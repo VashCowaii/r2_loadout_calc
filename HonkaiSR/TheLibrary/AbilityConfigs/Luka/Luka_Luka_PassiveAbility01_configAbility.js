@@ -43,20 +43,10 @@ const configAbility = {
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (BulletCount) || RETURN",
-            "displayLines": "BulletCount",
-            "constants": [],
-            "variables": [
-              "BulletCount"
-            ]
+            "displayLines": "BulletCount"
           },
           "maximum": {
-            "operator": "Constants[0] (4) || RETURN",
-            "displayLines": "4",
-            "constants": [
-              4
-            ],
-            "variables": []
+            "displayLines": "4"
           },
           "assignState": "True",
           "priorState": "Normal",
@@ -68,20 +58,10 @@ const configAbility = {
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (BulletCount) || RETURN",
-            "displayLines": "BulletCount",
-            "constants": [],
-            "variables": [
-              "BulletCount"
-            ]
+            "displayLines": "BulletCount"
           },
           "maximum": {
-            "operator": "Constants[0] (4) || RETURN",
-            "displayLines": "4",
-            "constants": [
-              4
-            ],
-            "variables": []
+            "displayLines": "4"
           },
           "assignState": "True",
           "priorState": "Active",

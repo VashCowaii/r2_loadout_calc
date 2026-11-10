@@ -38,12 +38,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoing</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -68,12 +63,7 @@ const compositeAbilityObject = {
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (180) || RETURN",
-                      "displayLines": "180",
-                      "constants": [],
-                      "variables": [
-                        180
-                      ]
+                      "displayLines": "180"
                     }
                   },
                   "passed": [
@@ -86,12 +76,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-392110406\">Relic_320_Sub</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     },
@@ -104,12 +89,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-392110406\">Relic_320_Sub</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     }
@@ -126,12 +106,7 @@ const compositeAbilityObject = {
                         "value1": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (135) || RETURN",
-                          "displayLines": "135",
-                          "constants": [],
-                          "variables": [
-                            135
-                          ]
+                          "displayLines": "135"
                         }
                       },
                       "passed": [
@@ -144,12 +119,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-392110406\">Relic_320_Sub</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.12) || RETURN",
-                              "displayLines": "0.12",
-                              "constants": [],
-                              "variables": [
-                                0.12
-                              ]
+                              "displayLines": "0.12"
                             }
                           }
                         },
@@ -162,12 +132,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-392110406\">Relic_320_Sub</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.12) || RETURN",
-                              "displayLines": "0.12",
-                              "constants": [],
-                              "variables": [
-                                0.12
-                              ]
+                              "displayLines": "0.12"
                             }
                           }
                         }
@@ -205,12 +170,7 @@ const compositeAbilityObject = {
                         "value1": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (180) || RETURN",
-                          "displayLines": "180",
-                          "constants": [],
-                          "variables": [
-                            180
-                          ]
+                          "displayLines": "180"
                         }
                       },
                       "passed": [
@@ -223,12 +183,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-392110406\">Relic_320_Sub</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.2) || RETURN",
-                              "displayLines": "0.2",
-                              "constants": [],
-                              "variables": [
-                                0.2
-                              ]
+                              "displayLines": "0.2"
                             }
                           }
                         }
@@ -245,12 +200,7 @@ const compositeAbilityObject = {
                             "value1": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (135) || RETURN",
-                              "displayLines": "135",
-                              "constants": [],
-                              "variables": [
-                                135
-                              ]
+                              "displayLines": "135"
                             }
                           },
                           "passed": [
@@ -263,12 +213,7 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"-392110406\">Relic_320_Sub</a>",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (0.12) || RETURN",
-                                  "displayLines": "0.12",
-                                  "constants": [],
-                                  "variables": [
-                                    0.12
-                                  ]
+                                  "displayLines": "0.12"
                                 }
                               }
                             }
@@ -290,12 +235,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "maxValue": {
-                    "operator": "Variables[0] (135) || RETURN",
-                    "displayLines": "135",
-                    "constants": [],
-                    "variables": [
-                      135
-                    ]
+                    "displayLines": "135"
                   },
                   "enteringRange": [
                     {
@@ -321,20 +261,10 @@ const compositeAbilityObject = {
                 {
                   "name": "Variable Value Range Conditions",
                   "minValue": {
-                    "operator": "Variables[0] (135) || RETURN",
-                    "displayLines": "135",
-                    "constants": [],
-                    "variables": [
-                      135
-                    ]
+                    "displayLines": "135"
                   },
                   "maxValue": {
-                    "operator": "Variables[0] (180) || RETURN",
-                    "displayLines": "180",
-                    "constants": [],
-                    "variables": [
-                      180
-                    ]
+                    "displayLines": "180"
                   },
                   "enteringRange": [
                     {
@@ -346,12 +276,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-392110406\">Relic_320_Sub</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.12) || RETURN",
-                          "displayLines": "0.12",
-                          "constants": [],
-                          "variables": [
-                            0.12
-                          ]
+                          "displayLines": "0.12"
                         }
                       }
                     },
@@ -364,12 +289,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-392110406\">Relic_320_Sub</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.12) || RETURN",
-                          "displayLines": "0.12",
-                          "constants": [],
-                          "variables": [
-                            0.12
-                          ]
+                          "displayLines": "0.12"
                         }
                       }
                     }
@@ -378,12 +298,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Variable Value Range Conditions",
                   "minValue": {
-                    "operator": "Variables[0] (180) || RETURN",
-                    "displayLines": "180",
-                    "constants": [],
-                    "variables": [
-                      180
-                    ]
+                    "displayLines": "180"
                   },
                   "enteringRange": [
                     {
@@ -395,12 +310,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-392110406\">Relic_320_Sub</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     },
@@ -413,12 +323,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-392110406\">Relic_320_Sub</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     }

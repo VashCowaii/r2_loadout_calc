@@ -28,12 +28,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (10) || RETURN",
-                "displayLines": "10",
-                "constants": [],
-                "variables": [
-                  10
-                ]
+                "displayLines": "10"
               },
               "isFixed": "(Fixed)"
             }
@@ -59,12 +54,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (10) || RETURN",
-                    "displayLines": "10",
-                    "constants": [],
-                    "variables": [
-                      10
-                    ]
+                    "displayLines": "10"
                   },
                   "isFixed": "(Fixed)"
                 }
@@ -94,12 +84,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.24) || RETURN",
-                "displayLines": "0.24",
-                "constants": [],
-                "variables": [
-                  0.24
-                ]
+                "displayLines": "0.24"
               }
             }
           ]
@@ -128,12 +113,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-815605708\">LC_23019_Sub1</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   }
                 },
                 {
@@ -147,12 +127,7 @@ const configAbility = {
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (1.5) || RETURN",
-                      "displayLines": "1.5",
-                      "constants": [],
-                      "variables": [
-                        1.5
-                      ]
+                      "displayLines": "1.5"
                     }
                   },
                   "passed": [

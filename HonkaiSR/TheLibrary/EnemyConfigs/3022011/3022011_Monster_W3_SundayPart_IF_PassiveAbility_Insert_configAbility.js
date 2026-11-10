@@ -8,12 +8,7 @@ const configAbility = {
     {
       "name": "Deal Toughness DMG",
       "value": {
-        "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-        "displayLines": "{[SkillP01[0]]}",
-        "constants": [],
-        "variables": [
-          "{[SkillP01[0]]}"
-        ]
+        "displayLines": "{[SkillP01[0]]}"
       },
       "defender": {
         "name": "Target Name",
@@ -82,12 +77,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"889164751\">Enemy_W3_SundayPart_IF_WeaknessShare</a>",
           "valuePerStack": {
             "MDF_WeaknessShare": {
-              "operator": "Variables[0] (_SummonerBreak) || RETURN",
-              "displayLines": "_SummonerBreak",
-              "constants": [],
-              "variables": [
-                "_SummonerBreak"
-              ]
+              "displayLines": "_SummonerBreak"
             }
           }
         }
@@ -149,12 +139,7 @@ const configAbility = {
             "target": "{{Parameter Target}}"
           },
           "value": {
-            "operator": "Variables[0] (_EnergyCharge) || RETURN",
-            "displayLines": "_EnergyCharge",
-            "constants": [],
-            "variables": [
-              "_EnergyCharge"
-            ]
+            "displayLines": "_EnergyCharge"
           },
           "isFixed": "(Fixed)"
         },

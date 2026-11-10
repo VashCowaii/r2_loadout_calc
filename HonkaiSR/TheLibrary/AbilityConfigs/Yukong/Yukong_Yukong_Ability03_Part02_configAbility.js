@@ -30,28 +30,13 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1097783562\">Yukong_Flower_ATK_Crit</a>[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]",
       "valuePerStack": {
         "MDF_RealAttack": {
-          "operator": "Variables[0] (0.8) || RETURN",
-          "displayLines": "0.8",
-          "constants": [],
-          "variables": [
-            0.8
-          ]
+          "displayLines": "0.8"
         },
         "MDF_CritChanceUp": {
-          "operator": "Variables[0] (0.28) || RETURN",
-          "displayLines": "0.28",
-          "constants": [],
-          "variables": [
-            0.28
-          ]
+          "displayLines": "0.28"
         },
         "MDF_CritDamageUpRatio": {
-          "operator": "Variables[0] (0.65) || RETURN",
-          "displayLines": "0.65",
-          "constants": [],
-          "variables": [
-            0.65
-          ]
+          "displayLines": "0.65"
         }
       }
     },
@@ -65,20 +50,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (3.8) || RETURN",
-          "displayLines": "3.8",
-          "constants": [],
-          "variables": [
-            3.8
-          ]
+          "displayLines": "3.8"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "attackType": "Ultimate",

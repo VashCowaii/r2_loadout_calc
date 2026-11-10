@@ -443,12 +443,7 @@ const configAbility = {
                     "value1": "AccumulatedEcho",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (240) || RETURN",
-                      "displayLines": "240",
-                      "constants": [],
-                      "variables": [
-                        240
-                      ]
+                      "displayLines": "240"
                     }
                   },
                   {
@@ -497,12 +492,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               },
               "variableName": "MDF_AllDamageTypeTakenRatio"
             },
@@ -514,12 +504,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeTakenRatio) || RETURN",
-                "displayLines": "MDF_AllDamageTypeTakenRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeTakenRatio"
-                ]
+                "displayLines": "MDF_AllDamageTypeTakenRatio"
               }
             }
           ]
@@ -550,13 +535,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (CasterCriticalDamage) || Variables[1] (0.2) || MUL || RETURN",
-                "displayLines": "(CasterCriticalDamage * 0.2)",
-                "constants": [],
-                "variables": [
-                  "CasterCriticalDamage",
-                  0.2
-                ]
+                "displayLines": "(CasterCriticalDamage * 0.2)"
               },
               "variableName": "MDF_PropertyValue"
             },
@@ -568,12 +547,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || RETURN",
-                "displayLines": "0",
-                "constants": [
-                  0
-                ],
-                "variables": []
+                "displayLines": "0"
               }
             },
             {
@@ -584,12 +558,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               },
               "isRefresh": true
             }
@@ -617,13 +586,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CasterCriticalDamage) || Variables[1] (0.2) || MUL || RETURN",
-                    "displayLines": "(CasterCriticalDamage * 0.2)",
-                    "constants": [],
-                    "variables": [
-                      "CasterCriticalDamage",
-                      0.2
-                    ]
+                    "displayLines": "(CasterCriticalDamage * 0.2)"
                   },
                   "variableName": "MDF_PropertyValue"
                 },
@@ -635,12 +598,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || RETURN",
-                    "displayLines": "0",
-                    "constants": [
-                      0
-                    ],
-                    "variables": []
+                    "displayLines": "0"
                   }
                 },
                 {
@@ -651,12 +609,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   },
                   "isRefresh": true
                 }
@@ -689,13 +642,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (CasterCriticalDamage) || Variables[1] (0.2) || MUL || RETURN",
-                        "displayLines": "(CasterCriticalDamage * 0.2)",
-                        "constants": [],
-                        "variables": [
-                          "CasterCriticalDamage",
-                          0.2
-                        ]
+                        "displayLines": "(CasterCriticalDamage * 0.2)"
                       },
                       "variableName": "MDF_PropertyValue"
                     },
@@ -707,12 +654,7 @@ const configAbility = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                        "displayLines": "MDF_PropertyValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue"
-                        ]
+                        "displayLines": "MDF_PropertyValue"
                       },
                       "isRefresh": true
                     }
@@ -737,12 +679,7 @@ const configAbility = {
               "variableName": "Evanescia_Rank06_EchoPointLifeTime",
               "modifierName": "<a class=\"gModGreen\" id=\"-1491295670\">MBattleEvent_Elation_ElationEchoPointBonus</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
               "changeDuration": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               }
             }
           ]
@@ -785,24 +722,14 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (120) || RETURN",
-                        "displayLines": "120",
-                        "constants": [],
-                        "variables": [
-                          120
-                        ]
+                        "displayLines": "120"
                       },
                       "isFixed": "(Fixed)"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (4) || RETURN",
-                        "displayLines": "4",
-                        "constants": [],
-                        "variables": [
-                          4
-                        ]
+                        "displayLines": "4"
                       },
                       "variableName": "DV_UltraCountdown"
                     }
@@ -858,19 +785,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (FLOOR) || Variables[1] (MIN) || Variables[2] (_EchoPoint) || Constants[0] (1000) || PARAM_2 || FUNCTION || Constants[1] (100) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.02) || MUL || Variables[4] (0.15) || ADD || RETURN",
-                    "displayLines": "((&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(_EchoPoint, 1000) / 100)) * 0.02) + 0.15)",
-                    "constants": [
-                      1000,
-                      100
-                    ],
-                    "variables": [
-                      "FLOOR",
-                      "MIN",
-                      "_EchoPoint",
-                      0.02,
-                      0.15
-                    ]
+                    "displayLines": "((&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(_EchoPoint, 1000) / 100)) * 0.02) + 0.15)"
                   },
                   "variableName": "MDF_PropertyValue"
                 },
@@ -903,19 +818,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (FLOOR) || Variables[1] (MIN) || Variables[2] (_EchoPoint) || Constants[0] (1000) || PARAM_2 || FUNCTION || Constants[1] (100) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.02) || MUL || Variables[4] (0.15) || ADD || RETURN",
-                "displayLines": "((&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(_EchoPoint, 1000) / 100)) * 0.02) + 0.15)",
-                "constants": [
-                  1000,
-                  100
-                ],
-                "variables": [
-                  "FLOOR",
-                  "MIN",
-                  "_EchoPoint",
-                  0.02,
-                  0.15
-                ]
+                "displayLines": "((&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(_EchoPoint, 1000) / 100)) * 0.02) + 0.15)"
               },
               "variableName": "MDF_PropertyValue"
             }
@@ -945,19 +848,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (FLOOR) || Variables[1] (MIN) || Variables[2] (_EchoPoint) || Constants[0] (1000) || PARAM_2 || FUNCTION || Constants[1] (100) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.02) || MUL || Variables[4] (0.15) || ADD || RETURN",
-                    "displayLines": "((&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(_EchoPoint, 1000) / 100)) * 0.02) + 0.15)",
-                    "constants": [
-                      1000,
-                      100
-                    ],
-                    "variables": [
-                      "FLOOR",
-                      "MIN",
-                      "_EchoPoint",
-                      0.02,
-                      0.15
-                    ]
+                    "displayLines": "((&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(_EchoPoint, 1000) / 100)) * 0.02) + 0.15)"
                   },
                   "variableName": "MDF_PropertyValue"
                 }
@@ -1008,12 +899,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.36) || RETURN",
-                "displayLines": "0.36",
-                "constants": [],
-                "variables": [
-                  0.36
-                ]
+                "displayLines": "0.36"
               },
               "isRefresh": true
             }
@@ -1040,12 +926,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.2) || RETURN",
-                "displayLines": "0.2",
-                "constants": [],
-                "variables": [
-                  0.2
-                ]
+                "displayLines": "0.2"
               },
               "isRefresh": true
             }

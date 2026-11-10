@@ -239,13 +239,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__252) || Variables[1] (SkillMaxHit) || DIV || RETURN",
-                  "displayLines": "(ENEMIES_OBJECT_UNUSED__252 / SkillMaxHit)",
-                  "constants": [],
-                  "variables": [
-                    "ENEMIES_OBJECT_UNUSED__252",
-                    "SkillMaxHit"
-                  ]
+                  "displayLines": "(ENEMIES_OBJECT_UNUSED__252 / SkillMaxHit)"
                 },
                 "Toughness": null,
                 "keepDMGType": true,
@@ -385,12 +379,7 @@ const configAbility = {
               },
               "variableName": "PursuitCount",
               "resetValue": {
-                "operator": "Variables[0] (MDF_Count) || RETURN",
-                "displayLines": "MDF_Count",
-                "constants": [],
-                "variables": [
-                  "MDF_Count"
-                ]
+                "displayLines": "MDF_Count"
               },
               "scope": "TargetEntity"
             }
@@ -490,12 +479,7 @@ const configAbility = {
               },
               "variableName": "PursuitCount",
               "resetValue": {
-                "operator": "Variables[0] (MDF_Count) || RETURN",
-                "displayLines": "MDF_Count",
-                "constants": [],
-                "variables": [
-                  "MDF_Count"
-                ]
+                "displayLines": "MDF_Count"
               },
               "scope": "TargetEntity"
             }

@@ -25,12 +25,7 @@ const configAbility = {
           "variableName": "Thunder_CountDark",
           "context": "TargetEntity",
           "value": {
-            "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-            "displayLines": "{[Skill02[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[0]]}"
-            ]
+            "displayLines": "{[Skill02[0]]}"
           },
           "max": 999
         },

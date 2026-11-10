@@ -18,12 +18,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       },
       "variableName": "FieldLifeTime"
     },
@@ -46,13 +41,7 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (CurSpecialSP) || Variables[1] (CurOverflowSpecialSP) || ADD || RETURN",
-        "displayLines": "(CurSpecialSP + CurOverflowSpecialSP)",
-        "constants": [],
-        "variables": [
-          "CurSpecialSP",
-          "CurOverflowSpecialSP"
-        ]
+        "displayLines": "(CurSpecialSP + CurOverflowSpecialSP)"
       },
       "displaySubType": "PureNum",
       "target": {
@@ -168,12 +157,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_DamageIncrease": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         }
@@ -233,14 +217,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMaxSpecialOverflow</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (27) || Constants[0] (24) || SUB || RETURN",
-                "displayLines": "(27 - 24)",
-                "constants": [
-                  24
-                ],
-                "variables": [
-                  27
-                ]
+                "displayLines": "(27 - 24)"
               },
               "isRefresh": true
             }
@@ -326,12 +303,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1931471655\">Cyrene_Passive_Teamate</a>[<span class=\"descriptionNumberColor\">Future</span>]",
                   "valuePerStack": {
                     "MDF_SPAdd": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     }
                   }
                 }
@@ -351,12 +323,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1931471655\">Cyrene_Passive_Teamate</a>[<span class=\"descriptionNumberColor\">Future</span>]",
               "valuePerStack": {
                 "MDF_SPAdd": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 }
               }
             }
@@ -477,14 +444,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (ChrysosCount) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(ChrysosCount + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "ChrysosCount"
-                            ]
+                            "displayLines": "(ChrysosCount + 1)"
                           },
                           "variableName": "ChrysosCount"
                         }
@@ -493,12 +453,7 @@ const configAbility = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (ChrysosCount) || RETURN",
-                        "displayLines": "ChrysosCount",
-                        "constants": [],
-                        "variables": [
-                          "ChrysosCount"
-                        ]
+                        "displayLines": "ChrysosCount"
                       },
                       "caseEvents": [
                         {
@@ -510,12 +465,7 @@ const configAbility = {
                               "functionName": "<a class=\"gTempYellow\" id=\"1682831339\">Cyrene_ChargeEnergy</a>",
                               "variables": {
                                 "parameter[0]_AddValue": {
-                                  "operator": "Variables[0] (2) || RETURN",
-                                  "displayLines": "2",
-                                  "constants": [],
-                                  "variables": [
-                                    2
-                                  ]
+                                  "displayLines": "2"
                                 }
                               }
                             }
@@ -530,12 +480,7 @@ const configAbility = {
                               "functionName": "<a class=\"gTempYellow\" id=\"1682831339\">Cyrene_ChargeEnergy</a>",
                               "variables": {
                                 "parameter[0]_AddValue": {
-                                  "operator": "Variables[0] (3) || RETURN",
-                                  "displayLines": "3",
-                                  "constants": [],
-                                  "variables": [
-                                    3
-                                  ]
+                                  "displayLines": "3"
                                 }
                               }
                             }
@@ -550,12 +495,7 @@ const configAbility = {
                               "functionName": "<a class=\"gTempYellow\" id=\"1682831339\">Cyrene_ChargeEnergy</a>",
                               "variables": {
                                 "parameter[0]_AddValue": {
-                                  "operator": "Variables[0] (6) || RETURN",
-                                  "displayLines": "6",
-                                  "constants": [],
-                                  "variables": [
-                                    6
-                                  ]
+                                  "displayLines": "6"
                                 }
                               }
                             }
@@ -578,12 +518,7 @@ const configAbility = {
                       "functionName": "<a class=\"gTempYellow\" id=\"1682831339\">Cyrene_ChargeEnergy</a>",
                       "variables": {
                         "parameter[0]_AddValue": {
-                          "operator": "Variables[0] (12) || RETURN",
-                          "displayLines": "12",
-                          "constants": [],
-                          "variables": [
-                            12
-                          ]
+                          "displayLines": "12"
                         }
                       }
                     }
@@ -598,12 +533,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1931471655\">Cyrene_Passive_Teamate</a>[<span class=\"descriptionNumberColor\">Future</span>]",
                   "valuePerStack": {
                     "MDF_SPAdd": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     }
                   }
                 }
@@ -646,13 +576,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (CurSpecialSP) || Variables[1] (CurOverflowSpecialSP) || ADD || RETURN",
-                    "displayLines": "(CurSpecialSP + CurOverflowSpecialSP)",
-                    "constants": [],
-                    "variables": [
-                      "CurSpecialSP",
-                      "CurOverflowSpecialSP"
-                    ]
+                    "displayLines": "(CurSpecialSP + CurOverflowSpecialSP)"
                   },
                   "target": {
                     "name": "Target Name",
@@ -667,12 +591,7 @@ const configAbility = {
                   },
                   "scope": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (CurSpecialSP) || RETURN",
-                    "displayLines": "CurSpecialSP",
-                    "constants": [],
-                    "variables": [
-                      "CurSpecialSP"
-                    ]
+                    "displayLines": "CurSpecialSP"
                   },
                   "variableName": "CurSpecialSP"
                 }
@@ -691,13 +610,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (CurSpecialSP) || Variables[1] (CurOverflowSpecialSP) || ADD || RETURN",
-                    "displayLines": "(CurSpecialSP + CurOverflowSpecialSP)",
-                    "constants": [],
-                    "variables": [
-                      "CurSpecialSP",
-                      "CurOverflowSpecialSP"
-                    ]
+                    "displayLines": "(CurSpecialSP + CurOverflowSpecialSP)"
                   },
                   "target": {
                     "name": "Target Name",
@@ -723,12 +636,7 @@ const configAbility = {
                     "value1": "CurSpecialSP",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (SpecialSPNeed) || RETURN",
-                      "displayLines": "SpecialSPNeed",
-                      "constants": [],
-                      "variables": [
-                        "SpecialSPNeed"
-                      ]
+                      "displayLines": "SpecialSPNeed"
                     }
                   },
                   "passed": [
@@ -817,12 +725,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": {
-                "operator": "Variables[0] (SpecialSPNeed) || RETURN",
-                "displayLines": "SpecialSPNeed",
-                "constants": [],
-                "variables": [
-                  "SpecialSPNeed"
-                ]
+                "displayLines": "SpecialSPNeed"
               },
               "enteringRange": [
                 {

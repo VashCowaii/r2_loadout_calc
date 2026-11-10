@@ -30,12 +30,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -78,12 +73,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1844616779\">MStrongChallengeEX_Talent_StageAbility_MST_071</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_3) || RETURN",
-                          "displayLines": "#ADF_3",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_3"
-                          ]
+                          "displayLines": "#ADF_3"
                         }
                       }
                     }
@@ -107,12 +97,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1844616779\">MStrongChallengeEX_Talent_StageAbility_MST_071</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (#ADF_2) || RETURN",
-                              "displayLines": "#ADF_2",
-                              "constants": [],
-                              "variables": [
-                                "#ADF_2"
-                              ]
+                              "displayLines": "#ADF_2"
                             }
                           }
                         }
@@ -136,12 +121,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-1844616779\">MStrongChallengeEX_Talent_StageAbility_MST_071</a>",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (#ADF_1) || RETURN",
-                                  "displayLines": "#ADF_1",
-                                  "constants": [],
-                                  "variables": [
-                                    "#ADF_1"
-                                  ]
+                                  "displayLines": "#ADF_1"
                                 }
                               }
                             }
@@ -187,12 +167,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1844616779\">MStrongChallengeEX_Talent_StageAbility_MST_071</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (#ADF_3) || RETURN",
-                      "displayLines": "#ADF_3",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_3"
-                      ]
+                      "displayLines": "#ADF_3"
                     }
                   }
                 }
@@ -216,12 +191,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1844616779\">MStrongChallengeEX_Talent_StageAbility_MST_071</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -245,12 +215,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1844616779\">MStrongChallengeEX_Talent_StageAbility_MST_071</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (#ADF_1) || RETURN",
-                              "displayLines": "#ADF_1",
-                              "constants": [],
-                              "variables": [
-                                "#ADF_1"
-                              ]
+                              "displayLines": "#ADF_1"
                             }
                           }
                         }

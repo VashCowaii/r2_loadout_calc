@@ -58,12 +58,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (Modifier_AttackAddedRatio) || RETURN",
-                "displayLines": "Modifier_AttackAddedRatio",
-                "constants": [],
-                "variables": [
-                  "Modifier_AttackAddedRatio"
-                ]
+                "displayLines": "Modifier_AttackAddedRatio"
               }
             },
             {
@@ -74,12 +69,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (Modifier_SpeedDelta) || RETURN",
-                "displayLines": "Modifier_SpeedDelta",
-                "constants": [],
-                "variables": [
-                  "Modifier_SpeedDelta"
-                ]
+                "displayLines": "Modifier_SpeedDelta"
               }
             }
           ]
@@ -102,12 +92,7 @@ const configAbility = {
       "statusName": "Out of Control",
       "stackLimit": 5,
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-        "displayLines": "ModifierStackLayer",
-        "constants": [],
-        "variables": [
-          "ModifierStackLayer"
-        ]
+        "displayLines": "ModifierStackLayer"
       },
       "execute": [
         {
@@ -122,13 +107,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (ModifierCriticalChanceRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(ModifierCriticalChanceRatio_PerLayer * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "ModifierCriticalChanceRatio_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(ModifierCriticalChanceRatio_PerLayer * ModifierLayers)"
               },
               "variableName": "ModifierCriticalChanceRatio"
             },
@@ -140,12 +119,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ModifierCriticalChanceRatio) || RETURN",
-                "displayLines": "ModifierCriticalChanceRatio",
-                "constants": [],
-                "variables": [
-                  "ModifierCriticalChanceRatio"
-                ]
+                "displayLines": "ModifierCriticalChanceRatio"
               }
             }
           ]

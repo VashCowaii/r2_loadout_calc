@@ -24,36 +24,16 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"216440055\">Aglaea_GoldenSword_Mark</a>[<span class=\"descriptionNumberColor\">Seam Stitch</span>]",
           "valuePerStack": {
             "BombDamagePercentage": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             },
             "_SpRecover": {
-              "operator": "Variables[0] (20) || RETURN",
-              "displayLines": "20",
-              "constants": [],
-              "variables": [
-                20
-              ]
+              "displayLines": "20"
             },
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             },
             "MDF_PropertyValue2": {
-              "operator": "Variables[0] (0.15) || RETURN",
-              "displayLines": "0.15",
-              "constants": [],
-              "variables": [
-                0.15
-              ]
+              "displayLines": "0.15"
             }
           }
         }
@@ -68,21 +48,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (1) || RETURN",
-          "displayLines": "1",
-          "constants": [],
-          "variables": [
-            1
-          ]
+          "displayLines": "1"
         },
         "HitSplit": 0.2,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "attackType": "Basic ATK",
@@ -98,21 +68,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (1) || RETURN",
-          "displayLines": "1",
-          "constants": [],
-          "variables": [
-            1
-          ]
+          "displayLines": "1"
         },
         "HitSplit": 0.2,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "attackType": "Basic ATK",
@@ -128,21 +88,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (1) || RETURN",
-          "displayLines": "1",
-          "constants": [],
-          "variables": [
-            1
-          ]
+          "displayLines": "1"
         },
         "HitSplit": 0.6,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "attackType": "Basic ATK",

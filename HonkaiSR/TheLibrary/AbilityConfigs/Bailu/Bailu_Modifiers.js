@@ -71,12 +71,7 @@ const configAbility = {
                     "name": "Insert Ability Condition",
                     "type": "AbilityOwnerInsertUnusedCount",
                     "typeValue": {
-                      "operator": "Variables[0] (MDF_ReviveTime2) || RETURN",
-                      "displayLines": "MDF_ReviveTime2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_ReviveTime2"
-                      ]
+                      "displayLines": "MDF_ReviveTime2"
                     }
                   },
                   "abilityName": "Bailu_InsertAbility_Revive",
@@ -132,13 +127,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_AttackUpRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_AttackUpRatio * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackUpRatio",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_AttackUpRatio * MDF_Layer)"
               },
               "variableName": "MDF_AttackUpRatio"
             },
@@ -150,12 +139,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AttackUpRatio) || RETURN",
-                "displayLines": "MDF_AttackUpRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackUpRatio"
-                ]
+                "displayLines": "MDF_AttackUpRatio"
               }
             }
           ]
@@ -177,29 +161,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-2145916157\">Bailu_Eidolon4_AttackUp</a>[<span class=\"descriptionNumberColor\">Evil Excision</span>]",
               "duration": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "stackLimit": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "valuePerStack": {
                 "MDF_AttackUpRatio": {
-                  "operator": "Variables[0] (0.1) || RETURN",
-                  "displayLines": "0.1",
-                  "constants": [],
-                  "variables": [
-                    0.1
-                  ]
+                  "displayLines": "0.1"
                 }
               },
               "addStacksPerTrigger": 1
@@ -228,12 +197,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoing</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -259,12 +223,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageResistance) || RETURN",
-                "displayLines": "MDF_DamageResistance",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageResistance"
-                ]
+                "displayLines": "MDF_DamageResistance"
               }
             }
           ]
@@ -291,12 +250,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_HPIncrease) || RETURN",
-                "displayLines": "MDF_HPIncrease",
-                "constants": [],
-                "variables": [
-                  "MDF_HPIncrease"
-                ]
+                "displayLines": "MDF_HPIncrease"
               }
             }
           ]
@@ -336,21 +290,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-469925889\">Bailu_PointB1_HPIncrease</a>[<span class=\"descriptionNumberColor\">Qihuang Analects</span>]",
                   "duration": {
-                    "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                    "displayLines": "MDF_LifeTime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_LifeTime"
-                    ]
+                    "displayLines": "MDF_LifeTime"
                   },
                   "valuePerStack": {
                     "MDF_HPIncrease": {
-                      "operator": "Variables[0] (MDF_HPIncrease2) || RETURN",
-                      "displayLines": "MDF_HPIncrease2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_HPIncrease2"
-                      ]
+                      "displayLines": "MDF_HPIncrease2"
                     }
                   }
                 }
@@ -396,21 +340,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-469925889\">Bailu_PointB1_HPIncrease</a>[<span class=\"descriptionNumberColor\">Qihuang Analects</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "MDF_HPIncrease": {
-                      "operator": "Variables[0] (0.1) || RETURN",
-                      "displayLines": "0.1",
-                      "constants": [],
-                      "variables": [
-                        0.1
-                      ]
+                      "displayLines": "0.1"
                     }
                   }
                 }
@@ -430,20 +364,10 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"996331331\">Bailu_PointB1_Sub</a>",
               "valuePerStack": {
                 "MDF_LifeTime": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
+                  "displayLines": "2"
                 },
                 "MDF_HPIncrease2": {
-                  "operator": "Variables[0] (0.1) || RETURN",
-                  "displayLines": "0.1",
-                  "constants": [],
-                  "variables": [
-                    0.1
-                  ]
+                  "displayLines": "0.1"
                 }
               },
               "casterAssign": "TargetSelf"
@@ -502,12 +426,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_AddSP) || RETURN",
-                    "displayLines": "MDF_AddSP",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AddSP"
-                    ]
+                    "displayLines": "MDF_AddSP"
                   },
                   "isFixed": "(Fixed)"
                 }
@@ -530,13 +449,7 @@ const configAbility = {
               "name": "Define Modifier Variable",
               "modifierName": "<a class=\"gModGreen\" id=\"36808524\">Bailu_Heal_Mark</a>[<span class=\"descriptionNumberColor\">Invigoration</span>]",
               "value": {
-                "operator": "Variables[0] (MDF_HealCount) || Variables[1] (MDF_HealCountExtra) || ADD || RETURN",
-                "displayLines": "(MDF_HealCount + MDF_HealCountExtra)",
-                "constants": [],
-                "variables": [
-                  "MDF_HealCount",
-                  "MDF_HealCountExtra"
-                ]
+                "displayLines": "(MDF_HealCount + MDF_HealCountExtra)"
               }
             }
           ]
@@ -564,20 +477,10 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (MDF__HealPercentage2) || RETURN",
-                    "displayLines": "MDF__HealPercentage2",
-                    "constants": [],
-                    "variables": [
-                      "MDF__HealPercentage2"
-                    ]
+                    "displayLines": "MDF__HealPercentage2"
                   },
                   "healFlat": {
-                    "operator": "Variables[0] (MDF__HealValue2) || RETURN",
-                    "displayLines": "MDF__HealValue2",
-                    "constants": [],
-                    "variables": [
-                      "MDF__HealValue2"
-                    ]
+                    "displayLines": "MDF__HealValue2"
                   },
                   "formula": "Heal from Healer's MaxHP"
                 },

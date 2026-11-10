@@ -32,12 +32,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "flatConsume": {
-                "operator": "Variables[0] (ChallengePeakBattle_0018_ADF_1) || RETURN",
-                "displayLines": "ChallengePeakBattle_0018_ADF_1",
-                "constants": [],
-                "variables": [
-                  "ChallengePeakBattle_0018_ADF_1"
-                ]
+                "displayLines": "ChallengePeakBattle_0018_ADF_1"
               },
               "eatShield": true,
               "attackType": "Level",
@@ -91,12 +86,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1227725619\">Modifier_ChallengePeakBattle_EnhancedAbility_0018_02</a>[<span class=\"descriptionNumberColor\">Hemovore+</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_0018_ADF_1": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }

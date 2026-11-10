@@ -49,13 +49,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (CEIL) || Variables[1] (_TargetNegativeHp) || PARAM_1 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(_TargetNegativeHp)",
-                "constants": [],
-                "variables": [
-                  "CEIL",
-                  "_TargetNegativeHp"
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(_TargetNegativeHp)"
               },
               "variableName": "_TargetNegativeHp"
             },
@@ -76,12 +70,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "DamageFlat": {
-                  "operator": "Variables[0] (_TargetNegativeHp) || RETURN",
-                  "displayLines": "_TargetNegativeHp",
-                  "constants": [],
-                  "variables": [
-                    "_TargetNegativeHp"
-                  ]
+                  "displayLines": "_TargetNegativeHp"
                 },
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
@@ -110,15 +99,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill06[0]]}) || MUL || Constants[0] (0.25) || MUL || RETURN",
-                  "displayLines": "((_MaxHP * {[Skill06[0]]}) * 0.25)",
-                  "constants": [
-                    0.25
-                  ],
-                  "variables": [
-                    "_MaxHP",
-                    "{[Skill06[0]]}"
-                  ]
+                  "displayLines": "((_MaxHP * {[Skill06[0]]}) * 0.25)"
                 },
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
@@ -169,15 +150,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill06[0]]}) || MUL || Constants[0] (0.25) || MUL || RETURN",
-                  "displayLines": "((_MaxHP * {[Skill06[0]]}) * 0.25)",
-                  "constants": [
-                    0.25
-                  ],
-                  "variables": [
-                    "_MaxHP",
-                    "{[Skill06[0]]}"
-                  ]
+                  "displayLines": "((_MaxHP * {[Skill06[0]]}) * 0.25)"
                 },
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
@@ -228,15 +201,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill06[0]]}) || MUL || Constants[0] (0.25) || MUL || RETURN",
-                  "displayLines": "((_MaxHP * {[Skill06[0]]}) * 0.25)",
-                  "constants": [
-                    0.25
-                  ],
-                  "variables": [
-                    "_MaxHP",
-                    "{[Skill06[0]]}"
-                  ]
+                  "displayLines": "((_MaxHP * {[Skill06[0]]}) * 0.25)"
                 },
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
@@ -287,15 +252,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill06[0]]}) || MUL || Constants[0] (0.25) || MUL || RETURN",
-                  "displayLines": "((_MaxHP * {[Skill06[0]]}) * 0.25)",
-                  "constants": [
-                    0.25
-                  ],
-                  "variables": [
-                    "_MaxHP",
-                    "{[Skill06[0]]}"
-                  ]
+                  "displayLines": "((_MaxHP * {[Skill06[0]]}) * 0.25)"
                 },
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
@@ -335,20 +292,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-976528853\">Enemy_W4_Pollux_IF_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
           "valuePerStack": {
             "MDF_DamagePercentage": {
-              "operator": "Variables[0] ({[SkillP02[1]]}) || RETURN",
-              "displayLines": "{[SkillP02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP02[1]]}"
-              ]
+              "displayLines": "{[SkillP02[1]]}"
             },
             "MDF_DamageHpAddedRatio": {
-              "operator": "Variables[0] ({[SkillP02[0]]}) || RETURN",
-              "displayLines": "{[SkillP02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP02[0]]}"
-              ]
+              "displayLines": "{[SkillP02[0]]}"
             }
           }
         }

@@ -12,12 +12,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "consumePercent": {
-        "operator": "Variables[0] (0.4) || RETURN",
-        "displayLines": "0.4",
-        "constants": [],
-        "variables": [
-          0.4
-        ]
+        "displayLines": "0.4"
       },
       "consumeFloor": 1
     },
@@ -28,12 +23,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "valuePercent": {
-        "operator": "Variables[0] (0.6) || RETURN",
-        "displayLines": "0.6",
-        "constants": [],
-        "variables": [
-          0.6
-        ]
+        "displayLines": "0.6"
       },
       "isFixed": "(Fixed)"
     },
@@ -46,21 +36,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (2) || RETURN",
-          "displayLines": "2",
-          "constants": [],
-          "variables": [
-            2
-          ]
+          "displayLines": "2"
         },
         "HitSplit": 0.4,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "ToughnessDMGType": {
           "DamageType": "Fire"
@@ -80,21 +60,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (2) || RETURN",
-          "displayLines": "2",
-          "constants": [],
-          "variables": [
-            2
-          ]
+          "displayLines": "2"
         },
         "HitSplit": 0.6,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "ToughnessDMGType": {
           "DamageType": "Fire"

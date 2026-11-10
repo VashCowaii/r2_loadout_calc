@@ -373,12 +373,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
                   "valuePerStack": {
                     "MDF_MaxCount": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_10347) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_10347",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_10347"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_10347"
                     },
                     "MDF_PartFlag": 0
                   }
@@ -460,15 +455,7 @@ const compositeAbilityObject = {
                             "value1": "Vibrate_Count",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_10347) || Constants[0] (3) || DIV || Constants[1] (2) || MUL || RETURN",
-                              "displayLines": "((UnusedUnderThisBase_10347 / 3) * 2)",
-                              "constants": [
-                                3,
-                                2
-                              ],
-                              "variables": [
-                                "UnusedUnderThisBase_10347"
-                              ]
+                              "displayLines": "((UnusedUnderThisBase_10347 / 3) * 2)"
                             }
                           },
                           "passed": [
@@ -501,14 +488,7 @@ const compositeAbilityObject = {
                                 "value1": "Vibrate_Count",
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_10347) || Constants[0] (3) || DIV || RETURN",
-                                  "displayLines": "(UnusedUnderThisBase_10347 / 3)",
-                                  "constants": [
-                                    3
-                                  ],
-                                  "variables": [
-                                    "UnusedUnderThisBase_10347"
-                                  ]
+                                  "displayLines": "(UnusedUnderThisBase_10347 / 3)"
                                 }
                               },
                               "passed": [
@@ -587,14 +567,7 @@ const compositeAbilityObject = {
                         "value1": "Vibrate_Count",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_10349) || Constants[0] (1) || SUB || RETURN",
-                          "displayLines": "(UnusedUnderThisBase_10349 - 1)",
-                          "constants": [
-                            1
-                          ],
-                          "variables": [
-                            "UnusedUnderThisBase_10349"
-                          ]
+                          "displayLines": "(UnusedUnderThisBase_10349 - 1)"
                         }
                       },
                       {
@@ -778,12 +751,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
                   "valuePerStack": {
                     "MDF_MaxCount": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_10347) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_10347",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_10347"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_10347"
                     },
                     "MDF_PartFlag": 0
                   }
@@ -865,15 +833,7 @@ const compositeAbilityObject = {
                             "value1": "Vibrate_Count",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_10347) || Constants[0] (3) || DIV || Constants[1] (2) || MUL || RETURN",
-                              "displayLines": "((UnusedUnderThisBase_10347 / 3) * 2)",
-                              "constants": [
-                                3,
-                                2
-                              ],
-                              "variables": [
-                                "UnusedUnderThisBase_10347"
-                              ]
+                              "displayLines": "((UnusedUnderThisBase_10347 / 3) * 2)"
                             }
                           },
                           "passed": [
@@ -906,14 +866,7 @@ const compositeAbilityObject = {
                                 "value1": "Vibrate_Count",
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_10347) || Constants[0] (3) || DIV || RETURN",
-                                  "displayLines": "(UnusedUnderThisBase_10347 / 3)",
-                                  "constants": [
-                                    3
-                                  ],
-                                  "variables": [
-                                    "UnusedUnderThisBase_10347"
-                                  ]
+                                  "displayLines": "(UnusedUnderThisBase_10347 / 3)"
                                 }
                               },
                               "passed": [
@@ -1011,12 +964,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
                   "valuePerStack": {
                     "MDF_MaxCount": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_10347) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_10347",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_10347"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_10347"
                     },
                     "MDF_PartFlag": 0
                   }
@@ -1063,12 +1011,7 @@ const compositeAbilityObject = {
                           "context": "TargetEntity",
                           "value": 1,
                           "max": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_10347) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_10347",
-                            "constants": [],
-                            "variables": [
-                              "UnusedUnderThisBase_10347"
-                            ]
+                            "displayLines": "UnusedUnderThisBase_10347"
                           }
                         },
                         {
@@ -1079,21 +1022,11 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_10347) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_10347",
-                            "constants": [],
-                            "variables": [
-                              "UnusedUnderThisBase_10347"
-                            ]
+                            "displayLines": "UnusedUnderThisBase_10347"
                           },
                           "valuePerStack": {
                             "Modifier_AttackUp_AttackUpLayer": {
-                              "operator": "Variables[0] (Vibrate_Count) || RETURN",
-                              "displayLines": "Vibrate_Count",
-                              "constants": [],
-                              "variables": [
-                                "Vibrate_Count"
-                              ]
+                              "displayLines": "Vibrate_Count"
                             }
                           }
                         },
@@ -1106,12 +1039,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
                           "valuePerStack": {
                             "MDF_MaxCount": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_10347) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_10347",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_10347"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_10347"
                             },
                             "MDF_PartFlag": 0
                           }
@@ -1130,14 +1058,7 @@ const compositeAbilityObject = {
                                 "value1": "Vibrate_Count",
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_10347) || Constants[0] (3) || DIV || RETURN",
-                                  "displayLines": "(UnusedUnderThisBase_10347 / 3)",
-                                  "constants": [
-                                    3
-                                  ],
-                                  "variables": [
-                                    "UnusedUnderThisBase_10347"
-                                  ]
+                                  "displayLines": "(UnusedUnderThisBase_10347 / 3)"
                                 },
                                 "contextScope": "TargetEntity"
                               },
@@ -1186,15 +1107,7 @@ const compositeAbilityObject = {
                                 "value1": "Vibrate_Count",
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_10347) || Constants[0] (3) || DIV || Constants[1] (2) || MUL || RETURN",
-                                  "displayLines": "((UnusedUnderThisBase_10347 / 3) * 2)",
-                                  "constants": [
-                                    3,
-                                    2
-                                  ],
-                                  "variables": [
-                                    "UnusedUnderThisBase_10347"
-                                  ]
+                                  "displayLines": "((UnusedUnderThisBase_10347 / 3) * 2)"
                                 },
                                 "contextScope": "TargetEntity"
                               },
@@ -1243,12 +1156,7 @@ const compositeAbilityObject = {
                                 "value1": "Vibrate_Count",
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_10347) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_10347",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_10347"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_10347"
                                 },
                                 "contextScope": "TargetEntity"
                               },
@@ -1294,12 +1202,7 @@ const compositeAbilityObject = {
                             "value1": "Vibrate_Count",
                             "compareType": "=",
                             "value2": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_10347) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_10347",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_10347"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_10347"
                             },
                             "contextScope": "TargetEntity"
                           },
@@ -1389,12 +1292,7 @@ const compositeAbilityObject = {
                               "context": "TargetEntity",
                               "value": 1,
                               "max": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_10349) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_10349",
-                                "constants": [],
-                                "variables": [
-                                  "UnusedUnderThisBase_10349"
-                                ]
+                                "displayLines": "UnusedUnderThisBase_10349"
                               }
                             },
                             {
@@ -1405,21 +1303,11 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_10349) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_10349",
-                                "constants": [],
-                                "variables": [
-                                  "UnusedUnderThisBase_10349"
-                                ]
+                                "displayLines": "UnusedUnderThisBase_10349"
                               },
                               "valuePerStack": {
                                 "Modifier_AttackUp_AttackUpLayer": {
-                                  "operator": "Variables[0] (Vibrate_Count) || RETURN",
-                                  "displayLines": "Vibrate_Count",
-                                  "constants": [],
-                                  "variables": [
-                                    "Vibrate_Count"
-                                  ]
+                                  "displayLines": "Vibrate_Count"
                                 }
                               }
                             },
@@ -1432,12 +1320,7 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
                               "valuePerStack": {
                                 "MDF_MaxCount": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_10349) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_10349",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_10349"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_10349"
                                 },
                                 "MDF_PartFlag": 1
                               }
@@ -1456,12 +1339,7 @@ const compositeAbilityObject = {
                                     "value1": "Vibrate_Count",
                                     "compareType": ">=",
                                     "value2": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_10349) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_10349",
-                                      "constants": [],
-                                      "variables": [
-                                        "UnusedUnderThisBase_10349"
-                                      ]
+                                      "displayLines": "UnusedUnderThisBase_10349"
                                     },
                                     "contextScope": "TargetEntity"
                                   },
@@ -1497,12 +1375,7 @@ const compositeAbilityObject = {
                                     "value1": "Vibrate_Count",
                                     "compareType": "=",
                                     "value2": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_10349) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_10349",
-                                      "constants": [],
-                                      "variables": [
-                                        "UnusedUnderThisBase_10349"
-                                      ]
+                                      "displayLines": "UnusedUnderThisBase_10349"
                                     },
                                     "contextScope": "TargetEntity"
                                   }
@@ -1623,12 +1496,7 @@ const compositeAbilityObject = {
                           "context": "TargetEntity",
                           "value": 1,
                           "max": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_10347) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_10347",
-                            "constants": [],
-                            "variables": [
-                              "UnusedUnderThisBase_10347"
-                            ]
+                            "displayLines": "UnusedUnderThisBase_10347"
                           }
                         },
                         {
@@ -1639,21 +1507,11 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_10347) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_10347",
-                            "constants": [],
-                            "variables": [
-                              "UnusedUnderThisBase_10347"
-                            ]
+                            "displayLines": "UnusedUnderThisBase_10347"
                           },
                           "valuePerStack": {
                             "Modifier_AttackUp_AttackUpLayer": {
-                              "operator": "Variables[0] (Vibrate_Count) || RETURN",
-                              "displayLines": "Vibrate_Count",
-                              "constants": [],
-                              "variables": [
-                                "Vibrate_Count"
-                              ]
+                              "displayLines": "Vibrate_Count"
                             }
                           }
                         },
@@ -1666,12 +1524,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
                           "valuePerStack": {
                             "MDF_MaxCount": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_10347) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_10347",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_10347"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_10347"
                             },
                             "MDF_PartFlag": 0
                           }
@@ -1690,14 +1543,7 @@ const compositeAbilityObject = {
                                 "value1": "Vibrate_Count",
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_10347) || Constants[0] (3) || DIV || RETURN",
-                                  "displayLines": "(UnusedUnderThisBase_10347 / 3)",
-                                  "constants": [
-                                    3
-                                  ],
-                                  "variables": [
-                                    "UnusedUnderThisBase_10347"
-                                  ]
+                                  "displayLines": "(UnusedUnderThisBase_10347 / 3)"
                                 },
                                 "contextScope": "TargetEntity"
                               },
@@ -1746,15 +1592,7 @@ const compositeAbilityObject = {
                                 "value1": "Vibrate_Count",
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_10347) || Constants[0] (3) || DIV || Constants[1] (2) || MUL || RETURN",
-                                  "displayLines": "((UnusedUnderThisBase_10347 / 3) * 2)",
-                                  "constants": [
-                                    3,
-                                    2
-                                  ],
-                                  "variables": [
-                                    "UnusedUnderThisBase_10347"
-                                  ]
+                                  "displayLines": "((UnusedUnderThisBase_10347 / 3) * 2)"
                                 },
                                 "contextScope": "TargetEntity"
                               },
@@ -1803,12 +1641,7 @@ const compositeAbilityObject = {
                                 "value1": "Vibrate_Count",
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_10347) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_10347",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_10347"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_10347"
                                 },
                                 "contextScope": "TargetEntity"
                               },
@@ -1854,12 +1687,7 @@ const compositeAbilityObject = {
                             "value1": "Vibrate_Count",
                             "compareType": "=",
                             "value2": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_10347) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_10347",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_10347"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_10347"
                             },
                             "contextScope": "TargetEntity"
                           },
@@ -1969,12 +1797,7 @@ const compositeAbilityObject = {
                                 "value1": "Vibrate_Count",
                                 "compareType": "=",
                                 "value2": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_10349) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_10349",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_10349"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_10349"
                                 },
                                 "contextScope": "TargetEntity"
                               }
@@ -1991,12 +1814,7 @@ const compositeAbilityObject = {
                               "context": "TargetEntity",
                               "value": 1,
                               "max": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_10349) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_10349",
-                                "constants": [],
-                                "variables": [
-                                  "UnusedUnderThisBase_10349"
-                                ]
+                                "displayLines": "UnusedUnderThisBase_10349"
                               }
                             },
                             {
@@ -2007,21 +1825,11 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_10349) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_10349",
-                                "constants": [],
-                                "variables": [
-                                  "UnusedUnderThisBase_10349"
-                                ]
+                                "displayLines": "UnusedUnderThisBase_10349"
                               },
                               "valuePerStack": {
                                 "Modifier_AttackUp_AttackUpLayer": {
-                                  "operator": "Variables[0] (Vibrate_Count) || RETURN",
-                                  "displayLines": "Vibrate_Count",
-                                  "constants": [],
-                                  "variables": [
-                                    "Vibrate_Count"
-                                  ]
+                                  "displayLines": "Vibrate_Count"
                                 }
                               }
                             },
@@ -2034,12 +1842,7 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
                               "valuePerStack": {
                                 "MDF_MaxCount": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_10349) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_10349",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_10349"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_10349"
                                 },
                                 "MDF_PartFlag": 1
                               }
@@ -2058,12 +1861,7 @@ const compositeAbilityObject = {
                                     "value1": "Vibrate_Count",
                                     "compareType": ">=",
                                     "value2": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_10349) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_10349",
-                                      "constants": [],
-                                      "variables": [
-                                        "UnusedUnderThisBase_10349"
-                                      ]
+                                      "displayLines": "UnusedUnderThisBase_10349"
                                     },
                                     "contextScope": "TargetEntity"
                                   },
@@ -2099,12 +1897,7 @@ const compositeAbilityObject = {
                                     "value1": "Vibrate_Count",
                                     "compareType": "=",
                                     "value2": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_10349) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_10349",
-                                      "constants": [],
-                                      "variables": [
-                                        "UnusedUnderThisBase_10349"
-                                      ]
+                                      "displayLines": "UnusedUnderThisBase_10349"
                                     },
                                     "contextScope": "TargetEntity"
                                   }
@@ -2226,12 +2019,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -2261,12 +2049,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1193792195\">MModifier_Monster_W3_Dinosaur_RLElite_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_10344) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_10344",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_10344"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_10344"
                         }
                       }
                     }
@@ -2347,21 +2130,11 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (Vibrate_Count) || RETURN",
-                        "displayLines": "Vibrate_Count",
-                        "constants": [],
-                        "variables": [
-                          "Vibrate_Count"
-                        ]
+                        "displayLines": "Vibrate_Count"
                       },
                       "entityClass": "Enemy",
                       "maximum": {
-                        "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                        "displayLines": "MDF_MaxCount",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxCount"
-                        ]
+                        "displayLines": "MDF_MaxCount"
                       },
                       "assignState": "True",
                       "state": "Normal"
@@ -2371,21 +2144,11 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (Vibrate_Count) || RETURN",
-                        "displayLines": "Vibrate_Count",
-                        "constants": [],
-                        "variables": [
-                          "Vibrate_Count"
-                        ]
+                        "displayLines": "Vibrate_Count"
                       },
                       "entityClass": "Enemy",
                       "maximum": {
-                        "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                        "displayLines": "MDF_MaxCount",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxCount"
-                        ]
+                        "displayLines": "MDF_MaxCount"
                       },
                       "assignState": "True",
                       "state": "Active"
@@ -2434,12 +2197,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] ({[PassiveSkillInitiate[0]]}) || RETURN",
-                    "displayLines": "{[PassiveSkillInitiate[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkillInitiate[0]]}"
-                    ]
+                    "displayLines": "{[PassiveSkillInitiate[0]]}"
                   },
                   "variableName": "MDF_PropertyValue"
                 }
@@ -2470,14 +2228,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "(0 - MDF_PropertyValue)"
                   }
                 }
               ]
@@ -2639,13 +2390,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_PropertyValue * MDF_Layer)"
                   }
                 }
               ]
@@ -2690,29 +2435,13 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "Damage": {
-                      "operator": "Variables[0] (Modifier_Burn_DamagePercentage) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                      "displayLines": "(Modifier_Burn_DamagePercentage * ModifierLayers)",
-                      "constants": [],
-                      "variables": [
-                        "Modifier_Burn_DamagePercentage",
-                        "ModifierLayers"
-                      ]
+                      "displayLines": "(Modifier_Burn_DamagePercentage * ModifierLayers)"
                     },
                     "DamageExtra": {
-                      "operator": "Variables[0] (Modifier_Burn_DamagePercentage_Defence) || RETURN",
-                      "displayLines": "Modifier_Burn_DamagePercentage_Defence",
-                      "constants": [],
-                      "variables": [
-                        "Modifier_Burn_DamagePercentage_Defence"
-                      ]
+                      "displayLines": "Modifier_Burn_DamagePercentage_Defence"
                     },
                     "DamageFlat": {
-                      "operator": "Variables[0] (Modifier_Burn_DamageValue) || RETURN",
-                      "displayLines": "Modifier_Burn_DamageValue",
-                      "constants": [],
-                      "variables": [
-                        "Modifier_Burn_DamageValue"
-                      ]
+                      "displayLines": "Modifier_Burn_DamageValue"
                     },
                     "dmgFormulaExtra": "DEF Scaling",
                     "Toughness": null,
@@ -2751,32 +2480,13 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "Damage": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Burn_DamagePercentage) || MUL || Variables[2] (ModifierLayers) || MUL || RETURN",
-                      "displayLines": "((DOT_TriggerRatio * Modifier_Burn_DamagePercentage) * ModifierLayers)",
-                      "constants": [],
-                      "variables": [
-                        "DOT_TriggerRatio",
-                        "Modifier_Burn_DamagePercentage",
-                        "ModifierLayers"
-                      ]
+                      "displayLines": "((DOT_TriggerRatio * Modifier_Burn_DamagePercentage) * ModifierLayers)"
                     },
                     "DamageExtra": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Burn_DamagePercentage_Defence) || MUL || RETURN",
-                      "displayLines": "(DOT_TriggerRatio * Modifier_Burn_DamagePercentage_Defence)",
-                      "constants": [],
-                      "variables": [
-                        "DOT_TriggerRatio",
-                        "Modifier_Burn_DamagePercentage_Defence"
-                      ]
+                      "displayLines": "(DOT_TriggerRatio * Modifier_Burn_DamagePercentage_Defence)"
                     },
                     "DamageFlat": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Burn_DamageValue) || MUL || RETURN",
-                      "displayLines": "(DOT_TriggerRatio * Modifier_Burn_DamageValue)",
-                      "constants": [],
-                      "variables": [
-                        "DOT_TriggerRatio",
-                        "Modifier_Burn_DamageValue"
-                      ]
+                      "displayLines": "(DOT_TriggerRatio * Modifier_Burn_DamageValue)"
                     },
                     "dmgFormulaExtra": "DEF Scaling",
                     "Toughness": null,
@@ -3383,29 +3093,14 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1792784435\">Enemy_W3_Dinosaur_02_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill09[2]]}) || RETURN",
-            "displayLines": "{[Skill09[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill09[2]]}"
-            ]
+            "displayLines": "{[Skill09[2]]}"
           },
           "stackLimit": {
-            "operator": "Variables[0] ({[Skill09[0]]}) || RETURN",
-            "displayLines": "{[Skill09[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill09[0]]}"
-            ]
+            "displayLines": "{[Skill09[0]]}"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[Skill09[1]]}) || RETURN",
-              "displayLines": "{[Skill09[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill09[1]]}"
-              ]
+              "displayLines": "{[Skill09[1]]}"
             }
           }
         },
@@ -3417,29 +3112,14 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1792784435\">Enemy_W3_Dinosaur_02_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill09[2]]}) || RETURN",
-            "displayLines": "{[Skill09[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill09[2]]}"
-            ]
+            "displayLines": "{[Skill09[2]]}"
           },
           "stackLimit": {
-            "operator": "Variables[0] ({[Skill09[0]]}) || RETURN",
-            "displayLines": "{[Skill09[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill09[0]]}"
-            ]
+            "displayLines": "{[Skill09[0]]}"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[Skill09[1]]}) || RETURN",
-              "displayLines": "{[Skill09[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill09[1]]}"
-              ]
+              "displayLines": "{[Skill09[1]]}"
             }
           }
         },
@@ -3530,12 +3210,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill08[0]]}) || RETURN",
-              "displayLines": "{[Skill08[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill08[0]]}"
-              ]
+              "displayLines": "{[Skill08[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -3553,12 +3228,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill08[2]]}) || RETURN",
-              "displayLines": "{[Skill08[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill08[2]]}"
-              ]
+              "displayLines": "{[Skill08[2]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -3576,12 +3246,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill08[2]]}) || RETURN",
-              "displayLines": "{[Skill08[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill08[2]]}"
-              ]
+              "displayLines": "{[Skill08[2]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -3598,29 +3263,14 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1761981801\">MModifier_Monster_W3_Dinosaur_SpeedDownRatio</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
           "duration": {
-            "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
-            "displayLines": "{[PassiveSkillInitiate[3]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkillInitiate[3]]}"
-            ]
+            "displayLines": "{[PassiveSkillInitiate[3]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[PassiveSkillInitiate[1]]}) || RETURN",
-            "displayLines": "{[PassiveSkillInitiate[1]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkillInitiate[1]]}"
-            ]
+            "displayLines": "{[PassiveSkillInitiate[1]]}"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[2]]}"
-              ]
+              "displayLines": "{[PassiveSkillInitiate[2]]}"
             }
           }
         },
@@ -3632,37 +3282,17 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1809911628\">Enemy_W3_Dinosaur_02_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill04[4]]}) || RETURN",
-            "displayLines": "{[Skill04[4]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill04[4]]}"
-            ]
+            "displayLines": "{[Skill04[4]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[Skill08[1]]}) || RETURN",
-            "displayLines": "{[Skill08[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill08[1]]}"
-            ]
+            "displayLines": "{[Skill08[1]]}"
           },
           "stackLimit": {
-            "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-            "displayLines": "{[Skill04[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill04[3]]}"
-            ]
+            "displayLines": "{[Skill04[3]]}"
           },
           "valuePerStack": {
             "Modifier_Burn_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-              "displayLines": "{[Skill04[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[2]]}"
-              ]
+              "displayLines": "{[Skill04[2]]}"
             }
           }
         }
@@ -3895,12 +3525,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__116) || RETURN",
-            "displayLines": "ENEMIES_OBJECT_UNUSED__116",
-            "constants": [],
-            "variables": [
-              "ENEMIES_OBJECT_UNUSED__116"
-            ]
+            "displayLines": "ENEMIES_OBJECT_UNUSED__116"
           },
           "execute": [
             {
@@ -4078,12 +3703,7 @@ const compositeAbilityObject = {
                   "variableName": "CurrentLockCount",
                   "value": 1,
                   "max": {
-                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__116) || RETURN",
-                    "displayLines": "ENEMIES_OBJECT_UNUSED__116",
-                    "constants": [],
-                    "variables": [
-                      "ENEMIES_OBJECT_UNUSED__116"
-                    ]
+                    "displayLines": "ENEMIES_OBJECT_UNUSED__116"
                   }
                 }
               ]
@@ -4116,25 +3736,14 @@ const compositeAbilityObject = {
                 "value1": "CurrentLockCount",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__116) || RETURN",
-                  "displayLines": "ENEMIES_OBJECT_UNUSED__116",
-                  "constants": [],
-                  "variables": [
-                    "ENEMIES_OBJECT_UNUSED__116"
-                  ]
+                  "displayLines": "ENEMIES_OBJECT_UNUSED__116"
                 }
               },
               "passed": [
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__116) || Variables[1] (CurrentLockCount) || SUB || RETURN",
-                    "displayLines": "(ENEMIES_OBJECT_UNUSED__116 - CurrentLockCount)",
-                    "constants": [],
-                    "variables": [
-                      "ENEMIES_OBJECT_UNUSED__116",
-                      "CurrentLockCount"
-                    ]
+                    "displayLines": "(ENEMIES_OBJECT_UNUSED__116 - CurrentLockCount)"
                   },
                   "execute": [
                     {
@@ -4246,25 +3855,14 @@ const compositeAbilityObject = {
                 "value1": "CurrentLockCount",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__116) || RETURN",
-                  "displayLines": "ENEMIES_OBJECT_UNUSED__116",
-                  "constants": [],
-                  "variables": [
-                    "ENEMIES_OBJECT_UNUSED__116"
-                  ]
+                  "displayLines": "ENEMIES_OBJECT_UNUSED__116"
                 }
               },
               "passed": [
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__116) || Variables[1] (CurrentLockCount) || SUB || RETURN",
-                    "displayLines": "(ENEMIES_OBJECT_UNUSED__116 - CurrentLockCount)",
-                    "constants": [],
-                    "variables": [
-                      "ENEMIES_OBJECT_UNUSED__116",
-                      "CurrentLockCount"
-                    ]
+                    "displayLines": "(ENEMIES_OBJECT_UNUSED__116 - CurrentLockCount)"
                   },
                   "execute": [
                     {
@@ -4448,12 +4046,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -4470,12 +4063,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "HitSplit": 0.3,
             "Toughness": null,
@@ -4492,12 +4080,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "HitSplit": 0.5,
             "Toughness": null,
@@ -4514,29 +4097,14 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1761981801\">MModifier_Monster_W3_Dinosaur_SpeedDownRatio</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
           "duration": {
-            "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
-            "displayLines": "{[PassiveSkillInitiate[3]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkillInitiate[3]]}"
-            ]
+            "displayLines": "{[PassiveSkillInitiate[3]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[PassiveSkillInitiate[1]]}) || RETURN",
-            "displayLines": "{[PassiveSkillInitiate[1]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkillInitiate[1]]}"
-            ]
+            "displayLines": "{[PassiveSkillInitiate[1]]}"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[2]]}"
-              ]
+              "displayLines": "{[PassiveSkillInitiate[2]]}"
             }
           }
         },
@@ -4548,37 +4116,17 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1809911628\">Enemy_W3_Dinosaur_02_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill04[4]]}) || RETURN",
-            "displayLines": "{[Skill04[4]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill04[4]]}"
-            ]
+            "displayLines": "{[Skill04[4]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-            "displayLines": "{[Skill04[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill04[1]]}"
-            ]
+            "displayLines": "{[Skill04[1]]}"
           },
           "stackLimit": {
-            "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-            "displayLines": "{[Skill04[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill04[3]]}"
-            ]
+            "displayLines": "{[Skill04[3]]}"
           },
           "valuePerStack": {
             "Modifier_Burn_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-              "displayLines": "{[Skill04[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[2]]}"
-              ]
+              "displayLines": "{[Skill04[2]]}"
             }
           }
         },
@@ -4602,12 +4150,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"1129261000\">MModifier_Monster_W3_Theater_RLBoss_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Oil to the Banabana</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_10475) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_10475",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_10475"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_10475"
                 }
               }
             }
@@ -4667,12 +4210,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -4689,12 +4227,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-              "displayLines": "{[Skill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[1]]}"
-              ]
+              "displayLines": "{[Skill02[1]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -4711,37 +4244,17 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1809911628\">Enemy_W3_Dinosaur_02_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill04[4]]}) || RETURN",
-            "displayLines": "{[Skill04[4]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill04[4]]}"
-            ]
+            "displayLines": "{[Skill04[4]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-            "displayLines": "{[Skill02[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[2]]}"
-            ]
+            "displayLines": "{[Skill02[2]]}"
           },
           "stackLimit": {
-            "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-            "displayLines": "{[Skill04[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill04[3]]}"
-            ]
+            "displayLines": "{[Skill04[3]]}"
           },
           "valuePerStack": {
             "Modifier_Burn_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-              "displayLines": "{[Skill04[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[2]]}"
-              ]
+              "displayLines": "{[Skill04[2]]}"
             }
           }
         },
@@ -4753,37 +4266,17 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1809911628\">Enemy_W3_Dinosaur_02_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill04[4]]}) || RETURN",
-            "displayLines": "{[Skill04[4]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill04[4]]}"
-            ]
+            "displayLines": "{[Skill04[4]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-            "displayLines": "{[Skill02[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[2]]}"
-            ]
+            "displayLines": "{[Skill02[2]]}"
           },
           "stackLimit": {
-            "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-            "displayLines": "{[Skill04[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill04[3]]}"
-            ]
+            "displayLines": "{[Skill04[3]]}"
           },
           "valuePerStack": {
             "Modifier_Burn_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-              "displayLines": "{[Skill04[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[2]]}"
-              ]
+              "displayLines": "{[Skill04[2]]}"
             }
           }
         },
@@ -4795,29 +4288,14 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1761981801\">MModifier_Monster_W3_Dinosaur_SpeedDownRatio</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
           "duration": {
-            "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
-            "displayLines": "{[PassiveSkillInitiate[3]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkillInitiate[3]]}"
-            ]
+            "displayLines": "{[PassiveSkillInitiate[3]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[PassiveSkillInitiate[1]]}) || RETURN",
-            "displayLines": "{[PassiveSkillInitiate[1]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkillInitiate[1]]}"
-            ]
+            "displayLines": "{[PassiveSkillInitiate[1]]}"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[2]]}"
-              ]
+              "displayLines": "{[PassiveSkillInitiate[2]]}"
             }
           }
         },
@@ -4829,29 +4307,14 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1761981801\">MModifier_Monster_W3_Dinosaur_SpeedDownRatio</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
           "duration": {
-            "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
-            "displayLines": "{[PassiveSkillInitiate[3]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkillInitiate[3]]}"
-            ]
+            "displayLines": "{[PassiveSkillInitiate[3]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[PassiveSkillInitiate[1]]}) || RETURN",
-            "displayLines": "{[PassiveSkillInitiate[1]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkillInitiate[1]]}"
-            ]
+            "displayLines": "{[PassiveSkillInitiate[1]]}"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[2]]}"
-              ]
+              "displayLines": "{[PassiveSkillInitiate[2]]}"
             }
           }
         },

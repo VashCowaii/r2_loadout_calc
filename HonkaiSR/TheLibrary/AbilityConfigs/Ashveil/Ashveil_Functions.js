@@ -223,20 +223,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1185293706\">Ashveil_Ability02_Debuff</a>[<span class=\"descriptionNumberColor\">Bait</span>]",
           "valuePerStack": {
             "MDF_DefenceDownTemp": {
-              "operator": "Variables[0] (0.4) || RETURN",
-              "displayLines": "0.4",
-              "constants": [],
-              "variables": [
-                0.4
-              ]
+              "displayLines": "0.4"
             },
             "MDF_AllDamageTypeResistenceDownTemp": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         }
@@ -306,20 +296,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1185293706\">Ashveil_Ability02_Debuff</a>[<span class=\"descriptionNumberColor\">Bait</span>]",
                   "valuePerStack": {
                     "MDF_DefenceDownTemp": {
-                      "operator": "Variables[0] (0.4) || RETURN",
-                      "displayLines": "0.4",
-                      "constants": [],
-                      "variables": [
-                        0.4
-                      ]
+                      "displayLines": "0.4"
                     },
                     "MDF_AllDamageTypeResistenceDownTemp": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 },

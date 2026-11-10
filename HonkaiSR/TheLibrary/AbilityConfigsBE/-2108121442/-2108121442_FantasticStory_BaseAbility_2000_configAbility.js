@@ -59,52 +59,22 @@ const configAbility = {
       "abilityName": "FantasticStory_BaseAbility_2010",
       "parameters": {
         "ADF_1_Get": {
-          "operator": "Variables[0] (ADF_1) || RETURN",
-          "displayLines": "ADF_1",
-          "constants": [],
-          "variables": [
-            "ADF_1"
-          ]
+          "displayLines": "ADF_1"
         },
         "ADF_2_Get": {
-          "operator": "Variables[0] (ADF_2) || RETURN",
-          "displayLines": "ADF_2",
-          "constants": [],
-          "variables": [
-            "ADF_2"
-          ]
+          "displayLines": "ADF_2"
         },
         "ADF_3_Get": {
-          "operator": "Variables[0] (ADF_3) || RETURN",
-          "displayLines": "ADF_3",
-          "constants": [],
-          "variables": [
-            "ADF_3"
-          ]
+          "displayLines": "ADF_3"
         },
         "ADF_4_Get": {
-          "operator": "Variables[0] (ADF_4) || RETURN",
-          "displayLines": "ADF_4",
-          "constants": [],
-          "variables": [
-            "ADF_4"
-          ]
+          "displayLines": "ADF_4"
         },
         "ADF_5_Get": {
-          "operator": "Variables[0] (ADF_5) || RETURN",
-          "displayLines": "ADF_5",
-          "constants": [],
-          "variables": [
-            "ADF_5"
-          ]
+          "displayLines": "ADF_5"
         },
         "ADF_6_Get": {
-          "operator": "Variables[0] (ADF_6) || RETURN",
-          "displayLines": "ADF_6",
-          "constants": [],
-          "variables": [
-            "ADF_6"
-          ]
+          "displayLines": "ADF_6"
         }
       }
     },
@@ -113,12 +83,7 @@ const configAbility = {
       "abilityName": "FantasticStory_BaseAbility_2010_BaseAddOn",
       "parameters": {
         "ADF_1_Get": {
-          "operator": "Variables[0] (ADF_7) || RETURN",
-          "displayLines": "ADF_7",
-          "constants": [],
-          "variables": [
-            "ADF_7"
-          ]
+          "displayLines": "ADF_7"
         }
       }
     },
@@ -127,12 +92,7 @@ const configAbility = {
       "abilityName": "FantasticStory_BaseAbility_2010_BeforeFever",
       "parameters": {
         "ADF_1_Get": {
-          "operator": "Variables[0] (ADF_8) || RETURN",
-          "displayLines": "ADF_8",
-          "constants": [],
-          "variables": [
-            "ADF_8"
-          ]
+          "displayLines": "ADF_8"
         }
       }
     },
@@ -141,28 +101,13 @@ const configAbility = {
       "abilityName": "FantasticStory_BaseAbility_2010_EnterFever",
       "parameters": {
         "ADF_1_Get": {
-          "operator": "Variables[0] (ADF_9) || RETURN",
-          "displayLines": "ADF_9",
-          "constants": [],
-          "variables": [
-            "ADF_9"
-          ]
+          "displayLines": "ADF_9"
         },
         "ADF_2_Get": {
-          "operator": "Variables[0] (ADF_10) || RETURN",
-          "displayLines": "ADF_10",
-          "constants": [],
-          "variables": [
-            "ADF_10"
-          ]
+          "displayLines": "ADF_10"
         },
         "ADF_3_Get": {
-          "operator": "Variables[0] (ADF_11) || RETURN",
-          "displayLines": "ADF_11",
-          "constants": [],
-          "variables": [
-            "ADF_11"
-          ]
+          "displayLines": "ADF_11"
         }
       }
     }

@@ -77,12 +77,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1545116875\">LC_21064_Sub</a>[<span class=\"descriptionNumberColor\">Elation DMG Vulnerability</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   }
                 }
               ]

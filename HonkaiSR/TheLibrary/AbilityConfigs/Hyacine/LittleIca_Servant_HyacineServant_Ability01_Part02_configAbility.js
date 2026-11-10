@@ -17,25 +17,14 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (_ServantHealValueTotal) || Variables[1] (_SummonerHealValueTotal) || ADD || RETURN",
-        "displayLines": "(_ServantHealValueTotal + _SummonerHealValueTotal)",
-        "constants": [],
-        "variables": [
-          "_ServantHealValueTotal",
-          "_SummonerHealValueTotal"
-        ]
+        "displayLines": "(_ServantHealValueTotal + _SummonerHealValueTotal)"
       },
       "variableName": "_ServantHealValueTotal"
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (_ServantHealValueTotal) || RETURN",
-        "displayLines": "_ServantHealValueTotal",
-        "constants": [],
-        "variables": [
-          "_ServantHealValueTotal"
-        ]
+        "displayLines": "_ServantHealValueTotal"
       },
       "variableName": "_ServantHealValueTotalNew"
     },
@@ -54,13 +43,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_ServantHealValueTotal) || Variables[0] (_ServantHealValueTotal) || Variables[1] (0.5) || MUL || SUB || RETURN",
-            "displayLines": "(_ServantHealValueTotal - (_ServantHealValueTotal * 0.5))",
-            "constants": [],
-            "variables": [
-              "_ServantHealValueTotal",
-              0.5
-            ]
+            "displayLines": "(_ServantHealValueTotal - (_ServantHealValueTotal * 0.5))"
           },
           "variableName": "_ServantHealValueTotal"
         }
@@ -69,13 +52,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_ServantHealValueTotal) || Variables[0] (_ServantHealValueTotal) || Variables[1] (0.12) || MUL || SUB || RETURN",
-            "displayLines": "(_ServantHealValueTotal - (_ServantHealValueTotal * 0.12))",
-            "constants": [],
-            "variables": [
-              "_ServantHealValueTotal",
-              0.12
-            ]
+            "displayLines": "(_ServantHealValueTotal - (_ServantHealValueTotal * 0.12))"
           },
           "variableName": "_ServantHealValueTotal"
         }
@@ -122,21 +99,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "DamageFlat": {
-          "operator": "Variables[0] (_ServantHealValueTotalNew) || Variables[1] (0.2) || MUL || RETURN",
-          "displayLines": "(_ServantHealValueTotalNew * 0.2)",
-          "constants": [],
-          "variables": [
-            "_ServantHealValueTotalNew",
-            0.2
-          ]
+          "displayLines": "(_ServantHealValueTotalNew * 0.2)"
         },
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "ToughnessDMGType": {
           "DamageType": "Wind"

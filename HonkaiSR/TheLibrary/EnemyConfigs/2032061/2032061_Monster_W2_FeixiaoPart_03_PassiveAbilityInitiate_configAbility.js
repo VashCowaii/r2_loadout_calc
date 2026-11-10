@@ -14,12 +14,7 @@ const configAbility = {
       },
       "scope": "TargetEntity",
       "value": {
-        "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-        "displayLines": "{[Skill02[0]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill02[0]]}"
-        ]
+        "displayLines": "{[Skill02[0]]}"
       },
       "variableName": "Skill06DamagePercentage"
     },
@@ -31,12 +26,7 @@ const configAbility = {
       },
       "scope": "TargetEntity",
       "value": {
-        "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-        "displayLines": "{[Skill01[0]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill01[0]]}"
-        ]
+        "displayLines": "{[Skill01[0]]}"
       },
       "variableName": "Skill06DamagePercentage"
     },
@@ -49,28 +39,13 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1928525254\">Monster_W2_FeixiaoPart_SuperArmorController</a>",
       "valuePerStack": {
         "MDF_SuperArmorDamageResistance": {
-          "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-          "displayLines": "{[Skill01[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[1]]}"
-          ]
+          "displayLines": "{[Skill01[1]]}"
         },
         "MDF_BreakActionDelay": {
-          "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-          "displayLines": "{[Skill01[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[2]]}"
-          ]
+          "displayLines": "{[Skill01[2]]}"
         },
         "MDF_SuperArmorBreakDamageAddedRatio": {
-          "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-          "displayLines": "{[Skill01[3]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[3]]}"
-          ]
+          "displayLines": "{[Skill01[3]]}"
         }
       }
     },

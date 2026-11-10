@@ -65,20 +65,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] (0.75) || RETURN",
-                  "displayLines": "0.75",
-                  "constants": [],
-                  "variables": [
-                    0.75
-                  ]
+                  "displayLines": "0.75"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "Tags": [
                   "Summon-Tag DMG"
@@ -130,20 +120,10 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "Damage": {
-                      "operator": "Variables[0] (0.75) || RETURN",
-                      "displayLines": "0.75",
-                      "constants": [],
-                      "variables": [
-                        0.75
-                      ]
+                      "displayLines": "0.75"
                     },
                     "Toughness": {
-                      "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                      "displayLines": "AOE Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "AOE Toughness Value"
-                      ]
+                      "displayLines": "AOE Toughness Value"
                     },
                     "Tags": [
                       "Summon-Tag DMG"
@@ -182,20 +162,10 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Fire",
                         "Damage": {
-                          "operator": "Variables[0] (0.75) || RETURN",
-                          "displayLines": "0.75",
-                          "constants": [],
-                          "variables": [
-                            0.75
-                          ]
+                          "displayLines": "0.75"
                         },
                         "Toughness": {
-                          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                          "displayLines": "AOE Toughness Value",
-                          "constants": [],
-                          "variables": [
-                            "AOE Toughness Value"
-                          ]
+                          "displayLines": "AOE Toughness Value"
                         },
                         "Tags": [
                           "Summon-Tag DMG"
@@ -224,20 +194,10 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] (0.75) || RETURN",
-                              "displayLines": "0.75",
-                              "constants": [],
-                              "variables": [
-                                0.75
-                              ]
+                              "displayLines": "0.75"
                             },
                             "Toughness": {
-                              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                              "displayLines": "AOE Toughness Value",
-                              "constants": [],
-                              "variables": [
-                                "AOE Toughness Value"
-                              ]
+                              "displayLines": "AOE Toughness Value"
                             },
                             "Tags": [
                               "Summon-Tag DMG"
@@ -262,12 +222,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (4) || RETURN",
-            "displayLines": "4",
-            "constants": [],
-            "variables": [
-              4
-            ]
+            "displayLines": "4"
           },
           "execute": [
             {
@@ -322,20 +277,10 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "Damage": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     },
                     "Toughness": {
-                      "operator": "Variables[0] (Lingsha_Rank06_StanceDamage) || RETURN",
-                      "displayLines": "Lingsha_Rank06_StanceDamage",
-                      "constants": [],
-                      "variables": [
-                        "Lingsha_Rank06_StanceDamage"
-                      ]
+                      "displayLines": "Lingsha_Rank06_StanceDamage"
                     },
                     "Tags": [
                       "Summon-Tag DMG"
@@ -387,20 +332,10 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Fire",
                         "Damage": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         },
                         "Toughness": {
-                          "operator": "Variables[0] (Lingsha_Rank06_StanceDamage) || RETURN",
-                          "displayLines": "Lingsha_Rank06_StanceDamage",
-                          "constants": [],
-                          "variables": [
-                            "Lingsha_Rank06_StanceDamage"
-                          ]
+                          "displayLines": "Lingsha_Rank06_StanceDamage"
                         },
                         "Tags": [
                           "Summon-Tag DMG"
@@ -439,20 +374,10 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] (0.5) || RETURN",
-                              "displayLines": "0.5",
-                              "constants": [],
-                              "variables": [
-                                0.5
-                              ]
+                              "displayLines": "0.5"
                             },
                             "Toughness": {
-                              "operator": "Variables[0] (Lingsha_Rank06_StanceDamage) || RETURN",
-                              "displayLines": "Lingsha_Rank06_StanceDamage",
-                              "constants": [],
-                              "variables": [
-                                "Lingsha_Rank06_StanceDamage"
-                              ]
+                              "displayLines": "Lingsha_Rank06_StanceDamage"
                             },
                             "Tags": [
                               "Summon-Tag DMG"
@@ -481,20 +406,10 @@ const configAbility = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] (0.5) || RETURN",
-                                  "displayLines": "0.5",
-                                  "constants": [],
-                                  "variables": [
-                                    0.5
-                                  ]
+                                  "displayLines": "0.5"
                                 },
                                 "Toughness": {
-                                  "operator": "Variables[0] (Lingsha_Rank06_StanceDamage) || RETURN",
-                                  "displayLines": "Lingsha_Rank06_StanceDamage",
-                                  "constants": [],
-                                  "variables": [
-                                    "Lingsha_Rank06_StanceDamage"
-                                  ]
+                                  "displayLines": "Lingsha_Rank06_StanceDamage"
                                 },
                                 "Tags": [
                                   "Summon-Tag DMG"

@@ -35,12 +35,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                    "displayLines": "{[Skill05[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill05[1]]}"
-                    ]
+                    "displayLines": "{[Skill05[1]]}"
                   },
                   "valuePerStack": {
                     "MDF_DirtyHPRatio": 0.1
@@ -87,12 +82,7 @@ const configAbility = {
               },
               "variableName": "MDF_MaxDirtyHPRatio",
               "resetValue": {
-                "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                "displayLines": "{[SkillP01[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP01[0]]}"
-                ]
+                "displayLines": "{[SkillP01[0]]}"
               }
             }
           ]
@@ -117,20 +107,10 @@ const configAbility = {
               },
               "variableName": "MDF_CurrentDirtyHPRatio",
               "value": {
-                "operator": "Variables[0] (MDF_DirtyHPAddedRatio) || RETURN",
-                "displayLines": "MDF_DirtyHPAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_DirtyHPAddedRatio"
-                ]
+                "displayLines": "MDF_DirtyHPAddedRatio"
               },
               "max": {
-                "operator": "Variables[0] (MDF_MaxDirtyHPRatio) || RETURN",
-                "displayLines": "MDF_MaxDirtyHPRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxDirtyHPRatio"
-                ]
+                "displayLines": "MDF_MaxDirtyHPRatio"
               }
             },
             {
@@ -172,21 +152,11 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                       "duration": {
-                        "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                        "displayLines": "{[Skill05[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill05[1]]}"
-                        ]
+                        "displayLines": "{[Skill05[1]]}"
                       },
                       "valuePerStack": {
                         "MDF_DirtyHPRatio": {
-                          "operator": "Variables[0] (MDF_CurrentDirtyHPRatio) || RETURN",
-                          "displayLines": "MDF_CurrentDirtyHPRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentDirtyHPRatio"
-                          ]
+                          "displayLines": "MDF_CurrentDirtyHPRatio"
                         }
                       }
                     }
@@ -208,21 +178,11 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                       "duration": {
-                        "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                        "displayLines": "{[Skill05[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill05[1]]}"
-                        ]
+                        "displayLines": "{[Skill05[1]]}"
                       },
                       "valuePerStack": {
                         "MDF_DirtyHPRatio": {
-                          "operator": "Variables[0] (MDF_CurrentDirtyHPRatio) || RETURN",
-                          "displayLines": "MDF_CurrentDirtyHPRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentDirtyHPRatio"
-                          ]
+                          "displayLines": "MDF_CurrentDirtyHPRatio"
                         }
                       }
                     }
@@ -238,29 +198,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                    "displayLines": "{[Skill05[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill05[1]]}"
-                    ]
+                    "displayLines": "{[Skill05[1]]}"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-                    "displayLines": "{[Skill05[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill05[2]]}"
-                    ]
+                    "displayLines": "{[Skill05[2]]}"
                   },
                   "valuePerStack": {
                     "MDF_DirtyHPRatio": {
-                      "operator": "Variables[0] (MDF_CurrentDirtyHPRatio) || RETURN",
-                      "displayLines": "MDF_CurrentDirtyHPRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_CurrentDirtyHPRatio"
-                      ]
+                      "displayLines": "MDF_CurrentDirtyHPRatio"
                     }
                   }
                 }
@@ -361,21 +306,10 @@ const configAbility = {
                   },
                   "variableName": "MDF_CurrentDirtyHPRatio",
                   "value": {
-                    "operator": "Variables[0] (MDF_HPRatioAfterAttacked) || Variables[1] (MDF_HPRatioBeforeAttacked) || SUB || RETURN",
-                    "displayLines": "(MDF_HPRatioAfterAttacked - MDF_HPRatioBeforeAttacked)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HPRatioAfterAttacked",
-                      "MDF_HPRatioBeforeAttacked"
-                    ]
+                    "displayLines": "(MDF_HPRatioAfterAttacked - MDF_HPRatioBeforeAttacked)"
                   },
                   "max": {
-                    "operator": "Variables[0] (MDF_MaxDirtyHPRatio) || RETURN",
-                    "displayLines": "MDF_MaxDirtyHPRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxDirtyHPRatio"
-                    ]
+                    "displayLines": "MDF_MaxDirtyHPRatio"
                   }
                 },
                 {
@@ -405,21 +339,11 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                       "duration": {
-                        "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                        "displayLines": "{[Skill05[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill05[1]]}"
-                        ]
+                        "displayLines": "{[Skill05[1]]}"
                       },
                       "valuePerStack": {
                         "MDF_DirtyHPRatio": {
-                          "operator": "Variables[0] (MDF_CurrentDirtyHPRatio) || RETURN",
-                          "displayLines": "MDF_CurrentDirtyHPRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentDirtyHPRatio"
-                          ]
+                          "displayLines": "MDF_CurrentDirtyHPRatio"
                         }
                       }
                     },

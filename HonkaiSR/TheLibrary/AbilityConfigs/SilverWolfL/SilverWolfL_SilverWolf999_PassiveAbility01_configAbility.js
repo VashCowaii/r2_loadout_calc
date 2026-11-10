@@ -53,20 +53,10 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (CurScore) || RETURN",
-        "displayLines": "CurScore",
-        "constants": [],
-        "variables": [
-          "CurScore"
-        ]
+        "displayLines": "CurScore"
       },
       "maximum": {
-        "operator": "Variables[0] (60) || RETURN",
-        "displayLines": "60",
-        "constants": [],
-        "variables": [
-          60
-        ]
+        "displayLines": "60"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -91,12 +81,7 @@ const configAbility = {
               "name": "Define Modifier Variable",
               "modifierName": null,
               "value": {
-                "operator": "Variables[0] (CurScore) || RETURN",
-                "displayLines": "CurScore",
-                "constants": [],
-                "variables": [
-                  "CurScore"
-                ]
+                "displayLines": "CurScore"
               }
             }
           ]
@@ -130,60 +115,28 @@ const configAbility = {
               "name": "Define Custom Variable",
               "scope": "ContextTaskTemplate",
               "value": {
-                "operator": "Variables[0] (CEIL) || Constants[0] (1) || Variables[1] (_critChance) || SUB || Variables[2] (0.0039999997) || DIV || PARAM_1 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(((1 - _critChance) / 0.0039999997))",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "CEIL",
-                  "_critChance",
-                  0.0039999997
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(((1 - _critChance) / 0.0039999997))"
               },
               "variableName": "_addCritChanceScore"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (CLAMP) || Variables[1] (MDF_CriticalChanceScore) || Variables[2] (_addCritChanceScore) || ADD || Constants[0] (0) || Variables[3] (CurScore) || PARAM_3 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CLAMP</span>((MDF_CriticalChanceScore + _addCritChanceScore), 0, CurScore)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "CLAMP",
-                  "MDF_CriticalChanceScore",
-                  "_addCritChanceScore",
-                  "CurScore"
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CLAMP</span>((MDF_CriticalChanceScore + _addCritChanceScore), 0, CurScore)"
               },
               "variableName": "MDF_CriticalChanceScore"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.0039999997) || Variables[1] (MDF_CriticalChanceScore) || MUL || RETURN",
-                "displayLines": "(0.0039999997 * MDF_CriticalChanceScore)",
-                "constants": [],
-                "variables": [
-                  0.0039999997,
-                  "MDF_CriticalChanceScore"
-                ]
+                "displayLines": "(0.0039999997 * MDF_CriticalChanceScore)"
               },
               "variableName": "MDF_CriticalChangeAdd"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.007999999) || Variables[1] (CurScore) || Variables[2] (MDF_CriticalChanceScore) || SUB || MUL || RETURN",
-                "displayLines": "(0.007999999 * (CurScore - MDF_CriticalChanceScore))",
-                "constants": [],
-                "variables": [
-                  0.007999999,
-                  "CurScore",
-                  "MDF_CriticalChanceScore"
-                ]
+                "displayLines": "(0.007999999 * (CurScore - MDF_CriticalChanceScore))"
               },
               "variableName": "MDF_CriticalDamageAdd"
             },
@@ -195,12 +148,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_CriticalChangeAdd) || RETURN",
-                "displayLines": "MDF_CriticalChangeAdd",
-                "constants": [],
-                "variables": [
-                  "MDF_CriticalChangeAdd"
-                ]
+                "displayLines": "MDF_CriticalChangeAdd"
               },
               "isRefresh": true
             },
@@ -212,12 +160,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_CriticalDamageAdd) || RETURN",
-                "displayLines": "MDF_CriticalDamageAdd",
-                "constants": [],
-                "variables": [
-                  "MDF_CriticalDamageAdd"
-                ]
+                "displayLines": "MDF_CriticalDamageAdd"
               },
               "isRefresh": true
             }
@@ -240,24 +183,14 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (CurScore) || RETURN",
-                    "displayLines": "CurScore",
-                    "constants": [],
-                    "variables": [
-                      "CurScore"
-                    ]
+                    "displayLines": "CurScore"
                   }
                 },
                 {
                   "name": "Define Modifier Variable",
                   "modifierName": null,
                   "value": {
-                    "operator": "Variables[0] (CurScore) || RETURN",
-                    "displayLines": "CurScore",
-                    "constants": [],
-                    "variables": [
-                      "CurScore"
-                    ]
+                    "displayLines": "CurScore"
                   }
                 },
                 {
@@ -318,13 +251,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurSpecialSP) || Variables[1] (MDF_CurExtraSpecialSP) || ADD || RETURN",
-                    "displayLines": "(MDF_CurSpecialSP + MDF_CurExtraSpecialSP)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurSpecialSP",
-                      "MDF_CurExtraSpecialSP"
-                    ]
+                    "displayLines": "(MDF_CurSpecialSP + MDF_CurExtraSpecialSP)"
                   },
                   "variableName": "CurScore"
                 }
@@ -351,13 +278,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurSpecialSP) || Variables[1] (MDF_CurExtraSpecialSP) || ADD || RETURN",
-                    "displayLines": "(MDF_CurSpecialSP + MDF_CurExtraSpecialSP)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurSpecialSP",
-                      "MDF_CurExtraSpecialSP"
-                    ]
+                    "displayLines": "(MDF_CurSpecialSP + MDF_CurExtraSpecialSP)"
                   },
                   "variableName": "CurScore"
                 }
@@ -413,12 +334,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMaxSpecialOverflow</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (240) || RETURN",
-                "displayLines": "240",
-                "constants": [],
-                "variables": [
-                  240
-                ]
+                "displayLines": "240"
               }
             }
           ]
@@ -456,12 +372,7 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"2105895650\">SilverWolf999_ModifySP</a>",
                   "variables": {
                     "parameter[0]_AddValue": {
-                      "operator": "Variables[0] (_epChange) || RETURN",
-                      "displayLines": "_epChange",
-                      "constants": [],
-                      "variables": [
-                        "_epChange"
-                      ]
+                      "displayLines": "_epChange"
                     }
                   }
                 }

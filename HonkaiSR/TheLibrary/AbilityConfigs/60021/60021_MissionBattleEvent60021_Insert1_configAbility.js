@@ -30,14 +30,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Constants[0] (8) || Variables[0] ({[SkillP01[3]]}) || MUL || RETURN",
-              "displayLines": "(8 * {[SkillP01[3]]})",
-              "constants": [
-                8
-              ],
-              "variables": [
-                "{[SkillP01[3]]}"
-              ]
+              "displayLines": "(8 * {[SkillP01[3]]})"
             },
             "indirectDMG": true,
             "Toughness": {
@@ -82,14 +75,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindBonus</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             },
             {

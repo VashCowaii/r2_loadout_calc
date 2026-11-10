@@ -30,13 +30,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (3) || Variables[1] (1) || ADD || RETURN",
-            "displayLines": "(3 + 1)",
-            "constants": [],
-            "variables": [
-              3,
-              1
-            ]
+            "displayLines": "(3 + 1)"
           },
           "variableName": "MDF_Silwolf_00_AddModifier_LifeTime"
         }
@@ -45,12 +39,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "variableName": "MDF_Silwolf_00_AddModifier_LifeTime"
         }
@@ -161,12 +150,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.72) || RETURN",
-                "displayLines": "0.72",
-                "constants": [],
-                "variables": [
-                  0.72
-                ]
+                "displayLines": "0.72"
               },
               "variableName": "MDF_Silwolf_00_AddModifier_Chance"
             },

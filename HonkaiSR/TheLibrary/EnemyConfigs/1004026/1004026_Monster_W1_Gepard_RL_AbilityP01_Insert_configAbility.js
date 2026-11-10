@@ -47,24 +47,14 @@ const configAbility = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (Soldier01) || RETURN",
-                    "displayLines": "Soldier01",
-                    "constants": [],
-                    "variables": [
-                      "Soldier01"
-                    ]
+                    "displayLines": "Soldier01"
                   },
                   "locationType": "BeforeCaster"
                 },
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (Soldier01) || RETURN",
-                    "displayLines": "Soldier01",
-                    "constants": [],
-                    "variables": [
-                      "Soldier01"
-                    ]
+                    "displayLines": "Soldier01"
                   },
                   "locationType": "Last"
                 }

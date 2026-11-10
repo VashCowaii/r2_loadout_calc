@@ -33,12 +33,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.2) || RETURN",
-                "displayLines": "0.2",
-                "constants": [],
-                "variables": [
-                  0.2
-                ]
+                "displayLines": "0.2"
               }
             }
           ]
@@ -52,12 +47,7 @@ const configAbility = {
         {
           "name": "Variable Value Range Conditions",
           "minValue": {
-            "operator": "Variables[0] (10) || RETURN",
-            "displayLines": "10",
-            "constants": [],
-            "variables": [
-              10
-            ]
+            "displayLines": "10"
           },
           "enteringRange": [
             {

@@ -62,12 +62,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (Tingyun_SpeedUP_Ratio) || RETURN",
-                    "displayLines": "Tingyun_SpeedUP_Ratio",
-                    "constants": [],
-                    "variables": [
-                      "Tingyun_SpeedUP_Ratio"
-                    ]
+                    "displayLines": "Tingyun_SpeedUP_Ratio"
                   }
                 }
               ]
@@ -98,12 +93,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_Rank01_SpeedUp_01) || RETURN",
-                    "displayLines": "MDF_Rank01_SpeedUp_01",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Rank01_SpeedUp_01"
-                    ]
+                    "displayLines": "MDF_Rank01_SpeedUp_01"
                   }
                 }
               ]
@@ -165,12 +155,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
-                            "displayLines": "TingYun_EnergyBarLayer",
-                            "constants": [],
-                            "variables": [
-                              "TingYun_EnergyBarLayer"
-                            ]
+                            "displayLines": "TingYun_EnergyBarLayer"
                           },
                           "maximum": 3,
                           "assignState": "True",
@@ -182,12 +167,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
-                            "displayLines": "TingYun_EnergyBarLayer",
-                            "constants": [],
-                            "variables": [
-                              "TingYun_EnergyBarLayer"
-                            ]
+                            "displayLines": "TingYun_EnergyBarLayer"
                           },
                           "maximum": 3,
                           "assignState": "True",
@@ -258,12 +238,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Update Displayed Energy Bar",
                               "value": {
-                                "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
-                                "displayLines": "TingYun_EnergyBarLayer",
-                                "constants": [],
-                                "variables": [
-                                  "TingYun_EnergyBarLayer"
-                                ]
+                                "displayLines": "TingYun_EnergyBarLayer"
                               },
                               "maximum": 3,
                               "assignState": "True",
@@ -275,12 +250,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Update Displayed Energy Bar",
                               "value": {
-                                "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
-                                "displayLines": "TingYun_EnergyBarLayer",
-                                "constants": [],
-                                "variables": [
-                                  "TingYun_EnergyBarLayer"
-                                ]
+                                "displayLines": "TingYun_EnergyBarLayer"
                               },
                               "maximum": 3,
                               "assignState": "True",
@@ -338,12 +308,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
-                            "displayLines": "TingYun_EnergyBarLayer",
-                            "constants": [],
-                            "variables": [
-                              "TingYun_EnergyBarLayer"
-                            ]
+                            "displayLines": "TingYun_EnergyBarLayer"
                           },
                           "maximum": 3,
                           "assignState": "True",
@@ -355,12 +320,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
-                            "displayLines": "TingYun_EnergyBarLayer",
-                            "constants": [],
-                            "variables": [
-                              "TingYun_EnergyBarLayer"
-                            ]
+                            "displayLines": "TingYun_EnergyBarLayer"
                           },
                           "maximum": 3,
                           "assignState": "True",
@@ -416,12 +376,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
-                            "displayLines": "TingYun_EnergyBarLayer",
-                            "constants": [],
-                            "variables": [
-                              "TingYun_EnergyBarLayer"
-                            ]
+                            "displayLines": "TingYun_EnergyBarLayer"
                           },
                           "maximum": 3,
                           "assignState": "True",
@@ -433,12 +388,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
-                            "displayLines": "TingYun_EnergyBarLayer",
-                            "constants": [],
-                            "variables": [
-                              "TingYun_EnergyBarLayer"
-                            ]
+                            "displayLines": "TingYun_EnergyBarLayer"
                           },
                           "maximum": 3,
                           "assignState": "True",
@@ -497,12 +447,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackDelta) || RETURN",
-                    "displayLines": "MDF_AttackDelta",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackDelta"
-                    ]
+                    "displayLines": "MDF_AttackDelta"
                   }
                 }
               ]
@@ -528,12 +473,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (MDF_Rank02_SPAdd) || RETURN",
-                        "displayLines": "MDF_Rank02_SPAdd",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Rank02_SPAdd"
-                        ]
+                        "displayLines": "MDF_Rank02_SPAdd"
                       },
                       "isFixed": "* ERR"
                     },
@@ -571,13 +511,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Thunder",
                         "Damage": {
-                          "operator": "Variables[0] (MDF_Passive_DamagePercentage) || Variables[1] (MDF_Rank04_DamagePercentage) || ADD || RETURN",
-                          "displayLines": "(MDF_Passive_DamagePercentage + MDF_Rank04_DamagePercentage)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Passive_DamagePercentage",
-                            "MDF_Rank04_DamagePercentage"
-                          ]
+                          "displayLines": "(MDF_Passive_DamagePercentage + MDF_Rank04_DamagePercentage)"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -620,12 +554,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Thunder",
                         "Damage": {
-                          "operator": "Variables[0] (MDF_Passive_DamagePercentageSelf) || RETURN",
-                          "displayLines": "MDF_Passive_DamagePercentageSelf",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Passive_DamagePercentageSelf"
-                          ]
+                          "displayLines": "MDF_Passive_DamagePercentageSelf"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -699,12 +628,7 @@ const compositeAbilityObject = {
                       "duration": 1,
                       "valuePerStack": {
                         "MDF_Eidolon1_SpeedUp_01": {
-                          "operator": "Variables[0] (MDF_Rank01_SpeedUp) || RETURN",
-                          "displayLines": "MDF_Rank01_SpeedUp",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Rank01_SpeedUp"
-                          ]
+                          "displayLines": "MDF_Rank01_SpeedUp"
                         }
                       }
                     }
@@ -758,12 +682,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackDelta) || RETURN",
-                    "displayLines": "MDF_AttackDelta",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackDelta"
-                    ]
+                    "displayLines": "MDF_AttackDelta"
                   }
                 }
               ]
@@ -789,12 +708,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (MDF_Rank02_SPAdd) || RETURN",
-                        "displayLines": "MDF_Rank02_SPAdd",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Rank02_SPAdd"
-                        ]
+                        "displayLines": "MDF_Rank02_SPAdd"
                       },
                       "isFixed": "* ERR"
                     },
@@ -832,12 +746,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Thunder",
                         "Damage": {
-                          "operator": "Variables[0] (MDF_Passive_DamagePercentage) || RETURN",
-                          "displayLines": "MDF_Passive_DamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Passive_DamagePercentage"
-                          ]
+                          "displayLines": "MDF_Passive_DamagePercentage"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -880,12 +789,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Thunder",
                         "Damage": {
-                          "operator": "Variables[0] (MDF_Passive_DamagePercentageSelf) || RETURN",
-                          "displayLines": "MDF_Passive_DamagePercentageSelf",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Passive_DamagePercentageSelf"
-                          ]
+                          "displayLines": "MDF_Passive_DamagePercentageSelf"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -959,12 +863,7 @@ const compositeAbilityObject = {
                       "duration": 1,
                       "valuePerStack": {
                         "MDF_Eidolon1_SpeedUp_01": {
-                          "operator": "Variables[0] (MDF_Rank01_SpeedUp) || RETURN",
-                          "displayLines": "MDF_Rank01_SpeedUp",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Rank01_SpeedUp"
-                          ]
+                          "displayLines": "MDF_Rank01_SpeedUp"
                         }
                       }
                     }
@@ -1005,12 +904,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackDelta) || RETURN",
-                    "displayLines": "MDF_AttackDelta",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackDelta"
-                    ]
+                    "displayLines": "MDF_AttackDelta"
                   }
                 }
               ]
@@ -1037,12 +931,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Thunder",
                         "Damage": {
-                          "operator": "Variables[0] (MDF_Passive_DamagePercentage) || RETURN",
-                          "displayLines": "MDF_Passive_DamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Passive_DamagePercentage"
-                          ]
+                          "displayLines": "MDF_Passive_DamagePercentage"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -1085,12 +974,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Thunder",
                         "Damage": {
-                          "operator": "Variables[0] (MDF_Passive_DamagePercentageSelf) || RETURN",
-                          "displayLines": "MDF_Passive_DamagePercentageSelf",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Passive_DamagePercentageSelf"
-                          ]
+                          "displayLines": "MDF_Passive_DamagePercentageSelf"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -1164,12 +1048,7 @@ const compositeAbilityObject = {
                       "duration": 1,
                       "valuePerStack": {
                         "MDF_Eidolon1_SpeedUp_01": {
-                          "operator": "Variables[0] (MDF_Rank01_SpeedUp) || RETURN",
-                          "displayLines": "MDF_Rank01_SpeedUp",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Rank01_SpeedUp"
-                          ]
+                          "displayLines": "MDF_Rank01_SpeedUp"
                         }
                       }
                     }
@@ -1210,12 +1089,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackDelta) || RETURN",
-                    "displayLines": "MDF_AttackDelta",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackDelta"
-                    ]
+                    "displayLines": "MDF_AttackDelta"
                   }
                 }
               ]
@@ -1242,12 +1116,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Thunder",
                         "Damage": {
-                          "operator": "Variables[0] (MDF_Passive_DamagePercentage) || RETURN",
-                          "displayLines": "MDF_Passive_DamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Passive_DamagePercentage"
-                          ]
+                          "displayLines": "MDF_Passive_DamagePercentage"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -1290,12 +1159,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Thunder",
                         "Damage": {
-                          "operator": "Variables[0] (MDF_Passive_DamagePercentageSelf) || RETURN",
-                          "displayLines": "MDF_Passive_DamagePercentageSelf",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Passive_DamagePercentageSelf"
-                          ]
+                          "displayLines": "MDF_Passive_DamagePercentageSelf"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -1432,12 +1296,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
-                    "displayLines": "TingYun_EnergyBarLayer",
-                    "constants": [],
-                    "variables": [
-                      "TingYun_EnergyBarLayer"
-                    ]
+                    "displayLines": "TingYun_EnergyBarLayer"
                   },
                   "maximum": 3,
                   "assignState": "True",
@@ -1548,12 +1407,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (5) || RETURN",
-                    "displayLines": "5",
-                    "constants": [],
-                    "variables": [
-                      5
-                    ]
+                    "displayLines": "5"
                   },
                   "isFixed": "* ERR"
                 }
@@ -1947,13 +1801,7 @@ const compositeAbilityObject = {
                 "target": "{{Ability Target(ST)}}"
               },
               "value": {
-                "operator": "Variables[0] (50) || Variables[1] (10) || ADD || RETURN",
-                "displayLines": "(50 + 10)",
-                "constants": [],
-                "variables": [
-                  50,
-                  10
-                ]
+                "displayLines": "(50 + 10)"
               },
               "isFixed": "(Fixed)",
               "tag": "ActiveSkillAdd"
@@ -1967,12 +1815,7 @@ const compositeAbilityObject = {
                 "target": "{{Ability Target(ST)}}"
               },
               "value": {
-                "operator": "Variables[0] (50) || RETURN",
-                "displayLines": "50",
-                "constants": [],
-                "variables": [
-                  50
-                ]
+                "displayLines": "50"
               },
               "isFixed": "(Fixed)",
               "tag": "ActiveSkillAdd"
@@ -1987,22 +1830,12 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"132060184\">TingYun_Ability03DamageUp</a>[<span class=\"descriptionNumberColor\">Amidst the Rejoicing Clouds</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "immediateEffect": true,
           "valuePerStack": {
             "MDF_DamageAddedRatio": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             }
           }
         },
@@ -2042,12 +1875,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageAddedRatio) || RETURN",
-                    "displayLines": "MDF_DamageAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageAddedRatio"
-                    ]
+                    "displayLines": "MDF_DamageAddedRatio"
                   }
                 }
               ]
@@ -2132,12 +1960,7 @@ const compositeAbilityObject = {
               "duration": 1,
               "valuePerStack": {
                 "Tingyun_SpeedUP_Ratio": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             }
@@ -2164,26 +1987,14 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (MDF_Target_CurrentAttack) || Variables[1] (0.5) || MUL || RETURN",
-            "displayLines": "(MDF_Target_CurrentAttack * 0.5)",
-            "constants": [],
-            "variables": [
-              "MDF_Target_CurrentAttack",
-              0.5
-            ]
+            "displayLines": "(MDF_Target_CurrentAttack * 0.5)"
           },
           "variableName": "MDF_Target_CurrentAttack"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (MDF_Tingyun_Attack) || Variables[1] (0.25) || MUL || RETURN",
-            "displayLines": "(MDF_Tingyun_Attack * 0.25)",
-            "constants": [],
-            "variables": [
-              "MDF_Tingyun_Attack",
-              0.25
-            ]
+            "displayLines": "(MDF_Tingyun_Attack * 0.25)"
           },
           "variableName": "MDF_Tingyun_Attack"
         },
@@ -2194,24 +2005,14 @@ const compositeAbilityObject = {
             "value1": "MDF_Target_CurrentAttack",
             "compareType": ">",
             "value2": {
-              "operator": "Variables[0] (MDF_Tingyun_Attack) || RETURN",
-              "displayLines": "MDF_Tingyun_Attack",
-              "constants": [],
-              "variables": [
-                "MDF_Tingyun_Attack"
-              ]
+              "displayLines": "MDF_Tingyun_Attack"
             }
           },
           "passed": [
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_Tingyun_Attack) || RETURN",
-                "displayLines": "MDF_Tingyun_Attack",
-                "constants": [],
-                "variables": [
-                  "MDF_Tingyun_Attack"
-                ]
+                "displayLines": "MDF_Tingyun_Attack"
               },
               "variableName": "MDF_Skill02_Attack"
             }
@@ -2220,12 +2021,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_Target_CurrentAttack) || RETURN",
-                "displayLines": "MDF_Target_CurrentAttack",
-                "constants": [],
-                "variables": [
-                  "MDF_Target_CurrentAttack"
-                ]
+                "displayLines": "MDF_Target_CurrentAttack"
               },
               "variableName": "MDF_Skill02_Attack"
             }
@@ -2268,29 +2064,14 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "valuePerStack": {
                 "MDF_AttackDelta": {
-                  "operator": "Variables[0] (MDF_Skill02_Attack) || RETURN",
-                  "displayLines": "MDF_Skill02_Attack",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Skill02_Attack"
-                  ]
+                  "displayLines": "MDF_Skill02_Attack"
                 },
                 "MDF_Eidolon1_SpeedUp": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 },
                 "MDF_Eidolon1_Count": 1
               }
@@ -2305,29 +2086,14 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "valuePerStack": {
                 "MDF_AttackDelta": {
-                  "operator": "Variables[0] (MDF_Skill02_Attack) || RETURN",
-                  "displayLines": "MDF_Skill02_Attack",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Skill02_Attack"
-                  ]
+                  "displayLines": "MDF_Skill02_Attack"
                 },
                 "MDF_Eidolon1_SpeedUp": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 },
                 "MDF_Eidolon1_Count": 0
               }
@@ -2418,52 +2184,22 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-888637681\">TingYun_Passive_LeiLing_Eidolon4</a>",
               "valuePerStack": {
                 "MDF_Passive_DamagePercentage": {
-                  "operator": "Variables[0] (0.4) || RETURN",
-                  "displayLines": "0.4",
-                  "constants": [],
-                  "variables": [
-                    0.4
-                  ]
+                  "displayLines": "0.4"
                 },
                 "MDF_Passive_DamagePercentageSelf": {
-                  "operator": "Variables[0] (0.6) || RETURN",
-                  "displayLines": "0.6",
-                  "constants": [],
-                  "variables": [
-                    0.6
-                  ]
+                  "displayLines": "0.6"
                 },
                 "MDF_Eidolon1_SpeedUp": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 },
                 "MDF_Eidolon2_SPAdd": {
-                  "operator": "Variables[0] (5) || RETURN",
-                  "displayLines": "5",
-                  "constants": [],
-                  "variables": [
-                    5
-                  ]
+                  "displayLines": "5"
                 },
                 "MDF_Eidolon4_DamagePercentage": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 },
                 "MDF_AttackDelta": {
-                  "operator": "Variables[0] (MDF_Skill02_Attack) || RETURN",
-                  "displayLines": "MDF_Skill02_Attack",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Skill02_Attack"
-                  ]
+                  "displayLines": "MDF_Skill02_Attack"
                 }
               },
               "casterAssign": "TargetSelf"
@@ -2486,44 +2222,19 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-922192919\">TingYun_Passive_LeiLing_Eidolon2</a>",
                   "valuePerStack": {
                     "MDF_Passive_DamagePercentage": {
-                      "operator": "Variables[0] (0.4) || RETURN",
-                      "displayLines": "0.4",
-                      "constants": [],
-                      "variables": [
-                        0.4
-                      ]
+                      "displayLines": "0.4"
                     },
                     "MDF_Passive_DamagePercentageSelf": {
-                      "operator": "Variables[0] (0.6) || RETURN",
-                      "displayLines": "0.6",
-                      "constants": [],
-                      "variables": [
-                        0.6
-                      ]
+                      "displayLines": "0.6"
                     },
                     "MDF_Eidolon1_SpeedUp": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     },
                     "MDF_Eidolon2_SPAdd": {
-                      "operator": "Variables[0] (5) || RETURN",
-                      "displayLines": "5",
-                      "constants": [],
-                      "variables": [
-                        5
-                      ]
+                      "displayLines": "5"
                     },
                     "MDF_AttackDelta": {
-                      "operator": "Variables[0] (MDF_Skill02_Attack) || RETURN",
-                      "displayLines": "MDF_Skill02_Attack",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Skill02_Attack"
-                      ]
+                      "displayLines": "MDF_Skill02_Attack"
                     }
                   },
                   "casterAssign": "TargetSelf"
@@ -2546,36 +2257,16 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-972525776\">TingYun_Passive_LeiLing_Eidolon1</a>",
                       "valuePerStack": {
                         "MDF_Passive_DamagePercentage": {
-                          "operator": "Variables[0] (0.4) || RETURN",
-                          "displayLines": "0.4",
-                          "constants": [],
-                          "variables": [
-                            0.4
-                          ]
+                          "displayLines": "0.4"
                         },
                         "MDF_Passive_DamagePercentageSelf": {
-                          "operator": "Variables[0] (0.6) || RETURN",
-                          "displayLines": "0.6",
-                          "constants": [],
-                          "variables": [
-                            0.6
-                          ]
+                          "displayLines": "0.6"
                         },
                         "MDF_Eidolon1_SpeedUp": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         },
                         "MDF_AttackDelta": {
-                          "operator": "Variables[0] (MDF_Skill02_Attack) || RETURN",
-                          "displayLines": "MDF_Skill02_Attack",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Skill02_Attack"
-                          ]
+                          "displayLines": "MDF_Skill02_Attack"
                         }
                       },
                       "casterAssign": "TargetSelf"
@@ -2591,28 +2282,13 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1351488572\">TingYun_Passive_LeiLing</a>",
                       "valuePerStack": {
                         "MDF_Passive_DamagePercentage": {
-                          "operator": "Variables[0] (0.4) || RETURN",
-                          "displayLines": "0.4",
-                          "constants": [],
-                          "variables": [
-                            0.4
-                          ]
+                          "displayLines": "0.4"
                         },
                         "MDF_Passive_DamagePercentageSelf": {
-                          "operator": "Variables[0] (0.6) || RETURN",
-                          "displayLines": "0.6",
-                          "constants": [],
-                          "variables": [
-                            0.6
-                          ]
+                          "displayLines": "0.6"
                         },
                         "MDF_AttackDelta": {
-                          "operator": "Variables[0] (MDF_Skill02_Attack) || RETURN",
-                          "displayLines": "MDF_Skill02_Attack",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Skill02_Attack"
-                          ]
+                          "displayLines": "MDF_Skill02_Attack"
                         }
                       },
                       "casterAssign": "TargetSelf"
@@ -2626,12 +2302,7 @@ const compositeAbilityObject = {
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
-            "displayLines": "TingYun_EnergyBarLayer",
-            "constants": [],
-            "variables": [
-              "TingYun_EnergyBarLayer"
-            ]
+            "displayLines": "TingYun_EnergyBarLayer"
           },
           "maximum": 3,
           "assignState": "True",
@@ -2730,21 +2401,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "HitSplit": 0.3,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -2760,21 +2421,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "HitSplit": 0.7,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"

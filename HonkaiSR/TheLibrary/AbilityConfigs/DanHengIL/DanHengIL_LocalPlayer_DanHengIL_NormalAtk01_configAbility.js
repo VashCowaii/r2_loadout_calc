@@ -33,24 +33,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (SprintModifiedSteerSpeed) || RETURN",
-            "displayLines": "SprintModifiedSteerSpeed",
-            "constants": [],
-            "variables": [
-              "SprintModifiedSteerSpeed"
-            ]
+            "displayLines": "SprintModifiedSteerSpeed"
           },
           "variableName": "SprintModifiedSteerSpeed"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (SprintModifiedSpeed) || RETURN",
-            "displayLines": "SprintModifiedSpeed",
-            "constants": [],
-            "variables": [
-              "SprintModifiedSpeed"
-            ]
+            "displayLines": "SprintModifiedSpeed"
           },
           "variableName": "SprintModifiedSpeed"
         },
@@ -182,12 +172,7 @@ const configAbility = {
                 "value1": "SprintModifiedSteerSpeed",
                 "compareType": "<=",
                 "value2": {
-                  "operator": "Constants[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [
-                    1
-                  ],
-                  "variables": []
+                  "displayLines": "1"
                 },
                 "contextScope": "ContextAbility"
               }

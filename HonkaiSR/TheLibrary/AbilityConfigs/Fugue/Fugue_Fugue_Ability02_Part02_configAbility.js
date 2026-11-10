@@ -53,37 +53,17 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-690913647\">Fugue_BPAbilityBonusListen</a>[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]",
       "duration": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "valuePerStack": {
         "MDF_Chance": {
-          "operator": "Variables[0] (1) || RETURN",
-          "displayLines": "1",
-          "constants": [],
-          "variables": [
-            1
-          ]
+          "displayLines": "1"
         },
         "MDF_DefenceDownRatio": {
-          "operator": "Variables[0] (0.18) || RETURN",
-          "displayLines": "0.18",
-          "constants": [],
-          "variables": [
-            0.18
-          ]
+          "displayLines": "0.18"
         },
         "MDF_LifeTime": {
-          "operator": "Variables[0] (2) || RETURN",
-          "displayLines": "2",
-          "constants": [],
-          "variables": [
-            2
-          ]
+          "displayLines": "2"
         }
       }
     },
@@ -120,60 +100,25 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1216788746\">Fugue_BPAbility_Eidolon4</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
               "valuePerStack": {
                 "MDF_BreakDamageAdd": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 },
                 "MDF_StanceBreakAddRatio": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
+                  "displayLines": "0.5"
                 },
                 "MDF_Chance": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 },
                 "MDF_DefenceDownRatio": {
-                  "operator": "Variables[0] (0.18) || RETURN",
-                  "displayLines": "0.18",
-                  "constants": [],
-                  "variables": [
-                    0.18
-                  ]
+                  "displayLines": "0.18"
                 },
                 "MDF_BreakDamageAddedRatio": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 },
                 "MDF_LifeTime": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
+                  "displayLines": "2"
                 },
                 "MDF_PropertyRatio": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
+                  "displayLines": "0.5"
                 }
               }
             }
@@ -195,52 +140,22 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1132900651\">Fugue_BPAbility_Eidolon1</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
                   "valuePerStack": {
                     "MDF_BreakDamageAdd": {
-                      "operator": "Variables[0] (0.3) || RETURN",
-                      "displayLines": "0.3",
-                      "constants": [],
-                      "variables": [
-                        0.3
-                      ]
+                      "displayLines": "0.3"
                     },
                     "MDF_StanceBreakAddRatio": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     },
                     "MDF_Chance": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     },
                     "MDF_DefenceDownRatio": {
-                      "operator": "Variables[0] (0.18) || RETURN",
-                      "displayLines": "0.18",
-                      "constants": [],
-                      "variables": [
-                        0.18
-                      ]
+                      "displayLines": "0.18"
                     },
                     "MDF_LifeTime": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     },
                     "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   }
                 }
@@ -255,44 +170,19 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"647019371\">Fugue_BPAbility</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
                   "valuePerStack": {
                     "MDF_BreakDamageAdd": {
-                      "operator": "Variables[0] (0.3) || RETURN",
-                      "displayLines": "0.3",
-                      "constants": [],
-                      "variables": [
-                        0.3
-                      ]
+                      "displayLines": "0.3"
                     },
                     "MDF_Chance": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     },
                     "MDF_DefenceDownRatio": {
-                      "operator": "Variables[0] (0.18) || RETURN",
-                      "displayLines": "0.18",
-                      "constants": [],
-                      "variables": [
-                        0.18
-                      ]
+                      "displayLines": "0.18"
                     },
                     "MDF_LifeTime": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     },
                     "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   }
                 }
@@ -403,12 +293,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_StanceBreakAddRatio) || RETURN",
-                "displayLines": "MDF_StanceBreakAddRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_StanceBreakAddRatio"
-                ]
+                "displayLines": "MDF_StanceBreakAddRatio"
               }
             },
             {
@@ -419,12 +304,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_BreakDamageAdd) || RETURN",
-                "displayLines": "MDF_BreakDamageAdd",
-                "constants": [],
-                "variables": [
-                  "MDF_BreakDamageAdd"
-                ]
+                "displayLines": "MDF_BreakDamageAdd"
               }
             },
             {
@@ -435,12 +315,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             }
           ]
@@ -494,12 +369,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_StanceBreakAddRatio) || RETURN",
-                "displayLines": "MDF_StanceBreakAddRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_StanceBreakAddRatio"
-                ]
+                "displayLines": "MDF_StanceBreakAddRatio"
               }
             },
             {
@@ -510,12 +380,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_BreakDamageAdd) || RETURN",
-                "displayLines": "MDF_BreakDamageAdd",
-                "constants": [],
-                "variables": [
-                  "MDF_BreakDamageAdd"
-                ]
+                "displayLines": "MDF_BreakDamageAdd"
               }
             },
             {
@@ -526,12 +391,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             }
           ]
@@ -584,12 +444,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_BreakDamageAdd) || RETURN",
-                "displayLines": "MDF_BreakDamageAdd",
-                "constants": [],
-                "variables": [
-                  "MDF_BreakDamageAdd"
-                ]
+                "displayLines": "MDF_BreakDamageAdd"
               }
             },
             {
@@ -600,12 +455,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             }
           ]
@@ -707,12 +557,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (Skill02_EnergyBarCount) || RETURN",
-                "displayLines": "Skill02_EnergyBarCount",
-                "constants": [],
-                "variables": [
-                  "Skill02_EnergyBarCount"
-                ]
+                "displayLines": "Skill02_EnergyBarCount"
               },
               "maximum": 3,
               "assignState": "True",

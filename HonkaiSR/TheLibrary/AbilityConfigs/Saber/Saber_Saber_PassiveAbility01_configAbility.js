@@ -41,20 +41,10 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (DV_SurgePoint) || RETURN",
-        "displayLines": "DV_SurgePoint",
-        "constants": [],
-        "variables": [
-          "DV_SurgePoint"
-        ]
+        "displayLines": "DV_SurgePoint"
       },
       "maximum": {
-        "operator": "Variables[0] (DV_SurgePointMax) || RETURN",
-        "displayLines": "DV_SurgePointMax",
-        "constants": [],
-        "variables": [
-          "DV_SurgePointMax"
-        ]
+        "displayLines": "DV_SurgePointMax"
       },
       "assignState": "True",
       "priorState": "Active",
@@ -92,12 +82,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1437622489\">Saber_Trace01_Bonus</a>[<span class=\"descriptionNumberColor\">Knight of the Dragon</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         }
@@ -120,12 +105,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (200) || RETURN",
-                "displayLines": "200",
-                "constants": [],
-                "variables": [
-                  200
-                ]
+                "displayLines": "200"
               },
               "variableName": "Saber_00_EntityMaxStockSP"
             }
@@ -134,12 +114,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (120) || RETURN",
-                "displayLines": "120",
-                "constants": [],
-                "variables": [
-                  120
-                ]
+                "displayLines": "120"
               },
               "variableName": "Saber_00_EntityMaxStockSP"
             }
@@ -266,21 +241,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"581836941\">Saber_Trace03_Bonus</a>[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   }
                 }
@@ -357,21 +322,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-435192710\">Saber_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">Dragon Reactor Core</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.6) || RETURN",
-                      "displayLines": "0.6",
-                      "constants": [],
-                      "variables": [
-                        0.6
-                      ]
+                      "displayLines": "0.6"
                     }
                   }
                 },
@@ -384,12 +339,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   }
                 },
                 {
@@ -407,30 +357,15 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1328926688\">Saber_Trace03_Bonus_02</a>[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (8) || RETURN",
-                        "displayLines": "8",
-                        "constants": [],
-                        "variables": [
-                          8
-                        ]
+                        "displayLines": "8"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.04) || RETURN",
-                          "displayLines": "0.04",
-                          "constants": [],
-                          "variables": [
-                            0.04
-                          ]
+                          "displayLines": "0.04"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       }
                     }
                   ]
@@ -450,30 +385,15 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1058966793\">Saber_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">The Lost Oath of the Round Table</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (15) || RETURN",
-                        "displayLines": "15",
-                        "constants": [],
-                        "variables": [
-                          15
-                        ]
+                        "displayLines": "15"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.01) || RETURN",
-                          "displayLines": "0.01",
-                          "constants": [],
-                          "variables": [
-                            0.01
-                          ]
+                          "displayLines": "0.01"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       }
                     }
                   ]
@@ -483,12 +403,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (DV_SurgePoint) || RETURN",
-                "displayLines": "DV_SurgePoint",
-                "constants": [],
-                "variables": [
-                  "DV_SurgePoint"
-                ]
+                "displayLines": "DV_SurgePoint"
               }
             }
           ]
@@ -530,31 +445,16 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   }
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (DV_SurgePoint) || RETURN",
-                    "displayLines": "DV_SurgePoint",
-                    "constants": [],
-                    "variables": [
-                      "DV_SurgePoint"
-                    ]
+                    "displayLines": "DV_SurgePoint"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (DV_SurgePointMax) || RETURN",
-                    "displayLines": "DV_SurgePointMax",
-                    "constants": [],
-                    "variables": [
-                      "DV_SurgePointMax"
-                    ]
+                    "displayLines": "DV_SurgePointMax"
                   },
                   "assignState": "True",
                   "priorState": "Active",
@@ -575,30 +475,15 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1328926688\">Saber_Trace03_Bonus_02</a>[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (8) || RETURN",
-                        "displayLines": "8",
-                        "constants": [],
-                        "variables": [
-                          8
-                        ]
+                        "displayLines": "8"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.04) || RETURN",
-                          "displayLines": "0.04",
-                          "constants": [],
-                          "variables": [
-                            0.04
-                          ]
+                          "displayLines": "0.04"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       }
                     }
                   ]
@@ -618,30 +503,15 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1058966793\">Saber_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">The Lost Oath of the Round Table</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (15) || RETURN",
-                        "displayLines": "15",
-                        "constants": [],
-                        "variables": [
-                          15
-                        ]
+                        "displayLines": "15"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.01) || RETURN",
-                          "displayLines": "0.01",
-                          "constants": [],
-                          "variables": [
-                            0.01
-                          ]
+                          "displayLines": "0.01"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       }
                     }
                   ]
@@ -672,12 +542,7 @@ const configAbility = {
                     "value1": "Energy%",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (0.6) || RETURN",
-                      "displayLines": "0.6",
-                      "constants": [],
-                      "variables": [
-                        0.6
-                      ]
+                      "displayLines": "0.6"
                     }
                   }
                 ]
@@ -699,13 +564,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (_MaxSP) || Variables[1] (0.6) || MUL || RETURN",
-                    "displayLines": "(_MaxSP * 0.6)",
-                    "constants": [],
-                    "variables": [
-                      "_MaxSP",
-                      0.6
-                    ]
+                    "displayLines": "(_MaxSP * 0.6)"
                   },
                   "adjustment": "Set"
                 }
@@ -757,12 +616,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1386884047\">Saber_Energy_Count</a>[<span class=\"descriptionNumberColor\">Core Resonance</span>]",
                       "counter": {
-                        "operator": "Variables[0] (DV_SurgePoint) || RETURN",
-                        "displayLines": "DV_SurgePoint",
-                        "constants": [],
-                        "variables": [
-                          "DV_SurgePoint"
-                        ]
+                        "displayLines": "DV_SurgePoint"
                       }
                     }
                   ],
@@ -806,12 +660,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1386884047\">Saber_Energy_Count</a>[<span class=\"descriptionNumberColor\">Core Resonance</span>]",
                       "counter": {
-                        "operator": "Variables[0] (DV_SurgePoint) || RETURN",
-                        "displayLines": "DV_SurgePoint",
-                        "constants": [],
-                        "variables": [
-                          "DV_SurgePoint"
-                        ]
+                        "displayLines": "DV_SurgePoint"
                       }
                     }
                   ],
@@ -872,12 +721,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -913,25 +757,13 @@ const configAbility = {
                   },
                   "modifierName": "<a class=\"gModGreen\" id=\"-1667717158\">Saber_Passive_ExceedSpStatus</a>[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
                   "value": {
-                    "operator": "Variables[0] (WHOLE) || Variables[1] (Saber_00_EntityStockSPForShow) || PARAM_1 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(Saber_00_EntityStockSPForShow)",
-                    "constants": [],
-                    "variables": [
-                      "WHOLE",
-                      "Saber_00_EntityStockSPForShow"
-                    ]
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(Saber_00_EntityStockSPForShow)"
                   }
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (WHOLE) || Variables[1] (Saber_00_EntityStockSPForShow) || PARAM_1 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(Saber_00_EntityStockSPForShow)",
-                    "constants": [],
-                    "variables": [
-                      "WHOLE",
-                      "Saber_00_EntityStockSPForShow"
-                    ]
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(Saber_00_EntityStockSPForShow)"
                   },
                   "variableName": "Saber_00_EntityStockSPForShow_Fake"
                 }
@@ -981,12 +813,7 @@ const configAbility = {
                 "value1": "_SPChangeValue",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Variables[0] (_SPChangeValueRaw) || RETURN",
-                  "displayLines": "_SPChangeValueRaw",
-                  "constants": [],
-                  "variables": [
-                    "_SPChangeValueRaw"
-                  ]
+                  "displayLines": "_SPChangeValueRaw"
                 }
               },
               "failed": [
@@ -1015,14 +842,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (Saber_00_EntityCurrentSP) || Variables[1] (_SPChangeValue) || SUB || Variables[2] (_SPChangeValueRaw) || ADD || RETURN",
-                        "displayLines": "((Saber_00_EntityCurrentSP - _SPChangeValue) + _SPChangeValueRaw)",
-                        "constants": [],
-                        "variables": [
-                          "Saber_00_EntityCurrentSP",
-                          "_SPChangeValue",
-                          "_SPChangeValueRaw"
-                        ]
+                        "displayLines": "((Saber_00_EntityCurrentSP - _SPChangeValue) + _SPChangeValueRaw)"
                       },
                       "variableName": "Saber_00_EntityCurrentSP"
                     },
@@ -1046,12 +866,7 @@ const configAbility = {
                         "value1": "Saber_00_EntityCurrentSP",
                         "compareType": ">",
                         "value2": {
-                          "operator": "Variables[0] (Saber_00_EntityMaxSP) || RETURN",
-                          "displayLines": "Saber_00_EntityMaxSP",
-                          "constants": [],
-                          "variables": [
-                            "Saber_00_EntityMaxSP"
-                          ]
+                          "displayLines": "Saber_00_EntityMaxSP"
                         }
                       },
                       "passed": [
@@ -1062,14 +877,7 @@ const configAbility = {
                             "target": "{{Modifier Holder}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (Saber_00_EntityStockSP) || Variables[1] (Saber_00_EntityCurrentSP) || ADD || Variables[2] (Saber_00_EntityMaxSP) || SUB || RETURN",
-                            "displayLines": "((Saber_00_EntityStockSP + Saber_00_EntityCurrentSP) - Saber_00_EntityMaxSP)",
-                            "constants": [],
-                            "variables": [
-                              "Saber_00_EntityStockSP",
-                              "Saber_00_EntityCurrentSP",
-                              "Saber_00_EntityMaxSP"
-                            ]
+                            "displayLines": "((Saber_00_EntityStockSP + Saber_00_EntityCurrentSP) - Saber_00_EntityMaxSP)"
                           },
                           "variableName": "Saber_00_EntityStockSP"
                         },
@@ -1080,12 +888,7 @@ const configAbility = {
                             "value1": "Saber_00_EntityStockSP",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (Saber_00_EntityMaxStockSP) || RETURN",
-                              "displayLines": "Saber_00_EntityMaxStockSP",
-                              "constants": [],
-                              "variables": [
-                                "Saber_00_EntityMaxStockSP"
-                              ]
+                              "displayLines": "Saber_00_EntityMaxStockSP"
                             }
                           },
                           "passed": [
@@ -1096,12 +899,7 @@ const configAbility = {
                                 "target": "{{Modifier Holder}}"
                               },
                               "value": {
-                                "operator": "Variables[0] (Saber_00_EntityMaxStockSP) || RETURN",
-                                "displayLines": "Saber_00_EntityMaxStockSP",
-                                "constants": [],
-                                "variables": [
-                                  "Saber_00_EntityMaxStockSP"
-                                ]
+                                "displayLines": "Saber_00_EntityMaxStockSP"
                               },
                               "variableName": "Saber_00_EntityStockSP"
                             }
@@ -1143,12 +941,7 @@ const configAbility = {
                                 "value1": "_Current_Show_Value",
                                 "compareType": "<",
                                 "value2": {
-                                  "operator": "Variables[0] (Saber_00_EntityStockSP) || RETURN",
-                                  "displayLines": "Saber_00_EntityStockSP",
-                                  "constants": [],
-                                  "variables": [
-                                    "Saber_00_EntityStockSP"
-                                  ]
+                                  "displayLines": "Saber_00_EntityStockSP"
                                 }
                               },
                               "passed": [
@@ -1161,12 +954,7 @@ const configAbility = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-1667717158\">Saber_Passive_ExceedSpStatus</a>[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
                                   "valuePerStack": {
                                     "Saber_EntityStockSPForShow": {
-                                      "operator": "Variables[0] (Saber_00_EntityStockSP) || RETURN",
-                                      "displayLines": "Saber_00_EntityStockSP",
-                                      "constants": [],
-                                      "variables": [
-                                        "Saber_00_EntityStockSP"
-                                      ]
+                                      "displayLines": "Saber_00_EntityStockSP"
                                     }
                                   }
                                 }
@@ -1183,12 +971,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-1667717158\">Saber_Passive_ExceedSpStatus</a>[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
                               "valuePerStack": {
                                 "Saber_EntityStockSPForShow": {
-                                  "operator": "Variables[0] (Saber_00_EntityStockSP) || RETURN",
-                                  "displayLines": "Saber_00_EntityStockSP",
-                                  "constants": [],
-                                  "variables": [
-                                    "Saber_00_EntityStockSP"
-                                  ]
+                                  "displayLines": "Saber_00_EntityStockSP"
                                 }
                               }
                             }
@@ -1240,12 +1023,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Saber_00_EntityStockSP) || RETURN",
-                    "displayLines": "Saber_00_EntityStockSP",
-                    "constants": [],
-                    "variables": [
-                      "Saber_00_EntityStockSP"
-                    ]
+                    "displayLines": "Saber_00_EntityStockSP"
                   },
                   "variableName": "_Temp_Return_SP"
                 },
@@ -1269,12 +1047,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (_Temp_Return_SP) || RETURN",
-                    "displayLines": "_Temp_Return_SP",
-                    "constants": [],
-                    "variables": [
-                      "_Temp_Return_SP"
-                    ]
+                    "displayLines": "_Temp_Return_SP"
                   },
                   "isFixed": "(Fixed)"
                 }
@@ -1342,23 +1115,13 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   }
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (DV_SurgePoint) || RETURN",
-                    "displayLines": "DV_SurgePoint",
-                    "constants": [],
-                    "variables": [
-                      "DV_SurgePoint"
-                    ]
+                    "displayLines": "DV_SurgePoint"
                   }
                 },
                 {
@@ -1376,30 +1139,15 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1328926688\">Saber_Trace03_Bonus_02</a>[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (8) || RETURN",
-                        "displayLines": "8",
-                        "constants": [],
-                        "variables": [
-                          8
-                        ]
+                        "displayLines": "8"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.04) || RETURN",
-                          "displayLines": "0.04",
-                          "constants": [],
-                          "variables": [
-                            0.04
-                          ]
+                          "displayLines": "0.04"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       }
                     }
                   ]
@@ -1419,30 +1167,15 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1058966793\">Saber_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">The Lost Oath of the Round Table</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (15) || RETURN",
-                        "displayLines": "15",
-                        "constants": [],
-                        "variables": [
-                          15
-                        ]
+                        "displayLines": "15"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.01) || RETURN",
-                          "displayLines": "0.01",
-                          "constants": [],
-                          "variables": [
-                            0.01
-                          ]
+                          "displayLines": "0.01"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       }
                     }
                   ]
@@ -1473,13 +1206,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindPEN</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_Layer) || Variables[1] (MDF_PropertyValue) || MUL || RETURN",
-                "displayLines": "(MDF_Layer * MDF_PropertyValue)",
-                "constants": [],
-                "variables": [
-                  "MDF_Layer",
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(MDF_Layer * MDF_PropertyValue)"
               }
             }
           ]
@@ -1504,12 +1231,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindPEN</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.08) || RETURN",
-                "displayLines": "0.08",
-                "constants": [],
-                "variables": [
-                  0.08
-                ]
+                "displayLines": "0.08"
               }
             }
           ]
@@ -1532,29 +1254,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-269544975\">Saber_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">The Saga of Sixteen Winter Days</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.04) || RETURN",
-                      "displayLines": "0.04",
-                      "constants": [],
-                      "variables": [
-                        0.04
-                      ]
+                      "displayLines": "0.04"
                     },
                     "MDF_Value_Base": {
-                      "operator": "Variables[0] (0.08) || RETURN",
-                      "displayLines": "0.08",
-                      "constants": [],
-                      "variables": [
-                        0.08
-                      ]
+                      "displayLines": "0.08"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -1653,12 +1360,7 @@ const configAbility = {
                       "name": "Define Modifier Variable",
                       "modifierName": "<a class=\"gModGreen\" id=\"1658820893\">Saber_Eidolon6_Count</a>[<span class=\"descriptionNumberColor\">The Long Fated Night</span>]",
                       "value": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       }
                     },
                     {
@@ -1668,12 +1370,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (300) || RETURN",
-                        "displayLines": "300",
-                        "constants": [],
-                        "variables": [
-                          300
-                        ]
+                        "displayLines": "300"
                       },
                       "isFixed": "(Fixed)"
                     }

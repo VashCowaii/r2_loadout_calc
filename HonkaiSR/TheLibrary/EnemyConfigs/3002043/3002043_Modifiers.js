@@ -40,13 +40,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_PropertyValue * MDF_Layer)"
               }
             }
           ]
@@ -380,12 +374,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SpeedOverride</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (BE_P1_BESpeed) || RETURN",
-                "displayLines": "BE_P1_BESpeed",
-                "constants": [],
-                "variables": [
-                  "BE_P1_BESpeed"
-                ]
+                "displayLines": "BE_P1_BESpeed"
               }
             },
             {
@@ -396,12 +385,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "multiBase": {
-                "operator": "Variables[0] (BE_P3_InitDelay) || RETURN",
-                "displayLines": "BE_P3_InitDelay",
-                "constants": [],
-                "variables": [
-                  "BE_P3_InitDelay"
-                ]
+                "displayLines": "BE_P3_InitDelay"
               }
             }
           ]
@@ -452,12 +436,7 @@ const configAbility = {
                   "stackLimit": 99,
                   "valuePerStack": {
                     "MDF_DamageReduce": {
-                      "operator": "Variables[0] (MDF_BEBreakDamageReduce) || RETURN",
-                      "displayLines": "MDF_BEBreakDamageReduce",
-                      "constants": [],
-                      "variables": [
-                        "MDF_BEBreakDamageReduce"
-                      ]
+                      "displayLines": "MDF_BEBreakDamageReduce"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -497,16 +476,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "set": {
-                    "operator": "Constants[0] (1000) || Variables[0] (BE_P1_BESpeed) || DIV || Variables[1] (BE_P3_InitDelay) || MUL || Constants[1] (15) || ADD || RETURN",
-                    "displayLines": "(((1000 / BE_P1_BESpeed) * BE_P3_InitDelay) + 15)",
-                    "constants": [
-                      1000,
-                      15
-                    ],
-                    "variables": [
-                      "BE_P1_BESpeed",
-                      "BE_P3_InitDelay"
-                    ]
+                    "displayLines": "(((1000 / BE_P1_BESpeed) * BE_P3_InitDelay) + 15)"
                   }
                 }
               ]
@@ -551,12 +521,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -738,12 +703,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeTakenRatio) || RETURN",
-                "displayLines": "MDF_AllDamageTypeTakenRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeTakenRatio"
-                ]
+                "displayLines": "MDF_AllDamageTypeTakenRatio"
               }
             }
           ]
@@ -998,12 +958,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                "displayLines": "MDF_AllDamageReduce",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageReduce"
-                ]
+                "displayLines": "MDF_AllDamageReduce"
               }
             }
           ]
@@ -1026,12 +981,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1242309858\">MModifier_Monster_W3_Theater_IF_MinionsSuperArmor</a>[<span class=\"descriptionNumberColor\">Homework In-Class</span>]",
               "valuePerStack": {
                 "MDF_AllDamageReduce": {
-                  "operator": "Variables[0] (MDF_MinionsSuperArmor_AllDamageReduce) || RETURN",
-                  "displayLines": "MDF_MinionsSuperArmor_AllDamageReduce",
-                  "constants": [],
-                  "variables": [
-                    "MDF_MinionsSuperArmor_AllDamageReduce"
-                  ]
+                  "displayLines": "MDF_MinionsSuperArmor_AllDamageReduce"
                 }
               }
             }
@@ -1112,12 +1062,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1242309858\">MModifier_Monster_W3_Theater_IF_MinionsSuperArmor</a>[<span class=\"descriptionNumberColor\">Homework In-Class</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageReduce": {
-                          "operator": "Variables[0] (MDF_MinionsSuperArmor_AllDamageReduce) || RETURN",
-                          "displayLines": "MDF_MinionsSuperArmor_AllDamageReduce",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MinionsSuperArmor_AllDamageReduce"
-                          ]
+                          "displayLines": "MDF_MinionsSuperArmor_AllDamageReduce"
                         }
                       }
                     }
@@ -1306,12 +1251,7 @@ const configAbility = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (MDF_DamageStanceValue_Dinosaur) || RETURN",
-                        "displayLines": "MDF_DamageStanceValue_Dinosaur",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DamageStanceValue_Dinosaur"
-                        ]
+                        "displayLines": "MDF_DamageStanceValue_Dinosaur"
                       },
                       "defender": {
                         "name": "Target Name",
@@ -1337,12 +1277,7 @@ const configAbility = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (MDF_DamageStanceValue_TV) || RETURN",
-                        "displayLines": "MDF_DamageStanceValue_TV",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DamageStanceValue_TV"
-                        ]
+                        "displayLines": "MDF_DamageStanceValue_TV"
                       },
                       "defender": {
                         "name": "Target Name",
@@ -1368,12 +1303,7 @@ const configAbility = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (MDF_DamageStanceValue_Mecha) || RETURN",
-                        "displayLines": "MDF_DamageStanceValue_Mecha",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DamageStanceValue_Mecha"
-                        ]
+                        "displayLines": "MDF_DamageStanceValue_Mecha"
                       },
                       "defender": {
                         "name": "Target Name",
@@ -1399,12 +1329,7 @@ const configAbility = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (MDF_DamageStanceValue_Clock) || RETURN",
-                        "displayLines": "MDF_DamageStanceValue_Clock",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DamageStanceValue_Clock"
-                        ]
+                        "displayLines": "MDF_DamageStanceValue_Clock"
                       },
                       "defender": {
                         "name": "Target Name",
@@ -1454,12 +1379,7 @@ const configAbility = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (MDF_DamageStanceValue_2) || RETURN",
-                        "displayLines": "MDF_DamageStanceValue_2",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DamageStanceValue_2"
-                        ]
+                        "displayLines": "MDF_DamageStanceValue_2"
                       },
                       "defender": {
                         "name": "Target Name",
@@ -1512,12 +1432,7 @@ const configAbility = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (MDF_DamageStanceValue_Dinosaur) || RETURN",
-                        "displayLines": "MDF_DamageStanceValue_Dinosaur",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DamageStanceValue_Dinosaur"
-                        ]
+                        "displayLines": "MDF_DamageStanceValue_Dinosaur"
                       },
                       "defender": {
                         "name": "Target Name",
@@ -1543,12 +1458,7 @@ const configAbility = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (MDF_DamageStanceValue_TV) || RETURN",
-                        "displayLines": "MDF_DamageStanceValue_TV",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DamageStanceValue_TV"
-                        ]
+                        "displayLines": "MDF_DamageStanceValue_TV"
                       },
                       "defender": {
                         "name": "Target Name",
@@ -1574,12 +1484,7 @@ const configAbility = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (MDF_DamageStanceValue_Mecha) || RETURN",
-                        "displayLines": "MDF_DamageStanceValue_Mecha",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DamageStanceValue_Mecha"
-                        ]
+                        "displayLines": "MDF_DamageStanceValue_Mecha"
                       },
                       "defender": {
                         "name": "Target Name",
@@ -1605,12 +1510,7 @@ const configAbility = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (MDF_DamageStanceValue_Clock) || RETURN",
-                        "displayLines": "MDF_DamageStanceValue_Clock",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DamageStanceValue_Clock"
-                        ]
+                        "displayLines": "MDF_DamageStanceValue_Clock"
                       },
                       "defender": {
                         "name": "Target Name",
@@ -3092,12 +2992,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                        "displayLines": "{[SkillP01[0]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillP01[0]]}"
-                        ]
+                        "displayLines": "{[SkillP01[0]]}"
                       },
                       "variableName": "MDF_Negative_Count_Max"
                     }
@@ -3119,12 +3014,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                            "displayLines": "{[SkillP01[2]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[SkillP01[2]]}"
-                            ]
+                            "displayLines": "{[SkillP01[2]]}"
                           },
                           "variableName": "MDF_Negative_Count_Max"
                         }
@@ -3146,12 +3036,7 @@ const configAbility = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                "displayLines": "{[SkillP01[3]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[SkillP01[3]]}"
-                                ]
+                                "displayLines": "{[SkillP01[3]]}"
                               },
                               "variableName": "MDF_Negative_Count_Max"
                             }
@@ -3166,12 +3051,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                    "displayLines": "{[SkillP01[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillP01[0]]}"
-                    ]
+                    "displayLines": "{[SkillP01[0]]}"
                   },
                   "variableName": "MDF_Negative_Count_Max"
                 }
@@ -3180,12 +3060,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_Negative_Count) || RETURN",
-                "displayLines": "MDF_Negative_Count",
-                "constants": [],
-                "variables": [
-                  "MDF_Negative_Count"
-                ]
+                "displayLines": "MDF_Negative_Count"
               },
               "entityClass": "Enemy",
               "target": {
@@ -3193,12 +3068,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (MDF_Negative_Count_Max) || RETURN",
-                "displayLines": "MDF_Negative_Count_Max",
-                "constants": [],
-                "variables": [
-                  "MDF_Negative_Count_Max"
-                ]
+                "displayLines": "MDF_Negative_Count_Max"
               },
               "assignState": "True",
               "state": "Normal"
@@ -3211,12 +3081,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_Negative_Count) || RETURN",
-                "displayLines": "MDF_Negative_Count",
-                "constants": [],
-                "variables": [
-                  "MDF_Negative_Count"
-                ]
+                "displayLines": "MDF_Negative_Count"
               },
               "entityClass": "Enemy",
               "target": {
@@ -3224,12 +3089,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (MDF_Negative_Count_Max) || RETURN",
-                "displayLines": "MDF_Negative_Count_Max",
-                "constants": [],
-                "variables": [
-                  "MDF_Negative_Count_Max"
-                ]
+                "displayLines": "MDF_Negative_Count_Max"
               },
               "assignState": "False",
               "state": "Normal"
@@ -3269,14 +3129,7 @@ const configAbility = {
                   "variableName": "MDF_Negative_Count",
                   "context": "ContextModifier",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] ({[SkillP01[1]]}) || SUB || RETURN",
-                    "displayLines": "(0 - {[SkillP01[1]]})",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "{[SkillP01[1]]}"
-                    ]
+                    "displayLines": "(0 - {[SkillP01[1]]})"
                   },
                   "max": 100
                 },
@@ -3288,24 +3141,14 @@ const configAbility = {
                   },
                   "scope": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (MDF_Negative_Count) || RETURN",
-                    "displayLines": "MDF_Negative_Count",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Negative_Count"
-                    ]
+                    "displayLines": "MDF_Negative_Count"
                   },
                   "variableName": "Negative_Count"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Negative_Count) || RETURN",
-                    "displayLines": "MDF_Negative_Count",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Negative_Count"
-                    ]
+                    "displayLines": "MDF_Negative_Count"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -3313,12 +3156,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_Negative_Count_Max) || RETURN",
-                    "displayLines": "MDF_Negative_Count_Max",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Negative_Count_Max"
-                    ]
+                    "displayLines": "MDF_Negative_Count_Max"
                   },
                   "assignState": "True",
                   "state": "Normal"
@@ -3348,14 +3186,7 @@ const configAbility = {
               },
               "scope": "ContextModifier",
               "value": {
-                "operator": "Variables[0] (MDF_Negative_Count) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(MDF_Negative_Count + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_Negative_Count"
-                ]
+                "displayLines": "(MDF_Negative_Count + 1)"
               },
               "variableName": "MDF_Negative_Count"
             },
@@ -3367,24 +3198,14 @@ const configAbility = {
               },
               "scope": "TargetEntity",
               "value": {
-                "operator": "Variables[0] (MDF_Negative_Count) || RETURN",
-                "displayLines": "MDF_Negative_Count",
-                "constants": [],
-                "variables": [
-                  "MDF_Negative_Count"
-                ]
+                "displayLines": "MDF_Negative_Count"
               },
               "variableName": "Negative_Count"
             },
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_Negative_Count) || RETURN",
-                "displayLines": "MDF_Negative_Count",
-                "constants": [],
-                "variables": [
-                  "MDF_Negative_Count"
-                ]
+                "displayLines": "MDF_Negative_Count"
               },
               "entityClass": "Enemy",
               "target": {
@@ -3392,12 +3213,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (MDF_Negative_Count_Max) || RETURN",
-                "displayLines": "MDF_Negative_Count_Max",
-                "constants": [],
-                "variables": [
-                  "MDF_Negative_Count_Max"
-                ]
+                "displayLines": "MDF_Negative_Count_Max"
               },
               "assignState": "True",
               "state": "Normal"
@@ -3410,13 +3226,7 @@ const configAbility = {
               },
               "scope": "ContextModifier",
               "value": {
-                "operator": "Variables[0] (MDF_Negative_Count_Max) || Variables[1] (MDF_Negative_Count) || SUB || RETURN",
-                "displayLines": "(MDF_Negative_Count_Max - MDF_Negative_Count)",
-                "constants": [],
-                "variables": [
-                  "MDF_Negative_Count_Max",
-                  "MDF_Negative_Count"
-                ]
+                "displayLines": "(MDF_Negative_Count_Max - MDF_Negative_Count)"
               },
               "variableName": "MDF_Negative_Count_Diff"
             },
@@ -3516,12 +3326,7 @@ const configAbility = {
                         {
                           "name": "Deal Toughness DMG",
                           "value": {
-                            "operator": "Variables[0] (MDF_CurrentStance) || RETURN",
-                            "displayLines": "MDF_CurrentStance",
-                            "constants": [],
-                            "variables": [
-                              "MDF_CurrentStance"
-                            ]
+                            "displayLines": "MDF_CurrentStance"
                           },
                           "attacker": {
                             "name": "Target Name",

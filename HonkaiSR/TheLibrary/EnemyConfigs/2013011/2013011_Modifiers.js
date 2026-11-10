@@ -167,12 +167,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedUpRatio) || RETURN",
-                "displayLines": "MDF_SpeedUpRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedUpRatio"
-                ]
+                "displayLines": "MDF_SpeedUpRatio"
               }
             }
           ]
@@ -302,12 +297,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_SpeedUpRatio) || RETURN",
-                    "displayLines": "MDF_SpeedUpRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedUpRatio"
-                    ]
+                    "displayLines": "MDF_SpeedUpRatio"
                   }
                 }
               ],
@@ -320,12 +310,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_SpeedAddedValue) || RETURN",
-                    "displayLines": "MDF_SpeedAddedValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedAddedValue"
-                    ]
+                    "displayLines": "MDF_SpeedAddedValue"
                   }
                 }
               ]

@@ -43,12 +43,7 @@ const configAbility = {
                 "value1": "_CheckTimes",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                  "displayLines": "MDF_PropertyValue2",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue2"
-                  ]
+                  "displayLines": "MDF_PropertyValue2"
                 }
               },
               "passed": [
@@ -76,12 +71,7 @@ const configAbility = {
                       "variableName": "DOT_TriggerRatio",
                       "eventType": "DOT",
                       "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                        "displayLines": "MDF_PropertyValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue"
-                        ]
+                        "displayLines": "MDF_PropertyValue"
                       }
                     }
                   ]
@@ -89,14 +79,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_CheckTimes) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(_CheckTimes + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_CheckTimes"
-                    ]
+                    "displayLines": "(_CheckTimes + 1)"
                   },
                   "variableName": "_CheckTimes"
                 }
@@ -138,20 +121,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1007740783\">MStrongChallengeEX_Talent_StageAbility_PLY_038</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     },
                     "MDF_PropertyValue2": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     }
                   }
                 }

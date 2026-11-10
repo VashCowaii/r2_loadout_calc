@@ -31,12 +31,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                "displayLines": "MDF_SpeedAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedAddedRatio"
-                ]
+                "displayLines": "MDF_SpeedAddedRatio"
               }
             }
           ]
@@ -58,21 +53,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-2027334103\">MStrongChallengeEX_Talent_StageAbility_TGT_045</a>",
               "duration": {
-                "operator": "Variables[0] (MDF_TGT_LifeTime) || RETURN",
-                "displayLines": "MDF_TGT_LifeTime",
-                "constants": [],
-                "variables": [
-                  "MDF_TGT_LifeTime"
-                ]
+                "displayLines": "MDF_TGT_LifeTime"
               },
               "valuePerStack": {
                 "MDF_SpeedAddedRatio": {
-                  "operator": "Variables[0] (MDF_TGT_SpeedAddedRatio) || RETURN",
-                  "displayLines": "MDF_TGT_SpeedAddedRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_TGT_SpeedAddedRatio"
-                  ]
+                  "displayLines": "MDF_TGT_SpeedAddedRatio"
                 }
               }
             }
@@ -148,12 +133,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"760903391\">MStrongChallengeEX_Talent_StageAbility_EMY_045</a>",
                   "valuePerStack": {
                     "MDF_Element_DamageTakenRatio": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 },
@@ -166,12 +146,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"760903391\">MStrongChallengeEX_Talent_StageAbility_EMY_045</a>",
                   "valuePerStack": {
                     "MDF_Element_DamageTakenRatio": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }
@@ -202,20 +177,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1090790235\">MStrongChallengeEX_Talent_StageAbility_PLY_045</a>",
                   "valuePerStack": {
                     "MDF_TGT_SpeedAddedRatio": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     },
                     "MDF_TGT_LifeTime": {
-                      "operator": "Variables[0] (#ADF_3) || RETURN",
-                      "displayLines": "#ADF_3",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_3"
-                      ]
+                      "displayLines": "#ADF_3"
                     }
                   }
                 }

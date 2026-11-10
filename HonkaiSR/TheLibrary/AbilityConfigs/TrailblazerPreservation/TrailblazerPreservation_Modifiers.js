@@ -164,12 +164,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (MWAvatar_PlayerBoy_10_Shield_Value01) || RETURN",
-                "displayLines": "MWAvatar_PlayerBoy_10_Shield_Value01",
-                "constants": [],
-                "variables": [
-                  "MWAvatar_PlayerBoy_10_Shield_Value01"
-                ]
+                "displayLines": "MWAvatar_PlayerBoy_10_Shield_Value01"
               }
             }
           ]
@@ -196,12 +191,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MAvatar_PlayerBoy_10_DamageResistance_Team_Value01) || RETURN",
-                "displayLines": "MAvatar_PlayerBoy_10_DamageResistance_Team_Value01",
-                "constants": [],
-                "variables": [
-                  "MAvatar_PlayerBoy_10_DamageResistance_Team_Value01"
-                ]
+                "displayLines": "MAvatar_PlayerBoy_10_DamageResistance_Team_Value01"
               }
             }
           ]
@@ -257,12 +247,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (PlayerBoy_10_DamageResistance_Value01) || RETURN",
-                "displayLines": "PlayerBoy_10_DamageResistance_Value01",
-                "constants": [],
-                "variables": [
-                  "PlayerBoy_10_DamageResistance_Value01"
-                ]
+                "displayLines": "PlayerBoy_10_DamageResistance_Value01"
               }
             }
           ]
@@ -410,13 +395,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DefenceAddedRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_DefenceAddedRatio * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_DefenceAddedRatio",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_DefenceAddedRatio * MDF_Layer)"
               }
             }
           ]

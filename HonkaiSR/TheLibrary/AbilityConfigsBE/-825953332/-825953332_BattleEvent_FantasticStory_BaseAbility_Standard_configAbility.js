@@ -77,12 +77,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (DV_BE_BaseSpeed) || RETURN",
-                "displayLines": "DV_BE_BaseSpeed",
-                "constants": [],
-                "variables": [
-                  "DV_BE_BaseSpeed"
-                ]
+                "displayLines": "DV_BE_BaseSpeed"
               }
             }
           ]

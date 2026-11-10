@@ -25,12 +25,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -49,12 +44,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -72,30 +62,15 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
       "duration": {
-        "operator": "Variables[0] ({[PassiveSkillInitiate[4]]}) || RETURN",
-        "displayLines": "{[PassiveSkillInitiate[4]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkillInitiate[4]]}"
-        ]
+        "displayLines": "{[PassiveSkillInitiate[4]]}"
       },
       "baseChance": 1,
       "stackLimit": {
-        "operator": "Variables[0] ({[PassiveSkillInitiate[5]]}) || RETURN",
-        "displayLines": "{[PassiveSkillInitiate[5]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkillInitiate[5]]}"
-        ]
+        "displayLines": "{[PassiveSkillInitiate[5]]}"
       },
       "valuePerStack": {
         "Modifier_Poison_DamagePercentage": {
-          "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
-          "displayLines": "{[PassiveSkillInitiate[3]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkillInitiate[3]]}"
-          ]
+          "displayLines": "{[PassiveSkillInitiate[3]]}"
         }
       },
       "stackFlag": "CharacterSkill"
@@ -120,12 +95,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -144,12 +114,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -167,30 +132,15 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
       "duration": {
-        "operator": "Variables[0] ({[PassiveSkillInitiate[4]]}) || RETURN",
-        "displayLines": "{[PassiveSkillInitiate[4]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkillInitiate[4]]}"
-        ]
+        "displayLines": "{[PassiveSkillInitiate[4]]}"
       },
       "baseChance": 1,
       "stackLimit": {
-        "operator": "Variables[0] ({[PassiveSkillInitiate[5]]}) || RETURN",
-        "displayLines": "{[PassiveSkillInitiate[5]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkillInitiate[5]]}"
-        ]
+        "displayLines": "{[PassiveSkillInitiate[5]]}"
       },
       "valuePerStack": {
         "Modifier_Poison_DamagePercentage": {
-          "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
-          "displayLines": "{[PassiveSkillInitiate[3]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkillInitiate[3]]}"
-          ]
+          "displayLines": "{[PassiveSkillInitiate[3]]}"
         }
       },
       "stackFlag": "CharacterSkill"

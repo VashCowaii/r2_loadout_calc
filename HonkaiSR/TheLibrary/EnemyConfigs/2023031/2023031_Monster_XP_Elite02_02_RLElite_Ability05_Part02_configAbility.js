@@ -22,12 +22,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1807594786\">Monster_XP_Elite02_02_RLElite_DirtyHPListener</a>",
       "valuePerStack": {
         "MDF_DirtyHPAddedRatio": {
-          "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-          "displayLines": "{[Skill05[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill05[0]]}"
-          ]
+          "displayLines": "{[Skill05[0]]}"
         }
       }
     },

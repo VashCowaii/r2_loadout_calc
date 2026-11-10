@@ -48,13 +48,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CEIL) || Variables[1] (MDF_NegativeBlood_Temp) || PARAM_1 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeBlood_Temp)",
-                    "constants": [],
-                    "variables": [
-                      "CEIL",
-                      "MDF_NegativeBlood_Temp"
-                    ]
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeBlood_Temp)"
                   },
                   "variableName": "MDF_NegativeBlood"
                 },
@@ -92,13 +86,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CEIL) || Variables[1] (MDF_NegativeBlood_Temp) || PARAM_1 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeBlood_Temp)",
-                    "constants": [],
-                    "variables": [
-                      "CEIL",
-                      "MDF_NegativeBlood_Temp"
-                    ]
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeBlood_Temp)"
                   },
                   "variableName": "MDF_NegativeBlood"
                 }
@@ -896,13 +884,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || Variables[1] (TargetCount) || DIV || RETURN",
-              "displayLines": "({[Skill02[0]]} / TargetCount)",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}",
-                "TargetCount"
-              ]
+              "displayLines": "({[Skill02[0]]} / TargetCount)"
             },
             "Toughness": null,
             "Tags": null,
@@ -964,12 +946,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,

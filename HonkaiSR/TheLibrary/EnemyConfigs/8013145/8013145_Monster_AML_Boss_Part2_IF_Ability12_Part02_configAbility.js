@@ -35,14 +35,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill12[0]]}) || Constants[0] (0.125) || MUL || RETURN",
-              "displayLines": "({[Skill12[0]]} * 0.125)",
-              "constants": [
-                0.125
-              ],
-              "variables": [
-                "{[Skill12[0]]}"
-              ]
+              "displayLines": "({[Skill12[0]]} * 0.125)"
             },
             "Toughness": null,
             "Tags": null,
@@ -59,14 +52,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill12[0]]}) || Constants[0] (0.125) || MUL || RETURN",
-              "displayLines": "({[Skill12[0]]} * 0.125)",
-              "constants": [
-                0.125
-              ],
-              "variables": [
-                "{[Skill12[0]]}"
-              ]
+              "displayLines": "({[Skill12[0]]} * 0.125)"
             },
             "Toughness": null,
             "Tags": null,
@@ -184,52 +170,22 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1433767937\">Enemy_AML_Boss_IF_Enhance_Imaginary</a>[<span class=\"descriptionNumberColor\">Imaginary Infusion</span>]",
                           "valuePerStack": {
                             "MDF_DamagePercentage": {
-                              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                              "displayLines": "{[SkillP01[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[0]]}"
-                              ]
+                              "displayLines": "{[SkillP01[0]]}"
                             },
                             "MDF_ControlChance": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                              "displayLines": "{[SkillP01[1]]}"
                             },
                             "MDF_ControlSpeedDownRatio": {
-                              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                              "displayLines": "{[SkillP01[2]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[2]]}"
-                              ]
+                              "displayLines": "{[SkillP01[2]]}"
                             },
                             "MDF_ControlActionDelayRatio": {
-                              "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                              "displayLines": "{[SkillP01[3]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[3]]}"
-                              ]
+                              "displayLines": "{[SkillP01[3]]}"
                             },
                             "MDF_ControlDamagePercentage": {
-                              "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-                              "displayLines": "{[SkillP01[4]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[4]]}"
-                              ]
+                              "displayLines": "{[SkillP01[4]]}"
                             },
                             "MDF_StanceBreakAddedRatio": {
-                              "operator": "Variables[0] ({[SkillP01[5]]}) || RETURN",
-                              "displayLines": "{[SkillP01[5]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[5]]}"
-                              ]
+                              "displayLines": "{[SkillP01[5]]}"
                             }
                           }
                         },
@@ -242,52 +198,22 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"-291765317\">Enemy_AML_Boss_IF_Enhance_Quantum</a>[<span class=\"descriptionNumberColor\">Quantum Infusion</span>]",
                           "valuePerStack": {
                             "MDF_DamagePercentage": {
-                              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                              "displayLines": "{[SkillP01[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[0]]}"
-                              ]
+                              "displayLines": "{[SkillP01[0]]}"
                             },
                             "MDF_ControlChance": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                              "displayLines": "{[SkillP01[1]]}"
                             },
                             "MDF_ControlSpeedDownRatio": {
-                              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                              "displayLines": "{[SkillP01[2]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[2]]}"
-                              ]
+                              "displayLines": "{[SkillP01[2]]}"
                             },
                             "MDF_ControlActionDelayRatio": {
-                              "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                              "displayLines": "{[SkillP01[3]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[3]]}"
-                              ]
+                              "displayLines": "{[SkillP01[3]]}"
                             },
                             "MDF_ControlDamagePercentage": {
-                              "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-                              "displayLines": "{[SkillP01[4]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[4]]}"
-                              ]
+                              "displayLines": "{[SkillP01[4]]}"
                             },
                             "MDF_StanceBreakAddedRatio": {
-                              "operator": "Variables[0] ({[SkillP01[5]]}) || RETURN",
-                              "displayLines": "{[SkillP01[5]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[5]]}"
-                              ]
+                              "displayLines": "{[SkillP01[5]]}"
                             }
                           }
                         }
@@ -334,14 +260,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Constants[0] (0.5) || Variables[0] ({[SkillP01[0]]}) || MUL || RETURN",
-              "displayLines": "(0.5 * {[SkillP01[0]]})",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
+              "displayLines": "(0.5 * {[SkillP01[0]]})"
             },
             "dmgFormulaFinal": "Pure (No DMG%)",
             "Toughness": null,
@@ -358,14 +277,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Constants[0] (0.5) || Variables[0] ({[SkillP01[0]]}) || MUL || RETURN",
-              "displayLines": "(0.5 * {[SkillP01[0]]})",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
+              "displayLines": "(0.5 * {[SkillP01[0]]})"
             },
             "dmgFormulaFinal": "Pure (No DMG%)",
             "Toughness": null,
@@ -382,37 +294,17 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"975559492\">Enemy_AML_Boss_IF_CTRL_ConfineAndEntangle</a>[<span class=\"descriptionNumberColor\">Snarelock</span>]",
           "duration": 1,
           "baseChance": {
-            "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-            "displayLines": "{[SkillP01[1]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP01[1]]}"
-            ]
+            "displayLines": "{[SkillP01[1]]}"
           },
           "valuePerStack": {
             "MDF_SpeedDownRatio": {
-              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-              "displayLines": "{[SkillP01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[2]]}"
-              ]
+              "displayLines": "{[SkillP01[2]]}"
             },
             "MDF_ActionDelayRatio": {
-              "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-              "displayLines": "{[SkillP01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[3]]}"
-              ]
+              "displayLines": "{[SkillP01[3]]}"
             },
             "Modifier_Entangle_DamagePercentage": {
-              "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-              "displayLines": "{[SkillP01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[4]]}"
-              ]
+              "displayLines": "{[SkillP01[4]]}"
             },
             "Modifier_Entangle_DamageValue": 0
           }
@@ -460,14 +352,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Constants[0] (0.5) || Variables[0] ({[SkillP01[0]]}) || MUL || RETURN",
-              "displayLines": "(0.5 * {[SkillP01[0]]})",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
+              "displayLines": "(0.5 * {[SkillP01[0]]})"
             },
             "dmgFormulaFinal": "Pure (No DMG%)",
             "Toughness": null,
@@ -484,14 +369,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Constants[0] (0.5) || Variables[0] ({[SkillP01[0]]}) || MUL || RETURN",
-              "displayLines": "(0.5 * {[SkillP01[0]]})",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
+              "displayLines": "(0.5 * {[SkillP01[0]]})"
             },
             "dmgFormulaFinal": "Pure (No DMG%)",
             "Toughness": null,
@@ -508,37 +386,17 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"975559492\">Enemy_AML_Boss_IF_CTRL_ConfineAndEntangle</a>[<span class=\"descriptionNumberColor\">Snarelock</span>]",
           "duration": 1,
           "baseChance": {
-            "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-            "displayLines": "{[SkillP01[1]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP01[1]]}"
-            ]
+            "displayLines": "{[SkillP01[1]]}"
           },
           "valuePerStack": {
             "MDF_SpeedDownRatio": {
-              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-              "displayLines": "{[SkillP01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[2]]}"
-              ]
+              "displayLines": "{[SkillP01[2]]}"
             },
             "MDF_ActionDelayRatio": {
-              "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-              "displayLines": "{[SkillP01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[3]]}"
-              ]
+              "displayLines": "{[SkillP01[3]]}"
             },
             "Modifier_Entangle_DamagePercentage": {
-              "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-              "displayLines": "{[SkillP01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[4]]}"
-              ]
+              "displayLines": "{[SkillP01[4]]}"
             },
             "Modifier_Entangle_DamageValue": 0
           }
@@ -591,12 +449,7 @@ const configAbility = {
           "duration": 1,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (SkillEX03_P1_AttackAddedRatio) || RETURN",
-              "displayLines": "SkillEX03_P1_AttackAddedRatio",
-              "constants": [],
-              "variables": [
-                "SkillEX03_P1_AttackAddedRatio"
-              ]
+              "displayLines": "SkillEX03_P1_AttackAddedRatio"
             }
           }
         }

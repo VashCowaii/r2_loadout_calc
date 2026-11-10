@@ -126,12 +126,7 @@ const configAbility = {
               "duration": 1,
               "valuePerStack": {
                 "MDF_ActionDelayRatio": {
-                  "operator": "Variables[0] (MDF_Shake_ActionDelayRatio) || RETURN",
-                  "displayLines": "MDF_Shake_ActionDelayRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Shake_ActionDelayRatio"
-                  ]
+                  "displayLines": "MDF_Shake_ActionDelayRatio"
                 }
               },
               "success": []

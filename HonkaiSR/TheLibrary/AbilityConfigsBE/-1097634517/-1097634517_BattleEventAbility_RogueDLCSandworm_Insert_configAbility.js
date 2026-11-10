@@ -51,31 +51,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
                   "duration": {
-                    "operator": "Variables[0] (LifeTime) || Variables[1] (ExtraLifeTime) || ADD || RETURN",
-                    "displayLines": "(LifeTime + ExtraLifeTime)",
-                    "constants": [],
-                    "variables": [
-                      "LifeTime",
-                      "ExtraLifeTime"
-                    ]
+                    "displayLines": "(LifeTime + ExtraLifeTime)"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (Chance) || Variables[1] (ExtraChance) || ADD || RETURN",
-                    "displayLines": "(Chance + ExtraChance)",
-                    "constants": [],
-                    "variables": [
-                      "Chance",
-                      "ExtraChance"
-                    ]
+                    "displayLines": "(Chance + ExtraChance)"
                   },
                   "valuePerStack": {
                     "Modifier_Electric_DamagePercentage": {
-                      "operator": "Variables[0] (DamagePercentage) || RETURN",
-                      "displayLines": "DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "DamagePercentage"
-                      ]
+                      "displayLines": "DamagePercentage"
                     }
                   },
                   "stackFlag": "Rogue"
@@ -90,29 +73,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
                   "duration": {
-                    "operator": "Variables[0] (LifeTime) || RETURN",
-                    "displayLines": "LifeTime",
-                    "constants": [],
-                    "variables": [
-                      "LifeTime"
-                    ]
+                    "displayLines": "LifeTime"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (Chance) || RETURN",
-                    "displayLines": "Chance",
-                    "constants": [],
-                    "variables": [
-                      "Chance"
-                    ]
+                    "displayLines": "Chance"
                   },
                   "valuePerStack": {
                     "Modifier_Electric_DamagePercentage": {
-                      "operator": "Variables[0] (DamagePercentage) || RETURN",
-                      "displayLines": "DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "DamagePercentage"
-                      ]
+                      "displayLines": "DamagePercentage"
                     }
                   },
                   "stackFlag": "Rogue"
@@ -182,33 +150,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                   "duration": {
-                    "operator": "Variables[0] (LifeTime) || Variables[1] (ExtraLifeTime) || ADD || RETURN",
-                    "displayLines": "(LifeTime + ExtraLifeTime)",
-                    "constants": [],
-                    "variables": [
-                      "LifeTime",
-                      "ExtraLifeTime"
-                    ]
+                    "displayLines": "(LifeTime + ExtraLifeTime)"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (Chance) || Variables[1] (ExtraChance) || ADD || RETURN",
-                    "displayLines": "(Chance + ExtraChance)",
-                    "constants": [],
-                    "variables": [
-                      "Chance",
-                      "ExtraChance"
-                    ]
+                    "displayLines": "(Chance + ExtraChance)"
                   },
                   "valuePerStack": {
                     "Modifier_Poison_DamagePercentage": {
-                      "operator": "Variables[0] (DamagePercentage) || Constants[0] (0.5) || MUL || RETURN",
-                      "displayLines": "(DamagePercentage * 0.5)",
-                      "constants": [
-                        0.5
-                      ],
-                      "variables": [
-                        "DamagePercentage"
-                      ]
+                      "displayLines": "(DamagePercentage * 0.5)"
                     }
                   },
                   "addStacksPerTrigger": 2,
@@ -224,31 +173,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                   "duration": {
-                    "operator": "Variables[0] (LifeTime) || RETURN",
-                    "displayLines": "LifeTime",
-                    "constants": [],
-                    "variables": [
-                      "LifeTime"
-                    ]
+                    "displayLines": "LifeTime"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (Chance) || RETURN",
-                    "displayLines": "Chance",
-                    "constants": [],
-                    "variables": [
-                      "Chance"
-                    ]
+                    "displayLines": "Chance"
                   },
                   "valuePerStack": {
                     "Modifier_Poison_DamagePercentage": {
-                      "operator": "Variables[0] (DamagePercentage) || Constants[0] (0.5) || MUL || RETURN",
-                      "displayLines": "(DamagePercentage * 0.5)",
-                      "constants": [
-                        0.5
-                      ],
-                      "variables": [
-                        "DamagePercentage"
-                      ]
+                      "displayLines": "(DamagePercentage * 0.5)"
                     }
                   },
                   "addStacksPerTrigger": 2,
@@ -319,31 +251,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
                   "duration": {
-                    "operator": "Variables[0] (LifeTime) || Variables[1] (ExtraLifeTime) || ADD || RETURN",
-                    "displayLines": "(LifeTime + ExtraLifeTime)",
-                    "constants": [],
-                    "variables": [
-                      "LifeTime",
-                      "ExtraLifeTime"
-                    ]
+                    "displayLines": "(LifeTime + ExtraLifeTime)"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (Chance) || Variables[1] (ExtraChance) || ADD || RETURN",
-                    "displayLines": "(Chance + ExtraChance)",
-                    "constants": [],
-                    "variables": [
-                      "Chance",
-                      "ExtraChance"
-                    ]
+                    "displayLines": "(Chance + ExtraChance)"
                   },
                   "valuePerStack": {
                     "Modifier_Burn_DamagePercentage": {
-                      "operator": "Variables[0] (DamagePercentage) || RETURN",
-                      "displayLines": "DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "DamagePercentage"
-                      ]
+                      "displayLines": "DamagePercentage"
                     }
                   },
                   "stackFlag": "Rogue"
@@ -358,29 +273,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
                   "duration": {
-                    "operator": "Variables[0] (LifeTime) || RETURN",
-                    "displayLines": "LifeTime",
-                    "constants": [],
-                    "variables": [
-                      "LifeTime"
-                    ]
+                    "displayLines": "LifeTime"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (Chance) || RETURN",
-                    "displayLines": "Chance",
-                    "constants": [],
-                    "variables": [
-                      "Chance"
-                    ]
+                    "displayLines": "Chance"
                   },
                   "valuePerStack": {
                     "Modifier_Burn_DamagePercentage": {
-                      "operator": "Variables[0] (DamagePercentage) || RETURN",
-                      "displayLines": "DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "DamagePercentage"
-                      ]
+                      "displayLines": "DamagePercentage"
                     }
                   },
                   "stackFlag": "Rogue"
@@ -450,41 +350,17 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"227784370\">Standard_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
                   "duration": {
-                    "operator": "Variables[0] (LifeTime) || Variables[1] (ExtraLifeTime) || ADD || RETURN",
-                    "displayLines": "(LifeTime + ExtraLifeTime)",
-                    "constants": [],
-                    "variables": [
-                      "LifeTime",
-                      "ExtraLifeTime"
-                    ]
+                    "displayLines": "(LifeTime + ExtraLifeTime)"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (Chance) || Variables[1] (ExtraChance) || ADD || RETURN",
-                    "displayLines": "(Chance + ExtraChance)",
-                    "constants": [],
-                    "variables": [
-                      "Chance",
-                      "ExtraChance"
-                    ]
+                    "displayLines": "(Chance + ExtraChance)"
                   },
                   "valuePerStack": {
                     "Modifier_Tear_DamageRatio": {
-                      "operator": "Variables[0] (BleedPercent) || RETURN",
-                      "displayLines": "BleedPercent",
-                      "constants": [],
-                      "variables": [
-                        "BleedPercent"
-                      ]
+                      "displayLines": "BleedPercent"
                     },
                     "Modifier_Tear_MaxPercentage": {
-                      "operator": "Variables[0] (BleedPercent) || Constants[0] (2) || MUL || RETURN",
-                      "displayLines": "(BleedPercent * 2)",
-                      "constants": [
-                        2
-                      ],
-                      "variables": [
-                        "BleedPercent"
-                      ]
+                      "displayLines": "(BleedPercent * 2)"
                     }
                   },
                   "stackFlag": "Rogue"
@@ -499,39 +375,17 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"227784370\">Standard_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
                   "duration": {
-                    "operator": "Variables[0] (LifeTime) || RETURN",
-                    "displayLines": "LifeTime",
-                    "constants": [],
-                    "variables": [
-                      "LifeTime"
-                    ]
+                    "displayLines": "LifeTime"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (Chance) || RETURN",
-                    "displayLines": "Chance",
-                    "constants": [],
-                    "variables": [
-                      "Chance"
-                    ]
+                    "displayLines": "Chance"
                   },
                   "valuePerStack": {
                     "Modifier_Tear_DamageRatio": {
-                      "operator": "Variables[0] (BleedPercent) || RETURN",
-                      "displayLines": "BleedPercent",
-                      "constants": [],
-                      "variables": [
-                        "BleedPercent"
-                      ]
+                      "displayLines": "BleedPercent"
                     },
                     "Modifier_Tear_MaxPercentage": {
-                      "operator": "Variables[0] (BleedPercent) || Constants[0] (2) || MUL || RETURN",
-                      "displayLines": "(BleedPercent * 2)",
-                      "constants": [
-                        2
-                      ],
-                      "variables": [
-                        "BleedPercent"
-                      ]
+                      "displayLines": "(BleedPercent * 2)"
                     }
                   },
                   "stackFlag": "Rogue"
@@ -596,13 +450,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ExtraDamagePercentage) || Variables[1] (_Layer) || MUL || RETURN",
-                "displayLines": "(ExtraDamagePercentage * _Layer)",
-                "constants": [],
-                "variables": [
-                  "ExtraDamagePercentage",
-                  "_Layer"
-                ]
+                "displayLines": "(ExtraDamagePercentage * _Layer)"
               }
             }
           ]

@@ -33,12 +33,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">MerryMake</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ChallengePeakBattle_Plugins_0027_ADF_1) || RETURN",
-                "displayLines": "ChallengePeakBattle_Plugins_0027_ADF_1",
-                "constants": [],
-                "variables": [
-                  "ChallengePeakBattle_Plugins_0027_ADF_1"
-                ]
+                "displayLines": "ChallengePeakBattle_Plugins_0027_ADF_1"
               }
             }
           ]
@@ -71,12 +66,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-902695705\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0027_02</a>[<span class=\"descriptionNumberColor\">Ecstasy Night</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_Plugins_0027_ADF_1": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }

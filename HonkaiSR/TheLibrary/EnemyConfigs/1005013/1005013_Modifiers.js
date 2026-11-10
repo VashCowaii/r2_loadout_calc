@@ -69,21 +69,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                      "displayLines": "MDF_DamageUpRatio_PerLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageUpRatio_PerLayer"
-                      ]
+                      "displayLines": "MDF_DamageUpRatio_PerLayer"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (DamageUpLayer) || RETURN",
-                    "displayLines": "DamageUpLayer",
-                    "constants": [],
-                    "variables": [
-                      "DamageUpLayer"
-                    ]
+                    "displayLines": "DamageUpLayer"
                   }
                 }
               ]
@@ -139,12 +129,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                      "displayLines": "MDF_DamageUpRatio_PerLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageUpRatio_PerLayer"
-                      ]
+                      "displayLines": "MDF_DamageUpRatio_PerLayer"
                     }
                   }
                 }
@@ -169,12 +154,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_Cocolia_IF_BOSS_AllDamageReduce) || RETURN",
-                "displayLines": "MDF_Cocolia_IF_BOSS_AllDamageReduce",
-                "constants": [],
-                "variables": [
-                  "MDF_Cocolia_IF_BOSS_AllDamageReduce"
-                ]
+                "displayLines": "MDF_Cocolia_IF_BOSS_AllDamageReduce"
               }
             },
             {
@@ -185,12 +165,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_Cocolia_IF_BOSS_AllDamageTypeAddedRatio) || RETURN",
-                "displayLines": "MDF_Cocolia_IF_BOSS_AllDamageTypeAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_Cocolia_IF_BOSS_AllDamageTypeAddedRatio"
-                ]
+                "displayLines": "MDF_Cocolia_IF_BOSS_AllDamageTypeAddedRatio"
               }
             },
             {
@@ -201,12 +176,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_Cocolia_IF_BOSS_SpeedAddedRatio) || RETURN",
-                "displayLines": "MDF_Cocolia_IF_BOSS_SpeedAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_Cocolia_IF_BOSS_SpeedAddedRatio"
-                ]
+                "displayLines": "MDF_Cocolia_IF_BOSS_SpeedAddedRatio"
               }
             }
           ]
@@ -439,12 +409,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_IF_BOSS_WeaknessDMGUpRatio) || RETURN",
-                "displayLines": "MDF_IF_BOSS_WeaknessDMGUpRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_IF_BOSS_WeaknessDMGUpRatio"
-                ]
+                "displayLines": "MDF_IF_BOSS_WeaknessDMGUpRatio"
               }
             }
           ]
@@ -486,12 +451,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__52) || RETURN",
-                "displayLines": "ENEMIES_OBJECT_UNUSED__52",
-                "constants": [],
-                "variables": [
-                  "ENEMIES_OBJECT_UNUSED__52"
-                ]
+                "displayLines": "ENEMIES_OBJECT_UNUSED__52"
               }
             }
           ]
@@ -536,28 +496,13 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"338689764\">Monster_IF_BOSS_Standard_BreakBonus_Show</a>[<span class=\"descriptionNumberColor\">Mind Shadow</span>]",
               "valuePerStack": {
                 "MDF_IF_BOSS_BreakDelay": {
-                  "operator": "Variables[0] (MDF_IF_BOSS_BreakDelay) || RETURN",
-                  "displayLines": "MDF_IF_BOSS_BreakDelay",
-                  "constants": [],
-                  "variables": [
-                    "MDF_IF_BOSS_BreakDelay"
-                  ]
+                  "displayLines": "MDF_IF_BOSS_BreakDelay"
                 },
                 "MDF_IF_BOSS_WeaknessDMGUpRatio": {
-                  "operator": "Variables[0] (MDF_IF_BOSS_WeaknessDMGUpRatio) || RETURN",
-                  "displayLines": "MDF_IF_BOSS_WeaknessDMGUpRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_IF_BOSS_WeaknessDMGUpRatio"
-                  ]
+                  "displayLines": "MDF_IF_BOSS_WeaknessDMGUpRatio"
                 },
                 "MDF_IF_BOSS_Standard_Defence": {
-                  "operator": "Variables[0] (MDF_IF_BOSS_Common_Defence) || RETURN",
-                  "displayLines": "MDF_IF_BOSS_Common_Defence",
-                  "constants": [],
-                  "variables": [
-                    "MDF_IF_BOSS_Common_Defence"
-                  ]
+                  "displayLines": "MDF_IF_BOSS_Common_Defence"
                 }
               }
             },
@@ -615,28 +560,13 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"338689764\">Monster_IF_BOSS_Standard_BreakBonus_Show</a>[<span class=\"descriptionNumberColor\">Mind Shadow</span>]",
                   "valuePerStack": {
                     "MDF_IF_BOSS_BreakDelay": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_BreakDelay) || RETURN",
-                      "displayLines": "MDF_IF_BOSS_BreakDelay",
-                      "constants": [],
-                      "variables": [
-                        "MDF_IF_BOSS_BreakDelay"
-                      ]
+                      "displayLines": "MDF_IF_BOSS_BreakDelay"
                     },
                     "MDF_IF_BOSS_WeaknessDMGUpRatio": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_WeaknessDMGUpRatio) || RETURN",
-                      "displayLines": "MDF_IF_BOSS_WeaknessDMGUpRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_IF_BOSS_WeaknessDMGUpRatio"
-                      ]
+                      "displayLines": "MDF_IF_BOSS_WeaknessDMGUpRatio"
                     },
                     "MDF_IF_BOSS_Standard_Defence": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_Common_Defence) || RETURN",
-                      "displayLines": "MDF_IF_BOSS_Common_Defence",
-                      "constants": [],
-                      "variables": [
-                        "MDF_IF_BOSS_Common_Defence"
-                      ]
+                      "displayLines": "MDF_IF_BOSS_Common_Defence"
                     }
                   }
                 }
@@ -698,12 +628,7 @@ const configAbility = {
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "BOSS_BreakDelay": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_BreakDelay) || RETURN",
-                      "displayLines": "MDF_IF_BOSS_BreakDelay",
-                      "constants": [],
-                      "variables": [
-                        "MDF_IF_BOSS_BreakDelay"
-                      ]
+                      "displayLines": "MDF_IF_BOSS_BreakDelay"
                     }
                   },
                   "allowAbilityTriggers": false
@@ -766,28 +691,13 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"338689764\">Monster_IF_BOSS_Standard_BreakBonus_Show</a>[<span class=\"descriptionNumberColor\">Mind Shadow</span>]",
                   "valuePerStack": {
                     "MDF_IF_BOSS_BreakDelay": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_BreakDelay) || RETURN",
-                      "displayLines": "MDF_IF_BOSS_BreakDelay",
-                      "constants": [],
-                      "variables": [
-                        "MDF_IF_BOSS_BreakDelay"
-                      ]
+                      "displayLines": "MDF_IF_BOSS_BreakDelay"
                     },
                     "MDF_IF_BOSS_WeaknessDMGUpRatio": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_WeaknessDMGUpRatio) || RETURN",
-                      "displayLines": "MDF_IF_BOSS_WeaknessDMGUpRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_IF_BOSS_WeaknessDMGUpRatio"
-                      ]
+                      "displayLines": "MDF_IF_BOSS_WeaknessDMGUpRatio"
                     },
                     "MDF_IF_BOSS_Standard_Defence": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_Common_Defence) || RETURN",
-                      "displayLines": "MDF_IF_BOSS_Common_Defence",
-                      "constants": [],
-                      "variables": [
-                        "MDF_IF_BOSS_Common_Defence"
-                      ]
+                      "displayLines": "MDF_IF_BOSS_Common_Defence"
                     }
                   }
                 }

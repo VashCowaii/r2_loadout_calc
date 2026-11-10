@@ -113,12 +113,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                "displayLines": "MDF_AllDamageReduce",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageReduce"
-                ]
+                "displayLines": "MDF_AllDamageReduce"
               }
             }
           ]
@@ -374,12 +369,7 @@ const configAbility = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (InsertFlag) || RETURN",
-                        "displayLines": "InsertFlag",
-                        "constants": [],
-                        "variables": [
-                          "InsertFlag"
-                        ]
+                        "displayLines": "InsertFlag"
                       },
                       "caseEvents": [
                         {
@@ -631,13 +621,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Physical",
                         "DamageFlat": {
-                          "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (MDF_SuccessDamageRatio) || MUL || RETURN",
-                          "displayLines": "(MDF_MaxHP * MDF_SuccessDamageRatio)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxHP",
-                            "MDF_SuccessDamageRatio"
-                          ]
+                          "displayLines": "(MDF_MaxHP * MDF_SuccessDamageRatio)"
                         },
                         "dmgFormula": "Max HP Scaling",
                         "dmgFormulaFinal": "Converted DMG Base",

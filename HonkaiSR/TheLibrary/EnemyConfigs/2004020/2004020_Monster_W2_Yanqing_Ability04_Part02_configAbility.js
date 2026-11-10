@@ -22,14 +22,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (0.3) || MUL || RETURN",
-          "displayLines": "({[Skill04[0]]} * 0.3)",
-          "constants": [
-            0.3
-          ],
-          "variables": [
-            "{[Skill04[0]]}"
-          ]
+          "displayLines": "({[Skill04[0]]} * 0.3)"
         },
         "Toughness": null,
         "Tags": null,
@@ -45,14 +38,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[1]]}) || Constants[0] (0.3) || MUL || RETURN",
-          "displayLines": "({[Skill04[1]]} * 0.3)",
-          "constants": [
-            0.3
-          ],
-          "variables": [
-            "{[Skill04[1]]}"
-          ]
+          "displayLines": "({[Skill04[1]]} * 0.3)"
         },
         "Toughness": null,
         "Tags": null,
@@ -68,14 +54,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (0.3) || MUL || RETURN",
-          "displayLines": "({[Skill04[0]]} * 0.3)",
-          "constants": [
-            0.3
-          ],
-          "variables": [
-            "{[Skill04[0]]}"
-          ]
+          "displayLines": "({[Skill04[0]]} * 0.3)"
         },
         "Toughness": null,
         "Tags": null,
@@ -91,14 +70,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[1]]}) || Constants[0] (0.3) || MUL || RETURN",
-          "displayLines": "({[Skill04[1]]} * 0.3)",
-          "constants": [
-            0.3
-          ],
-          "variables": [
-            "{[Skill04[1]]}"
-          ]
+          "displayLines": "({[Skill04[1]]} * 0.3)"
         },
         "Toughness": null,
         "Tags": null,
@@ -114,14 +86,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (0.4) || MUL || RETURN",
-          "displayLines": "({[Skill04[0]]} * 0.4)",
-          "constants": [
-            0.4
-          ],
-          "variables": [
-            "{[Skill04[0]]}"
-          ]
+          "displayLines": "({[Skill04[0]]} * 0.4)"
         },
         "Toughness": null,
         "Tags": null,
@@ -137,14 +102,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[1]]}) || Constants[0] (0.4) || MUL || RETURN",
-          "displayLines": "({[Skill04[1]]} * 0.4)",
-          "constants": [
-            0.4
-          ],
-          "variables": [
-            "{[Skill04[1]]}"
-          ]
+          "displayLines": "({[Skill04[1]]} * 0.4)"
         },
         "Toughness": null,
         "Tags": null,

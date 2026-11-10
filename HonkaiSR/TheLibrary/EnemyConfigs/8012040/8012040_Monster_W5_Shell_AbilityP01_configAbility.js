@@ -48,12 +48,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-368521336\">Enemy_W5_Shell_BESpeed</a>",
               "valuePerStack": {
                 "MDF_Speed": {
-                  "operator": "Variables[0] (BaseSpeed) || RETURN",
-                  "displayLines": "BaseSpeed",
-                  "constants": [],
-                  "variables": [
-                    "BaseSpeed"
-                  ]
+                  "displayLines": "BaseSpeed"
                 }
               }
             },
@@ -78,12 +73,7 @@ const configAbility = {
       "abilityName": "Monster_W5_Shell_Deathrattle",
       "parameters": {
         "P1_ShieldPercentage": {
-          "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[0]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[0]]}"
         }
       }
     }
@@ -210,12 +200,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1432687016\">Enemy_W5_Shell_LightTeam_Shield_Stack</a>",
                       "valuePerStack": {
                         "MDF_ShieldPercentage_Add": {
-                          "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill01[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill01[0]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill01[0]]}"
                         }
                       }
                     }
@@ -230,12 +215,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"234920767\">Enemy_W5_Shell_LightTeam_Shield</a>",
                       "valuePerStack": {
                         "MDF_ShieldPercentage": {
-                          "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill01[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill01[0]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill01[0]]}"
                         }
                       }
                     }
@@ -304,12 +284,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SpeedOverride</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_Speed) || RETURN",
-                "displayLines": "MDF_Speed",
-                "constants": [],
-                "variables": [
-                  "MDF_Speed"
-                ]
+                "displayLines": "MDF_Speed"
               }
             }
           ]

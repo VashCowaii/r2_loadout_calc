@@ -34,12 +34,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             }
           ]
@@ -68,21 +63,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"2094330090\">Feixiao_AttackProperty</a>[<span class=\"descriptionNumberColor\">Boltcatch</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (0.48) || RETURN",
-                      "displayLines": "0.48",
-                      "constants": [],
-                      "variables": [
-                        0.48
-                      ]
+                      "displayLines": "0.48"
                     }
                   }
                 }

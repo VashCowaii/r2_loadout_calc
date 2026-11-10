@@ -17,12 +17,7 @@ const configAbility = {
           "modifier": null,
           "ID": "122501(SkillMaze)",
           "duration": {
-            "operator": "Variables[0] (10) || RETURN",
-            "displayLines": "10",
-            "constants": [],
-            "variables": [
-              10
-            ]
+            "displayLines": "10"
           }
         }
       ]

@@ -165,12 +165,7 @@ const configAbility = {
                 "value1": "MDF_DebuffNumber",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_PointB3DebuffCount) || RETURN",
-                  "displayLines": "MDF_PointB3DebuffCount",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PointB3DebuffCount"
-                  ]
+                  "displayLines": "MDF_PointB3DebuffCount"
                 }
               },
               "passed": [
@@ -182,13 +177,7 @@ const configAbility = {
                   },
                   "scope": "ContextModifier",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_DebuffNumber) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * MDF_DebuffNumber)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_DebuffNumber"
-                    ]
+                    "displayLines": "(MDF_PropertyValue * MDF_DebuffNumber)"
                   },
                   "variableName": "MDF_PropertyValueChange"
                 },
@@ -199,12 +188,7 @@ const configAbility = {
                     "value1": "MDF_PropertyValueChange",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_PropertyValueMax) || RETURN",
-                      "displayLines": "MDF_PropertyValueMax",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValueMax"
-                      ]
+                      "displayLines": "MDF_PropertyValueMax"
                     }
                   },
                   "passed": [
@@ -216,12 +200,7 @@ const configAbility = {
                       },
                       "scope": "ContextModifier",
                       "value": {
-                        "operator": "Variables[0] (MDF_PropertyValueMax) || RETURN",
-                        "displayLines": "MDF_PropertyValueMax",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValueMax"
-                        ]
+                        "displayLines": "MDF_PropertyValueMax"
                       },
                       "variableName": "MDF_PropertyValueChange"
                     }
@@ -235,13 +214,7 @@ const configAbility = {
                       },
                       "scope": "ContextModifier",
                       "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_DebuffNumber) || MUL || RETURN",
-                        "displayLines": "(MDF_PropertyValue * MDF_DebuffNumber)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue",
-                          "MDF_DebuffNumber"
-                        ]
+                        "displayLines": "(MDF_PropertyValue * MDF_DebuffNumber)"
                       },
                       "variableName": "MDF_PropertyValueChange"
                     }
@@ -523,13 +496,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue01) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyValue01 * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue01",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_PropertyValue01 * MDF_Layer)"
               }
             },
             {
@@ -540,13 +507,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue02) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyValue02 * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue02",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_PropertyValue02 * MDF_Layer)"
               }
             }
           ]
@@ -646,45 +607,24 @@ const configAbility = {
                 "value1": "_Dr_Ratio_Rank06_Skill03_InsertMaxCount",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
+                  "displayLines": "2"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-                    "displayLines": "(2 + 1)",
-                    "constants": [],
-                    "variables": [
-                      2,
-                      1
-                    ]
+                    "displayLines": "(2 + 1)"
                   },
                   "variableName": "_Dr_Ratio_00_EnergyBar"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_Dr_Ratio_00_EnergyBar) || RETURN",
-                    "displayLines": "_Dr_Ratio_00_EnergyBar",
-                    "constants": [],
-                    "variables": [
-                      "_Dr_Ratio_00_EnergyBar"
-                    ]
+                    "displayLines": "_Dr_Ratio_00_EnergyBar"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (_Dr_Ratio_Rank06_Skill03_InsertMaxCount) || RETURN",
-                    "displayLines": "_Dr_Ratio_Rank06_Skill03_InsertMaxCount",
-                    "constants": [],
-                    "variables": [
-                      "_Dr_Ratio_Rank06_Skill03_InsertMaxCount"
-                    ]
+                    "displayLines": "_Dr_Ratio_Rank06_Skill03_InsertMaxCount"
                   },
                   "assignState": "True",
                   "priorState": "Active",
@@ -696,32 +636,17 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "variableName": "_Dr_Ratio_00_EnergyBar"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_Dr_Ratio_00_EnergyBar) || RETURN",
-                    "displayLines": "_Dr_Ratio_00_EnergyBar",
-                    "constants": [],
-                    "variables": [
-                      "_Dr_Ratio_00_EnergyBar"
-                    ]
+                    "displayLines": "_Dr_Ratio_00_EnergyBar"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "assignState": "True",
                   "priorState": "Active",

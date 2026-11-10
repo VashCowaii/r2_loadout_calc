@@ -16,13 +16,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (SkillP01_CurrentEnergy) || Variables[1] (1) || SUB || RETURN",
-        "displayLines": "(SkillP01_CurrentEnergy - 1)",
-        "constants": [],
-        "variables": [
-          "SkillP01_CurrentEnergy",
-          1
-        ]
+        "displayLines": "(SkillP01_CurrentEnergy - 1)"
       },
       "variableName": "SkillP01_CurrentEnergy"
     },
@@ -113,21 +107,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
+                  "displayLines": "2"
                 },
                 "HitSplit": 0.1,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Follow-up"
@@ -166,13 +150,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (SkillP01_EnhanceInsertBuffStack) || Variables[1] (2) || ADD || RETURN",
-        "displayLines": "(SkillP01_EnhanceInsertBuffStack + 2)",
-        "constants": [],
-        "variables": [
-          "SkillP01_EnhanceInsertBuffStack",
-          2
-        ]
+        "displayLines": "(SkillP01_EnhanceInsertBuffStack + 2)"
       },
       "variableName": "SkillP01_EnhanceInsertBuffStack"
     },
@@ -191,20 +169,10 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1033168707\">Ashveil_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">Finale: And Then There Were None</span>]",
           "stackLimit": {
-            "operator": "Variables[0] (30) || RETURN",
-            "displayLines": "30",
-            "constants": [],
-            "variables": [
-              30
-            ]
+            "displayLines": "30"
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           }
         }
       ]

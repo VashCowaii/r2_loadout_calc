@@ -44,20 +44,10 @@ const configAbility = {
                   },
                   "variables": {
                     "parameter[0]_AddLayer": {
-                      "operator": "Variables[0] (5) || RETURN",
-                      "displayLines": "5",
-                      "constants": [],
-                      "variables": [
-                        5
-                      ]
+                      "displayLines": "5"
                     },
                     "parameter[1]_Chance": {
-                      "operator": "Variables[0] (0.65) || RETURN",
-                      "displayLines": "0.65",
-                      "constants": [],
-                      "variables": [
-                        0.65
-                      ]
+                      "displayLines": "0.65"
                     }
                   }
                 }

@@ -61,44 +61,19 @@ const configAbility = {
               "canHitNonTargets": true,
               "valuePerStack": {
                 "Chance": {
-                  "operator": "Variables[0] (#ADF_1) || RETURN",
-                  "displayLines": "#ADF_1",
-                  "constants": [],
-                  "variables": [
-                    "#ADF_1"
-                  ]
+                  "displayLines": "#ADF_1"
                 },
                 "LifeTime": {
-                  "operator": "Variables[0] (#ADF_2) || RETURN",
-                  "displayLines": "#ADF_2",
-                  "constants": [],
-                  "variables": [
-                    "#ADF_2"
-                  ]
+                  "displayLines": "#ADF_2"
                 },
                 "ExtraDamagePercentage": {
-                  "operator": "Variables[0] (#ADF_3) || RETURN",
-                  "displayLines": "#ADF_3",
-                  "constants": [],
-                  "variables": [
-                    "#ADF_3"
-                  ]
+                  "displayLines": "#ADF_3"
                 },
                 "DamagePercentage": {
-                  "operator": "Variables[0] (#ADF_5) || RETURN",
-                  "displayLines": "#ADF_5",
-                  "constants": [],
-                  "variables": [
-                    "#ADF_5"
-                  ]
+                  "displayLines": "#ADF_5"
                 },
                 "BleedPercent": {
-                  "operator": "Variables[0] (#ADF_6) || RETURN",
-                  "displayLines": "#ADF_6",
-                  "constants": [],
-                  "variables": [
-                    "#ADF_6"
-                  ]
+                  "displayLines": "#ADF_6"
                 }
               },
               "allowAbilityTriggers": false

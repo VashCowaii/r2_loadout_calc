@@ -23,12 +23,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">StageFinalDMG</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (#StageBattleEvent_P1_ADF) || RETURN",
-                "displayLines": "#StageBattleEvent_P1_ADF",
-                "constants": [],
-                "variables": [
-                  "#StageBattleEvent_P1_ADF"
-                ]
+                "displayLines": "#StageBattleEvent_P1_ADF"
               }
             },
             {
@@ -188,12 +183,7 @@ const configAbility = {
                     ]
                   },
                   "value": {
-                    "operator": "Variables[0] (AddSPValue) || RETURN",
-                    "displayLines": "AddSPValue",
-                    "constants": [],
-                    "variables": [
-                      "AddSPValue"
-                    ]
+                    "displayLines": "AddSPValue"
                   },
                   "isFixed": "(Fixed)"
                 },
@@ -241,12 +231,7 @@ const configAbility = {
                   "duration": 1,
                   "valuePerStack": {
                     "AddSPValue": {
-                      "operator": "Variables[0] (#StageBattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "#StageBattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#StageBattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "#StageBattleEvent_P1_ADF"
                     }
                   }
                 }
@@ -314,12 +299,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">StageFinalDMG</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (#StageBattleEvent_P1_ADF) || RETURN",
-                "displayLines": "#StageBattleEvent_P1_ADF",
-                "constants": [],
-                "variables": [
-                  "#StageBattleEvent_P1_ADF"
-                ]
+                "displayLines": "#StageBattleEvent_P1_ADF"
               }
             }
           ]
@@ -340,12 +320,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "dispelCount": {
-                "operator": "Variables[0] (#StageBattleEvent_P1_ADF) || RETURN",
-                "displayLines": "#StageBattleEvent_P1_ADF",
-                "constants": [],
-                "variables": [
-                  "#StageBattleEvent_P1_ADF"
-                ]
+                "displayLines": "#StageBattleEvent_P1_ADF"
               },
               "dispelOrder": "LastAdded"
             }
@@ -368,12 +343,7 @@ const configAbility = {
               },
               "typeOverride": "Buff",
               "dispelCount": {
-                "operator": "Variables[0] (#StageBattleEvent_P1_ADF) || RETURN",
-                "displayLines": "#StageBattleEvent_P1_ADF",
-                "constants": [],
-                "variables": [
-                  "#StageBattleEvent_P1_ADF"
-                ]
+                "displayLines": "#StageBattleEvent_P1_ADF"
               },
               "dispelOrder": "LastAdded"
             }
@@ -449,12 +419,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (#StageBattleEvent_P1_ADF) || RETURN",
-                "displayLines": "#StageBattleEvent_P1_ADF",
-                "constants": [],
-                "variables": [
-                  "#StageBattleEvent_P1_ADF"
-                ]
+                "displayLines": "#StageBattleEvent_P1_ADF"
               },
               "formula": "Heal from Target MaxHP"
             }
@@ -472,12 +437,7 @@ const configAbility = {
             {
               "name": "Skill Points Modification",
               "adjustmentValue": {
-                "operator": "Variables[0] (#StageBattleEvent_P1_ADF) || RETURN",
-                "displayLines": "#StageBattleEvent_P1_ADF",
-                "constants": [],
-                "variables": [
-                  "#StageBattleEvent_P1_ADF"
-                ]
+                "displayLines": "#StageBattleEvent_P1_ADF"
               },
               "adjustmentType": "+"
             }
@@ -499,12 +459,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (#StageBattleEvent_P1_ADF) || RETURN",
-                "displayLines": "#StageBattleEvent_P1_ADF",
-                "constants": [],
-                "variables": [
-                  "#StageBattleEvent_P1_ADF"
-                ]
+                "displayLines": "#StageBattleEvent_P1_ADF"
               },
               "isFixed": "* ERR"
             }
@@ -527,12 +482,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">StageFinalDMG</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (#StageBattleEvent_P1_ADF) || RETURN",
-                "displayLines": "#StageBattleEvent_P1_ADF",
-                "constants": [],
-                "variables": [
-                  "#StageBattleEvent_P1_ADF"
-                ]
+                "displayLines": "#StageBattleEvent_P1_ADF"
               }
             }
           ]

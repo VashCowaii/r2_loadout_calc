@@ -46,13 +46,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CEIL) || Variables[1] (MDF_NegativeBlood_Temp) || PARAM_1 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeBlood_Temp)",
-                    "constants": [],
-                    "variables": [
-                      "CEIL",
-                      "MDF_NegativeBlood_Temp"
-                    ]
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeBlood_Temp)"
                   },
                   "variableName": "MDF_NegativeBlood"
                 },
@@ -90,13 +84,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CEIL) || Variables[1] (MDF_NegativeBlood_Temp) || PARAM_1 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeBlood_Temp)",
-                    "constants": [],
-                    "variables": [
-                      "CEIL",
-                      "MDF_NegativeBlood_Temp"
-                    ]
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeBlood_Temp)"
                   },
                   "variableName": "MDF_NegativeBlood"
                 }
@@ -411,12 +399,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -433,12 +416,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
+              "displayLines": "{[Skill01[1]]}"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -455,12 +433,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -477,12 +450,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
+              "displayLines": "{[Skill01[1]]}"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -499,12 +467,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -521,12 +484,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
+              "displayLines": "{[Skill01[1]]}"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -543,12 +501,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "HitSplit": 0.4,
             "Toughness": null,
@@ -565,12 +518,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
+              "displayLines": "{[Skill01[1]]}"
             },
             "HitSplit": 0.4,
             "Toughness": null,

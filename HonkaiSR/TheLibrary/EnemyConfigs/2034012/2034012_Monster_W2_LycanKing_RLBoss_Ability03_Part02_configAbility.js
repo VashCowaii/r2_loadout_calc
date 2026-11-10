@@ -25,12 +25,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -50,12 +45,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -86,12 +76,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -111,12 +96,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -147,12 +127,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -172,12 +147,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -208,12 +178,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -233,12 +198,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -269,12 +229,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -294,12 +249,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -320,12 +270,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-661361560\">Enemy_W2_LycanKing_RLBoss_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Thirst for War</span>]",
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] ({[SkillP05[0]]}) || RETURN",
-          "displayLines": "{[SkillP05[0]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP05[0]]}"
-          ]
+          "displayLines": "{[SkillP05[0]]}"
         }
       }
     },
@@ -376,12 +321,7 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1138048251\">Standard_FearPre</a>[<span class=\"descriptionNumberColor\">Terror Grip</span>]",
           "baseChance": {
-            "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-            "displayLines": "{[Skill03[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[1]]}"
-            ]
+            "displayLines": "{[Skill03[1]]}"
           },
           "valuePerStack": {
             "MDF_LoseSP": 0
@@ -413,12 +353,7 @@ const configAbility = {
               "name": "Define Modifier Variable",
               "modifierName": null,
               "value": {
-                "operator": "Variables[0] (MDF_Count) || RETURN",
-                "displayLines": "MDF_Count",
-                "constants": [],
-                "variables": [
-                  "MDF_Count"
-                ]
+                "displayLines": "MDF_Count"
               }
             }
           ]
@@ -465,12 +400,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_SPRecover) || RETURN",
-                    "displayLines": "MDF_SPRecover",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SPRecover"
-                    ]
+                    "displayLines": "MDF_SPRecover"
                   },
                   "isFixed": "* ERR"
                 },
@@ -481,12 +411,7 @@ const configAbility = {
                   "name": "Define Modifier Variable",
                   "modifierName": null,
                   "value": {
-                    "operator": "Variables[0] (MDF_Count) || RETURN",
-                    "displayLines": "MDF_Count",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Count"
-                    ]
+                    "displayLines": "MDF_Count"
                   }
                 }
               ]

@@ -62,12 +62,7 @@ const configAbility = {
                 "value1": "MDF_23060_Layer",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_23060_MaxCount) || RETURN",
-                  "displayLines": "MDF_23060_MaxCount",
-                  "constants": [],
-                  "variables": [
-                    "MDF_23060_MaxCount"
-                  ]
+                  "displayLines": "MDF_23060_MaxCount"
                 }
               },
               "passed": [
@@ -173,12 +168,7 @@ const configAbility = {
                 "value1": "MDF_23060_Layer",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_23060_MaxCount) || RETURN",
-                  "displayLines": "MDF_23060_MaxCount",
-                  "constants": [],
-                  "variables": [
-                    "MDF_23060_MaxCount"
-                  ]
+                  "displayLines": "MDF_23060_MaxCount"
                 }
               },
               "passed": [
@@ -214,12 +204,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_DefenceIgnoreRatio": {
-              "operator": "Variables[0] (0.32) || RETURN",
-              "displayLines": "0.32",
-              "constants": [],
-              "variables": [
-                0.32
-              ]
+              "displayLines": "0.32"
             }
           }
         }
@@ -245,12 +230,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (6) || RETURN",
-                    "displayLines": "6",
-                    "constants": [],
-                    "variables": [
-                      6
-                    ]
+                    "displayLines": "6"
                   },
                   "isFixed": "* ERR"
                 },
@@ -263,37 +243,17 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1153343279\">LC_23060_Sub</a>[<span class=\"descriptionNumberColor\">Sail</span>]",
                   "duration": 2,
                   "stackLimit": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_AssistDamageAddedRatio": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     },
                     "MDF_UltraDamageAddedRatio": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     },
                     "MDF_23060_MaxCount": {
-                      "operator": "Variables[0] (3) || RETURN",
-                      "displayLines": "3",
-                      "constants": [],
-                      "variables": [
-                        3
-                      ]
+                      "displayLines": "3"
                     }
                   },
                   "addStacksPerTrigger": 1

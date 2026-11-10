@@ -32,12 +32,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1191558894\">Enemy_W5_Vtuber_IF_AbilityEX04_EMY</a>",
           "valuePerStack": {
             "MDF_AllDamageReduce": {
-              "operator": "Variables[0] ({[SkillEX04[0]]}) || RETURN",
-              "displayLines": "{[SkillEX04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX04[0]]}"
-              ]
+              "displayLines": "{[SkillEX04[0]]}"
             }
           }
         }

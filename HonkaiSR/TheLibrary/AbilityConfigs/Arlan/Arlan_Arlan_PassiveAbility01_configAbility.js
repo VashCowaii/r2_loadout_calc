@@ -60,12 +60,7 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-331301596\">Arlan_PassiveAbility_UnDead</a>[<span class=\"descriptionNumberColor\">Turn the Tables</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           }
         }
       ]
@@ -114,13 +109,7 @@ const configAbility = {
                   },
                   "previewType": null,
                   "previewValue": {
-                    "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (0.15) || MUL || RETURN",
-                    "displayLines": "(MDF_MaxHP * 0.15)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxHP",
-                      0.15
-                    ]
+                    "displayLines": "(MDF_MaxHP * 0.15)"
                   }
                 }
               ]
@@ -161,12 +150,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.25) || RETURN",
-                "displayLines": "0.25",
-                "constants": [],
-                "variables": [
-                  0.25
-                ]
+                "displayLines": "0.25"
               },
               "variableName": "Modifier_Arlan_00_P03_Ratio"
             }
@@ -293,15 +277,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1498391924\">Arlan_Passive_DamageUp</a>[<span class=\"descriptionNumberColor\">Pain and Anger</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.72) || Constants[0] (1) || Variables[1] (_HPRatio) || SUB || MUL || RETURN",
-                      "displayLines": "(0.72 * (1 - _HPRatio))",
-                      "constants": [
-                        1
-                      ],
-                      "variables": [
-                        0.72,
-                        "_HPRatio"
-                      ]
+                      "displayLines": "(0.72 * (1 - _HPRatio))"
                     }
                   }
                 }
@@ -352,15 +328,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1498391924\">Arlan_Passive_DamageUp</a>[<span class=\"descriptionNumberColor\">Pain and Anger</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.72) || Constants[0] (1) || Variables[1] (_HPRatio) || SUB || MUL || RETURN",
-                      "displayLines": "(0.72 * (1 - _HPRatio))",
-                      "constants": [
-                        1
-                      ],
-                      "variables": [
-                        0.72,
-                        "_HPRatio"
-                      ]
+                      "displayLines": "(0.72 * (1 - _HPRatio))"
                     }
                   }
                 }

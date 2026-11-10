@@ -82,12 +82,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "consumePercent": {
-                    "operator": "Variables[0] (0.2) || RETURN",
-                    "displayLines": "0.2",
-                    "constants": [],
-                    "variables": [
-                      0.2
-                    ]
+                    "displayLines": "0.2"
                   },
                   "consumeFloor": 1,
                   "attackType": "Maze"
@@ -102,12 +97,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] (0.4) || RETURN",
-                      "displayLines": "0.4",
-                      "constants": [],
-                      "variables": [
-                        0.4
-                      ]
+                      "displayLines": "0.4"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "Toughness": null,

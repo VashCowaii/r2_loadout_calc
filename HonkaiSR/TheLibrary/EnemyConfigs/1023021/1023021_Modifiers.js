@@ -87,12 +87,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
-                "displayLines": "MDF_AttackAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackAddedRatio"
-                ]
+                "displayLines": "MDF_AttackAddedRatio"
               }
             }
           ]
@@ -151,12 +146,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (Modifier_AttackAddedRatio) || RETURN",
-                "displayLines": "Modifier_AttackAddedRatio",
-                "constants": [],
-                "variables": [
-                  "Modifier_AttackAddedRatio"
-                ]
+                "displayLines": "Modifier_AttackAddedRatio"
               }
             }
           ]
@@ -191,12 +181,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
-                "displayLines": "MDF_AttackAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackAddedRatio"
-                ]
+                "displayLines": "MDF_AttackAddedRatio"
               }
             }
           ]
@@ -235,14 +220,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_DefenceAddedRatio) || SUB || RETURN",
-                "displayLines": "(0 - MDF_DefenceAddedRatio)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_DefenceAddedRatio"
-                ]
+                "displayLines": "(0 - MDF_DefenceAddedRatio)"
               }
             }
           ]
@@ -260,12 +238,7 @@ const configAbility = {
       "statusName": "Deep Freeze",
       "stackLimit": 5,
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-        "displayLines": "ModifierStackLayer",
-        "constants": [],
-        "variables": [
-          "ModifierStackLayer"
-        ]
+        "displayLines": "ModifierStackLayer"
       },
       "execute": [
         {
@@ -280,15 +253,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_IceResistanceRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || SUB || RETURN",
-                "displayLines": "(0 - (MDF_IceResistanceRatio_PerLayer * ModifierLayers))",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_IceResistanceRatio_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(0 - (MDF_IceResistanceRatio_PerLayer * ModifierLayers))"
               },
               "variableName": "MDF_IceResistanceRatio"
             },
@@ -300,26 +265,13 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceIceBonus</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_IceResistanceRatio) || RETURN",
-                "displayLines": "MDF_IceResistanceRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_IceResistanceRatio"
-                ]
+                "displayLines": "MDF_IceResistanceRatio"
               }
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_SpeedAddedDelta_PerLayer) || Variables[1] (ModifierLayers) || MUL || SUB || RETURN",
-                "displayLines": "(0 - (MDF_SpeedAddedDelta_PerLayer * ModifierLayers))",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_SpeedAddedDelta_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(0 - (MDF_SpeedAddedDelta_PerLayer * ModifierLayers))"
               },
               "variableName": "MDF_SpeedAddedDelta"
             },
@@ -331,12 +283,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedAddedDelta) || RETURN",
-                "displayLines": "MDF_SpeedAddedDelta",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedAddedDelta"
-                ]
+                "displayLines": "MDF_SpeedAddedDelta"
               }
             }
           ]
@@ -393,12 +340,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (Modifier_DefenceAddedRatio) || RETURN",
-                "displayLines": "Modifier_DefenceAddedRatio",
-                "constants": [],
-                "variables": [
-                  "Modifier_DefenceAddedRatio"
-                ]
+                "displayLines": "Modifier_DefenceAddedRatio"
               }
             }
           ]
@@ -423,12 +365,7 @@ const configAbility = {
       "statusName": "Bitterly Cold",
       "stackLimit": 4,
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-        "displayLines": "ModifierStackLayer",
-        "constants": [],
-        "variables": [
-          "ModifierStackLayer"
-        ]
+        "displayLines": "ModifierStackLayer"
       },
       "execute": [
         {

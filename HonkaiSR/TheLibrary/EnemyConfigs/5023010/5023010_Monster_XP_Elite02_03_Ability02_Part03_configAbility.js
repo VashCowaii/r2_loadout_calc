@@ -108,12 +108,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
+                  "displayLines": "{[Skill02[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -126,12 +121,7 @@ const configAbility = {
               "conditions": {
                 "name": "Random Chance",
                 "chance": {
-                  "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                  "displayLines": "{[Skill02[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[1]]}"
-                  ]
+                  "displayLines": "{[Skill02[1]]}"
                 }
               },
               "passed": [
@@ -144,12 +134,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                   "valuePerStack": {
                     "Ability02_P4_BonusChance": {
-                      "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                      "displayLines": "{[Skill02[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[3]]}"
-                      ]
+                      "displayLines": "{[Skill02[3]]}"
                     }
                   }
                 }
@@ -250,12 +235,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
+                  "displayLines": "{[Skill02[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -268,12 +248,7 @@ const configAbility = {
               "conditions": {
                 "name": "Random Chance",
                 "chance": {
-                  "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                  "displayLines": "{[Skill02[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[1]]}"
-                  ]
+                  "displayLines": "{[Skill02[1]]}"
                 }
               },
               "passed": [
@@ -286,12 +261,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                   "valuePerStack": {
                     "Ability02_P4_BonusChance": {
-                      "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                      "displayLines": "{[Skill02[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[3]]}"
-                      ]
+                      "displayLines": "{[Skill02[3]]}"
                     }
                   }
                 }
@@ -392,12 +362,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
+                  "displayLines": "{[Skill02[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -410,12 +375,7 @@ const configAbility = {
               "conditions": {
                 "name": "Random Chance",
                 "chance": {
-                  "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                  "displayLines": "{[Skill02[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[1]]}"
-                  ]
+                  "displayLines": "{[Skill02[1]]}"
                 }
               },
               "passed": [
@@ -428,12 +388,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                   "valuePerStack": {
                     "Ability02_P4_BonusChance": {
-                      "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                      "displayLines": "{[Skill02[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[3]]}"
-                      ]
+                      "displayLines": "{[Skill02[3]]}"
                     }
                   }
                 }
@@ -551,12 +506,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
+                      "displayLines": "{[Skill02[0]]}"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -569,12 +519,7 @@ const configAbility = {
                   "conditions": {
                     "name": "Random Chance",
                     "chance": {
-                      "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                      "displayLines": "{[Skill02[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[1]]}"
-                      ]
+                      "displayLines": "{[Skill02[1]]}"
                     }
                   },
                   "passed": [
@@ -587,12 +532,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                       "valuePerStack": {
                         "Ability02_P4_BonusChance": {
-                          "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                          "displayLines": "{[Skill02[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[3]]}"
-                          ]
+                          "displayLines": "{[Skill02[3]]}"
                         }
                       }
                     }
@@ -687,12 +627,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Wind",
                         "Damage": {
-                          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                          "displayLines": "{[Skill02[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[0]]}"
-                          ]
+                          "displayLines": "{[Skill02[0]]}"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -705,12 +640,7 @@ const configAbility = {
                       "conditions": {
                         "name": "Random Chance",
                         "chance": {
-                          "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                          "displayLines": "{[Skill02[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[1]]}"
-                          ]
+                          "displayLines": "{[Skill02[1]]}"
                         }
                       },
                       "passed": [
@@ -723,12 +653,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                           "valuePerStack": {
                             "Ability02_P4_BonusChance": {
-                              "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                              "displayLines": "{[Skill02[3]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill02[3]]}"
-                              ]
+                              "displayLines": "{[Skill02[3]]}"
                             }
                           }
                         }
@@ -864,12 +789,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
+                  "displayLines": "{[Skill02[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -882,12 +802,7 @@ const configAbility = {
               "conditions": {
                 "name": "Random Chance",
                 "chance": {
-                  "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                  "displayLines": "{[Skill02[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[1]]}"
-                  ]
+                  "displayLines": "{[Skill02[1]]}"
                 }
               },
               "passed": [
@@ -900,12 +815,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                   "valuePerStack": {
                     "Ability02_P4_BonusChance": {
-                      "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                      "displayLines": "{[Skill02[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[3]]}"
-                      ]
+                      "displayLines": "{[Skill02[3]]}"
                     }
                   }
                 }
@@ -954,12 +864,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
+                      "displayLines": "{[Skill02[0]]}"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -972,12 +877,7 @@ const configAbility = {
                   "conditions": {
                     "name": "Random Chance",
                     "chance": {
-                      "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                      "displayLines": "{[Skill02[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[1]]}"
-                      ]
+                      "displayLines": "{[Skill02[1]]}"
                     }
                   },
                   "passed": [
@@ -990,12 +890,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                       "valuePerStack": {
                         "Ability02_P4_BonusChance": {
-                          "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                          "displayLines": "{[Skill02[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[3]]}"
-                          ]
+                          "displayLines": "{[Skill02[3]]}"
                         }
                       }
                     }
@@ -1030,12 +925,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Wind",
                         "Damage": {
-                          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                          "displayLines": "{[Skill02[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[0]]}"
-                          ]
+                          "displayLines": "{[Skill02[0]]}"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -1048,12 +938,7 @@ const configAbility = {
                       "conditions": {
                         "name": "Random Chance",
                         "chance": {
-                          "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                          "displayLines": "{[Skill02[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[1]]}"
-                          ]
+                          "displayLines": "{[Skill02[1]]}"
                         }
                       },
                       "passed": [
@@ -1066,12 +951,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                           "valuePerStack": {
                             "Ability02_P4_BonusChance": {
-                              "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                              "displayLines": "{[Skill02[3]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill02[3]]}"
-                              ]
+                              "displayLines": "{[Skill02[3]]}"
                             }
                           }
                         }
@@ -1127,12 +1007,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
+                      "displayLines": "{[Skill02[0]]}"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1145,12 +1020,7 @@ const configAbility = {
                   "conditions": {
                     "name": "Random Chance",
                     "chance": {
-                      "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                      "displayLines": "{[Skill02[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[1]]}"
-                      ]
+                      "displayLines": "{[Skill02[1]]}"
                     }
                   },
                   "passed": [
@@ -1163,12 +1033,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                       "valuePerStack": {
                         "Ability02_P4_BonusChance": {
-                          "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                          "displayLines": "{[Skill02[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[3]]}"
-                          ]
+                          "displayLines": "{[Skill02[3]]}"
                         }
                       }
                     }
@@ -1279,12 +1144,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
+                      "displayLines": "{[Skill02[0]]}"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1297,12 +1157,7 @@ const configAbility = {
                   "conditions": {
                     "name": "Random Chance",
                     "chance": {
-                      "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                      "displayLines": "{[Skill02[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[1]]}"
-                      ]
+                      "displayLines": "{[Skill02[1]]}"
                     }
                   },
                   "passed": [
@@ -1315,12 +1170,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                       "valuePerStack": {
                         "Ability02_P4_BonusChance": {
-                          "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                          "displayLines": "{[Skill02[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[3]]}"
-                          ]
+                          "displayLines": "{[Skill02[3]]}"
                         }
                       }
                     }
@@ -1415,12 +1265,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Wind",
                         "Damage": {
-                          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                          "displayLines": "{[Skill02[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[0]]}"
-                          ]
+                          "displayLines": "{[Skill02[0]]}"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -1433,12 +1278,7 @@ const configAbility = {
                       "conditions": {
                         "name": "Random Chance",
                         "chance": {
-                          "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                          "displayLines": "{[Skill02[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[1]]}"
-                          ]
+                          "displayLines": "{[Skill02[1]]}"
                         }
                       },
                       "passed": [
@@ -1451,12 +1291,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                           "valuePerStack": {
                             "Ability02_P4_BonusChance": {
-                              "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                              "displayLines": "{[Skill02[3]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill02[3]]}"
-                              ]
+                              "displayLines": "{[Skill02[3]]}"
                             }
                           }
                         }
@@ -1572,12 +1407,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
+                      "displayLines": "{[Skill02[0]]}"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1590,12 +1420,7 @@ const configAbility = {
                   "conditions": {
                     "name": "Random Chance",
                     "chance": {
-                      "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                      "displayLines": "{[Skill02[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[1]]}"
-                      ]
+                      "displayLines": "{[Skill02[1]]}"
                     }
                   },
                   "passed": [
@@ -1608,12 +1433,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                       "valuePerStack": {
                         "Ability02_P4_BonusChance": {
-                          "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                          "displayLines": "{[Skill02[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[3]]}"
-                          ]
+                          "displayLines": "{[Skill02[3]]}"
                         }
                       }
                     }
@@ -1664,12 +1484,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
+                      "displayLines": "{[Skill02[0]]}"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1682,12 +1497,7 @@ const configAbility = {
                   "conditions": {
                     "name": "Random Chance",
                     "chance": {
-                      "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                      "displayLines": "{[Skill02[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[1]]}"
-                      ]
+                      "displayLines": "{[Skill02[1]]}"
                     }
                   },
                   "passed": [
@@ -1700,12 +1510,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                       "valuePerStack": {
                         "Ability02_P4_BonusChance": {
-                          "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                          "displayLines": "{[Skill02[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[3]]}"
-                          ]
+                          "displayLines": "{[Skill02[3]]}"
                         }
                       }
                     }
@@ -1740,12 +1545,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Wind",
                         "Damage": {
-                          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                          "displayLines": "{[Skill02[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[0]]}"
-                          ]
+                          "displayLines": "{[Skill02[0]]}"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -1758,12 +1558,7 @@ const configAbility = {
                       "conditions": {
                         "name": "Random Chance",
                         "chance": {
-                          "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                          "displayLines": "{[Skill02[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[1]]}"
-                          ]
+                          "displayLines": "{[Skill02[1]]}"
                         }
                       },
                       "passed": [
@@ -1776,12 +1571,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                           "valuePerStack": {
                             "Ability02_P4_BonusChance": {
-                              "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                              "displayLines": "{[Skill02[3]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill02[3]]}"
-                              ]
+                              "displayLines": "{[Skill02[3]]}"
                             }
                           }
                         }
@@ -1849,13 +1639,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || Variables[1] ({[Skill02[2]]}) || MUL || RETURN",
-                  "displayLines": "({[Skill02[0]]} * {[Skill02[2]]})",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}",
-                    "{[Skill02[2]]}"
-                  ]
+                  "displayLines": "({[Skill02[0]]} * {[Skill02[2]]})"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1868,13 +1652,7 @@ const configAbility = {
               "conditions": {
                 "name": "Random Chance",
                 "chance": {
-                  "operator": "Variables[0] ({[Skill02[1]]}) || Variables[1] ({[Skill02[2]]}) || MUL || RETURN",
-                  "displayLines": "({[Skill02[1]]} * {[Skill02[2]]})",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[1]]}",
-                    "{[Skill02[2]]}"
-                  ]
+                  "displayLines": "({[Skill02[1]]} * {[Skill02[2]]})"
                 }
               },
               "passed": [
@@ -1887,12 +1665,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                   "valuePerStack": {
                     "Ability02_P4_BonusChance": {
-                      "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                      "displayLines": "{[Skill02[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[3]]}"
-                      ]
+                      "displayLines": "{[Skill02[3]]}"
                     }
                   }
                 }
@@ -1919,13 +1692,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || Variables[1] ({[Skill02[2]]}) || MUL || RETURN",
-                      "displayLines": "({[Skill02[0]]} * {[Skill02[2]]})",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}",
-                        "{[Skill02[2]]}"
-                      ]
+                      "displayLines": "({[Skill02[0]]} * {[Skill02[2]]})"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1938,13 +1705,7 @@ const configAbility = {
                   "conditions": {
                     "name": "Random Chance",
                     "chance": {
-                      "operator": "Variables[0] ({[Skill02[1]]}) || Variables[1] ({[Skill02[2]]}) || MUL || RETURN",
-                      "displayLines": "({[Skill02[1]]} * {[Skill02[2]]})",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[1]]}",
-                        "{[Skill02[2]]}"
-                      ]
+                      "displayLines": "({[Skill02[1]]} * {[Skill02[2]]})"
                     }
                   },
                   "passed": [
@@ -1957,12 +1718,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                       "valuePerStack": {
                         "Ability02_P4_BonusChance": {
-                          "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                          "displayLines": "{[Skill02[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[3]]}"
-                          ]
+                          "displayLines": "{[Skill02[3]]}"
                         }
                       }
                     }

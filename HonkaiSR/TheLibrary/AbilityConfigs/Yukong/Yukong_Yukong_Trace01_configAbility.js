@@ -31,12 +31,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-238308601\">Yukong_Point01_Resist</a>[<span class=\"descriptionNumberColor\">Debuff Block</span>]",
               "valuePerStack": {
                 "MDF_ResistCD": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
+                  "displayLines": "2"
                 }
               }
             }
@@ -68,12 +63,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-92058280\">Yukong_Point01_ResistCD</a>",
               "duration": {
-                "operator": "Variables[0] (MDF_ResistCD) || RETURN",
-                "displayLines": "MDF_ResistCD",
-                "constants": [],
-                "variables": [
-                  "MDF_ResistCD"
-                ]
+                "displayLines": "MDF_ResistCD"
               }
             },
             {
@@ -134,12 +124,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-238308601\">Yukong_Point01_Resist</a>[<span class=\"descriptionNumberColor\">Debuff Block</span>]",
                   "valuePerStack": {
                     "MDF_ResistCD": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     }
                   }
                 }
@@ -159,12 +144,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-238308601\">Yukong_Point01_Resist</a>[<span class=\"descriptionNumberColor\">Debuff Block</span>]",
               "valuePerStack": {
                 "MDF_ResistCD": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
+                  "displayLines": "2"
                 }
               }
             }

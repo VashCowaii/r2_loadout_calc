@@ -57,12 +57,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -96,23 +91,10 @@ const compositeAbilityObject = {
                 {
                   "name": "Variable Value Range Conditions",
                   "minValue": {
-                    "operator": "Variables[0] (Serval_Ran06_Judge_MaxSP) || Variables[1] (SERVAL_OBJECT_UNUSED_1) || MUL || RETURN",
-                    "displayLines": "(Serval_Ran06_Judge_MaxSP * SERVAL_OBJECT_UNUSED_1)",
-                    "constants": [],
-                    "variables": [
-                      "Serval_Ran06_Judge_MaxSP",
-                      "SERVAL_OBJECT_UNUSED_1"
-                    ]
+                    "displayLines": "(Serval_Ran06_Judge_MaxSP * SERVAL_OBJECT_UNUSED_1)"
                   },
                   "maxValue": {
-                    "operator": "Variables[0] (Serval_Ran06_Judge_MaxSP) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(Serval_Ran06_Judge_MaxSP + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Serval_Ran06_Judge_MaxSP"
-                    ]
+                    "displayLines": "(Serval_Ran06_Judge_MaxSP + 1)"
                   },
                   "enteringRange": [
                     {
@@ -167,12 +149,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (SERVAL_OBJECT_UNUSED_2) || RETURN",
-                        "displayLines": "SERVAL_OBJECT_UNUSED_2",
-                        "constants": [],
-                        "variables": [
-                          "SERVAL_OBJECT_UNUSED_2"
-                        ]
+                        "displayLines": "SERVAL_OBJECT_UNUSED_2"
                       },
                       "variableName": "MAvatar_Serval_00_Rank06_ShowRatio"
                     },
@@ -196,12 +173,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (SERVAL_OBJECT_UNUSED_2) || RETURN",
-                    "displayLines": "SERVAL_OBJECT_UNUSED_2",
-                    "constants": [],
-                    "variables": [
-                      "SERVAL_OBJECT_UNUSED_2"
-                    ]
+                    "displayLines": "SERVAL_OBJECT_UNUSED_2"
                   },
                   "variableName": "MAvatar_Serval_00_Rank06_ShowRatio"
                 }
@@ -243,21 +215,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-2005029779\">Serval_Tree03_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 }
@@ -319,12 +281,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (15) || RETURN",
-                        "displayLines": "15",
-                        "constants": [],
-                        "variables": [
-                          15
-                        ]
+                        "displayLines": "15"
                       },
                       "isFixed": "* ERR"
                     }
@@ -776,12 +733,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "operator": "Variables[0] (0.5) || RETURN",
-                              "displayLines": "0.5",
-                              "constants": [],
-                              "variables": [
-                                0.5
-                              ]
+                              "displayLines": "0.5"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -800,29 +752,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
                       "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "valuePerStack": {
                         "Modifier_Electric_DamagePercentage": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         }
                       },
                       "stackFlag": "CharacterSkill"
@@ -898,12 +835,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Thunder",
                         "Damage": {
-                          "operator": "Variables[0] (0.72) || RETURN",
-                          "displayLines": "0.72",
-                          "constants": [],
-                          "variables": [
-                            0.72
-                          ]
+                          "displayLines": "0.72"
                         },
                         "indirectDMG": true,
                         "Toughness": null,
@@ -926,12 +858,7 @@ const compositeAbilityObject = {
                             "target": "{{Caster}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (4) || RETURN",
-                            "displayLines": "4",
-                            "constants": [],
-                            "variables": [
-                              4
-                            ]
+                            "displayLines": "4"
                           },
                           "isFixed": "* ERR"
                         }
@@ -993,29 +920,14 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
               "duration": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "baseChance": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "valuePerStack": {
                 "Modifier_Electric_DamagePercentage": {
-                  "operator": "Variables[0] (1.04) || RETURN",
-                  "displayLines": "1.04",
-                  "constants": [],
-                  "variables": [
-                    1.04
-                  ]
+                  "displayLines": "1.04"
                 }
               },
               "stackFlag": "CharacterSkill"
@@ -1032,20 +944,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1.8) || RETURN",
-              "displayLines": "1.8",
-              "constants": [],
-              "variables": [
-                1.8
-              ]
+              "displayLines": "1.8"
             },
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -1079,12 +981,7 @@ const compositeAbilityObject = {
               ],
               "function": "Add",
               "value": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "valueType": "Duration"
             }
@@ -1160,20 +1057,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1.4) || RETURN",
-              "displayLines": "1.4",
-              "constants": [],
-              "variables": [
-                1.4
-              ]
+              "displayLines": "1.4"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -1189,20 +1076,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (0.6) || RETURN",
-              "displayLines": "0.6",
-              "constants": [],
-              "variables": [
-                0.6
-              ]
+              "displayLines": "0.6"
             },
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null
           }
@@ -1218,12 +1095,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.2) || RETURN",
-                "displayLines": "0.2",
-                "constants": [],
-                "variables": [
-                  0.2
-                ]
+                "displayLines": "0.2"
               },
               "variableName": "SkillTree01_ThunderChanceAdd"
             }
@@ -1244,30 +1116,14 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "baseChance": {
-            "operator": "Variables[0] (0.8) || Variables[1] (SkillTree01_ThunderChanceAdd) || ADD || RETURN",
-            "displayLines": "(0.8 + SkillTree01_ThunderChanceAdd)",
-            "constants": [],
-            "variables": [
-              0.8,
-              "SkillTree01_ThunderChanceAdd"
-            ]
+            "displayLines": "(0.8 + SkillTree01_ThunderChanceAdd)"
           },
           "valuePerStack": {
             "Modifier_Electric_DamagePercentage": {
-              "operator": "Variables[0] (1.04) || RETURN",
-              "displayLines": "1.04",
-              "constants": [],
-              "variables": [
-                1.04
-              ]
+              "displayLines": "1.04"
             }
           },
           "stackFlag": "CharacterSkill"
@@ -1332,20 +1188,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -1377,21 +1223,10 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (1) || Variables[1] (0.6) || MUL || RETURN",
-                      "displayLines": "(1 * 0.6)",
-                      "constants": [],
-                      "variables": [
-                        1,
-                        0.6
-                      ]
+                      "displayLines": "(1 * 0.6)"
                     },
                     "Toughness": {
-                      "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                      "displayLines": "ST Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "ST Toughness Value"
-                      ]
+                      "displayLines": "ST Toughness Value"
                     },
                     "Tags": null
                   }

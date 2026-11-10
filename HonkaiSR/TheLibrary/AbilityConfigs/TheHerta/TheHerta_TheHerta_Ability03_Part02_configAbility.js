@@ -57,14 +57,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (__i) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(__i + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "__i"
-            ]
+            "displayLines": "(__i + 1)"
           },
           "variableName": "__i"
         },
@@ -119,14 +112,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (__j) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(__j + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "__j"
-                ]
+                "displayLines": "(__j + 1)"
               },
               "variableName": "__j"
             },
@@ -137,12 +123,7 @@ const configAbility = {
                 "value1": "__j",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Variables[0] (__i) || RETURN",
-                  "displayLines": "__i",
-                  "constants": [],
-                  "variables": [
-                    "__i"
-                  ]
+                  "displayLines": "__i"
                 }
               },
               "passed": [
@@ -154,12 +135,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"184474088\">TheHerta_SKL03_Sort_Storge</a>",
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (_Temp_Sort_Layer) || RETURN",
-                    "displayLines": "_Temp_Sort_Layer",
-                    "constants": [],
-                    "variables": [
-                      "_Temp_Sort_Layer"
-                    ]
+                    "displayLines": "_Temp_Sort_Layer"
                   }
                 }
               ]
@@ -218,46 +194,21 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
           "stackLimit": {
-            "operator": "Variables[0] (42) || RETURN",
-            "displayLines": "42",
-            "constants": [],
-            "variables": [
-              42
-            ]
+            "displayLines": "42"
           },
           "valuePerStack": {
             "MagicMark_MaxCount_Max": {
-              "operator": "Variables[0] (42) || RETURN",
-              "displayLines": "42",
-              "constants": [],
-              "variables": [
-                42
-              ]
+              "displayLines": "42"
             },
             "MagicMark_MaxCount": {
-              "operator": "Variables[0] (42) || RETURN",
-              "displayLines": "42",
-              "constants": [],
-              "variables": [
-                42
-              ]
+              "displayLines": "42"
             },
             "MagicMark_Ratio": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             }
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] (_Temp_Sort_Layer) || RETURN",
-            "displayLines": "_Temp_Sort_Layer",
-            "constants": [],
-            "variables": [
-              "_Temp_Sort_Layer"
-            ]
+            "displayLines": "_Temp_Sort_Layer"
           }
         }
       ]
@@ -302,13 +253,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_SKL03_EXTRADAMAGE) || Variables[1] (_PointB3_Ratio) || MUL || RETURN",
-            "displayLines": "(_SKL03_EXTRADAMAGE * _PointB3_Ratio)",
-            "constants": [],
-            "variables": [
-              "_SKL03_EXTRADAMAGE",
-              "_PointB3_Ratio"
-            ]
+            "displayLines": "(_SKL03_EXTRADAMAGE * _PointB3_Ratio)"
           },
           "variableName": "_SKL03_EXTRADAMAGE"
         }
@@ -337,13 +282,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_SKL03_EXTRADAMAGE) || Variables[1] (1.4) || ADD || RETURN",
-                "displayLines": "(_SKL03_EXTRADAMAGE + 1.4)",
-                "constants": [],
-                "variables": [
-                  "_SKL03_EXTRADAMAGE",
-                  1.4
-                ]
+                "displayLines": "(_SKL03_EXTRADAMAGE + 1.4)"
               },
               "variableName": "_SKL03_EXTRADAMAGE"
             }
@@ -365,13 +304,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_SKL03_EXTRADAMAGE) || Variables[1] (2.5) || ADD || RETURN",
-                    "displayLines": "(_SKL03_EXTRADAMAGE + 2.5)",
-                    "constants": [],
-                    "variables": [
-                      "_SKL03_EXTRADAMAGE",
-                      2.5
-                    ]
+                    "displayLines": "(_SKL03_EXTRADAMAGE + 2.5)"
                   },
                   "variableName": "_SKL03_EXTRADAMAGE"
                 }
@@ -380,13 +313,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_SKL03_EXTRADAMAGE) || Variables[1] (4) || ADD || RETURN",
-                    "displayLines": "(_SKL03_EXTRADAMAGE + 4)",
-                    "constants": [],
-                    "variables": [
-                      "_SKL03_EXTRADAMAGE",
-                      4
-                    ]
+                    "displayLines": "(_SKL03_EXTRADAMAGE + 4)"
                   },
                   "variableName": "_SKL03_EXTRADAMAGE"
                 }
@@ -404,21 +331,11 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"555212333\">TheHerta_Ability03_Bonus</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "duration": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] (0.8) || RETURN",
-          "displayLines": "0.8",
-          "constants": [],
-          "variables": [
-            0.8
-          ]
+          "displayLines": "0.8"
         }
       }
     },
@@ -440,21 +357,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] (2) || Variables[1] (_SKL03_EXTRADAMAGE) || ADD || RETURN",
-          "displayLines": "(2 + _SKL03_EXTRADAMAGE)",
-          "constants": [],
-          "variables": [
-            2,
-            "_SKL03_EXTRADAMAGE"
-          ]
+          "displayLines": "(2 + _SKL03_EXTRADAMAGE)"
         },
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -489,12 +395,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "value": {
-        "operator": "Variables[0] (Skill21_Layer_Add) || RETURN",
-        "displayLines": "Skill21_Layer_Add",
-        "constants": [],
-        "variables": [
-          "Skill21_Layer_Add"
-        ]
+        "displayLines": "Skill21_Layer_Add"
       }
     },
     {
@@ -519,12 +420,7 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (Skill21_Layer) || RETURN",
-        "displayLines": "Skill21_Layer",
-        "constants": [],
-        "variables": [
-          "Skill21_Layer"
-        ]
+        "displayLines": "Skill21_Layer"
       },
       "priorState": "Active"
     },

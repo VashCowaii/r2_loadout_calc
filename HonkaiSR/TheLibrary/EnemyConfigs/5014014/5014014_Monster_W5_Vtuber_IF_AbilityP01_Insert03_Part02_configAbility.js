@@ -15,12 +15,7 @@ const configAbility = {
     {
       "name": "Deal Toughness DMG",
       "value": {
-        "operator": "Variables[0] ({[PassiveSkill01[7]]}) || RETURN",
-        "displayLines": "{[PassiveSkill01[7]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill01[7]]}"
-        ]
+        "displayLines": "{[PassiveSkill01[7]]}"
       },
       "defender": {
         "name": "Target Name",
@@ -43,12 +38,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "consumePercent": {
-        "operator": "Variables[0] ({[PassiveSkill01[8]]}) || RETURN",
-        "displayLines": "{[PassiveSkill01[8]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill01[8]]}"
-        ]
+        "displayLines": "{[PassiveSkill01[8]]}"
       }
     }
   ],

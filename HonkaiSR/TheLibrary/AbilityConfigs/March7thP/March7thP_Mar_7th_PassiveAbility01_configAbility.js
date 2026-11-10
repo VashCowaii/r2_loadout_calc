@@ -49,52 +49,24 @@ const configAbility = {
           "name": "Define Modifier Variable",
           "modifierName": "<a class=\"gModGreen\" id=\"300569468\">March7th_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Counter</span>]",
           "value": {
-            "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(2 + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              2
-            ]
+            "displayLines": "(2 + 1)"
           }
         },
         {
           "name": "Define Custom Variable",
           "scope": "ContextCaster",
           "value": {
-            "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(2 + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              2
-            ]
+            "displayLines": "(2 + 1)"
           },
           "variableName": "Mar7th_00_Passive_CounterView"
         },
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(2 + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              2
-            ]
+            "displayLines": "(2 + 1)"
           },
           "maximum": {
-            "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(2 + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              2
-            ]
+            "displayLines": "(2 + 1)"
           },
           "assignState": "True",
           "priorState": "Normal",
@@ -107,44 +79,24 @@ const configAbility = {
           "name": "Define Modifier Variable",
           "modifierName": "<a class=\"gModGreen\" id=\"300569468\">March7th_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Counter</span>]",
           "value": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           }
         },
         {
           "name": "Define Custom Variable",
           "scope": "ContextCaster",
           "value": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "variableName": "Mar7th_00_Passive_CounterView"
         },
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "maximum": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "assignState": "True",
           "priorState": "Normal",
@@ -321,28 +273,14 @@ const configAbility = {
                   "name": "Define Modifier Variable",
                   "modifierName": "<a class=\"gModGreen\" id=\"300569468\">March7th_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Counter</span>]",
                   "value": {
-                    "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(2 + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "(2 + 1)"
                   }
                 },
                 {
                   "name": "Define Custom Variable",
                   "scope": "ContextCaster",
                   "value": {
-                    "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(2 + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "(2 + 1)"
                   },
                   "variableName": "Mar7th_00_Passive_CounterView"
                 },
@@ -366,24 +304,10 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(2 + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "(2 + 1)"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(2 + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "(2 + 1)"
                       },
                       "assignState": "True",
                       "priorState": "Active",
@@ -395,24 +319,10 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(2 + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "(2 + 1)"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(2 + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "(2 + 1)"
                       },
                       "assignState": "True",
                       "priorState": "Normal",
@@ -427,24 +337,14 @@ const configAbility = {
                   "name": "Define Modifier Variable",
                   "modifierName": "<a class=\"gModGreen\" id=\"300569468\">March7th_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Counter</span>]",
                   "value": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   }
                 },
                 {
                   "name": "Define Custom Variable",
                   "scope": "ContextCaster",
                   "value": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "variableName": "Mar7th_00_Passive_CounterView"
                 },
@@ -468,20 +368,10 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "assignState": "True",
                       "priorState": "Active",
@@ -493,20 +383,10 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "assignState": "True",
                       "priorState": "Normal",
@@ -594,14 +474,7 @@ const configAbility = {
                   "name": "Update Displayed Energy Bar",
                   "value": 0,
                   "maximum": {
-                    "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(2 + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "(2 + 1)"
                   },
                   "assignState": "True",
                   "priorState": "Normal",
@@ -614,12 +487,7 @@ const configAbility = {
                   "name": "Update Displayed Energy Bar",
                   "value": 0,
                   "maximum": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "assignState": "True",
                   "priorState": "Normal",

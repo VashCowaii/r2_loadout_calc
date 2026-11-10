@@ -11,12 +11,7 @@ const configAbility = {
     {
       "name": "SWITCH",
       "switchValue": {
-        "operator": "Variables[0] (CurrentItem) || RETURN",
-        "displayLines": "CurrentItem",
-        "constants": [],
-        "variables": [
-          "CurrentItem"
-        ]
+        "displayLines": "CurrentItem"
       },
       "hasBreak": false,
       "caseEvents": [

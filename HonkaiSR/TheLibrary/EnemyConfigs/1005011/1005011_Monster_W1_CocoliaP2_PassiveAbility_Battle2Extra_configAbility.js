@@ -54,14 +54,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (Cocolia_MaxHPValue) || Constants[0] (0.05) || MUL || RETURN",
-                "displayLines": "(Cocolia_MaxHPValue * 0.05)",
-                "constants": [
-                  0.05
-                ],
-                "variables": [
-                  "Cocolia_MaxHPValue"
-                ]
+                "displayLines": "(Cocolia_MaxHPValue * 0.05)"
               },
               "variableName": "Cocolia_B2DMGLimit"
             }

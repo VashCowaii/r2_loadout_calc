@@ -37,12 +37,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.12) || RETURN",
-                    "displayLines": "0.12",
-                    "constants": [],
-                    "variables": [
-                      0.12
-                    ]
+                    "displayLines": "0.12"
                   }
                 }
               ]
@@ -67,12 +62,7 @@ const compositeAbilityObject = {
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (120) || RETURN",
-                      "displayLines": "120",
-                      "constants": [],
-                      "variables": [
-                        120
-                      ]
+                      "displayLines": "120"
                     }
                   },
                   "passed": [
@@ -98,12 +88,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "maxValue": {
-                    "operator": "Variables[0] (120) || RETURN",
-                    "displayLines": "120",
-                    "constants": [],
-                    "variables": [
-                      120
-                    ]
+                    "displayLines": "120"
                   },
                   "enteringRange": [
                     {

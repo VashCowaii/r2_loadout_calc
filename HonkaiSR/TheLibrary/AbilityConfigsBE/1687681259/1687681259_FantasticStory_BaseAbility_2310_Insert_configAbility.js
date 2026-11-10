@@ -26,12 +26,7 @@ const configAbility = {
           "eventID": 30501,
           "variables": {
             "DV_BE_BaseSpeed": {
-              "operator": "Variables[0] (DV_FeverBESpeed) || RETURN",
-              "displayLines": "DV_FeverBESpeed",
-              "constants": [],
-              "variables": [
-                "DV_FeverBESpeed"
-              ]
+              "displayLines": "DV_FeverBESpeed"
             }
           },
           "whenCreated": [
@@ -60,12 +55,7 @@ const configAbility = {
         "target": "{{Player Team(Exclude Memosprites)v2}}"
       },
       "valuePercent": {
-        "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2312_ADF_2) || RETURN",
-        "displayLines": "DV_FantasticStory_PlusAbility_2312_ADF_2",
-        "constants": [],
-        "variables": [
-          "DV_FantasticStory_PlusAbility_2312_ADF_2"
-        ]
+        "displayLines": "DV_FantasticStory_PlusAbility_2312_ADF_2"
       },
       "isFixed": "(Fixed)"
     },
@@ -80,12 +70,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Constants[0] (0) || RETURN",
-        "displayLines": "0",
-        "constants": [
-          0
-        ],
-        "variables": []
+        "displayLines": "0"
       },
       "variableName": "DV_FantasticStory_BaseAbility_CountSum"
     }

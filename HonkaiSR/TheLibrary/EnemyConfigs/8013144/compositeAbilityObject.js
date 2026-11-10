@@ -199,12 +199,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
-                    "displayLines": "MDF_AttackAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackAddedRatio"
-                    ]
+                    "displayLines": "MDF_AttackAddedRatio"
                   }
                 },
                 {
@@ -455,12 +450,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
-                    "displayLines": "MDF_AttackAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackAddedRatio"
-                    ]
+                    "displayLines": "MDF_AttackAddedRatio"
                   }
                 }
               ]
@@ -738,12 +728,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                    "displayLines": "MDF_SpeedAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedAddedRatio"
-                    ]
+                    "displayLines": "MDF_SpeedAddedRatio"
                   }
                 }
               ]
@@ -929,12 +914,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1383210331\">Enemy_W0_Boss_Part2_OnPhase3SpeedUp</a>[<span class=\"descriptionNumberColor\">Burst</span>]",
               "valuePerStack": {
                 "MDF_SpeedAddedRatio": {
-                  "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill03[0]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill03[0]]}"
                 }
               }
             }
@@ -1040,14 +1020,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill12[0]]}) || Constants[0] (0.125) || MUL || RETURN",
-                  "displayLines": "({[Skill12[0]]} * 0.125)",
-                  "constants": [
-                    0.125
-                  ],
-                  "variables": [
-                    "{[Skill12[0]]}"
-                  ]
+                  "displayLines": "({[Skill12[0]]} * 0.125)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1064,14 +1037,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill12[0]]}) || Constants[0] (0.125) || MUL || RETURN",
-                  "displayLines": "({[Skill12[0]]} * 0.125)",
-                  "constants": [
-                    0.125
-                  ],
-                  "variables": [
-                    "{[Skill12[0]]}"
-                  ]
+                  "displayLines": "({[Skill12[0]]} * 0.125)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1194,12 +1160,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"596990185\">Enemy_W0_Boss_Part2_Ability11_Modifier</a>",
           "valuePerStack": {
             "MDF_AttackAddedRatio": {
-              "operator": "Variables[0] ({[Skill11[0]]}) || RETURN",
-              "displayLines": "{[Skill11[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill11[0]]}"
-              ]
+              "displayLines": "{[Skill11[0]]}"
             }
           }
         },
@@ -1289,12 +1250,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill10[0]]}) || RETURN",
-              "displayLines": "{[Skill10[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill10[0]]}"
-              ]
+              "displayLines": "{[Skill10[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1387,21 +1343,11 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"360534641\">Enemy_W0_Boss_Part2_AttackUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill09[1]]}) || RETURN",
-            "displayLines": "{[Skill09[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill09[1]]}"
-            ]
+            "displayLines": "{[Skill09[1]]}"
           },
           "valuePerStack": {
             "MDF_AttackAddedRatio": {
-              "operator": "Variables[0] ({[Skill09[0]]}) || RETURN",
-              "displayLines": "{[Skill09[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill09[0]]}"
-              ]
+              "displayLines": "{[Skill09[0]]}"
             }
           }
         },
@@ -1413,21 +1359,11 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"360534641\">Enemy_W0_Boss_Part2_AttackUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill09[1]]}) || RETURN",
-            "displayLines": "{[Skill09[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill09[1]]}"
-            ]
+            "displayLines": "{[Skill09[1]]}"
           },
           "valuePerStack": {
             "MDF_AttackAddedRatio": {
-              "operator": "Variables[0] ({[Skill09[0]]}) || RETURN",
-              "displayLines": "{[Skill09[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill09[0]]}"
-              ]
+              "displayLines": "{[Skill09[0]]}"
             }
           }
         },
@@ -1516,21 +1452,11 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"360534641\">Enemy_W0_Boss_Part2_AttackUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill08[1]]}) || RETURN",
-            "displayLines": "{[Skill08[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill08[1]]}"
-            ]
+            "displayLines": "{[Skill08[1]]}"
           },
           "valuePerStack": {
             "MDF_AttackAddedRatio": {
-              "operator": "Variables[0] ({[Skill08[0]]}) || RETURN",
-              "displayLines": "{[Skill08[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill08[0]]}"
-              ]
+              "displayLines": "{[Skill08[0]]}"
             }
           }
         },
@@ -1619,21 +1545,11 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"360534641\">Enemy_W0_Boss_Part2_AttackUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill07[1]]}) || RETURN",
-            "displayLines": "{[Skill07[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill07[1]]}"
-            ]
+            "displayLines": "{[Skill07[1]]}"
           },
           "valuePerStack": {
             "MDF_AttackAddedRatio": {
-              "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-              "displayLines": "{[Skill07[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill07[0]]}"
-              ]
+              "displayLines": "{[Skill07[0]]}"
             }
           }
         },

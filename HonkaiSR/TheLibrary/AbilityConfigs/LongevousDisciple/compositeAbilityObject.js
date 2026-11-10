@@ -54,13 +54,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.08) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(0.08 * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      0.08,
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(0.08 * MDF_Layer)"
                   }
                 }
               ]
@@ -111,20 +105,10 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1696785974\">Relic_113_Sub</a>[<span class=\"descriptionNumberColor\">Longevous Disciple</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "stackLimit": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       }
                     }
                   ]
@@ -142,20 +126,10 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1696785974\">Relic_113_Sub</a>[<span class=\"descriptionNumberColor\">Longevous Disciple</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   }
                 }
               ]

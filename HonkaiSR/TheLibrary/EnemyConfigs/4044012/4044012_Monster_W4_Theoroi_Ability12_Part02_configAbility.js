@@ -22,12 +22,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"688363638\">Monster_W4_Theoroi_Destruction</a>[<span class=\"descriptionNumberColor\">Retribution of \"Law\"</span>]",
       "valuePerStack": {
         "MDF_LoseHPRatio": {
-          "operator": "Variables[0] ({[Skill12[0]]}) || RETURN",
-          "displayLines": "{[Skill12[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill12[0]]}"
-          ]
+          "displayLines": "{[Skill12[0]]}"
         }
       }
     },

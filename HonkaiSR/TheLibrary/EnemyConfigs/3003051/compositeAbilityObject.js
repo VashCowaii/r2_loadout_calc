@@ -91,21 +91,10 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (Modifier_Electric_DamagePercentage) || Variables[1] (Modifier_Electric_PoisonLayer) || MUL || RETURN",
-                      "displayLines": "(Modifier_Electric_DamagePercentage * Modifier_Electric_PoisonLayer)",
-                      "constants": [],
-                      "variables": [
-                        "Modifier_Electric_DamagePercentage",
-                        "Modifier_Electric_PoisonLayer"
-                      ]
+                      "displayLines": "(Modifier_Electric_DamagePercentage * Modifier_Electric_PoisonLayer)"
                     },
                     "DamageFlat": {
-                      "operator": "Variables[0] (Modifier_Electric_DamageValue) || RETURN",
-                      "displayLines": "Modifier_Electric_DamageValue",
-                      "constants": [],
-                      "variables": [
-                        "Modifier_Electric_DamageValue"
-                      ]
+                      "displayLines": "Modifier_Electric_DamageValue"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -145,23 +134,10 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Electric_DamagePercentage) || MUL || Variables[2] (Modifier_Electric_PoisonLayer) || MUL || RETURN",
-                      "displayLines": "((DOT_TriggerRatio * Modifier_Electric_DamagePercentage) * Modifier_Electric_PoisonLayer)",
-                      "constants": [],
-                      "variables": [
-                        "DOT_TriggerRatio",
-                        "Modifier_Electric_DamagePercentage",
-                        "Modifier_Electric_PoisonLayer"
-                      ]
+                      "displayLines": "((DOT_TriggerRatio * Modifier_Electric_DamagePercentage) * Modifier_Electric_PoisonLayer)"
                     },
                     "DamageFlat": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Electric_DamageValue) || MUL || RETURN",
-                      "displayLines": "(DOT_TriggerRatio * Modifier_Electric_DamageValue)",
-                      "constants": [],
-                      "variables": [
-                        "DOT_TriggerRatio",
-                        "Modifier_Electric_DamageValue"
-                      ]
+                      "displayLines": "(DOT_TriggerRatio * Modifier_Electric_DamageValue)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -211,13 +187,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] (Modifier_Poison_DamagePercentage) || Variables[1] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
-                      "displayLines": "(Modifier_Poison_DamagePercentage * Modifier_Poison_PoisonLayer)",
-                      "constants": [],
-                      "variables": [
-                        "Modifier_Poison_DamagePercentage",
-                        "Modifier_Poison_PoisonLayer"
-                      ]
+                      "displayLines": "(Modifier_Poison_DamagePercentage * Modifier_Poison_PoisonLayer)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -251,14 +221,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Poison_DamagePercentage) || MUL || Variables[2] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
-                      "displayLines": "((DOT_TriggerRatio * Modifier_Poison_DamagePercentage) * Modifier_Poison_PoisonLayer)",
-                      "constants": [],
-                      "variables": [
-                        "DOT_TriggerRatio",
-                        "Modifier_Poison_DamagePercentage",
-                        "Modifier_Poison_PoisonLayer"
-                      ]
+                      "displayLines": "((DOT_TriggerRatio * Modifier_Poison_DamagePercentage) * Modifier_Poison_PoisonLayer)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -632,37 +595,17 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-578587123\">Enemy_W3_Figure_01_Poison</a>[<span class=\"descriptionNumberColor\">Carousal of Wantonness</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill07[1]]}) || RETURN",
-                "displayLines": "{[Skill07[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill07[1]]}"
-                ]
+                "displayLines": "{[Skill07[1]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                "displayLines": "{[Skill07[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill07[0]]}"
-                ]
+                "displayLines": "{[Skill07[0]]}"
               },
               "stackLimit": {
-                "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                "displayLines": "{[Skill01[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[3]]}"
-                ]
+                "displayLines": "{[Skill01[3]]}"
               },
               "valuePerStack": {
                 "Modifier_Poison_DamagePercentage": {
-                  "operator": "Variables[0] ({[Skill07[2]]}) || RETURN",
-                  "displayLines": "{[Skill07[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill07[2]]}"
-                  ]
+                  "displayLines": "{[Skill07[2]]}"
                 }
               }
             },
@@ -674,37 +617,17 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"723419042\">Enemy_W3_Figure_01_Electric</a>[<span class=\"descriptionNumberColor\">Carousal of Revelry</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill07[1]]}) || RETURN",
-                "displayLines": "{[Skill07[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill07[1]]}"
-                ]
+                "displayLines": "{[Skill07[1]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                "displayLines": "{[Skill07[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill07[0]]}"
-                ]
+                "displayLines": "{[Skill07[0]]}"
               },
               "stackLimit": {
-                "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                "displayLines": "{[Skill01[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[4]]}"
-                ]
+                "displayLines": "{[Skill01[4]]}"
               },
               "valuePerStack": {
                 "Modifier_Electric_DamagePercentage": {
-                  "operator": "Variables[0] ({[Skill07[2]]}) || RETURN",
-                  "displayLines": "{[Skill07[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill07[2]]}"
-                  ]
+                  "displayLines": "{[Skill07[2]]}"
                 }
               }
             }
@@ -785,12 +708,7 @@ const compositeAbilityObject = {
               "variableName": "DOT_TriggerRatio",
               "eventType": "DOT",
               "value": {
-                "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                "displayLines": "{[Skill05[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill05[0]]}"
-                ]
+                "displayLines": "{[Skill05[0]]}"
               }
             }
           ]
@@ -882,37 +800,17 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-578587123\">Enemy_W3_Figure_01_Poison</a>[<span class=\"descriptionNumberColor\">Carousal of Wantonness</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-                "displayLines": "{[Skill04[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[1]]}"
-                ]
+                "displayLines": "{[Skill04[1]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                "displayLines": "{[Skill04[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[0]]}"
-                ]
+                "displayLines": "{[Skill04[0]]}"
               },
               "stackLimit": {
-                "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                "displayLines": "{[Skill01[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[3]]}"
-                ]
+                "displayLines": "{[Skill01[3]]}"
               },
               "valuePerStack": {
                 "Modifier_Poison_DamagePercentage": {
-                  "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-                  "displayLines": "{[Skill04[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[2]]}"
-                  ]
+                  "displayLines": "{[Skill04[2]]}"
                 }
               },
               "success": []
@@ -925,37 +823,17 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"723419042\">Enemy_W3_Figure_01_Electric</a>[<span class=\"descriptionNumberColor\">Carousal of Revelry</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-                "displayLines": "{[Skill04[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[1]]}"
-                ]
+                "displayLines": "{[Skill04[1]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                "displayLines": "{[Skill04[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[0]]}"
-                ]
+                "displayLines": "{[Skill04[0]]}"
               },
               "stackLimit": {
-                "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                "displayLines": "{[Skill01[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[4]]}"
-                ]
+                "displayLines": "{[Skill01[4]]}"
               },
               "valuePerStack": {
                 "Modifier_Electric_DamagePercentage": {
-                  "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-                  "displayLines": "{[Skill04[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[2]]}"
-                  ]
+                  "displayLines": "{[Skill04[2]]}"
                 }
               },
               "success": []
@@ -1038,37 +916,17 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-578587123\">Enemy_W3_Figure_01_Poison</a>[<span class=\"descriptionNumberColor\">Carousal of Wantonness</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                    "displayLines": "{[Skill02[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[1]]}"
-                    ]
+                    "displayLines": "{[Skill02[1]]}"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                    "displayLines": "{[Skill02[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[0]]}"
-                    ]
+                    "displayLines": "{[Skill02[0]]}"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                    "displayLines": "{[Skill01[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill01[3]]}"
-                    ]
+                    "displayLines": "{[Skill01[3]]}"
                   },
                   "valuePerStack": {
                     "Modifier_Poison_DamagePercentage": {
-                      "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                      "displayLines": "{[Skill02[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[2]]}"
-                      ]
+                      "displayLines": "{[Skill02[2]]}"
                     }
                   },
                   "success": []
@@ -1081,37 +939,17 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"723419042\">Enemy_W3_Figure_01_Electric</a>[<span class=\"descriptionNumberColor\">Carousal of Revelry</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                    "displayLines": "{[Skill02[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[1]]}"
-                    ]
+                    "displayLines": "{[Skill02[1]]}"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                    "displayLines": "{[Skill02[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[0]]}"
-                    ]
+                    "displayLines": "{[Skill02[0]]}"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                    "displayLines": "{[Skill01[4]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill01[4]]}"
-                    ]
+                    "displayLines": "{[Skill01[4]]}"
                   },
                   "valuePerStack": {
                     "Modifier_Electric_DamagePercentage": {
-                      "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                      "displayLines": "{[Skill02[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[2]]}"
-                      ]
+                      "displayLines": "{[Skill02[2]]}"
                     }
                   },
                   "success": []
@@ -1180,37 +1018,17 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-578587123\">Enemy_W3_Figure_01_Poison</a>[<span class=\"descriptionNumberColor\">Carousal of Wantonness</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                "displayLines": "{[Skill01[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[1]]}"
-                ]
+                "displayLines": "{[Skill01[1]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                "displayLines": "{[Skill01[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[0]]}"
-                ]
+                "displayLines": "{[Skill01[0]]}"
               },
               "stackLimit": {
-                "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                "displayLines": "{[Skill01[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[3]]}"
-                ]
+                "displayLines": "{[Skill01[3]]}"
               },
               "valuePerStack": {
                 "Modifier_Poison_DamagePercentage": {
-                  "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                  "displayLines": "{[Skill01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[2]]}"
-                  ]
+                  "displayLines": "{[Skill01[2]]}"
                 }
               },
               "success": []
@@ -1223,37 +1041,17 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"723419042\">Enemy_W3_Figure_01_Electric</a>[<span class=\"descriptionNumberColor\">Carousal of Revelry</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                "displayLines": "{[Skill01[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[1]]}"
-                ]
+                "displayLines": "{[Skill01[1]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                "displayLines": "{[Skill01[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[0]]}"
-                ]
+                "displayLines": "{[Skill01[0]]}"
               },
               "stackLimit": {
-                "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                "displayLines": "{[Skill01[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[4]]}"
-                ]
+                "displayLines": "{[Skill01[4]]}"
               },
               "valuePerStack": {
                 "Modifier_Electric_DamagePercentage": {
-                  "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                  "displayLines": "{[Skill01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[2]]}"
-                  ]
+                  "displayLines": "{[Skill01[2]]}"
                 }
               },
               "success": []

@@ -11,12 +11,7 @@ const configAbility = {
         "target": "{{All Team Members(Exclude Memosprites and Self)}}"
       },
       "valuePercent": {
-        "operator": "Variables[0] (0.2) || RETURN",
-        "displayLines": "0.2",
-        "constants": [],
-        "variables": [
-          0.2
-        ]
+        "displayLines": "0.2"
       },
       "isFixed": "(Fixed)",
       "tag": "ActiveSkillAdd"
@@ -48,12 +43,7 @@ const configAbility = {
                   "value1": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
                   "compareType": ">=",
                   "value2": {
-                    "operator": "Variables[0] (160) || RETURN",
-                    "displayLines": "160",
-                    "constants": [],
-                    "variables": [
-                      160
-                    ]
+                    "displayLines": "160"
                   }
                 }
               }
@@ -61,22 +51,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"805273454\">Advanced_Huohuo_Ability03_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "valuePerStack": {
             "MDF_AttackUP": {
-              "operator": "Variables[0] (0.4) || Variables[1] (0.24) || ADD || RETURN",
-              "displayLines": "(0.4 + 0.24)",
-              "constants": [],
-              "variables": [
-                0.4,
-                0.24
-              ]
+              "displayLines": "(0.4 + 0.24)"
             }
           }
         },
@@ -100,12 +79,7 @@ const configAbility = {
                   "value1": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
                   "compareType": "<",
                   "value2": {
-                    "operator": "Variables[0] (160) || RETURN",
-                    "displayLines": "160",
-                    "constants": [],
-                    "variables": [
-                      160
-                    ]
+                    "displayLines": "160"
                   }
                 }
               }
@@ -113,21 +87,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"805273454\">Advanced_Huohuo_Ability03_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "valuePerStack": {
             "MDF_AttackUP": {
-              "operator": "Variables[0] (0.4) || RETURN",
-              "displayLines": "0.4",
-              "constants": [],
-              "variables": [
-                0.4
-              ]
+              "displayLines": "0.4"
             }
           }
         }
@@ -141,21 +105,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"805273454\">Advanced_Huohuo_Ability03_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "valuePerStack": {
             "MDF_AttackUP": {
-              "operator": "Variables[0] (0.4) || RETURN",
-              "displayLines": "0.4",
-              "constants": [],
-              "variables": [
-                0.4
-              ]
+              "displayLines": "0.4"
             }
           }
         }

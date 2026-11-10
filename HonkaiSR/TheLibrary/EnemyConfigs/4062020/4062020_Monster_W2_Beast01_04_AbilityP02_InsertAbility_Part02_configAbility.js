@@ -48,12 +48,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-771052398\">Enemy_W2_Beast01_04_AbilityP02_GoldBlood_Enhance</a>[<span class=\"descriptionNumberColor\">Hemotort Stain</span>]",
                   "valuePerStack": {
                     "MDF_GoldBloodDOTDamageRatio": {
-                      "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                      "displayLines": "{[SkillP01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[0]]}"
-                      ]
+                      "displayLines": "{[SkillP01[0]]}"
                     }
                   },
                   "casterAssign": "TargetSelf"
@@ -90,12 +85,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-771052398\">Enemy_W2_Beast01_04_AbilityP02_GoldBlood_Enhance</a>[<span class=\"descriptionNumberColor\">Hemotort Stain</span>]",
                   "valuePerStack": {
                     "MDF_GoldBloodDOTDamageRatio": {
-                      "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                      "displayLines": "{[SkillP01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[0]]}"
-                      ]
+                      "displayLines": "{[SkillP01[0]]}"
                     }
                   },
                   "casterAssign": "TargetSelf"

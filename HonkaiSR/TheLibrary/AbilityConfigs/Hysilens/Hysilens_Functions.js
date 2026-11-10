@@ -145,15 +145,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (DOT_Tear_Mask) || Variables[1] (DOT_Electric_Mask) || ADD || Variables[2] (DOT_Burn_Mask) || ADD || Variables[3] (DOT_Poison_Mask) || ADD || RETURN",
-            "displayLines": "(((DOT_Tear_Mask + DOT_Electric_Mask) + DOT_Burn_Mask) + DOT_Poison_Mask)",
-            "constants": [],
-            "variables": [
-              "DOT_Tear_Mask",
-              "DOT_Electric_Mask",
-              "DOT_Burn_Mask",
-              "DOT_Poison_Mask"
-            ]
+            "displayLines": "(((DOT_Tear_Mask + DOT_Electric_Mask) + DOT_Burn_Mask) + DOT_Poison_Mask)"
           },
           "variableName": "DOT_Mask"
         },
@@ -209,36 +201,16 @@ const configAbility = {
               "name": "Random Event",
               "odds": [
                 {
-                  "operator": "Variables[0] (DOT_Tear_Mask) || RETURN",
-                  "displayLines": "DOT_Tear_Mask",
-                  "constants": [],
-                  "variables": [
-                    "DOT_Tear_Mask"
-                  ]
+                  "displayLines": "DOT_Tear_Mask"
                 },
                 {
-                  "operator": "Variables[0] (DOT_Electric_Mask) || RETURN",
-                  "displayLines": "DOT_Electric_Mask",
-                  "constants": [],
-                  "variables": [
-                    "DOT_Electric_Mask"
-                  ]
+                  "displayLines": "DOT_Electric_Mask"
                 },
                 {
-                  "operator": "Variables[0] (DOT_Burn_Mask) || RETURN",
-                  "displayLines": "DOT_Burn_Mask",
-                  "constants": [],
-                  "variables": [
-                    "DOT_Burn_Mask"
-                  ]
+                  "displayLines": "DOT_Burn_Mask"
                 },
                 {
-                  "operator": "Variables[0] (DOT_Poison_Mask) || RETURN",
-                  "displayLines": "DOT_Poison_Mask",
-                  "constants": [],
-                  "variables": [
-                    "DOT_Poison_Mask"
-                  ]
+                  "displayLines": "DOT_Poison_Mask"
                 }
               ],
               "execute": [
@@ -257,37 +229,17 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"850932122\">Harscyline_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "valuePerStack": {
                         "Modifier_Tear_DamageRatio": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         },
                         "Modifier_Tear_MaxPercentage": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
+                          "displayLines": "0.25"
                         }
                       }
                     },
@@ -299,37 +251,17 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"2146839416\">Harscyline_DOT_Tear2</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "valuePerStack": {
                         "Modifier_Tear_DamageRatio": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         },
                         "Modifier_Tear_MaxPercentage": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
+                          "displayLines": "0.25"
                         }
                       }
                     }
@@ -343,37 +275,17 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"850932122\">Harscyline_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "valuePerStack": {
                         "Modifier_Tear_DamageRatio": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         },
                         "Modifier_Tear_MaxPercentage": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
+                          "displayLines": "0.25"
                         }
                       }
                     }
@@ -394,29 +306,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-593885923\">Harscyline_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "valuePerStack": {
                         "Modifier_Electric_DamagePercentage": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
+                          "displayLines": "0.25"
                         }
                       }
                     },
@@ -428,29 +325,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1970678013\">Harscyline_DOT_Electric2</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "valuePerStack": {
                         "Modifier_Electric_DamagePercentage": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
+                          "displayLines": "0.25"
                         }
                       }
                     }
@@ -464,29 +346,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-593885923\">Harscyline_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "valuePerStack": {
                         "Modifier_Electric_DamagePercentage": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
+                          "displayLines": "0.25"
                         }
                       }
                     }
@@ -507,29 +374,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"566707275\">Harscyline_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "valuePerStack": {
                         "Modifier_Burn_DamagePercentage": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
+                          "displayLines": "0.25"
                         }
                       }
                     },
@@ -541,29 +393,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1515140485\">Harscyline_DOT_Burn2</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "valuePerStack": {
                         "Modifier_Burn_DamagePercentage": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
+                          "displayLines": "0.25"
                         }
                       }
                     }
@@ -577,29 +414,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"566707275\">Harscyline_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "valuePerStack": {
                         "Modifier_Burn_DamagePercentage": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
+                          "displayLines": "0.25"
                         }
                       }
                     }
@@ -620,29 +442,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1250170394\">Harscyline_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "valuePerStack": {
                         "Modifier_Poison_DamagePercentage": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
+                          "displayLines": "0.25"
                         }
                       }
                     },
@@ -654,29 +461,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1978589432\">Harscyline_DOT_Poison2</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "valuePerStack": {
                         "Modifier_Poison_DamagePercentage": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
+                          "displayLines": "0.25"
                         }
                       }
                     }
@@ -690,29 +482,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1250170394\">Harscyline_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "valuePerStack": {
                         "Modifier_Poison_DamagePercentage": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
+                          "displayLines": "0.25"
                         }
                       }
                     }
@@ -736,36 +513,16 @@ const configAbility = {
           "name": "Random Event",
           "odds": [
             {
-              "operator": "Variables[0] (DOT_Tear_Mask) || RETURN",
-              "displayLines": "DOT_Tear_Mask",
-              "constants": [],
-              "variables": [
-                "DOT_Tear_Mask"
-              ]
+              "displayLines": "DOT_Tear_Mask"
             },
             {
-              "operator": "Variables[0] (DOT_Electric_Mask) || RETURN",
-              "displayLines": "DOT_Electric_Mask",
-              "constants": [],
-              "variables": [
-                "DOT_Electric_Mask"
-              ]
+              "displayLines": "DOT_Electric_Mask"
             },
             {
-              "operator": "Variables[0] (DOT_Burn_Mask) || RETURN",
-              "displayLines": "DOT_Burn_Mask",
-              "constants": [],
-              "variables": [
-                "DOT_Burn_Mask"
-              ]
+              "displayLines": "DOT_Burn_Mask"
             },
             {
-              "operator": "Variables[0] (DOT_Poison_Mask) || RETURN",
-              "displayLines": "DOT_Poison_Mask",
-              "constants": [],
-              "variables": [
-                "DOT_Poison_Mask"
-              ]
+              "displayLines": "DOT_Poison_Mask"
             }
           ],
           "execute": [
@@ -784,37 +541,17 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"850932122\">Harscyline_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "valuePerStack": {
                     "Modifier_Tear_DamageRatio": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     },
                     "Modifier_Tear_MaxPercentage": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     }
                   }
                 },
@@ -826,37 +563,17 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"2146839416\">Harscyline_DOT_Tear2</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "valuePerStack": {
                     "Modifier_Tear_DamageRatio": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     },
                     "Modifier_Tear_MaxPercentage": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     }
                   }
                 }
@@ -870,37 +587,17 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"850932122\">Harscyline_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "valuePerStack": {
                     "Modifier_Tear_DamageRatio": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     },
                     "Modifier_Tear_MaxPercentage": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     }
                   }
                 }
@@ -921,29 +618,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-593885923\">Harscyline_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "valuePerStack": {
                     "Modifier_Electric_DamagePercentage": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     }
                   }
                 },
@@ -955,29 +637,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1970678013\">Harscyline_DOT_Electric2</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "valuePerStack": {
                     "Modifier_Electric_DamagePercentage": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     }
                   }
                 }
@@ -991,29 +658,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-593885923\">Harscyline_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "valuePerStack": {
                     "Modifier_Electric_DamagePercentage": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     }
                   }
                 }
@@ -1034,29 +686,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"566707275\">Harscyline_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "valuePerStack": {
                     "Modifier_Burn_DamagePercentage": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     }
                   }
                 },
@@ -1068,29 +705,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1515140485\">Harscyline_DOT_Burn2</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "valuePerStack": {
                     "Modifier_Burn_DamagePercentage": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     }
                   }
                 }
@@ -1104,29 +726,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"566707275\">Harscyline_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "valuePerStack": {
                     "Modifier_Burn_DamagePercentage": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     }
                   }
                 }
@@ -1147,29 +754,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1250170394\">Harscyline_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "valuePerStack": {
                     "Modifier_Poison_DamagePercentage": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     }
                   }
                 },
@@ -1181,29 +773,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1978589432\">Harscyline_DOT_Poison2</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "valuePerStack": {
                     "Modifier_Poison_DamagePercentage": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     }
                   }
                 }
@@ -1217,29 +794,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1250170394\">Harscyline_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "valuePerStack": {
                     "Modifier_Poison_DamagePercentage": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     }
                   }
                 }
@@ -1326,17 +888,7 @@ const configAbility = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (IsForceStanceDamage) || Constants[0] (1) || EQUAL || Variables[1] (ENEMIES_OBJECT_UNUSED__310) || Variables[2] (ENEMIES_OBJECT_UNUSED__312) || CHECK || Constants[0] (1) || Variables[3] (ENEMIES_OBJECT_UNUSED__313) || ADD || MUL || RETURN",
-                        "displayLines": "(check(value:(IsForceStanceDamage === 1), then:ENEMIES_OBJECT_UNUSED__310, else:ENEMIES_OBJECT_UNUSED__312) * (1 + ENEMIES_OBJECT_UNUSED__313))",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "IsForceStanceDamage",
-                          "ENEMIES_OBJECT_UNUSED__310",
-                          "ENEMIES_OBJECT_UNUSED__312",
-                          "ENEMIES_OBJECT_UNUSED__313"
-                        ]
+                        "displayLines": "(check(value:(IsForceStanceDamage === 1), then:ENEMIES_OBJECT_UNUSED__310, else:ENEMIES_OBJECT_UNUSED__312) * (1 + ENEMIES_OBJECT_UNUSED__313))"
                       },
                       "attacker": {
                         "name": "Target Name",
@@ -1358,17 +910,7 @@ const configAbility = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (IsForceStanceDamage) || Constants[0] (1) || EQUAL || Variables[1] (ENEMIES_OBJECT_UNUSED__310) || Variables[2] (ENEMIES_OBJECT_UNUSED__312) || CHECK || Constants[0] (1) || Variables[3] (ENEMIES_OBJECT_UNUSED__313) || ADD || MUL || RETURN",
-                        "displayLines": "(check(value:(IsForceStanceDamage === 1), then:ENEMIES_OBJECT_UNUSED__310, else:ENEMIES_OBJECT_UNUSED__312) * (1 + ENEMIES_OBJECT_UNUSED__313))",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "IsForceStanceDamage",
-                          "ENEMIES_OBJECT_UNUSED__310",
-                          "ENEMIES_OBJECT_UNUSED__312",
-                          "ENEMIES_OBJECT_UNUSED__313"
-                        ]
+                        "displayLines": "(check(value:(IsForceStanceDamage === 1), then:ENEMIES_OBJECT_UNUSED__310, else:ENEMIES_OBJECT_UNUSED__312) * (1 + ENEMIES_OBJECT_UNUSED__313))"
                       },
                       "attacker": {
                         "name": "Target Name",

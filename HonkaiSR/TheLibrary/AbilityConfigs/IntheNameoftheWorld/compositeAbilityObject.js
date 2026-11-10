@@ -38,12 +38,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.24) || RETURN",
-                    "displayLines": "0.24",
-                    "constants": [],
-                    "variables": [
-                      0.24
-                    ]
+                    "displayLines": "0.24"
                   }
                 },
                 {
@@ -54,12 +49,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRate</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.18) || RETURN",
-                    "displayLines": "0.18",
-                    "constants": [],
-                    "variables": [
-                      0.18
-                    ]
+                    "displayLines": "0.18"
                   }
                 }
               ]

@@ -76,20 +76,10 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-892811864\">Enemy_W3_Ghost_Ability01_Parasitize_Target</a>[<span class=\"descriptionNumberColor\">Deception's Crown</span>]",
       "valuePerStack": {
         "MDF_HealPercentage_BeAttacked": {
-          "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-          "displayLines": "{[SkillP01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[0]]}"
-          ]
+          "displayLines": "{[SkillP01[0]]}"
         },
         "MDF_ElementDamageTakenUp": {
-          "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-          "displayLines": "{[SkillP01[1]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[1]]}"
-          ]
+          "displayLines": "{[SkillP01[1]]}"
         }
       }
     },

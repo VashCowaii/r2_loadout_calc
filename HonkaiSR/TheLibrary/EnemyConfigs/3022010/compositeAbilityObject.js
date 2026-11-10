@@ -72,12 +72,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "AssistSkill02_DamagePercentage",
                   "resetValue": {
-                    "operator": "Variables[0] (MDF_Assist_DamagePercentage) || RETURN",
-                    "displayLines": "MDF_Assist_DamagePercentage",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Assist_DamagePercentage"
-                    ]
+                    "displayLines": "MDF_Assist_DamagePercentage"
                   },
                   "scope": "TargetEntity"
                 }
@@ -280,12 +275,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -365,12 +355,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "HitSplit": 0.5,
             "Toughness": null,
@@ -400,12 +385,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "HitSplit": 0.5,
             "Toughness": null,

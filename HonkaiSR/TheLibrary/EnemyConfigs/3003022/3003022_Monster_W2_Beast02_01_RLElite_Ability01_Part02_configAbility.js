@@ -69,12 +69,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                      "displayLines": "{[Skill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[0]]}"
-                      ]
+                      "displayLines": "{[Skill01[0]]}"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -149,12 +144,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                      "displayLines": "{[Skill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[0]]}"
-                      ]
+                      "displayLines": "{[Skill01[0]]}"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -169,29 +159,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill04[4]]}) || RETURN",
-                    "displayLines": "{[Skill04[4]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill04[4]]}"
-                    ]
+                    "displayLines": "{[Skill04[4]]}"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-                    "displayLines": "{[Skill04[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill04[3]]}"
-                    ]
+                    "displayLines": "{[Skill04[3]]}"
                   },
                   "valuePerStack": {
                     "Modifier_Frozen_DamagePercentage": {
-                      "operator": "Variables[0] ({[Skill04[5]]}) || RETURN",
-                      "displayLines": "{[Skill04[5]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[5]]}"
-                      ]
+                      "displayLines": "{[Skill04[5]]}"
                     }
                   }
                 }
@@ -213,12 +188,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (FireBallCount) || RETURN",
-            "displayLines": "FireBallCount",
-            "constants": [],
-            "variables": [
-              "FireBallCount"
-            ]
+            "displayLines": "FireBallCount"
           },
           "execute": [
             {
@@ -230,12 +200,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                  "displayLines": "{[Skill01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[1]]}"
-                  ]
+                  "displayLines": "{[Skill01[1]]}"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "Toughness": null,
@@ -250,29 +215,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                "displayLines": "{[Skill01[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[4]]}"
-                ]
+                "displayLines": "{[Skill01[4]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                "displayLines": "{[Skill01[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[2]]}"
-                ]
+                "displayLines": "{[Skill01[2]]}"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                  "displayLines": "{[Skill01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[3]]}"
-                  ]
+                  "displayLines": "{[Skill01[3]]}"
                 }
               }
             }

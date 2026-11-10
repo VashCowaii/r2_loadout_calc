@@ -149,12 +149,7 @@ const compositeAbilityObject = {
                         "value1": "HP_Bars_Remaining",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] (MaxPhase) || RETURN",
-                          "displayLines": "MaxPhase",
-                          "constants": [],
-                          "variables": [
-                            "MaxPhase"
-                          ]
+                          "displayLines": "MaxPhase"
                         }
                       }
                     ]
@@ -307,12 +302,7 @@ const compositeAbilityObject = {
                         "value1": "HP_Bars_Remaining",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] (MaxPhase) || RETURN",
-                          "displayLines": "MaxPhase",
-                          "constants": [],
-                          "variables": [
-                            "MaxPhase"
-                          ]
+                          "displayLines": "MaxPhase"
                         }
                       }
                     ]
@@ -395,13 +385,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageTakenUpRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                    "displayLines": "(MDF_DamageTakenUpRatio_PerLayer * ModifierLayers)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageTakenUpRatio_PerLayer",
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "(MDF_DamageTakenUpRatio_PerLayer * ModifierLayers)"
                   }
                 }
               ]
@@ -435,13 +419,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                    "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageUpRatio_PerLayer",
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)"
                   }
                 }
               ]
@@ -503,13 +481,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] (Modifier_Poison_DamagePercentage) || Variables[1] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
-                      "displayLines": "(Modifier_Poison_DamagePercentage * Modifier_Poison_PoisonLayer)",
-                      "constants": [],
-                      "variables": [
-                        "Modifier_Poison_DamagePercentage",
-                        "Modifier_Poison_PoisonLayer"
-                      ]
+                      "displayLines": "(Modifier_Poison_DamagePercentage * Modifier_Poison_PoisonLayer)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -540,14 +512,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Poison_DamagePercentage) || MUL || Variables[2] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
-                      "displayLines": "((DOT_TriggerRatio * Modifier_Poison_DamagePercentage) * Modifier_Poison_PoisonLayer)",
-                      "constants": [],
-                      "variables": [
-                        "DOT_TriggerRatio",
-                        "Modifier_Poison_DamagePercentage",
-                        "Modifier_Poison_PoisonLayer"
-                      ]
+                      "displayLines": "((DOT_TriggerRatio * Modifier_Poison_DamagePercentage) * Modifier_Poison_PoisonLayer)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -635,39 +600,19 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"603194622\">Monster_SW_Boss_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                   "duration": {
-                    "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                    "displayLines": "MDF_LifeTime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_LifeTime"
-                    ]
+                    "displayLines": "MDF_LifeTime"
                   },
                   "baseChance": 1,
                   "stackLimit": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "valuePerStack": {
                     "Modifier_Poison_DamagePercentage": {
-                      "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                      "displayLines": "MDF_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamagePercentage"
-                      ]
+                      "displayLines": "MDF_DamagePercentage"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_Count) || RETURN",
-                    "displayLines": "MDF_Count",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Count"
-                    ]
+                    "displayLines": "MDF_Count"
                   }
                 }
               ]
@@ -886,21 +831,11 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[0]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[0]]}"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "Toughness": {
-                      "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[5]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[5]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[5]]}"
                     },
                     "ToughnessDMGType": {
                       "DamageType": "Wind"
@@ -929,39 +864,18 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-658511969\">Monster_SW_Boss_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                       "duration": {
-                        "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
-                        "displayLines": "{[PassiveSkill02[3]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[PassiveSkill02[3]]}"
-                        ]
+                        "displayLines": "{[PassiveSkill02[3]]}"
                       },
                       "stackLimit": {
-                        "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
-                        "displayLines": "{[PassiveSkill02[4]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[PassiveSkill02[4]]}"
-                        ]
+                        "displayLines": "{[PassiveSkill02[4]]}"
                       },
                       "valuePerStack": {
                         "MDF_DamageTakenUpRatio_PerLayer": {
-                          "operator": "Variables[0] ({[PassiveSkill02[2]]}) || Variables[1] ({[PassiveSkill01[1]]}) || ADD || RETURN",
-                          "displayLines": "({[PassiveSkill02[2]]} + {[PassiveSkill01[1]]})",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill02[2]]}",
-                            "{[PassiveSkill01[1]]}"
-                          ]
+                          "displayLines": "({[PassiveSkill02[2]]} + {[PassiveSkill01[1]]})"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                        "displayLines": "{[PassiveSkill02[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[PassiveSkill02[1]]}"
-                        ]
+                        "displayLines": "{[PassiveSkill02[1]]}"
                       }
                     }
                   ],
@@ -974,38 +888,18 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-658511969\">Monster_SW_Boss_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                       "duration": {
-                        "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
-                        "displayLines": "{[PassiveSkill02[3]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[PassiveSkill02[3]]}"
-                        ]
+                        "displayLines": "{[PassiveSkill02[3]]}"
                       },
                       "stackLimit": {
-                        "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
-                        "displayLines": "{[PassiveSkill02[4]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[PassiveSkill02[4]]}"
-                        ]
+                        "displayLines": "{[PassiveSkill02[4]]}"
                       },
                       "valuePerStack": {
                         "MDF_DamageTakenUpRatio_PerLayer": {
-                          "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill02[2]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill02[2]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill02[2]]}"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                        "displayLines": "{[PassiveSkill02[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[PassiveSkill02[1]]}"
-                        ]
+                        "displayLines": "{[PassiveSkill02[1]]}"
                       }
                     }
                   ]
@@ -1513,12 +1407,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_14028) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_14028",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_14028"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_14028"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1535,39 +1424,19 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"603194622\">Monster_SW_Boss_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                "displayLines": "{[Skill01[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[3]]}"
-                ]
+                "displayLines": "{[Skill01[3]]}"
               },
               "baseChance": 1,
               "stackLimit": {
-                "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                "displayLines": "{[Skill01[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[4]]}"
-                ]
+                "displayLines": "{[Skill01[4]]}"
               },
               "valuePerStack": {
                 "Modifier_Poison_DamagePercentage": {
-                  "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                  "displayLines": "{[Skill01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[2]]}"
-                  ]
+                  "displayLines": "{[Skill01[2]]}"
                 }
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__65) || RETURN",
-                "displayLines": "ENEMIES_OBJECT_UNUSED__65",
-                "constants": [],
-                "variables": [
-                  "ENEMIES_OBJECT_UNUSED__65"
-                ]
+                "displayLines": "ENEMIES_OBJECT_UNUSED__65"
               }
             },
             {
@@ -1650,12 +1519,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[2]]}) || RETURN",
-              "displayLines": "{[Skill06[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[2]]}"
-              ]
+              "displayLines": "{[Skill06[2]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1672,39 +1536,19 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"603194622\">Monster_SW_Boss_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-            "displayLines": "{[Skill01[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[3]]}"
-            ]
+            "displayLines": "{[Skill01[3]]}"
           },
           "baseChance": 1,
           "stackLimit": {
-            "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-            "displayLines": "{[Skill01[4]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[4]]}"
-            ]
+            "displayLines": "{[Skill01[4]]}"
           },
           "valuePerStack": {
             "Modifier_Poison_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
+              "displayLines": "{[Skill01[2]]}"
             }
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-            "displayLines": "{[Skill06[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill06[3]]}"
-            ]
+            "displayLines": "{[Skill06[3]]}"
           }
         },
         {
@@ -2137,12 +1981,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-                      "displayLines": "{[Skill06[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill06[0]]}"
-                      ]
+                      "displayLines": "{[Skill06[0]]}"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -2157,39 +1996,19 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"603194622\">Monster_SW_Boss_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                    "displayLines": "{[Skill01[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill01[3]]}"
-                    ]
+                    "displayLines": "{[Skill01[3]]}"
                   },
                   "baseChance": 1,
                   "stackLimit": {
-                    "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                    "displayLines": "{[Skill01[4]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill01[4]]}"
-                    ]
+                    "displayLines": "{[Skill01[4]]}"
                   },
                   "valuePerStack": {
                     "Modifier_Poison_DamagePercentage": {
-                      "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                      "displayLines": "{[Skill01[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[2]]}"
-                      ]
+                      "displayLines": "{[Skill01[2]]}"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-                    "displayLines": "{[Skill06[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill06[1]]}"
-                    ]
+                    "displayLines": "{[Skill06[1]]}"
                   }
                 },
                 {
@@ -2199,12 +2018,7 @@ const compositeAbilityObject = {
                     "target": "{{Parameter Target}}"
                   },
                   "value": {
-                    "operator": "Variables[0] ({[Skill06[4]]}) || RETURN",
-                    "displayLines": "{[Skill06[4]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill06[4]]}"
-                    ]
+                    "displayLines": "{[Skill06[4]]}"
                   },
                   "isFixed": "* ERR"
                 }
@@ -2233,12 +2047,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Wind",
                         "Damage": {
-                          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-                          "displayLines": "{[Skill06[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill06[0]]}"
-                          ]
+                          "displayLines": "{[Skill06[0]]}"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -2253,39 +2062,19 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"603194622\">Monster_SW_Boss_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                       "duration": {
-                        "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                        "displayLines": "{[Skill01[3]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill01[3]]}"
-                        ]
+                        "displayLines": "{[Skill01[3]]}"
                       },
                       "baseChance": 1,
                       "stackLimit": {
-                        "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                        "displayLines": "{[Skill01[4]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill01[4]]}"
-                        ]
+                        "displayLines": "{[Skill01[4]]}"
                       },
                       "valuePerStack": {
                         "Modifier_Poison_DamagePercentage": {
-                          "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                          "displayLines": "{[Skill01[2]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill01[2]]}"
-                          ]
+                          "displayLines": "{[Skill01[2]]}"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-                        "displayLines": "{[Skill06[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill06[1]]}"
-                        ]
+                        "displayLines": "{[Skill06[1]]}"
                       }
                     },
                     {
@@ -2295,12 +2084,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "value": {
-                        "operator": "Variables[0] ({[Skill06[4]]}) || RETURN",
-                        "displayLines": "{[Skill06[4]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill06[4]]}"
-                        ]
+                        "displayLines": "{[Skill06[4]]}"
                       },
                       "isFixed": "* ERR"
                     }
@@ -2363,12 +2147,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Wind",
                         "Damage": {
-                          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-                          "displayLines": "{[Skill06[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill06[0]]}"
-                          ]
+                          "displayLines": "{[Skill06[0]]}"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -2383,39 +2162,19 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"603194622\">Monster_SW_Boss_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                       "duration": {
-                        "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                        "displayLines": "{[Skill01[3]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill01[3]]}"
-                        ]
+                        "displayLines": "{[Skill01[3]]}"
                       },
                       "baseChance": 1,
                       "stackLimit": {
-                        "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                        "displayLines": "{[Skill01[4]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill01[4]]}"
-                        ]
+                        "displayLines": "{[Skill01[4]]}"
                       },
                       "valuePerStack": {
                         "Modifier_Poison_DamagePercentage": {
-                          "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                          "displayLines": "{[Skill01[2]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill01[2]]}"
-                          ]
+                          "displayLines": "{[Skill01[2]]}"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-                        "displayLines": "{[Skill06[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill06[1]]}"
-                        ]
+                        "displayLines": "{[Skill06[1]]}"
                       }
                     },
                     {
@@ -2425,12 +2184,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "value": {
-                        "operator": "Variables[0] ({[Skill06[4]]}) || RETURN",
-                        "displayLines": "{[Skill06[4]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill06[4]]}"
-                        ]
+                        "displayLines": "{[Skill06[4]]}"
                       },
                       "isFixed": "* ERR"
                     }
@@ -2459,12 +2213,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-                              "displayLines": "{[Skill06[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill06[0]]}"
-                              ]
+                              "displayLines": "{[Skill06[0]]}"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -2479,39 +2228,19 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"603194622\">Monster_SW_Boss_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                           "duration": {
-                            "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                            "displayLines": "{[Skill01[3]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill01[3]]}"
-                            ]
+                            "displayLines": "{[Skill01[3]]}"
                           },
                           "baseChance": 1,
                           "stackLimit": {
-                            "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                            "displayLines": "{[Skill01[4]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill01[4]]}"
-                            ]
+                            "displayLines": "{[Skill01[4]]}"
                           },
                           "valuePerStack": {
                             "Modifier_Poison_DamagePercentage": {
-                              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                              "displayLines": "{[Skill01[2]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill01[2]]}"
-                              ]
+                              "displayLines": "{[Skill01[2]]}"
                             }
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-                            "displayLines": "{[Skill06[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill06[1]]}"
-                            ]
+                            "displayLines": "{[Skill06[1]]}"
                           }
                         },
                         {
@@ -2521,12 +2250,7 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "value": {
-                            "operator": "Variables[0] ({[Skill06[4]]}) || RETURN",
-                            "displayLines": "{[Skill06[4]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill06[4]]}"
-                            ]
+                            "displayLines": "{[Skill06[4]]}"
                           },
                           "isFixed": "* ERR"
                         }
@@ -2589,12 +2313,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-                              "displayLines": "{[Skill06[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill06[0]]}"
-                              ]
+                              "displayLines": "{[Skill06[0]]}"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -2609,39 +2328,19 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"603194622\">Monster_SW_Boss_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                           "duration": {
-                            "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                            "displayLines": "{[Skill01[3]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill01[3]]}"
-                            ]
+                            "displayLines": "{[Skill01[3]]}"
                           },
                           "baseChance": 1,
                           "stackLimit": {
-                            "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                            "displayLines": "{[Skill01[4]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill01[4]]}"
-                            ]
+                            "displayLines": "{[Skill01[4]]}"
                           },
                           "valuePerStack": {
                             "Modifier_Poison_DamagePercentage": {
-                              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                              "displayLines": "{[Skill01[2]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill01[2]]}"
-                              ]
+                              "displayLines": "{[Skill01[2]]}"
                             }
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-                            "displayLines": "{[Skill06[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill06[1]]}"
-                            ]
+                            "displayLines": "{[Skill06[1]]}"
                           }
                         },
                         {
@@ -2651,12 +2350,7 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "value": {
-                            "operator": "Variables[0] ({[Skill06[4]]}) || RETURN",
-                            "displayLines": "{[Skill06[4]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill06[4]]}"
-                            ]
+                            "displayLines": "{[Skill06[4]]}"
                           },
                           "isFixed": "* ERR"
                         }
@@ -2685,12 +2379,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-                                  "displayLines": "{[Skill06[0]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[Skill06[0]]}"
-                                  ]
+                                  "displayLines": "{[Skill06[0]]}"
                                 },
                                 "Toughness": null,
                                 "Tags": null,
@@ -2705,39 +2394,19 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"603194622\">Monster_SW_Boss_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                               "duration": {
-                                "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                                "displayLines": "{[Skill01[3]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[Skill01[3]]}"
-                                ]
+                                "displayLines": "{[Skill01[3]]}"
                               },
                               "baseChance": 1,
                               "stackLimit": {
-                                "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                                "displayLines": "{[Skill01[4]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[Skill01[4]]}"
-                                ]
+                                "displayLines": "{[Skill01[4]]}"
                               },
                               "valuePerStack": {
                                 "Modifier_Poison_DamagePercentage": {
-                                  "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                                  "displayLines": "{[Skill01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[Skill01[2]]}"
-                                  ]
+                                  "displayLines": "{[Skill01[2]]}"
                                 }
                               },
                               "addStacksPerTrigger": {
-                                "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-                                "displayLines": "{[Skill06[1]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[Skill06[1]]}"
-                                ]
+                                "displayLines": "{[Skill06[1]]}"
                               }
                             },
                             {
@@ -2747,12 +2416,7 @@ const compositeAbilityObject = {
                                 "target": "{{Parameter Target}}"
                               },
                               "value": {
-                                "operator": "Variables[0] ({[Skill06[4]]}) || RETURN",
-                                "displayLines": "{[Skill06[4]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[Skill06[4]]}"
-                                ]
+                                "displayLines": "{[Skill06[4]]}"
                               },
                               "isFixed": "* ERR"
                             }
@@ -2815,12 +2479,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-                                  "displayLines": "{[Skill06[0]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[Skill06[0]]}"
-                                  ]
+                                  "displayLines": "{[Skill06[0]]}"
                                 },
                                 "Toughness": null,
                                 "Tags": null,
@@ -2835,39 +2494,19 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"603194622\">Monster_SW_Boss_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                               "duration": {
-                                "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                                "displayLines": "{[Skill01[3]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[Skill01[3]]}"
-                                ]
+                                "displayLines": "{[Skill01[3]]}"
                               },
                               "baseChance": 1,
                               "stackLimit": {
-                                "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                                "displayLines": "{[Skill01[4]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[Skill01[4]]}"
-                                ]
+                                "displayLines": "{[Skill01[4]]}"
                               },
                               "valuePerStack": {
                                 "Modifier_Poison_DamagePercentage": {
-                                  "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                                  "displayLines": "{[Skill01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[Skill01[2]]}"
-                                  ]
+                                  "displayLines": "{[Skill01[2]]}"
                                 }
                               },
                               "addStacksPerTrigger": {
-                                "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-                                "displayLines": "{[Skill06[1]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[Skill06[1]]}"
-                                ]
+                                "displayLines": "{[Skill06[1]]}"
                               }
                             },
                             {
@@ -2877,12 +2516,7 @@ const compositeAbilityObject = {
                                 "target": "{{Parameter Target}}"
                               },
                               "value": {
-                                "operator": "Variables[0] ({[Skill06[4]]}) || RETURN",
-                                "displayLines": "{[Skill06[4]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[Skill06[4]]}"
-                                ]
+                                "displayLines": "{[Skill06[4]]}"
                               },
                               "isFixed": "* ERR"
                             }
@@ -2911,12 +2545,7 @@ const compositeAbilityObject = {
                                   "AttackScaling": {
                                     "DamageType": "Wind",
                                     "Damage": {
-                                      "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-                                      "displayLines": "{[Skill06[0]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[Skill06[0]]}"
-                                      ]
+                                      "displayLines": "{[Skill06[0]]}"
                                     },
                                     "Toughness": null,
                                     "Tags": null,
@@ -2931,39 +2560,19 @@ const compositeAbilityObject = {
                                   },
                                   "modifier": "<a class=\"gModGreen\" id=\"603194622\">Monster_SW_Boss_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                                   "duration": {
-                                    "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                                    "displayLines": "{[Skill01[3]]}",
-                                    "constants": [],
-                                    "variables": [
-                                      "{[Skill01[3]]}"
-                                    ]
+                                    "displayLines": "{[Skill01[3]]}"
                                   },
                                   "baseChance": 1,
                                   "stackLimit": {
-                                    "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                                    "displayLines": "{[Skill01[4]]}",
-                                    "constants": [],
-                                    "variables": [
-                                      "{[Skill01[4]]}"
-                                    ]
+                                    "displayLines": "{[Skill01[4]]}"
                                   },
                                   "valuePerStack": {
                                     "Modifier_Poison_DamagePercentage": {
-                                      "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                                      "displayLines": "{[Skill01[2]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[Skill01[2]]}"
-                                      ]
+                                      "displayLines": "{[Skill01[2]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": {
-                                    "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-                                    "displayLines": "{[Skill06[1]]}",
-                                    "constants": [],
-                                    "variables": [
-                                      "{[Skill06[1]]}"
-                                    ]
+                                    "displayLines": "{[Skill06[1]]}"
                                   }
                                 },
                                 {
@@ -2973,12 +2582,7 @@ const compositeAbilityObject = {
                                     "target": "{{Parameter Target}}"
                                   },
                                   "value": {
-                                    "operator": "Variables[0] ({[Skill06[4]]}) || RETURN",
-                                    "displayLines": "{[Skill06[4]]}",
-                                    "constants": [],
-                                    "variables": [
-                                      "{[Skill06[4]]}"
-                                    ]
+                                    "displayLines": "{[Skill06[4]]}"
                                   },
                                   "isFixed": "* ERR"
                                 }
@@ -3004,12 +2608,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[2]]}) || RETURN",
-              "displayLines": "{[Skill06[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[2]]}"
-              ]
+              "displayLines": "{[Skill06[2]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -3026,39 +2625,19 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"603194622\">Monster_SW_Boss_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-            "displayLines": "{[Skill01[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[3]]}"
-            ]
+            "displayLines": "{[Skill01[3]]}"
           },
           "baseChance": 1,
           "stackLimit": {
-            "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-            "displayLines": "{[Skill01[4]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[4]]}"
-            ]
+            "displayLines": "{[Skill01[4]]}"
           },
           "valuePerStack": {
             "Modifier_Poison_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
+              "displayLines": "{[Skill01[2]]}"
             }
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-            "displayLines": "{[Skill06[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill06[3]]}"
-            ]
+            "displayLines": "{[Skill06[3]]}"
           }
         },
         {
@@ -3254,12 +2833,7 @@ const compositeAbilityObject = {
               {
                 "name": "Enemy ID",
                 "ID": {
-                  "operator": "Variables[0] (SummonID0) || RETURN",
-                  "displayLines": "SummonID0",
-                  "constants": [],
-                  "variables": [
-                    "SummonID0"
-                  ]
+                  "displayLines": "SummonID0"
                 },
                 "target": {
                   "name": "Target Name",
@@ -3314,12 +2888,7 @@ const compositeAbilityObject = {
               {
                 "name": "Enemy ID",
                 "ID": {
-                  "operator": "Variables[0] (SummonID0) || RETURN",
-                  "displayLines": "SummonID0",
-                  "constants": [],
-                  "variables": [
-                    "SummonID0"
-                  ]
+                  "displayLines": "SummonID0"
                 },
                 "target": {
                   "name": "Target Name",
@@ -3349,12 +2918,7 @@ const compositeAbilityObject = {
           "conditions": {
             "name": "Enemy ID",
             "ID": {
-              "operator": "Variables[0] (SummonID0) || RETURN",
-              "displayLines": "SummonID0",
-              "constants": [],
-              "variables": [
-                "SummonID0"
-              ]
+              "displayLines": "SummonID0"
             },
             "target": {
               "name": "Target Name",
@@ -3397,12 +2961,7 @@ const compositeAbilityObject = {
           },
           "scope": "TargetEntity",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[0]]}"
-            ]
+            "displayLines": "{[PassiveSkill01[0]]}"
           },
           "variableName": "DamageUpRatio"
         },
@@ -3480,21 +3039,11 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill01[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill01[0]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill01[0]]}"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (DamageUpLayer) || RETURN",
-                        "displayLines": "DamageUpLayer",
-                        "constants": [],
-                        "variables": [
-                          "DamageUpLayer"
-                        ]
+                        "displayLines": "DamageUpLayer"
                       }
                     }
                   ]
@@ -3556,21 +3105,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[0]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill01[0]]}"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MonsterNumDamageUpLayer) || RETURN",
-                    "displayLines": "MonsterNumDamageUpLayer",
-                    "constants": [],
-                    "variables": [
-                      "MonsterNumDamageUpLayer"
-                    ]
+                    "displayLines": "MonsterNumDamageUpLayer"
                   }
                 }
               ]
@@ -4150,12 +3689,7 @@ const compositeAbilityObject = {
           },
           "scope": "TargetEntity",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[0]]}"
-            ]
+            "displayLines": "{[PassiveSkill01[0]]}"
           },
           "variableName": "DamageUpRatio"
         },
@@ -4233,21 +3767,11 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill01[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill01[0]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill01[0]]}"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (DamageUpLayer) || RETURN",
-                        "displayLines": "DamageUpLayer",
-                        "constants": [],
-                        "variables": [
-                          "DamageUpLayer"
-                        ]
+                        "displayLines": "DamageUpLayer"
                       }
                     }
                   ]
@@ -4332,21 +3856,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[0]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill01[0]]}"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MonsterNumDamageUpLayer) || RETURN",
-                    "displayLines": "MonsterNumDamageUpLayer",
-                    "constants": [],
-                    "variables": [
-                      "MonsterNumDamageUpLayer"
-                    ]
+                    "displayLines": "MonsterNumDamageUpLayer"
                   }
                 }
               ]
@@ -4416,12 +3930,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -4438,39 +3947,19 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"603194622\">Monster_SW_Boss_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-            "displayLines": "{[Skill01[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[3]]}"
-            ]
+            "displayLines": "{[Skill01[3]]}"
           },
           "baseChance": 1,
           "stackLimit": {
-            "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-            "displayLines": "{[Skill01[4]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[4]]}"
-            ]
+            "displayLines": "{[Skill01[4]]}"
           },
           "valuePerStack": {
             "Modifier_Poison_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
+              "displayLines": "{[Skill01[2]]}"
             }
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-            "displayLines": "{[Skill03[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[1]]}"
-            ]
+            "displayLines": "{[Skill03[1]]}"
           }
         },
         "Trigger: Ability End"
@@ -4559,12 +4048,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Wind",
                         "Damage": {
-                          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                          "displayLines": "{[Skill02[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[0]]}"
-                          ]
+                          "displayLines": "{[Skill02[0]]}"
                         },
                         "HitSplit": 0.125,
                         "Toughness": null,
@@ -4585,12 +4069,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Wind",
                         "Damage": {
-                          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                          "displayLines": "{[Skill02[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[0]]}"
-                          ]
+                          "displayLines": "{[Skill02[0]]}"
                         },
                         "HitSplit": 0.125,
                         "Toughness": null,
@@ -4613,12 +4092,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
+                      "displayLines": "{[Skill02[0]]}"
                     },
                     "HitSplit": 0.125,
                     "Toughness": null,
@@ -4711,12 +4185,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -4733,39 +4202,19 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"603194622\">Monster_SW_Boss_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-            "displayLines": "{[Skill01[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[3]]}"
-            ]
+            "displayLines": "{[Skill01[3]]}"
           },
           "baseChance": 1,
           "stackLimit": {
-            "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-            "displayLines": "{[Skill01[4]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[4]]}"
-            ]
+            "displayLines": "{[Skill01[4]]}"
           },
           "valuePerStack": {
             "Modifier_Poison_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
+              "displayLines": "{[Skill01[2]]}"
             }
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-            "displayLines": "{[Skill01[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[1]]}"
-            ]
+            "displayLines": "{[Skill01[1]]}"
           }
         },
         "Trigger: Ability End"

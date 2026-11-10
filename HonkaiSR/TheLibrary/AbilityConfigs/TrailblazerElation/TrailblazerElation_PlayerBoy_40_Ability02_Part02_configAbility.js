@@ -23,21 +23,11 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-138559016\">Player_40_Eidolon1_Count</a>[<span class=\"descriptionNumberColor\">Believe In the Light</span>]",
           "duration": -1,
           "stackLimit": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             }
           },
           "addStacksPerTrigger": 1
@@ -64,12 +54,7 @@ const configAbility = {
           },
           "variables": {
             "AddValue": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             }
           }
         },
@@ -93,20 +78,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (0.6) || RETURN",
-          "displayLines": "0.6",
-          "constants": [],
-          "variables": [
-            0.6
-          ]
+          "displayLines": "0.6"
         },
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "attackType": "Skill",
@@ -134,21 +109,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "DamageElation": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             },
             "dmgFormula": "Elation Scaling",
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "instanceTag": "Skill02_ElationDamage",
             "Tags": null,
@@ -167,12 +132,7 @@ const configAbility = {
       },
       "variables": {
         "AddValue": {
-          "operator": "Variables[0] (20) || RETURN",
-          "displayLines": "20",
-          "constants": [],
-          "variables": [
-            20
-          ]
+          "displayLines": "20"
         }
       }
     },
@@ -204,13 +164,7 @@ const configAbility = {
               },
               "variableName": "_Rank01_ElationEcho",
               "resetValue": {
-                "operator": "Variables[0] (MDF_Layer) || Variables[1] (2) || MUL || RETURN",
-                "displayLines": "(MDF_Layer * 2)",
-                "constants": [],
-                "variables": [
-                  "MDF_Layer",
-                  2
-                ]
+                "displayLines": "(MDF_Layer * 2)"
               },
               "scope": "ContextCaster"
             }

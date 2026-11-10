@@ -151,12 +151,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill11[2]]}) || RETURN",
-                  "displayLines": "{[Skill11[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill11[2]]}"
-                  ]
+                  "displayLines": "{[Skill11[2]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -173,12 +168,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill11[3]]}) || RETURN",
-                  "displayLines": "{[Skill11[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill11[3]]}"
-                  ]
+                  "displayLines": "{[Skill11[3]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -197,12 +187,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill11[0]]}) || RETURN",
-                  "displayLines": "{[Skill11[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill11[0]]}"
-                  ]
+                  "displayLines": "{[Skill11[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -219,12 +204,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill11[1]]}) || RETURN",
-                  "displayLines": "{[Skill11[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill11[1]]}"
-                  ]
+                  "displayLines": "{[Skill11[1]]}"
                 },
                 "Toughness": null,
                 "Tags": null,

@@ -39,12 +39,7 @@ const configAbility = {
               },
               "variables": {
                 "PassiveAbility01_P6_SpeedRatio": {
-                  "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill01[5]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill01[5]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill01[5]]}"
                 }
               },
               "whenCreated": [

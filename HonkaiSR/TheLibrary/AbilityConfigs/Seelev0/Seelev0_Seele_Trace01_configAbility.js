@@ -13,20 +13,10 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-730910953\">Seele_LowHP_AggroDown</a>",
       "valuePerStack": {
         "MDF_HPRatio": {
-          "operator": "Variables[0] (0.5) || RETURN",
-          "displayLines": "0.5",
-          "constants": [],
-          "variables": [
-            0.5
-          ]
+          "displayLines": "0.5"
         },
         "MDF_AggroDown": {
-          "operator": "Variables[0] (0.5) || RETURN",
-          "displayLines": "0.5",
-          "constants": [],
-          "variables": [
-            0.5
-          ]
+          "displayLines": "0.5"
         }
       }
     }
@@ -53,14 +43,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           ]
@@ -90,12 +73,7 @@ const configAbility = {
                 "value1": "CurrentHP%",
                 "compareType": "<=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_HPRatio) || RETURN",
-                  "displayLines": "MDF_HPRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_HPRatio"
-                  ]
+                  "displayLines": "MDF_HPRatio"
                 }
               },
               "passed": [
@@ -108,12 +86,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1465401968\">Seele_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Nightshade</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_AggroDown) || RETURN",
-                      "displayLines": "MDF_AggroDown",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AggroDown"
-                      ]
+                      "displayLines": "MDF_AggroDown"
                     }
                   }
                 }
@@ -135,12 +108,7 @@ const configAbility = {
                 "value1": "CurrentHP%",
                 "compareType": "<=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_HPRatio) || RETURN",
-                  "displayLines": "MDF_HPRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_HPRatio"
-                  ]
+                  "displayLines": "MDF_HPRatio"
                 }
               },
               "passed": [
@@ -153,12 +121,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1465401968\">Seele_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Nightshade</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_AggroDown) || RETURN",
-                      "displayLines": "MDF_AggroDown",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AggroDown"
-                      ]
+                      "displayLines": "MDF_AggroDown"
                     }
                   }
                 }

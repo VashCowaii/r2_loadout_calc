@@ -82,23 +82,13 @@ const configAbility = {
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] ({[SkillP03[0]]}) || RETURN",
-        "displayLines": "{[SkillP03[0]]}",
-        "constants": [],
-        "variables": [
-          "{[SkillP03[0]]}"
-        ]
+        "displayLines": "{[SkillP03[0]]}"
       },
       "enemyList": [
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonList_ADF_4) || RETURN",
-            "displayLines": "SummonList_ADF_4",
-            "constants": [],
-            "variables": [
-              "SummonList_ADF_4"
-            ]
+            "displayLines": "SummonList_ADF_4"
           },
           "locationType": "BeforeCaster"
         }
@@ -107,23 +97,13 @@ const configAbility = {
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] ({[SkillP03[1]]}) || RETURN",
-        "displayLines": "{[SkillP03[1]]}",
-        "constants": [],
-        "variables": [
-          "{[SkillP03[1]]}"
-        ]
+        "displayLines": "{[SkillP03[1]]}"
       },
       "enemyList": [
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
-            "displayLines": "SummonList_ADF_3",
-            "constants": [],
-            "variables": [
-              "SummonList_ADF_3"
-            ]
+            "displayLines": "SummonList_ADF_3"
           },
           "locationType": "First"
         }
@@ -132,23 +112,13 @@ const configAbility = {
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] ({[SkillP03[2]]}) || RETURN",
-        "displayLines": "{[SkillP03[2]]}",
-        "constants": [],
-        "variables": [
-          "{[SkillP03[2]]}"
-        ]
+        "displayLines": "{[SkillP03[2]]}"
       },
       "enemyList": [
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
-            "displayLines": "SummonList_ADF_3",
-            "constants": [],
-            "variables": [
-              "SummonList_ADF_3"
-            ]
+            "displayLines": "SummonList_ADF_3"
           },
           "locationType": "Last"
         }
@@ -157,23 +127,13 @@ const configAbility = {
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] ({[SkillP03[3]]}) || RETURN",
-        "displayLines": "{[SkillP03[3]]}",
-        "constants": [],
-        "variables": [
-          "{[SkillP03[3]]}"
-        ]
+        "displayLines": "{[SkillP03[3]]}"
       },
       "enemyList": [
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-            "displayLines": "SummonList_ADF_2",
-            "constants": [],
-            "variables": [
-              "SummonList_ADF_2"
-            ]
+            "displayLines": "SummonList_ADF_2"
           },
           "locationType": "First"
         }
@@ -182,23 +142,13 @@ const configAbility = {
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] ({[SkillP03[4]]}) || RETURN",
-        "displayLines": "{[SkillP03[4]]}",
-        "constants": [],
-        "variables": [
-          "{[SkillP03[4]]}"
-        ]
+        "displayLines": "{[SkillP03[4]]}"
       },
       "enemyList": [
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-            "displayLines": "SummonList_ADF_2",
-            "constants": [],
-            "variables": [
-              "SummonList_ADF_2"
-            ]
+            "displayLines": "SummonList_ADF_2"
           },
           "locationType": "Last"
         }
@@ -241,12 +191,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1759595362\">Enemy_W4_Serpent_01_IF_AbilityEX03_ShareHP</a>",
               "valuePerStack": {
                 "MDF_MaxHPAddRatio": {
-                  "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-                  "displayLines": "{[SkillEX03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX03[0]]}"
-                  ]
+                  "displayLines": "{[SkillEX03[0]]}"
                 }
               }
             }
@@ -279,12 +224,7 @@ const configAbility = {
       "conditions": {
         "name": "Enemy ID",
         "ID": {
-          "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
-          "displayLines": "SummonList_ADF_3",
-          "constants": [],
-          "variables": [
-            "SummonList_ADF_3"
-          ]
+          "displayLines": "SummonList_ADF_3"
         },
         "target": {
           "name": "Target Name",

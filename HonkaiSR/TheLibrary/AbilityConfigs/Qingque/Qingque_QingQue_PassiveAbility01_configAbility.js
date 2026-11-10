@@ -35,24 +35,14 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (0.72) || RETURN",
-        "displayLines": "0.72",
-        "constants": [],
-        "variables": [
-          0.72
-        ]
+        "displayLines": "0.72"
       },
       "variableName": "MDF_PropertyValue01"
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (0.72) || RETURN",
-        "displayLines": "0.72",
-        "constants": [],
-        "variables": [
-          0.72
-        ]
+        "displayLines": "0.72"
       },
       "variableName": "MDF_PropertyValue"
     },
@@ -80,12 +70,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1424511139\">QingQue_PassiveCount</a>",
       "valuePerStack": {
         "MDF_PropertyValue01": {
-          "operator": "Variables[0] (0.72) || RETURN",
-          "displayLines": "0.72",
-          "constants": [],
-          "variables": [
-            0.72
-          ]
+          "displayLines": "0.72"
         }
       }
     }

@@ -91,14 +91,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (BeHitTime) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(BeHitTime + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "BeHitTime"
-                        ]
+                        "displayLines": "(BeHitTime + 1)"
                       },
                       "variableName": "isBeHit"
                     },

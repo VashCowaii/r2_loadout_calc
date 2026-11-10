@@ -62,12 +62,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1588077472\">PlayerBoy_20_PointB3_Bonus</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             }
           }
         }
@@ -105,21 +100,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1210211185\">PlayerBoy_20_Eidolon2</a>[<span class=\"descriptionNumberColor\">Jailbreaking Rainbowwalk</span>]",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.25) || RETURN",
-              "displayLines": "0.25",
-              "constants": [],
-              "variables": [
-                0.25
-              ]
+              "displayLines": "0.25"
             }
           }
         }
@@ -129,12 +114,7 @@ const configAbility = {
       "name": "Update Displayed Energy Bar",
       "value": 0,
       "maximum": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "assignState": "True",
       "priorState": "Normal",

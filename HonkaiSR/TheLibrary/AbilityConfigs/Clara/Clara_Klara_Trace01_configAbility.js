@@ -13,12 +13,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1111450796\">Klara_Trace01</a>",
       "valuePerStack": {
         "MDF_Chance": {
-          "operator": "Variables[0] (0.35) || RETURN",
-          "displayLines": "0.35",
-          "constants": [],
-          "variables": [
-            0.35
-          ]
+          "displayLines": "0.35"
         }
       }
     }
@@ -39,12 +34,7 @@ const configAbility = {
               "conditions": {
                 "name": "Random Chance",
                 "chance": {
-                  "operator": "Variables[0] (MDF_Chance) || RETURN",
-                  "displayLines": "MDF_Chance",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Chance"
-                  ]
+                  "displayLines": "MDF_Chance"
                 }
               },
               "passed": [

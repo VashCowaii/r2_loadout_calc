@@ -85,12 +85,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Null Type",
                 "DamageFlat": {
-                  "operator": "Variables[0] (MDF_Eidolon6_DamageValue) || RETURN",
-                  "displayLines": "MDF_Eidolon6_DamageValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Eidolon6_DamageValue"
-                  ]
+                  "displayLines": "MDF_Eidolon6_DamageValue"
                 },
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
@@ -283,13 +278,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_DamageRatio) || Variables[1] (MDF_ModifierLayers) || MUL || RETURN",
-                "displayLines": "(MDF_DamageRatio * MDF_ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageRatio",
-                  "MDF_ModifierLayers"
-                ]
+                "displayLines": "(MDF_DamageRatio * MDF_ModifierLayers)"
               },
               "variableName": "MDF_FinalDamageRatio"
             },
@@ -301,12 +290,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_FinalDamageRatio) || RETURN",
-                "displayLines": "MDF_FinalDamageRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_FinalDamageRatio"
-                ]
+                "displayLines": "MDF_FinalDamageRatio"
               }
             }
           ]
@@ -491,13 +475,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (SpeedUp_Count) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyValue * SpeedUp_Count)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "SpeedUp_Count"
-                ]
+                "displayLines": "(MDF_PropertyValue * SpeedUp_Count)"
               }
             }
           ]
@@ -527,12 +505,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -563,12 +536,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (seele_dmg_percent) || RETURN",
-                "displayLines": "seele_dmg_percent",
-                "constants": [],
-                "variables": [
-                  "seele_dmg_percent"
-                ]
+                "displayLines": "seele_dmg_percent"
               }
             },
             {
@@ -590,12 +558,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceQuantumPEN</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_Penetrate) || RETURN",
-                    "displayLines": "MDF_Penetrate",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Penetrate"
-                    ]
+                    "displayLines": "MDF_Penetrate"
                   }
                 }
               ]
@@ -676,13 +639,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (FinalUltraDamage) || Variables[1] (AddUltraDamage) || ADD || RETURN",
-                    "displayLines": "(FinalUltraDamage + AddUltraDamage)",
-                    "constants": [],
-                    "variables": [
-                      "FinalUltraDamage",
-                      "AddUltraDamage"
-                    ]
+                    "displayLines": "(FinalUltraDamage + AddUltraDamage)"
                   },
                   "variableName": "FinalUltraDamage"
                 }

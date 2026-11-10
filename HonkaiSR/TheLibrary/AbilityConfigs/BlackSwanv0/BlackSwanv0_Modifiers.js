@@ -89,12 +89,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (Rank04_SPAdded) || RETURN",
-                "displayLines": "Rank04_SPAdded",
-                "constants": [],
-                "variables": [
-                  "Rank04_SPAdded"
-                ]
+                "displayLines": "Rank04_SPAdded"
               },
               "isFixed": "* ERR"
             },
@@ -191,14 +186,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_ResistanceDown) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_ResistanceDown)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_ResistanceDown"
-                    ]
+                    "displayLines": "(0 - MDF_ResistanceDown)"
                   }
                 },
                 {
@@ -222,12 +210,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1557426074\">M_BlackSwan_DOT_Eidolon4_AddSP</a>",
                   "valuePerStack": {
                     "Eidolon4_SPAdded": {
-                      "operator": "Variables[0] (8) || RETURN",
-                      "displayLines": "8",
-                      "constants": [],
-                      "variables": [
-                        8
-                      ]
+                      "displayLines": "8"
                     }
                   }
                 }
@@ -449,12 +432,7 @@ const configAbility = {
                     "value1": "Dot_Layer_Count",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (SecondLayer) || RETURN",
-                      "displayLines": "SecondLayer",
-                      "constants": [],
-                      "variables": [
-                        "SecondLayer"
-                      ]
+                      "displayLines": "SecondLayer"
                     },
                     "contextScope": "ContextModifier"
                   },
@@ -512,12 +490,7 @@ const configAbility = {
                         "value1": "Dot_Layer_Count",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (ThirdLayer) || RETURN",
-                          "displayLines": "ThirdLayer",
-                          "constants": [],
-                          "variables": [
-                            "ThirdLayer"
-                          ]
+                          "displayLines": "ThirdLayer"
                         },
                         "contextScope": "ContextModifier"
                       },
@@ -561,12 +534,7 @@ const configAbility = {
                     "value1": "Dot_Layer_Count",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (ThirdLayer) || RETURN",
-                      "displayLines": "ThirdLayer",
-                      "constants": [],
-                      "variables": [
-                        "ThirdLayer"
-                      ]
+                      "displayLines": "ThirdLayer"
                     },
                     "contextScope": "ContextModifier"
                   },
@@ -580,12 +548,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1900357632\">M_BlackSwan_DOT_DefenceIgnore</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (DefenceIgnore) || RETURN",
-                          "displayLines": "DefenceIgnore",
-                          "constants": [],
-                          "variables": [
-                            "DefenceIgnore"
-                          ]
+                          "displayLines": "DefenceIgnore"
                         }
                       }
                     },
@@ -598,12 +561,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1900357632\">M_BlackSwan_DOT_DefenceIgnore</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (DefenceIgnore) || RETURN",
-                          "displayLines": "DefenceIgnore",
-                          "constants": [],
-                          "variables": [
-                            "DefenceIgnore"
-                          ]
+                          "displayLines": "DefenceIgnore"
                         }
                       }
                     }
@@ -620,12 +578,7 @@ const configAbility = {
                     "value1": "Dot_Layer_Count",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (ThirdLayer) || RETURN",
-                      "displayLines": "ThirdLayer",
-                      "constants": [],
-                      "variables": [
-                        "ThirdLayer"
-                      ]
+                      "displayLines": "ThirdLayer"
                     },
                     "contextScope": "ContextModifier"
                   },
@@ -650,14 +603,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] (Basic_DamagePercentage) || Variables[1] (Dot_Layer_Count) || Variables[2] (ExtraLayer_DamagePercentage) || MUL || ADD || RETURN",
-                              "displayLines": "(Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage))",
-                              "constants": [],
-                              "variables": [
-                                "Basic_DamagePercentage",
-                                "Dot_Layer_Count",
-                                "ExtraLayer_DamagePercentage"
-                              ]
+                              "displayLines": "(Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage))"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -675,14 +621,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] (Basic_DamagePercentage) || Variables[1] (Dot_Layer_Count) || Variables[2] (ExtraLayer_DamagePercentage) || MUL || ADD || RETURN",
-                              "displayLines": "(Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage))",
-                              "constants": [],
-                              "variables": [
-                                "Basic_DamagePercentage",
-                                "Dot_Layer_Count",
-                                "ExtraLayer_DamagePercentage"
-                              ]
+                              "displayLines": "(Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage))"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -715,12 +654,7 @@ const configAbility = {
                         "value1": "Dot_Layer_Count",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (SecondLayer) || RETURN",
-                          "displayLines": "SecondLayer",
-                          "constants": [],
-                          "variables": [
-                            "SecondLayer"
-                          ]
+                          "displayLines": "SecondLayer"
                         },
                         "contextScope": "ContextModifier"
                       },
@@ -745,14 +679,7 @@ const configAbility = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] (Basic_DamagePercentage) || Variables[1] (Dot_Layer_Count) || Variables[2] (ExtraLayer_DamagePercentage) || MUL || ADD || RETURN",
-                                  "displayLines": "(Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage))",
-                                  "constants": [],
-                                  "variables": [
-                                    "Basic_DamagePercentage",
-                                    "Dot_Layer_Count",
-                                    "ExtraLayer_DamagePercentage"
-                                  ]
+                                  "displayLines": "(Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage))"
                                 },
                                 "Toughness": null,
                                 "Tags": null,
@@ -770,14 +697,7 @@ const configAbility = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] (Basic_DamagePercentage) || Variables[1] (Dot_Layer_Count) || Variables[2] (ExtraLayer_DamagePercentage) || MUL || ADD || RETURN",
-                                  "displayLines": "(Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage))",
-                                  "constants": [],
-                                  "variables": [
-                                    "Basic_DamagePercentage",
-                                    "Dot_Layer_Count",
-                                    "ExtraLayer_DamagePercentage"
-                                  ]
+                                  "displayLines": "(Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage))"
                                 },
                                 "Toughness": null,
                                 "Tags": null,
@@ -819,14 +739,7 @@ const configAbility = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] (Basic_DamagePercentage) || Variables[1] (Dot_Layer_Count) || Variables[2] (ExtraLayer_DamagePercentage) || MUL || ADD || RETURN",
-                                  "displayLines": "(Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage))",
-                                  "constants": [],
-                                  "variables": [
-                                    "Basic_DamagePercentage",
-                                    "Dot_Layer_Count",
-                                    "ExtraLayer_DamagePercentage"
-                                  ]
+                                  "displayLines": "(Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage))"
                                 },
                                 "Toughness": null,
                                 "Tags": null,
@@ -844,14 +757,7 @@ const configAbility = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] (Basic_DamagePercentage) || Variables[1] (Dot_Layer_Count) || Variables[2] (ExtraLayer_DamagePercentage) || MUL || ADD || RETURN",
-                                  "displayLines": "(Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage))",
-                                  "constants": [],
-                                  "variables": [
-                                    "Basic_DamagePercentage",
-                                    "Dot_Layer_Count",
-                                    "ExtraLayer_DamagePercentage"
-                                  ]
+                                  "displayLines": "(Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage))"
                                 },
                                 "Toughness": null,
                                 "Tags": null,
@@ -886,12 +792,7 @@ const configAbility = {
                     "value1": "Dot_Layer_Count",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (SecondLayer) || RETURN",
-                      "displayLines": "SecondLayer",
-                      "constants": [],
-                      "variables": [
-                        "SecondLayer"
-                      ]
+                      "displayLines": "SecondLayer"
                     },
                     "contextScope": "ContextModifier"
                   },
@@ -930,12 +831,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] (Spread_DamagePercentage) || RETURN",
-                              "displayLines": "Spread_DamagePercentage",
-                              "constants": [],
-                              "variables": [
-                                "Spread_DamagePercentage"
-                              ]
+                              "displayLines": "Spread_DamagePercentage"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -967,12 +863,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] (Spread_DamagePercentage) || RETURN",
-                              "displayLines": "Spread_DamagePercentage",
-                              "constants": [],
-                              "variables": [
-                                "Spread_DamagePercentage"
-                              ]
+                              "displayLines": "Spread_DamagePercentage"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -1008,12 +899,7 @@ const configAbility = {
                             "value1": "Dot_Layer_Count",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (ThirdLayer) || RETURN",
-                              "displayLines": "ThirdLayer",
-                              "constants": [],
-                              "variables": [
-                                "ThirdLayer"
-                              ]
+                              "displayLines": "ThirdLayer"
                             },
                             "contextScope": "ContextModifier"
                           },
@@ -1091,14 +977,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] (Basic_DamagePercentage) || Variables[1] (Dot_Layer_Count) || Variables[2] (ExtraLayer_DamagePercentage) || MUL || ADD || RETURN",
-                      "displayLines": "(Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage))",
-                      "constants": [],
-                      "variables": [
-                        "Basic_DamagePercentage",
-                        "Dot_Layer_Count",
-                        "ExtraLayer_DamagePercentage"
-                      ]
+                      "displayLines": "(Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage))"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1166,14 +1045,7 @@ const configAbility = {
                   "name": "Define Modifier Variable",
                   "modifierName": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]",
                   "value": {
-                    "operator": "Variables[0] (_enhance_count) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(_enhance_count - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_enhance_count"
-                    ]
+                    "displayLines": "(_enhance_count - 1)"
                   }
                 },
                 {
@@ -1181,14 +1053,7 @@ const configAbility = {
                   "modifierName": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]",
                   "variableName": "MDF_Count",
                   "value": {
-                    "operator": "Variables[0] (_enhance_count) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(_enhance_count - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_enhance_count"
-                    ]
+                    "displayLines": "(_enhance_count - 1)"
                   }
                 }
               ],
@@ -1220,14 +1085,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                   "addStacksPerTrigger": {
-                    "operator": "Constants[0] (1) || Variables[0] (ExtraLayer_DamagePercentage) || SUB || RETURN",
-                    "displayLines": "(1 - ExtraLayer_DamagePercentage)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "ExtraLayer_DamagePercentage"
-                    ]
+                    "displayLines": "(1 - ExtraLayer_DamagePercentage)"
                   },
                   "silentAdd": true
                 },
@@ -1365,12 +1223,7 @@ const configAbility = {
                         },
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (ThirdLayer) || RETURN",
-                          "displayLines": "ThirdLayer",
-                          "constants": [],
-                          "variables": [
-                            "ThirdLayer"
-                          ]
+                          "displayLines": "ThirdLayer"
                         },
                         "valueType": "Layer"
                       },
@@ -1385,12 +1238,7 @@ const configAbility = {
                             },
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (SecondLayer) || RETURN",
-                              "displayLines": "SecondLayer",
-                              "constants": [],
-                              "variables": [
-                                "SecondLayer"
-                              ]
+                              "displayLines": "SecondLayer"
                             },
                             "valueType": "Layer"
                           }
@@ -1409,12 +1257,7 @@ const configAbility = {
                         },
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (ThirdLayer) || RETURN",
-                          "displayLines": "ThirdLayer",
-                          "constants": [],
-                          "variables": [
-                            "ThirdLayer"
-                          ]
+                          "displayLines": "ThirdLayer"
                         },
                         "valueType": "Layer"
                       },
@@ -1429,12 +1272,7 @@ const configAbility = {
                             },
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (SecondLayer) || RETURN",
-                              "displayLines": "SecondLayer",
-                              "constants": [],
-                              "variables": [
-                                "SecondLayer"
-                              ]
+                              "displayLines": "SecondLayer"
                             },
                             "valueType": "Layer"
                           }
@@ -1481,15 +1319,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Basic_DamagePercentage) || Variables[2] (Dot_Layer_Count) || Variables[3] (ExtraLayer_DamagePercentage) || MUL || ADD || MUL || RETURN",
-                      "displayLines": "(DOT_TriggerRatio * (Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage)))",
-                      "constants": [],
-                      "variables": [
-                        "DOT_TriggerRatio",
-                        "Basic_DamagePercentage",
-                        "Dot_Layer_Count",
-                        "ExtraLayer_DamagePercentage"
-                      ]
+                      "displayLines": "(DOT_TriggerRatio * (Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage)))"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1507,15 +1337,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Basic_DamagePercentage) || Variables[2] (Dot_Layer_Count) || Variables[3] (ExtraLayer_DamagePercentage) || MUL || ADD || MUL || RETURN",
-                      "displayLines": "(DOT_TriggerRatio * (Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage)))",
-                      "constants": [],
-                      "variables": [
-                        "DOT_TriggerRatio",
-                        "Basic_DamagePercentage",
-                        "Dot_Layer_Count",
-                        "ExtraLayer_DamagePercentage"
-                      ]
+                      "displayLines": "(DOT_TriggerRatio * (Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage)))"
                     },
                     "Toughness": null,
                     "Tags": null,

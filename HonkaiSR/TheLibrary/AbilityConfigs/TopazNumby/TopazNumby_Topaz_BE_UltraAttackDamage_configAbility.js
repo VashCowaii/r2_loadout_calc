@@ -13,14 +13,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (CurEnhance) || Constants[0] (1) || SUB || RETURN",
-        "displayLines": "(CurEnhance - 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "CurEnhance"
-        ]
+        "displayLines": "(CurEnhance - 1)"
       },
       "variableName": "CurEnhance"
     },
@@ -36,20 +29,10 @@ const configAbility = {
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (CurEnhance) || RETURN",
-            "displayLines": "CurEnhance",
-            "constants": [],
-            "variables": [
-              "CurEnhance"
-            ]
+            "displayLines": "CurEnhance"
           },
           "maximum": {
-            "operator": "Variables[0] (MaxEnhance) || RETURN",
-            "displayLines": "MaxEnhance",
-            "constants": [],
-            "variables": [
-              "MaxEnhance"
-            ]
+            "displayLines": "MaxEnhance"
           },
           "assignState": "True",
           "priorState": "Active",
@@ -62,12 +45,7 @@ const configAbility = {
           "name": "Update Displayed Energy Bar",
           "value": 0,
           "maximum": {
-            "operator": "Variables[0] (MaxEnhance) || RETURN",
-            "displayLines": "MaxEnhance",
-            "constants": [],
-            "variables": [
-              "MaxEnhance"
-            ]
+            "displayLines": "MaxEnhance"
           },
           "assignState": "True",
           "priorState": "Normal",
@@ -98,22 +76,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (1.5) || Variables[1] (1.5) || ADD || RETURN",
-              "displayLines": "(1.5 + 1.5)",
-              "constants": [],
-              "variables": [
-                1.5,
-                1.5
-              ]
+              "displayLines": "(1.5 + 1.5)"
             },
             "HitSplit": 0.1,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": [
               "Summon-Tag DMG"
@@ -133,22 +100,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (1.5) || Variables[1] (1.5) || ADD || RETURN",
-          "displayLines": "(1.5 + 1.5)",
-          "constants": [],
-          "variables": [
-            1.5,
-            1.5
-          ]
+          "displayLines": "(1.5 + 1.5)"
         },
         "HitSplit": 0.3,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": [
           "Summon-Tag DMG"
@@ -174,12 +130,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (5) || RETURN",
-            "displayLines": "5",
-            "constants": [],
-            "variables": [
-              5
-            ]
+            "displayLines": "5"
           },
           "isFixed": "* ERR"
         }
@@ -199,12 +150,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (10) || RETURN",
-            "displayLines": "10",
-            "constants": [],
-            "variables": [
-              10
-            ]
+            "displayLines": "10"
           },
           "isFixed": "* ERR"
         }
@@ -228,12 +174,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (60) || RETURN",
-            "displayLines": "60",
-            "constants": [],
-            "variables": [
-              60
-            ]
+            "displayLines": "60"
           },
           "isFixed": "* ERR"
         },
@@ -269,12 +210,7 @@ const configAbility = {
             "target": "{{Numby}}"
           },
           "attackCountEnhanced": {
-            "operator": "Variables[0] (CurEnhance) || RETURN",
-            "displayLines": "CurEnhance",
-            "constants": [],
-            "variables": [
-              "CurEnhance"
-            ]
+            "displayLines": "CurEnhance"
           },
           "show": true
         },
@@ -287,12 +223,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1361568506\">Topaz_BE_UltraEnhance_ShowText</a>",
           "valuePerStack": {
             "ATKCount": {
-              "operator": "Variables[0] (CurEnhance) || RETURN",
-              "displayLines": "CurEnhance",
-              "constants": [],
-              "variables": [
-                "CurEnhance"
-              ]
+              "displayLines": "CurEnhance"
             }
           }
         }

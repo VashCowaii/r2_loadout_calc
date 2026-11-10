@@ -117,14 +117,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                           "duration": {
-                            "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
-                            "displayLines": "(2 - 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              2
-                            ]
+                            "displayLines": "(2 - 1)"
                           },
                           "immediateEffect": true
                         },
@@ -134,14 +127,7 @@ const compositeAbilityObject = {
                           "priorState": "CoolDown",
                           "bar#": 1,
                           "cooldown": {
-                            "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
-                            "displayLines": "(2 - 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              2
-                            ]
+                            "displayLines": "(2 - 1)"
                           }
                         }
                       ],
@@ -154,12 +140,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                           "duration": {
-                            "operator": "Variables[0] (2) || RETURN",
-                            "displayLines": "2",
-                            "constants": [],
-                            "variables": [
-                              2
-                            ]
+                            "displayLines": "2"
                           },
                           "immediateEffect": true
                         },
@@ -169,12 +150,7 @@ const compositeAbilityObject = {
                           "priorState": "CoolDown",
                           "bar#": 1,
                           "cooldown": {
-                            "operator": "Variables[0] (2) || RETURN",
-                            "displayLines": "2",
-                            "constants": [],
-                            "variables": [
-                              2
-                            ]
+                            "displayLines": "2"
                           }
                         }
                       ]
@@ -220,14 +196,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                           "duration": {
-                            "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
-                            "displayLines": "(2 - 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              2
-                            ]
+                            "displayLines": "(2 - 1)"
                           }
                         },
                         {
@@ -236,14 +205,7 @@ const compositeAbilityObject = {
                           "priorState": "CoolDown",
                           "bar#": 1,
                           "cooldown": {
-                            "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
-                            "displayLines": "(2 - 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              2
-                            ]
+                            "displayLines": "(2 - 1)"
                           }
                         }
                       ],
@@ -256,12 +218,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                           "duration": {
-                            "operator": "Variables[0] (2) || RETURN",
-                            "displayLines": "2",
-                            "constants": [],
-                            "variables": [
-                              2
-                            ]
+                            "displayLines": "2"
                           }
                         },
                         {
@@ -270,12 +227,7 @@ const compositeAbilityObject = {
                           "priorState": "CoolDown",
                           "bar#": 1,
                           "cooldown": {
-                            "operator": "Variables[0] (2) || RETURN",
-                            "displayLines": "2",
-                            "constants": [],
-                            "variables": [
-                              2
-                            ]
+                            "displayLines": "2"
                           }
                         }
                       ]
@@ -348,12 +300,7 @@ const compositeAbilityObject = {
                       "priorState": "CoolDown",
                       "bar#": 1,
                       "cooldown": {
-                        "operator": "Variables[0] (DanHeng_00_Passive_BeginTargetEnhance_CD) || RETURN",
-                        "displayLines": "DanHeng_00_Passive_BeginTargetEnhance_CD",
-                        "constants": [],
-                        "variables": [
-                          "DanHeng_00_Passive_BeginTargetEnhance_CD"
-                        ]
+                        "displayLines": "DanHeng_00_Passive_BeginTargetEnhance_CD"
                       }
                     }
                   ]
@@ -412,12 +359,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                    "displayLines": "MDF_PropertyRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyRatio"
-                    ]
+                    "displayLines": "MDF_PropertyRatio"
                   }
                 }
               ]
@@ -436,12 +378,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Random Chance",
                     "chance": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   },
                   "passed": [
@@ -453,21 +390,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1050755614\">DanHeng_PointB2_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     }
@@ -497,20 +424,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1715636734\">DanHeng_LowHP_AggroDown</a>",
           "valuePerStack": {
             "MDF_HPRatio": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             },
             "MDF_AggroDown": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             }
           }
         }
@@ -537,14 +454,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "(0 - MDF_PropertyValue)"
                   }
                 }
               ]
@@ -574,12 +484,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_HPRatio) || RETURN",
-                      "displayLines": "MDF_HPRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_HPRatio"
-                      ]
+                      "displayLines": "MDF_HPRatio"
                     }
                   },
                   "passed": [
@@ -592,12 +497,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1338494483\">DanHeng_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Hidden Dragon</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_AggroDown) || RETURN",
-                          "displayLines": "MDF_AggroDown",
-                          "constants": [],
-                          "variables": [
-                            "MDF_AggroDown"
-                          ]
+                          "displayLines": "MDF_AggroDown"
                         }
                       }
                     }
@@ -619,12 +519,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_HPRatio) || RETURN",
-                      "displayLines": "MDF_HPRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_HPRatio"
-                      ]
+                      "displayLines": "MDF_HPRatio"
                     }
                   },
                   "passed": [
@@ -637,12 +532,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1338494483\">DanHeng_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Hidden Dragon</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_AggroDown) || RETURN",
-                          "displayLines": "MDF_AggroDown",
-                          "constants": [],
-                          "variables": [
-                            "MDF_AggroDown"
-                          ]
+                          "displayLines": "MDF_AggroDown"
                         }
                       }
                     }
@@ -702,12 +592,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   },
                   "passed": [
@@ -1051,12 +936,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -1088,21 +968,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1978717144\">DanHeng_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">Splitting Spearhead</span>]",
                       "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.4) || RETURN",
-                          "displayLines": "0.4",
-                          "constants": [],
-                          "variables": [
-                            0.4
-                          ]
+                          "displayLines": "0.4"
                         }
                       }
                     }
@@ -1135,12 +1005,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1350798035\">DanHeng_Passive_SelfBeingTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
           "valuePerStack": {
             "DanHeng_PassivePene": {
-              "operator": "Variables[0] (0.36) || RETURN",
-              "displayLines": "0.36",
-              "constants": [],
-              "variables": [
-                0.36
-              ]
+              "displayLines": "0.36"
             }
           }
         }
@@ -1370,12 +1235,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1350798035\">DanHeng_Passive_SelfBeingTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                       "valuePerStack": {
                         "DanHeng_PassivePene": {
-                          "operator": "Variables[0] (0.36) || RETURN",
-                          "displayLines": "0.36",
-                          "constants": [],
-                          "variables": [
-                            0.36
-                          ]
+                          "displayLines": "0.36"
                         }
                       }
                     },
@@ -1472,12 +1332,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1350798035\">DanHeng_Passive_SelfBeingTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                       "valuePerStack": {
                         "DanHeng_PassivePene": {
-                          "operator": "Variables[0] (0.36) || RETURN",
-                          "displayLines": "0.36",
-                          "constants": [],
-                          "variables": [
-                            0.36
-                          ]
+                          "displayLines": "0.36"
                         }
                       }
                     },
@@ -1574,12 +1429,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1350798035\">DanHeng_Passive_SelfBeingTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                       "valuePerStack": {
                         "DanHeng_PassivePene": {
-                          "operator": "Variables[0] (0.36) || RETURN",
-                          "displayLines": "0.36",
-                          "constants": [],
-                          "variables": [
-                            0.36
-                          ]
+                          "displayLines": "0.36"
                         }
                       }
                     },
@@ -1709,21 +1559,10 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (4) || Variables[1] (1.2) || ADD || RETURN",
-                  "displayLines": "(4 + 1.2)",
-                  "constants": [],
-                  "variables": [
-                    4,
-                    1.2
-                  ]
+                  "displayLines": "(4 + 1.2)"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -1741,20 +1580,10 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (4) || RETURN",
-                  "displayLines": "4",
-                  "constants": [],
-                  "variables": [
-                    4
-                  ]
+                  "displayLines": "4"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -1891,12 +1720,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.08) || RETURN",
-                "displayLines": "0.08",
-                "constants": [],
-                "variables": [
-                  0.08
-                ]
+                "displayLines": "0.08"
               },
               "variableName": "_RankSpeedDown"
             }
@@ -1918,12 +1742,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-2025698986\">DanHeng_Ability02_CheckCritical_Modifier</a>",
           "valuePerStack": {
             "MDF_Chance": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             }
           }
         },
@@ -1936,21 +1755,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (2.6) || RETURN",
-              "displayLines": "2.6",
-              "constants": [],
-              "variables": [
-                2.6
-              ]
+              "displayLines": "2.6"
             },
             "HitSplit": 0.3,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -1965,21 +1774,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (2.6) || RETURN",
-              "displayLines": "2.6",
-              "constants": [],
-              "variables": [
-                2.6
-              ]
+              "displayLines": "2.6"
             },
             "HitSplit": 0.15,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -1994,21 +1793,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (2.6) || RETURN",
-              "displayLines": "2.6",
-              "constants": [],
-              "variables": [
-                2.6
-              ]
+              "displayLines": "2.6"
             },
             "HitSplit": 0.15,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -2024,21 +1813,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (2.6) || RETURN",
-              "displayLines": "2.6",
-              "constants": [],
-              "variables": [
-                2.6
-              ]
+              "displayLines": "2.6"
             },
             "HitSplit": 0.4,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -2079,14 +1858,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "(0 - MDF_PropertyValue)"
                   }
                 }
               ]
@@ -2115,30 +1887,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1147035290\">DanHeng_BPAbility_SpeedDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (MDF_Chance) || RETURN",
-                        "displayLines": "MDF_Chance",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Chance"
-                        ]
+                        "displayLines": "MDF_Chance"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.12) || Variables[1] (_RankSpeedDown) || ADD || RETURN",
-                          "displayLines": "(0.12 + _RankSpeedDown)",
-                          "constants": [],
-                          "variables": [
-                            0.12,
-                            "_RankSpeedDown"
-                          ]
+                          "displayLines": "(0.12 + _RankSpeedDown)"
                         }
                       }
                     }
@@ -2220,21 +1976,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "HitSplit": 0.45,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -2250,21 +1996,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "HitSplit": 0.55,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"

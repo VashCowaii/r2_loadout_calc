@@ -52,20 +52,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (Modifier_Electric_DamagePercentage) || RETURN",
-                  "displayLines": "Modifier_Electric_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "Modifier_Electric_DamagePercentage"
-                  ]
+                  "displayLines": "Modifier_Electric_DamagePercentage"
                 },
                 "DamageFlat": {
-                  "operator": "Variables[0] (Modifier_Electric_DamageValue) || RETURN",
-                  "displayLines": "Modifier_Electric_DamageValue",
-                  "constants": [],
-                  "variables": [
-                    "Modifier_Electric_DamageValue"
-                  ]
+                  "displayLines": "Modifier_Electric_DamageValue"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -86,22 +76,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Electric_DamagePercentage) || MUL || RETURN",
-                  "displayLines": "(DOT_TriggerRatio * Modifier_Electric_DamagePercentage)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "Modifier_Electric_DamagePercentage"
-                  ]
+                  "displayLines": "(DOT_TriggerRatio * Modifier_Electric_DamagePercentage)"
                 },
                 "DamageFlat": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Electric_DamageValue) || MUL || RETURN",
-                  "displayLines": "(DOT_TriggerRatio * Modifier_Electric_DamageValue)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "Modifier_Electric_DamageValue"
-                  ]
+                  "displayLines": "(DOT_TriggerRatio * Modifier_Electric_DamageValue)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -147,13 +125,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyValue * _Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "_Layer"
-                ]
+                "displayLines": "(MDF_PropertyValue * _Layer)"
               }
             }
           ]
@@ -186,22 +158,12 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1485539064\">LC_23006_DOT</a>[<span class=\"descriptionNumberColor\">Erode</span>]",
                   "duration": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "baseChance": 1,
                   "valuePerStack": {
                     "Modifier_Electric_DamagePercentage": {
-                      "operator": "Variables[0] (0.6) || RETURN",
-                      "displayLines": "0.6",
-                      "constants": [],
-                      "variables": [
-                        0.6
-                      ]
+                      "displayLines": "0.6"
                     }
                   }
                 }
@@ -220,21 +182,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1036917801\">LC_23006_SpeedAddedRatio</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.048) || RETURN",
-                  "displayLines": "0.048",
-                  "constants": [],
-                  "variables": [
-                    0.048
-                  ]
+                  "displayLines": "0.048"
                 }
               }
             }

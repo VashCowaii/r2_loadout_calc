@@ -62,12 +62,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1728959136\">Monster_W5_Ripper_Passive</a>",
       "valuePerStack": {
         "MDF_TriggerSummonCount": {
-          "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[0]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[0]]}"
         }
       }
     },
@@ -111,36 +106,16 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"766895631\">Standard_Monster_Floating_DamageReduceController</a>",
               "valuePerStack": {
                 "MDF_LockHpActionDecreaseRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13685) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13685",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_13685"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_13685"
                 },
                 "MDF_LockHpUpLimitRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13653) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13653",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_13653"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_13653"
                 },
                 "MDF_DamageReduceRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13656) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13656",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_13656"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_13656"
                 },
                 "MDF_LastLockHpRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13652) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13652",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_13652"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_13652"
                 }
               }
             },

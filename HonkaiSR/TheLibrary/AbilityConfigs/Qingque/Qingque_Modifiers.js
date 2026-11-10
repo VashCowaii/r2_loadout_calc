@@ -30,12 +30,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRate</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -66,14 +61,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           ]
@@ -101,14 +89,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceIceBonus</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           ]
@@ -136,12 +117,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessVulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_StanceBreakTakenRatio) || RETURN",
-                "displayLines": "MDF_StanceBreakTakenRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_StanceBreakTakenRatio"
-                ]
+                "displayLines": "MDF_StanceBreakTakenRatio"
               }
             }
           ]
@@ -171,12 +147,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_Pela_SkillRank02_P1_AddSpeedRatio) || RETURN",
-                "displayLines": "MDF_Pela_SkillRank02_P1_AddSpeedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_Pela_SkillRank02_P1_AddSpeedRatio"
-                ]
+                "displayLines": "MDF_Pela_SkillRank02_P1_AddSpeedRatio"
               }
             }
           ]
@@ -370,12 +341,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedUp) || RETURN",
-                "displayLines": "MDF_SpeedUp",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedUp"
-                ]
+                "displayLines": "MDF_SpeedUp"
               }
             }
           ]
@@ -501,14 +467,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(QingQue_Tiao + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "QingQue_Tiao"
-                    ]
+                    "displayLines": "(QingQue_Tiao + 1)"
                   },
                   "variableName": "QingQue_Tiao"
                 }
@@ -540,14 +499,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(QingQue_Tong + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "QingQue_Tong"
-                    ]
+                    "displayLines": "(QingQue_Tong + 1)"
                   },
                   "variableName": "QingQue_Tong"
                 }
@@ -579,14 +531,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(QingQue_Wan + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "QingQue_Wan"
-                    ]
+                    "displayLines": "(QingQue_Wan + 1)"
                   },
                   "variableName": "QingQue_Wan"
                 }
@@ -621,12 +566,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1861987598\">QingQue_PassiveCount_QingqueSelf</a>",
               "valuePerStack": {
                 "AbilityRank_Eidolon2_P1_SPAdd": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 }
               }
             },
@@ -681,12 +621,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1763556388\">QingQue_Passive_Hu</a>[<span class=\"descriptionNumberColor\">Hidden Hand</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue01) || RETURN",
-                          "displayLines": "MDF_PropertyValue01",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue01"
-                          ]
+                          "displayLines": "MDF_PropertyValue01"
                         }
                       }
                     },
@@ -760,12 +695,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1763556388\">QingQue_Passive_Hu</a>[<span class=\"descriptionNumberColor\">Hidden Hand</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (MDF_PropertyValue01) || RETURN",
-                              "displayLines": "MDF_PropertyValue01",
-                              "constants": [],
-                              "variables": [
-                                "MDF_PropertyValue01"
-                              ]
+                              "displayLines": "MDF_PropertyValue01"
                             }
                           }
                         },
@@ -839,12 +769,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-1763556388\">QingQue_Passive_Hu</a>[<span class=\"descriptionNumberColor\">Hidden Hand</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (MDF_PropertyValue01) || RETURN",
-                                  "displayLines": "MDF_PropertyValue01",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_PropertyValue01"
-                                  ]
+                                  "displayLines": "MDF_PropertyValue01"
                                 }
                               }
                             },
@@ -943,12 +868,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1998273394\">QingQue_PassiveCount_Teammate</a>",
               "valuePerStack": {
                 "QingQue_CardCount_Teammate": {
-                  "operator": "Variables[0] (QingQue_CardCount) || RETURN",
-                  "displayLines": "QingQue_CardCount",
-                  "constants": [],
-                  "variables": [
-                    "QingQue_CardCount"
-                  ]
+                  "displayLines": "QingQue_CardCount"
                 }
               }
             }
@@ -999,12 +919,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1861987598\">QingQue_PassiveCount_QingqueSelf</a>",
                   "valuePerStack": {
                     "AbilityRank_Eidolon2_P1_SPAdd": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     }
                   }
                 }
@@ -1076,12 +991,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (SkillRank_Rank02_P1_SPAdd) || RETURN",
-                    "displayLines": "SkillRank_Rank02_P1_SPAdd",
-                    "constants": [],
-                    "variables": [
-                      "SkillRank_Rank02_P1_SPAdd"
-                    ]
+                    "displayLines": "SkillRank_Rank02_P1_SPAdd"
                   },
                   "isFixed": "* ERR"
                 }
@@ -1153,14 +1063,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (QingQue_CardCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(QingQue_CardCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "QingQue_CardCount"
-                    ]
+                    "displayLines": "(QingQue_CardCount + 1)"
                   },
                   "variableName": "QingQue_CardCount"
                 }
@@ -1205,14 +1108,7 @@ const configAbility = {
                                 {
                                   "name": "Define Custom Variable",
                                   "value": {
-                                    "operator": "Variables[0] (QingQue_CardCount) || Constants[0] (1) || ADD || RETURN",
-                                    "displayLines": "(QingQue_CardCount + 1)",
-                                    "constants": [
-                                      1
-                                    ],
-                                    "variables": [
-                                      "QingQue_CardCount"
-                                    ]
+                                    "displayLines": "(QingQue_CardCount + 1)"
                                   },
                                   "variableName": "QingQue_CardCount"
                                 },
@@ -1285,14 +1181,7 @@ const configAbility = {
                                     {
                                       "name": "Define Custom Variable",
                                       "value": {
-                                        "operator": "Variables[0] (QingQue_CardCount) || Constants[0] (1) || SUB || RETURN",
-                                        "displayLines": "(QingQue_CardCount - 1)",
-                                        "constants": [
-                                          1
-                                        ],
-                                        "variables": [
-                                          "QingQue_CardCount"
-                                        ]
+                                        "displayLines": "(QingQue_CardCount - 1)"
                                       },
                                       "variableName": "QingQue_CardCount"
                                     },
@@ -1312,12 +1201,7 @@ const configAbility = {
                                             "value1": "QingQue_Wan",
                                             "compareType": ">",
                                             "value2": {
-                                              "operator": "Variables[0] (QingQue_Tiao) || RETURN",
-                                              "displayLines": "QingQue_Tiao",
-                                              "constants": [],
-                                              "variables": [
-                                                "QingQue_Tiao"
-                                              ]
+                                              "displayLines": "QingQue_Tiao"
                                             }
                                           },
                                           "passed": [
@@ -1332,14 +1216,7 @@ const configAbility = {
                                             {
                                               "name": "Define Custom Variable",
                                               "value": {
-                                                "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || SUB || RETURN",
-                                                "displayLines": "(QingQue_Tiao - 1)",
-                                                "constants": [
-                                                  1
-                                                ],
-                                                "variables": [
-                                                  "QingQue_Tiao"
-                                                ]
+                                                "displayLines": "(QingQue_Tiao - 1)"
                                               },
                                               "variableName": "QingQue_Tiao"
                                             }
@@ -1356,14 +1233,7 @@ const configAbility = {
                                             {
                                               "name": "Define Custom Variable",
                                               "value": {
-                                                "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
-                                                "displayLines": "(QingQue_Wan - 1)",
-                                                "constants": [
-                                                  1
-                                                ],
-                                                "variables": [
-                                                  "QingQue_Wan"
-                                                ]
+                                                "displayLines": "(QingQue_Wan - 1)"
                                               },
                                               "variableName": "QingQue_Wan"
                                             }
@@ -1387,12 +1257,7 @@ const configAbility = {
                                                 "value1": "QingQue_Wan",
                                                 "compareType": ">",
                                                 "value2": {
-                                                  "operator": "Variables[0] (QingQue_Tong) || RETURN",
-                                                  "displayLines": "QingQue_Tong",
-                                                  "constants": [],
-                                                  "variables": [
-                                                    "QingQue_Tong"
-                                                  ]
+                                                  "displayLines": "QingQue_Tong"
                                                 }
                                               },
                                               "passed": [
@@ -1407,14 +1272,7 @@ const configAbility = {
                                                 {
                                                   "name": "Define Custom Variable",
                                                   "value": {
-                                                    "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
-                                                    "displayLines": "(QingQue_Tong - 1)",
-                                                    "constants": [
-                                                      1
-                                                    ],
-                                                    "variables": [
-                                                      "QingQue_Tong"
-                                                    ]
+                                                    "displayLines": "(QingQue_Tong - 1)"
                                                   },
                                                   "variableName": "QingQue_Tong"
                                                 }
@@ -1431,14 +1289,7 @@ const configAbility = {
                                                 {
                                                   "name": "Define Custom Variable",
                                                   "value": {
-                                                    "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
-                                                    "displayLines": "(QingQue_Wan - 1)",
-                                                    "constants": [
-                                                      1
-                                                    ],
-                                                    "variables": [
-                                                      "QingQue_Wan"
-                                                    ]
+                                                    "displayLines": "(QingQue_Wan - 1)"
                                                   },
                                                   "variableName": "QingQue_Wan"
                                                 }
@@ -1475,12 +1326,7 @@ const configAbility = {
                                             "value1": "QingQue_Tong",
                                             "compareType": ">",
                                             "value2": {
-                                              "operator": "Variables[0] (QingQue_Tiao) || RETURN",
-                                              "displayLines": "QingQue_Tiao",
-                                              "constants": [],
-                                              "variables": [
-                                                "QingQue_Tiao"
-                                              ]
+                                              "displayLines": "QingQue_Tiao"
                                             }
                                           },
                                           "passed": [
@@ -1495,14 +1341,7 @@ const configAbility = {
                                             {
                                               "name": "Define Custom Variable",
                                               "value": {
-                                                "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || SUB || RETURN",
-                                                "displayLines": "(QingQue_Tiao - 1)",
-                                                "constants": [
-                                                  1
-                                                ],
-                                                "variables": [
-                                                  "QingQue_Tiao"
-                                                ]
+                                                "displayLines": "(QingQue_Tiao - 1)"
                                               },
                                               "variableName": "QingQue_Tiao"
                                             }
@@ -1515,12 +1354,7 @@ const configAbility = {
                                                 "value1": "QingQue_Tiao",
                                                 "compareType": ">",
                                                 "value2": {
-                                                  "operator": "Variables[0] (QingQue_Tong) || RETURN",
-                                                  "displayLines": "QingQue_Tong",
-                                                  "constants": [],
-                                                  "variables": [
-                                                    "QingQue_Tong"
-                                                  ]
+                                                  "displayLines": "QingQue_Tong"
                                                 }
                                               },
                                               "passed": [
@@ -1535,14 +1369,7 @@ const configAbility = {
                                                 {
                                                   "name": "Define Custom Variable",
                                                   "value": {
-                                                    "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
-                                                    "displayLines": "(QingQue_Tong - 1)",
-                                                    "constants": [
-                                                      1
-                                                    ],
-                                                    "variables": [
-                                                      "QingQue_Tong"
-                                                    ]
+                                                    "displayLines": "(QingQue_Tong - 1)"
                                                   },
                                                   "variableName": "QingQue_Tong"
                                                 }
@@ -1566,14 +1393,7 @@ const configAbility = {
                                                     {
                                                       "name": "Define Custom Variable",
                                                       "value": {
-                                                        "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
-                                                        "displayLines": "(QingQue_Tong - 1)",
-                                                        "constants": [
-                                                          1
-                                                        ],
-                                                        "variables": [
-                                                          "QingQue_Tong"
-                                                        ]
+                                                        "displayLines": "(QingQue_Tong - 1)"
                                                       },
                                                       "variableName": "QingQue_Tong"
                                                     }
@@ -1590,14 +1410,7 @@ const configAbility = {
                                                     {
                                                       "name": "Define Custom Variable",
                                                       "value": {
-                                                        "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || SUB || RETURN",
-                                                        "displayLines": "(QingQue_Tiao - 1)",
-                                                        "constants": [
-                                                          1
-                                                        ],
-                                                        "variables": [
-                                                          "QingQue_Tiao"
-                                                        ]
+                                                        "displayLines": "(QingQue_Tiao - 1)"
                                                       },
                                                       "variableName": "QingQue_Tiao"
                                                     }
@@ -1634,14 +1447,7 @@ const configAbility = {
                                     {
                                       "name": "Define Custom Variable",
                                       "value": {
-                                        "operator": "Variables[0] (QingQue_CardCount) || Constants[0] (1) || SUB || RETURN",
-                                        "displayLines": "(QingQue_CardCount - 1)",
-                                        "constants": [
-                                          1
-                                        ],
-                                        "variables": [
-                                          "QingQue_CardCount"
-                                        ]
+                                        "displayLines": "(QingQue_CardCount - 1)"
                                       },
                                       "variableName": "QingQue_CardCount"
                                     },
@@ -1661,12 +1467,7 @@ const configAbility = {
                                             "value1": "QingQue_Tong",
                                             "compareType": ">",
                                             "value2": {
-                                              "operator": "Variables[0] (QingQue_Tiao) || RETURN",
-                                              "displayLines": "QingQue_Tiao",
-                                              "constants": [],
-                                              "variables": [
-                                                "QingQue_Tiao"
-                                              ]
+                                              "displayLines": "QingQue_Tiao"
                                             }
                                           },
                                           "passed": [
@@ -1681,14 +1482,7 @@ const configAbility = {
                                             {
                                               "name": "Define Custom Variable",
                                               "value": {
-                                                "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || SUB || RETURN",
-                                                "displayLines": "(QingQue_Tiao - 1)",
-                                                "constants": [
-                                                  1
-                                                ],
-                                                "variables": [
-                                                  "QingQue_Tiao"
-                                                ]
+                                                "displayLines": "(QingQue_Tiao - 1)"
                                               },
                                               "variableName": "QingQue_Tiao"
                                             }
@@ -1705,14 +1499,7 @@ const configAbility = {
                                             {
                                               "name": "Define Custom Variable",
                                               "value": {
-                                                "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
-                                                "displayLines": "(QingQue_Tong - 1)",
-                                                "constants": [
-                                                  1
-                                                ],
-                                                "variables": [
-                                                  "QingQue_Tong"
-                                                ]
+                                                "displayLines": "(QingQue_Tong - 1)"
                                               },
                                               "variableName": "QingQue_Tong"
                                             }
@@ -1736,12 +1523,7 @@ const configAbility = {
                                                 "value1": "QingQue_Wan",
                                                 "compareType": ">",
                                                 "value2": {
-                                                  "operator": "Variables[0] (QingQue_Tong) || RETURN",
-                                                  "displayLines": "QingQue_Tong",
-                                                  "constants": [],
-                                                  "variables": [
-                                                    "QingQue_Tong"
-                                                  ]
+                                                  "displayLines": "QingQue_Tong"
                                                 }
                                               },
                                               "passed": [
@@ -1756,14 +1538,7 @@ const configAbility = {
                                                 {
                                                   "name": "Define Custom Variable",
                                                   "value": {
-                                                    "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
-                                                    "displayLines": "(QingQue_Tong - 1)",
-                                                    "constants": [
-                                                      1
-                                                    ],
-                                                    "variables": [
-                                                      "QingQue_Tong"
-                                                    ]
+                                                    "displayLines": "(QingQue_Tong - 1)"
                                                   },
                                                   "variableName": "QingQue_Tong"
                                                 }
@@ -1780,14 +1555,7 @@ const configAbility = {
                                                 {
                                                   "name": "Define Custom Variable",
                                                   "value": {
-                                                    "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
-                                                    "displayLines": "(QingQue_Wan - 1)",
-                                                    "constants": [
-                                                      1
-                                                    ],
-                                                    "variables": [
-                                                      "QingQue_Wan"
-                                                    ]
+                                                    "displayLines": "(QingQue_Wan - 1)"
                                                   },
                                                   "variableName": "QingQue_Wan"
                                                 }
@@ -1824,12 +1592,7 @@ const configAbility = {
                                             "value1": "QingQue_Wan",
                                             "compareType": ">",
                                             "value2": {
-                                              "operator": "Variables[0] (QingQue_Tiao) || RETURN",
-                                              "displayLines": "QingQue_Tiao",
-                                              "constants": [],
-                                              "variables": [
-                                                "QingQue_Tiao"
-                                              ]
+                                              "displayLines": "QingQue_Tiao"
                                             }
                                           },
                                           "passed": [
@@ -1844,14 +1607,7 @@ const configAbility = {
                                             {
                                               "name": "Define Custom Variable",
                                               "value": {
-                                                "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || SUB || RETURN",
-                                                "displayLines": "(QingQue_Tiao - 1)",
-                                                "constants": [
-                                                  1
-                                                ],
-                                                "variables": [
-                                                  "QingQue_Tiao"
-                                                ]
+                                                "displayLines": "(QingQue_Tiao - 1)"
                                               },
                                               "variableName": "QingQue_Tiao"
                                             }
@@ -1864,12 +1620,7 @@ const configAbility = {
                                                 "value1": "QingQue_Tiao",
                                                 "compareType": ">",
                                                 "value2": {
-                                                  "operator": "Variables[0] (QingQue_Wan) || RETURN",
-                                                  "displayLines": "QingQue_Wan",
-                                                  "constants": [],
-                                                  "variables": [
-                                                    "QingQue_Wan"
-                                                  ]
+                                                  "displayLines": "QingQue_Wan"
                                                 }
                                               },
                                               "passed": [
@@ -1884,14 +1635,7 @@ const configAbility = {
                                                 {
                                                   "name": "Define Custom Variable",
                                                   "value": {
-                                                    "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
-                                                    "displayLines": "(QingQue_Wan - 1)",
-                                                    "constants": [
-                                                      1
-                                                    ],
-                                                    "variables": [
-                                                      "QingQue_Wan"
-                                                    ]
+                                                    "displayLines": "(QingQue_Wan - 1)"
                                                   },
                                                   "variableName": "QingQue_Wan"
                                                 }
@@ -1915,14 +1659,7 @@ const configAbility = {
                                                     {
                                                       "name": "Define Custom Variable",
                                                       "value": {
-                                                        "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
-                                                        "displayLines": "(QingQue_Wan - 1)",
-                                                        "constants": [
-                                                          1
-                                                        ],
-                                                        "variables": [
-                                                          "QingQue_Wan"
-                                                        ]
+                                                        "displayLines": "(QingQue_Wan - 1)"
                                                       },
                                                       "variableName": "QingQue_Wan"
                                                     }
@@ -1939,14 +1676,7 @@ const configAbility = {
                                                     {
                                                       "name": "Define Custom Variable",
                                                       "value": {
-                                                        "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || SUB || RETURN",
-                                                        "displayLines": "(QingQue_Tiao - 1)",
-                                                        "constants": [
-                                                          1
-                                                        ],
-                                                        "variables": [
-                                                          "QingQue_Tiao"
-                                                        ]
+                                                        "displayLines": "(QingQue_Tiao - 1)"
                                                       },
                                                       "variableName": "QingQue_Tiao"
                                                     }
@@ -1983,14 +1713,7 @@ const configAbility = {
                                     {
                                       "name": "Define Custom Variable",
                                       "value": {
-                                        "operator": "Variables[0] (QingQue_CardCount) || Constants[0] (1) || SUB || RETURN",
-                                        "displayLines": "(QingQue_CardCount - 1)",
-                                        "constants": [
-                                          1
-                                        ],
-                                        "variables": [
-                                          "QingQue_CardCount"
-                                        ]
+                                        "displayLines": "(QingQue_CardCount - 1)"
                                       },
                                       "variableName": "QingQue_CardCount"
                                     },
@@ -2010,12 +1733,7 @@ const configAbility = {
                                             "value1": "QingQue_Tong",
                                             "compareType": ">",
                                             "value2": {
-                                              "operator": "Variables[0] (QingQue_Tiao) || RETURN",
-                                              "displayLines": "QingQue_Tiao",
-                                              "constants": [],
-                                              "variables": [
-                                                "QingQue_Tiao"
-                                              ]
+                                              "displayLines": "QingQue_Tiao"
                                             }
                                           },
                                           "passed": [
@@ -2030,14 +1748,7 @@ const configAbility = {
                                             {
                                               "name": "Define Custom Variable",
                                               "value": {
-                                                "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || SUB || RETURN",
-                                                "displayLines": "(QingQue_Tiao - 1)",
-                                                "constants": [
-                                                  1
-                                                ],
-                                                "variables": [
-                                                  "QingQue_Tiao"
-                                                ]
+                                                "displayLines": "(QingQue_Tiao - 1)"
                                               },
                                               "variableName": "QingQue_Tiao"
                                             }
@@ -2054,14 +1765,7 @@ const configAbility = {
                                             {
                                               "name": "Define Custom Variable",
                                               "value": {
-                                                "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
-                                                "displayLines": "(QingQue_Tong - 1)",
-                                                "constants": [
-                                                  1
-                                                ],
-                                                "variables": [
-                                                  "QingQue_Tong"
-                                                ]
+                                                "displayLines": "(QingQue_Tong - 1)"
                                               },
                                               "variableName": "QingQue_Tong"
                                             }
@@ -2085,12 +1789,7 @@ const configAbility = {
                                                 "value1": "QingQue_Wan",
                                                 "compareType": ">",
                                                 "value2": {
-                                                  "operator": "Variables[0] (QingQue_Tiao) || RETURN",
-                                                  "displayLines": "QingQue_Tiao",
-                                                  "constants": [],
-                                                  "variables": [
-                                                    "QingQue_Tiao"
-                                                  ]
+                                                  "displayLines": "QingQue_Tiao"
                                                 }
                                               },
                                               "passed": [
@@ -2105,14 +1804,7 @@ const configAbility = {
                                                 {
                                                   "name": "Define Custom Variable",
                                                   "value": {
-                                                    "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || SUB || RETURN",
-                                                    "displayLines": "(QingQue_Tiao - 1)",
-                                                    "constants": [
-                                                      1
-                                                    ],
-                                                    "variables": [
-                                                      "QingQue_Tiao"
-                                                    ]
+                                                    "displayLines": "(QingQue_Tiao - 1)"
                                                   },
                                                   "variableName": "QingQue_Tiao"
                                                 }
@@ -2129,14 +1821,7 @@ const configAbility = {
                                                 {
                                                   "name": "Define Custom Variable",
                                                   "value": {
-                                                    "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
-                                                    "displayLines": "(QingQue_Wan - 1)",
-                                                    "constants": [
-                                                      1
-                                                    ],
-                                                    "variables": [
-                                                      "QingQue_Wan"
-                                                    ]
+                                                    "displayLines": "(QingQue_Wan - 1)"
                                                   },
                                                   "variableName": "QingQue_Wan"
                                                 }
@@ -2173,12 +1858,7 @@ const configAbility = {
                                             "value1": "QingQue_Wan",
                                             "compareType": ">",
                                             "value2": {
-                                              "operator": "Variables[0] (QingQue_Tong) || RETURN",
-                                              "displayLines": "QingQue_Tong",
-                                              "constants": [],
-                                              "variables": [
-                                                "QingQue_Tong"
-                                              ]
+                                              "displayLines": "QingQue_Tong"
                                             }
                                           },
                                           "passed": [
@@ -2193,14 +1873,7 @@ const configAbility = {
                                             {
                                               "name": "Define Custom Variable",
                                               "value": {
-                                                "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
-                                                "displayLines": "(QingQue_Tong - 1)",
-                                                "constants": [
-                                                  1
-                                                ],
-                                                "variables": [
-                                                  "QingQue_Tong"
-                                                ]
+                                                "displayLines": "(QingQue_Tong - 1)"
                                               },
                                               "variableName": "QingQue_Tong"
                                             }
@@ -2213,12 +1886,7 @@ const configAbility = {
                                                 "value1": "QingQue_Tong",
                                                 "compareType": ">",
                                                 "value2": {
-                                                  "operator": "Variables[0] (QingQue_Wan) || RETURN",
-                                                  "displayLines": "QingQue_Wan",
-                                                  "constants": [],
-                                                  "variables": [
-                                                    "QingQue_Wan"
-                                                  ]
+                                                  "displayLines": "QingQue_Wan"
                                                 }
                                               },
                                               "passed": [
@@ -2233,14 +1901,7 @@ const configAbility = {
                                                 {
                                                   "name": "Define Custom Variable",
                                                   "value": {
-                                                    "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
-                                                    "displayLines": "(QingQue_Wan - 1)",
-                                                    "constants": [
-                                                      1
-                                                    ],
-                                                    "variables": [
-                                                      "QingQue_Wan"
-                                                    ]
+                                                    "displayLines": "(QingQue_Wan - 1)"
                                                   },
                                                   "variableName": "QingQue_Wan"
                                                 }
@@ -2264,14 +1925,7 @@ const configAbility = {
                                                     {
                                                       "name": "Define Custom Variable",
                                                       "value": {
-                                                        "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
-                                                        "displayLines": "(QingQue_Wan - 1)",
-                                                        "constants": [
-                                                          1
-                                                        ],
-                                                        "variables": [
-                                                          "QingQue_Wan"
-                                                        ]
+                                                        "displayLines": "(QingQue_Wan - 1)"
                                                       },
                                                       "variableName": "QingQue_Wan"
                                                     }
@@ -2288,14 +1942,7 @@ const configAbility = {
                                                     {
                                                       "name": "Define Custom Variable",
                                                       "value": {
-                                                        "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
-                                                        "displayLines": "(QingQue_Tong - 1)",
-                                                        "constants": [
-                                                          1
-                                                        ],
-                                                        "variables": [
-                                                          "QingQue_Tong"
-                                                        ]
+                                                        "displayLines": "(QingQue_Tong - 1)"
                                                       },
                                                       "variableName": "QingQue_Tong"
                                                     }
@@ -2345,12 +1992,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             },
             {
@@ -2415,13 +2057,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageAddedRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_DamageAddedRatio * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageAddedRatio",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_DamageAddedRatio * MDF_Layer)"
               }
             }
           ]

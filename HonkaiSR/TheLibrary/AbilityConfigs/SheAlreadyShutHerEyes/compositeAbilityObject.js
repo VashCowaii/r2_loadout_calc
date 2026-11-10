@@ -63,12 +63,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -123,21 +118,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"274994789\">LC_23011_Sub2</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.09) || RETURN",
-                          "displayLines": "0.09",
-                          "constants": [],
-                          "variables": [
-                            0.09
-                          ]
+                          "displayLines": "0.09"
                         }
                       }
                     },
@@ -179,12 +164,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (0.8) || RETURN",
-                        "displayLines": "0.8",
-                        "constants": [],
-                        "variables": [
-                          0.8
-                        ]
+                        "displayLines": "0.8"
                       },
                       "formula": "Heal from Target's MissingHP"
                     }

@@ -53,21 +53,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-459252663\">Klara_TechniqueUsage_AggroUP</a>[<span class=\"descriptionNumberColor\">A Small Price for Victory</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (5) || RETURN",
-                      "displayLines": "5",
-                      "constants": [],
-                      "variables": [
-                        5
-                      ]
+                      "displayLines": "5"
                     }
                   }
                 }

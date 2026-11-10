@@ -84,12 +84,7 @@ const configAbility = {
       "conditions": {
         "name": "Enemy ID",
         "ID": {
-          "operator": "Variables[0] (SummonID_3) || RETURN",
-          "displayLines": "SummonID_3",
-          "constants": [],
-          "variables": [
-            "SummonID_3"
-          ]
+          "displayLines": "SummonID_3"
         },
         "target": {
           "name": "Target Name",
@@ -114,13 +109,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "consumePercent": {
-            "operator": "Variables[0] ({[Skill04[1]]}) || Variables[1] (CurrentHPRatio) || MUL || RETURN",
-            "displayLines": "({[Skill04[1]]} * CurrentHPRatio)",
-            "constants": [],
-            "variables": [
-              "{[Skill04[1]]}",
-              "CurrentHPRatio"
-            ]
+            "displayLines": "({[Skill04[1]]} * CurrentHPRatio)"
           },
           "consumeFloor": 1,
           "attackType": "Unknown",
@@ -135,13 +124,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1577610826\">Enemy_W4_FireProwler_RallyHP_Mark</a>",
           "valuePerStack": {
             "MDF_RallyHP": {
-              "operator": "Variables[0] ({[Skill04[1]]}) || Variables[1] (CurrentHPRatio) || MUL || RETURN",
-              "displayLines": "({[Skill04[1]]} * CurrentHPRatio)",
-              "constants": [],
-              "variables": [
-                "{[Skill04[1]]}",
-                "CurrentHPRatio"
-              ]
+              "displayLines": "({[Skill04[1]]} * CurrentHPRatio)"
             }
           }
         }
@@ -193,12 +176,7 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"33624492\">Enemy_W4_FireProwler_TimePower</a>[<span class=\"descriptionNumberColor\">Calamity Power</span>]",
       "addStacksPerTrigger": {
-        "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-        "displayLines": "{[Skill04[0]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill04[0]]}"
-        ]
+        "displayLines": "{[Skill04[0]]}"
       }
     },
     {
@@ -218,12 +196,7 @@ const configAbility = {
     {
       "name": "Assign Advance/Delay to Current Ability Use",
       "adjustmentValue": {
-        "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-        "displayLines": "{[Skill04[2]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill04[2]]}"
-        ]
+        "displayLines": "{[Skill04[2]]}"
       },
       "adjustmentType": "="
     },

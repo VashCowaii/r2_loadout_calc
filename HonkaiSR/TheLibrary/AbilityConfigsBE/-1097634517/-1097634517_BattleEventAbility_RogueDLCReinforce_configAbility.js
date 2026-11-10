@@ -58,12 +58,7 @@ const configAbility = {
                   "conditions": {
                     "name": "Random Chance",
                     "chance": {
-                      "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P1_ADF"
                     }
                   },
                   "passed": [
@@ -87,12 +82,7 @@ const configAbility = {
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Constants[0] (8022020) || RETURN",
-                                "displayLines": "8022020",
-                                "constants": [
-                                  8022020
-                                ],
-                                "variables": []
+                                "displayLines": "8022020"
                               },
                               "locationType": "First"
                             }
@@ -108,12 +98,7 @@ const configAbility = {
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Constants[0] (8022020) || RETURN",
-                                "displayLines": "8022020",
-                                "constants": [
-                                  8022020
-                                ],
-                                "variables": []
+                                "displayLines": "8022020"
                               },
                               "locationType": "Last"
                             }
@@ -143,12 +128,7 @@ const configAbility = {
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Constants[0] (8022010) || RETURN",
-                                "displayLines": "8022010",
-                                "constants": [
-                                  8022010
-                                ],
-                                "variables": []
+                                "displayLines": "8022010"
                               },
                               "locationType": "First"
                             }
@@ -164,12 +144,7 @@ const configAbility = {
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Constants[0] (8022010) || RETURN",
-                                "displayLines": "8022010",
-                                "constants": [
-                                  8022010
-                                ],
-                                "variables": []
+                                "displayLines": "8022010"
                               },
                               "locationType": "Last"
                             }

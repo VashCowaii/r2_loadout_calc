@@ -71,12 +71,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-762526263\">Yunli_Trace03</a>",
           "valuePerStack": {
             "MDF_ProbabilityValue2": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             }
           }
         }
@@ -98,12 +93,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"258425587\">Yunli_Eidolon2</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         }
@@ -125,20 +115,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"325536063\">Yunli_Eidolon6</a>",
           "valuePerStack": {
             "MDF_CritChance": {
-              "operator": "Variables[0] (0.15) || RETURN",
-              "displayLines": "0.15",
-              "constants": [],
-              "variables": [
-                0.15
-              ]
+              "displayLines": "0.15"
             },
             "MDF_PhysicalPenetrateRatio": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         }
@@ -216,12 +196,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (15) || RETURN",
-                "displayLines": "15",
-                "constants": [],
-                "variables": [
-                  15
-                ]
+                "displayLines": "15"
               },
               "isFixed": "* ERR"
             },

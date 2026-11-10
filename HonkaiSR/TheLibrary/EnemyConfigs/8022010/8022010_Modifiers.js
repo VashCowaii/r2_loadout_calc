@@ -56,14 +56,7 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "scope": "ContextModifier",
                   "value": {
-                    "operator": "Variables[0] (Modifier_TurnCount) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(Modifier_TurnCount - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Modifier_TurnCount"
-                    ]
+                    "displayLines": "(Modifier_TurnCount - 1)"
                   },
                   "variableName": "Modifier_TurnCount"
                 }

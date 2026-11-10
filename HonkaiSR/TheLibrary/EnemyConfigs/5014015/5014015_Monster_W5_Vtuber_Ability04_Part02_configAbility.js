@@ -27,21 +27,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1255636057\">Enemy_W5_Vtuber_Ability04_Bonus</a>[<span class=\"descriptionNumberColor\">Flooding Viewers</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-            "displayLines": "{[Skill04[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill04[2]]}"
-            ]
+            "displayLines": "{[Skill04[2]]}"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-              "displayLines": "{[Skill04[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[1]]}"
-              ]
+              "displayLines": "{[Skill04[1]]}"
             }
           },
           "casterAssign": "TargetSelf"
@@ -85,12 +75,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]

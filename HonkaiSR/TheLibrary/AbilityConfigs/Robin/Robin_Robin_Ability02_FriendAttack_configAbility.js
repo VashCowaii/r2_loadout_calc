@@ -28,23 +28,13 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-341772219\">Robin_Ability02_DmgUpCasterListener</a>[<span class=\"descriptionNumberColor\">Aria</span>]",
       "duration": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       }
     },
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "assignState": "True",
       "priorState": "Active",

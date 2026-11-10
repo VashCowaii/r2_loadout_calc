@@ -49,13 +49,7 @@ const configAbility = {
                     "target": "{{Caster's Summoner}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (15) || Variables[1] (30) || ADD || RETURN",
-                    "displayLines": "(15 + 30)",
-                    "constants": [],
-                    "variables": [
-                      15,
-                      30
-                    ]
+                    "displayLines": "(15 + 30)"
                   },
                   "isFixed": "* ERR"
                 },
@@ -77,12 +71,7 @@ const configAbility = {
                     "target": "{{Caster's Summoner}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (15) || RETURN",
-                    "displayLines": "15",
-                    "constants": [],
-                    "variables": [
-                      15
-                    ]
+                    "displayLines": "15"
                   },
                   "isFixed": "* ERR"
                 }

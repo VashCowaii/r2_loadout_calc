@@ -41,12 +41,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-          "displayLines": "{[Skill04[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[2]]}"
-          ]
+          "displayLines": "{[Skill04[2]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -63,12 +58,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-          "displayLines": "{[Skill04[3]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[3]]}"
-          ]
+          "displayLines": "{[Skill04[3]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -102,14 +92,7 @@ const configAbility = {
         "value1": "WolfBoss_BloodRageCount",
         "compareType": "<",
         "value2": {
-          "operator": "Variables[0] (WolfBoss_BloodRageMaxCount) || Constants[0] (3) || SUB || RETURN",
-          "displayLines": "(WolfBoss_BloodRageMaxCount - 3)",
-          "constants": [
-            3
-          ],
-          "variables": [
-            "WolfBoss_BloodRageMaxCount"
-          ]
+          "displayLines": "(WolfBoss_BloodRageMaxCount - 3)"
         }
       }
     },

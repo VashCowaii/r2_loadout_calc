@@ -43,12 +43,7 @@ const configAbility = {
                 "target": "{{Ability Target(ST)}}"
               },
               "dispelCount": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "dispelOrder": "LastAdded"
             },
@@ -59,12 +54,7 @@ const configAbility = {
                 "target": "{{Ability Target(ST)}}.[[getMemosprite]]"
               },
               "dispelCount": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "dispelOrder": "LastAdded"
             }
@@ -77,12 +67,7 @@ const configAbility = {
                 "target": "{{Ability Target(ST)}}"
               },
               "dispelCount": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "dispelOrder": "LastAdded"
             }
@@ -121,22 +106,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"2015662270\">Sunday_10_Ability02_Property</a>[<span class=\"descriptionNumberColor\">Benison of Paper and Rites</span>]",
               "duration": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "valuePerStack": {
                 "MDF_PropertyRatio": {
-                  "operator": "Variables[0] (0.3) || Variables[1] (0.5) || ADD || RETURN",
-                  "displayLines": "(0.3 + 0.5)",
-                  "constants": [],
-                  "variables": [
-                    0.3,
-                    0.5
-                  ]
+                  "displayLines": "(0.3 + 0.5)"
                 }
               }
             }
@@ -150,21 +124,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"2015662270\">Sunday_10_Ability02_Property</a>[<span class=\"descriptionNumberColor\">Benison of Paper and Rites</span>]",
               "duration": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "valuePerStack": {
                 "MDF_PropertyRatio": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 }
               }
             }
@@ -180,22 +144,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"2015662270\">Sunday_10_Ability02_Property</a>[<span class=\"descriptionNumberColor\">Benison of Paper and Rites</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "valuePerStack": {
             "MDF_PropertyRatio": {
-              "operator": "Variables[0] (0.3) || Variables[1] (0.5) || ADD || RETURN",
-              "displayLines": "(0.3 + 0.5)",
-              "constants": [],
-              "variables": [
-                0.3,
-                0.5
-              ]
+              "displayLines": "(0.3 + 0.5)"
             }
           }
         }
@@ -228,21 +181,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"2041266105\">Sunday_10_MazeBonus</a>[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             }
           }
         }
@@ -383,29 +326,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-2103228822\">Sunday_10_CritUp</a>[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
               "duration": {
-                "operator": "Variables[0] (_P01_LifeTime) || RETURN",
-                "displayLines": "_P01_LifeTime",
-                "constants": [],
-                "variables": [
-                  "_P01_LifeTime"
-                ]
+                "displayLines": "_P01_LifeTime"
               },
               "stackLimit": {
-                "operator": "Variables[0] (_SkillP01_StackingLayer) || RETURN",
-                "displayLines": "_SkillP01_StackingLayer",
-                "constants": [],
-                "variables": [
-                  "_SkillP01_StackingLayer"
-                ]
+                "displayLines": "_SkillP01_StackingLayer"
               },
               "valuePerStack": {
                 "MDF_CritValue": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               },
               "addStacksPerTrigger": 1
@@ -420,21 +348,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-2103228822\">Sunday_10_CritUp</a>[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
               "duration": {
-                "operator": "Variables[0] (_P01_LifeTime) || RETURN",
-                "displayLines": "_P01_LifeTime",
-                "constants": [],
-                "variables": [
-                  "_P01_LifeTime"
-                ]
+                "displayLines": "_P01_LifeTime"
               },
               "valuePerStack": {
                 "MDF_CritValue": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             }
@@ -457,29 +375,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-2103228822\">Sunday_10_CritUp</a>[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
               "duration": {
-                "operator": "Variables[0] (_P01_LifeTime) || RETURN",
-                "displayLines": "_P01_LifeTime",
-                "constants": [],
-                "variables": [
-                  "_P01_LifeTime"
-                ]
+                "displayLines": "_P01_LifeTime"
               },
               "stackLimit": {
-                "operator": "Variables[0] (_SkillP01_StackingLayer) || RETURN",
-                "displayLines": "_SkillP01_StackingLayer",
-                "constants": [],
-                "variables": [
-                  "_SkillP01_StackingLayer"
-                ]
+                "displayLines": "_SkillP01_StackingLayer"
               },
               "valuePerStack": {
                 "MDF_CritValue": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               },
               "addStacksPerTrigger": 1
@@ -494,21 +397,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-2103228822\">Sunday_10_CritUp</a>[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
               "duration": {
-                "operator": "Variables[0] (_P01_LifeTime) || RETURN",
-                "displayLines": "_P01_LifeTime",
-                "constants": [],
-                "variables": [
-                  "_P01_LifeTime"
-                ]
+                "displayLines": "_P01_LifeTime"
               },
               "valuePerStack": {
                 "MDF_CritValue": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             }
@@ -550,29 +443,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-817980433\">Sunday_10_Eidolon1_SuperBonus</a>[<span class=\"descriptionNumberColor\">Millennium's Quietus</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (0.16) || RETURN",
-                      "displayLines": "0.16",
-                      "constants": [],
-                      "variables": [
-                        0.16
-                      ]
+                      "displayLines": "0.16"
                     },
                     "MDF_PropertyRatio02": {
-                      "operator": "Variables[0] (0.4) || RETURN",
-                      "displayLines": "0.4",
-                      "constants": [],
-                      "variables": [
-                        0.4
-                      ]
+                      "displayLines": "0.4"
                     }
                   }
                 }
@@ -597,21 +475,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1698887691\">Sunday_10_Eidolon1_SuperBonusForServant</a>[<span class=\"descriptionNumberColor\">Millennium's Quietus</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (0.4) || RETURN",
-                      "displayLines": "0.4",
-                      "constants": [],
-                      "variables": [
-                        0.4
-                      ]
+                      "displayLines": "0.4"
                     }
                   }
                 }
@@ -657,12 +525,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             }
           ]

@@ -51,12 +51,7 @@ const configAbility = {
               "canHitNonTargets": true,
               "valuePerStack": {
                 "MDF_DamageValue2": {
-                  "operator": "Variables[0] (MDF_DamageValue) || RETURN",
-                  "displayLines": "MDF_DamageValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamageValue"
-                  ]
+                  "displayLines": "MDF_DamageValue"
                 }
               },
               "allowAbilityTriggers": false
@@ -115,24 +110,14 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P1_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P1_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P1_ADF"
                       },
                       "refreshPositions": false,
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Constants[0] (2022010) || RETURN",
-                            "displayLines": "2022010",
-                            "constants": [
-                              2022010
-                            ],
-                            "variables": []
+                            "displayLines": "2022010"
                           },
                           "locationType": "First"
                         }
@@ -141,24 +126,14 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P1_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P1_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P1_ADF"
                       },
                       "refreshPositions": false,
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Constants[0] (2022010) || RETURN",
-                            "displayLines": "2022010",
-                            "constants": [
-                              2022010
-                            ],
-                            "variables": []
+                            "displayLines": "2022010"
                           },
                           "locationType": "Last"
                         }
@@ -169,24 +144,14 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P1_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P1_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P1_ADF"
                       },
                       "refreshPositions": false,
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Constants[0] (2022040) || RETURN",
-                            "displayLines": "2022040",
-                            "constants": [
-                              2022040
-                            ],
-                            "variables": []
+                            "displayLines": "2022040"
                           },
                           "locationType": "First"
                         }
@@ -195,24 +160,14 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P1_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P1_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P1_ADF"
                       },
                       "refreshPositions": false,
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Constants[0] (2022040) || RETURN",
-                            "displayLines": "2022040",
-                            "constants": [
-                              2022040
-                            ],
-                            "variables": []
+                            "displayLines": "2022040"
                           },
                           "locationType": "Last"
                         }
@@ -249,13 +204,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"613022705\">Modifier_BattleEventAbility_Challenge_Xianzhou_01_Sub</a>",
               "valuePerStack": {
                 "MDF_DamageValue": {
-                  "operator": "Variables[0] (TempHP) || Variables[1] (#BattleEvent_P2_ADF) || MUL || RETURN",
-                  "displayLines": "(TempHP * #BattleEvent_P2_ADF)",
-                  "constants": [],
-                  "variables": [
-                    "TempHP",
-                    "#BattleEvent_P2_ADF"
-                  ]
+                  "displayLines": "(TempHP * #BattleEvent_P2_ADF)"
                 }
               }
             }
@@ -284,13 +233,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"613022705\">Modifier_BattleEventAbility_Challenge_Xianzhou_01_Sub</a>",
                   "valuePerStack": {
                     "MDF_DamageValue": {
-                      "operator": "Variables[0] (TempHP) || Variables[1] (#BattleEvent_P2_ADF) || MUL || RETURN",
-                      "displayLines": "(TempHP * #BattleEvent_P2_ADF)",
-                      "constants": [],
-                      "variables": [
-                        "TempHP",
-                        "#BattleEvent_P2_ADF"
-                      ]
+                      "displayLines": "(TempHP * #BattleEvent_P2_ADF)"
                     }
                   }
                 }

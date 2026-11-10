@@ -34,12 +34,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -86,12 +81,7 @@ const configAbility = {
               },
               "statName": "STAT_CTRL",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -152,12 +142,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_Lynx_PointB1_AddSpValue) || RETURN",
-                    "displayLines": "MDF_Lynx_PointB1_AddSpValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Lynx_PointB1_AddSpValue"
-                    ]
+                    "displayLines": "MDF_Lynx_PointB1_AddSpValue"
                   },
                   "isFixed": "* ERR"
                 }
@@ -212,22 +197,10 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (MDF_HOT_HOTPercentage) || Variables[1] (MDF_HOT_AggroUp_HOTPercentage) || ADD || RETURN",
-                    "displayLines": "(MDF_HOT_HOTPercentage + MDF_HOT_AggroUp_HOTPercentage)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HOT_HOTPercentage",
-                      "MDF_HOT_AggroUp_HOTPercentage"
-                    ]
+                    "displayLines": "(MDF_HOT_HOTPercentage + MDF_HOT_AggroUp_HOTPercentage)"
                   },
                   "healFlat": {
-                    "operator": "Variables[0] (MDF_HOT_HealValue) || Variables[1] (MDF_HOT_AggroUp_HealValue) || ADD || RETURN",
-                    "displayLines": "(MDF_HOT_HealValue + MDF_HOT_AggroUp_HealValue)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HOT_HealValue",
-                      "MDF_HOT_AggroUp_HealValue"
-                    ]
+                    "displayLines": "(MDF_HOT_HealValue + MDF_HOT_AggroUp_HealValue)"
                   },
                   "formula": "Heal from Healer's MaxHP"
                 }
@@ -240,20 +213,10 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (MDF_HOT_HOTPercentage) || RETURN",
-                    "displayLines": "MDF_HOT_HOTPercentage",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HOT_HOTPercentage"
-                    ]
+                    "displayLines": "MDF_HOT_HOTPercentage"
                   },
                   "healFlat": {
-                    "operator": "Variables[0] (MDF_HOT_HealValue) || RETURN",
-                    "displayLines": "MDF_HOT_HealValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HOT_HealValue"
-                    ]
+                    "displayLines": "MDF_HOT_HealValue"
                   },
                   "formula": "Heal from Healer's MaxHP"
                 }
@@ -296,12 +259,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_HPAddValueConvert) || RETURN",
-                "displayLines": "MDF_HPAddValueConvert",
-                "constants": [],
-                "variables": [
-                  "MDF_HPAddValueConvert"
-                ]
+                "displayLines": "MDF_HPAddValueConvert"
               }
             },
             {
@@ -312,12 +270,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_HPDelta) || RETURN",
-                "displayLines": "MDF_HPDelta",
-                "constants": [],
-                "variables": [
-                  "MDF_HPDelta"
-                ]
+                "displayLines": "MDF_HPDelta"
               }
             },
             {
@@ -328,12 +281,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AddStatusResistance) || RETURN",
-                "displayLines": "MDF_AddStatusResistance",
-                "constants": [],
-                "variables": [
-                  "MDF_AddStatusResistance"
-                ]
+                "displayLines": "MDF_AddStatusResistance"
               }
             },
             {
@@ -359,12 +307,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AggroUp) || RETURN",
-                "displayLines": "MDF_AggroUp",
-                "constants": [],
-                "variables": [
-                  "MDF_AggroUp"
-                ]
+                "displayLines": "MDF_AggroUp"
               }
             }
           ]
@@ -404,12 +347,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_HPAddValueConvert) || RETURN",
-                "displayLines": "MDF_HPAddValueConvert",
-                "constants": [],
-                "variables": [
-                  "MDF_HPAddValueConvert"
-                ]
+                "displayLines": "MDF_HPAddValueConvert"
               }
             },
             {
@@ -420,12 +358,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_HPDelta) || RETURN",
-                "displayLines": "MDF_HPDelta",
-                "constants": [],
-                "variables": [
-                  "MDF_HPDelta"
-                ]
+                "displayLines": "MDF_HPDelta"
               }
             },
             {
@@ -451,12 +384,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AggroUp) || RETURN",
-                "displayLines": "MDF_AggroUp",
-                "constants": [],
-                "variables": [
-                  "MDF_AggroUp"
-                ]
+                "displayLines": "MDF_AggroUp"
               }
             }
           ]

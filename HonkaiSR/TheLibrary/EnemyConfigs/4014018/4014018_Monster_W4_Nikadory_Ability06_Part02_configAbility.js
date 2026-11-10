@@ -43,14 +43,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Skill06Count) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(Skill06Count + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "Skill06Count"
-            ]
+            "displayLines": "(Skill06Count + 1)"
           },
           "variableName": "Skill06Count"
         }
@@ -70,13 +63,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[Skill06[1]]}) || Variables[1] (Skill06Count) || DIV || RETURN",
-            "displayLines": "({[Skill06[1]]} / Skill06Count)",
-            "constants": [],
-            "variables": [
-              "{[Skill06[1]]}",
-              "Skill06Count"
-            ]
+            "displayLines": "({[Skill06[1]]} / Skill06Count)"
           },
           "variableName": "Skill06Damage"
         }
@@ -85,13 +72,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[Skill06[0]]}) || Variables[1] (Skill06Count) || DIV || RETURN",
-            "displayLines": "({[Skill06[0]]} / Skill06Count)",
-            "constants": [],
-            "variables": [
-              "{[Skill06[0]]}",
-              "Skill06Count"
-            ]
+            "displayLines": "({[Skill06[0]]} / Skill06Count)"
           },
           "variableName": "Skill06Damage"
         }
@@ -106,12 +87,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (Skill06Damage) || RETURN",
-          "displayLines": "Skill06Damage",
-          "constants": [],
-          "variables": [
-            "Skill06Damage"
-          ]
+          "displayLines": "Skill06Damage"
         },
         "Toughness": null,
         "Tags": null,
@@ -195,48 +171,21 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
           "stackLimit": {
-            "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-            "displayLines": "({[PassiveSkill01[0]]} + MDF_BraveLayer)",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[0]]}",
-              "MDF_BraveLayer"
-            ]
+            "displayLines": "({[PassiveSkill01[0]]} + MDF_BraveLayer)"
           },
           "valuePerStack": {
             "MDF_DamageResistance": {
-              "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[4]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[4]]}"
             },
             "MDF_CrackedEffect": {
-              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[1]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[1]]}"
             },
             "MDF_CrackedDamage": {
-              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[2]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[2]]}"
             }
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-            "displayLines": "({[PassiveSkill01[0]]} + MDF_BraveLayer)",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[0]]}",
-              "MDF_BraveLayer"
-            ]
+            "displayLines": "({[PassiveSkill01[0]]} + MDF_BraveLayer)"
           }
         }
       ]

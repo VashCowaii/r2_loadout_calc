@@ -83,20 +83,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-2024056044\">Monster_W4_Pollux_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
                   "valuePerStack": {
                     "MDF_DamagePercentage": {
-                      "operator": "Variables[0] (ThirstBlood_Dot_DamagePercentage) || RETURN",
-                      "displayLines": "ThirstBlood_Dot_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "ThirstBlood_Dot_DamagePercentage"
-                      ]
+                      "displayLines": "ThirstBlood_Dot_DamagePercentage"
                     },
                     "MDF_DamageHpAddedRatio": {
-                      "operator": "Variables[0] (ThirstBlood_DamageHpAddedRatio) || RETURN",
-                      "displayLines": "ThirstBlood_DamageHpAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "ThirstBlood_DamageHpAddedRatio"
-                      ]
+                      "displayLines": "ThirstBlood_DamageHpAddedRatio"
                     }
                   }
                 }

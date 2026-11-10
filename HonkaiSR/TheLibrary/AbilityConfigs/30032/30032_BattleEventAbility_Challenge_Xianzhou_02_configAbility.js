@@ -101,31 +101,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
                   "duration": {
-                    "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P3_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P3_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P3_ADF"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P2_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P2_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P2_ADF"
                   },
                   "valuePerStack": {
                     "Modifier_Electric_DamagePercentage": {
-                      "operator": "Variables[0] (#BattleEvent_P4_ADF) || Constants[0] (1.5) || MUL || RETURN",
-                      "displayLines": "(#BattleEvent_P4_ADF * 1.5)",
-                      "constants": [
-                        1.5
-                      ],
-                      "variables": [
-                        "#BattleEvent_P4_ADF"
-                      ]
+                      "displayLines": "(#BattleEvent_P4_ADF * 1.5)"
                     }
                   },
                   "stackFlag": "Level"
@@ -149,31 +132,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                   "duration": {
-                    "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P3_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P3_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P3_ADF"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P2_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P2_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P2_ADF"
                   },
                   "valuePerStack": {
                     "Modifier_Poison_DamagePercentage": {
-                      "operator": "Variables[0] (#BattleEvent_P4_ADF) || Constants[0] (1) || MUL || RETURN",
-                      "displayLines": "(#BattleEvent_P4_ADF * 1)",
-                      "constants": [
-                        1
-                      ],
-                      "variables": [
-                        "#BattleEvent_P4_ADF"
-                      ]
+                      "displayLines": "(#BattleEvent_P4_ADF * 1)"
                     }
                   },
                   "stackFlag": "Level"
@@ -197,31 +163,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                   "duration": {
-                    "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P3_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P3_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P3_ADF"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P2_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P2_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P2_ADF"
                   },
                   "valuePerStack": {
                     "Modifier_Poison_DamagePercentage": {
-                      "operator": "Variables[0] (#BattleEvent_P4_ADF) || Constants[0] (1) || MUL || RETURN",
-                      "displayLines": "(#BattleEvent_P4_ADF * 1)",
-                      "constants": [
-                        1
-                      ],
-                      "variables": [
-                        "#BattleEvent_P4_ADF"
-                      ]
+                      "displayLines": "(#BattleEvent_P4_ADF * 1)"
                     }
                   },
                   "stackFlag": "Level"
@@ -245,31 +194,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
                   "duration": {
-                    "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P3_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P3_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P3_ADF"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P2_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P2_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P2_ADF"
                   },
                   "valuePerStack": {
                     "Modifier_Burn_DamagePercentage": {
-                      "operator": "Variables[0] (#BattleEvent_P4_ADF) || Constants[0] (1) || MUL || RETURN",
-                      "displayLines": "(#BattleEvent_P4_ADF * 1)",
-                      "constants": [
-                        1
-                      ],
-                      "variables": [
-                        "#BattleEvent_P4_ADF"
-                      ]
+                      "displayLines": "(#BattleEvent_P4_ADF * 1)"
                     }
                   },
                   "stackFlag": "Level"
@@ -293,32 +225,15 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"227784370\">Standard_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
                   "duration": {
-                    "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P3_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P3_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P3_ADF"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P2_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P2_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P2_ADF"
                   },
                   "valuePerStack": {
                     "Modifier_Tear_DamageRatio": 0.1,
                     "Modifier_Tear_MaxPercentage": {
-                      "operator": "Variables[0] (#BattleEvent_P4_ADF) || Constants[0] (2.5) || MUL || RETURN",
-                      "displayLines": "(#BattleEvent_P4_ADF * 2.5)",
-                      "constants": [
-                        2.5
-                      ],
-                      "variables": [
-                        "#BattleEvent_P4_ADF"
-                      ]
+                      "displayLines": "(#BattleEvent_P4_ADF * 2.5)"
                     }
                   },
                   "stackFlag": "Level"
@@ -356,13 +271,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (TempHP) || Variables[1] (Hardlevel_HP) || SUB || RETURN",
-                "displayLines": "(TempHP - Hardlevel_HP)",
-                "constants": [],
-                "variables": [
-                  "TempHP",
-                  "Hardlevel_HP"
-                ]
+                "displayLines": "(TempHP - Hardlevel_HP)"
               }
             },
             {
@@ -382,15 +291,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRate</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (1) || Constants[0] (1) || Variables[0] (Hardlevel_StatusResistance) || Constants[1] (0.1) || ADD || SUB || DIV || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "((1 / (1 - (Hardlevel_StatusResistance + 0.1))) - 1)",
-                "constants": [
-                  1,
-                  0.1
-                ],
-                "variables": [
-                  "Hardlevel_StatusResistance"
-                ]
+                "displayLines": "((1 / (1 - (Hardlevel_StatusResistance + 0.1))) - 1)"
               }
             }
           ]

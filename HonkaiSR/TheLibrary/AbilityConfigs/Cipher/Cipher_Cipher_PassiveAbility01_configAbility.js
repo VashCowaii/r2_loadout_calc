@@ -24,12 +24,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (1) || RETURN",
-        "displayLines": "1",
-        "constants": [],
-        "variables": [
-          1
-        ]
+        "displayLines": "1"
       },
       "variableName": "Passive_Max_Count"
     },
@@ -60,12 +55,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (1.5) || RETURN",
-            "displayLines": "1.5",
-            "constants": [],
-            "variables": [
-              1.5
-            ]
+            "displayLines": "1.5"
           },
           "variableName": "Rank01_FinalRatio"
         }
@@ -88,12 +78,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.5) || RETURN",
-            "displayLines": "0.5",
-            "constants": [],
-            "variables": [
-              0.5
-            ]
+            "displayLines": "0.5"
           },
           "variableName": "Rank04_DamagePercentage"
         }
@@ -115,12 +100,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"374199979\">Cipher_Eidolon6</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (3.5) || RETURN",
-              "displayLines": "3.5",
-              "constants": [],
-              "variables": [
-                3.5
-              ]
+              "displayLines": "3.5"
             }
           }
         }
@@ -159,34 +139,17 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Constants[0] (0) || RETURN",
-        "displayLines": "0",
-        "constants": [
-          0
-        ],
-        "variables": []
+        "displayLines": "0"
       },
       "variableName": "SkillP01_FinalDamage"
     },
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (SkillP01_FinalDamage) || Constants[0] (1000) || DIV || RETURN",
-        "displayLines": "(SkillP01_FinalDamage / 1000)",
-        "constants": [
-          1000
-        ],
-        "variables": [
-          "SkillP01_FinalDamage"
-        ]
+        "displayLines": "(SkillP01_FinalDamage / 1000)"
       },
       "maximum": {
-        "operator": "Constants[0] (99999) || RETURN",
-        "displayLines": "99999",
-        "constants": [
-          99999
-        ],
-        "variables": []
+        "displayLines": "99999"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -203,24 +166,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "variableName": "PointB1_Add_2"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.5) || RETURN",
-            "displayLines": "0.5",
-            "constants": [],
-            "variables": [
-              0.5
-            ]
+            "displayLines": "0.5"
           },
           "variableName": "PointB1_Add_1"
         },
@@ -659,25 +612,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_TMP_Damage) || Variables[1] (_TMP_OverflowDamage) || SUB || RETURN",
-                    "displayLines": "(_TMP_Damage - _TMP_OverflowDamage)",
-                    "constants": [],
-                    "variables": [
-                      "_TMP_Damage",
-                      "_TMP_OverflowDamage"
-                    ]
+                    "displayLines": "(_TMP_Damage - _TMP_OverflowDamage)"
                   },
                   "variableName": "_TMP_Damage"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (0.08) || RETURN",
-                    "displayLines": "0.08",
-                    "constants": [],
-                    "variables": [
-                      0.08
-                    ]
+                    "displayLines": "0.08"
                   },
                   "variableName": "_TMP_Rate"
                 },
@@ -713,13 +655,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_TMP_Rate) || Variables[1] (0.16) || ADD || RETURN",
-                        "displayLines": "(_TMP_Rate + 0.16)",
-                        "constants": [],
-                        "variables": [
-                          "_TMP_Rate",
-                          0.16
-                        ]
+                        "displayLines": "(_TMP_Rate + 0.16)"
                       },
                       "variableName": "_TMP_Rate"
                     }
@@ -737,30 +673,14 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Constants[0] (0) || Variables[0] (_TMP_Damage) || SUB || RETURN",
-                        "displayLines": "(0 - _TMP_Damage)",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "_TMP_Damage"
-                        ]
+                        "displayLines": "(0 - _TMP_Damage)"
                       },
                       "variableName": "SkillP01_CurrentDamge"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (SkillP01_FinalDamage) || Variables[1] (SkillP01_CurrentDamge) || INVERT || Variables[2] (_TMP_Rate) || MUL || Variables[3] (0.12) || DIV || Variables[3] (0.12) || Variables[4] (Rank01_FinalRatio) || MUL || MUL || ADD || RETURN",
-                        "displayLines": "(SkillP01_FinalDamage + (((-SkillP01_CurrentDamge * _TMP_Rate) / 0.12) * (0.12 * Rank01_FinalRatio)))",
-                        "constants": [],
-                        "variables": [
-                          "SkillP01_FinalDamage",
-                          "SkillP01_CurrentDamge",
-                          "_TMP_Rate",
-                          0.12,
-                          "Rank01_FinalRatio"
-                        ]
+                        "displayLines": "(SkillP01_FinalDamage + (((-SkillP01_CurrentDamge * _TMP_Rate) / 0.12) * (0.12 * Rank01_FinalRatio)))"
                       },
                       "variableName": "SkillP01_FinalDamage"
                     },
@@ -792,24 +712,14 @@ const configAbility = {
                             "value1": "PointB1_Speed",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (OBJECT_[170]) || RETURN",
-                              "displayLines": "OBJECT_[170]",
-                              "constants": [],
-                              "variables": [
-                                "OBJECT_[170]"
-                              ]
+                              "displayLines": "OBJECT_[170]"
                             }
                           },
                           "passed": [
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (PointB1_Add_2) || RETURN",
-                                "displayLines": "PointB1_Add_2",
-                                "constants": [],
-                                "variables": [
-                                  "PointB1_Add_2"
-                                ]
+                                "displayLines": "PointB1_Add_2"
                               },
                               "variableName": "PointB1_Ratio"
                             }
@@ -822,24 +732,14 @@ const configAbility = {
                                 "value1": "PointB1_Speed",
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] (OBJECT_[140]) || RETURN",
-                                  "displayLines": "OBJECT_[140]",
-                                  "constants": [],
-                                  "variables": [
-                                    "OBJECT_[140]"
-                                  ]
+                                  "displayLines": "OBJECT_[140]"
                                 }
                               },
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
                                   "value": {
-                                    "operator": "Variables[0] (PointB1_Add_1) || RETURN",
-                                    "displayLines": "PointB1_Add_1",
-                                    "constants": [],
-                                    "variables": [
-                                      "PointB1_Add_1"
-                                    ]
+                                    "displayLines": "PointB1_Add_1"
                                   },
                                   "variableName": "PointB1_Ratio"
                                 }
@@ -857,17 +757,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (SkillP01_FinalDamage) || Variables[1] (SkillP01_CurrentDamge) || INVERT || Variables[2] (_TMP_Rate) || MUL || Variables[3] (0.12) || DIV || Variables[4] (PointB1_Ratio) || MUL || Variables[3] (0.12) || Variables[5] (Rank01_FinalRatio) || MUL || MUL || ADD || RETURN",
-                            "displayLines": "(SkillP01_FinalDamage + ((((-SkillP01_CurrentDamge * _TMP_Rate) / 0.12) * PointB1_Ratio) * (0.12 * Rank01_FinalRatio)))",
-                            "constants": [],
-                            "variables": [
-                              "SkillP01_FinalDamage",
-                              "SkillP01_CurrentDamge",
-                              "_TMP_Rate",
-                              0.12,
-                              "PointB1_Ratio",
-                              "Rank01_FinalRatio"
-                            ]
+                            "displayLines": "(SkillP01_FinalDamage + ((((-SkillP01_CurrentDamge * _TMP_Rate) / 0.12) * PointB1_Ratio) * (0.12 * Rank01_FinalRatio)))"
                           },
                           "variableName": "SkillP01_FinalDamage"
                         }
@@ -905,17 +795,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (SkillP01_FinalDamage) || Variables[1] (SkillP01_CurrentDamge) || INVERT || Variables[2] (_TMP_Rate) || MUL || Variables[3] (0.12) || DIV || Variables[4] (2) || MUL || Variables[3] (0.12) || Variables[5] (Rank01_FinalRatio) || MUL || MUL || ADD || RETURN",
-                            "displayLines": "(SkillP01_FinalDamage + ((((-SkillP01_CurrentDamge * _TMP_Rate) / 0.12) * 2) * (0.12 * Rank01_FinalRatio)))",
-                            "constants": [],
-                            "variables": [
-                              "SkillP01_FinalDamage",
-                              "SkillP01_CurrentDamge",
-                              "_TMP_Rate",
-                              0.12,
-                              2,
-                              "Rank01_FinalRatio"
-                            ]
+                            "displayLines": "(SkillP01_FinalDamage + ((((-SkillP01_CurrentDamge * _TMP_Rate) / 0.12) * 2) * (0.12 * Rank01_FinalRatio)))"
                           },
                           "variableName": "SkillP01_FinalDamage"
                         }
@@ -926,22 +806,10 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (SkillP01_FinalDamage) || Constants[0] (1000) || DIV || RETURN",
-                    "displayLines": "(SkillP01_FinalDamage / 1000)",
-                    "constants": [
-                      1000
-                    ],
-                    "variables": [
-                      "SkillP01_FinalDamage"
-                    ]
+                    "displayLines": "(SkillP01_FinalDamage / 1000)"
                   },
                   "maximum": {
-                    "operator": "Constants[0] (99999) || RETURN",
-                    "displayLines": "99999",
-                    "constants": [
-                      99999
-                    ],
-                    "variables": []
+                    "displayLines": "99999"
                   },
                   "assignState": "True",
                   "priorState": "Normal",
@@ -1115,12 +983,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.4) || RETURN",
-              "displayLines": "0.4",
-              "constants": [],
-              "variables": [
-                0.4
-              ]
+              "displayLines": "0.4"
             }
           }
         }
@@ -1203,12 +1066,7 @@ const configAbility = {
                 "value1": "_CUR_SPEED",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (OBJECT_[170]) || RETURN",
-                  "displayLines": "OBJECT_[170]",
-                  "constants": [],
-                  "variables": [
-                    "OBJECT_[170]"
-                  ]
+                  "displayLines": "OBJECT_[170]"
                 }
               },
               "passed": [
@@ -1221,12 +1079,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1951153647\">Cipher_PointB1_ListenSpeedChange_Bonus</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   }
                 }
@@ -1239,12 +1092,7 @@ const configAbility = {
                     "value1": "_CUR_SPEED",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (OBJECT_[140]) || RETURN",
-                      "displayLines": "OBJECT_[140]",
-                      "constants": [],
-                      "variables": [
-                        "OBJECT_[140]"
-                      ]
+                      "displayLines": "OBJECT_[140]"
                     }
                   },
                   "passed": [
@@ -1257,12 +1105,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1951153647\">Cipher_PointB1_ListenSpeedChange_Bonus</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
+                          "displayLines": "0.25"
                         }
                       }
                     }
@@ -1309,12 +1152,7 @@ const configAbility = {
                     "value1": "_CUR_SPEED",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (OBJECT_[170]) || RETURN",
-                      "displayLines": "OBJECT_[170]",
-                      "constants": [],
-                      "variables": [
-                        "OBJECT_[170]"
-                      ]
+                      "displayLines": "OBJECT_[170]"
                     }
                   },
                   "passed": [
@@ -1327,12 +1165,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1951153647\">Cipher_PointB1_ListenSpeedChange_Bonus</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         }
                       }
                     }
@@ -1345,12 +1178,7 @@ const configAbility = {
                         "value1": "_CUR_SPEED",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (OBJECT_[140]) || RETURN",
-                          "displayLines": "OBJECT_[140]",
-                          "constants": [],
-                          "variables": [
-                            "OBJECT_[140]"
-                          ]
+                          "displayLines": "OBJECT_[140]"
                         }
                       },
                       "passed": [
@@ -1363,12 +1191,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1951153647\">Cipher_PointB1_ListenSpeedChange_Bonus</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.25) || RETURN",
-                              "displayLines": "0.25",
-                              "constants": [],
-                              "variables": [
-                                0.25
-                              ]
+                              "displayLines": "0.25"
                             }
                           }
                         }
@@ -1414,12 +1237,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -1452,29 +1270,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-309291538\">Cipher_Eidolon2_Debuff</a>[<span class=\"descriptionNumberColor\">In the Fray, Nab On a Spree</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (1.2) || RETURN",
-                    "displayLines": "1.2",
-                    "constants": [],
-                    "variables": [
-                      1.2
-                    ]
+                    "displayLines": "1.2"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.3) || RETURN",
-                      "displayLines": "0.3",
-                      "constants": [],
-                      "variables": [
-                        0.3
-                      ]
+                      "displayLines": "0.3"
                     }
                   }
                 },

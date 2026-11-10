@@ -12,29 +12,14 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"1401924350\">Seele_Passive_DamageUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
       "duration": {
-        "operator": "Variables[0] (1) || RETURN",
-        "displayLines": "1",
-        "constants": [],
-        "variables": [
-          1
-        ]
+        "displayLines": "1"
       },
       "valuePerStack": {
         "seele_dmg_percent": {
-          "operator": "Variables[0] (0.8) || RETURN",
-          "displayLines": "0.8",
-          "constants": [],
-          "variables": [
-            0.8
-          ]
+          "displayLines": "0.8"
         },
         "MDF_Penetrate": {
-          "operator": "Variables[0] (0.2) || RETURN",
-          "displayLines": "0.2",
-          "constants": [],
-          "variables": [
-            0.2
-          ]
+          "displayLines": "0.2"
         }
       }
     },
@@ -48,20 +33,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (4.25) || RETURN",
-          "displayLines": "4.25",
-          "constants": [],
-          "variables": [
-            4.25
-          ]
+          "displayLines": "4.25"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -83,22 +58,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"995458646\">Seele_Eidolon6_Flag</a>[<span class=\"descriptionNumberColor\">Butterfly Flurry</span>]",
           "duration": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "valuePerStack": {
             "MDF_Eidolon6_Damage": {
-              "operator": "Variables[0] (4.25) || Variables[1] (0.15) || MUL || RETURN",
-              "displayLines": "(4.25 * 0.15)",
-              "constants": [],
-              "variables": [
-                4.25,
-                0.15
-              ]
+              "displayLines": "(4.25 * 0.15)"
             }
           }
         }
@@ -134,12 +98,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] (MDF_Rank06_Damage) || RETURN",
-                  "displayLines": "MDF_Rank06_Damage",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Rank06_Damage"
-                  ]
+                  "displayLines": "MDF_Rank06_Damage"
                 },
                 "Toughness": null,
                 "Tags": null,

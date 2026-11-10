@@ -32,12 +32,7 @@ const configAbility = {
     {
       "name": "SWITCH",
       "switchValue": {
-        "operator": "Variables[0] (PowerOutTargetNumber) || RETURN",
-        "displayLines": "PowerOutTargetNumber",
-        "constants": [],
-        "variables": [
-          "PowerOutTargetNumber"
-        ]
+        "displayLines": "PowerOutTargetNumber"
       },
       "caseEvents": [
         {

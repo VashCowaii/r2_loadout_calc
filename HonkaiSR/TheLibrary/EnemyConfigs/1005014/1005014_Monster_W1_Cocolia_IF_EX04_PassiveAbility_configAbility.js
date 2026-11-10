@@ -48,20 +48,10 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-146543153\">Enemy_W2_Cocolia_IF_WeaknessCount</a>",
               "valuePerStack": {
                 "MDF_TokenDamageReduceRatio": {
-                  "operator": "Variables[0] ({[SkillEX04[0]]}) || RETURN",
-                  "displayLines": "{[SkillEX04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX04[0]]}"
-                  ]
+                  "displayLines": "{[SkillEX04[0]]}"
                 },
                 "MDF_TokenDamageAddRatioPerlayer": {
-                  "operator": "Variables[0] ({[SkillEX04[1]]}) || RETURN",
-                  "displayLines": "{[SkillEX04[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX04[1]]}"
-                  ]
+                  "displayLines": "{[SkillEX04[1]]}"
                 }
               }
             }
@@ -90,20 +80,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-146543153\">Enemy_W2_Cocolia_IF_WeaknessCount</a>",
                   "valuePerStack": {
                     "MDF_TokenDamageReduceRatio": {
-                      "operator": "Variables[0] ({[SkillEX04[0]]}) || RETURN",
-                      "displayLines": "{[SkillEX04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillEX04[0]]}"
-                      ]
+                      "displayLines": "{[SkillEX04[0]]}"
                     },
                     "MDF_TokenDamageAddRatioPerlayer": {
-                      "operator": "Variables[0] ({[SkillEX04[1]]}) || RETURN",
-                      "displayLines": "{[SkillEX04[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillEX04[1]]}"
-                      ]
+                      "displayLines": "{[SkillEX04[1]]}"
                     }
                   }
                 }

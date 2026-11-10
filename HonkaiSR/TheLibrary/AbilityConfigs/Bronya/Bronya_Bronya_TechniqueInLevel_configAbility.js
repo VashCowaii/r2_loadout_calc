@@ -42,12 +42,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -79,21 +74,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1915866740\">Bronya_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.15) || RETURN",
-                      "displayLines": "0.15",
-                      "constants": [],
-                      "variables": [
-                        0.15
-                      ]
+                      "displayLines": "0.15"
                     }
                   }
                 }

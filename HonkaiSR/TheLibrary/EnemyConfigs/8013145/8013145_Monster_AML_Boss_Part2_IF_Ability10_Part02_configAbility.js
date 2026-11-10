@@ -14,12 +14,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill10[0]]}) || RETURN",
-          "displayLines": "{[Skill10[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill10[0]]}"
-          ]
+          "displayLines": "{[Skill10[0]]}"
         },
         "HitSplit": 0.5,
         "Toughness": null,
@@ -37,12 +32,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill10[0]]}) || RETURN",
-          "displayLines": "{[Skill10[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill10[0]]}"
-          ]
+          "displayLines": "{[Skill10[0]]}"
         },
         "HitSplit": 0.5,
         "Toughness": null,
@@ -73,12 +63,7 @@ const configAbility = {
           "duration": 1,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (SkillEX03_P2_SpeedAddedRatio) || RETURN",
-              "displayLines": "SkillEX03_P2_SpeedAddedRatio",
-              "constants": [],
-              "variables": [
-                "SkillEX03_P2_SpeedAddedRatio"
-              ]
+              "displayLines": "SkillEX03_P2_SpeedAddedRatio"
             }
           }
         }

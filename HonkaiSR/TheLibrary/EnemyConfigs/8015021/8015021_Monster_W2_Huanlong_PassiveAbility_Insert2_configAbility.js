@@ -147,24 +147,14 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[Skill12[0]]}) || RETURN",
-            "displayLines": "{[Skill12[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill12[0]]}"
-            ]
+            "displayLines": "{[Skill12[0]]}"
           },
           "refreshPositions": false,
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID3) || RETURN",
-                "displayLines": "SummonID3",
-                "constants": [],
-                "variables": [
-                  "SummonID3"
-                ]
+                "displayLines": "SummonID3"
               },
               "locationType": "BeforeCaster"
             }
@@ -173,24 +163,14 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[Skill12[1]]}) || RETURN",
-            "displayLines": "{[Skill12[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill12[1]]}"
-            ]
+            "displayLines": "{[Skill12[1]]}"
           },
           "refreshPositions": false,
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID3) || RETURN",
-                "displayLines": "SummonID3",
-                "constants": [],
-                "variables": [
-                  "SummonID3"
-                ]
+                "displayLines": "SummonID3"
               },
               "locationType": "AfterCaster"
             }
@@ -226,12 +206,7 @@ const configAbility = {
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonID4) || RETURN",
-            "displayLines": "SummonID4",
-            "constants": [],
-            "variables": [
-              "SummonID4"
-            ]
+            "displayLines": "SummonID4"
           },
           "locationType": "First"
         }
@@ -245,12 +220,7 @@ const configAbility = {
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonID4) || RETURN",
-            "displayLines": "SummonID4",
-            "constants": [],
-            "variables": [
-              "SummonID4"
-            ]
+            "displayLines": "SummonID4"
           },
           "locationType": "Last"
         }

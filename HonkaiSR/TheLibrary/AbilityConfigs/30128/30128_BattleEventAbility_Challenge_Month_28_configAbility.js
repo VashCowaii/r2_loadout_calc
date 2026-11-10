@@ -13,12 +13,7 @@ const configAbility = {
       },
       "variableName": "BattleEvent_P1_ADF",
       "resetValue": {
-        "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-        "displayLines": "#BattleEvent_P1_ADF",
-        "constants": [],
-        "variables": [
-          "#BattleEvent_P1_ADF"
-        ]
+        "displayLines": "#BattleEvent_P1_ADF"
       },
       "scope": "ContextCaster"
     },
@@ -30,12 +25,7 @@ const configAbility = {
       },
       "variableName": "BattleEvent_P2_ADF",
       "resetValue": {
-        "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-        "displayLines": "#BattleEvent_P2_ADF",
-        "constants": [],
-        "variables": [
-          "#BattleEvent_P2_ADF"
-        ]
+        "displayLines": "#BattleEvent_P2_ADF"
       },
       "scope": "ContextCaster"
     },
@@ -47,12 +37,7 @@ const configAbility = {
       },
       "variableName": "BattleEvent_P3_ADF",
       "resetValue": {
-        "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-        "displayLines": "#BattleEvent_P3_ADF",
-        "constants": [],
-        "variables": [
-          "#BattleEvent_P3_ADF"
-        ]
+        "displayLines": "#BattleEvent_P3_ADF"
       },
       "scope": "ContextCaster"
     },
@@ -64,12 +49,7 @@ const configAbility = {
       },
       "variableName": "BattleEvent_P4_ADF",
       "resetValue": {
-        "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
-        "displayLines": "#BattleEvent_P4_ADF",
-        "constants": [],
-        "variables": [
-          "#BattleEvent_P4_ADF"
-        ]
+        "displayLines": "#BattleEvent_P4_ADF"
       },
       "scope": "ContextCaster"
     },
@@ -81,12 +61,7 @@ const configAbility = {
       },
       "variableName": "BattleEvent_P5_ADF",
       "resetValue": {
-        "operator": "Variables[0] (#BattleEvent_P5_ADF) || RETURN",
-        "displayLines": "#BattleEvent_P5_ADF",
-        "constants": [],
-        "variables": [
-          "#BattleEvent_P5_ADF"
-        ]
+        "displayLines": "#BattleEvent_P5_ADF"
       },
       "scope": "ContextCaster"
     },
@@ -319,28 +294,13 @@ const configAbility = {
               "canHitNonTargets": true,
               "valuePerStack": {
                 "DV_DmgUpRatio_Set": {
-                  "operator": "Variables[0] (DV_DmgUpRatio) || RETURN",
-                  "displayLines": "DV_DmgUpRatio",
-                  "constants": [],
-                  "variables": [
-                    "DV_DmgUpRatio"
-                  ]
+                  "displayLines": "DV_DmgUpRatio"
                 },
                 "DV_MaxLayer_Set": {
-                  "operator": "Variables[0] (DV_MaxLayer) || RETURN",
-                  "displayLines": "DV_MaxLayer",
-                  "constants": [],
-                  "variables": [
-                    "DV_MaxLayer"
-                  ]
+                  "displayLines": "DV_MaxLayer"
                 },
                 "DV_AtkUpRatio_Set": {
-                  "operator": "Variables[0] (DV_AtkUpRatio) || RETURN",
-                  "displayLines": "DV_AtkUpRatio",
-                  "constants": [],
-                  "variables": [
-                    "DV_AtkUpRatio"
-                  ]
+                  "displayLines": "DV_AtkUpRatio"
                 }
               },
               "allowAbilityTriggers": false
@@ -397,12 +357,7 @@ const configAbility = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Constants[0] (800205060) || RETURN",
-                            "displayLines": "800205060",
-                            "constants": [
-                              800205060
-                            ],
-                            "variables": []
+                            "displayLines": "800205060"
                           },
                           "locationType": "Last"
                         }
@@ -428,12 +383,7 @@ const configAbility = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Constants[0] (800205060) || RETURN",
-                            "displayLines": "800205060",
-                            "constants": [
-                              800205060
-                            ],
-                            "variables": []
+                            "displayLines": "800205060"
                           },
                           "locationType": "Last"
                         }
@@ -459,12 +409,7 @@ const configAbility = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Constants[0] (800205060) || RETURN",
-                            "displayLines": "800205060",
-                            "constants": [
-                              800205060
-                            ],
-                            "variables": []
+                            "displayLines": "800205060"
                           },
                           "locationType": "Last"
                         }
@@ -490,12 +435,7 @@ const configAbility = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Constants[0] (800205060) || RETURN",
-                            "displayLines": "800205060",
-                            "constants": [
-                              800205060
-                            ],
-                            "variables": []
+                            "displayLines": "800205060"
                           },
                           "locationType": "Last"
                         }
@@ -521,12 +461,7 @@ const configAbility = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Constants[0] (800205060) || RETURN",
-                            "displayLines": "800205060",
-                            "constants": [
-                              800205060
-                            ],
-                            "variables": []
+                            "displayLines": "800205060"
                           },
                           "locationType": "Last"
                         }
@@ -552,12 +487,7 @@ const configAbility = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Constants[0] (800205060) || RETURN",
-                            "displayLines": "800205060",
-                            "constants": [
-                              800205060
-                            ],
-                            "variables": []
+                            "displayLines": "800205060"
                           },
                           "locationType": "Last"
                         }
@@ -583,12 +513,7 @@ const configAbility = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Constants[0] (800205060) || RETURN",
-                            "displayLines": "800205060",
-                            "constants": [
-                              800205060
-                            ],
-                            "variables": []
+                            "displayLines": "800205060"
                           },
                           "locationType": "Last"
                         }
@@ -614,12 +539,7 @@ const configAbility = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Constants[0] (800205060) || RETURN",
-                            "displayLines": "800205060",
-                            "constants": [
-                              800205060
-                            ],
-                            "variables": []
+                            "displayLines": "800205060"
                           },
                           "locationType": "Last"
                         }
@@ -645,12 +565,7 @@ const configAbility = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Constants[0] (800205060) || RETURN",
-                            "displayLines": "800205060",
-                            "constants": [
-                              800205060
-                            ],
-                            "variables": []
+                            "displayLines": "800205060"
                           },
                           "locationType": "Last"
                         }
@@ -676,12 +591,7 @@ const configAbility = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Constants[0] (800205060) || RETURN",
-                            "displayLines": "800205060",
-                            "constants": [
-                              800205060
-                            ],
-                            "variables": []
+                            "displayLines": "800205060"
                           },
                           "locationType": "Last"
                         }
@@ -812,36 +722,16 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1551992588\">Modifier_BattleEventAbility_Challenge_Month_28_Sub</a>[<span class=\"descriptionNumberColor\">Fatal Weakness</span>]",
                   "valuePerStack": {
                     "DV_WeaknessCount": {
-                      "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "BattleEvent_P1_ADF"
                     },
                     "DV_DmgUpRatio": {
-                      "operator": "Variables[0] (BattleEvent_P3_ADF) || RETURN",
-                      "displayLines": "BattleEvent_P3_ADF",
-                      "constants": [],
-                      "variables": [
-                        "BattleEvent_P3_ADF"
-                      ]
+                      "displayLines": "BattleEvent_P3_ADF"
                     },
                     "DV_MaxLayer": {
-                      "operator": "Variables[0] (BattleEvent_P4_ADF) || RETURN",
-                      "displayLines": "BattleEvent_P4_ADF",
-                      "constants": [],
-                      "variables": [
-                        "BattleEvent_P4_ADF"
-                      ]
+                      "displayLines": "BattleEvent_P4_ADF"
                     },
                     "DV_AtkUpRatio": {
-                      "operator": "Variables[0] (BattleEvent_P5_ADF) || RETURN",
-                      "displayLines": "BattleEvent_P5_ADF",
-                      "constants": [],
-                      "variables": [
-                        "BattleEvent_P5_ADF"
-                      ]
+                      "displayLines": "BattleEvent_P5_ADF"
                     }
                   }
                 }
@@ -870,12 +760,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-595048974\">Modifier_BattleEventAbility_Challenge_Month_28_preshow</a>",
                   "valuePerStack": {
                     "ActionDelayRatio": {
-                      "operator": "Variables[0] (BattleEvent_P2_ADF) || RETURN",
-                      "displayLines": "BattleEvent_P2_ADF",
-                      "constants": [],
-                      "variables": [
-                        "BattleEvent_P2_ADF"
-                      ]
+                      "displayLines": "BattleEvent_P2_ADF"
                     }
                   }
                 },
@@ -888,12 +773,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"639115186\">Modifier_BattleEventAbility_Challenge_Month_28_Sub2</a>",
                   "valuePerStack": {
                     "_ActionDelayRatio": {
-                      "operator": "Variables[0] (BattleEvent_P2_ADF) || RETURN",
-                      "displayLines": "BattleEvent_P2_ADF",
-                      "constants": [],
-                      "variables": [
-                        "BattleEvent_P2_ADF"
-                      ]
+                      "displayLines": "BattleEvent_P2_ADF"
                     }
                   },
                   "casterAssign": "TargetSelf"
@@ -938,12 +818,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-595048974\">Modifier_BattleEventAbility_Challenge_Month_28_preshow</a>",
               "valuePerStack": {
                 "ActionDelayRatio": {
-                  "operator": "Variables[0] (BattleEvent_P2_ADF) || RETURN",
-                  "displayLines": "BattleEvent_P2_ADF",
-                  "constants": [],
-                  "variables": [
-                    "BattleEvent_P2_ADF"
-                  ]
+                  "displayLines": "BattleEvent_P2_ADF"
                 }
               }
             },
@@ -956,12 +831,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"639115186\">Modifier_BattleEventAbility_Challenge_Month_28_Sub2</a>",
               "valuePerStack": {
                 "_ActionDelayRatio": {
-                  "operator": "Variables[0] (BattleEvent_P2_ADF) || RETURN",
-                  "displayLines": "BattleEvent_P2_ADF",
-                  "constants": [],
-                  "variables": [
-                    "BattleEvent_P2_ADF"
-                  ]
+                  "displayLines": "BattleEvent_P2_ADF"
                 }
               },
               "casterAssign": "TargetSelf"
@@ -992,12 +862,7 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (800205060) || RETURN",
-                        "displayLines": "800205060",
-                        "constants": [
-                          800205060
-                        ],
-                        "variables": []
+                        "displayLines": "800205060"
                       },
                       "locationType": "Last"
                     }
@@ -1022,12 +887,7 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (800205060) || RETURN",
-                        "displayLines": "800205060",
-                        "constants": [
-                          800205060
-                        ],
-                        "variables": []
+                        "displayLines": "800205060"
                       },
                       "locationType": "Last"
                     }
@@ -1052,12 +912,7 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (800205060) || RETURN",
-                        "displayLines": "800205060",
-                        "constants": [
-                          800205060
-                        ],
-                        "variables": []
+                        "displayLines": "800205060"
                       },
                       "locationType": "Last"
                     }
@@ -1082,12 +937,7 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (800205060) || RETURN",
-                        "displayLines": "800205060",
-                        "constants": [
-                          800205060
-                        ],
-                        "variables": []
+                        "displayLines": "800205060"
                       },
                       "locationType": "Last"
                     }
@@ -1112,12 +962,7 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (800205060) || RETURN",
-                        "displayLines": "800205060",
-                        "constants": [
-                          800205060
-                        ],
-                        "variables": []
+                        "displayLines": "800205060"
                       },
                       "locationType": "Last"
                     }
@@ -1142,12 +987,7 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (800205060) || RETURN",
-                        "displayLines": "800205060",
-                        "constants": [
-                          800205060
-                        ],
-                        "variables": []
+                        "displayLines": "800205060"
                       },
                       "locationType": "Last"
                     }
@@ -1172,12 +1012,7 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (800205060) || RETURN",
-                        "displayLines": "800205060",
-                        "constants": [
-                          800205060
-                        ],
-                        "variables": []
+                        "displayLines": "800205060"
                       },
                       "locationType": "Last"
                     }
@@ -1202,12 +1037,7 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (800205060) || RETURN",
-                        "displayLines": "800205060",
-                        "constants": [
-                          800205060
-                        ],
-                        "variables": []
+                        "displayLines": "800205060"
                       },
                       "locationType": "Last"
                     }
@@ -1232,12 +1062,7 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (800205060) || RETURN",
-                        "displayLines": "800205060",
-                        "constants": [
-                          800205060
-                        ],
-                        "variables": []
+                        "displayLines": "800205060"
                       },
                       "locationType": "Last"
                     }
@@ -1262,12 +1087,7 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (800205060) || RETURN",
-                        "displayLines": "800205060",
-                        "constants": [
-                          800205060
-                        ],
-                        "variables": []
+                        "displayLines": "800205060"
                       },
                       "locationType": "Last"
                     }

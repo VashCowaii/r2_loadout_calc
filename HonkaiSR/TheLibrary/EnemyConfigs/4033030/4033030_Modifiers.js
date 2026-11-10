@@ -246,15 +246,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (_Attack) || Variables[1] ({[Skill02[1]]}) || Constants[0] (1) || SUB || MUL || RETURN",
-                "displayLines": "(_Attack * ({[Skill02[1]]} - 1))",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_Attack",
-                  "{[Skill02[1]]}"
-                ]
+                "displayLines": "(_Attack * ({[Skill02[1]]} - 1))"
               }
             },
             {
@@ -274,15 +266,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill02[0]]}) || Constants[0] (1) || SUB || MUL || RETURN",
-                "displayLines": "(_MaxHP * ({[Skill02[0]]} - 1))",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_MaxHP",
-                  "{[Skill02[0]]}"
-                ]
+                "displayLines": "(_MaxHP * ({[Skill02[0]]} - 1))"
               }
             }
           ]
@@ -298,12 +282,7 @@ const configAbility = {
                 "target": "{{Summoner of Modifier Holder}}"
               },
               "consumePercent": {
-                "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                "displayLines": "{[Skill02[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill02[2]]}"
-                ]
+                "displayLines": "{[Skill02[2]]}"
               }
             }
           ]

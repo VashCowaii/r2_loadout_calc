@@ -184,13 +184,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageUP) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                    "displayLines": "(MDF_DamageUP * ModifierLayers)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageUP",
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "(MDF_DamageUP * ModifierLayers)"
                   }
                 }
               ]
@@ -217,12 +211,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"73301376\">Standard_SuperArmor</a>[<span class=\"descriptionNumberColor\">Safeguard</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeResistance": {
-                      "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                      "displayLines": "{[Skill03[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill03[0]]}"
-                      ]
+                      "displayLines": "{[Skill03[0]]}"
                     }
                   }
                 }
@@ -248,12 +237,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1917647041\">Standard_SuperArmorBreak</a>[<span class=\"descriptionNumberColor\">Safeguard Broken</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeTakenRatio": {
-                      "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-                      "displayLines": "{[Skill03[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill03[1]]}"
-                      ]
+                      "displayLines": "{[Skill03[1]]}"
                     }
                   }
                 },
@@ -287,12 +271,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"73301376\">Standard_SuperArmor</a>[<span class=\"descriptionNumberColor\">Safeguard</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeResistance": {
-                      "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                      "displayLines": "{[Skill03[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill03[0]]}"
-                      ]
+                      "displayLines": "{[Skill03[0]]}"
                     }
                   }
                 },
@@ -323,12 +302,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "AIFlag",
                   "resetValue": {
-                    "operator": "Variables[0] (MDF_AIFlag) || RETURN",
-                    "displayLines": "MDF_AIFlag",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AIFlag"
-                    ]
+                    "displayLines": "MDF_AIFlag"
                   },
                   "scope": "TargetEntity"
                 },
@@ -340,12 +314,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "set": {
-                    "operator": "Variables[0] (MDF_ActionDelay) || RETURN",
-                    "displayLines": "MDF_ActionDelay",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ActionDelay"
-                    ]
+                    "displayLines": "MDF_ActionDelay"
                   }
                 },
                 "Modifier Deletes Itself"
@@ -558,12 +527,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_ChosenOneSpeedUp) || RETURN",
-                    "displayLines": "MDF_ChosenOneSpeedUp",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ChosenOneSpeedUp"
-                    ]
+                    "displayLines": "MDF_ChosenOneSpeedUp"
                   }
                 },
                 {
@@ -744,44 +708,19 @@ const compositeAbilityObject = {
                               "canHitNonTargets": true,
                               "valuePerStack": {
                                 "P1_BreakDelayRatio": {
-                                  "operator": "Variables[0] (MDF_BreakDelayRatio) || RETURN",
-                                  "displayLines": "MDF_BreakDelayRatio",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_BreakDelayRatio"
-                                  ]
+                                  "displayLines": "MDF_BreakDelayRatio"
                                 },
                                 "P2_ChosenOneSpeedUp": {
-                                  "operator": "Variables[0] (MDF_ChosenOneSpeedUp) || RETURN",
-                                  "displayLines": "MDF_ChosenOneSpeedUp",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_ChosenOneSpeedUp"
-                                  ]
+                                  "displayLines": "MDF_ChosenOneSpeedUp"
                                 },
                                 "P3_ExploreDamagePercentage": {
-                                  "operator": "Variables[0] (MDF_ExploreDamagePercentage) || RETURN",
-                                  "displayLines": "MDF_ExploreDamagePercentage",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_ExploreDamagePercentage"
-                                  ]
+                                  "displayLines": "MDF_ExploreDamagePercentage"
                                 },
                                 "P4_ExploreDelayRatio": {
-                                  "operator": "Variables[0] (MDF_ExploreDelayRatio) || RETURN",
-                                  "displayLines": "MDF_ExploreDelayRatio",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_ExploreDelayRatio"
-                                  ]
+                                  "displayLines": "MDF_ExploreDelayRatio"
                                 },
                                 "P5_ExploreDamageUpRatio": {
-                                  "operator": "Variables[0] (MDF_ExploreDamageUpRatio) || RETURN",
-                                  "displayLines": "MDF_ExploreDamageUpRatio",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_ExploreDamageUpRatio"
-                                  ]
+                                  "displayLines": "MDF_ExploreDamageUpRatio"
                                 }
                               },
                               "allowAbilityTriggers": false
@@ -894,44 +833,19 @@ const compositeAbilityObject = {
                           "canHitNonTargets": true,
                           "valuePerStack": {
                             "P1_BreakDelayRatio": {
-                              "operator": "Variables[0] (MDF_BreakDelayRatio) || RETURN",
-                              "displayLines": "MDF_BreakDelayRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_BreakDelayRatio"
-                              ]
+                              "displayLines": "MDF_BreakDelayRatio"
                             },
                             "P2_ChosenOneSpeedUp": {
-                              "operator": "Variables[0] (MDF_ChosenOneSpeedUp) || RETURN",
-                              "displayLines": "MDF_ChosenOneSpeedUp",
-                              "constants": [],
-                              "variables": [
-                                "MDF_ChosenOneSpeedUp"
-                              ]
+                              "displayLines": "MDF_ChosenOneSpeedUp"
                             },
                             "P3_ExploreDamagePercentage": {
-                              "operator": "Variables[0] (MDF_ExploreDamagePercentage) || RETURN",
-                              "displayLines": "MDF_ExploreDamagePercentage",
-                              "constants": [],
-                              "variables": [
-                                "MDF_ExploreDamagePercentage"
-                              ]
+                              "displayLines": "MDF_ExploreDamagePercentage"
                             },
                             "P4_ExploreDelayRatio": {
-                              "operator": "Variables[0] (MDF_ExploreDelayRatio) || RETURN",
-                              "displayLines": "MDF_ExploreDelayRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_ExploreDelayRatio"
-                              ]
+                              "displayLines": "MDF_ExploreDelayRatio"
                             },
                             "P5_ExploreDamageUpRatio": {
-                              "operator": "Variables[0] (MDF_ExploreDamageUpRatio) || RETURN",
-                              "displayLines": "MDF_ExploreDamageUpRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_ExploreDamageUpRatio"
-                              ]
+                              "displayLines": "MDF_ExploreDamageUpRatio"
                             }
                           },
                           "allowAbilityTriggers": false
@@ -1046,44 +960,19 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
                           "valuePerStack": {
                             "MDF_BreakDelayRatio": {
-                              "operator": "Variables[0] (MDF_BreakDelayRatio) || RETURN",
-                              "displayLines": "MDF_BreakDelayRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_BreakDelayRatio"
-                              ]
+                              "displayLines": "MDF_BreakDelayRatio"
                             },
                             "MDF_ChosenOneSpeedUp": {
-                              "operator": "Variables[0] (MDF_ChosenOneSpeedUp) || RETURN",
-                              "displayLines": "MDF_ChosenOneSpeedUp",
-                              "constants": [],
-                              "variables": [
-                                "MDF_ChosenOneSpeedUp"
-                              ]
+                              "displayLines": "MDF_ChosenOneSpeedUp"
                             },
                             "MDF_ExploreDamagePercentage": {
-                              "operator": "Variables[0] (MDF_ExploreDamagePercentage) || RETURN",
-                              "displayLines": "MDF_ExploreDamagePercentage",
-                              "constants": [],
-                              "variables": [
-                                "MDF_ExploreDamagePercentage"
-                              ]
+                              "displayLines": "MDF_ExploreDamagePercentage"
                             },
                             "MDF_ExploreDelayRatio": {
-                              "operator": "Variables[0] (MDF_ExploreDelayRatio) || RETURN",
-                              "displayLines": "MDF_ExploreDelayRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_ExploreDelayRatio"
-                              ]
+                              "displayLines": "MDF_ExploreDelayRatio"
                             },
                             "MDF_ExploreDamageUpRatio": {
-                              "operator": "Variables[0] (MDF_ExploreDamageUpRatio) || RETURN",
-                              "displayLines": "MDF_ExploreDamageUpRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_ExploreDamageUpRatio"
-                              ]
+                              "displayLines": "MDF_ExploreDamageUpRatio"
                             }
                           }
                         }
@@ -1670,12 +1559,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
-                            "displayLines": "SummonList_ADF_3",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_3"
-                            ]
+                            "displayLines": "SummonList_ADF_3"
                           },
                           "locationType": "Last"
                         }
@@ -1687,12 +1571,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-                            "displayLines": "SummonList_ADF_2",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_2"
-                            ]
+                            "displayLines": "SummonList_ADF_2"
                           },
                           "locationType": "Last"
                         }
@@ -1704,12 +1583,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                            "displayLines": "SummonList_ADF_1",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_1"
-                            ]
+                            "displayLines": "SummonList_ADF_1"
                           },
                           "locationType": "Last"
                         }
@@ -1772,44 +1646,19 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"261154727\">Monster_W3_FigureBoss_Standard_BreakController</a>",
                       "valuePerStack": {
                         "MDF_BreakDelayRatio": {
-                          "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                          "displayLines": "{[Skill01[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill01[0]]}"
-                          ]
+                          "displayLines": "{[Skill01[0]]}"
                         },
                         "MDF_ChosenOneSpeedUp": {
-                          "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                          "displayLines": "{[Skill01[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill01[1]]}"
-                          ]
+                          "displayLines": "{[Skill01[1]]}"
                         },
                         "MDF_ExploreDamagePercentage": {
-                          "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                          "displayLines": "{[Skill01[2]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill01[2]]}"
-                          ]
+                          "displayLines": "{[Skill01[2]]}"
                         },
                         "MDF_ExploreDelayRatio": {
-                          "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                          "displayLines": "{[Skill01[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill01[3]]}"
-                          ]
+                          "displayLines": "{[Skill01[3]]}"
                         },
                         "MDF_ExploreDamageUpRatio": {
-                          "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                          "displayLines": "{[Skill01[4]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill01[4]]}"
-                          ]
+                          "displayLines": "{[Skill01[4]]}"
                         }
                       }
                     }
@@ -1905,44 +1754,19 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"261154727\">Monster_W3_FigureBoss_Standard_BreakController</a>",
                       "valuePerStack": {
                         "MDF_BreakDelayRatio": {
-                          "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                          "displayLines": "{[Skill01[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill01[0]]}"
-                          ]
+                          "displayLines": "{[Skill01[0]]}"
                         },
                         "MDF_ChosenOneSpeedUp": {
-                          "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                          "displayLines": "{[Skill01[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill01[1]]}"
-                          ]
+                          "displayLines": "{[Skill01[1]]}"
                         },
                         "MDF_ExploreDamagePercentage": {
-                          "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                          "displayLines": "{[Skill01[2]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill01[2]]}"
-                          ]
+                          "displayLines": "{[Skill01[2]]}"
                         },
                         "MDF_ExploreDelayRatio": {
-                          "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                          "displayLines": "{[Skill01[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill01[3]]}"
-                          ]
+                          "displayLines": "{[Skill01[3]]}"
                         },
                         "MDF_ExploreDamageUpRatio": {
-                          "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                          "displayLines": "{[Skill01[4]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill01[4]]}"
-                          ]
+                          "displayLines": "{[Skill01[4]]}"
                         }
                       }
                     }
@@ -2036,44 +1860,19 @@ const compositeAbilityObject = {
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "P1_BreakDelayRatio": {
-                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                      "displayLines": "{[Skill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[0]]}"
-                      ]
+                      "displayLines": "{[Skill01[0]]}"
                     },
                     "P2_ChosenOneSpeedUp": {
-                      "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                      "displayLines": "{[Skill01[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[1]]}"
-                      ]
+                      "displayLines": "{[Skill01[1]]}"
                     },
                     "P3_ExploreDamagePercentage": {
-                      "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                      "displayLines": "{[Skill01[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[2]]}"
-                      ]
+                      "displayLines": "{[Skill01[2]]}"
                     },
                     "P4_ExploreDelayRatio": {
-                      "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                      "displayLines": "{[Skill01[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[3]]}"
-                      ]
+                      "displayLines": "{[Skill01[3]]}"
                     },
                     "P5_ExploreDamageUpRatio": {
-                      "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                      "displayLines": "{[Skill01[4]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[4]]}"
-                      ]
+                      "displayLines": "{[Skill01[4]]}"
                     }
                   },
                   "allowAbilityTriggers": false
@@ -2372,12 +2171,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "AIFlag",
                   "resetValue": {
-                    "operator": "Variables[0] (MDF_AIFlag) || RETURN",
-                    "displayLines": "MDF_AIFlag",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AIFlag"
-                    ]
+                    "displayLines": "MDF_AIFlag"
                   },
                   "scope": "TargetEntity"
                 },
@@ -2389,12 +2183,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "set": {
-                    "operator": "Variables[0] (MDF_ActionDelay) || RETURN",
-                    "displayLines": "MDF_ActionDelay",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ActionDelay"
-                    ]
+                    "displayLines": "MDF_ActionDelay"
                   }
                 },
                 "Modifier Deletes Itself"
@@ -2522,12 +2311,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_ChosenOneSpeedUp) || RETURN",
-                    "displayLines": "MDF_ChosenOneSpeedUp",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ChosenOneSpeedUp"
-                    ]
+                    "displayLines": "MDF_ChosenOneSpeedUp"
                   }
                 },
                 {
@@ -2708,44 +2492,19 @@ const compositeAbilityObject = {
                               "canHitNonTargets": true,
                               "valuePerStack": {
                                 "P1_BreakDelayRatio": {
-                                  "operator": "Variables[0] (MDF_BreakDelayRatio) || RETURN",
-                                  "displayLines": "MDF_BreakDelayRatio",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_BreakDelayRatio"
-                                  ]
+                                  "displayLines": "MDF_BreakDelayRatio"
                                 },
                                 "P2_ChosenOneSpeedUp": {
-                                  "operator": "Variables[0] (MDF_ChosenOneSpeedUp) || RETURN",
-                                  "displayLines": "MDF_ChosenOneSpeedUp",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_ChosenOneSpeedUp"
-                                  ]
+                                  "displayLines": "MDF_ChosenOneSpeedUp"
                                 },
                                 "P3_ExploreDamagePercentage": {
-                                  "operator": "Variables[0] (MDF_ExploreDamagePercentage) || RETURN",
-                                  "displayLines": "MDF_ExploreDamagePercentage",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_ExploreDamagePercentage"
-                                  ]
+                                  "displayLines": "MDF_ExploreDamagePercentage"
                                 },
                                 "P4_ExploreDelayRatio": {
-                                  "operator": "Variables[0] (MDF_ExploreDelayRatio) || RETURN",
-                                  "displayLines": "MDF_ExploreDelayRatio",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_ExploreDelayRatio"
-                                  ]
+                                  "displayLines": "MDF_ExploreDelayRatio"
                                 },
                                 "P5_ExploreDamageUpRatio": {
-                                  "operator": "Variables[0] (MDF_ExploreDamageUpRatio) || RETURN",
-                                  "displayLines": "MDF_ExploreDamageUpRatio",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_ExploreDamageUpRatio"
-                                  ]
+                                  "displayLines": "MDF_ExploreDamageUpRatio"
                                 }
                               },
                               "allowAbilityTriggers": false
@@ -2858,44 +2617,19 @@ const compositeAbilityObject = {
                           "canHitNonTargets": true,
                           "valuePerStack": {
                             "P1_BreakDelayRatio": {
-                              "operator": "Variables[0] (MDF_BreakDelayRatio) || RETURN",
-                              "displayLines": "MDF_BreakDelayRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_BreakDelayRatio"
-                              ]
+                              "displayLines": "MDF_BreakDelayRatio"
                             },
                             "P2_ChosenOneSpeedUp": {
-                              "operator": "Variables[0] (MDF_ChosenOneSpeedUp) || RETURN",
-                              "displayLines": "MDF_ChosenOneSpeedUp",
-                              "constants": [],
-                              "variables": [
-                                "MDF_ChosenOneSpeedUp"
-                              ]
+                              "displayLines": "MDF_ChosenOneSpeedUp"
                             },
                             "P3_ExploreDamagePercentage": {
-                              "operator": "Variables[0] (MDF_ExploreDamagePercentage) || RETURN",
-                              "displayLines": "MDF_ExploreDamagePercentage",
-                              "constants": [],
-                              "variables": [
-                                "MDF_ExploreDamagePercentage"
-                              ]
+                              "displayLines": "MDF_ExploreDamagePercentage"
                             },
                             "P4_ExploreDelayRatio": {
-                              "operator": "Variables[0] (MDF_ExploreDelayRatio) || RETURN",
-                              "displayLines": "MDF_ExploreDelayRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_ExploreDelayRatio"
-                              ]
+                              "displayLines": "MDF_ExploreDelayRatio"
                             },
                             "P5_ExploreDamageUpRatio": {
-                              "operator": "Variables[0] (MDF_ExploreDamageUpRatio) || RETURN",
-                              "displayLines": "MDF_ExploreDamageUpRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_ExploreDamageUpRatio"
-                              ]
+                              "displayLines": "MDF_ExploreDamageUpRatio"
                             }
                           },
                           "allowAbilityTriggers": false
@@ -3009,44 +2743,19 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
                           "valuePerStack": {
                             "MDF_BreakDelayRatio": {
-                              "operator": "Variables[0] (MDF_BreakDelayRatio) || RETURN",
-                              "displayLines": "MDF_BreakDelayRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_BreakDelayRatio"
-                              ]
+                              "displayLines": "MDF_BreakDelayRatio"
                             },
                             "MDF_ChosenOneSpeedUp": {
-                              "operator": "Variables[0] (MDF_ChosenOneSpeedUp) || RETURN",
-                              "displayLines": "MDF_ChosenOneSpeedUp",
-                              "constants": [],
-                              "variables": [
-                                "MDF_ChosenOneSpeedUp"
-                              ]
+                              "displayLines": "MDF_ChosenOneSpeedUp"
                             },
                             "MDF_ExploreDamagePercentage": {
-                              "operator": "Variables[0] (MDF_ExploreDamagePercentage) || RETURN",
-                              "displayLines": "MDF_ExploreDamagePercentage",
-                              "constants": [],
-                              "variables": [
-                                "MDF_ExploreDamagePercentage"
-                              ]
+                              "displayLines": "MDF_ExploreDamagePercentage"
                             },
                             "MDF_ExploreDelayRatio": {
-                              "operator": "Variables[0] (MDF_ExploreDelayRatio) || RETURN",
-                              "displayLines": "MDF_ExploreDelayRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_ExploreDelayRatio"
-                              ]
+                              "displayLines": "MDF_ExploreDelayRatio"
                             },
                             "MDF_ExploreDamageUpRatio": {
-                              "operator": "Variables[0] (MDF_ExploreDamageUpRatio) || RETURN",
-                              "displayLines": "MDF_ExploreDamageUpRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_ExploreDamageUpRatio"
-                              ]
+                              "displayLines": "MDF_ExploreDamageUpRatio"
                             }
                           }
                         }
@@ -3562,12 +3271,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
-                            "displayLines": "SummonList_ADF_3",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_3"
-                            ]
+                            "displayLines": "SummonList_ADF_3"
                           },
                           "locationType": "Last"
                         }
@@ -3579,12 +3283,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-                            "displayLines": "SummonList_ADF_2",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_2"
-                            ]
+                            "displayLines": "SummonList_ADF_2"
                           },
                           "locationType": "Last"
                         }
@@ -3596,12 +3295,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                            "displayLines": "SummonList_ADF_1",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_1"
-                            ]
+                            "displayLines": "SummonList_ADF_1"
                           },
                           "locationType": "Last"
                         }
@@ -3664,44 +3358,19 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1842038910\">Enemy_W3_DollElite_Commnon_BreakController</a>",
                       "valuePerStack": {
                         "MDF_BreakDelayRatio": {
-                          "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                          "displayLines": "{[Skill01[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill01[0]]}"
-                          ]
+                          "displayLines": "{[Skill01[0]]}"
                         },
                         "MDF_ChosenOneSpeedUp": {
-                          "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                          "displayLines": "{[Skill01[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill01[1]]}"
-                          ]
+                          "displayLines": "{[Skill01[1]]}"
                         },
                         "MDF_ExploreDamagePercentage": {
-                          "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                          "displayLines": "{[Skill01[2]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill01[2]]}"
-                          ]
+                          "displayLines": "{[Skill01[2]]}"
                         },
                         "MDF_ExploreDelayRatio": {
-                          "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                          "displayLines": "{[Skill01[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill01[3]]}"
-                          ]
+                          "displayLines": "{[Skill01[3]]}"
                         },
                         "MDF_ExploreDamageUpRatio": {
-                          "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                          "displayLines": "{[Skill01[4]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill01[4]]}"
-                          ]
+                          "displayLines": "{[Skill01[4]]}"
                         }
                       }
                     }
@@ -3809,44 +3478,19 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1842038910\">Enemy_W3_DollElite_Commnon_BreakController</a>",
                       "valuePerStack": {
                         "MDF_BreakDelayRatio": {
-                          "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                          "displayLines": "{[Skill01[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill01[0]]}"
-                          ]
+                          "displayLines": "{[Skill01[0]]}"
                         },
                         "MDF_ChosenOneSpeedUp": {
-                          "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                          "displayLines": "{[Skill01[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill01[1]]}"
-                          ]
+                          "displayLines": "{[Skill01[1]]}"
                         },
                         "MDF_ExploreDamagePercentage": {
-                          "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                          "displayLines": "{[Skill01[2]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill01[2]]}"
-                          ]
+                          "displayLines": "{[Skill01[2]]}"
                         },
                         "MDF_ExploreDelayRatio": {
-                          "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                          "displayLines": "{[Skill01[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill01[3]]}"
-                          ]
+                          "displayLines": "{[Skill01[3]]}"
                         },
                         "MDF_ExploreDamageUpRatio": {
-                          "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                          "displayLines": "{[Skill01[4]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill01[4]]}"
-                          ]
+                          "displayLines": "{[Skill01[4]]}"
                         }
                       }
                     }
@@ -3939,44 +3583,19 @@ const compositeAbilityObject = {
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "P1_BreakDelayRatio": {
-                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                      "displayLines": "{[Skill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[0]]}"
-                      ]
+                      "displayLines": "{[Skill01[0]]}"
                     },
                     "P2_ChosenOneSpeedUp": {
-                      "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                      "displayLines": "{[Skill01[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[1]]}"
-                      ]
+                      "displayLines": "{[Skill01[1]]}"
                     },
                     "P3_ExploreDamagePercentage": {
-                      "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                      "displayLines": "{[Skill01[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[2]]}"
-                      ]
+                      "displayLines": "{[Skill01[2]]}"
                     },
                     "P4_ExploreDelayRatio": {
-                      "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                      "displayLines": "{[Skill01[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[3]]}"
-                      ]
+                      "displayLines": "{[Skill01[3]]}"
                     },
                     "P5_ExploreDamageUpRatio": {
-                      "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                      "displayLines": "{[Skill01[4]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[4]]}"
-                      ]
+                      "displayLines": "{[Skill01[4]]}"
                     }
                   },
                   "allowAbilityTriggers": false
@@ -4045,36 +3664,16 @@ const compositeAbilityObject = {
           "eventID": 20019,
           "variables": {
             "BE_P1_BESpeed": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "P1_BreakDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "P2_BreakDelayRatioPerFigure": {
-              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-              "displayLines": "{[Skill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[1]]}"
-              ]
+              "displayLines": "{[Skill02[1]]}"
             },
             "MDF_DamageUP": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             }
           },
           "whenCreated": [
@@ -4170,44 +3769,19 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
               "valuePerStack": {
                 "MDF_BreakDelayRatio": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "MDF_ChosenOneSpeedUp": {
-                  "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                  "displayLines": "{[Skill01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[1]]}"
-                  ]
+                  "displayLines": "{[Skill01[1]]}"
                 },
                 "MDF_ExploreDamagePercentage": {
-                  "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                  "displayLines": "{[Skill01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[2]]}"
-                  ]
+                  "displayLines": "{[Skill01[2]]}"
                 },
                 "MDF_ExploreDelayRatio": {
-                  "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                  "displayLines": "{[Skill01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[3]]}"
-                  ]
+                  "displayLines": "{[Skill01[3]]}"
                 },
                 "MDF_ExploreDamageUpRatio": {
-                  "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                  "displayLines": "{[Skill01[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[4]]}"
-                  ]
+                  "displayLines": "{[Skill01[4]]}"
                 }
               }
             },
@@ -4465,36 +4039,16 @@ const compositeAbilityObject = {
           "eventID": 20019,
           "variables": {
             "BE_P1_BESpeed": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "P1_BreakDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "P2_BreakDelayRatioPerFigure": {
-              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-              "displayLines": "{[Skill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[1]]}"
-              ]
+              "displayLines": "{[Skill02[1]]}"
             },
             "MDF_DamageUP": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             }
           }
         },
@@ -4598,44 +4152,19 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
               "valuePerStack": {
                 "MDF_BreakDelayRatio": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "MDF_ChosenOneSpeedUp": {
-                  "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                  "displayLines": "{[Skill01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[1]]}"
-                  ]
+                  "displayLines": "{[Skill01[1]]}"
                 },
                 "MDF_ExploreDamagePercentage": {
-                  "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                  "displayLines": "{[Skill01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[2]]}"
-                  ]
+                  "displayLines": "{[Skill01[2]]}"
                 },
                 "MDF_ExploreDelayRatio": {
-                  "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                  "displayLines": "{[Skill01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[3]]}"
-                  ]
+                  "displayLines": "{[Skill01[3]]}"
                 },
                 "MDF_ExploreDamageUpRatio": {
-                  "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                  "displayLines": "{[Skill01[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[4]]}"
-                  ]
+                  "displayLines": "{[Skill01[4]]}"
                 }
               }
             },
@@ -5016,44 +4545,19 @@ const compositeAbilityObject = {
           "abilityName": "Monster_W3_FigureBoss_Ability01_Insert_EnterCombat",
           "parameters": {
             "P1_BreakDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "P2_ChosenOneSpeedUp": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
+              "displayLines": "{[Skill01[1]]}"
             },
             "P3_ExploreDamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
+              "displayLines": "{[Skill01[2]]}"
             },
             "P4_ExploreDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
+              "displayLines": "{[Skill01[3]]}"
             },
             "P5_ExploreDamageUpRatio": {
-              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-              "displayLines": "{[Skill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[4]]}"
-              ]
+              "displayLines": "{[Skill01[4]]}"
             }
           }
         },
@@ -5062,44 +4566,19 @@ const compositeAbilityObject = {
           "abilityName": "Monster_W3_FigureBoss_Ability02_Insert_Restart",
           "parameters": {
             "P1_BreakDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "P2_ChosenOneSpeedUp": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
+              "displayLines": "{[Skill01[1]]}"
             },
             "P3_ExploreDamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
+              "displayLines": "{[Skill01[2]]}"
             },
             "P4_ExploreDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
+              "displayLines": "{[Skill01[3]]}"
             },
             "P5_ExploreDamageUpRatio": {
-              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-              "displayLines": "{[Skill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[4]]}"
-              ]
+              "displayLines": "{[Skill01[4]]}"
             }
           }
         },
@@ -5108,44 +4587,19 @@ const compositeAbilityObject = {
           "abilityName": "Monster_W3_FigureBoss_Ability03_Insert_Transform",
           "parameters": {
             "P1_BreakDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "P2_ChosenOneSpeedUp": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
+              "displayLines": "{[Skill01[1]]}"
             },
             "P3_ExploreDamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
+              "displayLines": "{[Skill01[2]]}"
             },
             "P4_ExploreDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
+              "displayLines": "{[Skill01[3]]}"
             },
             "P5_ExploreDamageUpRatio": {
-              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-              "displayLines": "{[Skill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[4]]}"
-              ]
+              "displayLines": "{[Skill01[4]]}"
             }
           }
         },
@@ -5154,44 +4608,19 @@ const compositeAbilityObject = {
           "abilityName": "Monster_W3_FigureBoss_Ability04_Insert_Explode",
           "parameters": {
             "P1_BreakDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "P2_ChosenOneSpeedUp": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
+              "displayLines": "{[Skill01[1]]}"
             },
             "P3_ExploreDamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
+              "displayLines": "{[Skill01[2]]}"
             },
             "P4_ExploreDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
+              "displayLines": "{[Skill01[3]]}"
             },
             "P5_ExploreDamageUpRatio": {
-              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-              "displayLines": "{[Skill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[4]]}"
-              ]
+              "displayLines": "{[Skill01[4]]}"
             }
           }
         },
@@ -5200,44 +4629,19 @@ const compositeAbilityObject = {
           "abilityName": "Monster_W3_FigureBoss_Ability02_Insert_RestartPhase2",
           "parameters": {
             "P1_BreakDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "P2_ChosenOneSpeedUp": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
+              "displayLines": "{[Skill01[1]]}"
             },
             "P3_ExploreDamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
+              "displayLines": "{[Skill01[2]]}"
             },
             "P4_ExploreDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
+              "displayLines": "{[Skill01[3]]}"
             },
             "P5_ExploreDamageUpRatio": {
-              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-              "displayLines": "{[Skill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[4]]}"
-              ]
+              "displayLines": "{[Skill01[4]]}"
             }
           }
         },
@@ -5401,12 +4805,7 @@ const compositeAbilityObject = {
                     "value1": "MDF_WaveIndex",
                     "compareType": "NOT=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_WaveIndex2) || RETURN",
-                      "displayLines": "MDF_WaveIndex2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_WaveIndex2"
-                      ]
+                      "displayLines": "MDF_WaveIndex2"
                     }
                   },
                   "passed": [
@@ -5486,44 +4885,19 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
           "valuePerStack": {
             "MDF_BreakDelayRatio": {
-              "operator": "Variables[0] (P1_BreakDelayRatio) || RETURN",
-              "displayLines": "P1_BreakDelayRatio",
-              "constants": [],
-              "variables": [
-                "P1_BreakDelayRatio"
-              ]
+              "displayLines": "P1_BreakDelayRatio"
             },
             "MDF_ChosenOneSpeedUp": {
-              "operator": "Variables[0] (P2_ChosenOneSpeedUp) || RETURN",
-              "displayLines": "P2_ChosenOneSpeedUp",
-              "constants": [],
-              "variables": [
-                "P2_ChosenOneSpeedUp"
-              ]
+              "displayLines": "P2_ChosenOneSpeedUp"
             },
             "MDF_ExploreDamagePercentage": {
-              "operator": "Variables[0] (P3_ExploreDamagePercentage) || RETURN",
-              "displayLines": "P3_ExploreDamagePercentage",
-              "constants": [],
-              "variables": [
-                "P3_ExploreDamagePercentage"
-              ]
+              "displayLines": "P3_ExploreDamagePercentage"
             },
             "MDF_ExploreDelayRatio": {
-              "operator": "Variables[0] (P4_ExploreDelayRatio) || RETURN",
-              "displayLines": "P4_ExploreDelayRatio",
-              "constants": [],
-              "variables": [
-                "P4_ExploreDelayRatio"
-              ]
+              "displayLines": "P4_ExploreDelayRatio"
             },
             "MDF_ExploreDamageUpRatio": {
-              "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
-              "displayLines": "P5_ExploreDamageUpRatio",
-              "constants": [],
-              "variables": [
-                "P5_ExploreDamageUpRatio"
-              ]
+              "displayLines": "P5_ExploreDamageUpRatio"
             }
           }
         },
@@ -5627,44 +5001,19 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
           "valuePerStack": {
             "MDF_BreakDelayRatio": {
-              "operator": "Variables[0] (P1_BreakDelayRatio) || RETURN",
-              "displayLines": "P1_BreakDelayRatio",
-              "constants": [],
-              "variables": [
-                "P1_BreakDelayRatio"
-              ]
+              "displayLines": "P1_BreakDelayRatio"
             },
             "MDF_ChosenOneSpeedUp": {
-              "operator": "Variables[0] (P2_ChosenOneSpeedUp) || RETURN",
-              "displayLines": "P2_ChosenOneSpeedUp",
-              "constants": [],
-              "variables": [
-                "P2_ChosenOneSpeedUp"
-              ]
+              "displayLines": "P2_ChosenOneSpeedUp"
             },
             "MDF_ExploreDamagePercentage": {
-              "operator": "Variables[0] (P3_ExploreDamagePercentage) || RETURN",
-              "displayLines": "P3_ExploreDamagePercentage",
-              "constants": [],
-              "variables": [
-                "P3_ExploreDamagePercentage"
-              ]
+              "displayLines": "P3_ExploreDamagePercentage"
             },
             "MDF_ExploreDelayRatio": {
-              "operator": "Variables[0] (P4_ExploreDelayRatio) || RETURN",
-              "displayLines": "P4_ExploreDelayRatio",
-              "constants": [],
-              "variables": [
-                "P4_ExploreDelayRatio"
-              ]
+              "displayLines": "P4_ExploreDelayRatio"
             },
             "MDF_ExploreDamageUpRatio": {
-              "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
-              "displayLines": "P5_ExploreDamageUpRatio",
-              "constants": [],
-              "variables": [
-                "P5_ExploreDamageUpRatio"
-              ]
+              "displayLines": "P5_ExploreDamageUpRatio"
             }
           }
         }
@@ -5757,44 +5106,19 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
               "valuePerStack": {
                 "MDF_BreakDelayRatio": {
-                  "operator": "Variables[0] (P1_BreakDelayRatio) || RETURN",
-                  "displayLines": "P1_BreakDelayRatio",
-                  "constants": [],
-                  "variables": [
-                    "P1_BreakDelayRatio"
-                  ]
+                  "displayLines": "P1_BreakDelayRatio"
                 },
                 "MDF_ChosenOneSpeedUp": {
-                  "operator": "Variables[0] (P2_ChosenOneSpeedUp) || RETURN",
-                  "displayLines": "P2_ChosenOneSpeedUp",
-                  "constants": [],
-                  "variables": [
-                    "P2_ChosenOneSpeedUp"
-                  ]
+                  "displayLines": "P2_ChosenOneSpeedUp"
                 },
                 "MDF_ExploreDamagePercentage": {
-                  "operator": "Variables[0] (P3_ExploreDamagePercentage) || RETURN",
-                  "displayLines": "P3_ExploreDamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "P3_ExploreDamagePercentage"
-                  ]
+                  "displayLines": "P3_ExploreDamagePercentage"
                 },
                 "MDF_ExploreDelayRatio": {
-                  "operator": "Variables[0] (P4_ExploreDelayRatio) || RETURN",
-                  "displayLines": "P4_ExploreDelayRatio",
-                  "constants": [],
-                  "variables": [
-                    "P4_ExploreDelayRatio"
-                  ]
+                  "displayLines": "P4_ExploreDelayRatio"
                 },
                 "MDF_ExploreDamageUpRatio": {
-                  "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
-                  "displayLines": "P5_ExploreDamageUpRatio",
-                  "constants": [],
-                  "variables": [
-                    "P5_ExploreDamageUpRatio"
-                  ]
+                  "displayLines": "P5_ExploreDamageUpRatio"
                 }
               }
             }
@@ -5820,44 +5144,19 @@ const compositeAbilityObject = {
               "canHitNonTargets": true,
               "valuePerStack": {
                 "P1_BreakDelayRatio": {
-                  "operator": "Variables[0] (P1_BreakDelayRatio) || RETURN",
-                  "displayLines": "P1_BreakDelayRatio",
-                  "constants": [],
-                  "variables": [
-                    "P1_BreakDelayRatio"
-                  ]
+                  "displayLines": "P1_BreakDelayRatio"
                 },
                 "P2_ChosenOneSpeedUp": {
-                  "operator": "Variables[0] (P2_ChosenOneSpeedUp) || RETURN",
-                  "displayLines": "P2_ChosenOneSpeedUp",
-                  "constants": [],
-                  "variables": [
-                    "P2_ChosenOneSpeedUp"
-                  ]
+                  "displayLines": "P2_ChosenOneSpeedUp"
                 },
                 "P3_ExploreDamagePercentage": {
-                  "operator": "Variables[0] (P3_ExploreDamagePercentage) || RETURN",
-                  "displayLines": "P3_ExploreDamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "P3_ExploreDamagePercentage"
-                  ]
+                  "displayLines": "P3_ExploreDamagePercentage"
                 },
                 "P4_ExploreDelayRatio": {
-                  "operator": "Variables[0] (P4_ExploreDelayRatio) || RETURN",
-                  "displayLines": "P4_ExploreDelayRatio",
-                  "constants": [],
-                  "variables": [
-                    "P4_ExploreDelayRatio"
-                  ]
+                  "displayLines": "P4_ExploreDelayRatio"
                 },
                 "P5_ExploreDamageUpRatio": {
-                  "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
-                  "displayLines": "P5_ExploreDamageUpRatio",
-                  "constants": [],
-                  "variables": [
-                    "P5_ExploreDamageUpRatio"
-                  ]
+                  "displayLines": "P5_ExploreDamageUpRatio"
                 }
               },
               "allowAbilityTriggers": false
@@ -5956,14 +5255,7 @@ const compositeAbilityObject = {
                     "target": "{{Parameter Target List}}"
                   },
                   "consumePercent": {
-                    "operator": "Variables[0] (P3_ExploreDamagePercentage) || Constants[0] (4) || DIV || RETURN",
-                    "displayLines": "(P3_ExploreDamagePercentage / 4)",
-                    "constants": [
-                      4
-                    ],
-                    "variables": [
-                      "P3_ExploreDamagePercentage"
-                    ]
+                    "displayLines": "(P3_ExploreDamagePercentage / 4)"
                   },
                   "DamageType": "AllType"
                 }
@@ -6063,12 +5355,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-558855282\">Enemy_W3_FigureBoss_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
           "valuePerStack": {
             "MDF_ExploreDamageUpRatio": {
-              "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
-              "displayLines": "P5_ExploreDamageUpRatio",
-              "constants": [],
-              "variables": [
-                "P5_ExploreDamageUpRatio"
-              ]
+              "displayLines": "P5_ExploreDamageUpRatio"
             }
           }
         }
@@ -6100,12 +5387,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_ExploreDamageUpRatio) || RETURN",
-                    "displayLines": "MDF_ExploreDamageUpRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ExploreDamageUpRatio"
-                    ]
+                    "displayLines": "MDF_ExploreDamageUpRatio"
                   }
                 }
               ]
@@ -6290,44 +5572,19 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
               "valuePerStack": {
                 "MDF_BreakDelayRatio": {
-                  "operator": "Variables[0] (P1_BreakDelayRatio) || RETURN",
-                  "displayLines": "P1_BreakDelayRatio",
-                  "constants": [],
-                  "variables": [
-                    "P1_BreakDelayRatio"
-                  ]
+                  "displayLines": "P1_BreakDelayRatio"
                 },
                 "MDF_ChosenOneSpeedUp": {
-                  "operator": "Variables[0] (P2_ChosenOneSpeedUp) || RETURN",
-                  "displayLines": "P2_ChosenOneSpeedUp",
-                  "constants": [],
-                  "variables": [
-                    "P2_ChosenOneSpeedUp"
-                  ]
+                  "displayLines": "P2_ChosenOneSpeedUp"
                 },
                 "MDF_ExploreDamagePercentage": {
-                  "operator": "Variables[0] (P3_ExploreDamagePercentage) || RETURN",
-                  "displayLines": "P3_ExploreDamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "P3_ExploreDamagePercentage"
-                  ]
+                  "displayLines": "P3_ExploreDamagePercentage"
                 },
                 "MDF_ExploreDelayRatio": {
-                  "operator": "Variables[0] (P4_ExploreDelayRatio) || RETURN",
-                  "displayLines": "P4_ExploreDelayRatio",
-                  "constants": [],
-                  "variables": [
-                    "P4_ExploreDelayRatio"
-                  ]
+                  "displayLines": "P4_ExploreDelayRatio"
                 },
                 "MDF_ExploreDamageUpRatio": {
-                  "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
-                  "displayLines": "P5_ExploreDamageUpRatio",
-                  "constants": [],
-                  "variables": [
-                    "P5_ExploreDamageUpRatio"
-                  ]
+                  "displayLines": "P5_ExploreDamageUpRatio"
                 }
               }
             },

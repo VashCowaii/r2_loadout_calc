@@ -170,13 +170,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageUP) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                    "displayLines": "(MDF_DamageUP * ModifierLayers)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageUP",
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "(MDF_DamageUP * ModifierLayers)"
                   }
                 }
               ]
@@ -203,12 +197,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"73301376\">Standard_SuperArmor</a>[<span class=\"descriptionNumberColor\">Safeguard</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeResistance": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_10536) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_10536",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_10536"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_10536"
                     }
                   }
                 }
@@ -234,12 +223,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1917647041\">Standard_SuperArmorBreak</a>[<span class=\"descriptionNumberColor\">Safeguard Broken</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeTakenRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_10537) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_10537",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_10537"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_10537"
                     }
                   }
                 },
@@ -273,12 +257,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"73301376\">Standard_SuperArmor</a>[<span class=\"descriptionNumberColor\">Safeguard</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeResistance": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_10536) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_10536",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_10536"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_10536"
                     }
                   }
                 },
@@ -309,12 +288,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "AIFlag",
                   "resetValue": {
-                    "operator": "Variables[0] (MDF_AIFlag) || RETURN",
-                    "displayLines": "MDF_AIFlag",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AIFlag"
-                    ]
+                    "displayLines": "MDF_AIFlag"
                   },
                   "scope": "TargetEntity"
                 },
@@ -326,12 +300,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "set": {
-                    "operator": "Variables[0] (MDF_ActionDelay) || RETURN",
-                    "displayLines": "MDF_ActionDelay",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ActionDelay"
-                    ]
+                    "displayLines": "MDF_ActionDelay"
                   }
                 },
                 "Modifier Deletes Itself"
@@ -544,12 +513,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_ChosenOneSpeedUp) || RETURN",
-                    "displayLines": "MDF_ChosenOneSpeedUp",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ChosenOneSpeedUp"
-                    ]
+                    "displayLines": "MDF_ChosenOneSpeedUp"
                   }
                 },
                 {
@@ -730,44 +694,19 @@ const compositeAbilityObject = {
                               "canHitNonTargets": true,
                               "valuePerStack": {
                                 "P1_BreakDelayRatio": {
-                                  "operator": "Variables[0] (MDF_BreakDelayRatio) || RETURN",
-                                  "displayLines": "MDF_BreakDelayRatio",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_BreakDelayRatio"
-                                  ]
+                                  "displayLines": "MDF_BreakDelayRatio"
                                 },
                                 "P2_ChosenOneSpeedUp": {
-                                  "operator": "Variables[0] (MDF_ChosenOneSpeedUp) || RETURN",
-                                  "displayLines": "MDF_ChosenOneSpeedUp",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_ChosenOneSpeedUp"
-                                  ]
+                                  "displayLines": "MDF_ChosenOneSpeedUp"
                                 },
                                 "P3_ExploreDamagePercentage": {
-                                  "operator": "Variables[0] (MDF_ExploreDamagePercentage) || RETURN",
-                                  "displayLines": "MDF_ExploreDamagePercentage",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_ExploreDamagePercentage"
-                                  ]
+                                  "displayLines": "MDF_ExploreDamagePercentage"
                                 },
                                 "P4_ExploreDelayRatio": {
-                                  "operator": "Variables[0] (MDF_ExploreDelayRatio) || RETURN",
-                                  "displayLines": "MDF_ExploreDelayRatio",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_ExploreDelayRatio"
-                                  ]
+                                  "displayLines": "MDF_ExploreDelayRatio"
                                 },
                                 "P5_ExploreDamageUpRatio": {
-                                  "operator": "Variables[0] (MDF_ExploreDamageUpRatio) || RETURN",
-                                  "displayLines": "MDF_ExploreDamageUpRatio",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_ExploreDamageUpRatio"
-                                  ]
+                                  "displayLines": "MDF_ExploreDamageUpRatio"
                                 }
                               },
                               "allowAbilityTriggers": false
@@ -880,44 +819,19 @@ const compositeAbilityObject = {
                           "canHitNonTargets": true,
                           "valuePerStack": {
                             "P1_BreakDelayRatio": {
-                              "operator": "Variables[0] (MDF_BreakDelayRatio) || RETURN",
-                              "displayLines": "MDF_BreakDelayRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_BreakDelayRatio"
-                              ]
+                              "displayLines": "MDF_BreakDelayRatio"
                             },
                             "P2_ChosenOneSpeedUp": {
-                              "operator": "Variables[0] (MDF_ChosenOneSpeedUp) || RETURN",
-                              "displayLines": "MDF_ChosenOneSpeedUp",
-                              "constants": [],
-                              "variables": [
-                                "MDF_ChosenOneSpeedUp"
-                              ]
+                              "displayLines": "MDF_ChosenOneSpeedUp"
                             },
                             "P3_ExploreDamagePercentage": {
-                              "operator": "Variables[0] (MDF_ExploreDamagePercentage) || RETURN",
-                              "displayLines": "MDF_ExploreDamagePercentage",
-                              "constants": [],
-                              "variables": [
-                                "MDF_ExploreDamagePercentage"
-                              ]
+                              "displayLines": "MDF_ExploreDamagePercentage"
                             },
                             "P4_ExploreDelayRatio": {
-                              "operator": "Variables[0] (MDF_ExploreDelayRatio) || RETURN",
-                              "displayLines": "MDF_ExploreDelayRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_ExploreDelayRatio"
-                              ]
+                              "displayLines": "MDF_ExploreDelayRatio"
                             },
                             "P5_ExploreDamageUpRatio": {
-                              "operator": "Variables[0] (MDF_ExploreDamageUpRatio) || RETURN",
-                              "displayLines": "MDF_ExploreDamageUpRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_ExploreDamageUpRatio"
-                              ]
+                              "displayLines": "MDF_ExploreDamageUpRatio"
                             }
                           },
                           "allowAbilityTriggers": false
@@ -1032,44 +946,19 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
                           "valuePerStack": {
                             "MDF_BreakDelayRatio": {
-                              "operator": "Variables[0] (MDF_BreakDelayRatio) || RETURN",
-                              "displayLines": "MDF_BreakDelayRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_BreakDelayRatio"
-                              ]
+                              "displayLines": "MDF_BreakDelayRatio"
                             },
                             "MDF_ChosenOneSpeedUp": {
-                              "operator": "Variables[0] (MDF_ChosenOneSpeedUp) || RETURN",
-                              "displayLines": "MDF_ChosenOneSpeedUp",
-                              "constants": [],
-                              "variables": [
-                                "MDF_ChosenOneSpeedUp"
-                              ]
+                              "displayLines": "MDF_ChosenOneSpeedUp"
                             },
                             "MDF_ExploreDamagePercentage": {
-                              "operator": "Variables[0] (MDF_ExploreDamagePercentage) || RETURN",
-                              "displayLines": "MDF_ExploreDamagePercentage",
-                              "constants": [],
-                              "variables": [
-                                "MDF_ExploreDamagePercentage"
-                              ]
+                              "displayLines": "MDF_ExploreDamagePercentage"
                             },
                             "MDF_ExploreDelayRatio": {
-                              "operator": "Variables[0] (MDF_ExploreDelayRatio) || RETURN",
-                              "displayLines": "MDF_ExploreDelayRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_ExploreDelayRatio"
-                              ]
+                              "displayLines": "MDF_ExploreDelayRatio"
                             },
                             "MDF_ExploreDamageUpRatio": {
-                              "operator": "Variables[0] (MDF_ExploreDamageUpRatio) || RETURN",
-                              "displayLines": "MDF_ExploreDamageUpRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_ExploreDamageUpRatio"
-                              ]
+                              "displayLines": "MDF_ExploreDamageUpRatio"
                             }
                           }
                         }
@@ -1656,12 +1545,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
-                            "displayLines": "SummonList_ADF_3",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_3"
-                            ]
+                            "displayLines": "SummonList_ADF_3"
                           },
                           "locationType": "Last"
                         }
@@ -1673,12 +1557,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-                            "displayLines": "SummonList_ADF_2",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_2"
-                            ]
+                            "displayLines": "SummonList_ADF_2"
                           },
                           "locationType": "Last"
                         }
@@ -1690,12 +1569,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                            "displayLines": "SummonList_ADF_1",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_1"
-                            ]
+                            "displayLines": "SummonList_ADF_1"
                           },
                           "locationType": "Last"
                         }
@@ -1758,44 +1632,19 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"261154727\">Monster_W3_FigureBoss_Standard_BreakController</a>",
                       "valuePerStack": {
                         "MDF_BreakDelayRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_10531) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_10531",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_10531"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_10531"
                         },
                         "MDF_ChosenOneSpeedUp": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_10532) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_10532",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_10532"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_10532"
                         },
                         "MDF_ExploreDamagePercentage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_10525) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_10525",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_10525"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_10525"
                         },
                         "MDF_ExploreDelayRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_10533) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_10533",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_10533"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_10533"
                         },
                         "MDF_ExploreDamageUpRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_10526) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_10526",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_10526"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_10526"
                         }
                       }
                     }
@@ -1891,44 +1740,19 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"261154727\">Monster_W3_FigureBoss_Standard_BreakController</a>",
                       "valuePerStack": {
                         "MDF_BreakDelayRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_10531) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_10531",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_10531"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_10531"
                         },
                         "MDF_ChosenOneSpeedUp": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_10532) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_10532",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_10532"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_10532"
                         },
                         "MDF_ExploreDamagePercentage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_10525) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_10525",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_10525"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_10525"
                         },
                         "MDF_ExploreDelayRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_10533) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_10533",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_10533"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_10533"
                         },
                         "MDF_ExploreDamageUpRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_10526) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_10526",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_10526"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_10526"
                         }
                       }
                     }
@@ -2022,44 +1846,19 @@ const compositeAbilityObject = {
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "P1_BreakDelayRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_10531) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_10531",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_10531"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_10531"
                     },
                     "P2_ChosenOneSpeedUp": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_10532) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_10532",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_10532"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_10532"
                     },
                     "P3_ExploreDamagePercentage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_10525) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_10525",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_10525"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_10525"
                     },
                     "P4_ExploreDelayRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_10533) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_10533",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_10533"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_10533"
                     },
                     "P5_ExploreDamageUpRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_10526) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_10526",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_10526"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_10526"
                     }
                   },
                   "allowAbilityTriggers": false
@@ -2542,12 +2341,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (BE_P1_BESpeed) || RETURN",
-                    "displayLines": "BE_P1_BESpeed",
-                    "constants": [],
-                    "variables": [
-                      "BE_P1_BESpeed"
-                    ]
+                    "displayLines": "BE_P1_BESpeed"
                   }
                 }
               ]

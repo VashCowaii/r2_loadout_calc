@@ -33,12 +33,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Weaken%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ChallengePeakBattle_0017_ADF_1) || RETURN",
-                "displayLines": "ChallengePeakBattle_0017_ADF_1",
-                "constants": [],
-                "variables": [
-                  "ChallengePeakBattle_0017_ADF_1"
-                ]
+                "displayLines": "ChallengePeakBattle_0017_ADF_1"
               }
             },
             {
@@ -49,12 +44,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ChallengePeakBattle_0017_ADF_2) || RETURN",
-                "displayLines": "ChallengePeakBattle_0017_ADF_2",
-                "constants": [],
-                "variables": [
-                  "ChallengePeakBattle_0017_ADF_2"
-                ]
+                "displayLines": "ChallengePeakBattle_0017_ADF_2"
               }
             }
           ]
@@ -93,20 +83,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1614669524\">Modifier_ChallengePeakBattle_EnhancedAbility_0017_02</a>[<span class=\"descriptionNumberColor\">Stability+</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_0017_ADF_1": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     },
                     "ChallengePeakBattle_0017_ADF_2": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     }
                   }
                 }

@@ -24,14 +24,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || Constants[0] (0.25) || MUL || RETURN",
-              "displayLines": "({[Skill06[0]]} * 0.25)",
-              "constants": [
-                0.25
-              ],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "({[Skill06[0]]} * 0.25)"
             },
             "Toughness": null,
             "Tags": null,
@@ -52,14 +45,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || Constants[0] (0.25) || MUL || RETURN",
-              "displayLines": "({[Skill06[0]]} * 0.25)",
-              "constants": [
-                0.25
-              ],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "({[Skill06[0]]} * 0.25)"
             },
             "Toughness": null,
             "Tags": null,
@@ -80,14 +66,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || Constants[0] (0.25) || MUL || RETURN",
-              "displayLines": "({[Skill06[0]]} * 0.25)",
-              "constants": [
-                0.25
-              ],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "({[Skill06[0]]} * 0.25)"
             },
             "Toughness": null,
             "Tags": null,
@@ -109,14 +88,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || Constants[0] (0.25) || MUL || RETURN",
-              "displayLines": "({[Skill06[0]]} * 0.25)",
-              "constants": [
-                0.25
-              ],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "({[Skill06[0]]} * 0.25)"
             },
             "Toughness": null,
             "Tags": null,
@@ -170,29 +142,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
               "duration": {
-                "operator": "Variables[0] ({[SkillP02[2]]}) || RETURN",
-                "displayLines": "{[SkillP02[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP02[2]]}"
-                ]
+                "displayLines": "{[SkillP02[2]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-                "displayLines": "{[SkillEX03[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillEX03[0]]}"
-                ]
+                "displayLines": "{[SkillEX03[0]]}"
               },
               "valuePerStack": {
                 "Modifier_Frozen_DamagePercentage": {
-                  "operator": "Variables[0] ({[SkillP02[1]]}) || RETURN",
-                  "displayLines": "{[SkillP02[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP02[1]]}"
-                  ]
+                  "displayLines": "{[SkillP02[1]]}"
                 }
               }
             }
@@ -215,29 +172,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
               "duration": {
-                "operator": "Variables[0] ({[SkillP02[2]]}) || RETURN",
-                "displayLines": "{[SkillP02[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP02[2]]}"
-                ]
+                "displayLines": "{[SkillP02[2]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
-                "displayLines": "{[SkillEX03[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillEX03[1]]}"
-                ]
+                "displayLines": "{[SkillEX03[1]]}"
               },
               "valuePerStack": {
                 "Modifier_Frozen_DamagePercentage": {
-                  "operator": "Variables[0] ({[SkillP02[1]]}) || RETURN",
-                  "displayLines": "{[SkillP02[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP02[1]]}"
-                  ]
+                  "displayLines": "{[SkillP02[1]]}"
                 }
               }
             }
@@ -260,29 +202,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
               "duration": {
-                "operator": "Variables[0] ({[SkillP02[2]]}) || RETURN",
-                "displayLines": "{[SkillP02[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP02[2]]}"
-                ]
+                "displayLines": "{[SkillP02[2]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[SkillEX03[2]]}) || RETURN",
-                "displayLines": "{[SkillEX03[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillEX03[2]]}"
-                ]
+                "displayLines": "{[SkillEX03[2]]}"
               },
               "valuePerStack": {
                 "Modifier_Frozen_DamagePercentage": {
-                  "operator": "Variables[0] ({[SkillP02[1]]}) || RETURN",
-                  "displayLines": "{[SkillP02[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP02[1]]}"
-                  ]
+                  "displayLines": "{[SkillP02[1]]}"
                 }
               }
             }
@@ -305,29 +232,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
               "duration": {
-                "operator": "Variables[0] ({[SkillP02[2]]}) || RETURN",
-                "displayLines": "{[SkillP02[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP02[2]]}"
-                ]
+                "displayLines": "{[SkillP02[2]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[SkillEX03[3]]}) || RETURN",
-                "displayLines": "{[SkillEX03[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillEX03[3]]}"
-                ]
+                "displayLines": "{[SkillEX03[3]]}"
               },
               "valuePerStack": {
                 "Modifier_Frozen_DamagePercentage": {
-                  "operator": "Variables[0] ({[SkillP02[1]]}) || RETURN",
-                  "displayLines": "{[SkillP02[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP02[1]]}"
-                  ]
+                  "displayLines": "{[SkillP02[1]]}"
                 }
               }
             }

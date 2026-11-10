@@ -68,12 +68,7 @@ const configAbility = {
                 {
                   "name": "Skill Points Modification",
                   "adjustmentValue": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "adjustmentType": "+"
                 }
@@ -125,12 +120,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"361999223\">LC_23048_Sub</a>[<span class=\"descriptionNumberColor\">Skill DMG Boost</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   }
                 }
               ]

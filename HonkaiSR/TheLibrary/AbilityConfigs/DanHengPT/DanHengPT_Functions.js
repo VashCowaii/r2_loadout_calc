@@ -30,31 +30,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "valuePerStack": {
             "MDF_DanHengPT_InitShieldValue": {
-              "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (0.2) || MUL || Variables[2] (400) || ADD || RETURN",
-              "displayLines": "((DanHengPT_Attack * 0.2) + 400)",
-              "constants": [],
-              "variables": [
-                "DanHengPT_Attack",
-                0.2,
-                400
-              ]
+              "displayLines": "((DanHengPT_Attack * 0.2) + 400)"
             },
             "MDF_MaxShieldRatio": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             },
             "MDF_MainTarget": 1
           }
@@ -82,31 +65,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "valuePerStack": {
             "MDF_DanHengPT_InitShieldValue": {
-              "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (0.2) || MUL || Variables[2] (400) || ADD || RETURN",
-              "displayLines": "((DanHengPT_Attack * 0.2) + 400)",
-              "constants": [],
-              "variables": [
-                "DanHengPT_Attack",
-                0.2,
-                400
-              ]
+              "displayLines": "((DanHengPT_Attack * 0.2) + 400)"
             },
             "MDF_MaxShieldRatio": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             },
             "MDF_MainTarget": 1
           }
@@ -195,33 +161,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "valuePerStack": {
                 "MDF_DanHengPT_InitShieldValue": {
-                  "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (0.1) || MUL || Variables[2] (200) || ADD || Variables[3] (DanHengPT_ExtraShieldUPRatio) || MUL || Variables[4] (2) || MUL || RETURN",
-                  "displayLines": "((((DanHengPT_Attack * 0.1) + 200) * DanHengPT_ExtraShieldUPRatio) * 2)",
-                  "constants": [],
-                  "variables": [
-                    "DanHengPT_Attack",
-                    0.1,
-                    200,
-                    "DanHengPT_ExtraShieldUPRatio",
-                    2
-                  ]
+                  "displayLines": "((((DanHengPT_Attack * 0.1) + 200) * DanHengPT_ExtraShieldUPRatio) * 2)"
                 },
                 "MDF_MaxShieldRatio": {
-                  "operator": "Variables[0] (3) || RETURN",
-                  "displayLines": "3",
-                  "constants": [],
-                  "variables": [
-                    3
-                  ]
+                  "displayLines": "3"
                 },
                 "MDF_MainTarget": 1
               }
@@ -263,33 +210,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                       "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "valuePerStack": {
                         "MDF_DanHengPT_InitShieldValue": {
-                          "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (0.05) || MUL || Variables[2] (100) || ADD || Variables[3] (DanHengPT_ExtraShieldUPRatio) || MUL || Variables[4] (2) || MUL || RETURN",
-                          "displayLines": "((((DanHengPT_Attack * 0.05) + 100) * DanHengPT_ExtraShieldUPRatio) * 2)",
-                          "constants": [],
-                          "variables": [
-                            "DanHengPT_Attack",
-                            0.05,
-                            100,
-                            "DanHengPT_ExtraShieldUPRatio",
-                            2
-                          ]
+                          "displayLines": "((((DanHengPT_Attack * 0.05) + 100) * DanHengPT_ExtraShieldUPRatio) * 2)"
                         },
                         "MDF_MaxShieldRatio": {
-                          "operator": "Variables[0] (3) || RETURN",
-                          "displayLines": "3",
-                          "constants": [],
-                          "variables": [
-                            3
-                          ]
+                          "displayLines": "3"
                         },
                         "MDF_MainTarget": 1
                       }
@@ -308,32 +236,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "valuePerStack": {
                 "MDF_DanHengPT_InitShieldValue": {
-                  "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (0.1) || MUL || Variables[2] (200) || ADD || Variables[3] (DanHengPT_ExtraShieldUPRatio) || MUL || RETURN",
-                  "displayLines": "(((DanHengPT_Attack * 0.1) + 200) * DanHengPT_ExtraShieldUPRatio)",
-                  "constants": [],
-                  "variables": [
-                    "DanHengPT_Attack",
-                    0.1,
-                    200,
-                    "DanHengPT_ExtraShieldUPRatio"
-                  ]
+                  "displayLines": "(((DanHengPT_Attack * 0.1) + 200) * DanHengPT_ExtraShieldUPRatio)"
                 },
                 "MDF_MaxShieldRatio": {
-                  "operator": "Variables[0] (3) || RETURN",
-                  "displayLines": "3",
-                  "constants": [],
-                  "variables": [
-                    3
-                  ]
+                  "displayLines": "3"
                 },
                 "MDF_MainTarget": 1
               }
@@ -375,32 +285,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                       "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "valuePerStack": {
                         "MDF_DanHengPT_InitShieldValue": {
-                          "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (0.05) || MUL || Variables[2] (100) || ADD || Variables[3] (DanHengPT_ExtraShieldUPRatio) || MUL || RETURN",
-                          "displayLines": "(((DanHengPT_Attack * 0.05) + 100) * DanHengPT_ExtraShieldUPRatio)",
-                          "constants": [],
-                          "variables": [
-                            "DanHengPT_Attack",
-                            0.05,
-                            100,
-                            "DanHengPT_ExtraShieldUPRatio"
-                          ]
+                          "displayLines": "(((DanHengPT_Attack * 0.05) + 100) * DanHengPT_ExtraShieldUPRatio)"
                         },
                         "MDF_MaxShieldRatio": {
-                          "operator": "Variables[0] (3) || RETURN",
-                          "displayLines": "3",
-                          "constants": [],
-                          "variables": [
-                            3
-                          ]
+                          "displayLines": "3"
                         },
                         "MDF_MainTarget": 1
                       }

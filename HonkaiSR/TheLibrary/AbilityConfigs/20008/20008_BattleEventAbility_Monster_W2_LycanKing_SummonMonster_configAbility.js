@@ -68,20 +68,10 @@ const configAbility = {
           "isUnique": true,
           "odds": [
             {
-              "operator": "Variables[0] (P1_Lycan00Chance) || RETURN",
-              "displayLines": "P1_Lycan00Chance",
-              "constants": [],
-              "variables": [
-                "P1_Lycan00Chance"
-              ]
+              "displayLines": "P1_Lycan00Chance"
             },
             {
-              "operator": "Variables[0] (P2_Lycan01Chance) || RETURN",
-              "displayLines": "P2_Lycan01Chance",
-              "constants": [],
-              "variables": [
-                "P2_Lycan01Chance"
-              ]
+              "displayLines": "P2_Lycan01Chance"
             }
           ],
           "execute": [
@@ -100,23 +90,13 @@ const configAbility = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] (P3_Lycan01Delay) || RETURN",
-                    "displayLines": "P3_Lycan01Delay",
-                    "constants": [],
-                    "variables": [
-                      "P3_Lycan01Delay"
-                    ]
+                    "displayLines": "P3_Lycan01Delay"
                   },
                   "enemyList": [
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (WolfID01) || RETURN",
-                        "displayLines": "WolfID01",
-                        "constants": [],
-                        "variables": [
-                          "WolfID01"
-                        ]
+                        "displayLines": "WolfID01"
                       },
                       "locationType": "First"
                     }
@@ -127,23 +107,13 @@ const configAbility = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] (P3_Lycan01Delay) || RETURN",
-                    "displayLines": "P3_Lycan01Delay",
-                    "constants": [],
-                    "variables": [
-                      "P3_Lycan01Delay"
-                    ]
+                    "displayLines": "P3_Lycan01Delay"
                   },
                   "enemyList": [
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (WolfID01) || RETURN",
-                        "displayLines": "WolfID01",
-                        "constants": [],
-                        "variables": [
-                          "WolfID01"
-                        ]
+                        "displayLines": "WolfID01"
                       },
                       "locationType": "Last"
                     }
@@ -166,23 +136,13 @@ const configAbility = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] (P3_Lycan01Delay) || RETURN",
-                    "displayLines": "P3_Lycan01Delay",
-                    "constants": [],
-                    "variables": [
-                      "P3_Lycan01Delay"
-                    ]
+                    "displayLines": "P3_Lycan01Delay"
                   },
                   "enemyList": [
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (WolfID02) || RETURN",
-                        "displayLines": "WolfID02",
-                        "constants": [],
-                        "variables": [
-                          "WolfID02"
-                        ]
+                        "displayLines": "WolfID02"
                       },
                       "locationType": "First"
                     }
@@ -193,23 +153,13 @@ const configAbility = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] (P3_Lycan01Delay) || RETURN",
-                    "displayLines": "P3_Lycan01Delay",
-                    "constants": [],
-                    "variables": [
-                      "P3_Lycan01Delay"
-                    ]
+                    "displayLines": "P3_Lycan01Delay"
                   },
                   "enemyList": [
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (WolfID02) || RETURN",
-                        "displayLines": "WolfID02",
-                        "constants": [],
-                        "variables": [
-                          "WolfID02"
-                        ]
+                        "displayLines": "WolfID02"
                       },
                       "locationType": "Last"
                     }
@@ -250,20 +200,10 @@ const configAbility = {
               "isUnique": true,
               "odds": [
                 {
-                  "operator": "Variables[0] (P1_Lycan00Chance) || RETURN",
-                  "displayLines": "P1_Lycan00Chance",
-                  "constants": [],
-                  "variables": [
-                    "P1_Lycan00Chance"
-                  ]
+                  "displayLines": "P1_Lycan00Chance"
                 },
                 {
-                  "operator": "Variables[0] (P2_Lycan01Chance) || RETURN",
-                  "displayLines": "P2_Lycan01Chance",
-                  "constants": [],
-                  "variables": [
-                    "P2_Lycan01Chance"
-                  ]
+                  "displayLines": "P2_Lycan01Chance"
                 }
               ],
               "execute": [
@@ -282,23 +222,13 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (P4_Lycan02Delay) || RETURN",
-                        "displayLines": "P4_Lycan02Delay",
-                        "constants": [],
-                        "variables": [
-                          "P4_Lycan02Delay"
-                        ]
+                        "displayLines": "P4_Lycan02Delay"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (WolfID01) || RETURN",
-                            "displayLines": "WolfID01",
-                            "constants": [],
-                            "variables": [
-                              "WolfID01"
-                            ]
+                            "displayLines": "WolfID01"
                           },
                           "locationType": "First"
                         }
@@ -309,23 +239,13 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (P4_Lycan02Delay) || RETURN",
-                        "displayLines": "P4_Lycan02Delay",
-                        "constants": [],
-                        "variables": [
-                          "P4_Lycan02Delay"
-                        ]
+                        "displayLines": "P4_Lycan02Delay"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (WolfID01) || RETURN",
-                            "displayLines": "WolfID01",
-                            "constants": [],
-                            "variables": [
-                              "WolfID01"
-                            ]
+                            "displayLines": "WolfID01"
                           },
                           "locationType": "Last"
                         }
@@ -348,23 +268,13 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (P4_Lycan02Delay) || RETURN",
-                        "displayLines": "P4_Lycan02Delay",
-                        "constants": [],
-                        "variables": [
-                          "P4_Lycan02Delay"
-                        ]
+                        "displayLines": "P4_Lycan02Delay"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (WolfID02) || RETURN",
-                            "displayLines": "WolfID02",
-                            "constants": [],
-                            "variables": [
-                              "WolfID02"
-                            ]
+                            "displayLines": "WolfID02"
                           },
                           "locationType": "First"
                         }
@@ -375,23 +285,13 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (P4_Lycan02Delay) || RETURN",
-                        "displayLines": "P4_Lycan02Delay",
-                        "constants": [],
-                        "variables": [
-                          "P4_Lycan02Delay"
-                        ]
+                        "displayLines": "P4_Lycan02Delay"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (WolfID02) || RETURN",
-                            "displayLines": "WolfID02",
-                            "constants": [],
-                            "variables": [
-                              "WolfID02"
-                            ]
+                            "displayLines": "WolfID02"
                           },
                           "locationType": "Last"
                         }
@@ -421,20 +321,10 @@ const configAbility = {
               "isUnique": true,
               "odds": [
                 {
-                  "operator": "Variables[0] (P1_Lycan00Chance) || RETURN",
-                  "displayLines": "P1_Lycan00Chance",
-                  "constants": [],
-                  "variables": [
-                    "P1_Lycan00Chance"
-                  ]
+                  "displayLines": "P1_Lycan00Chance"
                 },
                 {
-                  "operator": "Variables[0] (P2_Lycan01Chance) || RETURN",
-                  "displayLines": "P2_Lycan01Chance",
-                  "constants": [],
-                  "variables": [
-                    "P2_Lycan01Chance"
-                  ]
+                  "displayLines": "P2_Lycan01Chance"
                 }
               ],
               "execute": [
@@ -453,23 +343,13 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (P5_Lycan03Delay) || RETURN",
-                        "displayLines": "P5_Lycan03Delay",
-                        "constants": [],
-                        "variables": [
-                          "P5_Lycan03Delay"
-                        ]
+                        "displayLines": "P5_Lycan03Delay"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (WolfID01) || RETURN",
-                            "displayLines": "WolfID01",
-                            "constants": [],
-                            "variables": [
-                              "WolfID01"
-                            ]
+                            "displayLines": "WolfID01"
                           },
                           "locationType": "First"
                         }
@@ -480,23 +360,13 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (P5_Lycan03Delay) || RETURN",
-                        "displayLines": "P5_Lycan03Delay",
-                        "constants": [],
-                        "variables": [
-                          "P5_Lycan03Delay"
-                        ]
+                        "displayLines": "P5_Lycan03Delay"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (WolfID01) || RETURN",
-                            "displayLines": "WolfID01",
-                            "constants": [],
-                            "variables": [
-                              "WolfID01"
-                            ]
+                            "displayLines": "WolfID01"
                           },
                           "locationType": "Last"
                         }
@@ -519,23 +389,13 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (P5_Lycan03Delay) || RETURN",
-                        "displayLines": "P5_Lycan03Delay",
-                        "constants": [],
-                        "variables": [
-                          "P5_Lycan03Delay"
-                        ]
+                        "displayLines": "P5_Lycan03Delay"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (WolfID02) || RETURN",
-                            "displayLines": "WolfID02",
-                            "constants": [],
-                            "variables": [
-                              "WolfID02"
-                            ]
+                            "displayLines": "WolfID02"
                           },
                           "locationType": "First"
                         }
@@ -546,23 +406,13 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (P5_Lycan03Delay) || RETURN",
-                        "displayLines": "P5_Lycan03Delay",
-                        "constants": [],
-                        "variables": [
-                          "P5_Lycan03Delay"
-                        ]
+                        "displayLines": "P5_Lycan03Delay"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (WolfID02) || RETURN",
-                            "displayLines": "WolfID02",
-                            "constants": [],
-                            "variables": [
-                              "WolfID02"
-                            ]
+                            "displayLines": "WolfID02"
                           },
                           "locationType": "Last"
                         }
@@ -577,20 +427,10 @@ const configAbility = {
               "isUnique": true,
               "odds": [
                 {
-                  "operator": "Variables[0] (P1_Lycan00Chance) || RETURN",
-                  "displayLines": "P1_Lycan00Chance",
-                  "constants": [],
-                  "variables": [
-                    "P1_Lycan00Chance"
-                  ]
+                  "displayLines": "P1_Lycan00Chance"
                 },
                 {
-                  "operator": "Variables[0] (P2_Lycan01Chance) || RETURN",
-                  "displayLines": "P2_Lycan01Chance",
-                  "constants": [],
-                  "variables": [
-                    "P2_Lycan01Chance"
-                  ]
+                  "displayLines": "P2_Lycan01Chance"
                 }
               ],
               "execute": [
@@ -609,23 +449,13 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (P6_Lycan04Delay) || RETURN",
-                        "displayLines": "P6_Lycan04Delay",
-                        "constants": [],
-                        "variables": [
-                          "P6_Lycan04Delay"
-                        ]
+                        "displayLines": "P6_Lycan04Delay"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (WolfID01) || RETURN",
-                            "displayLines": "WolfID01",
-                            "constants": [],
-                            "variables": [
-                              "WolfID01"
-                            ]
+                            "displayLines": "WolfID01"
                           },
                           "locationType": "First"
                         }
@@ -636,23 +466,13 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (P6_Lycan04Delay) || RETURN",
-                        "displayLines": "P6_Lycan04Delay",
-                        "constants": [],
-                        "variables": [
-                          "P6_Lycan04Delay"
-                        ]
+                        "displayLines": "P6_Lycan04Delay"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (WolfID01) || RETURN",
-                            "displayLines": "WolfID01",
-                            "constants": [],
-                            "variables": [
-                              "WolfID01"
-                            ]
+                            "displayLines": "WolfID01"
                           },
                           "locationType": "Last"
                         }
@@ -675,23 +495,13 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (P6_Lycan04Delay) || RETURN",
-                        "displayLines": "P6_Lycan04Delay",
-                        "constants": [],
-                        "variables": [
-                          "P6_Lycan04Delay"
-                        ]
+                        "displayLines": "P6_Lycan04Delay"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (WolfID02) || RETURN",
-                            "displayLines": "WolfID02",
-                            "constants": [],
-                            "variables": [
-                              "WolfID02"
-                            ]
+                            "displayLines": "WolfID02"
                           },
                           "locationType": "First"
                         }
@@ -702,23 +512,13 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (P6_Lycan04Delay) || RETURN",
-                        "displayLines": "P6_Lycan04Delay",
-                        "constants": [],
-                        "variables": [
-                          "P6_Lycan04Delay"
-                        ]
+                        "displayLines": "P6_Lycan04Delay"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (WolfID02) || RETURN",
-                            "displayLines": "WolfID02",
-                            "constants": [],
-                            "variables": [
-                              "WolfID02"
-                            ]
+                            "displayLines": "WolfID02"
                           },
                           "locationType": "Last"
                         }

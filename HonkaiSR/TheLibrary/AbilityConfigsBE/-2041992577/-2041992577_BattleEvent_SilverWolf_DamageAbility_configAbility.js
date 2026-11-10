@@ -58,14 +58,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Quantum",
                         "DamageFlat": {
-                          "operator": "Constants[0] (130) || Variables[0] (_DamageRatioByWorldLevel) || MUL || RETURN",
-                          "displayLines": "(130 * _DamageRatioByWorldLevel)",
-                          "constants": [
-                            130
-                          ],
-                          "variables": [
-                            "_DamageRatioByWorldLevel"
-                          ]
+                          "displayLines": "(130 * _DamageRatioByWorldLevel)"
                         },
                         "Toughness": null,
                         "Tags": null,

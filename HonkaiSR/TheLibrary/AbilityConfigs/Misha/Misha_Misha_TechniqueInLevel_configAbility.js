@@ -42,13 +42,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (EnergyBar_ExtraUltraAttack) || Variables[1] (2) || ADD || RETURN",
-                    "displayLines": "(EnergyBar_ExtraUltraAttack + 2)",
-                    "constants": [],
-                    "variables": [
-                      "EnergyBar_ExtraUltraAttack",
-                      2
-                    ]
+                    "displayLines": "(EnergyBar_ExtraUltraAttack + 2)"
                   },
                   "variableName": "EnergyBar_ExtraUltraAttack"
                 }

@@ -55,12 +55,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     },
                     "Toughness": null,
                     "ToughnessDMGType": {
@@ -81,12 +76,7 @@ const configAbility = {
                   },
                   "variables": {
                     "AddValue": {
-                      "operator": "Variables[0] (20) || RETURN",
-                      "displayLines": "20",
-                      "constants": [],
-                      "variables": [
-                        20
-                      ]
+                      "displayLines": "20"
                     }
                   }
                 },
@@ -98,20 +88,10 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1333939602\">AventurineW_Passive_Energy</a>",
                   "stackLimit": {
-                    "operator": "Variables[0] (_MaxEnergyPoint) || RETURN",
-                    "displayLines": "_MaxEnergyPoint",
-                    "constants": [],
-                    "variables": [
-                      "_MaxEnergyPoint"
-                    ]
+                    "displayLines": "_MaxEnergyPoint"
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   }
                 }
               ]

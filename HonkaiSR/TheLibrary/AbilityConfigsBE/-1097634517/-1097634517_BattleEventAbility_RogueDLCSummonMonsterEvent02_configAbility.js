@@ -55,14 +55,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (SummonCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(SummonCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "SummonCount"
-                    ]
+                    "displayLines": "(SummonCount + 1)"
                   },
                   "variableName": "SummonCount"
                 },

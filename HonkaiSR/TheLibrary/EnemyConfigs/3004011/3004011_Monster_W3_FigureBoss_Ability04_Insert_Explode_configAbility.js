@@ -84,14 +84,7 @@ const configAbility = {
                 "target": "{{Parameter Target List}}"
               },
               "consumePercent": {
-                "operator": "Variables[0] (P3_ExploreDamagePercentage) || Constants[0] (4) || DIV || RETURN",
-                "displayLines": "(P3_ExploreDamagePercentage / 4)",
-                "constants": [
-                  4
-                ],
-                "variables": [
-                  "P3_ExploreDamagePercentage"
-                ]
+                "displayLines": "(P3_ExploreDamagePercentage / 4)"
               },
               "DamageType": "AllType"
             }
@@ -191,12 +184,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-558855282\">Enemy_W3_FigureBoss_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
       "valuePerStack": {
         "MDF_ExploreDamageUpRatio": {
-          "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
-          "displayLines": "P5_ExploreDamageUpRatio",
-          "constants": [],
-          "variables": [
-            "P5_ExploreDamageUpRatio"
-          ]
+          "displayLines": "P5_ExploreDamageUpRatio"
         }
       }
     }
@@ -228,12 +216,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_ExploreDamageUpRatio) || RETURN",
-                "displayLines": "MDF_ExploreDamageUpRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_ExploreDamageUpRatio"
-                ]
+                "displayLines": "MDF_ExploreDamageUpRatio"
               }
             }
           ]

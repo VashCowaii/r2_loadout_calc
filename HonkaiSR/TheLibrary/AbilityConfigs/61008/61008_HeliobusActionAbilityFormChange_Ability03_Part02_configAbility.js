@@ -54,12 +54,7 @@ const configAbility = {
       },
       "searchRandom": true,
       "maxTargets": {
-        "operator": "Variables[0] (_ChangeCount) || RETURN",
-        "displayLines": "_ChangeCount",
-        "constants": [],
-        "variables": [
-          "_ChangeCount"
-        ]
+        "displayLines": "_ChangeCount"
       },
       "ifTargetFound": [
         {
@@ -110,12 +105,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1943056367\">Modifier_HeliobusActionAbilityFormChange_Enemy</a>[<span class=\"descriptionNumberColor\">Incarnate Morph</span>]",
               "duration": {
-                "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                "displayLines": "#BattleEvent_P3_ADF",
-                "constants": [],
-                "variables": [
-                  "#BattleEvent_P3_ADF"
-                ]
+                "displayLines": "#BattleEvent_P3_ADF"
               }
             }
           ]
@@ -389,14 +379,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (LifeTimeCheck) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(LifeTimeCheck - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "LifeTimeCheck"
-                ]
+                "displayLines": "(LifeTimeCheck - 1)"
               },
               "variableName": "LifeTimeCheck"
             },

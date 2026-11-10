@@ -81,12 +81,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]",
       "valuePerStack": {
         "MDF_SpeedDownRatio": {
-          "operator": "Variables[0] ({[SkillP03[4]]}) || RETURN",
-          "displayLines": "{[SkillP03[4]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP03[4]]}"
-          ]
+          "displayLines": "{[SkillP03[4]]}"
         }
       }
     },
@@ -134,20 +129,10 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
               "valuePerStack": {
                 "MDF_SpeedUpPerLayer": {
-                  "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
-                  "displayLines": "{[SkillP04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP04[0]]}"
-                  ]
+                  "displayLines": "{[SkillP04[0]]}"
                 },
                 "MDF_AttackUpPerLayer": {
-                  "operator": "Variables[0] ({[SkillP04[1]]}) || RETURN",
-                  "displayLines": "{[SkillP04[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP04[1]]}"
-                  ]
+                  "displayLines": "{[SkillP04[1]]}"
                 }
               }
             },

@@ -177,12 +177,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGConverted</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_ElationDamageAddedRatio) || RETURN",
-                "displayLines": "MDF_ElationDamageAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_ElationDamageAddedRatio"
-                ]
+                "displayLines": "MDF_ElationDamageAddedRatio"
               }
             }
           ]

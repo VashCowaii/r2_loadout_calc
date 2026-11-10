@@ -35,12 +35,7 @@ const configAbility = {
         "target": "{{Modifier Holder}}"
       },
       "maximum": {
-        "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-        "displayLines": "{[PassiveSkill01[0]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill01[0]]}"
-        ]
+        "displayLines": "{[PassiveSkill01[0]]}"
       },
       "assignState": "True",
       "state": "Normal",
@@ -54,29 +49,14 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-98226572\">Monster_W5_Ripper_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Teasing</span>]",
       "duration": {
-        "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
-        "displayLines": "{[PassiveSkill01[5]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill01[5]]}"
-        ]
+        "displayLines": "{[PassiveSkill01[5]]}"
       },
       "stackLimit": {
-        "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-        "displayLines": "{[PassiveSkill01[2]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill01[2]]}"
-        ]
+        "displayLines": "{[PassiveSkill01[2]]}"
       },
       "valuePerStack": {
         "MDF_DamageTakenUpRatio_PerLayer": {
-          "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[1]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[1]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[1]]}"
         }
       },
       "addStacksPerTrigger": 1

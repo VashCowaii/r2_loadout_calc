@@ -39,12 +39,7 @@ const configAbility = {
             {
               "name": "Skill Points Modification",
               "adjustmentValue": {
-                "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                "displayLines": "{[Skill03[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill03[0]]}"
-                ]
+                "displayLines": "{[Skill03[0]]}"
               },
               "adjustmentType": "+"
             },
@@ -55,12 +50,7 @@ const configAbility = {
                 "target": "{{Player Team(Exclude Memosprites)v2}}"
               },
               "value": {
-                "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-                "displayLines": "{[Skill03[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill03[1]]}"
-                ]
+                "displayLines": "{[Skill03[1]]}"
               },
               "isFixed": "* ERR"
             }

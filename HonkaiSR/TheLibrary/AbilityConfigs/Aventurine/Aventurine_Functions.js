@@ -61,12 +61,7 @@ const configAbility = {
                   },
                   "variableName": "AventurineShieldValue",
                   "resetValue": {
-                    "operator": "Variables[0] (tmp_currentshield) || RETURN",
-                    "displayLines": "tmp_currentshield",
-                    "constants": [],
-                    "variables": [
-                      "tmp_currentshield"
-                    ]
+                    "displayLines": "tmp_currentshield"
                   },
                   "scope": "TargetEntity"
                 }
@@ -80,12 +75,7 @@ const configAbility = {
                   },
                   "variableName": "AventurineShieldValue",
                   "resetValue": {
-                    "operator": "Constants[0] (0) || RETURN",
-                    "displayLines": "0",
-                    "constants": [
-                      0
-                    ],
-                    "variables": []
+                    "displayLines": "0"
                   },
                   "scope": "TargetEntity"
                 }

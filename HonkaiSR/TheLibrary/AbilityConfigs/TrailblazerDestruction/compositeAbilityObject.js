@@ -107,12 +107,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (10) || RETURN",
-                    "displayLines": "10",
-                    "constants": [],
-                    "variables": [
-                      10
-                    ]
+                    "displayLines": "10"
                   },
                   "isFixed": "* ERR"
                 },
@@ -129,12 +124,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (10) || RETURN",
-                    "displayLines": "10",
-                    "constants": [],
-                    "variables": [
-                      10
-                    ]
+                    "displayLines": "10"
                   },
                   "isFixed": "* ERR"
                 },
@@ -206,12 +196,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (15) || RETURN",
-                        "displayLines": "15",
-                        "constants": [],
-                        "variables": [
-                          15
-                        ]
+                        "displayLines": "15"
                       },
                       "isFixed": "* ERR"
                     }
@@ -618,13 +603,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DefenceAddedRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_DefenceAddedRatio * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DefenceAddedRatio",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_DefenceAddedRatio * MDF_Layer)"
                   }
                 }
               ]
@@ -663,13 +642,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackAddedRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_AttackAddedRatio * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackAddedRatio",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_AttackAddedRatio * MDF_Layer)"
                   }
                 }
               ]
@@ -693,13 +666,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
-                        "displayLines": "(2 + MDF_Max_Layer)",
-                        "constants": [],
-                        "variables": [
-                          2,
-                          "MDF_Max_Layer"
-                        ]
+                        "displayLines": "(2 + MDF_Max_Layer)"
                       },
                       "variableName": "MDF_Max_Layer"
                     },
@@ -711,22 +678,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-417743675\">PlayerWarrior_Passive_BreakAtkUp</a>[<span class=\"descriptionNumberColor\">Perfect Pickoff</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
-                        "displayLines": "(2 + MDF_Max_Layer)",
-                        "constants": [],
-                        "variables": [
-                          2,
-                          "MDF_Max_Layer"
-                        ]
+                        "displayLines": "(2 + MDF_Max_Layer)"
                       },
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     },
@@ -745,22 +701,11 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1618202918\">PlayerWarrior_SkilTree02_BreakDefUp</a>[<span class=\"descriptionNumberColor\">Tenacity</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
-                            "displayLines": "(2 + MDF_Max_Layer)",
-                            "constants": [],
-                            "variables": [
-                              2,
-                              "MDF_Max_Layer"
-                            ]
+                            "displayLines": "(2 + MDF_Max_Layer)"
                           },
                           "valuePerStack": {
                             "MDF_DefenceAddedRatio": {
-                              "operator": "Variables[0] (0.1) || RETURN",
-                              "displayLines": "0.1",
-                              "constants": [],
-                              "variables": [
-                                0.1
-                              ]
+                              "displayLines": "0.1"
                             }
                           }
                         }
@@ -776,13 +721,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
-                    "displayLines": "(2 + MDF_Max_Layer)",
-                    "constants": [],
-                    "variables": [
-                      2,
-                      "MDF_Max_Layer"
-                    ]
+                    "displayLines": "(2 + MDF_Max_Layer)"
                   },
                   "variableName": "MDF_Max_Layer"
                 },
@@ -794,22 +733,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-417743675\">PlayerWarrior_Passive_BreakAtkUp</a>[<span class=\"descriptionNumberColor\">Perfect Pickoff</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
-                    "displayLines": "(2 + MDF_Max_Layer)",
-                    "constants": [],
-                    "variables": [
-                      2,
-                      "MDF_Max_Layer"
-                    ]
+                    "displayLines": "(2 + MDF_Max_Layer)"
                   },
                   "valuePerStack": {
                     "MDF_AttackAddedRatio": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 },
@@ -828,22 +756,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1618202918\">PlayerWarrior_SkilTree02_BreakDefUp</a>[<span class=\"descriptionNumberColor\">Tenacity</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
-                        "displayLines": "(2 + MDF_Max_Layer)",
-                        "constants": [],
-                        "variables": [
-                          2,
-                          "MDF_Max_Layer"
-                        ]
+                        "displayLines": "(2 + MDF_Max_Layer)"
                       },
                       "valuePerStack": {
                         "MDF_DefenceAddedRatio": {
-                          "operator": "Variables[0] (0.1) || RETURN",
-                          "displayLines": "0.1",
-                          "constants": [],
-                          "variables": [
-                            0.1
-                          ]
+                          "displayLines": "0.1"
                         }
                       }
                     }
@@ -959,12 +876,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (0.05) || RETURN",
-                        "displayLines": "0.05",
-                        "constants": [],
-                        "variables": [
-                          0.05
-                        ]
+                        "displayLines": "0.05"
                       }
                     }
                   ]
@@ -1054,20 +966,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (2.7) || RETURN",
-              "displayLines": "2.7",
-              "constants": [],
-              "variables": [
-                2.7
-              ]
+              "displayLines": "2.7"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -1100,20 +1002,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (1.62) || RETURN",
-              "displayLines": "1.62",
-              "constants": [],
-              "variables": [
-                1.62
-              ]
+              "displayLines": "1.62"
             },
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null
           }
@@ -1221,20 +1113,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (1.25) || RETURN",
-              "displayLines": "1.25",
-              "constants": [],
-              "variables": [
-                1.25
-              ]
+              "displayLines": "1.25"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -1267,20 +1149,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (1.25) || RETURN",
-              "displayLines": "1.25",
-              "constants": [],
-              "variables": [
-                1.25
-              ]
+              "displayLines": "1.25"
             },
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null
           }
@@ -1362,24 +1234,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (4.5) || Constants[0] (1) || MUL || RETURN",
-              "displayLines": "(4.5 * 1)",
-              "constants": [
-                1
-              ],
-              "variables": [
-                4.5
-              ]
+              "displayLines": "(4.5 * 1)"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || Constants[0] (1) || MUL || RETURN",
-              "displayLines": "(ST Toughness Value * 1)",
-              "constants": [
-                1
-              ],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "(ST Toughness Value * 1)"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -1471,24 +1329,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (1) || Constants[0] (1) || MUL || RETURN",
-              "displayLines": "(1 * 1)",
-              "constants": [
-                1
-              ],
-              "variables": [
-                1
-              ]
+              "displayLines": "(1 * 1)"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || Constants[0] (1) || MUL || RETURN",
-              "displayLines": "(ST Toughness Value * 1)",
-              "constants": [
-                1
-              ],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "(ST Toughness Value * 1)"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"

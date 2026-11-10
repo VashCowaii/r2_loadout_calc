@@ -32,12 +32,7 @@ const configAbility = {
                 "value1": "CurrentHP%",
                 "compareType": "<=",
                 "value2": {
-                  "operator": "Variables[0] (0.8) || RETURN",
-                  "displayLines": "0.8",
-                  "constants": [],
-                  "variables": [
-                    0.8
-                  ]
+                  "displayLines": "0.8"
                 }
               },
               "passed": [

@@ -93,12 +93,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_SPValue) || RETURN",
-                    "displayLines": "MDF_SPValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SPValue"
-                    ]
+                    "displayLines": "MDF_SPValue"
                   },
                   "isFixed": "(Fixed)"
                 }
@@ -214,13 +209,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_BaseHP) || Variables[1] (MDF_BaseAttack) || SUB || RETURN",
-                "displayLines": "(MDF_BaseHP - MDF_BaseAttack)",
-                "constants": [],
-                "variables": [
-                  "MDF_BaseHP",
-                  "MDF_BaseAttack"
-                ]
+                "displayLines": "(MDF_BaseHP - MDF_BaseAttack)"
               }
             }
           ]

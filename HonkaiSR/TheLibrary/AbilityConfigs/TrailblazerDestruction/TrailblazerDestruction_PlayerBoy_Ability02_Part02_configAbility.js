@@ -31,20 +31,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (1.25) || RETURN",
-          "displayLines": "1.25",
-          "constants": [],
-          "variables": [
-            1.25
-          ]
+          "displayLines": "1.25"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -77,20 +67,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (1.25) || RETURN",
-          "displayLines": "1.25",
-          "constants": [],
-          "variables": [
-            1.25
-          ]
+          "displayLines": "1.25"
         },
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-          "displayLines": "Blast Toughness Value",
-          "constants": [],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "Blast Toughness Value"
         },
         "Tags": null
       }

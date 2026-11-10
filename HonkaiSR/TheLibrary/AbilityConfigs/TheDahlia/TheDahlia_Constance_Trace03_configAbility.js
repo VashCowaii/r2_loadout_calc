@@ -63,14 +63,7 @@ const configAbility = {
         "show": "Hide",
         "isPercentofMaxToughness": true,
         "addedValue": {
-          "operator": "Variables[0] (20) || Constants[0] (3) || MUL || RETURN",
-          "displayLines": "(20 * 3)",
-          "constants": [
-            3
-          ],
-          "variables": [
-            20
-          ]
+          "displayLines": "(20 * 3)"
         },
         "maxToughness": 999,
         "conditions": {
@@ -129,12 +122,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -336,14 +324,7 @@ const configAbility = {
                 {
                   "name": "Deal Toughness DMG",
                   "value": {
-                    "operator": "Variables[0] (20) || Constants[0] (3) || MUL || RETURN",
-                    "displayLines": "(20 * 3)",
-                    "constants": [
-                      3
-                    ],
-                    "variables": [
-                      20
-                    ]
+                    "displayLines": "(20 * 3)"
                   },
                   "attacker": {
                     "name": "Target Name",
@@ -421,17 +402,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MAX) || Constants[0] (0) || Variables[1] (_maxSP) || Variables[2] (0.5) || MUL || Variables[3] (_curSP) || SUB || PARAM_2 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(0, ((_maxSP * 0.5) - _curSP))",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MAX",
-                      "_maxSP",
-                      0.5,
-                      "_curSP"
-                    ]
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(0, ((_maxSP * 0.5) - _curSP))"
                   },
                   "variableName": "_maxAddSP"
                 },
@@ -446,13 +417,7 @@ const configAbility = {
                     "value1": "_maxAddSP",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (_maxSP) || Variables[1] (0.1) || MUL || RETURN",
-                      "displayLines": "(_maxSP * 0.1)",
-                      "constants": [],
-                      "variables": [
-                        "_maxSP",
-                        0.1
-                      ]
+                      "displayLines": "(_maxSP * 0.1)"
                     }
                   },
                   "passed": [
@@ -463,12 +428,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "valuePercent": {
-                        "operator": "Variables[0] (0.1) || RETURN",
-                        "displayLines": "0.1",
-                        "constants": [],
-                        "variables": [
-                          0.1
-                        ]
+                        "displayLines": "0.1"
                       },
                       "isFixed": "(Fixed)"
                     }
@@ -481,12 +441,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (_maxAddSP) || RETURN",
-                        "displayLines": "_maxAddSP",
-                        "constants": [],
-                        "variables": [
-                          "_maxAddSP"
-                        ]
+                        "displayLines": "_maxAddSP"
                       },
                       "isFixed": "(Fixed)"
                     }
@@ -696,21 +651,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"922171575\">Constance_Tree03_Property</a>[<span class=\"descriptionNumberColor\">Outgrow the Old, Espouse the New</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.3) || RETURN",
-                      "displayLines": "0.3",
-                      "constants": [],
-                      "variables": [
-                        0.3
-                      ]
+                      "displayLines": "0.3"
                     }
                   }
                 }

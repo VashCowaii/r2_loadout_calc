@@ -55,36 +55,16 @@ const configAbility = {
       "eventID": 20019,
       "variables": {
         "BE_P1_BESpeed": {
-          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-          "displayLines": "{[Skill02[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[0]]}"
-          ]
+          "displayLines": "{[Skill02[0]]}"
         },
         "P1_BreakDelayRatio": {
-          "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-          "displayLines": "{[Skill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[0]]}"
-          ]
+          "displayLines": "{[Skill01[0]]}"
         },
         "P2_BreakDelayRatioPerFigure": {
-          "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-          "displayLines": "{[Skill02[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[1]]}"
-          ]
+          "displayLines": "{[Skill02[1]]}"
         },
         "MDF_DamageUP": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         }
       },
       "whenCreated": [
@@ -180,44 +160,19 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
           "valuePerStack": {
             "MDF_BreakDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "MDF_ChosenOneSpeedUp": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
+              "displayLines": "{[Skill01[1]]}"
             },
             "MDF_ExploreDamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
+              "displayLines": "{[Skill01[2]]}"
             },
             "MDF_ExploreDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
+              "displayLines": "{[Skill01[3]]}"
             },
             "MDF_ExploreDamageUpRatio": {
-              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-              "displayLines": "{[Skill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[4]]}"
-              ]
+              "displayLines": "{[Skill01[4]]}"
             }
           }
         },

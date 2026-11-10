@@ -47,21 +47,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "DamageFlat": {
-          "operator": "Variables[0] (Colossus_EnemyBoss_MaxHP) || Variables[1] ({[Skill03[0]]}) || MUL || RETURN",
-          "displayLines": "(Colossus_EnemyBoss_MaxHP * {[Skill03[0]]})",
-          "constants": [],
-          "variables": [
-            "Colossus_EnemyBoss_MaxHP",
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "(Colossus_EnemyBoss_MaxHP * {[Skill03[0]]})"
         },
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "ToughnessDMGType": {
           "DamageType": "Fire"

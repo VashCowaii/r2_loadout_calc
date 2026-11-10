@@ -65,12 +65,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__254) || RETURN",
-                "displayLines": "ENEMIES_OBJECT_UNUSED__254",
-                "constants": [],
-                "variables": [
-                  "ENEMIES_OBJECT_UNUSED__254"
-                ]
+                "displayLines": "ENEMIES_OBJECT_UNUSED__254"
               },
               "variableName": "_LightCharge"
             },
@@ -114,12 +109,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DMGReduceRatio) || RETURN",
-                "displayLines": "MDF_DMGReduceRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_DMGReduceRatio"
-                ]
+                "displayLines": "MDF_DMGReduceRatio"
               }
             }
           ]

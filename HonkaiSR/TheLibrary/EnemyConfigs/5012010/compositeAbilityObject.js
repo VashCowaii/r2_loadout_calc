@@ -53,12 +53,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Assign Advance/Delay to Current Ability Use",
                       "adjustmentValue": {
-                        "operator": "Variables[0] (MDF_ActionDelayRatio) || RETURN",
-                        "displayLines": "MDF_ActionDelayRatio",
-                        "constants": [],
-                        "variables": [
-                          "MDF_ActionDelayRatio"
-                        ]
+                        "displayLines": "MDF_ActionDelayRatio"
                       },
                       "adjustmentType": "Advance"
                     },
@@ -164,28 +159,13 @@ const compositeAbilityObject = {
           "isUnique": true,
           "odds": [
             {
-              "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-              "displayLines": "{[Skill02[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[3]]}"
-              ]
+              "displayLines": "{[Skill02[3]]}"
             },
             {
-              "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
-              "displayLines": "{[Skill02[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[4]]}"
-              ]
+              "displayLines": "{[Skill02[4]]}"
             },
             {
-              "operator": "Variables[0] ({[Skill02[5]]}) || RETURN",
-              "displayLines": "{[Skill02[5]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[5]]}"
-              ]
+              "displayLines": "{[Skill02[5]]}"
             }
           ],
           "execute": [
@@ -201,12 +181,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1638600472\">Standard_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
+                      "displayLines": "{[Skill02[0]]}"
                     }
                   }
                 }
@@ -243,14 +218,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Assign Advance/Delay to Current Ability Use",
                           "adjustmentValue": {
-                            "operator": "Constants[0] (0) || Variables[0] ({[Skill02[1]]}) || SUB || RETURN",
-                            "displayLines": "(0 - {[Skill02[1]]})",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "{[Skill02[1]]}"
-                            ]
+                            "displayLines": "(0 - {[Skill02[1]]})"
                           },
                           "adjustmentType": "Advance"
                         },
@@ -294,12 +262,7 @@ const compositeAbilityObject = {
                   "baseChance": 1,
                   "valuePerStack": {
                     "MDF_ActionDelayRatio": {
-                      "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                      "displayLines": "{[Skill02[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[2]]}"
-                      ]
+                      "displayLines": "{[Skill02[2]]}"
                     }
                   }
                 }
@@ -428,12 +391,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Adjust Team Punchline Value",
                       "value": {
-                        "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                        "displayLines": "{[SkillP01[0]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillP01[0]]}"
-                        ]
+                        "displayLines": "{[SkillP01[0]]}"
                       },
                       "adjustment": "Add"
                     },
@@ -502,12 +460,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,

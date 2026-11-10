@@ -171,12 +171,7 @@ const configAbility = {
           "duration": 3,
           "valuePerStack": {
             "MDF_SpeedUpRatio": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
+              "displayLines": "{[SkillP01[0]]}"
             }
           }
         }
@@ -191,12 +186,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1192309436\">Enemy_W2_Mecha03_Overdrive_On</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]",
           "valuePerStack": {
             "MDF_SpeedAddedValue": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
+              "displayLines": "{[SkillP01[0]]}"
             }
           }
         }

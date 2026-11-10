@@ -107,14 +107,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (DeathCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(DeathCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "DeathCount"
-                        ]
+                        "displayLines": "(DeathCount + 1)"
                       },
                       "variableName": "DeathCount"
                     },
@@ -130,15 +123,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Constants[0] (1) || Variables[0] (MonsterCount) || DIV || Constants[1] (0.0009999999) || ADD || RETURN",
-                        "displayLines": "((1 / MonsterCount) + 0.0009999999)",
-                        "constants": [
-                          1,
-                          0.0009999999
-                        ],
-                        "variables": [
-                          "MonsterCount"
-                        ]
+                        "displayLines": "((1 / MonsterCount) + 0.0009999999)"
                       },
                       "variableName": "ADF_HPDamageRatioValue"
                     },
@@ -158,14 +143,7 @@ const compositeAbilityObject = {
                         "value1": "ADF_CurrentHPValue",
                         "compareType": "<=",
                         "value2": {
-                          "operator": "Variables[0] (ADF_MaxHPValue) || Variables[1] (ADF_HPDamageRatioValue) || MUL || Variables[2] (DeathCount) || MUL || RETURN",
-                          "displayLines": "((ADF_MaxHPValue * ADF_HPDamageRatioValue) * DeathCount)",
-                          "constants": [],
-                          "variables": [
-                            "ADF_MaxHPValue",
-                            "ADF_HPDamageRatioValue",
-                            "DeathCount"
-                          ]
+                          "displayLines": "((ADF_MaxHPValue * ADF_HPDamageRatioValue) * DeathCount)"
                         }
                       },
                       "passed": [
@@ -231,14 +209,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (AchievementCount) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(AchievementCount + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "AchievementCount"
-                            ]
+                            "displayLines": "(AchievementCount + 1)"
                           },
                           "variableName": "AchievementCount"
                         }
@@ -512,27 +483,14 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Constants[0] (1) || Variables[0] (MonsterCount) || DIV || Constants[1] (0.000010000076) || ADD || RETURN",
-            "displayLines": "((1 / MonsterCount) + 0.000010000076)",
-            "constants": [
-              1,
-              0.000010000076
-            ],
-            "variables": [
-              "MonsterCount"
-            ]
+            "displayLines": "((1 / MonsterCount) + 0.000010000076)"
           },
           "variableName": "ADF_HPDamageRatioValue"
         },
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (DeathCount) || RETURN",
-            "displayLines": "DeathCount",
-            "constants": [],
-            "variables": [
-              "DeathCount"
-            ]
+            "displayLines": "DeathCount"
           },
           "execute": [
             {
@@ -551,13 +509,7 @@ const compositeAbilityObject = {
                 "value1": "ADF_CurrentHPValue",
                 "compareType": "<=",
                 "value2": {
-                  "operator": "Variables[0] (ADF_MaxHPValue) || Variables[1] (ADF_HPDamageRatioValue) || MUL || RETURN",
-                  "displayLines": "(ADF_MaxHPValue * ADF_HPDamageRatioValue)",
-                  "constants": [],
-                  "variables": [
-                    "ADF_MaxHPValue",
-                    "ADF_HPDamageRatioValue"
-                  ]
+                  "displayLines": "(ADF_MaxHPValue * ADF_HPDamageRatioValue)"
                 }
               },
               "passed": [
@@ -578,12 +530,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "consumePercent": {
-                    "operator": "Variables[0] (ADF_HPDamageRatioValue) || RETURN",
-                    "displayLines": "ADF_HPDamageRatioValue",
-                    "constants": [],
-                    "variables": [
-                      "ADF_HPDamageRatioValue"
-                    ]
+                    "displayLines": "ADF_HPDamageRatioValue"
                   }
                 },
                 {
@@ -968,12 +915,7 @@ const compositeAbilityObject = {
                     "value1": "MDF_WaveIndex",
                     "compareType": "NOT=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_WaveIndex2) || RETURN",
-                      "displayLines": "MDF_WaveIndex2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_WaveIndex2"
-                      ]
+                      "displayLines": "MDF_WaveIndex2"
                     }
                   },
                   "passed": [

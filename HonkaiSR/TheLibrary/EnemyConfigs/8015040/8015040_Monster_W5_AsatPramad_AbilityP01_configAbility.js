@@ -484,12 +484,7 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (AsatPramad01ID) || RETURN",
-                        "displayLines": "AsatPramad01ID",
-                        "constants": [],
-                        "variables": [
-                          "AsatPramad01ID"
-                        ]
+                        "displayLines": "AsatPramad01ID"
                       },
                       "locationType": "BeforeCaster"
                     }
@@ -520,12 +515,7 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (AsatPramad02ID) || RETURN",
-                        "displayLines": "AsatPramad02ID",
-                        "constants": [],
-                        "variables": [
-                          "AsatPramad02ID"
-                        ]
+                        "displayLines": "AsatPramad02ID"
                       },
                       "locationType": "BeforeCaster"
                     }
@@ -608,12 +598,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-551162872\">Enemy_W5_AsatPramad_Part03</a>",
                   "valuePerStack": {
                     "MDF_Part03SpeedAddRatio": {
-                      "operator": "Variables[0] ({[SkillP01[5]]}) || RETURN",
-                      "displayLines": "{[SkillP01[5]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[5]]}"
-                      ]
+                      "displayLines": "{[SkillP01[5]]}"
                     }
                   }
                 },
@@ -626,12 +611,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"975723655\">Enemy_W5_AsatPramad_BESpeedUp</a>",
                   "valuePerStack": {
                     "MDF_SpeedAddedRatio": {
-                      "operator": "Variables[0] ({[SkillP04[3]]}) || RETURN",
-                      "displayLines": "{[SkillP04[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP04[3]]}"
-                      ]
+                      "displayLines": "{[SkillP04[3]]}"
                     }
                   }
                 },
@@ -681,12 +661,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"975723655\">Enemy_W5_AsatPramad_BESpeedUp</a>",
                       "valuePerStack": {
                         "MDF_SpeedAddedRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13354) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13354",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_13354"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_13354"
                         }
                       }
                     }

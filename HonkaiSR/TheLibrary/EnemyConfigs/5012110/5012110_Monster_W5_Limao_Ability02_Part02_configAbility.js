@@ -20,13 +20,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (_FinalDamage) || Variables[1] (_MaxHp) || DIV || RETURN",
-        "displayLines": "(_FinalDamage / _MaxHp)",
-        "constants": [],
-        "variables": [
-          "_FinalDamage",
-          "_MaxHp"
-        ]
+        "displayLines": "(_FinalDamage / _MaxHp)"
       },
       "variableName": "_RankRatio"
     },
@@ -37,12 +31,7 @@ const configAbility = {
         "value1": "_RankRatio",
         "compareType": "<",
         "value2": {
-          "operator": "Variables[0] ({[PassiveSkillInitiate[1]]}) || RETURN",
-          "displayLines": "{[PassiveSkillInitiate[1]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkillInitiate[1]]}"
-          ]
+          "displayLines": "{[PassiveSkillInitiate[1]]}"
         }
       },
       "failed": [
@@ -53,12 +42,7 @@ const configAbility = {
             "value1": "_RankRatio",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[0]]}"
-              ]
+              "displayLines": "{[PassiveSkillInitiate[0]]}"
             }
           }
         }
@@ -71,24 +55,14 @@ const configAbility = {
         "value1": "_RankRatio",
         "compareType": "<",
         "value2": {
-          "operator": "Variables[0] ({[PassiveSkillInitiate[1]]}) || RETURN",
-          "displayLines": "{[PassiveSkillInitiate[1]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkillInitiate[1]]}"
-          ]
+          "displayLines": "{[PassiveSkillInitiate[1]]}"
         }
       },
       "passed": [
         {
           "name": "Adjust Team Punchline Value",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkillInitiate[4]]}) || RETURN",
-            "displayLines": "{[PassiveSkillInitiate[4]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkillInitiate[4]]}"
-            ]
+            "displayLines": "{[PassiveSkillInitiate[4]]}"
           },
           "adjustment": "Add"
         },
@@ -109,24 +83,14 @@ const configAbility = {
             "value1": "_RankRatio",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[0]]}"
-              ]
+              "displayLines": "{[PassiveSkillInitiate[0]]}"
             }
           },
           "passed": [
             {
               "name": "Adjust Team Punchline Value",
               "value": {
-                "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
-                "displayLines": "{[PassiveSkillInitiate[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkillInitiate[3]]}"
-                ]
+                "displayLines": "{[PassiveSkillInitiate[3]]}"
               },
               "adjustment": "Add"
             },
@@ -151,12 +115,7 @@ const configAbility = {
             {
               "name": "Adjust Team Punchline Value",
               "value": {
-                "operator": "Variables[0] ({[PassiveSkillInitiate[2]]}) || RETURN",
-                "displayLines": "{[PassiveSkillInitiate[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkillInitiate[2]]}"
-                ]
+                "displayLines": "{[PassiveSkillInitiate[2]]}"
               },
               "adjustment": "Add"
             },
@@ -191,21 +150,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1492528010\">Enemy_W5_Limao_ElationDamageUp</a>[<span class=\"descriptionNumberColor\">Make Headlines, Please!</span>]",
           "duration": {
-            "operator": "Variables[0] ({[PassiveSkillInitiate[8]]}) || RETURN",
-            "displayLines": "{[PassiveSkillInitiate[8]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkillInitiate[8]]}"
-            ]
+            "displayLines": "{[PassiveSkillInitiate[8]]}"
           },
           "valuePerStack": {
             "MDF_ElationDamageAddedRatio": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[5]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[5]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[5]]}"
-              ]
+              "displayLines": "{[PassiveSkillInitiate[5]]}"
             }
           },
           "casterAssign": "TargetSelf"
@@ -231,21 +180,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1492528010\">Enemy_W5_Limao_ElationDamageUp</a>[<span class=\"descriptionNumberColor\">Make Headlines, Please!</span>]",
               "duration": {
-                "operator": "Variables[0] ({[PassiveSkillInitiate[8]]}) || RETURN",
-                "displayLines": "{[PassiveSkillInitiate[8]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkillInitiate[8]]}"
-                ]
+                "displayLines": "{[PassiveSkillInitiate[8]]}"
               },
               "valuePerStack": {
                 "MDF_ElationDamageAddedRatio": {
-                  "operator": "Variables[0] ({[PassiveSkillInitiate[6]]}) || RETURN",
-                  "displayLines": "{[PassiveSkillInitiate[6]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkillInitiate[6]]}"
-                  ]
+                  "displayLines": "{[PassiveSkillInitiate[6]]}"
                 }
               },
               "casterAssign": "TargetSelf"
@@ -271,21 +210,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1492528010\">Enemy_W5_Limao_ElationDamageUp</a>[<span class=\"descriptionNumberColor\">Make Headlines, Please!</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[PassiveSkillInitiate[8]]}) || RETURN",
-                    "displayLines": "{[PassiveSkillInitiate[8]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkillInitiate[8]]}"
-                    ]
+                    "displayLines": "{[PassiveSkillInitiate[8]]}"
                   },
                   "valuePerStack": {
                     "MDF_ElationDamageAddedRatio": {
-                      "operator": "Variables[0] ({[PassiveSkillInitiate[7]]}) || RETURN",
-                      "displayLines": "{[PassiveSkillInitiate[7]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkillInitiate[7]]}"
-                      ]
+                      "displayLines": "{[PassiveSkillInitiate[7]]}"
                     }
                   },
                   "casterAssign": "TargetSelf"

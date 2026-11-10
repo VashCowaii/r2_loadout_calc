@@ -116,12 +116,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                        "displayLines": "Wolf_AttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Wolf_AttackCount"
-                        ]
+                        "displayLines": "Wolf_AttackCount"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -129,12 +124,7 @@ const configAbility = {
                         "target": "{{Parameter Target}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                        "displayLines": "Wolf_MaxAttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Wolf_MaxAttackCount"
-                        ]
+                        "displayLines": "Wolf_MaxAttackCount"
                       },
                       "assignState": "True",
                       "state": "Normal"
@@ -198,12 +188,7 @@ const configAbility = {
                     "value1": "Wolf_MaxAttackCount",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (MaxAttackCount) || RETURN",
-                      "displayLines": "MaxAttackCount",
-                      "constants": [],
-                      "variables": [
-                        "MaxAttackCount"
-                      ]
+                      "displayLines": "MaxAttackCount"
                     },
                     "contextScope": "TargetEntity"
                   }
@@ -218,12 +203,7 @@ const configAbility = {
                   },
                   "variableName": "Wolf_MaxAttackCount",
                   "resetValue": {
-                    "operator": "Variables[0] (MaxAttackCount) || RETURN",
-                    "displayLines": "MaxAttackCount",
-                    "constants": [],
-                    "variables": [
-                      "MaxAttackCount"
-                    ]
+                    "displayLines": "MaxAttackCount"
                   },
                   "scope": "TargetEntity"
                 }
@@ -259,12 +239,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                        "displayLines": "Wolf_AttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Wolf_AttackCount"
-                        ]
+                        "displayLines": "Wolf_AttackCount"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -272,12 +247,7 @@ const configAbility = {
                         "target": "{{Parameter Target}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                        "displayLines": "Wolf_MaxAttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Wolf_MaxAttackCount"
-                        ]
+                        "displayLines": "Wolf_MaxAttackCount"
                       },
                       "assignState": "True",
                       "state": "Normal"
@@ -325,12 +295,7 @@ const configAbility = {
                   },
                   "variableName": "Wolf_MaxAttackCount",
                   "resetValue": {
-                    "operator": "Variables[0] (MaxAttackCount) || RETURN",
-                    "displayLines": "MaxAttackCount",
-                    "constants": [],
-                    "variables": [
-                      "MaxAttackCount"
-                    ]
+                    "displayLines": "MaxAttackCount"
                   },
                   "scope": "TargetEntity"
                 },
@@ -388,20 +353,10 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1414738413\">Enemy_W2_Lycan_RagePhase1Mark</a>[<span class=\"descriptionNumberColor\">Bloodlust</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                        "displayLines": "Wolf_MaxAttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Wolf_MaxAttackCount"
-                        ]
+                        "displayLines": "Wolf_MaxAttackCount"
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                        "displayLines": "Wolf_AttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Wolf_AttackCount"
-                        ]
+                        "displayLines": "Wolf_AttackCount"
                       }
                     }
                   ]
@@ -409,12 +364,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                    "displayLines": "Wolf_AttackCount",
-                    "constants": [],
-                    "variables": [
-                      "Wolf_AttackCount"
-                    ]
+                    "displayLines": "Wolf_AttackCount"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -422,12 +372,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                    "displayLines": "Wolf_MaxAttackCount",
-                    "constants": [],
-                    "variables": [
-                      "Wolf_MaxAttackCount"
-                    ]
+                    "displayLines": "Wolf_MaxAttackCount"
                   },
                   "assignState": "True",
                   "state": "Normal"
@@ -512,12 +457,7 @@ const configAbility = {
                   "variableName": "Wolf_AttackCount",
                   "value": 1,
                   "max": {
-                    "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                    "displayLines": "Wolf_MaxAttackCount",
-                    "constants": [],
-                    "variables": [
-                      "Wolf_MaxAttackCount"
-                    ]
+                    "displayLines": "Wolf_MaxAttackCount"
                   }
                 },
                 {
@@ -552,12 +492,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                        "displayLines": "Wolf_AttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Wolf_AttackCount"
-                        ]
+                        "displayLines": "Wolf_AttackCount"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -565,12 +500,7 @@ const configAbility = {
                         "target": "{{Parameter Target}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                        "displayLines": "Wolf_MaxAttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Wolf_MaxAttackCount"
-                        ]
+                        "displayLines": "Wolf_MaxAttackCount"
                       },
                       "assignState": "True",
                       "state": "Normal"
@@ -600,12 +530,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1414738413\">Enemy_W2_Lycan_RagePhase1Mark</a>[<span class=\"descriptionNumberColor\">Bloodlust</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                        "displayLines": "Wolf_MaxAttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Wolf_MaxAttackCount"
-                        ]
+                        "displayLines": "Wolf_MaxAttackCount"
                       }
                     },
                     {
@@ -647,12 +572,7 @@ const configAbility = {
                     "value1": "Wolf_AttackCount",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                      "displayLines": "Wolf_MaxAttackCount",
-                      "constants": [],
-                      "variables": [
-                        "Wolf_MaxAttackCount"
-                      ]
+                      "displayLines": "Wolf_MaxAttackCount"
                     }
                   },
                   "passed": [
@@ -898,12 +818,7 @@ const configAbility = {
                       "variableName": "Wolf_AttackCount",
                       "value": 1,
                       "max": {
-                        "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                        "displayLines": "Wolf_MaxAttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Wolf_MaxAttackCount"
-                        ]
+                        "displayLines": "Wolf_MaxAttackCount"
                       }
                     },
                     {
@@ -938,12 +853,7 @@ const configAbility = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                            "displayLines": "Wolf_AttackCount",
-                            "constants": [],
-                            "variables": [
-                              "Wolf_AttackCount"
-                            ]
+                            "displayLines": "Wolf_AttackCount"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -951,12 +861,7 @@ const configAbility = {
                             "target": "{{Parameter Target}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                            "displayLines": "Wolf_MaxAttackCount",
-                            "constants": [],
-                            "variables": [
-                              "Wolf_MaxAttackCount"
-                            ]
+                            "displayLines": "Wolf_MaxAttackCount"
                           },
                           "assignState": "True",
                           "state": "Normal"
@@ -986,12 +891,7 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1414738413\">Enemy_W2_Lycan_RagePhase1Mark</a>[<span class=\"descriptionNumberColor\">Bloodlust</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                            "displayLines": "Wolf_MaxAttackCount",
-                            "constants": [],
-                            "variables": [
-                              "Wolf_MaxAttackCount"
-                            ]
+                            "displayLines": "Wolf_MaxAttackCount"
                           }
                         },
                         {
@@ -1033,12 +933,7 @@ const configAbility = {
                         "value1": "Wolf_AttackCount",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                          "displayLines": "Wolf_MaxAttackCount",
-                          "constants": [],
-                          "variables": [
-                            "Wolf_MaxAttackCount"
-                          ]
+                          "displayLines": "Wolf_MaxAttackCount"
                         }
                       },
                       "passed": [
@@ -1244,12 +1139,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                        "displayLines": "Wolf_AttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Wolf_AttackCount"
-                        ]
+                        "displayLines": "Wolf_AttackCount"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -1257,12 +1147,7 @@ const configAbility = {
                         "target": "{{Parameter Target}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                        "displayLines": "Wolf_MaxAttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Wolf_MaxAttackCount"
-                        ]
+                        "displayLines": "Wolf_MaxAttackCount"
                       },
                       "assignState": "True",
                       "state": "Normal"
@@ -1328,12 +1213,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                    "displayLines": "Wolf_AttackCount",
-                    "constants": [],
-                    "variables": [
-                      "Wolf_AttackCount"
-                    ]
+                    "displayLines": "Wolf_AttackCount"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -1341,12 +1221,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                    "displayLines": "Wolf_MaxAttackCount",
-                    "constants": [],
-                    "variables": [
-                      "Wolf_MaxAttackCount"
-                    ]
+                    "displayLines": "Wolf_MaxAttackCount"
                   },
                   "assignState": "True",
                   "state": "Normal"
@@ -1703,14 +1578,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (LycanDieCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(LycanDieCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "LycanDieCount"
-                    ]
+                    "displayLines": "(LycanDieCount + 1)"
                   },
                   "variableName": "LycanDieCount"
                 },
@@ -1778,13 +1646,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_AllDamageTypeAddedRatio * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeAddedRatio",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_AllDamageTypeAddedRatio * MDF_Layer)"
               }
             },
             {
@@ -1795,13 +1657,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_BreakDamageAddedRatioBase) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_BreakDamageAddedRatioBase * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_BreakDamageAddedRatioBase",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_BreakDamageAddedRatioBase * MDF_Layer)"
               }
             }
           ]
@@ -1849,38 +1705,18 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1831180535\">Enemy_W2_LycanKing_IF_ChampionEnhanceForever</a>",
                       "stackLimit": {
-                        "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                        "displayLines": "MDF_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxLayer"
-                        ]
+                        "displayLines": "MDF_MaxLayer"
                       },
                       "valuePerStack": {
                         "MDF_AllDamageTypeAddedRatio": {
-                          "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                          "displayLines": "MDF_AllDamageTypeAddedRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_AllDamageTypeAddedRatio"
-                          ]
+                          "displayLines": "MDF_AllDamageTypeAddedRatio"
                         },
                         "MDF_BreakDamageAddedRatioBase": {
-                          "operator": "Variables[0] (MDF_BreakDamageAddedRatioBase) || RETURN",
-                          "displayLines": "MDF_BreakDamageAddedRatioBase",
-                          "constants": [],
-                          "variables": [
-                            "MDF_BreakDamageAddedRatioBase"
-                          ]
+                          "displayLines": "MDF_BreakDamageAddedRatioBase"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (MDF_Layer) || RETURN",
-                        "displayLines": "MDF_Layer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Layer"
-                        ]
+                        "displayLines": "MDF_Layer"
                       }
                     }
                   ],
@@ -1896,12 +1732,7 @@ const configAbility = {
                         "value1": "<a class=\"gModGreen\" id=\"1831180535\">Enemy_W2_LycanKing_IF_ChampionEnhanceForever</a>",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MDF_Layer) || RETURN",
-                          "displayLines": "MDF_Layer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Layer"
-                          ]
+                          "displayLines": "MDF_Layer"
                         },
                         "valueType": "Layer"
                       },
@@ -1931,39 +1762,18 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1831180535\">Enemy_W2_LycanKing_IF_ChampionEnhanceForever</a>",
                           "stackLimit": {
-                            "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                            "displayLines": "MDF_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxLayer"
-                            ]
+                            "displayLines": "MDF_MaxLayer"
                           },
                           "valuePerStack": {
                             "MDF_AllDamageTypeAddedRatio": {
-                              "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                              "displayLines": "MDF_AllDamageTypeAddedRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_AllDamageTypeAddedRatio"
-                              ]
+                              "displayLines": "MDF_AllDamageTypeAddedRatio"
                             },
                             "MDF_BreakDamageAddedRatioBase": {
-                              "operator": "Variables[0] (MDF_BreakDamageAddedRatioBase) || RETURN",
-                              "displayLines": "MDF_BreakDamageAddedRatioBase",
-                              "constants": [],
-                              "variables": [
-                                "MDF_BreakDamageAddedRatioBase"
-                              ]
+                              "displayLines": "MDF_BreakDamageAddedRatioBase"
                             }
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (MDF_Layer) || Variables[1] (MDF_LayerNeedAdd) || SUB || RETURN",
-                            "displayLines": "(MDF_Layer - MDF_LayerNeedAdd)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Layer",
-                              "MDF_LayerNeedAdd"
-                            ]
+                            "displayLines": "(MDF_Layer - MDF_LayerNeedAdd)"
                           }
                         }
                       ]
@@ -2041,12 +1851,7 @@ const configAbility = {
                   },
                   "variableName": "MDF_HPAddDelta",
                   "value": {
-                    "operator": "Variables[0] (MDF_MaxHP) || RETURN",
-                    "displayLines": "MDF_MaxHP",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxHP"
-                    ]
+                    "displayLines": "MDF_MaxHP"
                   },
                   "max": 999999
                 },
@@ -2067,12 +1872,7 @@ const configAbility = {
                   },
                   "variableName": "MDF_AttackDelta",
                   "value": {
-                    "operator": "Variables[0] (MDF_Attack) || RETURN",
-                    "displayLines": "MDF_Attack",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Attack"
-                    ]
+                    "displayLines": "MDF_Attack"
                   },
                   "max": 999999
                 }
@@ -2086,12 +1886,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_HPAddDelta) || RETURN",
-                "displayLines": "MDF_HPAddDelta",
-                "constants": [],
-                "variables": [
-                  "MDF_HPAddDelta"
-                ]
+                "displayLines": "MDF_HPAddDelta"
               }
             },
             {
@@ -2102,12 +1897,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AttackDelta) || RETURN",
-                "displayLines": "MDF_AttackDelta",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackDelta"
-                ]
+                "displayLines": "MDF_AttackDelta"
               }
             }
           ]
@@ -2122,13 +1912,7 @@ const configAbility = {
         "name": "Modifier: UI Preview",
         "show": "Hide",
         "toughnessReductionPreviewAdd": {
-          "operator": "Variables[0] (MDF_DamageStancePerLayer) || Variables[1] (MDF_Layer) || MUL || RETURN",
-          "displayLines": "(MDF_DamageStancePerLayer * MDF_Layer)",
-          "constants": [],
-          "variables": [
-            "MDF_DamageStancePerLayer",
-            "MDF_Layer"
-          ]
+          "displayLines": "(MDF_DamageStancePerLayer * MDF_Layer)"
         }
       },
       "addStacksPerTrigger": 1,
@@ -2199,38 +1983,18 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1535911464\">Enemy_W2_LycanKing_IF_ChampionEnhance</a>",
                   "stackLimit": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "valuePerStack": {
                     "MDF_HealPercentage": {
-                      "operator": "Variables[0] (MDF_HealPercentage) || RETURN",
-                      "displayLines": "MDF_HealPercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_HealPercentage"
-                      ]
+                      "displayLines": "MDF_HealPercentage"
                     },
                     "MDF_DamageStancePerLayer": {
-                      "operator": "Variables[0] (MDF_DamageStancePerLayer) || RETURN",
-                      "displayLines": "MDF_DamageStancePerLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageStancePerLayer"
-                      ]
+                      "displayLines": "MDF_DamageStancePerLayer"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   }
                 }
               ]
@@ -2275,13 +2039,7 @@ const configAbility = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (MDF_DamageStancePerLayer) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                        "displayLines": "(MDF_DamageStancePerLayer * MDF_Layer)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DamageStancePerLayer",
-                          "MDF_Layer"
-                        ]
+                        "displayLines": "(MDF_DamageStancePerLayer * MDF_Layer)"
                       },
                       "attacker": {
                         "name": "Target Name",
@@ -2310,13 +2068,7 @@ const configAbility = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (MDF_DamageStancePerLayer) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                        "displayLines": "(MDF_DamageStancePerLayer * MDF_Layer)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DamageStancePerLayer",
-                          "MDF_Layer"
-                        ]
+                        "displayLines": "(MDF_DamageStancePerLayer * MDF_Layer)"
                       },
                       "attacker": {
                         "name": "Target Name",
@@ -2345,13 +2097,7 @@ const configAbility = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (MDF_DamageStancePerLayer) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                        "displayLines": "(MDF_DamageStancePerLayer * MDF_Layer)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DamageStancePerLayer",
-                          "MDF_Layer"
-                        ]
+                        "displayLines": "(MDF_DamageStancePerLayer * MDF_Layer)"
                       },
                       "attacker": {
                         "name": "Target Name",
@@ -2380,13 +2126,7 @@ const configAbility = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (MDF_DamageStancePerLayer) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                        "displayLines": "(MDF_DamageStancePerLayer * MDF_Layer)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DamageStancePerLayer",
-                          "MDF_Layer"
-                        ]
+                        "displayLines": "(MDF_DamageStancePerLayer * MDF_Layer)"
                       },
                       "attacker": {
                         "name": "Target Name",
@@ -2415,13 +2155,7 @@ const configAbility = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (MDF_DamageStancePerLayer) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                        "displayLines": "(MDF_DamageStancePerLayer * MDF_Layer)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DamageStancePerLayer",
-                          "MDF_Layer"
-                        ]
+                        "displayLines": "(MDF_DamageStancePerLayer * MDF_Layer)"
                       },
                       "attacker": {
                         "name": "Target Name",
@@ -2450,13 +2184,7 @@ const configAbility = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (MDF_DamageStancePerLayer) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                        "displayLines": "(MDF_DamageStancePerLayer * MDF_Layer)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DamageStancePerLayer",
-                          "MDF_Layer"
-                        ]
+                        "displayLines": "(MDF_DamageStancePerLayer * MDF_Layer)"
                       },
                       "attacker": {
                         "name": "Target Name",
@@ -2485,13 +2213,7 @@ const configAbility = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (MDF_DamageStancePerLayer) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                        "displayLines": "(MDF_DamageStancePerLayer * MDF_Layer)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DamageStancePerLayer",
-                          "MDF_Layer"
-                        ]
+                        "displayLines": "(MDF_DamageStancePerLayer * MDF_Layer)"
                       },
                       "attacker": {
                         "name": "Target Name",
@@ -2544,13 +2266,7 @@ const configAbility = {
                 ]
               },
               "healPercent": {
-                "operator": "Variables[0] (MDF_HealPercentage) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_HealPercentage * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_HealPercentage",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_HealPercentage * MDF_Layer)"
               },
               "formula": "Heal from Target MaxHP"
             }
@@ -2601,38 +2317,18 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1535911464\">Enemy_W2_LycanKing_IF_ChampionEnhance</a>",
                   "stackLimit": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "valuePerStack": {
                     "MDF_HealPercentage": {
-                      "operator": "Variables[0] (MDF_HealPercentage) || RETURN",
-                      "displayLines": "MDF_HealPercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_HealPercentage"
-                      ]
+                      "displayLines": "MDF_HealPercentage"
                     },
                     "MDF_DamageStancePerLayer": {
-                      "operator": "Variables[0] (MDF_DamageStancePerLayer) || RETURN",
-                      "displayLines": "MDF_DamageStancePerLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageStancePerLayer"
-                      ]
+                      "displayLines": "MDF_DamageStancePerLayer"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   }
                 },
                 {
@@ -2643,38 +2339,18 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1831180535\">Enemy_W2_LycanKing_IF_ChampionEnhanceForever</a>",
                   "stackLimit": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "valuePerStack": {
                     "MDF_AllDamageTypeAddedRatio": {
-                      "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                      "displayLines": "MDF_AllDamageTypeAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AllDamageTypeAddedRatio"
-                      ]
+                      "displayLines": "MDF_AllDamageTypeAddedRatio"
                     },
                     "MDF_BreakDamageAddedRatioBase": {
-                      "operator": "Variables[0] (MDF_BreakDamageAddedRatioBase) || RETURN",
-                      "displayLines": "MDF_BreakDamageAddedRatioBase",
-                      "constants": [],
-                      "variables": [
-                        "MDF_BreakDamageAddedRatioBase"
-                      ]
+                      "displayLines": "MDF_BreakDamageAddedRatioBase"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   }
                 },
                 {
@@ -2685,38 +2361,18 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-160773215\">Enemy_W2_LycanKing_IF_ChampionEnhanceForeverStatus</a>[<span class=\"descriptionNumberColor\">Rising War Spirits</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "valuePerStack": {
                     "MDF_AllDamageTypeAddedRatio": {
-                      "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                      "displayLines": "MDF_AllDamageTypeAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AllDamageTypeAddedRatio"
-                      ]
+                      "displayLines": "MDF_AllDamageTypeAddedRatio"
                     },
                     "MDF_BreakDamageAddedRatioBase": {
-                      "operator": "Variables[0] (MDF_BreakDamageAddedRatioBase) || RETURN",
-                      "displayLines": "MDF_BreakDamageAddedRatioBase",
-                      "constants": [],
-                      "variables": [
-                        "MDF_BreakDamageAddedRatioBase"
-                      ]
+                      "displayLines": "MDF_BreakDamageAddedRatioBase"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   }
                 },
                 {
@@ -2727,38 +2383,18 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1535911464\">Enemy_W2_LycanKing_IF_ChampionEnhance</a>",
                   "stackLimit": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "valuePerStack": {
                     "MDF_HealPercentage": {
-                      "operator": "Variables[0] (MDF_HealPercentage) || RETURN",
-                      "displayLines": "MDF_HealPercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_HealPercentage"
-                      ]
+                      "displayLines": "MDF_HealPercentage"
                     },
                     "MDF_DamageStancePerLayer": {
-                      "operator": "Variables[0] (MDF_DamageStancePerLayer) || RETURN",
-                      "displayLines": "MDF_DamageStancePerLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageStancePerLayer"
-                      ]
+                      "displayLines": "MDF_DamageStancePerLayer"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   }
                 },
                 {
@@ -2769,38 +2405,18 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1831180535\">Enemy_W2_LycanKing_IF_ChampionEnhanceForever</a>",
                   "stackLimit": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "valuePerStack": {
                     "MDF_AllDamageTypeAddedRatio": {
-                      "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                      "displayLines": "MDF_AllDamageTypeAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AllDamageTypeAddedRatio"
-                      ]
+                      "displayLines": "MDF_AllDamageTypeAddedRatio"
                     },
                     "MDF_BreakDamageAddedRatioBase": {
-                      "operator": "Variables[0] (MDF_BreakDamageAddedRatioBase) || RETURN",
-                      "displayLines": "MDF_BreakDamageAddedRatioBase",
-                      "constants": [],
-                      "variables": [
-                        "MDF_BreakDamageAddedRatioBase"
-                      ]
+                      "displayLines": "MDF_BreakDamageAddedRatioBase"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   }
                 },
                 {
@@ -2912,13 +2528,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_ChampionCountTotal) || Variables[1] (MDF_ChampionMarkCount) || ADD || RETURN",
-                        "displayLines": "(MDF_ChampionCountTotal + MDF_ChampionMarkCount)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_ChampionCountTotal",
-                          "MDF_ChampionMarkCount"
-                        ]
+                        "displayLines": "(MDF_ChampionCountTotal + MDF_ChampionMarkCount)"
                       },
                       "variableName": "MDF_ChampionCountTotal"
                     },
@@ -2933,12 +2543,7 @@ const configAbility = {
                         "value1": "MDF_ChampionCountTotal",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                          "displayLines": "MDF_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer"
-                          ]
+                          "displayLines": "MDF_MaxLayer"
                         }
                       },
                       "failed": [
@@ -2961,54 +2566,23 @@ const configAbility = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"848754639\">Enemy_W2_LycanKing_IF_ChampionMark</a>[<span class=\"descriptionNumberColor\">Blood Surge</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] (MDF_MaxLayer) || Variables[1] (MDF_ChampionCountTotal) || SUB || RETURN",
-                                "displayLines": "(MDF_MaxLayer - MDF_ChampionCountTotal)",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_MaxLayer",
-                                  "MDF_ChampionCountTotal"
-                                ]
+                                "displayLines": "(MDF_MaxLayer - MDF_ChampionCountTotal)"
                               },
                               "valuePerStack": {
                                 "MDF_MaxLayer": {
-                                  "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                  "displayLines": "MDF_MaxLayer",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_MaxLayer"
-                                  ]
+                                  "displayLines": "MDF_MaxLayer"
                                 },
                                 "MDF_HealPercentage": {
-                                  "operator": "Variables[0] (MDF_HealPercentage) || RETURN",
-                                  "displayLines": "MDF_HealPercentage",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_HealPercentage"
-                                  ]
+                                  "displayLines": "MDF_HealPercentage"
                                 },
                                 "MDF_AllDamageTypeAddedRatio": {
-                                  "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                                  "displayLines": "MDF_AllDamageTypeAddedRatio",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_AllDamageTypeAddedRatio"
-                                  ]
+                                  "displayLines": "MDF_AllDamageTypeAddedRatio"
                                 },
                                 "MDF_DamageStancePerLayer": {
-                                  "operator": "Variables[0] (MDF_DamageStancePerLayer) || RETURN",
-                                  "displayLines": "MDF_DamageStancePerLayer",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_DamageStancePerLayer"
-                                  ]
+                                  "displayLines": "MDF_DamageStancePerLayer"
                                 },
                                 "MDF_BreakDamageAddedRatioBase": {
-                                  "operator": "Variables[0] (MDF_BreakDamageAddedRatioBase) || RETURN",
-                                  "displayLines": "MDF_BreakDamageAddedRatioBase",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_BreakDamageAddedRatioBase"
-                                  ]
+                                  "displayLines": "MDF_BreakDamageAddedRatioBase"
                                 }
                               }
                             }
@@ -3038,44 +2612,19 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_MaxLayer": {
-              "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-              "displayLines": "MDF_MaxLayer",
-              "constants": [],
-              "variables": [
-                "MDF_MaxLayer"
-              ]
+              "displayLines": "MDF_MaxLayer"
             },
             "MDF_HealPercentage": {
-              "operator": "Variables[0] (MDF_HealPercentage) || RETURN",
-              "displayLines": "MDF_HealPercentage",
-              "constants": [],
-              "variables": [
-                "MDF_HealPercentage"
-              ]
+              "displayLines": "MDF_HealPercentage"
             },
             "MDF_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-              "displayLines": "MDF_AllDamageTypeAddedRatio",
-              "constants": [],
-              "variables": [
-                "MDF_AllDamageTypeAddedRatio"
-              ]
+              "displayLines": "MDF_AllDamageTypeAddedRatio"
             },
             "MDF_DamageStancePerLayer": {
-              "operator": "Variables[0] (MDF_DamageStancePerLayer) || RETURN",
-              "displayLines": "MDF_DamageStancePerLayer",
-              "constants": [],
-              "variables": [
-                "MDF_DamageStancePerLayer"
-              ]
+              "displayLines": "MDF_DamageStancePerLayer"
             },
             "MDF_BreakDamageAddedRatioBase": {
-              "operator": "Variables[0] (MDF_BreakDamageAddedRatioBase) || RETURN",
-              "displayLines": "MDF_BreakDamageAddedRatioBase",
-              "constants": [],
-              "variables": [
-                "MDF_BreakDamageAddedRatioBase"
-              ]
+              "displayLines": "MDF_BreakDamageAddedRatioBase"
             }
           }
         }
@@ -3168,12 +2717,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] ({[SkillP02[2]]}) || RETURN",
-                "displayLines": "{[SkillP02[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP02[2]]}"
-                ]
+                "displayLines": "{[SkillP02[2]]}"
               },
               "variableName": "MDF_AllDamageTypeAddedRatio"
             },
@@ -3185,12 +2729,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                "displayLines": "MDF_AllDamageTypeAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeAddedRatio"
-                ]
+                "displayLines": "MDF_AllDamageTypeAddedRatio"
               }
             },
             {
@@ -3207,13 +2746,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] ({[SkillEX04[0]]}) || Variables[1] ({[SkillP02[5]]}) || ADD || RETURN",
-                    "displayLines": "({[SkillEX04[0]]} + {[SkillP02[5]]})",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillEX04[0]]}",
-                      "{[SkillP02[5]]}"
-                    ]
+                    "displayLines": "({[SkillEX04[0]]} + {[SkillP02[5]]})"
                   },
                   "variableName": "MDF_DamageReduce"
                 },
@@ -3225,12 +2758,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageReduce) || RETURN",
-                    "displayLines": "MDF_DamageReduce",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageReduce"
-                    ]
+                    "displayLines": "MDF_DamageReduce"
                   }
                 }
               ],
@@ -3238,12 +2766,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] ({[SkillP02[5]]}) || RETURN",
-                    "displayLines": "{[SkillP02[5]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillP02[5]]}"
-                    ]
+                    "displayLines": "{[SkillP02[5]]}"
                   },
                   "variableName": "MDF_DamageReduce"
                 },
@@ -3255,12 +2778,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageReduce) || RETURN",
-                    "displayLines": "MDF_DamageReduce",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageReduce"
-                    ]
+                    "displayLines": "MDF_DamageReduce"
                   }
                 }
               ]
@@ -3918,12 +3436,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (WolfBoss_BloodRageCount) || RETURN",
-                "displayLines": "WolfBoss_BloodRageCount",
-                "constants": [],
-                "variables": [
-                  "WolfBoss_BloodRageCount"
-                ]
+                "displayLines": "WolfBoss_BloodRageCount"
               },
               "entityClass": "Enemy",
               "target": {
@@ -3931,12 +3444,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (WolfBoss_BloodRageMaxCount) || RETURN",
-                "displayLines": "WolfBoss_BloodRageMaxCount",
-                "constants": [],
-                "variables": [
-                  "WolfBoss_BloodRageMaxCount"
-                ]
+                "displayLines": "WolfBoss_BloodRageMaxCount"
               },
               "assignState": "True",
               "barType": "Hulei"
@@ -4030,12 +3538,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                    "displayLines": "Wolf_AttackCount",
-                    "constants": [],
-                    "variables": [
-                      "Wolf_AttackCount"
-                    ]
+                    "displayLines": "Wolf_AttackCount"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -4043,12 +3546,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                    "displayLines": "Wolf_MaxAttackCount",
-                    "constants": [],
-                    "variables": [
-                      "Wolf_MaxAttackCount"
-                    ]
+                    "displayLines": "Wolf_MaxAttackCount"
                   },
                   "assignState": "True",
                   "state": "Normal"

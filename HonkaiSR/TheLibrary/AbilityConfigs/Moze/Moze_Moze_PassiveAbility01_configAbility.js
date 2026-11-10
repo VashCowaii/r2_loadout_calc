@@ -19,12 +19,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (9) || RETURN",
-        "displayLines": "9",
-        "constants": [],
-        "variables": [
-          9
-        ]
+        "displayLines": "9"
       },
       "variableName": "MDF_MaxEnergy"
     },
@@ -51,13 +46,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (1.6) || Variables[1] (0.25) || ADD || RETURN",
-            "displayLines": "(1.6 + 0.25)",
-            "constants": [],
-            "variables": [
-              1.6,
-              0.25
-            ]
+            "displayLines": "(1.6 + 0.25)"
           },
           "variableName": "MDF_InsertDamagePercentage"
         }
@@ -66,12 +55,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (1.6) || RETURN",
-            "displayLines": "1.6",
-            "constants": [],
-            "variables": [
-              1.6
-            ]
+            "displayLines": "1.6"
           },
           "variableName": "MDF_InsertDamagePercentage"
         }
@@ -123,12 +107,7 @@ const configAbility = {
       "name": "Update Displayed Energy Bar",
       "value": 0,
       "maximum": {
-        "operator": "Variables[0] (MDF_MaxEnergy) || RETURN",
-        "displayLines": "MDF_MaxEnergy",
-        "constants": [],
-        "variables": [
-          "MDF_MaxEnergy"
-        ]
+        "displayLines": "MDF_MaxEnergy"
       },
       "assignState": "True",
       "priorState": "Disable",
@@ -219,14 +198,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_OnStageMember) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(MDF_OnStageMember + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_OnStageMember"
-                    ]
+                    "displayLines": "(MDF_OnStageMember + 1)"
                   },
                   "variableName": "MDF_OnStageMember"
                 }
@@ -319,14 +291,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_OnStageMember) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(MDF_OnStageMember + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_OnStageMember"
-                    ]
+                    "displayLines": "(MDF_OnStageMember + 1)"
                   },
                   "variableName": "MDF_OnStageMember"
                 }
@@ -395,14 +360,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_OnStageMember) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(MDF_OnStageMember + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_OnStageMember"
-                    ]
+                    "displayLines": "(MDF_OnStageMember + 1)"
                   },
                   "variableName": "MDF_OnStageMember"
                 }
@@ -526,14 +484,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_OnStageMember) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_OnStageMember + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_OnStageMember"
-                        ]
+                        "displayLines": "(MDF_OnStageMember + 1)"
                       },
                       "variableName": "MDF_OnStageMember"
                     }
@@ -596,14 +547,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_OnStageMember) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(MDF_OnStageMember + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_OnStageMember"
-                    ]
+                    "displayLines": "(MDF_OnStageMember + 1)"
                   },
                   "variableName": "MDF_OnStageMember"
                 }
@@ -680,14 +624,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_OnStageMember) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(MDF_OnStageMember + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_OnStageMember"
-                    ]
+                    "displayLines": "(MDF_OnStageMember + 1)"
                   },
                   "variableName": "MDF_OnStageMember"
                 }
@@ -868,14 +805,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_ActivePlayer) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(MDF_ActivePlayer - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_ActivePlayer"
-                    ]
+                    "displayLines": "(MDF_ActivePlayer - 1)"
                   },
                   "variableName": "MDF_ActivePlayer"
                 },
@@ -1102,12 +1032,7 @@ const configAbility = {
                         {
                           "name": "Assign Advance/Delay to Current Ability Use",
                           "adjustmentValue": {
-                            "operator": "Variables[0] (0.2) || INVERT || RETURN",
-                            "displayLines": "-0.2",
-                            "constants": [],
-                            "variables": [
-                              0.2
-                            ]
+                            "displayLines": "-0.2"
                           },
                           "adjustmentType": "Advance"
                         }
@@ -1452,12 +1377,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (20) || RETURN",
-                    "displayLines": "20",
-                    "constants": [],
-                    "variables": [
-                      20
-                    ]
+                    "displayLines": "20"
                   },
                   "isFixed": "* ERR"
                 }

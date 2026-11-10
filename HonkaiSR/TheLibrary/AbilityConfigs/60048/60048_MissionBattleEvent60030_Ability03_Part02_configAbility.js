@@ -99,14 +99,7 @@ const configAbility = {
       },
       "variableName": "_WorldErosion",
       "value": {
-        "operator": "Variables[0] ({[Skill03[1]]}) || INVERT || Constants[0] (100) || MUL || RETURN",
-        "displayLines": "(-{[Skill03[1]]} * 100)",
-        "constants": [
-          100
-        ],
-        "variables": [
-          "{[Skill03[1]]}"
-        ]
+        "displayLines": "(-{[Skill03[1]]} * 100)"
       },
       "max": 100
     },
@@ -167,15 +160,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "DamageFlat": {
-              "operator": "Variables[0] (_MaxHp) || Variables[1] ({[Skill03[0]]}) || MUL || Constants[0] (3) || DIV || RETURN",
-              "displayLines": "((_MaxHp * {[Skill03[0]]}) / 3)",
-              "constants": [
-                3
-              ],
-              "variables": [
-                "_MaxHp",
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "((_MaxHp * {[Skill03[0]]}) / 3)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -192,15 +177,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "DamageFlat": {
-              "operator": "Variables[0] (_MaxHp) || Variables[1] ({[Skill03[0]]}) || MUL || Constants[0] (3) || DIV || RETURN",
-              "displayLines": "((_MaxHp * {[Skill03[0]]}) / 3)",
-              "constants": [
-                3
-              ],
-              "variables": [
-                "_MaxHp",
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "((_MaxHp * {[Skill03[0]]}) / 3)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -217,15 +194,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "DamageFlat": {
-              "operator": "Variables[0] (_MaxHp) || Variables[1] ({[Skill03[0]]}) || MUL || Constants[0] (3) || DIV || RETURN",
-              "displayLines": "((_MaxHp * {[Skill03[0]]}) / 3)",
-              "constants": [
-                3
-              ],
-              "variables": [
-                "_MaxHp",
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "((_MaxHp * {[Skill03[0]]}) / 3)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -244,15 +213,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "DamageFlat": {
-              "operator": "Variables[0] (_MaxHp) || Variables[1] ({[Skill03[2]]}) || MUL || Constants[0] (3) || DIV || RETURN",
-              "displayLines": "((_MaxHp * {[Skill03[2]]}) / 3)",
-              "constants": [
-                3
-              ],
-              "variables": [
-                "_MaxHp",
-                "{[Skill03[2]]}"
-              ]
+              "displayLines": "((_MaxHp * {[Skill03[2]]}) / 3)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -269,15 +230,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "DamageFlat": {
-              "operator": "Variables[0] (_MaxHp) || Variables[1] ({[Skill03[2]]}) || MUL || Constants[0] (3) || DIV || RETURN",
-              "displayLines": "((_MaxHp * {[Skill03[2]]}) / 3)",
-              "constants": [
-                3
-              ],
-              "variables": [
-                "_MaxHp",
-                "{[Skill03[2]]}"
-              ]
+              "displayLines": "((_MaxHp * {[Skill03[2]]}) / 3)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -294,15 +247,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "DamageFlat": {
-              "operator": "Variables[0] (_MaxHp) || Variables[1] ({[Skill03[2]]}) || MUL || Constants[0] (3) || DIV || RETURN",
-              "displayLines": "((_MaxHp * {[Skill03[2]]}) / 3)",
-              "constants": [
-                3
-              ],
-              "variables": [
-                "_MaxHp",
-                "{[Skill03[2]]}"
-              ]
+              "displayLines": "((_MaxHp * {[Skill03[2]]}) / 3)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,

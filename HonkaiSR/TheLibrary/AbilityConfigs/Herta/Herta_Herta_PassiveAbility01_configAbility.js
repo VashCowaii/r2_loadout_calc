@@ -97,13 +97,7 @@ const configAbility = {
                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
                 "compareType": "<=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (0.5) || MUL || RETURN",
-                  "displayLines": "(MDF_MaxHP * 0.5)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_MaxHP",
-                    0.5
-                  ]
+                  "displayLines": "(MDF_MaxHP * 0.5)"
                 }
               },
               "passed": [
@@ -140,12 +134,7 @@ const configAbility = {
                         "value1": "MAvatar_Herta_Passive_CoolDown",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Constants[0] (0) || RETURN",
-                          "displayLines": "0",
-                          "constants": [
-                            0
-                          ],
-                          "variables": []
+                          "displayLines": "0"
                         }
                       },
                       {
@@ -193,14 +182,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (Herta_Count) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(Herta_Count + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Herta_Count"
-                            ]
+                            "displayLines": "(Herta_Count + 1)"
                           },
                           "variableName": "Herta_Count"
                         }
@@ -248,13 +230,7 @@ const configAbility = {
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (0.5) || MUL || RETURN",
-                      "displayLines": "(MDF_MaxHP * 0.5)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MaxHP",
-                        0.5
-                      ]
+                      "displayLines": "(MDF_MaxHP * 0.5)"
                     }
                   }
                 ]

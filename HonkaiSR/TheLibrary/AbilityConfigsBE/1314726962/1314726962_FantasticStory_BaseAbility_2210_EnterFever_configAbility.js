@@ -13,12 +13,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2210_EnterFever_P1_ElationPoint",
       "resetValue": {
-        "operator": "Variables[0] (ADF_1_Get) || RETURN",
-        "displayLines": "ADF_1_Get",
-        "constants": [],
-        "variables": [
-          "ADF_1_Get"
-        ]
+        "displayLines": "ADF_1_Get"
       },
       "scope": "ContextCaster"
     },
@@ -30,12 +25,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2210_EnterFever_P2_Ratio",
       "resetValue": {
-        "operator": "Variables[0] (ADF_2_Get) || RETURN",
-        "displayLines": "ADF_2_Get",
-        "constants": [],
-        "variables": [
-          "ADF_2_Get"
-        ]
+        "displayLines": "ADF_2_Get"
       },
       "scope": "ContextCaster"
     },
@@ -47,12 +37,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2210_EnterFever_P3_Ratio",
       "resetValue": {
-        "operator": "Variables[0] (ADF_3_Get) || RETURN",
-        "displayLines": "ADF_3_Get",
-        "constants": [],
-        "variables": [
-          "ADF_3_Get"
-        ]
+        "displayLines": "ADF_3_Get"
       },
       "scope": "ContextCaster"
     },
@@ -64,12 +49,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2210_EnterFever_P4_Ratio",
       "resetValue": {
-        "operator": "Variables[0] (ADF_4_Get) || RETURN",
-        "displayLines": "ADF_4_Get",
-        "constants": [],
-        "variables": [
-          "ADF_4_Get"
-        ]
+        "displayLines": "ADF_4_Get"
       },
       "scope": "ContextCaster"
     },
@@ -98,12 +78,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -234,12 +209,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1219408339\">Modifier_FantasticStory_BaseAbility_2210_EnterFever_sub</a>[<span class=\"descriptionNumberColor\">Surging Grit</span>]",
                   "valuePerStack": {
                     "DV_Ratio_Get": {
-                      "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2210_EnterFever_P3_Ratio) || RETURN",
-                      "displayLines": "DV_FantasticStory_BaseAbility_2210_EnterFever_P3_Ratio",
-                      "constants": [],
-                      "variables": [
-                        "DV_FantasticStory_BaseAbility_2210_EnterFever_P3_Ratio"
-                      ]
+                      "displayLines": "DV_FantasticStory_BaseAbility_2210_EnterFever_P3_Ratio"
                     }
                   }
                 }
@@ -266,12 +236,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1219408339\">Modifier_FantasticStory_BaseAbility_2210_EnterFever_sub</a>[<span class=\"descriptionNumberColor\">Surging Grit</span>]",
                   "valuePerStack": {
                     "DV_Ratio_Get": {
-                      "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2210_EnterFever_P3_Ratio) || RETURN",
-                      "displayLines": "DV_FantasticStory_BaseAbility_2210_EnterFever_P3_Ratio",
-                      "constants": [],
-                      "variables": [
-                        "DV_FantasticStory_BaseAbility_2210_EnterFever_P3_Ratio"
-                      ]
+                      "displayLines": "DV_FantasticStory_BaseAbility_2210_EnterFever_P3_Ratio"
                     }
                   }
                 },
@@ -300,12 +265,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1647830580\">Modifier_FantasticStory_BaseAbility_2210_ToBE</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2210_EnterFever_P2_Ratio) || RETURN",
-                          "displayLines": "DV_FantasticStory_BaseAbility_2210_EnterFever_P2_Ratio",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_BaseAbility_2210_EnterFever_P2_Ratio"
-                          ]
+                          "displayLines": "DV_FantasticStory_BaseAbility_2210_EnterFever_P2_Ratio"
                         }
                       }
                     },
@@ -318,12 +278,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1205308237\">Modifier_FantasticStory_BaseAbility_2210_ToBE_02</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2210_EnterFever_P4_Ratio) || RETURN",
-                          "displayLines": "DV_FantasticStory_BaseAbility_2210_EnterFever_P4_Ratio",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_BaseAbility_2210_EnterFever_P4_Ratio"
-                          ]
+                          "displayLines": "DV_FantasticStory_BaseAbility_2210_EnterFever_P4_Ratio"
                         }
                       }
                     }
@@ -353,12 +308,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"1647830580\">Modifier_FantasticStory_BaseAbility_2210_ToBE</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2210_EnterFever_P2_Ratio) || RETURN",
-                              "displayLines": "DV_FantasticStory_BaseAbility_2210_EnterFever_P2_Ratio",
-                              "constants": [],
-                              "variables": [
-                                "DV_FantasticStory_BaseAbility_2210_EnterFever_P2_Ratio"
-                              ]
+                              "displayLines": "DV_FantasticStory_BaseAbility_2210_EnterFever_P2_Ratio"
                             }
                           }
                         },
@@ -371,12 +321,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1205308237\">Modifier_FantasticStory_BaseAbility_2210_ToBE_02</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2210_EnterFever_P4_Ratio) || RETURN",
-                              "displayLines": "DV_FantasticStory_BaseAbility_2210_EnterFever_P4_Ratio",
-                              "constants": [],
-                              "variables": [
-                                "DV_FantasticStory_BaseAbility_2210_EnterFever_P4_Ratio"
-                              ]
+                              "displayLines": "DV_FantasticStory_BaseAbility_2210_EnterFever_P4_Ratio"
                             }
                           }
                         }
@@ -389,12 +334,7 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"101547145\">Elation_StartElationTime</a>",
                   "variables": {
                     "TryStartElationTime_OverrideElationPoint": {
-                      "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2210_EnterFever_P1_ElationPoint) || RETURN",
-                      "displayLines": "DV_FantasticStory_BaseAbility_2210_EnterFever_P1_ElationPoint",
-                      "constants": [],
-                      "variables": [
-                        "DV_FantasticStory_BaseAbility_2210_EnterFever_P1_ElationPoint"
-                      ]
+                      "displayLines": "DV_FantasticStory_BaseAbility_2210_EnterFever_P1_ElationPoint"
                     },
                     "TryStartElationTime_ElationTimeIsNoConsume": 1
                   },
@@ -493,12 +433,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1205308237\">Modifier_FantasticStory_BaseAbility_2210_ToBE_02</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2210_EnterFever_P4_Ratio) || RETURN",
-                      "displayLines": "DV_FantasticStory_BaseAbility_2210_EnterFever_P4_Ratio",
-                      "constants": [],
-                      "variables": [
-                        "DV_FantasticStory_BaseAbility_2210_EnterFever_P4_Ratio"
-                      ]
+                      "displayLines": "DV_FantasticStory_BaseAbility_2210_EnterFever_P4_Ratio"
                     }
                   }
                 }

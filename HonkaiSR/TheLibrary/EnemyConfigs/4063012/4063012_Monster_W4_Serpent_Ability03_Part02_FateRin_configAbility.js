@@ -55,13 +55,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] ({[Skill03[1]]}) || Variables[1] (_Layer) || MUL || RETURN",
-                "displayLines": "({[Skill03[1]]} * _Layer)",
-                "constants": [],
-                "variables": [
-                  "{[Skill03[1]]}",
-                  "_Layer"
-                ]
+                "displayLines": "({[Skill03[1]]} * _Layer)"
               }
             }
           ]

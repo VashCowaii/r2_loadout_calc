@@ -300,14 +300,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "consumePercent": {
-                    "operator": "Constants[0] (1) || Variables[0] (MDF_InitHP) || SUB || RETURN",
-                    "displayLines": "(1 - MDF_InitHP)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_InitHP"
-                    ]
+                    "displayLines": "(1 - MDF_InitHP)"
                   }
                 },
                 {
@@ -318,14 +311,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_DefenceAddedRatio) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_DefenceAddedRatio)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_DefenceAddedRatio"
-                    ]
+                    "displayLines": "(0 - MDF_DefenceAddedRatio)"
                   }
                 }
               ]
@@ -643,12 +629,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_W4_Unicorn_01_BattleEvent_Ultra_BaseSpeed) || RETURN",
-                    "displayLines": "MDF_W4_Unicorn_01_BattleEvent_Ultra_BaseSpeed",
-                    "constants": [],
-                    "variables": [
-                      "MDF_W4_Unicorn_01_BattleEvent_Ultra_BaseSpeed"
-                    ]
+                    "displayLines": "MDF_W4_Unicorn_01_BattleEvent_Ultra_BaseSpeed"
                   }
                 }
               ]

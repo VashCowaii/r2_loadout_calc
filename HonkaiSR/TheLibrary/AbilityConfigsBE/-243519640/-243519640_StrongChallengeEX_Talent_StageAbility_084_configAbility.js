@@ -73,21 +73,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1773698342\">MStrongChallengeEX_Talent_StageAbility_TGT_084</a>[<span class=\"descriptionNumberColor\">Montane Gush</span>]",
                   "duration": {
-                    "operator": "Variables[0] (MDF_BPCrit_Lifetime) || RETURN",
-                    "displayLines": "MDF_BPCrit_Lifetime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_BPCrit_Lifetime"
-                    ]
+                    "displayLines": "MDF_BPCrit_Lifetime"
                   },
                   "valuePerStack": {
                     "MDF_BPCrit_DamageAddedRatio": {
-                      "operator": "Variables[0] (MDF_BPCrit_DamageAddedRatio) || RETURN",
-                      "displayLines": "MDF_BPCrit_DamageAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_BPCrit_DamageAddedRatio"
-                      ]
+                      "displayLines": "MDF_BPCrit_DamageAddedRatio"
                     }
                   }
                 }
@@ -129,20 +119,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1308997662\">MStrongChallengeEX_Talent_StageAbility_PLY_084</a>",
                   "valuePerStack": {
                     "MDF_BPCrit_DamageAddedRatio": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     },
                     "MDF_BPCrit_Lifetime": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     }
                   }
                 }

@@ -54,12 +54,7 @@ const configAbility = {
                     "target": "{{All Team Members(Exclude Memosprites and Self)}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (25) || RETURN",
-                    "displayLines": "25",
-                    "constants": [],
-                    "variables": [
-                      25
-                    ]
+                    "displayLines": "25"
                   },
                   "isFixed": "(Fixed)"
                 },
@@ -72,23 +67,13 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   }
                 },
                 {
                   "name": "Skill Points Modification",
                   "adjustmentValue": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "adjustmentType": "+"
                 }
@@ -137,20 +122,10 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "Damage": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     },
                     "Toughness": {
-                      "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                      "displayLines": "ST Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "ST Toughness Value"
-                      ]
+                      "displayLines": "ST Toughness Value"
                     },
                     "ToughnessDMGType": {
                       "DamageType": "Physical"
@@ -172,12 +147,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "Damage": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     },
                     "Toughness": null,
                     "Tags": null,

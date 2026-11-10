@@ -41,21 +41,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"2036544920\">Standard_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-            "displayLines": "{[Skill06[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill06[1]]}"
-            ]
+            "displayLines": "{[Skill06[1]]}"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[Skill06[2]]}) || RETURN",
-              "displayLines": "{[Skill06[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[2]]}"
-              ]
+              "displayLines": "{[Skill06[2]]}"
             }
           }
         }
@@ -69,21 +59,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"2036544920\">Standard_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-            "displayLines": "{[Skill06[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill06[1]]}"
-            ]
+            "displayLines": "{[Skill06[1]]}"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             }
           }
         }

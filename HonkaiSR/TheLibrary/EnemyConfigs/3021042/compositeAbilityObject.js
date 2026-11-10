@@ -106,12 +106,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_ShowValue) || RETURN",
-                    "displayLines": "MDF_ShowValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ShowValue"
-                    ]
+                    "displayLines": "MDF_ShowValue"
                   }
                 }
               ]
@@ -1097,13 +1092,7 @@ const compositeAbilityObject = {
               "duration": -1,
               "valuePerStack": {
                 "MDF_ShowValue": {
-                  "operator": "Variables[0] ({[Skill01[1]]}) || Variables[1] (_MaxHP) || MUL || RETURN",
-                  "displayLines": "({[Skill01[1]]} * _MaxHP)",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[1]]}",
-                    "_MaxHP"
-                  ]
+                  "displayLines": "({[Skill01[1]]} * _MaxHP)"
                 }
               },
               "casterAssign": "TargetSelf"
@@ -1120,13 +1109,7 @@ const compositeAbilityObject = {
               "duration": -1,
               "valuePerStack": {
                 "MDF_ShowValue": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || Variables[1] (_MaxHP) || MUL || RETURN",
-                  "displayLines": "({[Skill01[0]]} * _MaxHP)",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}",
-                    "_MaxHP"
-                  ]
+                  "displayLines": "({[Skill01[0]]} * _MaxHP)"
                 }
               },
               "casterAssign": "TargetSelf"
@@ -1530,13 +1513,7 @@ const compositeAbilityObject = {
                         "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]"
                       ],
                       "value": {
-                        "operator": "Variables[0] ({[SkillP01[0]]}) || Variables[1] (_MaxHP) || MUL || RETURN",
-                        "displayLines": "({[SkillP01[0]]} * _MaxHP)",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillP01[0]]}",
-                          "_MaxHP"
-                        ]
+                        "displayLines": "({[SkillP01[0]]} * _MaxHP)"
                       }
                     }
                   ],
@@ -1551,13 +1528,7 @@ const compositeAbilityObject = {
                       "duration": 2,
                       "valuePerStack": {
                         "MDF_ShowValue": {
-                          "operator": "Variables[0] ({[SkillP01[0]]}) || Variables[1] (_MaxHP) || MUL || RETURN",
-                          "displayLines": "({[SkillP01[0]]} * _MaxHP)",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillP01[0]]}",
-                            "_MaxHP"
-                          ]
+                          "displayLines": "({[SkillP01[0]]} * _MaxHP)"
                         }
                       },
                       "casterAssign": "TargetSelf"
@@ -1605,13 +1576,7 @@ const compositeAbilityObject = {
                       "duration": 2,
                       "valuePerStack": {
                         "MDF_ShowValue": {
-                          "operator": "Variables[0] ({[SkillP01[0]]}) || Variables[1] (_MaxHP) || MUL || RETURN",
-                          "displayLines": "({[SkillP01[0]]} * _MaxHP)",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillP01[0]]}",
-                            "_MaxHP"
-                          ]
+                          "displayLines": "({[SkillP01[0]]} * _MaxHP)"
                         }
                       },
                       "casterAssign": "TargetSelf"
@@ -1626,13 +1591,7 @@ const compositeAbilityObject = {
                         "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]"
                       ],
                       "value": {
-                        "operator": "Variables[0] ({[SkillP01[0]]}) || Variables[1] (_MaxHP) || MUL || RETURN",
-                        "displayLines": "({[SkillP01[0]]} * _MaxHP)",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillP01[0]]}",
-                          "_MaxHP"
-                        ]
+                        "displayLines": "({[SkillP01[0]]} * _MaxHP)"
                       }
                     },
                     {
@@ -1645,13 +1604,7 @@ const compositeAbilityObject = {
                         "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]"
                       ],
                       "value": {
-                        "operator": "Variables[0] ({[SkillP01[0]]}) || Variables[1] (_MaxHP) || MUL || RETURN",
-                        "displayLines": "({[SkillP01[0]]} * _MaxHP)",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillP01[0]]}",
-                          "_MaxHP"
-                        ]
+                        "displayLines": "({[SkillP01[0]]} * _MaxHP)"
                       }
                     }
                   ],
@@ -1666,13 +1619,7 @@ const compositeAbilityObject = {
                       "duration": 2,
                       "valuePerStack": {
                         "MDF_ShowValue": {
-                          "operator": "Variables[0] ({[SkillP01[0]]}) || Variables[1] (_MaxHP) || MUL || RETURN",
-                          "displayLines": "({[SkillP01[0]]} * _MaxHP)",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillP01[0]]}",
-                            "_MaxHP"
-                          ]
+                          "displayLines": "({[SkillP01[0]]} * _MaxHP)"
                         }
                       },
                       "casterAssign": "TargetSelf"
@@ -1951,13 +1898,7 @@ const compositeAbilityObject = {
               "duration": -1,
               "valuePerStack": {
                 "MDF_ShowValue": {
-                  "operator": "Variables[0] ({[Skill01[1]]}) || Variables[1] (_MaxHP) || MUL || RETURN",
-                  "displayLines": "({[Skill01[1]]} * _MaxHP)",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[1]]}",
-                    "_MaxHP"
-                  ]
+                  "displayLines": "({[Skill01[1]]} * _MaxHP)"
                 }
               },
               "casterAssign": "TargetSelf"
@@ -1974,13 +1915,7 @@ const compositeAbilityObject = {
               "duration": -1,
               "valuePerStack": {
                 "MDF_ShowValue": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || Variables[1] (_MaxHP) || MUL || RETURN",
-                  "displayLines": "({[Skill01[0]]} * _MaxHP)",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}",
-                    "_MaxHP"
-                  ]
+                  "displayLines": "({[Skill01[0]]} * _MaxHP)"
                 }
               },
               "casterAssign": "TargetSelf"

@@ -31,36 +31,16 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1246789467\">Enemy_W2_Cocolia_IF_SoftFrenzyController</a>",
           "valuePerStack": {
             "MDF_FrenzyStartDelay": {
-              "operator": "Variables[0] ({[SkillEX05[0]]}) || RETURN",
-              "displayLines": "{[SkillEX05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX05[0]]}"
-              ]
+              "displayLines": "{[SkillEX05[0]]}"
             },
             "MDF_FrenzyIntervalDelay": {
-              "operator": "Variables[0] ({[SkillEX05[1]]}) || RETURN",
-              "displayLines": "{[SkillEX05[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX05[1]]}"
-              ]
+              "displayLines": "{[SkillEX05[1]]}"
             },
             "MDF_MaxFrenzyLayer": {
-              "operator": "Variables[0] ({[SkillEX05[2]]}) || RETURN",
-              "displayLines": "{[SkillEX05[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX05[2]]}"
-              ]
+              "displayLines": "{[SkillEX05[2]]}"
             },
             "MDF_TokenDMGAddRatioPerLayer": {
-              "operator": "Variables[0] ({[SkillEX05[3]]}) || RETURN",
-              "displayLines": "{[SkillEX05[3]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX05[3]]}"
-              ]
+              "displayLines": "{[SkillEX05[3]]}"
             }
           }
         }

@@ -16,12 +16,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-        "displayLines": "AOE Toughness Value",
-        "constants": [],
-        "variables": [
-          "AOE Toughness Value"
-        ]
+        "displayLines": "AOE Toughness Value"
       },
       "variableName": "DanHengPT_Stance_All"
     },
@@ -122,20 +117,10 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (DanHengPT_Passive_Count) || RETURN",
-        "displayLines": "DanHengPT_Passive_Count",
-        "constants": [],
-        "variables": [
-          "DanHengPT_Passive_Count"
-        ]
+        "displayLines": "DanHengPT_Passive_Count"
       },
       "maximum": {
-        "operator": "Variables[0] (DanHengPT_Passive_MaxCount) || RETURN",
-        "displayLines": "DanHengPT_Passive_MaxCount",
-        "constants": [],
-        "variables": [
-          "DanHengPT_Passive_MaxCount"
-        ]
+        "displayLines": "DanHengPT_Passive_MaxCount"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -144,12 +129,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (0.8) || RETURN",
-        "displayLines": "0.8",
-        "constants": [],
-        "variables": [
-          0.8
-        ]
+        "displayLines": "0.8"
       },
       "variableName": "Skill03_InsertDanHengPTDamagePercentage"
     },
@@ -163,26 +143,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.8) || Variables[1] (2) || MUL || RETURN",
-            "displayLines": "(0.8 * 2)",
-            "constants": [],
-            "variables": [
-              0.8,
-              2
-            ]
+            "displayLines": "(0.8 * 2)"
           },
           "variableName": "Skill03_InsertOwnerDamagePercentage"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.4) || Variables[1] (2) || MUL || RETURN",
-            "displayLines": "(0.4 * 2)",
-            "constants": [],
-            "variables": [
-              0.4,
-              2
-            ]
+            "displayLines": "(0.4 * 2)"
           },
           "variableName": "SkillTree_PointB3_OwnerDamagePercentage"
         }
@@ -191,24 +159,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.8) || RETURN",
-            "displayLines": "0.8",
-            "constants": [],
-            "variables": [
-              0.8
-            ]
+            "displayLines": "0.8"
           },
           "variableName": "Skill03_InsertOwnerDamagePercentage"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.4) || RETURN",
-            "displayLines": "0.4",
-            "constants": [],
-            "variables": [
-              0.4
-            ]
+            "displayLines": "0.4"
           },
           "variableName": "SkillTree_PointB3_OwnerDamagePercentage"
         }
@@ -250,12 +208,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_ShieldUPRatioTemp) || RETURN",
-                    "displayLines": "MDF_ShieldUPRatioTemp",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ShieldUPRatioTemp"
-                    ]
+                    "displayLines": "MDF_ShieldUPRatioTemp"
                   },
                   "variableName": "DanHengPT_ExtraShieldUPRatio"
                 }
@@ -328,12 +281,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_DamageRatioTemp) || RETURN",
-                "displayLines": "MDF_DamageRatioTemp",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageRatioTemp"
-                ]
+                "displayLines": "MDF_DamageRatioTemp"
               },
               "variableName": "DanHengPT_ExtraDamageRatio"
             },
@@ -355,12 +303,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_DamageCountTemp) || RETURN",
-                "displayLines": "MDF_DamageCountTemp",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageCountTemp"
-                ]
+                "displayLines": "MDF_DamageCountTemp"
               },
               "variableName": "DanHengPT_ExtraDamageCount"
             }
@@ -521,12 +464,7 @@ const configAbility = {
                 {
                   "name": "Skill Points Modification",
                   "adjustmentValue": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "adjustmentType": "+"
                 },
@@ -538,21 +476,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"2035403394\">DanHengPT_Eidolon1</a>[<span class=\"descriptionNumberColor\">Shed Scales of Old</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.18) || RETURN",
-                      "displayLines": "0.18",
-                      "constants": [],
-                      "variables": [
-                        0.18
-                      ]
+                      "displayLines": "0.18"
                     }
                   }
                 }
@@ -634,24 +562,14 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 1,
               "maxValue": {
-                "operator": "Variables[0] (DanHengPT_Passive_MaxCount) || RETURN",
-                "displayLines": "DanHengPT_Passive_MaxCount",
-                "constants": [],
-                "variables": [
-                  "DanHengPT_Passive_MaxCount"
-                ]
+                "displayLines": "DanHengPT_Passive_MaxCount"
               },
               "includeMaxValueInRange": true,
               "enteringRange": [
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (DanHengPT_Passive_Count) || RETURN",
-                    "displayLines": "DanHengPT_Passive_Count",
-                    "constants": [],
-                    "variables": [
-                      "DanHengPT_Passive_Count"
-                    ]
+                    "displayLines": "DanHengPT_Passive_Count"
                   },
                   "priorState": "Active"
                 }
@@ -660,12 +578,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (DanHengPT_Passive_Count) || RETURN",
-                    "displayLines": "DanHengPT_Passive_Count",
-                    "constants": [],
-                    "variables": [
-                      "DanHengPT_Passive_Count"
-                    ]
+                    "displayLines": "DanHengPT_Passive_Count"
                   },
                   "priorState": "Normal"
                 }
@@ -674,12 +587,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (DanHengPT_Passive_Count) || RETURN",
-                    "displayLines": "DanHengPT_Passive_Count",
-                    "constants": [],
-                    "variables": [
-                      "DanHengPT_Passive_Count"
-                    ]
+                    "displayLines": "DanHengPT_Passive_Count"
                   },
                   "priorState": "Active"
                 }
@@ -731,14 +639,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-892900131\">DanHengPT_PointB1_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">Empyreanity</span>]",
                       "valuePerStack": {
                         "MDF_AttackDelta": {
-                          "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (DanHengPT_ConvertAttack) || SUB || Variables[2] (0.15) || MUL || RETURN",
-                          "displayLines": "((DanHengPT_Attack - DanHengPT_ConvertAttack) * 0.15)",
-                          "constants": [],
-                          "variables": [
-                            "DanHengPT_Attack",
-                            "DanHengPT_ConvertAttack",
-                            0.15
-                          ]
+                          "displayLines": "((DanHengPT_Attack - DanHengPT_ConvertAttack) * 0.15)"
                         }
                       }
                     }
@@ -790,14 +691,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-892900131\">DanHengPT_PointB1_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">Empyreanity</span>]",
                       "valuePerStack": {
                         "MDF_AttackDelta": {
-                          "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (DanHengPT_ConvertAttack) || SUB || Variables[2] (0.15) || MUL || RETURN",
-                          "displayLines": "((DanHengPT_Attack - DanHengPT_ConvertAttack) * 0.15)",
-                          "constants": [],
-                          "variables": [
-                            "DanHengPT_Attack",
-                            "DanHengPT_ConvertAttack",
-                            0.15
-                          ]
+                          "displayLines": "((DanHengPT_Attack - DanHengPT_ConvertAttack) * 0.15)"
                         }
                       }
                     }

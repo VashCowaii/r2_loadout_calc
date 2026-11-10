@@ -45,21 +45,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "DamageElation": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 },
                 "dmgFormula": "Elation Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Elation DMG"
@@ -78,21 +68,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "DamageElation": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 },
                 "dmgFormula": "Elation Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Elation DMG"
@@ -123,20 +103,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Basic ATK"
@@ -155,20 +125,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Basic ATK"
@@ -211,14 +171,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (UltraAttackCount) || Constants[0] (1) || SUB || RETURN",
-        "displayLines": "(UltraAttackCount - 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "UltraAttackCount"
-        ]
+        "displayLines": "(UltraAttackCount - 1)"
       },
       "variableName": "UltraAttackCount"
     },

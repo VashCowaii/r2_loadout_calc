@@ -14,12 +14,7 @@ const configAbility = {
         {
           "name": "Adjust Team Punchline Value",
           "value": {
-            "operator": "Variables[0] (5) || RETURN",
-            "displayLines": "5",
-            "constants": [],
-            "variables": [
-              5
-            ]
+            "displayLines": "5"
           },
           "adjustment": "Add"
         }
@@ -28,13 +23,7 @@ const configAbility = {
     {
       "name": "Adjust Team Punchline Value",
       "value": {
-        "operator": "Variables[0] (2) || Variables[1] (Sparxie_SkillTree_PointB2_UltraEPAddValue) || ADD || RETURN",
-        "displayLines": "(2 + Sparxie_SkillTree_PointB2_UltraEPAddValue)",
-        "constants": [],
-        "variables": [
-          2,
-          "Sparxie_SkillTree_PointB2_UltraEPAddValue"
-        ]
+        "displayLines": "(2 + Sparxie_SkillTree_PointB2_UltraEPAddValue)"
       },
       "adjustment": "Add"
     },
@@ -54,12 +43,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (Sparxie_SkillTree_PointB2_UltraBPAddValue) || RETURN",
-            "displayLines": "Sparxie_SkillTree_PointB2_UltraBPAddValue",
-            "constants": [],
-            "variables": [
-              "Sparxie_SkillTree_PointB2_UltraBPAddValue"
-            ]
+            "displayLines": "Sparxie_SkillTree_PointB2_UltraBPAddValue"
           }
         },
         {
@@ -70,12 +54,7 @@ const configAbility = {
           },
           "function": "Set",
           "value": {
-            "operator": "Variables[0] (Sparxie_EnergyPoint) || RETURN",
-            "displayLines": "Sparxie_EnergyPoint",
-            "constants": [],
-            "variables": [
-              "Sparxie_EnergyPoint"
-            ]
+            "displayLines": "Sparxie_EnergyPoint"
           },
           "silentChange": true
         }
@@ -100,22 +79,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (_CurrentElationDamage) || Variables[1] (0.6) || MUL || Variables[2] (0.5) || ADD || RETURN",
-          "displayLines": "((_CurrentElationDamage * 0.6) + 0.5)",
-          "constants": [],
-          "variables": [
-            "_CurrentElationDamage",
-            0.6,
-            0.5
-          ]
+          "displayLines": "((_CurrentElationDamage * 0.6) + 0.5)"
         },
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -142,12 +109,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "DamageElation": {
-              "operator": "Variables[0] (0.48) || RETURN",
-              "displayLines": "0.48",
-              "constants": [],
-              "variables": [
-                0.48
-              ]
+              "displayLines": "0.48"
             },
             "dmgFormula": "Elation Scaling",
             "Toughness": null,

@@ -47,13 +47,7 @@ const configAbility = {
                   },
                   "variableName": "_Partner_Count_Show",
                   "value": {
-                    "operator": "Variables[0] (1) || Variables[1] (_Evernight_00_Extra_Energy) || ADD || RETURN",
-                    "displayLines": "(1 + _Evernight_00_Extra_Energy)",
-                    "constants": [],
-                    "variables": [
-                      1,
-                      "_Evernight_00_Extra_Energy"
-                    ]
+                    "displayLines": "(1 + _Evernight_00_Extra_Energy)"
                   }
                 },
                 {
@@ -64,13 +58,7 @@ const configAbility = {
                   },
                   "variableName": "_Partner_Count",
                   "value": {
-                    "operator": "Variables[0] (1) || Variables[1] (_Evernight_00_Extra_Energy) || ADD || RETURN",
-                    "displayLines": "(1 + _Evernight_00_Extra_Energy)",
-                    "constants": [],
-                    "variables": [
-                      1,
-                      "_Evernight_00_Extra_Energy"
-                    ]
+                    "displayLines": "(1 + _Evernight_00_Extra_Energy)"
                   }
                 },
                 {
@@ -129,13 +117,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (0.65) || Variables[1] (_S02_Buff_Value) || ADD || RETURN",
-                            "displayLines": "(0.65 + _S02_Buff_Value)",
-                            "constants": [],
-                            "variables": [
-                              0.65,
-                              "_S02_Buff_Value"
-                            ]
+                            "displayLines": "(0.65 + _S02_Buff_Value)"
                           },
                           "variableName": "_S02_Buff_Value"
                         }
@@ -153,13 +135,7 @@ const configAbility = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (0.5) || Variables[1] (_S02_Buff_Value) || ADD || RETURN",
-                                "displayLines": "(0.5 + _S02_Buff_Value)",
-                                "constants": [],
-                                "variables": [
-                                  0.5,
-                                  "_S02_Buff_Value"
-                                ]
+                                "displayLines": "(0.5 + _S02_Buff_Value)"
                               },
                               "variableName": "_S02_Buff_Value"
                             }
@@ -177,13 +153,7 @@ const configAbility = {
                                 {
                                   "name": "Define Custom Variable",
                                   "value": {
-                                    "operator": "Variables[0] (0.15) || Variables[1] (_S02_Buff_Value) || ADD || RETURN",
-                                    "displayLines": "(0.15 + _S02_Buff_Value)",
-                                    "constants": [],
-                                    "variables": [
-                                      0.15,
-                                      "_S02_Buff_Value"
-                                    ]
+                                    "displayLines": "(0.15 + _S02_Buff_Value)"
                                   },
                                   "variableName": "_S02_Buff_Value"
                                 }
@@ -201,13 +171,7 @@ const configAbility = {
                                     {
                                       "name": "Define Custom Variable",
                                       "value": {
-                                        "operator": "Variables[0] (0.05) || Variables[1] (_S02_Buff_Value) || ADD || RETURN",
-                                        "displayLines": "(0.05 + _S02_Buff_Value)",
-                                        "constants": [],
-                                        "variables": [
-                                          0.05,
-                                          "_S02_Buff_Value"
-                                        ]
+                                        "displayLines": "(0.05 + _S02_Buff_Value)"
                                       },
                                       "variableName": "_S02_Buff_Value"
                                     }
@@ -229,30 +193,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1894879081\">Evernight_Ability02_Bonus</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "MDF_Conv": {
-                      "operator": "Variables[0] (0.24) || Variables[1] (S02_ExtraRatio) || ADD || RETURN",
-                      "displayLines": "(0.24 + S02_ExtraRatio)",
-                      "constants": [],
-                      "variables": [
-                        0.24,
-                        "S02_ExtraRatio"
-                      ]
+                      "displayLines": "(0.24 + S02_ExtraRatio)"
                     },
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (_S02_Buff_Value) || RETURN",
-                      "displayLines": "_S02_Buff_Value",
-                      "constants": [],
-                      "variables": [
-                        "_S02_Buff_Value"
-                      ]
+                      "displayLines": "_S02_Buff_Value"
                     }
                   }
                 }

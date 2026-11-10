@@ -42,21 +42,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (4) || Variables[1] (1.2) || ADD || RETURN",
-              "displayLines": "(4 + 1.2)",
-              "constants": [],
-              "variables": [
-                4,
-                1.2
-              ]
+              "displayLines": "(4 + 1.2)"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -74,20 +63,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (4) || RETURN",
-              "displayLines": "4",
-              "constants": [],
-              "variables": [
-                4
-              ]
+              "displayLines": "4"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"

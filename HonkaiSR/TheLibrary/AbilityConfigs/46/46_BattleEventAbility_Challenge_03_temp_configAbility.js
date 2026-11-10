@@ -64,12 +64,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__47) || RETURN",
-                    "displayLines": "ENEMIES_OBJECT_UNUSED__47",
-                    "constants": [],
-                    "variables": [
-                      "ENEMIES_OBJECT_UNUSED__47"
-                    ]
+                    "displayLines": "ENEMIES_OBJECT_UNUSED__47"
                   },
                   "formula": "Heal from Target MaxHP"
                 }

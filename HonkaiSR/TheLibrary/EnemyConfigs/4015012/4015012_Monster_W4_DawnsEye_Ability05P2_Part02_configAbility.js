@@ -44,12 +44,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill05P2[0]]}) || RETURN",
-          "displayLines": "{[Skill05P2[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill05P2[0]]}"
-          ]
+          "displayLines": "{[Skill05P2[0]]}"
         },
         "HitSplit": 0.2,
         "Toughness": null,
@@ -67,12 +62,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill05P2[0]]}) || RETURN",
-          "displayLines": "{[Skill05P2[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill05P2[0]]}"
-          ]
+          "displayLines": "{[Skill05P2[0]]}"
         },
         "HitSplit": 0.2,
         "Toughness": null,
@@ -90,12 +80,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill05P2[0]]}) || RETURN",
-          "displayLines": "{[Skill05P2[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill05P2[0]]}"
-          ]
+          "displayLines": "{[Skill05P2[0]]}"
         },
         "HitSplit": 0.6,
         "Toughness": null,
@@ -110,24 +95,14 @@ const configAbility = {
         "value1": "Thunder_CountDark",
         "compareType": ">",
         "value2": {
-          "operator": "Variables[0] ({[Skill05P2[1]]}) || RETURN",
-          "displayLines": "{[Skill05P2[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill05P2[1]]}"
-          ]
+          "displayLines": "{[Skill05P2[1]]}"
         }
       },
       "passed": [
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[Skill05P2[1]]}) || RETURN",
-            "displayLines": "{[Skill05P2[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill05P2[1]]}"
-            ]
+            "displayLines": "{[Skill05P2[1]]}"
           },
           "variableName": "Thunder_CountTotal"
         }
@@ -136,12 +111,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Thunder_CountDark) || RETURN",
-            "displayLines": "Thunder_CountDark",
-            "constants": [],
-            "variables": [
-              "Thunder_CountDark"
-            ]
+            "displayLines": "Thunder_CountDark"
           },
           "variableName": "Thunder_CountTotal"
         }
@@ -174,15 +144,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "DamageFlat": {
-              "operator": "Variables[0] ({[SkillP02[0]]}) || Variables[1] (BaseAttack) || MUL || Variables[2] (Thunder_CountTotal) || MUL || Variables[3] (CurrentLightTeamCount) || DIV || RETURN",
-              "displayLines": "((({[SkillP02[0]]} * BaseAttack) * Thunder_CountTotal) / CurrentLightTeamCount)",
-              "constants": [],
-              "variables": [
-                "{[SkillP02[0]]}",
-                "BaseAttack",
-                "Thunder_CountTotal",
-                "CurrentLightTeamCount"
-              ]
+              "displayLines": "((({[SkillP02[0]]} * BaseAttack) * Thunder_CountTotal) / CurrentLightTeamCount)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -198,14 +160,7 @@ const configAbility = {
           },
           "variableName": "Thunder_CountDark",
           "value": {
-            "operator": "Constants[0] (0) || Variables[0] (Thunder_CountTotal) || SUB || RETURN",
-            "displayLines": "(0 - Thunder_CountTotal)",
-            "constants": [
-              0
-            ],
-            "variables": [
-              "Thunder_CountTotal"
-            ]
+            "displayLines": "(0 - Thunder_CountTotal)"
           },
           "max": 999
         },
@@ -254,12 +209,7 @@ const configAbility = {
       "conditions": {
         "name": "Enemy ID",
         "ID": {
-          "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
-          "displayLines": "PartEntity1_MonsterID",
-          "constants": [],
-          "variables": [
-            "PartEntity1_MonsterID"
-          ]
+          "displayLines": "PartEntity1_MonsterID"
         },
         "target": {
           "name": "Target Name",
@@ -322,12 +272,7 @@ const configAbility = {
       "conditions": {
         "name": "Enemy ID",
         "ID": {
-          "operator": "Variables[0] (PartEntity3_MonsterID) || RETURN",
-          "displayLines": "PartEntity3_MonsterID",
-          "constants": [],
-          "variables": [
-            "PartEntity3_MonsterID"
-          ]
+          "displayLines": "PartEntity3_MonsterID"
         },
         "target": {
           "name": "Target Name",

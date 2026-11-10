@@ -13,12 +13,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1478170495\">Colossus_EnterBattlePowerUp</a>",
       "valuePerStack": {
         "MDF_AllDamageReduce": {
-          "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-          "displayLines": "{[SkillP01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[0]]}"
-          ]
+          "displayLines": "{[SkillP01[0]]}"
         }
       }
     },
@@ -74,12 +69,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">StageFinalDMG</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageAddedRatio) || RETURN",
-                "displayLines": "MDF_AllDamageAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageAddedRatio"
-                ]
+                "displayLines": "MDF_AllDamageAddedRatio"
               }
             }
           ]
@@ -107,12 +97,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                "displayLines": "MDF_AllDamageReduce",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageReduce"
-                ]
+                "displayLines": "MDF_AllDamageReduce"
               }
             }
           ]

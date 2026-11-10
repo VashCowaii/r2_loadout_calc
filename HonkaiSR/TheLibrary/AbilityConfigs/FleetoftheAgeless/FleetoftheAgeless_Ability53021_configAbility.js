@@ -33,12 +33,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.08) || RETURN",
-                "displayLines": "0.08",
-                "constants": [],
-                "variables": [
-                  0.08
-                ]
+                "displayLines": "0.08"
               }
             }
           ]
@@ -74,12 +69,7 @@ const configAbility = {
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (120) || RETURN",
-                      "displayLines": "120",
-                      "constants": [],
-                      "variables": [
-                        120
-                      ]
+                      "displayLines": "120"
                     }
                   },
                   "passed": [
@@ -121,12 +111,7 @@ const configAbility = {
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (120) || RETURN",
-                      "displayLines": "120",
-                      "constants": [],
-                      "variables": [
-                        120
-                      ]
+                      "displayLines": "120"
                     }
                   },
                   "passed": [
@@ -154,12 +139,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": {
-                "operator": "Variables[0] (120) || RETURN",
-                "displayLines": "120",
-                "constants": [],
-                "variables": [
-                  120
-                ]
+                "displayLines": "120"
               },
               "enteringRange": [
                 {

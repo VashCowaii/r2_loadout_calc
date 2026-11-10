@@ -58,12 +58,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_TeamDefenceIgnoreRatio": {
-              "operator": "Variables[0] (MDF_TeamDefenceIgnoreRatio) || RETURN",
-              "displayLines": "MDF_TeamDefenceIgnoreRatio",
-              "constants": [],
-              "variables": [
-                "MDF_TeamDefenceIgnoreRatio"
-              ]
+              "displayLines": "MDF_TeamDefenceIgnoreRatio"
             }
           }
         }
@@ -127,12 +122,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1872257470\">LC_23061_Sub_Team</a>[<span class=\"descriptionNumberColor\">Radiant Crown</span>]",
                   "valuePerStack": {
                     "MDF_TeamDefenceIgnoreRatio": {
-                      "operator": "Variables[0] (MDF_TeamDefenceIgnoreRatio) || RETURN",
-                      "displayLines": "MDF_TeamDefenceIgnoreRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_TeamDefenceIgnoreRatio"
-                      ]
+                      "displayLines": "MDF_TeamDefenceIgnoreRatio"
                     }
                   }
                 }
@@ -219,25 +209,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_BPSpendDelta) || INVERT || RETURN",
-                    "displayLines": "-MDF_BPSpendDelta",
-                    "constants": [],
-                    "variables": [
-                      "MDF_BPSpendDelta"
-                    ]
+                    "displayLines": "-MDF_BPSpendDelta"
                   },
                   "variableName": "MDF_BPSpendDelta"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_BPSpendCount) || Variables[1] (MDF_BPSpendDelta) || ADD || RETURN",
-                    "displayLines": "(MDF_BPSpendCount + MDF_BPSpendDelta)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_BPSpendCount",
-                      "MDF_BPSpendDelta"
-                    ]
+                    "displayLines": "(MDF_BPSpendCount + MDF_BPSpendDelta)"
                   },
                   "variableName": "MDF_BPSpendCount"
                 },
@@ -255,12 +234,7 @@ const configAbility = {
                         "value1": "MDF_BPSpendCount",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (4) || RETURN",
-                          "displayLines": "4",
-                          "constants": [],
-                          "variables": [
-                            4
-                          ]
+                          "displayLines": "4"
                         }
                       },
                       {
@@ -284,29 +258,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-239068870\">LC_23061_Sub</a>[<span class=\"descriptionNumberColor\">Radiant Crown</span>]",
                       "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.72) || RETURN",
-                          "displayLines": "0.72",
-                          "constants": [],
-                          "variables": [
-                            0.72
-                          ]
+                          "displayLines": "0.72"
                         },
                         "MDF_TeamDefenceIgnoreRatio": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     },

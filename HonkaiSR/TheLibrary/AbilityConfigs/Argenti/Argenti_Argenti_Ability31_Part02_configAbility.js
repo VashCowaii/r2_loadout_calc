@@ -36,12 +36,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "isFixed": "* ERR"
         },
@@ -52,12 +47,7 @@ const configAbility = {
             "value1": "MDF_Layer",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-              "displayLines": "MDF_MaxCount",
-              "constants": [],
-              "variables": [
-                "MDF_MaxCount"
-              ]
+              "displayLines": "MDF_MaxCount"
             }
           },
           "passed": [
@@ -69,12 +59,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"68075206\">Argenti_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                "displayLines": "MDF_MaxCount",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxCount"
-                ]
+                "displayLines": "MDF_MaxCount"
               }
             }
           ]
@@ -90,20 +75,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (2.8) || RETURN",
-          "displayLines": "2.8",
-          "constants": [],
-          "variables": [
-            2.8
-          ]
+          "displayLines": "2.8"
         },
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "attackType": "Ultimate",
@@ -113,14 +88,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (6) || Constants[0] (1) || SUB || RETURN",
-        "displayLines": "(6 - 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          6
-        ]
+        "displayLines": "(6 - 1)"
       },
       "execute": [
         {
@@ -203,12 +171,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (6) || RETURN",
-        "displayLines": "6",
-        "constants": [],
-        "variables": [
-          6
-        ]
+        "displayLines": "6"
       },
       "execute": [
         {
@@ -229,20 +192,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] (0.95) || RETURN",
-                  "displayLines": "0.95",
-                  "constants": [],
-                  "variables": [
-                    0.95
-                  ]
+                  "displayLines": "0.95"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Ultimate"

@@ -62,12 +62,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1728959136\">Monster_W5_Ripper_Passive</a>",
       "valuePerStack": {
         "MDF_TriggerSummonCount": {
-          "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[0]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[0]]}"
         }
       }
     },
@@ -111,36 +106,16 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"766895631\">Standard_Monster_Floating_DamageReduceController</a>",
               "valuePerStack": {
                 "MDF_LockHpActionDecreaseRatio": {
-                  "operator": "Variables[0] ({[PassiveSkill02[6]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[6]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[6]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill02[6]]}"
                 },
                 "MDF_LockHpUpLimitRatio": {
-                  "operator": "Variables[0] ({[PassiveSkill02[7]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[7]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[7]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill02[7]]}"
                 },
                 "MDF_DamageReduceRatio": {
-                  "operator": "Variables[0] ({[PassiveSkill02[8]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[8]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[8]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill02[8]]}"
                 },
                 "MDF_LastLockHpRatio": {
-                  "operator": "Variables[0] ({[PassiveSkill02[9]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[9]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[9]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill02[9]]}"
                 }
               }
             },

@@ -33,12 +33,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ChallengePeakBattle_Plugins_0007_ADF_1) || RETURN",
-                "displayLines": "ChallengePeakBattle_Plugins_0007_ADF_1",
-                "constants": [],
-                "variables": [
-                  "ChallengePeakBattle_Plugins_0007_ADF_1"
-                ]
+                "displayLines": "ChallengePeakBattle_Plugins_0007_ADF_1"
               }
             }
           ]
@@ -112,37 +107,17 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1538654006\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_03</a>[<span class=\"descriptionNumberColor\">No Break No Rise</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (ChallengePeakBattle_Plugins_0007_ADF_3) || RETURN",
-                "displayLines": "ChallengePeakBattle_Plugins_0007_ADF_3",
-                "constants": [],
-                "variables": [
-                  "ChallengePeakBattle_Plugins_0007_ADF_3"
-                ]
+                "displayLines": "ChallengePeakBattle_Plugins_0007_ADF_3"
               },
               "valuePerStack": {
                 "ChallengePeakBattle_Plugins_0007_ADF_1": {
-                  "operator": "Variables[0] (ChallengePeakBattle_Plugins_0007_ADF_1) || RETURN",
-                  "displayLines": "ChallengePeakBattle_Plugins_0007_ADF_1",
-                  "constants": [],
-                  "variables": [
-                    "ChallengePeakBattle_Plugins_0007_ADF_1"
-                  ]
+                  "displayLines": "ChallengePeakBattle_Plugins_0007_ADF_1"
                 },
                 "ChallengePeakBattle_Plugins_0007_ADF_2": {
-                  "operator": "Variables[0] (ChallengePeakBattle_Plugins_0007_ADF_2) || RETURN",
-                  "displayLines": "ChallengePeakBattle_Plugins_0007_ADF_2",
-                  "constants": [],
-                  "variables": [
-                    "ChallengePeakBattle_Plugins_0007_ADF_2"
-                  ]
+                  "displayLines": "ChallengePeakBattle_Plugins_0007_ADF_2"
                 },
                 "ChallengePeakBattle_Plugins_0007_ADF_3": {
-                  "operator": "Variables[0] (ChallengePeakBattle_Plugins_0007_ADF_3) || RETURN",
-                  "displayLines": "ChallengePeakBattle_Plugins_0007_ADF_3",
-                  "constants": [],
-                  "variables": [
-                    "ChallengePeakBattle_Plugins_0007_ADF_3"
-                  ]
+                  "displayLines": "ChallengePeakBattle_Plugins_0007_ADF_3"
                 }
               }
             }
@@ -182,28 +157,13 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1555431625\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_02</a>",
                   "valuePerStack": {
                     "ChallengePeakBattle_Plugins_0007_ADF_1": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     },
                     "ChallengePeakBattle_Plugins_0007_ADF_2": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     },
                     "ChallengePeakBattle_Plugins_0007_ADF_3": {
-                      "operator": "Variables[0] (#ADF_3) || RETURN",
-                      "displayLines": "#ADF_3",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_3"
-                      ]
+                      "displayLines": "#ADF_3"
                     }
                   }
                 }
@@ -234,28 +194,13 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1588986863\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_04</a>[<span class=\"descriptionNumberColor\">No Break No Rise</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_Plugins_0007_ADF_1": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     },
                     "ChallengePeakBattle_Plugins_0007_ADF_2": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     },
                     "ChallengePeakBattle_Plugins_0007_ADF_3": {
-                      "operator": "Variables[0] (#ADF_3) || RETURN",
-                      "displayLines": "#ADF_3",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_3"
-                      ]
+                      "displayLines": "#ADF_3"
                     }
                   }
                 }

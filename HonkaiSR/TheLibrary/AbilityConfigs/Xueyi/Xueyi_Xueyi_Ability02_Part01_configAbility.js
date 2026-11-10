@@ -31,12 +31,7 @@ const configAbility = {
         "value1": "_Xueyi_PassiveLayer",
         "compareType": "=",
         "value2": {
-          "operator": "Variables[0] (_Xueyi_Count) || RETURN",
-          "displayLines": "_Xueyi_Count",
-          "constants": [],
-          "variables": [
-            "_Xueyi_Count"
-          ]
+          "displayLines": "_Xueyi_Count"
         }
       }
     }

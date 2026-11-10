@@ -62,12 +62,7 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
           "counter": {
-            "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-            "displayLines": "{[SkillP01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP01[0]]}"
-            ]
+            "displayLines": "{[SkillP01[0]]}"
           }
         }
       ],
@@ -102,12 +97,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
                   "counter": {
-                    "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                    "displayLines": "{[SkillP01[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillP01[0]]}"
-                    ]
+                    "displayLines": "{[SkillP01[0]]}"
                   }
                 }
               ]

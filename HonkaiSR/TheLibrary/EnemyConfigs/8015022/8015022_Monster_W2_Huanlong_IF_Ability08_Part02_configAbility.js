@@ -41,24 +41,14 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[PassiveSkill04[2]]}) || RETURN",
-            "displayLines": "{[PassiveSkill04[2]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill04[2]]}"
-            ]
+            "displayLines": "{[PassiveSkill04[2]]}"
           },
           "refreshPositions": false,
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID2) || RETURN",
-                "displayLines": "SummonID2",
-                "constants": [],
-                "variables": [
-                  "SummonID2"
-                ]
+                "displayLines": "SummonID2"
               },
               "locationType": "BeforeCaster"
             }
@@ -83,24 +73,14 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[PassiveSkill04[0]]}) || RETURN",
-            "displayLines": "{[PassiveSkill04[0]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill04[0]]}"
-            ]
+            "displayLines": "{[PassiveSkill04[0]]}"
           },
           "refreshPositions": false,
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID1) || RETURN",
-                "displayLines": "SummonID1",
-                "constants": [],
-                "variables": [
-                  "SummonID1"
-                ]
+                "displayLines": "SummonID1"
               },
               "locationType": "AfterCaster"
             }
@@ -155,24 +135,14 @@ const configAbility = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] ({[PassiveSkill04[2]]}) || RETURN",
-                "displayLines": "{[PassiveSkill04[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill04[2]]}"
-                ]
+                "displayLines": "{[PassiveSkill04[2]]}"
               },
               "refreshPositions": false,
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonID2) || RETURN",
-                    "displayLines": "SummonID2",
-                    "constants": [],
-                    "variables": [
-                      "SummonID2"
-                    ]
+                    "displayLines": "SummonID2"
                   },
                   "locationType": "BeforeCaster"
                 }
@@ -227,24 +197,14 @@ const configAbility = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] ({[PassiveSkill04[3]]}) || RETURN",
-                "displayLines": "{[PassiveSkill04[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill04[3]]}"
-                ]
+                "displayLines": "{[PassiveSkill04[3]]}"
               },
               "refreshPositions": false,
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonID2) || RETURN",
-                    "displayLines": "SummonID2",
-                    "constants": [],
-                    "variables": [
-                      "SummonID2"
-                    ]
+                    "displayLines": "SummonID2"
                   },
                   "locationType": "First"
                 }
@@ -299,24 +259,14 @@ const configAbility = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] ({[PassiveSkill04[0]]}) || RETURN",
-                "displayLines": "{[PassiveSkill04[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill04[0]]}"
-                ]
+                "displayLines": "{[PassiveSkill04[0]]}"
               },
               "refreshPositions": false,
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonID1) || RETURN",
-                    "displayLines": "SummonID1",
-                    "constants": [],
-                    "variables": [
-                      "SummonID1"
-                    ]
+                    "displayLines": "SummonID1"
                   },
                   "locationType": "AfterCaster"
                 }
@@ -371,24 +321,14 @@ const configAbility = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] ({[PassiveSkill04[1]]}) || RETURN",
-                "displayLines": "{[PassiveSkill04[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill04[1]]}"
-                ]
+                "displayLines": "{[PassiveSkill04[1]]}"
               },
               "refreshPositions": false,
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonID1) || RETURN",
-                    "displayLines": "SummonID1",
-                    "constants": [],
-                    "variables": [
-                      "SummonID1"
-                    ]
+                    "displayLines": "SummonID1"
                   },
                   "locationType": "Last"
                 }
@@ -514,12 +454,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
-                    "displayLines": "{[SkillEX03[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillEX03[1]]}"
-                    ]
+                    "displayLines": "{[SkillEX03[1]]}"
                   },
                   "formula": "Heal from Target MaxHP"
                 },
@@ -559,14 +494,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (SummonTimes_P1) || Constants[0] (1) || ADD || RETURN",
-        "displayLines": "(SummonTimes_P1 + 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "SummonTimes_P1"
-        ]
+        "displayLines": "(SummonTimes_P1 + 1)"
       },
       "variableName": "SummonTimes_P1"
     },

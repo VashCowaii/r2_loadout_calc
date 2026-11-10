@@ -157,12 +157,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"428140510\">Enemy_W4_DawnsEye_01_BESpeed</a>",
           "valuePerStack": {
             "MDF_Speed": {
-              "operator": "Variables[0] ({[SkillP07[5]]}) || RETURN",
-              "displayLines": "{[SkillP07[5]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP07[5]]}"
-              ]
+              "displayLines": "{[SkillP07[5]]}"
             }
           }
         },
@@ -176,12 +171,7 @@ const configAbility = {
           "conditions": {
             "name": "Enemy ID",
             "ID": {
-              "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
-              "displayLines": "PartEntity1_MonsterID",
-              "constants": [],
-              "variables": [
-                "PartEntity1_MonsterID"
-              ]
+              "displayLines": "PartEntity1_MonsterID"
             },
             "target": {
               "name": "Target Name",
@@ -204,12 +194,7 @@ const configAbility = {
               "name": "Create Enemy as Body Part",
               "partName": "Head_R",
               "value": {
-                "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
-                "displayLines": "PartEntity1_MonsterID",
-                "constants": [],
-                "variables": [
-                  "PartEntity1_MonsterID"
-                ]
+                "displayLines": "PartEntity1_MonsterID"
               },
               "offset": -2,
               "linkHitByPart": true
@@ -224,12 +209,7 @@ const configAbility = {
               "conditions": {
                 "name": "Enemy ID",
                 "ID": {
-                  "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
-                  "displayLines": "PartEntity1_MonsterID",
-                  "constants": [],
-                  "variables": [
-                    "PartEntity1_MonsterID"
-                  ]
+                  "displayLines": "PartEntity1_MonsterID"
                 },
                 "target": {
                   "name": "Target Name",
@@ -309,12 +289,7 @@ const configAbility = {
                   "valuePerStack": {
                     "MDF_TotalDamageRatioAdd": 0,
                     "MDF_TotalDamageRatioCut": {
-                      "operator": "Variables[0] ({[SkillP09[3]]}) || RETURN",
-                      "displayLines": "{[SkillP09[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP09[3]]}"
-                      ]
+                      "displayLines": "{[SkillP09[3]]}"
                     }
                   },
                   "casterAssign": "CasterSelf"
@@ -333,12 +308,7 @@ const configAbility = {
           "conditions": {
             "name": "Enemy ID",
             "ID": {
-              "operator": "Variables[0] (PartEntity3_MonsterID) || RETURN",
-              "displayLines": "PartEntity3_MonsterID",
-              "constants": [],
-              "variables": [
-                "PartEntity3_MonsterID"
-              ]
+              "displayLines": "PartEntity3_MonsterID"
             },
             "target": {
               "name": "Target Name",
@@ -361,12 +331,7 @@ const configAbility = {
               "name": "Create Enemy as Body Part",
               "partName": "Head_L",
               "value": {
-                "operator": "Variables[0] (PartEntity3_MonsterID) || RETURN",
-                "displayLines": "PartEntity3_MonsterID",
-                "constants": [],
-                "variables": [
-                  "PartEntity3_MonsterID"
-                ]
+                "displayLines": "PartEntity3_MonsterID"
               },
               "offset": 2,
               "type": 3,
@@ -382,12 +347,7 @@ const configAbility = {
               "conditions": {
                 "name": "Enemy ID",
                 "ID": {
-                  "operator": "Variables[0] (PartEntity3_MonsterID) || RETURN",
-                  "displayLines": "PartEntity3_MonsterID",
-                  "constants": [],
-                  "variables": [
-                    "PartEntity3_MonsterID"
-                  ]
+                  "displayLines": "PartEntity3_MonsterID"
                 },
                 "target": {
                   "name": "Target Name",
@@ -467,12 +427,7 @@ const configAbility = {
                   "valuePerStack": {
                     "MDF_TotalDamageRatioAdd": 0,
                     "MDF_TotalDamageRatioCut": {
-                      "operator": "Variables[0] ({[SkillP09[3]]}) || RETURN",
-                      "displayLines": "{[SkillP09[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP09[3]]}"
-                      ]
+                      "displayLines": "{[SkillP09[3]]}"
                     }
                   },
                   "casterAssign": "CasterSelf"

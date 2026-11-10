@@ -14,12 +14,7 @@ const configAbility = {
       "context": "TargetEntity",
       "value": -1,
       "max": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       }
     },
     {
@@ -35,20 +30,10 @@ const configAbility = {
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (YuKong_Flower_Count) || RETURN",
-            "displayLines": "YuKong_Flower_Count",
-            "constants": [],
-            "variables": [
-              "YuKong_Flower_Count"
-            ]
+            "displayLines": "YuKong_Flower_Count"
           },
           "maximum": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "assignState": "True",
           "priorState": "Normal",
@@ -68,20 +53,10 @@ const configAbility = {
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (YuKong_Flower_Count) || RETURN",
-            "displayLines": "YuKong_Flower_Count",
-            "constants": [],
-            "variables": [
-              "YuKong_Flower_Count"
-            ]
+            "displayLines": "YuKong_Flower_Count"
           },
           "maximum": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "assignState": "True",
           "priorState": "Active",

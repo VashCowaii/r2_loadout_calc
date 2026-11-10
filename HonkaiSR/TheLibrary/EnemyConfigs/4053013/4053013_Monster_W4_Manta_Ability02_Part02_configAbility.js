@@ -24,12 +24,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-          "displayLines": "{[Skill02[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[0]]}"
-          ]
+          "displayLines": "{[Skill02[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -46,37 +41,17 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"1240691682\">Enemy_W4_Manta_DefenseDown</a>[<span class=\"descriptionNumberColor\">Inebriated Daze</span>]",
       "duration": {
-        "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-        "displayLines": "{[Skill02[3]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill02[3]]}"
-        ]
+        "displayLines": "{[Skill02[3]]}"
       },
       "baseChance": {
-        "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-        "displayLines": "{[Skill02[1]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill02[1]]}"
-        ]
+        "displayLines": "{[Skill02[1]]}"
       },
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-          "displayLines": "{[Skill02[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[2]]}"
-          ]
+          "displayLines": "{[Skill02[2]]}"
         },
         "MDF_PropertyValue2": {
-          "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
-          "displayLines": "{[Skill02[4]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[4]]}"
-          ]
+          "displayLines": "{[Skill02[4]]}"
         }
       }
     },
@@ -113,12 +88,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || INVERT || RETURN",
-                "displayLines": "-MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "-MDF_PropertyValue"
               }
             },
             {
@@ -129,12 +99,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue2) || INVERT || RETURN",
-                "displayLines": "-MDF_PropertyValue2",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue2"
-                ]
+                "displayLines": "-MDF_PropertyValue2"
               }
             }
           ]

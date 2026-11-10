@@ -45,12 +45,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1018498779\">MissionBattleEvent60006_Charge</a>",
           "valuePerStack": {
             "MDF_SPValue": {
-              "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
-              "displayLines": "#BattleEvent_P4_ADF",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P4_ADF"
-              ]
+              "displayLines": "#BattleEvent_P4_ADF"
             }
           }
         },
@@ -69,12 +64,7 @@ const compositeAbilityObject = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-            "displayLines": "#BattleEvent_P3_ADF",
-            "constants": [],
-            "variables": [
-              "#BattleEvent_P3_ADF"
-            ]
+            "displayLines": "#BattleEvent_P3_ADF"
           },
           "isFixed": "(Fixed)"
         }
@@ -142,12 +132,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (MDF_SPValue) || RETURN",
-                        "displayLines": "MDF_SPValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_SPValue"
-                        ]
+                        "displayLines": "MDF_SPValue"
                       },
                       "isFixed": "(Fixed)"
                     }
@@ -271,22 +256,12 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                  "displayLines": "#BattleEvent_P1_ADF",
-                  "constants": [],
-                  "variables": [
-                    "#BattleEvent_P1_ADF"
-                  ]
+                  "displayLines": "#BattleEvent_P1_ADF"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "HitSplit": 0.1,
                 "Toughness": {
-                  "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                  "displayLines": "#BattleEvent_P2_ADF",
-                  "constants": [],
-                  "variables": [
-                    "#BattleEvent_P2_ADF"
-                  ]
+                  "displayLines": "#BattleEvent_P2_ADF"
                 },
                 "ToughnessDMGType": {
                   "DamageType": "Imaginary"
@@ -306,22 +281,12 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-              "displayLines": "#BattleEvent_P1_ADF",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P1_ADF"
-              ]
+              "displayLines": "#BattleEvent_P1_ADF"
             },
             "dmgFormula": "Max HP Scaling",
             "HitSplit": 0.5,
             "Toughness": {
-              "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-              "displayLines": "#BattleEvent_P2_ADF",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P2_ADF"
-              ]
+              "displayLines": "#BattleEvent_P2_ADF"
             },
             "ToughnessDMGType": {
               "DamageType": "Imaginary"
@@ -400,22 +365,12 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Imaginary",
                     "Damage": {
-                      "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P1_ADF"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "HitSplit": 0.1,
                     "Toughness": {
-                      "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P2_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P2_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P2_ADF"
                     },
                     "ToughnessDMGType": {
                       "DamageType": "Imaginary"
@@ -435,22 +390,12 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                  "displayLines": "#BattleEvent_P1_ADF",
-                  "constants": [],
-                  "variables": [
-                    "#BattleEvent_P1_ADF"
-                  ]
+                  "displayLines": "#BattleEvent_P1_ADF"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "HitSplit": 0.5,
                 "Toughness": {
-                  "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                  "displayLines": "#BattleEvent_P2_ADF",
-                  "constants": [],
-                  "variables": [
-                    "#BattleEvent_P2_ADF"
-                  ]
+                  "displayLines": "#BattleEvent_P2_ADF"
                 },
                 "ToughnessDMGType": {
                   "DamageType": "Imaginary"

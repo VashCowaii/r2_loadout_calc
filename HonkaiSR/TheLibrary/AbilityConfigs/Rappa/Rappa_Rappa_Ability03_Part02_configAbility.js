@@ -7,12 +7,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (DV_StockTempCount) || RETURN",
-        "displayLines": "DV_StockTempCount",
-        "constants": [],
-        "variables": [
-          "DV_StockTempCount"
-        ]
+        "displayLines": "DV_StockTempCount"
       },
       "variableName": "_AMMO"
     },
@@ -30,12 +25,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "value": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       }
     },
     {
@@ -58,20 +48,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1748394699\">Rappa_UltraMode</a>[<span class=\"descriptionNumberColor\">Nindō Supreme: Aishiteru</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             },
             "MDF_PropertyValue2": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             }
           }
         }

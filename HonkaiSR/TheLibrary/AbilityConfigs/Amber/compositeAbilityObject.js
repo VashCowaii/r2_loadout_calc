@@ -55,12 +55,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -85,12 +80,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   },
                   "passed": [
@@ -103,12 +93,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1896336110\">LC_20003_DefenceAddedRatio</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.16) || RETURN",
-                          "displayLines": "0.16",
-                          "constants": [],
-                          "variables": [
-                            0.16
-                          ]
+                          "displayLines": "0.16"
                         }
                       }
                     }
@@ -130,12 +115,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   },
                   "passed": [
@@ -148,12 +128,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1896336110\">LC_20003_DefenceAddedRatio</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.16) || RETURN",
-                          "displayLines": "0.16",
-                          "constants": [],
-                          "variables": [
-                            0.16
-                          ]
+                          "displayLines": "0.16"
                         }
                       }
                     }

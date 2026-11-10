@@ -86,44 +86,19 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-239294226\">Standard_Gluttony_LV1</a>",
                   "valuePerStack": {
                     "MDF_Param1": {
-                      "operator": "Variables[0] (MDF_Param1) || RETURN",
-                      "displayLines": "MDF_Param1",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Param1"
-                      ]
+                      "displayLines": "MDF_Param1"
                     },
                     "MDF_Param2": {
-                      "operator": "Variables[0] (MDF_Param2) || RETURN",
-                      "displayLines": "MDF_Param2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Param2"
-                      ]
+                      "displayLines": "MDF_Param2"
                     },
                     "MDF_Param3": {
-                      "operator": "Variables[0] (MDF_Param3) || RETURN",
-                      "displayLines": "MDF_Param3",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Param3"
-                      ]
+                      "displayLines": "MDF_Param3"
                     },
                     "MDF_Param4": {
-                      "operator": "Variables[0] (MDF_Param4) || RETURN",
-                      "displayLines": "MDF_Param4",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Param4"
-                      ]
+                      "displayLines": "MDF_Param4"
                     },
                     "MDF_Param5": {
-                      "operator": "Variables[0] (MDF_Param5) || RETURN",
-                      "displayLines": "MDF_Param5",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Param5"
-                      ]
+                      "displayLines": "MDF_Param5"
                     }
                   }
                 }

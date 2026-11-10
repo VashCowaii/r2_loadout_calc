@@ -24,31 +24,16 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "value": {
-        "operator": "Variables[0] (1) || INVERT || RETURN",
-        "displayLines": "-1",
-        "constants": [],
-        "variables": [
-          1
-        ]
+        "displayLines": "-1"
       }
     },
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (Jingliu_FullMoonFlag) || RETURN",
-        "displayLines": "Jingliu_FullMoonFlag",
-        "constants": [],
-        "variables": [
-          "Jingliu_FullMoonFlag"
-        ]
+        "displayLines": "Jingliu_FullMoonFlag"
       },
       "maximum": {
-        "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || RETURN",
-        "displayLines": "Jingliu_FullMoonFlagMax",
-        "constants": [],
-        "variables": [
-          "Jingliu_FullMoonFlagMax"
-        ]
+        "displayLines": "Jingliu_FullMoonFlagMax"
       },
       "assignState": "True",
       "priorState": "Active",
@@ -70,21 +55,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1949094753\">Jingliu_Eidolon1_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Moon Crashes Tianguan Gate</span>]",
           "duration": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.24) || RETURN",
-              "displayLines": "0.24",
-              "constants": [],
-              "variables": [
-                0.24
-              ]
+              "displayLines": "0.24"
             }
           }
         }
@@ -102,21 +77,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (2.5) || RETURN",
-              "displayLines": "2.5",
-              "constants": [],
-              "variables": [
-                2.5
-              ]
+              "displayLines": "2.5"
             },
             "HitSplit": 0.1,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -151,21 +116,11 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (1.25) || RETURN",
-                      "displayLines": "1.25",
-                      "constants": [],
-                      "variables": [
-                        1.25
-                      ]
+                      "displayLines": "1.25"
                     },
                     "HitSplit": 0.1,
                     "Toughness": {
-                      "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                      "displayLines": "Blast Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "Blast Toughness Value"
-                      ]
+                      "displayLines": "Blast Toughness Value"
                     },
                     "Tags": null
                   }
@@ -181,12 +136,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     },
                     "HitSplit": 0.1,
                     "Toughness": null,
@@ -206,21 +156,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (1.25) || RETURN",
-                  "displayLines": "1.25",
-                  "constants": [],
-                  "variables": [
-                    1.25
-                  ]
+                  "displayLines": "1.25"
                 },
                 "HitSplit": 0.1,
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "Tags": null
               }
@@ -241,21 +181,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (2.5) || RETURN",
-              "displayLines": "2.5",
-              "constants": [],
-              "variables": [
-                2.5
-              ]
+              "displayLines": "2.5"
             },
             "HitSplit": 0.1,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -290,21 +220,11 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (1.25) || RETURN",
-                      "displayLines": "1.25",
-                      "constants": [],
-                      "variables": [
-                        1.25
-                      ]
+                      "displayLines": "1.25"
                     },
                     "HitSplit": 0.1,
                     "Toughness": {
-                      "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                      "displayLines": "Blast Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "Blast Toughness Value"
-                      ]
+                      "displayLines": "Blast Toughness Value"
                     },
                     "Tags": null
                   }
@@ -320,12 +240,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     },
                     "HitSplit": 0.1,
                     "Toughness": null,
@@ -345,21 +260,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (1.25) || RETURN",
-                  "displayLines": "1.25",
-                  "constants": [],
-                  "variables": [
-                    1.25
-                  ]
+                  "displayLines": "1.25"
                 },
                 "HitSplit": 0.1,
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "Tags": null
               }
@@ -380,21 +285,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (2.5) || RETURN",
-              "displayLines": "2.5",
-              "constants": [],
-              "variables": [
-                2.5
-              ]
+              "displayLines": "2.5"
             },
             "HitSplit": 0.1,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -429,21 +324,11 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (1.25) || RETURN",
-                      "displayLines": "1.25",
-                      "constants": [],
-                      "variables": [
-                        1.25
-                      ]
+                      "displayLines": "1.25"
                     },
                     "HitSplit": 0.1,
                     "Toughness": {
-                      "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                      "displayLines": "Blast Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "Blast Toughness Value"
-                      ]
+                      "displayLines": "Blast Toughness Value"
                     },
                     "Tags": null
                   }
@@ -459,12 +344,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     },
                     "HitSplit": 0.1,
                     "Toughness": null,
@@ -484,21 +364,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (1.25) || RETURN",
-                  "displayLines": "1.25",
-                  "constants": [],
-                  "variables": [
-                    1.25
-                  ]
+                  "displayLines": "1.25"
                 },
                 "HitSplit": 0.1,
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "Tags": null
               }
@@ -519,21 +389,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (2.5) || RETURN",
-              "displayLines": "2.5",
-              "constants": [],
-              "variables": [
-                2.5
-              ]
+              "displayLines": "2.5"
             },
             "HitSplit": 0.2,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -568,21 +428,11 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (1.25) || RETURN",
-                      "displayLines": "1.25",
-                      "constants": [],
-                      "variables": [
-                        1.25
-                      ]
+                      "displayLines": "1.25"
                     },
                     "HitSplit": 0.2,
                     "Toughness": {
-                      "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                      "displayLines": "Blast Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "Blast Toughness Value"
-                      ]
+                      "displayLines": "Blast Toughness Value"
                     },
                     "Tags": null
                   }
@@ -598,12 +448,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     },
                     "HitSplit": 0.2,
                     "Toughness": null,
@@ -623,21 +468,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (1.25) || RETURN",
-                  "displayLines": "1.25",
-                  "constants": [],
-                  "variables": [
-                    1.25
-                  ]
+                  "displayLines": "1.25"
                 },
                 "HitSplit": 0.2,
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "Tags": null
               }
@@ -713,21 +548,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] (2.5) || RETURN",
-          "displayLines": "2.5",
-          "constants": [],
-          "variables": [
-            2.5
-          ]
+          "displayLines": "2.5"
         },
         "HitSplit": 0.5,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -762,21 +587,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (1.25) || RETURN",
-                  "displayLines": "1.25",
-                  "constants": [],
-                  "variables": [
-                    1.25
-                  ]
+                  "displayLines": "1.25"
                 },
                 "HitSplit": 0.5,
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "Tags": null
               }
@@ -792,12 +607,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 },
                 "HitSplit": 0.5,
                 "Toughness": null,
@@ -817,21 +627,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (1.25) || RETURN",
-              "displayLines": "1.25",
-              "constants": [],
-              "variables": [
-                1.25
-              ]
+              "displayLines": "1.25"
             },
             "HitSplit": 0.5,
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null
           }

@@ -18,14 +18,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.2) || MUL || RETURN",
-              "displayLines": "({[Skill01[0]]} * 0.2)",
-              "constants": [
-                0.2
-              ],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "({[Skill01[0]]} * 0.2)"
             },
             "Toughness": null,
             "Tags": null,

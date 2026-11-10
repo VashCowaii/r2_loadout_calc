@@ -64,12 +64,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "HitSplit": 0.05,
         "Toughness": null,
@@ -87,12 +82,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "HitSplit": 0.05,
         "Toughness": null,
@@ -110,12 +100,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "HitSplit": 0.05,
         "Toughness": null,
@@ -133,12 +118,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "HitSplit": 0.05,
         "Toughness": null,
@@ -156,12 +136,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "HitSplit": 0.05,
         "Toughness": null,
@@ -179,12 +154,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "HitSplit": 0.05,
         "Toughness": null,
@@ -202,12 +172,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "HitSplit": 0.05,
         "Toughness": null,
@@ -225,12 +190,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "HitSplit": 0.05,
         "Toughness": null,
@@ -248,12 +208,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "HitSplit": 0.05,
         "Toughness": null,
@@ -271,12 +226,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "HitSplit": 0.05,
         "Toughness": null,
@@ -294,12 +244,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "HitSplit": 0.5,
         "Toughness": null,

@@ -33,12 +33,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DefenceAddedRatio) || RETURN",
-                "displayLines": "MDF_DefenceAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_DefenceAddedRatio"
-                ]
+                "displayLines": "MDF_DefenceAddedRatio"
               }
             }
           ]
@@ -61,12 +56,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                "displayLines": "MDF_AllDamageTypeAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeAddedRatio"
-                ]
+                "displayLines": "MDF_AllDamageTypeAddedRatio"
               }
             }
           ]
@@ -96,12 +86,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (Bronya_SpeedUP_Ratio) || RETURN",
-                "displayLines": "Bronya_SpeedUP_Ratio",
-                "constants": [],
-                "variables": [
-                  "Bronya_SpeedUP_Ratio"
-                ]
+                "displayLines": "Bronya_SpeedUP_Ratio"
               }
             }
           ]
@@ -128,12 +113,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageAddedRatio) || RETURN",
-                "displayLines": "MDF_DamageAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageAddedRatio"
-                ]
+                "displayLines": "MDF_DamageAddedRatio"
               }
             }
           ]
@@ -161,12 +141,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
-                "displayLines": "MDF_AttackAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackAddedRatio"
-                ]
+                "displayLines": "MDF_AttackAddedRatio"
               }
             },
             {
@@ -177,12 +152,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (Bronya_CriticalDamage) || RETURN",
-                "displayLines": "Bronya_CriticalDamage",
-                "constants": [],
-                "variables": [
-                  "Bronya_CriticalDamage"
-                ]
+                "displayLines": "Bronya_CriticalDamage"
               }
             }
           ]
@@ -237,12 +207,7 @@ const configAbility = {
               "duration": 1,
               "valuePerStack": {
                 "Bronya_SpeedUP_Ratio": {
-                  "operator": "Variables[0] (Bronya_SpeedUP_Ratio_01) || RETURN",
-                  "displayLines": "Bronya_SpeedUP_Ratio_01",
-                  "constants": [],
-                  "variables": [
-                    "Bronya_SpeedUP_Ratio_01"
-                  ]
+                  "displayLines": "Bronya_SpeedUP_Ratio_01"
                 }
               }
             },

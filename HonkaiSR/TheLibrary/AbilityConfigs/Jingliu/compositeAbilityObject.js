@@ -249,13 +249,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_Layer) || Variables[1] (0.44) || MUL || RETURN",
-                    "displayLines": "(MDF_Layer * 0.44)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer",
-                      0.44
-                    ]
+                    "displayLines": "(MDF_Layer * 0.44)"
                   },
                   "variableName": "MDF_PropertyValue"
                 },
@@ -269,14 +263,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || Variables[2] (0.2) || MUL || ADD || RETURN",
-                        "displayLines": "(MDF_PropertyValue + (MDF_Layer * 0.2))",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue",
-                          "MDF_Layer",
-                          0.2
-                        ]
+                        "displayLines": "(MDF_PropertyValue + (MDF_Layer * 0.2))"
                       },
                       "variableName": "MDF_PropertyValue"
                     }
@@ -290,12 +277,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -365,13 +347,7 @@ const compositeAbilityObject = {
                           },
                           "previewType": null,
                           "previewValue": {
-                            "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (0.05) || MUL || RETURN",
-                            "displayLines": "(MDF_MaxHP * 0.05)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxHP",
-                              0.05
-                            ]
+                            "displayLines": "(MDF_MaxHP * 0.05)"
                           }
                         }
                       ]
@@ -401,12 +377,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_CriticalRatio) || RETURN",
-                    "displayLines": "MDF_CriticalRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CriticalRatio"
-                    ]
+                    "displayLines": "MDF_CriticalRatio"
                   }
                 }
               ]
@@ -463,12 +434,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -752,12 +718,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-9916760\">Advanced_Jingliu_Eidolon6</a>[<span class=\"descriptionNumberColor\">Eclipse Hollows Corporeal Husk</span>]",
                       "valuePerStack": {
                         "MDF_IcePenetrate": {
-                          "operator": "Variables[0] (0.3) || RETURN",
-                          "displayLines": "0.3",
-                          "constants": [],
-                          "variables": [
-                            0.3
-                          ]
+                          "displayLines": "0.3"
                         }
                       }
                     }
@@ -787,20 +748,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"291641534\">Advanced_Jingliu_Trace_B1_Resist</a>[<span class=\"descriptionNumberColor\">Deathrealm</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.35) || RETURN",
-                          "displayLines": "0.35",
-                          "constants": [],
-                          "variables": [
-                            0.35
-                          ]
+                          "displayLines": "0.35"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     }
@@ -815,12 +766,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1354140510\">Advanced_Jingliu_Passive_CriticalUp</a>[<span class=\"descriptionNumberColor\">Spectral Transmigration</span>]",
                   "valuePerStack": {
                     "MDF_CriticalRatio": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   }
                 }
@@ -861,12 +807,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "consumePercent": {
-                        "operator": "Variables[0] (SkillP01_P2_HpConsumption) || RETURN",
-                        "displayLines": "SkillP01_P2_HpConsumption",
-                        "constants": [],
-                        "variables": [
-                          "SkillP01_P2_HpConsumption"
-                        ]
+                        "displayLines": "SkillP01_P2_HpConsumption"
                       },
                       "consumeFloor": 1
                     }
@@ -973,12 +914,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceIcePEN</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_IcePenetrate) || RETURN",
-                    "displayLines": "MDF_IcePenetrate",
-                    "constants": [],
-                    "variables": [
-                      "MDF_IcePenetrate"
-                    ]
+                    "displayLines": "MDF_IcePenetrate"
                   }
                 }
               ]
@@ -1053,12 +989,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -1110,20 +1041,10 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (Jingliu_MoonFlag) || RETURN",
-                            "displayLines": "Jingliu_MoonFlag",
-                            "constants": [],
-                            "variables": [
-                              "Jingliu_MoonFlag"
-                            ]
+                            "displayLines": "Jingliu_MoonFlag"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-                            "displayLines": "Jingliu_MoonFlagMax",
-                            "constants": [],
-                            "variables": [
-                              "Jingliu_MoonFlagMax"
-                            ]
+                            "displayLines": "Jingliu_MoonFlagMax"
                           },
                           "assignState": "True",
                           "priorState": "Normal",
@@ -1179,20 +1100,10 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (Jingliu_MoonFlag) || RETURN",
-                            "displayLines": "Jingliu_MoonFlag",
-                            "constants": [],
-                            "variables": [
-                              "Jingliu_MoonFlag"
-                            ]
+                            "displayLines": "Jingliu_MoonFlag"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-                            "displayLines": "Jingliu_MoonFlagMax",
-                            "constants": [],
-                            "variables": [
-                              "Jingliu_MoonFlagMax"
-                            ]
+                            "displayLines": "Jingliu_MoonFlagMax"
                           },
                           "assignState": "True",
                           "priorState": "Normal",
@@ -1248,20 +1159,10 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (Jingliu_MoonFlag) || RETURN",
-                            "displayLines": "Jingliu_MoonFlag",
-                            "constants": [],
-                            "variables": [
-                              "Jingliu_MoonFlag"
-                            ]
+                            "displayLines": "Jingliu_MoonFlag"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-                            "displayLines": "Jingliu_MoonFlagMax",
-                            "constants": [],
-                            "variables": [
-                              "Jingliu_MoonFlagMax"
-                            ]
+                            "displayLines": "Jingliu_MoonFlagMax"
                           },
                           "assignState": "True",
                           "priorState": "Normal",
@@ -1330,20 +1231,10 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (Jingliu_MoonFlag) || RETURN",
-                            "displayLines": "Jingliu_MoonFlag",
-                            "constants": [],
-                            "variables": [
-                              "Jingliu_MoonFlag"
-                            ]
+                            "displayLines": "Jingliu_MoonFlag"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-                            "displayLines": "Jingliu_MoonFlagMax",
-                            "constants": [],
-                            "variables": [
-                              "Jingliu_MoonFlagMax"
-                            ]
+                            "displayLines": "Jingliu_MoonFlagMax"
                           },
                           "assignState": "True",
                           "priorState": "Normal",
@@ -1395,12 +1286,7 @@ const compositeAbilityObject = {
                         "value1": "Jingliu_MoonFlag",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-                          "displayLines": "Jingliu_MoonFlagMax",
-                          "constants": [],
-                          "variables": [
-                            "Jingliu_MoonFlagMax"
-                          ]
+                          "displayLines": "Jingliu_MoonFlagMax"
                         }
                       },
                       {
@@ -1456,15 +1342,7 @@ const compositeAbilityObject = {
                             "target": "{{Caster}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || Variables[1] (2) || ADD || RETURN",
-                            "displayLines": "((Jingliu_MoonFlag + 1) + 2)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Jingliu_MoonFlag",
-                              2
-                            ]
+                            "displayLines": "((Jingliu_MoonFlag + 1) + 2)"
                           }
                         }
                       ],
@@ -1478,14 +1356,7 @@ const compositeAbilityObject = {
                             "target": "{{Caster}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(Jingliu_MoonFlag + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Jingliu_MoonFlag"
-                            ]
+                            "displayLines": "(Jingliu_MoonFlag + 1)"
                           }
                         }
                       ]
@@ -1598,14 +1469,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (Jingliu_LoseHPCount) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(Jingliu_LoseHPCount + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Jingliu_LoseHPCount"
-                            ]
+                            "displayLines": "(Jingliu_LoseHPCount + 1)"
                           },
                           "variableName": "Jingliu_LoseHPCount"
                         },
@@ -1640,25 +1504,14 @@ const compositeAbilityObject = {
                             "value1": "Jingliu_LoseHPCount",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (20) || RETURN",
-                              "displayLines": "20",
-                              "constants": [],
-                              "variables": [
-                                20
-                              ]
+                              "displayLines": "20"
                             }
                           },
                           "passed": [
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (Jingliu_LoseHPCount) || Variables[1] (20) || SUB || RETURN",
-                                "displayLines": "(Jingliu_LoseHPCount - 20)",
-                                "constants": [],
-                                "variables": [
-                                  "Jingliu_LoseHPCount",
-                                  20
-                                ]
+                                "displayLines": "(Jingliu_LoseHPCount - 20)"
                               },
                               "variableName": "Jingliu_LoseHPCount"
                             },
@@ -1690,12 +1543,7 @@ const compositeAbilityObject = {
                                     "value1": "Jingliu_FullMoonFlag",
                                     "compareType": ">",
                                     "value2": {
-                                      "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || RETURN",
-                                      "displayLines": "Jingliu_FullMoonFlagMax",
-                                      "constants": [],
-                                      "variables": [
-                                        "Jingliu_FullMoonFlagMax"
-                                      ]
+                                      "displayLines": "Jingliu_FullMoonFlagMax"
                                     },
                                     "contextScope": "ContextCaster"
                                   },
@@ -1709,12 +1557,7 @@ const compositeAbilityObject = {
                                         "target": "{{Caster}}"
                                       },
                                       "value": {
-                                        "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || RETURN",
-                                        "displayLines": "Jingliu_FullMoonFlagMax",
-                                        "constants": [],
-                                        "variables": [
-                                          "Jingliu_FullMoonFlagMax"
-                                        ]
+                                        "displayLines": "Jingliu_FullMoonFlagMax"
                                       }
                                     }
                                   ]
@@ -1722,20 +1565,10 @@ const compositeAbilityObject = {
                                 {
                                   "name": "Update Displayed Energy Bar",
                                   "value": {
-                                    "operator": "Variables[0] (Jingliu_FullMoonFlag) || RETURN",
-                                    "displayLines": "Jingliu_FullMoonFlag",
-                                    "constants": [],
-                                    "variables": [
-                                      "Jingliu_FullMoonFlag"
-                                    ]
+                                    "displayLines": "Jingliu_FullMoonFlag"
                                   },
                                   "maximum": {
-                                    "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || RETURN",
-                                    "displayLines": "Jingliu_FullMoonFlagMax",
-                                    "constants": [],
-                                    "variables": [
-                                      "Jingliu_FullMoonFlagMax"
-                                    ]
+                                    "displayLines": "Jingliu_FullMoonFlagMax"
                                   },
                                   "assignState": "True",
                                   "priorState": "Active",
@@ -1757,20 +1590,10 @@ const compositeAbilityObject = {
                                 {
                                   "name": "Update Displayed Energy Bar",
                                   "value": {
-                                    "operator": "Variables[0] (Jingliu_MoonFlag) || RETURN",
-                                    "displayLines": "Jingliu_MoonFlag",
-                                    "constants": [],
-                                    "variables": [
-                                      "Jingliu_MoonFlag"
-                                    ]
+                                    "displayLines": "Jingliu_MoonFlag"
                                   },
                                   "maximum": {
-                                    "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-                                    "displayLines": "Jingliu_MoonFlagMax",
-                                    "constants": [],
-                                    "variables": [
-                                      "Jingliu_MoonFlagMax"
-                                    ]
+                                    "displayLines": "Jingliu_MoonFlagMax"
                                   },
                                   "assignState": "True",
                                   "priorState": "Normal",
@@ -1790,12 +1613,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"37722324\">Advanced_Jingliu_LoseHPCount</a>[<span class=\"descriptionNumberColor\">Crescent Transmigration</span>]",
                           "valuePerStack": {
                             "Jingliu_LoseHPCount": {
-                              "operator": "Variables[0] (Jingliu_LoseHPCount) || RETURN",
-                              "displayLines": "Jingliu_LoseHPCount",
-                              "constants": [],
-                              "variables": [
-                                "Jingliu_LoseHPCount"
-                              ]
+                              "displayLines": "Jingliu_LoseHPCount"
                             }
                           }
                         }
@@ -1820,12 +1638,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-44910835\">Advanced_Jingliu_MoonMad</a>[<span class=\"descriptionNumberColor\">Moonlight</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (5) || RETURN",
-                            "displayLines": "5",
-                            "constants": [],
-                            "variables": [
-                              5
-                            ]
+                            "displayLines": "5"
                           },
                           "addStacksPerTrigger": 1
                         }
@@ -1899,12 +1712,7 @@ const compositeAbilityObject = {
                         "value1": "Jingliu_MoonFlag",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-                          "displayLines": "Jingliu_MoonFlagMax",
-                          "constants": [],
-                          "variables": [
-                            "Jingliu_MoonFlagMax"
-                          ]
+                          "displayLines": "Jingliu_MoonFlagMax"
                         }
                       },
                       {
@@ -1960,15 +1768,7 @@ const compositeAbilityObject = {
                             "target": "{{Caster}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || Variables[1] (2) || ADD || RETURN",
-                            "displayLines": "((Jingliu_MoonFlag + 1) + 2)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Jingliu_MoonFlag",
-                              2
-                            ]
+                            "displayLines": "((Jingliu_MoonFlag + 1) + 2)"
                           }
                         }
                       ],
@@ -1982,14 +1782,7 @@ const compositeAbilityObject = {
                             "target": "{{Caster}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(Jingliu_MoonFlag + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Jingliu_MoonFlag"
-                            ]
+                            "displayLines": "(Jingliu_MoonFlag + 1)"
                           }
                         }
                       ]
@@ -2035,12 +1828,7 @@ const compositeAbilityObject = {
                         "value1": "Jingliu_MoonFlag",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-                          "displayLines": "Jingliu_MoonFlagMax",
-                          "constants": [],
-                          "variables": [
-                            "Jingliu_MoonFlagMax"
-                          ]
+                          "displayLines": "Jingliu_MoonFlagMax"
                         }
                       },
                       {
@@ -2096,15 +1884,7 @@ const compositeAbilityObject = {
                             "target": "{{Caster}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || Variables[1] (2) || ADD || RETURN",
-                            "displayLines": "((Jingliu_MoonFlag + 1) + 2)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Jingliu_MoonFlag",
-                              2
-                            ]
+                            "displayLines": "((Jingliu_MoonFlag + 1) + 2)"
                           }
                         }
                       ],
@@ -2118,14 +1898,7 @@ const compositeAbilityObject = {
                             "target": "{{Caster}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(Jingliu_MoonFlag + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Jingliu_MoonFlag"
-                            ]
+                            "displayLines": "(Jingliu_MoonFlag + 1)"
                           }
                         }
                       ]
@@ -2207,12 +1980,7 @@ const compositeAbilityObject = {
                             "value1": "Jingliu_MoonFlag",
                             "compareType": "=",
                             "value2": {
-                              "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-                              "displayLines": "Jingliu_MoonFlagMax",
-                              "constants": [],
-                              "variables": [
-                                "Jingliu_MoonFlagMax"
-                              ]
+                              "displayLines": "Jingliu_MoonFlagMax"
                             }
                           },
                           {
@@ -2250,15 +2018,7 @@ const compositeAbilityObject = {
                                 "target": "{{Caster}}"
                               },
                               "value": {
-                                "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || Variables[1] (2) || ADD || RETURN",
-                                "displayLines": "((Jingliu_MoonFlag + 1) + 2)",
-                                "constants": [
-                                  1
-                                ],
-                                "variables": [
-                                  "Jingliu_MoonFlag",
-                                  2
-                                ]
+                                "displayLines": "((Jingliu_MoonFlag + 1) + 2)"
                               }
                             }
                           ],
@@ -2272,14 +2032,7 @@ const compositeAbilityObject = {
                                 "target": "{{Caster}}"
                               },
                               "value": {
-                                "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || RETURN",
-                                "displayLines": "(Jingliu_MoonFlag + 1)",
-                                "constants": [
-                                  1
-                                ],
-                                "variables": [
-                                  "Jingliu_MoonFlag"
-                                ]
+                                "displayLines": "(Jingliu_MoonFlag + 1)"
                               }
                             }
                           ]
@@ -2303,12 +2056,7 @@ const compositeAbilityObject = {
                         "value1": "Jingliu_MoonFlag",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-                          "displayLines": "Jingliu_MoonFlagMax",
-                          "constants": [],
-                          "variables": [
-                            "Jingliu_MoonFlagMax"
-                          ]
+                          "displayLines": "Jingliu_MoonFlagMax"
                         }
                       },
                       {
@@ -2356,15 +2104,7 @@ const compositeAbilityObject = {
                             "target": "{{Caster}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || Variables[1] (2) || ADD || RETURN",
-                            "displayLines": "((Jingliu_MoonFlag + 1) + 2)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Jingliu_MoonFlag",
-                              2
-                            ]
+                            "displayLines": "((Jingliu_MoonFlag + 1) + 2)"
                           }
                         }
                       ],
@@ -2378,14 +2118,7 @@ const compositeAbilityObject = {
                             "target": "{{Caster}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(Jingliu_MoonFlag + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Jingliu_MoonFlag"
-                            ]
+                            "displayLines": "(Jingliu_MoonFlag + 1)"
                           }
                         }
                       ]
@@ -2407,12 +2140,7 @@ const compositeAbilityObject = {
                         "value1": "Jingliu_MoonFlag",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-                          "displayLines": "Jingliu_MoonFlagMax",
-                          "constants": [],
-                          "variables": [
-                            "Jingliu_MoonFlagMax"
-                          ]
+                          "displayLines": "Jingliu_MoonFlagMax"
                         }
                       },
                       {
@@ -2468,15 +2196,7 @@ const compositeAbilityObject = {
                             "target": "{{Caster}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || Variables[1] (2) || ADD || RETURN",
-                            "displayLines": "((Jingliu_MoonFlag + 1) + 2)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Jingliu_MoonFlag",
-                              2
-                            ]
+                            "displayLines": "((Jingliu_MoonFlag + 1) + 2)"
                           }
                         }
                       ],
@@ -2490,14 +2210,7 @@ const compositeAbilityObject = {
                             "target": "{{Caster}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(Jingliu_MoonFlag + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Jingliu_MoonFlag"
-                            ]
+                            "displayLines": "(Jingliu_MoonFlag + 1)"
                           }
                         }
                       ]
@@ -2542,14 +2255,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Variable Value Range Conditions",
                   "minValue": {
-                    "operator": "Variables[0] (Jingliu_MoonFlagMax) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(Jingliu_MoonFlagMax + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Jingliu_MoonFlagMax"
-                    ]
+                    "displayLines": "(Jingliu_MoonFlagMax + 1)"
                   },
                   "maxValue": 99,
                   "enteringRange": [
@@ -2569,12 +2275,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"596888368\">AdvancedJingliu_PointB3</a>[<span class=\"descriptionNumberColor\">Frost Wraith</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.25) || RETURN",
-                              "displayLines": "0.25",
-                              "constants": [],
-                              "variables": [
-                                0.25
-                              ]
+                              "displayLines": "0.25"
                             }
                           }
                         }
@@ -2589,12 +2290,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-                        "displayLines": "Jingliu_MoonFlagMax",
-                        "constants": [],
-                        "variables": [
-                          "Jingliu_MoonFlagMax"
-                        ]
+                        "displayLines": "Jingliu_MoonFlagMax"
                       }
                     }
                   ]
@@ -2609,14 +2305,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Variable Value Range Conditions",
                   "minValue": {
-                    "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(Jingliu_FullMoonFlagMax + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Jingliu_FullMoonFlagMax"
-                    ]
+                    "displayLines": "(Jingliu_FullMoonFlagMax + 1)"
                   },
                   "maxValue": 99,
                   "includeMaxValueInRange": true,
@@ -2637,12 +2326,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"596888368\">AdvancedJingliu_PointB3</a>[<span class=\"descriptionNumberColor\">Frost Wraith</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.25) || RETURN",
-                              "displayLines": "0.25",
-                              "constants": [],
-                              "variables": [
-                                0.25
-                              ]
+                              "displayLines": "0.25"
                             }
                           }
                         }
@@ -2675,12 +2359,7 @@ const compositeAbilityObject = {
             "delayAdvancePreview": {
               "name": "Delay/Advance Preview",
               "previewValue": {
-                "operator": "Variables[0] (1) || INVERT || RETURN",
-                "displayLines": "-1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "-1"
               }
             }
           }
@@ -2905,12 +2584,7 @@ const compositeAbilityObject = {
           "modifier": null,
           "ID": "121202()",
           "duration": {
-            "operator": "Variables[0] (20) || RETURN",
-            "displayLines": "20",
-            "constants": [],
-            "variables": [
-              20
-            ]
+            "displayLines": "20"
           }
         },
         "Submit Technique Use"
@@ -3076,20 +2750,10 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (Modifier_Frozen_DamagePercentage) || RETURN",
-                      "displayLines": "Modifier_Frozen_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "Modifier_Frozen_DamagePercentage"
-                      ]
+                      "displayLines": "Modifier_Frozen_DamagePercentage"
                     },
                     "DamageFlat": {
-                      "operator": "Variables[0] (Modifier_Frozen_DamageValue) || RETURN",
-                      "displayLines": "Modifier_Frozen_DamageValue",
-                      "constants": [],
-                      "variables": [
-                        "Modifier_Frozen_DamageValue"
-                      ]
+                      "displayLines": "Modifier_Frozen_DamageValue"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "Toughness": null,
@@ -3123,12 +2787,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Assign Advance/Delay to Current Ability Use",
                   "adjustmentValue": {
-                    "operator": "Variables[0] (STANDARDSPECIFIC_OBJECT_UNUSED_8[Freeze Delay, unassigned]) || RETURN",
-                    "displayLines": "STANDARDSPECIFIC_OBJECT_UNUSED_8[Freeze Delay, unassigned]",
-                    "constants": [],
-                    "variables": [
-                      "STANDARDSPECIFIC_OBJECT_UNUSED_8[Freeze Delay, unassigned]"
-                    ]
+                    "displayLines": "STANDARDSPECIFIC_OBJECT_UNUSED_8[Freeze Delay, unassigned]"
                   },
                   "adjustmentType": "="
                 }
@@ -3169,31 +2828,16 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_MazeMoonFlag) || RETURN",
-                    "displayLines": "MDF_MazeMoonFlag",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MazeMoonFlag"
-                    ]
+                    "displayLines": "MDF_MazeMoonFlag"
                   }
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (Jingliu_MoonFlag) || RETURN",
-                    "displayLines": "Jingliu_MoonFlag",
-                    "constants": [],
-                    "variables": [
-                      "Jingliu_MoonFlag"
-                    ]
+                    "displayLines": "Jingliu_MoonFlag"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-                    "displayLines": "Jingliu_MoonFlagMax",
-                    "constants": [],
-                    "variables": [
-                      "Jingliu_MoonFlagMax"
-                    ]
+                    "displayLines": "Jingliu_MoonFlagMax"
                   },
                   "assignState": "True",
                   "priorState": "Normal",
@@ -3224,29 +2868,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1060785735\">Technique_Jingliu_Modifier_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
                       "duration": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "valuePerStack": {
                         "Modifier_Frozen_DamagePercentage": {
-                          "operator": "Variables[0] (0.8) || RETURN",
-                          "displayLines": "0.8",
-                          "constants": [],
-                          "variables": [
-                            0.8
-                          ]
+                          "displayLines": "0.8"
                         }
                       }
                     }
@@ -3268,12 +2897,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (15) || RETURN",
-                        "displayLines": "15",
-                        "constants": [],
-                        "variables": [
-                          15
-                        ]
+                        "displayLines": "15"
                       },
                       "isFixed": "* ERR"
                     },
@@ -3286,12 +2910,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1042369095\">Advanced_Jingliu_TechniqueUsage</a>",
                       "valuePerStack": {
                         "MDF_MazeMoonFlag": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         }
                       }
                     }
@@ -3333,20 +2952,10 @@ const compositeAbilityObject = {
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (Jingliu_FullMoonFlag) || RETURN",
-            "displayLines": "Jingliu_FullMoonFlag",
-            "constants": [],
-            "variables": [
-              "Jingliu_FullMoonFlag"
-            ]
+            "displayLines": "Jingliu_FullMoonFlag"
           },
           "maximum": {
-            "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || RETURN",
-            "displayLines": "Jingliu_FullMoonFlagMax",
-            "constants": [],
-            "variables": [
-              "Jingliu_FullMoonFlagMax"
-            ]
+            "displayLines": "Jingliu_FullMoonFlagMax"
           },
           "assignState": "True",
           "priorState": "Active",
@@ -3362,20 +2971,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1784507575\">AdvancedJingliu_Attack_Transfer</a>",
           "valuePerStack": {
             "AbilityP01_P1_HpConsumption": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             },
             "AbilityP01_P2_HpConsumption": {
-              "operator": "Variables[0] (0.05) || RETURN",
-              "displayLines": "0.05",
-              "constants": [],
-              "variables": [
-                0.05
-              ]
+              "displayLines": "0.05"
             }
           }
         },
@@ -3388,12 +2987,7 @@ const compositeAbilityObject = {
           },
           "variables": {
             "parameter[0]_NormalizedValue": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             }
           }
         }
@@ -3456,14 +3050,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(Jingliu_FullMoonFlagMax + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "Jingliu_FullMoonFlagMax"
-                ]
+                "displayLines": "(Jingliu_FullMoonFlagMax + 1)"
               },
               "variableName": "Jingliu_FullMoonFlagMax"
             }
@@ -3472,12 +3059,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || RETURN",
-                "displayLines": "Jingliu_FullMoonFlagMax",
-                "constants": [],
-                "variables": [
-                  "Jingliu_FullMoonFlagMax"
-                ]
+                "displayLines": "Jingliu_FullMoonFlagMax"
               },
               "variableName": "Jingliu_FullMoonFlagMax"
             }
@@ -3496,32 +3078,17 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "variableName": "Jingliu_MoonFlagMax"
         },
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (Jingliu_MoonFlag) || RETURN",
-            "displayLines": "Jingliu_MoonFlag",
-            "constants": [],
-            "variables": [
-              "Jingliu_MoonFlag"
-            ]
+            "displayLines": "Jingliu_MoonFlag"
           },
           "maximum": {
-            "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-            "displayLines": "Jingliu_MoonFlagMax",
-            "constants": [],
-            "variables": [
-              "Jingliu_MoonFlagMax"
-            ]
+            "displayLines": "Jingliu_MoonFlagMax"
           },
           "assignState": "True",
           "priorState": "Normal",
@@ -3577,21 +3144,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1838091998\">Advanced_Jingliu_Eidolon1_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Moon Crashes Tianguan Gate</span>]",
               "duration": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.36) || RETURN",
-                  "displayLines": "0.36",
-                  "constants": [],
-                  "variables": [
-                    0.36
-                  ]
+                  "displayLines": "0.36"
                 }
               }
             }
@@ -3609,22 +3166,12 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (1.5) || RETURN",
-                  "displayLines": "1.5",
-                  "constants": [],
-                  "variables": [
-                    1.5
-                  ]
+                  "displayLines": "1.5"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "HitSplit": 0.1,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -3646,22 +3193,12 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (0.75) || RETURN",
-                      "displayLines": "0.75",
-                      "constants": [],
-                      "variables": [
-                        0.75
-                      ]
+                      "displayLines": "0.75"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "HitSplit": 0.1,
                     "Toughness": {
-                      "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                      "displayLines": "Blast Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "Blast Toughness Value"
-                      ]
+                      "displayLines": "Blast Toughness Value"
                     },
                     "Tags": null
                   }
@@ -3675,12 +3212,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (0.8) || RETURN",
-                      "displayLines": "0.8",
-                      "constants": [],
-                      "variables": [
-                        0.8
-                      ]
+                      "displayLines": "0.8"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "HitSplit": 0.1,
@@ -3699,22 +3231,12 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (0.75) || RETURN",
-                      "displayLines": "0.75",
-                      "constants": [],
-                      "variables": [
-                        0.75
-                      ]
+                      "displayLines": "0.75"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "HitSplit": 0.1,
                     "Toughness": {
-                      "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                      "displayLines": "Blast Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "Blast Toughness Value"
-                      ]
+                      "displayLines": "Blast Toughness Value"
                     },
                     "Tags": null
                   }
@@ -3735,22 +3257,12 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (1.5) || RETURN",
-                  "displayLines": "1.5",
-                  "constants": [],
-                  "variables": [
-                    1.5
-                  ]
+                  "displayLines": "1.5"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "HitSplit": 0.1,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -3772,22 +3284,12 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (0.75) || RETURN",
-                      "displayLines": "0.75",
-                      "constants": [],
-                      "variables": [
-                        0.75
-                      ]
+                      "displayLines": "0.75"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "HitSplit": 0.1,
                     "Toughness": {
-                      "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                      "displayLines": "Blast Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "Blast Toughness Value"
-                      ]
+                      "displayLines": "Blast Toughness Value"
                     },
                     "Tags": null
                   }
@@ -3801,12 +3303,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (0.8) || RETURN",
-                      "displayLines": "0.8",
-                      "constants": [],
-                      "variables": [
-                        0.8
-                      ]
+                      "displayLines": "0.8"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "HitSplit": 0.1,
@@ -3825,22 +3322,12 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (0.75) || RETURN",
-                      "displayLines": "0.75",
-                      "constants": [],
-                      "variables": [
-                        0.75
-                      ]
+                      "displayLines": "0.75"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "HitSplit": 0.1,
                     "Toughness": {
-                      "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                      "displayLines": "Blast Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "Blast Toughness Value"
-                      ]
+                      "displayLines": "Blast Toughness Value"
                     },
                     "Tags": null
                   }
@@ -3861,22 +3348,12 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (1.5) || RETURN",
-                  "displayLines": "1.5",
-                  "constants": [],
-                  "variables": [
-                    1.5
-                  ]
+                  "displayLines": "1.5"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "HitSplit": 0.1,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -3898,22 +3375,12 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (0.75) || RETURN",
-                      "displayLines": "0.75",
-                      "constants": [],
-                      "variables": [
-                        0.75
-                      ]
+                      "displayLines": "0.75"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "HitSplit": 0.1,
                     "Toughness": {
-                      "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                      "displayLines": "Blast Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "Blast Toughness Value"
-                      ]
+                      "displayLines": "Blast Toughness Value"
                     },
                     "Tags": null
                   }
@@ -3927,12 +3394,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (0.8) || RETURN",
-                      "displayLines": "0.8",
-                      "constants": [],
-                      "variables": [
-                        0.8
-                      ]
+                      "displayLines": "0.8"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "HitSplit": 0.1,
@@ -3951,22 +3413,12 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (0.75) || RETURN",
-                      "displayLines": "0.75",
-                      "constants": [],
-                      "variables": [
-                        0.75
-                      ]
+                      "displayLines": "0.75"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "HitSplit": 0.1,
                     "Toughness": {
-                      "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                      "displayLines": "Blast Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "Blast Toughness Value"
-                      ]
+                      "displayLines": "Blast Toughness Value"
                     },
                     "Tags": null
                   }
@@ -3987,22 +3439,12 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (1.5) || RETURN",
-                  "displayLines": "1.5",
-                  "constants": [],
-                  "variables": [
-                    1.5
-                  ]
+                  "displayLines": "1.5"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "HitSplit": 0.2,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -4024,22 +3466,12 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (0.75) || RETURN",
-                      "displayLines": "0.75",
-                      "constants": [],
-                      "variables": [
-                        0.75
-                      ]
+                      "displayLines": "0.75"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "HitSplit": 0.2,
                     "Toughness": {
-                      "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                      "displayLines": "Blast Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "Blast Toughness Value"
-                      ]
+                      "displayLines": "Blast Toughness Value"
                     },
                     "Tags": null
                   }
@@ -4053,12 +3485,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (0.8) || RETURN",
-                      "displayLines": "0.8",
-                      "constants": [],
-                      "variables": [
-                        0.8
-                      ]
+                      "displayLines": "0.8"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "HitSplit": 0.2,
@@ -4077,22 +3504,12 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (0.75) || RETURN",
-                      "displayLines": "0.75",
-                      "constants": [],
-                      "variables": [
-                        0.75
-                      ]
+                      "displayLines": "0.75"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "HitSplit": 0.2,
                     "Toughness": {
-                      "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                      "displayLines": "Blast Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "Blast Toughness Value"
-                      ]
+                      "displayLines": "Blast Toughness Value"
                     },
                     "Tags": null
                   }
@@ -4168,22 +3585,12 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (1.5) || RETURN",
-              "displayLines": "1.5",
-              "constants": [],
-              "variables": [
-                1.5
-              ]
+              "displayLines": "1.5"
             },
             "dmgFormula": "Max HP Scaling",
             "HitSplit": 0.5,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -4205,22 +3612,12 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (0.75) || RETURN",
-                  "displayLines": "0.75",
-                  "constants": [],
-                  "variables": [
-                    0.75
-                  ]
+                  "displayLines": "0.75"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "HitSplit": 0.5,
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "Tags": null
               }
@@ -4234,12 +3631,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (0.8) || RETURN",
-                  "displayLines": "0.8",
-                  "constants": [],
-                  "variables": [
-                    0.8
-                  ]
+                  "displayLines": "0.8"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "HitSplit": 0.5,
@@ -4258,22 +3650,12 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (0.75) || RETURN",
-                  "displayLines": "0.75",
-                  "constants": [],
-                  "variables": [
-                    0.75
-                  ]
+                  "displayLines": "0.75"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "HitSplit": 0.5,
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "Tags": null
               }
@@ -4290,31 +3672,16 @@ const compositeAbilityObject = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (1) || INVERT || RETURN",
-            "displayLines": "-1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "-1"
           }
         },
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (Jingliu_FullMoonFlag) || RETURN",
-            "displayLines": "Jingliu_FullMoonFlag",
-            "constants": [],
-            "variables": [
-              "Jingliu_FullMoonFlag"
-            ]
+            "displayLines": "Jingliu_FullMoonFlag"
           },
           "maximum": {
-            "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || RETURN",
-            "displayLines": "Jingliu_FullMoonFlagMax",
-            "constants": [],
-            "variables": [
-              "Jingliu_FullMoonFlagMax"
-            ]
+            "displayLines": "Jingliu_FullMoonFlagMax"
           },
           "assignState": "True",
           "priorState": "Active",
@@ -4343,12 +3710,7 @@ const compositeAbilityObject = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (8) || RETURN",
-                "displayLines": "8",
-                "constants": [],
-                "variables": [
-                  8
-                ]
+                "displayLines": "8"
               },
               "isFixed": "* ERR"
             }
@@ -4464,21 +3826,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1838091998\">Advanced_Jingliu_Eidolon1_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Moon Crashes Tianguan Gate</span>]",
               "duration": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.36) || RETURN",
-                  "displayLines": "0.36",
-                  "constants": [],
-                  "variables": [
-                    0.36
-                  ]
+                  "displayLines": "0.36"
                 }
               }
             }
@@ -4494,21 +3846,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (1.8) || RETURN",
-              "displayLines": "1.8",
-              "constants": [],
-              "variables": [
-                1.8
-              ]
+              "displayLines": "1.8"
             },
             "dmgFormula": "Max HP Scaling",
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -4531,21 +3873,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (0.9) || RETURN",
-                  "displayLines": "0.9",
-                  "constants": [],
-                  "variables": [
-                    0.9
-                  ]
+                  "displayLines": "0.9"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "Tags": null
               }
@@ -4560,12 +3892,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (0.8) || RETURN",
-                  "displayLines": "0.8",
-                  "constants": [],
-                  "variables": [
-                    0.8
-                  ]
+                  "displayLines": "0.8"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "Toughness": null,
@@ -4584,21 +3911,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (0.9) || RETURN",
-                  "displayLines": "0.9",
-                  "constants": [],
-                  "variables": [
-                    0.9
-                  ]
+                  "displayLines": "0.9"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "Tags": null
               }
@@ -4626,12 +3943,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               }
             },
             {
@@ -4641,12 +3953,7 @@ const compositeAbilityObject = {
                 "value1": "Jingliu_FullMoonFlag",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || RETURN",
-                  "displayLines": "Jingliu_FullMoonFlagMax",
-                  "constants": [],
-                  "variables": [
-                    "Jingliu_FullMoonFlagMax"
-                  ]
+                  "displayLines": "Jingliu_FullMoonFlagMax"
                 },
                 "contextScope": "ContextCaster"
               },
@@ -4660,12 +3967,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || RETURN",
-                    "displayLines": "Jingliu_FullMoonFlagMax",
-                    "constants": [],
-                    "variables": [
-                      "Jingliu_FullMoonFlagMax"
-                    ]
+                    "displayLines": "Jingliu_FullMoonFlagMax"
                   }
                 }
               ]
@@ -4673,20 +3975,10 @@ const compositeAbilityObject = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (Jingliu_FullMoonFlag) || RETURN",
-                "displayLines": "Jingliu_FullMoonFlag",
-                "constants": [],
-                "variables": [
-                  "Jingliu_FullMoonFlag"
-                ]
+                "displayLines": "Jingliu_FullMoonFlag"
               },
               "maximum": {
-                "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || RETURN",
-                "displayLines": "Jingliu_FullMoonFlagMax",
-                "constants": [],
-                "variables": [
-                  "Jingliu_FullMoonFlagMax"
-                ]
+                "displayLines": "Jingliu_FullMoonFlagMax"
               },
               "assignState": "True",
               "priorState": "Active",
@@ -4704,31 +3996,16 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               }
             },
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (Jingliu_MoonFlag) || RETURN",
-                "displayLines": "Jingliu_MoonFlag",
-                "constants": [],
-                "variables": [
-                  "Jingliu_MoonFlag"
-                ]
+                "displayLines": "Jingliu_MoonFlag"
               },
               "maximum": {
-                "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-                "displayLines": "Jingliu_MoonFlagMax",
-                "constants": [],
-                "variables": [
-                  "Jingliu_MoonFlagMax"
-                ]
+                "displayLines": "Jingliu_MoonFlagMax"
               },
               "assignState": "True",
               "priorState": "Normal",
@@ -4754,12 +4031,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"57193716\">Advanced_Jingliu_Eidolon2</a>[<span class=\"descriptionNumberColor\">Crescent Shadows Qixing Dipper</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.8) || RETURN",
-                  "displayLines": "0.8",
-                  "constants": [],
-                  "variables": [
-                    0.8
-                  ]
+                  "displayLines": "0.8"
                 }
               }
             }
@@ -4824,31 +4096,16 @@ const compositeAbilityObject = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           }
         },
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (Jingliu_MoonFlag) || RETURN",
-            "displayLines": "Jingliu_MoonFlag",
-            "constants": [],
-            "variables": [
-              "Jingliu_MoonFlag"
-            ]
+            "displayLines": "Jingliu_MoonFlag"
           },
           "maximum": {
-            "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-            "displayLines": "Jingliu_MoonFlagMax",
-            "constants": [],
-            "variables": [
-              "Jingliu_MoonFlagMax"
-            ]
+            "displayLines": "Jingliu_MoonFlagMax"
           },
           "assignState": "True",
           "priorState": "Normal",
@@ -4868,21 +4125,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (1.5) || RETURN",
-                  "displayLines": "1.5",
-                  "constants": [],
-                  "variables": [
-                    1.5
-                  ]
+                  "displayLines": "1.5"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -4905,12 +4152,7 @@ const compositeAbilityObject = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (15) || RETURN",
-                "displayLines": "15",
-                "constants": [],
-                "variables": [
-                  15
-                ]
+                "displayLines": "15"
               },
               "isFixed": "* ERR"
             }
@@ -4975,22 +4217,12 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             },
             "dmgFormula": "Max HP Scaling",
             "HitSplit": 0.3,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -5006,22 +4238,12 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             },
             "dmgFormula": "Max HP Scaling",
             "HitSplit": 0.7,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"

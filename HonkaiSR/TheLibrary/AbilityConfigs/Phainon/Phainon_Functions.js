@@ -42,22 +42,12 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1491786902\">Phainon_Passive_Property</a>[<span class=\"descriptionNumberColor\">Pyric Corpus</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "referenceModifier": "<a class=\"gModGreen\" id=\"1042665863\">MReference_CriticalDamageUp</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 }
               }
             }
@@ -72,12 +62,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (parameter[0]_AddValue) || RETURN",
-            "displayLines": "parameter[0]_AddValue",
-            "constants": [],
-            "variables": [
-              "parameter[0]_AddValue"
-            ]
+            "displayLines": "parameter[0]_AddValue"
           },
           "execute": [
             {

@@ -50,12 +50,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (BattleEvent_Geji_BaseSpeed) || RETURN",
-                "displayLines": "BattleEvent_Geji_BaseSpeed",
-                "constants": [],
-                "variables": [
-                  "BattleEvent_Geji_BaseSpeed"
-                ]
+                "displayLines": "BattleEvent_Geji_BaseSpeed"
               }
             }
           ]

@@ -51,13 +51,7 @@ const configAbility = {
                 "target": "{{Level Entity}}"
               },
               "consumePercent": {
-                "operator": "Variables[0] (MDF_Layer) || Variables[1] (ChallengePeakBattle_0007_ADF_1) || MUL || RETURN",
-                "displayLines": "(MDF_Layer * ChallengePeakBattle_0007_ADF_1)",
-                "constants": [],
-                "variables": [
-                  "MDF_Layer",
-                  "ChallengePeakBattle_0007_ADF_1"
-                ]
+                "displayLines": "(MDF_Layer * ChallengePeakBattle_0007_ADF_1)"
               },
               "eatShield": true,
               "attackType": "Level",
@@ -146,12 +140,7 @@ const configAbility = {
                   "stackLimit": 999,
                   "valuePerStack": {
                     "ChallengePeakBattle_0007_ADF_1": {
-                      "operator": "Variables[0] (ChallengePeakBattle_0007_ADF_1) || RETURN",
-                      "displayLines": "ChallengePeakBattle_0007_ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "ChallengePeakBattle_0007_ADF_1"
-                      ]
+                      "displayLines": "ChallengePeakBattle_0007_ADF_1"
                     }
                   }
                 }
@@ -248,12 +237,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1276144975\">Modifier_ChallengePeakBattle_EnhancedAbility_0007_02</a>",
                   "valuePerStack": {
                     "ChallengePeakBattle_0007_ADF_1": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }

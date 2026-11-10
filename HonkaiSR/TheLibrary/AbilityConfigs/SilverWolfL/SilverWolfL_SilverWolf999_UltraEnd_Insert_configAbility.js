@@ -34,17 +34,7 @@ const configAbility = {
           "functionName": "<a class=\"gTempYellow\" id=\"2105895650\">SilverWolf999_ModifySP</a>",
           "variables": {
             "parameter[0]_AddValue": {
-              "operator": "Constants[0] (0) || Variables[0] (CEIL) || Variables[1] (CurScore) || Constants[1] (1) || Variables[2] (0.2) || SUB || MUL || PARAM_1 || FUNCTION || SUB || RETURN",
-              "displayLines": "(0 - &nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>((CurScore * (1 - 0.2))))",
-              "constants": [
-                0,
-                1
-              ],
-              "variables": [
-                "CEIL",
-                "CurScore",
-                0.2
-              ]
+              "displayLines": "(0 - &nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>((CurScore * (1 - 0.2))))"
             }
           }
         }
@@ -55,14 +45,7 @@ const configAbility = {
           "functionName": "<a class=\"gTempYellow\" id=\"2105895650\">SilverWolf999_ModifySP</a>",
           "variables": {
             "parameter[0]_AddValue": {
-              "operator": "Constants[0] (0) || Variables[0] (CurScore) || SUB || RETURN",
-              "displayLines": "(0 - CurScore)",
-              "constants": [
-                0
-              ],
-              "variables": [
-                "CurScore"
-              ]
+              "displayLines": "(0 - CurScore)"
             }
           }
         }

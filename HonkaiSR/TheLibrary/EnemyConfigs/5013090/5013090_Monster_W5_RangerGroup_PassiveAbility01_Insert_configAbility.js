@@ -10,24 +10,14 @@ const configAbility = {
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-            "displayLines": "SummonList_ADF_2",
-            "constants": [],
-            "variables": [
-              "SummonList_ADF_2"
-            ]
+            "displayLines": "SummonList_ADF_2"
           },
           "locationType": "BeforeCaster"
         },
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonList_ADF_4) || RETURN",
-            "displayLines": "SummonList_ADF_4",
-            "constants": [],
-            "variables": [
-              "SummonList_ADF_4"
-            ]
+            "displayLines": "SummonList_ADF_4"
           },
           "locationType": "AfterCaster"
         }

@@ -347,14 +347,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Constants[0] (4) || Variables[0] (Skill05AssistNumber) || SUB || RETURN",
-        "displayLines": "(4 - Skill05AssistNumber)",
-        "constants": [
-          4
-        ],
-        "variables": [
-          "Skill05AssistNumber"
-        ]
+        "displayLines": "(4 - Skill05AssistNumber)"
       },
       "variableName": "Skill05ErrorNumber"
     },
@@ -400,14 +393,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "({[Skill05[0]]} * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "({[Skill05[0]]} * 0.5)"
             },
             "Toughness": null,
             "Tags": null,
@@ -458,14 +444,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "({[Skill05[0]]} * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "({[Skill05[0]]} * 0.5)"
             },
             "Toughness": null,
             "Tags": null,
@@ -516,14 +495,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "({[Skill05[0]]} * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "({[Skill05[0]]} * 0.5)"
             },
             "Toughness": null,
             "Tags": null,
@@ -574,14 +546,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "({[Skill05[0]]} * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "({[Skill05[0]]} * 0.5)"
             },
             "Toughness": null,
             "Tags": null,
@@ -599,15 +564,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill05[0]]}) || Constants[0] (0.5) || MUL || Variables[1] (Skill05AssistNumber) || MUL || RETURN",
-          "displayLines": "(({[Skill05[0]]} * 0.5) * Skill05AssistNumber)",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "{[Skill05[0]]}",
-            "Skill05AssistNumber"
-          ]
+          "displayLines": "(({[Skill05[0]]} * 0.5) * Skill05AssistNumber)"
         },
         "Toughness": null,
         "Tags": null,

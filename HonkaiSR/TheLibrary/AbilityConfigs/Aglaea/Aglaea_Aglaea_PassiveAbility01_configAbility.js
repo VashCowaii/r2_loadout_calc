@@ -178,13 +178,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_SPvalue) || Variables[1] (_MaxSp) || DIV || RETURN",
-                "displayLines": "(_SPvalue / _MaxSp)",
-                "constants": [],
-                "variables": [
-                  "_SPvalue",
-                  "_MaxSp"
-                ]
+                "displayLines": "(_SPvalue / _MaxSp)"
               },
               "variableName": "_SPRatio"
             },

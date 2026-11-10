@@ -40,20 +40,10 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Will of Steel</span>]",
               "valuePerStack": {
                 "MDF_SpeedUpPerLayer": {
-                  "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
-                  "displayLines": "{[SkillP04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP04[0]]}"
-                  ]
+                  "displayLines": "{[SkillP04[0]]}"
                 },
                 "MDF_AttackUpPerLayer": {
-                  "operator": "Variables[0] ({[SkillP04[1]]}) || RETURN",
-                  "displayLines": "{[SkillP04[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP04[1]]}"
-                  ]
+                  "displayLines": "{[SkillP04[1]]}"
                 }
               }
             },

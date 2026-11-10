@@ -137,13 +137,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (PromotionRank_BaseAttack) || Variables[1] (PromotionRank_AttackConvert) || SUB || RETURN",
-                "displayLines": "(PromotionRank_BaseAttack - PromotionRank_AttackConvert)",
-                "constants": [],
-                "variables": [
-                  "PromotionRank_BaseAttack",
-                  "PromotionRank_AttackConvert"
-                ]
+                "displayLines": "(PromotionRank_BaseAttack - PromotionRank_AttackConvert)"
               },
               "variableName": "PromotionRank_CleanAttack"
             },
@@ -166,13 +160,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (PromotionRank_CleanAttack) || Variables[1] (0.24) || MUL || RETURN",
-                "displayLines": "(PromotionRank_CleanAttack * 0.24)",
-                "constants": [],
-                "variables": [
-                  "PromotionRank_CleanAttack",
-                  0.24
-                ]
+                "displayLines": "(PromotionRank_CleanAttack * 0.24)"
               },
               "variableName": "PromotionRank_AttackAddedValue"
             },
@@ -196,12 +184,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-2138790536\">Cerydra_Ability02_Target_Lv2</a>[<span class=\"descriptionNumberColor\">Peerage</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (PromotionRank_AttackAddedValue) || RETURN",
-                      "displayLines": "PromotionRank_AttackAddedValue",
-                      "constants": [],
-                      "variables": [
-                        "PromotionRank_AttackAddedValue"
-                      ]
+                      "displayLines": "PromotionRank_AttackAddedValue"
                     }
                   }
                 }
@@ -216,12 +199,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-2088457679\">Cerydra_Ability02_Target_Lv1</a>[<span class=\"descriptionNumberColor\">Military Merit</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (PromotionRank_AttackAddedValue) || RETURN",
-                      "displayLines": "PromotionRank_AttackAddedValue",
-                      "constants": [],
-                      "variables": [
-                        "PromotionRank_AttackAddedValue"
-                      ]
+                      "displayLines": "PromotionRank_AttackAddedValue"
                     }
                   }
                 }
@@ -386,12 +364,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             },
             {
@@ -461,14 +434,7 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "scope": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (DV_CurrentPoint) || Variables[1] (6) || SUB || Variables[2] (_WindfuryCostFixValue) || ADD || RETURN",
-                    "displayLines": "((DV_CurrentPoint - 6) + _WindfuryCostFixValue)",
-                    "constants": [],
-                    "variables": [
-                      "DV_CurrentPoint",
-                      6,
-                      "_WindfuryCostFixValue"
-                    ]
+                    "displayLines": "((DV_CurrentPoint - 6) + _WindfuryCostFixValue)"
                   },
                   "variableName": "DV_CurrentPoint"
                 },
@@ -596,12 +562,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             },
             {
@@ -641,12 +602,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": {
-                "operator": "Variables[0] (8) || RETURN",
-                "displayLines": "8",
-                "constants": [],
-                "variables": [
-                  8
-                ]
+                "displayLines": "8"
               },
               "includeMaxValueInRange": true,
               "onChange": [
@@ -678,12 +634,7 @@ const configAbility = {
                             "value1": "DV_CurrentPoint",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (6) || RETURN",
-                              "displayLines": "6",
-                              "constants": [],
-                              "variables": [
-                                6
-                              ]
+                              "displayLines": "6"
                             }
                           }
                         }
@@ -784,12 +735,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             }
           }
         },
@@ -834,20 +780,10 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.16) || RETURN",
-              "displayLines": "0.16",
-              "constants": [],
-              "variables": [
-                0.16
-              ]
+              "displayLines": "0.16"
             },
             "MDF_PropertyValue2": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         },
@@ -868,12 +804,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.4) || RETURN",
-              "displayLines": "0.4",
-              "constants": [],
-              "variables": [
-                0.4
-              ]
+              "displayLines": "0.4"
             }
           }
         },
@@ -912,12 +843,7 @@ const configAbility = {
           "includeBattleEvent": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (1.6) || RETURN",
-              "displayLines": "1.6",
-              "constants": [],
-              "variables": [
-                1.6
-              ]
+              "displayLines": "1.6"
             }
           }
         },
@@ -1047,13 +973,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_Windfury_Flag_Sum) || Variables[1] (MDF_Windfury_Flag) || ADD || RETURN",
-                    "displayLines": "(MDF_Windfury_Flag_Sum + MDF_Windfury_Flag)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Windfury_Flag_Sum",
-                      "MDF_Windfury_Flag"
-                    ]
+                    "displayLines": "(MDF_Windfury_Flag_Sum + MDF_Windfury_Flag)"
                   },
                   "variableName": "MDF_Windfury_Flag_Sum"
                 }
@@ -1105,12 +1025,7 @@ const configAbility = {
                       },
                       "variables": {
                         "DV_AddPoint": {
-                          "operator": "Variables[0] (DV_PointAdded_Get) || RETURN",
-                          "displayLines": "DV_PointAdded_Get",
-                          "constants": [],
-                          "variables": [
-                            "DV_PointAdded_Get"
-                          ]
+                          "displayLines": "DV_PointAdded_Get"
                         }
                       }
                     }
@@ -1137,12 +1052,7 @@ const configAbility = {
                       "functionName": "<a class=\"gTempYellow\" id=\"1612575312\">Cerydra_Template_MaxPointHandle</a>",
                       "variables": {
                         "DV_AddPoint": {
-                          "operator": "Variables[0] (DV_PointAdded_Get) || RETURN",
-                          "displayLines": "DV_PointAdded_Get",
-                          "constants": [],
-                          "variables": [
-                            "DV_PointAdded_Get"
-                          ]
+                          "displayLines": "DV_PointAdded_Get"
                         }
                       }
                     }
@@ -1179,12 +1089,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -1217,12 +1122,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -1335,12 +1235,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.2) || RETURN",
-                "displayLines": "0.2",
-                "constants": [],
-                "variables": [
-                  0.2
-                ]
+                "displayLines": "0.2"
               },
               "variableName": "MDF_PropertyValue"
             },
@@ -1352,12 +1247,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -1382,12 +1272,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.2) || RETURN",
-                "displayLines": "0.2",
-                "constants": [],
-                "variables": [
-                  0.2
-                ]
+                "displayLines": "0.2"
               },
               "variableName": "DV_AllDamageTypePenetrate"
             },
@@ -1399,12 +1284,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (DV_AllDamageTypePenetrate) || RETURN",
-                "displayLines": "DV_AllDamageTypePenetrate",
-                "constants": [],
-                "variables": [
-                  "DV_AllDamageTypePenetrate"
-                ]
+                "displayLines": "DV_AllDamageTypePenetrate"
               }
             }
           ]
@@ -1469,13 +1349,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] (0.6) || Variables[1] (3) || ADD || RETURN",
-                              "displayLines": "(0.6 + 3)",
-                              "constants": [],
-                              "variables": [
-                                0.6,
-                                3
-                              ]
+                              "displayLines": "(0.6 + 3)"
                             },
                             "Toughness": null,
                             "instanceTag": "Cerydra_Rank06_PursuedDamage",
@@ -1487,14 +1361,7 @@ const configAbility = {
                           "name": "Define Custom Variable",
                           "scope": "ContextCaster",
                           "value": {
-                            "operator": "Variables[0] (DV_PursuedDamage_LimitCount) || Constants[0] (1) || SUB || RETURN",
-                            "displayLines": "(DV_PursuedDamage_LimitCount - 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "DV_PursuedDamage_LimitCount"
-                            ]
+                            "displayLines": "(DV_PursuedDamage_LimitCount - 1)"
                           },
                           "variableName": "DV_PursuedDamage_LimitCount"
                         }
@@ -1521,12 +1388,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] (0.6) || RETURN",
-                              "displayLines": "0.6",
-                              "constants": [],
-                              "variables": [
-                                0.6
-                              ]
+                              "displayLines": "0.6"
                             },
                             "Toughness": null,
                             "instanceTag": "Cerydra_Rank06_PursuedDamage",
@@ -1538,14 +1400,7 @@ const configAbility = {
                           "name": "Define Custom Variable",
                           "scope": "ContextCaster",
                           "value": {
-                            "operator": "Variables[0] (DV_PursuedDamage_LimitCount) || Constants[0] (1) || SUB || RETURN",
-                            "displayLines": "(DV_PursuedDamage_LimitCount - 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "DV_PursuedDamage_LimitCount"
-                            ]
+                            "displayLines": "(DV_PursuedDamage_LimitCount - 1)"
                           },
                           "variableName": "DV_PursuedDamage_LimitCount"
                         }
@@ -1593,12 +1448,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (5) || RETURN",
-                    "displayLines": "5",
-                    "constants": [],
-                    "variables": [
-                      5
-                    ]
+                    "displayLines": "5"
                   },
                   "isFixed": "* ERR"
                 },
@@ -1654,12 +1504,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -1681,12 +1526,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -1723,12 +1563,7 @@ const configAbility = {
                     "value1": "DV_CurrentPoint",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (8) || RETURN",
-                      "displayLines": "8",
-                      "constants": [],
-                      "variables": [
-                        8
-                      ]
+                      "displayLines": "8"
                     }
                   },
                   "passed": [
@@ -1737,12 +1572,7 @@ const configAbility = {
                       "functionName": "<a class=\"gTempYellow\" id=\"1612575312\">Cerydra_Template_MaxPointHandle</a>",
                       "variables": {
                         "DV_AddPoint": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         }
                       }
                     },
@@ -1775,27 +1605,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (FLOOR) || Variables[1] (MDF_PropertyValue) || Variables[2] (100) || DIV || PARAM_1 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_PropertyValue / 100))",
-                "constants": [],
-                "variables": [
-                  "FLOOR",
-                  "MDF_PropertyValue",
-                  100
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_PropertyValue / 100))"
               },
               "variableName": "MDF_Multipler"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_Multipler) || Variables[1] (0.18) || MUL || RETURN",
-                "displayLines": "(MDF_Multipler * 0.18)",
-                "constants": [],
-                "variables": [
-                  "MDF_Multipler",
-                  0.18
-                ]
+                "displayLines": "(MDF_Multipler * 0.18)"
               },
               "variableName": "MDF_PropertyValue2"
             },
@@ -1810,12 +1627,7 @@ const configAbility = {
                 "value1": "MDF_PropertyValue2",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (MDF_PropertyValue2_Max) || RETURN",
-                  "displayLines": "MDF_PropertyValue2_Max",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue2_Max"
-                  ]
+                  "displayLines": "MDF_PropertyValue2_Max"
                 },
                 "contextScope": "ContextModifier"
               },
@@ -1823,12 +1635,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue2_Max) || RETURN",
-                    "displayLines": "MDF_PropertyValue2_Max",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue2_Max"
-                    ]
+                    "displayLines": "MDF_PropertyValue2_Max"
                   },
                   "variableName": "MDF_PropertyValue2"
                 }
@@ -1842,12 +1649,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                "displayLines": "MDF_PropertyValue2",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue2"
-                ]
+                "displayLines": "MDF_PropertyValue2"
               }
             }
           ]
@@ -1895,13 +1697,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_CurrentAttack) || Variables[1] (MDF_CurrentAttackConvert) || SUB || RETURN",
-                "displayLines": "(MDF_CurrentAttack - MDF_CurrentAttackConvert)",
-                "constants": [],
-                "variables": [
-                  "MDF_CurrentAttack",
-                  "MDF_CurrentAttackConvert"
-                ]
+                "displayLines": "(MDF_CurrentAttack - MDF_CurrentAttackConvert)"
               },
               "variableName": "MDF_CurrentAttack2"
             },
@@ -1912,13 +1708,7 @@ const configAbility = {
                 "value1": "MDF_CurrentAttack2",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (2000) || Variables[1] (100) || ADD || RETURN",
-                  "displayLines": "(2000 + 100)",
-                  "constants": [],
-                  "variables": [
-                    2000,
-                    100
-                  ]
+                  "displayLines": "(2000 + 100)"
                 }
               },
               "passed": [
@@ -1942,21 +1732,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1777978570\">Cerydra_PointB1_CriticalDamageAddedRatio_Sub</a>[<span class=\"descriptionNumberColor\">Veni</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue2_Max": {
-                          "operator": "Variables[0] (3.6) || RETURN",
-                          "displayLines": "3.6",
-                          "constants": [],
-                          "variables": [
-                            3.6
-                          ]
+                          "displayLines": "3.6"
                         },
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_CurrentAttack2) || Variables[1] (2000) || SUB || RETURN",
-                          "displayLines": "(MDF_CurrentAttack2 - 2000)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentAttack2",
-                            2000
-                          ]
+                          "displayLines": "(MDF_CurrentAttack2 - 2000)"
                         }
                       }
                     }
@@ -1971,21 +1750,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1777978570\">Cerydra_PointB1_CriticalDamageAddedRatio_Sub</a>[<span class=\"descriptionNumberColor\">Veni</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue2_Max": {
-                          "operator": "Variables[0] (3.6) || RETURN",
-                          "displayLines": "3.6",
-                          "constants": [],
-                          "variables": [
-                            3.6
-                          ]
+                          "displayLines": "3.6"
                         },
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_CurrentAttack2) || Variables[1] (2000) || SUB || RETURN",
-                          "displayLines": "(MDF_CurrentAttack2 - 2000)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentAttack2",
-                            2000
-                          ]
+                          "displayLines": "(MDF_CurrentAttack2 - 2000)"
                         }
                       }
                     }

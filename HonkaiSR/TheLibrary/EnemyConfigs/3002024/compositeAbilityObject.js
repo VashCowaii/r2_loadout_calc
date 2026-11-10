@@ -371,14 +371,7 @@ const compositeAbilityObject = {
         {
           "name": "Skill Points Modification",
           "adjustmentValue": {
-            "operator": "Constants[0] (0) || Variables[0] ({[Skill08[0]]}) || SUB || RETURN",
-            "displayLines": "(0 - {[Skill08[0]]})",
-            "constants": [
-              0
-            ],
-            "variables": [
-              "{[Skill08[0]]}"
-            ]
+            "displayLines": "(0 - {[Skill08[0]]})"
           },
           "adjustmentType": "+"
         }
@@ -502,14 +495,7 @@ const compositeAbilityObject = {
         {
           "name": "Skill Points Modification",
           "adjustmentValue": {
-            "operator": "Constants[0] (0) || Variables[0] ({[Skill02[0]]}) || SUB || RETURN",
-            "displayLines": "(0 - {[Skill02[0]]})",
-            "constants": [
-              0
-            ],
-            "variables": [
-              "{[Skill02[0]]}"
-            ]
+            "displayLines": "(0 - {[Skill02[0]]})"
           },
           "adjustmentType": "+"
         },
@@ -582,12 +568,7 @@ const compositeAbilityObject = {
         {
           "name": "Skill Points Modification",
           "adjustmentValue": {
-            "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-            "displayLines": "{[Skill01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[0]]}"
-            ]
+            "displayLines": "{[Skill01[0]]}"
           },
           "adjustmentType": "+"
         },

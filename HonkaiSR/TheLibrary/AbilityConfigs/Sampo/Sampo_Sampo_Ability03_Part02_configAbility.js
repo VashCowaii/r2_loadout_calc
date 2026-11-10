@@ -18,24 +18,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (1.6) || Constants[0] (0.25) || MUL || RETURN",
-              "displayLines": "(1.6 * 0.25)",
-              "constants": [
-                0.25
-              ],
-              "variables": [
-                1.6
-              ]
+              "displayLines": "(1.6 * 0.25)"
             },
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || Constants[0] (0.25) || MUL || RETURN",
-              "displayLines": "(AOE Toughness Value * 0.25)",
-              "constants": [
-                0.25
-              ],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "(AOE Toughness Value * 0.25)"
             },
             "Tags": null,
             "EnergyGainPercent": "25%"
@@ -52,30 +38,15 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-2131103330\">Sampo_Ultimate_DOTTakenUp</a>[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
       "duration": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       },
       "baseChance": {
-        "operator": "Variables[0] (1) || RETURN",
-        "displayLines": "1",
-        "constants": [],
-        "variables": [
-          1
-        ]
+        "displayLines": "1"
       },
       "immediateEffect": true,
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] (0.3) || RETURN",
-          "displayLines": "0.3",
-          "constants": [],
-          "variables": [
-            0.3
-          ]
+          "displayLines": "0.3"
         }
       }
     },

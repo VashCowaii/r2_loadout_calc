@@ -33,12 +33,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.12) || RETURN",
-                "displayLines": "0.12",
-                "constants": [],
-                "variables": [
-                  0.12
-                ]
+                "displayLines": "0.12"
               }
             }
           ]
@@ -100,12 +95,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.24) || RETURN",
-                "displayLines": "0.24",
-                "constants": [],
-                "variables": [
-                  0.24
-                ]
+                "displayLines": "0.24"
               }
             }
           ]
@@ -147,12 +137,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"47200936\">Relic_326_Sub</a>[<span class=\"descriptionNumberColor\">City of Converging Stars</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   }
                 }
               ]

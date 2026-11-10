@@ -232,12 +232,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1708564836\">Standard_Fear</a>[<span class=\"descriptionNumberColor\">Terrified</span>]",
                       "valuePerStack": {
                         "MDF_LoseSP": {
-                          "operator": "Variables[0] (MDF_LoseSP) || RETURN",
-                          "displayLines": "MDF_LoseSP",
-                          "constants": [],
-                          "variables": [
-                            "MDF_LoseSP"
-                          ]
+                          "displayLines": "MDF_LoseSP"
                         }
                       }
                     },
@@ -390,12 +385,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-743573476\">Standard_FearListener</a>",
               "valuePerStack": {
                 "MDF_LoseSP": {
-                  "operator": "Variables[0] (MDF_LoseSP) || RETURN",
-                  "displayLines": "MDF_LoseSP",
-                  "constants": [],
-                  "variables": [
-                    "MDF_LoseSP"
-                  ]
+                  "displayLines": "MDF_LoseSP"
                 }
               },
               "casterAssign": "TargetSelf"

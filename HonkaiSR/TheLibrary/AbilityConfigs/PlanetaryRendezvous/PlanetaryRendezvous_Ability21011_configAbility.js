@@ -33,12 +33,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageImaginary</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.12) || RETURN",
-                "displayLines": "0.12",
-                "constants": [],
-                "variables": [
-                  0.12
-                ]
+                "displayLines": "0.12"
               }
             }
           ]
@@ -64,12 +59,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageQuantum</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.12) || RETURN",
-                "displayLines": "0.12",
-                "constants": [],
-                "variables": [
-                  0.12
-                ]
+                "displayLines": "0.12"
               }
             }
           ]
@@ -95,12 +85,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageWind</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.12) || RETURN",
-                "displayLines": "0.12",
-                "constants": [],
-                "variables": [
-                  0.12
-                ]
+                "displayLines": "0.12"
               }
             }
           ]
@@ -126,12 +111,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageLightning</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.12) || RETURN",
-                "displayLines": "0.12",
-                "constants": [],
-                "variables": [
-                  0.12
-                ]
+                "displayLines": "0.12"
               }
             }
           ]
@@ -157,12 +137,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageIce</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.12) || RETURN",
-                "displayLines": "0.12",
-                "constants": [],
-                "variables": [
-                  0.12
-                ]
+                "displayLines": "0.12"
               }
             }
           ]
@@ -188,12 +163,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageFire</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.12) || RETURN",
-                "displayLines": "0.12",
-                "constants": [],
-                "variables": [
-                  0.12
-                ]
+                "displayLines": "0.12"
               }
             }
           ]
@@ -219,12 +189,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamagePhysical</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.12) || RETURN",
-                "displayLines": "0.12",
-                "constants": [],
-                "variables": [
-                  0.12
-                ]
+                "displayLines": "0.12"
               }
             }
           ]

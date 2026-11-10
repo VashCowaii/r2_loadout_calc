@@ -13,20 +13,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (0.9) || RETURN",
-          "displayLines": "0.9",
-          "constants": [],
-          "variables": [
-            0.9
-          ]
+          "displayLines": "0.9"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "attackType": "Basic ATK",
@@ -42,20 +32,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (0.3) || RETURN",
-          "displayLines": "0.3",
-          "constants": [],
-          "variables": [
-            0.3
-          ]
+          "displayLines": "0.3"
         },
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-          "displayLines": "Blast Toughness Value",
-          "constants": [],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "Blast Toughness Value"
         },
         "Tags": null,
         "attackType": "Basic ATK"

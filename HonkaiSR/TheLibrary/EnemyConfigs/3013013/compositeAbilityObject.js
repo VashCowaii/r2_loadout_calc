@@ -133,12 +133,7 @@ const compositeAbilityObject = {
                     "value1": "<a class=\"gModGreen\" id=\"-1395319081\">Enemy_W3_Dinosaur_01_Standard_Growth</a>[<span class=\"descriptionNumberColor\">Obscure Blaze</span>]",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (Dinosaur_BreakModifierMaxCount) || RETURN",
-                      "displayLines": "Dinosaur_BreakModifierMaxCount",
-                      "constants": [],
-                      "variables": [
-                        "Dinosaur_BreakModifierMaxCount"
-                      ]
+                      "displayLines": "Dinosaur_BreakModifierMaxCount"
                     },
                     "valueType": "Layer"
                   },
@@ -304,28 +299,13 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"532367944\">Standard_SuperArmorController</a>",
           "valuePerStack": {
             "MDF_SuperArmorDamageResistance": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
+              "displayLines": "{[SkillP01[0]]}"
             },
             "MDF_SuperArmorBreakActionDelay": {
-              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-              "displayLines": "{[SkillP01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[1]]}"
-              ]
+              "displayLines": "{[SkillP01[1]]}"
             },
             "MDF_SuperArmorBreakDamageTakenRatio": {
-              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-              "displayLines": "{[SkillP01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[2]]}"
-              ]
+              "displayLines": "{[SkillP01[2]]}"
             }
           }
         }
@@ -384,13 +364,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (MDF_Growth_Layer) || Variables[1] ({[Skill07[1]]}) || ADD || RETURN",
-            "displayLines": "(MDF_Growth_Layer + {[Skill07[1]]})",
-            "constants": [],
-            "variables": [
-              "MDF_Growth_Layer",
-              "{[Skill07[1]]}"
-            ]
+            "displayLines": "(MDF_Growth_Layer + {[Skill07[1]]})"
           },
           "variableName": "Monster_W3_Dinosaur_01_Skill07_HitCount"
         },
@@ -402,15 +376,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Monster_W3_Dinosaur_01_Skill07_HitCount) || Variables[1] (Monster_W3_Dinosaur_01_Skill07_SumTime) || Constants[0] (1) || SUB || DIV || RETURN",
-            "displayLines": "(Monster_W3_Dinosaur_01_Skill07_HitCount / (Monster_W3_Dinosaur_01_Skill07_SumTime - 1))",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "Monster_W3_Dinosaur_01_Skill07_HitCount",
-              "Monster_W3_Dinosaur_01_Skill07_SumTime"
-            ]
+            "displayLines": "(Monster_W3_Dinosaur_01_Skill07_HitCount / (Monster_W3_Dinosaur_01_Skill07_SumTime - 1))"
           },
           "variableName": "Monster_W3_Dinosaur_01_Skill07_DeltaTime"
         },
@@ -425,12 +391,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (Monster_W3_Dinosaur_01_Skill07_SumTime) || RETURN",
-            "displayLines": "Monster_W3_Dinosaur_01_Skill07_SumTime",
-            "constants": [],
-            "variables": [
-              "Monster_W3_Dinosaur_01_Skill07_SumTime"
-            ]
+            "displayLines": "Monster_W3_Dinosaur_01_Skill07_SumTime"
           },
           "execute": [
             {
@@ -563,14 +524,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Monster_W3_Dinosaur_01_Skill07_CurrentHitCount_i) || Constants[0] (3) || MOD || RETURN",
-                "displayLines": "(Monster_W3_Dinosaur_01_Skill07_CurrentHitCount_i % 3)",
-                "constants": [
-                  3
-                ],
-                "variables": [
-                  "Monster_W3_Dinosaur_01_Skill07_CurrentHitCount_i"
-                ]
+                "displayLines": "(Monster_W3_Dinosaur_01_Skill07_CurrentHitCount_i % 3)"
               },
               "variableName": "Monster_W3_Dinosaur_01_Skill07_CurrentHitCount_i_Eff_Loop"
             },
@@ -671,12 +625,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                                  "displayLines": "{[Skill07[0]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[Skill07[0]]}"
-                                  ]
+                                  "displayLines": "{[Skill07[0]]}"
                                 },
                                 "Toughness": null,
                                 "Tags": null,
@@ -693,12 +642,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                                  "displayLines": "{[Skill07[0]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[Skill07[0]]}"
-                                  ]
+                                  "displayLines": "{[Skill07[0]]}"
                                 },
                                 "Toughness": null,
                                 "Tags": null,
@@ -717,12 +661,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                                  "displayLines": "{[Skill07[0]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[Skill07[0]]}"
-                                  ]
+                                  "displayLines": "{[Skill07[0]]}"
                                 },
                                 "Toughness": null,
                                 "Tags": null,
@@ -815,12 +754,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                                  "displayLines": "{[Skill07[0]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[Skill07[0]]}"
-                                  ]
+                                  "displayLines": "{[Skill07[0]]}"
                                 },
                                 "Toughness": null,
                                 "Tags": null,
@@ -837,12 +771,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                                  "displayLines": "{[Skill07[0]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[Skill07[0]]}"
-                                  ]
+                                  "displayLines": "{[Skill07[0]]}"
                                 },
                                 "Toughness": null,
                                 "Tags": null,
@@ -861,12 +790,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                                  "displayLines": "{[Skill07[0]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[Skill07[0]]}"
-                                  ]
+                                  "displayLines": "{[Skill07[0]]}"
                                 },
                                 "Toughness": null,
                                 "Tags": null,
@@ -970,12 +894,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                              "displayLines": "{[Skill07[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill07[0]]}"
-                              ]
+                              "displayLines": "{[Skill07[0]]}"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -992,12 +911,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                              "displayLines": "{[Skill07[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill07[0]]}"
-                              ]
+                              "displayLines": "{[Skill07[0]]}"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -1016,12 +930,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                              "displayLines": "{[Skill07[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill07[0]]}"
-                              ]
+                              "displayLines": "{[Skill07[0]]}"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -1123,12 +1032,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                              "displayLines": "{[Skill07[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill07[0]]}"
-                              ]
+                              "displayLines": "{[Skill07[0]]}"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -1145,12 +1049,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                              "displayLines": "{[Skill07[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill07[0]]}"
-                              ]
+                              "displayLines": "{[Skill07[0]]}"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -1169,12 +1068,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                              "displayLines": "{[Skill07[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill07[0]]}"
-                              ]
+                              "displayLines": "{[Skill07[0]]}"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -1286,12 +1180,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1321,21 +1210,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-340009422\">Enemy_W3_Dinosaur_01_Standard_Growth_Enhance</a>[<span class=\"descriptionNumberColor\">Scorchbone Inferno</span>]",
               "stackLimit": {
-                "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                "displayLines": "{[SkillP01[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP01[3]]}"
-                ]
+                "displayLines": "{[SkillP01[3]]}"
               },
               "valuePerStack": {
                 "MDF_MaxLayer": {
-                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                  "displayLines": "{[SkillP01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[3]]}"
-                  ]
+                  "displayLines": "{[SkillP01[3]]}"
                 }
               },
               "addStacksPerTrigger": 1
@@ -1351,12 +1230,7 @@ const compositeAbilityObject = {
                 "value1": "<a class=\"gModGreen\" id=\"-340009422\">Enemy_W3_Dinosaur_01_Standard_Growth_Enhance</a>[<span class=\"descriptionNumberColor\">Scorchbone Inferno</span>]",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                  "displayLines": "{[SkillP01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[3]]}"
-                  ]
+                  "displayLines": "{[SkillP01[3]]}"
                 },
                 "valueType": "Layer"
               }
@@ -1450,12 +1324,7 @@ const compositeAbilityObject = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                "displayLines": "{[Skill04[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[0]]}"
-                ]
+                "displayLines": "{[Skill04[0]]}"
               },
               "execute": [
                 {
@@ -1466,21 +1335,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-340009422\">Enemy_W3_Dinosaur_01_Standard_Growth_Enhance</a>[<span class=\"descriptionNumberColor\">Scorchbone Inferno</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                    "displayLines": "{[SkillP01[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillP01[3]]}"
-                    ]
+                    "displayLines": "{[SkillP01[3]]}"
                   },
                   "valuePerStack": {
                     "MDF_MaxLayer": {
-                      "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                      "displayLines": "{[SkillP01[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[3]]}"
-                      ]
+                      "displayLines": "{[SkillP01[3]]}"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -1498,12 +1357,7 @@ const compositeAbilityObject = {
                 "value1": "<a class=\"gModGreen\" id=\"-340009422\">Enemy_W3_Dinosaur_01_Standard_Growth_Enhance</a>[<span class=\"descriptionNumberColor\">Scorchbone Inferno</span>]",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                  "displayLines": "{[SkillP01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[3]]}"
-                  ]
+                  "displayLines": "{[SkillP01[3]]}"
                 },
                 "valueType": "Layer"
               }
@@ -1607,12 +1461,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1642,21 +1491,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-340009422\">Enemy_W3_Dinosaur_01_Standard_Growth_Enhance</a>[<span class=\"descriptionNumberColor\">Scorchbone Inferno</span>]",
               "stackLimit": {
-                "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                "displayLines": "{[SkillP01[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP01[3]]}"
-                ]
+                "displayLines": "{[SkillP01[3]]}"
               },
               "valuePerStack": {
                 "MDF_MaxLayer": {
-                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                  "displayLines": "{[SkillP01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[3]]}"
-                  ]
+                  "displayLines": "{[SkillP01[3]]}"
                 }
               },
               "addStacksPerTrigger": 1
@@ -1672,12 +1511,7 @@ const compositeAbilityObject = {
                 "value1": "<a class=\"gModGreen\" id=\"-340009422\">Enemy_W3_Dinosaur_01_Standard_Growth_Enhance</a>[<span class=\"descriptionNumberColor\">Scorchbone Inferno</span>]",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                  "displayLines": "{[SkillP01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[3]]}"
-                  ]
+                  "displayLines": "{[SkillP01[3]]}"
                 },
                 "valueType": "Layer"
               }

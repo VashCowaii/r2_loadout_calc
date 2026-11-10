@@ -34,12 +34,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.15) || RETURN",
-                "displayLines": "0.15",
-                "constants": [],
-                "variables": [
-                  0.15
-                ]
+                "displayLines": "0.15"
               }
             }
           ]
@@ -68,12 +63,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1919461923\">LC_21042_Sub</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   }
                 }
               ]

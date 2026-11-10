@@ -18,24 +18,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (1.5) || Constants[0] (7) || DIV || RETURN",
-              "displayLines": "(1.5 / 7)",
-              "constants": [
-                7
-              ],
-              "variables": [
-                1.5
-              ]
+              "displayLines": "(1.5 / 7)"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || Constants[0] (7) || DIV || RETURN",
-              "displayLines": "(ST Toughness Value / 7)",
-              "constants": [
-                7
-              ],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "(ST Toughness Value / 7)"
             },
             "Tags": [
               "Summon-Tag DMG"
@@ -63,12 +49,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (5) || RETURN",
-            "displayLines": "5",
-            "constants": [],
-            "variables": [
-              5
-            ]
+            "displayLines": "5"
           },
           "isFixed": "* ERR"
         }
@@ -92,12 +73,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (60) || RETURN",
-            "displayLines": "60",
-            "constants": [],
-            "variables": [
-              60
-            ]
+            "displayLines": "60"
           },
           "isFixed": "* ERR"
         },

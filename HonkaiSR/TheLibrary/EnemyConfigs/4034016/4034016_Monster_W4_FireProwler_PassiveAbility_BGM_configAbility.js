@@ -118,12 +118,7 @@ const configAbility = {
                 "value1": "MDF_WaveIndex",
                 "compareType": "NOT=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_WaveIndex2) || RETURN",
-                  "displayLines": "MDF_WaveIndex2",
-                  "constants": [],
-                  "variables": [
-                    "MDF_WaveIndex2"
-                  ]
+                  "displayLines": "MDF_WaveIndex2"
                 }
               },
               "passed": [

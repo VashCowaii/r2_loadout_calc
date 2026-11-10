@@ -460,12 +460,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_TotalDamage) || RETURN",
-                        "displayLines": "MDF_TotalDamage",
-                        "constants": [],
-                        "variables": [
-                          "MDF_TotalDamage"
-                        ]
+                        "displayLines": "MDF_TotalDamage"
                       },
                       "variableName": "_FinalDamage"
                     },
@@ -547,13 +542,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_TotalDamage) || Variables[1] (MDF_HitDamage) || ADD || RETURN",
-                "displayLines": "(MDF_TotalDamage + MDF_HitDamage)",
-                "constants": [],
-                "variables": [
-                  "MDF_TotalDamage",
-                  "MDF_HitDamage"
-                ]
+                "displayLines": "(MDF_TotalDamage + MDF_HitDamage)"
               },
               "variableName": "MDF_TotalDamage"
             },
@@ -905,12 +894,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_TotalDamage) || RETURN",
-                        "displayLines": "MDF_TotalDamage",
-                        "constants": [],
-                        "variables": [
-                          "MDF_TotalDamage"
-                        ]
+                        "displayLines": "MDF_TotalDamage"
                       },
                       "variableName": "_FinalDamage"
                     },

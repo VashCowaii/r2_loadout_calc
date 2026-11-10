@@ -14,12 +14,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-          "displayLines": "{[Skill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[0]]}"
-          ]
+          "displayLines": "{[Skill01[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -49,12 +44,7 @@ const configAbility = {
           "duration": 1,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (SkillEX03_P1_AttackAddedRatio) || RETURN",
-              "displayLines": "SkillEX03_P1_AttackAddedRatio",
-              "constants": [],
-              "variables": [
-                "SkillEX03_P1_AttackAddedRatio"
-              ]
+              "displayLines": "SkillEX03_P1_AttackAddedRatio"
             }
           }
         }

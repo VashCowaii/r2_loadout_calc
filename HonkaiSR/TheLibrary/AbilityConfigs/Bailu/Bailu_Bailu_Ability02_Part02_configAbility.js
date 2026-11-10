@@ -32,20 +32,10 @@ const configAbility = {
             "target": "{{Ability Target(ST)}}"
           },
           "healPercent": {
-            "operator": "Variables[0] (0.117) || RETURN",
-            "displayLines": "0.117",
-            "constants": [],
-            "variables": [
-              0.117
-            ]
+            "displayLines": "0.117"
           },
           "healFlat": {
-            "operator": "Variables[0] (312) || RETURN",
-            "displayLines": "312",
-            "constants": [],
-            "variables": [
-              312
-            ]
+            "displayLines": "312"
           },
           "formula": "Heal from Healer's MaxHP"
         },
@@ -62,24 +52,14 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (0.117) || RETURN",
-        "displayLines": "0.117",
-        "constants": [],
-        "variables": [
-          0.117
-        ]
+        "displayLines": "0.117"
       },
       "variableName": "MDF_HealPercentage"
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (312) || RETURN",
-        "displayLines": "312",
-        "constants": [],
-        "variables": [
-          312
-        ]
+        "displayLines": "312"
       },
       "variableName": "MDF_HealValue"
     },
@@ -95,30 +75,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (MDF_HealPercentage) || Constants[0] (1) || Variables[1] (0.15) || SUB || MUL || RETURN",
-            "displayLines": "(MDF_HealPercentage * (1 - 0.15))",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "MDF_HealPercentage",
-              0.15
-            ]
+            "displayLines": "(MDF_HealPercentage * (1 - 0.15))"
           },
           "variableName": "MDF_HealPercentage"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (MDF_HealValue) || Constants[0] (1) || Variables[1] (0.15) || SUB || MUL || RETURN",
-            "displayLines": "(MDF_HealValue * (1 - 0.15))",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "MDF_HealValue",
-              0.15
-            ]
+            "displayLines": "(MDF_HealValue * (1 - 0.15))"
           },
           "variableName": "MDF_HealValue"
         },
@@ -133,20 +97,10 @@ const configAbility = {
                 "target": "{{Projectile's Target}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (MDF_HealPercentage) || RETURN",
-                "displayLines": "MDF_HealPercentage",
-                "constants": [],
-                "variables": [
-                  "MDF_HealPercentage"
-                ]
+                "displayLines": "MDF_HealPercentage"
               },
               "healFlat": {
-                "operator": "Variables[0] (MDF_HealValue) || RETURN",
-                "displayLines": "MDF_HealValue",
-                "constants": [],
-                "variables": [
-                  "MDF_HealValue"
-                ]
+                "displayLines": "MDF_HealValue"
               },
               "formula": "Heal from Healer's MaxHP"
             },
@@ -165,14 +119,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
-        "displayLines": "(2 - 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          2
-        ]
+        "displayLines": "(2 - 1)"
       },
       "execute": [
         {
@@ -187,30 +134,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_HealPercentage) || Constants[0] (1) || Variables[1] (0.15) || SUB || MUL || RETURN",
-                "displayLines": "(MDF_HealPercentage * (1 - 0.15))",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_HealPercentage",
-                  0.15
-                ]
+                "displayLines": "(MDF_HealPercentage * (1 - 0.15))"
               },
               "variableName": "MDF_HealPercentage"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_HealValue) || Constants[0] (1) || Variables[1] (0.15) || SUB || MUL || RETURN",
-                "displayLines": "(MDF_HealValue * (1 - 0.15))",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_HealValue",
-                  0.15
-                ]
+                "displayLines": "(MDF_HealValue * (1 - 0.15))"
               },
               "variableName": "MDF_HealValue"
             },
@@ -225,20 +156,10 @@ const configAbility = {
                     "target": "{{Projectile's Target}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (MDF_HealPercentage) || RETURN",
-                    "displayLines": "MDF_HealPercentage",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HealPercentage"
-                    ]
+                    "displayLines": "MDF_HealPercentage"
                   },
                   "healFlat": {
-                    "operator": "Variables[0] (MDF_HealValue) || RETURN",
-                    "displayLines": "MDF_HealValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HealValue"
-                    ]
+                    "displayLines": "MDF_HealValue"
                   },
                   "formula": "Heal from Healer's MaxHP"
                 },

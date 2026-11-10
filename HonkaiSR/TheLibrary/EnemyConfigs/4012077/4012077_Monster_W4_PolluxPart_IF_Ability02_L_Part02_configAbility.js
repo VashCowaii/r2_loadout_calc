@@ -21,12 +21,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -52,13 +47,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "DamageFlat": {
-              "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill02[2]]}) || MUL || RETURN",
-              "displayLines": "(_MaxHP * {[Skill02[2]]})",
-              "constants": [],
-              "variables": [
-                "_MaxHP",
-                "{[Skill02[2]]}"
-              ]
+              "displayLines": "(_MaxHP * {[Skill02[2]]})"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -85,12 +74,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-              "displayLines": "{[Skill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[1]]}"
-              ]
+              "displayLines": "{[Skill02[1]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -116,13 +100,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "DamageFlat": {
-              "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill02[3]]}) || MUL || RETURN",
-              "displayLines": "(_MaxHP * {[Skill02[3]]})",
-              "constants": [],
-              "variables": [
-                "_MaxHP",
-                "{[Skill02[3]]}"
-              ]
+              "displayLines": "(_MaxHP * {[Skill02[3]]})"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,

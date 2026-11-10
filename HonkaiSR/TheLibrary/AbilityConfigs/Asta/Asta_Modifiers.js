@@ -34,12 +34,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRate</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -68,12 +63,7 @@ const configAbility = {
               "name": "Define Modifier Variable",
               "modifierName": "<a class=\"gModGreen\" id=\"216386907\">Asta_TeamAttackUP</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
               "value": {
-                "operator": "Variables[0] (MDF_Charge_Count) || RETURN",
-                "displayLines": "MDF_Charge_Count",
-                "constants": [],
-                "variables": [
-                  "MDF_Charge_Count"
-                ]
+                "displayLines": "MDF_Charge_Count"
               }
             },
             {
@@ -84,13 +74,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AttackAddedRatio) || Variables[1] (MDF_Charge_Count) || MUL || RETURN",
-                "displayLines": "(MDF_AttackAddedRatio * MDF_Charge_Count)",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackAddedRatio",
-                  "MDF_Charge_Count"
-                ]
+                "displayLines": "(MDF_AttackAddedRatio * MDF_Charge_Count)"
               }
             }
           ]
@@ -120,12 +104,7 @@ const configAbility = {
               "name": "Update Displayed Energy Bar",
               "value": 0,
               "maximum": {
-                "operator": "Variables[0] (5) || RETURN",
-                "displayLines": "5",
-                "constants": [],
-                "variables": [
-                  5
-                ]
+                "displayLines": "5"
               },
               "assignState": "True",
               "priorState": "Normal",
@@ -175,31 +154,16 @@ const configAbility = {
               "name": "Define Modifier Variable",
               "modifierName": "<a class=\"gModGreen\" id=\"-1734289579\">Asta_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
               "value": {
-                "operator": "Variables[0] (MDF_Count) || RETURN",
-                "displayLines": "MDF_Count",
-                "constants": [],
-                "variables": [
-                  "MDF_Count"
-                ]
+                "displayLines": "MDF_Count"
               }
             },
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_Count) || RETURN",
-                "displayLines": "MDF_Count",
-                "constants": [],
-                "variables": [
-                  "MDF_Count"
-                ]
+                "displayLines": "MDF_Count"
               },
               "maximum": {
-                "operator": "Variables[0] (5) || RETURN",
-                "displayLines": "5",
-                "constants": [],
-                "variables": [
-                  5
-                ]
+                "displayLines": "5"
               },
               "assignState": "True",
               "priorState": "Active",
@@ -221,13 +185,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackAddedRatio) || Variables[1] (MDF_Count) || MUL || RETURN",
-                    "displayLines": "(MDF_AttackAddedRatio * MDF_Count)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackAddedRatio",
-                      "MDF_Count"
-                    ]
+                    "displayLines": "(MDF_AttackAddedRatio * MDF_Count)"
                   }
                 },
                 {
@@ -238,13 +196,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DefenceAddedRatio) || Variables[1] (MDF_Count) || MUL || RETURN",
-                    "displayLines": "(MDF_DefenceAddedRatio * MDF_Count)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DefenceAddedRatio",
-                      "MDF_Count"
-                    ]
+                    "displayLines": "(MDF_DefenceAddedRatio * MDF_Count)"
                   }
                 },
                 {
@@ -261,13 +213,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackAddedRatio) || Variables[1] (MDF_Count) || MUL || RETURN",
-                    "displayLines": "(MDF_AttackAddedRatio * MDF_Count)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackAddedRatio",
-                      "MDF_Count"
-                    ]
+                    "displayLines": "(MDF_AttackAddedRatio * MDF_Count)"
                   }
                 }
               ]
@@ -281,20 +227,10 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"216386907\">Asta_TeamAttackUP</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
               "valuePerStack": {
                 "MDF_AttackAddedRatio": {
-                  "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
-                  "displayLines": "MDF_AttackAddedRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_AttackAddedRatio"
-                  ]
+                  "displayLines": "MDF_AttackAddedRatio"
                 },
                 "MDF_Charge_Count": {
-                  "operator": "Variables[0] (MDF_Count) || RETURN",
-                  "displayLines": "MDF_Count",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Count"
-                  ]
+                  "displayLines": "MDF_Count"
                 }
               }
             },
@@ -316,12 +252,7 @@ const configAbility = {
                     "value1": "<a class=\"gModGreen\" id=\"-1734289579\">Asta_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_BuffLayer) || RETURN",
-                      "displayLines": "MDF_BuffLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_BuffLayer"
-                      ]
+                      "displayLines": "MDF_BuffLayer"
                     }
                   },
                   "passed": [
@@ -334,12 +265,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-2135184996\">Asta_Passive_SPRatioUp</a>[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_SPRatio) || RETURN",
-                          "displayLines": "MDF_SPRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_SPRatio"
-                          ]
+                          "displayLines": "MDF_SPRatio"
                         }
                       }
                     }
@@ -380,20 +306,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"216386907\">Asta_TeamAttackUP</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
                   "valuePerStack": {
                     "MDF_AttackAddedRatio": {
-                      "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
-                      "displayLines": "MDF_AttackAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AttackAddedRatio"
-                      ]
+                      "displayLines": "MDF_AttackAddedRatio"
                     },
                     "MDF_Charge_Count": {
-                      "operator": "Variables[0] (MDF_Count) || RETURN",
-                      "displayLines": "MDF_Count",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Count"
-                      ]
+                      "displayLines": "MDF_Count"
                     }
                   }
                 }
@@ -419,12 +335,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageFire</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]

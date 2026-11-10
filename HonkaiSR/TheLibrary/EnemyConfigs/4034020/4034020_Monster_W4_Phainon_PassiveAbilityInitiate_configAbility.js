@@ -221,14 +221,7 @@ const configAbility = {
                     "value1": "MDF_CurrentSP",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (MDF_MaxSP) || Constants[0] (0.5) || MUL || RETURN",
-                      "displayLines": "(MDF_MaxSP * 0.5)",
-                      "constants": [
-                        0.5
-                      ],
-                      "variables": [
-                        "MDF_MaxSP"
-                      ]
+                      "displayLines": "(MDF_MaxSP * 0.5)"
                     }
                   },
                   "passed": [
@@ -239,14 +232,7 @@ const configAbility = {
                         "target": "{{Parameter Target}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (MDF_MaxSP) || Constants[0] (0.5) || MUL || RETURN",
-                        "displayLines": "(MDF_MaxSP * 0.5)",
-                        "constants": [
-                          0.5
-                        ],
-                        "variables": [
-                          "MDF_MaxSP"
-                        ]
+                        "displayLines": "(MDF_MaxSP * 0.5)"
                       },
                       "isFixed": "* ERR",
                       "isSetToValue": true

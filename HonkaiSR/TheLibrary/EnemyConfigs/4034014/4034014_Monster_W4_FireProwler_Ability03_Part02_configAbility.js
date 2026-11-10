@@ -66,12 +66,7 @@ const configAbility = {
       "conditions": {
         "name": "Enemy ID",
         "ID": {
-          "operator": "Variables[0] (SummonID_1) || RETURN",
-          "displayLines": "SummonID_1",
-          "constants": [],
-          "variables": [
-            "SummonID_1"
-          ]
+          "displayLines": "SummonID_1"
         },
         "target": {
           "name": "Target Name",
@@ -108,12 +103,7 @@ const configAbility = {
       "conditions": {
         "name": "Enemy ID",
         "ID": {
-          "operator": "Variables[0] (SummonID_2) || RETURN",
-          "displayLines": "SummonID_2",
-          "constants": [],
-          "variables": [
-            "SummonID_2"
-          ]
+          "displayLines": "SummonID_2"
         },
         "target": {
           "name": "Target Name",
@@ -182,12 +172,7 @@ const configAbility = {
         {
           "name": "Assign Advance/Delay to Current Ability Use",
           "adjustmentValue": {
-            "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-            "displayLines": "{[Skill03[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[0]]}"
-            ]
+            "displayLines": "{[Skill03[0]]}"
           },
           "adjustmentType": "Advance"
         }

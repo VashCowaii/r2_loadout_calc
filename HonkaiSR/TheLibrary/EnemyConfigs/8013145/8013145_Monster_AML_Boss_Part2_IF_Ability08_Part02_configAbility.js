@@ -48,12 +48,7 @@ const configAbility = {
             "target": "{{Target Part 3}}"
           },
           "healPercent": {
-            "operator": "Variables[0] (SkillEX03_P3_HealHPRatio) || RETURN",
-            "displayLines": "SkillEX03_P3_HealHPRatio",
-            "constants": [],
-            "variables": [
-              "SkillEX03_P3_HealHPRatio"
-            ]
+            "displayLines": "SkillEX03_P3_HealHPRatio"
           },
           "formula": "Heal from Target MaxHP"
         }

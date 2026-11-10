@@ -46,14 +46,7 @@ const configAbility = {
                     {
                       "element": "Physical",
                       "value": {
-                        "operator": "Constants[0] (1) || INVERT || Variables[0] (_WeakResistance) || MUL || RETURN",
-                        "displayLines": "(-1 * _WeakResistance)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_WeakResistance"
-                        ]
+                        "displayLines": "(-1 * _WeakResistance)"
                       }
                     }
                   ]
@@ -90,14 +83,7 @@ const configAbility = {
                     {
                       "element": "Fire",
                       "value": {
-                        "operator": "Constants[0] (1) || INVERT || Variables[0] (_WeakResistance) || MUL || RETURN",
-                        "displayLines": "(-1 * _WeakResistance)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_WeakResistance"
-                        ]
+                        "displayLines": "(-1 * _WeakResistance)"
                       }
                     }
                   ]
@@ -134,14 +120,7 @@ const configAbility = {
                     {
                       "element": "Ice",
                       "value": {
-                        "operator": "Constants[0] (1) || INVERT || Variables[0] (_WeakResistance) || MUL || RETURN",
-                        "displayLines": "(-1 * _WeakResistance)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_WeakResistance"
-                        ]
+                        "displayLines": "(-1 * _WeakResistance)"
                       }
                     }
                   ]
@@ -178,14 +157,7 @@ const configAbility = {
                     {
                       "element": "Thunder",
                       "value": {
-                        "operator": "Constants[0] (1) || INVERT || Variables[0] (_WeakResistance) || MUL || RETURN",
-                        "displayLines": "(-1 * _WeakResistance)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_WeakResistance"
-                        ]
+                        "displayLines": "(-1 * _WeakResistance)"
                       }
                     }
                   ]
@@ -222,14 +194,7 @@ const configAbility = {
                     {
                       "element": "Wind",
                       "value": {
-                        "operator": "Constants[0] (1) || INVERT || Variables[0] (_WeakResistance) || MUL || RETURN",
-                        "displayLines": "(-1 * _WeakResistance)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_WeakResistance"
-                        ]
+                        "displayLines": "(-1 * _WeakResistance)"
                       }
                     }
                   ]
@@ -266,14 +231,7 @@ const configAbility = {
                     {
                       "element": "Quantum",
                       "value": {
-                        "operator": "Constants[0] (1) || INVERT || Variables[0] (_WeakResistance) || MUL || RETURN",
-                        "displayLines": "(-1 * _WeakResistance)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_WeakResistance"
-                        ]
+                        "displayLines": "(-1 * _WeakResistance)"
                       }
                     }
                   ]
@@ -310,14 +268,7 @@ const configAbility = {
                     {
                       "element": "Imaginary",
                       "value": {
-                        "operator": "Constants[0] (1) || INVERT || Variables[0] (_WeakResistance) || MUL || RETURN",
-                        "displayLines": "(-1 * _WeakResistance)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_WeakResistance"
-                        ]
+                        "displayLines": "(-1 * _WeakResistance)"
                       }
                     }
                   ]
@@ -380,12 +331,7 @@ const configAbility = {
               },
               "variableName": "AssistSkill02_DamagePercentage",
               "resetValue": {
-                "operator": "Variables[0] (MDF_Assist_DamagePercentage) || RETURN",
-                "displayLines": "MDF_Assist_DamagePercentage",
-                "constants": [],
-                "variables": [
-                  "MDF_Assist_DamagePercentage"
-                ]
+                "displayLines": "MDF_Assist_DamagePercentage"
               },
               "scope": "TargetEntity"
             }

@@ -50,14 +50,7 @@ const compositeAbilityObject = {
               "name": "Define Custom Variable",
               "scope": "ContextCaster",
               "value": {
-                "operator": "Variables[0] (Gilgamesh_00_MazeSkill_AchievementCount) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(Gilgamesh_00_MazeSkill_AchievementCount + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "Gilgamesh_00_MazeSkill_AchievementCount"
-                ]
+                "displayLines": "(Gilgamesh_00_MazeSkill_AchievementCount + 1)"
               },
               "variableName": "Gilgamesh_00_MazeSkill_AchievementCount"
             },
@@ -322,12 +315,7 @@ const compositeAbilityObject = {
                         "value1": "Saber_Chain",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (8) || RETURN",
-                          "displayLines": "8",
-                          "constants": [],
-                          "variables": [
-                            8
-                          ]
+                          "displayLines": "8"
                         }
                       }
                     ]
@@ -503,12 +491,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageTypePenetrate) || RETURN",
-                    "displayLines": "MDF_AllDamageTypePenetrate",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageTypePenetrate"
-                    ]
+                    "displayLines": "MDF_AllDamageTypePenetrate"
                   },
                   "isRefresh": true
                 }
@@ -568,13 +551,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Gilgamesh_00_Rank06_GoldenRule) || Variables[1] (1) || MUL || RETURN",
-                    "displayLines": "(Gilgamesh_00_Rank06_GoldenRule * 1)",
-                    "constants": [],
-                    "variables": [
-                      "Gilgamesh_00_Rank06_GoldenRule",
-                      1
-                    ]
+                    "displayLines": "(Gilgamesh_00_Rank06_GoldenRule * 1)"
                   },
                   "variableName": "MDF_Propertyvalue"
                 }
@@ -597,12 +574,7 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_AllDamageTypePenetrate": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             }
@@ -623,12 +595,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRate</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.2) || RETURN",
-                    "displayLines": "0.2",
-                    "constants": [],
-                    "variables": [
-                      0.2
-                    ]
+                    "displayLines": "0.2"
                   }
                 }
               ]
@@ -657,12 +624,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (40) || RETURN",
-                        "displayLines": "40",
-                        "constants": [],
-                        "variables": [
-                          40
-                        ]
+                        "displayLines": "40"
                       },
                       "isFixed": "(Fixed)",
                       "tag": "ActiveSkillAdd"
@@ -711,45 +673,21 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MIN) || Variables[1] (MAX) || Variables[2] (MDF_MaxSP) || Variables[3] (MDF_MaxSPThreshold) || SUB || Constants[0] (0) || PARAM_2 || FUNCTION || Variables[4] (MDF_ExtraRatioPerMaxSP) || MUL || Variables[5] (MDF_MaxExtraRatio) || PARAM_2 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((MDF_MaxSP - MDF_MaxSPThreshold), 0) * MDF_ExtraRatioPerMaxSP), MDF_MaxExtraRatio)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MIN",
-                      "MAX",
-                      "MDF_MaxSP",
-                      "MDF_MaxSPThreshold",
-                      "MDF_ExtraRatioPerMaxSP",
-                      "MDF_MaxExtraRatio"
-                    ]
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((MDF_MaxSP - MDF_MaxSPThreshold), 0) * MDF_ExtraRatioPerMaxSP), MDF_MaxExtraRatio)"
                   },
                   "variableName": "MDF_ExtraRatio"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_BaseAttackAdded) || Variables[1] (MDF_ExtraRatio) || ADD || RETURN",
-                    "displayLines": "(MDF_BaseAttackAdded + MDF_ExtraRatio)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_BaseAttackAdded",
-                      "MDF_ExtraRatio"
-                    ]
+                    "displayLines": "(MDF_BaseAttackAdded + MDF_ExtraRatio)"
                   },
                   "variableName": "MDF_AttackAddedFinal"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_BaseCriticalDamageBaseAdd) || Variables[1] (MDF_ExtraRatio) || ADD || RETURN",
-                    "displayLines": "(MDF_BaseCriticalDamageBaseAdd + MDF_ExtraRatio)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_BaseCriticalDamageBaseAdd",
-                      "MDF_ExtraRatio"
-                    ]
+                    "displayLines": "(MDF_BaseCriticalDamageBaseAdd + MDF_ExtraRatio)"
                   },
                   "variableName": "MDF_CriticalDamageBaseFinal"
                 },
@@ -761,12 +699,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackAddedFinal) || RETURN",
-                    "displayLines": "MDF_AttackAddedFinal",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackAddedFinal"
-                    ]
+                    "displayLines": "MDF_AttackAddedFinal"
                   },
                   "isRefresh": true
                 },
@@ -778,12 +711,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_CriticalDamageBaseFinal) || RETURN",
-                    "displayLines": "MDF_CriticalDamageBaseFinal",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CriticalDamageBaseFinal"
-                    ]
+                    "displayLines": "MDF_CriticalDamageBaseFinal"
                   },
                   "isRefresh": true
                 }
@@ -825,44 +753,19 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_BaseAttackAdded": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 },
                 "MDF_BaseCriticalDamageBaseAdd": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 },
                 "MDF_MaxSPThreshold": {
-                  "operator": "Variables[0] (140) || RETURN",
-                  "displayLines": "140",
-                  "constants": [],
-                  "variables": [
-                    140
-                  ]
+                  "displayLines": "140"
                 },
                 "MDF_ExtraRatioPerMaxSP": {
-                  "operator": "Variables[0] (0.01) || RETURN",
-                  "displayLines": "0.01",
-                  "constants": [],
-                  "variables": [
-                    0.01
-                  ]
+                  "displayLines": "0.01"
                 },
                 "MDF_MaxExtraRatio": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 }
               }
             }
@@ -883,12 +786,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   },
                   "variableName": "SkillTree_DamageAddedlayer"
                 },
@@ -900,13 +798,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (SkillTree_DamageAddedlayer) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(SkillTree_DamageAddedlayer * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "SkillTree_DamageAddedlayer",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(SkillTree_DamageAddedlayer * MDF_Layer)"
                   }
                 }
               ]
@@ -950,30 +842,15 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"481485752\">Gilgamesh_TreeBonus2</a>[<span class=\"descriptionNumberColor\">Hero's Hauteur</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (6) || RETURN",
-                            "displayLines": "6",
-                            "constants": [],
-                            "variables": [
-                              6
-                            ]
+                            "displayLines": "6"
                           },
                           "valuePerStack": {
                             "MDF_DamageBaseAdd": {
-                              "operator": "Variables[0] (0.25) || RETURN",
-                              "displayLines": "0.25",
-                              "constants": [],
-                              "variables": [
-                                0.25
-                              ]
+                              "displayLines": "0.25"
                             }
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (_KingChangeValue) || RETURN",
-                            "displayLines": "_KingChangeValue",
-                            "constants": [],
-                            "variables": [
-                              "_KingChangeValue"
-                            ]
+                            "displayLines": "_KingChangeValue"
                           }
                         }
                       ]
@@ -1103,12 +980,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (MDF_TempSPChange) || INVERT || RETURN",
-                            "displayLines": "-MDF_TempSPChange",
-                            "constants": [],
-                            "variables": [
-                              "MDF_TempSPChange"
-                            ]
+                            "displayLines": "-MDF_TempSPChange"
                           },
                           "variableName": "SPChange"
                         }
@@ -1179,12 +1051,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Thunder",
                         "Damage": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -1197,12 +1064,7 @@ const compositeAbilityObject = {
                       "functionName": "<a class=\"gTempYellow\" id=\"-1526947844\">function_Gilgamesh_KingCount</a>",
                       "variables": {
                         "KingCountAdd": {
-                          "operator": "Variables[0] (3) || RETURN",
-                          "displayLines": "3",
-                          "constants": [],
-                          "variables": [
-                            3
-                          ]
+                          "displayLines": "3"
                         }
                       }
                     }
@@ -1233,12 +1095,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "maxValue": {
-                    "operator": "Variables[0] (8) || RETURN",
-                    "displayLines": "8",
-                    "constants": [],
-                    "variables": [
-                      8
-                    ]
+                    "displayLines": "8"
                   },
                   "includeMaxValueInRange": true,
                   "onChange": [
@@ -1249,12 +1106,7 @@ const compositeAbilityObject = {
                         "value1": "Saber_Chain",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (8) || RETURN",
-                          "displayLines": "8",
-                          "constants": [],
-                          "variables": [
-                            8
-                          ]
+                          "displayLines": "8"
                         }
                       }
                     }
@@ -1311,12 +1163,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-405354814\">Gilgamesh_SaberUltraBonus2</a>",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
-                          "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                          "displayLines": "MDF_DamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamagePercentage"
-                          ]
+                          "displayLines": "MDF_DamagePercentage"
                         }
                       }
                     }
@@ -1409,20 +1256,10 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (Avatar_Gilgamesh_00_KingCount) || RETURN",
-                    "displayLines": "Avatar_Gilgamesh_00_KingCount",
-                    "constants": [],
-                    "variables": [
-                      "Avatar_Gilgamesh_00_KingCount"
-                    ]
+                    "displayLines": "Avatar_Gilgamesh_00_KingCount"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (10) || RETURN",
-                    "displayLines": "10",
-                    "constants": [],
-                    "variables": [
-                      10
-                    ]
+                    "displayLines": "10"
                   },
                   "assignState": "True",
                   "priorState": "Normal",
@@ -1478,12 +1315,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageAddedRatio) || RETURN",
-                    "displayLines": "MDF_DamageAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageAddedRatio"
-                    ]
+                    "displayLines": "MDF_DamageAddedRatio"
                   },
                   "variableName": "SkillP01_P1_DamageAdded"
                 }
@@ -1525,12 +1357,7 @@ const compositeAbilityObject = {
                       "functionName": "<a class=\"gTempYellow\" id=\"-1526947844\">function_Gilgamesh_KingCount</a>",
                       "variables": {
                         "KingCountAdd": {
-                          "operator": "Variables[0] (5) || RETURN",
-                          "displayLines": "5",
-                          "constants": [],
-                          "variables": [
-                            5
-                          ]
+                          "displayLines": "5"
                         }
                       }
                     }
@@ -1693,12 +1520,7 @@ const compositeAbilityObject = {
                         "value1": "Saber_Chain",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (8) || RETURN",
-                          "displayLines": "8",
-                          "constants": [],
-                          "variables": [
-                            8
-                          ]
+                          "displayLines": "8"
                         }
                       },
                       {
@@ -1731,14 +1553,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (Saber_Chain) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(Saber_Chain + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Saber_Chain"
-                        ]
+                        "displayLines": "(Saber_Chain + 1)"
                       },
                       "variableName": "Saber_Chain"
                     }
@@ -1778,12 +1593,7 @@ const compositeAbilityObject = {
                         "value1": "Gilgamesh_00_Rank06_GoldenRule",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (3) || RETURN",
-                          "displayLines": "3",
-                          "constants": [],
-                          "variables": [
-                            3
-                          ]
+                          "displayLines": "3"
                         }
                       }
                     ]
@@ -1792,14 +1602,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (Gilgamesh_00_Rank06_GoldenRule) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(Gilgamesh_00_Rank06_GoldenRule + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Gilgamesh_00_Rank06_GoldenRule"
-                        ]
+                        "displayLines": "(Gilgamesh_00_Rank06_GoldenRule + 1)"
                       },
                       "variableName": "Gilgamesh_00_Rank06_GoldenRule"
                     },
@@ -1819,13 +1622,7 @@ const compositeAbilityObject = {
                       },
                       "modifierName": "<a class=\"gModGreen\" id=\"625310839\">Gilgamesh_Passive_Eidolon6_GoldenRule</a>[<span class=\"descriptionNumberColor\">Golden Rule</span>]",
                       "value": {
-                        "operator": "Variables[0] (WHOLE) || Variables[1] (Gilgamesh_00_Rank06_GoldenRule) || PARAM_1 || FUNCTION || RETURN",
-                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(Gilgamesh_00_Rank06_GoldenRule)",
-                        "constants": [],
-                        "variables": [
-                          "WHOLE",
-                          "Gilgamesh_00_Rank06_GoldenRule"
-                        ]
+                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(Gilgamesh_00_Rank06_GoldenRule)"
                       }
                     }
                   ]
@@ -1861,21 +1658,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-791691611\">Gilgamesh_Overcharge</a>[<span class=\"descriptionNumberColor\">King's Burden</span>]",
                       "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "valuePerStack": {
                         "MDF_DamageAddedRatio": {
-                          "operator": "Variables[0] (0.4) || RETURN",
-                          "displayLines": "0.4",
-                          "constants": [],
-                          "variables": [
-                            0.4
-                          ]
+                          "displayLines": "0.4"
                         }
                       }
                     }
@@ -1926,13 +1713,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (Avatar_Gilgamesh_00_TeamSPChangeAmount) || Variables[1] (0.3) || MUL || RETURN",
-                        "displayLines": "(Avatar_Gilgamesh_00_TeamSPChangeAmount * 0.3)",
-                        "constants": [],
-                        "variables": [
-                          "Avatar_Gilgamesh_00_TeamSPChangeAmount",
-                          0.3
-                        ]
+                        "displayLines": "(Avatar_Gilgamesh_00_TeamSPChangeAmount * 0.3)"
                       },
                       "isFixed": "(Fixed)",
                       "tag": "ActiveSkillAdd"
@@ -1942,12 +1723,7 @@ const compositeAbilityObject = {
                       "functionName": "<a class=\"gTempYellow\" id=\"-1526947844\">function_Gilgamesh_KingCount</a>",
                       "variables": {
                         "KingCountAdd": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         }
                       }
                     }
@@ -1985,12 +1761,7 @@ const compositeAbilityObject = {
                       "functionName": "<a class=\"gTempYellow\" id=\"-1526947844\">function_Gilgamesh_KingCount</a>",
                       "variables": {
                         "KingCountAdd": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         }
                       }
                     }
@@ -2181,12 +1952,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_DefenceDownRatio) || RETURN",
-                    "displayLines": "MDF_DefenceDownRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DefenceDownRatio"
-                    ]
+                    "displayLines": "MDF_DefenceDownRatio"
                   },
                   "variableName": "SkillRank_Rank01_DefenceDownRatio"
                 }
@@ -2217,12 +1983,7 @@ const compositeAbilityObject = {
               },
               "valuePerStack": {
                 "MDF_DefenceDownRatio": {
-                  "operator": "Variables[0] (MDF_DefenceDownRatio) || RETURN",
-                  "displayLines": "MDF_DefenceDownRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DefenceDownRatio"
-                  ]
+                  "displayLines": "MDF_DefenceDownRatio"
                 }
               }
             }
@@ -2254,12 +2015,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackAdd) || RETURN",
-                    "displayLines": "MDF_AttackAdd",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackAdd"
-                    ]
+                    "displayLines": "MDF_AttackAdd"
                   }
                 }
               ]
@@ -2351,13 +2107,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (Avatar_Gilgamesh_00_KingCount) || Variables[1] (0.1) || MUL || RETURN",
-                    "displayLines": "(Avatar_Gilgamesh_00_KingCount * 0.1)",
-                    "constants": [],
-                    "variables": [
-                      "Avatar_Gilgamesh_00_KingCount",
-                      0.1
-                    ]
+                    "displayLines": "(Avatar_Gilgamesh_00_KingCount * 0.1)"
                   },
                   "variableName": "MDF_PropertyValue"
                 },
@@ -2369,12 +2119,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -2692,12 +2437,7 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1014068292\">ADV_StageAbility_Maze_Gilgamesh_Flag</a>",
               "duration": {
-                "operator": "Variables[0] (10) || RETURN",
-                "displayLines": "10",
-                "constants": [],
-                "variables": [
-                  10
-                ]
+                "displayLines": "10"
               }
             }
           ]
@@ -2875,21 +2615,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (4) || RETURN",
-              "displayLines": "4",
-              "constants": [],
-              "variables": [
-                4
-              ]
+              "displayLines": "4"
             },
             "HitSplit": 0.2,
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": [
               "Joint-Attack"
@@ -2907,21 +2637,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (4) || RETURN",
-              "displayLines": "4",
-              "constants": [],
-              "variables": [
-                4
-              ]
+              "displayLines": "4"
             },
             "HitSplit": 0.2,
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": [
               "Joint-Attack"
@@ -2939,21 +2659,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (4) || RETURN",
-              "displayLines": "4",
-              "constants": [],
-              "variables": [
-                4
-              ]
+              "displayLines": "4"
             },
             "HitSplit": 0.2,
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": [
               "Joint-Attack"
@@ -2971,21 +2681,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (4) || RETURN",
-              "displayLines": "4",
-              "constants": [],
-              "variables": [
-                4
-              ]
+              "displayLines": "4"
             },
             "HitSplit": 0.4,
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": [
               "Joint-Attack"
@@ -3008,24 +2708,14 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"-1526947844\">function_Gilgamesh_KingCount</a>",
           "variables": {
             "KingCountAdd": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             }
           }
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Constants[0] (0) || RETURN",
-            "displayLines": "0",
-            "constants": [
-              0
-            ],
-            "variables": []
+            "displayLines": "0"
           },
           "variableName": "Saber_Chain"
         }
@@ -3341,12 +3031,7 @@ const compositeAbilityObject = {
                         "value1": "Saber_Chain",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (8) || RETURN",
-                          "displayLines": "8",
-                          "constants": [],
-                          "variables": [
-                            8
-                          ]
+                          "displayLines": "8"
                         }
                       },
                       {
@@ -3636,12 +3321,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"453870700\">Gilgamesh_Eidolon6_TeamBonusHalo</a>",
               "valuePerStack": {
                 "MDF_AllDamageTypePenetrate": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             }
@@ -3674,21 +3354,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 },
                 "HitSplit": 0.3,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -3708,21 +3378,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 },
                 "HitSplit": 0.3,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -3742,21 +3402,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 },
                 "HitSplit": 0.4,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -3824,12 +3474,7 @@ const compositeAbilityObject = {
               "functionName": "<a class=\"gTempYellow\" id=\"-1526947844\">function_Gilgamesh_KingCount</a>",
               "variables": {
                 "KingCountAdd": {
-                  "operator": "Variables[0] (5) || RETURN",
-                  "displayLines": "5",
-                  "constants": [],
-                  "variables": [
-                    5
-                  ]
+                  "displayLines": "5"
                 }
               }
             }
@@ -3851,12 +3496,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-474529239\">Gilgamesh_Eidolon6_GoldenRule2</a>",
               "valuePerStack": {
                 "MDF_GoldenRule": {
-                  "operator": "Variables[0] (Gilgamesh_00_Rank06_GoldenRule) || RETURN",
-                  "displayLines": "Gilgamesh_00_Rank06_GoldenRule",
-                  "constants": [],
-                  "variables": [
-                    "Gilgamesh_00_Rank06_GoldenRule"
-                  ]
+                  "displayLines": "Gilgamesh_00_Rank06_GoldenRule"
                 }
               }
             },
@@ -3884,20 +3524,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (4) || RETURN",
-              "displayLines": "4",
-              "constants": [],
-              "variables": [
-                4
-              ]
+              "displayLines": "4"
             },
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -3913,12 +3543,7 @@ const compositeAbilityObject = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (10) || RETURN",
-                "displayLines": "10",
-                "constants": [],
-                "variables": [
-                  10
-                ]
+                "displayLines": "10"
               },
               "execute": [
                 {
@@ -3938,21 +3563,10 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Thunder",
                         "Damage": {
-                          "operator": "Variables[0] (1) || Variables[1] (0.8) || ADD || RETURN",
-                          "displayLines": "(1 + 0.8)",
-                          "constants": [],
-                          "variables": [
-                            1,
-                            0.8
-                          ]
+                          "displayLines": "(1 + 0.8)"
                         },
                         "Toughness": {
-                          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                          "displayLines": "ST Toughness Value",
-                          "constants": [],
-                          "variables": [
-                            "ST Toughness Value"
-                          ]
+                          "displayLines": "ST Toughness Value"
                         },
                         "Tags": null,
                         "attackType": "Ultimate"
@@ -3967,12 +3581,7 @@ const compositeAbilityObject = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (10) || RETURN",
-                "displayLines": "10",
-                "constants": [],
-                "variables": [
-                  10
-                ]
+                "displayLines": "10"
               },
               "execute": [
                 {
@@ -3992,20 +3601,10 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Thunder",
                         "Damage": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         },
                         "Toughness": {
-                          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                          "displayLines": "ST Toughness Value",
-                          "constants": [],
-                          "variables": [
-                            "ST Toughness Value"
-                          ]
+                          "displayLines": "ST Toughness Value"
                         },
                         "Tags": null,
                         "attackType": "Ultimate"
@@ -4116,24 +3715,14 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "variableName": "Gilgamesh_00_Rank02_MainTargetDamageAdded"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.5) || RETURN",
-                "displayLines": "0.5",
-                "constants": [],
-                "variables": [
-                  0.5
-                ]
+                "displayLines": "0.5"
               },
               "variableName": "Gilgamesh_00_Rank02_AdjacentTargetDamageAdded"
             }
@@ -4154,29 +3743,14 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1516158451\">Gilgamesh_DroneAnalysis_Team</a>[<span class=\"descriptionNumberColor\">King's Acknowledgement</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "valuePerStack": {
                 "MDF_DefenceDownRatio": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 },
                 "MDF_AttackAdd": {
-                  "operator": "Variables[0] (0.6) || RETURN",
-                  "displayLines": "0.6",
-                  "constants": [],
-                  "variables": [
-                    0.6
-                  ]
+                  "displayLines": "0.6"
                 }
               }
             }
@@ -4190,21 +3764,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1220268105\">Gilgamesh_DroneAnalysis</a>[<span class=\"descriptionNumberColor\">King's Acknowledgement</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "valuePerStack": {
                 "MDF_DefenceDownRatio": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 }
               }
             }
@@ -4220,22 +3784,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (2.8) || Variables[1] (Gilgamesh_00_Rank02_MainTargetDamageAdded) || ADD || RETURN",
-              "displayLines": "(2.8 + Gilgamesh_00_Rank02_MainTargetDamageAdded)",
-              "constants": [],
-              "variables": [
-                2.8,
-                "Gilgamesh_00_Rank02_MainTargetDamageAdded"
-              ]
+              "displayLines": "(2.8 + Gilgamesh_00_Rank02_MainTargetDamageAdded)"
             },
             "HitSplit": 0.1,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -4251,22 +3804,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1.4) || Variables[1] (Gilgamesh_00_Rank02_AdjacentTargetDamageAdded) || ADD || RETURN",
-              "displayLines": "(1.4 + Gilgamesh_00_Rank02_AdjacentTargetDamageAdded)",
-              "constants": [],
-              "variables": [
-                1.4,
-                "Gilgamesh_00_Rank02_AdjacentTargetDamageAdded"
-              ]
+              "displayLines": "(1.4 + Gilgamesh_00_Rank02_AdjacentTargetDamageAdded)"
             },
             "HitSplit": 0.1,
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null
           }
@@ -4281,22 +3823,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (2.8) || Variables[1] (Gilgamesh_00_Rank02_MainTargetDamageAdded) || ADD || RETURN",
-              "displayLines": "(2.8 + Gilgamesh_00_Rank02_MainTargetDamageAdded)",
-              "constants": [],
-              "variables": [
-                2.8,
-                "Gilgamesh_00_Rank02_MainTargetDamageAdded"
-              ]
+              "displayLines": "(2.8 + Gilgamesh_00_Rank02_MainTargetDamageAdded)"
             },
             "HitSplit": 0.1,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -4312,22 +3843,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1.4) || Variables[1] (Gilgamesh_00_Rank02_AdjacentTargetDamageAdded) || ADD || RETURN",
-              "displayLines": "(1.4 + Gilgamesh_00_Rank02_AdjacentTargetDamageAdded)",
-              "constants": [],
-              "variables": [
-                1.4,
-                "Gilgamesh_00_Rank02_AdjacentTargetDamageAdded"
-              ]
+              "displayLines": "(1.4 + Gilgamesh_00_Rank02_AdjacentTargetDamageAdded)"
             },
             "HitSplit": 0.1,
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null
           }
@@ -4342,22 +3862,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (2.8) || Variables[1] (Gilgamesh_00_Rank02_MainTargetDamageAdded) || ADD || RETURN",
-              "displayLines": "(2.8 + Gilgamesh_00_Rank02_MainTargetDamageAdded)",
-              "constants": [],
-              "variables": [
-                2.8,
-                "Gilgamesh_00_Rank02_MainTargetDamageAdded"
-              ]
+              "displayLines": "(2.8 + Gilgamesh_00_Rank02_MainTargetDamageAdded)"
             },
             "HitSplit": 0.2,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -4373,22 +3882,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1.4) || Variables[1] (Gilgamesh_00_Rank02_AdjacentTargetDamageAdded) || ADD || RETURN",
-              "displayLines": "(1.4 + Gilgamesh_00_Rank02_AdjacentTargetDamageAdded)",
-              "constants": [],
-              "variables": [
-                1.4,
-                "Gilgamesh_00_Rank02_AdjacentTargetDamageAdded"
-              ]
+              "displayLines": "(1.4 + Gilgamesh_00_Rank02_AdjacentTargetDamageAdded)"
             },
             "HitSplit": 0.2,
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null
           }
@@ -4403,22 +3901,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (2.8) || Variables[1] (Gilgamesh_00_Rank02_MainTargetDamageAdded) || ADD || RETURN",
-              "displayLines": "(2.8 + Gilgamesh_00_Rank02_MainTargetDamageAdded)",
-              "constants": [],
-              "variables": [
-                2.8,
-                "Gilgamesh_00_Rank02_MainTargetDamageAdded"
-              ]
+              "displayLines": "(2.8 + Gilgamesh_00_Rank02_MainTargetDamageAdded)"
             },
             "HitSplit": 0.2,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -4434,22 +3921,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1.4) || Variables[1] (Gilgamesh_00_Rank02_AdjacentTargetDamageAdded) || ADD || RETURN",
-              "displayLines": "(1.4 + Gilgamesh_00_Rank02_AdjacentTargetDamageAdded)",
-              "constants": [],
-              "variables": [
-                1.4,
-                "Gilgamesh_00_Rank02_AdjacentTargetDamageAdded"
-              ]
+              "displayLines": "(1.4 + Gilgamesh_00_Rank02_AdjacentTargetDamageAdded)"
             },
             "HitSplit": 0.2,
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null
           }
@@ -4464,22 +3940,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (2.8) || Variables[1] (Gilgamesh_00_Rank02_MainTargetDamageAdded) || ADD || RETURN",
-              "displayLines": "(2.8 + Gilgamesh_00_Rank02_MainTargetDamageAdded)",
-              "constants": [],
-              "variables": [
-                2.8,
-                "Gilgamesh_00_Rank02_MainTargetDamageAdded"
-              ]
+              "displayLines": "(2.8 + Gilgamesh_00_Rank02_MainTargetDamageAdded)"
             },
             "HitSplit": 0.4,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -4495,22 +3960,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1.4) || Variables[1] (Gilgamesh_00_Rank02_AdjacentTargetDamageAdded) || ADD || RETURN",
-              "displayLines": "(1.4 + Gilgamesh_00_Rank02_AdjacentTargetDamageAdded)",
-              "constants": [],
-              "variables": [
-                1.4,
-                "Gilgamesh_00_Rank02_AdjacentTargetDamageAdded"
-              ]
+              "displayLines": "(1.4 + Gilgamesh_00_Rank02_AdjacentTargetDamageAdded)"
             },
             "HitSplit": 0.4,
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null
           }
@@ -4584,21 +4038,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 },
                 "HitSplit": 0.3,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -4618,21 +4062,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 },
                 "HitSplit": 0.3,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -4652,21 +4086,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 },
                 "HitSplit": 0.4,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -4736,25 +4160,14 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Avatar_Gilgamesh_00_KingCount) || Variables[1] (KingCountAdd) || ADD || RETURN",
-                "displayLines": "(Avatar_Gilgamesh_00_KingCount + KingCountAdd)",
-                "constants": [],
-                "variables": [
-                  "Avatar_Gilgamesh_00_KingCount",
-                  "KingCountAdd"
-                ]
+                "displayLines": "(Avatar_Gilgamesh_00_KingCount + KingCountAdd)"
               },
               "variableName": "Avatar_Gilgamesh_00_KingCount"
             },
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (Avatar_Gilgamesh_00_KingCount) || RETURN",
-                "displayLines": "Avatar_Gilgamesh_00_KingCount",
-                "constants": [],
-                "variables": [
-                  "Avatar_Gilgamesh_00_KingCount"
-                ]
+                "displayLines": "Avatar_Gilgamesh_00_KingCount"
               },
               "bar#": 4
             },
@@ -4776,12 +4189,7 @@ const compositeAbilityObject = {
                     "value1": "Avatar_Gilgamesh_00_IsFirstTime",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Constants[0] (0) || RETURN",
-                      "displayLines": "0",
-                      "constants": [
-                        0
-                      ],
-                      "variables": []
+                      "displayLines": "0"
                     }
                   },
                   {
@@ -4789,12 +4197,7 @@ const compositeAbilityObject = {
                     "value1": "Avatar_Gilgamesh_00_KingCount",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (10) || RETURN",
-                      "displayLines": "10",
-                      "constants": [],
-                      "variables": [
-                        10
-                      ]
+                      "displayLines": "10"
                     }
                   }
                 ]
@@ -4821,12 +4224,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (Avatar_Gilgamesh_00_KingCount) || RETURN",
-                    "displayLines": "Avatar_Gilgamesh_00_KingCount",
-                    "constants": [],
-                    "variables": [
-                      "Avatar_Gilgamesh_00_KingCount"
-                    ]
+                    "displayLines": "Avatar_Gilgamesh_00_KingCount"
                   },
                   "assignState": "True",
                   "priorState": "Active",

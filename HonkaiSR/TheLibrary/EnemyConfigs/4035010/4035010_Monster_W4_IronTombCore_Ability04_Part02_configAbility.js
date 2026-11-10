@@ -22,12 +22,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-          "displayLines": "{[Skill04[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}"
-          ]
+          "displayLines": "{[Skill04[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -41,12 +36,7 @@ const configAbility = {
       "functionName": "<a class=\"gTempYellow\" id=\"1699523791\">W4_IronTombCore_CalWorldErosion</a>",
       "variables": {
         "_ErosionParam": {
-          "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-          "displayLines": "{[Skill04[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[1]]}"
-          ]
+          "displayLines": "{[Skill04[1]]}"
         }
       }
     },
@@ -59,20 +49,10 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1372521903\">MModifier_W4_IronTombCore_TimeLock</a>[<span class=\"descriptionNumberColor\">Action Lock</span>]",
       "valuePerStack": {
         "MDF_SPConvert": {
-          "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-          "displayLines": "{[Skill04[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[2]]}"
-          ]
+          "displayLines": "{[Skill04[2]]}"
         },
         "MDF_ActionDelayConvert": {
-          "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-          "displayLines": "{[Skill04[3]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[3]]}"
-          ]
+          "displayLines": "{[Skill04[3]]}"
         }
       }
     },

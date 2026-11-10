@@ -37,14 +37,7 @@ const configAbility = {
               },
               "variableName": "CurEnergy",
               "value": {
-                "operator": "Variables[0] (0.5) || Constants[0] (100) || MUL || RETURN",
-                "displayLines": "(0.5 * 100)",
-                "constants": [
-                  100
-                ],
-                "variables": [
-                  0.5
-                ]
+                "displayLines": "(0.5 * 100)"
               }
             }
           ]

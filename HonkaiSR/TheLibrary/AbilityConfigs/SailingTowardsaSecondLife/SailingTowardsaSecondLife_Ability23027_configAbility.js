@@ -37,12 +37,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             }
           ]
@@ -94,12 +89,7 @@ const configAbility = {
                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (1.5) || RETURN",
-                  "displayLines": "1.5",
-                  "constants": [],
-                  "variables": [
-                    1.5
-                  ]
+                  "displayLines": "1.5"
                 }
               },
               "passed": [
@@ -112,12 +102,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1965028940\">LC_23027_Sub</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (0.12) || RETURN",
-                      "displayLines": "0.12",
-                      "constants": [],
-                      "variables": [
-                        0.12
-                      ]
+                      "displayLines": "0.12"
                     }
                   }
                 }
@@ -135,12 +120,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": {
-                "operator": "Variables[0] (1.5) || RETURN",
-                "displayLines": "1.5",
-                "constants": [],
-                "variables": [
-                  1.5
-                ]
+                "displayLines": "1.5"
               },
               "enteringRange": [
                 {
@@ -162,12 +142,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1965028940\">LC_23027_Sub</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (0.12) || RETURN",
-                      "displayLines": "0.12",
-                      "constants": [],
-                      "variables": [
-                        0.12
-                      ]
+                      "displayLines": "0.12"
                     }
                   }
                 }

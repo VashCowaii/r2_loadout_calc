@@ -89,12 +89,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"775144590\">Modifier_BattleEventAbility_Challenge_Xianzhou_06_Sub2</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (PropertyValue) || RETURN",
-                      "displayLines": "PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "PropertyValue"
-                      ]
+                      "displayLines": "PropertyValue"
                     }
                   }
                 }
@@ -162,24 +157,10 @@ const configAbility = {
                     "target": "{{Enemy Team All}}"
                   },
                   "selfSplit": {
-                    "operator": "Constants[0] (1) || Variables[0] (DarkTeamCount) || DIV || RETURN",
-                    "displayLines": "(1 / DarkTeamCount)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "DarkTeamCount"
-                    ]
+                    "displayLines": "(1 / DarkTeamCount)"
                   },
                   "targetSplit": {
-                    "operator": "Constants[0] (1) || Variables[0] (DarkTeamCount) || DIV || RETURN",
-                    "displayLines": "(1 / DarkTeamCount)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "DarkTeamCount"
-                    ]
+                    "displayLines": "(1 / DarkTeamCount)"
                   }
                 }
               ]
@@ -204,12 +185,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"758366971\">Modifier_BattleEventAbility_Challenge_Xianzhou_06_Sub1</a>",
               "valuePerStack": {
                 "PropertyValue": {
-                  "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                  "displayLines": "#BattleEvent_P1_ADF",
-                  "constants": [],
-                  "variables": [
-                    "#BattleEvent_P1_ADF"
-                  ]
+                  "displayLines": "#BattleEvent_P1_ADF"
                 }
               }
             }
@@ -259,12 +235,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"758366971\">Modifier_BattleEventAbility_Challenge_Xianzhou_06_Sub1</a>",
                   "valuePerStack": {
                     "PropertyValue": {
-                      "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P1_ADF"
                     }
                   }
                 }

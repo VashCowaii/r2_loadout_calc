@@ -23,25 +23,14 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "variableName": "Sparxie_Skill02_GrandPrizeChance"
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (28) || Variables[1] (Sparxie_Skill02_GrandPrizeChance) || SUB || RETURN",
-        "displayLines": "(28 - Sparxie_Skill02_GrandPrizeChance)",
-        "constants": [],
-        "variables": [
-          28,
-          "Sparxie_Skill02_GrandPrizeChance"
-        ]
+        "displayLines": "(28 - Sparxie_Skill02_GrandPrizeChance)"
       },
       "variableName": "Sparxie_Skill02_MinorPrizeChance"
     },
@@ -57,12 +46,7 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (Sparxie_EnergyPoint) || RETURN",
-        "displayLines": "Sparxie_EnergyPoint",
-        "constants": [],
-        "variables": [
-          "Sparxie_EnergyPoint"
-        ]
+        "displayLines": "Sparxie_EnergyPoint"
       },
       "maximum": 1,
       "assignState": "True",
@@ -152,12 +136,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-769743474\">Sparxie_Eidolon6</a>[<span class=\"descriptionNumberColor\">#BuiltDifferent #GoingExtinct</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         }

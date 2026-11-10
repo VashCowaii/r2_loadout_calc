@@ -32,14 +32,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (count) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(count + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "count"
-                    ]
+                    "displayLines": "(count + 1)"
                   },
                   "variableName": "count"
                 },
@@ -255,14 +248,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_Yanqing_KillCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(MDF_Yanqing_KillCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_Yanqing_KillCount"
-                    ]
+                    "displayLines": "(MDF_Yanqing_KillCount + 1)"
                   },
                   "variableName": "MDF_Yanqing_KillCount"
                 }
@@ -343,14 +329,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_KillCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(MDF_KillCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_KillCount"
-                    ]
+                    "displayLines": "(MDF_KillCount + 1)"
                   },
                   "variableName": "MDF_KillCount"
                 }
@@ -379,12 +358,7 @@ const compositeAbilityObject = {
                     "value1": "MDF_Yanqing_KillCount",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_KillCount) || RETURN",
-                      "displayLines": "MDF_KillCount",
-                      "constants": [],
-                      "variables": [
-                        "MDF_KillCount"
-                      ]
+                      "displayLines": "MDF_KillCount"
                     }
                   },
                   "passed": [
@@ -423,12 +397,7 @@ const compositeAbilityObject = {
                         "value1": "MDF_KillCount",
                         "compareType": ">",
                         "value2": {
-                          "operator": "Variables[0] (MDF_Yanqing_KillCount) || RETURN",
-                          "displayLines": "MDF_Yanqing_KillCount",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Yanqing_KillCount"
-                          ]
+                          "displayLines": "MDF_Yanqing_KillCount"
                         }
                       },
                       "passed": [
@@ -508,12 +477,7 @@ const compositeAbilityObject = {
                         "value1": "MDF_Yanqing_KillCount",
                         "compareType": ">",
                         "value2": {
-                          "operator": "Variables[0] (MDF_KillCount) || RETURN",
-                          "displayLines": "MDF_KillCount",
-                          "constants": [],
-                          "variables": [
-                            "MDF_KillCount"
-                          ]
+                          "displayLines": "MDF_KillCount"
                         }
                       },
                       "passed": [
@@ -647,40 +611,20 @@ const compositeAbilityObject = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                "displayLines": "#BattleEvent_P1_ADF",
-                "constants": [],
-                "variables": [
-                  "#BattleEvent_P1_ADF"
-                ]
+                "displayLines": "#BattleEvent_P1_ADF"
               },
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (Value_NextMonsterId) || RETURN",
-                    "displayLines": "Value_NextMonsterId",
-                    "constants": [],
-                    "variables": [
-                      "Value_NextMonsterId"
-                    ]
+                    "displayLines": "Value_NextMonsterId"
                   },
                   "locationType": "FormationRecord",
                   "overrideActivityGroup": {
-                    "operator": "Variables[0] (Value_NextMonsterEliteGroup) || RETURN",
-                    "displayLines": "Value_NextMonsterEliteGroup",
-                    "constants": [],
-                    "variables": [
-                      "Value_NextMonsterEliteGroup"
-                    ]
+                    "displayLines": "Value_NextMonsterEliteGroup"
                   },
                   "slot": {
-                    "operator": "Variables[0] (Value_MonsterSlotKey) || RETURN",
-                    "displayLines": "Value_MonsterSlotKey",
-                    "constants": [],
-                    "variables": [
-                      "Value_MonsterSlotKey"
-                    ]
+                    "displayLines": "Value_MonsterSlotKey"
                   }
                 }
               ]
@@ -740,12 +684,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "DamageExtra": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
+              "displayLines": "{[SkillP01[0]]}"
             },
             "dmgFormulaExtra": "Max HP Scaling",
             "Toughness": {
@@ -769,12 +708,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "DamageExtra": {
-              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-              "displayLines": "{[SkillP01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[1]]}"
-              ]
+              "displayLines": "{[SkillP01[1]]}"
             },
             "dmgFormulaExtra": "Max HP Scaling",
             "Toughness": {
@@ -821,12 +755,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "DamageExtra": {
-                      "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                      "displayLines": "{[SkillP01[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[2]]}"
-                      ]
+                      "displayLines": "{[SkillP01[2]]}"
                     },
                     "dmgFormulaExtra": "Max HP Scaling",
                     "Toughness": null,
@@ -1293,60 +1222,25 @@ const compositeAbilityObject = {
               "name": "Random Event",
               "odds": [
                 {
-                  "operator": "Variables[0] (TDF_NoPhysical) || RETURN",
-                  "displayLines": "TDF_NoPhysical",
-                  "constants": [],
-                  "variables": [
-                    "TDF_NoPhysical"
-                  ]
+                  "displayLines": "TDF_NoPhysical"
                 },
                 {
-                  "operator": "Variables[0] (TDF_NoWind) || RETURN",
-                  "displayLines": "TDF_NoWind",
-                  "constants": [],
-                  "variables": [
-                    "TDF_NoWind"
-                  ]
+                  "displayLines": "TDF_NoWind"
                 },
                 {
-                  "operator": "Variables[0] (TDF_NoFire) || RETURN",
-                  "displayLines": "TDF_NoFire",
-                  "constants": [],
-                  "variables": [
-                    "TDF_NoFire"
-                  ]
+                  "displayLines": "TDF_NoFire"
                 },
                 {
-                  "operator": "Variables[0] (TDF_NoThunder) || RETURN",
-                  "displayLines": "TDF_NoThunder",
-                  "constants": [],
-                  "variables": [
-                    "TDF_NoThunder"
-                  ]
+                  "displayLines": "TDF_NoThunder"
                 },
                 {
-                  "operator": "Variables[0] (TDF_NoIce) || RETURN",
-                  "displayLines": "TDF_NoIce",
-                  "constants": [],
-                  "variables": [
-                    "TDF_NoIce"
-                  ]
+                  "displayLines": "TDF_NoIce"
                 },
                 {
-                  "operator": "Variables[0] (TDF_NoQuantum) || RETURN",
-                  "displayLines": "TDF_NoQuantum",
-                  "constants": [],
-                  "variables": [
-                    "TDF_NoQuantum"
-                  ]
+                  "displayLines": "TDF_NoQuantum"
                 },
                 {
-                  "operator": "Variables[0] (TDF_NoImaginary) || RETURN",
-                  "displayLines": "TDF_NoImaginary",
-                  "constants": [],
-                  "variables": [
-                    "TDF_NoImaginary"
-                  ]
+                  "displayLines": "TDF_NoImaginary"
                 }
               ],
               "execute": [

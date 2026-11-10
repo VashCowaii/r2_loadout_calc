@@ -802,13 +802,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_PropertyValue * MDF_Layer)"
               },
               "variableName": "MDF_ResistanceDown"
             },
@@ -820,15 +814,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindBonus</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || SUB || RETURN",
-                "displayLines": "(0 - (MDF_PropertyValue * MDF_Layer))",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(0 - (MDF_PropertyValue * MDF_Layer))"
               }
             }
           ]
@@ -868,13 +854,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_PropertyValue * MDF_Layer)"
               },
               "variableName": "MDF_ResistanceDown"
             },
@@ -886,15 +866,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceLightningBonus</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || SUB || RETURN",
-                "displayLines": "(0 - (MDF_PropertyValue * MDF_Layer))",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(0 - (MDF_PropertyValue * MDF_Layer))"
               }
             }
           ]
@@ -934,13 +906,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_PropertyValue * MDF_Layer)"
               },
               "variableName": "MDF_ResistanceDown"
             },
@@ -952,15 +918,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceQuantumBonus</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || SUB || RETURN",
-                "displayLines": "(0 - (MDF_PropertyValue * MDF_Layer))",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(0 - (MDF_PropertyValue * MDF_Layer))"
               }
             }
           ]
@@ -1000,13 +958,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_PropertyValue * MDF_Layer)"
               },
               "variableName": "MDF_ResistanceDown"
             },
@@ -1018,15 +970,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistancePhysicalBonus</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || SUB || RETURN",
-                "displayLines": "(0 - (MDF_PropertyValue * MDF_Layer))",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(0 - (MDF_PropertyValue * MDF_Layer))"
               }
             }
           ]
@@ -1066,13 +1010,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_PropertyValue * MDF_Layer)"
               },
               "variableName": "MDF_ResistanceDown"
             },
@@ -1084,15 +1022,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceImaginaryBonus</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || SUB || RETURN",
-                "displayLines": "(0 - (MDF_PropertyValue * MDF_Layer))",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(0 - (MDF_PropertyValue * MDF_Layer))"
               }
             }
           ]
@@ -1132,13 +1062,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_PropertyValue * MDF_Layer)"
               },
               "variableName": "MDF_ResistanceDown"
             },
@@ -1150,15 +1074,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceIceBonus</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || SUB || RETURN",
-                "displayLines": "(0 - (MDF_PropertyValue * MDF_Layer))",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(0 - (MDF_PropertyValue * MDF_Layer))"
               }
             }
           ]
@@ -1198,13 +1114,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_PropertyValue * MDF_Layer)"
               },
               "variableName": "MDF_ResistanceDown"
             },
@@ -1216,15 +1126,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFireBonus</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || SUB || RETURN",
-                "displayLines": "(0 - (MDF_PropertyValue * MDF_Layer))",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(0 - (MDF_PropertyValue * MDF_Layer))"
               }
             }
           ]
@@ -1250,12 +1152,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -1497,12 +1394,7 @@ const configAbility = {
               },
               "scope": "TargetEntity",
               "value": {
-                "operator": "Variables[0] (CurrentMaxColorType) || RETURN",
-                "displayLines": "CurrentMaxColorType",
-                "constants": [],
-                "variables": [
-                  "CurrentMaxColorType"
-                ]
+                "displayLines": "CurrentMaxColorType"
               },
               "variableName": "CurrentMaxColorScore"
             },
@@ -1517,12 +1409,7 @@ const configAbility = {
                 "value1": "IceScore",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (CurrentMaxColorScore) || RETURN",
-                  "displayLines": "CurrentMaxColorScore",
-                  "constants": [],
-                  "variables": [
-                    "CurrentMaxColorScore"
-                  ]
+                  "displayLines": "CurrentMaxColorScore"
                 }
               },
               "passed": [
@@ -1544,12 +1431,7 @@ const configAbility = {
                   },
                   "scope": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (IceScore) || RETURN",
-                    "displayLines": "IceScore",
-                    "constants": [],
-                    "variables": [
-                      "IceScore"
-                    ]
+                    "displayLines": "IceScore"
                   },
                   "variableName": "CurrentMaxColorScore"
                 }
@@ -1566,12 +1448,7 @@ const configAbility = {
                 "value1": "ImaginaryScore",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (CurrentMaxColorScore) || RETURN",
-                  "displayLines": "CurrentMaxColorScore",
-                  "constants": [],
-                  "variables": [
-                    "CurrentMaxColorScore"
-                  ]
+                  "displayLines": "CurrentMaxColorScore"
                 }
               },
               "passed": [
@@ -1593,12 +1470,7 @@ const configAbility = {
                   },
                   "scope": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (ImaginaryScore) || RETURN",
-                    "displayLines": "ImaginaryScore",
-                    "constants": [],
-                    "variables": [
-                      "ImaginaryScore"
-                    ]
+                    "displayLines": "ImaginaryScore"
                   },
                   "variableName": "CurrentMaxColorScore"
                 }
@@ -1615,12 +1487,7 @@ const configAbility = {
                 "value1": "PhysicalScore",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (CurrentMaxColorScore) || RETURN",
-                  "displayLines": "CurrentMaxColorScore",
-                  "constants": [],
-                  "variables": [
-                    "CurrentMaxColorScore"
-                  ]
+                  "displayLines": "CurrentMaxColorScore"
                 }
               },
               "passed": [
@@ -1642,12 +1509,7 @@ const configAbility = {
                   },
                   "scope": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (PhysicalScore) || RETURN",
-                    "displayLines": "PhysicalScore",
-                    "constants": [],
-                    "variables": [
-                      "PhysicalScore"
-                    ]
+                    "displayLines": "PhysicalScore"
                   },
                   "variableName": "CurrentMaxColorScore"
                 }
@@ -1664,12 +1526,7 @@ const configAbility = {
                 "value1": "QuantumScore",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (CurrentMaxColorScore) || RETURN",
-                  "displayLines": "CurrentMaxColorScore",
-                  "constants": [],
-                  "variables": [
-                    "CurrentMaxColorScore"
-                  ]
+                  "displayLines": "CurrentMaxColorScore"
                 }
               },
               "passed": [
@@ -1691,12 +1548,7 @@ const configAbility = {
                   },
                   "scope": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (QuantumScore) || RETURN",
-                    "displayLines": "QuantumScore",
-                    "constants": [],
-                    "variables": [
-                      "QuantumScore"
-                    ]
+                    "displayLines": "QuantumScore"
                   },
                   "variableName": "CurrentMaxColorScore"
                 }
@@ -1713,12 +1565,7 @@ const configAbility = {
                 "value1": "ThunderScore",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (CurrentMaxColorScore) || RETURN",
-                  "displayLines": "CurrentMaxColorScore",
-                  "constants": [],
-                  "variables": [
-                    "CurrentMaxColorScore"
-                  ]
+                  "displayLines": "CurrentMaxColorScore"
                 }
               },
               "passed": [
@@ -1740,12 +1587,7 @@ const configAbility = {
                   },
                   "scope": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (ThunderScore) || RETURN",
-                    "displayLines": "ThunderScore",
-                    "constants": [],
-                    "variables": [
-                      "ThunderScore"
-                    ]
+                    "displayLines": "ThunderScore"
                   },
                   "variableName": "CurrentMaxColorScore"
                 }
@@ -1762,12 +1604,7 @@ const configAbility = {
                 "value1": "WindScore",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (CurrentMaxColorScore) || RETURN",
-                  "displayLines": "CurrentMaxColorScore",
-                  "constants": [],
-                  "variables": [
-                    "CurrentMaxColorScore"
-                  ]
+                  "displayLines": "CurrentMaxColorScore"
                 }
               },
               "passed": [
@@ -1789,12 +1626,7 @@ const configAbility = {
                   },
                   "scope": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (WindScore) || RETURN",
-                    "displayLines": "WindScore",
-                    "constants": [],
-                    "variables": [
-                      "WindScore"
-                    ]
+                    "displayLines": "WindScore"
                   },
                   "variableName": "CurrentMaxColorScore"
                 }
@@ -1803,14 +1635,7 @@ const configAbility = {
             {
               "name": "Adjust Team Punchline Value",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_13527) || Variables[1] (WHOLE) || Variables[2] (CurrentMaxColorScore) || PARAM_1 || FUNCTION || MUL || RETURN",
-                "displayLines": "(UnusedUnderThisBase_13527 * &nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(CurrentMaxColorScore))",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_13527",
-                  "WHOLE",
-                  "CurrentMaxColorScore"
-                ]
+                "displayLines": "(UnusedUnderThisBase_13527 * &nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(CurrentMaxColorScore))"
               },
               "adjustment": "Add"
             },
@@ -2464,12 +2289,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-                    "displayLines": "CurrentColorSlotIndex",
-                    "constants": [],
-                    "variables": [
-                      "CurrentColorSlotIndex"
-                    ]
+                    "displayLines": "CurrentColorSlotIndex"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -2844,12 +2664,7 @@ const configAbility = {
                     {
                       "name": "Looped Event",
                       "maxLoops": {
-                        "operator": "Variables[0] (MDF_ElationDamageExtraColorCount) || RETURN",
-                        "displayLines": "MDF_ElationDamageExtraColorCount",
-                        "constants": [],
-                        "variables": [
-                          "MDF_ElationDamageExtraColorCount"
-                        ]
+                        "displayLines": "MDF_ElationDamageExtraColorCount"
                       },
                       "execute": [
                         {
@@ -2899,12 +2714,7 @@ const configAbility = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-                        "displayLines": "CurrentColorSlotIndex",
-                        "constants": [],
-                        "variables": [
-                          "CurrentColorSlotIndex"
-                        ]
+                        "displayLines": "CurrentColorSlotIndex"
                       },
                       "caseEvents": [
                         {
@@ -3027,12 +2837,7 @@ const configAbility = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-                        "displayLines": "CurrentColorSlotIndex",
-                        "constants": [],
-                        "variables": [
-                          "CurrentColorSlotIndex"
-                        ]
+                        "displayLines": "CurrentColorSlotIndex"
                       },
                       "caseEvents": [
                         {
@@ -3155,12 +2960,7 @@ const configAbility = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-                        "displayLines": "CurrentColorSlotIndex",
-                        "constants": [],
-                        "variables": [
-                          "CurrentColorSlotIndex"
-                        ]
+                        "displayLines": "CurrentColorSlotIndex"
                       },
                       "caseEvents": [
                         {
@@ -3283,12 +3083,7 @@ const configAbility = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-                        "displayLines": "CurrentColorSlotIndex",
-                        "constants": [],
-                        "variables": [
-                          "CurrentColorSlotIndex"
-                        ]
+                        "displayLines": "CurrentColorSlotIndex"
                       },
                       "caseEvents": [
                         {
@@ -3411,12 +3206,7 @@ const configAbility = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-                        "displayLines": "CurrentColorSlotIndex",
-                        "constants": [],
-                        "variables": [
-                          "CurrentColorSlotIndex"
-                        ]
+                        "displayLines": "CurrentColorSlotIndex"
                       },
                       "caseEvents": [
                         {
@@ -3539,12 +3329,7 @@ const configAbility = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-                        "displayLines": "CurrentColorSlotIndex",
-                        "constants": [],
-                        "variables": [
-                          "CurrentColorSlotIndex"
-                        ]
+                        "displayLines": "CurrentColorSlotIndex"
                       },
                       "caseEvents": [
                         {
@@ -3667,12 +3452,7 @@ const configAbility = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-                        "displayLines": "CurrentColorSlotIndex",
-                        "constants": [],
-                        "variables": [
-                          "CurrentColorSlotIndex"
-                        ]
+                        "displayLines": "CurrentColorSlotIndex"
                       },
                       "caseEvents": [
                         {
@@ -3809,14 +3589,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (CurrentColorSlotIndex) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(CurrentColorSlotIndex - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "CurrentColorSlotIndex"
-                    ]
+                    "displayLines": "(CurrentColorSlotIndex - 1)"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -3849,12 +3622,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1506777447\">Enemy_W5_Peacock_AbilityP01_Colorless</a>[<span class=\"descriptionNumberColor\">Colorless</span>]",
               "valuePerStack": {
                 "MDF_ElationDamageExtraColorCount": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13529) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13529",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_13529"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_13529"
                 }
               }
             },
@@ -3867,12 +3635,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1921694254\">Enemy_W5_Peacock_AbilityP01_ElementResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Boost</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13534) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13534",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_13534"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_13534"
                 }
               }
             }
@@ -4091,12 +3854,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1921694254\">Enemy_W5_Peacock_AbilityP01_ElementResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Boost</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13534) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13534",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_13534"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_13534"
                 }
               }
             },
@@ -4128,12 +3886,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1506777447\">Enemy_W5_Peacock_AbilityP01_Colorless</a>[<span class=\"descriptionNumberColor\">Colorless</span>]",
                   "valuePerStack": {
                     "MDF_ElationDamageExtraColorCount": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_13529) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_13529",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_13529"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_13529"
                     }
                   }
                 }

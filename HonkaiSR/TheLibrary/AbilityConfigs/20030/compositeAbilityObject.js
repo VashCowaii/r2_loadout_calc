@@ -156,12 +156,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                          "displayLines": "MDF_DamageUpRatio_PerLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageUpRatio_PerLayer"
-                          ]
+                          "displayLines": "MDF_DamageUpRatio_PerLayer"
                         }
                       }
                     }
@@ -534,12 +529,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -644,12 +634,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MDF_Count) || RETURN",
-                        "displayLines": "MDF_Count",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Count"
-                        ]
+                        "displayLines": "MDF_Count"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -657,12 +642,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                        "displayLines": "MDF_MaxCount",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxCount"
-                        ]
+                        "displayLines": "MDF_MaxCount"
                       },
                       "assignState": "True",
                       "state": "Active",
@@ -744,20 +724,10 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1710428840\">Enemy_W4_Serpent_01_Charge01_Target</a>[<span class=\"descriptionNumberColor\">Pursuit Target</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                            "displayLines": "MDF_MaxCount",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxCount"
-                            ]
+                            "displayLines": "MDF_MaxCount"
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (MDF_Count) || RETURN",
-                            "displayLines": "MDF_Count",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Count"
-                            ]
+                            "displayLines": "MDF_Count"
                           }
                         }
                       ]
@@ -812,20 +782,10 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1710428840\">Enemy_W4_Serpent_01_Charge01_Target</a>[<span class=\"descriptionNumberColor\">Pursuit Target</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                        "displayLines": "MDF_MaxCount",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxCount"
-                        ]
+                        "displayLines": "MDF_MaxCount"
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (MDF_Count) || RETURN",
-                        "displayLines": "MDF_Count",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Count"
-                        ]
+                        "displayLines": "MDF_Count"
                       }
                     }
                   ]
@@ -877,20 +837,10 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1710428840\">Enemy_W4_Serpent_01_Charge01_Target</a>[<span class=\"descriptionNumberColor\">Pursuit Target</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                            "displayLines": "MDF_MaxCount",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxCount"
-                            ]
+                            "displayLines": "MDF_MaxCount"
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (MDF_Count) || RETURN",
-                            "displayLines": "MDF_Count",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Count"
-                            ]
+                            "displayLines": "MDF_Count"
                           }
                         }
                       ]
@@ -1108,12 +1058,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Imaginary",
                     "Damage": {
-                      "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                      "displayLines": "MDF_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamagePercentage"
-                      ]
+                      "displayLines": "MDF_DamagePercentage"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "dmgFormulaFinal": "Converted DMG Base",
@@ -1130,12 +1075,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageTypeTakenRatio) || RETURN",
-                    "displayLines": "MDF_AllDamageTypeTakenRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageTypeTakenRatio"
-                    ]
+                    "displayLines": "MDF_AllDamageTypeTakenRatio"
                   }
                 }
               ]
@@ -1202,12 +1142,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                    "displayLines": "MDF_AllDamageReduce",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageReduce"
-                    ]
+                    "displayLines": "MDF_AllDamageReduce"
                   }
                 }
               ]
@@ -1242,12 +1177,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1717754231\">Enemy_W4_Serpent_01_Passive_Sub</a>[<span class=\"descriptionNumberColor\">Expedite Verdict</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageReduce": {
-                          "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                          "displayLines": "MDF_AllDamageReduce",
-                          "constants": [],
-                          "variables": [
-                            "MDF_AllDamageReduce"
-                          ]
+                          "displayLines": "MDF_AllDamageReduce"
                         }
                       }
                     }
@@ -1275,20 +1205,10 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1922828191\">Enemy_W4_Serpent_01_Passive_Sub2</a>[<span class=\"descriptionNumberColor\">Expedite Verdict</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeTakenRatio": {
-                      "operator": "Variables[0] (MDF_AllDamageTypeTakenRatio) || RETURN",
-                      "displayLines": "MDF_AllDamageTypeTakenRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AllDamageTypeTakenRatio"
-                      ]
+                      "displayLines": "MDF_AllDamageTypeTakenRatio"
                     },
                     "MDF_DamagePercentage": {
-                      "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                      "displayLines": "MDF_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamagePercentage"
-                      ]
+                      "displayLines": "MDF_DamagePercentage"
                     }
                   }
                 },
@@ -1315,12 +1235,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1717754231\">Enemy_W4_Serpent_01_Passive_Sub</a>[<span class=\"descriptionNumberColor\">Expedite Verdict</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageReduce": {
-                      "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                      "displayLines": "MDF_AllDamageReduce",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AllDamageReduce"
-                      ]
+                      "displayLines": "MDF_AllDamageReduce"
                     }
                   }
                 },
@@ -1361,12 +1276,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (MDF_StanceDamage) || RETURN",
-                        "displayLines": "MDF_StanceDamage",
-                        "constants": [],
-                        "variables": [
-                          "MDF_StanceDamage"
-                        ]
+                        "displayLines": "MDF_StanceDamage"
                       },
                       "attacker": {
                         "name": "Target Name",

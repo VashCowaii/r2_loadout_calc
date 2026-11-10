@@ -16,12 +16,7 @@ const configAbility = {
       "name": "Update Displayed Energy Bar",
       "value": 0,
       "maximum": {
-        "operator": "Variables[0] (_Xueyi_Count) || RETURN",
-        "displayLines": "_Xueyi_Count",
-        "constants": [],
-        "variables": [
-          "_Xueyi_Count"
-        ]
+        "displayLines": "_Xueyi_Count"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -54,12 +49,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "healPercent": {
-            "operator": "Variables[0] (0.05) || RETURN",
-            "displayLines": "0.05",
-            "constants": [],
-            "variables": [
-              0.05
-            ]
+            "displayLines": "0.05"
           },
           "formula": "Heal from Target MaxHP"
         }
@@ -81,12 +71,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"900132102\">Xueyi_AbilityEidolon1_InserteDamageRatio</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.4) || RETURN",
-              "displayLines": "0.4",
-              "constants": [],
-              "variables": [
-                0.4
-              ]
+              "displayLines": "0.4"
             }
           }
         }
@@ -110,20 +95,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (0.9) || RETURN",
-              "displayLines": "0.9",
-              "constants": [],
-              "variables": [
-                0.9
-              ]
+              "displayLines": "0.9"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Follow-up",
@@ -150,20 +125,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (0.9) || RETURN",
-              "displayLines": "0.9",
-              "constants": [],
-              "variables": [
-                0.9
-              ]
+              "displayLines": "0.9"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Follow-up",
@@ -190,20 +155,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (0.9) || RETURN",
-              "displayLines": "0.9",
-              "constants": [],
-              "variables": [
-                0.9
-              ]
+              "displayLines": "0.9"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Follow-up",
@@ -238,12 +193,7 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (_Xueyi_PassiveLayer) || RETURN",
-        "displayLines": "_Xueyi_PassiveLayer",
-        "constants": [],
-        "variables": [
-          "_Xueyi_PassiveLayer"
-        ]
+        "displayLines": "_Xueyi_PassiveLayer"
       },
       "priorState": "Normal",
       "bar#": 2
@@ -263,30 +213,15 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"444597683\">Xueyi_BP_Passive01</a>[<span class=\"descriptionNumberColor\">Karma</span>]",
           "stackLimit": {
-            "operator": "Variables[0] (_Xueyi_Count) || RETURN",
-            "displayLines": "_Xueyi_Count",
-            "constants": [],
-            "variables": [
-              "_Xueyi_Count"
-            ]
+            "displayLines": "_Xueyi_Count"
           },
           "valuePerStack": {
             "MDF_PassiveLayer": {
-              "operator": "Variables[0] (_Xueyi_Count) || RETURN",
-              "displayLines": "_Xueyi_Count",
-              "constants": [],
-              "variables": [
-                "_Xueyi_Count"
-              ]
+              "displayLines": "_Xueyi_Count"
             }
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] (PointB3_DifferencePassive01_Count) || RETURN",
-            "displayLines": "PointB3_DifferencePassive01_Count",
-            "constants": [],
-            "variables": [
-              "PointB3_DifferencePassive01_Count"
-            ]
+            "displayLines": "PointB3_DifferencePassive01_Count"
           }
         },
         {

@@ -22,12 +22,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-          "displayLines": "{[Skill04[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}"
-          ]
+          "displayLines": "{[Skill04[0]]}"
         },
         "HitSplit": 0.2,
         "Toughness": null,
@@ -44,12 +39,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-          "displayLines": "{[Skill04[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}"
-          ]
+          "displayLines": "{[Skill04[0]]}"
         },
         "HitSplit": 0.3,
         "Toughness": null,
@@ -66,12 +56,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-          "displayLines": "{[Skill04[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}"
-          ]
+          "displayLines": "{[Skill04[0]]}"
         },
         "HitSplit": 0.5,
         "Toughness": null,
@@ -88,29 +73,14 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-1761981801\">MModifier_Monster_W3_Dinosaur_SpeedDownRatio</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
       "duration": {
-        "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
-        "displayLines": "{[PassiveSkillInitiate[3]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkillInitiate[3]]}"
-        ]
+        "displayLines": "{[PassiveSkillInitiate[3]]}"
       },
       "baseChance": {
-        "operator": "Variables[0] ({[PassiveSkillInitiate[1]]}) || RETURN",
-        "displayLines": "{[PassiveSkillInitiate[1]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkillInitiate[1]]}"
-        ]
+        "displayLines": "{[PassiveSkillInitiate[1]]}"
       },
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] ({[PassiveSkillInitiate[2]]}) || RETURN",
-          "displayLines": "{[PassiveSkillInitiate[2]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkillInitiate[2]]}"
-          ]
+          "displayLines": "{[PassiveSkillInitiate[2]]}"
         }
       }
     },
@@ -221,12 +191,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
       "valuePerStack": {
         "MDF_MaxCount": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-          "displayLines": "{[Skill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "{[Skill03[0]]}"
         },
         "MDF_PartFlag": 0
       }

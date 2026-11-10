@@ -47,14 +47,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (SummonMonsterEatCount) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(SummonMonsterEatCount + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "SummonMonsterEatCount"
-                ]
+                "displayLines": "(SummonMonsterEatCount + 1)"
               },
               "variableName": "SummonMonsterEatCount"
             }
@@ -70,12 +63,7 @@ const configAbility = {
           "duration": 1,
           "valuePerStack": {
             "MDF_AttackAddedRatio": {
-              "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-              "displayLines": "{[Skill07[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill07[0]]}"
-              ]
+              "displayLines": "{[Skill07[0]]}"
             }
           }
         }
@@ -117,12 +105,7 @@ const configAbility = {
           "duration": 1,
           "valuePerStack": {
             "MDF_AttackAddedRatio": {
-              "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-              "displayLines": "{[Skill07[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill07[0]]}"
-              ]
+              "displayLines": "{[Skill07[0]]}"
             }
           }
         }

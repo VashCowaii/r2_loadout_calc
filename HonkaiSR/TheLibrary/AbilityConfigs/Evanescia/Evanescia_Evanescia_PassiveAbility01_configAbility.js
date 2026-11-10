@@ -41,15 +41,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "value": {
-        "operator": "Variables[0] (MIN) || Variables[1] (EvanesciaEnergy) || Constants[0] (100) || PARAM_2 || FUNCTION || RETURN",
-        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(EvanesciaEnergy, 100)",
-        "constants": [
-          100
-        ],
-        "variables": [
-          "MIN",
-          "EvanesciaEnergy"
-        ]
+        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(EvanesciaEnergy, 100)"
       },
       "isFixed": "* ERR"
     },
@@ -71,12 +63,7 @@ const configAbility = {
           },
           "variables": {
             "AddValue": {
-              "operator": "Variables[0] (EvanesciaSP) || RETURN",
-              "displayLines": "EvanesciaSP",
-              "constants": [],
-              "variables": [
-                "EvanesciaSP"
-              ]
+              "displayLines": "EvanesciaSP"
             }
           }
         }
@@ -105,14 +92,7 @@ const configAbility = {
       "variableName": "AccumulatedEcho",
       "context": "ContextCaster",
       "value": {
-        "operator": "Variables[0] (MIN) || Variables[1] (240) || Variables[2] (EvanesciaSP) || PARAM_2 || FUNCTION || RETURN",
-        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(240, EvanesciaSP)",
-        "constants": [],
-        "variables": [
-          "MIN",
-          240,
-          "EvanesciaSP"
-        ]
+        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(240, EvanesciaSP)"
       }
     },
     {
@@ -122,12 +102,7 @@ const configAbility = {
         "value1": "AccumulatedEcho",
         "compareType": ">=",
         "value2": {
-          "operator": "Variables[0] (240) || RETURN",
-          "displayLines": "240",
-          "constants": [],
-          "variables": [
-            240
-          ]
+          "displayLines": "240"
         }
       },
       "passed": [
@@ -220,12 +195,7 @@ const configAbility = {
                   "referenceModifier": "<a class=\"gModGreen\" id=\"-143754898\">MReference_CriticalChanceUp</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.3) || RETURN",
-                      "displayLines": "0.3",
-                      "constants": [],
-                      "variables": [
-                        0.3
-                      ]
+                      "displayLines": "0.3"
                     }
                   }
                 }
@@ -243,20 +213,10 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (AccumulatedEcho) || RETURN",
-                "displayLines": "AccumulatedEcho",
-                "constants": [],
-                "variables": [
-                  "AccumulatedEcho"
-                ]
+                "displayLines": "AccumulatedEcho"
               },
               "maximum": {
-                "operator": "Variables[0] (240) || RETURN",
-                "displayLines": "240",
-                "constants": [],
-                "variables": [
-                  240
-                ]
+                "displayLines": "240"
               },
               "assignState": "True",
               "priorState": "Normal",
@@ -487,15 +447,7 @@ const configAbility = {
                     {
                       "name": "Modify Param Value for Param Target",
                       "value": {
-                        "operator": "Constants[0] (1) || INVERT || Variables[0] (_ElationPoint) || MUL || Variables[1] (0.5) || MUL || RETURN",
-                        "displayLines": "((-1 * _ElationPoint) * 0.5)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_ElationPoint",
-                          0.5
-                        ]
+                        "displayLines": "((-1 * _ElationPoint) * 0.5)"
                       }
                     },
                     {
@@ -507,13 +459,7 @@ const configAbility = {
                       },
                       "variables": {
                         "AddValue": {
-                          "operator": "Variables[0] (_ElationPoint) || Variables[1] (0.5) || MUL || RETURN",
-                          "displayLines": "(_ElationPoint * 0.5)",
-                          "constants": [],
-                          "variables": [
-                            "_ElationPoint",
-                            0.5
-                          ]
+                          "displayLines": "(_ElationPoint * 0.5)"
                         }
                       }
                     },
@@ -526,13 +472,7 @@ const configAbility = {
                       "variableName": "TotalEchoPointFromTeammate",
                       "context": "ContextCaster",
                       "value": {
-                        "operator": "Variables[0] (_ElationPoint) || Variables[1] (0.5) || MUL || RETURN",
-                        "displayLines": "(_ElationPoint * 0.5)",
-                        "constants": [],
-                        "variables": [
-                          "_ElationPoint",
-                          0.5
-                        ]
+                        "displayLines": "(_ElationPoint * 0.5)"
                       }
                     },
                     {
@@ -551,14 +491,7 @@ const configAbility = {
                           },
                           "variables": {
                             "AddValue": {
-                              "operator": "Variables[0] (_ElationPoint) || Variables[1] (0.5) || MUL || Variables[2] (0.5) || MUL || RETURN",
-                              "displayLines": "((_ElationPoint * 0.5) * 0.5)",
-                              "constants": [],
-                              "variables": [
-                                "_ElationPoint",
-                                0.5,
-                                0.5
-                              ]
+                              "displayLines": "((_ElationPoint * 0.5) * 0.5)"
                             }
                           }
                         },
@@ -571,14 +504,7 @@ const configAbility = {
                           "variableName": "TotalEchoPointFromTeammate",
                           "context": "ContextCaster",
                           "value": {
-                            "operator": "Variables[0] (_ElationPoint) || Variables[1] (0.5) || MUL || Variables[2] (0.5) || MUL || RETURN",
-                            "displayLines": "((_ElationPoint * 0.5) * 0.5)",
-                            "constants": [],
-                            "variables": [
-                              "_ElationPoint",
-                              0.5,
-                              0.5
-                            ]
+                            "displayLines": "((_ElationPoint * 0.5) * 0.5)"
                           }
                         }
                       ]
@@ -658,21 +584,10 @@ const configAbility = {
                       },
                       "variables": {
                         "AddValue": {
-                          "operator": "Variables[0] (ElationEchoTemp) || Variables[1] (0.5) || MUL || RETURN",
-                          "displayLines": "(ElationEchoTemp * 0.5)",
-                          "constants": [],
-                          "variables": [
-                            "ElationEchoTemp",
-                            0.5
-                          ]
+                          "displayLines": "(ElationEchoTemp * 0.5)"
                         },
                         "TryMergeMDF": {
-                          "operator": "Variables[0] (_MergeElationEchoPointMDF) || RETURN",
-                          "displayLines": "_MergeElationEchoPointMDF",
-                          "constants": [],
-                          "variables": [
-                            "_MergeElationEchoPointMDF"
-                          ]
+                          "displayLines": "_MergeElationEchoPointMDF"
                         }
                       }
                     },
@@ -685,13 +600,7 @@ const configAbility = {
                       "variableName": "TotalEchoPointFromTeammate",
                       "context": "ContextCaster",
                       "value": {
-                        "operator": "Variables[0] (ElationEchoTemp) || Variables[1] (0.5) || MUL || RETURN",
-                        "displayLines": "(ElationEchoTemp * 0.5)",
-                        "constants": [],
-                        "variables": [
-                          "ElationEchoTemp",
-                          0.5
-                        ]
+                        "displayLines": "(ElationEchoTemp * 0.5)"
                       }
                     },
                     {
@@ -710,22 +619,10 @@ const configAbility = {
                           },
                           "variables": {
                             "AddValue": {
-                              "operator": "Variables[0] (ElationEchoTemp) || Variables[1] (0.5) || MUL || Variables[2] (1) || MUL || RETURN",
-                              "displayLines": "((ElationEchoTemp * 0.5) * 1)",
-                              "constants": [],
-                              "variables": [
-                                "ElationEchoTemp",
-                                0.5,
-                                1
-                              ]
+                              "displayLines": "((ElationEchoTemp * 0.5) * 1)"
                             },
                             "TryMergeMDF": {
-                              "operator": "Variables[0] (_MergeElationEchoPointMDF) || RETURN",
-                              "displayLines": "_MergeElationEchoPointMDF",
-                              "constants": [],
-                              "variables": [
-                                "_MergeElationEchoPointMDF"
-                              ]
+                              "displayLines": "_MergeElationEchoPointMDF"
                             }
                           }
                         },
@@ -738,14 +635,7 @@ const configAbility = {
                           "variableName": "TotalEchoPointFromTeammate",
                           "context": "ContextCaster",
                           "value": {
-                            "operator": "Variables[0] (ElationEchoTemp) || Variables[1] (0.5) || MUL || Variables[2] (1) || MUL || RETURN",
-                            "displayLines": "((ElationEchoTemp * 0.5) * 1)",
-                            "constants": [],
-                            "variables": [
-                              "ElationEchoTemp",
-                              0.5,
-                              1
-                            ]
+                            "displayLines": "((ElationEchoTemp * 0.5) * 1)"
                           }
                         }
                       ]
@@ -782,12 +672,7 @@ const configAbility = {
                     "value1": "AccumulatedEcho",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (240) || RETURN",
-                      "displayLines": "240",
-                      "constants": [],
-                      "variables": [
-                        240
-                      ]
+                      "displayLines": "240"
                     }
                   },
                   "passed": [
@@ -800,12 +685,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (AccumulatedEcho) || RETURN",
-                    "displayLines": "AccumulatedEcho",
-                    "constants": [],
-                    "variables": [
-                      "AccumulatedEcho"
-                    ]
+                    "displayLines": "AccumulatedEcho"
                   }
                 }
               ]
@@ -827,12 +707,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (EvanesciaSP) || RETURN",
-                    "displayLines": "EvanesciaSP",
-                    "constants": [],
-                    "variables": [
-                      "EvanesciaSP"
-                    ]
+                    "displayLines": "EvanesciaSP"
                   },
                   "variableName": "old_EvanesciaSP"
                 },
@@ -872,12 +747,7 @@ const configAbility = {
                         "value1": "EvanesciaSP",
                         "compareType": ">",
                         "value2": {
-                          "operator": "Variables[0] (old_EvanesciaSP) || RETURN",
-                          "displayLines": "old_EvanesciaSP",
-                          "constants": [],
-                          "variables": [
-                            "old_EvanesciaSP"
-                          ]
+                          "displayLines": "old_EvanesciaSP"
                         }
                       },
                       "passed": [
@@ -895,13 +765,7 @@ const configAbility = {
                           },
                           "variables": {
                             "AddValue": {
-                              "operator": "Variables[0] (EvanesciaSP) || Variables[1] (old_EvanesciaSP) || SUB || RETURN",
-                              "displayLines": "(EvanesciaSP - old_EvanesciaSP)",
-                              "constants": [],
-                              "variables": [
-                                "EvanesciaSP",
-                                "old_EvanesciaSP"
-                              ]
+                              "displayLines": "(EvanesciaSP - old_EvanesciaSP)"
                             }
                           }
                         }
@@ -927,14 +791,7 @@ const configAbility = {
                       "variableName": "AccumulatedEcho",
                       "context": "ContextCaster",
                       "value": {
-                        "operator": "Variables[0] (MIN) || Variables[1] (240) || Variables[2] (change_EvanesciaSP) || PARAM_2 || FUNCTION || RETURN",
-                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(240, change_EvanesciaSP)",
-                        "constants": [],
-                        "variables": [
-                          "MIN",
-                          240,
-                          "change_EvanesciaSP"
-                        ]
+                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(240, change_EvanesciaSP)"
                       }
                     }
                   ]
@@ -956,12 +813,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (EvanesciaEnergy) || RETURN",
-                    "displayLines": "EvanesciaEnergy",
-                    "constants": [],
-                    "variables": [
-                      "EvanesciaEnergy"
-                    ]
+                    "displayLines": "EvanesciaEnergy"
                   },
                   "variableName": "old_EvanesciaEnergy"
                 },
@@ -1001,12 +853,7 @@ const configAbility = {
                         "value1": "EvanesciaEnergy",
                         "compareType": ">",
                         "value2": {
-                          "operator": "Variables[0] (old_EvanesciaEnergy) || RETURN",
-                          "displayLines": "old_EvanesciaEnergy",
-                          "constants": [],
-                          "variables": [
-                            "old_EvanesciaEnergy"
-                          ]
+                          "displayLines": "old_EvanesciaEnergy"
                         }
                       },
                       "passed": [
@@ -1022,15 +869,7 @@ const configAbility = {
                             "target": "{{Caster}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (MIN) || Variables[1] (change_EvanesciaEnergy) || Constants[0] (100) || PARAM_2 || FUNCTION || RETURN",
-                            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(change_EvanesciaEnergy, 100)",
-                            "constants": [
-                              100
-                            ],
-                            "variables": [
-                              "MIN",
-                              "change_EvanesciaEnergy"
-                            ]
+                            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(change_EvanesciaEnergy, 100)"
                           },
                           "isFixed": "* ERR"
                         }

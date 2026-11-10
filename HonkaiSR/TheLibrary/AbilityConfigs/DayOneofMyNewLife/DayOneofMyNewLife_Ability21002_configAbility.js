@@ -64,12 +64,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-992676615\">LC_EquipUnique_DamageResistance</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.08) || RETURN",
-                      "displayLines": "0.08",
-                      "constants": [],
-                      "variables": [
-                        0.08
-                      ]
+                      "displayLines": "0.08"
                     }
                   }
                 }
@@ -99,12 +94,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-992676615\">LC_EquipUnique_DamageResistance</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.08) || RETURN",
-                      "displayLines": "0.08",
-                      "constants": [],
-                      "variables": [
-                        0.08
-                      ]
+                      "displayLines": "0.08"
                     }
                   }
                 }
@@ -159,12 +149,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]

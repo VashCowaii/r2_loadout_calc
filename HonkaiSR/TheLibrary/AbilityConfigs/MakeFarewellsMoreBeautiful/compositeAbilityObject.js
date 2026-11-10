@@ -85,12 +85,7 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "LC_23040_PropertyValue": {
-                  "operator": "Variables[0] (MDF_DefenceAddedRatio) || RETURN",
-                  "displayLines": "MDF_DefenceAddedRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DefenceAddedRatio"
-                  ]
+                  "displayLines": "MDF_DefenceAddedRatio"
                 }
               }
             }
@@ -305,29 +300,14 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-414774492\">LC_23040_Main02</a>[<span class=\"descriptionNumberColor\">Death Flower</span>]",
                           "duration": {
-                            "operator": "Variables[0] (2) || RETURN",
-                            "displayLines": "2",
-                            "constants": [],
-                            "variables": [
-                              2
-                            ]
+                            "displayLines": "2"
                           },
                           "valuePerStack": {
                             "MDF_DefenceAddedRatio": {
-                              "operator": "Variables[0] (0.3) || RETURN",
-                              "displayLines": "0.3",
-                              "constants": [],
-                              "variables": [
-                                0.3
-                              ]
+                              "displayLines": "0.3"
                             },
                             "MDF_LifeTime": {
-                              "operator": "Variables[0] (2) || RETURN",
-                              "displayLines": "2",
-                              "constants": [],
-                              "variables": [
-                                2
-                              ]
+                              "displayLines": "2"
                             }
                           }
                         },

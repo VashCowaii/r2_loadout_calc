@@ -16,12 +16,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-        "displayLines": "{[Skill02[2]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill02[2]]}"
-        ]
+        "displayLines": "{[Skill02[2]]}"
       },
       "variableName": "Wolf_MaxAttackCount"
     },
@@ -34,12 +29,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1148945924\">Enemy_W2_LycanKing_IF_RageControllerV2</a>",
       "valuePerStack": {
         "MaxAttackCount": {
-          "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-          "displayLines": "{[Skill02[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[2]]}"
-          ]
+          "displayLines": "{[Skill02[2]]}"
         }
       },
       "casterAssign": "TargetSelf"
@@ -81,12 +71,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedUpRatio) || RETURN",
-                "displayLines": "MDF_SpeedUpRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedUpRatio"
-                ]
+                "displayLines": "MDF_SpeedUpRatio"
               }
             }
           ]
@@ -101,12 +86,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (MDF_HealRatio) || RETURN",
-                "displayLines": "MDF_HealRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_HealRatio"
-                ]
+                "displayLines": "MDF_HealRatio"
               },
               "formula": "Heal from Target MaxHP"
             }
@@ -208,20 +188,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"511046360\">Enemy_W2_Lycan_01_IF_RageStatus</a>",
                   "valuePerStack": {
                     "MDF_SpeedUpRatio": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
+                      "displayLines": "{[Skill02[0]]}"
                     },
                     "MDF_HealRatio": {
-                      "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                      "displayLines": "{[Skill02[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[1]]}"
-                      ]
+                      "displayLines": "{[Skill02[1]]}"
                     }
                   }
                 }

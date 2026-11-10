@@ -37,21 +37,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-509656395\">Memosprite_CastoriceServant_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Roar Rumbles the Realm</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.1) || RETURN",
-                  "displayLines": "0.1",
-                  "constants": [],
-                  "variables": [
-                    0.1
-                  ]
+                  "displayLines": "0.1"
                 }
               }
             }
@@ -78,21 +68,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-509656395\">Memosprite_CastoriceServant_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Roar Rumbles the Realm</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.1) || RETURN",
-                      "displayLines": "0.1",
-                      "constants": [],
-                      "variables": [
-                        0.1
-                      ]
+                      "displayLines": "0.1"
                     }
                   }
                 }

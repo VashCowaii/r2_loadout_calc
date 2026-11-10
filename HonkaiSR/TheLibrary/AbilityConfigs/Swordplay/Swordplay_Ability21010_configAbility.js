@@ -45,13 +45,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyValue * _Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "_Layer"
-                ]
+                "displayLines": "(MDF_PropertyValue * _Layer)"
               }
             }
           ]
@@ -188,12 +182,7 @@ const configAbility = {
                     "value1": "<a class=\"gModGreen\" id=\"90221710\">LC_21010_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (5) || RETURN",
-                      "displayLines": "5",
-                      "constants": [],
-                      "variables": [
-                        5
-                      ]
+                      "displayLines": "5"
                     },
                     "valueType": "Layer"
                   },
@@ -206,21 +195,11 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"90221710\">LC_21010_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (5) || RETURN",
-                        "displayLines": "5",
-                        "constants": [],
-                        "variables": [
-                          5
-                        ]
+                        "displayLines": "5"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.08) || RETURN",
-                          "displayLines": "0.08",
-                          "constants": [],
-                          "variables": [
-                            0.08
-                          ]
+                          "displayLines": "0.08"
                         }
                       }
                     }
@@ -236,21 +215,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"90221710\">LC_21010_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (5) || RETURN",
-                    "displayLines": "5",
-                    "constants": [],
-                    "variables": [
-                      5
-                    ]
+                    "displayLines": "5"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.08) || RETURN",
-                      "displayLines": "0.08",
-                      "constants": [],
-                      "variables": [
-                        0.08
-                      ]
+                      "displayLines": "0.08"
                     }
                   }
                 }

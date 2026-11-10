@@ -29,12 +29,7 @@ const configAbility = {
             "value1": "_CurrentSpeed",
             "compareType": ">=",
             "value2": {
-              "operator": "Variables[0] (180) || RETURN",
-              "displayLines": "180",
-              "constants": [],
-              "variables": [
-                180
-              ]
+              "displayLines": "180"
             }
           },
           "passed": [
@@ -47,12 +42,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"827249673\">Cyrene_PointB3_Sub3</a>[<span class=\"descriptionNumberColor\">Causality in Trichotomy</span>]",
               "valuePerStack": {
                 "MDF_DamageIncrease": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             },
@@ -68,26 +58,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (_CurrentSpeedConvert) || SUB || RETURN",
-                "displayLines": "(_CurrentSpeed - _CurrentSpeedConvert)",
-                "constants": [],
-                "variables": [
-                  "_CurrentSpeed",
-                  "_CurrentSpeedConvert"
-                ]
+                "displayLines": "(_CurrentSpeed - _CurrentSpeedConvert)"
               },
               "variableName": "_CurrentSpeed"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (180) || SUB || RETURN",
-                "displayLines": "(_CurrentSpeed - 180)",
-                "constants": [],
-                "variables": [
-                  "_CurrentSpeed",
-                  180
-                ]
+                "displayLines": "(_CurrentSpeed - 180)"
               },
               "variableName": "_CurrentSpeed"
             },
@@ -98,24 +76,14 @@ const configAbility = {
                 "value1": "_CurrentSpeed",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (60) || RETURN",
-                  "displayLines": "60",
-                  "constants": [],
-                  "variables": [
-                    60
-                  ]
+                  "displayLines": "60"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (60) || RETURN",
-                    "displayLines": "60",
-                    "constants": [],
-                    "variables": [
-                      60
-                    ]
+                    "displayLines": "60"
                   },
                   "variableName": "_CurrentSpeed"
                 }
@@ -139,20 +107,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"810472054\">Cyrene_PointB3_Sub2</a>[<span class=\"descriptionNumberColor\">Causality in Trichotomy</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (_CurrentSpeed) || RETURN",
-                      "displayLines": "_CurrentSpeed",
-                      "constants": [],
-                      "variables": [
-                        "_CurrentSpeed"
-                      ]
+                      "displayLines": "_CurrentSpeed"
                     },
                     "MDF_DamageIncrease": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 }
@@ -262,17 +220,7 @@ const configAbility = {
           "name": "Define Custom Variable",
           "scope": "ContextTaskTemplate",
           "value": {
-            "operator": "Variables[0] (MAX) || Variables[1] (_CurSpecialSP) || Variables[2] (parameter[0]_AddValue) || ADD || Variables[3] (_MaxSpecialSP) || SUB || Constants[0] (0) || PARAM_2 || FUNCTION || RETURN",
-            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(((_CurSpecialSP + parameter[0]_AddValue) - _MaxSpecialSP), 0)",
-            "constants": [
-              0
-            ],
-            "variables": [
-              "MAX",
-              "_CurSpecialSP",
-              "parameter[0]_AddValue",
-              "_MaxSpecialSP"
-            ]
+            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(((_CurSpecialSP + parameter[0]_AddValue) - _MaxSpecialSP), 0)"
           },
           "variableName": "_ExtraSpecialSP"
         },
@@ -294,12 +242,7 @@ const configAbility = {
               },
               "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecialOverflow</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (_ExtraSpecialSP) || RETURN",
-                "displayLines": "_ExtraSpecialSP",
-                "constants": [],
-                "variables": [
-                  "_ExtraSpecialSP"
-                ]
+                "displayLines": "_ExtraSpecialSP"
               }
             }
           ]
@@ -311,12 +254,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (parameter[0]_AddValue) || RETURN",
-            "displayLines": "parameter[0]_AddValue",
-            "constants": [],
-            "variables": [
-              "parameter[0]_AddValue"
-            ]
+            "displayLines": "parameter[0]_AddValue"
           },
           "isFixed": "(Fixed)",
           "ignoreBlock": true,
@@ -342,12 +280,7 @@ const configAbility = {
           "functionName": "<a class=\"gTempYellow\" id=\"1682831339\">Cyrene_ChargeEnergy</a>",
           "variables": {
             "parameter[0]_AddValue": {
-              "operator": "Variables[0] (_CurExtraSpecialSP) || RETURN",
-              "displayLines": "_CurExtraSpecialSP",
-              "constants": [],
-              "variables": [
-                "_CurExtraSpecialSP"
-              ]
+              "displayLines": "_CurExtraSpecialSP"
             }
           }
         },

@@ -80,12 +80,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">MerryMake</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -114,12 +109,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 },
                 {
@@ -130,12 +120,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.16) || RETURN",
-                    "displayLines": "0.16",
-                    "constants": [],
-                    "variables": [
-                      0.16
-                    ]
+                    "displayLines": "0.16"
                   }
                 }
               ]
@@ -194,12 +179,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGConverted</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -221,12 +201,7 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                  "displayLines": "MDF_PropertyValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue"
-                  ]
+                  "displayLines": "MDF_PropertyValue"
                 }
               }
             }
@@ -248,12 +223,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -280,12 +250,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -312,12 +277,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -344,12 +304,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGConverted</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -374,12 +329,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGConverted</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                        "displayLines": "MDF_PropertyValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue"
-                        ]
+                        "displayLines": "MDF_PropertyValue"
                       },
                       "isRefresh": true
                     }
@@ -409,12 +359,7 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_PropertyValue3) || RETURN",
-                  "displayLines": "MDF_PropertyValue3",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue3"
-                  ]
+                  "displayLines": "MDF_PropertyValue3"
                 }
               }
             },
@@ -432,12 +377,7 @@ const compositeAbilityObject = {
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.12) || RETURN",
-                  "displayLines": "0.12",
-                  "constants": [],
-                  "variables": [
-                    0.12
-                  ]
+                  "displayLines": "0.12"
                 }
               }
             }
@@ -469,13 +409,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_ElationDamageAddedRatioBase) || Variables[1] (0.2) || MUL || RETURN",
-                    "displayLines": "(_ElationDamageAddedRatioBase * 0.2)",
-                    "constants": [],
-                    "variables": [
-                      "_ElationDamageAddedRatioBase",
-                      0.2
-                    ]
+                    "displayLines": "(_ElationDamageAddedRatioBase * 0.2)"
                   },
                   "variableName": "MDF_PropertyValue3"
                 },
@@ -487,12 +421,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGConverted</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue3) || RETURN",
-                    "displayLines": "MDF_PropertyValue3",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue3"
-                    ]
+                    "displayLines": "MDF_PropertyValue3"
                   }
                 },
                 {
@@ -504,24 +433,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_LifeTime) || RETURN",
-                    "displayLines": "_LifeTime",
-                    "constants": [],
-                    "variables": [
-                      "_LifeTime"
-                    ]
+                    "displayLines": "_LifeTime"
                   },
                   "variableName": "G_EnergyBar"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (G_EnergyBar) || RETURN",
-                    "displayLines": "G_EnergyBar",
-                    "constants": [],
-                    "variables": [
-                      "G_EnergyBar"
-                    ]
+                    "displayLines": "G_EnergyBar"
                   },
                   "assignState": "True",
                   "priorState": "Active"
@@ -556,12 +475,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Adjust Team Punchline Value",
                       "value": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "adjustment": "Add"
                     }
@@ -590,13 +504,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_ElationDamageAddedRatioBase) || Variables[1] (0.2) || MUL || RETURN",
-                        "displayLines": "(_ElationDamageAddedRatioBase * 0.2)",
-                        "constants": [],
-                        "variables": [
-                          "_ElationDamageAddedRatioBase",
-                          0.2
-                        ]
+                        "displayLines": "(_ElationDamageAddedRatioBase * 0.2)"
                       },
                       "variableName": "MDF_PropertyValue3"
                     },
@@ -609,12 +517,7 @@ const compositeAbilityObject = {
                       "modifierName": "<a class=\"gModGreen\" id=\"1266011188\">G_YaoGuang_Ability02_ToMember</a>[<span class=\"descriptionNumberColor\">Decalight Unveils All</span>]",
                       "variableName": "MDF_PropertyValue",
                       "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue3) || RETURN",
-                        "displayLines": "MDF_PropertyValue3",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue3"
-                        ]
+                        "displayLines": "MDF_PropertyValue3"
                       }
                     },
                     {
@@ -625,12 +528,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGConverted</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue3) || RETURN",
-                        "displayLines": "MDF_PropertyValue3",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue3"
-                        ]
+                        "displayLines": "MDF_PropertyValue3"
                       },
                       "isRefresh": true
                     }
@@ -700,12 +598,7 @@ const compositeAbilityObject = {
                         "value1": "_ElationDamageAddedRatio_YG",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (_ElationDamageAddedRatio) || RETURN",
-                          "displayLines": "_ElationDamageAddedRatio",
-                          "constants": [],
-                          "variables": [
-                            "_ElationDamageAddedRatio"
-                          ]
+                          "displayLines": "_ElationDamageAddedRatio"
                         }
                       },
                       "passed": [
@@ -838,12 +731,7 @@ const compositeAbilityObject = {
                               }
                             },
                             "DamageElation": {
-                              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                              "displayLines": "MDF_PropertyValue",
-                              "constants": [],
-                              "variables": [
-                                "MDF_PropertyValue"
-                              ]
+                              "displayLines": "MDF_PropertyValue"
                             },
                             "indirectDMG": true,
                             "dmgFormula": "Elation Scaling",
@@ -864,14 +752,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (G_HongBao_Times) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(G_HongBao_Times + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "G_HongBao_Times"
-                            ]
+                            "displayLines": "(G_HongBao_Times + 1)"
                           },
                           "variableName": "G_HongBao_Times"
                         }
@@ -916,12 +797,7 @@ const compositeAbilityObject = {
                                   }
                                 },
                                 "DamageElation": {
-                                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                                  "displayLines": "MDF_PropertyValue",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_PropertyValue"
-                                  ]
+                                  "displayLines": "MDF_PropertyValue"
                                 },
                                 "indirectDMG": true,
                                 "dmgFormula": "Elation Scaling",
@@ -942,14 +818,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (G_HongBao_Times) || Constants[0] (1) || ADD || RETURN",
-                                "displayLines": "(G_HongBao_Times + 1)",
-                                "constants": [
-                                  1
-                                ],
-                                "variables": [
-                                  "G_HongBao_Times"
-                                ]
+                                "displayLines": "(G_HongBao_Times + 1)"
                               },
                               "variableName": "G_HongBao_Times"
                             }
@@ -1020,12 +889,7 @@ const compositeAbilityObject = {
                       "modifierName": "<a class=\"gModGreen\" id=\"-228290033\">ParamModifier</a>",
                       "function": "Add",
                       "value": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "valueType": "Duration"
                     }
@@ -1072,12 +936,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.6) || RETURN",
-                    "displayLines": "0.6",
-                    "constants": [],
-                    "variables": [
-                      0.6
-                    ]
+                    "displayLines": "0.6"
                   }
                 }
               ]
@@ -1095,12 +954,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Skill Points Modification",
                       "adjustmentValue": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "adjustmentType": "+"
                     }
@@ -1147,12 +1001,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -1187,24 +1036,14 @@ const compositeAbilityObject = {
                     "value1": "_CurrentSpeed",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (120) || RETURN",
-                      "displayLines": "120",
-                      "constants": [],
-                      "variables": [
-                        120
-                      ]
+                      "displayLines": "120"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (0.3) || RETURN",
-                        "displayLines": "0.3",
-                        "constants": [],
-                        "variables": [
-                          0.3
-                        ]
+                        "displayLines": "0.3"
                       },
                       "variableName": "_EPRatioBase"
                     },
@@ -1220,26 +1059,14 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (_CurrentSpeedConvert) || SUB || RETURN",
-                        "displayLines": "(_CurrentSpeed - _CurrentSpeedConvert)",
-                        "constants": [],
-                        "variables": [
-                          "_CurrentSpeed",
-                          "_CurrentSpeedConvert"
-                        ]
+                        "displayLines": "(_CurrentSpeed - _CurrentSpeedConvert)"
                       },
                       "variableName": "_CurrentSpeed"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (120) || SUB || RETURN",
-                        "displayLines": "(_CurrentSpeed - 120)",
-                        "constants": [],
-                        "variables": [
-                          "_CurrentSpeed",
-                          120
-                        ]
+                        "displayLines": "(_CurrentSpeed - 120)"
                       },
                       "variableName": "_OverCountSpeedValue"
                     },
@@ -1250,24 +1077,14 @@ const compositeAbilityObject = {
                         "value1": "_OverCountSpeedValue",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (200) || RETURN",
-                          "displayLines": "200",
-                          "constants": [],
-                          "variables": [
-                            200
-                          ]
+                          "displayLines": "200"
                         }
                       },
                       "passed": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (200) || RETURN",
-                            "displayLines": "200",
-                            "constants": [],
-                            "variables": [
-                              200
-                            ]
+                            "displayLines": "200"
                           },
                           "variableName": "_OverCountSpeedValue"
                         }
@@ -1280,27 +1097,14 @@ const compositeAbilityObject = {
                         "value1": "_OverCountSpeedValue",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         }
                       },
                       "passed": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (FLOOR) || Variables[1] (_OverCountSpeedValue) || Variables[2] (1) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.01) || MUL || RETURN",
-                            "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_OverCountSpeedValue / 1)) * 0.01)",
-                            "constants": [],
-                            "variables": [
-                              "FLOOR",
-                              "_OverCountSpeedValue",
-                              1,
-                              0.01
-                            ]
+                            "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_OverCountSpeedValue / 1)) * 0.01)"
                           },
                           "variableName": "_EPRatioAdd"
                         }
@@ -1322,13 +1126,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1286933987\">YaoGuang_Trace01_Effect</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (_EPRatioBase) || Variables[1] (_EPRatioAdd) || ADD || RETURN",
-                          "displayLines": "(_EPRatioBase + _EPRatioAdd)",
-                          "constants": [],
-                          "variables": [
-                            "_EPRatioBase",
-                            "_EPRatioAdd"
-                          ]
+                          "displayLines": "(_EPRatioBase + _EPRatioAdd)"
                         }
                       }
                     }
@@ -1443,12 +1241,7 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.25) || RETURN",
-                  "displayLines": "0.25",
-                  "constants": [],
-                  "variables": [
-                    0.25
-                  ]
+                  "displayLines": "0.25"
                 }
               }
             }
@@ -1498,13 +1291,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (40) || Variables[1] (20) || SUB || RETURN",
-            "displayLines": "(40 - 20)",
-            "constants": [],
-            "variables": [
-              40,
-              20
-            ]
+            "displayLines": "(40 - 20)"
           },
           "variableName": "G_Rank01_AddedElationPoint"
         }
@@ -1525,12 +1312,7 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             }
@@ -1914,20 +1696,10 @@ const compositeAbilityObject = {
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (G_EnergyBar) || RETURN",
-            "displayLines": "G_EnergyBar",
-            "constants": [],
-            "variables": [
-              "G_EnergyBar"
-            ]
+            "displayLines": "G_EnergyBar"
           },
           "maximum": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "assignState": "True",
           "priorState": "Normal",
@@ -1950,12 +1722,7 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             }
@@ -2003,12 +1770,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (G_EnergyBar) || RETURN",
-                        "displayLines": "G_EnergyBar",
-                        "constants": [],
-                        "variables": [
-                          "G_EnergyBar"
-                        ]
+                        "displayLines": "G_EnergyBar"
                       },
                       "assignState": "True",
                       "priorState": "Active"
@@ -2049,21 +1811,11 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"179366080\">G_YaoGuang_Ability04_AllDamageTypeTaken</a>[<span class=\"descriptionNumberColor\">Woe's Whisper</span>]",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.16) || RETURN",
-              "displayLines": "0.16",
-              "constants": [],
-              "variables": [
-                0.16
-              ]
+              "displayLines": "0.16"
             }
           }
         },
@@ -2083,24 +1835,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageElation": {
-                  "operator": "Variables[0] (1) || Constants[0] (1) || Variables[1] (1) || ADD || MUL || RETURN",
-                  "displayLines": "(1 * (1 + 1))",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    1,
-                    1
-                  ]
+                  "displayLines": "(1 * (1 + 1))"
                 },
                 "dmgFormula": "Elation Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Elation DMG",
@@ -2110,12 +1849,7 @@ const compositeAbilityObject = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (5) || RETURN",
-                "displayLines": "5",
-                "constants": [],
-                "variables": [
-                  5
-                ]
+                "displayLines": "5"
               },
               "execute": [
                 {
@@ -2135,24 +1869,11 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Physical",
                         "DamageElation": {
-                          "operator": "Variables[0] (0.2) || Constants[0] (1) || Variables[1] (1) || ADD || MUL || RETURN",
-                          "displayLines": "(0.2 * (1 + 1))",
-                          "constants": [
-                            1
-                          ],
-                          "variables": [
-                            0.2,
-                            1
-                          ]
+                          "displayLines": "(0.2 * (1 + 1))"
                         },
                         "dmgFormula": "Elation Scaling",
                         "Toughness": {
-                          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                          "displayLines": "ST Toughness Value",
-                          "constants": [],
-                          "variables": [
-                            "ST Toughness Value"
-                          ]
+                          "displayLines": "ST Toughness Value"
                         },
                         "Tags": null,
                         "attackType": "Elation DMG"
@@ -2173,21 +1894,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageElation": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 },
                 "dmgFormula": "Elation Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Elation DMG",
@@ -2197,12 +1908,7 @@ const compositeAbilityObject = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (5) || RETURN",
-                "displayLines": "5",
-                "constants": [],
-                "variables": [
-                  5
-                ]
+                "displayLines": "5"
               },
               "execute": [
                 {
@@ -2222,21 +1928,11 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Physical",
                         "DamageElation": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         },
                         "dmgFormula": "Elation Scaling",
                         "Toughness": {
-                          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                          "displayLines": "ST Toughness Value",
-                          "constants": [],
-                          "variables": [
-                            "ST Toughness Value"
-                          ]
+                          "displayLines": "ST Toughness Value"
                         },
                         "Tags": null,
                         "attackType": "Elation DMG"
@@ -2307,33 +2003,18 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-2059745464\">G_YaoGuang_Ability03_AllDamageTypePenetrate</a>[<span class=\"descriptionNumberColor\">Hexagram of Feathered Fortune</span>]",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         },
         {
           "name": "Adjust Team Punchline Value",
           "value": {
-            "operator": "Variables[0] (5) || RETURN",
-            "displayLines": "5",
-            "constants": [],
-            "variables": [
-              5
-            ]
+            "displayLines": "5"
           },
           "adjustment": "Add"
         },
@@ -2349,13 +2030,7 @@ const compositeAbilityObject = {
               "functionName": "<a class=\"gTempYellow\" id=\"101547145\">Elation_StartElationTime</a>",
               "variables": {
                 "TryStartElationTime_OverrideElationPoint": {
-                  "operator": "Variables[0] (20) || Variables[1] (G_Rank01_AddedElationPoint) || ADD || RETURN",
-                  "displayLines": "(20 + G_Rank01_AddedElationPoint)",
-                  "constants": [],
-                  "variables": [
-                    20,
-                    "G_Rank01_AddedElationPoint"
-                  ]
+                  "displayLines": "(20 + G_Rank01_AddedElationPoint)"
                 },
                 "TryStartElationTime_ElationTimeIsNoConsume": 1
               },
@@ -2381,12 +2056,7 @@ const compositeAbilityObject = {
               "functionName": "<a class=\"gTempYellow\" id=\"101547145\">Elation_StartElationTime</a>",
               "variables": {
                 "TryStartElationTime_OverrideElationPoint": {
-                  "operator": "Variables[0] (20) || RETURN",
-                  "displayLines": "20",
-                  "constants": [],
-                  "variables": [
-                    20
-                  ]
+                  "displayLines": "20"
                 },
                 "TryStartElationTime_ElationTimeIsNoConsume": 1
               },
@@ -2626,12 +2296,7 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1968939868\">G_YaoGuang_Ability02_ToSelf</a>[<span class=\"descriptionNumberColor\">Decalight Unveils All</span>]",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           }
         },
         {
@@ -2797,21 +2462,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] (0.9) || RETURN",
-                  "displayLines": "0.9",
-                  "constants": [],
-                  "variables": [
-                    0.9
-                  ]
+                  "displayLines": "0.9"
                 },
                 "HitSplit": 0.25,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Basic ATK",
@@ -2827,21 +2482,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 },
                 "HitSplit": 0.25,
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Basic ATK"
@@ -2856,15 +2501,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_DeltaY) || Constants[0] (1000) || DIV || Constants[1] (1.15) || ADD || RETURN",
-                "displayLines": "((_DeltaY / 1000) + 1.15)",
-                "constants": [
-                  1000,
-                  1.15
-                ],
-                "variables": [
-                  "_DeltaY"
-                ]
+                "displayLines": "((_DeltaY / 1000) + 1.15)"
               },
               "variableName": "_DeltaY"
             },
@@ -2877,15 +2514,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_DeltaY_R) || Constants[0] (1000) || DIV || Constants[1] (1.3) || ADD || RETURN",
-                "displayLines": "((_DeltaY_R / 1000) + 1.3)",
-                "constants": [
-                  1000,
-                  1.3
-                ],
-                "variables": [
-                  "_DeltaY_R"
-                ]
+                "displayLines": "((_DeltaY_R / 1000) + 1.3)"
               },
               "variableName": "_DeltaY_R"
             },
@@ -2898,15 +2527,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_DeltaY_L) || Constants[0] (1000) || DIV || Constants[1] (1.1) || ADD || RETURN",
-                "displayLines": "((_DeltaY_L / 1000) + 1.1)",
-                "constants": [
-                  1000,
-                  1.1
-                ],
-                "variables": [
-                  "_DeltaY_L"
-                ]
+                "displayLines": "((_DeltaY_L / 1000) + 1.1)"
               },
               "variableName": "_DeltaY_L"
             }
@@ -2925,21 +2546,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] (0.9) || RETURN",
-                  "displayLines": "0.9",
-                  "constants": [],
-                  "variables": [
-                    0.9
-                  ]
+                  "displayLines": "0.9"
                 },
                 "HitSplit": 0.25,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Basic ATK",
@@ -2955,21 +2566,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 },
                 "HitSplit": 0.25,
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Basic ATK"
@@ -2984,15 +2585,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_DeltaY) || Constants[0] (1000) || DIV || Constants[1] (1.15) || ADD || RETURN",
-                "displayLines": "((_DeltaY / 1000) + 1.15)",
-                "constants": [
-                  1000,
-                  1.15
-                ],
-                "variables": [
-                  "_DeltaY"
-                ]
+                "displayLines": "((_DeltaY / 1000) + 1.15)"
               },
               "variableName": "_DeltaY"
             },
@@ -3005,15 +2598,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_DeltaY_R) || Constants[0] (1000) || DIV || Constants[1] (1.3) || ADD || RETURN",
-                "displayLines": "((_DeltaY_R / 1000) + 1.3)",
-                "constants": [
-                  1000,
-                  1.3
-                ],
-                "variables": [
-                  "_DeltaY_R"
-                ]
+                "displayLines": "((_DeltaY_R / 1000) + 1.3)"
               },
               "variableName": "_DeltaY_R"
             },
@@ -3026,15 +2611,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_DeltaY_L) || Constants[0] (1000) || DIV || Constants[1] (1.1) || ADD || RETURN",
-                "displayLines": "((_DeltaY_L / 1000) + 1.1)",
-                "constants": [
-                  1000,
-                  1.1
-                ],
-                "variables": [
-                  "_DeltaY_L"
-                ]
+                "displayLines": "((_DeltaY_L / 1000) + 1.1)"
               },
               "variableName": "_DeltaY_L"
             }

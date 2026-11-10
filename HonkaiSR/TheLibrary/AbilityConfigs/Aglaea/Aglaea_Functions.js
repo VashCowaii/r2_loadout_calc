@@ -31,12 +31,7 @@ const configAbility = {
               "modifierName": "<a class=\"gModGreen\" id=\"1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
               "variableName": "MDF_PropertyValue2",
               "value": {
-                "operator": "Variables[0] (0.6) || RETURN",
-                "displayLines": "0.6",
-                "constants": [],
-                "variables": [
-                  0.6
-                ]
+                "displayLines": "0.6"
               }
             }
           ],
@@ -59,12 +54,7 @@ const configAbility = {
                   "modifierName": "<a class=\"gModGreen\" id=\"1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
                   "variableName": "MDF_PropertyValue2",
                   "value": {
-                    "operator": "Variables[0] (0.3) || RETURN",
-                    "displayLines": "0.3",
-                    "constants": [],
-                    "variables": [
-                      0.3
-                    ]
+                    "displayLines": "0.3"
                   }
                 }
               ],
@@ -87,12 +77,7 @@ const configAbility = {
                       "modifierName": "<a class=\"gModGreen\" id=\"1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
                       "variableName": "MDF_PropertyValue2",
                       "value": {
-                        "operator": "Variables[0] (0.1) || RETURN",
-                        "displayLines": "0.1",
-                        "constants": [],
-                        "variables": [
-                          0.1
-                        ]
+                        "displayLines": "0.1"
                       }
                     }
                   ],

@@ -39,24 +39,14 @@ const configAbility = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (Soldier03) || RETURN",
-                    "displayLines": "Soldier03",
-                    "constants": [],
-                    "variables": [
-                      "Soldier03"
-                    ]
+                    "displayLines": "Soldier03"
                   },
                   "locationType": "BeforeCaster"
                 },
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (Soldier03) || RETURN",
-                    "displayLines": "Soldier03",
-                    "constants": [],
-                    "variables": [
-                      "Soldier03"
-                    ]
+                    "displayLines": "Soldier03"
                   },
                   "locationType": "AfterCaster"
                 }
@@ -93,24 +83,14 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (Soldier03) || RETURN",
-                        "displayLines": "Soldier03",
-                        "constants": [],
-                        "variables": [
-                          "Soldier03"
-                        ]
+                        "displayLines": "Soldier03"
                       },
                       "locationType": "First"
                     },
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (Soldier03) || RETURN",
-                        "displayLines": "Soldier03",
-                        "constants": [],
-                        "variables": [
-                          "Soldier03"
-                        ]
+                        "displayLines": "Soldier03"
                       },
                       "locationType": "Last"
                     }

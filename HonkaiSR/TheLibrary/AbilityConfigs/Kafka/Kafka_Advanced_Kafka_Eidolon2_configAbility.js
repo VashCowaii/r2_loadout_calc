@@ -52,12 +52,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1021385452\">Kafka_Eidolon2_Sub</a>[<span class=\"descriptionNumberColor\">Fortississimo</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.33) || RETURN",
-                  "displayLines": "0.33",
-                  "constants": [],
-                  "variables": [
-                    0.33
-                  ]
+                  "displayLines": "0.33"
                 }
               }
             }
@@ -75,12 +70,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1021385452\">Kafka_Eidolon2_Sub</a>[<span class=\"descriptionNumberColor\">Fortississimo</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.33) || RETURN",
-                  "displayLines": "0.33",
-                  "constants": [],
-                  "variables": [
-                    0.33
-                  ]
+                  "displayLines": "0.33"
                 }
               }
             }

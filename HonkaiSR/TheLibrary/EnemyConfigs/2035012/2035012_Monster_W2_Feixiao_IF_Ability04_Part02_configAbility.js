@@ -91,12 +91,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] (Skill04DamagePercentage) || RETURN",
-          "displayLines": "Skill04DamagePercentage",
-          "constants": [],
-          "variables": [
-            "Skill04DamagePercentage"
-          ]
+          "displayLines": "Skill04DamagePercentage"
         },
         "HitSplit": 0.15,
         "Toughness": null,
@@ -115,12 +110,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] (Skill04DamagePercentage) || RETURN",
-          "displayLines": "Skill04DamagePercentage",
-          "constants": [],
-          "variables": [
-            "Skill04DamagePercentage"
-          ]
+          "displayLines": "Skill04DamagePercentage"
         },
         "HitSplit": 0.15,
         "Toughness": null,
@@ -139,12 +129,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] (Skill04DamagePercentage) || RETURN",
-          "displayLines": "Skill04DamagePercentage",
-          "constants": [],
-          "variables": [
-            "Skill04DamagePercentage"
-          ]
+          "displayLines": "Skill04DamagePercentage"
         },
         "HitSplit": 0.15,
         "Toughness": null,
@@ -163,12 +148,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] (Skill04DamagePercentage) || RETURN",
-          "displayLines": "Skill04DamagePercentage",
-          "constants": [],
-          "variables": [
-            "Skill04DamagePercentage"
-          ]
+          "displayLines": "Skill04DamagePercentage"
         },
         "HitSplit": 0.15,
         "Toughness": null,
@@ -187,12 +167,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] (Skill04DamagePercentage) || RETURN",
-          "displayLines": "Skill04DamagePercentage",
-          "constants": [],
-          "variables": [
-            "Skill04DamagePercentage"
-          ]
+          "displayLines": "Skill04DamagePercentage"
         },
         "HitSplit": 0.4,
         "Toughness": null,
@@ -219,12 +194,7 @@ const configAbility = {
       },
       "searchRandom": true,
       "maxTargets": {
-        "operator": "Variables[0] ({[PassiveSkill03[4]]}) || RETURN",
-        "displayLines": "{[PassiveSkill03[4]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill03[4]]}"
-        ]
+        "displayLines": "{[PassiveSkill03[4]]}"
       },
       "ifTargetFound": [
         {
@@ -235,20 +205,10 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1794338335\">Standard_CTRL_Crazy</a>[<span class=\"descriptionNumberColor\">Outrage</span>]",
           "duration": {
-            "operator": "Variables[0] ({[PassiveSkill03[3]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[3]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[3]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[3]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[Skill03[5]]}) || RETURN",
-            "displayLines": "{[Skill03[5]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[5]]}"
-            ]
+            "displayLines": "{[Skill03[5]]}"
           }
         }
       ]

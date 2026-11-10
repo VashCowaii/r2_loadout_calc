@@ -75,24 +75,14 @@ const configAbility = {
                 "value1": "CasterMaxSP",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (180) || RETURN",
-                  "displayLines": "180",
-                  "constants": [],
-                  "variables": [
-                    180
-                  ]
+                  "displayLines": "180"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (180) || RETURN",
-                    "displayLines": "180",
-                    "constants": [],
-                    "variables": [
-                      180
-                    ]
+                    "displayLines": "180"
                   },
                   "variableName": "CasterMaxSP"
                 }

@@ -53,13 +53,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_ShowValue2) || Variables[1] (MDF_ShowValue1) || MUL || RETURN",
-                    "displayLines": "(MDF_ShowValue2 * MDF_ShowValue1)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ShowValue2",
-                      "MDF_ShowValue1"
-                    ]
+                    "displayLines": "(MDF_ShowValue2 * MDF_ShowValue1)"
                   }
                 }
               ]
@@ -475,32 +469,15 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "duration": {
-                "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                "displayLines": "{[SkillP01[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP01[3]]}"
-                ]
+                "displayLines": "{[SkillP01[3]]}"
               },
               "valuePerStack": {
                 "MDF_ShowValue1": {
-                  "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                  "displayLines": "{[SkillP01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[0]]}"
-                  ]
+                  "displayLines": "{[SkillP01[0]]}"
                 }
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] ({[SkillP01[2]]}) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "({[SkillP01[2]]} - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "{[SkillP01[2]]}"
-                ]
+                "displayLines": "({[SkillP01[2]]} - 1)"
               }
             },
             {
@@ -511,21 +488,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "duration": {
-                "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                "displayLines": "{[SkillP01[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP01[3]]}"
-                ]
+                "displayLines": "{[SkillP01[3]]}"
               },
               "valuePerStack": {
                 "MDF_ShowValue1": {
-                  "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                  "displayLines": "{[SkillP01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[0]]}"
-                  ]
+                  "displayLines": "{[SkillP01[0]]}"
                 }
               },
               "addStacksPerTrigger": 1
@@ -540,30 +507,15 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "duration": {
-                "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                "displayLines": "{[SkillP01[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP01[3]]}"
-                ]
+                "displayLines": "{[SkillP01[3]]}"
               },
               "valuePerStack": {
                 "MDF_ShowValue1": {
-                  "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                  "displayLines": "{[SkillP01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[0]]}"
-                  ]
+                  "displayLines": "{[SkillP01[0]]}"
                 }
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                "displayLines": "{[SkillP01[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP01[1]]}"
-                ]
+                "displayLines": "{[SkillP01[1]]}"
               }
             }
           ]
@@ -683,32 +635,15 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                    "displayLines": "{[Skill01[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill01[3]]}"
-                    ]
+                    "displayLines": "{[Skill01[3]]}"
                   },
                   "valuePerStack": {
                     "MDF_ShowValue1": {
-                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                      "displayLines": "{[Skill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[0]]}"
-                      ]
+                      "displayLines": "{[Skill01[0]]}"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] ({[Skill01[2]]}) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "({[Skill01[2]]} - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "{[Skill01[2]]}"
-                    ]
+                    "displayLines": "({[Skill01[2]]} - 1)"
                   }
                 },
                 {
@@ -719,21 +654,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                    "displayLines": "{[Skill01[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill01[3]]}"
-                    ]
+                    "displayLines": "{[Skill01[3]]}"
                   },
                   "valuePerStack": {
                     "MDF_ShowValue1": {
-                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                      "displayLines": "{[Skill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[0]]}"
-                      ]
+                      "displayLines": "{[Skill01[0]]}"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -767,30 +692,15 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                    "displayLines": "{[Skill01[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill01[3]]}"
-                    ]
+                    "displayLines": "{[Skill01[3]]}"
                   },
                   "valuePerStack": {
                     "MDF_ShowValue1": {
-                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                      "displayLines": "{[Skill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[0]]}"
-                      ]
+                      "displayLines": "{[Skill01[0]]}"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                    "displayLines": "{[Skill01[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill01[1]]}"
-                    ]
+                    "displayLines": "{[Skill01[1]]}"
                   }
                 }
               ]

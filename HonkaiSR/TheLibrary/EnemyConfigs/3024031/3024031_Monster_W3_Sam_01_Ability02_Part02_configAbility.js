@@ -33,12 +33,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "HitSplit": 0.4,
             "Toughness": null,
@@ -58,12 +53,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "HitSplit": 0.4,
             "Toughness": null,
@@ -94,12 +84,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "HitSplit": 0.6,
             "Toughness": null,
@@ -119,12 +104,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "HitSplit": 0.6,
             "Toughness": null,
@@ -155,12 +135,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-              "displayLines": "{[Skill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[1]]}"
-              ]
+              "displayLines": "{[Skill02[1]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -179,12 +154,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-              "displayLines": "{[Skill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[1]]}"
-              ]
+              "displayLines": "{[Skill02[1]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -217,12 +187,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (SummonMonsterCount) || RETURN",
-            "displayLines": "SummonMonsterCount",
-            "constants": [],
-            "variables": [
-              "SummonMonsterCount"
-            ]
+            "displayLines": "SummonMonsterCount"
           },
           "execute": [
             {
@@ -235,12 +200,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                  "displayLines": "{[Skill02[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[2]]}"
-                  ]
+                  "displayLines": "{[Skill02[2]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -257,12 +217,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                  "displayLines": "{[Skill02[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[2]]}"
-                  ]
+                  "displayLines": "{[Skill02[2]]}"
                 },
                 "Toughness": null,
                 "Tags": null,

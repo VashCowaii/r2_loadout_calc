@@ -64,13 +64,7 @@ const compositeAbilityObject = {
                     "value1": "DV_CurrentDelay",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12670) || Variables[1] (DV_InitDelay) || ADD || RETURN",
-                      "displayLines": "(UnusedUnderThisBase_12670 + DV_InitDelay)",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_12670",
-                        "DV_InitDelay"
-                      ]
+                      "displayLines": "(UnusedUnderThisBase_12670 + DV_InitDelay)"
                     }
                   },
                   "passed": [
@@ -133,13 +127,7 @@ const compositeAbilityObject = {
                     "value1": "DV_CurrentDelay",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12670) || Variables[1] (DV_InitDelay) || ADD || RETURN",
-                      "displayLines": "(UnusedUnderThisBase_12670 + DV_InitDelay)",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_12670",
-                        "DV_InitDelay"
-                      ]
+                      "displayLines": "(UnusedUnderThisBase_12670 + DV_InitDelay)"
                     }
                   },
                   "passed": [
@@ -181,12 +169,7 @@ const compositeAbilityObject = {
                     "value1": "DV_CurrentDelay",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12670) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_12670",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_12670"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_12670"
                     }
                   },
                   "passed": [
@@ -474,12 +457,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster's Summoner}}"
               },
               "consumePercent": {
-                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[0]]}"
-                ]
+                "displayLines": "{[PassiveSkill01[0]]}"
               },
               "consumeFloor": 1,
               "attackType": "Unknown",
@@ -512,12 +490,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,

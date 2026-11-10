@@ -29,12 +29,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_14438) || RETURN",
-              "displayLines": "UnusedUnderThisBase_14438",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_14438"
-              ]
+              "displayLines": "UnusedUnderThisBase_14438"
             },
             "notAHit": true,
             "dmgFormula": "Max HP Scaling",
@@ -51,29 +46,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
           "duration": {
-            "operator": "Variables[0] (UnusedUnderThisBase_11018) || RETURN",
-            "displayLines": "UnusedUnderThisBase_11018",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_11018"
-            ]
+            "displayLines": "UnusedUnderThisBase_11018"
           },
           "baseChance": {
-            "operator": "Variables[0] (UnusedUnderThisBase_11014) || RETURN",
-            "displayLines": "UnusedUnderThisBase_11014",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_11014"
-            ]
+            "displayLines": "UnusedUnderThisBase_11014"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (UnusedUnderThisBase_11016) || RETURN",
-              "displayLines": "UnusedUnderThisBase_11016",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_11016"
-              ]
+              "displayLines": "UnusedUnderThisBase_11016"
             }
           }
         },

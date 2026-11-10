@@ -601,12 +601,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-          "displayLines": "{[Skill04[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}"
-          ]
+          "displayLines": "{[Skill04[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -679,55 +674,24 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-                "displayLines": "{[Skill04[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[2]]}"
-                ]
+                "displayLines": "{[Skill04[2]]}"
               },
               "stackLimit": {
-                "operator": "Variables[0] ({[Skill04[1]]}) || Variables[1] ({[Skill04[3]]}) || ADD || RETURN",
-                "displayLines": "({[Skill04[1]]} + {[Skill04[3]]})",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[1]]}",
-                  "{[Skill04[3]]}"
-                ]
+                "displayLines": "({[Skill04[1]]} + {[Skill04[3]]})"
               },
               "valuePerStack": {
                 "MDF_MaxLayer": {
-                  "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-                  "displayLines": "{[Skill04[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[1]]}"
-                  ]
+                  "displayLines": "{[Skill04[1]]}"
                 },
                 "MDF_AddLayer": {
-                  "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-                  "displayLines": "{[Skill04[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[3]]}"
-                  ]
+                  "displayLines": "{[Skill04[3]]}"
                 },
                 "MDF_SummonCount": {
-                  "operator": "Variables[0] ({[Skill04[4]]}) || RETURN",
-                  "displayLines": "{[Skill04[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[4]]}"
-                  ]
+                  "displayLines": "{[Skill04[4]]}"
                 }
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] ({[Skill04[9]]}) || RETURN",
-                "displayLines": "{[Skill04[9]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[9]]}"
-                ]
+                "displayLines": "{[Skill04[9]]}"
               }
             }
           ],
@@ -740,55 +704,24 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-                "displayLines": "{[Skill04[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[2]]}"
-                ]
+                "displayLines": "{[Skill04[2]]}"
               },
               "stackLimit": {
-                "operator": "Variables[0] ({[Skill04[1]]}) || Variables[1] ({[Skill04[3]]}) || ADD || RETURN",
-                "displayLines": "({[Skill04[1]]} + {[Skill04[3]]})",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[1]]}",
-                  "{[Skill04[3]]}"
-                ]
+                "displayLines": "({[Skill04[1]]} + {[Skill04[3]]})"
               },
               "valuePerStack": {
                 "MDF_MaxLayer": {
-                  "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-                  "displayLines": "{[Skill04[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[1]]}"
-                  ]
+                  "displayLines": "{[Skill04[1]]}"
                 },
                 "MDF_AddLayer": {
-                  "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-                  "displayLines": "{[Skill04[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[3]]}"
-                  ]
+                  "displayLines": "{[Skill04[3]]}"
                 },
                 "MDF_SummonCount": {
-                  "operator": "Variables[0] ({[Skill04[4]]}) || RETURN",
-                  "displayLines": "{[Skill04[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[4]]}"
-                  ]
+                  "displayLines": "{[Skill04[4]]}"
                 }
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] ({[Skill04[9]]}) || RETURN",
-                "displayLines": "{[Skill04[9]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[9]]}"
-                ]
+                "displayLines": "{[Skill04[9]]}"
               },
               "success": [
                 {
@@ -811,12 +744,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] ({[PassiveSkill02[6]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill02[6]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill02[6]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill02[6]]}"
                         }
                       }
                     }

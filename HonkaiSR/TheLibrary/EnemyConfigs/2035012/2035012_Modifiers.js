@@ -1122,14 +1122,7 @@ const configAbility = {
                 {
                   "name": "Deal Toughness DMG",
                   "value": {
-                    "operator": "Variables[0] ({[PassiveSkill04[1]]}) || Constants[0] (3) || MUL || RETURN",
-                    "displayLines": "({[PassiveSkill04[1]]} * 3)",
-                    "constants": [
-                      3
-                    ],
-                    "variables": [
-                      "{[PassiveSkill04[1]]}"
-                    ]
+                    "displayLines": "({[PassiveSkill04[1]]} * 3)"
                   },
                   "attacker": {
                     "name": "Target Name",
@@ -1218,14 +1211,7 @@ const configAbility = {
                     "target": "{{Level Entity}}"
                   },
                   "baseToughnessDMG": {
-                    "operator": "Variables[0] ({[PassiveSkill04[1]]}) || Constants[0] (3) || MUL || RETURN",
-                    "displayLines": "({[PassiveSkill04[1]]} * 3)",
-                    "constants": [
-                      3
-                    ],
-                    "variables": [
-                      "{[PassiveSkill04[1]]}"
-                    ]
+                    "displayLines": "({[PassiveSkill04[1]]} * 3)"
                   },
                   "toughnessForcedReductionPreview": 1,
                   "isForcedReduction": true,

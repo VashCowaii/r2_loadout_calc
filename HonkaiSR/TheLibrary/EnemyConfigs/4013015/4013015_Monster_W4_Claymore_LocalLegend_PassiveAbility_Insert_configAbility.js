@@ -54,12 +54,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1110903121\">MModifier_Monster_W4_Claymore_LocalLegend_DeathCountDown_Monster_Display</a>[<span class=\"descriptionNumberColor\">HP Count</span>]",
       "valuePerStack": {
         "MDF_EntityScore": {
-          "operator": "Variables[0] (_SelfP1_LifeCount) || RETURN",
-          "displayLines": "_SelfP1_LifeCount",
-          "constants": [],
-          "variables": [
-            "_SelfP1_LifeCount"
-          ]
+          "displayLines": "_SelfP1_LifeCount"
         }
       }
     },

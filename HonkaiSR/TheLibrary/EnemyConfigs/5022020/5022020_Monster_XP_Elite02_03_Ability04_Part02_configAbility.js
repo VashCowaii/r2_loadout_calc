@@ -49,12 +49,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
+                  "displayLines": "{[Skill04[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -65,14 +60,7 @@ const configAbility = {
             {
               "name": "Skill Points Modification",
               "adjustmentValue": {
-                "operator": "Constants[0] (0) || Variables[0] ({[Skill04[2]]}) || SUB || RETURN",
-                "displayLines": "(0 - {[Skill04[2]]})",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "{[Skill04[2]]}"
-                ]
+                "displayLines": "(0 - {[Skill04[2]]})"
               },
               "adjustmentType": "+"
             },
@@ -112,12 +100,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
+                  "displayLines": "{[Skill04[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,

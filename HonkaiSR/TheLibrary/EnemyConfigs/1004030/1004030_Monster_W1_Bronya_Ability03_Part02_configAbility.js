@@ -25,12 +25,7 @@ const configAbility = {
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Constants[0] (1002040) || RETURN",
-                "displayLines": "1002040",
-                "constants": [
-                  1002040
-                ],
-                "variables": []
+                "displayLines": "1002040"
               },
               "locationType": "First"
             }
@@ -43,12 +38,7 @@ const configAbility = {
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Constants[0] (1002050) || RETURN",
-                "displayLines": "1002050",
-                "constants": [
-                  1002050
-                ],
-                "variables": []
+                "displayLines": "1002050"
               },
               "locationType": "Last"
             }
@@ -84,12 +74,7 @@ const configAbility = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Constants[0] (1002040) || RETURN",
-                    "displayLines": "1002040",
-                    "constants": [
-                      1002040
-                    ],
-                    "variables": []
+                    "displayLines": "1002040"
                   },
                   "locationType": "First"
                 }
@@ -115,12 +100,7 @@ const configAbility = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Constants[0] (1002050) || RETURN",
-                    "displayLines": "1002050",
-                    "constants": [
-                      1002050
-                    ],
-                    "variables": []
+                    "displayLines": "1002050"
                   },
                   "locationType": "Last"
                 }

@@ -64,12 +64,7 @@ const configAbility = {
       "conditions": {
         "name": "Enemy ID",
         "ID": {
-          "operator": "Variables[0] (SummonID) || RETURN",
-          "displayLines": "SummonID",
-          "constants": [],
-          "variables": [
-            "SummonID"
-          ]
+          "displayLines": "SummonID"
         },
         "target": {
           "name": "Target Name",
@@ -219,13 +214,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "DamageFlat": {
-                  "operator": "Variables[0] (MaxHPValue) || Variables[1] ({[Skill04[0]]}) || MUL || RETURN",
-                  "displayLines": "(MaxHPValue * {[Skill04[0]]})",
-                  "constants": [],
-                  "variables": [
-                    "MaxHPValue",
-                    "{[Skill04[0]]}"
-                  ]
+                  "displayLines": "(MaxHPValue * {[Skill04[0]]})"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -246,13 +235,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "DamageFlat": {
-              "operator": "Variables[0] (MaxHPValue) || Variables[1] ({[Skill04[0]]}) || MUL || RETURN",
-              "displayLines": "(MaxHPValue * {[Skill04[0]]})",
-              "constants": [],
-              "variables": [
-                "MaxHPValue",
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "(MaxHPValue * {[Skill04[0]]})"
             },
             "Toughness": null,
             "Tags": null,
@@ -356,12 +339,7 @@ const configAbility = {
       "conditions": {
         "name": "Enemy ID",
         "ID": {
-          "operator": "Variables[0] (SummonID) || RETURN",
-          "displayLines": "SummonID",
-          "constants": [],
-          "variables": [
-            "SummonID"
-          ]
+          "displayLines": "SummonID"
         },
         "target": {
           "name": "Target Name",

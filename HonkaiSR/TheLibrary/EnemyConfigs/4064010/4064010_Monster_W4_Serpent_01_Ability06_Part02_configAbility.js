@@ -31,12 +31,7 @@ const configAbility = {
     {
       "name": "Assign Advance/Delay to Current Ability Use",
       "adjustmentValue": {
-        "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-        "displayLines": "{[Skill06[0]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill06[0]]}"
-        ]
+        "displayLines": "{[Skill06[0]]}"
       },
       "adjustmentType": "="
     },

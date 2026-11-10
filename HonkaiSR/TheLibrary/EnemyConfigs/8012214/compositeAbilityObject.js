@@ -222,12 +222,7 @@ const compositeAbilityObject = {
                         "target": "{{Player Team All}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                        "displayLines": "{[PassiveSkill01[2]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[PassiveSkill01[2]]}"
-                        ]
+                        "displayLines": "{[PassiveSkill01[2]]}"
                       },
                       "formula": "Heal from Target MaxHP"
                     },
@@ -248,22 +243,11 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Physical",
                         "DamageFlat": {
-                          "operator": "Variables[0] (SummonerMaxHPValue) || Variables[1] ({[PassiveSkill01[0]]}) || MUL || RETURN",
-                          "displayLines": "(SummonerMaxHPValue * {[PassiveSkill01[0]]})",
-                          "constants": [],
-                          "variables": [
-                            "SummonerMaxHPValue",
-                            "{[PassiveSkill01[0]]}"
-                          ]
+                          "displayLines": "(SummonerMaxHPValue * {[PassiveSkill01[0]]})"
                         },
                         "dmgFormulaFinal": "Converted DMG Base",
                         "Toughness": {
-                          "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill01[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill01[1]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill01[1]]}"
                         },
                         "Tags": null,
                         "attackType": "Basic ATK"
@@ -348,28 +332,13 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"532367944\">Standard_SuperArmorController</a>",
           "valuePerStack": {
             "MDF_SuperArmorDamageResistance": {
-              "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill03[0]]}"
-              ]
+              "displayLines": "{[PassiveSkill03[0]]}"
             },
             "MDF_SuperArmorBreakDamageTakenRatio": {
-              "operator": "Variables[0] ({[PassiveSkill03[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill03[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill03[1]]}"
-              ]
+              "displayLines": "{[PassiveSkill03[1]]}"
             },
             "MDF_SuperArmorBreakActionDelay": {
-              "operator": "Variables[0] ({[PassiveSkill03[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkill03[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill03[2]]}"
-              ]
+              "displayLines": "{[PassiveSkill03[2]]}"
             }
           }
         }
@@ -559,29 +528,14 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-            "displayLines": "{[Skill03[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[1]]}"
-            ]
+            "displayLines": "{[Skill03[1]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-            "displayLines": "{[Skill03[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[2]]}"
-            ]
+            "displayLines": "{[Skill03[2]]}"
           },
           "valuePerStack": {
             "MDF_DirtyHPRatio": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             }
           },
           "success": []

@@ -22,26 +22,14 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1230803206\">Monster_Fuyan_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">Slay Move</span>]",
           "valuePerStack": {
             "MDF_DamageUpRatio_PerLayer": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             }
           }
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (DamageUpCount) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(DamageUpCount + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "DamageUpCount"
-            ]
+            "displayLines": "(DamageUpCount + 1)"
           },
           "variableName": "DamageUpCount"
         }
@@ -65,26 +53,14 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1579371120\">Monster_Fuyan_RL_SpeedUp</a>[<span class=\"descriptionNumberColor\">Transfer Move</span>]",
               "valuePerStack": {
                 "MDF_SpeedAddedRatio_PerLayer": {
-                  "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                  "displayLines": "{[Skill01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[1]]}"
-                  ]
+                  "displayLines": "{[Skill01[1]]}"
                 }
               }
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (SpeedAddCount) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(SpeedAddCount + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "SpeedAddCount"
-                ]
+                "displayLines": "(SpeedAddCount + 1)"
               },
               "variableName": "SpeedAddCount"
             }
@@ -99,12 +75,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1230803206\">Monster_Fuyan_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">Slay Move</span>]",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 }
               }
             },
@@ -117,40 +88,21 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1579371120\">Monster_Fuyan_RL_SpeedUp</a>[<span class=\"descriptionNumberColor\">Transfer Move</span>]",
               "valuePerStack": {
                 "MDF_SpeedAddedRatio_PerLayer": {
-                  "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                  "displayLines": "{[Skill01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[1]]}"
-                  ]
+                  "displayLines": "{[Skill01[1]]}"
                 }
               }
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (DamageUpCount) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(DamageUpCount + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "DamageUpCount"
-                ]
+                "displayLines": "(DamageUpCount + 1)"
               },
               "variableName": "DamageUpCount"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (SpeedAddCount) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(SpeedAddCount + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "SpeedAddCount"
-                ]
+                "displayLines": "(SpeedAddCount + 1)"
               },
               "variableName": "SpeedAddCount"
             }

@@ -63,12 +63,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                "displayLines": "MDF_AllDamageTypeAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeAddedRatio"
-                ]
+                "displayLines": "MDF_AllDamageTypeAddedRatio"
               }
             }
           ]
@@ -105,13 +100,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_Layer) || Variables[1] (MDF_AllDamageTypeAddedRatio) || MUL || RETURN",
-                "displayLines": "(MDF_Layer * MDF_AllDamageTypeAddedRatio)",
-                "constants": [],
-                "variables": [
-                  "MDF_Layer",
-                  "MDF_AllDamageTypeAddedRatio"
-                ]
+                "displayLines": "(MDF_Layer * MDF_AllDamageTypeAddedRatio)"
               }
             }
           ]
@@ -230,12 +219,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                "displayLines": "MDF_SpeedAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedAddedRatio"
-                ]
+                "displayLines": "MDF_SpeedAddedRatio"
               }
             }
           ]
@@ -252,12 +236,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1754815848\">Enemy_W4_Claymore_01_Ability02_DeadLock_PowerUp</a>[<span class=\"descriptionNumberColor\">Morale</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] (MDF_PowerUp_AllDamageTypeAddedRatio) || RETURN",
-                  "displayLines": "MDF_PowerUp_AllDamageTypeAddedRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PowerUp_AllDamageTypeAddedRatio"
-                  ]
+                  "displayLines": "MDF_PowerUp_AllDamageTypeAddedRatio"
                 }
               },
               "addStacksPerTrigger": 1
@@ -296,28 +275,13 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1632906191\">Enemy_W4_Claymore_01_Ability02_DeadLock_Target_Servant</a>[<span class=\"descriptionNumberColor\">Duel</span>]",
               "valuePerStack": {
                 "MDF_DamageReduce": {
-                  "operator": "Variables[0] (MDF_DamageReduce) || RETURN",
-                  "displayLines": "MDF_DamageReduce",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamageReduce"
-                  ]
+                  "displayLines": "MDF_DamageReduce"
                 },
                 "MDF_SpeedAddedRatio": {
-                  "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                  "displayLines": "MDF_SpeedAddedRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_SpeedAddedRatio"
-                  ]
+                  "displayLines": "MDF_SpeedAddedRatio"
                 },
                 "MDF_PowerUp_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] (MDF_PowerUp_AllDamageTypeAddedRatio) || RETURN",
-                  "displayLines": "MDF_PowerUp_AllDamageTypeAddedRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PowerUp_AllDamageTypeAddedRatio"
-                  ]
+                  "displayLines": "MDF_PowerUp_AllDamageTypeAddedRatio"
                 }
               }
             },
@@ -383,12 +347,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                "displayLines": "MDF_SpeedAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedAddedRatio"
-                ]
+                "displayLines": "MDF_SpeedAddedRatio"
               }
             }
           ]
@@ -419,28 +378,13 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1632906191\">Enemy_W4_Claymore_01_Ability02_DeadLock_Target_Servant</a>[<span class=\"descriptionNumberColor\">Duel</span>]",
                   "valuePerStack": {
                     "MDF_DamageReduce": {
-                      "operator": "Variables[0] (MDF_DamageReduce) || RETURN",
-                      "displayLines": "MDF_DamageReduce",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageReduce"
-                      ]
+                      "displayLines": "MDF_DamageReduce"
                     },
                     "MDF_SpeedAddedRatio": {
-                      "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                      "displayLines": "MDF_SpeedAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_SpeedAddedRatio"
-                      ]
+                      "displayLines": "MDF_SpeedAddedRatio"
                     },
                     "MDF_PowerUp_AllDamageTypeAddedRatio": {
-                      "operator": "Variables[0] (MDF_PowerUp_AllDamageTypeAddedRatio) || RETURN",
-                      "displayLines": "MDF_PowerUp_AllDamageTypeAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PowerUp_AllDamageTypeAddedRatio"
-                      ]
+                      "displayLines": "MDF_PowerUp_AllDamageTypeAddedRatio"
                     }
                   }
                 }
@@ -460,12 +404,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1754815848\">Enemy_W4_Claymore_01_Ability02_DeadLock_PowerUp</a>[<span class=\"descriptionNumberColor\">Morale</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] (MDF_PowerUp_AllDamageTypeAddedRatio) || RETURN",
-                  "displayLines": "MDF_PowerUp_AllDamageTypeAddedRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PowerUp_AllDamageTypeAddedRatio"
-                  ]
+                  "displayLines": "MDF_PowerUp_AllDamageTypeAddedRatio"
                 }
               },
               "addStacksPerTrigger": 1
@@ -527,13 +466,7 @@ const configAbility = {
                   },
                   "scope": "ContextModifier",
                   "value": {
-                    "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (MDF_DeadLock_HPRatio) || MUL || RETURN",
-                    "displayLines": "(MDF_MaxHP * MDF_DeadLock_HPRatio)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxHP",
-                      "MDF_DeadLock_HPRatio"
-                    ]
+                    "displayLines": "(MDF_MaxHP * MDF_DeadLock_HPRatio)"
                   },
                   "variableName": "MDF_DeadLock_HP"
                 },
@@ -545,24 +478,14 @@ const configAbility = {
                   },
                   "scope": "ContextModifier",
                   "value": {
-                    "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                    "displayLines": "MDF_DeadLock_HP",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DeadLock_HP"
-                    ]
+                    "displayLines": "MDF_DeadLock_HP"
                   },
                   "variableName": "DeadLock_HP_CurrentValue"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                    "displayLines": "DeadLock_HP_CurrentValue",
-                    "constants": [],
-                    "variables": [
-                      "DeadLock_HP_CurrentValue"
-                    ]
+                    "displayLines": "DeadLock_HP_CurrentValue"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -570,12 +493,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                    "displayLines": "MDF_DeadLock_HP",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DeadLock_HP"
-                    ]
+                    "displayLines": "MDF_DeadLock_HP"
                   },
                   "assignState": "True",
                   "state": "Normal",
@@ -600,13 +518,7 @@ const configAbility = {
                   },
                   "scope": "ContextModifier",
                   "value": {
-                    "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (MDF_DeadLock_HPRatio) || MUL || RETURN",
-                    "displayLines": "(MDF_MaxHP * MDF_DeadLock_HPRatio)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxHP",
-                      "MDF_DeadLock_HPRatio"
-                    ]
+                    "displayLines": "(MDF_MaxHP * MDF_DeadLock_HPRatio)"
                   },
                   "variableName": "MDF_DeadLock_HP"
                 },
@@ -618,24 +530,14 @@ const configAbility = {
                   },
                   "scope": "ContextModifier",
                   "value": {
-                    "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                    "displayLines": "MDF_DeadLock_HP",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DeadLock_HP"
-                    ]
+                    "displayLines": "MDF_DeadLock_HP"
                   },
                   "variableName": "DeadLock_HP_CurrentValue"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                    "displayLines": "DeadLock_HP_CurrentValue",
-                    "constants": [],
-                    "variables": [
-                      "DeadLock_HP_CurrentValue"
-                    ]
+                    "displayLines": "DeadLock_HP_CurrentValue"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -643,12 +545,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                    "displayLines": "MDF_DeadLock_HP",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DeadLock_HP"
-                    ]
+                    "displayLines": "MDF_DeadLock_HP"
                   },
                   "assignState": "True",
                   "state": "Normal",
@@ -671,12 +568,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                    "displayLines": "DeadLock_HP_CurrentValue",
-                    "constants": [],
-                    "variables": [
-                      "DeadLock_HP_CurrentValue"
-                    ]
+                    "displayLines": "DeadLock_HP_CurrentValue"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -684,12 +576,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                    "displayLines": "MDF_DeadLock_HP",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DeadLock_HP"
-                    ]
+                    "displayLines": "MDF_DeadLock_HP"
                   },
                   "assignState": "False",
                   "state": "Normal",
@@ -700,12 +587,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                    "displayLines": "DeadLock_HP_CurrentValue",
-                    "constants": [],
-                    "variables": [
-                      "DeadLock_HP_CurrentValue"
-                    ]
+                    "displayLines": "DeadLock_HP_CurrentValue"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -713,12 +595,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                    "displayLines": "MDF_DeadLock_HP",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DeadLock_HP"
-                    ]
+                    "displayLines": "MDF_DeadLock_HP"
                   },
                   "assignState": "False",
                   "state": "Normal",
@@ -757,12 +634,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                    "displayLines": "DeadLock_HP_CurrentValue",
-                    "constants": [],
-                    "variables": [
-                      "DeadLock_HP_CurrentValue"
-                    ]
+                    "displayLines": "DeadLock_HP_CurrentValue"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -770,12 +642,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                    "displayLines": "MDF_DeadLock_HP",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DeadLock_HP"
-                    ]
+                    "displayLines": "MDF_DeadLock_HP"
                   },
                   "assignState": "True",
                   "state": "Normal",
@@ -786,12 +653,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                    "displayLines": "DeadLock_HP_CurrentValue",
-                    "constants": [],
-                    "variables": [
-                      "DeadLock_HP_CurrentValue"
-                    ]
+                    "displayLines": "DeadLock_HP_CurrentValue"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -799,12 +661,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                    "displayLines": "MDF_DeadLock_HP",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DeadLock_HP"
-                    ]
+                    "displayLines": "MDF_DeadLock_HP"
                   },
                   "assignState": "True",
                   "state": "Normal",
@@ -1011,13 +868,7 @@ const configAbility = {
                       },
                       "scope": "ContextModifier",
                       "value": {
-                        "operator": "Variables[0] (DeadLock_HP_CurrentValue) || Variables[1] (_Damage) || SUB || RETURN",
-                        "displayLines": "(DeadLock_HP_CurrentValue - _Damage)",
-                        "constants": [],
-                        "variables": [
-                          "DeadLock_HP_CurrentValue",
-                          "_Damage"
-                        ]
+                        "displayLines": "(DeadLock_HP_CurrentValue - _Damage)"
                       },
                       "variableName": "DeadLock_HP_CurrentValue"
                     },
@@ -1050,12 +901,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                        "displayLines": "DeadLock_HP_CurrentValue",
-                        "constants": [],
-                        "variables": [
-                          "DeadLock_HP_CurrentValue"
-                        ]
+                        "displayLines": "DeadLock_HP_CurrentValue"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -1063,12 +909,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                        "displayLines": "MDF_DeadLock_HP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DeadLock_HP"
-                        ]
+                        "displayLines": "MDF_DeadLock_HP"
                       },
                       "assignState": "True"
                     },
@@ -1160,13 +1001,7 @@ const configAbility = {
                       },
                       "scope": "ContextModifier",
                       "value": {
-                        "operator": "Variables[0] (DeadLock_HP_CurrentValue) || Variables[1] (_Damage) || SUB || RETURN",
-                        "displayLines": "(DeadLock_HP_CurrentValue - _Damage)",
-                        "constants": [],
-                        "variables": [
-                          "DeadLock_HP_CurrentValue",
-                          "_Damage"
-                        ]
+                        "displayLines": "(DeadLock_HP_CurrentValue - _Damage)"
                       },
                       "variableName": "DeadLock_HP_CurrentValue"
                     },
@@ -1199,12 +1034,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                        "displayLines": "DeadLock_HP_CurrentValue",
-                        "constants": [],
-                        "variables": [
-                          "DeadLock_HP_CurrentValue"
-                        ]
+                        "displayLines": "DeadLock_HP_CurrentValue"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -1212,12 +1042,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                        "displayLines": "MDF_DeadLock_HP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DeadLock_HP"
-                        ]
+                        "displayLines": "MDF_DeadLock_HP"
                       },
                       "assignState": "True"
                     },
@@ -1321,12 +1146,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                "displayLines": "MDF_SpeedAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedAddedRatio"
-                ]
+                "displayLines": "MDF_SpeedAddedRatio"
               }
             }
           ]
@@ -1343,12 +1163,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1754815848\">Enemy_W4_Claymore_01_Ability02_DeadLock_PowerUp</a>[<span class=\"descriptionNumberColor\">Morale</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] (MDF_PowerUp_AllDamageTypeAddedRatio) || RETURN",
-                  "displayLines": "MDF_PowerUp_AllDamageTypeAddedRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PowerUp_AllDamageTypeAddedRatio"
-                  ]
+                  "displayLines": "MDF_PowerUp_AllDamageTypeAddedRatio"
                 }
               },
               "addStacksPerTrigger": 1
@@ -1432,12 +1247,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                        "displayLines": "DeadLock_HP_CurrentValue",
-                        "constants": [],
-                        "variables": [
-                          "DeadLock_HP_CurrentValue"
-                        ]
+                        "displayLines": "DeadLock_HP_CurrentValue"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -1445,12 +1255,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                        "displayLines": "MDF_DeadLock_HP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DeadLock_HP"
-                        ]
+                        "displayLines": "MDF_DeadLock_HP"
                       },
                       "assignState": "True",
                       "enableState": "False"
@@ -1460,12 +1265,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                        "displayLines": "DeadLock_HP_CurrentValue",
-                        "constants": [],
-                        "variables": [
-                          "DeadLock_HP_CurrentValue"
-                        ]
+                        "displayLines": "DeadLock_HP_CurrentValue"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -1473,12 +1273,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                        "displayLines": "MDF_DeadLock_HP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DeadLock_HP"
-                        ]
+                        "displayLines": "MDF_DeadLock_HP"
                       },
                       "assignState": "True",
                       "enableState": "False"
@@ -1616,12 +1411,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                        "displayLines": "DeadLock_HP_CurrentValue",
-                        "constants": [],
-                        "variables": [
-                          "DeadLock_HP_CurrentValue"
-                        ]
+                        "displayLines": "DeadLock_HP_CurrentValue"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -1629,12 +1419,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                        "displayLines": "MDF_DeadLock_HP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DeadLock_HP"
-                        ]
+                        "displayLines": "MDF_DeadLock_HP"
                       },
                       "assignState": "True",
                       "state": "Normal",
@@ -1645,12 +1430,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                        "displayLines": "DeadLock_HP_CurrentValue",
-                        "constants": [],
-                        "variables": [
-                          "DeadLock_HP_CurrentValue"
-                        ]
+                        "displayLines": "DeadLock_HP_CurrentValue"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -1658,12 +1438,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                        "displayLines": "MDF_DeadLock_HP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DeadLock_HP"
-                        ]
+                        "displayLines": "MDF_DeadLock_HP"
                       },
                       "assignState": "True",
                       "state": "Normal",
@@ -1683,12 +1458,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                        "displayLines": "DeadLock_HP_CurrentValue",
-                        "constants": [],
-                        "variables": [
-                          "DeadLock_HP_CurrentValue"
-                        ]
+                        "displayLines": "DeadLock_HP_CurrentValue"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -1696,12 +1466,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                        "displayLines": "MDF_DeadLock_HP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DeadLock_HP"
-                        ]
+                        "displayLines": "MDF_DeadLock_HP"
                       },
                       "assignState": "True",
                       "state": "Disable",
@@ -1712,12 +1477,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                        "displayLines": "DeadLock_HP_CurrentValue",
-                        "constants": [],
-                        "variables": [
-                          "DeadLock_HP_CurrentValue"
-                        ]
+                        "displayLines": "DeadLock_HP_CurrentValue"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -1725,12 +1485,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                        "displayLines": "MDF_DeadLock_HP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DeadLock_HP"
-                        ]
+                        "displayLines": "MDF_DeadLock_HP"
                       },
                       "assignState": "True",
                       "state": "Disable",
@@ -1764,12 +1519,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                        "displayLines": "DeadLock_HP_CurrentValue",
-                        "constants": [],
-                        "variables": [
-                          "DeadLock_HP_CurrentValue"
-                        ]
+                        "displayLines": "DeadLock_HP_CurrentValue"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -1777,12 +1527,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                        "displayLines": "MDF_DeadLock_HP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DeadLock_HP"
-                        ]
+                        "displayLines": "MDF_DeadLock_HP"
                       },
                       "assignState": "True",
                       "state": "Normal",
@@ -1793,12 +1538,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                        "displayLines": "DeadLock_HP_CurrentValue",
-                        "constants": [],
-                        "variables": [
-                          "DeadLock_HP_CurrentValue"
-                        ]
+                        "displayLines": "DeadLock_HP_CurrentValue"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -1806,12 +1546,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                        "displayLines": "MDF_DeadLock_HP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DeadLock_HP"
-                        ]
+                        "displayLines": "MDF_DeadLock_HP"
                       },
                       "assignState": "True",
                       "state": "Normal",

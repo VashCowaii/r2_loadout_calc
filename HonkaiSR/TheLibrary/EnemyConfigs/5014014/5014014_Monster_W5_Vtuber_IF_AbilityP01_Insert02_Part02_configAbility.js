@@ -41,12 +41,7 @@ const configAbility = {
             "target": "{{Parameter Target}}"
           },
           "consumePercent": {
-            "operator": "Variables[0] (ADF_LoseHPRatio_ScreenBonus) || RETURN",
-            "displayLines": "ADF_LoseHPRatio_ScreenBonus",
-            "constants": [],
-            "variables": [
-              "ADF_LoseHPRatio_ScreenBonus"
-            ]
+            "displayLines": "ADF_LoseHPRatio_ScreenBonus"
           }
         }
       ]

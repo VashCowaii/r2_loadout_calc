@@ -20,12 +20,7 @@ const configAbility = {
               "conditions": {
                 "name": "Enemy ID",
                 "ID": {
-                  "operator": "Variables[0] (SummonID04) || RETURN",
-                  "displayLines": "SummonID04",
-                  "constants": [],
-                  "variables": [
-                    "SummonID04"
-                  ]
+                  "displayLines": "SummonID04"
                 },
                 "target": {
                   "name": "Target Name",
@@ -44,23 +39,13 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-            "displayLines": "{[Skill05[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill05[1]]}"
-            ]
+            "displayLines": "{[Skill05[1]]}"
           },
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID04) || RETURN",
-                "displayLines": "SummonID04",
-                "constants": [],
-                "variables": [
-                  "SummonID04"
-                ]
+                "displayLines": "SummonID04"
               },
               "locationType": "AroundCaster"
             }
@@ -92,12 +77,7 @@ const configAbility = {
               "conditions": {
                 "name": "Enemy ID",
                 "ID": {
-                  "operator": "Variables[0] (SummonID01) || RETURN",
-                  "displayLines": "SummonID01",
-                  "constants": [],
-                  "variables": [
-                    "SummonID01"
-                  ]
+                  "displayLines": "SummonID01"
                 },
                 "target": {
                   "name": "Target Name",
@@ -116,23 +96,13 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-            "displayLines": "{[Skill05[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill05[0]]}"
-            ]
+            "displayLines": "{[Skill05[0]]}"
           },
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID01) || RETURN",
-                "displayLines": "SummonID01",
-                "constants": [],
-                "variables": [
-                  "SummonID01"
-                ]
+                "displayLines": "SummonID01"
               },
               "locationType": "AroundCasterOnEdge"
             }
@@ -164,12 +134,7 @@ const configAbility = {
               "conditions": {
                 "name": "Enemy ID",
                 "ID": {
-                  "operator": "Variables[0] (SummonID03) || RETURN",
-                  "displayLines": "SummonID03",
-                  "constants": [],
-                  "variables": [
-                    "SummonID03"
-                  ]
+                  "displayLines": "SummonID03"
                 },
                 "target": {
                   "name": "Target Name",
@@ -188,23 +153,13 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-            "displayLines": "{[Skill05[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill05[1]]}"
-            ]
+            "displayLines": "{[Skill05[1]]}"
           },
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID03) || RETURN",
-                "displayLines": "SummonID03",
-                "constants": [],
-                "variables": [
-                  "SummonID03"
-                ]
+                "displayLines": "SummonID03"
               },
               "locationType": "AroundCaster"
             }
@@ -236,12 +191,7 @@ const configAbility = {
               "conditions": {
                 "name": "Enemy ID",
                 "ID": {
-                  "operator": "Variables[0] (SummonID02) || RETURN",
-                  "displayLines": "SummonID02",
-                  "constants": [],
-                  "variables": [
-                    "SummonID02"
-                  ]
+                  "displayLines": "SummonID02"
                 },
                 "target": {
                   "name": "Target Name",
@@ -260,23 +210,13 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-            "displayLines": "{[Skill05[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill05[1]]}"
-            ]
+            "displayLines": "{[Skill05[1]]}"
           },
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID02) || RETURN",
-                "displayLines": "SummonID02",
-                "constants": [],
-                "variables": [
-                  "SummonID02"
-                ]
+                "displayLines": "SummonID02"
               },
               "locationType": "AroundCasterOnEdge"
             }

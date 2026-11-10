@@ -41,12 +41,7 @@ const configAbility = {
     {
       "name": "Skill Points Modification",
       "adjustmentValue": {
-        "operator": "Variables[0] (MaxBP) || RETURN",
-        "displayLines": "MaxBP",
-        "constants": [],
-        "variables": [
-          "MaxBP"
-        ]
+        "displayLines": "MaxBP"
       },
       "adjustmentType": "+"
     },
@@ -69,12 +64,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1431346612\">Monster_W3_Sam_TakenDamage</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
       "valuePerStack": {
         "MDF_DamageTakenUpRatio_PerLayer": {
-          "operator": "Variables[0] ({[Skill04[4]]}) || RETURN",
-          "displayLines": "{[Skill04[4]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[4]]}"
-          ]
+          "displayLines": "{[Skill04[4]]}"
         }
       }
     },

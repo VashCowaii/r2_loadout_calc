@@ -79,23 +79,13 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] ({[SkillP03[1]]}) || RETURN",
-                        "displayLines": "{[SkillP03[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillP03[1]]}"
-                        ]
+                        "displayLines": "{[SkillP03[1]]}"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (WolfSummon01) || RETURN",
-                            "displayLines": "WolfSummon01",
-                            "constants": [],
-                            "variables": [
-                              "WolfSummon01"
-                            ]
+                            "displayLines": "WolfSummon01"
                           },
                           "locationType": "First"
                         }
@@ -106,23 +96,13 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] ({[SkillP03[1]]}) || RETURN",
-                        "displayLines": "{[SkillP03[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillP03[1]]}"
-                        ]
+                        "displayLines": "{[SkillP03[1]]}"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (WolfSummon01) || RETURN",
-                            "displayLines": "WolfSummon01",
-                            "constants": [],
-                            "variables": [
-                              "WolfSummon01"
-                            ]
+                            "displayLines": "WolfSummon01"
                           },
                           "locationType": "Last"
                         }
@@ -145,23 +125,13 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] ({[SkillP03[1]]}) || RETURN",
-                        "displayLines": "{[SkillP03[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillP03[1]]}"
-                        ]
+                        "displayLines": "{[SkillP03[1]]}"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (WolfSummon02) || RETURN",
-                            "displayLines": "WolfSummon02",
-                            "constants": [],
-                            "variables": [
-                              "WolfSummon02"
-                            ]
+                            "displayLines": "WolfSummon02"
                           },
                           "locationType": "First"
                         }
@@ -172,23 +142,13 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] ({[SkillP03[1]]}) || RETURN",
-                        "displayLines": "{[SkillP03[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillP03[1]]}"
-                        ]
+                        "displayLines": "{[SkillP03[1]]}"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (WolfSummon02) || RETURN",
-                            "displayLines": "WolfSummon02",
-                            "constants": [],
-                            "variables": [
-                              "WolfSummon02"
-                            ]
+                            "displayLines": "WolfSummon02"
                           },
                           "locationType": "Last"
                         }
@@ -221,23 +181,13 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] ({[SkillP03[2]]}) || RETURN",
-                        "displayLines": "{[SkillP03[2]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillP03[2]]}"
-                        ]
+                        "displayLines": "{[SkillP03[2]]}"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (WolfSummon01) || RETURN",
-                            "displayLines": "WolfSummon01",
-                            "constants": [],
-                            "variables": [
-                              "WolfSummon01"
-                            ]
+                            "displayLines": "WolfSummon01"
                           },
                           "locationType": "First"
                         }
@@ -248,23 +198,13 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] ({[SkillP03[2]]}) || RETURN",
-                        "displayLines": "{[SkillP03[2]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillP03[2]]}"
-                        ]
+                        "displayLines": "{[SkillP03[2]]}"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (WolfSummon01) || RETURN",
-                            "displayLines": "WolfSummon01",
-                            "constants": [],
-                            "variables": [
-                              "WolfSummon01"
-                            ]
+                            "displayLines": "WolfSummon01"
                           },
                           "locationType": "Last"
                         }
@@ -287,23 +227,13 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] ({[SkillP03[2]]}) || RETURN",
-                        "displayLines": "{[SkillP03[2]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillP03[2]]}"
-                        ]
+                        "displayLines": "{[SkillP03[2]]}"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (WolfSummon02) || RETURN",
-                            "displayLines": "WolfSummon02",
-                            "constants": [],
-                            "variables": [
-                              "WolfSummon02"
-                            ]
+                            "displayLines": "WolfSummon02"
                           },
                           "locationType": "First"
                         }
@@ -314,23 +244,13 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] ({[SkillP03[2]]}) || RETURN",
-                        "displayLines": "{[SkillP03[2]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillP03[2]]}"
-                        ]
+                        "displayLines": "{[SkillP03[2]]}"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (WolfSummon02) || RETURN",
-                            "displayLines": "WolfSummon02",
-                            "constants": [],
-                            "variables": [
-                              "WolfSummon02"
-                            ]
+                            "displayLines": "WolfSummon02"
                           },
                           "locationType": "Last"
                         }
@@ -416,23 +336,13 @@ const configAbility = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] ({[SkillP03[1]]}) || RETURN",
-                            "displayLines": "{[SkillP03[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[SkillP03[1]]}"
-                            ]
+                            "displayLines": "{[SkillP03[1]]}"
                           },
                           "enemyList": [
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Variables[0] (WolfSummon01) || RETURN",
-                                "displayLines": "WolfSummon01",
-                                "constants": [],
-                                "variables": [
-                                  "WolfSummon01"
-                                ]
+                                "displayLines": "WolfSummon01"
                               },
                               "locationType": "First"
                             }
@@ -443,23 +353,13 @@ const configAbility = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] ({[SkillP03[1]]}) || RETURN",
-                            "displayLines": "{[SkillP03[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[SkillP03[1]]}"
-                            ]
+                            "displayLines": "{[SkillP03[1]]}"
                           },
                           "enemyList": [
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Variables[0] (WolfSummon01) || RETURN",
-                                "displayLines": "WolfSummon01",
-                                "constants": [],
-                                "variables": [
-                                  "WolfSummon01"
-                                ]
+                                "displayLines": "WolfSummon01"
                               },
                               "locationType": "Last"
                             }
@@ -482,23 +382,13 @@ const configAbility = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] ({[SkillP03[2]]}) || RETURN",
-                            "displayLines": "{[SkillP03[2]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[SkillP03[2]]}"
-                            ]
+                            "displayLines": "{[SkillP03[2]]}"
                           },
                           "enemyList": [
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Variables[0] (WolfSummon02) || RETURN",
-                                "displayLines": "WolfSummon02",
-                                "constants": [],
-                                "variables": [
-                                  "WolfSummon02"
-                                ]
+                                "displayLines": "WolfSummon02"
                               },
                               "locationType": "First"
                             }
@@ -509,23 +399,13 @@ const configAbility = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] ({[SkillP03[2]]}) || RETURN",
-                            "displayLines": "{[SkillP03[2]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[SkillP03[2]]}"
-                            ]
+                            "displayLines": "{[SkillP03[2]]}"
                           },
                           "enemyList": [
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Variables[0] (WolfSummon02) || RETURN",
-                                "displayLines": "WolfSummon02",
-                                "constants": [],
-                                "variables": [
-                                  "WolfSummon02"
-                                ]
+                                "displayLines": "WolfSummon02"
                               },
                               "locationType": "Last"
                             }

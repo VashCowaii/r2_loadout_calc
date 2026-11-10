@@ -34,12 +34,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             }
           ]
@@ -66,12 +61,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             }
           ]
@@ -168,21 +158,11 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-110388147\">Mar_7th_10_PointB3_Kill_Property</a>[<span class=\"descriptionNumberColor\">Tide Tamer</span>]",
                           "duration": {
-                            "operator": "Variables[0] (2) || RETURN",
-                            "displayLines": "2",
-                            "constants": [],
-                            "variables": [
-                              2
-                            ]
+                            "displayLines": "2"
                           },
                           "valuePerStack": {
                             "MDF_PropertyRatio": {
-                              "operator": "Variables[0] (0.6) || RETURN",
-                              "displayLines": "0.6",
-                              "constants": [],
-                              "variables": [
-                                0.6
-                              ]
+                              "displayLines": "0.6"
                             }
                           }
                         },
@@ -194,21 +174,11 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1794469882\">Mar_7th_10_PointB3_Break_Property</a>[<span class=\"descriptionNumberColor\">Tide Tamer</span>]",
                           "duration": {
-                            "operator": "Variables[0] (2) || RETURN",
-                            "displayLines": "2",
-                            "constants": [],
-                            "variables": [
-                              2
-                            ]
+                            "displayLines": "2"
                           },
                           "valuePerStack": {
                             "MDF_PropertyRatio": {
-                              "operator": "Variables[0] (0.36) || RETURN",
-                              "displayLines": "0.36",
-                              "constants": [],
-                              "variables": [
-                                0.36
-                              ]
+                              "displayLines": "0.36"
                             }
                           }
                         }

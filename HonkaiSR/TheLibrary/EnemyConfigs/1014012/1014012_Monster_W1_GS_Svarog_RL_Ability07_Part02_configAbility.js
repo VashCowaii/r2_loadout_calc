@@ -80,12 +80,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "value": {
-                "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                "displayLines": "{[PassiveSkill02[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill02[1]]}"
-                ]
+                "displayLines": "{[PassiveSkill02[1]]}"
               },
               "variableName": "LowHPRatio"
             }
@@ -127,12 +122,7 @@ const configAbility = {
             "value1": "CurrentHP%",
             "compareType": "<=",
             "value2": {
-              "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill02[1]]}"
-              ]
+              "displayLines": "{[PassiveSkill02[1]]}"
             }
           },
           "failed": [
@@ -145,12 +135,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1666707889\">Monster_W1_Svarog_RL_Part_ListenHP_Modifier</a>",
               "valuePerStack": {
                 "PassiveAbility02_P2_HPRatio": {
-                  "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[0]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill02[0]]}"
                 }
               }
             }

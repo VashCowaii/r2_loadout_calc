@@ -64,20 +64,10 @@ const configAbility = {
                   "duration": 1,
                   "valuePerStack": {
                     "MDF_PropertyValue01": {
-                      "operator": "Variables[0] (0.24) || RETURN",
-                      "displayLines": "0.24",
-                      "constants": [],
-                      "variables": [
-                        0.24
-                      ]
+                      "displayLines": "0.24"
                     },
                     "MDF_PropertyValue02": {
-                      "operator": "Variables[0] (0.24) || RETURN",
-                      "displayLines": "0.24",
-                      "constants": [],
-                      "variables": [
-                        0.24
-                      ]
+                      "displayLines": "0.24"
                     }
                   },
                   "success": [

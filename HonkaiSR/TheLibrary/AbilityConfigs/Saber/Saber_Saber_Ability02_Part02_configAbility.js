@@ -7,12 +7,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (DV_SurgePoint) || RETURN",
-        "displayLines": "DV_SurgePoint",
-        "constants": [],
-        "variables": [
-          "DV_SurgePoint"
-        ]
+        "displayLines": "DV_SurgePoint"
       },
       "variableName": "S02_Point"
     },
@@ -53,17 +48,7 @@ const configAbility = {
             "value1": "S02_MSP",
             "compareType": ">",
             "value2": {
-              "operator": "Variables[0] (S02_CSP) || Variables[1] (8) || Variables[2] (S02_Point) || MUL || ADD || Constants[0] (30) || Variables[3] (S02_SP_R) || MUL || ADD || RETURN",
-              "displayLines": "((S02_CSP + (8 * S02_Point)) + (30 * S02_SP_R))",
-              "constants": [
-                30
-              ],
-              "variables": [
-                "S02_CSP",
-                8,
-                "S02_Point",
-                "S02_SP_R"
-              ]
+              "displayLines": "((S02_CSP + (8 * S02_Point)) + (30 * S02_SP_R))"
             }
           },
           {
@@ -84,12 +69,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           }
         },
         {
@@ -107,30 +87,15 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1328926688\">Saber_Trace03_Bonus_02</a>[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (8) || RETURN",
-                "displayLines": "8",
-                "constants": [],
-                "variables": [
-                  8
-                ]
+                "displayLines": "8"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.04) || RETURN",
-                  "displayLines": "0.04",
-                  "constants": [],
-                  "variables": [
-                    0.04
-                  ]
+                  "displayLines": "0.04"
                 }
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               }
             }
           ]
@@ -150,30 +115,15 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1058966793\">Saber_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">The Lost Oath of the Round Table</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (15) || RETURN",
-                "displayLines": "15",
-                "constants": [],
-                "variables": [
-                  15
-                ]
+                "displayLines": "15"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.01) || RETURN",
-                  "displayLines": "0.01",
-                  "constants": [],
-                  "variables": [
-                    0.01
-                  ]
+                  "displayLines": "0.01"
                 }
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               }
             }
           ]
@@ -185,12 +135,7 @@ const configAbility = {
             "value1": "DV_SurgePoint",
             "compareType": ">",
             "value2": {
-              "operator": "Variables[0] (DV_SurgePointMax) || RETURN",
-              "displayLines": "DV_SurgePointMax",
-              "constants": [],
-              "variables": [
-                "DV_SurgePointMax"
-              ]
+              "displayLines": "DV_SurgePointMax"
             }
           },
           "passed": [
@@ -203,12 +148,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (DV_SurgePointMax) || RETURN",
-                "displayLines": "DV_SurgePointMax",
-                "constants": [],
-                "variables": [
-                  "DV_SurgePointMax"
-                ]
+                "displayLines": "DV_SurgePointMax"
               }
             }
           ]
@@ -216,12 +156,7 @@ const configAbility = {
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (DV_SurgePoint) || RETURN",
-            "displayLines": "DV_SurgePoint",
-            "constants": [],
-            "variables": [
-              "DV_SurgePoint"
-            ]
+            "displayLines": "DV_SurgePoint"
           }
         },
         {
@@ -239,12 +174,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (DV_SurgePoint) || RETURN",
-            "displayLines": "DV_SurgePoint",
-            "constants": [],
-            "variables": [
-              "DV_SurgePoint"
-            ]
+            "displayLines": "DV_SurgePoint"
           },
           "variableName": "DV_SurgePointUse"
         },
@@ -258,14 +188,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (DV_SurgePointUse) || Variables[1] (0.07) || Variables[2] (0.14) || ADD || MUL || RETURN",
-                "displayLines": "(DV_SurgePointUse * (0.07 + 0.14))",
-                "constants": [],
-                "variables": [
-                  "DV_SurgePointUse",
-                  0.07,
-                  0.14
-                ]
+                "displayLines": "(DV_SurgePointUse * (0.07 + 0.14))"
               },
               "variableName": "DV_ExtraDmgRatio"
             }
@@ -274,13 +197,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (DV_SurgePointUse) || Variables[1] (0.14) || MUL || RETURN",
-                "displayLines": "(DV_SurgePointUse * 0.14)",
-                "constants": [],
-                "variables": [
-                  "DV_SurgePointUse",
-                  0.14
-                ]
+                "displayLines": "(DV_SurgePointUse * 0.14)"
               },
               "variableName": "DV_ExtraDmgRatio"
             }
@@ -298,25 +215,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Constants[0] (0.1) || Variables[0] (1.5) || Variables[1] (DV_ExtraDmgRatio) || ADD || MUL || RETURN",
-          "displayLines": "(0.1 * (1.5 + DV_ExtraDmgRatio))",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            1.5,
-            "DV_ExtraDmgRatio"
-          ]
+          "displayLines": "(0.1 * (1.5 + DV_ExtraDmgRatio))"
         },
         "Toughness": {
-          "operator": "Constants[0] (0.1) || Variables[0] (ST Toughness Value) || MUL || RETURN",
-          "displayLines": "(0.1 * ST Toughness Value)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(0.1 * ST Toughness Value)"
         },
         "Tags": [
           "Skill (Saber)"
@@ -334,25 +236,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Constants[0] (0.1) || Variables[0] (0.75) || Variables[1] (DV_ExtraDmgRatio) || ADD || MUL || RETURN",
-          "displayLines": "(0.1 * (0.75 + DV_ExtraDmgRatio))",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            0.75,
-            "DV_ExtraDmgRatio"
-          ]
+          "displayLines": "(0.1 * (0.75 + DV_ExtraDmgRatio))"
         },
         "Toughness": {
-          "operator": "Constants[0] (0.1) || Variables[0] (Blast Toughness Value) || MUL || RETURN",
-          "displayLines": "(0.1 * Blast Toughness Value)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "(0.1 * Blast Toughness Value)"
         },
         "Tags": [
           "Skill (Saber)"
@@ -369,25 +256,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Constants[0] (0.1) || Variables[0] (1.5) || Variables[1] (DV_ExtraDmgRatio) || ADD || MUL || RETURN",
-          "displayLines": "(0.1 * (1.5 + DV_ExtraDmgRatio))",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            1.5,
-            "DV_ExtraDmgRatio"
-          ]
+          "displayLines": "(0.1 * (1.5 + DV_ExtraDmgRatio))"
         },
         "Toughness": {
-          "operator": "Constants[0] (0.1) || Variables[0] (ST Toughness Value) || MUL || RETURN",
-          "displayLines": "(0.1 * ST Toughness Value)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(0.1 * ST Toughness Value)"
         },
         "Tags": [
           "Skill (Saber)"
@@ -405,25 +277,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Constants[0] (0.1) || Variables[0] (0.75) || Variables[1] (DV_ExtraDmgRatio) || ADD || MUL || RETURN",
-          "displayLines": "(0.1 * (0.75 + DV_ExtraDmgRatio))",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            0.75,
-            "DV_ExtraDmgRatio"
-          ]
+          "displayLines": "(0.1 * (0.75 + DV_ExtraDmgRatio))"
         },
         "Toughness": {
-          "operator": "Constants[0] (0.1) || Variables[0] (Blast Toughness Value) || MUL || RETURN",
-          "displayLines": "(0.1 * Blast Toughness Value)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "(0.1 * Blast Toughness Value)"
         },
         "Tags": [
           "Skill (Saber)"
@@ -440,25 +297,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Constants[0] (0.1) || Variables[0] (1.5) || Variables[1] (DV_ExtraDmgRatio) || ADD || MUL || RETURN",
-          "displayLines": "(0.1 * (1.5 + DV_ExtraDmgRatio))",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            1.5,
-            "DV_ExtraDmgRatio"
-          ]
+          "displayLines": "(0.1 * (1.5 + DV_ExtraDmgRatio))"
         },
         "Toughness": {
-          "operator": "Constants[0] (0.1) || Variables[0] (ST Toughness Value) || MUL || RETURN",
-          "displayLines": "(0.1 * ST Toughness Value)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(0.1 * ST Toughness Value)"
         },
         "Tags": [
           "Skill (Saber)"
@@ -476,25 +318,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Constants[0] (0.1) || Variables[0] (0.75) || Variables[1] (DV_ExtraDmgRatio) || ADD || MUL || RETURN",
-          "displayLines": "(0.1 * (0.75 + DV_ExtraDmgRatio))",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            0.75,
-            "DV_ExtraDmgRatio"
-          ]
+          "displayLines": "(0.1 * (0.75 + DV_ExtraDmgRatio))"
         },
         "Toughness": {
-          "operator": "Constants[0] (0.1) || Variables[0] (Blast Toughness Value) || MUL || RETURN",
-          "displayLines": "(0.1 * Blast Toughness Value)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "(0.1 * Blast Toughness Value)"
         },
         "Tags": [
           "Skill (Saber)"
@@ -511,25 +338,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Constants[0] (0.7) || Variables[0] (1.5) || Variables[1] (DV_ExtraDmgRatio) || ADD || MUL || RETURN",
-          "displayLines": "(0.7 * (1.5 + DV_ExtraDmgRatio))",
-          "constants": [
-            0.7
-          ],
-          "variables": [
-            1.5,
-            "DV_ExtraDmgRatio"
-          ]
+          "displayLines": "(0.7 * (1.5 + DV_ExtraDmgRatio))"
         },
         "Toughness": {
-          "operator": "Constants[0] (0.7) || Variables[0] (ST Toughness Value) || MUL || RETURN",
-          "displayLines": "(0.7 * ST Toughness Value)",
-          "constants": [
-            0.7
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(0.7 * ST Toughness Value)"
         },
         "Tags": [
           "Skill (Saber)"
@@ -547,25 +359,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Constants[0] (0.7) || Variables[0] (0.75) || Variables[1] (DV_ExtraDmgRatio) || ADD || MUL || RETURN",
-          "displayLines": "(0.7 * (0.75 + DV_ExtraDmgRatio))",
-          "constants": [
-            0.7
-          ],
-          "variables": [
-            0.75,
-            "DV_ExtraDmgRatio"
-          ]
+          "displayLines": "(0.7 * (0.75 + DV_ExtraDmgRatio))"
         },
         "Toughness": {
-          "operator": "Constants[0] (0.7) || Variables[0] (Blast Toughness Value) || MUL || RETURN",
-          "displayLines": "(0.7 * Blast Toughness Value)",
-          "constants": [
-            0.7
-          ],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "(0.7 * Blast Toughness Value)"
         },
         "Tags": [
           "Skill (Saber)"
@@ -576,12 +373,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (DV_SurgePoint) || RETURN",
-        "displayLines": "DV_SurgePoint",
-        "constants": [],
-        "variables": [
-          "DV_SurgePoint"
-        ]
+        "displayLines": "DV_SurgePoint"
       },
       "variableName": "Check_Surge_Use_Before"
     },
@@ -594,14 +386,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "value": {
-        "operator": "Constants[0] (0) || Variables[0] (DV_SurgePointUse) || SUB || RETURN",
-        "displayLines": "(0 - DV_SurgePointUse)",
-        "constants": [
-          0
-        ],
-        "variables": [
-          "DV_SurgePointUse"
-        ]
+        "displayLines": "(0 - DV_SurgePointUse)"
       }
     },
     {
@@ -620,14 +405,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (8) || Variables[1] (Check_Surge_Use_Before) || Variables[2] (DV_SurgePoint) || SUB || MUL || RETURN",
-            "displayLines": "(8 * (Check_Surge_Use_Before - DV_SurgePoint))",
-            "constants": [],
-            "variables": [
-              8,
-              "Check_Surge_Use_Before",
-              "DV_SurgePoint"
-            ]
+            "displayLines": "(8 * (Check_Surge_Use_Before - DV_SurgePoint))"
           },
           "isFixed": "(Fixed)"
         }
@@ -636,12 +414,7 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (DV_SurgePoint) || RETURN",
-        "displayLines": "DV_SurgePoint",
-        "constants": [],
-        "variables": [
-          "DV_SurgePoint"
-        ]
+        "displayLines": "DV_SurgePoint"
       }
     },
     "Trigger: Ability End"

@@ -41,24 +41,14 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-        "displayLines": "{[SkillP01[2]]}",
-        "constants": [],
-        "variables": [
-          "{[SkillP01[2]]}"
-        ]
+        "displayLines": "{[SkillP01[2]]}"
       },
       "variableName": "Wolf_MaxAttackCount"
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (UnusedUnderThisBase_9698) || RETURN",
-        "displayLines": "UnusedUnderThisBase_9698",
-        "constants": [],
-        "variables": [
-          "UnusedUnderThisBase_9698"
-        ]
+        "displayLines": "UnusedUnderThisBase_9698"
       },
       "variableName": "WolfBoss_BloodRageMaxCount"
     },
@@ -71,12 +61,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1905621078\">Enemy_W2_Lycan_RageControllerV2</a>",
       "valuePerStack": {
         "MaxAttackCount": {
-          "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-          "displayLines": "{[SkillP01[2]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[2]]}"
-          ]
+          "displayLines": "{[SkillP01[2]]}"
         }
       },
       "casterAssign": "TargetSelf"
@@ -119,12 +104,7 @@ const configAbility = {
           },
           "variableName": "WolfID01",
           "resetValue": {
-            "operator": "Variables[0] (WolfSummon01) || RETURN",
-            "displayLines": "WolfSummon01",
-            "constants": [],
-            "variables": [
-              "WolfSummon01"
-            ]
+            "displayLines": "WolfSummon01"
           },
           "scope": "TargetEntity"
         }
@@ -152,12 +132,7 @@ const configAbility = {
           },
           "variableName": "WolfID02",
           "resetValue": {
-            "operator": "Variables[0] (WolfSummon02) || RETURN",
-            "displayLines": "WolfSummon02",
-            "constants": [],
-            "variables": [
-              "WolfSummon02"
-            ]
+            "displayLines": "WolfSummon02"
           },
           "scope": "TargetEntity"
         }
@@ -197,36 +172,16 @@ const configAbility = {
               "eventID": 20008,
               "variables": {
                 "P3_Lycan01Delay": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9656) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9656",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_9656"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_9656"
                 },
                 "P4_Lycan02Delay": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9678) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9678",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_9678"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_9678"
                 },
                 "P5_Lycan03Delay": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9653) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9653",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_9653"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_9653"
                 },
                 "P6_Lycan04Delay": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9679) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9679",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_9679"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_9679"
                 }
               }
             },
@@ -252,12 +207,7 @@ const configAbility = {
                   },
                   "variableName": "P3_Lycan01Delay",
                   "resetValue": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_9656) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_9656",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_9656"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_9656"
                   },
                   "scope": "TargetEntity"
                 }
@@ -285,12 +235,7 @@ const configAbility = {
                   },
                   "variableName": "P4_Lycan02Delay",
                   "resetValue": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_9678) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_9678",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_9678"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_9678"
                   },
                   "scope": "TargetEntity"
                 }
@@ -318,12 +263,7 @@ const configAbility = {
                   },
                   "variableName": "P5_Lycan03Delay",
                   "resetValue": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_9653) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_9653",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_9653"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_9653"
                   },
                   "scope": "TargetEntity"
                 }
@@ -351,12 +291,7 @@ const configAbility = {
                   },
                   "variableName": "P6_Lycan04Delay",
                   "resetValue": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_9679) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_9679",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_9679"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_9679"
                   },
                   "scope": "TargetEntity"
                 }
@@ -370,20 +305,10 @@ const configAbility = {
               "eventID": 20008,
               "variables": {
                 "P3_Lycan01Delay": {
-                  "operator": "Variables[0] ({[SkillP03[1]]}) || RETURN",
-                  "displayLines": "{[SkillP03[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP03[1]]}"
-                  ]
+                  "displayLines": "{[SkillP03[1]]}"
                 },
                 "P4_Lycan02Delay": {
-                  "operator": "Variables[0] ({[SkillP03[2]]}) || RETURN",
-                  "displayLines": "{[SkillP03[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP03[2]]}"
-                  ]
+                  "displayLines": "{[SkillP03[2]]}"
                 }
               }
             },
@@ -409,12 +334,7 @@ const configAbility = {
                   },
                   "variableName": "P3_Lycan01Delay",
                   "resetValue": {
-                    "operator": "Variables[0] ({[SkillP03[1]]}) || RETURN",
-                    "displayLines": "{[SkillP03[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillP03[1]]}"
-                    ]
+                    "displayLines": "{[SkillP03[1]]}"
                   },
                   "scope": "TargetEntity"
                 }
@@ -442,12 +362,7 @@ const configAbility = {
                   },
                   "variableName": "P4_Lycan02Delay",
                   "resetValue": {
-                    "operator": "Variables[0] ({[SkillP03[2]]}) || RETURN",
-                    "displayLines": "{[SkillP03[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillP03[2]]}"
-                    ]
+                    "displayLines": "{[SkillP03[2]]}"
                   },
                   "scope": "TargetEntity"
                 }
@@ -489,12 +404,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                "displayLines": "Wolf_AttackCount",
-                "constants": [],
-                "variables": [
-                  "Wolf_AttackCount"
-                ]
+                "displayLines": "Wolf_AttackCount"
               },
               "entityClass": "Enemy",
               "target": {
@@ -502,12 +412,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                "displayLines": "Wolf_MaxAttackCount",
-                "constants": [],
-                "variables": [
-                  "Wolf_MaxAttackCount"
-                ]
+                "displayLines": "Wolf_MaxAttackCount"
               },
               "assignState": "True",
               "state": "Normal"
@@ -520,12 +425,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_9699) || RETURN",
-                "displayLines": "UnusedUnderThisBase_9699",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_9699"
-                ]
+                "displayLines": "UnusedUnderThisBase_9699"
               },
               "variableName": "WolfBoss_BloodRageCount"
             },
@@ -537,20 +437,10 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"563066245\">Enemy_W2_LycanKing_BloodRageMark</a>[<span class=\"descriptionNumberColor\">Irate</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (WolfBoss_BloodRageMaxCount) || RETURN",
-                "displayLines": "WolfBoss_BloodRageMaxCount",
-                "constants": [],
-                "variables": [
-                  "WolfBoss_BloodRageMaxCount"
-                ]
+                "displayLines": "WolfBoss_BloodRageMaxCount"
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (WolfBoss_BloodRageCount) || RETURN",
-                "displayLines": "WolfBoss_BloodRageCount",
-                "constants": [],
-                "variables": [
-                  "WolfBoss_BloodRageCount"
-                ]
+                "displayLines": "WolfBoss_BloodRageCount"
               }
             },
             {
@@ -587,12 +477,7 @@ const configAbility = {
                   "variableName": "WolfBoss_BloodRageCount",
                   "value": 1,
                   "max": {
-                    "operator": "Variables[0] (WolfBoss_BloodRageMaxCount) || RETURN",
-                    "displayLines": "WolfBoss_BloodRageMaxCount",
-                    "constants": [],
-                    "variables": [
-                      "WolfBoss_BloodRageMaxCount"
-                    ]
+                    "displayLines": "WolfBoss_BloodRageMaxCount"
                   }
                 },
                 {
@@ -603,12 +488,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"563066245\">Enemy_W2_LycanKing_BloodRageMark</a>[<span class=\"descriptionNumberColor\">Irate</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (WolfBoss_BloodRageMaxCount) || RETURN",
-                    "displayLines": "WolfBoss_BloodRageMaxCount",
-                    "constants": [],
-                    "variables": [
-                      "WolfBoss_BloodRageMaxCount"
-                    ]
+                    "displayLines": "WolfBoss_BloodRageMaxCount"
                   }
                 },
                 {
@@ -633,12 +513,7 @@ const configAbility = {
                         "value1": "WolfBoss_BloodRageCount",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] (WolfBoss_BloodRageMaxCount) || RETURN",
-                          "displayLines": "WolfBoss_BloodRageMaxCount",
-                          "constants": [],
-                          "variables": [
-                            "WolfBoss_BloodRageMaxCount"
-                          ]
+                          "displayLines": "WolfBoss_BloodRageMaxCount"
                         }
                       },
                       {
@@ -698,13 +573,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (WolfBoss_BloodRageMaxCount) || Variables[1] (WolfBoss_BloodRageCount) || SUB || RETURN",
-                        "displayLines": "(WolfBoss_BloodRageMaxCount - WolfBoss_BloodRageCount)",
-                        "constants": [],
-                        "variables": [
-                          "WolfBoss_BloodRageMaxCount",
-                          "WolfBoss_BloodRageCount"
-                        ]
+                        "displayLines": "(WolfBoss_BloodRageMaxCount - WolfBoss_BloodRageCount)"
                       },
                       "variableName": "MDF_BloodRageCountRemain"
                     },
@@ -764,12 +633,7 @@ const configAbility = {
                   "variableName": "WolfBoss_BloodRageCount",
                   "value": 1,
                   "max": {
-                    "operator": "Variables[0] (WolfBoss_BloodRageMaxCount) || RETURN",
-                    "displayLines": "WolfBoss_BloodRageMaxCount",
-                    "constants": [],
-                    "variables": [
-                      "WolfBoss_BloodRageMaxCount"
-                    ]
+                    "displayLines": "WolfBoss_BloodRageMaxCount"
                   }
                 },
                 {
@@ -780,12 +644,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"563066245\">Enemy_W2_LycanKing_BloodRageMark</a>[<span class=\"descriptionNumberColor\">Irate</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (WolfBoss_BloodRageMaxCount) || RETURN",
-                    "displayLines": "WolfBoss_BloodRageMaxCount",
-                    "constants": [],
-                    "variables": [
-                      "WolfBoss_BloodRageMaxCount"
-                    ]
+                    "displayLines": "WolfBoss_BloodRageMaxCount"
                   }
                 },
                 {
@@ -810,12 +669,7 @@ const configAbility = {
                         "value1": "WolfBoss_BloodRageCount",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] (WolfBoss_BloodRageMaxCount) || RETURN",
-                          "displayLines": "WolfBoss_BloodRageMaxCount",
-                          "constants": [],
-                          "variables": [
-                            "WolfBoss_BloodRageMaxCount"
-                          ]
+                          "displayLines": "WolfBoss_BloodRageMaxCount"
                         }
                       },
                       {
@@ -875,13 +729,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (WolfBoss_BloodRageMaxCount) || Variables[1] (WolfBoss_BloodRageCount) || SUB || RETURN",
-                        "displayLines": "(WolfBoss_BloodRageMaxCount - WolfBoss_BloodRageCount)",
-                        "constants": [],
-                        "variables": [
-                          "WolfBoss_BloodRageMaxCount",
-                          "WolfBoss_BloodRageCount"
-                        ]
+                        "displayLines": "(WolfBoss_BloodRageMaxCount - WolfBoss_BloodRageCount)"
                       },
                       "variableName": "MDF_BloodRageCountRemain"
                     },
@@ -937,24 +785,14 @@ const configAbility = {
                         "value1": "WolfBoss_BloodRageCount",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (WolfBoss_BloodRageMaxCount) || RETURN",
-                          "displayLines": "WolfBoss_BloodRageMaxCount",
-                          "constants": [],
-                          "variables": [
-                            "WolfBoss_BloodRageMaxCount"
-                          ]
+                          "displayLines": "WolfBoss_BloodRageMaxCount"
                         }
                       },
                       "passed": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (WolfBoss_BloodRageCount) || RETURN",
-                            "displayLines": "WolfBoss_BloodRageCount",
-                            "constants": [],
-                            "variables": [
-                              "WolfBoss_BloodRageCount"
-                            ]
+                            "displayLines": "WolfBoss_BloodRageCount"
                           },
                           "variableName": "MDF_BloodRageCountBefore"
                         },
@@ -967,12 +805,7 @@ const configAbility = {
                           "variableName": "WolfBoss_BloodRageCount",
                           "value": -1,
                           "max": {
-                            "operator": "Variables[0] (WolfBoss_BloodRageMaxCount) || RETURN",
-                            "displayLines": "WolfBoss_BloodRageMaxCount",
-                            "constants": [],
-                            "variables": [
-                              "WolfBoss_BloodRageMaxCount"
-                            ]
+                            "displayLines": "WolfBoss_BloodRageMaxCount"
                           }
                         },
                         {
@@ -1035,28 +868,13 @@ const configAbility = {
                               "canHitNonTargets": true,
                               "valuePerStack": {
                                 "ResetBloodRageCount": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_9683) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_9683",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_9683"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_9683"
                                 },
                                 "DelayRatio": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_9701) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_9701",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_9701"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_9701"
                                 },
                                 "StanceDamage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_9700) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_9700",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_9700"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_9700"
                                 }
                               },
                               "allowAbilityTriggers": false
@@ -1076,12 +894,7 @@ const configAbility = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"563066245\">Enemy_W2_LycanKing_BloodRageMark</a>[<span class=\"descriptionNumberColor\">Irate</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] (WolfBoss_BloodRageMaxCount) || RETURN",
-                                "displayLines": "WolfBoss_BloodRageMaxCount",
-                                "constants": [],
-                                "variables": [
-                                  "WolfBoss_BloodRageMaxCount"
-                                ]
+                                "displayLines": "WolfBoss_BloodRageMaxCount"
                               },
                               "addStacksPerTrigger": -1
                             }
@@ -1185,12 +998,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedUpRatio) || RETURN",
-                "displayLines": "MDF_SpeedUpRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedUpRatio"
-                ]
+                "displayLines": "MDF_SpeedUpRatio"
               }
             },
             {
@@ -1331,12 +1139,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedUpRatio) || RETURN",
-                "displayLines": "MDF_SpeedUpRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedUpRatio"
-                ]
+                "displayLines": "MDF_SpeedUpRatio"
               }
             },
             {
@@ -1524,12 +1327,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1729331430\">Enemy_W2_LycanKing_RageStatusEnhance</a>[<span class=\"descriptionNumberColor\">Lupine Lord's Majesty</span>]",
                   "valuePerStack": {
                     "MDF_SpeedAddRatio": {
-                      "operator": "Variables[0] ({[SkillP03[0]]}) || RETURN",
-                      "displayLines": "{[SkillP03[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP03[0]]}"
-                      ]
+                      "displayLines": "{[SkillP03[0]]}"
                     }
                   },
                   "casterAssign": "CasterSelf"
@@ -1656,12 +1454,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1729331430\">Enemy_W2_LycanKing_RageStatusEnhance</a>[<span class=\"descriptionNumberColor\">Lupine Lord's Majesty</span>]",
                   "valuePerStack": {
                     "MDF_SpeedAddRatio": {
-                      "operator": "Variables[0] ({[SkillP03[0]]}) || RETURN",
-                      "displayLines": "{[SkillP03[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP03[0]]}"
-                      ]
+                      "displayLines": "{[SkillP03[0]]}"
                     }
                   },
                   "casterAssign": "CasterSelf"
@@ -1769,20 +1562,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"224849748\">Enemy_W2_LycanKing_RageStatus</a>[<span class=\"descriptionNumberColor\">Eclipse's Ire</span>]",
                       "valuePerStack": {
                         "MDF_SpeedUpRatio": {
-                          "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                          "displayLines": "{[SkillP01[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillP01[0]]}"
-                          ]
+                          "displayLines": "{[SkillP01[0]]}"
                         },
                         "MDF_SpeedUpRatioPerWolf": {
-                          "operator": "Variables[0] ({[SkillP03[0]]}) || RETURN",
-                          "displayLines": "{[SkillP03[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillP03[0]]}"
-                          ]
+                          "displayLines": "{[SkillP03[0]]}"
                         }
                       }
                     },
@@ -1865,20 +1648,10 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"540941563\">Enemy_W2_LycanKing_RageStatusPhase2</a>[<span class=\"descriptionNumberColor\">Eclipse's Wrath</span>]",
                           "valuePerStack": {
                             "MDF_SpeedUpRatio": {
-                              "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                              "displayLines": "{[SkillP01[3]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[3]]}"
-                              ]
+                              "displayLines": "{[SkillP01[3]]}"
                             },
                             "MDF_SpeedUpRatioPerWolf": {
-                              "operator": "Variables[0] ({[SkillP03[0]]}) || RETURN",
-                              "displayLines": "{[SkillP03[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP03[0]]}"
-                              ]
+                              "displayLines": "{[SkillP03[0]]}"
                             }
                           }
                         },

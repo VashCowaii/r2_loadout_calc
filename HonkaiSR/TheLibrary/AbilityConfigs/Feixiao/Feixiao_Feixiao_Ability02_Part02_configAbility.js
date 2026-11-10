@@ -21,21 +21,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] (2) || RETURN",
-          "displayLines": "2",
-          "constants": [],
-          "variables": [
-            2
-          ]
+          "displayLines": "2"
         },
         "HitSplit": 0.34,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "attackType": "Skill",
@@ -55,21 +45,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             },
             "HitSplit": 0.33,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Skill",

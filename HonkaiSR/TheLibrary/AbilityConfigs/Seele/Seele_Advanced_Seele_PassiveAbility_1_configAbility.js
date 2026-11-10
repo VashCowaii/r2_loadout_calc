@@ -46,12 +46,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1743016793\">Ability01PreShowModifier_Fixed</a>",
           "valuePerStack": {
             "MDF_Ability01_Delay": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         }
@@ -74,12 +69,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"959272575\">Local_Seele_ListenKill</a>",
       "valuePerStack": {
         "dmg_percent": {
-          "operator": "Variables[0] (0.8) || RETURN",
-          "displayLines": "0.8",
-          "constants": [],
-          "variables": [
-            0.8
-          ]
+          "displayLines": "0.8"
         }
       }
     },
@@ -156,12 +146,7 @@ const configAbility = {
                         "value1": "CurrentHP%",
                         "compareType": "<=",
                         "value2": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         }
                       },
                       {
@@ -326,29 +311,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-472499117\">Advanced_Seele_Passive_DamageUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "seele_dmg_percent": {
-                      "operator": "Variables[0] (dmg_percent) || RETURN",
-                      "displayLines": "dmg_percent",
-                      "constants": [],
-                      "variables": [
-                        "dmg_percent"
-                      ]
+                      "displayLines": "dmg_percent"
                     },
                     "MDF_Penetrate": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     }
                   }
                 }
@@ -374,14 +344,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Seele_BonusInsertActionCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(Seele_BonusInsertActionCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Seele_BonusInsertActionCount"
-                    ]
+                    "displayLines": "(Seele_BonusInsertActionCount + 1)"
                   },
                   "variableName": "Seele_BonusInsertActionCount"
                 },
@@ -400,14 +363,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (Seele_BonusInsertActionCount) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(Seele_BonusInsertActionCount - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Seele_BonusInsertActionCount"
-                        ]
+                        "displayLines": "(Seele_BonusInsertActionCount - 1)"
                       },
                       "variableName": "Seele_BonusInsertActionCount"
                     },
@@ -440,29 +396,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-472499117\">Advanced_Seele_Passive_DamageUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "seele_dmg_percent": {
-                      "operator": "Variables[0] (dmg_percent) || RETURN",
-                      "displayLines": "dmg_percent",
-                      "constants": [],
-                      "variables": [
-                        "dmg_percent"
-                      ]
+                      "displayLines": "dmg_percent"
                     },
                     "MDF_Penetrate": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     }
                   }
                 }
@@ -524,29 +465,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-472499117\">Advanced_Seele_Passive_DamageUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "seele_dmg_percent": {
-                      "operator": "Variables[0] (dmg_percent) || RETURN",
-                      "displayLines": "dmg_percent",
-                      "constants": [],
-                      "variables": [
-                        "dmg_percent"
-                      ]
+                      "displayLines": "dmg_percent"
                     },
                     "MDF_Penetrate": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     }
                   }
                 }
@@ -610,14 +536,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Seele_BonusInsertActionCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(Seele_BonusInsertActionCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Seele_BonusInsertActionCount"
-                    ]
+                    "displayLines": "(Seele_BonusInsertActionCount + 1)"
                   },
                   "variableName": "Seele_BonusInsertActionCount"
                 },
@@ -636,14 +555,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (Seele_BonusInsertActionCount) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(Seele_BonusInsertActionCount - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Seele_BonusInsertActionCount"
-                        ]
+                        "displayLines": "(Seele_BonusInsertActionCount - 1)"
                       },
                       "variableName": "Seele_BonusInsertActionCount"
                     },
@@ -708,14 +620,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Seele_BonusInsertActionCount) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(Seele_BonusInsertActionCount - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Seele_BonusInsertActionCount"
-                    ]
+                    "displayLines": "(Seele_BonusInsertActionCount - 1)"
                   },
                   "variableName": "Seele_BonusInsertActionCount"
                 }
@@ -824,12 +729,7 @@ const configAbility = {
                   "value1": "<a class=\"gModGreen\" id=\"1818761365\">Advanced_Seele_BPAbility_SpeedUpEidolon2</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                   "compareType": "<",
                   "value2": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valueType": "Layer"
                 }
@@ -862,12 +762,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Variables[0] (MDF_Skill01_Delay) || INVERT || RETURN",
-            "displayLines": "-MDF_Skill01_Delay",
-            "constants": [],
-            "variables": [
-              "MDF_Skill01_Delay"
-            ]
+            "displayLines": "-MDF_Skill01_Delay"
           }
         }
       }

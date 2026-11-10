@@ -59,12 +59,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (SummonCount) || RETURN",
-            "displayLines": "SummonCount",
-            "constants": [],
-            "variables": [
-              "SummonCount"
-            ]
+            "displayLines": "SummonCount"
           },
           "execute": [
             {
@@ -114,12 +109,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-          "displayLines": "{[Skill04[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}"
-          ]
+          "displayLines": "{[Skill04[0]]}"
         },
         "Toughness": null,
         "Tags": null,

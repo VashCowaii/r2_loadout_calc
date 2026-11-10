@@ -23,21 +23,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "DamageElation": {
-          "operator": "Variables[0] (1.1) || RETURN",
-          "displayLines": "1.1",
-          "constants": [],
-          "variables": [
-            1.1
-          ]
+          "displayLines": "1.1"
         },
         "dmgFormula": "Elation Scaling",
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "ToughnessDMGType": {
           "DamageType": "Physical"
@@ -57,12 +47,7 @@ const configAbility = {
       },
       "variables": {
         "AddValue": {
-          "operator": "Variables[0] (5) || RETURN",
-          "displayLines": "5",
-          "constants": [],
-          "variables": [
-            5
-          ]
+          "displayLines": "5"
         }
       }
     },
@@ -82,12 +67,7 @@ const configAbility = {
           },
           "variables": {
             "AddValue": {
-              "operator": "Variables[0] (10) || RETURN",
-              "displayLines": "10",
-              "constants": [],
-              "variables": [
-                10
-              ]
+              "displayLines": "10"
             }
           }
         }

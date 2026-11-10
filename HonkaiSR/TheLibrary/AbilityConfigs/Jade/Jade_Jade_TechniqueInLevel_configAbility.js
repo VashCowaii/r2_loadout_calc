@@ -77,12 +77,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Quantum",
                         "Damage": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -92,14 +87,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_RateLayer) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_RateLayer + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_RateLayer"
-                        ]
+                        "displayLines": "(_RateLayer + 1)"
                       },
                       "variableName": "_RateLayer"
                     }
@@ -114,38 +102,18 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-2143808418\">Jade_Passive_Rate</a>[<span class=\"descriptionNumberColor\">Pawned Asset</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (50) || RETURN",
-                    "displayLines": "50",
-                    "constants": [],
-                    "variables": [
-                      50
-                    ]
+                    "displayLines": "50"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.024) || RETURN",
-                      "displayLines": "0.024",
-                      "constants": [],
-                      "variables": [
-                        0.024
-                      ]
+                      "displayLines": "0.024"
                     },
                     "MDF_PropertyValue2": {
-                      "operator": "Variables[0] (0.005) || RETURN",
-                      "displayLines": "0.005",
-                      "constants": [],
-                      "variables": [
-                        0.005
-                      ]
+                      "displayLines": "0.005"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (15) || RETURN",
-                    "displayLines": "15",
-                    "constants": [],
-                    "variables": [
-                      15
-                    ]
+                    "displayLines": "15"
                   }
                 }
               ]

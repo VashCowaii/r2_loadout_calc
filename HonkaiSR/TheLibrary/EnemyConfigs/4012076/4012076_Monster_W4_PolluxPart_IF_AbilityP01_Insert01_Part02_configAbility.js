@@ -26,12 +26,7 @@ const configAbility = {
         {
           "name": "Deal Toughness DMG",
           "value": {
-            "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-            "displayLines": "{[SkillP01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP01[0]]}"
-            ]
+            "displayLines": "{[SkillP01[0]]}"
           },
           "attacker": {
             "name": "Target Name",
@@ -59,12 +54,7 @@ const configAbility = {
         {
           "name": "Deal Toughness DMG",
           "value": {
-            "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-            "displayLines": "{[SkillP01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP01[0]]}"
-            ]
+            "displayLines": "{[SkillP01[0]]}"
           },
           "attacker": {
             "name": "Target Name",
@@ -92,12 +82,7 @@ const configAbility = {
         "target": "{{Caster's Summoner}}"
       },
       "consumePercent": {
-        "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-        "displayLines": "{[SkillP01[1]]}",
-        "constants": [],
-        "variables": [
-          "{[SkillP01[1]]}"
-        ]
+        "displayLines": "{[SkillP01[1]]}"
       },
       "consumeFloor": 1
     }

@@ -47,28 +47,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Herta_Count) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(Herta_Count - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "Herta_Count"
-            ]
+            "displayLines": "(Herta_Count - 1)"
           },
           "variableName": "Herta_Count"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Scoring_Herta_Count) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(Scoring_Herta_Count + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "Scoring_Herta_Count"
-            ]
+            "displayLines": "(Scoring_Herta_Count + 1)"
           },
           "variableName": "Scoring_Herta_Count"
         },
@@ -87,21 +73,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1736222640\">Herta_AbilityEidolon2_CriticalChance</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (5) || RETURN",
-                "displayLines": "5",
-                "constants": [],
-                "variables": [
-                  5
-                ]
+                "displayLines": "5"
               },
               "valuePerStack": {
                 "MDF_CriticalChance": {
-                  "operator": "Variables[0] (0.03) || RETURN",
-                  "displayLines": "0.03",
-                  "constants": [],
-                  "variables": [
-                    0.03
-                  ]
+                  "displayLines": "0.03"
                 }
               }
             }
@@ -123,12 +99,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1482818607\">Herta_AbilityEidolon4_DamageUp</a>",
               "valuePerStack": {
                 "AbilityRank_Eidolon4_P1_DamagePercentage": {
-                  "operator": "Variables[0] (0.1) || RETURN",
-                  "displayLines": "0.1",
-                  "constants": [],
-                  "variables": [
-                    0.1
-                  ]
+                  "displayLines": "0.1"
                 }
               }
             }
@@ -144,20 +115,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (0.4) || RETURN",
-              "displayLines": "0.4",
-              "constants": [],
-              "variables": [
-                0.4
-              ]
+              "displayLines": "0.4"
             },
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "attackType": "Follow-up",
@@ -374,13 +335,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_CriticalChance) || Variables[1] (MDF_Count) || MUL || RETURN",
-                "displayLines": "(MDF_CriticalChance * MDF_Count)",
-                "constants": [],
-                "variables": [
-                  "MDF_CriticalChance",
-                  "MDF_Count"
-                ]
+                "displayLines": "(MDF_CriticalChance * MDF_Count)"
               }
             }
           ]

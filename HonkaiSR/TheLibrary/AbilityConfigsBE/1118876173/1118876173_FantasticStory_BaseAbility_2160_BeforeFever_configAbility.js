@@ -13,12 +13,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P1_EnterLayer",
       "resetValue": {
-        "operator": "Variables[0] (ADF_1_Get) || RETURN",
-        "displayLines": "ADF_1_Get",
-        "constants": [],
-        "variables": [
-          "ADF_1_Get"
-        ]
+        "displayLines": "ADF_1_Get"
       },
       "scope": "ContextCaster"
     },
@@ -30,12 +25,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P2_ActionLayer",
       "resetValue": {
-        "operator": "Variables[0] (ADF_2_Get) || RETURN",
-        "displayLines": "ADF_2_Get",
-        "constants": [],
-        "variables": [
-          "ADF_2_Get"
-        ]
+        "displayLines": "ADF_2_Get"
       },
       "scope": "ContextCaster"
     },
@@ -47,12 +37,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer",
       "resetValue": {
-        "operator": "Variables[0] (ADF_3_Get) || RETURN",
-        "displayLines": "ADF_3_Get",
-        "constants": [],
-        "variables": [
-          "ADF_3_Get"
-        ]
+        "displayLines": "ADF_3_Get"
       },
       "scope": "ContextCaster"
     },
@@ -64,12 +49,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime",
       "resetValue": {
-        "operator": "Variables[0] (ADF_4_Get) || RETURN",
-        "displayLines": "ADF_4_Get",
-        "constants": [],
-        "variables": [
-          "ADF_4_Get"
-        ]
+        "displayLines": "ADF_4_Get"
       },
       "scope": "ContextCaster"
     },
@@ -81,12 +61,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage",
       "resetValue": {
-        "operator": "Variables[0] (ADF_5_Get) || RETURN",
-        "displayLines": "ADF_5_Get",
-        "constants": [],
-        "variables": [
-          "ADF_5_Get"
-        ]
+        "displayLines": "ADF_5_Get"
       },
       "scope": "ContextCaster"
     },
@@ -174,47 +149,21 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1010904189\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT</a>[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
                       "duration": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime) || RETURN",
-                        "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime"
-                        ]
+                        "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime"
                       },
                       "stackLimit": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer) || RETURN",
-                        "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
-                        ]
+                        "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
                       },
                       "valuePerStack": {
                         "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer": {
-                          "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer) || RETURN",
-                          "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
-                          ]
+                          "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
                         },
                         "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage": {
-                          "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage) || RETURN",
-                          "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage"
-                          ]
+                          "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P1_EnterLayer) || Variables[1] (DV_FantasticStory_PlusAbility_2163_ADF_2) || ADD || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_2160_BeforeFever_P1_EnterLayer + DV_FantasticStory_PlusAbility_2163_ADF_2)",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_2160_BeforeFever_P1_EnterLayer",
-                          "DV_FantasticStory_PlusAbility_2163_ADF_2"
-                        ]
+                        "displayLines": "(DV_FantasticStory_BaseAbility_2160_BeforeFever_P1_EnterLayer + DV_FantasticStory_PlusAbility_2163_ADF_2)"
                       }
                     }
                   ],
@@ -227,46 +176,21 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1010904189\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT</a>[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
                       "duration": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime) || RETURN",
-                        "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime"
-                        ]
+                        "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime"
                       },
                       "stackLimit": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer) || RETURN",
-                        "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
-                        ]
+                        "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
                       },
                       "valuePerStack": {
                         "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer": {
-                          "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer) || RETURN",
-                          "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
-                          ]
+                          "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
                         },
                         "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage": {
-                          "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage) || RETURN",
-                          "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage"
-                          ]
+                          "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P1_EnterLayer) || RETURN",
-                        "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P1_EnterLayer",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_2160_BeforeFever_P1_EnterLayer"
-                        ]
+                        "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P1_EnterLayer"
                       }
                     }
                   ]
@@ -320,47 +244,21 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1010904189\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT</a>[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
                       "duration": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime) || RETURN",
-                        "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime"
-                        ]
+                        "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime"
                       },
                       "stackLimit": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer) || RETURN",
-                        "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
-                        ]
+                        "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
                       },
                       "valuePerStack": {
                         "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer": {
-                          "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer) || RETURN",
-                          "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
-                          ]
+                          "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
                         },
                         "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage": {
-                          "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage) || RETURN",
-                          "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage"
-                          ]
+                          "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P2_ActionLayer) || Variables[1] (DV_FantasticStory_PlusAbility_2163_ADF_2) || ADD || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_2160_BeforeFever_P2_ActionLayer + DV_FantasticStory_PlusAbility_2163_ADF_2)",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_2160_BeforeFever_P2_ActionLayer",
-                          "DV_FantasticStory_PlusAbility_2163_ADF_2"
-                        ]
+                        "displayLines": "(DV_FantasticStory_BaseAbility_2160_BeforeFever_P2_ActionLayer + DV_FantasticStory_PlusAbility_2163_ADF_2)"
                       }
                     }
                   ],
@@ -373,46 +271,21 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1010904189\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT</a>[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
                       "duration": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime) || RETURN",
-                        "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime"
-                        ]
+                        "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime"
                       },
                       "stackLimit": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer) || RETURN",
-                        "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
-                        ]
+                        "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
                       },
                       "valuePerStack": {
                         "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer": {
-                          "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer) || RETURN",
-                          "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
-                          ]
+                          "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
                         },
                         "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage": {
-                          "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage) || RETURN",
-                          "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage"
-                          ]
+                          "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P2_ActionLayer) || RETURN",
-                        "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P2_ActionLayer",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_2160_BeforeFever_P2_ActionLayer"
-                        ]
+                        "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P2_ActionLayer"
                       }
                     }
                   ]

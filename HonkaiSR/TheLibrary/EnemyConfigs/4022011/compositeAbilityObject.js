@@ -55,12 +55,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                "displayLines": "{[Skill02[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill02[0]]}"
-                ]
+                "displayLines": "{[Skill02[0]]}"
               },
               "variableName": "_GlobalDelay"
             }
@@ -69,12 +64,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                "displayLines": "{[Skill02[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill02[1]]}"
-                ]
+                "displayLines": "{[Skill02[1]]}"
               },
               "variableName": "_GlobalDelay"
             }
@@ -194,12 +184,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -284,12 +269,7 @@ const compositeAbilityObject = {
                       "name": "Compare: Ability Use Limit",
                       "skillName": "Skill02",
                       "value1": {
-                        "operator": "Variables[0] (FREEVAR) || RETURN",
-                        "displayLines": "FREEVAR",
-                        "constants": [],
-                        "variables": [
-                          "FREEVAR"
-                        ]
+                        "displayLines": "FREEVAR"
                       }
                     },
                     "passed": [

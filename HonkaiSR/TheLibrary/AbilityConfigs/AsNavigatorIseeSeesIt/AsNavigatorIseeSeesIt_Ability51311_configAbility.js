@@ -104,22 +104,10 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-151396438\">Relic_131_Sub</a>[<span class=\"descriptionNumberColor\">As Navigator Isee Sees It</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Constants[0] (1) || INVERT || Variables[0] (1) || MUL || RETURN",
-                    "displayLines": "(-1 * 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "(-1 * 1)"
                   }
                 }
               ]
@@ -144,12 +132,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-151396438\">Relic_131_Sub</a>[<span class=\"descriptionNumberColor\">As Navigator Isee Sees It</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "addStacksPerTrigger": 1
                 }
@@ -186,22 +169,10 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-151396438\">Relic_131_Sub</a>[<span class=\"descriptionNumberColor\">As Navigator Isee Sees It</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Constants[0] (1) || INVERT || Variables[0] (1) || MUL || RETURN",
-                        "displayLines": "(-1 * 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "(-1 * 1)"
                       }
                     }
                   ]
@@ -230,12 +201,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-151396438\">Relic_131_Sub</a>[<span class=\"descriptionNumberColor\">As Navigator Isee Sees It</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "addStacksPerTrigger": 1
                 }

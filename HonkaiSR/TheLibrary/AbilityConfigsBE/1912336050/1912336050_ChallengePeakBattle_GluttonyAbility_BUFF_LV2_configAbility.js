@@ -42,44 +42,19 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"282468831\">Standard_Gluttony_BUFF_LV2</a>[<span class=\"descriptionNumberColor\">Aha's Tiny Aid</span>]",
                   "valuePerStack": {
                     "MDF_Param1": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     },
                     "MDF_Param2": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     },
                     "MDF_Param3": {
-                      "operator": "Variables[0] (#ADF_3) || RETURN",
-                      "displayLines": "#ADF_3",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_3"
-                      ]
+                      "displayLines": "#ADF_3"
                     },
                     "MDF_Param4": {
-                      "operator": "Variables[0] (#ADF_4) || RETURN",
-                      "displayLines": "#ADF_4",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_4"
-                      ]
+                      "displayLines": "#ADF_4"
                     },
                     "MDF_Param5": {
-                      "operator": "Variables[0] (#ADF_5) || RETURN",
-                      "displayLines": "#ADF_5",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_5"
-                      ]
+                      "displayLines": "#ADF_5"
                     }
                   }
                 }

@@ -14,12 +14,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-          "displayLines": "{[Skill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[0]]}"
-          ]
+          "displayLines": "{[Skill01[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -56,13 +51,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "DamageFlat": {
-              "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill01[1]]}) || MUL || RETURN",
-              "displayLines": "(_MaxHP * {[Skill01[1]]})",
-              "constants": [],
-              "variables": [
-                "_MaxHP",
-                "{[Skill01[1]]}"
-              ]
+              "displayLines": "(_MaxHP * {[Skill01[1]]})"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -112,20 +101,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-976528853\">Enemy_W4_Pollux_IF_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
           "valuePerStack": {
             "MDF_DamagePercentage": {
-              "operator": "Variables[0] ({[SkillP02[1]]}) || RETURN",
-              "displayLines": "{[SkillP02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP02[1]]}"
-              ]
+              "displayLines": "{[SkillP02[1]]}"
             },
             "MDF_DamageHpAddedRatio": {
-              "operator": "Variables[0] ({[SkillP02[0]]}) || RETURN",
-              "displayLines": "{[SkillP02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP02[0]]}"
-              ]
+              "displayLines": "{[SkillP02[0]]}"
             }
           }
         }

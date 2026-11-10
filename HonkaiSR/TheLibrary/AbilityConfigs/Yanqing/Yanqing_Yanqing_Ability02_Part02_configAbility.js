@@ -32,21 +32,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (2.2) || RETURN",
-              "displayLines": "2.2",
-              "constants": [],
-              "variables": [
-                2.2
-              ]
+              "displayLines": "2.2"
             },
             "HitSplit": 0.25,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Skill",
@@ -64,21 +54,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] (2.2) || RETURN",
-          "displayLines": "2.2",
-          "constants": [],
-          "variables": [
-            2.2
-          ]
+          "displayLines": "2.2"
         },
         "HitSplit": 0.25,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "attackType": "Skill",

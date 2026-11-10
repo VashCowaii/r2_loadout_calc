@@ -47,12 +47,7 @@ const configAbility = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_LowHPRatio) || RETURN",
-                      "displayLines": "MDF_LowHPRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_LowHPRatio"
-                      ]
+                      "displayLines": "MDF_LowHPRatio"
                     }
                   },
                   {
@@ -532,13 +527,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageUpRatio_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)"
               }
             }
           ]
@@ -576,12 +565,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-2053914629\">Monster_W2_Kafka_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                      "displayLines": "MDF_DamageUpRatio_PerLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageUpRatio_PerLayer"
-                      ]
+                      "displayLines": "MDF_DamageUpRatio_PerLayer"
                     }
                   }
                 },
@@ -679,12 +663,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-2053914629\">Monster_W2_Kafka_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                          "displayLines": "MDF_DamageUpRatio_PerLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageUpRatio_PerLayer"
-                          ]
+                          "displayLines": "MDF_DamageUpRatio_PerLayer"
                         }
                       }
                     }
@@ -712,12 +691,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1459324201\">Monster_W2_Kafka_RL_ListenElectric</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                  "displayLines": "MDF_DamageUpRatio_PerLayer",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamageUpRatio_PerLayer"
-                  ]
+                  "displayLines": "MDF_DamageUpRatio_PerLayer"
                 }
               }
             }
@@ -782,12 +756,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1459324201\">Monster_W2_Kafka_RL_ListenElectric</a>",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                      "displayLines": "MDF_DamageUpRatio_PerLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageUpRatio_PerLayer"
-                      ]
+                      "displayLines": "MDF_DamageUpRatio_PerLayer"
                     }
                   }
                 }
@@ -1362,13 +1331,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__252) || Variables[1] (SkillMaxHit) || DIV || RETURN",
-                  "displayLines": "(ENEMIES_OBJECT_UNUSED__252 / SkillMaxHit)",
-                  "constants": [],
-                  "variables": [
-                    "ENEMIES_OBJECT_UNUSED__252",
-                    "SkillMaxHit"
-                  ]
+                  "displayLines": "(ENEMIES_OBJECT_UNUSED__252 / SkillMaxHit)"
                 },
                 "Toughness": null,
                 "keepDMGType": true,
@@ -1508,12 +1471,7 @@ const configAbility = {
               },
               "variableName": "PursuitCount",
               "resetValue": {
-                "operator": "Variables[0] (MDF_Count) || RETURN",
-                "displayLines": "MDF_Count",
-                "constants": [],
-                "variables": [
-                  "MDF_Count"
-                ]
+                "displayLines": "MDF_Count"
               },
               "scope": "TargetEntity"
             }
@@ -1613,12 +1571,7 @@ const configAbility = {
               },
               "variableName": "PursuitCount",
               "resetValue": {
-                "operator": "Variables[0] (MDF_Count) || RETURN",
-                "displayLines": "MDF_Count",
-                "constants": [],
-                "variables": [
-                  "MDF_Count"
-                ]
+                "displayLines": "MDF_Count"
               },
               "scope": "TargetEntity"
             }

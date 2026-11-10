@@ -60,12 +60,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (10) || RETURN",
-                    "displayLines": "10",
-                    "constants": [],
-                    "variables": [
-                      10
-                    ]
+                    "displayLines": "10"
                   },
                   "isFixed": "* ERR"
                 }
@@ -118,18 +113,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Constants[0] (0.5) || Variables[0] (DV_Ultra_Damage_MaxStance) || Constants[1] (30) || DIV || Constants[2] (2) || ADD || MUL || Constants[3] (4) || DIV || Variables[1] (2) || MUL || RETURN",
-                        "displayLines": "(((0.5 * ((DV_Ultra_Damage_MaxStance / 30) + 2)) / 4) * 2)",
-                        "constants": [
-                          0.5,
-                          30,
-                          2,
-                          4
-                        ],
-                        "variables": [
-                          "DV_Ultra_Damage_MaxStance",
-                          2
-                        ]
+                        "displayLines": "(((0.5 * ((DV_Ultra_Damage_MaxStance / 30) + 2)) / 4) * 2)"
                       },
                       "variableName": "DV_Ratio"
                     },
@@ -143,12 +127,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Imaginary",
                         "DamageBreak": {
-                          "operator": "Variables[0] (DV_Ratio) || RETURN",
-                          "displayLines": "DV_Ratio",
-                          "constants": [],
-                          "variables": [
-                            "DV_Ratio"
-                          ]
+                          "displayLines": "DV_Ratio"
                         },
                         "dmgFormula": "Break DMG Scaling",
                         "dmgFormulaFinal": "Pure (No DMG%)",
@@ -178,18 +157,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Constants[0] (0.5) || Variables[0] (DV_Ultra_Damage_MaxStance) || Constants[1] (30) || DIV || Constants[2] (2) || ADD || MUL || Constants[3] (4) || DIV || Variables[1] (1.8) || MUL || RETURN",
-                            "displayLines": "(((0.5 * ((DV_Ultra_Damage_MaxStance / 30) + 2)) / 4) * 1.8)",
-                            "constants": [
-                              0.5,
-                              30,
-                              2,
-                              4
-                            ],
-                            "variables": [
-                              "DV_Ultra_Damage_MaxStance",
-                              1.8
-                            ]
+                            "displayLines": "(((0.5 * ((DV_Ultra_Damage_MaxStance / 30) + 2)) / 4) * 1.8)"
                           },
                           "variableName": "DV_Ratio2"
                         },
@@ -203,12 +171,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "DamageBreak": {
-                              "operator": "Variables[0] (DV_Ratio2) || RETURN",
-                              "displayLines": "DV_Ratio2",
-                              "constants": [],
-                              "variables": [
-                                "DV_Ratio2"
-                              ]
+                              "displayLines": "DV_Ratio2"
                             },
                             "dmgFormula": "Break DMG Scaling",
                             "dmgFormulaFinal": "Pure (No DMG%)",

@@ -166,12 +166,7 @@ const compositeAbilityObject = {
                                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;",
                                 "compareType": ">",
                                 "value2": {
-                                  "operator": "Variables[0] (W2_Valkyrie02_00_Skill04_CurrentActionDelay) || RETURN",
-                                  "displayLines": "W2_Valkyrie02_00_Skill04_CurrentActionDelay",
-                                  "constants": [],
-                                  "variables": [
-                                    "W2_Valkyrie02_00_Skill04_CurrentActionDelay"
-                                  ]
+                                  "displayLines": "W2_Valkyrie02_00_Skill04_CurrentActionDelay"
                                 }
                               },
                               {
@@ -509,12 +504,7 @@ const compositeAbilityObject = {
                                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;",
                                 "compareType": ">",
                                 "value2": {
-                                  "operator": "Variables[0] (W2_Valkyrie02_00_Skill04_CurrentActionDelay) || RETURN",
-                                  "displayLines": "W2_Valkyrie02_00_Skill04_CurrentActionDelay",
-                                  "constants": [],
-                                  "variables": [
-                                    "W2_Valkyrie02_00_Skill04_CurrentActionDelay"
-                                  ]
+                                  "displayLines": "W2_Valkyrie02_00_Skill04_CurrentActionDelay"
                                 }
                               },
                               {
@@ -667,12 +657,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "HitSplit": 0.25,
             "Toughness": null,
@@ -690,12 +675,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "HitSplit": 0.25,
             "Toughness": null,
@@ -713,12 +693,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "HitSplit": 0.25,
             "Toughness": null,
@@ -736,12 +711,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "HitSplit": 0.25,
             "Toughness": null,
@@ -1037,12 +1007,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "HitSplit": 0.25,
             "Toughness": null,
@@ -1060,12 +1025,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "HitSplit": 0.25,
             "Toughness": null,
@@ -1083,12 +1043,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "HitSplit": 0.25,
             "Toughness": null,
@@ -1106,12 +1061,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "HitSplit": 0.25,
             "Toughness": null,
@@ -1129,12 +1079,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-              "displayLines": "{[Skill04[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[1]]}"
-              ]
+              "displayLines": "{[Skill04[1]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1228,12 +1173,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "HitSplit": 0.5,
             "Toughness": null,
@@ -1252,12 +1192,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "HitSplit": 0.5,
             "Toughness": null,
@@ -1343,20 +1278,10 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-                    "displayLines": "{[Skill03[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill03[2]]}"
-                    ]
+                    "displayLines": "{[Skill03[2]]}"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-                    "displayLines": "{[Skill03[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill03[1]]}"
-                    ]
+                    "displayLines": "{[Skill03[1]]}"
                   },
                   "valuePerStack": {
                     "MDF_Shake_ActionDelayRatio": 0.7
@@ -1406,20 +1331,10 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-                    "displayLines": "{[Skill03[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill03[2]]}"
-                    ]
+                    "displayLines": "{[Skill03[2]]}"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-                    "displayLines": "{[Skill03[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill03[1]]}"
-                    ]
+                    "displayLines": "{[Skill03[1]]}"
                   },
                   "valuePerStack": {
                     "MDF_Shake_ActionDelayRatio": 0.7
@@ -1483,12 +1398,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1531,20 +1441,10 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                "displayLines": "{[Skill02[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill02[2]]}"
-                ]
+                "displayLines": "{[Skill02[2]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                "displayLines": "{[Skill02[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill02[1]]}"
-                ]
+                "displayLines": "{[Skill02[1]]}"
               },
               "valuePerStack": {
                 "MDF_Shake_ActionDelayRatio": 0.7
@@ -1616,14 +1516,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "({[Skill01[0]]} * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "({[Skill01[0]]} * 0.5)"
             },
             "Toughness": null,
             "Tags": null,
@@ -1641,14 +1534,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "({[Skill01[0]]} * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "({[Skill01[0]]} * 0.5)"
             },
             "Toughness": null,
             "Tags": null,

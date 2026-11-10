@@ -36,14 +36,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceLightningBonus</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           ]
@@ -72,14 +65,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFireBonus</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           ]
@@ -108,14 +94,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistancePhysicalBonus</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           ]
@@ -144,14 +123,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindBonus</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           ]
@@ -202,12 +174,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 },
@@ -220,12 +187,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 },
@@ -238,12 +200,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 },
@@ -256,12 +213,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -287,12 +239,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -318,12 +265,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -349,12 +291,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -380,12 +317,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -477,12 +409,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -542,12 +469,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -607,12 +529,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -672,12 +589,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -727,12 +639,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 },
@@ -745,12 +652,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 },
@@ -763,12 +665,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 },
@@ -781,12 +678,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -927,12 +819,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 },
@@ -945,12 +832,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 },
@@ -963,12 +845,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 },
@@ -981,12 +858,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -1008,12 +880,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -1035,12 +902,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -1062,12 +924,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -1089,12 +946,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -1131,12 +983,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1077373681\">BlackSwan_Eidolon1_SubOnEnemy</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     }
                   }
                 }
@@ -1157,12 +1004,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1077373681\">BlackSwan_Eidolon1_SubOnEnemy</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.25) || RETURN",
-                  "displayLines": "0.25",
-                  "constants": [],
-                  "variables": [
-                    0.25
-                  ]
+                  "displayLines": "0.25"
                 }
               }
             }

@@ -35,12 +35,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">QuantumVulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                "displayLines": "#BattleEvent_P2_ADF",
-                "constants": [],
-                "variables": [
-                  "#BattleEvent_P2_ADF"
-                ]
+                "displayLines": "#BattleEvent_P2_ADF"
               }
             }
           ]
@@ -84,12 +79,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-235869909\">MLevel_BattleEventAbility_Challenge_07</a>[<span class=\"descriptionNumberColor\">Quantum Vulnerability</span>]",
                   "duration": {
-                    "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P3_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P3_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P3_ADF"
                   }
                 }
               ]

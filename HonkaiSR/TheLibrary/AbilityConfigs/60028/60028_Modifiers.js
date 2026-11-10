@@ -76,12 +76,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                "displayLines": "{[Skill03[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill03[0]]}"
-                ]
+                "displayLines": "{[Skill03[0]]}"
               },
               "variableName": "MDF_DamageUpRatio"
             },
@@ -93,12 +88,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageUpRatio) || RETURN",
-                "displayLines": "MDF_DamageUpRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageUpRatio"
-                ]
+                "displayLines": "MDF_DamageUpRatio"
               }
             }
           ]

@@ -71,13 +71,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.08) || Variables[1] (_Layer) || MUL || RETURN",
-                    "displayLines": "(0.08 * _Layer)",
-                    "constants": [],
-                    "variables": [
-                      0.08,
-                      "_Layer"
-                    ]
+                    "displayLines": "(0.08 * _Layer)"
                   }
                 }
               ]
@@ -106,21 +100,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1796724281\">LC_22005_Sub</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "valuePerStack": {
                         "MDF_MaxLayer": {
-                          "operator": "Variables[0] (3) || RETURN",
-                          "displayLines": "3",
-                          "constants": [],
-                          "variables": [
-                            3
-                          ]
+                          "displayLines": "3"
                         }
                       }
                     }

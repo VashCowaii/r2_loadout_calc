@@ -125,26 +125,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_PowerCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(MDF_PowerCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_PowerCount"
-                    ]
+                    "displayLines": "(MDF_PowerCount + 1)"
                   },
                   "variableName": "MDF_PowerCount"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_PowerCount) || RETURN",
-                    "displayLines": "MDF_PowerCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PowerCount"
-                    ]
+                    "displayLines": "MDF_PowerCount"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -201,14 +189,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_TurnCount) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(MDF_TurnCount - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_TurnCount"
-                    ]
+                    "displayLines": "(MDF_TurnCount - 1)"
                   },
                   "variableName": "MDF_TurnCount"
                 }
@@ -217,12 +198,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_TurnCount) || RETURN",
-                "displayLines": "MDF_TurnCount",
-                "constants": [],
-                "variables": [
-                  "MDF_TurnCount"
-                ]
+                "displayLines": "MDF_TurnCount"
               },
               "entityClass": "Enemy",
               "target": {
@@ -246,24 +222,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] ({[SkillEX02[1]]}) || RETURN",
-                "displayLines": "{[SkillEX02[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillEX02[1]]}"
-                ]
+                "displayLines": "{[SkillEX02[1]]}"
               },
               "variableName": "MDF_ShowValue1"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] ({[SkillEX02[0]]}) || RETURN",
-                "displayLines": "{[SkillEX02[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillEX02[0]]}"
-                ]
+                "displayLines": "{[SkillEX02[0]]}"
               },
               "variableName": "MDF_ShowValue2"
             },
@@ -275,12 +241,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] ({[SkillEX02[1]]}) || RETURN",
-                "displayLines": "{[SkillEX02[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillEX02[1]]}"
-                ]
+                "displayLines": "{[SkillEX02[1]]}"
               }
             },
             {
@@ -291,23 +252,13 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] ({[SkillEX02[0]]}) || RETURN",
-                "displayLines": "{[SkillEX02[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillEX02[0]]}"
-                ]
+                "displayLines": "{[SkillEX02[0]]}"
               }
             },
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_TurnCount) || RETURN",
-                "displayLines": "MDF_TurnCount",
-                "constants": [],
-                "variables": [
-                  "MDF_TurnCount"
-                ]
+                "displayLines": "MDF_TurnCount"
               },
               "entityClass": "Enemy",
               "target": {
@@ -365,14 +316,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_TurnCount) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(MDF_TurnCount - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_TurnCount"
-                    ]
+                    "displayLines": "(MDF_TurnCount - 1)"
                   },
                   "variableName": "MDF_TurnCount"
                 }
@@ -381,12 +325,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_TurnCount) || RETURN",
-                "displayLines": "MDF_TurnCount",
-                "constants": [],
-                "variables": [
-                  "MDF_TurnCount"
-                ]
+                "displayLines": "MDF_TurnCount"
               },
               "entityClass": "Enemy",
               "target": {
@@ -410,12 +349,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] ({[SkillEX02[2]]}) || RETURN",
-                "displayLines": "{[SkillEX02[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillEX02[2]]}"
-                ]
+                "displayLines": "{[SkillEX02[2]]}"
               },
               "variableName": "MDF_ShowValue1"
             },
@@ -427,23 +361,13 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] ({[SkillEX02[2]]}) || RETURN",
-                "displayLines": "{[SkillEX02[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillEX02[2]]}"
-                ]
+                "displayLines": "{[SkillEX02[2]]}"
               }
             },
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_TurnCount) || RETURN",
-                "displayLines": "MDF_TurnCount",
-                "constants": [],
-                "variables": [
-                  "MDF_TurnCount"
-                ]
+                "displayLines": "MDF_TurnCount"
               },
               "entityClass": "Enemy",
               "target": {

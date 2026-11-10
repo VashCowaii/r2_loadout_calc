@@ -215,12 +215,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
       "valuePerStack": {
         "MDF_DamageUpRatio_PerLayer": {
-          "operator": "Variables[0] ({[SkillP03[0]]}) || RETURN",
-          "displayLines": "{[SkillP03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP03[0]]}"
-          ]
+          "displayLines": "{[SkillP03[0]]}"
         }
       },
       "casterAssign": "TargetSelf"
@@ -268,30 +263,15 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1860338310\">Enemy_W4_Nikadory_IF_SuperShieldP2</a>[<span class=\"descriptionNumberColor\">Centirefined War Armor</span>]",
           "stackLimit": {
-            "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-            "displayLines": "{[SkillEX03[0]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillEX03[0]]}"
-            ]
+            "displayLines": "{[SkillEX03[0]]}"
           },
           "valuePerStack": {
             "MDF_AllDamageReduce": {
-              "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-              "displayLines": "{[SkillP01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[4]]}"
-              ]
+              "displayLines": "{[SkillP01[4]]}"
             }
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-            "displayLines": "{[SkillEX03[0]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillEX03[0]]}"
-            ]
+            "displayLines": "{[SkillEX03[0]]}"
           }
         }
       ],
@@ -304,30 +284,15 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1860338310\">Enemy_W4_Nikadory_IF_SuperShieldP2</a>[<span class=\"descriptionNumberColor\">Centirefined War Armor</span>]",
           "stackLimit": {
-            "operator": "Variables[0] ({[SkillP02[0]]}) || RETURN",
-            "displayLines": "{[SkillP02[0]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP02[0]]}"
-            ]
+            "displayLines": "{[SkillP02[0]]}"
           },
           "valuePerStack": {
             "MDF_AllDamageReduce": {
-              "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-              "displayLines": "{[SkillP01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[4]]}"
-              ]
+              "displayLines": "{[SkillP01[4]]}"
             }
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] ({[SkillP02[0]]}) || RETURN",
-            "displayLines": "{[SkillP02[0]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP02[0]]}"
-            ]
+            "displayLines": "{[SkillP02[0]]}"
           }
         }
       ]

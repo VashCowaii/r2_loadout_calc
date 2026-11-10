@@ -20,14 +20,7 @@ const configAbility = {
     {
       "name": "Skill Points Modification",
       "adjustmentValue": {
-        "operator": "Constants[0] (0) || Variables[0] ({[Skill08[0]]}) || SUB || RETURN",
-        "displayLines": "(0 - {[Skill08[0]]})",
-        "constants": [
-          0
-        ],
-        "variables": [
-          "{[Skill08[0]]}"
-        ]
+        "displayLines": "(0 - {[Skill08[0]]})"
       },
       "adjustmentType": "+"
     }

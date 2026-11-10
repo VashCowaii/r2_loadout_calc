@@ -61,47 +61,20 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]",
           "duration": {
-            "operator": "Variables[0] (UnusedUnderThisBase_9509) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(UnusedUnderThisBase_9509 + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "UnusedUnderThisBase_9509"
-            ]
+            "displayLines": "(UnusedUnderThisBase_9509 + 1)"
           },
           "baseChance": {
-            "operator": "Variables[0] (UnusedUnderThisBase_9503) || RETURN",
-            "displayLines": "UnusedUnderThisBase_9503",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_9503"
-            ]
+            "displayLines": "UnusedUnderThisBase_9503"
           },
           "valuePerStack": {
             "MDF_MindControlDamagePercentage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_12801) || RETURN",
-              "displayLines": "UnusedUnderThisBase_12801",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_12801"
-              ]
+              "displayLines": "UnusedUnderThisBase_12801"
             },
             "MDF_MaxDamageRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_9518) || RETURN",
-              "displayLines": "UnusedUnderThisBase_9518",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_9518"
-              ]
+              "displayLines": "UnusedUnderThisBase_9518"
             },
             "MDF_MinDamageRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_9507) || RETURN",
-              "displayLines": "UnusedUnderThisBase_9507",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_9507"
-              ]
+              "displayLines": "UnusedUnderThisBase_9507"
             }
           },
           "success": [

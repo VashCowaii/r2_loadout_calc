@@ -67,12 +67,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -425,12 +420,7 @@ const compositeAbilityObject = {
                                 "value1": "HP_Bars_Remaining",
                                 "compareType": "NOT=",
                                 "value2": {
-                                  "operator": "Variables[0] (MaxPhase) || RETURN",
-                                  "displayLines": "MaxPhase",
-                                  "constants": [],
-                                  "variables": [
-                                    "MaxPhase"
-                                  ]
+                                  "displayLines": "MaxPhase"
                                 }
                               },
                               {
@@ -657,12 +647,7 @@ const compositeAbilityObject = {
           "conditions": {
             "name": "Enemy ID",
             "ID": {
-              "operator": "Variables[0] (SummonID01) || RETURN",
-              "displayLines": "SummonID01",
-              "constants": [],
-              "variables": [
-                "SummonID01"
-              ]
+              "displayLines": "SummonID01"
             },
             "target": {
               "name": "Target Name",
@@ -686,24 +671,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-                    "displayLines": "{[Skill03[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill03[1]]}"
-                    ]
+                    "displayLines": "{[Skill03[1]]}"
                   },
                   "refreshPositions": false,
                   "enemyList": [
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonID01) || RETURN",
-                        "displayLines": "SummonID01",
-                        "constants": [],
-                        "variables": [
-                          "SummonID01"
-                        ]
+                        "displayLines": "SummonID01"
                       },
                       "locationType": "First"
                     }
@@ -714,24 +689,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-                    "displayLines": "{[Skill03[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill03[1]]}"
-                    ]
+                    "displayLines": "{[Skill03[1]]}"
                   },
                   "refreshPositions": false,
                   "enemyList": [
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonID01) || RETURN",
-                        "displayLines": "SummonID01",
-                        "constants": [],
-                        "variables": [
-                          "SummonID01"
-                        ]
+                        "displayLines": "SummonID01"
                       },
                       "locationType": "Last"
                     }
@@ -752,12 +717,7 @@ const compositeAbilityObject = {
           "conditions": {
             "name": "Enemy ID",
             "ID": {
-              "operator": "Variables[0] (SummonID03) || RETURN",
-              "displayLines": "SummonID03",
-              "constants": [],
-              "variables": [
-                "SummonID03"
-              ]
+              "displayLines": "SummonID03"
             },
             "target": {
               "name": "Target Name",
@@ -781,24 +741,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-                    "displayLines": "{[Skill03[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill03[2]]}"
-                    ]
+                    "displayLines": "{[Skill03[2]]}"
                   },
                   "refreshPositions": false,
                   "enemyList": [
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonID03) || RETURN",
-                        "displayLines": "SummonID03",
-                        "constants": [],
-                        "variables": [
-                          "SummonID03"
-                        ]
+                        "displayLines": "SummonID03"
                       },
                       "locationType": "First"
                     }
@@ -809,24 +759,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-                    "displayLines": "{[Skill03[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill03[2]]}"
-                    ]
+                    "displayLines": "{[Skill03[2]]}"
                   },
                   "refreshPositions": false,
                   "enemyList": [
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonID03) || RETURN",
-                        "displayLines": "SummonID03",
-                        "constants": [],
-                        "variables": [
-                          "SummonID03"
-                        ]
+                        "displayLines": "SummonID03"
                       },
                       "locationType": "Last"
                     }
@@ -851,24 +791,14 @@ const compositeAbilityObject = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                "displayLines": "{[Skill03[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill03[0]]}"
-                ]
+                "displayLines": "{[Skill03[0]]}"
               },
               "refreshPositions": false,
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonID02) || RETURN",
-                    "displayLines": "SummonID02",
-                    "constants": [],
-                    "variables": [
-                      "SummonID02"
-                    ]
+                    "displayLines": "SummonID02"
                   },
                   "locationType": "First"
                 }
@@ -879,24 +809,14 @@ const compositeAbilityObject = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                "displayLines": "{[Skill03[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill03[0]]}"
-                ]
+                "displayLines": "{[Skill03[0]]}"
               },
               "refreshPositions": false,
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonID02) || RETURN",
-                    "displayLines": "SummonID02",
-                    "constants": [],
-                    "variables": [
-                      "SummonID02"
-                    ]
+                    "displayLines": "SummonID02"
                   },
                   "locationType": "Last"
                 }
@@ -919,24 +839,14 @@ const compositeAbilityObject = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                "displayLines": "{[Skill03[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill03[0]]}"
-                ]
+                "displayLines": "{[Skill03[0]]}"
               },
               "refreshPositions": false,
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonID02) || RETURN",
-                    "displayLines": "SummonID02",
-                    "constants": [],
-                    "variables": [
-                      "SummonID02"
-                    ]
+                    "displayLines": "SummonID02"
                   },
                   "locationType": "First"
                 }
@@ -947,24 +857,14 @@ const compositeAbilityObject = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                "displayLines": "{[Skill03[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill03[0]]}"
-                ]
+                "displayLines": "{[Skill03[0]]}"
               },
               "refreshPositions": false,
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonID02) || RETURN",
-                    "displayLines": "SummonID02",
-                    "constants": [],
-                    "variables": [
-                      "SummonID02"
-                    ]
+                    "displayLines": "SummonID02"
                   },
                   "locationType": "Last"
                 }
@@ -1071,12 +971,7 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-488812813\">Enemy_W2_Argenti_Power_RL</a>[<span class=\"descriptionNumberColor\">Soul Ascension</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                "displayLines": "{[Skill04[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[0]]}"
-                ]
+                "displayLines": "{[Skill04[0]]}"
               }
             }
           ],
@@ -1089,12 +984,7 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-431168288\">Enemy_W2_Argenti_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                "displayLines": "{[Skill04[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[0]]}"
-                ]
+                "displayLines": "{[Skill04[0]]}"
               }
             }
           ]
@@ -1165,14 +1055,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || Constants[0] (0.2) || MUL || RETURN",
-              "displayLines": "({[Skill05[0]]} * 0.2)",
-              "constants": [
-                0.2
-              ],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "({[Skill05[0]]} * 0.2)"
             },
             "Toughness": null,
             "Tags": null,
@@ -1189,14 +1072,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || Constants[0] (0.8) || MUL || RETURN",
-              "displayLines": "({[Skill05[0]]} * 0.8)",
-              "constants": [
-                0.8
-              ],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "({[Skill05[0]]} * 0.8)"
             },
             "Toughness": null,
             "Tags": null,
@@ -1240,12 +1116,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"352751855\">Monster_W1_Gepard_RL_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "valuePerStack": {
                 "MDF_DamageAddedRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9045) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9045",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_9045"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_9045"
                 }
               }
             }
@@ -1386,12 +1257,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-488812813\">Enemy_W2_Argenti_Power_RL</a>[<span class=\"descriptionNumberColor\">Soul Ascension</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                    "displayLines": "{[Skill04[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill04[0]]}"
-                    ]
+                    "displayLines": "{[Skill04[0]]}"
                   }
                 },
                 {
@@ -1422,12 +1288,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-431168288\">Enemy_W2_Argenti_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                    "displayLines": "{[Skill04[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill04[0]]}"
-                    ]
+                    "displayLines": "{[Skill04[0]]}"
                   }
                 }
               ]
@@ -1490,12 +1351,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-488812813\">Enemy_W2_Argenti_Power_RL</a>[<span class=\"descriptionNumberColor\">Soul Ascension</span>]",
                       "duration": {
-                        "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                        "displayLines": "{[Skill04[0]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill04[0]]}"
-                        ]
+                        "displayLines": "{[Skill04[0]]}"
                       }
                     },
                     {
@@ -1526,12 +1382,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-431168288\">Enemy_W2_Argenti_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]",
                       "duration": {
-                        "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                        "displayLines": "{[Skill04[0]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill04[0]]}"
-                        ]
+                        "displayLines": "{[Skill04[0]]}"
                       }
                     }
                   ]
@@ -1609,24 +1460,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-                    "displayLines": "{[Skill03[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill03[1]]}"
-                    ]
+                    "displayLines": "{[Skill03[1]]}"
                   },
                   "refreshPositions": false,
                   "enemyList": [
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonID01) || RETURN",
-                        "displayLines": "SummonID01",
-                        "constants": [],
-                        "variables": [
-                          "SummonID01"
-                        ]
+                        "displayLines": "SummonID01"
                       },
                       "locationType": "First"
                     }
@@ -1637,24 +1478,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-                    "displayLines": "{[Skill03[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill03[1]]}"
-                    ]
+                    "displayLines": "{[Skill03[1]]}"
                   },
                   "refreshPositions": false,
                   "enemyList": [
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonID01) || RETURN",
-                        "displayLines": "SummonID01",
-                        "constants": [],
-                        "variables": [
-                          "SummonID01"
-                        ]
+                        "displayLines": "SummonID01"
                       },
                       "locationType": "Last"
                     }
@@ -1673,12 +1504,7 @@ const compositeAbilityObject = {
               "conditions": {
                 "name": "Enemy ID",
                 "ID": {
-                  "operator": "Variables[0] (SummonID02) || RETURN",
-                  "displayLines": "SummonID02",
-                  "constants": [],
-                  "variables": [
-                    "SummonID02"
-                  ]
+                  "displayLines": "SummonID02"
                 },
                 "target": {
                   "name": "Target Name",
@@ -1702,24 +1528,14 @@ const compositeAbilityObject = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-                        "displayLines": "{[Skill03[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill03[1]]}"
-                        ]
+                        "displayLines": "{[Skill03[1]]}"
                       },
                       "refreshPositions": false,
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonID01) || RETURN",
-                            "displayLines": "SummonID01",
-                            "constants": [],
-                            "variables": [
-                              "SummonID01"
-                            ]
+                            "displayLines": "SummonID01"
                           },
                           "locationType": "First"
                         }
@@ -1730,24 +1546,14 @@ const compositeAbilityObject = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-                        "displayLines": "{[Skill03[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill03[1]]}"
-                        ]
+                        "displayLines": "{[Skill03[1]]}"
                       },
                       "refreshPositions": false,
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonID01) || RETURN",
-                            "displayLines": "SummonID01",
-                            "constants": [],
-                            "variables": [
-                              "SummonID01"
-                            ]
+                            "displayLines": "SummonID01"
                           },
                           "locationType": "Last"
                         }
@@ -1772,24 +1578,14 @@ const compositeAbilityObject = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                        "displayLines": "{[Skill03[0]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill03[0]]}"
-                        ]
+                        "displayLines": "{[Skill03[0]]}"
                       },
                       "refreshPositions": false,
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonID02) || RETURN",
-                            "displayLines": "SummonID02",
-                            "constants": [],
-                            "variables": [
-                              "SummonID02"
-                            ]
+                            "displayLines": "SummonID02"
                           },
                           "locationType": "First"
                         }
@@ -1800,24 +1596,14 @@ const compositeAbilityObject = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                        "displayLines": "{[Skill03[0]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill03[0]]}"
-                        ]
+                        "displayLines": "{[Skill03[0]]}"
                       },
                       "refreshPositions": false,
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonID02) || RETURN",
-                            "displayLines": "SummonID02",
-                            "constants": [],
-                            "variables": [
-                              "SummonID02"
-                            ]
+                            "displayLines": "SummonID02"
                           },
                           "locationType": "Last"
                         }
@@ -1838,12 +1624,7 @@ const compositeAbilityObject = {
               "conditions": {
                 "name": "Enemy ID",
                 "ID": {
-                  "operator": "Variables[0] (SummonID03) || RETURN",
-                  "displayLines": "SummonID03",
-                  "constants": [],
-                  "variables": [
-                    "SummonID03"
-                  ]
+                  "displayLines": "SummonID03"
                 },
                 "target": {
                   "name": "Target Name",
@@ -1867,24 +1648,14 @@ const compositeAbilityObject = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-                        "displayLines": "{[Skill03[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill03[1]]}"
-                        ]
+                        "displayLines": "{[Skill03[1]]}"
                       },
                       "refreshPositions": false,
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonID01) || RETURN",
-                            "displayLines": "SummonID01",
-                            "constants": [],
-                            "variables": [
-                              "SummonID01"
-                            ]
+                            "displayLines": "SummonID01"
                           },
                           "locationType": "First"
                         }
@@ -1895,24 +1666,14 @@ const compositeAbilityObject = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-                        "displayLines": "{[Skill03[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill03[1]]}"
-                        ]
+                        "displayLines": "{[Skill03[1]]}"
                       },
                       "refreshPositions": false,
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonID01) || RETURN",
-                            "displayLines": "SummonID01",
-                            "constants": [],
-                            "variables": [
-                              "SummonID01"
-                            ]
+                            "displayLines": "SummonID01"
                           },
                           "locationType": "Last"
                         }
@@ -1937,24 +1698,14 @@ const compositeAbilityObject = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-                        "displayLines": "{[Skill03[2]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill03[2]]}"
-                        ]
+                        "displayLines": "{[Skill03[2]]}"
                       },
                       "refreshPositions": false,
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonID03) || RETURN",
-                            "displayLines": "SummonID03",
-                            "constants": [],
-                            "variables": [
-                              "SummonID03"
-                            ]
+                            "displayLines": "SummonID03"
                           },
                           "locationType": "First"
                         }
@@ -1965,24 +1716,14 @@ const compositeAbilityObject = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-                        "displayLines": "{[Skill03[2]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill03[2]]}"
-                        ]
+                        "displayLines": "{[Skill03[2]]}"
                       },
                       "refreshPositions": false,
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonID03) || RETURN",
-                            "displayLines": "SummonID03",
-                            "constants": [],
-                            "variables": [
-                              "SummonID03"
-                            ]
+                            "displayLines": "SummonID03"
                           },
                           "locationType": "Last"
                         }
@@ -2056,12 +1797,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -2078,12 +1814,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-              "displayLines": "{[Skill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[1]]}"
-              ]
+              "displayLines": "{[Skill02[1]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -2147,12 +1878,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -2289,12 +2015,7 @@ const compositeAbilityObject = {
                     "value1": "MDF_WaveIndex",
                     "compareType": "NOT=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_WaveIndex2) || RETURN",
-                      "displayLines": "MDF_WaveIndex2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_WaveIndex2"
-                      ]
+                      "displayLines": "MDF_WaveIndex2"
                     }
                   },
                   "passed": [

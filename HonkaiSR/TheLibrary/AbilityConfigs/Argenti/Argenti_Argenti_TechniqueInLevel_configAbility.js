@@ -71,12 +71,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Physical",
                         "Damage": {
-                          "operator": "Variables[0] (0.8) || RETURN",
-                          "displayLines": "0.8",
-                          "constants": [],
-                          "variables": [
-                            0.8
-                          ]
+                          "displayLines": "0.8"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -93,12 +88,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (15) || RETURN",
-                    "displayLines": "15",
-                    "constants": [],
-                    "variables": [
-                      15
-                    ]
+                    "displayLines": "15"
                   },
                   "isFixed": "* ERR"
                 }

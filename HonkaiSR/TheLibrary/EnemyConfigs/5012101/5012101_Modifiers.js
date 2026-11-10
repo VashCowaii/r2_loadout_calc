@@ -35,12 +35,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (ModifierLayers) || RETURN",
-                "displayLines": "ModifierLayers",
-                "constants": [],
-                "variables": [
-                  "ModifierLayers"
-                ]
+                "displayLines": "ModifierLayers"
               },
               "entityClass": "Enemy",
               "target": {
@@ -48,12 +43,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (ModifierMaxLayers) || RETURN",
-                "displayLines": "ModifierMaxLayers",
-                "constants": [],
-                "variables": [
-                  "ModifierMaxLayers"
-                ]
+                "displayLines": "ModifierMaxLayers"
               },
               "assignState": "True",
               "state": "Normal",
@@ -245,12 +235,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (ModifierLayers) || RETURN",
-                "displayLines": "ModifierLayers",
-                "constants": [],
-                "variables": [
-                  "ModifierLayers"
-                ]
+                "displayLines": "ModifierLayers"
               },
               "entityClass": "Enemy",
               "target": {
@@ -258,12 +243,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (ModifierMaxLayers) || RETURN",
-                "displayLines": "ModifierMaxLayers",
-                "constants": [],
-                "variables": [
-                  "ModifierMaxLayers"
-                ]
+                "displayLines": "ModifierMaxLayers"
               },
               "assignState": "True",
               "state": "Normal"

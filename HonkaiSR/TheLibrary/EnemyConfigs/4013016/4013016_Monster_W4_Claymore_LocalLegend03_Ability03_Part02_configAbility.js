@@ -47,15 +47,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || Variables[1] ({[Skill03[2]]}) || Variables[2] (SummonCount) || MUL || ADD || Variables[3] (TargetCount) || DIV || RETURN",
-          "displayLines": "(({[Skill03[0]]} + ({[Skill03[2]]} * SummonCount)) / TargetCount)",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}",
-            "{[Skill03[2]]}",
-            "SummonCount",
-            "TargetCount"
-          ]
+          "displayLines": "(({[Skill03[0]]} + ({[Skill03[2]]} * SummonCount)) / TargetCount)"
         },
         "Toughness": null,
         "Tags": null,
@@ -71,22 +63,11 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-351944820\">MModifier_Monster_W4_Claymore_Ability04_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
       "duration": {
-        "operator": "Variables[0] ({[Skill03[3]]}) || RETURN",
-        "displayLines": "{[Skill03[3]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill03[3]]}"
-        ]
+        "displayLines": "{[Skill03[3]]}"
       },
       "valuePerStack": {
         "MDF_DamageTakenUpRatio": {
-          "operator": "Variables[0] ({[Skill03[1]]}) || Variables[1] (TargetCount) || DIV || RETURN",
-          "displayLines": "({[Skill03[1]]} / TargetCount)",
-          "constants": [],
-          "variables": [
-            "{[Skill03[1]]}",
-            "TargetCount"
-          ]
+          "displayLines": "({[Skill03[1]]} / TargetCount)"
         }
       }
     },

@@ -22,12 +22,7 @@ const configAbility = {
           "ID": "150401(SkillMaze)",
           "counter": 1,
           "duration": {
-            "operator": "Variables[0] (10) || RETURN",
-            "displayLines": "10",
-            "constants": [],
-            "variables": [
-              10
-            ]
+            "displayLines": "10"
           },
           "conditions": {
             "name": "Has Flag",
@@ -63,13 +58,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.04) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(0.04 * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  0.04,
-                  "MDF_Layer"
-                ]
+                "displayLines": "(0.04 * MDF_Layer)"
               },
               "variableName": "MDF_TotalRatio"
             },
@@ -81,12 +70,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_TotalRatio) || RETURN",
-                "displayLines": "MDF_TotalRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_TotalRatio"
-                ]
+                "displayLines": "MDF_TotalRatio"
               },
               "isRefresh": true
             }
@@ -116,12 +100,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeResistenceDown) || INVERT || RETURN",
-                "displayLines": "-MDF_AllDamageTypeResistenceDown",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeResistenceDown"
-                ]
+                "displayLines": "-MDF_AllDamageTypeResistenceDown"
               },
               "isRefresh": true
             }
@@ -152,12 +131,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AttackUp) || RETURN",
-                "displayLines": "MDF_AttackUp",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackUp"
-                ]
+                "displayLines": "MDF_AttackUp"
               },
               "isRefresh": true
             }
@@ -194,12 +168,7 @@ const configAbility = {
                 "value1": "MDF_HPRatio",
                 "compareType": "<=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_HPThreshold) || RETURN",
-                  "displayLines": "MDF_HPThreshold",
-                  "constants": [],
-                  "variables": [
-                    "MDF_HPThreshold"
-                  ]
+                  "displayLines": "MDF_HPThreshold"
                 }
               },
               "passed": [
@@ -211,24 +180,14 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageTakenAdd2) || RETURN",
-                    "displayLines": "MDF_DamageTakenAdd2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageTakenAdd2"
-                    ]
+                    "displayLines": "MDF_DamageTakenAdd2"
                   },
                   "isRefresh": true
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageTakenAdd2) || RETURN",
-                    "displayLines": "MDF_DamageTakenAdd2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageTakenAdd2"
-                    ]
+                    "displayLines": "MDF_DamageTakenAdd2"
                   },
                   "variableName": "MDF_DamageTakenForShow"
                 }
@@ -242,24 +201,14 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageTakenAdd1) || RETURN",
-                    "displayLines": "MDF_DamageTakenAdd1",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageTakenAdd1"
-                    ]
+                    "displayLines": "MDF_DamageTakenAdd1"
                   },
                   "isRefresh": true
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageTakenAdd1) || RETURN",
-                    "displayLines": "MDF_DamageTakenAdd1",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageTakenAdd1"
-                    ]
+                    "displayLines": "MDF_DamageTakenAdd1"
                   },
                   "variableName": "MDF_DamageTakenForShow"
                 }
@@ -285,12 +234,7 @@ const configAbility = {
                 "value1": "MDF_HPRatio",
                 "compareType": "<=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_HPThreshold) || RETURN",
-                  "displayLines": "MDF_HPThreshold",
-                  "constants": [],
-                  "variables": [
-                    "MDF_HPThreshold"
-                  ]
+                  "displayLines": "MDF_HPThreshold"
                 }
               },
               "passed": [
@@ -302,24 +246,14 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageTakenAdd2) || RETURN",
-                    "displayLines": "MDF_DamageTakenAdd2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageTakenAdd2"
-                    ]
+                    "displayLines": "MDF_DamageTakenAdd2"
                   },
                   "isRefresh": true
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageTakenAdd2) || RETURN",
-                    "displayLines": "MDF_DamageTakenAdd2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageTakenAdd2"
-                    ]
+                    "displayLines": "MDF_DamageTakenAdd2"
                   },
                   "variableName": "MDF_DamageTakenForShow"
                 }
@@ -333,24 +267,14 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageTakenAdd1) || RETURN",
-                    "displayLines": "MDF_DamageTakenAdd1",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageTakenAdd1"
-                    ]
+                    "displayLines": "MDF_DamageTakenAdd1"
                   },
                   "isRefresh": true
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageTakenAdd1) || RETURN",
-                    "displayLines": "MDF_DamageTakenAdd1",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageTakenAdd1"
-                    ]
+                    "displayLines": "MDF_DamageTakenAdd1"
                   },
                   "variableName": "MDF_DamageTakenForShow"
                 }
@@ -377,28 +301,13 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_DamageTakenAdd1": {
-              "operator": "Variables[0] (0.24) || RETURN",
-              "displayLines": "0.24",
-              "constants": [],
-              "variables": [
-                0.24
-              ]
+              "displayLines": "0.24"
             },
             "MDF_DamageTakenAdd2": {
-              "operator": "Variables[0] (0.36) || RETURN",
-              "displayLines": "0.36",
-              "constants": [],
-              "variables": [
-                0.36
-              ]
+              "displayLines": "0.36"
             },
             "MDF_HPThreshold": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             }
           }
         }
@@ -453,12 +362,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_CriticalDamage) || RETURN",
-                "displayLines": "MDF_CriticalDamage",
-                "constants": [],
-                "variables": [
-                  "MDF_CriticalDamage"
-                ]
+                "displayLines": "MDF_CriticalDamage"
               },
               "isRefresh": true
             }
@@ -483,20 +387,10 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_CriticalDamage": {
-              "operator": "Variables[0] (MDF_CriticalDamageTemp) || RETURN",
-              "displayLines": "MDF_CriticalDamageTemp",
-              "constants": [],
-              "variables": [
-                "MDF_CriticalDamageTemp"
-              ]
+              "displayLines": "MDF_CriticalDamageTemp"
             },
             "MDF_InsertCriticalDamageAdd": {
-              "operator": "Variables[0] (MDF_InsertCriticalDamageAddTemp) || RETURN",
-              "displayLines": "MDF_InsertCriticalDamageAddTemp",
-              "constants": [],
-              "variables": [
-                "MDF_InsertCriticalDamageAddTemp"
-              ]
+              "displayLines": "MDF_InsertCriticalDamageAddTemp"
             }
           }
         }
@@ -524,28 +418,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (FLOOR) || Variables[1] (SkillP01_EnhanceInsertBuffStack) || Variables[2] (1) || DIV || PARAM_1 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((SkillP01_EnhanceInsertBuffStack / 1))",
-                    "constants": [],
-                    "variables": [
-                      "FLOOR",
-                      "SkillP01_EnhanceInsertBuffStack",
-                      1
-                    ]
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((SkillP01_EnhanceInsertBuffStack / 1))"
                   },
                   "variableName": "MDF_Cal1"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (0.8) || Variables[1] (0.1) || Variables[2] (MDF_Cal1) || MUL || ADD || RETURN",
-                    "displayLines": "(0.8 + (0.1 * MDF_Cal1))",
-                    "constants": [],
-                    "variables": [
-                      0.8,
-                      0.1,
-                      "MDF_Cal1"
-                    ]
+                    "displayLines": "(0.8 + (0.1 * MDF_Cal1))"
                   },
                   "variableName": "MDF_Cal2"
                 },
@@ -640,14 +520,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_EnemyCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_EnemyCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_EnemyCount"
-                        ]
+                        "displayLines": "(MDF_EnemyCount + 1)"
                       },
                       "variableName": "MDF_EnemyCount"
                     }
@@ -660,25 +533,14 @@ const configAbility = {
                     "value1": "MDF_EnemyCount",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     }
                   },
                   "execute": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (SkillP01_EnhanceInsertBuffStack) || Variables[1] (1) || ADD || RETURN",
-                        "displayLines": "(SkillP01_EnhanceInsertBuffStack + 1)",
-                        "constants": [],
-                        "variables": [
-                          "SkillP01_EnhanceInsertBuffStack",
-                          1
-                        ]
+                        "displayLines": "(SkillP01_EnhanceInsertBuffStack + 1)"
                       },
                       "variableName": "SkillP01_EnhanceInsertBuffStack"
                     },
@@ -697,20 +559,10 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-1033168707\">Ashveil_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">Finale: And Then There Were None</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (30) || RETURN",
-                            "displayLines": "30",
-                            "constants": [],
-                            "variables": [
-                              30
-                            ]
+                            "displayLines": "30"
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (1) || RETURN",
-                            "displayLines": "1",
-                            "constants": [],
-                            "variables": [
-                              1
-                            ]
+                            "displayLines": "1"
                           }
                         }
                       ]
@@ -718,13 +570,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_EnemyCount) || Variables[1] (1) || SUB || RETURN",
-                        "displayLines": "(MDF_EnemyCount - 1)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_EnemyCount",
-                          1
-                        ]
+                        "displayLines": "(MDF_EnemyCount - 1)"
                       },
                       "variableName": "MDF_EnemyCount"
                     }
@@ -753,14 +599,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (FLOOR) || Variables[1] (MDF_ExtraInsertCountForShow) || Variables[2] (4) || DIV || PARAM_1 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_ExtraInsertCountForShow / 4))",
-                "constants": [],
-                "variables": [
-                  "FLOOR",
-                  "MDF_ExtraInsertCountForShow",
-                  4
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_ExtraInsertCountForShow / 4))"
               },
               "variableName": "MDF_ExtraInsertCountForShow"
             },
@@ -768,12 +607,7 @@ const configAbility = {
               "name": "Define Modifier Variable",
               "modifierName": null,
               "value": {
-                "operator": "Variables[0] (MDF_ExtraInsertCountForShow) || RETURN",
-                "displayLines": "MDF_ExtraInsertCountForShow",
-                "constants": [],
-                "variables": [
-                  "MDF_ExtraInsertCountForShow"
-                ]
+                "displayLines": "MDF_ExtraInsertCountForShow"
               }
             }
           ]
@@ -804,24 +638,14 @@ const configAbility = {
                     "value1": "SkillP01_EnhanceInsertBuffStack",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (SkillP01_EnhanceInsertBuffStackLimit) || RETURN",
-                      "displayLines": "SkillP01_EnhanceInsertBuffStackLimit",
-                      "constants": [],
-                      "variables": [
-                        "SkillP01_EnhanceInsertBuffStackLimit"
-                      ]
+                      "displayLines": "SkillP01_EnhanceInsertBuffStackLimit"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (SkillP01_EnhanceInsertBuffStackLimit) || RETURN",
-                        "displayLines": "SkillP01_EnhanceInsertBuffStackLimit",
-                        "constants": [],
-                        "variables": [
-                          "SkillP01_EnhanceInsertBuffStackLimit"
-                        ]
+                        "displayLines": "SkillP01_EnhanceInsertBuffStackLimit"
                       },
                       "variableName": "SkillP01_EnhanceInsertBuffStack"
                     }
@@ -856,12 +680,7 @@ const configAbility = {
                       "counter": 0,
                       "valuePerStack": {
                         "MDF_LayerForShow": {
-                          "operator": "Variables[0] (SkillP01_EnhanceInsertBuffStack) || RETURN",
-                          "displayLines": "SkillP01_EnhanceInsertBuffStack",
-                          "constants": [],
-                          "variables": [
-                            "SkillP01_EnhanceInsertBuffStack"
-                          ]
+                          "displayLines": "SkillP01_EnhanceInsertBuffStack"
                         }
                       }
                     }
@@ -897,24 +716,14 @@ const configAbility = {
                     "value1": "SkillP01_CurrentEnergy",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (SkillP01_MaxEnergy) || RETURN",
-                      "displayLines": "SkillP01_MaxEnergy",
-                      "constants": [],
-                      "variables": [
-                        "SkillP01_MaxEnergy"
-                      ]
+                      "displayLines": "SkillP01_MaxEnergy"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (SkillP01_MaxEnergy) || RETURN",
-                        "displayLines": "SkillP01_MaxEnergy",
-                        "constants": [],
-                        "variables": [
-                          "SkillP01_MaxEnergy"
-                        ]
+                        "displayLines": "SkillP01_MaxEnergy"
                       },
                       "variableName": "SkillP01_CurrentEnergy"
                     }
@@ -923,12 +732,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (SkillP01_CurrentEnergy) || RETURN",
-                    "displayLines": "SkillP01_CurrentEnergy",
-                    "constants": [],
-                    "variables": [
-                      "SkillP01_CurrentEnergy"
-                    ]
+                    "displayLines": "SkillP01_CurrentEnergy"
                   },
                   "priorState": "Active"
                 },
@@ -944,12 +748,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (SkillP01_CurrentEnergy) || RETURN",
-                        "displayLines": "SkillP01_CurrentEnergy",
-                        "constants": [],
-                        "variables": [
-                          "SkillP01_CurrentEnergy"
-                        ]
+                        "displayLines": "SkillP01_CurrentEnergy"
                       },
                       "priorState": "Normal"
                     }
@@ -1404,20 +1203,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1185293706\">Ashveil_Ability02_Debuff</a>[<span class=\"descriptionNumberColor\">Bait</span>]",
                       "valuePerStack": {
                         "MDF_DefenceDownTemp": {
-                          "operator": "Variables[0] (0.4) || RETURN",
-                          "displayLines": "0.4",
-                          "constants": [],
-                          "variables": [
-                            0.4
-                          ]
+                          "displayLines": "0.4"
                         },
                         "MDF_AllDamageTypeResistenceDownTemp": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     },
@@ -1551,12 +1340,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DefenceDown) || INVERT || RETURN",
-                "displayLines": "-MDF_DefenceDown",
-                "constants": [],
-                "variables": [
-                  "MDF_DefenceDown"
-                ]
+                "displayLines": "-MDF_DefenceDown"
               },
               "isRefresh": true
             }
@@ -1593,12 +1377,7 @@ const configAbility = {
           "detectRevive": true,
           "valuePerStack": {
             "MDF_DefenceDown": {
-              "operator": "Variables[0] (MDF_DefenceDownTemp) || RETURN",
-              "displayLines": "MDF_DefenceDownTemp",
-              "constants": [],
-              "variables": [
-                "MDF_DefenceDownTemp"
-              ]
+              "displayLines": "MDF_DefenceDownTemp"
             }
           }
         },
@@ -1621,12 +1400,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_AllDamageTypeResistenceDown": {
-              "operator": "Variables[0] (MDF_AllDamageTypeResistenceDownTemp) || RETURN",
-              "displayLines": "MDF_AllDamageTypeResistenceDownTemp",
-              "constants": [],
-              "variables": [
-                "MDF_AllDamageTypeResistenceDownTemp"
-              ]
+              "displayLines": "MDF_AllDamageTypeResistenceDownTemp"
             }
           }
         }
@@ -1744,20 +1518,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1185293706\">Ashveil_Ability02_Debuff</a>[<span class=\"descriptionNumberColor\">Bait</span>]",
                       "valuePerStack": {
                         "MDF_DefenceDownTemp": {
-                          "operator": "Variables[0] (MDF_DefenceDownTemp) || RETURN",
-                          "displayLines": "MDF_DefenceDownTemp",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DefenceDownTemp"
-                          ]
+                          "displayLines": "MDF_DefenceDownTemp"
                         },
                         "MDF_AllDamageTypeResistenceDownTemp": {
-                          "operator": "Variables[0] (MDF_AllDamageTypeResistenceDownTemp) || RETURN",
-                          "displayLines": "MDF_AllDamageTypeResistenceDownTemp",
-                          "constants": [],
-                          "variables": [
-                            "MDF_AllDamageTypeResistenceDownTemp"
-                          ]
+                          "displayLines": "MDF_AllDamageTypeResistenceDownTemp"
                         }
                       }
                     },
@@ -1874,12 +1638,7 @@ const configAbility = {
                         "value1": "SkillP01_CurrentEnergy",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         }
                       }
                     ]
@@ -1982,20 +1741,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1185293706\">Ashveil_Ability02_Debuff</a>[<span class=\"descriptionNumberColor\">Bait</span>]",
                       "valuePerStack": {
                         "MDF_DefenceDownTemp": {
-                          "operator": "Variables[0] (MDF_DefenceDownTemp) || RETURN",
-                          "displayLines": "MDF_DefenceDownTemp",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DefenceDownTemp"
-                          ]
+                          "displayLines": "MDF_DefenceDownTemp"
                         },
                         "MDF_AllDamageTypeResistenceDownTemp": {
-                          "operator": "Variables[0] (MDF_AllDamageTypeResistenceDownTemp) || RETURN",
-                          "displayLines": "MDF_AllDamageTypeResistenceDownTemp",
-                          "constants": [],
-                          "variables": [
-                            "MDF_AllDamageTypeResistenceDownTemp"
-                          ]
+                          "displayLines": "MDF_AllDamageTypeResistenceDownTemp"
                         }
                       }
                     },

@@ -18,12 +18,7 @@ const configAbility = {
             "target": "{{Ability Target(ST)}}"
           },
           "dispelCount": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "dispelOrder": "LastAdded"
         }
@@ -36,20 +31,10 @@ const configAbility = {
         "target": "{{Ability Target(ST)}}"
       },
       "healPercent": {
-        "operator": "Variables[0] (0.105) || RETURN",
-        "displayLines": "0.105",
-        "constants": [],
-        "variables": [
-          0.105
-        ]
+        "displayLines": "0.105"
       },
       "healFlat": {
-        "operator": "Variables[0] (280) || RETURN",
-        "displayLines": "280",
-        "constants": [],
-        "variables": [
-          280
-        ]
+        "displayLines": "280"
       },
       "formula": "Heal from Healer's MaxHP"
     },
@@ -63,12 +48,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "variableName": "SkillTree_LifeTime"
         }
@@ -89,30 +69,14 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"1462346849\">Natasha_HOT_HPByMaxHP</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
       "duration": {
-        "operator": "Variables[0] (2) || Variables[1] (SkillTree_LifeTime) || ADD || RETURN",
-        "displayLines": "(2 + SkillTree_LifeTime)",
-        "constants": [],
-        "variables": [
-          2,
-          "SkillTree_LifeTime"
-        ]
+        "displayLines": "(2 + SkillTree_LifeTime)"
       },
       "valuePerStack": {
         "MDF_ShowValue1": {
-          "operator": "Variables[0] (0.072) || RETURN",
-          "displayLines": "0.072",
-          "constants": [],
-          "variables": [
-            0.072
-          ]
+          "displayLines": "0.072"
         },
         "MDF_ShowValue2": {
-          "operator": "Variables[0] (192) || RETURN",
-          "displayLines": "192",
-          "constants": [],
-          "variables": [
-            192
-          ]
+          "displayLines": "192"
         }
       }
     },

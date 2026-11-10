@@ -38,12 +38,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-781925470\">Enemy_W3_Sam_01_Ability04Target</a>[<span class=\"descriptionNumberColor\">Nemesis</span>]",
       "valuePerStack": {
         "MDF_BreakDamageAddedRatioBase": {
-          "operator": "Variables[0] (Ability03_BreakDamageAddedRatioBase) || RETURN",
-          "displayLines": "Ability03_BreakDamageAddedRatioBase",
-          "constants": [],
-          "variables": [
-            "Ability03_BreakDamageAddedRatioBase"
-          ]
+          "displayLines": "Ability03_BreakDamageAddedRatioBase"
         }
       }
     },

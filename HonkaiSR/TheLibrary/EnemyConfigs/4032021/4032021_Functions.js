@@ -32,12 +32,7 @@ const configAbility = {
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (CurrentSummonIndex) || RETURN",
-            "displayLines": "CurrentSummonIndex",
-            "constants": [],
-            "variables": [
-              "CurrentSummonIndex"
-            ]
+            "displayLines": "CurrentSummonIndex"
           },
           "caseEvents": [
             {
@@ -95,12 +90,7 @@ const configAbility = {
             "value1": "CurrentBounsIndex",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] (UnusedUnderThisBase_12038) || RETURN",
-              "displayLines": "UnusedUnderThisBase_12038",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_12038"
-              ]
+              "displayLines": "UnusedUnderThisBase_12038"
             }
           },
           "passed": [

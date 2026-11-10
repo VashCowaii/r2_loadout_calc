@@ -22,12 +22,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-          "displayLines": "{[Skill04[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}"
-          ]
+          "displayLines": "{[Skill04[0]]}"
         },
         "HitSplit": 0.25,
         "Toughness": null,
@@ -45,12 +40,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-          "displayLines": "{[Skill04[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}"
-          ]
+          "displayLines": "{[Skill04[0]]}"
         },
         "HitSplit": 0.25,
         "Toughness": null,
@@ -68,12 +58,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-          "displayLines": "{[Skill04[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}"
-          ]
+          "displayLines": "{[Skill04[0]]}"
         },
         "HitSplit": 0.25,
         "Toughness": null,
@@ -91,12 +76,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-          "displayLines": "{[Skill04[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}"
-          ]
+          "displayLines": "{[Skill04[0]]}"
         },
         "HitSplit": 0.25,
         "Toughness": null,
@@ -114,12 +94,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-          "displayLines": "{[Skill04[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[1]]}"
-          ]
+          "displayLines": "{[Skill04[1]]}"
         },
         "Toughness": null,
         "Tags": null,

@@ -14,20 +14,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (0.8) || RETURN",
-          "displayLines": "0.8",
-          "constants": [],
-          "variables": [
-            0.8
-          ]
+          "displayLines": "0.8"
         },
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -46,13 +36,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Lingsha_AttackTime) || Variables[1] (3) || ADD || RETURN",
-            "displayLines": "(Lingsha_AttackTime + 3)",
-            "constants": [],
-            "variables": [
-              "Lingsha_AttackTime",
-              3
-            ]
+            "displayLines": "(Lingsha_AttackTime + 3)"
           },
           "variableName": "Lingsha_AttackTime"
         },
@@ -64,21 +48,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1876847773\">Lingsha_BPAbility_BattleEvent_LifeTime</a>",
           "counter": {
-            "operator": "Variables[0] (Lingsha_AttackTime) || RETURN",
-            "displayLines": "Lingsha_AttackTime",
-            "constants": [],
-            "variables": [
-              "Lingsha_AttackTime"
-            ]
+            "displayLines": "Lingsha_AttackTime"
           },
           "valuePerStack": {
             "_AttackTime": {
-              "operator": "Variables[0] (Lingsha_AttackTime) || RETURN",
-              "displayLines": "Lingsha_AttackTime",
-              "constants": [],
-              "variables": [
-                "Lingsha_AttackTime"
-              ]
+              "displayLines": "Lingsha_AttackTime"
             }
           },
           "casterAssign": "TargetSelf"
@@ -88,13 +62,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Lingsha_AttackTime) || Variables[1] (3) || ADD || RETURN",
-            "displayLines": "(Lingsha_AttackTime + 3)",
-            "constants": [],
-            "variables": [
-              "Lingsha_AttackTime",
-              3
-            ]
+            "displayLines": "(Lingsha_AttackTime + 3)"
           },
           "variableName": "Lingsha_AttackTime"
         },
@@ -104,28 +72,13 @@ const configAbility = {
           "eventID": 11222,
           "variables": {
             "BattleEvent_Lingsha_BaseSpeed": {
-              "operator": "Variables[0] (90) || RETURN",
-              "displayLines": "90",
-              "constants": [],
-              "variables": [
-                90
-              ]
+              "displayLines": "90"
             },
             "BattleEvent_Lingsha_AttackTime": {
-              "operator": "Variables[0] (Lingsha_AttackTime) || RETURN",
-              "displayLines": "Lingsha_AttackTime",
-              "constants": [],
-              "variables": [
-                "Lingsha_AttackTime"
-              ]
+              "displayLines": "Lingsha_AttackTime"
             },
             "BattleEvent_Lingsha_IndexID": {
-              "operator": "Variables[0] (BattleEvent_Lingsha_IndexID) || RETURN",
-              "displayLines": "BattleEvent_Lingsha_IndexID",
-              "constants": [],
-              "variables": [
-                "BattleEvent_Lingsha_IndexID"
-              ]
+              "displayLines": "BattleEvent_Lingsha_IndexID"
             },
             "BattleEvent_Lingsha_PointB3": 0
           }
@@ -133,20 +86,10 @@ const configAbility = {
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (Lingsha_AttackTime) || RETURN",
-            "displayLines": "Lingsha_AttackTime",
-            "constants": [],
-            "variables": [
-              "Lingsha_AttackTime"
-            ]
+            "displayLines": "Lingsha_AttackTime"
           },
           "maximum": {
-            "operator": "Variables[0] (5) || RETURN",
-            "displayLines": "5",
-            "constants": [],
-            "variables": [
-              5
-            ]
+            "displayLines": "5"
           },
           "assignState": "True",
           "priorState": "Active",
@@ -185,20 +128,10 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"210278197\">Lingsha_PointB3_OnListen</a>",
               "valuePerStack": {
                 "MDF_HPRatio": {
-                  "operator": "Variables[0] (0.6) || RETURN",
-                  "displayLines": "0.6",
-                  "constants": [],
-                  "variables": [
-                    0.6
-                  ]
+                  "displayLines": "0.6"
                 },
                 "MDF_LifeTime": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
+                  "displayLines": "2"
                 }
               },
               "casterAssign": "TargetSelf"
@@ -208,14 +141,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Lingsha_BENum) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(Lingsha_BENum + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "Lingsha_BENum"
-            ]
+            "displayLines": "(Lingsha_BENum + 1)"
           },
           "variableName": "Lingsha_BENum"
         }
@@ -228,20 +154,10 @@ const configAbility = {
         "target": "{{All Team Members}}"
       },
       "healPercent": {
-        "operator": "Variables[0] (0.14) || RETURN",
-        "displayLines": "0.14",
-        "constants": [],
-        "variables": [
-          0.14
-        ]
+        "displayLines": "0.14"
       },
       "healFlat": {
-        "operator": "Variables[0] (420) || RETURN",
-        "displayLines": "420",
-        "constants": [],
-        "variables": [
-          420
-        ]
+        "displayLines": "420"
       }
     },
     {

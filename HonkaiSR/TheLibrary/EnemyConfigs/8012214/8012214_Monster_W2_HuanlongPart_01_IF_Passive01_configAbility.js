@@ -55,28 +55,13 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"532367944\">Standard_SuperArmorController</a>",
       "valuePerStack": {
         "MDF_SuperArmorDamageResistance": {
-          "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
-          "displayLines": "{[PassiveSkill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill03[0]]}"
-          ]
+          "displayLines": "{[PassiveSkill03[0]]}"
         },
         "MDF_SuperArmorBreakDamageTakenRatio": {
-          "operator": "Variables[0] ({[PassiveSkill03[1]]}) || RETURN",
-          "displayLines": "{[PassiveSkill03[1]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill03[1]]}"
-          ]
+          "displayLines": "{[PassiveSkill03[1]]}"
         },
         "MDF_SuperArmorBreakActionDelay": {
-          "operator": "Variables[0] ({[PassiveSkill03[2]]}) || RETURN",
-          "displayLines": "{[PassiveSkill03[2]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill03[2]]}"
-          ]
+          "displayLines": "{[PassiveSkill03[2]]}"
         }
       }
     }

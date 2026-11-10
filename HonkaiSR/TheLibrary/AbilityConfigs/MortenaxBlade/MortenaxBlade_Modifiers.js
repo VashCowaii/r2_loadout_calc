@@ -57,12 +57,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (25) || RETURN",
-                    "displayLines": "25",
-                    "constants": [],
-                    "variables": [
-                      25
-                    ]
+                    "displayLines": "25"
                   },
                   "isFixed": "* ERR"
                 }
@@ -689,12 +684,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1744828077\">G_MortenaxBlade_BE_ModifyActionDelay</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.15) || RETURN",
-                      "displayLines": "0.15",
-                      "constants": [],
-                      "variables": [
-                        0.15
-                      ]
+                      "displayLines": "0.15"
                     }
                   }
                 }
@@ -724,12 +714,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || INVERT || RETURN",
-                "displayLines": "-MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "-MDF_PropertyValue"
               }
             }
           ]
@@ -782,12 +767,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -814,12 +794,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -846,12 +821,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -877,12 +847,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             },
             {
@@ -893,12 +858,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                "displayLines": "MDF_PropertyValue2",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue2"
-                ]
+                "displayLines": "MDF_PropertyValue2"
               }
             },
             {
@@ -909,12 +869,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingIncoming</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue3) || RETURN",
-                "displayLines": "MDF_PropertyValue3",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue3"
-                ]
+                "displayLines": "MDF_PropertyValue3"
               }
             }
           ]
@@ -979,12 +934,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || INVERT || RETURN",
-                "displayLines": "-MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "-MDF_PropertyValue"
               }
             },
             {
@@ -995,12 +945,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                "displayLines": "MDF_PropertyValue2",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue2"
-                ]
+                "displayLines": "MDF_PropertyValue2"
               }
             }
           ]
@@ -1022,29 +967,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1247337710\">G_MortenaxBlade_Debuff_ToEnemy</a>[<span class=\"descriptionNumberColor\">Balefire Bind</span>]",
               "duration": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 },
                 "MDF_PropertyValue2": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
+                  "displayLines": "0.5"
                 }
               }
             },
@@ -1078,12 +1008,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             },
             {
@@ -1094,12 +1019,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                "displayLines": "MDF_PropertyValue2",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue2"
-                ]
+                "displayLines": "MDF_PropertyValue2"
               }
             }
           ]
@@ -1268,28 +1188,13 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (10) || RETURN",
-              "displayLines": "10",
-              "constants": [],
-              "variables": [
-                10
-              ]
+              "displayLines": "10"
             },
             "MDF_PropertyValue2": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             },
             "MDF_PropertyValue3": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             }
           }
         },
@@ -1335,12 +1240,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             }
           }
         },
@@ -1386,13 +1286,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.5) || Variables[1] (0.75) || ADD || RETURN",
-              "displayLines": "(0.5 + 0.75)",
-              "constants": [],
-              "variables": [
-                0.5,
-                0.75
-              ]
+              "displayLines": "(0.5 + 0.75)"
             }
           }
         },
@@ -1437,20 +1331,10 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             },
             "MDF_PropertyValue2": {
-              "operator": "Variables[0] (0.75) || RETURN",
-              "displayLines": "0.75",
-              "constants": [],
-              "variables": [
-                0.75
-              ]
+              "displayLines": "0.75"
             }
           }
         },
@@ -1495,13 +1379,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.5) || Variables[1] (0.5) || ADD || RETURN",
-              "displayLines": "(0.5 + 0.5)",
-              "constants": [],
-              "variables": [
-                0.5,
-                0.5
-              ]
+              "displayLines": "(0.5 + 0.5)"
             }
           }
         },
@@ -1546,14 +1424,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.5) || Variables[1] (0.5) || ADD || Variables[2] (0.75) || ADD || RETURN",
-              "displayLines": "((0.5 + 0.5) + 0.75)",
-              "constants": [],
-              "variables": [
-                0.5,
-                0.5,
-                0.75
-              ]
+              "displayLines": "((0.5 + 0.5) + 0.75)"
             }
           }
         },
@@ -1597,21 +1468,10 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.5) || Variables[1] (0.5) || ADD || RETURN",
-              "displayLines": "(0.5 + 0.5)",
-              "constants": [],
-              "variables": [
-                0.5,
-                0.5
-              ]
+              "displayLines": "(0.5 + 0.5)"
             },
             "MDF_PropertyValue2": {
-              "operator": "Variables[0] (0.75) || RETURN",
-              "displayLines": "0.75",
-              "constants": [],
-              "variables": [
-                0.75
-              ]
+              "displayLines": "0.75"
             }
           }
         },
@@ -1642,12 +1502,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         },
@@ -1681,12 +1536,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (G_EnergyCount) || RETURN",
-                "displayLines": "G_EnergyCount",
-                "constants": [],
-                "variables": [
-                  "G_EnergyCount"
-                ]
+                "displayLines": "G_EnergyCount"
               },
               "priorState": "Disable"
             },
@@ -1757,12 +1607,7 @@ const configAbility = {
               "eventID": 96217,
               "variables": {
                 "BattleEvent_BaseSpeed": {
-                  "operator": "Variables[0] (70) || RETURN",
-                  "displayLines": "70",
-                  "constants": [],
-                  "variables": [
-                    70
-                  ]
+                  "displayLines": "70"
                 }
               }
             },
@@ -1775,20 +1620,10 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-19531616\">G_MortenaxBlade_Ability03_Bonus</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.6) || RETURN",
-                  "displayLines": "0.6",
-                  "constants": [],
-                  "variables": [
-                    0.6
-                  ]
+                  "displayLines": "0.6"
                 },
                 "MDF_PropertyValue2": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             }
@@ -1865,12 +1700,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1123291765\">G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToOtherMember</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   }
                 },
@@ -1883,13 +1713,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1420064965\">G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToSelf</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.5) || Variables[1] (0.75) || ADD || RETURN",
-                      "displayLines": "(0.5 + 0.75)",
-                      "constants": [],
-                      "variables": [
-                        0.5,
-                        0.75
-                      ]
+                      "displayLines": "(0.5 + 0.75)"
                     }
                   }
                 }
@@ -1962,20 +1786,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"917600023\">G_MortenaxBlade_PointB3_DamageUp_Warlock_ToAllLT</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (0.75) || RETURN",
-                          "displayLines": "0.75",
-                          "constants": [],
-                          "variables": [
-                            0.75
-                          ]
+                          "displayLines": "0.75"
                         }
                       }
                     }
@@ -2048,13 +1862,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"1123291765\">G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToOtherMember</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.5) || Variables[1] (0.5) || ADD || RETURN",
-                              "displayLines": "(0.5 + 0.5)",
-                              "constants": [],
-                              "variables": [
-                                0.5,
-                                0.5
-                              ]
+                              "displayLines": "(0.5 + 0.5)"
                             }
                           }
                         },
@@ -2067,14 +1875,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"1420064965\">G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToSelf</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.5) || Variables[1] (0.5) || ADD || Variables[2] (0.75) || ADD || RETURN",
-                              "displayLines": "((0.5 + 0.5) + 0.75)",
-                              "constants": [],
-                              "variables": [
-                                0.5,
-                                0.5,
-                                0.75
-                              ]
+                              "displayLines": "((0.5 + 0.5) + 0.75)"
                             }
                           }
                         }
@@ -2146,21 +1947,10 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"917600023\">G_MortenaxBlade_PointB3_DamageUp_Warlock_ToAllLT</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (0.5) || Variables[1] (0.5) || ADD || RETURN",
-                                  "displayLines": "(0.5 + 0.5)",
-                                  "constants": [],
-                                  "variables": [
-                                    0.5,
-                                    0.5
-                                  ]
+                                  "displayLines": "(0.5 + 0.5)"
                                 },
                                 "MDF_PropertyValue2": {
-                                  "operator": "Variables[0] (0.75) || RETURN",
-                                  "displayLines": "0.75",
-                                  "constants": [],
-                                  "variables": [
-                                    0.75
-                                  ]
+                                  "displayLines": "0.75"
                                 }
                               }
                             }
@@ -2253,29 +2043,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1247337710\">G_MortenaxBlade_Debuff_ToEnemy</a>[<span class=\"descriptionNumberColor\">Balefire Bind</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.3) || RETURN",
-                      "displayLines": "0.3",
-                      "constants": [],
-                      "variables": [
-                        0.3
-                      ]
+                      "displayLines": "0.3"
                     },
                     "MDF_PropertyValue2": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   }
                 }
@@ -2338,23 +2113,13 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": {
-                "operator": "Variables[0] (G_EPMax) || RETURN",
-                "displayLines": "G_EPMax",
-                "constants": [],
-                "variables": [
-                  "G_EPMax"
-                ]
+                "displayLines": "G_EPMax"
               },
               "enteringRange": [
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (G_EnergyCount) || RETURN",
-                    "displayLines": "G_EnergyCount",
-                    "constants": [],
-                    "variables": [
-                      "G_EnergyCount"
-                    ]
+                    "displayLines": "G_EnergyCount"
                   },
                   "priorState": "Normal"
                 }
@@ -2363,12 +2128,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (G_EnergyCount) || RETURN",
-                    "displayLines": "G_EnergyCount",
-                    "constants": [],
-                    "variables": [
-                      "G_EnergyCount"
-                    ]
+                    "displayLines": "G_EnergyCount"
                   },
                   "priorState": "Normal"
                 }
@@ -2377,23 +2137,13 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": {
-                "operator": "Variables[0] (G_EPMax) || RETURN",
-                "displayLines": "G_EPMax",
-                "constants": [],
-                "variables": [
-                  "G_EPMax"
-                ]
+                "displayLines": "G_EPMax"
               },
               "enteringRange": [
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (G_EnergyCount) || RETURN",
-                    "displayLines": "G_EnergyCount",
-                    "constants": [],
-                    "variables": [
-                      "G_EnergyCount"
-                    ]
+                    "displayLines": "G_EnergyCount"
                   },
                   "priorState": "Active"
                 },
@@ -2406,12 +2156,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (G_EnergyCount) || RETURN",
-                    "displayLines": "G_EnergyCount",
-                    "constants": [],
-                    "variables": [
-                      "G_EnergyCount"
-                    ]
+                    "displayLines": "G_EnergyCount"
                   },
                   "priorState": "Active"
                 },

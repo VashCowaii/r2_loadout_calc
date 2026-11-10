@@ -56,12 +56,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AddStatusResistance) || RETURN",
-                    "displayLines": "MDF_AddStatusResistance",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AddStatusResistance"
-                    ]
+                    "displayLines": "MDF_AddStatusResistance"
                   }
                 }
               ]
@@ -91,14 +86,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyRaito) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyRaito)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyRaito"
-                    ]
+                    "displayLines": "(0 - MDF_PropertyRaito)"
                   }
                 }
               ]
@@ -144,21 +132,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1613152679\">Gepard_Eidolon2_SpeedDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_Lifetime) || RETURN",
-                        "displayLines": "MDF_Lifetime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Lifetime"
-                        ]
+                        "displayLines": "MDF_Lifetime"
                       },
                       "valuePerStack": {
                         "MDF_PropertyRaito": {
-                          "operator": "Variables[0] (MDF_SPD) || RETURN",
-                          "displayLines": "MDF_SPD",
-                          "constants": [],
-                          "variables": [
-                            "MDF_SPD"
-                          ]
+                          "displayLines": "MDF_SPD"
                         }
                       }
                     },
@@ -185,12 +163,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -243,12 +216,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_ShowValue) || RETURN",
-                    "displayLines": "MDF_ShowValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ShowValue"
-                    ]
+                    "displayLines": "MDF_ShowValue"
                   }
                 }
               ]
@@ -273,12 +241,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1558938344\">M_Gepard_AttackConvert</a>",
           "valuePerStack": {
             "MDF_ConvertRatio": {
-              "operator": "Variables[0] (0.35) || RETURN",
-              "displayLines": "0.35",
-              "constants": [],
-              "variables": [
-                0.35
-              ]
+              "displayLines": "0.35"
             }
           }
         }
@@ -321,14 +284,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"567771648\">Gepard_Passive02_AttackDeltaUp</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (Avatar_Gepard_DefenceValue) || Variables[1] (Avatar_Gepard_DefenceConvert) || SUB || Variables[2] (MDF_ConvertRatio) || MUL || RETURN",
-                      "displayLines": "((Avatar_Gepard_DefenceValue - Avatar_Gepard_DefenceConvert) * MDF_ConvertRatio)",
-                      "constants": [],
-                      "variables": [
-                        "Avatar_Gepard_DefenceValue",
-                        "Avatar_Gepard_DefenceConvert",
-                        "MDF_ConvertRatio"
-                      ]
+                      "displayLines": "((Avatar_Gepard_DefenceValue - Avatar_Gepard_DefenceConvert) * MDF_ConvertRatio)"
                     }
                   }
                 }
@@ -364,14 +320,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"567771648\">Gepard_Passive02_AttackDeltaUp</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (Avatar_Gepard_DefenceValue) || Variables[1] (Avatar_Gepard_DefenceConvert) || SUB || Variables[2] (MDF_ConvertRatio) || MUL || RETURN",
-                      "displayLines": "((Avatar_Gepard_DefenceValue - Avatar_Gepard_DefenceConvert) * MDF_ConvertRatio)",
-                      "constants": [],
-                      "variables": [
-                        "Avatar_Gepard_DefenceValue",
-                        "Avatar_Gepard_DefenceConvert",
-                        "MDF_ConvertRatio"
-                      ]
+                      "displayLines": "((Avatar_Gepard_DefenceValue - Avatar_Gepard_DefenceConvert) * MDF_ConvertRatio)"
                     }
                   }
                 }
@@ -399,12 +348,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1138569970\">M_Trace_AggroUp</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             }
           }
         }
@@ -747,24 +691,12 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-176429589\">Gepard_Ultimate_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "immediateEffect": true,
                       "valuePerStack": {
                         "MDF_ShowValue": {
-                          "operator": "Variables[0] (Avatar_Gepard_BaseDefenceValue) || Variables[1] (0.24) || MUL || Variables[2] (150) || ADD || RETURN",
-                          "displayLines": "((Avatar_Gepard_BaseDefenceValue * 0.24) + 150)",
-                          "constants": [],
-                          "variables": [
-                            "Avatar_Gepard_BaseDefenceValue",
-                            0.24,
-                            150
-                          ]
+                          "displayLines": "((Avatar_Gepard_BaseDefenceValue * 0.24) + 150)"
                         }
                       }
                     }
@@ -808,14 +740,7 @@ const compositeAbilityObject = {
             "target": "{{Caster}}"
           },
           "setValue": {
-            "operator": "Variables[0] (Gepard_MaxHPValue) || Variables[1] (0.5) || Variables[2] (0.5) || ADD || MUL || RETURN",
-            "displayLines": "(Gepard_MaxHPValue * (0.5 + 0.5))",
-            "constants": [],
-            "variables": [
-              "Gepard_MaxHPValue",
-              0.5,
-              0.5
-            ]
+            "displayLines": "(Gepard_MaxHPValue * (0.5 + 0.5))"
           }
         },
         {
@@ -883,12 +808,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (MDF_MaxSP) || RETURN",
-                "displayLines": "MDF_MaxSP",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxSP"
-                ]
+                "displayLines": "MDF_MaxSP"
               },
               "isFixed": "* ERR"
             }
@@ -971,12 +891,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.35) || RETURN",
-                "displayLines": "0.35",
-                "constants": [],
-                "variables": [
-                  0.35
-                ]
+                "displayLines": "0.35"
               },
               "variableName": "MDF_Rank01_P1_Chance"
             }
@@ -1041,12 +956,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (0.5) || RETURN",
-                    "displayLines": "0.5",
-                    "constants": [],
-                    "variables": [
-                      0.5
-                    ]
+                    "displayLines": "0.5"
                   },
                   "variableName": "Modifier_Gepard_00_Ratio"
                 }
@@ -1143,12 +1053,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1307422316\">Gepard_Eidolon4_AddStatusResistance</a>[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
                   "valuePerStack": {
                     "MDF_AddStatusResistance": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 }
@@ -1176,12 +1081,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1307422316\">Gepard_Eidolon4_AddStatusResistance</a>[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
                       "valuePerStack": {
                         "MDF_AddStatusResistance": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     }
@@ -1245,24 +1145,12 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-176429589\">Gepard_Ultimate_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "immediateEffect": true,
           "valuePerStack": {
             "MDF_ShowValue": {
-              "operator": "Variables[0] (Avatar_Gepard_DefenceValue) || Variables[1] (0.45) || MUL || Variables[2] (600) || ADD || RETURN",
-              "displayLines": "((Avatar_Gepard_DefenceValue * 0.45) + 600)",
-              "constants": [],
-              "variables": [
-                "Avatar_Gepard_DefenceValue",
-                0.45,
-                600
-              ]
+              "displayLines": "((Avatar_Gepard_DefenceValue * 0.45) + 600)"
             }
           }
         },
@@ -1345,24 +1233,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (2) || Constants[0] (0.15) || MUL || RETURN",
-              "displayLines": "(2 * 0.15)",
-              "constants": [
-                0.15
-              ],
-              "variables": [
-                2
-              ]
+              "displayLines": "(2 * 0.15)"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.15) || MUL || RETURN",
-              "displayLines": "(ST Toughness Value * 0.15)",
-              "constants": [
-                0.15
-              ],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "(ST Toughness Value * 0.15)"
             },
             "Tags": null,
             "EnergyGainPercent": "15%"
@@ -1377,24 +1251,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (2) || Constants[0] (0.35) || MUL || RETURN",
-              "displayLines": "(2 * 0.35)",
-              "constants": [
-                0.35
-              ],
-              "variables": [
-                2
-              ]
+              "displayLines": "(2 * 0.35)"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.35) || MUL || RETURN",
-              "displayLines": "(ST Toughness Value * 0.35)",
-              "constants": [
-                0.35
-              ],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "(ST Toughness Value * 0.35)"
             },
             "Tags": null,
             "EnergyGainPercent": "35%"
@@ -1410,24 +1270,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (2) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "(2 * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                2
-              ]
+              "displayLines": "(2 * 0.5)"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "(ST Toughness Value * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "(ST Toughness Value * 0.5)"
             },
             "Tags": null,
             "EnergyGainPercent": "50%"
@@ -1442,30 +1288,14 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
           "duration": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "baseChance": {
-            "operator": "Variables[0] (0.65) || Variables[1] (MDF_Rank01_P1_Chance) || ADD || RETURN",
-            "displayLines": "(0.65 + MDF_Rank01_P1_Chance)",
-            "constants": [],
-            "variables": [
-              0.65,
-              "MDF_Rank01_P1_Chance"
-            ]
+            "displayLines": "(0.65 + MDF_Rank01_P1_Chance)"
           },
           "valuePerStack": {
             "Modifier_Frozen_DamagePercentage": {
-              "operator": "Variables[0] (0.6) || RETURN",
-              "displayLines": "0.6",
-              "constants": [],
-              "variables": [
-                0.6
-              ]
+              "displayLines": "0.6"
             }
           },
           "success": [
@@ -1485,20 +1315,10 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-367770919\">Gepard_Eidolon2_Delay</a>",
                   "valuePerStack": {
                     "MDF_SPD": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     },
                     "MDF_Lifetime": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     }
                   }
                 }
@@ -1564,24 +1384,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (1) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "(1 * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                1
-              ]
+              "displayLines": "(1 * 0.5)"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "(ST Toughness Value * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "(ST Toughness Value * 0.5)"
             },
             "Tags": null,
             "EnergyGainPercent": "50%"
@@ -1597,24 +1403,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (1) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "(1 * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                1
-              ]
+              "displayLines": "(1 * 0.5)"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "(ST Toughness Value * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "(ST Toughness Value * 0.5)"
             },
             "Tags": null,
             "EnergyGainPercent": "50%"

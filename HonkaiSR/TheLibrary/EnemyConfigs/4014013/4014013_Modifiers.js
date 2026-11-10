@@ -23,12 +23,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_12184) || RETURN",
-                "displayLines": "UnusedUnderThisBase_12184",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_12184"
-                ]
+                "displayLines": "UnusedUnderThisBase_12184"
               }
             }
           ]
@@ -93,12 +88,7 @@ const configAbility = {
                 {
                   "name": "Skill Points Modification",
                   "adjustmentValue": {
-                    "operator": "Variables[0] (MDF_BPRecoverValue) || RETURN",
-                    "displayLines": "MDF_BPRecoverValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_BPRecoverValue"
-                    ]
+                    "displayLines": "MDF_BPRecoverValue"
                   },
                   "adjustmentType": "+"
                 }
@@ -145,12 +135,7 @@ const configAbility = {
                 {
                   "name": "Skill Points Modification",
                   "adjustmentValue": {
-                    "operator": "Variables[0] (MDF_BPRecoverValue) || RETURN",
-                    "displayLines": "MDF_BPRecoverValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_BPRecoverValue"
-                    ]
+                    "displayLines": "MDF_BPRecoverValue"
                   },
                   "adjustmentType": "+"
                 },
@@ -162,12 +147,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_BraveBonusLayer) || RETURN",
-                    "displayLines": "MDF_BraveBonusLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_BraveBonusLayer"
-                    ]
+                    "displayLines": "MDF_BraveBonusLayer"
                   },
                   "casterAssign": "TargetSelf"
                 }
@@ -203,23 +183,13 @@ const configAbility = {
                         "target": "{{Nikador: Self}}"
                       },
                       "consumePercent": {
-                        "operator": "Variables[0] (MDF_Part02LoseHPRatio) || RETURN",
-                        "displayLines": "MDF_Part02LoseHPRatio",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Part02LoseHPRatio"
-                        ]
+                        "displayLines": "MDF_Part02LoseHPRatio"
                       }
                     },
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (MDF_DamageStanceValue) || RETURN",
-                        "displayLines": "MDF_DamageStanceValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DamageStanceValue"
-                        ]
+                        "displayLines": "MDF_DamageStanceValue"
                       },
                       "attacker": {
                         "name": "Target Name",
@@ -244,12 +214,7 @@ const configAbility = {
                         "target": "{{Nikador: Self}}"
                       },
                       "consumePercent": {
-                        "operator": "Variables[0] (MDF_Part01LoseHPRatio) || RETURN",
-                        "displayLines": "MDF_Part01LoseHPRatio",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Part01LoseHPRatio"
-                        ]
+                        "displayLines": "MDF_Part01LoseHPRatio"
                       }
                     },
                     {
@@ -282,12 +247,7 @@ const configAbility = {
                         {
                           "name": "Deal Toughness DMG",
                           "value": {
-                            "operator": "Variables[0] (MDF_DamageStanceValue) || RETURN",
-                            "displayLines": "MDF_DamageStanceValue",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DamageStanceValue"
-                            ]
+                            "displayLines": "MDF_DamageStanceValue"
                           },
                           "attacker": {
                             "name": "Target Name",
@@ -307,12 +267,7 @@ const configAbility = {
                         {
                           "name": "Deal Toughness DMG",
                           "value": {
-                            "operator": "Variables[0] (MDF_DamageStanceValue) || RETURN",
-                            "displayLines": "MDF_DamageStanceValue",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DamageStanceValue"
-                            ]
+                            "displayLines": "MDF_DamageStanceValue"
                           },
                           "attacker": {
                             "name": "Target Name",
@@ -481,14 +436,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1169900751\">Monster_W4_Hearse_SetSpeed</a>",
               "valuePerStack": {
                 "MDF_Speed": {
-                  "operator": "Variables[0] (MDF_Speed) || Constants[0] (0) || MUL || RETURN",
-                  "displayLines": "(MDF_Speed * 0)",
-                  "constants": [
-                    0
-                  ],
-                  "variables": [
-                    "MDF_Speed"
-                  ]
+                  "displayLines": "(MDF_Speed * 0)"
                 }
               }
             },
@@ -1007,26 +955,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio_PerLayer) || Variables[1] (_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_AllDamageTypeAddedRatio_PerLayer * _Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeAddedRatio_PerLayer",
-                  "_Layer"
-                ]
+                "displayLines": "(MDF_AllDamageTypeAddedRatio_PerLayer * _Layer)"
               },
               "variableName": "MDF_AllDamageReduce"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageReduce_PerLayer) || Variables[1] (_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_AllDamageReduce_PerLayer * _Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageReduce_PerLayer",
-                  "_Layer"
-                ]
+                "displayLines": "(MDF_AllDamageReduce_PerLayer * _Layer)"
               },
               "variableName": "MDF_AllDamageTypeAddedRatio"
             },
@@ -1038,12 +974,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                "displayLines": "MDF_AllDamageTypeAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeAddedRatio"
-                ]
+                "displayLines": "MDF_AllDamageTypeAddedRatio"
               }
             },
             {
@@ -1054,12 +985,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                "displayLines": "MDF_AllDamageReduce",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageReduce"
-                ]
+                "displayLines": "MDF_AllDamageReduce"
               }
             }
           ]
@@ -1164,29 +1090,14 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-311844030\">Enemy_W4_Nikadory_IF_AbilityEX04_TGT</a>[<span class=\"descriptionNumberColor\">Protective Formation</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageReduce_PerLayer": {
-                      "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                      "displayLines": "MDF_AllDamageReduce",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AllDamageReduce"
-                      ]
+                      "displayLines": "MDF_AllDamageReduce"
                     },
                     "MDF_AllDamageTypeAddedRatio_PerLayer": {
-                      "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                      "displayLines": "MDF_AllDamageTypeAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AllDamageTypeAddedRatio"
-                      ]
+                      "displayLines": "MDF_AllDamageTypeAddedRatio"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (_CharacterNumber) || RETURN",
-                    "displayLines": "_CharacterNumber",
-                    "constants": [],
-                    "variables": [
-                      "_CharacterNumber"
-                    ]
+                    "displayLines": "_CharacterNumber"
                   }
                 }
               ]
@@ -1799,12 +1710,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                "displayLines": "MDF_AllDamageTypeAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeAddedRatio"
-                ]
+                "displayLines": "MDF_AllDamageTypeAddedRatio"
               }
             }
           ]
@@ -2998,13 +2904,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageUpRatio_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)"
               }
             }
           ]
@@ -3046,14 +2946,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (_bpChange) || SUB || RETURN",
-                    "displayLines": "(0 - _bpChange)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "_bpChange"
-                    ]
+                    "displayLines": "(0 - _bpChange)"
                   },
                   "variableName": "_bpChange"
                 },
@@ -3065,12 +2958,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (_bpChange) || RETURN",
-                    "displayLines": "_bpChange",
-                    "constants": [],
-                    "variables": [
-                      "_bpChange"
-                    ]
+                    "displayLines": "_bpChange"
                   },
                   "casterAssign": "TargetSelf"
                 },
@@ -3082,12 +2970,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (_bpChange) || RETURN",
-                    "displayLines": "_bpChange",
-                    "constants": [],
-                    "variables": [
-                      "_bpChange"
-                    ]
+                    "displayLines": "_bpChange"
                   },
                   "casterAssign": "TargetSelf"
                 }
@@ -3147,12 +3030,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] ({[SkillP03[0]]}) || RETURN",
-                          "displayLines": "{[SkillP03[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillP03[0]]}"
-                          ]
+                          "displayLines": "{[SkillP03[0]]}"
                         }
                       },
                       "casterAssign": "TargetSelf"
@@ -3206,21 +3084,11 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                           "valuePerStack": {
                             "MDF_DamageUpRatio_PerLayer": {
-                              "operator": "Variables[0] ({[SkillP03[0]]}) || RETURN",
-                              "displayLines": "{[SkillP03[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP03[0]]}"
-                              ]
+                              "displayLines": "{[SkillP03[0]]}"
                             }
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (_SummonerBraveLayer) || RETURN",
-                            "displayLines": "_SummonerBraveLayer",
-                            "constants": [],
-                            "variables": [
-                              "_SummonerBraveLayer"
-                            ]
+                            "displayLines": "_SummonerBraveLayer"
                           },
                           "casterAssign": "TargetSelf"
                         }
@@ -3265,12 +3133,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] ({[SkillP03[0]]}) || RETURN",
-                      "displayLines": "{[SkillP03[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP03[0]]}"
-                      ]
+                      "displayLines": "{[SkillP03[0]]}"
                     }
                   },
                   "casterAssign": "TargetSelf"
@@ -3377,12 +3240,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                    "displayLines": "MDF_AllDamageReduce",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageReduce"
-                    ]
+                    "displayLines": "MDF_AllDamageReduce"
                   }
                 },
                 {
@@ -3429,12 +3287,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_Layer) || RETURN",
-                    "displayLines": "_Layer",
-                    "constants": [],
-                    "variables": [
-                      "_Layer"
-                    ]
+                    "displayLines": "_Layer"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -3442,12 +3295,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (_MaxLayer) || RETURN",
-                    "displayLines": "_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "_MaxLayer"
-                    ]
+                    "displayLines": "_MaxLayer"
                   },
                   "assignState": "True",
                   "state": "CoolDown"
@@ -3457,12 +3305,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_Layer) || RETURN",
-                    "displayLines": "_Layer",
-                    "constants": [],
-                    "variables": [
-                      "_Layer"
-                    ]
+                    "displayLines": "_Layer"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -3470,12 +3313,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (_MaxLayer) || RETURN",
-                    "displayLines": "_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "_MaxLayer"
-                    ]
+                    "displayLines": "_MaxLayer"
                   },
                   "assignState": "True",
                   "state": "Active"
@@ -3541,12 +3379,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                    "displayLines": "MDF_AllDamageReduce",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageReduce"
-                    ]
+                    "displayLines": "MDF_AllDamageReduce"
                   }
                 },
                 {
@@ -3572,12 +3405,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_Layer) || RETURN",
-                    "displayLines": "_Layer",
-                    "constants": [],
-                    "variables": [
-                      "_Layer"
-                    ]
+                    "displayLines": "_Layer"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -3585,12 +3413,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (_MaxLayer) || RETURN",
-                    "displayLines": "_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "_MaxLayer"
-                    ]
+                    "displayLines": "_MaxLayer"
                   },
                   "assignState": "True",
                   "state": "CoolDown"
@@ -3600,12 +3423,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_Layer) || RETURN",
-                    "displayLines": "_Layer",
-                    "constants": [],
-                    "variables": [
-                      "_Layer"
-                    ]
+                    "displayLines": "_Layer"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -3613,12 +3431,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (_MaxLayer) || RETURN",
-                    "displayLines": "_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "_MaxLayer"
-                    ]
+                    "displayLines": "_MaxLayer"
                   },
                   "assignState": "True",
                   "state": "Active"
@@ -3684,12 +3497,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                    "displayLines": "MDF_AllDamageReduce",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageReduce"
-                    ]
+                    "displayLines": "MDF_AllDamageReduce"
                   }
                 },
                 {
@@ -3715,12 +3523,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_Layer) || RETURN",
-                    "displayLines": "_Layer",
-                    "constants": [],
-                    "variables": [
-                      "_Layer"
-                    ]
+                    "displayLines": "_Layer"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -3728,12 +3531,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (_MaxLayer) || RETURN",
-                    "displayLines": "_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "_MaxLayer"
-                    ]
+                    "displayLines": "_MaxLayer"
                   },
                   "assignState": "True",
                   "state": "CoolDown"
@@ -3743,12 +3541,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_Layer) || RETURN",
-                    "displayLines": "_Layer",
-                    "constants": [],
-                    "variables": [
-                      "_Layer"
-                    ]
+                    "displayLines": "_Layer"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -3756,12 +3549,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (_MaxLayer) || RETURN",
-                    "displayLines": "_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "_MaxLayer"
-                    ]
+                    "displayLines": "_MaxLayer"
                   },
                   "assignState": "True",
                   "state": "Active"
@@ -3862,12 +3650,7 @@ const configAbility = {
                             "value1": "<a class=\"gModGreen\" id=\"-698443266\">Enemy_W4_Nikadory_IF_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                             "compareType": "<",
                             "value2": {
-                              "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                              "displayLines": "MDF_MaxLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxLayer"
-                              ]
+                              "displayLines": "MDF_MaxLayer"
                             },
                             "valueType": "Layer"
                           }
@@ -3894,30 +3677,15 @@ const configAbility = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"-698443266\">Enemy_W4_Nikadory_IF_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                "displayLines": "MDF_MaxLayer",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_MaxLayer"
-                                ]
+                                "displayLines": "MDF_MaxLayer"
                               },
                               "valuePerStack": {
                                 "MDF_AllDamageReduce": {
-                                  "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                                  "displayLines": "MDF_AllDamageReduce",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_AllDamageReduce"
-                                  ]
+                                  "displayLines": "MDF_AllDamageReduce"
                                 }
                               },
                               "addStacksPerTrigger": {
-                                "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                "displayLines": "MDF_MaxLayer",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_MaxLayer"
-                                ]
+                                "displayLines": "MDF_MaxLayer"
                               }
                             }
                           ]
@@ -3970,30 +3738,15 @@ const configAbility = {
                                   },
                                   "modifier": "<a class=\"gModGreen\" id=\"-698443266\">Enemy_W4_Nikadory_IF_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                                   "stackLimit": {
-                                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                    "displayLines": "MDF_MaxLayer",
-                                    "constants": [],
-                                    "variables": [
-                                      "MDF_MaxLayer"
-                                    ]
+                                    "displayLines": "MDF_MaxLayer"
                                   },
                                   "valuePerStack": {
                                     "MDF_AllDamageReduce": {
-                                      "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                                      "displayLines": "MDF_AllDamageReduce",
-                                      "constants": [],
-                                      "variables": [
-                                        "MDF_AllDamageReduce"
-                                      ]
+                                      "displayLines": "MDF_AllDamageReduce"
                                     }
                                   },
                                   "addStacksPerTrigger": {
-                                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                    "displayLines": "MDF_MaxLayer",
-                                    "constants": [],
-                                    "variables": [
-                                      "MDF_MaxLayer"
-                                    ]
+                                    "displayLines": "MDF_MaxLayer"
                                   }
                                 }
                               ]
@@ -4045,30 +3798,15 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-698443266\">Enemy_W4_Nikadory_IF_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                        "displayLines": "MDF_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxLayer"
-                        ]
+                        "displayLines": "MDF_MaxLayer"
                       },
                       "valuePerStack": {
                         "MDF_AllDamageReduce": {
-                          "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                          "displayLines": "MDF_AllDamageReduce",
-                          "constants": [],
-                          "variables": [
-                            "MDF_AllDamageReduce"
-                          ]
+                          "displayLines": "MDF_AllDamageReduce"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                        "displayLines": "MDF_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxLayer"
-                        ]
+                        "displayLines": "MDF_MaxLayer"
                       }
                     }
                   ]
@@ -4106,30 +3844,15 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-1860338310\">Enemy_W4_Nikadory_IF_SuperShieldP2</a>[<span class=\"descriptionNumberColor\">Centirefined War Armor</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (MDF_SuperShield_MaxLayer) || RETURN",
-                            "displayLines": "MDF_SuperShield_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_SuperShield_MaxLayer"
-                            ]
+                            "displayLines": "MDF_SuperShield_MaxLayer"
                           },
                           "valuePerStack": {
                             "MDF_AllDamageReduce": {
-                              "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                              "displayLines": "MDF_AllDamageReduce",
-                              "constants": [],
-                              "variables": [
-                                "MDF_AllDamageReduce"
-                              ]
+                              "displayLines": "MDF_AllDamageReduce"
                             }
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (MDF_SuperShield_MaxLayer) || RETURN",
-                            "displayLines": "MDF_SuperShield_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_SuperShield_MaxLayer"
-                            ]
+                            "displayLines": "MDF_SuperShield_MaxLayer"
                           }
                         }
                       ]
@@ -4164,30 +3887,15 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-698443266\">Enemy_W4_Nikadory_IF_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "valuePerStack": {
                     "MDF_AllDamageReduce": {
-                      "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                      "displayLines": "MDF_AllDamageReduce",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AllDamageReduce"
-                      ]
+                      "displayLines": "MDF_AllDamageReduce"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   }
                 }
               ],
@@ -4200,30 +3908,15 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1860338310\">Enemy_W4_Nikadory_IF_SuperShieldP2</a>[<span class=\"descriptionNumberColor\">Centirefined War Armor</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (MDF_SuperShield_MaxLayer) || RETURN",
-                    "displayLines": "MDF_SuperShield_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SuperShield_MaxLayer"
-                    ]
+                    "displayLines": "MDF_SuperShield_MaxLayer"
                   },
                   "valuePerStack": {
                     "MDF_AllDamageReduce": {
-                      "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                      "displayLines": "MDF_AllDamageReduce",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AllDamageReduce"
-                      ]
+                      "displayLines": "MDF_AllDamageReduce"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_SuperShield_MaxLayer) || RETURN",
-                    "displayLines": "MDF_SuperShield_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SuperShield_MaxLayer"
-                    ]
+                    "displayLines": "MDF_SuperShield_MaxLayer"
                   }
                 }
               ]
@@ -4352,12 +4045,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "operator": "Variables[0] (MDF_CrackedDamageAfter) || RETURN",
-                              "displayLines": "MDF_CrackedDamageAfter",
-                              "constants": [],
-                              "variables": [
-                                "MDF_CrackedDamageAfter"
-                              ]
+                              "displayLines": "MDF_CrackedDamageAfter"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -4379,12 +4067,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "operator": "Variables[0] (MDF_CrackedDamageAfter) || RETURN",
-                              "displayLines": "MDF_CrackedDamageAfter",
-                              "constants": [],
-                              "variables": [
-                                "MDF_CrackedDamageAfter"
-                              ]
+                              "displayLines": "MDF_CrackedDamageAfter"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -4449,12 +4132,7 @@ const configAbility = {
                     "value1": "<a class=\"gModGreen\" id=\"-698443266\">Enemy_W4_Nikadory_IF_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (_BraveLayer) || RETURN",
-                      "displayLines": "_BraveLayer",
-                      "constants": [],
-                      "variables": [
-                        "_BraveLayer"
-                      ]
+                      "displayLines": "_BraveLayer"
                     },
                     "valueType": "Layer"
                   },
@@ -4462,12 +4140,7 @@ const configAbility = {
                     {
                       "name": "Skill Points Modification",
                       "adjustmentValue": {
-                        "operator": "Variables[0] (MDF_BPRecoverValue) || RETURN",
-                        "displayLines": "MDF_BPRecoverValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_BPRecoverValue"
-                        ]
+                        "displayLines": "MDF_BPRecoverValue"
                       },
                       "adjustmentType": "+"
                     },
@@ -4545,14 +4218,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-698443266\">Enemy_W4_Nikadory_IF_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                       "addStacksPerTrigger": {
-                        "operator": "Constants[0] (0) || Variables[0] (_ShieldLayer) || SUB || RETURN",
-                        "displayLines": "(0 - _ShieldLayer)",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "_ShieldLayer"
-                        ]
+                        "displayLines": "(0 - _ShieldLayer)"
                       }
                     },
                     {
@@ -4577,12 +4243,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "operator": "Variables[0] (MDF_CrackedDamage) || RETURN",
-                              "displayLines": "MDF_CrackedDamage",
-                              "constants": [],
-                              "variables": [
-                                "MDF_CrackedDamage"
-                              ]
+                              "displayLines": "MDF_CrackedDamage"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -4595,12 +4256,7 @@ const configAbility = {
                         {
                           "name": "Deal Toughness DMG",
                           "value": {
-                            "operator": "Variables[0] (MDF_DamageStanceValue) || RETURN",
-                            "displayLines": "MDF_DamageStanceValue",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DamageStanceValue"
-                            ]
+                            "displayLines": "MDF_DamageStanceValue"
                           },
                           "attacker": {
                             "name": "Target Name",
@@ -4627,12 +4283,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "operator": "Variables[0] (MDF_CrackedDamage) || RETURN",
-                              "displayLines": "MDF_CrackedDamage",
-                              "constants": [],
-                              "variables": [
-                                "MDF_CrackedDamage"
-                              ]
+                              "displayLines": "MDF_CrackedDamage"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -4645,12 +4296,7 @@ const configAbility = {
                         {
                           "name": "Deal Toughness DMG",
                           "value": {
-                            "operator": "Variables[0] (MDF_DamageStanceValue) || RETURN",
-                            "displayLines": "MDF_DamageStanceValue",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DamageStanceValue"
-                            ]
+                            "displayLines": "MDF_DamageStanceValue"
                           },
                           "attacker": {
                             "name": "Target Name",
@@ -4677,14 +4323,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-698443266\">Enemy_W4_Nikadory_IF_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                       "addStacksPerTrigger": {
-                        "operator": "Constants[0] (0) || Variables[0] (_BraveLayer) || SUB || RETURN",
-                        "displayLines": "(0 - _BraveLayer)",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "_BraveLayer"
-                        ]
+                        "displayLines": "(0 - _BraveLayer)"
                       }
                     }
                   ]
@@ -4740,12 +4379,7 @@ const configAbility = {
                     "value1": "<a class=\"gModGreen\" id=\"-1685699403\">Enemy_W4_Nikadory_IF_EnhanceShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (_BraveLayer) || RETURN",
-                      "displayLines": "_BraveLayer",
-                      "constants": [],
-                      "variables": [
-                        "_BraveLayer"
-                      ]
+                      "displayLines": "_BraveLayer"
                     },
                     "valueType": "Layer"
                   },
@@ -4753,12 +4387,7 @@ const configAbility = {
                     {
                       "name": "Skill Points Modification",
                       "adjustmentValue": {
-                        "operator": "Variables[0] (MDF_BPRecoverValue) || RETURN",
-                        "displayLines": "MDF_BPRecoverValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_BPRecoverValue"
-                        ]
+                        "displayLines": "MDF_BPRecoverValue"
                       },
                       "adjustmentType": "+"
                     },
@@ -4820,14 +4449,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1685699403\">Enemy_W4_Nikadory_IF_EnhanceShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                       "addStacksPerTrigger": {
-                        "operator": "Constants[0] (0) || Variables[0] (_ShieldLayer) || SUB || RETURN",
-                        "displayLines": "(0 - _ShieldLayer)",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "_ShieldLayer"
-                        ]
+                        "displayLines": "(0 - _ShieldLayer)"
                       }
                     },
                     {
@@ -4852,12 +4474,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "operator": "Variables[0] (MDF_CrackedDamage) || RETURN",
-                              "displayLines": "MDF_CrackedDamage",
-                              "constants": [],
-                              "variables": [
-                                "MDF_CrackedDamage"
-                              ]
+                              "displayLines": "MDF_CrackedDamage"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -4870,12 +4487,7 @@ const configAbility = {
                         {
                           "name": "Deal Toughness DMG",
                           "value": {
-                            "operator": "Variables[0] (MDF_DamageStanceValue) || RETURN",
-                            "displayLines": "MDF_DamageStanceValue",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DamageStanceValue"
-                            ]
+                            "displayLines": "MDF_DamageStanceValue"
                           },
                           "attacker": {
                             "name": "Target Name",
@@ -4902,14 +4514,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1685699403\">Enemy_W4_Nikadory_IF_EnhanceShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                       "addStacksPerTrigger": {
-                        "operator": "Constants[0] (0) || Variables[0] (_BraveLayer) || SUB || RETURN",
-                        "displayLines": "(0 - _BraveLayer)",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "_BraveLayer"
-                        ]
+                        "displayLines": "(0 - _BraveLayer)"
                       }
                     }
                   ]
@@ -4965,12 +4570,7 @@ const configAbility = {
                     "value1": "<a class=\"gModGreen\" id=\"-1860338310\">Enemy_W4_Nikadory_IF_SuperShieldP2</a>[<span class=\"descriptionNumberColor\">Centirefined War Armor</span>]",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (_BraveLayer) || RETURN",
-                      "displayLines": "_BraveLayer",
-                      "constants": [],
-                      "variables": [
-                        "_BraveLayer"
-                      ]
+                      "displayLines": "_BraveLayer"
                     },
                     "valueType": "Layer"
                   },
@@ -4978,12 +4578,7 @@ const configAbility = {
                     {
                       "name": "Skill Points Modification",
                       "adjustmentValue": {
-                        "operator": "Variables[0] (MDF_SuperShield_BPRecoverValue) || RETURN",
-                        "displayLines": "MDF_SuperShield_BPRecoverValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_SuperShield_BPRecoverValue"
-                        ]
+                        "displayLines": "MDF_SuperShield_BPRecoverValue"
                       },
                       "adjustmentType": "+"
                     },
@@ -4995,12 +4590,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (MDF_BraveBonusLayer) || RETURN",
-                        "displayLines": "MDF_BraveBonusLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_BraveBonusLayer"
-                        ]
+                        "displayLines": "MDF_BraveBonusLayer"
                       },
                       "casterAssign": "TargetSelf"
                     },
@@ -5078,14 +4668,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1860338310\">Enemy_W4_Nikadory_IF_SuperShieldP2</a>[<span class=\"descriptionNumberColor\">Centirefined War Armor</span>]",
                       "addStacksPerTrigger": {
-                        "operator": "Constants[0] (0) || Variables[0] (_ShieldLayer) || SUB || RETURN",
-                        "displayLines": "(0 - _ShieldLayer)",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "_ShieldLayer"
-                        ]
+                        "displayLines": "(0 - _ShieldLayer)"
                       }
                     },
                     {
@@ -5110,12 +4693,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "operator": "Variables[0] (MDF_CrackedDamage) || RETURN",
-                              "displayLines": "MDF_CrackedDamage",
-                              "constants": [],
-                              "variables": [
-                                "MDF_CrackedDamage"
-                              ]
+                              "displayLines": "MDF_CrackedDamage"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -5128,12 +4706,7 @@ const configAbility = {
                         {
                           "name": "Deal Toughness DMG",
                           "value": {
-                            "operator": "Variables[0] (MDF_SuperShield_DamageStanceValue) || RETURN",
-                            "displayLines": "MDF_SuperShield_DamageStanceValue",
-                            "constants": [],
-                            "variables": [
-                              "MDF_SuperShield_DamageStanceValue"
-                            ]
+                            "displayLines": "MDF_SuperShield_DamageStanceValue"
                           },
                           "attacker": {
                             "name": "Target Name",
@@ -5160,12 +4733,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "operator": "Variables[0] (MDF_CrackedDamage) || RETURN",
-                              "displayLines": "MDF_CrackedDamage",
-                              "constants": [],
-                              "variables": [
-                                "MDF_CrackedDamage"
-                              ]
+                              "displayLines": "MDF_CrackedDamage"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -5178,12 +4746,7 @@ const configAbility = {
                         {
                           "name": "Deal Toughness DMG",
                           "value": {
-                            "operator": "Variables[0] (MDF_SuperShield_DamageStanceValue) || RETURN",
-                            "displayLines": "MDF_SuperShield_DamageStanceValue",
-                            "constants": [],
-                            "variables": [
-                              "MDF_SuperShield_DamageStanceValue"
-                            ]
+                            "displayLines": "MDF_SuperShield_DamageStanceValue"
                           },
                           "attacker": {
                             "name": "Target Name",
@@ -5210,14 +4773,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1860338310\">Enemy_W4_Nikadory_IF_SuperShieldP2</a>[<span class=\"descriptionNumberColor\">Centirefined War Armor</span>]",
                       "addStacksPerTrigger": {
-                        "operator": "Constants[0] (0) || Variables[0] (_BraveLayer) || SUB || RETURN",
-                        "displayLines": "(0 - _BraveLayer)",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "_BraveLayer"
-                        ]
+                        "displayLines": "(0 - _BraveLayer)"
                       }
                     }
                   ]
@@ -5269,12 +4825,7 @@ const configAbility = {
                 {
                   "name": "Skill Points Modification",
                   "adjustmentValue": {
-                    "operator": "Variables[0] (MDF_BPRecoverValue) || RETURN",
-                    "displayLines": "MDF_BPRecoverValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_BPRecoverValue"
-                    ]
+                    "displayLines": "MDF_BPRecoverValue"
                   },
                   "adjustmentType": "+"
                 },
@@ -5352,14 +4903,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-698443266\">Enemy_W4_Nikadory_IF_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                   "addStacksPerTrigger": {
-                    "operator": "Constants[0] (0) || Variables[0] (_ShieldLayer) || SUB || RETURN",
-                    "displayLines": "(0 - _ShieldLayer)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "_ShieldLayer"
-                    ]
+                    "displayLines": "(0 - _ShieldLayer)"
                   }
                 },
                 {
@@ -5384,12 +4928,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Imaginary",
                         "Damage": {
-                          "operator": "Variables[0] (MDF_CrackedDamage) || RETURN",
-                          "displayLines": "MDF_CrackedDamage",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CrackedDamage"
-                          ]
+                          "displayLines": "MDF_CrackedDamage"
                         },
                         "dmgFormula": "Max HP Scaling",
                         "dmgFormulaFinal": "Converted DMG Base",
@@ -5411,12 +4950,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Imaginary",
                         "Damage": {
-                          "operator": "Variables[0] (MDF_CrackedDamage) || RETURN",
-                          "displayLines": "MDF_CrackedDamage",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CrackedDamage"
-                          ]
+                          "displayLines": "MDF_CrackedDamage"
                         },
                         "dmgFormula": "Max HP Scaling",
                         "dmgFormulaFinal": "Converted DMG Base",
@@ -5470,12 +5004,7 @@ const configAbility = {
                 {
                   "name": "Skill Points Modification",
                   "adjustmentValue": {
-                    "operator": "Variables[0] (MDF_BPRecoverValue) || RETURN",
-                    "displayLines": "MDF_BPRecoverValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_BPRecoverValue"
-                    ]
+                    "displayLines": "MDF_BPRecoverValue"
                   },
                   "adjustmentType": "+"
                 },
@@ -5529,14 +5058,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1685699403\">Enemy_W4_Nikadory_IF_EnhanceShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                   "addStacksPerTrigger": {
-                    "operator": "Constants[0] (0) || Variables[0] (_ShieldLayer) || SUB || RETURN",
-                    "displayLines": "(0 - _ShieldLayer)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "_ShieldLayer"
-                    ]
+                    "displayLines": "(0 - _ShieldLayer)"
                   }
                 },
                 {
@@ -5561,12 +5083,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Imaginary",
                         "Damage": {
-                          "operator": "Variables[0] (MDF_CrackedDamage) || RETURN",
-                          "displayLines": "MDF_CrackedDamage",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CrackedDamage"
-                          ]
+                          "displayLines": "MDF_CrackedDamage"
                         },
                         "dmgFormula": "Max HP Scaling",
                         "dmgFormulaFinal": "Converted DMG Base",
@@ -5620,12 +5137,7 @@ const configAbility = {
                 {
                   "name": "Skill Points Modification",
                   "adjustmentValue": {
-                    "operator": "Variables[0] (MDF_SuperShield_BPRecoverValue) || RETURN",
-                    "displayLines": "MDF_SuperShield_BPRecoverValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SuperShield_BPRecoverValue"
-                    ]
+                    "displayLines": "MDF_SuperShield_BPRecoverValue"
                   },
                   "adjustmentType": "+"
                 },
@@ -5651,12 +5163,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (MDF_BraveBonusLayer) || RETURN",
-                        "displayLines": "MDF_BraveBonusLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_BraveBonusLayer"
-                        ]
+                        "displayLines": "MDF_BraveBonusLayer"
                       },
                       "casterAssign": "TargetSelf"
                     }
@@ -5736,14 +5243,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1860338310\">Enemy_W4_Nikadory_IF_SuperShieldP2</a>[<span class=\"descriptionNumberColor\">Centirefined War Armor</span>]",
                   "addStacksPerTrigger": {
-                    "operator": "Constants[0] (0) || Variables[0] (_ShieldLayer) || SUB || RETURN",
-                    "displayLines": "(0 - _ShieldLayer)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "_ShieldLayer"
-                    ]
+                    "displayLines": "(0 - _ShieldLayer)"
                   }
                 },
                 {
@@ -5768,12 +5268,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Imaginary",
                         "Damage": {
-                          "operator": "Variables[0] (MDF_CrackedDamage) || RETURN",
-                          "displayLines": "MDF_CrackedDamage",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CrackedDamage"
-                          ]
+                          "displayLines": "MDF_CrackedDamage"
                         },
                         "dmgFormula": "Max HP Scaling",
                         "dmgFormulaFinal": "Converted DMG Base",
@@ -5795,12 +5290,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Imaginary",
                         "Damage": {
-                          "operator": "Variables[0] (MDF_CrackedDamage) || RETURN",
-                          "displayLines": "MDF_CrackedDamage",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CrackedDamage"
-                          ]
+                          "displayLines": "MDF_CrackedDamage"
                         },
                         "dmgFormula": "Max HP Scaling",
                         "dmgFormulaFinal": "Converted DMG Base",
@@ -5848,30 +5338,15 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1860338310\">Enemy_W4_Nikadory_IF_SuperShieldP2</a>[<span class=\"descriptionNumberColor\">Centirefined War Armor</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (MDF_SuperShield_MaxLayer) || RETURN",
-                    "displayLines": "MDF_SuperShield_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SuperShield_MaxLayer"
-                    ]
+                    "displayLines": "MDF_SuperShield_MaxLayer"
                   },
                   "valuePerStack": {
                     "MDF_AllDamageReduce": {
-                      "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                      "displayLines": "MDF_AllDamageReduce",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AllDamageReduce"
-                      ]
+                      "displayLines": "MDF_AllDamageReduce"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_SuperShield_MaxLayer) || RETURN",
-                    "displayLines": "MDF_SuperShield_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SuperShield_MaxLayer"
-                    ]
+                    "displayLines": "MDF_SuperShield_MaxLayer"
                   }
                 }
               ]
@@ -5895,30 +5370,15 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-698443266\">Enemy_W4_Nikadory_IF_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "valuePerStack": {
                     "MDF_AllDamageReduce": {
-                      "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                      "displayLines": "MDF_AllDamageReduce",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AllDamageReduce"
-                      ]
+                      "displayLines": "MDF_AllDamageReduce"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   }
                 }
               ]
@@ -5950,30 +5410,15 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-698443266\">Enemy_W4_Nikadory_IF_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "valuePerStack": {
                     "MDF_AllDamageReduce": {
-                      "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                      "displayLines": "MDF_AllDamageReduce",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AllDamageReduce"
-                      ]
+                      "displayLines": "MDF_AllDamageReduce"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   }
                 }
               ]
@@ -6165,13 +5610,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageUpRatio_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)"
               }
             }
           ]
@@ -6214,12 +5653,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                      "displayLines": "MDF_DamageUpRatio_PerLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageUpRatio_PerLayer"
-                      ]
+                      "displayLines": "MDF_DamageUpRatio_PerLayer"
                     }
                   }
                 }
@@ -6244,48 +5678,21 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (UnusedUnderThisBase_12649) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-                "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_12649",
-                  "MDF_BraveLayer"
-                ]
+                "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)"
               },
               "valuePerStack": {
                 "MDF_DamageResistance": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_12666) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_12666",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_12666"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_12666"
                 },
                 "MDF_CrackedEffect": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_12664) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_12664",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_12664"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_12664"
                 },
                 "MDF_CrackedDamage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_12665) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_12665",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_12665"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_12665"
                 }
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (UnusedUnderThisBase_12649) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-                "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_12649",
-                  "MDF_BraveLayer"
-                ]
+                "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)"
               }
             }
           ]
@@ -6373,12 +5780,7 @@ const configAbility = {
                     "value1": "MDF_CurrentLayer",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_AddMaxLayer) || RETURN",
-                      "displayLines": "MDF_AddMaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AddMaxLayer"
-                      ]
+                      "displayLines": "MDF_AddMaxLayer"
                     }
                   },
                   "passed": [
@@ -6399,12 +5801,7 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-1511774920\">Monster_W4_Nikadory_EnhanceShield</a>[<span class=\"descriptionNumberColor\">Titanic Corpus</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                            "displayLines": "{[Skill05[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[1]]}"
-                            ]
+                            "displayLines": "{[Skill05[1]]}"
                           },
                           "addStacksPerTrigger": 0
                         }
@@ -6418,22 +5815,10 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-1511774920\">Monster_W4_Nikadory_EnhanceShield</a>[<span class=\"descriptionNumberColor\">Titanic Corpus</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                            "displayLines": "{[Skill05[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[1]]}"
-                            ]
+                            "displayLines": "{[Skill05[1]]}"
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Constants[0] (1) || Variables[0] (MDF_CurrentLayer) || SUB || RETURN",
-                            "displayLines": "(1 - MDF_CurrentLayer)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "MDF_CurrentLayer"
-                            ]
+                            "displayLines": "(1 - MDF_CurrentLayer)"
                           }
                         }
                       ]
@@ -6448,22 +5833,10 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1511774920\">Monster_W4_Nikadory_EnhanceShield</a>[<span class=\"descriptionNumberColor\">Titanic Corpus</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                        "displayLines": "{[Skill05[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill05[1]]}"
-                        ]
+                        "displayLines": "{[Skill05[1]]}"
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Constants[0] (0) || Variables[0] (MDF_AddMaxLayer) || SUB || RETURN",
-                        "displayLines": "(0 - MDF_AddMaxLayer)",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "MDF_AddMaxLayer"
-                        ]
+                        "displayLines": "(0 - MDF_AddMaxLayer)"
                       }
                     }
                   ]
@@ -6483,12 +5856,7 @@ const configAbility = {
               },
               "scope": "TargetEntity",
               "value": {
-                "operator": "Variables[0] (MDF_AddMaxLayer) || RETURN",
-                "displayLines": "MDF_AddMaxLayer",
-                "constants": [],
-                "variables": [
-                  "MDF_AddMaxLayer"
-                ]
+                "displayLines": "MDF_AddMaxLayer"
               },
               "variableName": "ShieldAddMaxLayer"
             },
@@ -6500,21 +5868,10 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1511774920\">Monster_W4_Nikadory_EnhanceShield</a>[<span class=\"descriptionNumberColor\">Titanic Corpus</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (MDF_AddMaxLayer) || Variables[1] ({[Skill05[1]]}) || ADD || RETURN",
-                "displayLines": "(MDF_AddMaxLayer + {[Skill05[1]]})",
-                "constants": [],
-                "variables": [
-                  "MDF_AddMaxLayer",
-                  "{[Skill05[1]]}"
-                ]
+                "displayLines": "(MDF_AddMaxLayer + {[Skill05[1]]})"
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (MDF_AddMaxLayer) || RETURN",
-                "displayLines": "MDF_AddMaxLayer",
-                "constants": [],
-                "variables": [
-                  "MDF_AddMaxLayer"
-                ]
+                "displayLines": "MDF_AddMaxLayer"
               }
             },
             {
@@ -6599,12 +5956,7 @@ const configAbility = {
                     "value1": "MDF_CurrentLayer",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_AddMaxLayer) || RETURN",
-                      "displayLines": "MDF_AddMaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AddMaxLayer"
-                      ]
+                      "displayLines": "MDF_AddMaxLayer"
                     }
                   },
                   "passed": [
@@ -6625,12 +5977,7 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-1511774920\">Monster_W4_Nikadory_EnhanceShield</a>[<span class=\"descriptionNumberColor\">Titanic Corpus</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                            "displayLines": "{[Skill05[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[1]]}"
-                            ]
+                            "displayLines": "{[Skill05[1]]}"
                           },
                           "addStacksPerTrigger": 0
                         }
@@ -6644,22 +5991,10 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-1511774920\">Monster_W4_Nikadory_EnhanceShield</a>[<span class=\"descriptionNumberColor\">Titanic Corpus</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                            "displayLines": "{[Skill05[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[1]]}"
-                            ]
+                            "displayLines": "{[Skill05[1]]}"
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Constants[0] (1) || Variables[0] (MDF_CurrentLayer) || SUB || RETURN",
-                            "displayLines": "(1 - MDF_CurrentLayer)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "MDF_CurrentLayer"
-                            ]
+                            "displayLines": "(1 - MDF_CurrentLayer)"
                           }
                         }
                       ]
@@ -6674,22 +6009,10 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1511774920\">Monster_W4_Nikadory_EnhanceShield</a>[<span class=\"descriptionNumberColor\">Titanic Corpus</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                        "displayLines": "{[Skill05[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill05[1]]}"
-                        ]
+                        "displayLines": "{[Skill05[1]]}"
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Constants[0] (0) || Variables[0] (MDF_AddMaxLayer) || SUB || RETURN",
-                        "displayLines": "(0 - MDF_AddMaxLayer)",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "MDF_AddMaxLayer"
-                        ]
+                        "displayLines": "(0 - MDF_AddMaxLayer)"
                       }
                     }
                   ]
@@ -6709,12 +6032,7 @@ const configAbility = {
               },
               "scope": "TargetEntity",
               "value": {
-                "operator": "Variables[0] (MDF_AddMaxLayer) || RETURN",
-                "displayLines": "MDF_AddMaxLayer",
-                "constants": [],
-                "variables": [
-                  "MDF_AddMaxLayer"
-                ]
+                "displayLines": "MDF_AddMaxLayer"
               },
               "variableName": "ShieldAddMaxLayer"
             },
@@ -6809,12 +6127,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1187494701\">Monster_W4_Nikadory_Shield_Enhance</a>",
                   "valuePerStack": {
                     "MDF_AddMaxLayer": {
-                      "operator": "Variables[0] (MDF_AddMaxLayer) || RETURN",
-                      "displayLines": "MDF_AddMaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AddMaxLayer"
-                      ]
+                      "displayLines": "MDF_AddMaxLayer"
                     }
                   },
                   "casterAssign": "TargetSelf"
@@ -6841,12 +6154,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1153492503\">Monster_W4_Nikadory_EnhanceShield_Enhance</a>",
                   "valuePerStack": {
                     "MDF_AddMaxLayer": {
-                      "operator": "Variables[0] (MDF_AddMaxLayer) || RETURN",
-                      "displayLines": "MDF_AddMaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AddMaxLayer"
-                      ]
+                      "displayLines": "MDF_AddMaxLayer"
                     }
                   },
                   "casterAssign": "TargetSelf"
@@ -7048,14 +6356,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_CurrentTurn) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(MDF_CurrentTurn + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_CurrentTurn"
-                ]
+                "displayLines": "(MDF_CurrentTurn + 1)"
               },
               "variableName": "MDF_CurrentTurn"
             },
@@ -7071,14 +6372,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentTurn) || Constants[0] (3) || SUB || RETURN",
-                    "displayLines": "(MDF_CurrentTurn - 3)",
-                    "constants": [
-                      3
-                    ],
-                    "variables": [
-                      "MDF_CurrentTurn"
-                    ]
+                    "displayLines": "(MDF_CurrentTurn - 3)"
                   },
                   "variableName": "MDF_CurrentTurn"
                 }
@@ -7234,12 +6528,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"261985089\">Monster_W4_Nikadory_Energy</a>",
               "valuePerStack": {
                 "MDF_SPAddedRatio": {
-                  "operator": "Variables[0] (MDF_SPAddedRatio) || RETURN",
-                  "displayLines": "MDF_SPAddedRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_SPAddedRatio"
-                  ]
+                  "displayLines": "MDF_SPAddedRatio"
                 }
               }
             },
@@ -7272,12 +6561,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "valuePercent": {
-                "operator": "Variables[0] (MDF_SPAddedRatio) || RETURN",
-                "displayLines": "MDF_SPAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_SPAddedRatio"
-                ]
+                "displayLines": "MDF_SPAddedRatio"
               },
               "isFixed": "(Fixed)"
             },
@@ -7372,12 +6656,7 @@ const configAbility = {
                     "value1": "MDF_Layer",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                      "displayLines": "MDF_MaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MaxLayer"
-                      ]
+                      "displayLines": "MDF_MaxLayer"
                     }
                   },
                   "passed": [
@@ -7440,12 +6719,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_12645) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_12645",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_12645"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_12645"
                   }
                 }
               ]
@@ -7470,37 +6744,17 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_12645) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_12645",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_12645"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_12645"
                   },
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12651) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_12651",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_12651"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_12651"
                     },
                     "MDF_EnergyAddRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12667) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_12667",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_12667"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_12667"
                     },
                     "MDF_MaxLayer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12645) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_12645",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_12645"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_12645"
                     }
                   }
                 }
@@ -7581,13 +6835,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageUpRatio_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)"
               }
             },
             {
@@ -7598,13 +6846,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRate</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_EnergyAddRatio) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(MDF_EnergyAddRatio * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "MDF_EnergyAddRatio",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(MDF_EnergyAddRatio * ModifierLayers)"
               }
             },
             {
@@ -7617,12 +6859,7 @@ const configAbility = {
                     "value1": "ModifierLayers",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                      "displayLines": "MDF_MaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MaxLayer"
-                      ]
+                      "displayLines": "MDF_MaxLayer"
                     }
                   },
                   {
@@ -7684,12 +6921,7 @@ const configAbility = {
                     "value1": "ModifierLayers",
                     "compareType": "NOT=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                      "displayLines": "MDF_MaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MaxLayer"
-                      ]
+                      "displayLines": "MDF_MaxLayer"
                     }
                   }
                 },
@@ -7701,12 +6933,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_12645) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_12645",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_12645"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_12645"
                   }
                 },
                 {
@@ -7717,12 +6944,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_12645) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_12645",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_12645"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_12645"
                   }
                 }
               ]
@@ -7760,12 +6982,7 @@ const configAbility = {
                 "value1": "ModifierLayers",
                 "compareType": "NOT=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                  "displayLines": "MDF_MaxLayer",
-                  "constants": [],
-                  "variables": [
-                    "MDF_MaxLayer"
-                  ]
+                  "displayLines": "MDF_MaxLayer"
                 }
               }
             },
@@ -7777,12 +6994,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (UnusedUnderThisBase_12645) || RETURN",
-                "displayLines": "UnusedUnderThisBase_12645",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_12645"
-                ]
+                "displayLines": "UnusedUnderThisBase_12645"
               }
             },
             {
@@ -7793,12 +7005,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (UnusedUnderThisBase_12645) || RETURN",
-                "displayLines": "UnusedUnderThisBase_12645",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_12645"
-                ]
+                "displayLines": "UnusedUnderThisBase_12645"
               }
             }
           ]
@@ -7857,23 +7064,13 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageResistance_PerLayer) || RETURN",
-                "displayLines": "MDF_DamageResistance_PerLayer",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageResistance_PerLayer"
-                ]
+                "displayLines": "MDF_DamageResistance_PerLayer"
               }
             },
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_Layer) || RETURN",
-                "displayLines": "MDF_Layer",
-                "constants": [],
-                "variables": [
-                  "MDF_Layer"
-                ]
+                "displayLines": "MDF_Layer"
               },
               "entityClass": "Enemy",
               "target": {
@@ -7881,12 +7078,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                "displayLines": "MDF_MaxLayer",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxLayer"
-                ]
+                "displayLines": "MDF_MaxLayer"
               },
               "assignState": "True",
               "state": "Active"
@@ -8010,12 +7202,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -8023,12 +7210,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "assignState": "True",
                   "state": "Normal"
@@ -8043,23 +7225,13 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageResistance_PerLayer) || RETURN",
-                    "displayLines": "MDF_DamageResistance_PerLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageResistance_PerLayer"
-                    ]
+                    "displayLines": "MDF_DamageResistance_PerLayer"
                   }
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -8067,12 +7239,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "assignState": "True",
                   "state": "Active"
@@ -8122,12 +7289,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Imaginary",
                     "Damage": {
-                      "operator": "Variables[0] (MDF_CrackedDamageAfter) || RETURN",
-                      "displayLines": "MDF_CrackedDamageAfter",
-                      "constants": [],
-                      "variables": [
-                        "MDF_CrackedDamageAfter"
-                      ]
+                      "displayLines": "MDF_CrackedDamageAfter"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "dmgFormulaFinal": "Converted DMG Base",
@@ -8234,12 +7396,7 @@ const configAbility = {
                         "value1": "<a class=\"gModGreen\" id=\"-1511774920\">Monster_W4_Nikadory_EnhanceShield</a>[<span class=\"descriptionNumberColor\">Titanic Corpus</span>]",
                         "compareType": "<=",
                         "value2": {
-                          "operator": "Variables[0] (ShieldAddMaxLayer) || RETURN",
-                          "displayLines": "ShieldAddMaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "ShieldAddMaxLayer"
-                          ]
+                          "displayLines": "ShieldAddMaxLayer"
                         },
                         "valueType": "Layer"
                       },
@@ -8259,14 +7416,7 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-1511774920\">Monster_W4_Nikadory_EnhanceShield</a>[<span class=\"descriptionNumberColor\">Titanic Corpus</span>]",
                           "addStacksPerTrigger": {
-                            "operator": "Constants[0] (0) || Variables[0] (MDF_ShieldLayer) || SUB || RETURN",
-                            "displayLines": "(0 - MDF_ShieldLayer)",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "MDF_ShieldLayer"
-                            ]
+                            "displayLines": "(0 - MDF_ShieldLayer)"
                           }
                         }
                       ],
@@ -8279,14 +7429,7 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-1511774920\">Monster_W4_Nikadory_EnhanceShield</a>[<span class=\"descriptionNumberColor\">Titanic Corpus</span>]",
                           "addStacksPerTrigger": {
-                            "operator": "Constants[0] (0) || Variables[0] (ShieldAddMaxLayer) || SUB || RETURN",
-                            "displayLines": "(0 - ShieldAddMaxLayer)",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "ShieldAddMaxLayer"
-                            ]
+                            "displayLines": "(0 - ShieldAddMaxLayer)"
                           }
                         }
                       ]
@@ -8326,12 +7469,7 @@ const configAbility = {
                             "target": "{{Player Team(Exclude Memosprites)v2}}"
                           },
                           "valuePercent": {
-                            "operator": "Variables[0] (MDF_EnhanceSPAddedRatio) || RETURN",
-                            "displayLines": "MDF_EnhanceSPAddedRatio",
-                            "constants": [],
-                            "variables": [
-                              "MDF_EnhanceSPAddedRatio"
-                            ]
+                            "displayLines": "MDF_EnhanceSPAddedRatio"
                           },
                           "isFixed": "* ERR"
                         },
@@ -8362,12 +7500,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "operator": "Variables[0] (MDF_CrackedDamage) || RETURN",
-                              "displayLines": "MDF_CrackedDamage",
-                              "constants": [],
-                              "variables": [
-                                "MDF_CrackedDamage"
-                              ]
+                              "displayLines": "MDF_CrackedDamage"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -8456,13 +7589,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_12649) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)",
-                        "constants": [],
-                        "variables": [
-                          "UnusedUnderThisBase_12649",
-                          "MDF_BraveLayer"
-                        ]
+                        "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)"
                       },
                       "addStacksPerTrigger": 0
                     },
@@ -8646,12 +7773,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageUpRatio) || RETURN",
-                "displayLines": "MDF_DamageUpRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageUpRatio"
-                ]
+                "displayLines": "MDF_DamageUpRatio"
               }
             }
           ]
@@ -8681,37 +7803,17 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_12645) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_12645",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_12645"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_12645"
                   },
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12651) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_12651",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_12651"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_12651"
                     },
                     "MDF_EnergyAddRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12667) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_12667",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_12667"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_12667"
                     },
                     "MDF_MaxLayer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12645) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_12645",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_12645"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_12645"
                     }
                   }
                 },
@@ -8833,22 +7935,12 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
                       "duration": 1,
                       "baseChance": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_12668) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_12668",
-                        "constants": [],
-                        "variables": [
-                          "UnusedUnderThisBase_12668"
-                        ]
+                        "displayLines": "UnusedUnderThisBase_12668"
                       },
                       "immediateEffect": true,
                       "valuePerStack": {
                         "MDF_ActionDelayRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12669) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12669",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_12669"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_12669"
                         }
                       }
                     }
@@ -8898,37 +7990,17 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                        "displayLines": "MDF_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxLayer"
-                        ]
+                        "displayLines": "MDF_MaxLayer"
                       },
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                          "displayLines": "MDF_DamageUpRatio_PerLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageUpRatio_PerLayer"
-                          ]
+                          "displayLines": "MDF_DamageUpRatio_PerLayer"
                         },
                         "MDF_EnergyAddRatio": {
-                          "operator": "Variables[0] (MDF_EnergyAddRatio) || RETURN",
-                          "displayLines": "MDF_EnergyAddRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_EnergyAddRatio"
-                          ]
+                          "displayLines": "MDF_EnergyAddRatio"
                         },
                         "MDF_MaxLayer": {
-                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                          "displayLines": "MDF_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer"
-                          ]
+                          "displayLines": "MDF_MaxLayer"
                         }
                       },
                       "casterAssign": "CasterSelf"
@@ -9031,37 +8103,17 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                        "displayLines": "MDF_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxLayer"
-                        ]
+                        "displayLines": "MDF_MaxLayer"
                       },
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                          "displayLines": "MDF_DamageUpRatio_PerLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageUpRatio_PerLayer"
-                          ]
+                          "displayLines": "MDF_DamageUpRatio_PerLayer"
                         },
                         "MDF_EnergyAddRatio": {
-                          "operator": "Variables[0] (MDF_EnergyAddRatio) || RETURN",
-                          "displayLines": "MDF_EnergyAddRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_EnergyAddRatio"
-                          ]
+                          "displayLines": "MDF_EnergyAddRatio"
                         },
                         "MDF_MaxLayer": {
-                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                          "displayLines": "MDF_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer"
-                          ]
+                          "displayLines": "MDF_MaxLayer"
                         }
                       },
                       "casterAssign": "CasterSelf"
@@ -9162,28 +8214,13 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1389759519\">Monster_W4_Nikadory_Charge_UnselectableFlag</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_12651) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_12651",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_12651"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_12651"
                 },
                 "MDF_EnergyAddRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_12667) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_12667",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_12667"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_12667"
                 },
                 "MDF_MaxLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_12645) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_12645",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_12645"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_12645"
                 }
               },
               "casterAssign": "CasterSelf"
@@ -9695,48 +8732,21 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_12649) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)",
-                        "constants": [],
-                        "variables": [
-                          "UnusedUnderThisBase_12649",
-                          "MDF_BraveLayer"
-                        ]
+                        "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)"
                       },
                       "valuePerStack": {
                         "MDF_DamageResistance": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12666) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12666",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_12666"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_12666"
                         },
                         "MDF_CrackedEffect": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12664) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12664",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_12664"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_12664"
                         },
                         "MDF_CrackedDamage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12665) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12665",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_12665"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_12665"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_12649) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)",
-                        "constants": [],
-                        "variables": [
-                          "UnusedUnderThisBase_12649",
-                          "MDF_BraveLayer"
-                        ]
+                        "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)"
                       }
                     },
                     {
@@ -9824,48 +8834,21 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_12649) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-                            "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)",
-                            "constants": [],
-                            "variables": [
-                              "UnusedUnderThisBase_12649",
-                              "MDF_BraveLayer"
-                            ]
+                            "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)"
                           },
                           "valuePerStack": {
                             "MDF_DamageResistance": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_12666) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_12666",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_12666"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_12666"
                             },
                             "MDF_CrackedEffect": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_12664) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_12664",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_12664"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_12664"
                             },
                             "MDF_CrackedDamage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_12665) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_12665",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_12665"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_12665"
                             }
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_12649) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-                            "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)",
-                            "constants": [],
-                            "variables": [
-                              "UnusedUnderThisBase_12649",
-                              "MDF_BraveLayer"
-                            ]
+                            "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)"
                           }
                         },
                         {
@@ -9987,48 +8970,21 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_12649) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)",
-                        "constants": [],
-                        "variables": [
-                          "UnusedUnderThisBase_12649",
-                          "MDF_BraveLayer"
-                        ]
+                        "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)"
                       },
                       "valuePerStack": {
                         "MDF_DamageResistance": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12666) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12666",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_12666"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_12666"
                         },
                         "MDF_CrackedEffect": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12664) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12664",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_12664"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_12664"
                         },
                         "MDF_CrackedDamage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12665) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12665",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_12665"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_12665"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_12649) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)",
-                        "constants": [],
-                        "variables": [
-                          "UnusedUnderThisBase_12649",
-                          "MDF_BraveLayer"
-                        ]
+                        "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)"
                       }
                     },
                     {
@@ -10136,48 +9092,21 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_12649) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)",
-                        "constants": [],
-                        "variables": [
-                          "UnusedUnderThisBase_12649",
-                          "MDF_BraveLayer"
-                        ]
+                        "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)"
                       },
                       "valuePerStack": {
                         "MDF_DamageResistance": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12666) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12666",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_12666"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_12666"
                         },
                         "MDF_CrackedEffect": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12664) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12664",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_12664"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_12664"
                         },
                         "MDF_CrackedDamage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12665) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12665",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_12665"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_12665"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_12649) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)",
-                        "constants": [],
-                        "variables": [
-                          "UnusedUnderThisBase_12649",
-                          "MDF_BraveLayer"
-                        ]
+                        "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)"
                       }
                     },
                     {

@@ -205,12 +205,7 @@ const compositeAbilityObject = {
                         "value1": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                          "displayLines": "MDF_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer"
-                          ]
+                          "displayLines": "MDF_MaxLayer"
                         },
                         "valueType": "Layer"
                       }
@@ -270,20 +265,10 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_DamagePercentage": {
-                  "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                  "displayLines": "MDF_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamagePercentage"
-                  ]
+                  "displayLines": "MDF_DamagePercentage"
                 },
                 "MDF_AddMaxLayer": {
-                  "operator": "Variables[0] (MDF_AddMaxLayer) || RETURN",
-                  "displayLines": "MDF_AddMaxLayer",
-                  "constants": [],
-                  "variables": [
-                    "MDF_AddMaxLayer"
-                  ]
+                  "displayLines": "MDF_AddMaxLayer"
                 }
               }
             },
@@ -339,20 +324,10 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_DamagePercentage": {
-                  "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                  "displayLines": "MDF_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamagePercentage"
-                  ]
+                  "displayLines": "MDF_DamagePercentage"
                 },
                 "MDF_AddMaxLayer": {
-                  "operator": "Variables[0] (MDF_AddMaxLayer) || RETURN",
-                  "displayLines": "MDF_AddMaxLayer",
-                  "constants": [],
-                  "variables": [
-                    "MDF_AddMaxLayer"
-                  ]
+                  "displayLines": "MDF_AddMaxLayer"
                 }
               }
             }
@@ -488,52 +463,22 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1282910303\">Enemy_Heaven_StoneShieldController</a>",
           "valuePerStack": {
             "MDF_MaxLayer": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[0]]}"
-              ]
+              "displayLines": "{[PassiveSkillInitiate[0]]}"
             },
             "MDF_CrackedEffect": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[1]]}"
-              ]
+              "displayLines": "{[PassiveSkillInitiate[1]]}"
             },
             "MDF_CrackedDamage": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[5]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[5]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[5]]}"
-              ]
+              "displayLines": "{[PassiveSkillInitiate[5]]}"
             },
             "MDF_DamageResistance": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[2]]}"
-              ]
+              "displayLines": "{[PassiveSkillInitiate[2]]}"
             },
             "MDF_CrackedDamageAfter": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[3]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[3]]}"
-              ]
+              "displayLines": "{[PassiveSkillInitiate[3]]}"
             },
             "MDF_ModifySP": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[4]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[4]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[4]]}"
-              ]
+              "displayLines": "{[PassiveSkillInitiate[4]]}"
             }
           }
         },
@@ -685,12 +630,7 @@ const compositeAbilityObject = {
                         "value1": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                          "displayLines": "MDF_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer"
-                          ]
+                          "displayLines": "MDF_MaxLayer"
                         },
                         "valueType": "Layer"
                       },
@@ -768,28 +708,13 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1735610792\">MModifier_Monster_AML_Minion03_01_Halo</a>[<span class=\"descriptionNumberColor\">War Song</span>]",
           "valuePerStack": {
             "MDF_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "MDF_AddMaxLayer": {
-              "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-              "displayLines": "{[Skill03[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[1]]}"
-              ]
+              "displayLines": "{[Skill03[1]]}"
             },
             "MDF_SetMaxLayer": {
-              "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-              "displayLines": "{[Skill03[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[2]]}"
-              ]
+              "displayLines": "{[Skill03[2]]}"
             }
           }
         },
@@ -847,12 +772,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -868,12 +788,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-              "displayLines": "{[Skill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[1]]}"
-              ]
+              "displayLines": "{[Skill02[1]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1023,28 +938,13 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1735610792\">MModifier_Monster_AML_Minion03_01_Halo</a>[<span class=\"descriptionNumberColor\">War Song</span>]",
           "valuePerStack": {
             "MDF_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "MDF_AddMaxLayer": {
-              "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-              "displayLines": "{[Skill03[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[1]]}"
-              ]
+              "displayLines": "{[Skill03[1]]}"
             },
             "MDF_SetMaxLayer": {
-              "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-              "displayLines": "{[Skill03[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[2]]}"
-              ]
+              "displayLines": "{[Skill03[2]]}"
             }
           }
         }

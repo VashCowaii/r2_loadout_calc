@@ -47,12 +47,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_W2_Kafka_00_RL_BattleEvent_BaseSpeed) || RETURN",
-                "displayLines": "MDF_W2_Kafka_00_RL_BattleEvent_BaseSpeed",
-                "constants": [],
-                "variables": [
-                  "MDF_W2_Kafka_00_RL_BattleEvent_BaseSpeed"
-                ]
+                "displayLines": "MDF_W2_Kafka_00_RL_BattleEvent_BaseSpeed"
               }
             }
           ]

@@ -34,12 +34,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             }
           ]
@@ -66,12 +61,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             }
           ]
@@ -109,12 +99,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"2111491576\">LC_23064_Bonus_1</a>[<span class=\"descriptionNumberColor\">Updraft</span>]",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (0.24) || RETURN",
-                      "displayLines": "0.24",
-                      "constants": [],
-                      "variables": [
-                        0.24
-                      ]
+                      "displayLines": "0.24"
                     }
                   }
                 },
@@ -128,12 +113,7 @@ const configAbility = {
                         "value1": "_CurrentElationSkillIndex",
                         "compareType": "NOT=",
                         "value2": {
-                          "operator": "Variables[0] (_LastElationSkillIndex) || RETURN",
-                          "displayLines": "_LastElationSkillIndex",
-                          "constants": [],
-                          "variables": [
-                            "_LastElationSkillIndex"
-                          ]
+                          "displayLines": "_LastElationSkillIndex"
                         },
                         "contextScope": "ContextModifier"
                       },
@@ -156,12 +136,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-2133142863\">LC_23064_Bonus_2</a>[<span class=\"descriptionNumberColor\">Uptrend</span>]",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
-                          "operator": "Variables[0] (0.4) || RETURN",
-                          "displayLines": "0.4",
-                          "constants": [],
-                          "variables": [
-                            0.4
-                          ]
+                          "displayLines": "0.4"
                         }
                       }
                     }
@@ -171,12 +146,7 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "scope": "ContextModifier",
                   "value": {
-                    "operator": "Variables[0] (_CurrentElationSkillIndex) || RETURN",
-                    "displayLines": "_CurrentElationSkillIndex",
-                    "constants": [],
-                    "variables": [
-                      "_CurrentElationSkillIndex"
-                    ]
+                    "displayLines": "_CurrentElationSkillIndex"
                   },
                   "variableName": "_LastElationSkillIndex"
                 }
@@ -215,12 +185,7 @@ const configAbility = {
                     "value1": "_ElationSkillCastNum",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (3) || RETURN",
-                      "displayLines": "3",
-                      "constants": [],
-                      "variables": [
-                        3
-                      ]
+                      "displayLines": "3"
                     },
                     "contextScope": "ContextModifier"
                   },

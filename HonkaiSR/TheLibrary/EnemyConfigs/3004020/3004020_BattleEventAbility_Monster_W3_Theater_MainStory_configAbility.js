@@ -32,12 +32,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                "displayLines": "{[Skill04[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[0]]}"
-                ]
+                "displayLines": "{[Skill04[0]]}"
               },
               "variableName": "MainStoryDamage"
             }
@@ -73,12 +68,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-                "displayLines": "{[Skill04[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[1]]}"
-                ]
+                "displayLines": "{[Skill04[1]]}"
               },
               "variableName": "MainStoryDamage"
             }
@@ -114,12 +104,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-                "displayLines": "{[Skill04[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[2]]}"
-                ]
+                "displayLines": "{[Skill04[2]]}"
               },
               "variableName": "MainStoryDamage"
             }
@@ -164,13 +149,7 @@ const configAbility = {
                     "target": "{{Parameter Target List}}"
                   },
                   "consumePercent": {
-                    "operator": "Variables[0] (MainStoryDamage) || Variables[1] (LoopCount) || DIV || RETURN",
-                    "displayLines": "(MainStoryDamage / LoopCount)",
-                    "constants": [],
-                    "variables": [
-                      "MainStoryDamage",
-                      "LoopCount"
-                    ]
+                    "displayLines": "(MainStoryDamage / LoopCount)"
                   },
                   "DamageType": "Imaginary"
                 }
@@ -199,13 +178,7 @@ const configAbility = {
                     "target": "{{Parameter Target List}}"
                   },
                   "consumePercent": {
-                    "operator": "Variables[0] (MainStoryDamage) || Variables[1] (LoopCount) || DIV || RETURN",
-                    "displayLines": "(MainStoryDamage / LoopCount)",
-                    "constants": [],
-                    "variables": [
-                      "MainStoryDamage",
-                      "LoopCount"
-                    ]
+                    "displayLines": "(MainStoryDamage / LoopCount)"
                   },
                   "DamageType": "Imaginary"
                 }
@@ -234,13 +207,7 @@ const configAbility = {
                     "target": "{{Parameter Target List}}"
                   },
                   "consumePercent": {
-                    "operator": "Variables[0] (MainStoryDamage) || Variables[1] (LoopCount) || DIV || RETURN",
-                    "displayLines": "(MainStoryDamage / LoopCount)",
-                    "constants": [],
-                    "variables": [
-                      "MainStoryDamage",
-                      "LoopCount"
-                    ]
+                    "displayLines": "(MainStoryDamage / LoopCount)"
                   },
                   "DamageType": "Imaginary"
                 }
@@ -254,13 +221,7 @@ const configAbility = {
                 "target": "{{Parameter Target List}}"
               },
               "consumePercent": {
-                "operator": "Variables[0] (MainStoryDamage) || Variables[1] (LoopCount) || DIV || RETURN",
-                "displayLines": "(MainStoryDamage / LoopCount)",
-                "constants": [],
-                "variables": [
-                  "MainStoryDamage",
-                  "LoopCount"
-                ]
+                "displayLines": "(MainStoryDamage / LoopCount)"
               },
               "DamageType": "Imaginary"
             }

@@ -56,20 +56,10 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Constants[0] (0) || RETURN",
-        "displayLines": "0",
-        "constants": [
-          0
-        ],
-        "variables": []
+        "displayLines": "0"
       },
       "maximum": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -92,20 +82,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"136105164\">Sushang_LowHP_AggroDown</a>",
           "valuePerStack": {
             "MDF_HPRatio": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             },
             "MDF_AggroDown": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             }
           }
         }
@@ -126,22 +106,12 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-995993731\">Sushang_P01_Eidolon6</a>[<span class=\"descriptionNumberColor\">Dancing Blade</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "stackLimit": 2,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         }
@@ -188,22 +158,12 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-995993731\">Sushang_P01_Eidolon6</a>[<span class=\"descriptionNumberColor\">Dancing Blade</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "stackLimit": 2,
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 }
@@ -217,21 +177,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"326660748\">Sushang_P01</a>[<span class=\"descriptionNumberColor\">Dancing Blade</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 }
@@ -256,12 +206,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.4) || RETURN",
-                "displayLines": "0.4",
-                "constants": [],
-                "variables": [
-                  0.4
-                ]
+                "displayLines": "0.4"
               }
             }
           ]
@@ -309,12 +254,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Variables[0] (0.15) || INVERT || RETURN",
-            "displayLines": "-0.15",
-            "constants": [],
-            "variables": [
-              0.15
-            ]
+            "displayLines": "-0.15"
           }
         }
       }
@@ -360,12 +300,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Variables[0] (0.15) || INVERT || RETURN",
-            "displayLines": "-0.15",
-            "constants": [],
-            "variables": [
-              0.15
-            ]
+            "displayLines": "-0.15"
           }
         }
       }

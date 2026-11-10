@@ -153,12 +153,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-664793449\">Monster_W2_Feixiao_AlreadyConnectRemove</a>",
           "valuePerStack": {
             "MDF_StanceBreakTakenRatio": {
-              "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-              "displayLines": "{[PassiveSkill03[5]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill03[5]]}"
-              ]
+              "displayLines": "{[PassiveSkill03[5]]}"
             }
           }
         }
@@ -182,12 +177,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] (Skill06DamagePercentage) || RETURN",
-          "displayLines": "Skill06DamagePercentage",
-          "constants": [],
-          "variables": [
-            "Skill06DamagePercentage"
-          ]
+          "displayLines": "Skill06DamagePercentage"
         },
         "HitSplit": 0.5,
         "Toughness": null,
@@ -206,12 +196,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] (Skill06DamagePercentage) || RETURN",
-          "displayLines": "Skill06DamagePercentage",
-          "constants": [],
-          "variables": [
-            "Skill06DamagePercentage"
-          ]
+          "displayLines": "Skill06DamagePercentage"
         },
         "HitSplit": 0.3,
         "Toughness": null,
@@ -230,12 +215,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] (Skill06DamagePercentage) || RETURN",
-          "displayLines": "Skill06DamagePercentage",
-          "constants": [],
-          "variables": [
-            "Skill06DamagePercentage"
-          ]
+          "displayLines": "Skill06DamagePercentage"
         },
         "HitSplit": 0.2,
         "Toughness": null,
@@ -262,29 +242,14 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-1887773470\">Standard_FatigueRatio</a>[<span class=\"descriptionNumberColor\">Weaken</span>]",
       "duration": {
-        "operator": "Variables[0] ({[PassiveSkill03[2]]}) || RETURN",
-        "displayLines": "{[PassiveSkill03[2]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill03[2]]}"
-        ]
+        "displayLines": "{[PassiveSkill03[2]]}"
       },
       "baseChance": {
-        "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-        "displayLines": "{[Skill02[2]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill02[2]]}"
-        ]
+        "displayLines": "{[Skill02[2]]}"
       },
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-          "displayLines": "{[Skill02[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[1]]}"
-          ]
+          "displayLines": "{[Skill02[1]]}"
         }
       }
     },

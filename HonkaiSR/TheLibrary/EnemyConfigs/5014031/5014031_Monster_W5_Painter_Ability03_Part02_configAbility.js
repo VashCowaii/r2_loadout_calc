@@ -61,12 +61,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-          "displayLines": "{[Skill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "{[Skill03[0]]}"
         },
         "HitSplit": 0.14,
         "Toughness": null,
@@ -84,12 +79,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-          "displayLines": "{[Skill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "{[Skill03[0]]}"
         },
         "HitSplit": 0.14,
         "Toughness": null,
@@ -107,12 +97,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-          "displayLines": "{[Skill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "{[Skill03[0]]}"
         },
         "HitSplit": 0.14,
         "Toughness": null,
@@ -130,12 +115,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-          "displayLines": "{[Skill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "{[Skill03[0]]}"
         },
         "HitSplit": 0.14,
         "Toughness": null,
@@ -153,12 +133,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-          "displayLines": "{[Skill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "{[Skill03[0]]}"
         },
         "HitSplit": 0.14,
         "Toughness": null,
@@ -176,12 +151,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-          "displayLines": "{[Skill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "{[Skill03[0]]}"
         },
         "HitSplit": 0.14,
         "Toughness": null,
@@ -199,12 +169,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-          "displayLines": "{[Skill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "{[Skill03[0]]}"
         },
         "HitSplit": 0.16,
         "Toughness": null,
@@ -222,61 +187,26 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"596149428\">Enemy_W5_Painter_Inferno</a>[<span class=\"descriptionNumberColor\">Grudge Ablaze</span>]",
       "duration": {
-        "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-        "displayLines": "{[Skill03[2]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill03[2]]}"
-        ]
+        "displayLines": "{[Skill03[2]]}"
       },
       "baseChance": {
-        "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-        "displayLines": "{[Skill03[1]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill03[1]]}"
-        ]
+        "displayLines": "{[Skill03[1]]}"
       },
       "valuePerStack": {
         "MDF_Inferno_Ability01_DamagePercentage": {
-          "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-          "displayLines": "{[SkillP01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[0]]}"
-          ]
+          "displayLines": "{[SkillP01[0]]}"
         },
         "MDF_Inferno_Ability02_DamagePercentage": {
-          "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-          "displayLines": "{[SkillP01[1]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[1]]}"
-          ]
+          "displayLines": "{[SkillP01[1]]}"
         },
         "MDF_Inferno_Ability02_SuccessChance": {
-          "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-          "displayLines": "{[SkillP01[2]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[2]]}"
-          ]
+          "displayLines": "{[SkillP01[2]]}"
         },
         "MDF_Inferno_Part1_DamagePercentage": {
-          "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-          "displayLines": "{[SkillP01[3]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[3]]}"
-          ]
+          "displayLines": "{[SkillP01[3]]}"
         },
         "MDF_Inferno_Ability02_Bonus_HPRatio": {
-          "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-          "displayLines": "{[SkillP01[4]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[4]]}"
-          ]
+          "displayLines": "{[SkillP01[4]]}"
         }
       }
     },

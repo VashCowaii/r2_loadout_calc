@@ -13,21 +13,11 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"1650122283\">Enemy_W4_Manta_Passive</a>[<span class=\"descriptionNumberColor\">Respite By The Waters</span>]",
       "stackLimit": {
-        "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-        "displayLines": "{[PassiveSkill02[0]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill02[0]]}"
-        ]
+        "displayLines": "{[PassiveSkill02[0]]}"
       },
       "valuePerStack": {
         "MDF_MaxLayer": {
-          "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-          "displayLines": "{[PassiveSkill02[0]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill02[0]]}"
-          ]
+          "displayLines": "{[PassiveSkill02[0]]}"
         }
       },
       "addStacksPerTrigger": 0

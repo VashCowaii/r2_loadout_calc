@@ -82,12 +82,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Ice",
                         "Damage": {
-                          "operator": "Variables[0] (0.4) || RETURN",
-                          "displayLines": "0.4",
-                          "constants": [],
-                          "variables": [
-                            0.4
-                          ]
+                          "displayLines": "0.4"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -128,12 +123,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_SPValue) || RETURN",
-                    "displayLines": "MDF_SPValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SPValue"
-                    ]
+                    "displayLines": "MDF_SPValue"
                   },
                   "isFixed": "* ERR"
                 }
@@ -166,12 +156,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1770216154\">Pela_AbilityEidolon1</a>",
                   "valuePerStack": {
                     "MDF_SPValue": {
-                      "operator": "Variables[0] (5) || RETURN",
-                      "displayLines": "5",
-                      "constants": [],
-                      "variables": [
-                        5
-                      ]
+                      "displayLines": "5"
                     }
                   }
                 }
@@ -249,12 +234,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1770216154\">Pela_AbilityEidolon1</a>",
                   "valuePerStack": {
                     "MDF_SPValue": {
-                      "operator": "Variables[0] (5) || RETURN",
-                      "displayLines": "5",
-                      "constants": [],
-                      "variables": [
-                        5
-                      ]
+                      "displayLines": "5"
                     }
                   }
                 }
@@ -284,13 +264,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DebuffNumber_SingleTarget) || Variables[1] (DebuffNumber) || ADD || RETURN",
-                    "displayLines": "(DebuffNumber_SingleTarget + DebuffNumber)",
-                    "constants": [],
-                    "variables": [
-                      "DebuffNumber_SingleTarget",
-                      "DebuffNumber"
-                    ]
+                    "displayLines": "(DebuffNumber_SingleTarget + DebuffNumber)"
                   },
                   "variableName": "DebuffNumber"
                 }
@@ -312,12 +286,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (10) || RETURN",
-                    "displayLines": "10",
-                    "constants": [],
-                    "variables": [
-                      10
-                    ]
+                    "displayLines": "10"
                   },
                   "isFixed": "* ERR"
                 },

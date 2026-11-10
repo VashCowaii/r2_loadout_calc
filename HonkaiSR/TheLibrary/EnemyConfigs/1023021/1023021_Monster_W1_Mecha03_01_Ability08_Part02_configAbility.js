@@ -27,12 +27,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"2015116315\">Monster_W1_Mecha03_01_Overheat</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
       "valuePerStack": {
         "MDF_DefenceAddedRatio": {
-          "operator": "Variables[0] ({[Skill08[0]]}) || RETURN",
-          "displayLines": "{[Skill08[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill08[0]]}"
-          ]
+          "displayLines": "{[Skill08[0]]}"
         }
       }
     },

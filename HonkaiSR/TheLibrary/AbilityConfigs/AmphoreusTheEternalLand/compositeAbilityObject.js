@@ -43,12 +43,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.08) || RETURN",
-                    "displayLines": "0.08",
-                    "constants": [],
-                    "variables": [
-                      0.08
-                    ]
+                    "displayLines": "0.08"
                   }
                 }
               ]

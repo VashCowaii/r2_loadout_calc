@@ -32,24 +32,14 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-        "displayLines": "{[Skill03[0]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill03[0]]}"
-        ]
+        "displayLines": "{[Skill03[0]]}"
       },
       "variableName": "MaxChargeValue"
     },
     {
       "name": "SWITCH",
       "switchValue": {
-        "operator": "Variables[0] (CurrentRanger) || RETURN",
-        "displayLines": "CurrentRanger",
-        "constants": [],
-        "variables": [
-          "CurrentRanger"
-        ]
+        "displayLines": "CurrentRanger"
       },
       "caseEvents": [
         {

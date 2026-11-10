@@ -14,22 +14,12 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "DamageElation": {
-          "operator": "Variables[0] (0.6) || RETURN",
-          "displayLines": "0.6",
-          "constants": [],
-          "variables": [
-            0.6
-          ]
+          "displayLines": "0.6"
         },
         "dmgFormula": "Elation Scaling",
         "HitSplit": 0.5,
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "instanceTag": "ElationSkill_1",
         "Tags": null,
@@ -40,12 +30,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (10) || RETURN",
-        "displayLines": "10",
-        "constants": [],
-        "variables": [
-          10
-        ]
+        "displayLines": "10"
       },
       "execute": [
         {
@@ -66,21 +51,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "DamageElation": {
-                  "operator": "Variables[0] (0.18) || RETURN",
-                  "displayLines": "0.18",
-                  "constants": [],
-                  "variables": [
-                    0.18
-                  ]
+                  "displayLines": "0.18"
                 },
                 "dmgFormula": "Elation Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "instanceTag": "ElationSkill_1",
                 "Tags": null,
@@ -101,22 +76,12 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "DamageElation": {
-          "operator": "Variables[0] (0.6) || RETURN",
-          "displayLines": "0.6",
-          "constants": [],
-          "variables": [
-            0.6
-          ]
+          "displayLines": "0.6"
         },
         "dmgFormula": "Elation Scaling",
         "HitSplit": 0.5,
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "instanceTag": "ElationSkill_1",
         "Tags": null,

@@ -20,21 +20,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-          "displayLines": "{[Skill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "{[Skill03[0]]}"
         },
         "dmgFormula": "Max HP Scaling",
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"

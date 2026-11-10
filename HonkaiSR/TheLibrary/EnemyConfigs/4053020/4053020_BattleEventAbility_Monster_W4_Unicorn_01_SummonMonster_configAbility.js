@@ -39,39 +39,20 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (SummonCount) || RETURN",
-            "displayLines": "SummonCount",
-            "constants": [],
-            "variables": [
-              "SummonCount"
-            ]
+            "displayLines": "SummonCount"
           },
           "variableName": "SummonCountTemp"
         },
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (MIN) || Variables[1] (SummonCount) || Constants[0] (5) || Variables[2] (DarkTeamCount) || SUB || PARAM_2 || FUNCTION || RETURN",
-            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(SummonCount, (5 - DarkTeamCount))",
-            "constants": [
-              5
-            ],
-            "variables": [
-              "MIN",
-              "SummonCount",
-              "DarkTeamCount"
-            ]
+            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(SummonCount, (5 - DarkTeamCount))"
           },
           "execute": [
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (SummonCountTemp) || RETURN",
-                "displayLines": "SummonCountTemp",
-                "constants": [],
-                "variables": [
-                  "SummonCountTemp"
-                ]
+                "displayLines": "SummonCountTemp"
               },
               "caseEvents": [
                 {
@@ -84,12 +65,7 @@ const configAbility = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                            "displayLines": "SummonList_ADF_1",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_1"
-                            ]
+                            "displayLines": "SummonList_ADF_1"
                           },
                           "locationType": "AfterCaster"
                         }
@@ -107,12 +83,7 @@ const configAbility = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                            "displayLines": "SummonList_ADF_1",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_1"
-                            ]
+                            "displayLines": "SummonList_ADF_1"
                           },
                           "locationType": "BeforeCaster"
                         }
@@ -130,12 +101,7 @@ const configAbility = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                            "displayLines": "SummonList_ADF_1",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_1"
-                            ]
+                            "displayLines": "SummonList_ADF_1"
                           },
                           "locationType": "Last"
                         }
@@ -153,12 +119,7 @@ const configAbility = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                            "displayLines": "SummonList_ADF_1",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_1"
-                            ]
+                            "displayLines": "SummonList_ADF_1"
                           },
                           "locationType": "First"
                         }
@@ -224,12 +185,7 @@ const configAbility = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (SummonCount) || RETURN",
-                "displayLines": "SummonCount",
-                "constants": [],
-                "variables": [
-                  "SummonCount"
-                ]
+                "displayLines": "SummonCount"
               },
               "caseEvents": [
                 {
@@ -295,12 +251,7 @@ const configAbility = {
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (SummonCount) || RETURN",
-            "displayLines": "SummonCount",
-            "constants": [],
-            "variables": [
-              "SummonCount"
-            ]
+            "displayLines": "SummonCount"
           },
           "caseEvents": [
             {
@@ -507,12 +458,7 @@ const configAbility = {
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (SummonCount) || RETURN",
-            "displayLines": "SummonCount",
-            "constants": [],
-            "variables": [
-              "SummonCount"
-            ]
+            "displayLines": "SummonCount"
           },
           "caseEvents": [
             {

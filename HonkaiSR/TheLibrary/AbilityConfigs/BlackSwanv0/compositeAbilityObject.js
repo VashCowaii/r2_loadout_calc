@@ -115,12 +115,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (Rank04_SPAdded) || RETURN",
-                    "displayLines": "Rank04_SPAdded",
-                    "constants": [],
-                    "variables": [
-                      "Rank04_SPAdded"
-                    ]
+                    "displayLines": "Rank04_SPAdded"
                   },
                   "isFixed": "* ERR"
                 },
@@ -217,14 +212,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
                       "value": {
-                        "operator": "Constants[0] (0) || Variables[0] (MDF_ResistanceDown) || SUB || RETURN",
-                        "displayLines": "(0 - MDF_ResistanceDown)",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "MDF_ResistanceDown"
-                        ]
+                        "displayLines": "(0 - MDF_ResistanceDown)"
                       }
                     },
                     {
@@ -248,12 +236,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1557426074\">M_BlackSwan_DOT_Eidolon4_AddSP</a>",
                       "valuePerStack": {
                         "Eidolon4_SPAdded": {
-                          "operator": "Variables[0] (8) || RETURN",
-                          "displayLines": "8",
-                          "constants": [],
-                          "variables": [
-                            8
-                          ]
+                          "displayLines": "8"
                         }
                       }
                     }
@@ -475,12 +458,7 @@ const compositeAbilityObject = {
                         "value1": "Dot_Layer_Count",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (SecondLayer) || RETURN",
-                          "displayLines": "SecondLayer",
-                          "constants": [],
-                          "variables": [
-                            "SecondLayer"
-                          ]
+                          "displayLines": "SecondLayer"
                         },
                         "contextScope": "ContextModifier"
                       },
@@ -538,12 +516,7 @@ const compositeAbilityObject = {
                             "value1": "Dot_Layer_Count",
                             "compareType": "<",
                             "value2": {
-                              "operator": "Variables[0] (ThirdLayer) || RETURN",
-                              "displayLines": "ThirdLayer",
-                              "constants": [],
-                              "variables": [
-                                "ThirdLayer"
-                              ]
+                              "displayLines": "ThirdLayer"
                             },
                             "contextScope": "ContextModifier"
                           },
@@ -587,12 +560,7 @@ const compositeAbilityObject = {
                         "value1": "Dot_Layer_Count",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (ThirdLayer) || RETURN",
-                          "displayLines": "ThirdLayer",
-                          "constants": [],
-                          "variables": [
-                            "ThirdLayer"
-                          ]
+                          "displayLines": "ThirdLayer"
                         },
                         "contextScope": "ContextModifier"
                       },
@@ -606,12 +574,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1900357632\">M_BlackSwan_DOT_DefenceIgnore</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (DefenceIgnore) || RETURN",
-                              "displayLines": "DefenceIgnore",
-                              "constants": [],
-                              "variables": [
-                                "DefenceIgnore"
-                              ]
+                              "displayLines": "DefenceIgnore"
                             }
                           }
                         },
@@ -624,12 +587,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1900357632\">M_BlackSwan_DOT_DefenceIgnore</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (DefenceIgnore) || RETURN",
-                              "displayLines": "DefenceIgnore",
-                              "constants": [],
-                              "variables": [
-                                "DefenceIgnore"
-                              ]
+                              "displayLines": "DefenceIgnore"
                             }
                           }
                         }
@@ -646,12 +604,7 @@ const compositeAbilityObject = {
                         "value1": "Dot_Layer_Count",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (ThirdLayer) || RETURN",
-                          "displayLines": "ThirdLayer",
-                          "constants": [],
-                          "variables": [
-                            "ThirdLayer"
-                          ]
+                          "displayLines": "ThirdLayer"
                         },
                         "contextScope": "ContextModifier"
                       },
@@ -676,14 +629,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] (Basic_DamagePercentage) || Variables[1] (Dot_Layer_Count) || Variables[2] (ExtraLayer_DamagePercentage) || MUL || ADD || RETURN",
-                                  "displayLines": "(Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage))",
-                                  "constants": [],
-                                  "variables": [
-                                    "Basic_DamagePercentage",
-                                    "Dot_Layer_Count",
-                                    "ExtraLayer_DamagePercentage"
-                                  ]
+                                  "displayLines": "(Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage))"
                                 },
                                 "Toughness": null,
                                 "Tags": null,
@@ -701,14 +647,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] (Basic_DamagePercentage) || Variables[1] (Dot_Layer_Count) || Variables[2] (ExtraLayer_DamagePercentage) || MUL || ADD || RETURN",
-                                  "displayLines": "(Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage))",
-                                  "constants": [],
-                                  "variables": [
-                                    "Basic_DamagePercentage",
-                                    "Dot_Layer_Count",
-                                    "ExtraLayer_DamagePercentage"
-                                  ]
+                                  "displayLines": "(Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage))"
                                 },
                                 "Toughness": null,
                                 "Tags": null,
@@ -741,12 +680,7 @@ const compositeAbilityObject = {
                             "value1": "Dot_Layer_Count",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (SecondLayer) || RETURN",
-                              "displayLines": "SecondLayer",
-                              "constants": [],
-                              "variables": [
-                                "SecondLayer"
-                              ]
+                              "displayLines": "SecondLayer"
                             },
                             "contextScope": "ContextModifier"
                           },
@@ -771,14 +705,7 @@ const compositeAbilityObject = {
                                   "AttackScaling": {
                                     "DamageType": "Wind",
                                     "Damage": {
-                                      "operator": "Variables[0] (Basic_DamagePercentage) || Variables[1] (Dot_Layer_Count) || Variables[2] (ExtraLayer_DamagePercentage) || MUL || ADD || RETURN",
-                                      "displayLines": "(Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage))",
-                                      "constants": [],
-                                      "variables": [
-                                        "Basic_DamagePercentage",
-                                        "Dot_Layer_Count",
-                                        "ExtraLayer_DamagePercentage"
-                                      ]
+                                      "displayLines": "(Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage))"
                                     },
                                     "Toughness": null,
                                     "Tags": null,
@@ -796,14 +723,7 @@ const compositeAbilityObject = {
                                   "AttackScaling": {
                                     "DamageType": "Wind",
                                     "Damage": {
-                                      "operator": "Variables[0] (Basic_DamagePercentage) || Variables[1] (Dot_Layer_Count) || Variables[2] (ExtraLayer_DamagePercentage) || MUL || ADD || RETURN",
-                                      "displayLines": "(Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage))",
-                                      "constants": [],
-                                      "variables": [
-                                        "Basic_DamagePercentage",
-                                        "Dot_Layer_Count",
-                                        "ExtraLayer_DamagePercentage"
-                                      ]
+                                      "displayLines": "(Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage))"
                                     },
                                     "Toughness": null,
                                     "Tags": null,
@@ -845,14 +765,7 @@ const compositeAbilityObject = {
                                   "AttackScaling": {
                                     "DamageType": "Wind",
                                     "Damage": {
-                                      "operator": "Variables[0] (Basic_DamagePercentage) || Variables[1] (Dot_Layer_Count) || Variables[2] (ExtraLayer_DamagePercentage) || MUL || ADD || RETURN",
-                                      "displayLines": "(Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage))",
-                                      "constants": [],
-                                      "variables": [
-                                        "Basic_DamagePercentage",
-                                        "Dot_Layer_Count",
-                                        "ExtraLayer_DamagePercentage"
-                                      ]
+                                      "displayLines": "(Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage))"
                                     },
                                     "Toughness": null,
                                     "Tags": null,
@@ -870,14 +783,7 @@ const compositeAbilityObject = {
                                   "AttackScaling": {
                                     "DamageType": "Wind",
                                     "Damage": {
-                                      "operator": "Variables[0] (Basic_DamagePercentage) || Variables[1] (Dot_Layer_Count) || Variables[2] (ExtraLayer_DamagePercentage) || MUL || ADD || RETURN",
-                                      "displayLines": "(Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage))",
-                                      "constants": [],
-                                      "variables": [
-                                        "Basic_DamagePercentage",
-                                        "Dot_Layer_Count",
-                                        "ExtraLayer_DamagePercentage"
-                                      ]
+                                      "displayLines": "(Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage))"
                                     },
                                     "Toughness": null,
                                     "Tags": null,
@@ -912,12 +818,7 @@ const compositeAbilityObject = {
                         "value1": "Dot_Layer_Count",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (SecondLayer) || RETURN",
-                          "displayLines": "SecondLayer",
-                          "constants": [],
-                          "variables": [
-                            "SecondLayer"
-                          ]
+                          "displayLines": "SecondLayer"
                         },
                         "contextScope": "ContextModifier"
                       },
@@ -956,12 +857,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] (Spread_DamagePercentage) || RETURN",
-                                  "displayLines": "Spread_DamagePercentage",
-                                  "constants": [],
-                                  "variables": [
-                                    "Spread_DamagePercentage"
-                                  ]
+                                  "displayLines": "Spread_DamagePercentage"
                                 },
                                 "Toughness": null,
                                 "Tags": null,
@@ -993,12 +889,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] (Spread_DamagePercentage) || RETURN",
-                                  "displayLines": "Spread_DamagePercentage",
-                                  "constants": [],
-                                  "variables": [
-                                    "Spread_DamagePercentage"
-                                  ]
+                                  "displayLines": "Spread_DamagePercentage"
                                 },
                                 "Toughness": null,
                                 "Tags": null,
@@ -1034,12 +925,7 @@ const compositeAbilityObject = {
                                 "value1": "Dot_Layer_Count",
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] (ThirdLayer) || RETURN",
-                                  "displayLines": "ThirdLayer",
-                                  "constants": [],
-                                  "variables": [
-                                    "ThirdLayer"
-                                  ]
+                                  "displayLines": "ThirdLayer"
                                 },
                                 "contextScope": "ContextModifier"
                               },
@@ -1117,14 +1003,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Wind",
                         "Damage": {
-                          "operator": "Variables[0] (Basic_DamagePercentage) || Variables[1] (Dot_Layer_Count) || Variables[2] (ExtraLayer_DamagePercentage) || MUL || ADD || RETURN",
-                          "displayLines": "(Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage))",
-                          "constants": [],
-                          "variables": [
-                            "Basic_DamagePercentage",
-                            "Dot_Layer_Count",
-                            "ExtraLayer_DamagePercentage"
-                          ]
+                          "displayLines": "(Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage))"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -1192,14 +1071,7 @@ const compositeAbilityObject = {
                       "name": "Define Modifier Variable",
                       "modifierName": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]",
                       "value": {
-                        "operator": "Variables[0] (_enhance_count) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(_enhance_count - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_enhance_count"
-                        ]
+                        "displayLines": "(_enhance_count - 1)"
                       }
                     },
                     {
@@ -1207,14 +1079,7 @@ const compositeAbilityObject = {
                       "modifierName": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]",
                       "variableName": "MDF_Count",
                       "value": {
-                        "operator": "Variables[0] (_enhance_count) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(_enhance_count - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_enhance_count"
-                        ]
+                        "displayLines": "(_enhance_count - 1)"
                       }
                     }
                   ],
@@ -1246,14 +1111,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                       "addStacksPerTrigger": {
-                        "operator": "Constants[0] (1) || Variables[0] (ExtraLayer_DamagePercentage) || SUB || RETURN",
-                        "displayLines": "(1 - ExtraLayer_DamagePercentage)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "ExtraLayer_DamagePercentage"
-                        ]
+                        "displayLines": "(1 - ExtraLayer_DamagePercentage)"
                       },
                       "silentAdd": true
                     },
@@ -1391,12 +1249,7 @@ const compositeAbilityObject = {
                             },
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (ThirdLayer) || RETURN",
-                              "displayLines": "ThirdLayer",
-                              "constants": [],
-                              "variables": [
-                                "ThirdLayer"
-                              ]
+                              "displayLines": "ThirdLayer"
                             },
                             "valueType": "Layer"
                           },
@@ -1411,12 +1264,7 @@ const compositeAbilityObject = {
                                 },
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] (SecondLayer) || RETURN",
-                                  "displayLines": "SecondLayer",
-                                  "constants": [],
-                                  "variables": [
-                                    "SecondLayer"
-                                  ]
+                                  "displayLines": "SecondLayer"
                                 },
                                 "valueType": "Layer"
                               }
@@ -1435,12 +1283,7 @@ const compositeAbilityObject = {
                             },
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (ThirdLayer) || RETURN",
-                              "displayLines": "ThirdLayer",
-                              "constants": [],
-                              "variables": [
-                                "ThirdLayer"
-                              ]
+                              "displayLines": "ThirdLayer"
                             },
                             "valueType": "Layer"
                           },
@@ -1455,12 +1298,7 @@ const compositeAbilityObject = {
                                 },
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] (SecondLayer) || RETURN",
-                                  "displayLines": "SecondLayer",
-                                  "constants": [],
-                                  "variables": [
-                                    "SecondLayer"
-                                  ]
+                                  "displayLines": "SecondLayer"
                                 },
                                 "valueType": "Layer"
                               }
@@ -1507,15 +1345,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Wind",
                         "Damage": {
-                          "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Basic_DamagePercentage) || Variables[2] (Dot_Layer_Count) || Variables[3] (ExtraLayer_DamagePercentage) || MUL || ADD || MUL || RETURN",
-                          "displayLines": "(DOT_TriggerRatio * (Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage)))",
-                          "constants": [],
-                          "variables": [
-                            "DOT_TriggerRatio",
-                            "Basic_DamagePercentage",
-                            "Dot_Layer_Count",
-                            "ExtraLayer_DamagePercentage"
-                          ]
+                          "displayLines": "(DOT_TriggerRatio * (Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage)))"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -1533,15 +1363,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Wind",
                         "Damage": {
-                          "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Basic_DamagePercentage) || Variables[2] (Dot_Layer_Count) || Variables[3] (ExtraLayer_DamagePercentage) || MUL || ADD || MUL || RETURN",
-                          "displayLines": "(DOT_TriggerRatio * (Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage)))",
-                          "constants": [],
-                          "variables": [
-                            "DOT_TriggerRatio",
-                            "Basic_DamagePercentage",
-                            "Dot_Layer_Count",
-                            "ExtraLayer_DamagePercentage"
-                          ]
+                          "displayLines": "(DOT_TriggerRatio * (Basic_DamagePercentage + (Dot_Layer_Count * ExtraLayer_DamagePercentage)))"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -1588,24 +1410,14 @@ const compositeAbilityObject = {
                     "value1": "MDF_PropertyRatio",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (0.72) || RETURN",
-                      "displayLines": "0.72",
-                      "constants": [],
-                      "variables": [
-                        0.72
-                      ]
+                      "displayLines": "0.72"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (0.72) || RETURN",
-                        "displayLines": "0.72",
-                        "constants": [],
-                        "variables": [
-                          0.72
-                        ]
+                        "displayLines": "0.72"
                       },
                       "variableName": "MDF_PropertyRatio"
                     }
@@ -1619,12 +1431,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                    "displayLines": "MDF_PropertyRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyRatio"
-                    ]
+                    "displayLines": "MDF_PropertyRatio"
                   }
                 }
               ]
@@ -1660,13 +1467,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"97197540\">M_BlackSwan_Trace03_Sub</a>",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (CasterStatusProbability) || Variables[1] (0.6) || MUL || RETURN",
-                      "displayLines": "(CasterStatusProbability * 0.6)",
-                      "constants": [],
-                      "variables": [
-                        "CasterStatusProbability",
-                        0.6
-                      ]
+                      "displayLines": "(CasterStatusProbability * 0.6)"
                     }
                   }
                 }
@@ -1701,13 +1502,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"97197540\">M_BlackSwan_Trace03_Sub</a>",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
-                          "operator": "Variables[0] (CasterStatusProbability) || Variables[1] (0.6) || MUL || RETURN",
-                          "displayLines": "(CasterStatusProbability * 0.6)",
-                          "constants": [],
-                          "variables": [
-                            "CasterStatusProbability",
-                            0.6
-                          ]
+                          "displayLines": "(CasterStatusProbability * 0.6)"
                         }
                       }
                     }
@@ -1778,12 +1573,7 @@ const compositeAbilityObject = {
                         "value1": "_count",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (_maxLimit) || RETURN",
-                          "displayLines": "_maxLimit",
-                          "constants": [],
-                          "variables": [
-                            "_maxLimit"
-                          ]
+                          "displayLines": "_maxLimit"
                         },
                         "contextScope": "ContextModifier"
                       },
@@ -1935,26 +1725,14 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Random Chance",
                         "chance": {
-                          "operator": "Variables[0] (Rank06_Chance) || RETURN",
-                          "displayLines": "Rank06_Chance",
-                          "constants": [],
-                          "variables": [
-                            "Rank06_Chance"
-                          ]
+                          "displayLines": "Rank06_Chance"
                         }
                       },
                       "passed": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Constants[0] (1) || Variables[0] (Rank06_Extra_Layer) || ADD || RETURN",
-                            "displayLines": "(1 + Rank06_Extra_Layer)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Rank06_Extra_Layer"
-                            ]
+                            "displayLines": "(1 + Rank06_Extra_Layer)"
                           },
                           "variableName": "Rank06_Weighted_Stack_Layer"
                         }
@@ -1963,12 +1741,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Constants[0] (1) || RETURN",
-                            "displayLines": "1",
-                            "constants": [
-                              1
-                            ],
-                            "variables": []
+                            "displayLines": "1"
                           },
                           "variableName": "Rank06_Weighted_Stack_Layer"
                         }
@@ -1982,79 +1755,34 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                       "baseChance": {
-                        "operator": "Variables[0] (0.65) || RETURN",
-                        "displayLines": "0.65",
-                        "constants": [],
-                        "variables": [
-                          0.65
-                        ]
+                        "displayLines": "0.65"
                       },
                       "stackLimit": {
-                        "operator": "Variables[0] (Max_DOT_Layer) || RETURN",
-                        "displayLines": "Max_DOT_Layer",
-                        "constants": [],
-                        "variables": [
-                          "Max_DOT_Layer"
-                        ]
+                        "displayLines": "Max_DOT_Layer"
                       },
                       "valuePerStack": {
                         "Basic_DamagePercentage": {
-                          "operator": "Variables[0] (2.4) || RETURN",
-                          "displayLines": "2.4",
-                          "constants": [],
-                          "variables": [
-                            2.4
-                          ]
+                          "displayLines": "2.4"
                         },
                         "ExtraLayer_DamagePercentage": {
-                          "operator": "Variables[0] (0.12) || RETURN",
-                          "displayLines": "0.12",
-                          "constants": [],
-                          "variables": [
-                            0.12
-                          ]
+                          "displayLines": "0.12"
                         },
                         "SecondLayer": {
-                          "operator": "Variables[0] (3) || RETURN",
-                          "displayLines": "3",
-                          "constants": [],
-                          "variables": [
-                            3
-                          ]
+                          "displayLines": "3"
                         },
                         "Spread_DamagePercentage": {
-                          "operator": "Variables[0] (1.8) || RETURN",
-                          "displayLines": "1.8",
-                          "constants": [],
-                          "variables": [
-                            1.8
-                          ]
+                          "displayLines": "1.8"
                         },
                         "ThirdLayer": {
-                          "operator": "Variables[0] (7) || RETURN",
-                          "displayLines": "7",
-                          "constants": [],
-                          "variables": [
-                            7
-                          ]
+                          "displayLines": "7"
                         },
                         "DefenceIgnore": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         },
                         "Cast_By_Level": 0
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (Rank06_Weighted_Stack_Layer) || RETURN",
-                        "displayLines": "Rank06_Weighted_Stack_Layer",
-                        "constants": [],
-                        "variables": [
-                          "Rank06_Weighted_Stack_Layer"
-                        ]
+                        "displayLines": "Rank06_Weighted_Stack_Layer"
                       }
                     }
                   ]
@@ -2090,12 +1818,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-993235017\">M_BlackSwan_Tree02_ListenAddPoison_SubOnEnemy</a>",
                       "valuePerStack": {
                         "_maxLimit": {
-                          "operator": "Variables[0] (3) || RETURN",
-                          "displayLines": "3",
-                          "constants": [],
-                          "variables": [
-                            3
-                          ]
+                          "displayLines": "3"
                         }
                       }
                     }
@@ -2130,26 +1853,14 @@ const compositeAbilityObject = {
                           "conditions": {
                             "name": "Random Chance",
                             "chance": {
-                              "operator": "Variables[0] (Rank06_Chance) || RETURN",
-                              "displayLines": "Rank06_Chance",
-                              "constants": [],
-                              "variables": [
-                                "Rank06_Chance"
-                              ]
+                              "displayLines": "Rank06_Chance"
                             }
                           },
                           "passed": [
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Constants[0] (1) || Variables[0] (Rank06_Extra_Layer) || ADD || RETURN",
-                                "displayLines": "(1 + Rank06_Extra_Layer)",
-                                "constants": [
-                                  1
-                                ],
-                                "variables": [
-                                  "Rank06_Extra_Layer"
-                                ]
+                                "displayLines": "(1 + Rank06_Extra_Layer)"
                               },
                               "variableName": "Rank06_Weighted_Stack_Layer"
                             }
@@ -2158,12 +1869,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Constants[0] (1) || RETURN",
-                                "displayLines": "1",
-                                "constants": [
-                                  1
-                                ],
-                                "variables": []
+                                "displayLines": "1"
                               },
                               "variableName": "Rank06_Weighted_Stack_Layer"
                             }
@@ -2177,79 +1883,34 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                           "baseChance": {
-                            "operator": "Variables[0] (0.65) || RETURN",
-                            "displayLines": "0.65",
-                            "constants": [],
-                            "variables": [
-                              0.65
-                            ]
+                            "displayLines": "0.65"
                           },
                           "stackLimit": {
-                            "operator": "Variables[0] (Max_DOT_Layer) || RETURN",
-                            "displayLines": "Max_DOT_Layer",
-                            "constants": [],
-                            "variables": [
-                              "Max_DOT_Layer"
-                            ]
+                            "displayLines": "Max_DOT_Layer"
                           },
                           "valuePerStack": {
                             "Basic_DamagePercentage": {
-                              "operator": "Variables[0] (2.4) || RETURN",
-                              "displayLines": "2.4",
-                              "constants": [],
-                              "variables": [
-                                2.4
-                              ]
+                              "displayLines": "2.4"
                             },
                             "ExtraLayer_DamagePercentage": {
-                              "operator": "Variables[0] (0.12) || RETURN",
-                              "displayLines": "0.12",
-                              "constants": [],
-                              "variables": [
-                                0.12
-                              ]
+                              "displayLines": "0.12"
                             },
                             "SecondLayer": {
-                              "operator": "Variables[0] (3) || RETURN",
-                              "displayLines": "3",
-                              "constants": [],
-                              "variables": [
-                                3
-                              ]
+                              "displayLines": "3"
                             },
                             "Spread_DamagePercentage": {
-                              "operator": "Variables[0] (1.8) || RETURN",
-                              "displayLines": "1.8",
-                              "constants": [],
-                              "variables": [
-                                1.8
-                              ]
+                              "displayLines": "1.8"
                             },
                             "ThirdLayer": {
-                              "operator": "Variables[0] (7) || RETURN",
-                              "displayLines": "7",
-                              "constants": [],
-                              "variables": [
-                                7
-                              ]
+                              "displayLines": "7"
                             },
                             "DefenceIgnore": {
-                              "operator": "Variables[0] (0.2) || RETURN",
-                              "displayLines": "0.2",
-                              "constants": [],
-                              "variables": [
-                                0.2
-                              ]
+                              "displayLines": "0.2"
                             },
                             "Cast_By_Level": 0
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (Rank06_Weighted_Stack_Layer) || RETURN",
-                            "displayLines": "Rank06_Weighted_Stack_Layer",
-                            "constants": [],
-                            "variables": [
-                              "Rank06_Weighted_Stack_Layer"
-                            ]
+                            "displayLines": "Rank06_Weighted_Stack_Layer"
                           }
                         }
                       ]
@@ -2281,26 +1942,14 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Random Chance",
                         "chance": {
-                          "operator": "Variables[0] (Rank06_Chance) || RETURN",
-                          "displayLines": "Rank06_Chance",
-                          "constants": [],
-                          "variables": [
-                            "Rank06_Chance"
-                          ]
+                          "displayLines": "Rank06_Chance"
                         }
                       },
                       "passed": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Constants[0] (1) || Variables[0] (Rank06_Extra_Layer) || ADD || RETURN",
-                            "displayLines": "(1 + Rank06_Extra_Layer)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Rank06_Extra_Layer"
-                            ]
+                            "displayLines": "(1 + Rank06_Extra_Layer)"
                           },
                           "variableName": "Rank06_Weighted_Stack_Layer"
                         }
@@ -2309,12 +1958,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Constants[0] (1) || RETURN",
-                            "displayLines": "1",
-                            "constants": [
-                              1
-                            ],
-                            "variables": []
+                            "displayLines": "1"
                           },
                           "variableName": "Rank06_Weighted_Stack_Layer"
                         }
@@ -2328,79 +1972,34 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                       "baseChance": {
-                        "operator": "Variables[0] (0.65) || RETURN",
-                        "displayLines": "0.65",
-                        "constants": [],
-                        "variables": [
-                          0.65
-                        ]
+                        "displayLines": "0.65"
                       },
                       "stackLimit": {
-                        "operator": "Variables[0] (Max_DOT_Layer) || RETURN",
-                        "displayLines": "Max_DOT_Layer",
-                        "constants": [],
-                        "variables": [
-                          "Max_DOT_Layer"
-                        ]
+                        "displayLines": "Max_DOT_Layer"
                       },
                       "valuePerStack": {
                         "Basic_DamagePercentage": {
-                          "operator": "Variables[0] (2.4) || RETURN",
-                          "displayLines": "2.4",
-                          "constants": [],
-                          "variables": [
-                            2.4
-                          ]
+                          "displayLines": "2.4"
                         },
                         "ExtraLayer_DamagePercentage": {
-                          "operator": "Variables[0] (0.12) || RETURN",
-                          "displayLines": "0.12",
-                          "constants": [],
-                          "variables": [
-                            0.12
-                          ]
+                          "displayLines": "0.12"
                         },
                         "SecondLayer": {
-                          "operator": "Variables[0] (3) || RETURN",
-                          "displayLines": "3",
-                          "constants": [],
-                          "variables": [
-                            3
-                          ]
+                          "displayLines": "3"
                         },
                         "Spread_DamagePercentage": {
-                          "operator": "Variables[0] (1.8) || RETURN",
-                          "displayLines": "1.8",
-                          "constants": [],
-                          "variables": [
-                            1.8
-                          ]
+                          "displayLines": "1.8"
                         },
                         "ThirdLayer": {
-                          "operator": "Variables[0] (7) || RETURN",
-                          "displayLines": "7",
-                          "constants": [],
-                          "variables": [
-                            7
-                          ]
+                          "displayLines": "7"
                         },
                         "DefenceIgnore": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         },
                         "Cast_By_Level": 0
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (Rank06_Weighted_Stack_Layer) || RETURN",
-                        "displayLines": "Rank06_Weighted_Stack_Layer",
-                        "constants": [],
-                        "variables": [
-                          "Rank06_Weighted_Stack_Layer"
-                        ]
+                        "displayLines": "Rank06_Weighted_Stack_Layer"
                       },
                       "success": [
                         {
@@ -2565,26 +2164,14 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Random Chance",
                         "chance": {
-                          "operator": "Variables[0] (Rank06_Chance) || RETURN",
-                          "displayLines": "Rank06_Chance",
-                          "constants": [],
-                          "variables": [
-                            "Rank06_Chance"
-                          ]
+                          "displayLines": "Rank06_Chance"
                         }
                       },
                       "passed": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Constants[0] (1) || Variables[0] (Rank06_Extra_Layer) || ADD || RETURN",
-                            "displayLines": "(1 + Rank06_Extra_Layer)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Rank06_Extra_Layer"
-                            ]
+                            "displayLines": "(1 + Rank06_Extra_Layer)"
                           },
                           "variableName": "Rank06_Weighted_Stack_Layer"
                         }
@@ -2593,12 +2180,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Constants[0] (1) || RETURN",
-                            "displayLines": "1",
-                            "constants": [
-                              1
-                            ],
-                            "variables": []
+                            "displayLines": "1"
                           },
                           "variableName": "Rank06_Weighted_Stack_Layer"
                         }
@@ -2612,79 +2194,34 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                       "baseChance": {
-                        "operator": "Variables[0] (0.65) || RETURN",
-                        "displayLines": "0.65",
-                        "constants": [],
-                        "variables": [
-                          0.65
-                        ]
+                        "displayLines": "0.65"
                       },
                       "stackLimit": {
-                        "operator": "Variables[0] (Max_DOT_Layer) || RETURN",
-                        "displayLines": "Max_DOT_Layer",
-                        "constants": [],
-                        "variables": [
-                          "Max_DOT_Layer"
-                        ]
+                        "displayLines": "Max_DOT_Layer"
                       },
                       "valuePerStack": {
                         "Basic_DamagePercentage": {
-                          "operator": "Variables[0] (2.4) || RETURN",
-                          "displayLines": "2.4",
-                          "constants": [],
-                          "variables": [
-                            2.4
-                          ]
+                          "displayLines": "2.4"
                         },
                         "ExtraLayer_DamagePercentage": {
-                          "operator": "Variables[0] (0.12) || RETURN",
-                          "displayLines": "0.12",
-                          "constants": [],
-                          "variables": [
-                            0.12
-                          ]
+                          "displayLines": "0.12"
                         },
                         "SecondLayer": {
-                          "operator": "Variables[0] (3) || RETURN",
-                          "displayLines": "3",
-                          "constants": [],
-                          "variables": [
-                            3
-                          ]
+                          "displayLines": "3"
                         },
                         "Spread_DamagePercentage": {
-                          "operator": "Variables[0] (1.8) || RETURN",
-                          "displayLines": "1.8",
-                          "constants": [],
-                          "variables": [
-                            1.8
-                          ]
+                          "displayLines": "1.8"
                         },
                         "ThirdLayer": {
-                          "operator": "Variables[0] (7) || RETURN",
-                          "displayLines": "7",
-                          "constants": [],
-                          "variables": [
-                            7
-                          ]
+                          "displayLines": "7"
                         },
                         "DefenceIgnore": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         },
                         "Cast_By_Level": 0
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (Rank06_Weighted_Stack_Layer) || RETURN",
-                        "displayLines": "Rank06_Weighted_Stack_Layer",
-                        "constants": [],
-                        "variables": [
-                          "Rank06_Weighted_Stack_Layer"
-                        ]
+                        "displayLines": "Rank06_Weighted_Stack_Layer"
                       }
                     }
                   ]
@@ -2804,25 +2341,14 @@ const compositeAbilityObject = {
                               "conditions": {
                                 "name": "Random Chance",
                                 "chance": {
-                                  "operator": "Variables[0] (Rank06_Chance) || RETURN",
-                                  "displayLines": "Rank06_Chance",
-                                  "constants": [],
-                                  "variables": [
-                                    "Rank06_Chance"
-                                  ]
+                                  "displayLines": "Rank06_Chance"
                                 }
                               },
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
                                   "value": {
-                                    "operator": "Variables[0] (6) || Variables[1] (Rank06_Extra_Layer) || ADD || RETURN",
-                                    "displayLines": "(6 + Rank06_Extra_Layer)",
-                                    "constants": [],
-                                    "variables": [
-                                      6,
-                                      "Rank06_Extra_Layer"
-                                    ]
+                                    "displayLines": "(6 + Rank06_Extra_Layer)"
                                   },
                                   "variableName": "Rank06_Weighted_Stack_Layer"
                                 }
@@ -2831,12 +2357,7 @@ const compositeAbilityObject = {
                                 {
                                   "name": "Define Custom Variable",
                                   "value": {
-                                    "operator": "Variables[0] (6) || RETURN",
-                                    "displayLines": "6",
-                                    "constants": [],
-                                    "variables": [
-                                      6
-                                    ]
+                                    "displayLines": "6"
                                   },
                                   "variableName": "Rank06_Weighted_Stack_Layer"
                                 }
@@ -2850,79 +2371,34 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                               "baseChance": {
-                                "operator": "Variables[0] (1) || RETURN",
-                                "displayLines": "1",
-                                "constants": [],
-                                "variables": [
-                                  1
-                                ]
+                                "displayLines": "1"
                               },
                               "stackLimit": {
-                                "operator": "Variables[0] (Max_DOT_Layer) || RETURN",
-                                "displayLines": "Max_DOT_Layer",
-                                "constants": [],
-                                "variables": [
-                                  "Max_DOT_Layer"
-                                ]
+                                "displayLines": "Max_DOT_Layer"
                               },
                               "valuePerStack": {
                                 "Basic_DamagePercentage": {
-                                  "operator": "Variables[0] (2.4) || RETURN",
-                                  "displayLines": "2.4",
-                                  "constants": [],
-                                  "variables": [
-                                    2.4
-                                  ]
+                                  "displayLines": "2.4"
                                 },
                                 "ExtraLayer_DamagePercentage": {
-                                  "operator": "Variables[0] (0.12) || RETURN",
-                                  "displayLines": "0.12",
-                                  "constants": [],
-                                  "variables": [
-                                    0.12
-                                  ]
+                                  "displayLines": "0.12"
                                 },
                                 "SecondLayer": {
-                                  "operator": "Variables[0] (3) || RETURN",
-                                  "displayLines": "3",
-                                  "constants": [],
-                                  "variables": [
-                                    3
-                                  ]
+                                  "displayLines": "3"
                                 },
                                 "Spread_DamagePercentage": {
-                                  "operator": "Variables[0] (1.8) || RETURN",
-                                  "displayLines": "1.8",
-                                  "constants": [],
-                                  "variables": [
-                                    1.8
-                                  ]
+                                  "displayLines": "1.8"
                                 },
                                 "ThirdLayer": {
-                                  "operator": "Variables[0] (7) || RETURN",
-                                  "displayLines": "7",
-                                  "constants": [],
-                                  "variables": [
-                                    7
-                                  ]
+                                  "displayLines": "7"
                                 },
                                 "DefenceIgnore": {
-                                  "operator": "Variables[0] (0.2) || RETURN",
-                                  "displayLines": "0.2",
-                                  "constants": [],
-                                  "variables": [
-                                    0.2
-                                  ]
+                                  "displayLines": "0.2"
                                 },
                                 "Cast_By_Level": 0
                               },
                               "addStacksPerTrigger": {
-                                "operator": "Variables[0] (Rank06_Weighted_Stack_Layer) || RETURN",
-                                "displayLines": "Rank06_Weighted_Stack_Layer",
-                                "constants": [],
-                                "variables": [
-                                  "Rank06_Weighted_Stack_Layer"
-                                ]
+                                "displayLines": "Rank06_Weighted_Stack_Layer"
                               }
                             }
                           ]
@@ -2978,14 +2454,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceLightningBonus</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "(0 - MDF_PropertyValue)"
                   }
                 }
               ]
@@ -3014,14 +2483,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFireBonus</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "(0 - MDF_PropertyValue)"
                   }
                 }
               ]
@@ -3050,14 +2512,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistancePhysicalBonus</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "(0 - MDF_PropertyValue)"
                   }
                 }
               ]
@@ -3086,14 +2541,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindBonus</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "(0 - MDF_PropertyValue)"
                   }
                 }
               ]
@@ -3144,12 +2592,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     },
@@ -3162,12 +2605,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     },
@@ -3180,12 +2618,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     },
@@ -3198,12 +2631,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     }
@@ -3229,12 +2657,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     }
@@ -3260,12 +2683,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     }
@@ -3291,12 +2709,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     }
@@ -3322,12 +2735,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     }
@@ -3419,12 +2827,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     }
@@ -3484,12 +2887,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     }
@@ -3549,12 +2947,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     }
@@ -3614,12 +3007,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     }
@@ -3669,12 +3057,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     },
@@ -3687,12 +3070,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     },
@@ -3705,12 +3083,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     },
@@ -3723,12 +3096,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     }
@@ -3869,12 +3237,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     },
@@ -3887,12 +3250,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     },
@@ -3905,12 +3263,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     },
@@ -3923,12 +3276,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     }
@@ -3950,12 +3298,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     }
@@ -3977,12 +3320,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     }
@@ -4004,12 +3342,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     }
@@ -4031,12 +3364,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     }
@@ -4073,12 +3401,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1077373681\">BlackSwan_Eidolon1_SubOnEnemy</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
+                          "displayLines": "0.25"
                         }
                       }
                     }
@@ -4099,12 +3422,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1077373681\">BlackSwan_Eidolon1_SubOnEnemy</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     }
                   }
                 }
@@ -4394,12 +3712,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Constants[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [
-              1
-            ],
-            "variables": []
+            "displayLines": "1"
           },
           "variableName": "_can_continue"
         },
@@ -4411,12 +3724,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (1.5) || RETURN",
-            "displayLines": "1.5",
-            "constants": [],
-            "variables": [
-              1.5
-            ]
+            "displayLines": "1.5"
           },
           "variableName": "_current_chance"
         },
@@ -4453,26 +3761,14 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_loop_count) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(_loop_count + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_loop_count"
-                ]
+                "displayLines": "(_loop_count + 1)"
               },
               "variableName": "_loop_count"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Constants[0] (0) || RETURN",
-                "displayLines": "0",
-                "constants": [
-                  0
-                ],
-                "variables": []
+                "displayLines": "0"
               },
               "variableName": "_can_continue"
             },
@@ -4497,26 +3793,14 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Random Chance",
                     "chance": {
-                      "operator": "Variables[0] (Rank06_Chance) || RETURN",
-                      "displayLines": "Rank06_Chance",
-                      "constants": [],
-                      "variables": [
-                        "Rank06_Chance"
-                      ]
+                      "displayLines": "Rank06_Chance"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Constants[0] (1) || Variables[0] (Rank06_Extra_Layer) || ADD || RETURN",
-                        "displayLines": "(1 + Rank06_Extra_Layer)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Rank06_Extra_Layer"
-                        ]
+                        "displayLines": "(1 + Rank06_Extra_Layer)"
                       },
                       "variableName": "Rank06_Weighted_Stack_Layer"
                     }
@@ -4525,12 +3809,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Constants[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [
-                          1
-                        ],
-                        "variables": []
+                        "displayLines": "1"
                       },
                       "variableName": "Rank06_Weighted_Stack_Layer"
                     }
@@ -4544,91 +3823,41 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                   "baseChance": {
-                    "operator": "Variables[0] (_current_chance) || RETURN",
-                    "displayLines": "_current_chance",
-                    "constants": [],
-                    "variables": [
-                      "_current_chance"
-                    ]
+                    "displayLines": "_current_chance"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] (Max_DOT_Layer) || RETURN",
-                    "displayLines": "Max_DOT_Layer",
-                    "constants": [],
-                    "variables": [
-                      "Max_DOT_Layer"
-                    ]
+                    "displayLines": "Max_DOT_Layer"
                   },
                   "valuePerStack": {
                     "Basic_DamagePercentage": {
-                      "operator": "Variables[0] (2.4) || RETURN",
-                      "displayLines": "2.4",
-                      "constants": [],
-                      "variables": [
-                        2.4
-                      ]
+                      "displayLines": "2.4"
                     },
                     "ExtraLayer_DamagePercentage": {
-                      "operator": "Variables[0] (0.12) || RETURN",
-                      "displayLines": "0.12",
-                      "constants": [],
-                      "variables": [
-                        0.12
-                      ]
+                      "displayLines": "0.12"
                     },
                     "SecondLayer": {
-                      "operator": "Variables[0] (3) || RETURN",
-                      "displayLines": "3",
-                      "constants": [],
-                      "variables": [
-                        3
-                      ]
+                      "displayLines": "3"
                     },
                     "Spread_DamagePercentage": {
-                      "operator": "Variables[0] (1.8) || RETURN",
-                      "displayLines": "1.8",
-                      "constants": [],
-                      "variables": [
-                        1.8
-                      ]
+                      "displayLines": "1.8"
                     },
                     "ThirdLayer": {
-                      "operator": "Variables[0] (7) || RETURN",
-                      "displayLines": "7",
-                      "constants": [],
-                      "variables": [
-                        7
-                      ]
+                      "displayLines": "7"
                     },
                     "DefenceIgnore": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     },
                     "Cast_By_Level": 0
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (Rank06_Weighted_Stack_Layer) || RETURN",
-                    "displayLines": "Rank06_Weighted_Stack_Layer",
-                    "constants": [],
-                    "variables": [
-                      "Rank06_Weighted_Stack_Layer"
-                    ]
+                    "displayLines": "Rank06_Weighted_Stack_Layer"
                   },
                   "success": [
                     {
                       "name": "Define Custom Variable",
                       "scope": "ContextAbility",
                       "value": {
-                        "operator": "Constants[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [
-                          1
-                        ],
-                        "variables": []
+                        "displayLines": "1"
                       },
                       "variableName": "_can_continue"
                     }
@@ -4649,13 +3878,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_current_chance) || Variables[1] (0.5) || MUL || RETURN",
-                "displayLines": "(_current_chance * 0.5)",
-                "constants": [],
-                "variables": [
-                  "_current_chance",
-                  0.5
-                ]
+                "displayLines": "(_current_chance * 0.5)"
               },
               "variableName": "_current_chance"
             },
@@ -4823,12 +4046,7 @@ const compositeAbilityObject = {
           "name": "Define Custom Variable",
           "scope": "ContextCaster",
           "value": {
-            "operator": "Variables[0] (50) || RETURN",
-            "displayLines": "50",
-            "constants": [],
-            "variables": [
-              50
-            ]
+            "displayLines": "50"
           },
           "variableName": "Max_DOT_Layer"
         },
@@ -4859,24 +4077,14 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.5) || RETURN",
-                "displayLines": "0.5",
-                "constants": [],
-                "variables": [
-                  0.5
-                ]
+                "displayLines": "0.5"
               },
               "variableName": "Rank06_Chance"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "variableName": "Rank06_Extra_Layer"
             }
@@ -4971,12 +4179,7 @@ const compositeAbilityObject = {
                             "target": "{{Caster}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (8) || RETURN",
-                            "displayLines": "8",
-                            "constants": [],
-                            "variables": [
-                              8
-                            ]
+                            "displayLines": "8"
                           },
                           "isFixed": "* ERR"
                         }
@@ -5152,26 +4355,14 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Random Chance",
                         "chance": {
-                          "operator": "Variables[0] (Rank06_Chance) || RETURN",
-                          "displayLines": "Rank06_Chance",
-                          "constants": [],
-                          "variables": [
-                            "Rank06_Chance"
-                          ]
+                          "displayLines": "Rank06_Chance"
                         }
                       },
                       "passed": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Constants[0] (1) || Variables[0] (Rank06_Extra_Layer) || ADD || RETURN",
-                            "displayLines": "(1 + Rank06_Extra_Layer)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Rank06_Extra_Layer"
-                            ]
+                            "displayLines": "(1 + Rank06_Extra_Layer)"
                           },
                           "variableName": "Rank06_Weighted_Stack_Layer"
                         }
@@ -5180,12 +4371,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Constants[0] (1) || RETURN",
-                            "displayLines": "1",
-                            "constants": [
-                              1
-                            ],
-                            "variables": []
+                            "displayLines": "1"
                           },
                           "variableName": "Rank06_Weighted_Stack_Layer"
                         }
@@ -5211,79 +4397,34 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                           "baseChance": {
-                            "operator": "Variables[0] (0.65) || RETURN",
-                            "displayLines": "0.65",
-                            "constants": [],
-                            "variables": [
-                              0.65
-                            ]
+                            "displayLines": "0.65"
                           },
                           "stackLimit": {
-                            "operator": "Variables[0] (Max_DOT_Layer) || RETURN",
-                            "displayLines": "Max_DOT_Layer",
-                            "constants": [],
-                            "variables": [
-                              "Max_DOT_Layer"
-                            ]
+                            "displayLines": "Max_DOT_Layer"
                           },
                           "valuePerStack": {
                             "Basic_DamagePercentage": {
-                              "operator": "Variables[0] (2.4) || RETURN",
-                              "displayLines": "2.4",
-                              "constants": [],
-                              "variables": [
-                                2.4
-                              ]
+                              "displayLines": "2.4"
                             },
                             "ExtraLayer_DamagePercentage": {
-                              "operator": "Variables[0] (0.12) || RETURN",
-                              "displayLines": "0.12",
-                              "constants": [],
-                              "variables": [
-                                0.12
-                              ]
+                              "displayLines": "0.12"
                             },
                             "SecondLayer": {
-                              "operator": "Variables[0] (3) || RETURN",
-                              "displayLines": "3",
-                              "constants": [],
-                              "variables": [
-                                3
-                              ]
+                              "displayLines": "3"
                             },
                             "Spread_DamagePercentage": {
-                              "operator": "Variables[0] (1.8) || RETURN",
-                              "displayLines": "1.8",
-                              "constants": [],
-                              "variables": [
-                                1.8
-                              ]
+                              "displayLines": "1.8"
                             },
                             "ThirdLayer": {
-                              "operator": "Variables[0] (7) || RETURN",
-                              "displayLines": "7",
-                              "constants": [],
-                              "variables": [
-                                7
-                              ]
+                              "displayLines": "7"
                             },
                             "DefenceIgnore": {
-                              "operator": "Variables[0] (0.2) || RETURN",
-                              "displayLines": "0.2",
-                              "constants": [],
-                              "variables": [
-                                0.2
-                              ]
+                              "displayLines": "0.2"
                             },
                             "Cast_By_Level": 0
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (Rank06_Weighted_Stack_Layer) || RETURN",
-                            "displayLines": "Rank06_Weighted_Stack_Layer",
-                            "constants": [],
-                            "variables": [
-                              "Rank06_Weighted_Stack_Layer"
-                            ]
+                            "displayLines": "Rank06_Weighted_Stack_Layer"
                           }
                         }
                       ],
@@ -5296,79 +4437,34 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                           "baseChance": {
-                            "operator": "Variables[0] (0.65) || RETURN",
-                            "displayLines": "0.65",
-                            "constants": [],
-                            "variables": [
-                              0.65
-                            ]
+                            "displayLines": "0.65"
                           },
                           "stackLimit": {
-                            "operator": "Variables[0] (Max_DOT_Layer) || RETURN",
-                            "displayLines": "Max_DOT_Layer",
-                            "constants": [],
-                            "variables": [
-                              "Max_DOT_Layer"
-                            ]
+                            "displayLines": "Max_DOT_Layer"
                           },
                           "valuePerStack": {
                             "Basic_DamagePercentage": {
-                              "operator": "Variables[0] (2.4) || RETURN",
-                              "displayLines": "2.4",
-                              "constants": [],
-                              "variables": [
-                                2.4
-                              ]
+                              "displayLines": "2.4"
                             },
                             "ExtraLayer_DamagePercentage": {
-                              "operator": "Variables[0] (0.12) || RETURN",
-                              "displayLines": "0.12",
-                              "constants": [],
-                              "variables": [
-                                0.12
-                              ]
+                              "displayLines": "0.12"
                             },
                             "SecondLayer": {
-                              "operator": "Variables[0] (3) || RETURN",
-                              "displayLines": "3",
-                              "constants": [],
-                              "variables": [
-                                3
-                              ]
+                              "displayLines": "3"
                             },
                             "Spread_DamagePercentage": {
-                              "operator": "Variables[0] (1.8) || RETURN",
-                              "displayLines": "1.8",
-                              "constants": [],
-                              "variables": [
-                                1.8
-                              ]
+                              "displayLines": "1.8"
                             },
                             "ThirdLayer": {
-                              "operator": "Variables[0] (7) || RETURN",
-                              "displayLines": "7",
-                              "constants": [],
-                              "variables": [
-                                7
-                              ]
+                              "displayLines": "7"
                             },
                             "DefenceIgnore": {
-                              "operator": "Variables[0] (0.2) || RETURN",
-                              "displayLines": "0.2",
-                              "constants": [],
-                              "variables": [
-                                0.2
-                              ]
+                              "displayLines": "0.2"
                             },
                             "Cast_By_Level": 0
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (Rank06_Weighted_Stack_Layer) || RETURN",
-                            "displayLines": "Rank06_Weighted_Stack_Layer",
-                            "constants": [],
-                            "variables": [
-                              "Rank06_Weighted_Stack_Layer"
-                            ]
+                            "displayLines": "Rank06_Weighted_Stack_Layer"
                           }
                         }
                       ]
@@ -5416,61 +4512,26 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]",
           "counter": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.25) || RETURN",
-              "displayLines": "0.25",
-              "constants": [],
-              "variables": [
-                0.25
-              ]
+              "displayLines": "0.25"
             },
             "MDF_ResistanceDown": {
-              "operator": "Variables[0] (0.1) || RETURN",
-              "displayLines": "0.1",
-              "constants": [],
-              "variables": [
-                0.1
-              ]
+              "displayLines": "0.1"
             },
             "MDF_Count": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "SecondLayer": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             },
             "ThirdLayer": {
-              "operator": "Variables[0] (7) || RETURN",
-              "displayLines": "7",
-              "constants": [],
-              "variables": [
-                7
-              ]
+              "displayLines": "7"
             }
           }
         },
@@ -5484,20 +4545,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (1.2) || RETURN",
-              "displayLines": "1.2",
-              "constants": [],
-              "variables": [
-                1.2
-              ]
+              "displayLines": "1.2"
             },
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -5564,20 +4615,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (0.9) || RETURN",
-              "displayLines": "0.9",
-              "constants": [],
-              "variables": [
-                0.9
-              ]
+              "displayLines": "0.9"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -5593,20 +4634,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (0.9) || RETURN",
-              "displayLines": "0.9",
-              "constants": [],
-              "variables": [
-                0.9
-              ]
+              "displayLines": "0.9"
             },
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null
           }
@@ -5617,12 +4648,7 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
           "variables": {
             "Arg01": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             }
           }
         },
@@ -5649,12 +4675,7 @@ const compositeAbilityObject = {
                   "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
                   "variables": {
                     "Arg01": {
-                      "operator": "Variables[0] (0.65) || RETURN",
-                      "displayLines": "0.65",
-                      "constants": [],
-                      "variables": [
-                        0.65
-                      ]
+                      "displayLines": "0.65"
                     }
                   }
                 }
@@ -5676,12 +4697,7 @@ const compositeAbilityObject = {
                   "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
                   "variables": {
                     "Arg01": {
-                      "operator": "Variables[0] (0.65) || RETURN",
-                      "displayLines": "0.65",
-                      "constants": [],
-                      "variables": [
-                        0.65
-                      ]
+                      "displayLines": "0.65"
                     }
                   }
                 }
@@ -5703,12 +4719,7 @@ const compositeAbilityObject = {
                   "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
                   "variables": {
                     "Arg01": {
-                      "operator": "Variables[0] (0.65) || RETURN",
-                      "displayLines": "0.65",
-                      "constants": [],
-                      "variables": [
-                        0.65
-                      ]
+                      "displayLines": "0.65"
                     }
                   }
                 }
@@ -5730,12 +4741,7 @@ const compositeAbilityObject = {
                   "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
                   "variables": {
                     "Arg01": {
-                      "operator": "Variables[0] (0.65) || RETURN",
-                      "displayLines": "0.65",
-                      "constants": [],
-                      "variables": [
-                        0.65
-                      ]
+                      "displayLines": "0.65"
                     }
                   }
                 }
@@ -5757,26 +4763,14 @@ const compositeAbilityObject = {
               "conditions": {
                 "name": "Random Chance",
                 "chance": {
-                  "operator": "Variables[0] (Rank06_Chance) || RETURN",
-                  "displayLines": "Rank06_Chance",
-                  "constants": [],
-                  "variables": [
-                    "Rank06_Chance"
-                  ]
+                  "displayLines": "Rank06_Chance"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Constants[0] (1) || Variables[0] (Rank06_Extra_Layer) || ADD || RETURN",
-                    "displayLines": "(1 + Rank06_Extra_Layer)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Rank06_Extra_Layer"
-                    ]
+                    "displayLines": "(1 + Rank06_Extra_Layer)"
                   },
                   "variableName": "Rank06_Weighted_Stack_Layer"
                 }
@@ -5785,12 +4779,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Constants[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [
-                      1
-                    ],
-                    "variables": []
+                    "displayLines": "1"
                   },
                   "variableName": "Rank06_Weighted_Stack_Layer"
                 }
@@ -5804,79 +4793,34 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
               "baseChance": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "stackLimit": {
-                "operator": "Variables[0] (Max_DOT_Layer) || RETURN",
-                "displayLines": "Max_DOT_Layer",
-                "constants": [],
-                "variables": [
-                  "Max_DOT_Layer"
-                ]
+                "displayLines": "Max_DOT_Layer"
               },
               "valuePerStack": {
                 "Basic_DamagePercentage": {
-                  "operator": "Variables[0] (2.4) || RETURN",
-                  "displayLines": "2.4",
-                  "constants": [],
-                  "variables": [
-                    2.4
-                  ]
+                  "displayLines": "2.4"
                 },
                 "ExtraLayer_DamagePercentage": {
-                  "operator": "Variables[0] (0.12) || RETURN",
-                  "displayLines": "0.12",
-                  "constants": [],
-                  "variables": [
-                    0.12
-                  ]
+                  "displayLines": "0.12"
                 },
                 "SecondLayer": {
-                  "operator": "Variables[0] (3) || RETURN",
-                  "displayLines": "3",
-                  "constants": [],
-                  "variables": [
-                    3
-                  ]
+                  "displayLines": "3"
                 },
                 "Spread_DamagePercentage": {
-                  "operator": "Variables[0] (1.8) || RETURN",
-                  "displayLines": "1.8",
-                  "constants": [],
-                  "variables": [
-                    1.8
-                  ]
+                  "displayLines": "1.8"
                 },
                 "ThirdLayer": {
-                  "operator": "Variables[0] (7) || RETURN",
-                  "displayLines": "7",
-                  "constants": [],
-                  "variables": [
-                    7
-                  ]
+                  "displayLines": "7"
                 },
                 "DefenceIgnore": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 },
                 "Cast_By_Level": 0
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (Rank06_Weighted_Stack_Layer) || RETURN",
-                "displayLines": "Rank06_Weighted_Stack_Layer",
-                "constants": [],
-                "variables": [
-                  "Rank06_Weighted_Stack_Layer"
-                ]
+                "displayLines": "Rank06_Weighted_Stack_Layer"
               }
             }
           ]
@@ -5889,29 +4833,14 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"2093125302\">BlackSwan_DefenceDown</a>[<span class=\"descriptionNumberColor\">Decadence, False Twilight</span>]",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "baseChance": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.208) || RETURN",
-              "displayLines": "0.208",
-              "constants": [],
-              "variables": [
-                0.208
-              ]
+              "displayLines": "0.208"
             }
           }
         },
@@ -5932,29 +4861,14 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"2093125302\">BlackSwan_DefenceDown</a>[<span class=\"descriptionNumberColor\">Decadence, False Twilight</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "baseChance": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.208) || RETURN",
-                  "displayLines": "0.208",
-                  "constants": [],
-                  "variables": [
-                    0.208
-                  ]
+                  "displayLines": "0.208"
                 }
               }
             }
@@ -5972,26 +4886,14 @@ const compositeAbilityObject = {
               "conditions": {
                 "name": "Random Chance",
                 "chance": {
-                  "operator": "Variables[0] (Rank06_Chance) || RETURN",
-                  "displayLines": "Rank06_Chance",
-                  "constants": [],
-                  "variables": [
-                    "Rank06_Chance"
-                  ]
+                  "displayLines": "Rank06_Chance"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Constants[0] (1) || Variables[0] (Rank06_Extra_Layer) || ADD || RETURN",
-                    "displayLines": "(1 + Rank06_Extra_Layer)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Rank06_Extra_Layer"
-                    ]
+                    "displayLines": "(1 + Rank06_Extra_Layer)"
                   },
                   "variableName": "Rank06_Weighted_Stack_Layer"
                 }
@@ -6000,12 +4902,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Constants[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [
-                      1
-                    ],
-                    "variables": []
+                    "displayLines": "1"
                   },
                   "variableName": "Rank06_Weighted_Stack_Layer"
                 }
@@ -6019,79 +4916,34 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
               "baseChance": {
-                "operator": "Variables[0] (Arg01) || RETURN",
-                "displayLines": "Arg01",
-                "constants": [],
-                "variables": [
-                  "Arg01"
-                ]
+                "displayLines": "Arg01"
               },
               "stackLimit": {
-                "operator": "Variables[0] (Max_DOT_Layer) || RETURN",
-                "displayLines": "Max_DOT_Layer",
-                "constants": [],
-                "variables": [
-                  "Max_DOT_Layer"
-                ]
+                "displayLines": "Max_DOT_Layer"
               },
               "valuePerStack": {
                 "Basic_DamagePercentage": {
-                  "operator": "Variables[0] (2.4) || RETURN",
-                  "displayLines": "2.4",
-                  "constants": [],
-                  "variables": [
-                    2.4
-                  ]
+                  "displayLines": "2.4"
                 },
                 "ExtraLayer_DamagePercentage": {
-                  "operator": "Variables[0] (0.12) || RETURN",
-                  "displayLines": "0.12",
-                  "constants": [],
-                  "variables": [
-                    0.12
-                  ]
+                  "displayLines": "0.12"
                 },
                 "SecondLayer": {
-                  "operator": "Variables[0] (3) || RETURN",
-                  "displayLines": "3",
-                  "constants": [],
-                  "variables": [
-                    3
-                  ]
+                  "displayLines": "3"
                 },
                 "Spread_DamagePercentage": {
-                  "operator": "Variables[0] (1.8) || RETURN",
-                  "displayLines": "1.8",
-                  "constants": [],
-                  "variables": [
-                    1.8
-                  ]
+                  "displayLines": "1.8"
                 },
                 "ThirdLayer": {
-                  "operator": "Variables[0] (7) || RETURN",
-                  "displayLines": "7",
-                  "constants": [],
-                  "variables": [
-                    7
-                  ]
+                  "displayLines": "7"
                 },
                 "DefenceIgnore": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 },
                 "Cast_By_Level": 0
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (Rank06_Weighted_Stack_Layer) || RETURN",
-                "displayLines": "Rank06_Weighted_Stack_Layer",
-                "constants": [],
-                "variables": [
-                  "Rank06_Weighted_Stack_Layer"
-                ]
+                "displayLines": "Rank06_Weighted_Stack_Layer"
               }
             }
           ]
@@ -6124,14 +4976,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "(0 - MDF_PropertyValue)"
                   }
                 }
               ]
@@ -6194,20 +5039,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (0.6) || RETURN",
-              "displayLines": "0.6",
-              "constants": [],
-              "variables": [
-                0.6
-              ]
+              "displayLines": "0.6"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "ToughnessDMGType": {
               "DamageType": "Wind"
@@ -6234,12 +5069,7 @@ const compositeAbilityObject = {
               "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
               "variables": {
                 "Arg01": {
-                  "operator": "Variables[0] (0.65) || RETURN",
-                  "displayLines": "0.65",
-                  "constants": [],
-                  "variables": [
-                    0.65
-                  ]
+                  "displayLines": "0.65"
                 }
               }
             },
@@ -6259,12 +5089,7 @@ const compositeAbilityObject = {
                   "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
                   "variables": {
                     "Arg01": {
-                      "operator": "Variables[0] (0.65) || RETURN",
-                      "displayLines": "0.65",
-                      "constants": [],
-                      "variables": [
-                        0.65
-                      ]
+                      "displayLines": "0.65"
                     }
                   }
                 }
@@ -6286,12 +5111,7 @@ const compositeAbilityObject = {
                   "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
                   "variables": {
                     "Arg01": {
-                      "operator": "Variables[0] (0.65) || RETURN",
-                      "displayLines": "0.65",
-                      "constants": [],
-                      "variables": [
-                        0.65
-                      ]
+                      "displayLines": "0.65"
                     }
                   }
                 }
@@ -6313,12 +5133,7 @@ const compositeAbilityObject = {
                   "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
                   "variables": {
                     "Arg01": {
-                      "operator": "Variables[0] (0.65) || RETURN",
-                      "displayLines": "0.65",
-                      "constants": [],
-                      "variables": [
-                        0.65
-                      ]
+                      "displayLines": "0.65"
                     }
                   }
                 }
@@ -6340,12 +5155,7 @@ const compositeAbilityObject = {
                   "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
                   "variables": {
                     "Arg01": {
-                      "operator": "Variables[0] (0.65) || RETURN",
-                      "displayLines": "0.65",
-                      "constants": [],
-                      "variables": [
-                        0.65
-                      ]
+                      "displayLines": "0.65"
                     }
                   }
                 }
@@ -6365,26 +5175,14 @@ const compositeAbilityObject = {
               "conditions": {
                 "name": "Random Chance",
                 "chance": {
-                  "operator": "Variables[0] (Rank06_Chance) || RETURN",
-                  "displayLines": "Rank06_Chance",
-                  "constants": [],
-                  "variables": [
-                    "Rank06_Chance"
-                  ]
+                  "displayLines": "Rank06_Chance"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Constants[0] (1) || Variables[0] (Rank06_Extra_Layer) || ADD || RETURN",
-                    "displayLines": "(1 + Rank06_Extra_Layer)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Rank06_Extra_Layer"
-                    ]
+                    "displayLines": "(1 + Rank06_Extra_Layer)"
                   },
                   "variableName": "Rank06_Weighted_Stack_Layer"
                 }
@@ -6393,12 +5191,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Constants[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [
-                      1
-                    ],
-                    "variables": []
+                    "displayLines": "1"
                   },
                   "variableName": "Rank06_Weighted_Stack_Layer"
                 }
@@ -6412,79 +5205,34 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
               "baseChance": {
-                "operator": "Variables[0] (Arg01) || RETURN",
-                "displayLines": "Arg01",
-                "constants": [],
-                "variables": [
-                  "Arg01"
-                ]
+                "displayLines": "Arg01"
               },
               "stackLimit": {
-                "operator": "Variables[0] (Max_DOT_Layer) || RETURN",
-                "displayLines": "Max_DOT_Layer",
-                "constants": [],
-                "variables": [
-                  "Max_DOT_Layer"
-                ]
+                "displayLines": "Max_DOT_Layer"
               },
               "valuePerStack": {
                 "Basic_DamagePercentage": {
-                  "operator": "Variables[0] (2.4) || RETURN",
-                  "displayLines": "2.4",
-                  "constants": [],
-                  "variables": [
-                    2.4
-                  ]
+                  "displayLines": "2.4"
                 },
                 "ExtraLayer_DamagePercentage": {
-                  "operator": "Variables[0] (0.12) || RETURN",
-                  "displayLines": "0.12",
-                  "constants": [],
-                  "variables": [
-                    0.12
-                  ]
+                  "displayLines": "0.12"
                 },
                 "SecondLayer": {
-                  "operator": "Variables[0] (3) || RETURN",
-                  "displayLines": "3",
-                  "constants": [],
-                  "variables": [
-                    3
-                  ]
+                  "displayLines": "3"
                 },
                 "Spread_DamagePercentage": {
-                  "operator": "Variables[0] (1.8) || RETURN",
-                  "displayLines": "1.8",
-                  "constants": [],
-                  "variables": [
-                    1.8
-                  ]
+                  "displayLines": "1.8"
                 },
                 "ThirdLayer": {
-                  "operator": "Variables[0] (7) || RETURN",
-                  "displayLines": "7",
-                  "constants": [],
-                  "variables": [
-                    7
-                  ]
+                  "displayLines": "7"
                 },
                 "DefenceIgnore": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 },
                 "Cast_By_Level": 0
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (Rank06_Weighted_Stack_Layer) || RETURN",
-                "displayLines": "Rank06_Weighted_Stack_Layer",
-                "constants": [],
-                "variables": [
-                  "Rank06_Weighted_Stack_Layer"
-                ]
+                "displayLines": "Rank06_Weighted_Stack_Layer"
               }
             }
           ]

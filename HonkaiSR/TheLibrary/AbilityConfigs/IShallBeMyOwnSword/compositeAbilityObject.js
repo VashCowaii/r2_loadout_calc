@@ -181,12 +181,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-625916918\">LC_23014_Sub</a>[<span class=\"descriptionNumberColor\">Eclipse</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       }
                     }
                   ]
@@ -204,12 +199,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-625916918\">LC_23014_Sub</a>[<span class=\"descriptionNumberColor\">Eclipse</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   }
                 }
               ]

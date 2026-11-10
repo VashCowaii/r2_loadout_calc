@@ -17,12 +17,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "HitSplit": 0.1,
             "Toughness": null,
@@ -42,12 +37,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-          "displayLines": "{[Skill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[0]]}"
-          ]
+          "displayLines": "{[Skill01[0]]}"
         },
         "HitSplit": 0.4,
         "Toughness": null,

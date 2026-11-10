@@ -55,12 +55,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (_TargetNum) || RETURN",
-            "displayLines": "_TargetNum",
-            "constants": [],
-            "variables": [
-              "_TargetNum"
-            ]
+            "displayLines": "_TargetNum"
           },
           "execute": [
             {
@@ -98,14 +93,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill01[1]]}) || Constants[0] (0.5) || MUL || RETURN",
-                      "displayLines": "({[Skill01[1]]} * 0.5)",
-                      "constants": [
-                        0.5
-                      ],
-                      "variables": [
-                        "{[Skill01[1]]}"
-                      ]
+                      "displayLines": "({[Skill01[1]]} * 0.5)"
                     },
                     "Toughness": null,
                     "ToughnessDMGType": {
@@ -129,14 +117,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "({[Skill01[1]]} * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
+              "displayLines": "({[Skill01[1]]} * 0.5)"
             },
             "Toughness": null,
             "ToughnessDMGType": {
@@ -152,12 +133,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (_TargetNum) || RETURN",
-            "displayLines": "_TargetNum",
-            "constants": [],
-            "variables": [
-              "_TargetNum"
-            ]
+            "displayLines": "_TargetNum"
           },
           "execute": [
             {
@@ -195,12 +171,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                      "displayLines": "{[Skill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[0]]}"
-                      ]
+                      "displayLines": "{[Skill01[0]]}"
                     },
                     "Toughness": null,
                     "ToughnessDMGType": {

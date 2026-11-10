@@ -39,21 +39,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (1) || Variables[1] (0.8) || MUL || RETURN",
-              "displayLines": "(1 * 0.8)",
-              "constants": [],
-              "variables": [
-                1,
-                0.8
-              ]
+              "displayLines": "(1 * 0.8)"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Follow-up",

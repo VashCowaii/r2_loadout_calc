@@ -22,14 +22,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (RallyCount) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(RallyCount + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "RallyCount"
-            ]
+            "displayLines": "(RallyCount + 1)"
           },
           "variableName": "RallyCount"
         },
@@ -58,14 +51,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (RallyCount) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(RallyCount - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "RallyCount"
-            ]
+            "displayLines": "(RallyCount - 1)"
           },
           "variableName": "RallyCount"
         }
@@ -89,14 +75,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (RallyCount) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(RallyCount + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "RallyCount"
-            ]
+            "displayLines": "(RallyCount + 1)"
           },
           "variableName": "RallyCount"
         }
@@ -117,14 +96,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (RallyCount) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(RallyCount - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "RallyCount"
-            ]
+            "displayLines": "(RallyCount - 1)"
           },
           "variableName": "RallyCount"
         }
@@ -148,14 +120,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (RallyCount) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(RallyCount + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "RallyCount"
-            ]
+            "displayLines": "(RallyCount + 1)"
           },
           "variableName": "RallyCount"
         }
@@ -176,14 +141,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (RallyCount) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(RallyCount - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "RallyCount"
-            ]
+            "displayLines": "(RallyCount - 1)"
           },
           "variableName": "RallyCount"
         }
@@ -207,14 +165,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (RallyCount) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(RallyCount + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "RallyCount"
-            ]
+            "displayLines": "(RallyCount + 1)"
           },
           "variableName": "RallyCount"
         }
@@ -279,14 +230,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (RallyCount) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(RallyCount - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "RallyCount"
-            ]
+            "displayLines": "(RallyCount - 1)"
           },
           "variableName": "RallyCount"
         }
@@ -308,14 +252,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (RallyCount) || Constants[0] (1) || SUB || RETURN",
-        "displayLines": "(RallyCount - 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "RallyCount"
-        ]
+        "displayLines": "(RallyCount - 1)"
       },
       "variableName": "RallyCount"
     },

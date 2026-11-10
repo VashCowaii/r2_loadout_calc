@@ -88,13 +88,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DefenceAddedRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_DefenceAddedRatio * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_DefenceAddedRatio",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_DefenceAddedRatio * MDF_Layer)"
               }
             }
           ]
@@ -133,13 +127,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AttackAddedRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_AttackAddedRatio * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackAddedRatio",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_AttackAddedRatio * MDF_Layer)"
               }
             }
           ]
@@ -163,13 +151,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
-                    "displayLines": "(2 + MDF_Max_Layer)",
-                    "constants": [],
-                    "variables": [
-                      2,
-                      "MDF_Max_Layer"
-                    ]
+                    "displayLines": "(2 + MDF_Max_Layer)"
                   },
                   "variableName": "MDF_Max_Layer"
                 },
@@ -181,22 +163,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-417743675\">PlayerWarrior_Passive_BreakAtkUp</a>[<span class=\"descriptionNumberColor\">Perfect Pickoff</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
-                    "displayLines": "(2 + MDF_Max_Layer)",
-                    "constants": [],
-                    "variables": [
-                      2,
-                      "MDF_Max_Layer"
-                    ]
+                    "displayLines": "(2 + MDF_Max_Layer)"
                   },
                   "valuePerStack": {
                     "MDF_AttackAddedRatio": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 },
@@ -215,22 +186,11 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1618202918\">PlayerWarrior_SkilTree02_BreakDefUp</a>[<span class=\"descriptionNumberColor\">Tenacity</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
-                        "displayLines": "(2 + MDF_Max_Layer)",
-                        "constants": [],
-                        "variables": [
-                          2,
-                          "MDF_Max_Layer"
-                        ]
+                        "displayLines": "(2 + MDF_Max_Layer)"
                       },
                       "valuePerStack": {
                         "MDF_DefenceAddedRatio": {
-                          "operator": "Variables[0] (0.1) || RETURN",
-                          "displayLines": "0.1",
-                          "constants": [],
-                          "variables": [
-                            0.1
-                          ]
+                          "displayLines": "0.1"
                         }
                       }
                     }
@@ -246,13 +206,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
-                "displayLines": "(2 + MDF_Max_Layer)",
-                "constants": [],
-                "variables": [
-                  2,
-                  "MDF_Max_Layer"
-                ]
+                "displayLines": "(2 + MDF_Max_Layer)"
               },
               "variableName": "MDF_Max_Layer"
             },
@@ -264,22 +218,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-417743675\">PlayerWarrior_Passive_BreakAtkUp</a>[<span class=\"descriptionNumberColor\">Perfect Pickoff</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
-                "displayLines": "(2 + MDF_Max_Layer)",
-                "constants": [],
-                "variables": [
-                  2,
-                  "MDF_Max_Layer"
-                ]
+                "displayLines": "(2 + MDF_Max_Layer)"
               },
               "valuePerStack": {
                 "MDF_AttackAddedRatio": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             },
@@ -298,22 +241,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1618202918\">PlayerWarrior_SkilTree02_BreakDefUp</a>[<span class=\"descriptionNumberColor\">Tenacity</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
-                    "displayLines": "(2 + MDF_Max_Layer)",
-                    "constants": [],
-                    "variables": [
-                      2,
-                      "MDF_Max_Layer"
-                    ]
+                    "displayLines": "(2 + MDF_Max_Layer)"
                   },
                   "valuePerStack": {
                     "MDF_DefenceAddedRatio": {
-                      "operator": "Variables[0] (0.1) || RETURN",
-                      "displayLines": "0.1",
-                      "constants": [],
-                      "variables": [
-                        0.1
-                      ]
+                      "displayLines": "0.1"
                     }
                   }
                 }
@@ -429,12 +361,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (0.05) || RETURN",
-                    "displayLines": "0.05",
-                    "constants": [],
-                    "variables": [
-                      0.05
-                    ]
+                    "displayLines": "0.05"
                   }
                 }
               ]

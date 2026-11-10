@@ -22,21 +22,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] (1) || RETURN",
-          "displayLines": "1",
-          "constants": [],
-          "variables": [
-            1
-          ]
+          "displayLines": "1"
         },
         "HitSplit": 0.3,
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -52,21 +42,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] (1) || RETURN",
-          "displayLines": "1",
-          "constants": [],
-          "variables": [
-            1
-          ]
+          "displayLines": "1"
         },
         "HitSplit": 0.7,
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -111,13 +91,7 @@ const configAbility = {
                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (0.5) || MUL || RETURN",
-                  "displayLines": "(MDF_MaxHP * 0.5)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_MaxHP",
-                    0.5
-                  ]
+                  "displayLines": "(MDF_MaxHP * 0.5)"
                 }
               },
               "passed": [

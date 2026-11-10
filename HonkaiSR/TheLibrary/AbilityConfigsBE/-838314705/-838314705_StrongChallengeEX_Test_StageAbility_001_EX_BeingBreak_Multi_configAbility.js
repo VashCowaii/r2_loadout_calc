@@ -94,13 +94,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (_MaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                    "displayLines": "(_MaxSP - _CurrentSP)",
-                    "constants": [],
-                    "variables": [
-                      "_MaxSP",
-                      "_CurrentSP"
-                    ]
+                    "displayLines": "(_MaxSP - _CurrentSP)"
                   },
                   "isFixed": "(Fixed)",
                   "ignoreBlock": true,
@@ -133,13 +127,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (_MaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                    "displayLines": "(_MaxSP - _CurrentSP)",
-                    "constants": [],
-                    "variables": [
-                      "_MaxSP",
-                      "_CurrentSP"
-                    ]
+                    "displayLines": "(_MaxSP - _CurrentSP)"
                   },
                   "isFixed": "(Fixed)"
                 }
@@ -230,12 +218,7 @@ const configAbility = {
           "functionName": "<a class=\"gTempYellow\" id=\"101547145\">Elation_StartElationTime</a>",
           "variables": {
             "TryStartElationTime_OverrideElationPoint": {
-              "operator": "Variables[0] (Override_ElationPoint) || RETURN",
-              "displayLines": "Override_ElationPoint",
-              "constants": [],
-              "variables": [
-                "Override_ElationPoint"
-              ]
+              "displayLines": "Override_ElationPoint"
             },
             "TryStartElationTime_ElationTimeIsNoConsume": 1
           }
@@ -272,12 +255,7 @@ const configAbility = {
             "value1": "_ActionDelay",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] (BOSS_BreakDelay) || RETURN",
-              "displayLines": "BOSS_BreakDelay",
-              "constants": [],
-              "variables": [
-                "BOSS_BreakDelay"
-              ]
+              "displayLines": "BOSS_BreakDelay"
             }
           },
           "passed": [
@@ -289,12 +267,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "set": {
-                "operator": "Variables[0] (BOSS_BreakDelay) || RETURN",
-                "displayLines": "BOSS_BreakDelay",
-                "constants": [],
-                "variables": [
-                  "BOSS_BreakDelay"
-                ]
+                "displayLines": "BOSS_BreakDelay"
               }
             },
             {
@@ -339,12 +312,7 @@ const configAbility = {
             {
               "name": "Deal Toughness DMG",
               "value": {
-                "operator": "Variables[0] (MDF_CurrentStance) || RETURN",
-                "displayLines": "MDF_CurrentStance",
-                "constants": [],
-                "variables": [
-                  "MDF_CurrentStance"
-                ]
+                "displayLines": "MDF_CurrentStance"
               },
               "attacker": {
                 "name": "Target Name",
@@ -616,14 +584,7 @@ const configAbility = {
                 "value1": "<a class=\"gModGreen\" id=\"2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>",
                 "compareType": "<=",
                 "value2": {
-                  "operator": "Variables[0] (_MaxLayer) || Constants[0] (0.5) || MUL || RETURN",
-                  "displayLines": "(_MaxLayer * 0.5)",
-                  "constants": [
-                    0.5
-                  ],
-                  "variables": [
-                    "_MaxLayer"
-                  ]
+                  "displayLines": "(_MaxLayer * 0.5)"
                 },
                 "valueType": "Layer"
               }

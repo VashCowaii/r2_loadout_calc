@@ -109,12 +109,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"51921734\">MStrongChallengeEX_BEMark_ExtraElationBE</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (#ADF_3) || RETURN",
-                  "displayLines": "#ADF_3",
-                  "constants": [],
-                  "variables": [
-                    "#ADF_3"
-                  ]
+                  "displayLines": "#ADF_3"
                 }
               }
             },
@@ -156,20 +151,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-948928871\">MStrongChallengeEX_Environment_StageAbility_BOSS_015</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     },
                     "MDF_PropertyValue2": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     }
                   }
                 }

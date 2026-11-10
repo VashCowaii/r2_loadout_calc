@@ -7,14 +7,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (BonusAttackCounter) || Constants[0] (1) || ADD || RETURN",
-        "displayLines": "(BonusAttackCounter + 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "BonusAttackCounter"
-        ]
+        "displayLines": "(BonusAttackCounter + 1)"
       },
       "variableName": "BonusAttackCounter"
     },

@@ -13,12 +13,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1881355591\">Monster_W4_Theoroi_Reload</a>[<span class=\"descriptionNumberColor\">Infinite Recursion</span>]",
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
-          "displayLines": "{[PassiveSkill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill03[0]]}"
-          ]
+          "displayLines": "{[PassiveSkill03[0]]}"
         }
       }
     },

@@ -31,12 +31,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-          "displayLines": "{[Skill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[0]]}"
-          ]
+          "displayLines": "{[Skill01[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -78,20 +73,10 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-            "displayLines": "{[Skill01[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[2]]}"
-            ]
+            "displayLines": "{[Skill01[2]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-            "displayLines": "{[Skill01[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[1]]}"
-            ]
+            "displayLines": "{[Skill01[1]]}"
           },
           "valuePerStack": {
             "MDF_Shake_ActionDelayRatio": 0.7

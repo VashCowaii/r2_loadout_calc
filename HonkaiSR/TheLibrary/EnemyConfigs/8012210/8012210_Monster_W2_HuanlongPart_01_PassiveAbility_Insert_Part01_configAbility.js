@@ -28,12 +28,7 @@ const configAbility = {
           "conditions": {
             "name": "Enemy ID",
             "ID": {
-              "operator": "Variables[0] (SummonerID) || RETURN",
-              "displayLines": "SummonerID",
-              "constants": [],
-              "variables": [
-                "SummonerID"
-              ]
+              "displayLines": "SummonerID"
             },
             "target": {
               "name": "Target Name",
@@ -51,20 +46,10 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-616319653\">Monster_W2_HuanlongPart_01_Success</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
               "valuePerStack": {
                 "MDF_ActionDelayRatio": {
-                  "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[1]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill02[1]]}"
                 },
                 "MDF_DamageTakenUpRatio_PerLayer": {
-                  "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[0]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill02[0]]}"
                 }
               }
             }

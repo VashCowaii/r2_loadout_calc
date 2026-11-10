@@ -268,13 +268,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "Damage": {
-                      "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__252) || Variables[1] (SkillMaxHit) || DIV || RETURN",
-                      "displayLines": "(ENEMIES_OBJECT_UNUSED__252 / SkillMaxHit)",
-                      "constants": [],
-                      "variables": [
-                        "ENEMIES_OBJECT_UNUSED__252",
-                        "SkillMaxHit"
-                      ]
+                      "displayLines": "(ENEMIES_OBJECT_UNUSED__252 / SkillMaxHit)"
                     },
                     "Toughness": null,
                     "keepDMGType": true,
@@ -414,12 +408,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "PursuitCount",
                   "resetValue": {
-                    "operator": "Variables[0] (MDF_Count) || RETURN",
-                    "displayLines": "MDF_Count",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Count"
-                    ]
+                    "displayLines": "MDF_Count"
                   },
                   "scope": "TargetEntity"
                 }
@@ -519,12 +508,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "PursuitCount",
                   "resetValue": {
-                    "operator": "Variables[0] (MDF_Count) || RETURN",
-                    "displayLines": "MDF_Count",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Count"
-                    ]
+                    "displayLines": "MDF_Count"
                   },
                   "scope": "TargetEntity"
                 }
@@ -678,12 +662,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1082518094\">Monster_W2_Kafka_Pursuit</a>",
           "valuePerStack": {
             "MDF_Count": {
-              "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-              "displayLines": "{[Skill06[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[1]]}"
-              ]
+              "displayLines": "{[Skill06[1]]}"
             }
           }
         },
@@ -915,12 +894,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-              "displayLines": "{[Skill05[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[1]]}"
-              ]
+              "displayLines": "{[Skill05[1]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1037,12 +1011,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "HitSplit": 0.15,
             "Toughness": null,
@@ -1060,12 +1029,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "HitSplit": 0.15,
             "Toughness": null,
@@ -1083,12 +1047,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "HitSplit": 0.15,
             "Toughness": null,
@@ -1106,12 +1065,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "HitSplit": 0.15,
             "Toughness": null,
@@ -1129,12 +1083,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "HitSplit": 0.15,
             "Toughness": null,
@@ -1152,12 +1101,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "HitSplit": 0.25,
             "Toughness": null,
@@ -1263,47 +1207,20 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill05[0]]}) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "({[Skill05[0]]} + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "{[Skill05[0]]}"
-            ]
+            "displayLines": "({[Skill05[0]]} + 1)"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[Skill05[4]]}) || RETURN",
-            "displayLines": "{[Skill05[4]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill05[4]]}"
-            ]
+            "displayLines": "{[Skill05[4]]}"
           },
           "valuePerStack": {
             "MDF_MindControlDamagePercentage": {
-              "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-              "displayLines": "{[Skill05[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[1]]}"
-              ]
+              "displayLines": "{[Skill05[1]]}"
             },
             "MDF_MaxDamageRatio": {
-              "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-              "displayLines": "{[Skill05[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[2]]}"
-              ]
+              "displayLines": "{[Skill05[2]]}"
             },
             "MDF_MinDamageRatio": {
-              "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-              "displayLines": "{[Skill05[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[3]]}"
-              ]
+              "displayLines": "{[Skill05[3]]}"
             }
           },
           "success": []
@@ -1418,12 +1335,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1580,12 +1492,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9482) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9482",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_9482"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_9482"
                 }
               }
             }
@@ -1619,12 +1526,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -1642,12 +1544,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "HitSplit": 0.3,
             "Toughness": null,
@@ -1665,12 +1562,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "HitSplit": 0.5,
             "Toughness": null,
@@ -1688,12 +1580,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-              "displayLines": "{[Skill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[1]]}"
-              ]
+              "displayLines": "{[Skill02[1]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1746,23 +1633,13 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                "displayLines": "{[Skill01[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[2]]}"
-                ]
+                "displayLines": "{[Skill01[2]]}"
               },
               "baseChance": 1,
               "immediateEffect": true,
               "valuePerStack": {
                 "Modifier_Electric_DamagePercentage": {
-                  "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                  "displayLines": "{[Skill01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[3]]}"
-                  ]
+                  "displayLines": "{[Skill01[3]]}"
                 }
               },
               "stackFlag": "CharacterSkill"
@@ -1964,12 +1841,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9482) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9482",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_9482"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_9482"
                 }
               }
             }
@@ -1984,14 +1856,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "({[Skill01[0]]} * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "({[Skill01[0]]} * 0.5)"
             },
             "Toughness": null,
             "Tags": null,
@@ -2009,14 +1874,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "({[Skill01[0]]} * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "({[Skill01[0]]} * 0.5)"
             },
             "Toughness": null,
             "Tags": null,
@@ -2055,30 +1913,15 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-            "displayLines": "{[Skill01[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[2]]}"
-            ]
+            "displayLines": "{[Skill01[2]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-            "displayLines": "{[Skill01[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[1]]}"
-            ]
+            "displayLines": "{[Skill01[1]]}"
           },
           "immediateEffect": true,
           "valuePerStack": {
             "Modifier_Electric_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
+              "displayLines": "{[Skill01[3]]}"
             }
           },
           "stackFlag": "CharacterSkill"
@@ -2251,12 +2094,7 @@ const compositeAbilityObject = {
                     "value1": "MDF_WaveIndex",
                     "compareType": "NOT=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_WaveIndex2) || RETURN",
-                      "displayLines": "MDF_WaveIndex2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_WaveIndex2"
-                      ]
+                      "displayLines": "MDF_WaveIndex2"
                     }
                   },
                   "passed": [

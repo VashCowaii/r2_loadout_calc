@@ -14,12 +14,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-          "displayLines": "{[Skill04[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}"
-          ]
+          "displayLines": "{[Skill04[0]]}"
         },
         "HitSplit": 0.2,
         "Toughness": null,
@@ -37,12 +32,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-          "displayLines": "{[Skill04[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}"
-          ]
+          "displayLines": "{[Skill04[0]]}"
         },
         "HitSplit": 0.2,
         "Toughness": null,
@@ -60,12 +50,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-          "displayLines": "{[Skill04[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}"
-          ]
+          "displayLines": "{[Skill04[0]]}"
         },
         "HitSplit": 0.2,
         "Toughness": null,
@@ -83,12 +68,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-          "displayLines": "{[Skill04[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}"
-          ]
+          "displayLines": "{[Skill04[0]]}"
         },
         "HitSplit": 0.4,
         "Toughness": null,
@@ -101,12 +81,7 @@ const configAbility = {
     {
       "name": "Adjust Team Punchline Value",
       "value": {
-        "operator": "Variables[0] ({[Skill04[4]]}) || RETURN",
-        "displayLines": "{[Skill04[4]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill04[4]]}"
-        ]
+        "displayLines": "{[Skill04[4]]}"
       },
       "adjustment": "Add"
     },
@@ -120,36 +95,16 @@ const configAbility = {
       "duration": 1,
       "valuePerStack": {
         "MDF_PropertyValue01": {
-          "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-          "displayLines": "{[Skill04[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[1]]}"
-          ]
+          "displayLines": "{[Skill04[1]]}"
         },
         "MDF_PropertyValue02": {
-          "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-          "displayLines": "{[Skill04[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[2]]}"
-          ]
+          "displayLines": "{[Skill04[2]]}"
         },
         "MDF_PropertyValue03": {
-          "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-          "displayLines": "{[Skill04[3]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[3]]}"
-          ]
+          "displayLines": "{[Skill04[3]]}"
         },
         "MDF_PropertyValue04": {
-          "operator": "Variables[0] ({[Skill04[5]]}) || RETURN",
-          "displayLines": "{[Skill04[5]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[5]]}"
-          ]
+          "displayLines": "{[Skill04[5]]}"
         }
       }
     },

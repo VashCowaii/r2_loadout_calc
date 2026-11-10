@@ -13,12 +13,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-          "displayLines": "{[Skill02[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[1]]}"
-          ]
+          "displayLines": "{[Skill02[1]]}"
         },
         "Toughness": null,
         "Tags": null,

@@ -19,29 +19,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-426535006\">Seele_BPAbility_SpeedUpEidolon2</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "stackLimit": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.25) || RETURN",
-              "displayLines": "0.25",
-              "constants": [],
-              "variables": [
-                0.25
-              ]
+              "displayLines": "0.25"
             }
           }
         }
@@ -55,21 +40,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-456765622\">Seele_BPAbility_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.25) || RETURN",
-              "displayLines": "0.25",
-              "constants": [],
-              "variables": [
-                0.25
-              ]
+              "displayLines": "0.25"
             }
           }
         }
@@ -84,24 +59,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (2.2) || Constants[0] (0.2) || MUL || RETURN",
-          "displayLines": "(2.2 * 0.2)",
-          "constants": [
-            0.2
-          ],
-          "variables": [
-            2.2
-          ]
+          "displayLines": "(2.2 * 0.2)"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.2) || MUL || RETURN",
-          "displayLines": "(ST Toughness Value * 0.2)",
-          "constants": [
-            0.2
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(ST Toughness Value * 0.2)"
         },
         "Tags": null,
         "EnergyGainPercent": "20%"
@@ -116,24 +77,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (2.2) || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "(2.2 * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            2.2
-          ]
+          "displayLines": "(2.2 * 0.1)"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "(ST Toughness Value * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(ST Toughness Value * 0.1)"
         },
         "Tags": null,
         "EnergyGainPercent": "10%"
@@ -148,24 +95,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (2.2) || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "(2.2 * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            2.2
-          ]
+          "displayLines": "(2.2 * 0.1)"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "(ST Toughness Value * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(ST Toughness Value * 0.1)"
         },
         "Tags": null,
         "EnergyGainPercent": "10%"
@@ -181,24 +114,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (2.2) || Constants[0] (0.6) || MUL || RETURN",
-          "displayLines": "(2.2 * 0.6)",
-          "constants": [
-            0.6
-          ],
-          "variables": [
-            2.2
-          ]
+          "displayLines": "(2.2 * 0.6)"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.6) || MUL || RETURN",
-          "displayLines": "(ST Toughness Value * 0.6)",
-          "constants": [
-            0.6
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(ST Toughness Value * 0.6)"
         },
         "Tags": null,
         "EnergyGainPercent": "60%"

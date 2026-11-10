@@ -13,12 +13,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "value": {
-        "operator": "Variables[0] (MYDEI_OBJECT_UNUSED_8[100]) || INVERT || RETURN",
-        "displayLines": "-MYDEI_OBJECT_UNUSED_8[100]",
-        "constants": [],
-        "variables": [
-          "MYDEI_OBJECT_UNUSED_8[100]"
-        ]
+        "displayLines": "-MYDEI_OBJECT_UNUSED_8[100]"
       }
     },
     {
@@ -47,12 +42,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "healPercent": {
-        "operator": "Variables[0] (0.25) || RETURN",
-        "displayLines": "0.25",
-        "constants": [],
-        "variables": [
-          0.25
-        ]
+        "displayLines": "0.25"
       },
       "formula": "Heal from Target MaxHP"
     },

@@ -104,24 +104,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                "displayLines": "{[Skill03[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill03[0]]}"
-                ]
+                "displayLines": "{[Skill03[0]]}"
               },
               "variableName": "AttackCount"
             },
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (AttackCount) || RETURN",
-                "displayLines": "AttackCount",
-                "constants": [],
-                "variables": [
-                  "AttackCount"
-                ]
+                "displayLines": "AttackCount"
               },
               "entityClass": "Enemy",
               "target": {
@@ -129,12 +119,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                "displayLines": "{[Skill03[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill03[0]]}"
-                ]
+                "displayLines": "{[Skill03[0]]}"
               },
               "assignState": "True",
               "state": "Active"
@@ -147,26 +132,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (AttackCount) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(AttackCount - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "AttackCount"
-                ]
+                "displayLines": "(AttackCount - 1)"
               },
               "variableName": "AttackCount"
             },
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (AttackCount) || RETURN",
-                "displayLines": "AttackCount",
-                "constants": [],
-                "variables": [
-                  "AttackCount"
-                ]
+                "displayLines": "AttackCount"
               },
               "entityClass": "Enemy",
               "target": {
@@ -174,12 +147,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                "displayLines": "{[Skill03[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill03[0]]}"
-                ]
+                "displayLines": "{[Skill03[0]]}"
               },
               "assignState": "True",
               "state": "Active"
@@ -324,12 +292,7 @@ const configAbility = {
                     "value1": "MDF_Index1",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (MDF_Index2) || RETURN",
-                      "displayLines": "MDF_Index2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Index2"
-                      ]
+                      "displayLines": "MDF_Index2"
                     }
                   }
                 },
@@ -456,12 +419,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -507,12 +465,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -635,12 +588,7 @@ const configAbility = {
                 {
                   "name": "Adjust Team Punchline Value",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_11461) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_11461",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_11461"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_11461"
                   },
                   "adjustment": "Add"
                 },
@@ -652,21 +600,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-989097149\">MModifier_Monster_W4_Claymore_02_Ability03_AllDamageTypeTaken</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill03[3]]}) || RETURN",
-                    "displayLines": "{[Skill03[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill03[3]]}"
-                    ]
+                    "displayLines": "{[Skill03[3]]}"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-                      "displayLines": "{[Skill03[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill03[2]]}"
-                      ]
+                      "displayLines": "{[Skill03[2]]}"
                     }
                   }
                 },

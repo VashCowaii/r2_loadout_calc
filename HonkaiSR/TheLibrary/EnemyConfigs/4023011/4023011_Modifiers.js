@@ -163,15 +163,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (CEIL) || Variables[1] (MDF_Value) || Constants[0] (100) || MUL || PARAM_1 || FUNCTION || Constants[0] (100) || DIV || RETURN",
-                "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>((MDF_Value * 100)) / 100)",
-                "constants": [
-                  100
-                ],
-                "variables": [
-                  "CEIL",
-                  "MDF_Value"
-                ]
+                "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>((MDF_Value * 100)) / 100)"
               },
               "variableName": "MDF_PropertyValue"
             },
@@ -183,12 +175,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_Value) || RETURN",
-                "displayLines": "MDF_Value",
-                "constants": [],
-                "variables": [
-                  "MDF_Value"
-                ]
+                "displayLines": "MDF_Value"
               }
             }
           ]
@@ -217,13 +204,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_Layer) || Variables[1] (MDF_AddedDamageRatio) || MUL || RETURN",
-                "displayLines": "(MDF_Layer * MDF_AddedDamageRatio)",
-                "constants": [],
-                "variables": [
-                  "MDF_Layer",
-                  "MDF_AddedDamageRatio"
-                ]
+                "displayLines": "(MDF_Layer * MDF_AddedDamageRatio)"
               },
               "variableName": "MDF_ShowValue1"
             },
@@ -235,12 +216,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_ShowValue1) || RETURN",
-                "displayLines": "MDF_ShowValue1",
-                "constants": [],
-                "variables": [
-                  "MDF_ShowValue1"
-                ]
+                "displayLines": "MDF_ShowValue1"
               }
             }
           ]
@@ -433,12 +409,7 @@ const configAbility = {
                       "variableName": "_DieSums",
                       "value": 1,
                       "max": {
-                        "operator": "Variables[0] (_Phase1Sums) || RETURN",
-                        "displayLines": "_Phase1Sums",
-                        "constants": [],
-                        "variables": [
-                          "_Phase1Sums"
-                        ]
+                        "displayLines": "_Phase1Sums"
                       }
                     },
                     {
@@ -448,12 +419,7 @@ const configAbility = {
                         "value1": "_Phase1Sums",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (_DieSums) || RETURN",
-                          "displayLines": "_DieSums",
-                          "constants": [],
-                          "variables": [
-                            "_DieSums"
-                          ]
+                          "displayLines": "_DieSums"
                         }
                       },
                       "passed": [
@@ -466,16 +432,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1263736651\">MModifier_W4_Griffin_LocalLegend_AllDamageTaken</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                           "valuePerStack": {
                             "MDF_Value": {
-                              "operator": "Variables[0] (_SummonCounts) || Variables[1] (EXP^) || Variables[2] (_DieSums) || Variables[3] (_Phase1Sums) || DIV || Variables[4] (_FactorK) || PARAM_2 || FUNCTION || MUL || RETURN",
-                              "displayLines": "(_SummonCounts * &nbsp;<span class=\"descriptionFunctionColor\">EXP^</span>((_DieSums / _Phase1Sums), _FactorK))",
-                              "constants": [],
-                              "variables": [
-                                "_SummonCounts",
-                                "EXP^",
-                                "_DieSums",
-                                "_Phase1Sums",
-                                "_FactorK"
-                              ]
+                              "displayLines": "(_SummonCounts * &nbsp;<span class=\"descriptionFunctionColor\">EXP^</span>((_DieSums / _Phase1Sums), _FactorK))"
                             }
                           }
                         }
@@ -492,12 +449,7 @@ const configAbility = {
                       "variableName": "_DieSums",
                       "value": 1,
                       "max": {
-                        "operator": "Variables[0] (_Phase2Sums) || RETURN",
-                        "displayLines": "_Phase2Sums",
-                        "constants": [],
-                        "variables": [
-                          "_Phase2Sums"
-                        ]
+                        "displayLines": "_Phase2Sums"
                       }
                     },
                     {
@@ -507,12 +459,7 @@ const configAbility = {
                         "value1": "_Phase2Sums",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (_DieSums) || RETURN",
-                          "displayLines": "_DieSums",
-                          "constants": [],
-                          "variables": [
-                            "_DieSums"
-                          ]
+                          "displayLines": "_DieSums"
                         }
                       },
                       "passed": [
@@ -525,16 +472,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1263736651\">MModifier_W4_Griffin_LocalLegend_AllDamageTaken</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                           "valuePerStack": {
                             "MDF_Value": {
-                              "operator": "Variables[0] (_SummonCounts) || Variables[1] (EXP^) || Variables[2] (_DieSums) || Variables[3] (_Phase2Sums) || DIV || Variables[4] (_FactorK) || PARAM_2 || FUNCTION || MUL || RETURN",
-                              "displayLines": "(_SummonCounts * &nbsp;<span class=\"descriptionFunctionColor\">EXP^</span>((_DieSums / _Phase2Sums), _FactorK))",
-                              "constants": [],
-                              "variables": [
-                                "_SummonCounts",
-                                "EXP^",
-                                "_DieSums",
-                                "_Phase2Sums",
-                                "_FactorK"
-                              ]
+                              "displayLines": "(_SummonCounts * &nbsp;<span class=\"descriptionFunctionColor\">EXP^</span>((_DieSums / _Phase2Sums), _FactorK))"
                             }
                           }
                         }
@@ -1126,14 +1064,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Constants[0] (1) || INVERT || Variables[0] (_GriffinMark_SPCost) || MUL || RETURN",
-                        "displayLines": "(-1 * _GriffinMark_SPCost)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_GriffinMark_SPCost"
-                        ]
+                        "displayLines": "(-1 * _GriffinMark_SPCost)"
                       },
                       "isFixed": "(Fixed)"
                     },
@@ -1146,12 +1077,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Fire",
                         "Damage": {
-                          "operator": "Variables[0] (_GriffinMark_DamagePercentage) || RETURN",
-                          "displayLines": "_GriffinMark_DamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "_GriffinMark_DamagePercentage"
-                          ]
+                          "displayLines": "_GriffinMark_DamagePercentage"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -1207,13 +1133,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Null Type",
                         "DamageFlat": {
-                          "operator": "Variables[0] (_MaxHP) || Variables[1] (_MixedMark_LoseHpRatio) || MUL || RETURN",
-                          "displayLines": "(_MaxHP * _MixedMark_LoseHpRatio)",
-                          "constants": [],
-                          "variables": [
-                            "_MaxHP",
-                            "_MixedMark_LoseHpRatio"
-                          ]
+                          "displayLines": "(_MaxHP * _MixedMark_LoseHpRatio)"
                         },
                         "dmgFormulaFinal": "Converted DMG Base",
                         "Toughness": null,
@@ -1228,14 +1148,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Constants[0] (1) || INVERT || Variables[0] (_GriffinMark_SPCost) || MUL || RETURN",
-                        "displayLines": "(-1 * _GriffinMark_SPCost)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_GriffinMark_SPCost"
-                        ]
+                        "displayLines": "(-1 * _GriffinMark_SPCost)"
                       },
                       "isFixed": "(Fixed)"
                     },
@@ -1247,37 +1160,17 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"2065489118\">Standard_Entangle</a>[<span class=\"descriptionNumberColor\">Entanglement</span>]",
                       "duration": {
-                        "operator": "Variables[0] (_UnicornMark_LifeTime) || RETURN",
-                        "displayLines": "_UnicornMark_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "_UnicornMark_LifeTime"
-                        ]
+                        "displayLines": "_UnicornMark_LifeTime"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (_UnicornMark_Chance) || RETURN",
-                        "displayLines": "_UnicornMark_Chance",
-                        "constants": [],
-                        "variables": [
-                          "_UnicornMark_Chance"
-                        ]
+                        "displayLines": "_UnicornMark_Chance"
                       },
                       "valuePerStack": {
                         "MDF_ActionDelayRatio": {
-                          "operator": "Variables[0] (_UnicornMark_ActionDelayRatio) || RETURN",
-                          "displayLines": "_UnicornMark_ActionDelayRatio",
-                          "constants": [],
-                          "variables": [
-                            "_UnicornMark_ActionDelayRatio"
-                          ]
+                          "displayLines": "_UnicornMark_ActionDelayRatio"
                         },
                         "Modifier_Entangle_DamagePercentage": {
-                          "operator": "Variables[0] (_UnicornMark_DebuffDamagePercentage) || RETURN",
-                          "displayLines": "_UnicornMark_DebuffDamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "_UnicornMark_DebuffDamagePercentage"
-                          ]
+                          "displayLines": "_UnicornMark_DebuffDamagePercentage"
                         },
                         "Modifier_Entangle_DamageValue": 0
                       }

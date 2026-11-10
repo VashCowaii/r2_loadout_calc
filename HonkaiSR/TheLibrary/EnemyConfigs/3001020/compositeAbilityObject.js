@@ -27,14 +27,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (2) || DIV || RETURN",
-                  "displayLines": "({[Skill01[0]]} / 2)",
-                  "constants": [
-                    2
-                  ],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "({[Skill01[0]]} / 2)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -52,14 +45,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (2) || DIV || RETURN",
-              "displayLines": "({[Skill01[0]]} / 2)",
-              "constants": [
-                2
-              ],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "({[Skill01[0]]} / 2)"
             },
             "Toughness": null,
             "Tags": null,
@@ -75,29 +61,14 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"227784370\">Standard_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-            "displayLines": "{[Skill01[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[3]]}"
-            ]
+            "displayLines": "{[Skill01[3]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-            "displayLines": "{[Skill01[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[1]]}"
-            ]
+            "displayLines": "{[Skill01[1]]}"
           },
           "valuePerStack": {
             "Modifier_Tear_DamageRatio": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
+              "displayLines": "{[Skill01[2]]}"
             },
             "Modifier_Tear_MaxPercentage": 5
           },

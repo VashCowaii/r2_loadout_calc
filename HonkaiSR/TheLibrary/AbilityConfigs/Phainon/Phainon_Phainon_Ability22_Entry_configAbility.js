@@ -25,12 +25,7 @@ const configAbility = {
         "value1": "Skill22_Energy",
         "compareType": ">=",
         "value2": {
-          "operator": "Variables[0] (4) || RETURN",
-          "displayLines": "4",
-          "constants": [],
-          "variables": [
-            4
-          ]
+          "displayLines": "4"
         }
       },
       "passed": [

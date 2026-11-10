@@ -55,12 +55,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Variables[0] (0.2) || INVERT || RETURN",
-            "displayLines": "-0.2",
-            "constants": [],
-            "variables": [
-              0.2
-            ]
+            "displayLines": "-0.2"
           }
         }
       }

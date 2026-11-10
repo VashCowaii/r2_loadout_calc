@@ -60,14 +60,7 @@ const configAbility = {
             "value1": "_WorldErosion",
             "compareType": ">=",
             "value2": {
-              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || Constants[0] (100) || MUL || RETURN",
-              "displayLines": "({[PassiveSkill01[2]]} * 100)",
-              "constants": [
-                100
-              ],
-              "variables": [
-                "{[PassiveSkill01[2]]}"
-              ]
+              "displayLines": "({[PassiveSkill01[2]]} * 100)"
             }
           },
           {
@@ -89,14 +82,7 @@ const configAbility = {
           "valuePerStack": {
             "MDF_BPMaxCost": 4,
             "MDF_DirtyHPRatio_PerLayer": {
-              "operator": "Constants[0] (4) || Variables[0] ({[PassiveSkill01[4]]}) || MUL || RETURN",
-              "displayLines": "(4 * {[PassiveSkill01[4]]})",
-              "constants": [
-                4
-              ],
-              "variables": [
-                "{[PassiveSkill01[4]]}"
-              ]
+              "displayLines": "(4 * {[PassiveSkill01[4]]})"
             }
           }
         }
@@ -112,14 +98,7 @@ const configAbility = {
                 "value1": "_WorldErosion",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] ({[PassiveSkill01[1]]}) || Constants[0] (100) || MUL || RETURN",
-                  "displayLines": "({[PassiveSkill01[1]]} * 100)",
-                  "constants": [
-                    100
-                  ],
-                  "variables": [
-                    "{[PassiveSkill01[1]]}"
-                  ]
+                  "displayLines": "({[PassiveSkill01[1]]} * 100)"
                 }
               },
               {
@@ -141,14 +120,7 @@ const configAbility = {
               "valuePerStack": {
                 "MDF_BPMaxCost": 2,
                 "MDF_DirtyHPRatio_PerLayer": {
-                  "operator": "Constants[0] (2) || Variables[0] ({[PassiveSkill01[4]]}) || MUL || RETURN",
-                  "displayLines": "(2 * {[PassiveSkill01[4]]})",
-                  "constants": [
-                    2
-                  ],
-                  "variables": [
-                    "{[PassiveSkill01[4]]}"
-                  ]
+                  "displayLines": "(2 * {[PassiveSkill01[4]]})"
                 }
               }
             }
@@ -164,14 +136,7 @@ const configAbility = {
                     "value1": "_WorldErosion",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Constants[0] (100) || MUL || RETURN",
-                      "displayLines": "({[PassiveSkill01[0]]} * 100)",
-                      "constants": [
-                        100
-                      ],
-                      "variables": [
-                        "{[PassiveSkill01[0]]}"
-                      ]
+                      "displayLines": "({[PassiveSkill01[0]]} * 100)"
                     }
                   },
                   {
@@ -193,12 +158,7 @@ const configAbility = {
                   "valuePerStack": {
                     "MDF_BPMaxCost": 1,
                     "MDF_DirtyHPRatio_PerLayer": {
-                      "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill01[4]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[4]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill01[4]]}"
                     }
                   }
                 }

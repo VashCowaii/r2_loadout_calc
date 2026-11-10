@@ -24,12 +24,7 @@ const configAbility = {
       "name": "Update Displayed Energy Bar",
       "value": 0,
       "maximum": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "assignState": "True",
       "priorState": "Normal",

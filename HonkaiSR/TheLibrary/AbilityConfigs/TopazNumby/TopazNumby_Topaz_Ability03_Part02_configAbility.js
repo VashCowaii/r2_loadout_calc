@@ -46,57 +46,27 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
       "counter": {
-        "operator": "Variables[0] (MaxEnhance) || RETURN",
-        "displayLines": "MaxEnhance",
-        "constants": [],
-        "variables": [
-          "MaxEnhance"
-        ]
+        "displayLines": "MaxEnhance"
       },
       "valuePerStack": {
         "Ability03_P1_BEDamageRatio": {
-          "operator": "Variables[0] (1.5) || RETURN",
-          "displayLines": "1.5",
-          "constants": [],
-          "variables": [
-            1.5
-          ]
+          "displayLines": "1.5"
         },
         "Ability03_P2_CriticalChance": {
-          "operator": "Variables[0] (0.25) || RETURN",
-          "displayLines": "0.25",
-          "constants": [],
-          "variables": [
-            0.25
-          ]
+          "displayLines": "0.25"
         },
         "Ability03_P3_DelayRatio": {
-          "operator": "Variables[0] (0.5) || RETURN",
-          "displayLines": "0.5",
-          "constants": [],
-          "variables": [
-            0.5
-          ]
+          "displayLines": "0.5"
         },
         "Eidolon6_P2_PenRatio": {
-          "operator": "Variables[0] (0.1) || RETURN",
-          "displayLines": "0.1",
-          "constants": [],
-          "variables": [
-            0.1
-          ]
+          "displayLines": "0.1"
         }
       }
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (MaxEnhance) || RETURN",
-        "displayLines": "MaxEnhance",
-        "constants": [],
-        "variables": [
-          "MaxEnhance"
-        ]
+        "displayLines": "MaxEnhance"
       },
       "variableName": "CurEnhance"
     },
@@ -107,12 +77,7 @@ const configAbility = {
         "target": "{{Numby}}"
       },
       "attackCountEnhanced": {
-        "operator": "Variables[0] (MaxEnhance) || RETURN",
-        "displayLines": "MaxEnhance",
-        "constants": [],
-        "variables": [
-          "MaxEnhance"
-        ]
+        "displayLines": "MaxEnhance"
       },
       "show": true
     },
@@ -125,32 +90,17 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1361568506\">Topaz_BE_UltraEnhance_ShowText</a>",
       "valuePerStack": {
         "ATKCount": {
-          "operator": "Variables[0] (MaxEnhance) || RETURN",
-          "displayLines": "MaxEnhance",
-          "constants": [],
-          "variables": [
-            "MaxEnhance"
-          ]
+          "displayLines": "MaxEnhance"
         }
       }
     },
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (MaxEnhance) || RETURN",
-        "displayLines": "MaxEnhance",
-        "constants": [],
-        "variables": [
-          "MaxEnhance"
-        ]
+        "displayLines": "MaxEnhance"
       },
       "maximum": {
-        "operator": "Variables[0] (MaxEnhance) || RETURN",
-        "displayLines": "MaxEnhance",
-        "constants": [],
-        "variables": [
-          "MaxEnhance"
-        ]
+        "displayLines": "MaxEnhance"
       },
       "assignState": "True",
       "priorState": "Active",

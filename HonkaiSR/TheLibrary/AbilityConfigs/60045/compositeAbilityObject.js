@@ -117,12 +117,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (MDF_SPValue) || RETURN",
-                        "displayLines": "MDF_SPValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_SPValue"
-                        ]
+                        "displayLines": "MDF_SPValue"
                       },
                       "isFixed": "(Fixed)"
                     }
@@ -238,13 +233,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_BaseHP) || Variables[1] (MDF_BaseAttack) || SUB || RETURN",
-                    "displayLines": "(MDF_BaseHP - MDF_BaseAttack)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_BaseHP",
-                      "MDF_BaseAttack"
-                    ]
+                    "displayLines": "(MDF_BaseHP - MDF_BaseAttack)"
                   }
                 }
               ]
@@ -310,21 +299,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "dmgFormula": "Max HP Scaling",
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"

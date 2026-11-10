@@ -38,24 +38,14 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[SkillP03[2]]}) || RETURN",
-            "displayLines": "{[SkillP03[2]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP03[2]]}"
-            ]
+            "displayLines": "{[SkillP03[2]]}"
           },
           "refreshPositions": false,
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonedMonsterID) || RETURN",
-                "displayLines": "SummonedMonsterID",
-                "constants": [],
-                "variables": [
-                  "SummonedMonsterID"
-                ]
+                "displayLines": "SummonedMonsterID"
               },
               "locationType": "First"
             }
@@ -89,20 +79,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1716068014\">Enemy_W4_DawnsEye_PartHP</a>[<span class=\"descriptionNumberColor\">All As One</span>]",
           "valuePerStack": {
             "MDF_SunnyBreakCold": {
-              "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-              "displayLines": "{[SkillP01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[3]]}"
-              ]
+              "displayLines": "{[SkillP01[3]]}"
             },
             "MDF_SunnyBreakColdRatio": {
-              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-              "displayLines": "{[SkillP01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[2]]}"
-              ]
+              "displayLines": "{[SkillP01[2]]}"
             }
           },
           "casterAssign": "CasterSelf"
@@ -150,23 +130,13 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[SkillP03[3]]}) || RETURN",
-            "displayLines": "{[SkillP03[3]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP03[3]]}"
-            ]
+            "displayLines": "{[SkillP03[3]]}"
           },
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonedMonsterID) || RETURN",
-                "displayLines": "SummonedMonsterID",
-                "constants": [],
-                "variables": [
-                  "SummonedMonsterID"
-                ]
+                "displayLines": "SummonedMonsterID"
               },
               "locationType": "Last"
             }
@@ -200,20 +170,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1716068014\">Enemy_W4_DawnsEye_PartHP</a>[<span class=\"descriptionNumberColor\">All As One</span>]",
           "valuePerStack": {
             "MDF_SunnyBreakCold": {
-              "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-              "displayLines": "{[SkillP01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[3]]}"
-              ]
+              "displayLines": "{[SkillP01[3]]}"
             },
             "MDF_SunnyBreakColdRatio": {
-              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-              "displayLines": "{[SkillP01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[2]]}"
-              ]
+              "displayLines": "{[SkillP01[2]]}"
             }
           },
           "casterAssign": "CasterSelf"

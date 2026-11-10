@@ -51,69 +51,29 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
       "duration": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "valuePerStack": {
         "MDF_PropertyRatio": {
-          "operator": "Variables[0] (0.1) || RETURN",
-          "displayLines": "0.1",
-          "constants": [],
-          "variables": [
-            0.1
-          ]
+          "displayLines": "0.1"
         },
         "MDF_BasicDamagePercentage": {
-          "operator": "Variables[0] (0.28) || RETURN",
-          "displayLines": "0.28",
-          "constants": [],
-          "variables": [
-            0.28
-          ]
+          "displayLines": "0.28"
         },
         "MDF_PointB3_P1_Basic": {
-          "operator": "Variables[0] (100) || RETURN",
-          "displayLines": "100",
-          "constants": [],
-          "variables": [
-            100
-          ]
+          "displayLines": "100"
         },
         "MDF_PointB3_P2_Delta": {
-          "operator": "Variables[0] (10) || RETURN",
-          "displayLines": "10",
-          "constants": [],
-          "variables": [
-            10
-          ]
+          "displayLines": "10"
         },
         "MDF_PointB3_P3_Ratio": {
-          "operator": "Variables[0] (0.02) || RETURN",
-          "displayLines": "0.02",
-          "constants": [],
-          "variables": [
-            0.02
-          ]
+          "displayLines": "0.02"
         },
         "MDF_PointB3_P4_Max": {
-          "operator": "Variables[0] (0.2) || RETURN",
-          "displayLines": "0.2",
-          "constants": [],
-          "variables": [
-            0.2
-          ]
+          "displayLines": "0.2"
         },
         "MDF_Eidolon4_P2_ExtraDamagePercentage": {
-          "operator": "Variables[0] (0.06) || RETURN",
-          "displayLines": "0.06",
-          "constants": [],
-          "variables": [
-            0.06
-          ]
+          "displayLines": "0.06"
         }
       }
     },
@@ -181,14 +141,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Constants[0] (0) || Variables[0] (1) || SUB || RETURN",
-            "displayLines": "(0 - 1)",
-            "constants": [
-              0
-            ],
-            "variables": [
-              1
-            ]
+            "displayLines": "(0 - 1)"
           }
         }
       }

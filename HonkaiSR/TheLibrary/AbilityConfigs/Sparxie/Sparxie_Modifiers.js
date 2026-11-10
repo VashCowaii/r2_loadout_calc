@@ -37,12 +37,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -69,12 +64,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -104,21 +94,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"2009365349\">Sparxie_Eidolon4_Sub</a>[<span class=\"descriptionNumberColor\">#LockedIn #FaceCard</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.36) || RETURN",
-                      "displayLines": "0.36",
-                      "constants": [],
-                      "variables": [
-                        0.36
-                      ]
+                      "displayLines": "0.36"
                     }
                   }
                 }
@@ -153,13 +133,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyValue * _Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "_Layer"
-                ]
+                "displayLines": "(MDF_PropertyValue * _Layer)"
               }
             }
           ]
@@ -186,12 +160,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -213,12 +182,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-              "displayLines": "MDF_PropertyValue",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyValue"
-              ]
+              "displayLines": "MDF_PropertyValue"
             }
           }
         }
@@ -235,12 +199,7 @@ const configAbility = {
             {
               "name": "Adjust Team Punchline Value",
               "value": {
-                "operator": "Variables[0] (5) || RETURN",
-                "displayLines": "5",
-                "constants": [],
-                "variables": [
-                  5
-                ]
+                "displayLines": "5"
               },
               "adjustment": "Add"
             }
@@ -264,13 +223,7 @@ const configAbility = {
                 "value1": "#SkillRank_Rank01_P3_EPDamageAddRatioMax",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] (0.015) || Variables[1] (_CurrentEP) || MUL || RETURN",
-                  "displayLines": "(0.015 * _CurrentEP)",
-                  "constants": [],
-                  "variables": [
-                    0.015,
-                    "_CurrentEP"
-                  ]
+                  "displayLines": "(0.015 * _CurrentEP)"
                 }
               },
               "passed": [
@@ -283,12 +236,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"416920765\">Sparxie_Eidolon1_Sub01</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.15) || RETURN",
-                      "displayLines": "0.15",
-                      "constants": [],
-                      "variables": [
-                        0.15
-                      ]
+                      "displayLines": "0.15"
                     }
                   }
                 }
@@ -303,13 +251,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"416920765\">Sparxie_Eidolon1_Sub01</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.015) || Variables[1] (_CurrentEP) || MUL || RETURN",
-                      "displayLines": "(0.015 * _CurrentEP)",
-                      "constants": [],
-                      "variables": [
-                        0.015,
-                        "_CurrentEP"
-                      ]
+                      "displayLines": "(0.015 * _CurrentEP)"
                     }
                   }
                 }
@@ -339,13 +281,7 @@ const configAbility = {
                 "value1": "#SkillRank_Rank01_P3_EPDamageAddRatioMax",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] (0.015) || Variables[1] (_CurrentEP) || MUL || RETURN",
-                  "displayLines": "(0.015 * _CurrentEP)",
-                  "constants": [],
-                  "variables": [
-                    0.015,
-                    "_CurrentEP"
-                  ]
+                  "displayLines": "(0.015 * _CurrentEP)"
                 }
               },
               "passed": [
@@ -358,12 +294,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"416920765\">Sparxie_Eidolon1_Sub01</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.15) || RETURN",
-                      "displayLines": "0.15",
-                      "constants": [],
-                      "variables": [
-                        0.15
-                      ]
+                      "displayLines": "0.15"
                     }
                   }
                 }
@@ -378,13 +309,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"416920765\">Sparxie_Eidolon1_Sub01</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.015) || Variables[1] (_CurrentEP) || MUL || RETURN",
-                      "displayLines": "(0.015 * _CurrentEP)",
-                      "constants": [],
-                      "variables": [
-                        0.015,
-                        "_CurrentEP"
-                      ]
+                      "displayLines": "(0.015 * _CurrentEP)"
                     }
                   }
                 }
@@ -474,12 +399,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (MDF_Layer) || RETURN",
-                "displayLines": "MDF_Layer",
-                "constants": [],
-                "variables": [
-                  "MDF_Layer"
-                ]
+                "displayLines": "MDF_Layer"
               },
               "execute": [
                 {
@@ -539,12 +459,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -566,12 +481,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-              "displayLines": "MDF_PropertyValue",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyValue"
-              ]
+              "displayLines": "MDF_PropertyValue"
             }
           }
         }
@@ -598,13 +508,7 @@ const configAbility = {
                 "value1": "#SkillTree_PointB3_P2_CriticalDamageMax",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] (0.08) || Variables[1] (_CurrentEP) || MUL || RETURN",
-                  "displayLines": "(0.08 * _CurrentEP)",
-                  "constants": [],
-                  "variables": [
-                    0.08,
-                    "_CurrentEP"
-                  ]
+                  "displayLines": "(0.08 * _CurrentEP)"
                 }
               },
               "passed": [
@@ -617,12 +521,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1399447832\">Sparxie_Trace03_Sub01</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.8) || RETURN",
-                      "displayLines": "0.8",
-                      "constants": [],
-                      "variables": [
-                        0.8
-                      ]
+                      "displayLines": "0.8"
                     }
                   }
                 }
@@ -637,13 +536,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1399447832\">Sparxie_Trace03_Sub01</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.08) || Variables[1] (_CurrentEP) || MUL || RETURN",
-                      "displayLines": "(0.08 * _CurrentEP)",
-                      "constants": [],
-                      "variables": [
-                        0.08,
-                        "_CurrentEP"
-                      ]
+                      "displayLines": "(0.08 * _CurrentEP)"
                     }
                   }
                 }
@@ -673,13 +566,7 @@ const configAbility = {
                 "value1": "#SkillTree_PointB3_P2_CriticalDamageMax",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] (0.08) || Variables[1] (_CurrentEP) || MUL || RETURN",
-                  "displayLines": "(0.08 * _CurrentEP)",
-                  "constants": [],
-                  "variables": [
-                    0.08,
-                    "_CurrentEP"
-                  ]
+                  "displayLines": "(0.08 * _CurrentEP)"
                 }
               },
               "passed": [
@@ -692,12 +579,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1399447832\">Sparxie_Trace03_Sub01</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.8) || RETURN",
-                      "displayLines": "0.8",
-                      "constants": [],
-                      "variables": [
-                        0.8
-                      ]
+                      "displayLines": "0.8"
                     }
                   }
                 }
@@ -712,13 +594,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1399447832\">Sparxie_Trace03_Sub01</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.08) || Variables[1] (_CurrentEP) || MUL || RETURN",
-                      "displayLines": "(0.08 * _CurrentEP)",
-                      "constants": [],
-                      "variables": [
-                        0.08,
-                        "_CurrentEP"
-                      ]
+                      "displayLines": "(0.08 * _CurrentEP)"
                     }
                   }
                 }
@@ -767,12 +643,7 @@ const configAbility = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (_Elation_Count) || RETURN",
-                "displayLines": "_Elation_Count",
-                "constants": [],
-                "variables": [
-                  "_Elation_Count"
-                ]
+                "displayLines": "_Elation_Count"
               },
               "compareType": ">=",
               "caseEvents": [
@@ -783,24 +654,14 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (8) || RETURN",
-                        "displayLines": "8",
-                        "constants": [],
-                        "variables": [
-                          8
-                        ]
+                        "displayLines": "8"
                       },
                       "variableName": "Sparxie_SkillTree_PointB2_UltraEPAddValue"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (4) || RETURN",
-                        "displayLines": "4",
-                        "constants": [],
-                        "variables": [
-                          4
-                        ]
+                        "displayLines": "4"
                       },
                       "variableName": "Sparxie_SkillTree_PointB2_UltraBPAddValue"
                     }
@@ -813,24 +674,14 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (4) || RETURN",
-                        "displayLines": "4",
-                        "constants": [],
-                        "variables": [
-                          4
-                        ]
+                        "displayLines": "4"
                       },
                       "variableName": "Sparxie_SkillTree_PointB2_UltraEPAddValue"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "variableName": "Sparxie_SkillTree_PointB2_UltraBPAddValue"
                     }
@@ -843,24 +694,14 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "variableName": "Sparxie_SkillTree_PointB2_UltraEPAddValue"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "variableName": "Sparxie_SkillTree_PointB2_UltraBPAddValue"
                     }
@@ -904,12 +745,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -957,17 +793,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (WHOLE) || Variables[1] (_CurrentAttack) || Variables[2] (_CurrentAttackConvert) || SUB || Variables[3] (2000) || SUB || Variables[4] (100) || DIV || PARAM_1 || FUNCTION || Variables[5] (0.05) || MUL || RETURN",
-                "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((((_CurrentAttack - _CurrentAttackConvert) - 2000) / 100)) * 0.05)",
-                "constants": [],
-                "variables": [
-                  "WHOLE",
-                  "_CurrentAttack",
-                  "_CurrentAttackConvert",
-                  2000,
-                  100,
-                  0.05
-                ]
+                "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((((_CurrentAttack - _CurrentAttackConvert) - 2000) / 100)) * 0.05)"
               },
               "variableName": "Sparxie_SkillTree_PointB1_AddedValue"
             },
@@ -1003,12 +829,7 @@ const configAbility = {
                     "value1": "Sparxie_SkillTree_PointB1_AddedValue",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (0.8) || RETURN",
-                      "displayLines": "0.8",
-                      "constants": [],
-                      "variables": [
-                        0.8
-                      ]
+                      "displayLines": "0.8"
                     },
                     "contextScope": "ContextCaster"
                   },
@@ -1016,12 +837,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (0.8) || RETURN",
-                        "displayLines": "0.8",
-                        "constants": [],
-                        "variables": [
-                          0.8
-                        ]
+                        "displayLines": "0.8"
                       },
                       "variableName": "Sparxie_SkillTree_PointB1_AddedValue"
                     }
@@ -1036,12 +852,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1914794720\">Sparxie_Trace01_Bonus</a>[<span class=\"descriptionNumberColor\">Sweet! Punchline Signing</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (Sparxie_SkillTree_PointB1_AddedValue) || RETURN",
-                      "displayLines": "Sparxie_SkillTree_PointB1_AddedValue",
-                      "constants": [],
-                      "variables": [
-                        "Sparxie_SkillTree_PointB1_AddedValue"
-                      ]
+                      "displayLines": "Sparxie_SkillTree_PointB1_AddedValue"
                     }
                   }
                 }
@@ -1162,12 +973,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (_BPChange) || RETURN",
-                    "displayLines": "_BPChange",
-                    "constants": [],
-                    "variables": [
-                      "_BPChange"
-                    ]
+                    "displayLines": "_BPChange"
                   }
                 }
               ]
@@ -1267,12 +1073,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   }
                 },
                 {
@@ -1283,12 +1084,7 @@ const configAbility = {
                   },
                   "function": "Set",
                   "value": {
-                    "operator": "Variables[0] (Sparxie_EnergyPoint) || RETURN",
-                    "displayLines": "Sparxie_EnergyPoint",
-                    "constants": [],
-                    "variables": [
-                      "Sparxie_EnergyPoint"
-                    ]
+                    "displayLines": "Sparxie_EnergyPoint"
                   },
                   "silentChange": true
                 }
@@ -1398,12 +1194,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (Sparxie_EnergyPoint) || RETURN",
-                        "displayLines": "Sparxie_EnergyPoint",
-                        "constants": [],
-                        "variables": [
-                          "Sparxie_EnergyPoint"
-                        ]
+                        "displayLines": "Sparxie_EnergyPoint"
                       },
                       "priorState": "Active"
                     }
@@ -1412,12 +1203,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (Sparxie_EnergyPoint) || RETURN",
-                        "displayLines": "Sparxie_EnergyPoint",
-                        "constants": [],
-                        "variables": [
-                          "Sparxie_EnergyPoint"
-                        ]
+                        "displayLines": "Sparxie_EnergyPoint"
                       },
                       "priorState": "Normal"
                     }
@@ -1435,12 +1221,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"153929564\">Sparxie_EnergyPoint</a>[<span class=\"descriptionNumberColor\">Thrill</span>]",
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (_EPChange) || RETURN",
-                    "displayLines": "_EPChange",
-                    "constants": [],
-                    "variables": [
-                      "_EPChange"
-                    ]
+                    "displayLines": "_EPChange"
                   }
                 },
                 {
@@ -1469,38 +1250,18 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"510555115\">Sparxie_Eidolon2_CriticalDamage</a>[<span class=\"descriptionNumberColor\">#AudienceKnows</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "stackLimit": {
-                        "operator": "Variables[0] (4) || RETURN",
-                        "displayLines": "4",
-                        "constants": [],
-                        "variables": [
-                          4
-                        ]
+                        "displayLines": "4"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.1) || RETURN",
-                          "displayLines": "0.1",
-                          "constants": [],
-                          "variables": [
-                            0.1
-                          ]
+                          "displayLines": "0.1"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (_EPChange) || INVERT || RETURN",
-                        "displayLines": "-_EPChange",
-                        "constants": [],
-                        "variables": [
-                          "_EPChange"
-                        ]
+                        "displayLines": "-_EPChange"
                       }
                     }
                   ]
@@ -1522,25 +1283,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "variableName": "Sparxie_Skill02_GrandPrizeChance"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (28) || Variables[1] (Sparxie_Skill02_GrandPrizeChance) || SUB || RETURN",
-                "displayLines": "(28 - Sparxie_Skill02_GrandPrizeChance)",
-                "constants": [],
-                "variables": [
-                  28,
-                  "Sparxie_Skill02_GrandPrizeChance"
-                ]
+                "displayLines": "(28 - Sparxie_Skill02_GrandPrizeChance)"
               },
               "variableName": "Sparxie_Skill02_MinorPrizeChance"
             }

@@ -49,12 +49,7 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (_AR_STATE_LIFETIME) || RETURN",
-        "displayLines": "_AR_STATE_LIFETIME",
-        "constants": [],
-        "variables": [
-          "_AR_STATE_LIFETIME"
-        ]
+        "displayLines": "_AR_STATE_LIFETIME"
       },
       "priorState": "Active"
     }

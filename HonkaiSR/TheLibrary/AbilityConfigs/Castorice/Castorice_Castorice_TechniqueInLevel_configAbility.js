@@ -20,12 +20,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
-        "displayLines": "Castorice_Passive_MaxCount",
-        "constants": [],
-        "variables": [
-          "Castorice_Passive_MaxCount"
-        ]
+        "displayLines": "Castorice_Passive_MaxCount"
       },
       "variableName": "Castorice_Passive_Count"
     },
@@ -42,117 +37,46 @@ const configAbility = {
       "memoID": 11407,
       "valuePerStack": {
         "Castorice_Ability21_P3_HPPercentage": {
-          "operator": "Variables[0] (0.5) || RETURN",
-          "displayLines": "0.5",
-          "constants": [],
-          "variables": [
-            0.5
-          ]
+          "displayLines": "0.5"
         },
         "CastoriceServant_BaseSpeed": {
-          "operator": "Variables[0] (165) || RETURN",
-          "displayLines": "165",
-          "constants": [],
-          "variables": [
-            165
-          ]
+          "displayLines": "165"
         },
         "CastoriceServant_LifeTime": {
-          "operator": "Variables[0] (3) || RETURN",
-          "displayLines": "3",
-          "constants": [],
-          "variables": [
-            3
-          ]
+          "displayLines": "3"
         },
         "CastoriceServant_CurrentHP": {
-          "operator": "Variables[0] (Castorice_Passive_MaxCount) || Variables[1] (0.5) || MUL || RETURN",
-          "displayLines": "(Castorice_Passive_MaxCount * 0.5)",
-          "constants": [],
-          "variables": [
-            "Castorice_Passive_MaxCount",
-            0.5
-          ]
+          "displayLines": "(Castorice_Passive_MaxCount * 0.5)"
         },
         "CastoriceServant_MaxHP": {
-          "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
-          "displayLines": "Castorice_Passive_MaxCount",
-          "constants": [],
-          "variables": [
-            "Castorice_Passive_MaxCount"
-          ]
+          "displayLines": "Castorice_Passive_MaxCount"
         },
         "CastoriceServant_PointB2_SpeedRatio": {
-          "operator": "Variables[0] (1) || RETURN",
-          "displayLines": "1",
-          "constants": [],
-          "variables": [
-            1
-          ]
+          "displayLines": "1"
         },
         "CastoriceServant_PointB3_AllDamageTypeAddedRatio": {
-          "operator": "Variables[0] (0.3) || RETURN",
-          "displayLines": "0.3",
-          "constants": [],
-          "variables": [
-            0.3
-          ]
+          "displayLines": "0.3"
         },
         "CastoriceServant_PointB3_MaxLayer": {
-          "operator": "Variables[0] (6) || RETURN",
-          "displayLines": "6",
-          "constants": [],
-          "variables": [
-            6
-          ]
+          "displayLines": "6"
         },
         "CastoriceServant_Eidolon1_HPRatio01": {
-          "operator": "Variables[0] (0.8) || RETURN",
-          "displayLines": "0.8",
-          "constants": [],
-          "variables": [
-            0.8
-          ]
+          "displayLines": "0.8"
         },
         "CastoriceServant_Eidolon1_HPRatio02": {
-          "operator": "Variables[0] (0.5) || RETURN",
-          "displayLines": "0.5",
-          "constants": [],
-          "variables": [
-            0.5
-          ]
+          "displayLines": "0.5"
         },
         "CastoriceServant_Eidolon1_DamageRatio01": {
-          "operator": "Variables[0] (1.2) || RETURN",
-          "displayLines": "1.2",
-          "constants": [],
-          "variables": [
-            1.2
-          ]
+          "displayLines": "1.2"
         },
         "CastoriceServant_Eidolon1_DamageRatio02": {
-          "operator": "Variables[0] (1.4) || RETURN",
-          "displayLines": "1.4",
-          "constants": [],
-          "variables": [
-            1.4
-          ]
+          "displayLines": "1.4"
         },
         "CastoriceServant_Eidolon2_MaxCount": {
-          "operator": "Variables[0] (2) || RETURN",
-          "displayLines": "2",
-          "constants": [],
-          "variables": [
-            2
-          ]
+          "displayLines": "2"
         },
         "CastoriceServant_Eidolon6_AddCount": {
-          "operator": "Variables[0] (3) || RETURN",
-          "displayLines": "3",
-          "constants": [],
-          "variables": [
-            3
-          ]
+          "displayLines": "3"
         }
       }
     },
@@ -192,12 +116,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "variableName": "Castorice_Rank02_Count"
         },
@@ -208,12 +127,7 @@ const configAbility = {
             "target": "{{Caster's Memosprite}}"
           },
           "value": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "variableName": "CastoriceServant_Rank02_Count"
         }
@@ -297,12 +211,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"689500868\">StageAbility_Maze_Castorice_Modifier</a>",
       "valuePerStack": {
         "MDF_LoseHP": {
-          "operator": "Variables[0] (0.4) || RETURN",
-          "displayLines": "0.4",
-          "constants": [],
-          "variables": [
-            0.4
-          ]
+          "displayLines": "0.4"
         }
       }
     }
@@ -363,12 +272,7 @@ const configAbility = {
                     "target": "{{All Team Members}} - {{Caster's Memosprite}}"
                   },
                   "consumePercent": {
-                    "operator": "Variables[0] (MDF_LoseHP) || RETURN",
-                    "displayLines": "MDF_LoseHP",
-                    "constants": [],
-                    "variables": [
-                      "MDF_LoseHP"
-                    ]
+                    "displayLines": "MDF_LoseHP"
                   },
                   "consumeFloor": 1,
                   "attackType": "Unknown"

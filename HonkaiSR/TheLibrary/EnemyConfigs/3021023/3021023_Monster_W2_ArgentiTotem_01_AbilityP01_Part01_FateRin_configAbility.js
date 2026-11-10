@@ -29,30 +29,15 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1125306110\">Enemy_Argenti_DamageUP_FateRin</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "duration": {
-            "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-            "displayLines": "{[SkillP01[3]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP01[3]]}"
-            ]
+            "displayLines": "{[SkillP01[3]]}"
           },
           "valuePerStack": {
             "MDF_ShowValue1": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
+              "displayLines": "{[SkillP01[0]]}"
             }
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-            "displayLines": "{[SkillP01[2]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP01[2]]}"
-            ]
+            "displayLines": "{[SkillP01[2]]}"
           }
         }
       ],
@@ -65,30 +50,15 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1125306110\">Enemy_Argenti_DamageUP_FateRin</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "duration": {
-            "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-            "displayLines": "{[SkillP01[3]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP01[3]]}"
-            ]
+            "displayLines": "{[SkillP01[3]]}"
           },
           "valuePerStack": {
             "MDF_ShowValue1": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
+              "displayLines": "{[SkillP01[0]]}"
             }
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-            "displayLines": "{[SkillP01[1]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP01[1]]}"
-            ]
+            "displayLines": "{[SkillP01[1]]}"
           }
         }
       ]

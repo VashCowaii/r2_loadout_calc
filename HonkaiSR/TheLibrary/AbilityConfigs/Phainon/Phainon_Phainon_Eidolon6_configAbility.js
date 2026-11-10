@@ -58,13 +58,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_Rank06ExtraDamage) || Variables[1] (MDF_TempDamage) || ADD || RETURN",
-                    "displayLines": "(MDF_Rank06ExtraDamage + MDF_TempDamage)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Rank06ExtraDamage",
-                      "MDF_TempDamage"
-                    ]
+                    "displayLines": "(MDF_Rank06ExtraDamage + MDF_TempDamage)"
                   },
                   "variableName": "MDF_Rank06ExtraDamage"
                 }
@@ -110,13 +104,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_Rank06ExtraDamage) || Variables[1] (0.36) || MUL || RETURN",
-                      "displayLines": "(MDF_Rank06ExtraDamage * 0.36)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Rank06ExtraDamage",
-                        0.36
-                      ]
+                      "displayLines": "(MDF_Rank06ExtraDamage * 0.36)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -176,12 +164,7 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
                   "variables": {
                     "parameter[0]_AddValue": {
-                      "operator": "Variables[0] (6) || RETURN",
-                      "displayLines": "6",
-                      "constants": [],
-                      "variables": [
-                        6
-                      ]
+                      "displayLines": "6"
                     }
                   }
                 }

@@ -29,12 +29,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (Thunder_CountLight) || RETURN",
-        "displayLines": "Thunder_CountLight",
-        "constants": [],
-        "variables": [
-          "Thunder_CountLight"
-        ]
+        "displayLines": "Thunder_CountLight"
       },
       "variableName": "Thunder_CountTotal"
     },
@@ -68,15 +63,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] ({[SkillP02[1]]}) || Variables[1] (Thunder_CountTotal) || Constants[0] (6) || DIV || MUL || RETURN",
-                  "displayLines": "({[SkillP02[1]]} * (Thunder_CountTotal / 6))",
-                  "constants": [
-                    6
-                  ],
-                  "variables": [
-                    "{[SkillP02[1]]}",
-                    "Thunder_CountTotal"
-                  ]
+                  "displayLines": "({[SkillP02[1]]} * (Thunder_CountTotal / 6))"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "dmgFormulaFinal": "Converted DMG Base",
@@ -100,15 +87,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] ({[SkillP02[1]]}) || Variables[1] (Thunder_CountTotal) || Constants[0] (6) || DIV || MUL || RETURN",
-                  "displayLines": "({[SkillP02[1]]} * (Thunder_CountTotal / 6))",
-                  "constants": [
-                    6
-                  ],
-                  "variables": [
-                    "{[SkillP02[1]]}",
-                    "Thunder_CountTotal"
-                  ]
+                  "displayLines": "({[SkillP02[1]]} * (Thunder_CountTotal / 6))"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "dmgFormulaFinal": "Converted DMG Base",
@@ -134,15 +113,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] ({[SkillP02[1]]}) || Variables[1] (Thunder_CountLight) || MUL || Constants[0] (3) || DIV || RETURN",
-                  "displayLines": "(({[SkillP02[1]]} * Thunder_CountLight) / 3)",
-                  "constants": [
-                    3
-                  ],
-                  "variables": [
-                    "{[SkillP02[1]]}",
-                    "Thunder_CountLight"
-                  ]
+                  "displayLines": "(({[SkillP02[1]]} * Thunder_CountLight) / 3)"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "dmgFormulaFinal": "Converted DMG Base",

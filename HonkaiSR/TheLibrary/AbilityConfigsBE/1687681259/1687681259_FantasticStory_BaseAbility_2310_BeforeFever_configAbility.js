@@ -13,12 +13,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2310_BeforeFever_P1_AtkRatio",
       "resetValue": {
-        "operator": "Variables[0] (ADF_1_Get) || RETURN",
-        "displayLines": "ADF_1_Get",
-        "constants": [],
-        "variables": [
-          "ADF_1_Get"
-        ]
+        "displayLines": "ADF_1_Get"
       },
       "scope": "ContextCaster"
     },
@@ -30,12 +25,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2310_BeforeFever_P2_HPRatio",
       "resetValue": {
-        "operator": "Variables[0] (ADF_2_Get) || RETURN",
-        "displayLines": "ADF_2_Get",
-        "constants": [],
-        "variables": [
-          "ADF_2_Get"
-        ]
+        "displayLines": "ADF_2_Get"
       },
       "scope": "ContextCaster"
     },
@@ -47,12 +37,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2310_BeforeFever_P3_FeverDmgUp",
       "resetValue": {
-        "operator": "Variables[0] (ADF_3_Get) || RETURN",
-        "displayLines": "ADF_3_Get",
-        "constants": [],
-        "variables": [
-          "ADF_3_Get"
-        ]
+        "displayLines": "ADF_3_Get"
       },
       "scope": "ContextCaster"
     },
@@ -90,28 +75,13 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_AtkRatio": {
-              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2310_BeforeFever_P1_AtkRatio) || RETURN",
-              "displayLines": "DV_FantasticStory_BaseAbility_2310_BeforeFever_P1_AtkRatio",
-              "constants": [],
-              "variables": [
-                "DV_FantasticStory_BaseAbility_2310_BeforeFever_P1_AtkRatio"
-              ]
+              "displayLines": "DV_FantasticStory_BaseAbility_2310_BeforeFever_P1_AtkRatio"
             },
             "MDF_HPRatio": {
-              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2310_BeforeFever_P2_HPRatio) || RETURN",
-              "displayLines": "DV_FantasticStory_BaseAbility_2310_BeforeFever_P2_HPRatio",
-              "constants": [],
-              "variables": [
-                "DV_FantasticStory_BaseAbility_2310_BeforeFever_P2_HPRatio"
-              ]
+              "displayLines": "DV_FantasticStory_BaseAbility_2310_BeforeFever_P2_HPRatio"
             },
             "MDF_FeverDmgUp": {
-              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2310_BeforeFever_P3_FeverDmgUp) || RETURN",
-              "displayLines": "DV_FantasticStory_BaseAbility_2310_BeforeFever_P3_FeverDmgUp",
-              "constants": [],
-              "variables": [
-                "DV_FantasticStory_BaseAbility_2310_BeforeFever_P3_FeverDmgUp"
-              ]
+              "displayLines": "DV_FantasticStory_BaseAbility_2310_BeforeFever_P3_FeverDmgUp"
             }
           }
         }

@@ -37,28 +37,13 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-557071994\">XP_Ice_Elite_Powerful_Modifier</a>[<span class=\"descriptionNumberColor\">Freezing Point</span>]",
       "valuePerStack": {
         "Modifier_AllDamageTypeResistance": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13929) || RETURN",
-          "displayLines": "UnusedUnderThisBase_13929",
-          "constants": [],
-          "variables": [
-            "UnusedUnderThisBase_13929"
-          ]
+          "displayLines": "UnusedUnderThisBase_13929"
         },
         "Modifier_StanceWeakAddedRatio": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13935) || RETURN",
-          "displayLines": "UnusedUnderThisBase_13935",
-          "constants": [],
-          "variables": [
-            "UnusedUnderThisBase_13935"
-          ]
+          "displayLines": "UnusedUnderThisBase_13935"
         },
         "Modifier_Stance": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13936) || RETURN",
-          "displayLines": "UnusedUnderThisBase_13936",
-          "constants": [],
-          "variables": [
-            "UnusedUnderThisBase_13936"
-          ]
+          "displayLines": "UnusedUnderThisBase_13936"
         }
       }
     },

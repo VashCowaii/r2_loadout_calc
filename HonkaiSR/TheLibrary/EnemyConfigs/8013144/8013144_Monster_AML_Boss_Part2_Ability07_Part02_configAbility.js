@@ -36,21 +36,11 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"360534641\">Enemy_W0_Boss_Part2_AttackUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
       "duration": {
-        "operator": "Variables[0] ({[Skill07[1]]}) || RETURN",
-        "displayLines": "{[Skill07[1]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill07[1]]}"
-        ]
+        "displayLines": "{[Skill07[1]]}"
       },
       "valuePerStack": {
         "MDF_AttackAddedRatio": {
-          "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-          "displayLines": "{[Skill07[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill07[0]]}"
-          ]
+          "displayLines": "{[Skill07[0]]}"
         }
       }
     },

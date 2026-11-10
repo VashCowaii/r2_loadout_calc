@@ -14,12 +14,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-          "displayLines": "{[Skill02[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[0]]}"
-          ]
+          "displayLines": "{[Skill02[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -35,38 +30,18 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
       "duration": {
-        "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-        "displayLines": "{[Skill02[2]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill02[2]]}"
-        ]
+        "displayLines": "{[Skill02[2]]}"
       },
       "baseChance": {
-        "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-        "displayLines": "{[Skill02[1]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill02[1]]}"
-        ]
+        "displayLines": "{[Skill02[1]]}"
       },
       "immediateEffect": true,
       "valuePerStack": {
         "MDF_SpeedDownRatio": {
-          "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-          "displayLines": "{[Skill02[3]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[3]]}"
-          ]
+          "displayLines": "{[Skill02[3]]}"
         },
         "MDF_ActionDelayRatio": {
-          "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
-          "displayLines": "{[Skill02[4]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[4]]}"
-          ]
+          "displayLines": "{[Skill02[4]]}"
         }
       }
     },

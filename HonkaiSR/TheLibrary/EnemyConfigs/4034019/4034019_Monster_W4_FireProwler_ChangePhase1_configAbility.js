@@ -35,12 +35,7 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"33624492\">Enemy_W4_FireProwler_TimePower</a>[<span class=\"descriptionNumberColor\">Calamity Power</span>]",
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (ChangePhase_Layer) || INVERT || RETURN",
-        "displayLines": "-ChangePhase_Layer",
-        "constants": [],
-        "variables": [
-          "ChangePhase_Layer"
-        ]
+        "displayLines": "-ChangePhase_Layer"
       }
     },
     {
@@ -73,30 +68,15 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"742116058\">Enemy_W4_FireProwler_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Reduction</span>]",
       "stackLimit": {
-        "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-        "displayLines": "{[Skill01[3]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill01[3]]}"
-        ]
+        "displayLines": "{[Skill01[3]]}"
       },
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-          "displayLines": "{[Skill01[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[2]]}"
-          ]
+          "displayLines": "{[Skill01[2]]}"
         }
       },
       "addStacksPerTrigger": {
-        "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-        "displayLines": "{[Skill01[3]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill01[3]]}"
-        ]
+        "displayLines": "{[Skill01[3]]}"
       }
     },
     {

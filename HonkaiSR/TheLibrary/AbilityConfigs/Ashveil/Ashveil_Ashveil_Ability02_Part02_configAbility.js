@@ -41,13 +41,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (SkillP01_EnhanceInsertBuffStack) || Variables[1] (1) || ADD || RETURN",
-            "displayLines": "(SkillP01_EnhanceInsertBuffStack + 1)",
-            "constants": [],
-            "variables": [
-              "SkillP01_EnhanceInsertBuffStack",
-              1
-            ]
+            "displayLines": "(SkillP01_EnhanceInsertBuffStack + 1)"
           },
           "variableName": "SkillP01_EnhanceInsertBuffStack"
         },
@@ -66,20 +60,10 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1033168707\">Ashveil_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">Finale: And Then There Were None</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (30) || RETURN",
-                "displayLines": "30",
-                "constants": [],
-                "variables": [
-                  30
-                ]
+                "displayLines": "30"
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               }
             }
           ]
@@ -95,21 +79,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (2) || RETURN",
-          "displayLines": "2",
-          "constants": [],
-          "variables": [
-            2
-          ]
+          "displayLines": "2"
         },
         "HitSplit": 0.6,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -124,21 +98,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (2) || RETURN",
-          "displayLines": "2",
-          "constants": [],
-          "variables": [
-            2
-          ]
+          "displayLines": "2"
         },
         "HitSplit": 0.4,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -162,12 +126,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "Toughness": null,
             "Tags": null
@@ -176,12 +135,7 @@ const configAbility = {
         {
           "name": "Skill Points Modification",
           "adjustmentValue": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "adjustmentType": "+"
         }

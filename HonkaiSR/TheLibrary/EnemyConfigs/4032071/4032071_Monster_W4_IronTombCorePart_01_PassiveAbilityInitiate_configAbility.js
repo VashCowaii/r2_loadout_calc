@@ -108,12 +108,7 @@ const configAbility = {
                     "target": "{{Irontomb: Core}}"
                   },
                   "flatConsume": {
-                    "operator": "Variables[0] (MDF_HPChange) || INVERT || RETURN",
-                    "displayLines": "-MDF_HPChange",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HPChange"
-                    ]
+                    "displayLines": "-MDF_HPChange"
                   }
                 }
               ]
@@ -144,12 +139,7 @@ const configAbility = {
                     "target": "{{Irontomb: Core}}"
                   },
                   "flatConsume": {
-                    "operator": "Variables[0] (MDF_HPOverflow) || INVERT || RETURN",
-                    "displayLines": "-MDF_HPOverflow",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HPOverflow"
-                    ]
+                    "displayLines": "-MDF_HPOverflow"
                   }
                 }
               ]

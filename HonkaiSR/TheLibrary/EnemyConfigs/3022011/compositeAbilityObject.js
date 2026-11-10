@@ -64,14 +64,7 @@ const compositeAbilityObject = {
                         {
                           "element": "Physical",
                           "value": {
-                            "operator": "Constants[0] (1) || INVERT || Variables[0] (_WeakResistance) || MUL || RETURN",
-                            "displayLines": "(-1 * _WeakResistance)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "_WeakResistance"
-                            ]
+                            "displayLines": "(-1 * _WeakResistance)"
                           }
                         }
                       ]
@@ -108,14 +101,7 @@ const compositeAbilityObject = {
                         {
                           "element": "Fire",
                           "value": {
-                            "operator": "Constants[0] (1) || INVERT || Variables[0] (_WeakResistance) || MUL || RETURN",
-                            "displayLines": "(-1 * _WeakResistance)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "_WeakResistance"
-                            ]
+                            "displayLines": "(-1 * _WeakResistance)"
                           }
                         }
                       ]
@@ -152,14 +138,7 @@ const compositeAbilityObject = {
                         {
                           "element": "Ice",
                           "value": {
-                            "operator": "Constants[0] (1) || INVERT || Variables[0] (_WeakResistance) || MUL || RETURN",
-                            "displayLines": "(-1 * _WeakResistance)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "_WeakResistance"
-                            ]
+                            "displayLines": "(-1 * _WeakResistance)"
                           }
                         }
                       ]
@@ -196,14 +175,7 @@ const compositeAbilityObject = {
                         {
                           "element": "Thunder",
                           "value": {
-                            "operator": "Constants[0] (1) || INVERT || Variables[0] (_WeakResistance) || MUL || RETURN",
-                            "displayLines": "(-1 * _WeakResistance)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "_WeakResistance"
-                            ]
+                            "displayLines": "(-1 * _WeakResistance)"
                           }
                         }
                       ]
@@ -240,14 +212,7 @@ const compositeAbilityObject = {
                         {
                           "element": "Wind",
                           "value": {
-                            "operator": "Constants[0] (1) || INVERT || Variables[0] (_WeakResistance) || MUL || RETURN",
-                            "displayLines": "(-1 * _WeakResistance)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "_WeakResistance"
-                            ]
+                            "displayLines": "(-1 * _WeakResistance)"
                           }
                         }
                       ]
@@ -284,14 +249,7 @@ const compositeAbilityObject = {
                         {
                           "element": "Quantum",
                           "value": {
-                            "operator": "Constants[0] (1) || INVERT || Variables[0] (_WeakResistance) || MUL || RETURN",
-                            "displayLines": "(-1 * _WeakResistance)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "_WeakResistance"
-                            ]
+                            "displayLines": "(-1 * _WeakResistance)"
                           }
                         }
                       ]
@@ -328,14 +286,7 @@ const compositeAbilityObject = {
                         {
                           "element": "Imaginary",
                           "value": {
-                            "operator": "Constants[0] (1) || INVERT || Variables[0] (_WeakResistance) || MUL || RETURN",
-                            "displayLines": "(-1 * _WeakResistance)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "_WeakResistance"
-                            ]
+                            "displayLines": "(-1 * _WeakResistance)"
                           }
                         }
                       ]
@@ -398,12 +349,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "AssistSkill02_DamagePercentage",
                   "resetValue": {
-                    "operator": "Variables[0] (MDF_Assist_DamagePercentage) || RETURN",
-                    "displayLines": "MDF_Assist_DamagePercentage",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Assist_DamagePercentage"
-                    ]
+                    "displayLines": "MDF_Assist_DamagePercentage"
                   },
                   "scope": "TargetEntity"
                 }
@@ -424,12 +370,7 @@ const compositeAbilityObject = {
         {
           "name": "Deal Toughness DMG",
           "value": {
-            "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-            "displayLines": "{[SkillP01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP01[0]]}"
-            ]
+            "displayLines": "{[SkillP01[0]]}"
           },
           "defender": {
             "name": "Target Name",
@@ -498,12 +439,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"889164751\">Enemy_W3_SundayPart_IF_WeaknessShare</a>",
               "valuePerStack": {
                 "MDF_WeaknessShare": {
-                  "operator": "Variables[0] (_SummonerBreak) || RETURN",
-                  "displayLines": "_SummonerBreak",
-                  "constants": [],
-                  "variables": [
-                    "_SummonerBreak"
-                  ]
+                  "displayLines": "_SummonerBreak"
                 }
               }
             }
@@ -565,12 +501,7 @@ const compositeAbilityObject = {
                 "target": "{{Parameter Target}}"
               },
               "value": {
-                "operator": "Variables[0] (_EnergyCharge) || RETURN",
-                "displayLines": "_EnergyCharge",
-                "constants": [],
-                "variables": [
-                  "_EnergyCharge"
-                ]
+                "displayLines": "_EnergyCharge"
               },
               "isFixed": "(Fixed)"
             },
@@ -776,12 +707,7 @@ const compositeAbilityObject = {
             "target": "{{Caster's Summoner}}"
           },
           "value": {
-            "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-            "displayLines": "{[SkillP01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP01[0]]}"
-            ]
+            "displayLines": "{[SkillP01[0]]}"
           },
           "variableName": "PartBreak_StanceValue"
         },
@@ -884,12 +810,7 @@ const compositeAbilityObject = {
                         "value1": "_ActionDelay",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (_ActionDelaySummoner) || RETURN",
-                          "displayLines": "_ActionDelaySummoner",
-                          "constants": [],
-                          "variables": [
-                            "_ActionDelaySummoner"
-                          ]
+                          "displayLines": "_ActionDelaySummoner"
                         }
                       },
                       "passed": [
@@ -901,12 +822,7 @@ const compositeAbilityObject = {
                           },
                           "advanceType": "Set",
                           "add": {
-                            "operator": "Variables[0] (_ActionDelaySummoner) || RETURN",
-                            "displayLines": "_ActionDelaySummoner",
-                            "constants": [],
-                            "variables": [
-                              "_ActionDelaySummoner"
-                            ]
+                            "displayLines": "_ActionDelaySummoner"
                           }
                         }
                       ]
@@ -1077,12 +993,7 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"889164751\">Enemy_W3_SundayPart_IF_WeaknessShare</a>",
                               "valuePerStack": {
                                 "MDF_WeaknessShare": {
-                                  "operator": "Variables[0] (_SummonerBreak) || RETURN",
-                                  "displayLines": "_SummonerBreak",
-                                  "constants": [],
-                                  "variables": [
-                                    "_SummonerBreak"
-                                  ]
+                                  "displayLines": "_SummonerBreak"
                                 }
                               }
                             }
@@ -1160,12 +1071,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1245,12 +1151,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "HitSplit": 0.5,
             "Toughness": null,
@@ -1280,12 +1181,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "HitSplit": 0.5,
             "Toughness": null,

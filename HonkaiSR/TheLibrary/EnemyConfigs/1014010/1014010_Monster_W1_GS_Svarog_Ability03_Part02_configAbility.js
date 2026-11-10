@@ -49,36 +49,16 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"17783365\">Svarog_Part_ListenHP_Modifier</a>",
       "valuePerStack": {
         "PassiveAbility02_P2_HPRatio": {
-          "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__35) || RETURN",
-          "displayLines": "ENEMIES_OBJECT_UNUSED__35",
-          "constants": [],
-          "variables": [
-            "ENEMIES_OBJECT_UNUSED__35"
-          ]
+          "displayLines": "ENEMIES_OBJECT_UNUSED__35"
         },
         "PassiveAbility02_P3_StanceBreakTakenRatio": {
-          "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__36) || RETURN",
-          "displayLines": "ENEMIES_OBJECT_UNUSED__36",
-          "constants": [],
-          "variables": [
-            "ENEMIES_OBJECT_UNUSED__36"
-          ]
+          "displayLines": "ENEMIES_OBJECT_UNUSED__36"
         },
         "PassiveAbility02_P4_MDF_AllDamageTypeTakenRatio": {
-          "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__37) || RETURN",
-          "displayLines": "ENEMIES_OBJECT_UNUSED__37",
-          "constants": [],
-          "variables": [
-            "ENEMIES_OBJECT_UNUSED__37"
-          ]
+          "displayLines": "ENEMIES_OBJECT_UNUSED__37"
         },
         "PassiveAbility02_P5_LifeTime": {
-          "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__38) || RETURN",
-          "displayLines": "ENEMIES_OBJECT_UNUSED__38",
-          "constants": [],
-          "variables": [
-            "ENEMIES_OBJECT_UNUSED__38"
-          ]
+          "displayLines": "ENEMIES_OBJECT_UNUSED__38"
         }
       }
     },

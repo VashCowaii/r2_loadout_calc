@@ -13,12 +13,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2260_BeforeFever_P1_StatusResDown",
       "resetValue": {
-        "operator": "Variables[0] (ADF_1_Get) || RETURN",
-        "displayLines": "ADF_1_Get",
-        "constants": [],
-        "variables": [
-          "ADF_1_Get"
-        ]
+        "displayLines": "ADF_1_Get"
       },
       "scope": "ContextCaster"
     },
@@ -30,12 +25,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2260_BeforeFever_P2_DmgTakenUp",
       "resetValue": {
-        "operator": "Variables[0] (ADF_2_Get) || RETURN",
-        "displayLines": "ADF_2_Get",
-        "constants": [],
-        "variables": [
-          "ADF_2_Get"
-        ]
+        "displayLines": "ADF_2_Get"
       },
       "scope": "ContextCaster"
     },
@@ -47,12 +37,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2260_BeforeFever_P3_DebuffThreshold",
       "resetValue": {
-        "operator": "Variables[0] (ADF_3_Get) || RETURN",
-        "displayLines": "ADF_3_Get",
-        "constants": [],
-        "variables": [
-          "ADF_3_Get"
-        ]
+        "displayLines": "ADF_3_Get"
       },
       "scope": "ContextCaster"
     },
@@ -90,28 +75,13 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_StatusResDown": {
-              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2260_BeforeFever_P1_StatusResDown) || RETURN",
-              "displayLines": "DV_FantasticStory_BaseAbility_2260_BeforeFever_P1_StatusResDown",
-              "constants": [],
-              "variables": [
-                "DV_FantasticStory_BaseAbility_2260_BeforeFever_P1_StatusResDown"
-              ]
+              "displayLines": "DV_FantasticStory_BaseAbility_2260_BeforeFever_P1_StatusResDown"
             },
             "MDF_DmgTakenUp": {
-              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2260_BeforeFever_P2_DmgTakenUp) || RETURN",
-              "displayLines": "DV_FantasticStory_BaseAbility_2260_BeforeFever_P2_DmgTakenUp",
-              "constants": [],
-              "variables": [
-                "DV_FantasticStory_BaseAbility_2260_BeforeFever_P2_DmgTakenUp"
-              ]
+              "displayLines": "DV_FantasticStory_BaseAbility_2260_BeforeFever_P2_DmgTakenUp"
             },
             "MDF_DebuffThreshold": {
-              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2260_BeforeFever_P3_DebuffThreshold) || RETURN",
-              "displayLines": "DV_FantasticStory_BaseAbility_2260_BeforeFever_P3_DebuffThreshold",
-              "constants": [],
-              "variables": [
-                "DV_FantasticStory_BaseAbility_2260_BeforeFever_P3_DebuffThreshold"
-              ]
+              "displayLines": "DV_FantasticStory_BaseAbility_2260_BeforeFever_P3_DebuffThreshold"
             }
           }
         }

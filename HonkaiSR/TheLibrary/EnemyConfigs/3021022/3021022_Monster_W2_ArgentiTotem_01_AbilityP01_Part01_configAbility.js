@@ -56,32 +56,15 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "duration": {
-            "operator": "Variables[0] (UnusedUnderThisBase_8956) || RETURN",
-            "displayLines": "UnusedUnderThisBase_8956",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_8956"
-            ]
+            "displayLines": "UnusedUnderThisBase_8956"
           },
           "valuePerStack": {
             "MDF_ShowValue1": {
-              "operator": "Variables[0] (UnusedUnderThisBase_8962) || RETURN",
-              "displayLines": "UnusedUnderThisBase_8962",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_8962"
-              ]
+              "displayLines": "UnusedUnderThisBase_8962"
             }
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] (UnusedUnderThisBase_8957) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(UnusedUnderThisBase_8957 - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "UnusedUnderThisBase_8957"
-            ]
+            "displayLines": "(UnusedUnderThisBase_8957 - 1)"
           }
         },
         {
@@ -92,21 +75,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "duration": {
-            "operator": "Variables[0] (UnusedUnderThisBase_8956) || RETURN",
-            "displayLines": "UnusedUnderThisBase_8956",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_8956"
-            ]
+            "displayLines": "UnusedUnderThisBase_8956"
           },
           "valuePerStack": {
             "MDF_ShowValue1": {
-              "operator": "Variables[0] (UnusedUnderThisBase_8962) || RETURN",
-              "displayLines": "UnusedUnderThisBase_8962",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_8962"
-              ]
+              "displayLines": "UnusedUnderThisBase_8962"
             }
           },
           "addStacksPerTrigger": 1
@@ -121,30 +94,15 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "duration": {
-            "operator": "Variables[0] (UnusedUnderThisBase_8956) || RETURN",
-            "displayLines": "UnusedUnderThisBase_8956",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_8956"
-            ]
+            "displayLines": "UnusedUnderThisBase_8956"
           },
           "valuePerStack": {
             "MDF_ShowValue1": {
-              "operator": "Variables[0] (UnusedUnderThisBase_8962) || RETURN",
-              "displayLines": "UnusedUnderThisBase_8962",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_8962"
-              ]
+              "displayLines": "UnusedUnderThisBase_8962"
             }
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] (UnusedUnderThisBase_8963) || RETURN",
-            "displayLines": "UnusedUnderThisBase_8963",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_8963"
-            ]
+            "displayLines": "UnusedUnderThisBase_8963"
           }
         }
       ]

@@ -72,13 +72,7 @@ const configAbility = {
         "target": "{{Summoner of Ability Target(ST)}}"
       },
       "setValue": {
-        "operator": "Variables[0] (_MaxHP) || Variables[1] (_HPRatio) || MUL || RETURN",
-        "displayLines": "(_MaxHP * _HPRatio)",
-        "constants": [],
-        "variables": [
-          "_MaxHP",
-          "_HPRatio"
-        ]
+        "displayLines": "(_MaxHP * _HPRatio)"
       }
     },
     {
@@ -137,12 +131,7 @@ const configAbility = {
       },
       "isSet": true,
       "constantValue": {
-        "operator": "Variables[0] (_CurrentStance) || RETURN",
-        "displayLines": "_CurrentStance",
-        "constants": [],
-        "variables": [
-          "_CurrentStance"
-        ]
+        "displayLines": "_CurrentStance"
       }
     },
     {

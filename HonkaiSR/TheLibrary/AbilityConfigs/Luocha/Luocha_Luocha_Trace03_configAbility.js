@@ -13,12 +13,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-579247332\">M_Luocha_Trace03</a>",
       "valuePerStack": {
         "MDF_Resistance": {
-          "operator": "Variables[0] (0.7) || RETURN",
-          "displayLines": "0.7",
-          "constants": [],
-          "variables": [
-            0.7
-          ]
+          "displayLines": "0.7"
         }
       }
     }
@@ -42,12 +37,7 @@ const configAbility = {
               },
               "statName": "STAT_CTRL",
               "value": {
-                "operator": "Variables[0] (MDF_Resistance) || RETURN",
-                "displayLines": "MDF_Resistance",
-                "constants": [],
-                "variables": [
-                  "MDF_Resistance"
-                ]
+                "displayLines": "MDF_Resistance"
               }
             }
           ]

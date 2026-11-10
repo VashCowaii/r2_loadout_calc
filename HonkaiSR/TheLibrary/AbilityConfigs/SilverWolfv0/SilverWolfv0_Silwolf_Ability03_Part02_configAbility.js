@@ -20,30 +20,15 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"898206024\">Silwolf_Ultimate_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
       "duration": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "baseChance": {
-        "operator": "Variables[0] (1) || RETURN",
-        "displayLines": "1",
-        "constants": [],
-        "variables": [
-          1
-        ]
+        "displayLines": "1"
       },
       "immediateEffect": true,
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] (0.45) || RETURN",
-          "displayLines": "0.45",
-          "constants": [],
-          "variables": [
-            0.45
-          ]
+          "displayLines": "0.45"
         }
       }
     },
@@ -57,20 +42,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (3.8) || RETURN",
-          "displayLines": "3.8",
-          "constants": [],
-          "variables": [
-            3.8
-          ]
+          "displayLines": "3.8"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -91,24 +66,14 @@ const configAbility = {
             "value1": "_DebuffCountForRank04",
             "compareType": ">=",
             "value2": {
-              "operator": "Variables[0] (5) || RETURN",
-              "displayLines": "5",
-              "constants": [],
-              "variables": [
-                5
-              ]
+              "displayLines": "5"
             }
           },
           "passed": [
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (5) || RETURN",
-                "displayLines": "5",
-                "constants": [],
-                "variables": [
-                  5
-                ]
+                "displayLines": "5"
               },
               "variableName": "_DebuffCountForRank04"
             }
@@ -126,12 +91,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (_DebuffCountForRank04) || RETURN",
-                "displayLines": "_DebuffCountForRank04",
-                "constants": [],
-                "variables": [
-                  "_DebuffCountForRank04"
-                ]
+                "displayLines": "_DebuffCountForRank04"
               },
               "execute": [
                 {
@@ -144,12 +104,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -176,24 +131,14 @@ const configAbility = {
             "value1": "_DebuffCountForRank01",
             "compareType": ">=",
             "value2": {
-              "operator": "Variables[0] (5) || RETURN",
-              "displayLines": "5",
-              "constants": [],
-              "variables": [
-                5
-              ]
+              "displayLines": "5"
             }
           },
           "passed": [
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (5) || RETURN",
-                "displayLines": "5",
-                "constants": [],
-                "variables": [
-                  5
-                ]
+                "displayLines": "5"
               },
               "variableName": "_DebuffCountForRank01"
             }
@@ -206,13 +151,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (7) || Variables[1] (_DebuffCountForRank01) || MUL || RETURN",
-            "displayLines": "(7 * _DebuffCountForRank01)",
-            "constants": [],
-            "variables": [
-              7,
-              "_DebuffCountForRank01"
-            ]
+            "displayLines": "(7 * _DebuffCountForRank01)"
           },
           "isFixed": "* ERR"
         }

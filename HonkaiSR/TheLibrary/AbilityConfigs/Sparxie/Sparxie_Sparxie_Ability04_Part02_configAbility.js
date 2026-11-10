@@ -21,12 +21,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "value": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       }
     },
     {
@@ -37,12 +32,7 @@ const configAbility = {
       },
       "function": "Set",
       "value": {
-        "operator": "Variables[0] (Sparxie_EnergyPoint) || RETURN",
-        "displayLines": "Sparxie_EnergyPoint",
-        "constants": [],
-        "variables": [
-          "Sparxie_EnergyPoint"
-        ]
+        "displayLines": "Sparxie_EnergyPoint"
       },
       "silentChange": true
     },
@@ -60,14 +50,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (FLOOR) || Variables[1] (_CurrentEP) || Variables[2] (1) || DIV || PARAM_1 || FUNCTION || RETURN",
-            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_CurrentEP / 1))",
-            "constants": [],
-            "variables": [
-              "FLOOR",
-              "_CurrentEP",
-              1
-            ]
+            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_CurrentEP / 1))"
           },
           "variableName": "_Rank06_ExtraDamage"
         },
@@ -78,26 +61,14 @@ const configAbility = {
             "value1": "_Rank06_ExtraDamage",
             "compareType": ">",
             "value2": {
-              "operator": "Variables[0] (40) || Variables[1] (20) || SUB || RETURN",
-              "displayLines": "(40 - 20)",
-              "constants": [],
-              "variables": [
-                40,
-                20
-              ]
+              "displayLines": "(40 - 20)"
             }
           },
           "passed": [
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (40) || Variables[1] (20) || SUB || RETURN",
-                "displayLines": "(40 - 20)",
-                "constants": [],
-                "variables": [
-                  40,
-                  20
-                ]
+                "displayLines": "(40 - 20)"
               },
               "variableName": "_Rank06_ExtraDamage"
             }
@@ -108,13 +79,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (20) || Variables[1] (_Rank06_ExtraDamage) || ADD || RETURN",
-        "displayLines": "(20 + _Rank06_ExtraDamage)",
-        "constants": [],
-        "variables": [
-          20,
-          "_Rank06_ExtraDamage"
-        ]
+        "displayLines": "(20 + _Rank06_ExtraDamage)"
       },
       "execute": [
         {

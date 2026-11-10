@@ -71,14 +71,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2165_ADF_3) || Variables[2] (DV_TargetCount) || MUL || ADD || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_FantasticStory_PlusAbility_2165_ADF_3 * DV_TargetCount))",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_CountSum",
-                          "DV_FantasticStory_PlusAbility_2165_ADF_3",
-                          "DV_TargetCount"
-                        ]
+                        "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_FantasticStory_PlusAbility_2165_ADF_3 * DV_TargetCount))"
                       },
                       "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                     },
@@ -89,12 +82,7 @@ const compositeAbilityObject = {
                         "value1": "DV_FantasticStory_BaseAbility_CountSum",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
-                          "displayLines": "DV_EnterFeverValue",
-                          "constants": [],
-                          "variables": [
-                            "DV_EnterFeverValue"
-                          ]
+                          "displayLines": "DV_EnterFeverValue"
                         }
                       },
                       "passed": [
@@ -103,13 +91,7 @@ const compositeAbilityObject = {
                           "current": 100,
                           "max": 100,
                           "delta": {
-                            "operator": "Variables[0] (DV_TargetCount) || Variables[1] (DV_FantasticStory_PlusAbility_2165_ADF_3) || MUL || RETURN",
-                            "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2165_ADF_3)",
-                            "constants": [],
-                            "variables": [
-                              "DV_TargetCount",
-                              "DV_FantasticStory_PlusAbility_2165_ADF_3"
-                            ]
+                            "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2165_ADF_3)"
                           },
                           "type": "Special",
                           "phaseType": "P1"
@@ -119,29 +101,13 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Surging Grit[PF]",
                           "current": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
-                            "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_CountSum"
-                            ]
+                            "displayLines": "DV_FantasticStory_BaseAbility_CountSum"
                           },
                           "max": {
-                            "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
-                            "displayLines": "DV_EnterFeverValue",
-                            "constants": [],
-                            "variables": [
-                              "DV_EnterFeverValue"
-                            ]
+                            "displayLines": "DV_EnterFeverValue"
                           },
                           "delta": {
-                            "operator": "Variables[0] (DV_TargetCount) || Variables[1] (DV_FantasticStory_PlusAbility_2165_ADF_3) || MUL || RETURN",
-                            "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2165_ADF_3)",
-                            "constants": [],
-                            "variables": [
-                              "DV_TargetCount",
-                              "DV_FantasticStory_PlusAbility_2165_ADF_3"
-                            ]
+                            "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2165_ADF_3)"
                           },
                           "type": "Special"
                         }
@@ -280,14 +246,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2164_ADF_2) || Variables[2] (DV_TargetCount) || MUL || ADD || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_FantasticStory_PlusAbility_2164_ADF_2 * DV_TargetCount))",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_CountSum",
-                          "DV_FantasticStory_PlusAbility_2164_ADF_2",
-                          "DV_TargetCount"
-                        ]
+                        "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_FantasticStory_PlusAbility_2164_ADF_2 * DV_TargetCount))"
                       },
                       "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                     },
@@ -298,12 +257,7 @@ const compositeAbilityObject = {
                         "value1": "DV_FantasticStory_BaseAbility_CountSum",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
-                          "displayLines": "DV_EnterFeverValue",
-                          "constants": [],
-                          "variables": [
-                            "DV_EnterFeverValue"
-                          ]
+                          "displayLines": "DV_EnterFeverValue"
                         }
                       },
                       "passed": [
@@ -312,13 +266,7 @@ const compositeAbilityObject = {
                           "current": 100,
                           "max": 100,
                           "delta": {
-                            "operator": "Variables[0] (DV_TargetCount) || Variables[1] (DV_FantasticStory_PlusAbility_2164_ADF_2) || MUL || RETURN",
-                            "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2164_ADF_2)",
-                            "constants": [],
-                            "variables": [
-                              "DV_TargetCount",
-                              "DV_FantasticStory_PlusAbility_2164_ADF_2"
-                            ]
+                            "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2164_ADF_2)"
                           },
                           "type": "Special",
                           "phaseType": "P1"
@@ -328,29 +276,13 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Surging Grit[PF]",
                           "current": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
-                            "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_CountSum"
-                            ]
+                            "displayLines": "DV_FantasticStory_BaseAbility_CountSum"
                           },
                           "max": {
-                            "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
-                            "displayLines": "DV_EnterFeverValue",
-                            "constants": [],
-                            "variables": [
-                              "DV_EnterFeverValue"
-                            ]
+                            "displayLines": "DV_EnterFeverValue"
                           },
                           "delta": {
-                            "operator": "Variables[0] (DV_TargetCount) || Variables[1] (DV_FantasticStory_PlusAbility_2164_ADF_2) || MUL || RETURN",
-                            "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2164_ADF_2)",
-                            "constants": [],
-                            "variables": [
-                              "DV_TargetCount",
-                              "DV_FantasticStory_PlusAbility_2164_ADF_2"
-                            ]
+                            "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2164_ADF_2)"
                           },
                           "type": "Special"
                         }
@@ -385,14 +317,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (DV_TargetCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(DV_TargetCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "DV_TargetCount"
-                        ]
+                        "displayLines": "(DV_TargetCount + 1)"
                       },
                       "variableName": "DV_TargetCount"
                     }
@@ -467,13 +392,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2163_ADF_3) || ADD || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + DV_FantasticStory_PlusAbility_2163_ADF_3)",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_CountSum",
-                          "DV_FantasticStory_PlusAbility_2163_ADF_3"
-                        ]
+                        "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + DV_FantasticStory_PlusAbility_2163_ADF_3)"
                       },
                       "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                     },
@@ -484,12 +403,7 @@ const compositeAbilityObject = {
                         "value1": "DV_FantasticStory_BaseAbility_CountSum",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
-                          "displayLines": "DV_EnterFeverValue",
-                          "constants": [],
-                          "variables": [
-                            "DV_EnterFeverValue"
-                          ]
+                          "displayLines": "DV_EnterFeverValue"
                         }
                       },
                       "passed": [
@@ -498,12 +412,7 @@ const compositeAbilityObject = {
                           "current": 100,
                           "max": 100,
                           "delta": {
-                            "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2163_ADF_3) || RETURN",
-                            "displayLines": "DV_FantasticStory_PlusAbility_2163_ADF_3",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_PlusAbility_2163_ADF_3"
-                            ]
+                            "displayLines": "DV_FantasticStory_PlusAbility_2163_ADF_3"
                           },
                           "type": "Special",
                           "phaseType": "P1"
@@ -513,28 +422,13 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Surging Grit[PF]",
                           "current": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
-                            "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_CountSum"
-                            ]
+                            "displayLines": "DV_FantasticStory_BaseAbility_CountSum"
                           },
                           "max": {
-                            "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
-                            "displayLines": "DV_EnterFeverValue",
-                            "constants": [],
-                            "variables": [
-                              "DV_EnterFeverValue"
-                            ]
+                            "displayLines": "DV_EnterFeverValue"
                           },
                           "delta": {
-                            "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2163_ADF_3) || RETURN",
-                            "displayLines": "DV_FantasticStory_PlusAbility_2163_ADF_3",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_PlusAbility_2163_ADF_3"
-                            ]
+                            "displayLines": "DV_FantasticStory_PlusAbility_2163_ADF_3"
                           },
                           "type": "Special"
                         }
@@ -605,14 +499,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2162_ADF_3) || Variables[2] (DV_TargetCount) || MUL || ADD || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_FantasticStory_PlusAbility_2162_ADF_3 * DV_TargetCount))",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_CountSum",
-                          "DV_FantasticStory_PlusAbility_2162_ADF_3",
-                          "DV_TargetCount"
-                        ]
+                        "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_FantasticStory_PlusAbility_2162_ADF_3 * DV_TargetCount))"
                       },
                       "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                     },
@@ -623,12 +510,7 @@ const compositeAbilityObject = {
                         "value1": "DV_FantasticStory_BaseAbility_CountSum",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
-                          "displayLines": "DV_EnterFeverValue",
-                          "constants": [],
-                          "variables": [
-                            "DV_EnterFeverValue"
-                          ]
+                          "displayLines": "DV_EnterFeverValue"
                         }
                       },
                       "passed": [
@@ -637,13 +519,7 @@ const compositeAbilityObject = {
                           "current": 100,
                           "max": 100,
                           "delta": {
-                            "operator": "Variables[0] (DV_TargetCount) || Variables[1] (DV_FantasticStory_PlusAbility_2162_ADF_3) || MUL || RETURN",
-                            "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2162_ADF_3)",
-                            "constants": [],
-                            "variables": [
-                              "DV_TargetCount",
-                              "DV_FantasticStory_PlusAbility_2162_ADF_3"
-                            ]
+                            "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2162_ADF_3)"
                           },
                           "type": "Special",
                           "phaseType": "P1"
@@ -653,29 +529,13 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Surging Grit[PF]",
                           "current": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
-                            "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_CountSum"
-                            ]
+                            "displayLines": "DV_FantasticStory_BaseAbility_CountSum"
                           },
                           "max": {
-                            "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
-                            "displayLines": "DV_EnterFeverValue",
-                            "constants": [],
-                            "variables": [
-                              "DV_EnterFeverValue"
-                            ]
+                            "displayLines": "DV_EnterFeverValue"
                           },
                           "delta": {
-                            "operator": "Variables[0] (DV_TargetCount) || Variables[1] (DV_FantasticStory_PlusAbility_2162_ADF_3) || MUL || RETURN",
-                            "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2162_ADF_3)",
-                            "constants": [],
-                            "variables": [
-                              "DV_TargetCount",
-                              "DV_FantasticStory_PlusAbility_2162_ADF_3"
-                            ]
+                            "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2162_ADF_3)"
                           },
                           "type": "Special"
                         }
@@ -726,46 +586,21 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1010904189\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT</a>[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
                       "duration": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime) || RETURN",
-                        "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime"
-                        ]
+                        "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime"
                       },
                       "stackLimit": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer) || RETURN",
-                        "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
-                        ]
+                        "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
                       },
                       "valuePerStack": {
                         "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer": {
-                          "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer) || RETURN",
-                          "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
-                          ]
+                          "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
                         },
                         "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage": {
-                          "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage) || RETURN",
-                          "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage"
-                          ]
+                          "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2165_ADF_2) || RETURN",
-                        "displayLines": "DV_FantasticStory_PlusAbility_2165_ADF_2",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_PlusAbility_2165_ADF_2"
-                        ]
+                        "displayLines": "DV_FantasticStory_PlusAbility_2165_ADF_2"
                       }
                     }
                   ]
@@ -975,12 +810,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-397579384\">Modifier_FantasticStory_BaseAbility_2160_Plus1_Sub_PLY</a>[<span class=\"descriptionNumberColor\">DoT Boost</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2161_ADF_3) || RETURN",
-                        "displayLines": "DV_FantasticStory_PlusAbility_2161_ADF_3",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_PlusAbility_2161_ADF_3"
-                        ]
+                        "displayLines": "DV_FantasticStory_PlusAbility_2161_ADF_3"
                       }
                     }
                   ]
@@ -1064,12 +894,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio) || RETURN",
-                    "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio"
-                    ]
+                    "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio"
                   }
                 },
                 {
@@ -1080,12 +905,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Weaken%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio) || RETURN",
-                    "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio"
-                    ]
+                    "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio"
                   }
                 },
                 {
@@ -1096,12 +916,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio) || RETURN",
-                    "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio"
-                    ]
+                    "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio"
                   }
                 }
               ]
@@ -1123,28 +938,13 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio": {
-                  "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio) || RETURN",
-                  "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio",
-                  "constants": [],
-                  "variables": [
-                    "DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio"
-                  ]
+                  "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio"
                 },
                 "DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio": {
-                  "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio) || RETURN",
-                  "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio",
-                  "constants": [],
-                  "variables": [
-                    "DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio"
-                  ]
+                  "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio"
                 },
                 "DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio": {
-                  "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio) || RETURN",
-                  "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio",
-                  "constants": [],
-                  "variables": [
-                    "DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio"
-                  ]
+                  "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio"
                 }
               }
             },
@@ -1254,40 +1054,20 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSumTemp) || RETURN",
-                    "displayLines": "DV_FantasticStory_BaseAbility_CountSumTemp",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_BaseAbility_CountSumTemp"
-                    ]
+                    "displayLines": "DV_FantasticStory_BaseAbility_CountSumTemp"
                   },
                   "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                 },
                 {
                   "name": "Update Surging Grit[PF]",
                   "current": {
-                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
-                    "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_BaseAbility_CountSum"
-                    ]
+                    "displayLines": "DV_FantasticStory_BaseAbility_CountSum"
                   },
                   "max": {
-                    "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
-                    "displayLines": "DV_EnterFeverValue",
-                    "constants": [],
-                    "variables": [
-                      "DV_EnterFeverValue"
-                    ]
+                    "displayLines": "DV_EnterFeverValue"
                   },
                   "delta": {
-                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
-                    "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_BaseAbility_CountSum"
-                    ]
+                    "displayLines": "DV_FantasticStory_BaseAbility_CountSum"
                   },
                   "type": "FeverBack"
                 },
@@ -1335,14 +1115,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (BattleEvent_BaseHP) || Constants[0] (90) || MUL || RETURN",
-                    "displayLines": "(BattleEvent_BaseHP * 90)",
-                    "constants": [
-                      90
-                    ],
-                    "variables": [
-                      "BattleEvent_BaseHP"
-                    ]
+                    "displayLines": "(BattleEvent_BaseHP * 90)"
                   },
                   "variableName": "BattleEvent_BaseHP"
                 },
@@ -1428,14 +1201,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "DamageFlat": {
-                      "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_Layer) || MUL || Variables[2] (Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage) || MUL || RETURN",
-                      "displayLines": "((BattleEvent_BaseHP * Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_Layer) * Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage)",
-                      "constants": [],
-                      "variables": [
-                        "BattleEvent_BaseHP",
-                        "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_Layer",
-                        "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage"
-                      ]
+                      "displayLines": "((BattleEvent_BaseHP * Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_Layer) * Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1591,15 +1357,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "DamageFlat": {
-                      "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (DOT_TriggerRatio) || MUL || Variables[2] (Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_Layer) || MUL || Variables[3] (Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage) || MUL || RETURN",
-                      "displayLines": "(((BattleEvent_BaseHP * DOT_TriggerRatio) * Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_Layer) * Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage)",
-                      "constants": [],
-                      "variables": [
-                        "BattleEvent_BaseHP",
-                        "DOT_TriggerRatio",
-                        "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_Layer",
-                        "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage"
-                      ]
+                      "displayLines": "(((BattleEvent_BaseHP * DOT_TriggerRatio) * Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_Layer) * Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1647,36 +1405,18 @@ const compositeAbilityObject = {
                     "value1": "DV_FantasticStory_BaseAbility_CountSumTemp",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSumTempMax) || RETURN",
-                      "displayLines": "DV_FantasticStory_BaseAbility_CountSumTempMax",
-                      "constants": [],
-                      "variables": [
-                        "DV_FantasticStory_BaseAbility_CountSumTempMax"
-                      ]
+                      "displayLines": "DV_FantasticStory_BaseAbility_CountSumTempMax"
                     }
                   },
                   "passed": [
                     {
                       "name": "Update Surging Grit[PF]",
                       "current": {
-                        "operator": "Variables[0] (DV_CurrentDelay) || Constants[0] (10) || MUL || RETURN",
-                        "displayLines": "(DV_CurrentDelay * 10)",
-                        "constants": [
-                          10
-                        ],
-                        "variables": [
-                          "DV_CurrentDelay"
-                        ]
+                        "displayLines": "(DV_CurrentDelay * 10)"
                       },
                       "max": 100,
                       "extra": {
-                        "operator": "Variables[0] (FLOOR) || Variables[1] (DV_FantasticStory_BaseAbility_CountSumTemp) || PARAM_1 || FUNCTION || RETURN",
-                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(DV_FantasticStory_BaseAbility_CountSumTemp)",
-                        "constants": [],
-                        "variables": [
-                          "FLOOR",
-                          "DV_FantasticStory_BaseAbility_CountSumTemp"
-                        ]
+                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(DV_FantasticStory_BaseAbility_CountSumTemp)"
                       },
                       "phaseType": "P1",
                       "reachedLimit": true
@@ -1686,24 +1426,11 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Surging Grit[PF]",
                       "current": {
-                        "operator": "Variables[0] (DV_CurrentDelay) || Constants[0] (10) || MUL || RETURN",
-                        "displayLines": "(DV_CurrentDelay * 10)",
-                        "constants": [
-                          10
-                        ],
-                        "variables": [
-                          "DV_CurrentDelay"
-                        ]
+                        "displayLines": "(DV_CurrentDelay * 10)"
                       },
                       "max": 100,
                       "extra": {
-                        "operator": "Variables[0] (FLOOR) || Variables[1] (DV_FantasticStory_BaseAbility_CountSumTemp) || PARAM_1 || FUNCTION || RETURN",
-                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(DV_FantasticStory_BaseAbility_CountSumTemp)",
-                        "constants": [],
-                        "variables": [
-                          "FLOOR",
-                          "DV_FantasticStory_BaseAbility_CountSumTemp"
-                        ]
+                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(DV_FantasticStory_BaseAbility_CountSumTemp)"
                       },
                       "phaseType": "P1"
                     }
@@ -1736,12 +1463,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_2165_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         },
@@ -1753,12 +1475,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_2165_ADF_2",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_2) || RETURN",
-            "displayLines": "#ADF_2",
-            "constants": [],
-            "variables": [
-              "#ADF_2"
-            ]
+            "displayLines": "#ADF_2"
           },
           "scope": "ContextCaster"
         },
@@ -1770,12 +1487,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_2165_ADF_3",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_3) || RETURN",
-            "displayLines": "#ADF_3",
-            "constants": [],
-            "variables": [
-              "#ADF_3"
-            ]
+            "displayLines": "#ADF_3"
           },
           "scope": "ContextCaster"
         }
@@ -1802,12 +1514,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_2164_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         },
@@ -1819,12 +1526,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_2164_ADF_2",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_2) || RETURN",
-            "displayLines": "#ADF_2",
-            "constants": [],
-            "variables": [
-              "#ADF_2"
-            ]
+            "displayLines": "#ADF_2"
           },
           "scope": "ContextCaster"
         }
@@ -1851,12 +1553,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_2163_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         },
@@ -1868,12 +1565,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_2163_ADF_2",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_2) || RETURN",
-            "displayLines": "#ADF_2",
-            "constants": [],
-            "variables": [
-              "#ADF_2"
-            ]
+            "displayLines": "#ADF_2"
           },
           "scope": "ContextCaster"
         },
@@ -1885,12 +1577,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_2163_ADF_3",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_3) || RETURN",
-            "displayLines": "#ADF_3",
-            "constants": [],
-            "variables": [
-              "#ADF_3"
-            ]
+            "displayLines": "#ADF_3"
           },
           "scope": "ContextCaster"
         }
@@ -1917,12 +1604,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_2162_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         },
@@ -1934,12 +1616,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_2162_ADF_2",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_2) || RETURN",
-            "displayLines": "#ADF_2",
-            "constants": [],
-            "variables": [
-              "#ADF_2"
-            ]
+            "displayLines": "#ADF_2"
           },
           "scope": "ContextCaster"
         },
@@ -1951,12 +1628,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_2162_ADF_3",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_3) || RETURN",
-            "displayLines": "#ADF_3",
-            "constants": [],
-            "variables": [
-              "#ADF_3"
-            ]
+            "displayLines": "#ADF_3"
           },
           "scope": "ContextCaster"
         }
@@ -1983,12 +1655,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_2161_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         },
@@ -2000,12 +1667,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_2161_ADF_2",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_2) || RETURN",
-            "displayLines": "#ADF_2",
-            "constants": [],
-            "variables": [
-              "#ADF_2"
-            ]
+            "displayLines": "#ADF_2"
           },
           "scope": "ContextCaster"
         },
@@ -2017,12 +1679,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_2161_ADF_3",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_3) || RETURN",
-            "displayLines": "#ADF_3",
-            "constants": [],
-            "variables": [
-              "#ADF_3"
-            ]
+            "displayLines": "#ADF_3"
           },
           "scope": "ContextCaster"
         }
@@ -2057,12 +1714,7 @@ const compositeAbilityObject = {
               "eventID": 30501,
               "variables": {
                 "DV_BE_BaseSpeed": {
-                  "operator": "Variables[0] (DV_FeverBESpeed) || RETURN",
-                  "displayLines": "DV_FeverBESpeed",
-                  "constants": [],
-                  "variables": [
-                    "DV_FeverBESpeed"
-                  ]
+                  "displayLines": "DV_FeverBESpeed"
                 }
               },
               "whenCreated": [
@@ -2092,46 +1744,21 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1010904189\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT</a>[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
           "duration": {
-            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime) || RETURN",
-            "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime",
-            "constants": [],
-            "variables": [
-              "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime"
-            ]
+            "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime"
           },
           "stackLimit": {
-            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer) || RETURN",
-            "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer",
-            "constants": [],
-            "variables": [
-              "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
-            ]
+            "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
           },
           "valuePerStack": {
             "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer": {
-              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer) || RETURN",
-              "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer",
-              "constants": [],
-              "variables": [
-                "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
-              ]
+              "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
             },
             "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage": {
-              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage) || RETURN",
-              "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage",
-              "constants": [],
-              "variables": [
-                "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage"
-              ]
+              "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage"
             }
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_EnterFever_P5_EnterFeverLayer) || RETURN",
-            "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P5_EnterFeverLayer",
-            "constants": [],
-            "variables": [
-              "DV_FantasticStory_BaseAbility_2160_EnterFever_P5_EnterFeverLayer"
-            ]
+            "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P5_EnterFeverLayer"
           }
         },
         {
@@ -2143,12 +1770,7 @@ const compositeAbilityObject = {
           "variableName": "DOT_TriggerRatio",
           "eventType": "DOT",
           "value": {
-            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_EnterFever_P1_DotTriggerRatio) || RETURN",
-            "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P1_DotTriggerRatio",
-            "constants": [],
-            "variables": [
-              "DV_FantasticStory_BaseAbility_2160_EnterFever_P1_DotTriggerRatio"
-            ]
+            "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P1_DotTriggerRatio"
           }
         },
         {
@@ -2160,40 +1782,20 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-898765267\">Modifier_FantasticStory_BaseAbility_2160_Aura</a>",
           "valuePerStack": {
             "DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio": {
-              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio) || RETURN",
-              "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio",
-              "constants": [],
-              "variables": [
-                "DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio"
-              ]
+              "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio"
             },
             "DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio": {
-              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio) || RETURN",
-              "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio",
-              "constants": [],
-              "variables": [
-                "DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio"
-              ]
+              "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio"
             },
             "DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio": {
-              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio) || RETURN",
-              "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio",
-              "constants": [],
-              "variables": [
-                "DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio"
-              ]
+              "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio"
             }
           }
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Constants[0] (0) || RETURN",
-            "displayLines": "0",
-            "constants": [
-              0
-            ],
-            "variables": []
+            "displayLines": "0"
           },
           "variableName": "DV_FantasticStory_BaseAbility_CountSum"
         }
@@ -2218,12 +1820,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_BaseAbility_2160_EnterFever_P1_DotTriggerRatio",
           "resetValue": {
-            "operator": "Variables[0] (ADF_1_Get) || RETURN",
-            "displayLines": "ADF_1_Get",
-            "constants": [],
-            "variables": [
-              "ADF_1_Get"
-            ]
+            "displayLines": "ADF_1_Get"
           },
           "scope": "ContextCaster"
         },
@@ -2235,12 +1832,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio",
           "resetValue": {
-            "operator": "Variables[0] (ADF_2_Get) || RETURN",
-            "displayLines": "ADF_2_Get",
-            "constants": [],
-            "variables": [
-              "ADF_2_Get"
-            ]
+            "displayLines": "ADF_2_Get"
           },
           "scope": "ContextCaster"
         },
@@ -2252,12 +1844,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio",
           "resetValue": {
-            "operator": "Variables[0] (ADF_3_Get) || RETURN",
-            "displayLines": "ADF_3_Get",
-            "constants": [],
-            "variables": [
-              "ADF_3_Get"
-            ]
+            "displayLines": "ADF_3_Get"
           },
           "scope": "ContextCaster"
         },
@@ -2269,12 +1856,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio",
           "resetValue": {
-            "operator": "Variables[0] (ADF_4_Get) || RETURN",
-            "displayLines": "ADF_4_Get",
-            "constants": [],
-            "variables": [
-              "ADF_4_Get"
-            ]
+            "displayLines": "ADF_4_Get"
           },
           "scope": "ContextCaster"
         },
@@ -2286,12 +1868,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_BaseAbility_2160_EnterFever_P5_EnterFeverLayer",
           "resetValue": {
-            "operator": "Variables[0] (ADF_5_Get) || RETURN",
-            "displayLines": "ADF_5_Get",
-            "constants": [],
-            "variables": [
-              "ADF_5_Get"
-            ]
+            "displayLines": "ADF_5_Get"
           },
           "scope": "ContextCaster"
         },
@@ -2327,12 +1904,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P1_EnterLayer",
           "resetValue": {
-            "operator": "Variables[0] (ADF_1_Get) || RETURN",
-            "displayLines": "ADF_1_Get",
-            "constants": [],
-            "variables": [
-              "ADF_1_Get"
-            ]
+            "displayLines": "ADF_1_Get"
           },
           "scope": "ContextCaster"
         },
@@ -2344,12 +1916,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P2_ActionLayer",
           "resetValue": {
-            "operator": "Variables[0] (ADF_2_Get) || RETURN",
-            "displayLines": "ADF_2_Get",
-            "constants": [],
-            "variables": [
-              "ADF_2_Get"
-            ]
+            "displayLines": "ADF_2_Get"
           },
           "scope": "ContextCaster"
         },
@@ -2361,12 +1928,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer",
           "resetValue": {
-            "operator": "Variables[0] (ADF_3_Get) || RETURN",
-            "displayLines": "ADF_3_Get",
-            "constants": [],
-            "variables": [
-              "ADF_3_Get"
-            ]
+            "displayLines": "ADF_3_Get"
           },
           "scope": "ContextCaster"
         },
@@ -2378,12 +1940,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime",
           "resetValue": {
-            "operator": "Variables[0] (ADF_4_Get) || RETURN",
-            "displayLines": "ADF_4_Get",
-            "constants": [],
-            "variables": [
-              "ADF_4_Get"
-            ]
+            "displayLines": "ADF_4_Get"
           },
           "scope": "ContextCaster"
         },
@@ -2395,12 +1952,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage",
           "resetValue": {
-            "operator": "Variables[0] (ADF_5_Get) || RETURN",
-            "displayLines": "ADF_5_Get",
-            "constants": [],
-            "variables": [
-              "ADF_5_Get"
-            ]
+            "displayLines": "ADF_5_Get"
           },
           "scope": "ContextCaster"
         },
@@ -2488,47 +2040,21 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1010904189\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT</a>[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
                           "duration": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime) || RETURN",
-                            "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime"
-                            ]
+                            "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime"
                           },
                           "stackLimit": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer) || RETURN",
-                            "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
-                            ]
+                            "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
                           },
                           "valuePerStack": {
                             "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer": {
-                              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer) || RETURN",
-                              "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer",
-                              "constants": [],
-                              "variables": [
-                                "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
-                              ]
+                              "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
                             },
                             "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage": {
-                              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage) || RETURN",
-                              "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage",
-                              "constants": [],
-                              "variables": [
-                                "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage"
-                              ]
+                              "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage"
                             }
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P1_EnterLayer) || Variables[1] (DV_FantasticStory_PlusAbility_2163_ADF_2) || ADD || RETURN",
-                            "displayLines": "(DV_FantasticStory_BaseAbility_2160_BeforeFever_P1_EnterLayer + DV_FantasticStory_PlusAbility_2163_ADF_2)",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_2160_BeforeFever_P1_EnterLayer",
-                              "DV_FantasticStory_PlusAbility_2163_ADF_2"
-                            ]
+                            "displayLines": "(DV_FantasticStory_BaseAbility_2160_BeforeFever_P1_EnterLayer + DV_FantasticStory_PlusAbility_2163_ADF_2)"
                           }
                         }
                       ],
@@ -2541,46 +2067,21 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1010904189\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT</a>[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
                           "duration": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime) || RETURN",
-                            "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime"
-                            ]
+                            "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime"
                           },
                           "stackLimit": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer) || RETURN",
-                            "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
-                            ]
+                            "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
                           },
                           "valuePerStack": {
                             "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer": {
-                              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer) || RETURN",
-                              "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer",
-                              "constants": [],
-                              "variables": [
-                                "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
-                              ]
+                              "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
                             },
                             "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage": {
-                              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage) || RETURN",
-                              "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage",
-                              "constants": [],
-                              "variables": [
-                                "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage"
-                              ]
+                              "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage"
                             }
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P1_EnterLayer) || RETURN",
-                            "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P1_EnterLayer",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_2160_BeforeFever_P1_EnterLayer"
-                            ]
+                            "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P1_EnterLayer"
                           }
                         }
                       ]
@@ -2634,47 +2135,21 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1010904189\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT</a>[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
                           "duration": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime) || RETURN",
-                            "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime"
-                            ]
+                            "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime"
                           },
                           "stackLimit": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer) || RETURN",
-                            "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
-                            ]
+                            "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
                           },
                           "valuePerStack": {
                             "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer": {
-                              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer) || RETURN",
-                              "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer",
-                              "constants": [],
-                              "variables": [
-                                "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
-                              ]
+                              "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
                             },
                             "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage": {
-                              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage) || RETURN",
-                              "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage",
-                              "constants": [],
-                              "variables": [
-                                "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage"
-                              ]
+                              "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage"
                             }
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P2_ActionLayer) || Variables[1] (DV_FantasticStory_PlusAbility_2163_ADF_2) || ADD || RETURN",
-                            "displayLines": "(DV_FantasticStory_BaseAbility_2160_BeforeFever_P2_ActionLayer + DV_FantasticStory_PlusAbility_2163_ADF_2)",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_2160_BeforeFever_P2_ActionLayer",
-                              "DV_FantasticStory_PlusAbility_2163_ADF_2"
-                            ]
+                            "displayLines": "(DV_FantasticStory_BaseAbility_2160_BeforeFever_P2_ActionLayer + DV_FantasticStory_PlusAbility_2163_ADF_2)"
                           }
                         }
                       ],
@@ -2687,46 +2162,21 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1010904189\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT</a>[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
                           "duration": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime) || RETURN",
-                            "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime"
-                            ]
+                            "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime"
                           },
                           "stackLimit": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer) || RETURN",
-                            "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
-                            ]
+                            "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
                           },
                           "valuePerStack": {
                             "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer": {
-                              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer) || RETURN",
-                              "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer",
-                              "constants": [],
-                              "variables": [
-                                "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
-                              ]
+                              "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
                             },
                             "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage": {
-                              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage) || RETURN",
-                              "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage",
-                              "constants": [],
-                              "variables": [
-                                "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage"
-                              ]
+                              "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage"
                             }
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P2_ActionLayer) || RETURN",
-                            "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P2_ActionLayer",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_2160_BeforeFever_P2_ActionLayer"
-                            ]
+                            "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P2_ActionLayer"
                           }
                         }
                       ]
@@ -2754,12 +2204,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value",
           "resetValue": {
-            "operator": "Variables[0] (ADF_1_Get) || RETURN",
-            "displayLines": "ADF_1_Get",
-            "constants": [],
-            "variables": [
-              "ADF_1_Get"
-            ]
+            "displayLines": "ADF_1_Get"
           },
           "scope": "ContextCaster"
         },
@@ -2788,12 +2233,7 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value": {
-                  "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value) || RETURN",
-                  "displayLines": "DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value",
-                  "constants": [],
-                  "variables": [
-                    "DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value"
-                  ]
+                  "displayLines": "DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value"
                 }
               }
             }
@@ -2853,13 +2293,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value) || ADD || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value)",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_CountSum",
-                          "DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value"
-                        ]
+                        "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value)"
                       },
                       "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                     },
@@ -2870,12 +2304,7 @@ const compositeAbilityObject = {
                         "value1": "DV_FantasticStory_BaseAbility_CountSum",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
-                          "displayLines": "DV_EnterFeverValue",
-                          "constants": [],
-                          "variables": [
-                            "DV_EnterFeverValue"
-                          ]
+                          "displayLines": "DV_EnterFeverValue"
                         }
                       },
                       "passed": [
@@ -2884,12 +2313,7 @@ const compositeAbilityObject = {
                           "current": 100,
                           "max": 100,
                           "delta": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value) || RETURN",
-                            "displayLines": "DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value"
-                            ]
+                            "displayLines": "DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value"
                           },
                           "type": "FeverSpecial",
                           "phaseType": "P1"
@@ -2899,28 +2323,13 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Surging Grit[PF]",
                           "current": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
-                            "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_CountSum"
-                            ]
+                            "displayLines": "DV_FantasticStory_BaseAbility_CountSum"
                           },
                           "max": {
-                            "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
-                            "displayLines": "DV_EnterFeverValue",
-                            "constants": [],
-                            "variables": [
-                              "DV_EnterFeverValue"
-                            ]
+                            "displayLines": "DV_EnterFeverValue"
                           },
                           "delta": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value) || RETURN",
-                            "displayLines": "DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value"
-                            ]
+                            "displayLines": "DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value"
                           },
                           "type": "FeverSpecial"
                         }
@@ -2967,12 +2376,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_EnterFeverValue",
           "resetValue": {
-            "operator": "Variables[0] (ADF_1_Get) || RETURN",
-            "displayLines": "ADF_1_Get",
-            "constants": [],
-            "variables": [
-              "ADF_1_Get"
-            ]
+            "displayLines": "ADF_1_Get"
           },
           "scope": "ContextCaster"
         },
@@ -2984,12 +2388,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_BeforeFeverEliteDmgRatio",
           "resetValue": {
-            "operator": "Variables[0] (ADF_3_Get) || RETURN",
-            "displayLines": "ADF_3_Get",
-            "constants": [],
-            "variables": [
-              "ADF_3_Get"
-            ]
+            "displayLines": "ADF_3_Get"
           },
           "scope": "ContextCaster"
         },
@@ -3001,12 +2400,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_BeforeFeverKillChargeRatio",
           "resetValue": {
-            "operator": "Variables[0] (ADF_4_Get) || RETURN",
-            "displayLines": "ADF_4_Get",
-            "constants": [],
-            "variables": [
-              "ADF_4_Get"
-            ]
+            "displayLines": "ADF_4_Get"
           },
           "scope": "ContextCaster"
         },
@@ -3018,12 +2412,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FeverKillReturnRatio",
           "resetValue": {
-            "operator": "Variables[0] (ADF_5_Get) || RETURN",
-            "displayLines": "ADF_5_Get",
-            "constants": [],
-            "variables": [
-              "ADF_5_Get"
-            ]
+            "displayLines": "ADF_5_Get"
           },
           "scope": "ContextCaster"
         },
@@ -3035,12 +2424,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FeverBESpeed",
           "resetValue": {
-            "operator": "Variables[0] (ADF_6_Get) || RETURN",
-            "displayLines": "ADF_6_Get",
-            "constants": [],
-            "variables": [
-              "ADF_6_Get"
-            ]
+            "displayLines": "ADF_6_Get"
           },
           "scope": "ContextCaster"
         },
@@ -3052,13 +2436,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_BaseAbility_CountSumTempMax",
           "resetValue": {
-            "operator": "Variables[0] (ADF_1_Get) || Variables[1] (ADF_2_Get) || MUL || RETURN",
-            "displayLines": "(ADF_1_Get * ADF_2_Get)",
-            "constants": [],
-            "variables": [
-              "ADF_1_Get",
-              "ADF_2_Get"
-            ]
+            "displayLines": "(ADF_1_Get * ADF_2_Get)"
           },
           "scope": "ContextCaster"
         },
@@ -3128,12 +2506,7 @@ const compositeAbilityObject = {
         {
           "name": "Update Surging Grit[PF]",
           "max": {
-            "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
-            "displayLines": "DV_EnterFeverValue",
-            "constants": [],
-            "variables": [
-              "DV_EnterFeverValue"
-            ]
+            "displayLines": "DV_EnterFeverValue"
           }
         },
         {
@@ -3458,12 +2831,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Variable Value Range Conditions",
                   "minValue": {
-                    "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
-                    "displayLines": "DV_EnterFeverValue",
-                    "constants": [],
-                    "variables": [
-                      "DV_EnterFeverValue"
-                    ]
+                    "displayLines": "DV_EnterFeverValue"
                   },
                   "maxValue": 1000000000,
                   "includeMaxValueInRange": true,
@@ -3640,14 +3008,7 @@ const compositeAbilityObject = {
                                 {
                                   "name": "Define Custom Variable",
                                   "value": {
-                                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSumTemp) || Variables[1] (DV_EnterFeverValue) || Variables[2] (DV_BeforeFeverKillChargeRatio) || MUL || ADD || RETURN",
-                                    "displayLines": "(DV_FantasticStory_BaseAbility_CountSumTemp + (DV_EnterFeverValue * DV_BeforeFeverKillChargeRatio))",
-                                    "constants": [],
-                                    "variables": [
-                                      "DV_FantasticStory_BaseAbility_CountSumTemp",
-                                      "DV_EnterFeverValue",
-                                      "DV_BeforeFeverKillChargeRatio"
-                                    ]
+                                    "displayLines": "(DV_FantasticStory_BaseAbility_CountSumTemp + (DV_EnterFeverValue * DV_BeforeFeverKillChargeRatio))"
                                   },
                                   "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp"
                                 },
@@ -3658,48 +3019,25 @@ const compositeAbilityObject = {
                                     "value1": "DV_FantasticStory_BaseAbility_CountSumTemp",
                                     "compareType": ">=",
                                     "value2": {
-                                      "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSumTempMax) || RETURN",
-                                      "displayLines": "DV_FantasticStory_BaseAbility_CountSumTempMax",
-                                      "constants": [],
-                                      "variables": [
-                                        "DV_FantasticStory_BaseAbility_CountSumTempMax"
-                                      ]
+                                      "displayLines": "DV_FantasticStory_BaseAbility_CountSumTempMax"
                                     }
                                   },
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable",
                                       "value": {
-                                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSumTempMax) || RETURN",
-                                        "displayLines": "DV_FantasticStory_BaseAbility_CountSumTempMax",
-                                        "constants": [],
-                                        "variables": [
-                                          "DV_FantasticStory_BaseAbility_CountSumTempMax"
-                                        ]
+                                        "displayLines": "DV_FantasticStory_BaseAbility_CountSumTempMax"
                                       },
                                       "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp"
                                     },
                                     {
                                       "name": "Update Surging Grit[PF]",
                                       "current": {
-                                        "operator": "Variables[0] (DV_Delay) || Constants[0] (10) || MUL || RETURN",
-                                        "displayLines": "(DV_Delay * 10)",
-                                        "constants": [
-                                          10
-                                        ],
-                                        "variables": [
-                                          "DV_Delay"
-                                        ]
+                                        "displayLines": "(DV_Delay * 10)"
                                       },
                                       "max": 100,
                                       "extra": {
-                                        "operator": "Variables[0] (FLOOR) || Variables[1] (DV_FantasticStory_BaseAbility_CountSumTemp) || PARAM_1 || FUNCTION || RETURN",
-                                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(DV_FantasticStory_BaseAbility_CountSumTemp)",
-                                        "constants": [],
-                                        "variables": [
-                                          "FLOOR",
-                                          "DV_FantasticStory_BaseAbility_CountSumTemp"
-                                        ]
+                                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(DV_FantasticStory_BaseAbility_CountSumTemp)"
                                       },
                                       "phaseType": "P1",
                                       "reachedLimit": true
@@ -3709,24 +3047,11 @@ const compositeAbilityObject = {
                                     {
                                       "name": "Update Surging Grit[PF]",
                                       "current": {
-                                        "operator": "Variables[0] (DV_Delay) || Constants[0] (10) || MUL || RETURN",
-                                        "displayLines": "(DV_Delay * 10)",
-                                        "constants": [
-                                          10
-                                        ],
-                                        "variables": [
-                                          "DV_Delay"
-                                        ]
+                                        "displayLines": "(DV_Delay * 10)"
                                       },
                                       "max": 100,
                                       "extra": {
-                                        "operator": "Variables[0] (FLOOR) || Variables[1] (DV_FantasticStory_BaseAbility_CountSumTemp) || PARAM_1 || FUNCTION || RETURN",
-                                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(DV_FantasticStory_BaseAbility_CountSumTemp)",
-                                        "constants": [],
-                                        "variables": [
-                                          "FLOOR",
-                                          "DV_FantasticStory_BaseAbility_CountSumTemp"
-                                        ]
+                                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(DV_FantasticStory_BaseAbility_CountSumTemp)"
                                       },
                                       "phaseType": "P1"
                                     }
@@ -3737,14 +3062,7 @@ const compositeAbilityObject = {
                                 {
                                   "name": "Define Custom Variable",
                                   "value": {
-                                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_EnterFeverValue) || Variables[2] (DV_FeverKillReturnRatio) || MUL || ADD || RETURN",
-                                    "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_EnterFeverValue * DV_FeverKillReturnRatio))",
-                                    "constants": [],
-                                    "variables": [
-                                      "DV_FantasticStory_BaseAbility_CountSum",
-                                      "DV_EnterFeverValue",
-                                      "DV_FeverKillReturnRatio"
-                                    ]
+                                    "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_EnterFeverValue * DV_FeverKillReturnRatio))"
                                   },
                                   "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                                 },
@@ -3755,12 +3073,7 @@ const compositeAbilityObject = {
                                     "value1": "DV_FantasticStory_BaseAbility_CountSum",
                                     "compareType": ">=",
                                     "value2": {
-                                      "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
-                                      "displayLines": "DV_EnterFeverValue",
-                                      "constants": [],
-                                      "variables": [
-                                        "DV_EnterFeverValue"
-                                      ]
+                                      "displayLines": "DV_EnterFeverValue"
                                     }
                                   },
                                   "passed": [
@@ -3769,13 +3082,7 @@ const compositeAbilityObject = {
                                       "current": 100,
                                       "max": 100,
                                       "delta": {
-                                        "operator": "Variables[0] (DV_EnterFeverValue) || Variables[1] (DV_FeverKillReturnRatio) || MUL || RETURN",
-                                        "displayLines": "(DV_EnterFeverValue * DV_FeverKillReturnRatio)",
-                                        "constants": [],
-                                        "variables": [
-                                          "DV_EnterFeverValue",
-                                          "DV_FeverKillReturnRatio"
-                                        ]
+                                        "displayLines": "(DV_EnterFeverValue * DV_FeverKillReturnRatio)"
                                       },
                                       "type": "Normal",
                                       "phaseType": "P1"
@@ -3785,29 +3092,13 @@ const compositeAbilityObject = {
                                     {
                                       "name": "Update Surging Grit[PF]",
                                       "current": {
-                                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
-                                        "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
-                                        "constants": [],
-                                        "variables": [
-                                          "DV_FantasticStory_BaseAbility_CountSum"
-                                        ]
+                                        "displayLines": "DV_FantasticStory_BaseAbility_CountSum"
                                       },
                                       "max": {
-                                        "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
-                                        "displayLines": "DV_EnterFeverValue",
-                                        "constants": [],
-                                        "variables": [
-                                          "DV_EnterFeverValue"
-                                        ]
+                                        "displayLines": "DV_EnterFeverValue"
                                       },
                                       "delta": {
-                                        "operator": "Variables[0] (DV_EnterFeverValue) || Variables[1] (DV_FeverKillReturnRatio) || MUL || RETURN",
-                                        "displayLines": "(DV_EnterFeverValue * DV_FeverKillReturnRatio)",
-                                        "constants": [],
-                                        "variables": [
-                                          "DV_EnterFeverValue",
-                                          "DV_FeverKillReturnRatio"
-                                        ]
+                                        "displayLines": "(DV_EnterFeverValue * DV_FeverKillReturnRatio)"
                                       },
                                       "type": "Normal"
                                     }
@@ -3852,13 +3143,7 @@ const compositeAbilityObject = {
                                   "AttackScaling": {
                                     "DamageType": "Physical",
                                     "DamageFlat": {
-                                      "operator": "Variables[0] (DV_maxHP) || Variables[1] (DV_BeforeFeverEliteDmgRatio) || MUL || RETURN",
-                                      "displayLines": "(DV_maxHP * DV_BeforeFeverEliteDmgRatio)",
-                                      "constants": [],
-                                      "variables": [
-                                        "DV_maxHP",
-                                        "DV_BeforeFeverEliteDmgRatio"
-                                      ]
+                                      "displayLines": "(DV_maxHP * DV_BeforeFeverEliteDmgRatio)"
                                     },
                                     "notAHit": true,
                                     "dmgFormulaFinal": "Converted DMG Base",
@@ -3906,15 +3191,7 @@ const compositeAbilityObject = {
                                       "AttackScaling": {
                                         "DamageType": "Physical",
                                         "DamageFlat": {
-                                          "operator": "Variables[0] (DV_maxHP) || Constants[0] (20) || DIV || Constants[1] (0.0009999999) || ADD || RETURN",
-                                          "displayLines": "((DV_maxHP / 20) + 0.0009999999)",
-                                          "constants": [
-                                            20,
-                                            0.0009999999
-                                          ],
-                                          "variables": [
-                                            "DV_maxHP"
-                                          ]
+                                          "displayLines": "((DV_maxHP / 20) + 0.0009999999)"
                                         },
                                         "notAHit": true,
                                         "dmgFormulaFinal": "Converted DMG Base",
@@ -4220,52 +3497,22 @@ const compositeAbilityObject = {
           "abilityName": "FantasticStory_BaseAbility_2160",
           "parameters": {
             "ADF_1_Get": {
-              "operator": "Variables[0] (ADF_1) || RETURN",
-              "displayLines": "ADF_1",
-              "constants": [],
-              "variables": [
-                "ADF_1"
-              ]
+              "displayLines": "ADF_1"
             },
             "ADF_2_Get": {
-              "operator": "Variables[0] (ADF_2) || RETURN",
-              "displayLines": "ADF_2",
-              "constants": [],
-              "variables": [
-                "ADF_2"
-              ]
+              "displayLines": "ADF_2"
             },
             "ADF_3_Get": {
-              "operator": "Variables[0] (ADF_3) || RETURN",
-              "displayLines": "ADF_3",
-              "constants": [],
-              "variables": [
-                "ADF_3"
-              ]
+              "displayLines": "ADF_3"
             },
             "ADF_4_Get": {
-              "operator": "Variables[0] (ADF_4) || RETURN",
-              "displayLines": "ADF_4",
-              "constants": [],
-              "variables": [
-                "ADF_4"
-              ]
+              "displayLines": "ADF_4"
             },
             "ADF_5_Get": {
-              "operator": "Variables[0] (ADF_5) || RETURN",
-              "displayLines": "ADF_5",
-              "constants": [],
-              "variables": [
-                "ADF_5"
-              ]
+              "displayLines": "ADF_5"
             },
             "ADF_6_Get": {
-              "operator": "Variables[0] (ADF_6) || RETURN",
-              "displayLines": "ADF_6",
-              "constants": [],
-              "variables": [
-                "ADF_6"
-              ]
+              "displayLines": "ADF_6"
             }
           }
         },
@@ -4274,12 +3521,7 @@ const compositeAbilityObject = {
           "abilityName": "FantasticStory_BaseAbility_2160_BaseAddOn",
           "parameters": {
             "ADF_1_Get": {
-              "operator": "Variables[0] (ADF_7) || RETURN",
-              "displayLines": "ADF_7",
-              "constants": [],
-              "variables": [
-                "ADF_7"
-              ]
+              "displayLines": "ADF_7"
             }
           }
         },
@@ -4288,44 +3530,19 @@ const compositeAbilityObject = {
           "abilityName": "FantasticStory_BaseAbility_2160_BeforeFever",
           "parameters": {
             "ADF_1_Get": {
-              "operator": "Variables[0] (ADF_8) || RETURN",
-              "displayLines": "ADF_8",
-              "constants": [],
-              "variables": [
-                "ADF_8"
-              ]
+              "displayLines": "ADF_8"
             },
             "ADF_2_Get": {
-              "operator": "Variables[0] (ADF_9) || RETURN",
-              "displayLines": "ADF_9",
-              "constants": [],
-              "variables": [
-                "ADF_9"
-              ]
+              "displayLines": "ADF_9"
             },
             "ADF_3_Get": {
-              "operator": "Variables[0] (ADF_10) || RETURN",
-              "displayLines": "ADF_10",
-              "constants": [],
-              "variables": [
-                "ADF_10"
-              ]
+              "displayLines": "ADF_10"
             },
             "ADF_4_Get": {
-              "operator": "Variables[0] (ADF_11) || RETURN",
-              "displayLines": "ADF_11",
-              "constants": [],
-              "variables": [
-                "ADF_11"
-              ]
+              "displayLines": "ADF_11"
             },
             "ADF_5_Get": {
-              "operator": "Variables[0] (ADF_12) || RETURN",
-              "displayLines": "ADF_12",
-              "constants": [],
-              "variables": [
-                "ADF_12"
-              ]
+              "displayLines": "ADF_12"
             }
           }
         },
@@ -4334,44 +3551,19 @@ const compositeAbilityObject = {
           "abilityName": "FantasticStory_BaseAbility_2160_EnterFever",
           "parameters": {
             "ADF_1_Get": {
-              "operator": "Variables[0] (ADF_13) || RETURN",
-              "displayLines": "ADF_13",
-              "constants": [],
-              "variables": [
-                "ADF_13"
-              ]
+              "displayLines": "ADF_13"
             },
             "ADF_2_Get": {
-              "operator": "Variables[0] (ADF_14) || RETURN",
-              "displayLines": "ADF_14",
-              "constants": [],
-              "variables": [
-                "ADF_14"
-              ]
+              "displayLines": "ADF_14"
             },
             "ADF_3_Get": {
-              "operator": "Variables[0] (ADF_15) || RETURN",
-              "displayLines": "ADF_15",
-              "constants": [],
-              "variables": [
-                "ADF_15"
-              ]
+              "displayLines": "ADF_15"
             },
             "ADF_4_Get": {
-              "operator": "Variables[0] (ADF_16) || RETURN",
-              "displayLines": "ADF_16",
-              "constants": [],
-              "variables": [
-                "ADF_16"
-              ]
+              "displayLines": "ADF_16"
             },
             "ADF_5_Get": {
-              "operator": "Variables[0] (ADF_17) || RETURN",
-              "displayLines": "ADF_17",
-              "constants": [],
-              "variables": [
-                "ADF_17"
-              ]
+              "displayLines": "ADF_17"
             }
           }
         }

@@ -261,13 +261,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageAddRatio) || Variables[1] (Layer) || MUL || RETURN",
-                "displayLines": "(MDF_DamageAddRatio * Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageAddRatio",
-                  "Layer"
-                ]
+                "displayLines": "(MDF_DamageAddRatio * Layer)"
               }
             },
             {
@@ -278,13 +272,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_TokenDMGRduceRatio) || Variables[1] (Layer) || MUL || RETURN",
-                "displayLines": "(MDF_TokenDMGRduceRatio * Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_TokenDMGRduceRatio",
-                  "Layer"
-                ]
+                "displayLines": "(MDF_TokenDMGRduceRatio * Layer)"
               }
             }
           ]
@@ -390,29 +378,14 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1784319990\">Enemy_W2_Argenti_IF_EX_EnemyCount_Sub</a>[<span class=\"descriptionNumberColor\">Stellar Aegis</span>]",
                   "valuePerStack": {
                     "MDF_DamageAddRatio": {
-                      "operator": "Variables[0] (MDF_ShowValue2) || RETURN",
-                      "displayLines": "MDF_ShowValue2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_ShowValue2"
-                      ]
+                      "displayLines": "MDF_ShowValue2"
                     },
                     "MDF_TokenDMGRduceRatio": {
-                      "operator": "Variables[0] (MDF_ShowValue1) || RETURN",
-                      "displayLines": "MDF_ShowValue1",
-                      "constants": [],
-                      "variables": [
-                        "MDF_ShowValue1"
-                      ]
+                      "displayLines": "MDF_ShowValue1"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (_TeamNumber) || RETURN",
-                    "displayLines": "_TeamNumber",
-                    "constants": [],
-                    "variables": [
-                      "_TeamNumber"
-                    ]
+                    "displayLines": "_TeamNumber"
                   }
                 }
               ]
@@ -452,14 +425,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_IF_BOSS_AllPowerFlag) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(MDF_IF_BOSS_AllPowerFlag + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_IF_BOSS_AllPowerFlag"
-                    ]
+                    "displayLines": "(MDF_IF_BOSS_AllPowerFlag + 1)"
                   },
                   "variableName": "MDF_IF_BOSS_AllPowerFlag"
                 },
@@ -517,12 +483,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_IF_BOSS_AllPowerFlag) || RETURN",
-                        "displayLines": "MDF_IF_BOSS_AllPowerFlag",
-                        "constants": [],
-                        "variables": [
-                          "MDF_IF_BOSS_AllPowerFlag"
-                        ]
+                        "displayLines": "MDF_IF_BOSS_AllPowerFlag"
                       },
                       "variableName": "MDF_IF_BOSS_AllPowerFlag"
                     },
@@ -564,14 +525,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_IF_BOSS_AllPowerFlag) || Constants[0] (3) || ADD || RETURN",
-                        "displayLines": "(MDF_IF_BOSS_AllPowerFlag + 3)",
-                        "constants": [
-                          3
-                        ],
-                        "variables": [
-                          "MDF_IF_BOSS_AllPowerFlag"
-                        ]
+                        "displayLines": "(MDF_IF_BOSS_AllPowerFlag + 3)"
                       },
                       "variableName": "MDF_IF_BOSS_AllPowerFlag"
                     },
@@ -623,12 +577,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_IF_BOSS_AllPowerFlag) || RETURN",
-                        "displayLines": "MDF_IF_BOSS_AllPowerFlag",
-                        "constants": [],
-                        "variables": [
-                          "MDF_IF_BOSS_AllPowerFlag"
-                        ]
+                        "displayLines": "MDF_IF_BOSS_AllPowerFlag"
                       },
                       "variableName": "MDF_IF_BOSS_AllPowerFlag"
                     },
@@ -656,12 +605,7 @@ const configAbility = {
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (MDF_IF_BOSS_AllPowerFlag) || RETURN",
-                    "displayLines": "MDF_IF_BOSS_AllPowerFlag",
-                    "constants": [],
-                    "variables": [
-                      "MDF_IF_BOSS_AllPowerFlag"
-                    ]
+                    "displayLines": "MDF_IF_BOSS_AllPowerFlag"
                   },
                   "execute": [
                     {
@@ -717,20 +661,10 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]",
                           "valuePerStack": {
                             "MDF_LightPowerUp": {
-                              "operator": "Variables[0] ({[Skill17[0]]}) || RETURN",
-                              "displayLines": "{[Skill17[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill17[0]]}"
-                              ]
+                              "displayLines": "{[Skill17[0]]}"
                             },
                             "MDF_DamageAddedRatio": {
-                              "operator": "Variables[0] ({[Skill17[1]]}) || RETURN",
-                              "displayLines": "{[Skill17[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill17[1]]}"
-                              ]
+                              "displayLines": "{[Skill17[1]]}"
                             }
                           }
                         }
@@ -764,20 +698,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]",
                   "valuePerStack": {
                     "MDF_LightPowerUp": {
-                      "operator": "Variables[0] ({[Skill17[0]]}) || RETURN",
-                      "displayLines": "{[Skill17[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill17[0]]}"
-                      ]
+                      "displayLines": "{[Skill17[0]]}"
                     },
                     "MDF_DamageAddedRatio": {
-                      "operator": "Variables[0] ({[Skill17[1]]}) || RETURN",
-                      "displayLines": "{[Skill17[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill17[1]]}"
-                      ]
+                      "displayLines": "{[Skill17[1]]}"
                     }
                   }
                 },
@@ -825,24 +749,13 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_LightPowerUp) || Variables[1] (Layer) || MUL || RETURN",
-                "displayLines": "(MDF_LightPowerUp * Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_LightPowerUp",
-                  "Layer"
-                ]
+                "displayLines": "(MDF_LightPowerUp * Layer)"
               }
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_LightPowerUp) || RETURN",
-                "displayLines": "MDF_LightPowerUp",
-                "constants": [],
-                "variables": [
-                  "MDF_LightPowerUp"
-                ]
+                "displayLines": "MDF_LightPowerUp"
               },
               "variableName": "MDF_ShowValue1"
             }
@@ -883,24 +796,13 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] ({[Skill16[0]]}) || Variables[1] (Layer) || MUL || RETURN",
-                "displayLines": "({[Skill16[0]]} * Layer)",
-                "constants": [],
-                "variables": [
-                  "{[Skill16[0]]}",
-                  "Layer"
-                ]
+                "displayLines": "({[Skill16[0]]} * Layer)"
               }
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] ({[Skill16[0]]}) || RETURN",
-                "displayLines": "{[Skill16[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill16[0]]}"
-                ]
+                "displayLines": "{[Skill16[0]]}"
               },
               "variableName": "MDF_ShowValue1"
             }
@@ -1026,12 +928,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageAddedRatio) || RETURN",
-                "displayLines": "MDF_DamageAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageAddedRatio"
-                ]
+                "displayLines": "MDF_DamageAddedRatio"
               }
             },
             {
@@ -1099,12 +996,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1999138756\">Enemy_W2_Argenti_IF_EX_PowerUpLight</a>[<span class=\"descriptionNumberColor\">Soul Enhancement</span>]",
                       "valuePerStack": {
                         "MDF_LightPowerUp": {
-                          "operator": "Variables[0] (MDF_LightPowerUp) || RETURN",
-                          "displayLines": "MDF_LightPowerUp",
-                          "constants": [],
-                          "variables": [
-                            "MDF_LightPowerUp"
-                          ]
+                          "displayLines": "MDF_LightPowerUp"
                         }
                       }
                     },
@@ -1332,12 +1224,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DefenceAddedRatio) || RETURN",
-                "displayLines": "MDF_DefenceAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_DefenceAddedRatio"
-                ]
+                "displayLines": "MDF_DefenceAddedRatio"
               }
             }
           ]
@@ -1373,12 +1260,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"2119201708\">Enemy__W2_Argenti_IF_NoWeakness</a>",
                   "valuePerStack": {
                     "MDF_DefenceAddedRatio": {
-                      "operator": "Variables[0] (MDF_DefenceAddedRatio) || RETURN",
-                      "displayLines": "MDF_DefenceAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DefenceAddedRatio"
-                      ]
+                      "displayLines": "MDF_DefenceAddedRatio"
                     }
                   }
                 }
@@ -1440,12 +1322,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"2119201708\">Enemy__W2_Argenti_IF_NoWeakness</a>",
                   "valuePerStack": {
                     "MDF_DefenceAddedRatio": {
-                      "operator": "Variables[0] (MDF_DefenceAddedRatio) || RETURN",
-                      "displayLines": "MDF_DefenceAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DefenceAddedRatio"
-                      ]
+                      "displayLines": "MDF_DefenceAddedRatio"
                     }
                   }
                 }
@@ -1673,12 +1550,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"73301376\">Standard_SuperArmor</a>[<span class=\"descriptionNumberColor\">Safeguard</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeResistance": {
-                  "operator": "Variables[0] (MDF_SuperArmorDamageResistance) || RETURN",
-                  "displayLines": "MDF_SuperArmorDamageResistance",
-                  "constants": [],
-                  "variables": [
-                    "MDF_SuperArmorDamageResistance"
-                  ]
+                  "displayLines": "MDF_SuperArmorDamageResistance"
                 }
               }
             },
@@ -1727,12 +1599,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1917647041\">Standard_SuperArmorBreak</a>[<span class=\"descriptionNumberColor\">Safeguard Broken</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeTakenRatio": {
-                  "operator": "Variables[0] (MDF_SuperArmorBreakDamageTakenRatio) || RETURN",
-                  "displayLines": "MDF_SuperArmorBreakDamageTakenRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_SuperArmorBreakDamageTakenRatio"
-                  ]
+                  "displayLines": "MDF_SuperArmorBreakDamageTakenRatio"
                 }
               }
             },
@@ -1822,12 +1689,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"73301376\">Standard_SuperArmor</a>[<span class=\"descriptionNumberColor\">Safeguard</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeResistance": {
-                  "operator": "Variables[0] (MDF_SuperArmorDamageResistance) || RETURN",
-                  "displayLines": "MDF_SuperArmorDamageResistance",
-                  "constants": [],
-                  "variables": [
-                    "MDF_SuperArmorDamageResistance"
-                  ]
+                  "displayLines": "MDF_SuperArmorDamageResistance"
                 }
               }
             },
@@ -2012,13 +1874,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] ({[Skill16[0]]}) || Variables[1] (Layer) || MUL || RETURN",
-                "displayLines": "({[Skill16[0]]} * Layer)",
-                "constants": [],
-                "variables": [
-                  "{[Skill16[0]]}",
-                  "Layer"
-                ]
+                "displayLines": "({[Skill16[0]]} * Layer)"
               }
             }
           ]
@@ -2427,12 +2283,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]

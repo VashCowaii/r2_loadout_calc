@@ -21,20 +21,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (0.72) || RETURN",
-          "displayLines": "0.72",
-          "constants": [],
-          "variables": [
-            0.72
-          ]
+          "displayLines": "0.72"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -69,13 +59,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] (0.72) || Variables[1] (0.8) || MUL || RETURN",
-              "displayLines": "(0.72 * 0.8)",
-              "constants": [],
-              "variables": [
-                0.72,
-                0.8
-              ]
+              "displayLines": "(0.72 * 0.8)"
             },
             "Toughness": null,
             "Tags": null,
@@ -102,20 +86,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] (0.72) || RETURN",
-              "displayLines": "0.72",
-              "constants": [],
-              "variables": [
-                0.72
-              ]
+              "displayLines": "0.72"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -142,20 +116,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] (0.72) || RETURN",
-              "displayLines": "0.72",
-              "constants": [],
-              "variables": [
-                0.72
-              ]
+              "displayLines": "0.72"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -189,20 +153,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (0.72) || RETURN",
-                  "displayLines": "0.72",
-                  "constants": [],
-                  "variables": [
-                    0.72
-                  ]
+                  "displayLines": "0.72"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -249,30 +203,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"2123171519\">Welt_BPAbility_SpeedDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (0.75) || Variables[1] (0.35) || ADD || RETURN",
-                    "displayLines": "(0.75 + 0.35)",
-                    "constants": [],
-                    "variables": [
-                      0.75,
-                      0.35
-                    ]
+                    "displayLines": "(0.75 + 0.35)"
                   },
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (0.1) || RETURN",
-                      "displayLines": "0.1",
-                      "constants": [],
-                      "variables": [
-                        0.1
-                      ]
+                      "displayLines": "0.1"
                     }
                   }
                 }
@@ -286,29 +224,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"2123171519\">Welt_BPAbility_SpeedDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (0.75) || RETURN",
-                    "displayLines": "0.75",
-                    "constants": [],
-                    "variables": [
-                      0.75
-                    ]
+                    "displayLines": "0.75"
                   },
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (0.1) || RETURN",
-                      "displayLines": "0.1",
-                      "constants": [],
-                      "variables": [
-                        0.1
-                      ]
+                      "displayLines": "0.1"
                     }
                   }
                 }

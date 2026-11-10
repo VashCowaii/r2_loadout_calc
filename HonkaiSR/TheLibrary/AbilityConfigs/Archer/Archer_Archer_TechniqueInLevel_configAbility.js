@@ -63,12 +63,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -108,13 +103,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_RestEnergy) || Variables[1] (1) || ADD || RETURN",
-                    "displayLines": "(MDF_RestEnergy + 1)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_RestEnergy",
-                      1
-                    ]
+                    "displayLines": "(MDF_RestEnergy + 1)"
                   },
                   "variableName": "MDF_RestEnergy"
                 }

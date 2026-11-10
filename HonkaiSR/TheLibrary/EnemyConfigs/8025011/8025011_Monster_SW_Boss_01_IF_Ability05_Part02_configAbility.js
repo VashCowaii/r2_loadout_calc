@@ -32,22 +32,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-2022523841\">Enemy_SW_Boss_01_IF_SwarmArmor</a>[<span class=\"descriptionNumberColor\">Insect Egg</span>]",
           "counter": {
-            "operator": "Variables[0] ({[SkillP02[3]]}) || Variables[1] ({[SkillEX04[1]]}) || ADD || RETURN",
-            "displayLines": "({[SkillP02[3]]} + {[SkillEX04[1]]})",
-            "constants": [],
-            "variables": [
-              "{[SkillP02[3]]}",
-              "{[SkillEX04[1]]}"
-            ]
+            "displayLines": "({[SkillP02[3]]} + {[SkillEX04[1]]})"
           },
           "valuePerStack": {
             "MDF_DamageReduce": {
-              "operator": "Variables[0] ({[SkillP02[1]]}) || RETURN",
-              "displayLines": "{[SkillP02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP02[1]]}"
-              ]
+              "displayLines": "{[SkillP02[1]]}"
             }
           }
         }
@@ -61,21 +50,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-2022523841\">Enemy_SW_Boss_01_IF_SwarmArmor</a>[<span class=\"descriptionNumberColor\">Insect Egg</span>]",
           "counter": {
-            "operator": "Variables[0] ({[SkillP02[3]]}) || RETURN",
-            "displayLines": "{[SkillP02[3]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP02[3]]}"
-            ]
+            "displayLines": "{[SkillP02[3]]}"
           },
           "valuePerStack": {
             "MDF_DamageReduce": {
-              "operator": "Variables[0] ({[SkillP02[1]]}) || RETURN",
-              "displayLines": "{[SkillP02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP02[1]]}"
-              ]
+              "displayLines": "{[SkillP02[1]]}"
             }
           }
         }

@@ -117,21 +117,11 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "Damage": {
-                      "operator": "Variables[0] ({[PassiveSkillInitiate[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkillInitiate[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkillInitiate[0]]}"
-                      ]
+                      "displayLines": "{[PassiveSkillInitiate[0]]}"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "Toughness": {
-                      "operator": "Variables[0] ({[PassiveSkillInitiate[1]]}) || RETURN",
-                      "displayLines": "{[PassiveSkillInitiate[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkillInitiate[1]]}"
-                      ]
+                      "displayLines": "{[PassiveSkillInitiate[1]]}"
                     },
                     "ToughnessDMGType": {
                       "DamageType": "Fire"
@@ -258,12 +248,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -279,12 +264,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -458,12 +438,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,

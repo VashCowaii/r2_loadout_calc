@@ -63,21 +63,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1777684731\">Standard_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "duration": {
-                    "operator": "Variables[0] (#ADF_2) || RETURN",
-                    "displayLines": "#ADF_2",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_2"
-                    ]
+                    "displayLines": "#ADF_2"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }

@@ -49,12 +49,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"2037521246\">MissionBattleEvent60010_Charge</a>",
           "valuePerStack": {
             "MDF_SPValue": {
-              "operator": "Variables[0] ({[Skill03[3]]}) || RETURN",
-              "displayLines": "{[Skill03[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[3]]}"
-              ]
+              "displayLines": "{[Skill03[3]]}"
             }
           }
         },
@@ -152,12 +147,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (MDF_SPValue) || RETURN",
-                        "displayLines": "MDF_SPValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_SPValue"
-                        ]
+                        "displayLines": "MDF_SPValue"
                       },
                       "isFixed": "(Fixed)"
                     }
@@ -253,13 +243,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_BaseHP) || Variables[1] (MDF_BaseAttack) || SUB || RETURN",
-                    "displayLines": "(MDF_BaseHP - MDF_BaseAttack)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_BaseHP",
-                      "MDF_BaseAttack"
-                    ]
+                    "displayLines": "(MDF_BaseHP - MDF_BaseAttack)"
                   }
                 }
               ]
@@ -353,12 +337,7 @@ const compositeAbilityObject = {
                             "target": "{{Caster}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (MDF_MaxSP) || RETURN",
-                            "displayLines": "MDF_MaxSP",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxSP"
-                            ]
+                            "displayLines": "MDF_MaxSP"
                           },
                           "isFixed": "* ERR"
                         },
@@ -443,12 +422,7 @@ const compositeAbilityObject = {
                                 "target": "{{Caster}}"
                               },
                               "value": {
-                                "operator": "Variables[0] (MDF_MaxSP) || RETURN",
-                                "displayLines": "MDF_MaxSP",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_MaxSP"
-                                ]
+                                "displayLines": "MDF_MaxSP"
                               },
                               "isFixed": "* ERR"
                             },
@@ -501,21 +475,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "dmgFormula": "Max HP Scaling",
             "Toughness": {
-              "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-              "displayLines": "{[Skill03[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[1]]}"
-              ]
+              "displayLines": "{[Skill03[1]]}"
             },
             "ToughnessDMGType": {
               "DamageType": "Wind"
@@ -535,28 +499,13 @@ const compositeAbilityObject = {
           "stackLimit": 50,
           "valuePerStack": {
             "Basic_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill03[4]]}) || RETURN",
-              "displayLines": "{[Skill03[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[4]]}"
-              ]
+              "displayLines": "{[Skill03[4]]}"
             },
             "ExtraLayer_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill03[5]]}) || RETURN",
-              "displayLines": "{[Skill03[5]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[5]]}"
-              ]
+              "displayLines": "{[Skill03[5]]}"
             },
             "Spread_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill03[6]]}) || RETURN",
-              "displayLines": "{[Skill03[6]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[6]]}"
-              ]
+              "displayLines": "{[Skill03[6]]}"
             },
             "Cast_By_Level": 1
           },

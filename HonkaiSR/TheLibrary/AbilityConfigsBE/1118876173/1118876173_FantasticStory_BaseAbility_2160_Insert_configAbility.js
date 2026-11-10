@@ -26,12 +26,7 @@ const configAbility = {
           "eventID": 30501,
           "variables": {
             "DV_BE_BaseSpeed": {
-              "operator": "Variables[0] (DV_FeverBESpeed) || RETURN",
-              "displayLines": "DV_FeverBESpeed",
-              "constants": [],
-              "variables": [
-                "DV_FeverBESpeed"
-              ]
+              "displayLines": "DV_FeverBESpeed"
             }
           },
           "whenCreated": [
@@ -61,46 +56,21 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"1010904189\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT</a>[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
       "duration": {
-        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime) || RETURN",
-        "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime",
-        "constants": [],
-        "variables": [
-          "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime"
-        ]
+        "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime"
       },
       "stackLimit": {
-        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer) || RETURN",
-        "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer",
-        "constants": [],
-        "variables": [
-          "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
-        ]
+        "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
       },
       "valuePerStack": {
         "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer": {
-          "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer) || RETURN",
-          "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer",
-          "constants": [],
-          "variables": [
-            "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
-          ]
+          "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
         },
         "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage": {
-          "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage) || RETURN",
-          "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage",
-          "constants": [],
-          "variables": [
-            "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage"
-          ]
+          "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage"
         }
       },
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_EnterFever_P5_EnterFeverLayer) || RETURN",
-        "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P5_EnterFeverLayer",
-        "constants": [],
-        "variables": [
-          "DV_FantasticStory_BaseAbility_2160_EnterFever_P5_EnterFeverLayer"
-        ]
+        "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P5_EnterFeverLayer"
       }
     },
     {
@@ -112,12 +82,7 @@ const configAbility = {
       "variableName": "DOT_TriggerRatio",
       "eventType": "DOT",
       "value": {
-        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_EnterFever_P1_DotTriggerRatio) || RETURN",
-        "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P1_DotTriggerRatio",
-        "constants": [],
-        "variables": [
-          "DV_FantasticStory_BaseAbility_2160_EnterFever_P1_DotTriggerRatio"
-        ]
+        "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P1_DotTriggerRatio"
       }
     },
     {
@@ -129,40 +94,20 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-898765267\">Modifier_FantasticStory_BaseAbility_2160_Aura</a>",
       "valuePerStack": {
         "DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio": {
-          "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio) || RETURN",
-          "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio",
-          "constants": [],
-          "variables": [
-            "DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio"
-          ]
+          "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio"
         },
         "DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio": {
-          "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio) || RETURN",
-          "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio",
-          "constants": [],
-          "variables": [
-            "DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio"
-          ]
+          "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio"
         },
         "DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio": {
-          "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio) || RETURN",
-          "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio",
-          "constants": [],
-          "variables": [
-            "DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio"
-          ]
+          "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio"
         }
       }
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Constants[0] (0) || RETURN",
-        "displayLines": "0",
-        "constants": [
-          0
-        ],
-        "variables": []
+        "displayLines": "0"
       },
       "variableName": "DV_FantasticStory_BaseAbility_CountSum"
     }

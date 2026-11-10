@@ -216,12 +216,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] ({[SkillP02[0]]}) || RETURN",
-                        "displayLines": "{[SkillP02[0]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillP02[0]]}"
-                        ]
+                        "displayLines": "{[SkillP02[0]]}"
                       }
                     }
                   ]
@@ -429,13 +424,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "DamageFlat": {
-                                  "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (MDF_SuccessDamageRatio) || MUL || RETURN",
-                                  "displayLines": "(MDF_MaxHP * MDF_SuccessDamageRatio)",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_MaxHP",
-                                    "MDF_SuccessDamageRatio"
-                                  ]
+                                  "displayLines": "(MDF_MaxHP * MDF_SuccessDamageRatio)"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -461,12 +450,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "DamageFlat": {
-                                  "operator": "Variables[0] (MDF_MaxHP) || RETURN",
-                                  "displayLines": "MDF_MaxHP",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_MaxHP"
-                                  ]
+                                  "displayLines": "MDF_MaxHP"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -508,12 +492,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                    "displayLines": "MDF_AllDamageReduce",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageReduce"
-                    ]
+                    "displayLines": "MDF_AllDamageReduce"
                   }
                 }
               ]
@@ -769,12 +748,7 @@ const compositeAbilityObject = {
                         {
                           "name": "SWITCH",
                           "switchValue": {
-                            "operator": "Variables[0] (InsertFlag) || RETURN",
-                            "displayLines": "InsertFlag",
-                            "constants": [],
-                            "variables": [
-                              "InsertFlag"
-                            ]
+                            "displayLines": "InsertFlag"
                           },
                           "caseEvents": [
                             {
@@ -1026,13 +1000,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "DamageFlat": {
-                              "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (MDF_SuccessDamageRatio) || MUL || RETURN",
-                              "displayLines": "(MDF_MaxHP * MDF_SuccessDamageRatio)",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxHP",
-                                "MDF_SuccessDamageRatio"
-                              ]
+                              "displayLines": "(MDF_MaxHP * MDF_SuccessDamageRatio)"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -1882,13 +1850,7 @@ const compositeAbilityObject = {
                 "target": "{{Parameter Target}}"
               },
               "value": {
-                "operator": "Variables[0] ({[SkillP01[1]]}) || Variables[1] (_TargetMaxSP) || MUL || RETURN",
-                "displayLines": "({[SkillP01[1]]} * _TargetMaxSP)",
-                "constants": [],
-                "variables": [
-                  "{[SkillP01[1]]}",
-                  "_TargetMaxSP"
-                ]
+                "displayLines": "({[SkillP01[1]]} * _TargetMaxSP)"
               },
               "isFixed": "(Fixed)"
             }
@@ -2054,12 +2016,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1597331632\">Enemy_W4_Mascot_LocalLegend_ListenCorrectInteract</a>",
           "valuePerStack": {
             "MDF_SuccessDamageRatio": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
+              "displayLines": "{[SkillP01[0]]}"
             }
           }
         },

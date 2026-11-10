@@ -25,12 +25,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] ({[Skill14[0]]}) || RETURN",
-        "displayLines": "{[Skill14[0]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill14[0]]}"
-        ]
+        "displayLines": "{[Skill14[0]]}"
       },
       "variableName": "Skill04Damage"
     },
@@ -74,12 +69,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (Skill04Damage) || RETURN",
-                  "displayLines": "Skill04Damage",
-                  "constants": [],
-                  "variables": [
-                    "Skill04Damage"
-                  ]
+                  "displayLines": "Skill04Damage"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -110,26 +100,14 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] ({[Skill14[1]]}) || Constants[0] (1) || SUB || RETURN",
-        "displayLines": "({[Skill14[1]]} - 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "{[Skill14[1]]}"
-        ]
+        "displayLines": "({[Skill14[1]]} - 1)"
       },
       "variableName": "Skill04Count"
     },
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (Skill04Count) || RETURN",
-        "displayLines": "Skill04Count",
-        "constants": [],
-        "variables": [
-          "Skill04Count"
-        ]
+        "displayLines": "Skill04Count"
       },
       "execute": [
         {
@@ -175,12 +153,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Imaginary",
                     "Damage": {
-                      "operator": "Variables[0] (Skill04Damage) || RETURN",
-                      "displayLines": "Skill04Damage",
-                      "constants": [],
-                      "variables": [
-                        "Skill04Damage"
-                      ]
+                      "displayLines": "Skill04Damage"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -200,12 +173,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Imaginary",
                     "Damage": {
-                      "operator": "Variables[0] (Skill04Damage) || RETURN",
-                      "displayLines": "Skill04Damage",
-                      "constants": [],
-                      "variables": [
-                        "Skill04Damage"
-                      ]
+                      "displayLines": "Skill04Damage"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -267,12 +235,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Imaginary",
                         "Damage": {
-                          "operator": "Variables[0] (Skill04Damage) || RETURN",
-                          "displayLines": "Skill04Damage",
-                          "constants": [],
-                          "variables": [
-                            "Skill04Damage"
-                          ]
+                          "displayLines": "Skill04Damage"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -292,12 +255,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Imaginary",
                         "Damage": {
-                          "operator": "Variables[0] (Skill04Damage) || RETURN",
-                          "displayLines": "Skill04Damage",
-                          "constants": [],
-                          "variables": [
-                            "Skill04Damage"
-                          ]
+                          "displayLines": "Skill04Damage"
                         },
                         "Toughness": null,
                         "Tags": null,

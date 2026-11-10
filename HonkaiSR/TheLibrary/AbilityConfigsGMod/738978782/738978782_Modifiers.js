@@ -28,12 +28,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageReduce) || RETURN",
-                "displayLines": "MDF_DamageReduce",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageReduce"
-                ]
+                "displayLines": "MDF_DamageReduce"
               }
             }
           ]
@@ -136,13 +131,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_HpRatio) || Variables[1] (MDF_LockHpActionDecreaseRatio) || SUB || RETURN",
-                    "displayLines": "(MDF_HpRatio - MDF_LockHpActionDecreaseRatio)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HpRatio",
-                      "MDF_LockHpActionDecreaseRatio"
-                    ]
+                    "displayLines": "(MDF_HpRatio - MDF_LockHpActionDecreaseRatio)"
                   },
                   "variableName": "MDF_NextLockHpRatio"
                 }
@@ -151,12 +140,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_HpRatio) || RETURN",
-                    "displayLines": "MDF_HpRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HpRatio"
-                    ]
+                    "displayLines": "MDF_HpRatio"
                   },
                   "variableName": "MDF_NextLockHpRatio"
                 }
@@ -165,12 +149,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_NextLockHpRatio ) || RETURN",
-                "displayLines": "MDF_NextLockHpRatio ",
-                "constants": [],
-                "variables": [
-                  "MDF_NextLockHpRatio "
-                ]
+                "displayLines": "MDF_NextLockHpRatio "
               },
               "variableName": "MDF_LastLockHpRatio"
             }
@@ -208,13 +187,7 @@ const configAbility = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_NextLockHpRatio ) || Variables[1] (MDF_LockHpUpLimitRatio) || ADD || RETURN",
-                      "displayLines": "(MDF_NextLockHpRatio  + MDF_LockHpUpLimitRatio)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_NextLockHpRatio ",
-                        "MDF_LockHpUpLimitRatio"
-                      ]
+                      "displayLines": "(MDF_NextLockHpRatio  + MDF_LockHpUpLimitRatio)"
                     }
                   },
                   "passed": [
@@ -227,17 +200,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"981190627\">Standard_Monster_Floating_DamageReduce</a>",
                       "valuePerStack": {
                         "MDF_DamageReduce": {
-                          "operator": "Constants[0] (1) || Variables[0] (MDF_LastLockHpRatio) || Variables[1] (MDF_NextLockHpRatio ) || SUB || Variables[2] (MDF_LockHpUpLimitRatio) || DIV || SUB || Variables[3] (MDF_DamageReduceRatio) || MUL || RETURN",
-                          "displayLines": "((1 - ((MDF_LastLockHpRatio - MDF_NextLockHpRatio ) / MDF_LockHpUpLimitRatio)) * MDF_DamageReduceRatio)",
-                          "constants": [
-                            1
-                          ],
-                          "variables": [
-                            "MDF_LastLockHpRatio",
-                            "MDF_NextLockHpRatio ",
-                            "MDF_LockHpUpLimitRatio",
-                            "MDF_DamageReduceRatio"
-                          ]
+                          "displayLines": "((1 - ((MDF_LastLockHpRatio - MDF_NextLockHpRatio ) / MDF_LockHpUpLimitRatio)) * MDF_DamageReduceRatio)"
                         }
                       }
                     }
@@ -576,12 +539,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -607,12 +565,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">StageFinalDMG</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -644,12 +597,7 @@ const configAbility = {
                     "value1": "_CurrentTurnsLeft",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (_FastAction_Turns) || RETURN",
-                      "displayLines": "_FastAction_Turns",
-                      "constants": [],
-                      "variables": [
-                        "_FastAction_Turns"
-                      ]
+                      "displayLines": "_FastAction_Turns"
                     },
                     "contextScope": "ContextModifier"
                   },
@@ -1007,25 +955,14 @@ const configAbility = {
                       "variableName": "MDF_CurrentTurnsLeft",
                       "value": 1,
                       "max": {
-                        "operator": "Variables[0] (Standard_FastAction) || RETURN",
-                        "displayLines": "Standard_FastAction",
-                        "constants": [],
-                        "variables": [
-                          "Standard_FastAction"
-                        ]
+                        "displayLines": "Standard_FastAction"
                       }
                     },
                     {
                       "name": "Define Modifier Variable",
                       "modifierName": "<a class=\"gModGreen\" id=\"35393434\">Standard_FastAction</a>[<span class=\"descriptionNumberColor\">Stormride</span>]",
                       "value": {
-                        "operator": "Variables[0] (Standard_FastAction) || Variables[1] (MDF_CurrentTurnsLeft) || SUB || RETURN",
-                        "displayLines": "(Standard_FastAction - MDF_CurrentTurnsLeft)",
-                        "constants": [],
-                        "variables": [
-                          "Standard_FastAction",
-                          "MDF_CurrentTurnsLeft"
-                        ]
+                        "displayLines": "(Standard_FastAction - MDF_CurrentTurnsLeft)"
                       }
                     },
                     {
@@ -1037,20 +974,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1796235183\">Standard_FastAction_Part1</a>",
                       "valuePerStack": {
                         "_FastAction_Turns": {
-                          "operator": "Variables[0] (Standard_FastAction) || RETURN",
-                          "displayLines": "Standard_FastAction",
-                          "constants": [],
-                          "variables": [
-                            "Standard_FastAction"
-                          ]
+                          "displayLines": "Standard_FastAction"
                         },
                         "_CurrentTurnsLeft": {
-                          "operator": "Variables[0] (MDF_CurrentTurnsLeft) || RETURN",
-                          "displayLines": "MDF_CurrentTurnsLeft",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentTurnsLeft"
-                          ]
+                          "displayLines": "MDF_CurrentTurnsLeft"
                         }
                       }
                     }
@@ -1067,13 +994,7 @@ const configAbility = {
               "name": "Define Modifier Variable",
               "modifierName": "<a class=\"gModGreen\" id=\"35393434\">Standard_FastAction</a>[<span class=\"descriptionNumberColor\">Stormride</span>]",
               "value": {
-                "operator": "Variables[0] (Standard_FastAction) || Variables[1] (MDF_CurrentTurnsLeft) || SUB || RETURN",
-                "displayLines": "(Standard_FastAction - MDF_CurrentTurnsLeft)",
-                "constants": [],
-                "variables": [
-                  "Standard_FastAction",
-                  "MDF_CurrentTurnsLeft"
-                ]
+                "displayLines": "(Standard_FastAction - MDF_CurrentTurnsLeft)"
               }
             }
           ]
@@ -1145,12 +1066,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeTakenRatio) || RETURN",
-                "displayLines": "MDF_AllDamageTypeTakenRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeTakenRatio"
-                ]
+                "displayLines": "MDF_AllDamageTypeTakenRatio"
               }
             }
           ]
@@ -1433,12 +1349,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeResistance) || RETURN",
-                "displayLines": "MDF_AllDamageTypeResistance",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeResistance"
-                ]
+                "displayLines": "MDF_AllDamageTypeResistance"
               }
             }
           ]
@@ -1461,12 +1372,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"73301376\">Standard_SuperArmor</a>[<span class=\"descriptionNumberColor\">Safeguard</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeResistance": {
-                  "operator": "Variables[0] (MDF_SuperArmorDamageResistance) || RETURN",
-                  "displayLines": "MDF_SuperArmorDamageResistance",
-                  "constants": [],
-                  "variables": [
-                    "MDF_SuperArmorDamageResistance"
-                  ]
+                  "displayLines": "MDF_SuperArmorDamageResistance"
                 }
               }
             }
@@ -1501,12 +1407,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1917647041\">Standard_SuperArmorBreak</a>[<span class=\"descriptionNumberColor\">Safeguard Broken</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeTakenRatio": {
-                  "operator": "Variables[0] (MDF_SuperArmorBreakDamageTakenRatio) || RETURN",
-                  "displayLines": "MDF_SuperArmorBreakDamageTakenRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_SuperArmorBreakDamageTakenRatio"
-                  ]
+                  "displayLines": "MDF_SuperArmorBreakDamageTakenRatio"
                 }
               }
             }
@@ -1532,12 +1433,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"73301376\">Standard_SuperArmor</a>[<span class=\"descriptionNumberColor\">Safeguard</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeResistance": {
-                  "operator": "Variables[0] (MDF_SuperArmorDamageResistance) || RETURN",
-                  "displayLines": "MDF_SuperArmorDamageResistance",
-                  "constants": [],
-                  "variables": [
-                    "MDF_SuperArmorDamageResistance"
-                  ]
+                  "displayLines": "MDF_SuperArmorDamageResistance"
                 }
               }
             }
@@ -1553,12 +1449,7 @@ const configAbility = {
       "type": "Other",
       "statusName": "Bloody Fight",
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-        "displayLines": "ModifierStackLayer",
-        "constants": [],
-        "variables": [
-          "ModifierStackLayer"
-        ]
+        "displayLines": "ModifierStackLayer"
       },
       "execute": [
         {
@@ -1578,13 +1469,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">StageFinalDMG</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageUpRatio_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)"
               }
             },
             {
@@ -1595,15 +1480,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ShieldIncoming</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (1) || INVERT || Variables[0] (MDF_HealDownRatio_PerLayer) || MUL || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "((-1 * MDF_HealDownRatio_PerLayer) * ModifierLayers)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_HealDownRatio_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "((-1 * MDF_HealDownRatio_PerLayer) * ModifierLayers)"
               }
             },
             {
@@ -1614,15 +1491,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingIncoming</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (1) || INVERT || Variables[0] (MDF_HealDownRatio_PerLayer) || MUL || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "((-1 * MDF_HealDownRatio_PerLayer) * ModifierLayers)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_HealDownRatio_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "((-1 * MDF_HealDownRatio_PerLayer) * ModifierLayers)"
               }
             }
           ]
@@ -1647,12 +1516,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageTakenUpRatio) || RETURN",
-                "displayLines": "MDF_DamageTakenUpRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageTakenUpRatio"
-                ]
+                "displayLines": "MDF_DamageTakenUpRatio"
               }
             }
           ]
@@ -1668,12 +1532,7 @@ const configAbility = {
       "effectName": "DMG Boost",
       "statusName": "Berserk",
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-        "displayLines": "ModifierStackLayer",
-        "constants": [],
-        "variables": [
-          "ModifierStackLayer"
-        ]
+        "displayLines": "ModifierStackLayer"
       },
       "execute": [
         {
@@ -1693,13 +1552,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">StageFinalDMG</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageUpRatio_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)"
               }
             }
           ]
@@ -1752,12 +1605,7 @@ const configAbility = {
       "effectName": "DMG Boost",
       "statusName": "Berserk",
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-        "displayLines": "ModifierStackLayer",
-        "constants": [],
-        "variables": [
-          "ModifierStackLayer"
-        ]
+        "displayLines": "ModifierStackLayer"
       },
       "execute": [
         {
@@ -1777,13 +1625,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">StageFinalDMG</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageUpRatio_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)"
               }
             }
           ]
@@ -1903,14 +1745,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "setValue": {
-                "operator": "Variables[0] (_MaxHP) || Constants[0] (0.3) || MUL || RETURN",
-                "displayLines": "(_MaxHP * 0.3)",
-                "constants": [
-                  0.3
-                ],
-                "variables": [
-                  "_MaxHP"
-                ]
+                "displayLines": "(_MaxHP * 0.3)"
               }
             },
             {
@@ -2070,14 +1905,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           ]

@@ -89,12 +89,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Physical",
                         "DamageFlat": {
-                          "operator": "Variables[0] (MDF_DamageValue) || RETURN",
-                          "displayLines": "MDF_DamageValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageValue"
-                          ]
+                          "displayLines": "MDF_DamageValue"
                         },
                         "dmgFormulaFinal": "Converted DMG Base",
                         "Toughness": null,
@@ -135,13 +130,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1478824350\">Modifier_BattleEventAbility_Challenge_Xianzhou_04_Sub</a>",
               "valuePerStack": {
                 "MDF_DamageValue": {
-                  "operator": "Variables[0] (TempHP) || Variables[1] (#BattleEvent_P1_ADF) || MUL || RETURN",
-                  "displayLines": "(TempHP * #BattleEvent_P1_ADF)",
-                  "constants": [],
-                  "variables": [
-                    "TempHP",
-                    "#BattleEvent_P1_ADF"
-                  ]
+                  "displayLines": "(TempHP * #BattleEvent_P1_ADF)"
                 }
               },
               "casterAssign": "TargetSelf"
@@ -171,13 +160,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1478824350\">Modifier_BattleEventAbility_Challenge_Xianzhou_04_Sub</a>",
                   "valuePerStack": {
                     "MDF_DamageValue": {
-                      "operator": "Variables[0] (TempHP) || Variables[1] (#BattleEvent_P1_ADF) || MUL || RETURN",
-                      "displayLines": "(TempHP * #BattleEvent_P1_ADF)",
-                      "constants": [],
-                      "variables": [
-                        "TempHP",
-                        "#BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "(TempHP * #BattleEvent_P1_ADF)"
                     }
                   },
                   "casterAssign": "TargetSelf"

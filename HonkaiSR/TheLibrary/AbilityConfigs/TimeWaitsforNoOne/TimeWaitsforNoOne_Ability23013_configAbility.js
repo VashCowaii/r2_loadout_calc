@@ -36,13 +36,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_TotalAmount) || Variables[1] (_HealAmount) || ADD || RETURN",
-                "displayLines": "(_TotalAmount + _HealAmount)",
-                "constants": [],
-                "variables": [
-                  "_TotalAmount",
-                  "_HealAmount"
-                ]
+                "displayLines": "(_TotalAmount + _HealAmount)"
               },
               "variableName": "_TotalAmount"
             }
@@ -135,13 +129,7 @@ const configAbility = {
                           }
                         },
                         "DamageFlat": {
-                          "operator": "Variables[0] (_TotalAmount) || Variables[1] (0.36) || MUL || RETURN",
-                          "displayLines": "(_TotalAmount * 0.36)",
-                          "constants": [],
-                          "variables": [
-                            "_TotalAmount",
-                            0.36
-                          ]
+                          "displayLines": "(_TotalAmount * 0.36)"
                         },
                         "indirectDMG": true,
                         "dmgFormulaFinal": "Pure (No DMG%)",

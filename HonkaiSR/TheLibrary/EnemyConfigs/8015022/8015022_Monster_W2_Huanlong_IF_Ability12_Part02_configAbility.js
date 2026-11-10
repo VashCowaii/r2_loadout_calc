@@ -92,12 +92,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill12[0]]}) || RETURN",
-          "displayLines": "{[Skill12[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill12[0]]}"
-          ]
+          "displayLines": "{[Skill12[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -292,14 +287,7 @@ const configAbility = {
                         "target": "{{Parameter Target}}"
                       },
                       "value": {
-                        "operator": "Constants[0] (1) || INVERT || Variables[0] ({[Skill12[2]]}) || MUL || RETURN",
-                        "displayLines": "(-1 * {[Skill12[2]]})",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "{[Skill12[2]]}"
-                        ]
+                        "displayLines": "(-1 * {[Skill12[2]]})"
                       },
                       "isFixed": "(Fixed)"
                     }
@@ -331,29 +319,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                       "duration": {
-                        "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-                        "displayLines": "{[Skill04[3]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill04[3]]}"
-                        ]
+                        "displayLines": "{[Skill04[3]]}"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] ({[Skill04[4]]}) || RETURN",
-                        "displayLines": "{[Skill04[4]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill04[4]]}"
-                        ]
+                        "displayLines": "{[Skill04[4]]}"
                       },
                       "valuePerStack": {
                         "MDF_DirtyHPRatio": {
-                          "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-                          "displayLines": "{[Skill04[2]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill04[2]]}"
-                          ]
+                          "displayLines": "{[Skill04[2]]}"
                         }
                       },
                       "success": [
@@ -506,14 +479,7 @@ const configAbility = {
                             "target": "{{Parameter Target}}"
                           },
                           "value": {
-                            "operator": "Constants[0] (1) || INVERT || Variables[0] ({[Skill12[2]]}) || MUL || RETURN",
-                            "displayLines": "(-1 * {[Skill12[2]]})",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "{[Skill12[2]]}"
-                            ]
+                            "displayLines": "(-1 * {[Skill12[2]]})"
                           },
                           "isFixed": "(Fixed)"
                         }
@@ -537,14 +503,7 @@ const configAbility = {
                             "target": "{{Parameter Target}}"
                           },
                           "value": {
-                            "operator": "Constants[0] (1) || INVERT || Variables[0] ({[Skill12[2]]}) || MUL || RETURN",
-                            "displayLines": "(-1 * {[Skill12[2]]})",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "{[Skill12[2]]}"
-                            ]
+                            "displayLines": "(-1 * {[Skill12[2]]})"
                           },
                           "isFixed": "(Fixed)"
                         }
@@ -591,29 +550,14 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                           "duration": {
-                            "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-                            "displayLines": "{[Skill04[3]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill04[3]]}"
-                            ]
+                            "displayLines": "{[Skill04[3]]}"
                           },
                           "baseChance": {
-                            "operator": "Variables[0] ({[Skill04[4]]}) || RETURN",
-                            "displayLines": "{[Skill04[4]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill04[4]]}"
-                            ]
+                            "displayLines": "{[Skill04[4]]}"
                           },
                           "valuePerStack": {
                             "MDF_DirtyHPRatio": {
-                              "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-                              "displayLines": "{[Skill04[2]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill04[2]]}"
-                              ]
+                              "displayLines": "{[Skill04[2]]}"
                             }
                           },
                           "success": [
@@ -656,29 +600,14 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                           "duration": {
-                            "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-                            "displayLines": "{[Skill04[3]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill04[3]]}"
-                            ]
+                            "displayLines": "{[Skill04[3]]}"
                           },
                           "baseChance": {
-                            "operator": "Variables[0] ({[Skill04[4]]}) || RETURN",
-                            "displayLines": "{[Skill04[4]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill04[4]]}"
-                            ]
+                            "displayLines": "{[Skill04[4]]}"
                           },
                           "valuePerStack": {
                             "MDF_DirtyHPRatio": {
-                              "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-                              "displayLines": "{[Skill04[2]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill04[2]]}"
-                              ]
+                              "displayLines": "{[Skill04[2]]}"
                             }
                           },
                           "success": [
@@ -833,14 +762,7 @@ const configAbility = {
                             "target": "{{Parameter Target}}"
                           },
                           "value": {
-                            "operator": "Constants[0] (1) || INVERT || Variables[0] ({[Skill12[2]]}) || MUL || RETURN",
-                            "displayLines": "(-1 * {[Skill12[2]]})",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "{[Skill12[2]]}"
-                            ]
+                            "displayLines": "(-1 * {[Skill12[2]]})"
                           },
                           "isFixed": "(Fixed)"
                         }
@@ -864,14 +786,7 @@ const configAbility = {
                             "target": "{{Parameter Target}}"
                           },
                           "value": {
-                            "operator": "Constants[0] (1) || INVERT || Variables[0] ({[Skill12[2]]}) || MUL || RETURN",
-                            "displayLines": "(-1 * {[Skill12[2]]})",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "{[Skill12[2]]}"
-                            ]
+                            "displayLines": "(-1 * {[Skill12[2]]})"
                           },
                           "isFixed": "(Fixed)"
                         }
@@ -918,29 +833,14 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                           "duration": {
-                            "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-                            "displayLines": "{[Skill04[3]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill04[3]]}"
-                            ]
+                            "displayLines": "{[Skill04[3]]}"
                           },
                           "baseChance": {
-                            "operator": "Variables[0] ({[Skill04[4]]}) || RETURN",
-                            "displayLines": "{[Skill04[4]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill04[4]]}"
-                            ]
+                            "displayLines": "{[Skill04[4]]}"
                           },
                           "valuePerStack": {
                             "MDF_DirtyHPRatio": {
-                              "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-                              "displayLines": "{[Skill04[2]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill04[2]]}"
-                              ]
+                              "displayLines": "{[Skill04[2]]}"
                             }
                           },
                           "success": [
@@ -983,29 +883,14 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                           "duration": {
-                            "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-                            "displayLines": "{[Skill04[3]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill04[3]]}"
-                            ]
+                            "displayLines": "{[Skill04[3]]}"
                           },
                           "baseChance": {
-                            "operator": "Variables[0] ({[Skill04[4]]}) || RETURN",
-                            "displayLines": "{[Skill04[4]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill04[4]]}"
-                            ]
+                            "displayLines": "{[Skill04[4]]}"
                           },
                           "valuePerStack": {
                             "MDF_DirtyHPRatio": {
-                              "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-                              "displayLines": "{[Skill04[2]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill04[2]]}"
-                              ]
+                              "displayLines": "{[Skill04[2]]}"
                             }
                           },
                           "success": [
@@ -1159,14 +1044,7 @@ const configAbility = {
                             "target": "{{Parameter Target}}"
                           },
                           "value": {
-                            "operator": "Constants[0] (1) || INVERT || Variables[0] ({[Skill12[2]]}) || MUL || RETURN",
-                            "displayLines": "(-1 * {[Skill12[2]]})",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "{[Skill12[2]]}"
-                            ]
+                            "displayLines": "(-1 * {[Skill12[2]]})"
                           },
                           "isFixed": "(Fixed)"
                         }
@@ -1190,14 +1068,7 @@ const configAbility = {
                             "target": "{{Parameter Target}}"
                           },
                           "value": {
-                            "operator": "Constants[0] (1) || INVERT || Variables[0] ({[Skill12[2]]}) || MUL || RETURN",
-                            "displayLines": "(-1 * {[Skill12[2]]})",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "{[Skill12[2]]}"
-                            ]
+                            "displayLines": "(-1 * {[Skill12[2]]})"
                           },
                           "isFixed": "(Fixed)"
                         }
@@ -1243,29 +1114,14 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                           "duration": {
-                            "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-                            "displayLines": "{[Skill04[3]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill04[3]]}"
-                            ]
+                            "displayLines": "{[Skill04[3]]}"
                           },
                           "baseChance": {
-                            "operator": "Variables[0] ({[Skill04[4]]}) || RETURN",
-                            "displayLines": "{[Skill04[4]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill04[4]]}"
-                            ]
+                            "displayLines": "{[Skill04[4]]}"
                           },
                           "valuePerStack": {
                             "MDF_DirtyHPRatio": {
-                              "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-                              "displayLines": "{[Skill04[2]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill04[2]]}"
-                              ]
+                              "displayLines": "{[Skill04[2]]}"
                             }
                           },
                           "success": [
@@ -1308,29 +1164,14 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                           "duration": {
-                            "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-                            "displayLines": "{[Skill04[3]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill04[3]]}"
-                            ]
+                            "displayLines": "{[Skill04[3]]}"
                           },
                           "baseChance": {
-                            "operator": "Variables[0] ({[Skill04[4]]}) || RETURN",
-                            "displayLines": "{[Skill04[4]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill04[4]]}"
-                            ]
+                            "displayLines": "{[Skill04[4]]}"
                           },
                           "valuePerStack": {
                             "MDF_DirtyHPRatio": {
-                              "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-                              "displayLines": "{[Skill04[2]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill04[2]]}"
-                              ]
+                              "displayLines": "{[Skill04[2]]}"
                             }
                           },
                           "success": [

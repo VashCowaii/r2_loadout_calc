@@ -165,24 +165,13 @@ const compositeAbilityObject = {
                     {
                       "name": "Override HP Lost",
                       "finalDMGFlat": {
-                        "operator": "Variables[0] (MDF_DamagerPerHit) || RETURN",
-                        "displayLines": "MDF_DamagerPerHit",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DamagerPerHit"
-                        ]
+                        "displayLines": "MDF_DamagerPerHit"
                       }
                     },
                     {
                       "name": "Override HP Lost",
                       "finalDMGFlat": {
-                        "operator": "Variables[0] (MDF_DamagerPerHit) || Variables[1] (MDF_BeingAttackCountDown) || MUL || RETURN",
-                        "displayLines": "(MDF_DamagerPerHit * MDF_BeingAttackCountDown)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DamagerPerHit",
-                          "MDF_BeingAttackCountDown"
-                        ]
+                        "displayLines": "(MDF_DamagerPerHit * MDF_BeingAttackCountDown)"
                       }
                     },
                     {
@@ -195,12 +184,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Override HP Lost",
                       "finalDMGFlat": {
-                        "operator": "Variables[0] (MDF_DamagerPerHit) || RETURN",
-                        "displayLines": "MDF_DamagerPerHit",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DamagerPerHit"
-                        ]
+                        "displayLines": "MDF_DamagerPerHit"
                       }
                     }
                   ]
@@ -315,14 +299,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (CEIL) || Variables[1] (MDF_MaxHP) || Variables[2] (MDF_ShowValue) || DIV || PARAM_1 || FUNCTION || RETURN",
-                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>((MDF_MaxHP / MDF_ShowValue))",
-                        "constants": [],
-                        "variables": [
-                          "CEIL",
-                          "MDF_MaxHP",
-                          "MDF_ShowValue"
-                        ]
+                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>((MDF_MaxHP / MDF_ShowValue))"
                       },
                       "variableName": "MDF_DamagerPerHit"
                     }
@@ -396,12 +373,7 @@ const compositeAbilityObject = {
         {
           "name": "Divide HP Bar into Segments",
           "segCount": {
-            "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-            "displayLines": "{[SkillP01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP01[0]]}"
-            ]
+            "displayLines": "{[SkillP01[0]]}"
           }
         },
         {
@@ -452,12 +424,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1476787547\">Monster_W3_DeathPart_ListenDie</a>",
           "valuePerStack": {
             "MDF_ShowValue": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
+              "displayLines": "{[SkillP01[0]]}"
             }
           }
         },
@@ -520,12 +487,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"785799791\">Monster_W3_DeathPart_PreShow_Attack</a>",
           "valuePerStack": {
             "MDF_ShowValue": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
+              "displayLines": "{[SkillP01[0]]}"
             }
           }
         },
@@ -538,12 +500,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1415744166\">Monster_W3_DeathPart_PreShow_Break</a>",
           "valuePerStack": {
             "MDF_ShowValue": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
+              "displayLines": "{[SkillP01[0]]}"
             }
           }
         }
@@ -640,13 +597,7 @@ const compositeAbilityObject = {
                           },
                           "previewType": null,
                           "previewValue": {
-                            "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (MDF_ShowValue) || DIV || RETURN",
-                            "displayLines": "(MDF_MaxHP / MDF_ShowValue)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxHP",
-                              "MDF_ShowValue"
-                            ]
+                            "displayLines": "(MDF_MaxHP / MDF_ShowValue)"
                           }
                         }
                       ]
@@ -728,13 +679,7 @@ const compositeAbilityObject = {
                       },
                       "previewType": null,
                       "previewValue": {
-                        "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (MDF_ShowValue) || DIV || RETURN",
-                        "displayLines": "(MDF_MaxHP / MDF_ShowValue)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxHP",
-                          "MDF_ShowValue"
-                        ]
+                        "displayLines": "(MDF_MaxHP / MDF_ShowValue)"
                       }
                     }
                   ]

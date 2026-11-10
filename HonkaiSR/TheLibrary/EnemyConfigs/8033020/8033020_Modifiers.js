@@ -72,12 +72,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageTakenUpRatio) || RETURN",
-                "displayLines": "MDF_DamageTakenUpRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageTakenUpRatio"
-                ]
+                "displayLines": "MDF_DamageTakenUpRatio"
               }
             }
           ]
@@ -150,12 +145,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                "displayLines": "MDF_MaxLayer",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxLayer"
-                ]
+                "displayLines": "MDF_MaxLayer"
               },
               "variableName": "MDF_Layer"
             },
@@ -176,38 +166,18 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-950617106\">Modifier_Monster_W4_Claymore_04_Enhanced</a>[<span class=\"descriptionNumberColor\">Inspire</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                "displayLines": "MDF_MaxLayer",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxLayer"
-                ]
+                "displayLines": "MDF_MaxLayer"
               },
               "valuePerStack": {
                 "MDF_DamageResistanceRatio": {
-                  "operator": "Variables[0] (MDF_DamageResistanceRatio) || RETURN",
-                  "displayLines": "MDF_DamageResistanceRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamageResistanceRatio"
-                  ]
+                  "displayLines": "MDF_DamageResistanceRatio"
                 },
                 "MDF_SpeedAddedRatio": {
-                  "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                  "displayLines": "MDF_SpeedAddedRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_SpeedAddedRatio"
-                  ]
+                  "displayLines": "MDF_SpeedAddedRatio"
                 }
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                "displayLines": "MDF_MaxLayer",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxLayer"
-                ]
+                "displayLines": "MDF_MaxLayer"
               }
             }
           ]
@@ -242,38 +212,18 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-950617106\">Modifier_Monster_W4_Claymore_04_Enhanced</a>[<span class=\"descriptionNumberColor\">Inspire</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "valuePerStack": {
                     "MDF_DamageResistanceRatio": {
-                      "operator": "Variables[0] (MDF_DamageResistanceRatio) || RETURN",
-                      "displayLines": "MDF_DamageResistanceRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageResistanceRatio"
-                      ]
+                      "displayLines": "MDF_DamageResistanceRatio"
                     },
                     "MDF_SpeedAddedRatio": {
-                      "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                      "displayLines": "MDF_SpeedAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_SpeedAddedRatio"
-                      ]
+                      "displayLines": "MDF_SpeedAddedRatio"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   }
                 }
               ]
@@ -361,12 +311,7 @@ const configAbility = {
                         "value1": "MDF_Layer",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                          "displayLines": "MDF_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer"
-                          ]
+                          "displayLines": "MDF_MaxLayer"
                         }
                       },
                       "passed": [
@@ -397,20 +342,10 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"-950617106\">Modifier_Monster_W4_Claymore_04_Enhanced</a>[<span class=\"descriptionNumberColor\">Inspire</span>]",
                           "valuePerStack": {
                             "MDF_DamageResistanceRatio": {
-                              "operator": "Variables[0] (MDF_DamageResistanceRatio) || RETURN",
-                              "displayLines": "MDF_DamageResistanceRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_DamageResistanceRatio"
-                              ]
+                              "displayLines": "MDF_DamageResistanceRatio"
                             },
                             "MDF_SpeedAddedRatio": {
-                              "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                              "displayLines": "MDF_SpeedAddedRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_SpeedAddedRatio"
-                              ]
+                              "displayLines": "MDF_SpeedAddedRatio"
                             }
                           },
                           "addStacksPerTrigger": 1
@@ -519,12 +454,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-998413100\">Modifier_Monster_W4_Claymore_04_Honor</a>[<span class=\"descriptionNumberColor\">All Wishes</span>]",
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (MDF_Layer) || INVERT || RETURN",
-                        "displayLines": "-MDF_Layer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Layer"
-                        ]
+                        "displayLines": "-MDF_Layer"
                       }
                     },
                     {
@@ -535,12 +465,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-950617106\">Modifier_Monster_W4_Claymore_04_Enhanced</a>[<span class=\"descriptionNumberColor\">Inspire</span>]",
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (MDF_Layer) || INVERT || RETURN",
-                        "displayLines": "-MDF_Layer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Layer"
-                        ]
+                        "displayLines": "-MDF_Layer"
                       }
                     },
                     {
@@ -618,29 +543,14 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-950617106\">Modifier_Monster_W4_Claymore_04_Enhanced</a>[<span class=\"descriptionNumberColor\">Inspire</span>]",
               "valuePerStack": {
                 "MDF_DamageResistanceRatio": {
-                  "operator": "Variables[0] (MDF_DamageResistanceRatio) || RETURN",
-                  "displayLines": "MDF_DamageResistanceRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamageResistanceRatio"
-                  ]
+                  "displayLines": "MDF_DamageResistanceRatio"
                 },
                 "MDF_SpeedAddedRatio": {
-                  "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                  "displayLines": "MDF_SpeedAddedRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_SpeedAddedRatio"
-                  ]
+                  "displayLines": "MDF_SpeedAddedRatio"
                 }
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (MDF_Layer) || RETURN",
-                "displayLines": "MDF_Layer",
-                "constants": [],
-                "variables": [
-                  "MDF_Layer"
-                ]
+                "displayLines": "MDF_Layer"
               }
             }
           ]
@@ -664,29 +574,14 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-950617106\">Modifier_Monster_W4_Claymore_04_Enhanced</a>[<span class=\"descriptionNumberColor\">Inspire</span>]",
               "valuePerStack": {
                 "MDF_DamageResistanceRatio": {
-                  "operator": "Variables[0] (MDF_DamageResistanceRatio) || RETURN",
-                  "displayLines": "MDF_DamageResistanceRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamageResistanceRatio"
-                  ]
+                  "displayLines": "MDF_DamageResistanceRatio"
                 },
                 "MDF_SpeedAddedRatio": {
-                  "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                  "displayLines": "MDF_SpeedAddedRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_SpeedAddedRatio"
-                  ]
+                  "displayLines": "MDF_SpeedAddedRatio"
                 }
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__334) || RETURN",
-                "displayLines": "ENEMIES_OBJECT_UNUSED__334",
-                "constants": [],
-                "variables": [
-                  "ENEMIES_OBJECT_UNUSED__334"
-                ]
+                "displayLines": "ENEMIES_OBJECT_UNUSED__334"
               }
             }
           ]
@@ -723,13 +618,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageResistanceRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_DamageResistanceRatio * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageResistanceRatio",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_DamageResistanceRatio * MDF_Layer)"
               }
             },
             {
@@ -791,12 +680,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_Layer) || RETURN",
-                "displayLines": "MDF_Layer",
-                "constants": [],
-                "variables": [
-                  "MDF_Layer"
-                ]
+                "displayLines": "MDF_Layer"
               },
               "entityClass": "Enemy",
               "target": {
@@ -804,12 +688,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                "displayLines": "MDF_MaxLayer",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxLayer"
-                ]
+                "displayLines": "MDF_MaxLayer"
               },
               "assignState": "True",
               "state": "Active"
@@ -882,12 +761,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -895,12 +769,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "assignState": "True",
                   "state": "Active"
@@ -910,12 +779,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -923,12 +787,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "assignState": "True",
                   "state": "CoolDown"
@@ -981,12 +840,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_Layer) || RETURN",
-                "displayLines": "MDF_Layer",
-                "constants": [],
-                "variables": [
-                  "MDF_Layer"
-                ]
+                "displayLines": "MDF_Layer"
               },
               "entityClass": "Enemy",
               "target": {
@@ -994,12 +848,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                "displayLines": "MDF_MaxLayer",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxLayer"
-                ]
+                "displayLines": "MDF_MaxLayer"
               },
               "assignState": "True",
               "barType": "Hulei"
@@ -1051,14 +900,7 @@ const configAbility = {
                     "value1": "MDF_Layer",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (MDF_MaxLayer) || Constants[0] (2) || DIV || RETURN",
-                      "displayLines": "(MDF_MaxLayer / 2)",
-                      "constants": [
-                        2
-                      ],
-                      "variables": [
-                        "MDF_MaxLayer"
-                      ]
+                      "displayLines": "(MDF_MaxLayer / 2)"
                     }
                   },
                   {
@@ -1087,14 +929,7 @@ const configAbility = {
                     "value1": "MDF_Layer",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_MaxLayer) || Constants[0] (2) || DIV || RETURN",
-                      "displayLines": "(MDF_MaxLayer / 2)",
-                      "constants": [
-                        2
-                      ],
-                      "variables": [
-                        "MDF_MaxLayer"
-                      ]
+                      "displayLines": "(MDF_MaxLayer / 2)"
                     }
                   },
                   {

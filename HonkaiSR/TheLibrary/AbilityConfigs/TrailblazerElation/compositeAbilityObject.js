@@ -64,12 +64,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CertifiedBanger</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (ElationEchoPoint) || RETURN",
-                    "displayLines": "ElationEchoPoint",
-                    "constants": [],
-                    "variables": [
-                      "ElationEchoPoint"
-                    ]
+                    "displayLines": "ElationEchoPoint"
                   }
                 }
               ]
@@ -96,12 +91,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -209,12 +199,7 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "punchlineFixed": {
-                            "operator": "Variables[0] (20) || RETURN",
-                            "displayLines": "20",
-                            "constants": [],
-                            "variables": [
-                              20
-                            ]
+                            "displayLines": "20"
                           },
                           "actionTag": null,
                           "execute": [
@@ -407,21 +392,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1521577078\">PlayerBoy_40_Maze_ElationRatio</a>[<span class=\"descriptionNumberColor\">We Are So Back!</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 },
@@ -468,21 +443,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1521577078\">PlayerBoy_40_Maze_ElationRatio</a>[<span class=\"descriptionNumberColor\">We Are So Back!</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.3) || RETURN",
-                      "displayLines": "0.3",
-                      "constants": [],
-                      "variables": [
-                        0.3
-                      ]
+                      "displayLines": "0.3"
                     }
                   }
                 },
@@ -695,14 +660,7 @@ const compositeAbilityObject = {
             "value1": "_no_ssr_times",
             "compareType": ">=",
             "value2": {
-              "operator": "Variables[0] (UNKNOWN_PITY_OBJECT) || Constants[0] (1) || SUB || RETURN",
-              "displayLines": "(UNKNOWN_PITY_OBJECT - 1)",
-              "constants": [
-                1
-              ],
-              "variables": [
-                "UNKNOWN_PITY_OBJECT"
-              ]
+              "displayLines": "(UNKNOWN_PITY_OBJECT - 1)"
             },
             "contextScope": "ContextCaster"
           },
@@ -737,15 +695,7 @@ const compositeAbilityObject = {
             "value1": "_random",
             "compareType": ">=",
             "value2": {
-              "operator": "Constants[0] (0.6) || Variables[0] (_sum_probability) || DIV || Constants[1] (100) || MUL || RETURN",
-              "displayLines": "((0.6 / _sum_probability) * 100)",
-              "constants": [
-                0.6,
-                100
-              ],
-              "variables": [
-                "_sum_probability"
-              ]
+              "displayLines": "((0.6 / _sum_probability) * 100)"
             },
             "contextScope": "ContextAbility"
           },
@@ -787,14 +737,7 @@ const compositeAbilityObject = {
               "name": "Define Custom Variable",
               "scope": "ContextCaster",
               "value": {
-                "operator": "Variables[0] (_no_ssr_times) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(_no_ssr_times + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_no_ssr_times"
-                ]
+                "displayLines": "(_no_ssr_times + 1)"
               },
               "variableName": "_no_ssr_times"
             }
@@ -1018,12 +961,7 @@ const compositeAbilityObject = {
               "referenceModifier": "<a class=\"gModGreen\" id=\"-143754898\">MReference_CriticalChanceUp</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.15) || RETURN",
-                  "displayLines": "0.15",
-                  "constants": [],
-                  "variables": [
-                    0.15
-                  ]
+                  "displayLines": "0.15"
                 }
               }
             },
@@ -1138,12 +1076,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1940881761\">Player_40_PointB3_P1Mark</a>[<span class=\"descriptionNumberColor\">Aha, Sic 'Em!</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         }
                       }
                     }
@@ -1178,12 +1111,7 @@ const compositeAbilityObject = {
             "delayAdvancePreview": {
               "name": "Delay/Advance Preview",
               "previewValue": {
-                "operator": "Variables[0] (0.5) || INVERT || RETURN",
-                "displayLines": "-0.5",
-                "constants": [],
-                "variables": [
-                  0.5
-                ]
+                "displayLines": "-0.5"
               }
             }
           }
@@ -1204,12 +1132,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGConverted</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   },
                   "isRefresh": true
                 }
@@ -1352,24 +1275,14 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (10) || RETURN",
-                    "displayLines": "10",
-                    "constants": [],
-                    "variables": [
-                      10
-                    ]
+                    "displayLines": "10"
                   },
                   "isFixed": "(Fixed)"
                 },
                 {
                   "name": "Adjust Team Punchline Value",
                   "value": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "adjustment": "Add"
                 }
@@ -1397,12 +1310,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -1427,12 +1335,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Skill Points Modification",
                       "adjustmentValue": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "adjustmentType": "+"
                     }
@@ -1488,17 +1391,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "player_SkillTree_PointB1_AddedValue",
                   "resetValue": {
-                    "operator": "Variables[0] (WHOLE) || Variables[1] (_CurrentAttack) || Variables[2] (_CurrentAttackConvert) || SUB || Variables[3] (1000) || SUB || Variables[4] (200) || DIV || PARAM_1 || FUNCTION || Variables[5] (0.1) || MUL || RETURN",
-                    "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((((_CurrentAttack - _CurrentAttackConvert) - 1000) / 200)) * 0.1)",
-                    "constants": [],
-                    "variables": [
-                      "WHOLE",
-                      "_CurrentAttack",
-                      "_CurrentAttackConvert",
-                      1000,
-                      200,
-                      0.1
-                    ]
+                    "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((((_CurrentAttack - _CurrentAttackConvert) - 1000) / 200)) * 0.1)"
                   },
                   "scope": "ContextCaster"
                 },
@@ -1534,12 +1427,7 @@ const compositeAbilityObject = {
                         "value1": "player_SkillTree_PointB1_AddedValue",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (0.6) || RETURN",
-                          "displayLines": "0.6",
-                          "constants": [],
-                          "variables": [
-                            0.6
-                          ]
+                          "displayLines": "0.6"
                         },
                         "contextScope": "ContextCaster"
                       },
@@ -1547,12 +1435,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (0.6) || RETURN",
-                            "displayLines": "0.6",
-                            "constants": [],
-                            "variables": [
-                              0.6
-                            ]
+                            "displayLines": "0.6"
                           },
                           "variableName": "player_SkillTree_PointB1_AddedValue"
                         }
@@ -1567,12 +1450,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1930250757\">Player_40_Trace01_Bonus</a>[<span class=\"descriptionNumberColor\">On Cloud Nine</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (player_SkillTree_PointB1_AddedValue) || RETURN",
-                          "displayLines": "player_SkillTree_PointB1_AddedValue",
-                          "constants": [],
-                          "variables": [
-                            "player_SkillTree_PointB1_AddedValue"
-                          ]
+                          "displayLines": "player_SkillTree_PointB1_AddedValue"
                         }
                       }
                     }
@@ -1647,22 +1525,12 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-64770112\">Player_40_Eidolon6CriticalDamageUp</a>[<span class=\"descriptionNumberColor\">The Cosmic Legend Cometh!</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "referenceModifier": "<a class=\"gModGreen\" id=\"1042665863\">MReference_CriticalDamageUp</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 }
               }
             }
@@ -1683,22 +1551,12 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1595116936\">Player_40_BeDamageAddedRatio</a>[<span class=\"descriptionNumberColor\">Save the World. Just Because.</span>]",
               "duration": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "referenceModifier": "<a class=\"gModGreen\" id=\"-1553319646\">MReference_AllDamageTypeTakenRatio</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.1) || RETURN",
-                  "displayLines": "0.1",
-                  "constants": [],
-                  "variables": [
-                    0.1
-                  ]
+                  "displayLines": "0.1"
                 }
               }
             }
@@ -1707,12 +1565,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (8) || RETURN",
-            "displayLines": "8",
-            "constants": [],
-            "variables": [
-              8
-            ]
+            "displayLines": "8"
           },
           "execute": [
             {
@@ -1732,21 +1585,11 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "DamageElation": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     },
                     "dmgFormula": "Elation Scaling",
                     "Toughness": {
-                      "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                      "displayLines": "ST Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "ST Toughness Value"
-                      ]
+                      "displayLines": "ST Toughness Value"
                     },
                     "Tags": null,
                     "attackType": "Elation DMG"
@@ -1776,21 +1619,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "DamageElation": {
-                  "operator": "Variables[0] (0.6) || RETURN",
-                  "displayLines": "0.6",
-                  "constants": [],
-                  "variables": [
-                    0.6
-                  ]
+                  "displayLines": "0.6"
                 },
                 "dmgFormula": "Elation Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "instanceTag": "Skill04_LastElationDamage",
                 "Tags": null,
@@ -1811,21 +1644,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "DamageElation": {
-                  "operator": "Variables[0] (0.6) || RETURN",
-                  "displayLines": "0.6",
-                  "constants": [],
-                  "variables": [
-                    0.6
-                  ]
+                  "displayLines": "0.6"
                 },
                 "dmgFormula": "Elation Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "instanceTag": "Skill04_LastElationDamage",
                 "Tags": null,
@@ -1934,12 +1757,7 @@ const compositeAbilityObject = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (_SelectCharacterID) || RETURN",
-                "displayLines": "_SelectCharacterID",
-                "constants": [],
-                "variables": [
-                  "_SelectCharacterID"
-                ]
+                "displayLines": "_SelectCharacterID"
               },
               "caseEvents": [
                 {
@@ -1965,12 +1783,7 @@ const compositeAbilityObject = {
         {
           "name": "Adjust Team Punchline Value",
           "value": {
-            "operator": "Variables[0] (5) || RETURN",
-            "displayLines": "5",
-            "constants": [],
-            "variables": [
-              5
-            ]
+            "displayLines": "5"
           },
           "adjustment": "Add"
         },
@@ -1982,22 +1795,12 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"2144861411\">Player_40_Ultimate_Bonus</a>[<span class=\"descriptionNumberColor\">May the Trailblaze Fly You Starward</span>]",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "referenceModifier": "<a class=\"gModGreen\" id=\"1042665863\">MReference_CriticalDamageUp</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             }
           }
         },
@@ -2019,21 +1822,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1890166672\">Player_40_Eidolon2ElationRatio</a>[<span class=\"descriptionNumberColor\">History in the Making...</span>]",
               "duration": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.12) || RETURN",
-                  "displayLines": "0.12",
-                  "constants": [],
-                  "variables": [
-                    0.12
-                  ]
+                  "displayLines": "0.12"
                 }
               }
             }
@@ -2068,13 +1861,7 @@ const compositeAbilityObject = {
                   },
                   "variables": {
                     "AddValue": {
-                      "operator": "Variables[0] (10) || Variables[1] (_Rank01_ElationEcho) || ADD || RETURN",
-                      "displayLines": "(10 + _Rank01_ElationEcho)",
-                      "constants": [],
-                      "variables": [
-                        10,
-                        "_Rank01_ElationEcho"
-                      ]
+                      "displayLines": "(10 + _Rank01_ElationEcho)"
                     }
                   }
                 },
@@ -2106,12 +1893,7 @@ const compositeAbilityObject = {
                   },
                   "variables": {
                     "AddValue": {
-                      "operator": "Variables[0] (10) || RETURN",
-                      "displayLines": "10",
-                      "constants": [],
-                      "variables": [
-                        10
-                      ]
+                      "displayLines": "10"
                     }
                   }
                 }
@@ -2161,12 +1943,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "punchlineFixed": {
-                        "operator": "Variables[0] (20) || RETURN",
-                        "displayLines": "20",
-                        "constants": [],
-                        "variables": [
-                          20
-                        ]
+                        "displayLines": "20"
                       },
                       "actionTag": null,
                       "execute": [
@@ -2232,12 +2009,7 @@ const compositeAbilityObject = {
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (_SelectCharacterID) || RETURN",
-            "displayLines": "_SelectCharacterID",
-            "constants": [],
-            "variables": [
-              "_SelectCharacterID"
-            ]
+            "displayLines": "_SelectCharacterID"
           },
           "caseEvents": [
             {
@@ -2276,12 +2048,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.12) || RETURN",
-                    "displayLines": "0.12",
-                    "constants": [],
-                    "variables": [
-                      0.12
-                    ]
+                    "displayLines": "0.12"
                   },
                   "isRefresh": true
                 }
@@ -2368,21 +2135,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-138559016\">Player_40_Eidolon1_Count</a>[<span class=\"descriptionNumberColor\">Believe In the Light</span>]",
               "duration": -1,
               "stackLimit": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
+                  "displayLines": "2"
                 }
               },
               "addStacksPerTrigger": 1
@@ -2409,12 +2166,7 @@ const compositeAbilityObject = {
               },
               "variables": {
                 "AddValue": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
+                  "displayLines": "2"
                 }
               }
             },
@@ -2438,20 +2190,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (0.6) || RETURN",
-              "displayLines": "0.6",
-              "constants": [],
-              "variables": [
-                0.6
-              ]
+              "displayLines": "0.6"
             },
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "attackType": "Skill",
@@ -2479,21 +2221,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "DamageElation": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 },
                 "dmgFormula": "Elation Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "instanceTag": "Skill02_ElationDamage",
                 "Tags": null,
@@ -2512,12 +2244,7 @@ const compositeAbilityObject = {
           },
           "variables": {
             "AddValue": {
-              "operator": "Variables[0] (20) || RETURN",
-              "displayLines": "20",
-              "constants": [],
-              "variables": [
-                20
-              ]
+              "displayLines": "20"
             }
           }
         },
@@ -2549,13 +2276,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "_Rank01_ElationEcho",
                   "resetValue": {
-                    "operator": "Variables[0] (MDF_Layer) || Variables[1] (2) || MUL || RETURN",
-                    "displayLines": "(MDF_Layer * 2)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer",
-                      2
-                    ]
+                    "displayLines": "(MDF_Layer * 2)"
                   },
                   "scope": "ContextCaster"
                 }
@@ -2620,21 +2341,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "HitSplit": 0.5,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Basic ATK",
@@ -2651,21 +2362,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "HitSplit": 0.5,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Basic ATK",

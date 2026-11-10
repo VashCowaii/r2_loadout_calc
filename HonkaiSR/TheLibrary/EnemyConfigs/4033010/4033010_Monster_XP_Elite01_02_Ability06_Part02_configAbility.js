@@ -12,12 +12,7 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"550129180\">Enemy_XP_Elite01_02_DefenceDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
       "duration": {
-        "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-        "displayLines": "{[Skill06[1]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill06[1]]}"
-        ]
+        "displayLines": "{[Skill06[1]]}"
       }
     },
     {
@@ -56,14 +51,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (1) || INVERT || Variables[0] ({[Skill06[0]]}) || MUL || RETURN",
-                "displayLines": "(-1 * {[Skill06[0]]})",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "{[Skill06[0]]}"
-                ]
+                "displayLines": "(-1 * {[Skill06[0]]})"
               }
             }
           ]

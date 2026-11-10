@@ -12,21 +12,11 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-2066845206\">Enemy_W5_Eater_Ability03_Attack_FateRin</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "duration": {
-        "operator": "Variables[0] (Skill03_LifeTime) || RETURN",
-        "displayLines": "Skill03_LifeTime",
-        "constants": [],
-        "variables": [
-          "Skill03_LifeTime"
-        ]
+        "displayLines": "Skill03_LifeTime"
       },
       "valuePerStack": {
         "MDF_Attack": {
-          "operator": "Variables[0] (Skill03_Attack) || RETURN",
-          "displayLines": "Skill03_Attack",
-          "constants": [],
-          "variables": [
-            "Skill03_Attack"
-          ]
+          "displayLines": "Skill03_Attack"
         }
       },
       "casterAssign": "TargetSelf"

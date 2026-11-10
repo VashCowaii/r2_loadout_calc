@@ -12,20 +12,10 @@ const configAbility = {
           "name": "Random Event",
           "odds": [
             {
-              "operator": "Variables[0] ({[Skill41[2]]}) || RETURN",
-              "displayLines": "{[Skill41[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill41[2]]}"
-              ]
+              "displayLines": "{[Skill41[2]]}"
             },
             {
-              "operator": "Variables[0] ({[Skill41[3]]}) || RETURN",
-              "displayLines": "{[Skill41[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill41[3]]}"
-              ]
+              "displayLines": "{[Skill41[3]]}"
             }
           ],
           "execute": [
@@ -60,12 +50,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "value": {
-                    "operator": "Variables[0] ({[Skill41[4]]}) || RETURN",
-                    "displayLines": "{[Skill41[4]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill41[4]]}"
-                    ]
+                    "displayLines": "{[Skill41[4]]}"
                   },
                   "isFixed": "* ERR"
                 }
@@ -88,12 +73,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "DamageElation": {
-                      "operator": "Variables[0] ({[Skill41[1]]}) || RETURN",
-                      "displayLines": "{[Skill41[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill41[1]]}"
-                      ]
+                      "displayLines": "{[Skill41[1]]}"
                     },
                     "dmgFormula": "Elation Scaling",
                     "Toughness": null,
@@ -168,14 +148,7 @@ const configAbility = {
         {
           "name": "Adjust Team Punchline Value",
           "value": {
-            "operator": "Variables[0] (Elation_Character_Num) || Constants[0] (1) || MUL || RETURN",
-            "displayLines": "(Elation_Character_Num * 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "Elation_Character_Num"
-            ]
+            "displayLines": "(Elation_Character_Num * 1)"
           },
           "adjustment": "Add"
         }

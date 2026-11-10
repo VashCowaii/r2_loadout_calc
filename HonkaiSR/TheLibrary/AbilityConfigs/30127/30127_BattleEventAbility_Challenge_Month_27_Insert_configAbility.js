@@ -31,12 +31,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1483417654\">Modifier_BattleEventAbility_Challenge_Month_27_Sub3</a>",
       "valuePerStack": {
         "_SP_Ratio_get": {
-          "operator": "Variables[0] (_SP_Ratio) || RETURN",
-          "displayLines": "_SP_Ratio",
-          "constants": [],
-          "variables": [
-            "_SP_Ratio"
-          ]
+          "displayLines": "_SP_Ratio"
         }
       },
       "casterAssign": "TargetSelf"

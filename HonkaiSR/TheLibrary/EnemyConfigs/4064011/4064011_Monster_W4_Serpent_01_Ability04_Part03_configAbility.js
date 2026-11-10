@@ -21,28 +21,13 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
       "valuePerStack": {
         "MDF_RallyTransferRatio": {
-          "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-          "displayLines": "{[Skill05[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill05[1]]}"
-          ]
+          "displayLines": "{[Skill05[1]]}"
         },
         "MDF_Rally_HealPercentage": {
-          "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-          "displayLines": "{[Skill05[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill05[2]]}"
-          ]
+          "displayLines": "{[Skill05[2]]}"
         },
         "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-          "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-          "displayLines": "{[Skill05[3]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill05[3]]}"
-          ]
+          "displayLines": "{[Skill05[3]]}"
         }
       }
     },
@@ -55,12 +40,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-          "displayLines": "{[Skill04[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}"
-          ]
+          "displayLines": "{[Skill04[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -80,12 +60,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"149951100\">Enemy_W4_Serpent_01_Passive_StanceDamage</a>",
           "valuePerStack": {
             "MDF_StanceDamage": {
-              "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-              "displayLines": "{[Skill04[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[1]]}"
-              ]
+              "displayLines": "{[Skill04[1]]}"
             }
           }
         }

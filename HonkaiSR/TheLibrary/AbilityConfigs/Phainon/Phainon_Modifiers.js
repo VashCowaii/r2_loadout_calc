@@ -313,13 +313,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyRatio * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_PropertyRatio * MDF_Layer)"
               }
             }
           ]
@@ -348,12 +342,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistancePhysicalPEN</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             }
           ]
@@ -402,12 +391,7 @@ const configAbility = {
               "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
               "variables": {
                 "parameter[0]_AddValue": {
-                  "operator": "Variables[0] (MDF_Count) || RETURN",
-                  "displayLines": "MDF_Count",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Count"
-                  ]
+                  "displayLines": "MDF_Count"
                 }
               }
             }
@@ -581,12 +565,7 @@ const configAbility = {
               "referenceModifier": "<a class=\"gModGreen\" id=\"1020254741\">MReference_SpeedRatioUp</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.15) || RETURN",
-                  "displayLines": "0.15",
-                  "constants": [],
-                  "variables": [
-                    0.15
-                  ]
+                  "displayLines": "0.15"
                 }
               }
             }
@@ -615,26 +594,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1889470699\">M_Phainon_Ultimate_ActionOrder</a>",
                   "counter": {
-                    "operator": "Variables[0] (MDF_ActionOrderIndex) || RETURN",
-                    "displayLines": "MDF_ActionOrderIndex",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ActionOrderIndex"
-                    ]
+                    "displayLines": "MDF_ActionOrderIndex"
                   },
                   "referenceModifier": "<a class=\"gModGreen\" id=\"1832901043\">MReference_Empty</a>"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_ActionOrderIndex) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(MDF_ActionOrderIndex + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_ActionOrderIndex"
-                    ]
+                    "displayLines": "(MDF_ActionOrderIndex + 1)"
                   },
                   "variableName": "MDF_ActionOrderIndex"
                 }
@@ -915,29 +882,13 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (CurSpecialSP) || Variables[1] (CurOverflowSpecialSP) || ADD || RETURN",
-                "displayLines": "(CurSpecialSP + CurOverflowSpecialSP)",
-                "constants": [],
-                "variables": [
-                  "CurSpecialSP",
-                  "CurOverflowSpecialSP"
-                ]
+                "displayLines": "(CurSpecialSP + CurOverflowSpecialSP)"
               },
               "activeCount": {
-                "operator": "Variables[0] (12) || RETURN",
-                "displayLines": "12",
-                "constants": [],
-                "variables": [
-                  12
-                ]
+                "displayLines": "12"
               },
               "maximum": {
-                "operator": "Variables[0] (12) || RETURN",
-                "displayLines": "12",
-                "constants": [],
-                "variables": [
-                  12
-                ]
+                "displayLines": "12"
               },
               "assignState": "True",
               "priorState": "Normal",
@@ -950,12 +901,7 @@ const configAbility = {
                 "value1": "CurSpecialSP",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (12) || RETURN",
-                  "displayLines": "12",
-                  "constants": [],
-                  "variables": [
-                    12
-                  ]
+                  "displayLines": "12"
                 }
               },
               "passed": [
@@ -1002,14 +948,7 @@ const configAbility = {
                 {
                   "name": "Set Phainon Action Count",
                   "count": {
-                    "operator": "Variables[0] (#CL_MDF_BECount) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(#CL_MDF_BECount - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "#CL_MDF_BECount"
-                    ]
+                    "displayLines": "(#CL_MDF_BECount - 1)"
                   }
                 }
               ]
@@ -1062,12 +1001,7 @@ const configAbility = {
             {
               "name": "Set Phainon Action Count",
               "count": {
-                "operator": "Variables[0] (#CL_MDF_BECount) || RETURN",
-                "displayLines": "#CL_MDF_BECount",
-                "constants": [],
-                "variables": [
-                  "#CL_MDF_BECount"
-                ]
+                "displayLines": "#CL_MDF_BECount"
               }
             },
             {
@@ -1079,23 +1013,13 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (4) || RETURN",
-                "displayLines": "4",
-                "constants": [],
-                "variables": [
-                  4
-                ]
+                "displayLines": "4"
               }
             },
             {
               "name": "Set Phainon Charge Points",
               "value": {
-                "operator": "Variables[0] (Skill22_Energy) || RETURN",
-                "displayLines": "Skill22_Energy",
-                "constants": [],
-                "variables": [
-                  "Skill22_Energy"
-                ]
+                "displayLines": "Skill22_Energy"
               }
             },
             {
@@ -1119,14 +1043,7 @@ const configAbility = {
             {
               "name": "Set Phainon Action Count",
               "count": {
-                "operator": "Variables[0] (8) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(8 - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  8
-                ]
+                "displayLines": "(8 - 1)"
               }
             },
             {
@@ -1265,14 +1182,7 @@ const configAbility = {
                     "value1": "_enemyIndex",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (_enemyCount) || Constants[0] (2) || DIV || RETURN",
-                      "displayLines": "(_enemyCount / 2)",
-                      "constants": [
-                        2
-                      ],
-                      "variables": [
-                        "_enemyCount"
-                      ]
+                      "displayLines": "(_enemyCount / 2)"
                     }
                   }
                 }
@@ -1330,12 +1240,7 @@ const configAbility = {
                 "value1": "Skill22_Energy",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (4) || RETURN",
-                  "displayLines": "4",
-                  "constants": [],
-                  "variables": [
-                    4
-                  ]
+                  "displayLines": "4"
                 }
               },
               "passed": [
@@ -1398,14 +1303,7 @@ const configAbility = {
                 {
                   "name": "Set Phainon Action Count",
                   "count": {
-                    "operator": "Variables[0] (#CL_MDF_BECount) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(#CL_MDF_BECount - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "#CL_MDF_BECount"
-                    ]
+                    "displayLines": "(#CL_MDF_BECount - 1)"
                   }
                 }
               ]
@@ -1497,12 +1395,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyRatio": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         },
@@ -1576,12 +1469,7 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
                   "variables": {
                     "parameter[0]_AddValue": {
-                      "operator": "Variables[0] (3) || RETURN",
-                      "displayLines": "3",
-                      "constants": [],
-                      "variables": [
-                        3
-                      ]
+                      "displayLines": "3"
                     }
                   }
                 }
@@ -1602,21 +1490,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-982733816\">Phainon_Tree03_Property</a>[<span class=\"descriptionNumberColor\">Shine with Valor</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -1725,12 +1603,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             },
             {
@@ -1741,12 +1614,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio2) || RETURN",
-                "displayLines": "MDF_PropertyRatio2",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio2"
-                ]
+                "displayLines": "MDF_PropertyRatio2"
               }
             },
             {
@@ -1827,12 +1695,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (0.2) || RETURN",
-                "displayLines": "0.2",
-                "constants": [],
-                "variables": [
-                  0.2
-                ]
+                "displayLines": "0.2"
               },
               "formula": "Heal from Target MaxHP"
             }

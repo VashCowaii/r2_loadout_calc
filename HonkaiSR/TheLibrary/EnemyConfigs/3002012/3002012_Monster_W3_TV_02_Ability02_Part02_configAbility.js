@@ -15,12 +15,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-          "displayLines": "{[Skill02[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[0]]}"
-          ]
+          "displayLines": "{[Skill02[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -44,12 +39,7 @@ const configAbility = {
         "target": "{{Player Team(Exclude Memosprites)v2}}"
       },
       "value": {
-        "operator": "Variables[0] ({[Skill02[1]]}) || INVERT || RETURN",
-        "displayLines": "-{[Skill02[1]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill02[1]]}"
-        ]
+        "displayLines": "-{[Skill02[1]]}"
       },
       "isFixed": "(Fixed)"
     },

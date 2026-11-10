@@ -47,12 +47,7 @@ const configAbility = {
                 "value1": "TeamCharacterCount",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] (LightTeamCount) || RETURN",
-                  "displayLines": "LightTeamCount",
-                  "constants": [],
-                  "variables": [
-                    "LightTeamCount"
-                  ]
+                  "displayLines": "LightTeamCount"
                 }
               }
             ]
@@ -73,12 +68,7 @@ const configAbility = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] ({[Skill08[0]]}) || RETURN",
-                    "displayLines": "{[Skill08[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill08[0]]}"
-                    ]
+                    "displayLines": "{[Skill08[0]]}"
                   },
                   "refreshPositions": false,
                   "enemyList": [
@@ -94,12 +84,7 @@ const configAbility = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] ({[Skill08[0]]}) || RETURN",
-                    "displayLines": "{[Skill08[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill08[0]]}"
-                    ]
+                    "displayLines": "{[Skill08[0]]}"
                   },
                   "refreshPositions": false,
                   "enemyList": [
@@ -132,12 +117,7 @@ const configAbility = {
                   },
                   "scope": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (DeathPartMaxHPCount) || RETURN",
-                    "displayLines": "DeathPartMaxHPCount",
-                    "constants": [],
-                    "variables": [
-                      "DeathPartMaxHPCount"
-                    ]
+                    "displayLines": "DeathPartMaxHPCount"
                   },
                   "variableName": "Owner_MaxHPCount"
                 }

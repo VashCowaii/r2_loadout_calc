@@ -61,12 +61,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "value": {
-                "operator": "Variables[0] (_CurrentBPSP) || RETURN",
-                "displayLines": "_CurrentBPSP",
-                "constants": [],
-                "variables": [
-                  "_CurrentBPSP"
-                ]
+                "displayLines": "_CurrentBPSP"
               },
               "isFixed": "* ERR",
               "isSetToValue": true
@@ -128,12 +123,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "value": {
-                "operator": "Variables[0] (_CurrentBPSP) || RETURN",
-                "displayLines": "_CurrentBPSP",
-                "constants": [],
-                "variables": [
-                  "_CurrentBPSP"
-                ]
+                "displayLines": "_CurrentBPSP"
               },
               "isFixed": "* ERR",
               "isSetToValue": true
@@ -186,14 +176,7 @@ const configAbility = {
         "value1": "_WorldErosion",
         "compareType": "<",
         "value2": {
-          "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Constants[0] (100) || MUL || RETURN",
-          "displayLines": "({[PassiveSkill01[0]]} * 100)",
-          "constants": [
-            100
-          ],
-          "variables": [
-            "{[PassiveSkill01[0]]}"
-          ]
+          "displayLines": "({[PassiveSkill01[0]]} * 100)"
         }
       },
       "passed": [
@@ -210,28 +193,14 @@ const configAbility = {
         {
           "name": "Set IronTomb Progress",
           "display": {
-            "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Constants[0] (100) || MUL || RETURN",
-            "displayLines": "({[PassiveSkill01[0]]} * 100)",
-            "constants": [
-              100
-            ],
-            "variables": [
-              "{[PassiveSkill01[0]]}"
-            ]
+            "displayLines": "({[PassiveSkill01[0]]} * 100)"
           },
           "duration": 3
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Constants[0] (100) || MUL || RETURN",
-            "displayLines": "({[PassiveSkill01[0]]} * 100)",
-            "constants": [
-              100
-            ],
-            "variables": [
-              "{[PassiveSkill01[0]]}"
-            ]
+            "displayLines": "({[PassiveSkill01[0]]} * 100)"
           },
           "variableName": "_WorldErosion"
         }
@@ -509,12 +478,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "set": {
-                "operator": "Variables[0] ({[Skill07[1]]}) || RETURN",
-                "displayLines": "{[Skill07[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill07[1]]}"
-                ]
+                "displayLines": "{[Skill07[1]]}"
               }
             }
           ],
@@ -527,12 +491,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "set": {
-                "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                "displayLines": "{[Skill07[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill07[0]]}"
-                ]
+                "displayLines": "{[Skill07[0]]}"
               }
             }
           ]
@@ -624,12 +583,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "set": {
-                    "operator": "Variables[0] ({[Skill07[1]]}) || RETURN",
-                    "displayLines": "{[Skill07[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill07[1]]}"
-                    ]
+                    "displayLines": "{[Skill07[1]]}"
                   }
                 }
               ],
@@ -642,12 +596,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "set": {
-                    "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                    "displayLines": "{[Skill07[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill07[0]]}"
-                    ]
+                    "displayLines": "{[Skill07[0]]}"
                   }
                 }
               ]

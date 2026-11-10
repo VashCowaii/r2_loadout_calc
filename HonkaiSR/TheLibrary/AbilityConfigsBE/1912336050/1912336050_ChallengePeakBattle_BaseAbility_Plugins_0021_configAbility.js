@@ -35,14 +35,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (ChallengePeakBattle_Plugins_0021_ADF_1) || Variables[1] (ChallengePeakBattle_Plugins_0021_ADF_2) || Variables[2] (MDF_KillCount) || MUL || ADD || RETURN",
-                "displayLines": "(ChallengePeakBattle_Plugins_0021_ADF_1 + (ChallengePeakBattle_Plugins_0021_ADF_2 * MDF_KillCount))",
-                "constants": [],
-                "variables": [
-                  "ChallengePeakBattle_Plugins_0021_ADF_1",
-                  "ChallengePeakBattle_Plugins_0021_ADF_2",
-                  "MDF_KillCount"
-                ]
+                "displayLines": "(ChallengePeakBattle_Plugins_0021_ADF_1 + (ChallengePeakBattle_Plugins_0021_ADF_2 * MDF_KillCount))"
               },
               "variableName": "MDF_TotalDmgUp"
             },
@@ -54,12 +47,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_TotalDmgUp) || RETURN",
-                "displayLines": "MDF_TotalDmgUp",
-                "constants": [],
-                "variables": [
-                  "MDF_TotalDmgUp"
-                ]
+                "displayLines": "MDF_TotalDmgUp"
               }
             }
           ]
@@ -87,20 +75,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1871244851\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0021_02</a>[<span class=\"descriptionNumberColor\">Shatter the Adamant</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_Plugins_0021_ADF_1": {
-                      "operator": "Variables[0] (ChallengePeakBattle_Plugins_0021_ADF_1) || RETURN",
-                      "displayLines": "ChallengePeakBattle_Plugins_0021_ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "ChallengePeakBattle_Plugins_0021_ADF_1"
-                      ]
+                      "displayLines": "ChallengePeakBattle_Plugins_0021_ADF_1"
                     },
                     "ChallengePeakBattle_Plugins_0021_ADF_2": {
-                      "operator": "Variables[0] (ChallengePeakBattle_Plugins_0021_ADF_2) || RETURN",
-                      "displayLines": "ChallengePeakBattle_Plugins_0021_ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "ChallengePeakBattle_Plugins_0021_ADF_2"
-                      ]
+                      "displayLines": "ChallengePeakBattle_Plugins_0021_ADF_2"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -138,20 +116,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1871244851\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0021_02</a>[<span class=\"descriptionNumberColor\">Shatter the Adamant</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_Plugins_0021_ADF_1": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     },
                     "ChallengePeakBattle_Plugins_0021_ADF_2": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     }
                   },
                   "addStacksPerTrigger": 0

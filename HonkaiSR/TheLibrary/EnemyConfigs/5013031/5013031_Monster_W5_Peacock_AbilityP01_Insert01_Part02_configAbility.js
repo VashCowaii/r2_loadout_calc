@@ -38,12 +38,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"973037691\">Enemy_W5_Peacock_AbilityP01_Colorful</a>[<span class=\"descriptionNumberColor\">Color</span>]",
       "valuePerStack": {
         "MDF_ColorDiffDamageAddedRatio": {
-          "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-          "displayLines": "{[SkillP01[4]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[4]]}"
-          ]
+          "displayLines": "{[SkillP01[4]]}"
         }
       }
     },

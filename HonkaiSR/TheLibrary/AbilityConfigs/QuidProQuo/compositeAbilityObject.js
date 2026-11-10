@@ -47,12 +47,7 @@ const compositeAbilityObject = {
                     "value1": "Energy%",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   },
                   "ifTargetFound": [
@@ -63,12 +58,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (8) || RETURN",
-                        "displayLines": "8",
-                        "constants": [],
-                        "variables": [
-                          8
-                        ]
+                        "displayLines": "8"
                       },
                       "isFixed": "* ERR"
                     }

@@ -51,12 +51,7 @@ const configAbility = {
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (_SelectCharacterID) || RETURN",
-            "displayLines": "_SelectCharacterID",
-            "constants": [],
-            "variables": [
-              "_SelectCharacterID"
-            ]
+            "displayLines": "_SelectCharacterID"
           },
           "caseEvents": [
             {
@@ -82,12 +77,7 @@ const configAbility = {
     {
       "name": "Adjust Team Punchline Value",
       "value": {
-        "operator": "Variables[0] (5) || RETURN",
-        "displayLines": "5",
-        "constants": [],
-        "variables": [
-          5
-        ]
+        "displayLines": "5"
       },
       "adjustment": "Add"
     },
@@ -99,22 +89,12 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"2144861411\">Player_40_Ultimate_Bonus</a>[<span class=\"descriptionNumberColor\">May the Trailblaze Fly You Starward</span>]",
       "duration": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "referenceModifier": "<a class=\"gModGreen\" id=\"1042665863\">MReference_CriticalDamageUp</a>",
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] (0.5) || RETURN",
-          "displayLines": "0.5",
-          "constants": [],
-          "variables": [
-            0.5
-          ]
+          "displayLines": "0.5"
         }
       }
     },
@@ -136,21 +116,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1890166672\">Player_40_Eidolon2ElationRatio</a>[<span class=\"descriptionNumberColor\">History in the Making...</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.12) || RETURN",
-              "displayLines": "0.12",
-              "constants": [],
-              "variables": [
-                0.12
-              ]
+              "displayLines": "0.12"
             }
           }
         }
@@ -185,13 +155,7 @@ const configAbility = {
               },
               "variables": {
                 "AddValue": {
-                  "operator": "Variables[0] (10) || Variables[1] (_Rank01_ElationEcho) || ADD || RETURN",
-                  "displayLines": "(10 + _Rank01_ElationEcho)",
-                  "constants": [],
-                  "variables": [
-                    10,
-                    "_Rank01_ElationEcho"
-                  ]
+                  "displayLines": "(10 + _Rank01_ElationEcho)"
                 }
               }
             },
@@ -223,12 +187,7 @@ const configAbility = {
               },
               "variables": {
                 "AddValue": {
-                  "operator": "Variables[0] (10) || RETURN",
-                  "displayLines": "10",
-                  "constants": [],
-                  "variables": [
-                    10
-                  ]
+                  "displayLines": "10"
                 }
               }
             }
@@ -278,12 +237,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "punchlineFixed": {
-                    "operator": "Variables[0] (20) || RETURN",
-                    "displayLines": "20",
-                    "constants": [],
-                    "variables": [
-                      20
-                    ]
+                    "displayLines": "20"
                   },
                   "actionTag": null,
                   "execute": [
@@ -349,12 +303,7 @@ const configAbility = {
     {
       "name": "SWITCH",
       "switchValue": {
-        "operator": "Variables[0] (_SelectCharacterID) || RETURN",
-        "displayLines": "_SelectCharacterID",
-        "constants": [],
-        "variables": [
-          "_SelectCharacterID"
-        ]
+        "displayLines": "_SelectCharacterID"
       },
       "caseEvents": [
         {
@@ -393,12 +342,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.12) || RETURN",
-                "displayLines": "0.12",
-                "constants": [],
-                "variables": [
-                  0.12
-                ]
+                "displayLines": "0.12"
               },
               "isRefresh": true
             }

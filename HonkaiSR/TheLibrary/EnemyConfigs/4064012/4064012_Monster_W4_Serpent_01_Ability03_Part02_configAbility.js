@@ -23,46 +23,21 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"1560904792\">Enemy_W4_Serpent_01_Charge01</a>[<span class=\"descriptionNumberColor\">Pursuer</span>]",
       "stackLimit": {
-        "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-        "displayLines": "{[Skill03[2]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill03[2]]}"
-        ]
+        "displayLines": "{[Skill03[2]]}"
       },
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-          "displayLines": "{[Skill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "{[Skill03[0]]}"
         },
         "MDF_MaxCount": {
-          "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-          "displayLines": "{[Skill03[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[2]]}"
-          ]
+          "displayLines": "{[Skill03[2]]}"
         },
         "MDF_Count": {
-          "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-          "displayLines": "{[Skill03[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[2]]}"
-          ]
+          "displayLines": "{[Skill03[2]]}"
         }
       },
       "addStacksPerTrigger": {
-        "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-        "displayLines": "{[Skill03[2]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill03[2]]}"
-        ]
+        "displayLines": "{[Skill03[2]]}"
       }
     },
     {
@@ -84,20 +59,10 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1710428840\">Enemy_W4_Serpent_01_Charge01_Target</a>[<span class=\"descriptionNumberColor\">Pursuit Target</span>]",
           "stackLimit": {
-            "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-            "displayLines": "{[Skill03[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[2]]}"
-            ]
+            "displayLines": "{[Skill03[2]]}"
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-            "displayLines": "{[Skill03[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[2]]}"
-            ]
+            "displayLines": "{[Skill03[2]]}"
           }
         }
       ],
@@ -110,20 +75,10 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1710428840\">Enemy_W4_Serpent_01_Charge01_Target</a>[<span class=\"descriptionNumberColor\">Pursuit Target</span>]",
           "stackLimit": {
-            "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-            "displayLines": "{[Skill03[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[2]]}"
-            ]
+            "displayLines": "{[Skill03[2]]}"
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-            "displayLines": "{[Skill03[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[2]]}"
-            ]
+            "displayLines": "{[Skill03[2]]}"
           }
         }
       ]

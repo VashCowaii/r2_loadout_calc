@@ -52,12 +52,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "Damage": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     },
                     "Toughness": null,
                     "ToughnessDMGType": {
@@ -78,12 +73,7 @@ const configAbility = {
                   },
                   "variables": {
                     "AddValue": {
-                      "operator": "Variables[0] (20) || RETURN",
-                      "displayLines": "20",
-                      "constants": [],
-                      "variables": [
-                        20
-                      ]
+                      "displayLines": "20"
                     }
                   }
                 }

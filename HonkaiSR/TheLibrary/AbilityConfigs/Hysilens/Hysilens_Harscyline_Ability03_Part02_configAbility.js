@@ -20,53 +20,23 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-1383903101\">Harscyline_Ability03_HaloStatus</a>",
       "duration": {
-        "operator": "Variables[0] (Skill03_HaloLifeTime) || RETURN",
-        "displayLines": "Skill03_HaloLifeTime",
-        "constants": [],
-        "variables": [
-          "Skill03_HaloLifeTime"
-        ]
+        "displayLines": "Skill03_HaloLifeTime"
       },
       "valuePerStack": {
         "MDF_DOTDamagePercentageTemp": {
-          "operator": "Variables[0] (Skill03_DOTDamagePercentage) || RETURN",
-          "displayLines": "Skill03_DOTDamagePercentage",
-          "constants": [],
-          "variables": [
-            "Skill03_DOTDamagePercentage"
-          ]
+          "displayLines": "Skill03_DOTDamagePercentage"
         },
         "MDF_TriggerDOTMaxCountTemp": {
-          "operator": "Variables[0] (Skill03_TriggerDotMaxCount) || RETURN",
-          "displayLines": "Skill03_TriggerDotMaxCount",
-          "constants": [],
-          "variables": [
-            "Skill03_TriggerDotMaxCount"
-          ]
+          "displayLines": "Skill03_TriggerDotMaxCount"
         },
         "MDF_DefenceDownRatioTemp": {
-          "operator": "Variables[0] (0.25) || RETURN",
-          "displayLines": "0.25",
-          "constants": [],
-          "variables": [
-            0.25
-          ]
+          "displayLines": "0.25"
         },
         "MDF_ResistanceDownRatioTemp": {
-          "operator": "Variables[0] (0.2) || RETURN",
-          "displayLines": "0.2",
-          "constants": [],
-          "variables": [
-            0.2
-          ]
+          "displayLines": "0.2"
         },
         "MDF_AttackDownRatioTemp": {
-          "operator": "Variables[0] (0.15) || RETURN",
-          "displayLines": "0.15",
-          "constants": [],
-          "variables": [
-            0.15
-          ]
+          "displayLines": "0.15"
         }
       }
     },
@@ -80,20 +50,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (2) || RETURN",
-          "displayLines": "2",
-          "constants": [],
-          "variables": [
-            2
-          ]
+          "displayLines": "2"
         },
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -128,12 +88,7 @@ const configAbility = {
           "variableName": "DOT_TriggerRatio",
           "eventType": "DOT",
           "value": {
-            "operator": "Variables[0] (1.5) || RETURN",
-            "displayLines": "1.5",
-            "constants": [],
-            "variables": [
-              1.5
-            ]
+            "displayLines": "1.5"
           }
         }
       ]

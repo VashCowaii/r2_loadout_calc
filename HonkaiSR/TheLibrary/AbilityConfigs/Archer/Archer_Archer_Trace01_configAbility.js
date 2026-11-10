@@ -25,12 +25,7 @@ const configAbility = {
               "name": "Change Skill Point Max",
               "function": "Add",
               "value": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               }
             }
           ]
@@ -42,12 +37,7 @@ const configAbility = {
               "name": "Change Skill Point Max",
               "function": "Add",
               "value": {
-                "operator": "Variables[0] (2) || INVERT || RETURN",
-                "displayLines": "-2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "-2"
               }
             }
           ]

@@ -14,20 +14,10 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"188036182\">Monster_W1_Mecha_Fire_Burning</a>[<span class=\"descriptionNumberColor\">Mania</span>]",
       "valuePerStack": {
         "Modifier_AttackAddedRatio": {
-          "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-          "displayLines": "{[Skill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[0]]}"
-          ]
+          "displayLines": "{[Skill01[0]]}"
         },
         "Modifier_SpeedDelta": {
-          "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-          "displayLines": "{[Skill01[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[1]]}"
-          ]
+          "displayLines": "{[Skill01[1]]}"
         }
       }
     },

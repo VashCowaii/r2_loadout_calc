@@ -31,12 +31,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (20) || RETURN",
-            "displayLines": "20",
-            "constants": [],
-            "variables": [
-              20
-            ]
+            "displayLines": "20"
           },
           "isFixed": "* ERR"
         }
@@ -70,21 +65,11 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-1150141703\">FuXuan_ListenLifeTime</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
       "duration": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "valuePerStack": {
         "Ability02_P2_DamageResistance": {
-          "operator": "Variables[0] (UnusedUnderThisBase_5275) || RETURN",
-          "displayLines": "UnusedUnderThisBase_5275",
-          "constants": [],
-          "variables": [
-            "UnusedUnderThisBase_5275"
-          ]
+          "displayLines": "UnusedUnderThisBase_5275"
         }
       }
     },
@@ -97,28 +82,13 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1553530097\">FuXuan_HitDamageSplit</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
       "valuePerStack": {
         "MDF_SplitPercentage": {
-          "operator": "Variables[0] (0.65) || RETURN",
-          "displayLines": "0.65",
-          "constants": [],
-          "variables": [
-            0.65
-          ]
+          "displayLines": "0.65"
         },
         "Ability02_P2_DamageResistance": {
-          "operator": "Variables[0] (UnusedUnderThisBase_5275) || RETURN",
-          "displayLines": "UnusedUnderThisBase_5275",
-          "constants": [],
-          "variables": [
-            "UnusedUnderThisBase_5275"
-          ]
+          "displayLines": "UnusedUnderThisBase_5275"
         },
         "AddSP": {
-          "operator": "Variables[0] (5) || RETURN",
-          "displayLines": "5",
-          "constants": [],
-          "variables": [
-            5
-          ]
+          "displayLines": "5"
         }
       }
     },

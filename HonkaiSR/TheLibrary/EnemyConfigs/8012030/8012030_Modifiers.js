@@ -35,12 +35,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (Skill01_P2_MarkDamagePercentage) || RETURN",
-                  "displayLines": "Skill01_P2_MarkDamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "Skill01_P2_MarkDamagePercentage"
-                  ]
+                  "displayLines": "Skill01_P2_MarkDamagePercentage"
                 },
                 "Toughness": null,
                 "Tags": null,

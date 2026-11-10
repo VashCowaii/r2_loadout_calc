@@ -41,12 +41,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-735432971\">Monster_W1_Mecha03_RL_Revenge</a>[<span class=\"descriptionNumberColor\">Obliteration Order</span>]",
       "valuePerStack": {
         "MDF_DamageUpRatio": {
-          "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[2]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[2]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[2]]}"
         }
       }
     },

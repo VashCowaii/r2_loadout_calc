@@ -71,12 +71,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"196132555\">Enemy_W4_DawnsEye_01_MainStoryLockHP</a>",
           "valuePerStack": {
             "MDF_DeathSPAdd": {
-              "operator": "Variables[0] ({[SkillP07[2]]}) || RETURN",
-              "displayLines": "{[SkillP07[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP07[2]]}"
-              ]
+              "displayLines": "{[SkillP07[2]]}"
             }
           }
         }
@@ -92,16 +87,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "DamageFlat": {
-          "operator": "Variables[0] (BaseAttack) || Variables[1] (TotalDamageRatio) || MUL || Variables[2] ({[Skill04P3[0]]}) || MUL || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "(((BaseAttack * TotalDamageRatio) * {[Skill04P3[0]]}) * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "BaseAttack",
-            "TotalDamageRatio",
-            "{[Skill04P3[0]]}"
-          ]
+          "displayLines": "(((BaseAttack * TotalDamageRatio) * {[Skill04P3[0]]}) * 0.1)"
         },
         "dmgFormulaFinal": "Converted DMG Base",
         "Toughness": null,
@@ -119,16 +105,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "DamageFlat": {
-          "operator": "Variables[0] (BaseAttack) || Variables[1] (TotalDamageRatio) || MUL || Variables[2] ({[Skill04P3[0]]}) || MUL || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "(((BaseAttack * TotalDamageRatio) * {[Skill04P3[0]]}) * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "BaseAttack",
-            "TotalDamageRatio",
-            "{[Skill04P3[0]]}"
-          ]
+          "displayLines": "(((BaseAttack * TotalDamageRatio) * {[Skill04P3[0]]}) * 0.1)"
         },
         "dmgFormulaFinal": "Converted DMG Base",
         "Toughness": null,
@@ -146,16 +123,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "DamageFlat": {
-          "operator": "Variables[0] (BaseAttack) || Variables[1] (TotalDamageRatio) || MUL || Variables[2] ({[Skill04P3[0]]}) || MUL || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "(((BaseAttack * TotalDamageRatio) * {[Skill04P3[0]]}) * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "BaseAttack",
-            "TotalDamageRatio",
-            "{[Skill04P3[0]]}"
-          ]
+          "displayLines": "(((BaseAttack * TotalDamageRatio) * {[Skill04P3[0]]}) * 0.1)"
         },
         "dmgFormulaFinal": "Converted DMG Base",
         "Toughness": null,
@@ -173,16 +141,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "DamageFlat": {
-          "operator": "Variables[0] (BaseAttack) || Variables[1] (TotalDamageRatio) || MUL || Variables[2] ({[Skill04P3[0]]}) || MUL || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "(((BaseAttack * TotalDamageRatio) * {[Skill04P3[0]]}) * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "BaseAttack",
-            "TotalDamageRatio",
-            "{[Skill04P3[0]]}"
-          ]
+          "displayLines": "(((BaseAttack * TotalDamageRatio) * {[Skill04P3[0]]}) * 0.1)"
         },
         "dmgFormulaFinal": "Converted DMG Base",
         "Toughness": null,
@@ -200,16 +159,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "DamageFlat": {
-          "operator": "Variables[0] (BaseAttack) || Variables[1] (TotalDamageRatio) || MUL || Variables[2] ({[Skill04P3[0]]}) || MUL || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "(((BaseAttack * TotalDamageRatio) * {[Skill04P3[0]]}) * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "BaseAttack",
-            "TotalDamageRatio",
-            "{[Skill04P3[0]]}"
-          ]
+          "displayLines": "(((BaseAttack * TotalDamageRatio) * {[Skill04P3[0]]}) * 0.1)"
         },
         "dmgFormulaFinal": "Converted DMG Base",
         "Toughness": null,
@@ -227,16 +177,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "DamageFlat": {
-          "operator": "Variables[0] (BaseAttack) || Variables[1] (TotalDamageRatio) || MUL || Variables[2] ({[Skill04P3[0]]}) || MUL || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "(((BaseAttack * TotalDamageRatio) * {[Skill04P3[0]]}) * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "BaseAttack",
-            "TotalDamageRatio",
-            "{[Skill04P3[0]]}"
-          ]
+          "displayLines": "(((BaseAttack * TotalDamageRatio) * {[Skill04P3[0]]}) * 0.1)"
         },
         "dmgFormulaFinal": "Converted DMG Base",
         "Toughness": null,
@@ -254,16 +195,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "DamageFlat": {
-          "operator": "Variables[0] (BaseAttack) || Variables[1] (TotalDamageRatio) || MUL || Variables[2] ({[Skill04P3[0]]}) || MUL || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "(((BaseAttack * TotalDamageRatio) * {[Skill04P3[0]]}) * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "BaseAttack",
-            "TotalDamageRatio",
-            "{[Skill04P3[0]]}"
-          ]
+          "displayLines": "(((BaseAttack * TotalDamageRatio) * {[Skill04P3[0]]}) * 0.1)"
         },
         "dmgFormulaFinal": "Converted DMG Base",
         "Toughness": null,
@@ -281,16 +213,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "DamageFlat": {
-          "operator": "Variables[0] (BaseAttack) || Variables[1] (TotalDamageRatio) || MUL || Variables[2] ({[Skill04P3[0]]}) || MUL || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "(((BaseAttack * TotalDamageRatio) * {[Skill04P3[0]]}) * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "BaseAttack",
-            "TotalDamageRatio",
-            "{[Skill04P3[0]]}"
-          ]
+          "displayLines": "(((BaseAttack * TotalDamageRatio) * {[Skill04P3[0]]}) * 0.1)"
         },
         "dmgFormulaFinal": "Converted DMG Base",
         "Toughness": null,
@@ -308,16 +231,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "DamageFlat": {
-          "operator": "Variables[0] (BaseAttack) || Variables[1] (TotalDamageRatio) || MUL || Variables[2] ({[Skill04P3[0]]}) || MUL || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "(((BaseAttack * TotalDamageRatio) * {[Skill04P3[0]]}) * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "BaseAttack",
-            "TotalDamageRatio",
-            "{[Skill04P3[0]]}"
-          ]
+          "displayLines": "(((BaseAttack * TotalDamageRatio) * {[Skill04P3[0]]}) * 0.1)"
         },
         "dmgFormulaFinal": "Converted DMG Base",
         "Toughness": null,
@@ -335,16 +249,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "DamageFlat": {
-          "operator": "Variables[0] (BaseAttack) || Variables[1] (TotalDamageRatio) || MUL || Variables[2] ({[Skill04P3[0]]}) || MUL || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "(((BaseAttack * TotalDamageRatio) * {[Skill04P3[0]]}) * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "BaseAttack",
-            "TotalDamageRatio",
-            "{[Skill04P3[0]]}"
-          ]
+          "displayLines": "(((BaseAttack * TotalDamageRatio) * {[Skill04P3[0]]}) * 0.1)"
         },
         "dmgFormulaFinal": "Converted DMG Base",
         "Toughness": null,
@@ -454,12 +359,7 @@ const configAbility = {
       "conditions": {
         "name": "Enemy ID",
         "ID": {
-          "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
-          "displayLines": "PartEntity1_MonsterID",
-          "constants": [],
-          "variables": [
-            "PartEntity1_MonsterID"
-          ]
+          "displayLines": "PartEntity1_MonsterID"
         },
         "target": {
           "name": "Target Name",
@@ -522,12 +422,7 @@ const configAbility = {
       "conditions": {
         "name": "Enemy ID",
         "ID": {
-          "operator": "Variables[0] (PartEntity3_MonsterID) || RETURN",
-          "displayLines": "PartEntity3_MonsterID",
-          "constants": [],
-          "variables": [
-            "PartEntity3_MonsterID"
-          ]
+          "displayLines": "PartEntity3_MonsterID"
         },
         "target": {
           "name": "Target Name",

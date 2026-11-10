@@ -65,14 +65,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Scoring_KillCount_4083009) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(Scoring_KillCount_4083009 + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "Scoring_KillCount_4083009"
-                ]
+                "displayLines": "(Scoring_KillCount_4083009 + 1)"
               },
               "variableName": "Scoring_KillCount_4083009"
             },
@@ -190,14 +183,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Scoring_KillCount_4083009) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(Scoring_KillCount_4083009 + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "Scoring_KillCount_4083009"
-                ]
+                "displayLines": "(Scoring_KillCount_4083009 + 1)"
               },
               "variableName": "Scoring_KillCount_4083009"
             },

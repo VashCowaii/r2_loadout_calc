@@ -60,13 +60,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_Layer) || Variables[1] (#BattleEvent_P1_ADF) || MUL || RETURN",
-                "displayLines": "(MDF_Layer * #BattleEvent_P1_ADF)",
-                "constants": [],
-                "variables": [
-                  "MDF_Layer",
-                  "#BattleEvent_P1_ADF"
-                ]
+                "displayLines": "(MDF_Layer * #BattleEvent_P1_ADF)"
               }
             }
           ]
@@ -244,12 +238,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"897526972\">Modifier_BattleEventAbility_Challenge_Xianzhou_05_Sub1</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P2_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P2_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P2_ADF"
                   }
                 }
               ]

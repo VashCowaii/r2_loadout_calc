@@ -14,20 +14,10 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1052717956\">Modifier_BattleEventAbility_Challenge_Month_38</a>",
       "valuePerStack": {
         "MDF_PursuedDamageRatio": {
-          "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-          "displayLines": "#BattleEvent_P1_ADF",
-          "constants": [],
-          "variables": [
-            "#BattleEvent_P1_ADF"
-          ]
+          "displayLines": "#BattleEvent_P1_ADF"
         },
         "MDF_DotDmgRatio": {
-          "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-          "displayLines": "#BattleEvent_P2_ADF",
-          "constants": [],
-          "variables": [
-            "#BattleEvent_P2_ADF"
-          ]
+          "displayLines": "#BattleEvent_P2_ADF"
         }
       }
     }
@@ -80,12 +70,7 @@ const configAbility = {
                           }
                         },
                         "Damage": {
-                          "operator": "Variables[0] (MDF_PursuedDamageRatio) || RETURN",
-                          "displayLines": "MDF_PursuedDamageRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PursuedDamageRatio"
-                          ]
+                          "displayLines": "MDF_PursuedDamageRatio"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -109,12 +94,7 @@ const configAbility = {
                           }
                         },
                         "Damage": {
-                          "operator": "Variables[0] (MDF_PursuedDamageRatio) || RETURN",
-                          "displayLines": "MDF_PursuedDamageRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PursuedDamageRatio"
-                          ]
+                          "displayLines": "MDF_PursuedDamageRatio"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -167,12 +147,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "DamageFlat": {
-                  "operator": "Variables[0] (Modifier_Burn_DamageValue) || RETURN",
-                  "displayLines": "Modifier_Burn_DamageValue",
-                  "constants": [],
-                  "variables": [
-                    "Modifier_Burn_DamageValue"
-                  ]
+                  "displayLines": "Modifier_Burn_DamageValue"
                 },
                 "Toughness": null,
                 "Tags": [
@@ -195,13 +170,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "DamageFlat": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Burn_DamageValue) || MUL || RETURN",
-                  "displayLines": "(DOT_TriggerRatio * Modifier_Burn_DamageValue)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "Modifier_Burn_DamageValue"
-                  ]
+                  "displayLines": "(DOT_TriggerRatio * Modifier_Burn_DamageValue)"
                 },
                 "Toughness": null,
                 "Tags": [
@@ -321,13 +290,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-717184223\">Modifier_BattleEventAbility_Challenge_Month_38_Sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
                   "valuePerStack": {
                     "Modifier_Burn_DamageValue": {
-                      "operator": "Variables[0] (MDF_DotDmgRatio) || Variables[1] (_Temp_HP_BE) || MUL || RETURN",
-                      "displayLines": "(MDF_DotDmgRatio * _Temp_HP_BE)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DotDmgRatio",
-                        "_Temp_HP_BE"
-                      ]
+                      "displayLines": "(MDF_DotDmgRatio * _Temp_HP_BE)"
                     }
                   }
                 }
@@ -394,13 +357,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-717184223\">Modifier_BattleEventAbility_Challenge_Month_38_Sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
                       "valuePerStack": {
                         "Modifier_Burn_DamageValue": {
-                          "operator": "Variables[0] (MDF_DotDmgRatio) || Variables[1] (_Temp_HP_BE) || MUL || RETURN",
-                          "displayLines": "(MDF_DotDmgRatio * _Temp_HP_BE)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DotDmgRatio",
-                            "_Temp_HP_BE"
-                          ]
+                          "displayLines": "(MDF_DotDmgRatio * _Temp_HP_BE)"
                         }
                       }
                     }
@@ -433,12 +390,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"894900364\">Modifier_BattleEventAbility_Challenge_Month_38_PLY</a>",
                   "valuePerStack": {
                     "MDF_PursuedDamageRatio": {
-                      "operator": "Variables[0] (MDF_PursuedDamageRatio) || RETURN",
-                      "displayLines": "MDF_PursuedDamageRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PursuedDamageRatio"
-                      ]
+                      "displayLines": "MDF_PursuedDamageRatio"
                     }
                   },
                   "casterAssign": "TargetSelf"
@@ -469,12 +421,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"894900364\">Modifier_BattleEventAbility_Challenge_Month_38_PLY</a>",
               "valuePerStack": {
                 "MDF_PursuedDamageRatio": {
-                  "operator": "Variables[0] (MDF_PursuedDamageRatio) || RETURN",
-                  "displayLines": "MDF_PursuedDamageRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PursuedDamageRatio"
-                  ]
+                  "displayLines": "MDF_PursuedDamageRatio"
                 }
               },
               "casterAssign": "TargetSelf"
@@ -567,13 +514,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-717184223\">Modifier_BattleEventAbility_Challenge_Month_38_Sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
                   "valuePerStack": {
                     "Modifier_Burn_DamageValue": {
-                      "operator": "Variables[0] (MDF_DotDmgRatio) || Variables[1] (_Temp_HP_BE) || MUL || RETURN",
-                      "displayLines": "(MDF_DotDmgRatio * _Temp_HP_BE)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DotDmgRatio",
-                        "_Temp_HP_BE"
-                      ]
+                      "displayLines": "(MDF_DotDmgRatio * _Temp_HP_BE)"
                     }
                   }
                 }
@@ -640,13 +581,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-717184223\">Modifier_BattleEventAbility_Challenge_Month_38_Sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
                       "valuePerStack": {
                         "Modifier_Burn_DamageValue": {
-                          "operator": "Variables[0] (MDF_DotDmgRatio) || Variables[1] (_Temp_HP_BE) || MUL || RETURN",
-                          "displayLines": "(MDF_DotDmgRatio * _Temp_HP_BE)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DotDmgRatio",
-                            "_Temp_HP_BE"
-                          ]
+                          "displayLines": "(MDF_DotDmgRatio * _Temp_HP_BE)"
                         }
                       }
                     }

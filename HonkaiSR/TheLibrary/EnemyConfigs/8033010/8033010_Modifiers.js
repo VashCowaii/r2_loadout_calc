@@ -53,12 +53,7 @@ const configAbility = {
       "stackType": "Replace",
       "stackLimit": 3,
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-        "displayLines": "ModifierStackLayer",
-        "constants": [],
-        "variables": [
-          "ModifierStackLayer"
-        ]
+        "displayLines": "ModifierStackLayer"
       },
       "execute": [
         {
@@ -78,13 +73,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageUpRatio_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)"
               }
             }
           ]
@@ -124,21 +113,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                      "displayLines": "MDF_DamageUpRatio_PerLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageUpRatio_PerLayer"
-                      ]
+                      "displayLines": "MDF_DamageUpRatio_PerLayer"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (ModifierLayers) || RETURN",
-                    "displayLines": "ModifierLayers",
-                    "constants": [],
-                    "variables": [
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "ModifierLayers"
                   },
                   "casterAssign": "TargetSelf"
                 },
@@ -183,21 +162,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio": {
-                      "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                      "displayLines": "MDF_DamageUpRatio_PerLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageUpRatio_PerLayer"
-                      ]
+                      "displayLines": "MDF_DamageUpRatio_PerLayer"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (ModifierLayers) || RETURN",
-                    "displayLines": "ModifierLayers",
-                    "constants": [],
-                    "variables": [
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "ModifierLayers"
                   },
                   "casterAssign": "TargetSelf"
                 }
@@ -218,12 +187,7 @@ const configAbility = {
       "statusName": "Performance Points",
       "stackLimit": 3,
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-        "displayLines": "ModifierStackLayer",
-        "constants": [],
-        "variables": [
-          "ModifierStackLayer"
-        ]
+        "displayLines": "ModifierStackLayer"
       },
       "execute": [
         {
@@ -296,20 +260,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"481524186\">Monster_Company_Coin_Monster_Mark</a>",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                      "displayLines": "MDF_DamageUpRatio_PerLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageUpRatio_PerLayer"
-                      ]
+                      "displayLines": "MDF_DamageUpRatio_PerLayer"
                     },
                     "ModifierLayers": {
-                      "operator": "Variables[0] (ModifierLayers) || RETURN",
-                      "displayLines": "ModifierLayers",
-                      "constants": [],
-                      "variables": [
-                        "ModifierLayers"
-                      ]
+                      "displayLines": "ModifierLayers"
                     }
                   }
                 }
@@ -344,21 +298,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1908212065\">Monster_Company_Coin_Avater_Effect</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                  "displayLines": "MDF_DamageUpRatio_PerLayer",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamageUpRatio_PerLayer"
-                  ]
+                  "displayLines": "MDF_DamageUpRatio_PerLayer"
                 }
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (ModifierLayers) || RETURN",
-                "displayLines": "ModifierLayers",
-                "constants": [],
-                "variables": [
-                  "ModifierLayers"
-                ]
+                "displayLines": "ModifierLayers"
               }
             },
             {
@@ -487,21 +431,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1908212065\">Monster_Company_Coin_Avater_Effect</a>",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                      "displayLines": "MDF_DamageUpRatio_PerLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageUpRatio_PerLayer"
-                      ]
+                      "displayLines": "MDF_DamageUpRatio_PerLayer"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (ModifierLayers) || RETURN",
-                    "displayLines": "ModifierLayers",
-                    "constants": [],
-                    "variables": [
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "ModifierLayers"
                   }
                 }
               ]
@@ -520,14 +454,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_AddLayer) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(MDF_AddLayer + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_AddLayer"
-                ]
+                "displayLines": "(MDF_AddLayer + 1)"
               },
               "variableName": "MDF_AddLayer"
             }
@@ -575,21 +502,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"141077401\">Monster_Company_Coin_Avater</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                      "displayLines": "MDF_DamageUpRatio_PerLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageUpRatio_PerLayer"
-                      ]
+                      "displayLines": "MDF_DamageUpRatio_PerLayer"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_AddLayer) || RETURN",
-                    "displayLines": "MDF_AddLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AddLayer"
-                    ]
+                    "displayLines": "MDF_AddLayer"
                   },
                   "casterAssign": "TargetSelf"
                 }
@@ -637,14 +554,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_AddLayer) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(MDF_AddLayer + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_AddLayer"
-                    ]
+                    "displayLines": "(MDF_AddLayer + 1)"
                   },
                   "variableName": "MDF_AddLayer"
                 }
@@ -718,12 +628,7 @@ const configAbility = {
       "statusName": "Performance Points",
       "stackLimit": 3,
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-        "displayLines": "ModifierStackLayer",
-        "constants": [],
-        "variables": [
-          "ModifierStackLayer"
-        ]
+        "displayLines": "ModifierStackLayer"
       },
       "execute": [
         {
@@ -839,20 +744,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-565074201\">Monster_Company_Coin_Avater_RemoveMark</a>",
                       "valuePerStack": {
                         "MDF_OriginLayer": {
-                          "operator": "Variables[0] (MDF_OriginLayer) || RETURN",
-                          "displayLines": "MDF_OriginLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_OriginLayer"
-                          ]
+                          "displayLines": "MDF_OriginLayer"
                         },
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                          "displayLines": "MDF_DamageUpRatio_PerLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageUpRatio_PerLayer"
-                          ]
+                          "displayLines": "MDF_DamageUpRatio_PerLayer"
                         }
                       },
                       "casterAssign": "TargetSelf"
@@ -896,21 +791,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"141077401\">Monster_Company_Coin_Avater</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                      "displayLines": "MDF_DamageUpRatio_PerLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageUpRatio_PerLayer"
-                      ]
+                      "displayLines": "MDF_DamageUpRatio_PerLayer"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (ModifierLayers) || RETURN",
-                    "displayLines": "ModifierLayers",
-                    "constants": [],
-                    "variables": [
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "ModifierLayers"
                   },
                   "casterAssign": "TargetSelf"
                 },
@@ -1025,13 +910,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageUpRatio_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)"
               }
             }
           ]
@@ -1206,20 +1085,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-565074201\">Monster_Company_Coin_Avater_RemoveMark</a>",
                       "valuePerStack": {
                         "MDF_OriginLayer": {
-                          "operator": "Variables[0] (MDF_OriginLayer) || RETURN",
-                          "displayLines": "MDF_OriginLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_OriginLayer"
-                          ]
+                          "displayLines": "MDF_OriginLayer"
                         },
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                          "displayLines": "MDF_DamageUpRatio_PerLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageUpRatio_PerLayer"
-                          ]
+                          "displayLines": "MDF_DamageUpRatio_PerLayer"
                         }
                       },
                       "casterAssign": "TargetSelf"
@@ -1263,21 +1132,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"141077401\">Monster_Company_Coin_Avater</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                      "displayLines": "MDF_DamageUpRatio_PerLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageUpRatio_PerLayer"
-                      ]
+                      "displayLines": "MDF_DamageUpRatio_PerLayer"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (ModifierLayers) || RETURN",
-                    "displayLines": "ModifierLayers",
-                    "constants": [],
-                    "variables": [
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "ModifierLayers"
                   },
                   "casterAssign": "TargetSelf"
                 },
@@ -1301,12 +1160,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1664994655\">Monster_Company_Coin_Elite_RemoveEffect</a>",
               "valuePerStack": {
                 "ModifierLayers": {
-                  "operator": "Variables[0] (ModifierLayers) || RETURN",
-                  "displayLines": "ModifierLayers",
-                  "constants": [],
-                  "variables": [
-                    "ModifierLayers"
-                  ]
+                  "displayLines": "ModifierLayers"
                 }
               }
             },
@@ -1369,12 +1223,7 @@ const configAbility = {
       "statusName": "Performance Points",
       "stackLimit": 1,
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-        "displayLines": "ModifierStackLayer",
-        "constants": [],
-        "variables": [
-          "ModifierStackLayer"
-        ]
+        "displayLines": "ModifierStackLayer"
       },
       "execute": [
         {
@@ -1512,20 +1361,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-565074201\">Monster_Company_Coin_Avater_RemoveMark</a>",
                       "valuePerStack": {
                         "MDF_OriginLayer": {
-                          "operator": "Variables[0] (MDF_OriginLayer) || RETURN",
-                          "displayLines": "MDF_OriginLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_OriginLayer"
-                          ]
+                          "displayLines": "MDF_OriginLayer"
                         },
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] (MDF_DamageUpRatio) || RETURN",
-                          "displayLines": "MDF_DamageUpRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageUpRatio"
-                          ]
+                          "displayLines": "MDF_DamageUpRatio"
                         }
                       },
                       "casterAssign": "TargetSelf"
@@ -1569,21 +1408,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"141077401\">Monster_Company_Coin_Avater</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (MDF_DamageUpRatio) || RETURN",
-                      "displayLines": "MDF_DamageUpRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageUpRatio"
-                      ]
+                      "displayLines": "MDF_DamageUpRatio"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (ModifierLayers) || RETURN",
-                    "displayLines": "ModifierLayers",
-                    "constants": [],
-                    "variables": [
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "ModifierLayers"
                   },
                   "casterAssign": "TargetSelf"
                 },
@@ -1625,13 +1454,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageUpRatio) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(MDF_DamageUpRatio * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageUpRatio",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(MDF_DamageUpRatio * ModifierLayers)"
               }
             }
           ]
@@ -1773,20 +1596,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-565074201\">Monster_Company_Coin_Avater_RemoveMark</a>",
                       "valuePerStack": {
                         "MDF_OriginLayer": {
-                          "operator": "Variables[0] (MDF_OriginLayer) || RETURN",
-                          "displayLines": "MDF_OriginLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_OriginLayer"
-                          ]
+                          "displayLines": "MDF_OriginLayer"
                         },
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] (MDF_DamageUpRatio) || RETURN",
-                          "displayLines": "MDF_DamageUpRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageUpRatio"
-                          ]
+                          "displayLines": "MDF_DamageUpRatio"
                         }
                       },
                       "casterAssign": "TargetSelf"
@@ -1830,21 +1643,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"141077401\">Monster_Company_Coin_Avater</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (MDF_DamageUpRatio) || RETURN",
-                      "displayLines": "MDF_DamageUpRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageUpRatio"
-                      ]
+                      "displayLines": "MDF_DamageUpRatio"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (ModifierLayers) || RETURN",
-                    "displayLines": "ModifierLayers",
-                    "constants": [],
-                    "variables": [
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "ModifierLayers"
                   },
                   "casterAssign": "TargetSelf"
                 },
@@ -2586,12 +2389,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] ({[PassiveSkillInitiate[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkillInitiate[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkillInitiate[0]]}"
-                      ]
+                      "displayLines": "{[PassiveSkillInitiate[0]]}"
                     }
                   }
                 }

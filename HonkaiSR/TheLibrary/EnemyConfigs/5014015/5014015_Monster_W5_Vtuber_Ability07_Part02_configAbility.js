@@ -120,13 +120,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill07[0]]}) || Variables[1] (Skill07_HPRatio) || MUL || RETURN",
-          "displayLines": "({[Skill07[0]]} * Skill07_HPRatio)",
-          "constants": [],
-          "variables": [
-            "{[Skill07[0]]}",
-            "Skill07_HPRatio"
-          ]
+          "displayLines": "({[Skill07[0]]} * Skill07_HPRatio)"
         },
         "HitSplit": 0.25,
         "Toughness": null,
@@ -148,13 +142,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill07[0]]}) || Variables[1] (Skill07_HPRatio) || MUL || RETURN",
-          "displayLines": "({[Skill07[0]]} * Skill07_HPRatio)",
-          "constants": [],
-          "variables": [
-            "{[Skill07[0]]}",
-            "Skill07_HPRatio"
-          ]
+          "displayLines": "({[Skill07[0]]} * Skill07_HPRatio)"
         },
         "HitSplit": 0.25,
         "Toughness": null,
@@ -176,13 +164,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill07[0]]}) || Variables[1] (Skill07_HPRatio) || MUL || RETURN",
-          "displayLines": "({[Skill07[0]]} * Skill07_HPRatio)",
-          "constants": [],
-          "variables": [
-            "{[Skill07[0]]}",
-            "Skill07_HPRatio"
-          ]
+          "displayLines": "({[Skill07[0]]} * Skill07_HPRatio)"
         },
         "HitSplit": 0.25,
         "Toughness": null,
@@ -204,13 +186,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill07[0]]}) || Variables[1] (Skill07_HPRatio) || MUL || RETURN",
-          "displayLines": "({[Skill07[0]]} * Skill07_HPRatio)",
-          "constants": [],
-          "variables": [
-            "{[Skill07[0]]}",
-            "Skill07_HPRatio"
-          ]
+          "displayLines": "({[Skill07[0]]} * Skill07_HPRatio)"
         },
         "HitSplit": 0.25,
         "Toughness": null,
@@ -252,30 +228,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1592948509\">Standard_AttackRatioDown</a>[<span class=\"descriptionNumberColor\">ATK Reduction</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill07[3]]}) || RETURN",
-                "displayLines": "{[Skill07[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill07[3]]}"
-                ]
+                "displayLines": "{[Skill07[3]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill07[1]]}) || Variables[1] (Skill07_HPRatio) || MUL || RETURN",
-                "displayLines": "({[Skill07[1]]} * Skill07_HPRatio)",
-                "constants": [],
-                "variables": [
-                  "{[Skill07[1]]}",
-                  "Skill07_HPRatio"
-                ]
+                "displayLines": "({[Skill07[1]]} * Skill07_HPRatio)"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] ({[Skill07[2]]}) || RETURN",
-                  "displayLines": "{[Skill07[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill07[2]]}"
-                  ]
+                  "displayLines": "{[Skill07[2]]}"
                 }
               }
             },
@@ -287,30 +247,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill07[3]]}) || RETURN",
-                "displayLines": "{[Skill07[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill07[3]]}"
-                ]
+                "displayLines": "{[Skill07[3]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill07[1]]}) || Variables[1] (Skill07_HPRatio) || MUL || RETURN",
-                "displayLines": "({[Skill07[1]]} * Skill07_HPRatio)",
-                "constants": [],
-                "variables": [
-                  "{[Skill07[1]]}",
-                  "Skill07_HPRatio"
-                ]
+                "displayLines": "({[Skill07[1]]} * Skill07_HPRatio)"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] ({[Skill07[2]]}) || RETURN",
-                  "displayLines": "{[Skill07[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill07[2]]}"
-                  ]
+                  "displayLines": "{[Skill07[2]]}"
                 }
               }
             },
@@ -322,30 +266,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-958879550\">Monster_Standard_SpeedRatioDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill07[3]]}) || RETURN",
-                "displayLines": "{[Skill07[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill07[3]]}"
-                ]
+                "displayLines": "{[Skill07[3]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill07[1]]}) || Variables[1] (Skill07_HPRatio) || MUL || RETURN",
-                "displayLines": "({[Skill07[1]]} * Skill07_HPRatio)",
-                "constants": [],
-                "variables": [
-                  "{[Skill07[1]]}",
-                  "Skill07_HPRatio"
-                ]
+                "displayLines": "({[Skill07[1]]} * Skill07_HPRatio)"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] ({[Skill07[2]]}) || RETURN",
-                  "displayLines": "{[Skill07[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill07[2]]}"
-                  ]
+                  "displayLines": "{[Skill07[2]]}"
                 }
               }
             },
@@ -357,30 +285,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1887773470\">Standard_FatigueRatio</a>[<span class=\"descriptionNumberColor\">Weaken</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill07[3]]}) || RETURN",
-                "displayLines": "{[Skill07[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill07[3]]}"
-                ]
+                "displayLines": "{[Skill07[3]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill07[1]]}) || Variables[1] (Skill07_HPRatio) || MUL || RETURN",
-                "displayLines": "({[Skill07[1]]} * Skill07_HPRatio)",
-                "constants": [],
-                "variables": [
-                  "{[Skill07[1]]}",
-                  "Skill07_HPRatio"
-                ]
+                "displayLines": "({[Skill07[1]]} * Skill07_HPRatio)"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] ({[Skill07[2]]}) || RETURN",
-                  "displayLines": "{[Skill07[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill07[2]]}"
-                  ]
+                  "displayLines": "{[Skill07[2]]}"
                 }
               }
             }
@@ -406,38 +318,17 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"2065489118\">Standard_Entangle</a>[<span class=\"descriptionNumberColor\">Entanglement</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill07[5]]}) || RETURN",
-                "displayLines": "{[Skill07[5]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill07[5]]}"
-                ]
+                "displayLines": "{[Skill07[5]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill07[4]]}) || Variables[1] (Skill07_HPRatio) || MUL || RETURN",
-                "displayLines": "({[Skill07[4]]} * Skill07_HPRatio)",
-                "constants": [],
-                "variables": [
-                  "{[Skill07[4]]}",
-                  "Skill07_HPRatio"
-                ]
+                "displayLines": "({[Skill07[4]]} * Skill07_HPRatio)"
               },
               "valuePerStack": {
                 "MDF_ActionDelayRatio": {
-                  "operator": "Variables[0] ({[Skill07[6]]}) || RETURN",
-                  "displayLines": "{[Skill07[6]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill07[6]]}"
-                  ]
+                  "displayLines": "{[Skill07[6]]}"
                 },
                 "Modifier_Entangle_DamagePercentage": {
-                  "operator": "Variables[0] ({[Skill07[7]]}) || RETURN",
-                  "displayLines": "{[Skill07[7]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill07[7]]}"
-                  ]
+                  "displayLines": "{[Skill07[7]]}"
                 },
                 "Modifier_Entangle_DamageValue": 0
               }

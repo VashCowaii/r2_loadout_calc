@@ -34,12 +34,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -61,21 +56,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-892055160\">LC_20007_AttackAddedRatio</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.24) || RETURN",
-                  "displayLines": "0.24",
-                  "constants": [],
-                  "variables": [
-                    0.24
-                  ]
+                  "displayLines": "0.24"
                 }
               }
             }

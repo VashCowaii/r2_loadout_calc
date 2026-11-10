@@ -67,13 +67,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (_MaxHP) || Variables[1] (MDF_ShieldRatio) || MUL || RETURN",
-                "displayLines": "(_MaxHP * MDF_ShieldRatio)",
-                "constants": [],
-                "variables": [
-                  "_MaxHP",
-                  "MDF_ShieldRatio"
-                ]
+                "displayLines": "(_MaxHP * MDF_ShieldRatio)"
               }
             },
             {
@@ -160,13 +154,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_MaxHP) || Variables[1] (0.16) || MUL || RETURN",
-                    "displayLines": "(_MaxHP * 0.16)",
-                    "constants": [],
-                    "variables": [
-                      "_MaxHP",
-                      0.16
-                    ]
+                    "displayLines": "(_MaxHP * 0.16)"
                   },
                   "variableName": "MDF_ShieldValue"
                 },
@@ -178,29 +166,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1791888969\">LC_24002_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "MDF_ShieldRatio": {
-                      "operator": "Variables[0] (0.16) || RETURN",
-                      "displayLines": "0.16",
-                      "constants": [],
-                      "variables": [
-                        0.16
-                      ]
+                      "displayLines": "0.16"
                     },
                     "MDF_ShieldValue": {
-                      "operator": "Variables[0] (MDF_ShieldValue) || RETURN",
-                      "displayLines": "MDF_ShieldValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_ShieldValue"
-                      ]
+                      "displayLines": "MDF_ShieldValue"
                     }
                   }
                 },
@@ -212,12 +185,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1590345463\">LC_24002_CD</a>",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   }
                 }
               ]

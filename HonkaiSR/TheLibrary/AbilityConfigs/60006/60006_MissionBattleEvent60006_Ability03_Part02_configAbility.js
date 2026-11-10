@@ -34,22 +34,12 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                  "displayLines": "#BattleEvent_P1_ADF",
-                  "constants": [],
-                  "variables": [
-                    "#BattleEvent_P1_ADF"
-                  ]
+                  "displayLines": "#BattleEvent_P1_ADF"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "HitSplit": 0.1,
                 "Toughness": {
-                  "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                  "displayLines": "#BattleEvent_P2_ADF",
-                  "constants": [],
-                  "variables": [
-                    "#BattleEvent_P2_ADF"
-                  ]
+                  "displayLines": "#BattleEvent_P2_ADF"
                 },
                 "ToughnessDMGType": {
                   "DamageType": "Imaginary"
@@ -69,22 +59,12 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-              "displayLines": "#BattleEvent_P1_ADF",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P1_ADF"
-              ]
+              "displayLines": "#BattleEvent_P1_ADF"
             },
             "dmgFormula": "Max HP Scaling",
             "HitSplit": 0.5,
             "Toughness": {
-              "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-              "displayLines": "#BattleEvent_P2_ADF",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P2_ADF"
-              ]
+              "displayLines": "#BattleEvent_P2_ADF"
             },
             "ToughnessDMGType": {
               "DamageType": "Imaginary"

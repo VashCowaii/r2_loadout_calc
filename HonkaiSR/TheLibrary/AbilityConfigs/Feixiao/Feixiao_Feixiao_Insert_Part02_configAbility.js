@@ -62,21 +62,11 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-1116070545\">Feixiao_DamageProperty</a>[<span class=\"descriptionNumberColor\">Thunderhunt</span>]",
       "duration": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       },
       "valuePerStack": {
         "MDF_PropertyRatio": {
-          "operator": "Variables[0] (0.6) || RETURN",
-          "displayLines": "0.6",
-          "constants": [],
-          "variables": [
-            0.6
-          ]
+          "displayLines": "0.6"
         }
       }
     },
@@ -95,21 +85,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1006222027\">Feixiao_Eidolon4_Property</a>[<span class=\"descriptionNumberColor\">Stormward I Hear</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "valuePerStack": {
             "MDF_PropertyRatio": {
-              "operator": "Variables[0] (0.08) || RETURN",
-              "displayLines": "0.08",
-              "constants": [],
-              "variables": [
-                0.08
-              ]
+              "displayLines": "0.08"
             }
           }
         }
@@ -144,21 +124,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] (Insert_DamagePercentage) || RETURN",
-          "displayLines": "Insert_DamagePercentage",
-          "constants": [],
-          "variables": [
-            "Insert_DamagePercentage"
-          ]
+          "displayLines": "Insert_DamagePercentage"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Variables[1] (Insert_StanceRatio) || MUL || RETURN",
-          "displayLines": "(ST Toughness Value * Insert_StanceRatio)",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value",
-            "Insert_StanceRatio"
-          ]
+          "displayLines": "(ST Toughness Value * Insert_StanceRatio)"
         },
         "instanceTag": "Feixiao_00_InsertAttack",
         "Tags": null,
@@ -213,12 +182,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             }
           ]

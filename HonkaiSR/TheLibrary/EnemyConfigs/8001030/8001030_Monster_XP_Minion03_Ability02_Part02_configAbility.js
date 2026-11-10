@@ -13,21 +13,11 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"1727496698\">Monster_XP_Minion03_Attack</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "duration": {
-        "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-        "displayLines": "{[Skill02[1]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill02[1]]}"
-        ]
+        "displayLines": "{[Skill02[1]]}"
       },
       "valuePerStack": {
         "MDF_AttackAddedRatio": {
-          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-          "displayLines": "{[Skill02[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[0]]}"
-          ]
+          "displayLines": "{[Skill02[0]]}"
         }
       }
     },

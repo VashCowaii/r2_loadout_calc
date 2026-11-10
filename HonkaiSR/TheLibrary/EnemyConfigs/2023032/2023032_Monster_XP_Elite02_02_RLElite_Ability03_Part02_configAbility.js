@@ -35,12 +35,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-          "displayLines": "{[Skill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "{[Skill03[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -56,29 +51,14 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
       "duration": {
-        "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-        "displayLines": "{[Skill03[2]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill03[2]]}"
-        ]
+        "displayLines": "{[Skill03[2]]}"
       },
       "baseChance": {
-        "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-        "displayLines": "{[Skill03[1]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill03[1]]}"
-        ]
+        "displayLines": "{[Skill03[1]]}"
       },
       "valuePerStack": {
         "Modifier_Poison_DamagePercentage": {
-          "operator": "Variables[0] ({[Skill03[3]]}) || RETURN",
-          "displayLines": "{[Skill03[3]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[3]]}"
-          ]
+          "displayLines": "{[Skill03[3]]}"
         }
       },
       "stackFlag": "CharacterSkill"

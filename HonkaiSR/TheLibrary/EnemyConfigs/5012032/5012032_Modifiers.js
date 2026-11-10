@@ -73,12 +73,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                "displayLines": "MDF_AllDamageTypeAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeAddedRatio"
-                ]
+                "displayLines": "MDF_AllDamageTypeAddedRatio"
               }
             },
             {
@@ -89,12 +84,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                "displayLines": "MDF_AllDamageReduce",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageReduce"
-                ]
+                "displayLines": "MDF_AllDamageReduce"
               }
             }
           ]
@@ -396,12 +386,7 @@ const configAbility = {
           "name": "Variable Value Range Conditions",
           "minValue": 0,
           "maxValue": {
-            "operator": "Variables[0] (MDF_ThresholdValue) || RETURN",
-            "displayLines": "MDF_ThresholdValue",
-            "constants": [],
-            "variables": [
-              "MDF_ThresholdValue"
-            ]
+            "displayLines": "MDF_ThresholdValue"
           },
           "leavingRange": [
             {
@@ -462,12 +447,7 @@ const configAbility = {
         {
           "name": "Variable Value Range Conditions",
           "minValue": {
-            "operator": "Variables[0] (MDF_ThresholdValue) || RETURN",
-            "displayLines": "MDF_ThresholdValue",
-            "constants": [],
-            "variables": [
-              "MDF_ThresholdValue"
-            ]
+            "displayLines": "MDF_ThresholdValue"
           },
           "maxValue": 9999,
           "onChange": [

@@ -118,12 +118,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceLightningPEN</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 },
                 {
@@ -258,13 +253,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_Layer) || Variables[1] (_IgnoreDefenceRatio) || MUL || RETURN",
-                    "displayLines": "(_Layer * _IgnoreDefenceRatio)",
-                    "constants": [],
-                    "variables": [
-                      "_Layer",
-                      "_IgnoreDefenceRatio"
-                    ]
+                    "displayLines": "(_Layer * _IgnoreDefenceRatio)"
                   },
                   "variableName": "_IgnoreDefenceRatioTotal"
                 }
@@ -305,21 +294,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1027471092\">Aglaea_Eidolon2_Effect</a>[<span class=\"descriptionNumberColor\">Sail on the Raft of Eyelids</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "valuePerStack": {
                         "_IgnoreDefenceRatio": {
-                          "operator": "Variables[0] (0.14) || RETURN",
-                          "displayLines": "0.14",
-                          "constants": [],
-                          "variables": [
-                            0.14
-                          ]
+                          "displayLines": "0.14"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -370,21 +349,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1027471092\">Aglaea_Eidolon2_Effect</a>[<span class=\"descriptionNumberColor\">Sail on the Raft of Eyelids</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "valuePerStack": {
                         "_IgnoreDefenceRatio": {
-                          "operator": "Variables[0] (0.14) || RETURN",
-                          "displayLines": "0.14",
-                          "constants": [],
-                          "variables": [
-                            0.14
-                          ]
+                          "displayLines": "0.14"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -691,12 +660,7 @@ const compositeAbilityObject = {
                         "value1": "_Energy",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Constants[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [
-                            1
-                          ],
-                          "variables": []
+                          "displayLines": "1"
                         }
                       }
                     ]
@@ -748,12 +712,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1374425540\">Memosprite_AglaeaServant_SummonerAddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (_SpeedLayer) || RETURN",
-                        "displayLines": "_SpeedLayer",
-                        "constants": [],
-                        "variables": [
-                          "_SpeedLayer"
-                        ]
+                        "displayLines": "_SpeedLayer"
                       }
                     }
                   ]
@@ -840,13 +799,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_Layer) || Variables[1] (MDF_SpeedUp) || MUL || RETURN",
-                    "displayLines": "(MDF_Layer * MDF_SpeedUp)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer",
-                      "MDF_SpeedUp"
-                    ]
+                    "displayLines": "(MDF_Layer * MDF_SpeedUp)"
                   },
                   "variableName": "MDF_PropertyValue"
                 }
@@ -874,13 +827,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_Layer) || Variables[1] (MDF_SpeedUp) || MUL || RETURN",
-                    "displayLines": "(MDF_Layer * MDF_SpeedUp)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer",
-                      "MDF_SpeedUp"
-                    ]
+                    "displayLines": "(MDF_Layer * MDF_SpeedUp)"
                   },
                   "variableName": "MDF_PropertyValue"
                 },
@@ -892,12 +839,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -928,14 +870,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0.5) || Variables[0] (_Layer) || MUL || RETURN",
-                    "displayLines": "(0.5 * _Layer)",
-                    "constants": [
-                      0.5
-                    ],
-                    "variables": [
-                      "_Layer"
-                    ]
+                    "displayLines": "(0.5 * _Layer)"
                   }
                 }
               ]
@@ -1010,12 +945,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -1032,13 +962,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackUp) || Variables[1] (MDF_Count2) || MUL || RETURN",
-                    "displayLines": "(MDF_AttackUp * MDF_Count2)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackUp",
-                      "MDF_Count2"
-                    ]
+                    "displayLines": "(MDF_AttackUp * MDF_Count2)"
                   },
                   "variableName": "MDF_PropertyValue2"
                 }
@@ -1074,27 +998,14 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_Count2) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(MDF_Count2 - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_Count2"
-                        ]
+                        "displayLines": "(MDF_Count2 - 1)"
                       },
                       "variableName": "MDF_Count2"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_AttackUp) || Variables[1] (MDF_Count2) || MUL || RETURN",
-                        "displayLines": "(MDF_AttackUp * MDF_Count2)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_AttackUp",
-                          "MDF_Count2"
-                        ]
+                        "displayLines": "(MDF_AttackUp * MDF_Count2)"
                       },
                       "variableName": "MDF_PropertyValue2"
                     }
@@ -1132,27 +1043,14 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_Count2) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_Count2 + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_Count2"
-                        ]
+                        "displayLines": "(MDF_Count2 + 1)"
                       },
                       "variableName": "MDF_Count2"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_AttackUp) || Variables[1] (MDF_Count2) || MUL || RETURN",
-                        "displayLines": "(MDF_AttackUp * MDF_Count2)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_AttackUp",
-                          "MDF_Count2"
-                        ]
+                        "displayLines": "(MDF_AttackUp * MDF_Count2)"
                       },
                       "variableName": "MDF_PropertyValue2"
                     }
@@ -1190,27 +1088,14 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_Count2) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(MDF_Count2 - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_Count2"
-                        ]
+                        "displayLines": "(MDF_Count2 - 1)"
                       },
                       "variableName": "MDF_Count2"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_AttackUp) || Variables[1] (MDF_Count2) || MUL || RETURN",
-                        "displayLines": "(MDF_AttackUp * MDF_Count2)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_AttackUp",
-                          "MDF_Count2"
-                        ]
+                        "displayLines": "(MDF_AttackUp * MDF_Count2)"
                       },
                       "variableName": "MDF_PropertyValue2"
                     }
@@ -1366,12 +1251,7 @@ const compositeAbilityObject = {
                             "target": "{{Caster}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (20) || RETURN",
-                            "displayLines": "20",
-                            "constants": [],
-                            "variables": [
-                              20
-                            ]
+                            "displayLines": "20"
                           },
                           "isFixed": "* ERR"
                         }
@@ -1447,12 +1327,7 @@ const compositeAbilityObject = {
                                 "target": "{{Caster}}"
                               },
                               "value": {
-                                "operator": "Variables[0] (20) || RETURN",
-                                "displayLines": "20",
-                                "constants": [],
-                                "variables": [
-                                  20
-                                ]
+                                "displayLines": "20"
                               },
                               "isFixed": "* ERR"
                             }
@@ -1476,12 +1351,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "operator": "Variables[0] (BombDamagePercentage) || RETURN",
-                              "displayLines": "BombDamagePercentage",
-                              "constants": [],
-                              "variables": [
-                                "BombDamagePercentage"
-                              ]
+                              "displayLines": "BombDamagePercentage"
                             },
                             "Toughness": null,
                             "instanceTag": "AglaeaBomb",
@@ -1540,13 +1410,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_Layer) || Variables[1] (0.15) || MUL || RETURN",
-                    "displayLines": "(_Layer * 0.15)",
-                    "constants": [],
-                    "variables": [
-                      "_Layer",
-                      0.15
-                    ]
+                    "displayLines": "(_Layer * 0.15)"
                   },
                   "variableName": "SpeedAddTotal"
                 },
@@ -1558,12 +1422,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (SpeedAddTotal) || RETURN",
-                    "displayLines": "SpeedAddTotal",
-                    "constants": [],
-                    "variables": [
-                      "SpeedAddTotal"
-                    ]
+                    "displayLines": "SpeedAddTotal"
                   }
                 }
               ]
@@ -1634,41 +1493,21 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (_CurrentSpeedConvert) || SUB || RETURN",
-                    "displayLines": "(_CurrentSpeed - _CurrentSpeedConvert)",
-                    "constants": [],
-                    "variables": [
-                      "_CurrentSpeed",
-                      "_CurrentSpeedConvert"
-                    ]
+                    "displayLines": "(_CurrentSpeed - _CurrentSpeedConvert)"
                   },
                   "variableName": "_CurrentSpeed"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_ServantCurrentSpeed) || Variables[1] (_ServantCurrentSpeedConvert) || SUB || RETURN",
-                    "displayLines": "(_ServantCurrentSpeed - _ServantCurrentSpeedConvert)",
-                    "constants": [],
-                    "variables": [
-                      "_ServantCurrentSpeed",
-                      "_ServantCurrentSpeedConvert"
-                    ]
+                    "displayLines": "(_ServantCurrentSpeed - _ServantCurrentSpeedConvert)"
                   },
                   "variableName": "_ServantCurrentSpeed"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (7.2) || MUL || Variables[2] (_ServantCurrentSpeed) || Variables[3] (3.6) || MUL || ADD || RETURN",
-                    "displayLines": "((_CurrentSpeed * 7.2) + (_ServantCurrentSpeed * 3.6))",
-                    "constants": [],
-                    "variables": [
-                      "_CurrentSpeed",
-                      7.2,
-                      "_ServantCurrentSpeed",
-                      3.6
-                    ]
+                    "displayLines": "((_CurrentSpeed * 7.2) + (_ServantCurrentSpeed * 3.6))"
                   },
                   "variableName": "_AttackConvert"
                 },
@@ -1680,12 +1519,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (_AttackConvert) || RETURN",
-                    "displayLines": "_AttackConvert",
-                    "constants": [],
-                    "variables": [
-                      "_AttackConvert"
-                    ]
+                    "displayLines": "_AttackConvert"
                   }
                 }
               ]
@@ -2163,28 +1997,13 @@ const compositeAbilityObject = {
               "memoID": 11402,
               "valuePerStack": {
                 "_PointB3Layer": {
-                  "operator": "Variables[0] (_EnergyReduce) || RETURN",
-                  "displayLines": "_EnergyReduce",
-                  "constants": [],
-                  "variables": [
-                    "_EnergyReduce"
-                  ]
+                  "displayLines": "_EnergyReduce"
                 },
                 "Ability11_DamagePercentage": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
+                  "displayLines": "2"
                 },
                 "Ability11_DamagePercentageAD": {
-                  "operator": "Variables[0] (0.9) || RETURN",
-                  "displayLines": "0.9",
-                  "constants": [],
-                  "variables": [
-                    0.9
-                  ]
+                  "displayLines": "0.9"
                 }
               }
             },
@@ -2238,12 +2057,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (30) || RETURN",
-                        "displayLines": "30",
-                        "constants": [],
-                        "variables": [
-                          30
-                        ]
+                        "displayLines": "30"
                       },
                       "isFixed": "* ERR"
                     },
@@ -2257,12 +2071,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Thunder",
                         "Damage": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -2289,36 +2098,16 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"216440055\">Aglaea_GoldenSword_Mark</a>[<span class=\"descriptionNumberColor\">Seam Stitch</span>]",
                           "valuePerStack": {
                             "BombDamagePercentage": {
-                              "operator": "Variables[0] (0.3) || RETURN",
-                              "displayLines": "0.3",
-                              "constants": [],
-                              "variables": [
-                                0.3
-                              ]
+                              "displayLines": "0.3"
                             },
                             "_SpRecover": {
-                              "operator": "Variables[0] (20) || RETURN",
-                              "displayLines": "20",
-                              "constants": [],
-                              "variables": [
-                                20
-                              ]
+                              "displayLines": "20"
                             },
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.3) || RETURN",
-                              "displayLines": "0.3",
-                              "constants": [],
-                              "variables": [
-                                0.3
-                              ]
+                              "displayLines": "0.3"
                             },
                             "MDF_PropertyValue2": {
-                              "operator": "Variables[0] (0.15) || RETURN",
-                              "displayLines": "0.15",
-                              "constants": [],
-                              "variables": [
-                                0.15
-                              ]
+                              "displayLines": "0.15"
                             }
                           }
                         }
@@ -2542,13 +2331,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_SPvalue) || Variables[1] (_MaxSp) || DIV || RETURN",
-                    "displayLines": "(_SPvalue / _MaxSp)",
-                    "constants": [],
-                    "variables": [
-                      "_SPvalue",
-                      "_MaxSp"
-                    ]
+                    "displayLines": "(_SPvalue / _MaxSp)"
                   },
                   "variableName": "_SPRatio"
                 },
@@ -2636,12 +2419,7 @@ const compositeAbilityObject = {
             "target": "{{Caster's Memosprite}}"
           },
           "value": {
-            "operator": "Variables[0] (ST Toughness Value) || RETURN",
-            "displayLines": "ST Toughness Value",
-            "constants": [],
-            "variables": [
-              "ST Toughness Value"
-            ]
+            "displayLines": "ST Toughness Value"
           },
           "variableName": "_PairStanceDMG1"
         },
@@ -2652,40 +2430,21 @@ const compositeAbilityObject = {
             "target": "{{Caster's Memosprite}}"
           },
           "value": {
-            "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-            "displayLines": "Blast Toughness Value",
-            "constants": [],
-            "variables": [
-              "Blast Toughness Value"
-            ]
+            "displayLines": "Blast Toughness Value"
           },
           "variableName": "_PairStanceDMG2"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_Energy) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(_Energy - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "_Energy"
-            ]
+            "displayLines": "(_Energy - 1)"
           },
           "variableName": "_Energy"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Skill11Count) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(Skill11Count + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "Skill11Count"
-            ]
+            "displayLines": "(Skill11Count + 1)"
           },
           "variableName": "Skill11Count"
         },
@@ -2709,36 +2468,16 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"216440055\">Aglaea_GoldenSword_Mark</a>[<span class=\"descriptionNumberColor\">Seam Stitch</span>]",
               "valuePerStack": {
                 "BombDamagePercentage": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 },
                 "_SpRecover": {
-                  "operator": "Variables[0] (20) || RETURN",
-                  "displayLines": "20",
-                  "constants": [],
-                  "variables": [
-                    20
-                  ]
+                  "displayLines": "20"
                 },
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 },
                 "MDF_PropertyValue2": {
-                  "operator": "Variables[0] (0.15) || RETURN",
-                  "displayLines": "0.15",
-                  "constants": [],
-                  "variables": [
-                    0.15
-                  ]
+                  "displayLines": "0.15"
                 }
               }
             }
@@ -2753,24 +2492,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (2) || Variables[1] (_Rank06Ratio) || ADD || RETURN",
-              "displayLines": "(2 + _Rank06Ratio)",
-              "constants": [],
-              "variables": [
-                2,
-                "_Rank06Ratio"
-              ]
+              "displayLines": "(2 + _Rank06Ratio)"
             },
             "HitSplit": 0.25,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "(ST Toughness Value * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "(ST Toughness Value * 0.5)"
             },
             "instanceTag": "AglasaPairsDamage",
             "Tags": [
@@ -2788,24 +2514,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (0.9) || Variables[1] (_Rank06Ratio) || ADD || RETURN",
-              "displayLines": "(0.9 + _Rank06Ratio)",
-              "constants": [],
-              "variables": [
-                0.9,
-                "_Rank06Ratio"
-              ]
+              "displayLines": "(0.9 + _Rank06Ratio)"
             },
             "HitSplit": 0.25,
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "(Blast Toughness Value * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "(Blast Toughness Value * 0.5)"
             },
             "instanceTag": "AglasaPairsDamage",
             "Tags": [
@@ -2822,24 +2535,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (2) || Variables[1] (_Rank06Ratio) || ADD || RETURN",
-              "displayLines": "(2 + _Rank06Ratio)",
-              "constants": [],
-              "variables": [
-                2,
-                "_Rank06Ratio"
-              ]
+              "displayLines": "(2 + _Rank06Ratio)"
             },
             "HitSplit": 0.25,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "(ST Toughness Value * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "(ST Toughness Value * 0.5)"
             },
             "instanceTag": "AglasaPairsDamage",
             "Tags": [
@@ -2857,24 +2557,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (0.9) || Variables[1] (_Rank06Ratio) || ADD || RETURN",
-              "displayLines": "(0.9 + _Rank06Ratio)",
-              "constants": [],
-              "variables": [
-                0.9,
-                "_Rank06Ratio"
-              ]
+              "displayLines": "(0.9 + _Rank06Ratio)"
             },
             "HitSplit": 0.25,
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "(Blast Toughness Value * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "(Blast Toughness Value * 0.5)"
             },
             "instanceTag": "AglasaPairsDamage",
             "Tags": [
@@ -2891,24 +2578,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (2) || Variables[1] (_Rank06Ratio) || ADD || RETURN",
-              "displayLines": "(2 + _Rank06Ratio)",
-              "constants": [],
-              "variables": [
-                2,
-                "_Rank06Ratio"
-              ]
+              "displayLines": "(2 + _Rank06Ratio)"
             },
             "HitSplit": 0.25,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "(ST Toughness Value * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "(ST Toughness Value * 0.5)"
             },
             "instanceTag": "AglasaPairsDamage",
             "Tags": [
@@ -2926,24 +2600,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (0.9) || Variables[1] (_Rank06Ratio) || ADD || RETURN",
-              "displayLines": "(0.9 + _Rank06Ratio)",
-              "constants": [],
-              "variables": [
-                0.9,
-                "_Rank06Ratio"
-              ]
+              "displayLines": "(0.9 + _Rank06Ratio)"
             },
             "HitSplit": 0.25,
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "(Blast Toughness Value * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "(Blast Toughness Value * 0.5)"
             },
             "instanceTag": "AglasaPairsDamage",
             "Tags": [
@@ -2960,24 +2621,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (2) || Variables[1] (_Rank06Ratio) || ADD || RETURN",
-              "displayLines": "(2 + _Rank06Ratio)",
-              "constants": [],
-              "variables": [
-                2,
-                "_Rank06Ratio"
-              ]
+              "displayLines": "(2 + _Rank06Ratio)"
             },
             "HitSplit": 0.25,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "(ST Toughness Value * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "(ST Toughness Value * 0.5)"
             },
             "instanceTag": "AglasaPairsDamage",
             "Tags": [
@@ -2995,24 +2643,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (0.9) || Variables[1] (_Rank06Ratio) || ADD || RETURN",
-              "displayLines": "(0.9 + _Rank06Ratio)",
-              "constants": [],
-              "variables": [
-                0.9,
-                "_Rank06Ratio"
-              ]
+              "displayLines": "(0.9 + _Rank06Ratio)"
             },
             "HitSplit": 0.25,
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "(Blast Toughness Value * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "(Blast Toughness Value * 0.5)"
             },
             "instanceTag": "AglasaPairsDamage",
             "Tags": [
@@ -3113,12 +2748,7 @@ const compositeAbilityObject = {
             "target": "{{Caster's Memosprite}}"
           },
           "value": {
-            "operator": "Variables[0] (_Energy) || RETURN",
-            "displayLines": "_Energy",
-            "constants": [],
-            "variables": [
-              "_Energy"
-            ]
+            "displayLines": "_Energy"
           },
           "variableName": "_CasterEnergy"
         },
@@ -3129,12 +2759,7 @@ const compositeAbilityObject = {
             "target": "{{Caster's Memosprite}}"
           },
           "healPercent": {
-            "operator": "Variables[0] (0.5) || RETURN",
-            "displayLines": "0.5",
-            "constants": [],
-            "variables": [
-              0.5
-            ]
+            "displayLines": "0.5"
           },
           "formula": "Heal from Target MaxHP"
         },
@@ -3240,28 +2865,13 @@ const compositeAbilityObject = {
               "memoID": 11402,
               "valuePerStack": {
                 "_PointB3Layer": {
-                  "operator": "Variables[0] (_EnergyReduce) || RETURN",
-                  "displayLines": "_EnergyReduce",
-                  "constants": [],
-                  "variables": [
-                    "_EnergyReduce"
-                  ]
+                  "displayLines": "_EnergyReduce"
                 },
                 "Ability11_DamagePercentage": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
+                  "displayLines": "2"
                 },
                 "Ability11_DamagePercentageAD": {
-                  "operator": "Variables[0] (0.9) || RETURN",
-                  "displayLines": "0.9",
-                  "constants": [],
-                  "variables": [
-                    0.9
-                  ]
+                  "displayLines": "0.9"
                 }
               }
             },
@@ -3320,13 +2930,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (ServantMaxHP) || Variables[1] (ServantCurrentHP) || SUB || RETURN",
-                "displayLines": "(ServantMaxHP - ServantCurrentHP)",
-                "constants": [],
-                "variables": [
-                  "ServantMaxHP",
-                  "ServantCurrentHP"
-                ]
+                "displayLines": "(ServantMaxHP - ServantCurrentHP)"
               },
               "variableName": "ServantHealValue"
             },
@@ -3337,12 +2941,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster's Memosprite}}"
               },
               "healFlat": {
-                "operator": "Variables[0] (ServantHealValue) || RETURN",
-                "displayLines": "ServantHealValue",
-                "constants": [],
-                "variables": [
-                  "ServantHealValue"
-                ]
+                "displayLines": "ServantHealValue"
               },
               "formula": "Heal from Base Value"
             }
@@ -3362,12 +2961,7 @@ const compositeAbilityObject = {
           "eventID": 11402,
           "variables": {
             "BattleEvent_Aglaea_BaseSpeed": {
-              "operator": "Variables[0] (100) || RETURN",
-              "displayLines": "100",
-              "constants": [],
-              "variables": [
-                100
-              ]
+              "displayLines": "100"
             }
           }
         },
@@ -3395,12 +2989,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             }
@@ -3516,28 +3105,13 @@ const compositeAbilityObject = {
               "memoID": 11402,
               "valuePerStack": {
                 "_PointB3Layer": {
-                  "operator": "Variables[0] (_EnergyReduce) || RETURN",
-                  "displayLines": "_EnergyReduce",
-                  "constants": [],
-                  "variables": [
-                    "_EnergyReduce"
-                  ]
+                  "displayLines": "_EnergyReduce"
                 },
                 "Ability11_DamagePercentage": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
+                  "displayLines": "2"
                 },
                 "Ability11_DamagePercentageAD": {
-                  "operator": "Variables[0] (0.9) || RETURN",
-                  "displayLines": "0.9",
-                  "constants": [],
-                  "variables": [
-                    0.9
-                  ]
+                  "displayLines": "0.9"
                 }
               }
             },
@@ -3562,12 +3136,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster's Memosprite}}"
               },
               "value": {
-                "operator": "Variables[0] (_Energy) || RETURN",
-                "displayLines": "_Energy",
-                "constants": [],
-                "variables": [
-                  "_Energy"
-                ]
+                "displayLines": "_Energy"
               },
               "variableName": "_CasterEnergy"
             },
@@ -3661,36 +3230,16 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"216440055\">Aglaea_GoldenSword_Mark</a>[<span class=\"descriptionNumberColor\">Seam Stitch</span>]",
               "valuePerStack": {
                 "BombDamagePercentage": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 },
                 "_SpRecover": {
-                  "operator": "Variables[0] (20) || RETURN",
-                  "displayLines": "20",
-                  "constants": [],
-                  "variables": [
-                    20
-                  ]
+                  "displayLines": "20"
                 },
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 },
                 "MDF_PropertyValue2": {
-                  "operator": "Variables[0] (0.15) || RETURN",
-                  "displayLines": "0.15",
-                  "constants": [],
-                  "variables": [
-                    0.15
-                  ]
+                  "displayLines": "0.15"
                 }
               }
             }
@@ -3705,21 +3254,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "HitSplit": 0.2,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Basic ATK",
@@ -3735,21 +3274,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "HitSplit": 0.2,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Basic ATK",
@@ -3765,21 +3294,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "HitSplit": 0.6,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Basic ATK",
@@ -3990,12 +3509,7 @@ const compositeAbilityObject = {
                   "modifierName": "<a class=\"gModGreen\" id=\"1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
                   "variableName": "MDF_PropertyValue2",
                   "value": {
-                    "operator": "Variables[0] (0.6) || RETURN",
-                    "displayLines": "0.6",
-                    "constants": [],
-                    "variables": [
-                      0.6
-                    ]
+                    "displayLines": "0.6"
                   }
                 }
               ],
@@ -4018,12 +3532,7 @@ const compositeAbilityObject = {
                       "modifierName": "<a class=\"gModGreen\" id=\"1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
                       "variableName": "MDF_PropertyValue2",
                       "value": {
-                        "operator": "Variables[0] (0.3) || RETURN",
-                        "displayLines": "0.3",
-                        "constants": [],
-                        "variables": [
-                          0.3
-                        ]
+                        "displayLines": "0.3"
                       }
                     }
                   ],
@@ -4046,12 +3555,7 @@ const compositeAbilityObject = {
                           "modifierName": "<a class=\"gModGreen\" id=\"1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
                           "variableName": "MDF_PropertyValue2",
                           "value": {
-                            "operator": "Variables[0] (0.1) || RETURN",
-                            "displayLines": "0.1",
-                            "constants": [],
-                            "variables": [
-                              0.1
-                            ]
+                            "displayLines": "0.1"
                           }
                         }
                       ],
@@ -4165,12 +3669,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-394991116\">Memosprite_AglaeaServant_AddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (_MaxLayer2) || RETURN",
-                    "displayLines": "_MaxLayer2",
-                    "constants": [],
-                    "variables": [
-                      "_MaxLayer2"
-                    ]
+                    "displayLines": "_MaxLayer2"
                   },
                   "addStacksPerTrigger": 1
                 },
@@ -4193,12 +3692,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1374425540\">Memosprite_AglaeaServant_SummonerAddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (_MaxLayer2) || RETURN",
-                        "displayLines": "_MaxLayer2",
-                        "constants": [],
-                        "variables": [
-                          "_MaxLayer2"
-                        ]
+                        "displayLines": "_MaxLayer2"
                       },
                       "addStacksPerTrigger": 1,
                       "casterAssign": "TargetSelf"
@@ -4290,12 +3784,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (AGLAEA_OBJECT_UNUSED_7) || RETURN",
-                    "displayLines": "AGLAEA_OBJECT_UNUSED_7",
-                    "constants": [],
-                    "variables": [
-                      "AGLAEA_OBJECT_UNUSED_7"
-                    ]
+                    "displayLines": "AGLAEA_OBJECT_UNUSED_7"
                   },
                   "variableName": "SkillTree_PointB1_P1_DamageTaken1"
                 }
@@ -4350,13 +3839,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Thunder",
                         "Damage": {
-                          "operator": "Variables[0] (BombDamagePercentage) || Variables[1] (_Layer) || MUL || RETURN",
-                          "displayLines": "(BombDamagePercentage * _Layer)",
-                          "constants": [],
-                          "variables": [
-                            "BombDamagePercentage",
-                            "_Layer"
-                          ]
+                          "displayLines": "(BombDamagePercentage * _Layer)"
                         },
                         "Toughness": null,
                         "instanceTag": "AglaeaBomb",
@@ -4457,12 +3940,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster's Summoner}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (_MaxLayer) || RETURN",
-                    "displayLines": "_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "_MaxLayer"
-                    ]
+                    "displayLines": "_MaxLayer"
                   },
                   "assignState": "False",
                   "bar#": "Number"
@@ -4495,12 +3973,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_Layer) || RETURN",
-                    "displayLines": "_Layer",
-                    "constants": [],
-                    "variables": [
-                      "_Layer"
-                    ]
+                    "displayLines": "_Layer"
                   },
                   "displaySubType": "Fraction",
                   "target": {
@@ -4508,12 +3981,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster's Summoner}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (_MaxLayer) || RETURN",
-                    "displayLines": "_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "_MaxLayer"
-                    ]
+                    "displayLines": "_MaxLayer"
                   },
                   "assignState": "True",
                   "bar#": "Number"
@@ -4521,13 +3989,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_Layer) || Variables[1] (55) || MUL || RETURN",
-                    "displayLines": "(_Layer * 55)",
-                    "constants": [],
-                    "variables": [
-                      "_Layer",
-                      55
-                    ]
+                    "displayLines": "(_Layer * 55)"
                   },
                   "variableName": "SpeedAddTotal"
                 },
@@ -4539,12 +4001,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (SpeedAddTotal) || RETURN",
-                    "displayLines": "SpeedAddTotal",
-                    "constants": [],
-                    "variables": [
-                      "SpeedAddTotal"
-                    ]
+                    "displayLines": "SpeedAddTotal"
                   }
                 }
               ]
@@ -4583,22 +4040,10 @@ const compositeAbilityObject = {
                       },
                       "state": "Mask_AliveOrLimbo",
                       "selfSplit": {
-                        "operator": "Constants[0] (1) || Variables[0] (MDF_SplitPercentage) || SUB || RETURN",
-                        "displayLines": "(1 - MDF_SplitPercentage)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_SplitPercentage"
-                        ]
+                        "displayLines": "(1 - MDF_SplitPercentage)"
                       },
                       "targetSplit": {
-                        "operator": "Variables[0] (MDF_SplitPercentage) || RETURN",
-                        "displayLines": "MDF_SplitPercentage",
-                        "constants": [],
-                        "variables": [
-                          "MDF_SplitPercentage"
-                        ]
+                        "displayLines": "MDF_SplitPercentage"
                       }
                     }
                   ]
@@ -4655,12 +4100,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster's Summoner}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (20) || RETURN",
-                    "displayLines": "20",
-                    "constants": [],
-                    "variables": [
-                      20
-                    ]
+                    "displayLines": "20"
                   },
                   "isFixed": "* ERR"
                 }
@@ -4854,23 +4294,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (Ability11_DamagePercentage) || Variables[1] (_Rank06Ratio) || ADD || RETURN",
-              "displayLines": "(Ability11_DamagePercentage + _Rank06Ratio)",
-              "constants": [],
-              "variables": [
-                "Ability11_DamagePercentage",
-                "_Rank06Ratio"
-              ]
+              "displayLines": "(Ability11_DamagePercentage + _Rank06Ratio)"
             },
             "Toughness": {
-              "operator": "Variables[0] (_PairStanceDMG1) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "(_PairStanceDMG1 * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "_PairStanceDMG1"
-              ]
+              "displayLines": "(_PairStanceDMG1 * 0.5)"
             },
             "ToughnessDMGType": {
               "DamageType": "Thunder"
@@ -4891,23 +4318,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (Ability11_DamagePercentageAD) || Variables[1] (_Rank06Ratio) || ADD || RETURN",
-              "displayLines": "(Ability11_DamagePercentageAD + _Rank06Ratio)",
-              "constants": [],
-              "variables": [
-                "Ability11_DamagePercentageAD",
-                "_Rank06Ratio"
-              ]
+              "displayLines": "(Ability11_DamagePercentageAD + _Rank06Ratio)"
             },
             "Toughness": {
-              "operator": "Variables[0] (_PairStanceDMG2) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "(_PairStanceDMG2 * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "_PairStanceDMG2"
-              ]
+              "displayLines": "(_PairStanceDMG2 * 0.5)"
             },
             "ToughnessDMGType": {
               "DamageType": "Thunder"
@@ -5004,14 +4418,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (1) || Variables[0] (MDF_Property) || SUB || RETURN",
-                    "displayLines": "(1 - MDF_Property)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_Property"
-                    ]
+                    "displayLines": "(1 - MDF_Property)"
                   }
                 }
               ]
@@ -5037,12 +4444,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_CritDmg) || RETURN",
-                    "displayLines": "MDF_CritDmg",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CritDmg"
-                    ]
+                    "displayLines": "MDF_CritDmg"
                   }
                 }
               ]
@@ -5159,13 +4561,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (6) || Variables[1] (1) || ADD || RETURN",
-                        "displayLines": "(6 + 1)",
-                        "constants": [],
-                        "variables": [
-                          6,
-                          1
-                        ]
+                        "displayLines": "(6 + 1)"
                       },
                       "variableName": "_MaxLayer"
                     }
@@ -5174,12 +4570,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (6) || RETURN",
-                        "displayLines": "6",
-                        "constants": [],
-                        "variables": [
-                          6
-                        ]
+                        "displayLines": "6"
                       },
                       "variableName": "_MaxLayer"
                     }
@@ -5194,12 +4585,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster's Summoner}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (_MaxLayer) || RETURN",
-                    "displayLines": "_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "_MaxLayer"
-                    ]
+                    "displayLines": "_MaxLayer"
                   },
                   "assignState": "True",
                   "bar#": "Number"
@@ -5252,12 +4638,7 @@ const compositeAbilityObject = {
                             "value1": "_KeepSpeedLayer",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (1) || RETURN",
-                              "displayLines": "1",
-                              "constants": [],
-                              "variables": [
-                                1
-                              ]
+                              "displayLines": "1"
                             }
                           },
                           "passed": [
@@ -5269,20 +4650,10 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"-394991116\">Memosprite_AglaeaServant_AddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] (_MaxLayer) || RETURN",
-                                "displayLines": "_MaxLayer",
-                                "constants": [],
-                                "variables": [
-                                  "_MaxLayer"
-                                ]
+                                "displayLines": "_MaxLayer"
                               },
                               "addStacksPerTrigger": {
-                                "operator": "Variables[0] (1) || RETURN",
-                                "displayLines": "1",
-                                "constants": [],
-                                "variables": [
-                                  1
-                                ]
+                                "displayLines": "1"
                               }
                             }
                           ],
@@ -5295,20 +4666,10 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"-394991116\">Memosprite_AglaeaServant_AddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] (_MaxLayer) || RETURN",
-                                "displayLines": "_MaxLayer",
-                                "constants": [],
-                                "variables": [
-                                  "_MaxLayer"
-                                ]
+                                "displayLines": "_MaxLayer"
                               },
                               "addStacksPerTrigger": {
-                                "operator": "Variables[0] (_KeepSpeedLayer) || RETURN",
-                                "displayLines": "_KeepSpeedLayer",
-                                "constants": [],
-                                "variables": [
-                                  "_KeepSpeedLayer"
-                                ]
+                                "displayLines": "_KeepSpeedLayer"
                               }
                             }
                           ]
@@ -5375,12 +4736,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"783183170\">Memosprite_AglaeaServant_SummonerKeepSpeed</a>",
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (_AddSpeedLayer) || RETURN",
-                            "displayLines": "_AddSpeedLayer",
-                            "constants": [],
-                            "variables": [
-                              "_AddSpeedLayer"
-                            ]
+                            "displayLines": "_AddSpeedLayer"
                           }
                         }
                       ]
@@ -5476,12 +4832,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-394991116\">Memosprite_AglaeaServant_AddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (_MaxLayer) || RETURN",
-                        "displayLines": "_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "_MaxLayer"
-                        ]
+                        "displayLines": "_MaxLayer"
                       },
                       "addStacksPerTrigger": 1
                     },
@@ -5504,12 +4855,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1374425540\">Memosprite_AglaeaServant_SummonerAddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (_MaxLayer) || RETURN",
-                            "displayLines": "_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "_MaxLayer"
-                            ]
+                            "displayLines": "_MaxLayer"
                           },
                           "addStacksPerTrigger": 1,
                           "casterAssign": "TargetSelf"
@@ -5545,21 +4891,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1.1) || RETURN",
-              "displayLines": "1.1",
-              "constants": [],
-              "variables": [
-                1.1
-              ]
+              "displayLines": "1.1"
             },
             "HitSplit": 0.3,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Memosprite",
@@ -5575,21 +4911,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1.1) || RETURN",
-              "displayLines": "1.1",
-              "constants": [],
-              "variables": [
-                1.1
-              ]
+              "displayLines": "1.1"
             },
             "HitSplit": 0.3,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Memosprite",
@@ -5609,21 +4935,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (1.1) || RETURN",
-                  "displayLines": "1.1",
-                  "constants": [],
-                  "variables": [
-                    1.1
-                  ]
+                  "displayLines": "1.1"
                 },
                 "HitSplit": 0.1,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Memosprite",
@@ -5639,21 +4955,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (0.66) || RETURN",
-                  "displayLines": "0.66",
-                  "constants": [],
-                  "variables": [
-                    0.66
-                  ]
+                  "displayLines": "0.66"
                 },
                 "HitSplit": 0.25,
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Memosprite"
@@ -5678,21 +4984,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1.1) || RETURN",
-              "displayLines": "1.1",
-              "constants": [],
-              "variables": [
-                1.1
-              ]
+              "displayLines": "1.1"
             },
             "HitSplit": 0.2,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Memosprite",
@@ -5708,21 +5004,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (0.66) || RETURN",
-              "displayLines": "0.66",
-              "constants": [],
-              "variables": [
-                0.66
-              ]
+              "displayLines": "0.66"
             },
             "HitSplit": 0.5,
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null,
             "attackType": "Memosprite"

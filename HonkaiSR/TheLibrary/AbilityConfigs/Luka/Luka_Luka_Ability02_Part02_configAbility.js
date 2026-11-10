@@ -32,22 +32,12 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-632542414\">Luka_Eidolon1_Sub</a>[<span class=\"descriptionNumberColor\">Fighting Endlessly</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "stackLimit": 1,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.15) || RETURN",
-              "displayLines": "0.15",
-              "constants": [],
-              "variables": [
-                0.15
-              ]
+              "displayLines": "0.15"
             }
           }
         }
@@ -71,12 +61,7 @@ const configAbility = {
               },
               "typeOverride": "Buff",
               "dispelCount": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "dispelOrder": "LastAdded",
               "counterKey": "BuffClear"
@@ -93,20 +78,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (1.2) || RETURN",
-              "displayLines": "1.2",
-              "constants": [],
-              "variables": [
-                1.2
-              ]
+              "displayLines": "1.2"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -121,37 +96,17 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1202378594\">Luka_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "baseChance": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "valuePerStack": {
             "Modifier_Tear_DamageRatio": {
-              "operator": "Variables[0] (0.24) || RETURN",
-              "displayLines": "0.24",
-              "constants": [],
-              "variables": [
-                0.24
-              ]
+              "displayLines": "0.24"
             },
             "Modifier_Tear_MaxPercentage": {
-              "operator": "Variables[0] (3.38) || RETURN",
-              "displayLines": "3.38",
-              "constants": [],
-              "variables": [
-                3.38
-              ]
+              "displayLines": "3.38"
             }
           }
         }
@@ -166,12 +121,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1275149529\">Luka_ReloadBullet</a>",
       "valuePerStack": {
         "MDF_AddValue": {
-          "operator": "Variables[0] (1) || RETURN",
-          "displayLines": "1",
-          "constants": [],
-          "variables": [
-            1
-          ]
+          "displayLines": "1"
         }
       }
     },

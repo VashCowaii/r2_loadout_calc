@@ -43,12 +43,7 @@ const configAbility = {
                   "variableName": "Xuanlu_04_Charged",
                   "context": "TargetEntity",
                   "value": {
-                    "operator": "Constants[0] (1) || INVERT || RETURN",
-                    "displayLines": "-1",
-                    "constants": [
-                      1
-                    ],
-                    "variables": []
+                    "displayLines": "-1"
                   }
                 }
               ]

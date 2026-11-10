@@ -93,12 +93,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1175516973\">MStrongChallengeEX_Talent_StageAbility_PLY_032</a>",
                   "valuePerStack": {
                     "MDF_AllDamageAddedRatio": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }

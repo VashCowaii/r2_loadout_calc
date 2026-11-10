@@ -69,26 +69,13 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "DamageFlat": {
-          "operator": "Variables[0] (#BattleEvent_P1_ADF) || Variables[1] (EnemyBoss_MaxHP) || MUL || Constants[0] (3) || DIV || RETURN",
-          "displayLines": "((#BattleEvent_P1_ADF * EnemyBoss_MaxHP) / 3)",
-          "constants": [
-            3
-          ],
-          "variables": [
-            "#BattleEvent_P1_ADF",
-            "EnemyBoss_MaxHP"
-          ]
+          "displayLines": "((#BattleEvent_P1_ADF * EnemyBoss_MaxHP) / 3)"
         },
         "cantKill": true,
         "dmgFormula": "Max HP Scaling",
         "dmgFormulaFinal": "Converted DMG Base",
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "ToughnessDMGType": {
           "DamageType": "Imaginary"
@@ -167,12 +154,7 @@ const configAbility = {
           "duration": -1,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-              "displayLines": "#BattleEvent_P2_ADF",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P2_ADF"
-              ]
+              "displayLines": "#BattleEvent_P2_ADF"
             }
           },
           "casterAssign": "TargetSelf"

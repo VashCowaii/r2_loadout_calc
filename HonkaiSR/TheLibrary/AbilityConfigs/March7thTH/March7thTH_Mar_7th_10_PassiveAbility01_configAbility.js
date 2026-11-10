@@ -26,12 +26,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (7) || RETURN",
-        "displayLines": "7",
-        "constants": [],
-        "variables": [
-          7
-        ]
+        "displayLines": "7"
       },
       "variableName": "EnergyBar_MaxEnergy"
     },
@@ -57,24 +52,14 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "variableName": "Skill11_BasicCount"
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (0.6) || RETURN",
-        "displayLines": "0.6",
-        "constants": [],
-        "variables": [
-          0.6
-        ]
+        "displayLines": "0.6"
       },
       "variableName": "Skill11_FixedChance"
     },
@@ -82,12 +67,7 @@ const configAbility = {
       "name": "Define Custom Variable",
       "scope": "ContextCaster",
       "value": {
-        "operator": "Variables[0] (0.8) || RETURN",
-        "displayLines": "0.8",
-        "constants": [],
-        "variables": [
-          0.8
-        ]
+        "displayLines": "0.8"
       },
       "variableName": "Skill11_DamagePercatage"
     },
@@ -99,49 +79,24 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-388995203\">Mar_7th_10_Energy</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
       "counter": {
-        "operator": "Variables[0] (EnergyBar_CurEnergy) || RETURN",
-        "displayLines": "EnergyBar_CurEnergy",
-        "constants": [],
-        "variables": [
-          "EnergyBar_CurEnergy"
-        ]
+        "displayLines": "EnergyBar_CurEnergy"
       },
       "valuePerStack": {
         "MDF_PropertyRatio": {
-          "operator": "Variables[0] (0.8) || RETURN",
-          "displayLines": "0.8",
-          "constants": [],
-          "variables": [
-            0.8
-          ]
+          "displayLines": "0.8"
         },
         "MDF_Count": {
-          "operator": "Variables[0] (EnergyBar_MaxEnergy) || RETURN",
-          "displayLines": "EnergyBar_MaxEnergy",
-          "constants": [],
-          "variables": [
-            "EnergyBar_MaxEnergy"
-          ]
+          "displayLines": "EnergyBar_MaxEnergy"
         }
       }
     },
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (EnergyBar_CurEnergy) || RETURN",
-        "displayLines": "EnergyBar_CurEnergy",
-        "constants": [],
-        "variables": [
-          "EnergyBar_CurEnergy"
-        ]
+        "displayLines": "EnergyBar_CurEnergy"
       },
       "maximum": {
-        "operator": "Variables[0] (EnergyBar_MaxEnergy) || RETURN",
-        "displayLines": "EnergyBar_MaxEnergy",
-        "constants": [],
-        "variables": [
-          "EnergyBar_MaxEnergy"
-        ]
+        "displayLines": "EnergyBar_MaxEnergy"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -432,12 +387,7 @@ const configAbility = {
                 "value1": "EnergyBar_CurEnergy",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (EnergyBar_MaxEnergy) || RETURN",
-                  "displayLines": "EnergyBar_MaxEnergy",
-                  "constants": [],
-                  "variables": [
-                    "EnergyBar_MaxEnergy"
-                  ]
+                  "displayLines": "EnergyBar_MaxEnergy"
                 }
               },
               "passed": [
@@ -450,12 +400,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"2055743569\">Mar_7th_10_Enhance</a>",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (0.8) || RETURN",
-                      "displayLines": "0.8",
-                      "constants": [],
-                      "variables": [
-                        0.8
-                      ]
+                      "displayLines": "0.8"
                     }
                   }
                 }
@@ -484,23 +429,13 @@ const configAbility = {
                   },
                   "modifierName": "<a class=\"gModGreen\" id=\"-388995203\">Mar_7th_10_Energy</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                   "value": {
-                    "operator": "Variables[0] (EnergyBar_CurEnergy) || RETURN",
-                    "displayLines": "EnergyBar_CurEnergy",
-                    "constants": [],
-                    "variables": [
-                      "EnergyBar_CurEnergy"
-                    ]
+                    "displayLines": "EnergyBar_CurEnergy"
                   }
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (EnergyBar_CurEnergy) || RETURN",
-                    "displayLines": "EnergyBar_CurEnergy",
-                    "constants": [],
-                    "variables": [
-                      "EnergyBar_CurEnergy"
-                    ]
+                    "displayLines": "EnergyBar_CurEnergy"
                   }
                 },
                 {

@@ -33,12 +33,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-          "displayLines": "{[Skill05[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill05[0]]}"
-          ]
+          "displayLines": "{[Skill05[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -69,20 +64,10 @@ const configAbility = {
           "baseChance": 1,
           "valuePerStack": {
             "MDF_ActionDelayRatio": {
-              "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-              "displayLines": "{[Skill05[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[1]]}"
-              ]
+              "displayLines": "{[Skill05[1]]}"
             },
             "Modifier_Entangle_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-              "displayLines": "{[Skill05[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[2]]}"
-              ]
+              "displayLines": "{[Skill05[2]]}"
             },
             "Modifier_Entangle_DamageValue": 0
           }

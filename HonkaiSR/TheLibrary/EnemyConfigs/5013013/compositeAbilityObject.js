@@ -128,24 +128,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                    "displayLines": "{[Skill03[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill03[0]]}"
-                    ]
+                    "displayLines": "{[Skill03[0]]}"
                   },
                   "variableName": "AttackCount"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (AttackCount) || RETURN",
-                    "displayLines": "AttackCount",
-                    "constants": [],
-                    "variables": [
-                      "AttackCount"
-                    ]
+                    "displayLines": "AttackCount"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -153,12 +143,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                    "displayLines": "{[Skill03[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill03[0]]}"
-                    ]
+                    "displayLines": "{[Skill03[0]]}"
                   },
                   "assignState": "True",
                   "state": "Active"
@@ -171,26 +156,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (AttackCount) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(AttackCount - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "AttackCount"
-                    ]
+                    "displayLines": "(AttackCount - 1)"
                   },
                   "variableName": "AttackCount"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (AttackCount) || RETURN",
-                    "displayLines": "AttackCount",
-                    "constants": [],
-                    "variables": [
-                      "AttackCount"
-                    ]
+                    "displayLines": "AttackCount"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -198,12 +171,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                    "displayLines": "{[Skill03[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill03[0]]}"
-                    ]
+                    "displayLines": "{[Skill03[0]]}"
                   },
                   "assignState": "True",
                   "state": "Active"
@@ -348,12 +316,7 @@ const compositeAbilityObject = {
                         "value1": "MDF_Index1",
                         "compareType": ">",
                         "value2": {
-                          "operator": "Variables[0] (MDF_Index2) || RETURN",
-                          "displayLines": "MDF_Index2",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Index2"
-                          ]
+                          "displayLines": "MDF_Index2"
                         }
                       }
                     },
@@ -480,12 +443,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -531,12 +489,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -659,12 +612,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Adjust Team Punchline Value",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_11461) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_11461",
-                        "constants": [],
-                        "variables": [
-                          "UnusedUnderThisBase_11461"
-                        ]
+                        "displayLines": "UnusedUnderThisBase_11461"
                       },
                       "adjustment": "Add"
                     },
@@ -676,21 +624,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-989097149\">MModifier_Monster_W4_Claymore_02_Ability03_AllDamageTypeTaken</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                       "duration": {
-                        "operator": "Variables[0] ({[Skill03[3]]}) || RETURN",
-                        "displayLines": "{[Skill03[3]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill03[3]]}"
-                        ]
+                        "displayLines": "{[Skill03[3]]}"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-                          "displayLines": "{[Skill03[2]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill03[2]]}"
-                          ]
+                          "displayLines": "{[Skill03[2]]}"
                         }
                       }
                     },
@@ -1124,21 +1062,11 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-989097149\">MModifier_Monster_W4_Claymore_02_Ability03_AllDamageTypeTaken</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill03[3]]}) || RETURN",
-            "displayLines": "{[Skill03[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[3]]}"
-            ]
+            "displayLines": "{[Skill03[3]]}"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-              "displayLines": "{[Skill03[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[2]]}"
-              ]
+              "displayLines": "{[Skill03[2]]}"
             }
           }
         }
@@ -1201,12 +1129,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1379,12 +1302,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1401,12 +1319,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1423,12 +1336,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1518,12 +1426,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1540,12 +1443,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1562,12 +1460,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1676,12 +1569,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1698,12 +1586,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1720,12 +1603,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1812,12 +1690,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1834,12 +1707,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1856,12 +1724,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,

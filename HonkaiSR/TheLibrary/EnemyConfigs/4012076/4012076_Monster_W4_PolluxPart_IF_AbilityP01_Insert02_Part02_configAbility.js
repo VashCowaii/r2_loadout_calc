@@ -52,12 +52,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "healPercent": {
-                "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                "displayLines": "{[SkillP01[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP01[3]]}"
-                ]
+                "displayLines": "{[SkillP01[3]]}"
               },
               "formula": "Heal from Target MaxHP"
             }
@@ -70,12 +65,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "healPercent": {
-                "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                "displayLines": "{[SkillP01[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP01[2]]}"
-                ]
+                "displayLines": "{[SkillP01[2]]}"
               },
               "formula": "Heal from Target MaxHP"
             }
@@ -105,12 +95,7 @@ const configAbility = {
         {
           "name": "Deal Toughness DMG",
           "value": {
-            "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-            "displayLines": "{[SkillP01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP01[0]]}"
-            ]
+            "displayLines": "{[SkillP01[0]]}"
           },
           "attacker": {
             "name": "Target Name",
@@ -138,12 +123,7 @@ const configAbility = {
         {
           "name": "Deal Toughness DMG",
           "value": {
-            "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-            "displayLines": "{[SkillP01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP01[0]]}"
-            ]
+            "displayLines": "{[SkillP01[0]]}"
           },
           "attacker": {
             "name": "Target Name",
@@ -171,12 +151,7 @@ const configAbility = {
         "target": "{{Caster's Summoner}}"
       },
       "consumePercent": {
-        "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-        "displayLines": "{[SkillP01[1]]}",
-        "constants": [],
-        "variables": [
-          "{[SkillP01[1]]}"
-        ]
+        "displayLines": "{[SkillP01[1]]}"
       },
       "consumeFloor": 1
     }

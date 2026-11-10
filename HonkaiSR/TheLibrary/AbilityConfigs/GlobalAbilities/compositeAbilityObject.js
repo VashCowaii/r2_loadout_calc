@@ -879,12 +879,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (MDF_AddValue) || RETURN",
-                        "displayLines": "MDF_AddValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_AddValue"
-                        ]
+                        "displayLines": "MDF_AddValue"
                       },
                       "isFixed": "* ERR"
                     }
@@ -947,14 +942,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (TurnCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(TurnCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "TurnCount"
-                    ]
+                    "displayLines": "(TurnCount + 1)"
                   },
                   "variableName": "TurnCount"
                 },

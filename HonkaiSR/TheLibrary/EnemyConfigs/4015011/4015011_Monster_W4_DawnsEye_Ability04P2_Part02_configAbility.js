@@ -93,25 +93,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Thunder_CountDark) || Variables[1] ({[Skill04P2[0]]}) || ADD || RETURN",
-            "displayLines": "(Thunder_CountDark + {[Skill04P2[0]]})",
-            "constants": [],
-            "variables": [
-              "Thunder_CountDark",
-              "{[Skill04P2[0]]}"
-            ]
+            "displayLines": "(Thunder_CountDark + {[Skill04P2[0]]})"
           },
           "variableName": "Thunder_CountDark"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Thunder_CountDark) || RETURN",
-            "displayLines": "Thunder_CountDark",
-            "constants": [],
-            "variables": [
-              "Thunder_CountDark"
-            ]
+            "displayLines": "Thunder_CountDark"
           },
           "variableName": "Thunder_CountTotal"
         },
@@ -129,12 +118,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1414068042\">Modifier_Monster_W4_DawnsEye_WheaterMarkAbility04</a>[<span class=\"descriptionNumberColor\">Ionization</span>]",
           "valuePerStack": {
             "MDF_ThunderDark": {
-              "operator": "Variables[0] (Thunder_CountDark) || RETURN",
-              "displayLines": "Thunder_CountDark",
-              "constants": [],
-              "variables": [
-                "Thunder_CountDark"
-              ]
+              "displayLines": "Thunder_CountDark"
             }
           }
         },

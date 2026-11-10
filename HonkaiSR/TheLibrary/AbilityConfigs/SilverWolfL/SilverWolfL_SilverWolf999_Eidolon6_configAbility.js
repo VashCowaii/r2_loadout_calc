@@ -165,14 +165,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistancePhysicalBonus</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (0.2) || SUB || RETURN",
-                    "displayLines": "(0 - 0.2)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      0.2
-                    ]
+                    "displayLines": "(0 - 0.2)"
                   }
                 }
               ]
@@ -208,14 +201,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFireBonus</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (0.2) || SUB || RETURN",
-                    "displayLines": "(0 - 0.2)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      0.2
-                    ]
+                    "displayLines": "(0 - 0.2)"
                   }
                 }
               ]
@@ -251,14 +237,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceLightningBonus</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (0.2) || SUB || RETURN",
-                    "displayLines": "(0 - 0.2)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      0.2
-                    ]
+                    "displayLines": "(0 - 0.2)"
                   }
                 }
               ]
@@ -294,14 +273,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceIceBonus</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (0.2) || SUB || RETURN",
-                    "displayLines": "(0 - 0.2)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      0.2
-                    ]
+                    "displayLines": "(0 - 0.2)"
                   }
                 }
               ]
@@ -337,14 +309,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindBonus</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (0.2) || SUB || RETURN",
-                    "displayLines": "(0 - 0.2)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      0.2
-                    ]
+                    "displayLines": "(0 - 0.2)"
                   }
                 }
               ]
@@ -380,14 +345,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceQuantumBonus</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (0.2) || SUB || RETURN",
-                    "displayLines": "(0 - 0.2)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      0.2
-                    ]
+                    "displayLines": "(0 - 0.2)"
                   }
                 }
               ]
@@ -423,14 +381,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceImaginaryBonus</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (0.2) || SUB || RETURN",
-                    "displayLines": "(0 - 0.2)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      0.2
-                    ]
+                    "displayLines": "(0 - 0.2)"
                   }
                 }
               ]
@@ -453,12 +404,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyRatio": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         }

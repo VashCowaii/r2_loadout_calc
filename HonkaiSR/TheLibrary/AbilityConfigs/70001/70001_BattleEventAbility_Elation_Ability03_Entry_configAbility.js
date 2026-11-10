@@ -210,20 +210,10 @@ const configAbility = {
           "skillIndex": 1,
           "valuePerStack": {
             "ElationTime_OverrideElationPoint": {
-              "operator": "Variables[0] (ElationTime_OverrideElationPointTemp) || RETURN",
-              "displayLines": "ElationTime_OverrideElationPointTemp",
-              "constants": [],
-              "variables": [
-                "ElationTime_OverrideElationPointTemp"
-              ]
+              "displayLines": "ElationTime_OverrideElationPointTemp"
             },
             "ElationTime_IsNoConsumeTemp2": {
-              "operator": "Variables[0] (ElationTime_IsNoConsumeTemp) || RETURN",
-              "displayLines": "ElationTime_IsNoConsumeTemp",
-              "constants": [],
-              "variables": [
-                "ElationTime_IsNoConsumeTemp"
-              ]
+              "displayLines": "ElationTime_IsNoConsumeTemp"
             }
           },
           "sourceOverride": "Add Target by Current Extra-Turn Source",
@@ -248,12 +238,7 @@ const configAbility = {
             "ElationTime_CustomTagTemp"
           ],
           "forcedPunchline": {
-            "operator": "Variables[0] (ElationTime_OverrideElationPointTemp) || RETURN",
-            "displayLines": "ElationTime_OverrideElationPointTemp",
-            "constants": [],
-            "variables": [
-              "ElationTime_OverrideElationPointTemp"
-            ]
+            "displayLines": "ElationTime_OverrideElationPointTemp"
           },
           "skillIndex": 2,
           "afterInjection": []
@@ -262,12 +247,7 @@ const configAbility = {
           "name": "Define Custom Variable",
           "scope": "ContextCaster",
           "value": {
-            "operator": "Variables[0] (ElationTime_IsNoConsumeTemp) || RETURN",
-            "displayLines": "ElationTime_IsNoConsumeTemp",
-            "constants": [],
-            "variables": [
-              "ElationTime_IsNoConsumeTemp"
-            ]
+            "displayLines": "ElationTime_IsNoConsumeTemp"
           },
           "variableName": "ElationTime_IsNoConsume"
         }

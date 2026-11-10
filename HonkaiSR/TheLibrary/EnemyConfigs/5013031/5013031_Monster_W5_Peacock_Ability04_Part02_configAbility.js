@@ -16,12 +16,7 @@ const configAbility = {
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-            "displayLines": "CurrentColorSlotIndex",
-            "constants": [],
-            "variables": [
-              "CurrentColorSlotIndex"
-            ]
+            "displayLines": "CurrentColorSlotIndex"
           },
           "caseEvents": [
             {
@@ -118,12 +113,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-          "displayLines": "{[Skill04[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}"
-          ]
+          "displayLines": "{[Skill04[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -143,12 +133,7 @@ const configAbility = {
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-            "displayLines": "CurrentColorSlotIndex",
-            "constants": [],
-            "variables": [
-              "CurrentColorSlotIndex"
-            ]
+            "displayLines": "CurrentColorSlotIndex"
           },
           "caseEvents": [
             {

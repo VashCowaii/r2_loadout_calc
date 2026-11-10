@@ -16,12 +16,7 @@ const configAbility = {
       "name": "Create Enemy as Body Part",
       "partName": "Head_R",
       "value": {
-        "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
-        "displayLines": "PartEntity1_MonsterID",
-        "constants": [],
-        "variables": [
-          "PartEntity1_MonsterID"
-        ]
+        "displayLines": "PartEntity1_MonsterID"
       },
       "offset": -2,
       "linkHitByPart": true
@@ -38,12 +33,7 @@ const configAbility = {
       "name": "Create Enemy as Body Part",
       "partName": "Head_L",
       "value": {
-        "operator": "Variables[0] (PartEntity3_MonsterID) || RETURN",
-        "displayLines": "PartEntity3_MonsterID",
-        "constants": [],
-        "variables": [
-          "PartEntity3_MonsterID"
-        ]
+        "displayLines": "PartEntity3_MonsterID"
       },
       "offset": 2,
       "type": 3,
@@ -160,12 +150,7 @@ const configAbility = {
       "eventID": 20015,
       "variables": {
         "BaseAttack": {
-          "operator": "Variables[0] (BaseAttack) || RETURN",
-          "displayLines": "BaseAttack",
-          "constants": [],
-          "variables": [
-            "BaseAttack"
-          ]
+          "displayLines": "BaseAttack"
         }
       },
       "whenCreated": [
@@ -178,12 +163,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"428140510\">Enemy_W4_DawnsEye_01_BESpeed</a>",
           "valuePerStack": {
             "MDF_Speed": {
-              "operator": "Variables[0] ({[SkillP07[4]]}) || RETURN",
-              "displayLines": "{[SkillP07[4]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP07[4]]}"
-              ]
+              "displayLines": "{[SkillP07[4]]}"
             }
           }
         },
@@ -195,12 +175,7 @@ const configAbility = {
             "target": "{{Parameter Target}}"
           },
           "multiBase": {
-            "operator": "Variables[0] ({[SkillP07[3]]}) || RETURN",
-            "displayLines": "{[SkillP07[3]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP07[3]]}"
-            ]
+            "displayLines": "{[SkillP07[3]]}"
           }
         },
         {
@@ -220,12 +195,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-355315499\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamageActionListener</a>",
           "valuePerStack": {
             "MDF_TotalDamageRatioAdd": {
-              "operator": "Variables[0] ({[SkillP09[2]]}) || RETURN",
-              "displayLines": "{[SkillP09[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP09[2]]}"
-              ]
+              "displayLines": "{[SkillP09[2]]}"
             },
             "MDF_TotalDamageRatioCut": 0
           },
@@ -254,37 +224,16 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-2100215981\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamage</a>[<span class=\"descriptionNumberColor\">Black Tide Sync Rate</span>]",
           "valuePerStack": {
             "MDF_TotalDamageRatio": {
-              "operator": "Variables[0] ({[SkillP09[0]]}) || Variables[1] ({[SkillP09[5]]}) || ADD || RETURN",
-              "displayLines": "({[SkillP09[0]]} + {[SkillP09[5]]})",
-              "constants": [],
-              "variables": [
-                "{[SkillP09[0]]}",
-                "{[SkillP09[5]]}"
-              ]
+              "displayLines": "({[SkillP09[0]]} + {[SkillP09[5]]})"
             },
             "MDF_TotalDamageRatioMin": {
-              "operator": "Variables[0] ({[SkillP09[0]]}) || RETURN",
-              "displayLines": "{[SkillP09[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP09[0]]}"
-              ]
+              "displayLines": "{[SkillP09[0]]}"
             },
             "MDF_TotalDamageRatioMax": {
-              "operator": "Variables[0] ({[SkillP09[1]]}) || RETURN",
-              "displayLines": "{[SkillP09[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP09[1]]}"
-              ]
+              "displayLines": "{[SkillP09[1]]}"
             },
             "MDF_BaseAttack": {
-              "operator": "Variables[0] (BaseAttack) || RETURN",
-              "displayLines": "BaseAttack",
-              "constants": [],
-              "variables": [
-                "BaseAttack"
-              ]
+              "displayLines": "BaseAttack"
             }
           }
         }
@@ -299,36 +248,16 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-2100215981\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamage</a>[<span class=\"descriptionNumberColor\">Black Tide Sync Rate</span>]",
           "valuePerStack": {
             "MDF_TotalDamageRatio": {
-              "operator": "Variables[0] ({[SkillP09[0]]}) || RETURN",
-              "displayLines": "{[SkillP09[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP09[0]]}"
-              ]
+              "displayLines": "{[SkillP09[0]]}"
             },
             "MDF_TotalDamageRatioMin": {
-              "operator": "Variables[0] ({[SkillP09[0]]}) || RETURN",
-              "displayLines": "{[SkillP09[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP09[0]]}"
-              ]
+              "displayLines": "{[SkillP09[0]]}"
             },
             "MDF_TotalDamageRatioMax": {
-              "operator": "Variables[0] ({[SkillP09[1]]}) || RETURN",
-              "displayLines": "{[SkillP09[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP09[1]]}"
-              ]
+              "displayLines": "{[SkillP09[1]]}"
             },
             "MDF_BaseAttack": {
-              "operator": "Variables[0] (BaseAttack) || RETURN",
-              "displayLines": "BaseAttack",
-              "constants": [],
-              "variables": [
-                "BaseAttack"
-              ]
+              "displayLines": "BaseAttack"
             }
           }
         }
@@ -343,12 +272,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-355315499\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamageActionListener</a>",
       "valuePerStack": {
         "MDF_TotalDamageRatioAdd": {
-          "operator": "Variables[0] ({[SkillP09[2]]}) || RETURN",
-          "displayLines": "{[SkillP09[2]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP09[2]]}"
-          ]
+          "displayLines": "{[SkillP09[2]]}"
         },
         "MDF_TotalDamageRatioCut": 0
       }
@@ -430,12 +354,7 @@ const configAbility = {
           "valuePerStack": {
             "MDF_TotalDamageRatioAdd": 0,
             "MDF_TotalDamageRatioCut": {
-              "operator": "Variables[0] ({[SkillP09[3]]}) || RETURN",
-              "displayLines": "{[SkillP09[3]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP09[3]]}"
-              ]
+              "displayLines": "{[SkillP09[3]]}"
             }
           },
           "casterAssign": "CasterSelf"
@@ -484,12 +403,7 @@ const configAbility = {
           "eventID": 60029,
           "variables": {
             "BaseAttack": {
-              "operator": "Variables[0] (BaseAttack) || RETURN",
-              "displayLines": "BaseAttack",
-              "constants": [],
-              "variables": [
-                "BaseAttack"
-              ]
+              "displayLines": "BaseAttack"
             }
           },
           "whenCreated": [
@@ -508,12 +422,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "value": {
-                "operator": "Variables[0] ({[SkillP10[5]]}) || RETURN",
-                "displayLines": "{[SkillP10[5]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP10[5]]}"
-                ]
+                "displayLines": "{[SkillP10[5]]}"
               },
               "isFixed": "* ERR"
             }
@@ -530,28 +439,13 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1313380500\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarok</a>",
       "valuePerStack": {
         "MDF_DirtyHPBase": {
-          "operator": "Variables[0] ({[SkillP07[0]]}) || RETURN",
-          "displayLines": "{[SkillP07[0]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP07[0]]}"
-          ]
+          "displayLines": "{[SkillP07[0]]}"
         },
         "MDF_BaseAttack": {
-          "operator": "Variables[0] (BaseAttack) || RETURN",
-          "displayLines": "BaseAttack",
-          "constants": [],
-          "variables": [
-            "BaseAttack"
-          ]
+          "displayLines": "BaseAttack"
         },
         "MDF_DeathSPAdd": {
-          "operator": "Variables[0] ({[SkillP07[2]]}) || RETURN",
-          "displayLines": "{[SkillP07[2]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP07[2]]}"
-          ]
+          "displayLines": "{[SkillP07[2]]}"
         }
       }
     },
@@ -580,12 +474,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1259657295\">Enemy_W4_DawnsEye_01_BreakController</a>",
       "valuePerStack": {
         "StanceDamage": {
-          "operator": "Variables[0] ({[SkillP06[2]]}) || RETURN",
-          "displayLines": "{[SkillP06[2]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP06[2]]}"
-          ]
+          "displayLines": "{[SkillP06[2]]}"
         }
       }
     },

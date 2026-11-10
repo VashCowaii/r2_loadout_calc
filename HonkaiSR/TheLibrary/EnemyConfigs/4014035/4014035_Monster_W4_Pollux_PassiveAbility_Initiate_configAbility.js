@@ -43,12 +43,7 @@ const configAbility = {
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonID0) || RETURN",
-            "displayLines": "SummonID0",
-            "constants": [],
-            "variables": [
-              "SummonID0"
-            ]
+            "displayLines": "SummonID0"
           },
           "locationType": "BeforeCaster",
           "locationOffset": -1,
@@ -74,12 +69,7 @@ const configAbility = {
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonID1) || RETURN",
-            "displayLines": "SummonID1",
-            "constants": [],
-            "variables": [
-              "SummonID1"
-            ]
+            "displayLines": "SummonID1"
           },
           "locationType": "AfterCaster",
           "locationOffset": 1,
@@ -150,12 +140,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (UnusedUnderThisBase_12873) || RETURN",
-              "displayLines": "UnusedUnderThisBase_12873",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_12873"
-              ]
+              "displayLines": "UnusedUnderThisBase_12873"
             }
           }
         }
@@ -170,12 +155,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
-              "displayLines": "{[PassiveSkill02[4]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill02[4]]}"
-              ]
+              "displayLines": "{[PassiveSkill02[4]]}"
             }
           }
         }
@@ -272,36 +252,21 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (UnusedUnderThisBase_12870) || RETURN",
-            "displayLines": "UnusedUnderThisBase_12870",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_12870"
-            ]
+            "displayLines": "UnusedUnderThisBase_12870"
           },
           "variableName": "_Skill05_LoseHpRatio"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (UnusedUnderThisBase_12832) || RETURN",
-            "displayLines": "UnusedUnderThisBase_12832",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_12832"
-            ]
+            "displayLines": "UnusedUnderThisBase_12832"
           },
           "variableName": "_Skill05_ActionDelay"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (UnusedUnderThisBase_12830) || RETURN",
-            "displayLines": "UnusedUnderThisBase_12830",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_12830"
-            ]
+            "displayLines": "UnusedUnderThisBase_12830"
           },
           "variableName": "_Skill05_Part_ActionDelay"
         }
@@ -310,36 +275,21 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-            "displayLines": "{[Skill05[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill05[1]]}"
-            ]
+            "displayLines": "{[Skill05[1]]}"
           },
           "variableName": "_Skill05_LoseHpRatio"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-            "displayLines": "{[Skill05[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill05[2]]}"
-            ]
+            "displayLines": "{[Skill05[2]]}"
           },
           "variableName": "_Skill05_ActionDelay"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-            "displayLines": "{[Skill05[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill05[3]]}"
-            ]
+            "displayLines": "{[Skill05[3]]}"
           },
           "variableName": "_Skill05_Part_ActionDelay"
         }
@@ -444,12 +394,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_ReadyToCharge) || RETURN",
-                    "displayLines": "_ReadyToCharge",
-                    "constants": [],
-                    "variables": [
-                      "_ReadyToCharge"
-                    ]
+                    "displayLines": "_ReadyToCharge"
                   },
                   "variableName": "_TempAIFlag"
                 },
@@ -471,12 +416,7 @@ const configAbility = {
                     {
                       "name": "Assign Advance/Delay to Current Ability Use",
                       "adjustmentValue": {
-                        "operator": "Variables[0] ({[PassiveSkill01[3]]}) || INVERT || RETURN",
-                        "displayLines": "-{[PassiveSkill01[3]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[PassiveSkill01[3]]}"
-                        ]
+                        "displayLines": "-{[PassiveSkill01[3]]}"
                       },
                       "adjustmentType": "Advance"
                     },
@@ -560,12 +500,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (_EnergyValue) || RETURN",
-                "displayLines": "_EnergyValue",
-                "constants": [],
-                "variables": [
-                  "_EnergyValue"
-                ]
+                "displayLines": "_EnergyValue"
               },
               "entityClass": "Enemy",
               "maximum": 1,
@@ -655,13 +590,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_HPChangeValue) || INVERT || Variables[1] (_TargetMaxHP) || DIV || RETURN",
-                    "displayLines": "(-_HPChangeValue / _TargetMaxHP)",
-                    "constants": [],
-                    "variables": [
-                      "_HPChangeValue",
-                      "_TargetMaxHP"
-                    ]
+                    "displayLines": "(-_HPChangeValue / _TargetMaxHP)"
                   },
                   "variableName": "_HPChangeRatio"
                 },
@@ -673,13 +602,7 @@ const configAbility = {
                   },
                   "variableName": "_EnergyValue",
                   "value": {
-                    "operator": "Variables[0] (_HPChangeRatio) || Variables[1] ({[PassiveSkill01[2]]}) || MUL || RETURN",
-                    "displayLines": "(_HPChangeRatio * {[PassiveSkill01[2]]})",
-                    "constants": [],
-                    "variables": [
-                      "_HPChangeRatio",
-                      "{[PassiveSkill01[2]]}"
-                    ]
+                    "displayLines": "(_HPChangeRatio * {[PassiveSkill01[2]]})"
                   },
                   "max": 1
                 },
@@ -714,12 +637,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (_EnergyValue) || RETURN",
-                        "displayLines": "_EnergyValue",
-                        "constants": [],
-                        "variables": [
-                          "_EnergyValue"
-                        ]
+                        "displayLines": "_EnergyValue"
                       },
                       "entityClass": "Enemy",
                       "maximum": 1
@@ -757,12 +675,7 @@ const configAbility = {
                     {
                       "name": "Assign Advance/Delay to Current Ability Use",
                       "adjustmentValue": {
-                        "operator": "Variables[0] (_Skill05_ActionDelay) || RETURN",
-                        "displayLines": "_Skill05_ActionDelay",
-                        "constants": [],
-                        "variables": [
-                          "_Skill05_ActionDelay"
-                        ]
+                        "displayLines": "_Skill05_ActionDelay"
                       },
                       "adjustmentType": "Advance"
                     }
@@ -788,12 +701,7 @@ const configAbility = {
                   },
                   "advanceType": "Set",
                   "add": {
-                    "operator": "Variables[0] (_Skill05_Part_ActionDelay) || RETURN",
-                    "displayLines": "_Skill05_Part_ActionDelay",
-                    "constants": [],
-                    "variables": [
-                      "_Skill05_Part_ActionDelay"
-                    ]
+                    "displayLines": "_Skill05_Part_ActionDelay"
                   }
                 }
               ]

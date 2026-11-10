@@ -33,12 +33,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             }
           ]
@@ -64,12 +59,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             }
           ]
@@ -103,12 +93,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-992053376\">Anaxa_Trace02_SubAll</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   }
                 }
@@ -159,12 +144,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-879409639\">Anaxa_Trace02_Sub</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
-                          "operator": "Variables[0] (1.4) || RETURN",
-                          "displayLines": "1.4",
-                          "constants": [],
-                          "variables": [
-                            1.4
-                          ]
+                          "displayLines": "1.4"
                         }
                       }
                     },
@@ -201,12 +181,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-992053376\">Anaxa_Trace02_SubAll</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         }
                       }
                     },
@@ -267,12 +242,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-879409639\">Anaxa_Trace02_Sub</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
-                          "operator": "Variables[0] (1.4) || RETURN",
-                          "displayLines": "1.4",
-                          "constants": [],
-                          "variables": [
-                            1.4
-                          ]
+                          "displayLines": "1.4"
                         }
                       }
                     },
@@ -291,12 +261,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-992053376\">Anaxa_Trace02_SubAll</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         }
                       }
                     },
@@ -335,14 +300,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (_count) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(_count + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "_count"
-                            ]
+                            "displayLines": "(_count + 1)"
                           },
                           "variableName": "_count"
                         }
@@ -366,12 +324,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"-879409639\">Anaxa_Trace02_Sub</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
                           "valuePerStack": {
                             "MDF_PropertyRatio": {
-                              "operator": "Variables[0] (1.4) || RETURN",
-                              "displayLines": "1.4",
-                              "constants": [],
-                              "variables": [
-                                1.4
-                              ]
+                              "displayLines": "1.4"
                             }
                           }
                         },
@@ -392,12 +345,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"-992053376\">Anaxa_Trace02_SubAll</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
                           "valuePerStack": {
                             "MDF_PropertyRatio": {
-                              "operator": "Variables[0] (0.5) || RETURN",
-                              "displayLines": "0.5",
-                              "constants": [],
-                              "variables": [
-                                0.5
-                              ]
+                              "displayLines": "0.5"
                             }
                           }
                         },

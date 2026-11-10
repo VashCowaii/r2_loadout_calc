@@ -46,29 +46,14 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-998413100\">Modifier_Monster_W4_Claymore_04_Honor</a>[<span class=\"descriptionNumberColor\">All Wishes</span>]",
       "valuePerStack": {
         "MDF_MaxLayer": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-          "displayLines": "{[Skill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "{[Skill03[0]]}"
         },
         "MDF_DamageAddedRatio": {
-          "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-          "displayLines": "{[Skill04[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[1]]}"
-          ]
+          "displayLines": "{[Skill04[1]]}"
         }
       },
       "addStacksPerTrigger": {
-        "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-        "displayLines": "{[Skill03[0]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill03[0]]}"
-        ]
+        "displayLines": "{[Skill03[0]]}"
       }
     },
     {
@@ -80,48 +65,23 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-374062983\">Modifier_Monster_W4_Claymore_04_Ability03_Charge</a>",
       "valuePerStack": {
         "MDF_MaxLayer": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-          "displayLines": "{[Skill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "{[Skill03[0]]}"
         },
         "MDF_DamageResistanceRatio": {
-          "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-          "displayLines": "{[SkillP01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[0]]}"
-          ]
+          "displayLines": "{[SkillP01[0]]}"
         },
         "MDF_SpeedAddedRatio": {
-          "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-          "displayLines": "{[SkillP01[1]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[1]]}"
-          ]
+          "displayLines": "{[SkillP01[1]]}"
         },
         "MDF_ActionDelayRatio": {
-          "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-          "displayLines": "{[Skill03[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[1]]}"
-          ]
+          "displayLines": "{[Skill03[1]]}"
         }
       }
     },
     {
       "name": "Assign Advance/Delay to Current Ability Use",
       "adjustmentValue": {
-        "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-        "displayLines": "{[Skill03[1]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill03[1]]}"
-        ]
+        "displayLines": "{[Skill03[1]]}"
       },
       "adjustmentType": "Advance"
     },

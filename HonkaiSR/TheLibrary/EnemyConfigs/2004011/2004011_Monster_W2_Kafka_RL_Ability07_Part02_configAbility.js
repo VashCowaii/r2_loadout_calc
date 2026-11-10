@@ -247,20 +247,10 @@ const configAbility = {
           },
           "variables": {
             "MDF_W2_Kafka_RL_BattleEvent_ActionDelay": {
-              "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkill02[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill02[2]]}"
-              ]
+              "displayLines": "{[PassiveSkill02[2]]}"
             },
             "MDF_W2_Kafka_RL_BattleEvent_BaseSpeed": {
-              "operator": "Variables[0] (BaseSpeed) || RETURN",
-              "displayLines": "BaseSpeed",
-              "constants": [],
-              "variables": [
-                "BaseSpeed"
-              ]
+              "displayLines": "BaseSpeed"
             }
           }
         }
@@ -276,20 +266,10 @@ const configAbility = {
           },
           "variables": {
             "MDF_W2_Kafka_RL_BattleEvent_ActionDelay": {
-              "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-              "displayLines": "{[Skill07[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill07[0]]}"
-              ]
+              "displayLines": "{[Skill07[0]]}"
             },
             "MDF_W2_Kafka_RL_BattleEvent_BaseSpeed": {
-              "operator": "Variables[0] (BaseSpeed) || RETURN",
-              "displayLines": "BaseSpeed",
-              "constants": [],
-              "variables": [
-                "BaseSpeed"
-              ]
+              "displayLines": "BaseSpeed"
             }
           }
         }

@@ -40,12 +40,7 @@ const configAbility = {
     {
       "name": "SWITCH",
       "switchValue": {
-        "operator": "Variables[0] (SummonCount) || RETURN",
-        "displayLines": "SummonCount",
-        "constants": [],
-        "variables": [
-          "SummonCount"
-        ]
+        "displayLines": "SummonCount"
       },
       "caseEvents": [
         {

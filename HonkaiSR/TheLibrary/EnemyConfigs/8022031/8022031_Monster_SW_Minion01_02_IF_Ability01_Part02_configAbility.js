@@ -15,14 +15,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.5) || MUL || RETURN",
-          "displayLines": "({[Skill01[0]]} * 0.5)",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "{[Skill01[0]]}"
-          ]
+          "displayLines": "({[Skill01[0]]} * 0.5)"
         },
         "Toughness": null,
         "Tags": null,
@@ -50,14 +43,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.5) || MUL || RETURN",
-          "displayLines": "({[Skill01[0]]} * 0.5)",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "{[Skill01[0]]}"
-          ]
+          "displayLines": "({[Skill01[0]]} * 0.5)"
         },
         "Toughness": null,
         "Tags": null,
@@ -100,29 +86,14 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"2065489118\">Standard_Entangle</a>[<span class=\"descriptionNumberColor\">Entanglement</span>]",
           "duration": 1,
           "baseChance": {
-            "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-            "displayLines": "{[Skill01[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[1]]}"
-            ]
+            "displayLines": "{[Skill01[1]]}"
           },
           "valuePerStack": {
             "MDF_ActionDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
+              "displayLines": "{[Skill01[2]]}"
             },
             "Modifier_Entangle_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
+              "displayLines": "{[Skill01[3]]}"
             },
             "Modifier_Entangle_DamageValue": 0
           }

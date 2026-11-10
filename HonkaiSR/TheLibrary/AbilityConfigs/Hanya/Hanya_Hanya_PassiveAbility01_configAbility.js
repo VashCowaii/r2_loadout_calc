@@ -33,20 +33,10 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (ZhanYinCount) || RETURN",
-        "displayLines": "ZhanYinCount",
-        "constants": [],
-        "variables": [
-          "ZhanYinCount"
-        ]
+        "displayLines": "ZhanYinCount"
       },
       "maximum": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       },
       "assignState": "True",
       "bar#": 3,
@@ -132,13 +122,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_Skill03_Speed) || Variables[1] (MDF_Skill03_Speed_Convert) || SUB || RETURN",
-                "displayLines": "(MDF_Skill03_Speed - MDF_Skill03_Speed_Convert)",
-                "constants": [],
-                "variables": [
-                  "MDF_Skill03_Speed",
-                  "MDF_Skill03_Speed_Convert"
-                ]
+                "displayLines": "(MDF_Skill03_Speed - MDF_Skill03_Speed_Convert)"
               },
               "variableName": "MDF_Skill03_Speed"
             }

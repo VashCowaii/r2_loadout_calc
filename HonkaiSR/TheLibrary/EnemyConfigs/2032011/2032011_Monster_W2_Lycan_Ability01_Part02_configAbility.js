@@ -14,12 +14,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-          "displayLines": "{[Skill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[0]]}"
-          ]
+          "displayLines": "{[Skill01[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -35,12 +30,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-          "displayLines": "{[Skill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[0]]}"
-          ]
+          "displayLines": "{[Skill01[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -67,29 +57,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"227784370\">Standard_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-            "displayLines": "{[Skill02[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[2]]}"
-            ]
+            "displayLines": "{[Skill02[2]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-            "displayLines": "{[Skill02[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[1]]}"
-            ]
+            "displayLines": "{[Skill02[1]]}"
           },
           "valuePerStack": {
             "Modifier_Tear_DamageRatio": {
-              "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
-              "displayLines": "{[Skill02[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[4]]}"
-              ]
+              "displayLines": "{[Skill02[4]]}"
             },
             "Modifier_Tear_MaxPercentage": 5
           }
@@ -102,29 +77,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"227784370\">Standard_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-            "displayLines": "{[Skill02[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[2]]}"
-            ]
+            "displayLines": "{[Skill02[2]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-            "displayLines": "{[Skill02[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[1]]}"
-            ]
+            "displayLines": "{[Skill02[1]]}"
           },
           "valuePerStack": {
             "Modifier_Tear_DamageRatio": {
-              "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
-              "displayLines": "{[Skill02[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[4]]}"
-              ]
+              "displayLines": "{[Skill02[4]]}"
             },
             "Modifier_Tear_MaxPercentage": 5
           }

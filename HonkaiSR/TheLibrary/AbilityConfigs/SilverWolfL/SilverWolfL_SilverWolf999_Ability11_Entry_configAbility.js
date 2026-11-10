@@ -24,12 +24,7 @@ const configAbility = {
       "name": "Define Custom Variable",
       "scope": "TargetEntity",
       "value": {
-        "operator": "Variables[0] (ST Toughness Value) || RETURN",
-        "displayLines": "ST Toughness Value",
-        "constants": [],
-        "variables": [
-          "ST Toughness Value"
-        ]
+        "displayLines": "ST Toughness Value"
       },
       "variableName": "Skill11_Shoot_Stance"
     },

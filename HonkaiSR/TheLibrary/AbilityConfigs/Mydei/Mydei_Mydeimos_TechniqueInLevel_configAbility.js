@@ -55,12 +55,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Imaginary",
                     "Damage": {
-                      "operator": "Variables[0] (0.8) || RETURN",
-                      "displayLines": "0.8",
-                      "constants": [],
-                      "variables": [
-                        0.8
-                      ]
+                      "displayLines": "0.8"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "Toughness": null,
@@ -77,12 +72,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1488319040\">Standard_CTRL_Taunt</a>[<span class=\"descriptionNumberColor\">Taunt</span>]",
                   "duration": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   }
                 },
                 {
@@ -94,12 +84,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (50) || RETURN",
-                    "displayLines": "50",
-                    "constants": [],
-                    "variables": [
-                      50
-                    ]
+                    "displayLines": "50"
                   }
                 }
               ]

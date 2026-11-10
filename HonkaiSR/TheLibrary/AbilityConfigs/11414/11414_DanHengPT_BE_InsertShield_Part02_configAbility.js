@@ -11,12 +11,7 @@ const configAbility = {
         "target": "{{All Team Members}}"
       },
       "dispelCount": {
-        "operator": "Variables[0] (MDF_DisperseNum) || RETURN",
-        "displayLines": "MDF_DisperseNum",
-        "constants": [],
-        "variables": [
-          "MDF_DisperseNum"
-        ]
+        "displayLines": "MDF_DisperseNum"
       },
       "dispelOrder": "LastAdded"
     },

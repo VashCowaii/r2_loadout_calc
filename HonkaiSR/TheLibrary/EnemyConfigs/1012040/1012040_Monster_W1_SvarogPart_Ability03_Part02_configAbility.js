@@ -65,12 +65,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-733983508\">Svarog_Control_OnPart_Modifier</a>",
       "valuePerStack": {
         "Modifier_DamagePercentage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-          "displayLines": "{[Skill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "{[Skill03[0]]}"
         }
       }
     },
@@ -118,13 +113,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "DamageFlat": {
-              "operator": "Variables[0] (Owner_MaxHP) || Variables[1] ({[Skill03[0]]}) || MUL || RETURN",
-              "displayLines": "(Owner_MaxHP * {[Skill03[0]]})",
-              "constants": [],
-              "variables": [
-                "Owner_MaxHP",
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "(Owner_MaxHP * {[Skill03[0]]})"
             },
             "Toughness": null,
             "Tags": null,

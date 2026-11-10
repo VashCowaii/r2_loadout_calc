@@ -449,20 +449,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-804634083\">Death_Control_Modifier</a>",
                   "valuePerStack": {
                     "MDF_HealHPPercentage": {
-                      "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                      "displayLines": "{[Skill05[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill05[0]]}"
-                      ]
+                      "displayLines": "{[Skill05[0]]}"
                     },
                     "MDF_AddSPValue": {
-                      "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                      "displayLines": "{[Skill05[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill05[1]]}"
-                      ]
+                      "displayLines": "{[Skill05[1]]}"
                     }
                   }
                 }
@@ -494,20 +484,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-804634083\">Death_Control_Modifier</a>",
                   "valuePerStack": {
                     "MDF_HealHPPercentage": {
-                      "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                      "displayLines": "{[Skill05[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill05[0]]}"
-                      ]
+                      "displayLines": "{[Skill05[0]]}"
                     },
                     "MDF_AddSPValue": {
-                      "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                      "displayLines": "{[Skill05[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill05[1]]}"
-                      ]
+                      "displayLines": "{[Skill05[1]]}"
                     }
                   }
                 }
@@ -532,12 +512,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (LightTeamCount) || RETURN",
-                "displayLines": "LightTeamCount",
-                "constants": [],
-                "variables": [
-                  "LightTeamCount"
-                ]
+                "displayLines": "LightTeamCount"
               },
               "execute": [
                 {
@@ -602,12 +577,7 @@ const configAbility = {
                   },
                   "scope": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (DeathPartMaxHPCount) || RETURN",
-                    "displayLines": "DeathPartMaxHPCount",
-                    "constants": [],
-                    "variables": [
-                      "DeathPartMaxHPCount"
-                    ]
+                    "displayLines": "DeathPartMaxHPCount"
                   },
                   "variableName": "Owner_MaxHPCount"
                 }

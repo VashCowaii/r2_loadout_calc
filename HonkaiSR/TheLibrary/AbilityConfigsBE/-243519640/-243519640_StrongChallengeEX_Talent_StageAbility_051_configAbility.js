@@ -63,15 +63,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (#ADF_1) || Variables[1] (MDF_HealedHP) || MUL || Constants[0] (1) || INVERT || MUL || RETURN",
-                        "displayLines": "((#ADF_1 * MDF_HealedHP) * -1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "#ADF_1",
-                          "MDF_HealedHP"
-                        ]
+                        "displayLines": "((#ADF_1 * MDF_HealedHP) * -1)"
                       },
                       "variableName": "MDF_ChangeValue"
                     },
@@ -95,28 +87,14 @@ const configAbility = {
                         "value1": "MDF_ChangeValue",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (#ADF_2) || Variables[1] (MDF_MaxHP) || MUL || Variables[2] (MDF_ChangeValue) || SUB || RETURN",
-                          "displayLines": "((#ADF_2 * MDF_MaxHP) - MDF_ChangeValue)",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2",
-                            "MDF_MaxHP",
-                            "MDF_ChangeValue"
-                          ]
+                          "displayLines": "((#ADF_2 * MDF_MaxHP) - MDF_ChangeValue)"
                         }
                       },
                       "failed": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (#ADF_2) || Variables[1] (MDF_MaxHP) || MUL || Variables[2] (MDF_ChangeValue) || SUB || RETURN",
-                            "displayLines": "((#ADF_2 * MDF_MaxHP) - MDF_ChangeValue)",
-                            "constants": [],
-                            "variables": [
-                              "#ADF_2",
-                              "MDF_MaxHP",
-                              "MDF_ChangeValue"
-                            ]
+                            "displayLines": "((#ADF_2 * MDF_MaxHP) - MDF_ChangeValue)"
                           },
                           "variableName": "MDF_ChangeValue"
                         }
@@ -129,12 +107,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "healFlat": {
-                        "operator": "Variables[0] (MDF_HealedHP) || RETURN",
-                        "displayLines": "MDF_HealedHP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_HealedHP"
-                        ]
+                        "displayLines": "MDF_HealedHP"
                       },
                       "formula": "Heal from Base Value"
                     },
@@ -146,21 +119,10 @@ const configAbility = {
                       },
                       "variableName": "MDF_HealedHP",
                       "value": {
-                        "operator": "Variables[0] (MDF_HealedHP) || RETURN",
-                        "displayLines": "MDF_HealedHP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_HealedHP"
-                        ]
+                        "displayLines": "MDF_HealedHP"
                       },
                       "max": {
-                        "operator": "Variables[0] (#ADF_2) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
-                        "displayLines": "(#ADF_2 * MDF_MaxHP)",
-                        "constants": [],
-                        "variables": [
-                          "#ADF_2",
-                          "MDF_MaxHP"
-                        ]
+                        "displayLines": "(#ADF_2 * MDF_MaxHP)"
                       }
                     }
                   ]

@@ -29,12 +29,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.6) || RETURN",
-                "displayLines": "0.6",
-                "constants": [],
-                "variables": [
-                  0.6
-                ]
+                "displayLines": "0.6"
               }
             }
           ]
@@ -83,12 +78,7 @@ const configAbility = {
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (1.2) || RETURN",
-                      "displayLines": "1.2",
-                      "constants": [],
-                      "variables": [
-                        1.2
-                      ]
+                      "displayLines": "1.2"
                     }
                   },
                   "passed": [

@@ -119,12 +119,7 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (_EnergyValue) || RETURN",
-        "displayLines": "_EnergyValue",
-        "constants": [],
-        "variables": [
-          "_EnergyValue"
-        ]
+        "displayLines": "_EnergyValue"
       },
       "entityClass": "Enemy",
       "maximum": 1,
@@ -191,12 +186,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[PassiveSkill04[4]]}) || RETURN",
-              "displayLines": "{[PassiveSkill04[4]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill04[4]]}"
-              ]
+              "displayLines": "{[PassiveSkill04[4]]}"
             }
           }
         }
@@ -211,12 +201,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
-              "displayLines": "{[PassiveSkill02[4]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill02[4]]}"
-              ]
+              "displayLines": "{[PassiveSkill02[4]]}"
             }
           }
         }

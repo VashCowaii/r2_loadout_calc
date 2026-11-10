@@ -39,14 +39,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceLightningBonus</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           ]
@@ -78,14 +71,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFireBonus</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           ]
@@ -117,14 +103,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistancePhysicalBonus</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           ]
@@ -156,14 +135,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindBonus</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           ]
@@ -203,12 +175,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-666436048\">Advanced_BlackSwan_Eidolon1_WindResistanceDown</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 },
@@ -221,12 +188,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1029321993\">Advanced_BlackSwan_Eidolon1_PhysicalResistanceDown</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 },
@@ -239,12 +201,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-105360526\">Advanced_BlackSwan_Eidolon1_FireResistanceDown</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 },
@@ -257,12 +214,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1004290042\">Advanced_BlackSwan_Eidolon1_ThunderResistanceDown</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -288,12 +240,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-666436048\">Advanced_BlackSwan_Eidolon1_WindResistanceDown</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -319,12 +266,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1029321993\">Advanced_BlackSwan_Eidolon1_PhysicalResistanceDown</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -350,12 +292,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-105360526\">Advanced_BlackSwan_Eidolon1_FireResistanceDown</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -381,12 +318,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1004290042\">Advanced_BlackSwan_Eidolon1_ThunderResistanceDown</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -441,12 +373,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-666436048\">Advanced_BlackSwan_Eidolon1_WindResistanceDown</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -506,12 +433,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1029321993\">Advanced_BlackSwan_Eidolon1_PhysicalResistanceDown</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -571,12 +493,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-105360526\">Advanced_BlackSwan_Eidolon1_FireResistanceDown</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -636,12 +553,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1004290042\">Advanced_BlackSwan_Eidolon1_ThunderResistanceDown</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -784,12 +696,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-666436048\">Advanced_BlackSwan_Eidolon1_WindResistanceDown</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 },
@@ -802,12 +709,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1029321993\">Advanced_BlackSwan_Eidolon1_PhysicalResistanceDown</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 },
@@ -820,12 +722,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-105360526\">Advanced_BlackSwan_Eidolon1_FireResistanceDown</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 },
@@ -838,12 +735,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1004290042\">Advanced_BlackSwan_Eidolon1_ThunderResistanceDown</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -865,12 +757,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-666436048\">Advanced_BlackSwan_Eidolon1_WindResistanceDown</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -892,12 +779,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1029321993\">Advanced_BlackSwan_Eidolon1_PhysicalResistanceDown</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -919,12 +801,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-105360526\">Advanced_BlackSwan_Eidolon1_FireResistanceDown</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -946,12 +823,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1004290042\">Advanced_BlackSwan_Eidolon1_ThunderResistanceDown</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -976,12 +848,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.25) || RETURN",
-              "displayLines": "0.25",
-              "constants": [],
-              "variables": [
-                0.25
-              ]
+              "displayLines": "0.25"
             }
           }
         }

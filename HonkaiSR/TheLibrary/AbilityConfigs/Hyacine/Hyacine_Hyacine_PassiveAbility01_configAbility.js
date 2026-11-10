@@ -25,12 +25,7 @@ const configAbility = {
       "name": "Update Displayed Energy Bar",
       "value": 0,
       "maximum": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "assignState": "True",
       "bar#": "Dot"
@@ -82,12 +77,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"931141896\">Hyacine_PointB2</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             }
           }
         }
@@ -110,29 +100,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1132518124\">Hyacine_Passive_Effect</a>[<span class=\"descriptionNumberColor\">First Light Heals the World</span>]",
               "duration": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "stackLimit": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "valuePerStack": {
                 "MDF_DamageAddRatio": {
-                  "operator": "Variables[0] (0.8) || RETURN",
-                  "displayLines": "0.8",
-                  "constants": [],
-                  "variables": [
-                    0.8
-                  ]
+                  "displayLines": "0.8"
                 }
               },
               "addStacksPerTrigger": 1
@@ -156,14 +131,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_HealCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(_HealCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_HealCount"
-                    ]
+                    "displayLines": "(_HealCount + 1)"
                   },
                   "variableName": "_HealCount"
                 }
@@ -181,28 +149,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_HealValue) || Constants[0] (1) || Variables[1] (ExtraHealRatio) || ADD || MUL || RETURN",
-                "displayLines": "(_HealValue * (1 + ExtraHealRatio))",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_HealValue",
-                  "ExtraHealRatio"
-                ]
+                "displayLines": "(_HealValue * (1 + ExtraHealRatio))"
               },
               "variableName": "_HealValue"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_HealValueTotal) || Variables[1] (_HealValue) || ADD || RETURN",
-                "displayLines": "(_HealValueTotal + _HealValue)",
-                "constants": [],
-                "variables": [
-                  "_HealValueTotal",
-                  "_HealValue"
-                ]
+                "displayLines": "(_HealValueTotal + _HealValue)"
               },
               "variableName": "_HealValueTotal"
             },
@@ -213,12 +167,7 @@ const configAbility = {
                 "target": "{{Caster's Memosprite}}"
               },
               "value": {
-                "operator": "Variables[0] (_HealValueTotal) || RETURN",
-                "displayLines": "_HealValueTotal",
-                "constants": [],
-                "variables": [
-                  "_HealValueTotal"
-                ]
+                "displayLines": "_HealValueTotal"
               },
               "variableName": "_SummonerHealValueTotal"
             },
@@ -329,12 +278,7 @@ const configAbility = {
                     "target": "{{Caster's Memosprite}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (_HealCount) || RETURN",
-                    "displayLines": "_HealCount",
-                    "constants": [],
-                    "variables": [
-                      "_HealCount"
-                    ]
+                    "displayLines": "_HealCount"
                   },
                   "variableName": "_SummonerHealCount"
                 }

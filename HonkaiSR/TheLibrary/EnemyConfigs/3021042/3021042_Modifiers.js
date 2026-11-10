@@ -85,12 +85,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (MDF_ShowValue) || RETURN",
-                "displayLines": "MDF_ShowValue",
-                "constants": [],
-                "variables": [
-                  "MDF_ShowValue"
-                ]
+                "displayLines": "MDF_ShowValue"
               }
             }
           ]

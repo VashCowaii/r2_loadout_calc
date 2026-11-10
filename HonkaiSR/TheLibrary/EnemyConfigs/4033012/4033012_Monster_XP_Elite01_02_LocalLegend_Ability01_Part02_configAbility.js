@@ -35,17 +35,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (1) || Variables[1] (_TargetCurrentHp) || Variables[2] (_TargetMaxHp) || DIV || Variables[3] ({[Skill01[1]]}) || MUL || ADD || MUL || RETURN",
-              "displayLines": "({[Skill01[0]]} * (1 + ((_TargetCurrentHp / _TargetMaxHp) * {[Skill01[1]]})))",
-              "constants": [
-                1
-              ],
-              "variables": [
-                "{[Skill01[0]]}",
-                "_TargetCurrentHp",
-                "_TargetMaxHp",
-                "{[Skill01[1]]}"
-              ]
+              "displayLines": "({[Skill01[0]]} * (1 + ((_TargetCurrentHp / _TargetMaxHp) * {[Skill01[1]]})))"
             },
             "Toughness": null,
             "Tags": null,

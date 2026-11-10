@@ -24,24 +24,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (parameter[0]_AddLayer) || RETURN",
-                "displayLines": "parameter[0]_AddLayer",
-                "constants": [],
-                "variables": [
-                  "parameter[0]_AddLayer"
-                ]
+                "displayLines": "parameter[0]_AddLayer"
               },
               "variableName": "Result_Stack_Layer"
             },
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (parameter[0]_AddLayer) || RETURN",
-                "displayLines": "parameter[0]_AddLayer",
-                "constants": [],
-                "variables": [
-                  "parameter[0]_AddLayer"
-                ]
+                "displayLines": "parameter[0]_AddLayer"
               },
               "execute": [
                 {
@@ -60,12 +50,7 @@ const configAbility = {
                       {
                         "name": "Random Chance",
                         "chance": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         }
                       }
                     ]
@@ -74,14 +59,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (Result_Stack_Layer) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(Result_Stack_Layer + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Result_Stack_Layer"
-                        ]
+                        "displayLines": "(Result_Stack_Layer + 1)"
                       },
                       "variableName": "Result_Stack_Layer"
                     }
@@ -97,13 +75,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (Result_Stack_Layer) || Variables[1] (1) || ADD || RETURN",
-                        "displayLines": "(Result_Stack_Layer + 1)",
-                        "constants": [],
-                        "variables": [
-                          "Result_Stack_Layer",
-                          1
-                        ]
+                        "displayLines": "(Result_Stack_Layer + 1)"
                       },
                       "variableName": "Result_Stack_Layer"
                     }
@@ -131,70 +103,30 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"866598290\">Advanced_BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                   "baseChance": {
-                    "operator": "Variables[0] (parameter[1]_Chance) || RETURN",
-                    "displayLines": "parameter[1]_Chance",
-                    "constants": [],
-                    "variables": [
-                      "parameter[1]_Chance"
-                    ]
+                    "displayLines": "parameter[1]_Chance"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] (Max_DOT_Layer) || RETURN",
-                    "displayLines": "Max_DOT_Layer",
-                    "constants": [],
-                    "variables": [
-                      "Max_DOT_Layer"
-                    ]
+                    "displayLines": "Max_DOT_Layer"
                   },
                   "valuePerStack": {
                     "Basic_DamagePercentage": {
-                      "operator": "Variables[0] (2.4) || RETURN",
-                      "displayLines": "2.4",
-                      "constants": [],
-                      "variables": [
-                        2.4
-                      ]
+                      "displayLines": "2.4"
                     },
                     "ExtraLayer_DamagePercentage": {
-                      "operator": "Variables[0] (0.12) || RETURN",
-                      "displayLines": "0.12",
-                      "constants": [],
-                      "variables": [
-                        0.12
-                      ]
+                      "displayLines": "0.12"
                     },
                     "Spread_DamagePercentage": {
-                      "operator": "Variables[0] (1.8) || RETURN",
-                      "displayLines": "1.8",
-                      "constants": [],
-                      "variables": [
-                        1.8
-                      ]
+                      "displayLines": "1.8"
                     },
                     "ThresholdLayer": {
-                      "operator": "Variables[0] (DOT_Layer_Threshold) || RETURN",
-                      "displayLines": "DOT_Layer_Threshold",
-                      "constants": [],
-                      "variables": [
-                        "DOT_Layer_Threshold"
-                      ]
+                      "displayLines": "DOT_Layer_Threshold"
                     },
                     "DefenceIgnore": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (Result_Stack_Layer) || RETURN",
-                    "displayLines": "Result_Stack_Layer",
-                    "constants": [],
-                    "variables": [
-                      "Result_Stack_Layer"
-                    ]
+                    "displayLines": "Result_Stack_Layer"
                   }
                 }
               ],
@@ -207,70 +139,30 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"866598290\">Advanced_BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                   "baseChance": {
-                    "operator": "Variables[0] (parameter[1]_Chance) || RETURN",
-                    "displayLines": "parameter[1]_Chance",
-                    "constants": [],
-                    "variables": [
-                      "parameter[1]_Chance"
-                    ]
+                    "displayLines": "parameter[1]_Chance"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] (Max_DOT_Layer) || RETURN",
-                    "displayLines": "Max_DOT_Layer",
-                    "constants": [],
-                    "variables": [
-                      "Max_DOT_Layer"
-                    ]
+                    "displayLines": "Max_DOT_Layer"
                   },
                   "valuePerStack": {
                     "Basic_DamagePercentage": {
-                      "operator": "Variables[0] (2.4) || RETURN",
-                      "displayLines": "2.4",
-                      "constants": [],
-                      "variables": [
-                        2.4
-                      ]
+                      "displayLines": "2.4"
                     },
                     "ExtraLayer_DamagePercentage": {
-                      "operator": "Variables[0] (0.12) || RETURN",
-                      "displayLines": "0.12",
-                      "constants": [],
-                      "variables": [
-                        0.12
-                      ]
+                      "displayLines": "0.12"
                     },
                     "Spread_DamagePercentage": {
-                      "operator": "Variables[0] (1.8) || RETURN",
-                      "displayLines": "1.8",
-                      "constants": [],
-                      "variables": [
-                        1.8
-                      ]
+                      "displayLines": "1.8"
                     },
                     "ThresholdLayer": {
-                      "operator": "Variables[0] (DOT_Layer_Threshold) || RETURN",
-                      "displayLines": "DOT_Layer_Threshold",
-                      "constants": [],
-                      "variables": [
-                        "DOT_Layer_Threshold"
-                      ]
+                      "displayLines": "DOT_Layer_Threshold"
                     },
                     "DefenceIgnore": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (Result_Stack_Layer) || RETURN",
-                    "displayLines": "Result_Stack_Layer",
-                    "constants": [],
-                    "variables": [
-                      "Result_Stack_Layer"
-                    ]
+                    "displayLines": "Result_Stack_Layer"
                   }
                 }
               ]

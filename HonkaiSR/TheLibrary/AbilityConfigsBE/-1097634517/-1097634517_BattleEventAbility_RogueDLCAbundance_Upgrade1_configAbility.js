@@ -29,12 +29,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "dispelCount": {
-                "operator": "Variables[0] (#ADF_1) || RETURN",
-                "displayLines": "#ADF_1",
-                "constants": [],
-                "variables": [
-                  "#ADF_1"
-                ]
+                "displayLines": "#ADF_1"
               }
             }
           ]

@@ -31,12 +31,7 @@ const configAbility = {
           "ID": "140401(SkillMaze)",
           "counter": 1,
           "duration": {
-            "operator": "Variables[0] (10) || RETURN",
-            "displayLines": "10",
-            "constants": [],
-            "variables": [
-              10
-            ]
+            "displayLines": "10"
           },
           "conditions": {
             "name": "Has Flag",
@@ -221,12 +216,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -267,12 +257,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                    "displayLines": "MDF_PropertyValue2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue2"
-                    ]
+                    "displayLines": "MDF_PropertyValue2"
                   },
                   "formula": "Heal from Healer's MaxHP"
                 }
@@ -334,17 +319,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_SumBeingHealValue) || Variables[1] (_BeingHealValue) || Variables[2] (MDF_PropertyValue2) || MUL || Variables[3] (_MaxHPValue) || DIV || Constants[0] (100) || MUL || ADD || RETURN",
-                    "displayLines": "(_SumBeingHealValue + (((_BeingHealValue * MDF_PropertyValue2) / _MaxHPValue) * 100))",
-                    "constants": [
-                      100
-                    ],
-                    "variables": [
-                      "_SumBeingHealValue",
-                      "_BeingHealValue",
-                      "MDF_PropertyValue2",
-                      "_MaxHPValue"
-                    ]
+                    "displayLines": "(_SumBeingHealValue + (((_BeingHealValue * MDF_PropertyValue2) / _MaxHPValue) * 100))"
                   },
                   "variableName": "_SumBeingHealValue"
                 },
@@ -358,12 +333,7 @@ const configAbility = {
                         "value1": "_SumBeingHealValue",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (40) || RETURN",
-                          "displayLines": "40",
-                          "constants": [],
-                          "variables": [
-                            40
-                          ]
+                          "displayLines": "40"
                         }
                       },
                       {
@@ -384,18 +354,7 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (40) || Variables[1] (_SumBeingHealValue) || Variables[2] (_BeingHealValue) || Variables[3] (MDF_PropertyValue2) || MUL || Variables[4] (_MaxHPValue) || DIV || Constants[0] (100) || MUL || SUB || SUB || RETURN",
-                        "displayLines": "(40 - (_SumBeingHealValue - (((_BeingHealValue * MDF_PropertyValue2) / _MaxHPValue) * 100)))",
-                        "constants": [
-                          100
-                        ],
-                        "variables": [
-                          40,
-                          "_SumBeingHealValue",
-                          "_BeingHealValue",
-                          "MDF_PropertyValue2",
-                          "_MaxHPValue"
-                        ]
+                        "displayLines": "(40 - (_SumBeingHealValue - (((_BeingHealValue * MDF_PropertyValue2) / _MaxHPValue) * 100)))"
                       }
                     },
                     {
@@ -414,16 +373,7 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (_BeingHealValue) || Variables[1] (MDF_PropertyValue2) || MUL || Variables[2] (_MaxHPValue) || DIV || Constants[0] (100) || MUL || RETURN",
-                        "displayLines": "(((_BeingHealValue * MDF_PropertyValue2) / _MaxHPValue) * 100)",
-                        "constants": [
-                          100
-                        ],
-                        "variables": [
-                          "_BeingHealValue",
-                          "MDF_PropertyValue2",
-                          "_MaxHPValue"
-                        ]
+                        "displayLines": "(((_BeingHealValue * MDF_PropertyValue2) / _MaxHPValue) * 100)"
                       }
                     }
                   ]
@@ -479,27 +429,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (FLOOR) || Variables[1] (_MaxHPFixValue) || Variables[2] (MYDEI_OBJECT_UNUSED_6[100]) || DIV || PARAM_1 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_MaxHPFixValue / MYDEI_OBJECT_UNUSED_6[100]))",
-                "constants": [],
-                "variables": [
-                  "FLOOR",
-                  "_MaxHPFixValue",
-                  "MYDEI_OBJECT_UNUSED_6[100]"
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_MaxHPFixValue / MYDEI_OBJECT_UNUSED_6[100]))"
               },
               "variableName": "_Multipler"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_Multipler) || Variables[1] (0.012) || MUL || RETURN",
-                "displayLines": "(_Multipler * 0.012)",
-                "constants": [],
-                "variables": [
-                  "_Multipler",
-                  0.012
-                ]
+                "displayLines": "(_Multipler * 0.012)"
               },
               "variableName": "MDF_PropertyValue"
             },
@@ -511,50 +448,27 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateConverted</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_Multipler) || Variables[1] (0.025) || MUL || RETURN",
-                "displayLines": "(_Multipler * 0.025)",
-                "constants": [],
-                "variables": [
-                  "_Multipler",
-                  0.025
-                ]
+                "displayLines": "(_Multipler * 0.025)"
               },
               "variableName": "MDF_PropertyValue2"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_Multipler) || Variables[1] (0.025) || MUL || RETURN",
-                "displayLines": "(_Multipler * 0.025)",
-                "constants": [],
-                "variables": [
-                  "_Multipler",
-                  0.025
-                ]
+                "displayLines": "(_Multipler * 0.025)"
               },
               "variableName": "_Tree03_BeingHitRatio"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_Multipler) || Variables[1] (0.0075) || MUL || RETURN",
-                "displayLines": "(_Multipler * 0.0075)",
-                "constants": [],
-                "variables": [
-                  "_Multipler",
-                  0.0075
-                ]
+                "displayLines": "(_Multipler * 0.0075)"
               },
               "variableName": "MDF_PropertyValue3"
             },
@@ -566,12 +480,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingIncoming</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue3) || RETURN",
-                "displayLines": "MDF_PropertyValue3",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue3"
-                ]
+                "displayLines": "MDF_PropertyValue3"
               }
             }
           ]
@@ -607,13 +516,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_CurrentHP) || Variables[1] (MDF_CurrentHPConvert) || SUB || RETURN",
-                "displayLines": "(MDF_CurrentHP - MDF_CurrentHPConvert)",
-                "constants": [],
-                "variables": [
-                  "MDF_CurrentHP",
-                  "MDF_CurrentHPConvert"
-                ]
+                "displayLines": "(MDF_CurrentHP - MDF_CurrentHPConvert)"
               },
               "variableName": "MDF_CurrentRealHP"
             },
@@ -624,13 +527,7 @@ const configAbility = {
                 "value1": "MDF_CurrentRealHP",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (4000) || Variables[1] (MYDEI_OBJECT_UNUSED_6[100]) || ADD || RETURN",
-                  "displayLines": "(4000 + MYDEI_OBJECT_UNUSED_6[100])",
-                  "constants": [],
-                  "variables": [
-                    4000,
-                    "MYDEI_OBJECT_UNUSED_6[100]"
-                  ]
+                  "displayLines": "(4000 + MYDEI_OBJECT_UNUSED_6[100])"
                 }
               },
               "passed": [
@@ -643,13 +540,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-242497681\">Mydeimos_Trace03_Sub</a>[<span class=\"descriptionNumberColor\">Bloodied Chiton</span>]",
                   "valuePerStack": {
                     "_MaxHPFixValue": {
-                      "operator": "Variables[0] (MDF_CurrentRealHP) || Variables[1] (4000) || SUB || RETURN",
-                      "displayLines": "(MDF_CurrentRealHP - 4000)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_CurrentRealHP",
-                        4000
-                      ]
+                      "displayLines": "(MDF_CurrentRealHP - 4000)"
                     }
                   }
                 }
@@ -712,14 +603,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (DV_MaxHP) || Variables[1] (DV_HPConvert) || SUB || Variables[2] (0.5) || MUL || RETURN",
-                "displayLines": "((DV_MaxHP - DV_HPConvert) * 0.5)",
-                "constants": [],
-                "variables": [
-                  "DV_MaxHP",
-                  "DV_HPConvert",
-                  0.5
-                ]
+                "displayLines": "((DV_MaxHP - DV_HPConvert) * 0.5)"
               }
             }
           ]
@@ -751,20 +635,10 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.15) || RETURN",
-              "displayLines": "0.15",
-              "constants": [],
-              "variables": [
-                0.15
-              ]
+              "displayLines": "0.15"
             },
             "MDF_PropertyValue2": {
-              "operator": "Variables[0] (0.4) || RETURN",
-              "displayLines": "0.4",
-              "constants": [],
-              "variables": [
-                0.4
-              ]
+              "displayLines": "0.4"
             }
           }
         },
@@ -781,20 +655,10 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             },
             "MDF_PropertyValue2": {
-              "operator": "Variables[0] (0.1) || RETURN",
-              "displayLines": "0.1",
-              "constants": [],
-              "variables": [
-                0.1
-              ]
+              "displayLines": "0.1"
             }
           }
         }
@@ -844,12 +708,7 @@ const configAbility = {
               "name": "Update Displayed Energy Bar",
               "value": 0,
               "maximum": {
-                "operator": "Variables[0] (MYDEI_OBJECT_UNUSED_8[100]) || RETURN",
-                "displayLines": "MYDEI_OBJECT_UNUSED_8[100]",
-                "constants": [],
-                "variables": [
-                  "MYDEI_OBJECT_UNUSED_8[100]"
-                ]
+                "displayLines": "MYDEI_OBJECT_UNUSED_8[100]"
               },
               "assignState": "True",
               "priorState": "Normal",
@@ -921,14 +780,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (DV_MaxHP) || Variables[1] (DV_HPConvert) || SUB || Variables[2] (0.5) || MUL || RETURN",
-                "displayLines": "((DV_MaxHP - DV_HPConvert) * 0.5)",
-                "constants": [],
-                "variables": [
-                  "DV_MaxHP",
-                  "DV_HPConvert",
-                  0.5
-                ]
+                "displayLines": "((DV_MaxHP - DV_HPConvert) * 0.5)"
               },
               "variableName": "MDF_HPAddValue"
             },
@@ -1014,12 +866,7 @@ const configAbility = {
                     "name": "Insert Ability Condition",
                     "type": "AbilityOwnerInsertUnusedCount",
                     "typeValue": {
-                      "operator": "Variables[0] (MDF_HPAddValue) || RETURN",
-                      "displayLines": "MDF_HPAddValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_HPAddValue"
-                      ]
+                      "displayLines": "MDF_HPAddValue"
                     }
                   },
                   "abilityName": "Mydeimos_PassiveAbility01_InsertExit",
@@ -1037,12 +884,7 @@ const configAbility = {
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "DV_HealRatio": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   },
                   "allowAbilityTriggers": false
@@ -1089,14 +931,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DV_MaxHP) || Variables[1] (DV_HPConvert) || SUB || Variables[2] (0.5) || MUL || RETURN",
-                    "displayLines": "((DV_MaxHP - DV_HPConvert) * 0.5)",
-                    "constants": [],
-                    "variables": [
-                      "DV_MaxHP",
-                      "DV_HPConvert",
-                      0.5
-                    ]
+                    "displayLines": "((DV_MaxHP - DV_HPConvert) * 0.5)"
                   },
                   "variableName": "MDF_HPAddValue"
                 }
@@ -1140,14 +975,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DV_MaxHP) || Variables[1] (DV_HPConvert) || SUB || Variables[2] (0.5) || MUL || RETURN",
-                    "displayLines": "((DV_MaxHP - DV_HPConvert) * 0.5)",
-                    "constants": [],
-                    "variables": [
-                      "DV_MaxHP",
-                      "DV_HPConvert",
-                      0.5
-                    ]
+                    "displayLines": "((DV_MaxHP - DV_HPConvert) * 0.5)"
                   },
                   "variableName": "MDF_HPAddValue"
                 }
@@ -1191,14 +1019,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DV_MaxHP) || Variables[1] (DV_HPConvert) || SUB || Variables[2] (0.5) || MUL || RETURN",
-                    "displayLines": "((DV_MaxHP - DV_HPConvert) * 0.5)",
-                    "constants": [],
-                    "variables": [
-                      "DV_MaxHP",
-                      "DV_HPConvert",
-                      0.5
-                    ]
+                    "displayLines": "((DV_MaxHP - DV_HPConvert) * 0.5)"
                   },
                   "variableName": "MDF_HPAddValue"
                 }

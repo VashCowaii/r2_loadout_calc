@@ -52,14 +52,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] ({[Skill10[0]]}) || Variables[1] (Skill10Attack) || MUL || Variables[2] (Skill10TargetNumber) || MUL || RETURN",
-        "displayLines": "(({[Skill10[0]]} * Skill10Attack) * Skill10TargetNumber)",
-        "constants": [],
-        "variables": [
-          "{[Skill10[0]]}",
-          "Skill10Attack",
-          "Skill10TargetNumber"
-        ]
+        "displayLines": "(({[Skill10[0]]} * Skill10Attack) * Skill10TargetNumber)"
       },
       "variableName": "Skill10Damage"
     },
@@ -81,12 +74,7 @@ const configAbility = {
         "value1": "Skill10Damage",
         "compareType": ">=",
         "value2": {
-          "operator": "Variables[0] (Skill10LightTeamShield) || RETURN",
-          "displayLines": "Skill10LightTeamShield",
-          "constants": [],
-          "variables": [
-            "Skill10LightTeamShield"
-          ]
+          "displayLines": "Skill10LightTeamShield"
         }
       },
       "passed": [
@@ -120,12 +108,7 @@ const configAbility = {
         "value1": "Skill10Damage",
         "compareType": ">=",
         "value2": {
-          "operator": "Variables[0] (Skill10LightTeamShield) || RETURN",
-          "displayLines": "Skill10LightTeamShield",
-          "constants": [],
-          "variables": [
-            "Skill10LightTeamShield"
-          ]
+          "displayLines": "Skill10LightTeamShield"
         }
       },
       "passed": [

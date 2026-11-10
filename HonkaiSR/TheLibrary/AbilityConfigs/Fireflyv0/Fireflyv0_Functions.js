@@ -86,17 +86,7 @@ const configAbility = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (IsForceStanceDamage) || Constants[0] (1) || EQUAL || Variables[1] (ENEMIES_OBJECT_UNUSED__310) || Variables[2] (ENEMIES_OBJECT_UNUSED__312) || CHECK || Constants[0] (1) || Variables[3] (ENEMIES_OBJECT_UNUSED__313) || ADD || MUL || RETURN",
-                        "displayLines": "(check(value:(IsForceStanceDamage === 1), then:ENEMIES_OBJECT_UNUSED__310, else:ENEMIES_OBJECT_UNUSED__312) * (1 + ENEMIES_OBJECT_UNUSED__313))",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "IsForceStanceDamage",
-                          "ENEMIES_OBJECT_UNUSED__310",
-                          "ENEMIES_OBJECT_UNUSED__312",
-                          "ENEMIES_OBJECT_UNUSED__313"
-                        ]
+                        "displayLines": "(check(value:(IsForceStanceDamage === 1), then:ENEMIES_OBJECT_UNUSED__310, else:ENEMIES_OBJECT_UNUSED__312) * (1 + ENEMIES_OBJECT_UNUSED__313))"
                       },
                       "attacker": {
                         "name": "Target Name",
@@ -118,17 +108,7 @@ const configAbility = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (IsForceStanceDamage) || Constants[0] (1) || EQUAL || Variables[1] (ENEMIES_OBJECT_UNUSED__310) || Variables[2] (ENEMIES_OBJECT_UNUSED__312) || CHECK || Constants[0] (1) || Variables[3] (ENEMIES_OBJECT_UNUSED__313) || ADD || MUL || RETURN",
-                        "displayLines": "(check(value:(IsForceStanceDamage === 1), then:ENEMIES_OBJECT_UNUSED__310, else:ENEMIES_OBJECT_UNUSED__312) * (1 + ENEMIES_OBJECT_UNUSED__313))",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "IsForceStanceDamage",
-                          "ENEMIES_OBJECT_UNUSED__310",
-                          "ENEMIES_OBJECT_UNUSED__312",
-                          "ENEMIES_OBJECT_UNUSED__313"
-                        ]
+                        "displayLines": "(check(value:(IsForceStanceDamage === 1), then:ENEMIES_OBJECT_UNUSED__310, else:ENEMIES_OBJECT_UNUSED__312) * (1 + ENEMIES_OBJECT_UNUSED__313))"
                       },
                       "attacker": {
                         "name": "Target Name",

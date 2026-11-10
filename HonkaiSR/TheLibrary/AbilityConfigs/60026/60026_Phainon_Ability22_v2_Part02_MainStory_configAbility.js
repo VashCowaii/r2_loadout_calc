@@ -21,28 +21,14 @@ const configAbility = {
       "name": "Define Custom Variable",
       "scope": "ContextAbility",
       "value": {
-        "operator": "Variables[0] (PHAINON_OBJECT_UNUSED_1) || Variables[1] (PHAINON_OBJECT_UNUSED_2) || SUB || Variables[2] (Count) || Constants[0] (1) || SUB || DIV || RETURN",
-        "displayLines": "((PHAINON_OBJECT_UNUSED_1 - PHAINON_OBJECT_UNUSED_2) / (Count - 1))",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "PHAINON_OBJECT_UNUSED_1",
-          "PHAINON_OBJECT_UNUSED_2",
-          "Count"
-        ]
+        "displayLines": "((PHAINON_OBJECT_UNUSED_1 - PHAINON_OBJECT_UNUSED_2) / (Count - 1))"
       },
       "variableName": "_delta_frame"
     },
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (Count) || RETURN",
-        "displayLines": "Count",
-        "constants": [],
-        "variables": [
-          "Count"
-        ]
+        "displayLines": "Count"
       },
       "execute": [
         {
@@ -57,14 +43,7 @@ const configAbility = {
               "name": "Define Custom Variable",
               "scope": "ContextAbility",
               "value": {
-                "operator": "Variables[0] (_count) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(_count + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_count"
-                ]
+                "displayLines": "(_count + 1)"
               },
               "variableName": "_count"
             },
@@ -130,22 +109,10 @@ const configAbility = {
               "displayLines": 1
             },
             "DamageFlat": {
-              "operator": "Variables[0] (_CurrentHp) || RETURN",
-              "displayLines": "_CurrentHp",
-              "constants": [],
-              "variables": [
-                "_CurrentHp"
-              ]
+              "displayLines": "_CurrentHp"
             },
             "HitSplit": {
-              "operator": "Constants[0] (1) || Variables[0] (ADF_TargetCount) || DIV || RETURN",
-              "displayLines": "(1 / ADF_TargetCount)",
-              "constants": [
-                1
-              ],
-              "variables": [
-                "ADF_TargetCount"
-              ]
+              "displayLines": "(1 / ADF_TargetCount)"
             },
             "Toughness": {
               "displayLines": 30

@@ -12,12 +12,7 @@ const configAbility = {
         "target": "{{Caster's Summoner}}"
       },
       "value": {
-        "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-        "displayLines": "{[SkillP01[0]]}",
-        "constants": [],
-        "variables": [
-          "{[SkillP01[0]]}"
-        ]
+        "displayLines": "{[SkillP01[0]]}"
       },
       "variableName": "PartBreak_StanceValue"
     },
@@ -120,12 +115,7 @@ const configAbility = {
                     "value1": "_ActionDelay",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (_ActionDelaySummoner) || RETURN",
-                      "displayLines": "_ActionDelaySummoner",
-                      "constants": [],
-                      "variables": [
-                        "_ActionDelaySummoner"
-                      ]
+                      "displayLines": "_ActionDelaySummoner"
                     }
                   },
                   "passed": [
@@ -137,12 +127,7 @@ const configAbility = {
                       },
                       "advanceType": "Set",
                       "add": {
-                        "operator": "Variables[0] (_ActionDelaySummoner) || RETURN",
-                        "displayLines": "_ActionDelaySummoner",
-                        "constants": [],
-                        "variables": [
-                          "_ActionDelaySummoner"
-                        ]
+                        "displayLines": "_ActionDelaySummoner"
                       }
                     }
                   ]
@@ -313,12 +298,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"889164751\">Enemy_W3_SundayPart_IF_WeaknessShare</a>",
                           "valuePerStack": {
                             "MDF_WeaknessShare": {
-                              "operator": "Variables[0] (_SummonerBreak) || RETURN",
-                              "displayLines": "_SummonerBreak",
-                              "constants": [],
-                              "variables": [
-                                "_SummonerBreak"
-                              ]
+                              "displayLines": "_SummonerBreak"
                             }
                           }
                         }

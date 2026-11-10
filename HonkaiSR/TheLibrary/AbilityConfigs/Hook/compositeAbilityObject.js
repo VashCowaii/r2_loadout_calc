@@ -116,12 +116,7 @@ const compositeAbilityObject = {
           },
           "statName": "STAT_CTRL",
           "value": {
-            "operator": "Variables[0] (0.35) || RETURN",
-            "displayLines": "0.35",
-            "constants": [],
-            "variables": [
-              0.35
-            ]
+            "displayLines": "0.35"
           }
         }
       ],
@@ -676,12 +671,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] (0.5) || RETURN",
-                              "displayLines": "0.5",
-                              "constants": [],
-                              "variables": [
-                                0.5
-                              ]
+                              "displayLines": "0.5"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -728,29 +718,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
                       "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "valuePerStack": {
                         "Modifier_Burn_DamagePercentage": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         }
                       },
                       "stackFlag": "CharacterSkill"
@@ -782,12 +757,7 @@ const compositeAbilityObject = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (5) || RETURN",
-            "displayLines": "5",
-            "constants": [],
-            "variables": [
-              5
-            ]
+            "displayLines": "5"
           },
           "isFixed": "* ERR"
         },
@@ -801,12 +771,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "Toughness": null,
             "Tags": null,
@@ -829,30 +794,14 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
               "duration": {
-                "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-                "displayLines": "(2 + 1)",
-                "constants": [],
-                "variables": [
-                  2,
-                  1
-                ]
+                "displayLines": "(2 + 1)"
               },
               "baseChance": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "valuePerStack": {
                 "Modifier_Burn_DamagePercentage": {
-                  "operator": "Variables[0] (0.65) || RETURN",
-                  "displayLines": "0.65",
-                  "constants": [],
-                  "variables": [
-                    0.65
-                  ]
+                  "displayLines": "0.65"
                 }
               },
               "stackFlag": "CharacterSkill"
@@ -873,12 +822,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (0.05) || RETURN",
-                "displayLines": "0.05",
-                "constants": [],
-                "variables": [
-                  0.05
-                ]
+                "displayLines": "0.05"
               },
               "formula": "Heal from Healer's MaxHP"
             }
@@ -947,12 +891,7 @@ const compositeAbilityObject = {
             "delayAdvancePreview": {
               "name": "Delay/Advance Preview",
               "previewValue": {
-                "operator": "Variables[0] (0.2) || INVERT || RETURN",
-                "displayLines": "-0.2",
-                "constants": [],
-                "variables": [
-                  0.2
-                ]
+                "displayLines": "-0.2"
               }
             }
           }
@@ -980,21 +919,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (4) || RETURN",
-              "displayLines": "4",
-              "constants": [],
-              "variables": [
-                4
-              ]
+              "displayLines": "4"
             },
             "HitSplit": 0.3,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -1010,21 +939,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (4) || RETURN",
-              "displayLines": "4",
-              "constants": [],
-              "variables": [
-                4
-              ]
+              "displayLines": "4"
             },
             "HitSplit": 0.7,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -1090,12 +1009,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"372814598\">Hook_Eidolon1_AddDamageRatio</a>",
               "valuePerStack": {
                 "MDF_AddRatio": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             }
@@ -1115,12 +1029,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (5) || RETURN",
-                "displayLines": "5",
-                "constants": [],
-                "variables": [
-                  5
-                ]
+                "displayLines": "5"
               },
               "isFixed": "* ERR"
             },
@@ -1240,20 +1149,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (2.8) || RETURN",
-              "displayLines": "2.8",
-              "constants": [],
-              "variables": [
-                2.8
-              ]
+              "displayLines": "2.8"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -1269,20 +1168,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (0.8) || RETURN",
-              "displayLines": "0.8",
-              "constants": [],
-              "variables": [
-                0.8
-              ]
+              "displayLines": "0.8"
             },
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null
           }
@@ -1311,12 +1200,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (5) || RETURN",
-                "displayLines": "5",
-                "constants": [],
-                "variables": [
-                  5
-                ]
+                "displayLines": "5"
               },
               "isFixed": "* ERR"
             },
@@ -1340,30 +1224,14 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-                    "displayLines": "(2 + 1)",
-                    "constants": [],
-                    "variables": [
-                      2,
-                      1
-                    ]
+                    "displayLines": "(2 + 1)"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "valuePerStack": {
                     "Modifier_Burn_DamagePercentage": {
-                      "operator": "Variables[0] (0.65) || RETURN",
-                      "displayLines": "0.65",
-                      "constants": [],
-                      "variables": [
-                        0.65
-                      ]
+                      "displayLines": "0.65"
                     }
                   },
                   "stackFlag": "CharacterSkill"
@@ -1389,12 +1257,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (0.05) || RETURN",
-                    "displayLines": "0.05",
-                    "constants": [],
-                    "variables": [
-                      0.05
-                    ]
+                    "displayLines": "0.05"
                   },
                   "formula": "Heal from Healer's MaxHP"
                 }
@@ -1410,12 +1273,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1435,12 +1293,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "variableName": "Rank_LifeTime"
             }
@@ -1461,30 +1314,14 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || Variables[1] (Rank_LifeTime) || ADD || RETURN",
-            "displayLines": "(2 + Rank_LifeTime)",
-            "constants": [],
-            "variables": [
-              2,
-              "Rank_LifeTime"
-            ]
+            "displayLines": "(2 + Rank_LifeTime)"
           },
           "baseChance": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "valuePerStack": {
             "Modifier_Burn_DamagePercentage": {
-              "operator": "Variables[0] (0.65) || RETURN",
-              "displayLines": "0.65",
-              "constants": [],
-              "variables": [
-                0.65
-              ]
+              "displayLines": "0.65"
             }
           },
           "stackFlag": "CharacterSkill"
@@ -1583,20 +1420,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (2.4) || RETURN",
-              "displayLines": "2.4",
-              "constants": [],
-              "variables": [
-                2.4
-              ]
+              "displayLines": "2.4"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -1641,12 +1468,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "variableName": "Rank_LifeTime"
             }
@@ -1667,30 +1489,14 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || Variables[1] (Rank_LifeTime) || ADD || RETURN",
-            "displayLines": "(2 + Rank_LifeTime)",
-            "constants": [],
-            "variables": [
-              2,
-              "Rank_LifeTime"
-            ]
+            "displayLines": "(2 + Rank_LifeTime)"
           },
           "baseChance": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "valuePerStack": {
             "Modifier_Burn_DamagePercentage": {
-              "operator": "Variables[0] (0.65) || RETURN",
-              "displayLines": "0.65",
-              "constants": [],
-              "variables": [
-                0.65
-              ]
+              "displayLines": "0.65"
             }
           },
           "stackFlag": "CharacterSkill"
@@ -1754,20 +1560,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"

@@ -19,12 +19,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (SummonCount) || RETURN",
-            "displayLines": "SummonCount",
-            "constants": [],
-            "variables": [
-              "SummonCount"
-            ]
+            "displayLines": "SummonCount"
           },
           "variableName": "SummonNum"
         },
@@ -56,12 +51,7 @@ const configAbility = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (SummonCount) || RETURN",
-                        "displayLines": "SummonCount",
-                        "constants": [],
-                        "variables": [
-                          "SummonCount"
-                        ]
+                        "displayLines": "SummonCount"
                       },
                       "caseEvents": [
                         {
@@ -71,24 +61,14 @@ const configAbility = {
                             {
                               "name": "Create Enemies",
                               "delayPercent": {
-                                "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                                "displayLines": "{[Skill03[0]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[Skill03[0]]}"
-                                ]
+                                "displayLines": "{[Skill03[0]]}"
                               },
                               "refreshPositions": false,
                               "enemyList": [
                                 {
                                   "name": "Enemy Entry",
                                   "enemyID": {
-                                    "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                                    "displayLines": "SummonList_ADF_1",
-                                    "constants": [],
-                                    "variables": [
-                                      "SummonList_ADF_1"
-                                    ]
+                                    "displayLines": "SummonList_ADF_1"
                                   },
                                   "locationType": "Last"
                                 }
@@ -103,24 +83,14 @@ const configAbility = {
                             {
                               "name": "Create Enemies",
                               "delayPercent": {
-                                "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                                "displayLines": "{[Skill03[0]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[Skill03[0]]}"
-                                ]
+                                "displayLines": "{[Skill03[0]]}"
                               },
                               "refreshPositions": false,
                               "enemyList": [
                                 {
                                   "name": "Enemy Entry",
                                   "enemyID": {
-                                    "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                                    "displayLines": "SummonList_ADF_1",
-                                    "constants": [],
-                                    "variables": [
-                                      "SummonList_ADF_1"
-                                    ]
+                                    "displayLines": "SummonList_ADF_1"
                                   },
                                   "locationType": "First"
                                 }
@@ -135,24 +105,14 @@ const configAbility = {
                             {
                               "name": "Create Enemies",
                               "delayPercent": {
-                                "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                                "displayLines": "{[Skill03[0]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[Skill03[0]]}"
-                                ]
+                                "displayLines": "{[Skill03[0]]}"
                               },
                               "refreshPositions": false,
                               "enemyList": [
                                 {
                                   "name": "Enemy Entry",
                                   "enemyID": {
-                                    "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                                    "displayLines": "SummonList_ADF_1",
-                                    "constants": [],
-                                    "variables": [
-                                      "SummonList_ADF_1"
-                                    ]
+                                    "displayLines": "SummonList_ADF_1"
                                   },
                                   "locationType": "Last"
                                 }
@@ -167,24 +127,14 @@ const configAbility = {
                             {
                               "name": "Create Enemies",
                               "delayPercent": {
-                                "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                                "displayLines": "{[Skill03[0]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[Skill03[0]]}"
-                                ]
+                                "displayLines": "{[Skill03[0]]}"
                               },
                               "refreshPositions": false,
                               "enemyList": [
                                 {
                                   "name": "Enemy Entry",
                                   "enemyID": {
-                                    "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                                    "displayLines": "SummonList_ADF_1",
-                                    "constants": [],
-                                    "variables": [
-                                      "SummonList_ADF_1"
-                                    ]
+                                    "displayLines": "SummonList_ADF_1"
                                   },
                                   "locationType": "First"
                                 }
@@ -212,20 +162,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1300638915\">Enemy_W4_Unicorn_01_SummonMonsterWeak</a>[<span class=\"descriptionNumberColor\">Weakling</span>]",
                       "valuePerStack": {
                         "MDF_InitHP": {
-                          "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-                          "displayLines": "{[Skill03[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill03[1]]}"
-                          ]
+                          "displayLines": "{[Skill03[1]]}"
                         },
                         "MDF_DefenceAddedRatio": {
-                          "operator": "Variables[0] ({[Skill03[6]]}) || RETURN",
-                          "displayLines": "{[Skill03[6]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill03[6]]}"
-                          ]
+                          "displayLines": "{[Skill03[6]]}"
                         }
                       }
                     },
@@ -270,12 +210,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (SummonCount) || RETURN",
-                    "displayLines": "SummonCount",
-                    "constants": [],
-                    "variables": [
-                      "SummonCount"
-                    ]
+                    "displayLines": "SummonCount"
                   },
                   "caseEvents": [
                     {
@@ -333,12 +268,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "consumePercent": {
-            "operator": "Variables[0] ({[Skill03[4]]}) || RETURN",
-            "displayLines": "{[Skill03[4]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[4]]}"
-            ]
+            "displayLines": "{[Skill03[4]]}"
           },
           "DamageType": "AllType"
         },
@@ -378,12 +308,7 @@ const configAbility = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (SummonNum) || RETURN",
-                "displayLines": "SummonNum",
-                "constants": [],
-                "variables": [
-                  "SummonNum"
-                ]
+                "displayLines": "SummonNum"
               },
               "caseEvents": [
                 {
@@ -444,12 +369,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (SummonCount) || RETURN",
-            "displayLines": "SummonCount",
-            "constants": [],
-            "variables": [
-              "SummonCount"
-            ]
+            "displayLines": "SummonCount"
           },
           "execute": [
             {
@@ -473,12 +393,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (SummonCount) || RETURN",
-                    "displayLines": "SummonCount",
-                    "constants": [],
-                    "variables": [
-                      "SummonCount"
-                    ]
+                    "displayLines": "SummonCount"
                   },
                   "caseEvents": [
                     {
@@ -536,12 +451,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "consumePercent": {
-            "operator": "Variables[0] ({[Skill03[4]]}) || RETURN",
-            "displayLines": "{[Skill03[4]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[4]]}"
-            ]
+            "displayLines": "{[Skill03[4]]}"
           },
           "DamageType": "AllType"
         }

@@ -67,13 +67,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (6) || Variables[1] (CastoriceServant_Eidolon6_AddCount) || ADD || RETURN",
-            "displayLines": "(6 + CastoriceServant_Eidolon6_AddCount)",
-            "constants": [],
-            "variables": [
-              6,
-              "CastoriceServant_Eidolon6_AddCount"
-            ]
+            "displayLines": "(6 + CastoriceServant_Eidolon6_AddCount)"
           },
           "variableName": "CastoriceServant_LoopCount"
         }
@@ -82,12 +76,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (6) || RETURN",
-            "displayLines": "6",
-            "constants": [],
-            "variables": [
-              6
-            ]
+            "displayLines": "6"
           },
           "variableName": "CastoriceServant_LoopCount"
         }
@@ -96,25 +85,14 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (0.4) || Variables[1] (SkillP04_P1_ExtraAddPercentage) || ADD || RETURN",
-        "displayLines": "(0.4 + SkillP04_P1_ExtraAddPercentage)",
-        "constants": [],
-        "variables": [
-          0.4,
-          "SkillP04_P1_ExtraAddPercentage"
-        ]
+        "displayLines": "(0.4 + SkillP04_P1_ExtraAddPercentage)"
       },
       "variableName": "SkillP04_P1_HPPercentage"
     },
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (CastoriceServant_LoopCount) || RETURN",
-        "displayLines": "CastoriceServant_LoopCount",
-        "constants": [],
-        "variables": [
-          "CastoriceServant_LoopCount"
-        ]
+        "displayLines": "CastoriceServant_LoopCount"
       },
       "execute": [
         {
@@ -146,22 +124,11 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] (SkillP04_P1_HPPercentage) || Variables[1] (Castorice_Rank01_DamageRatio) || MUL || RETURN",
-                      "displayLines": "(SkillP04_P1_HPPercentage * Castorice_Rank01_DamageRatio)",
-                      "constants": [],
-                      "variables": [
-                        "SkillP04_P1_HPPercentage",
-                        "Castorice_Rank01_DamageRatio"
-                      ]
+                      "displayLines": "(SkillP04_P1_HPPercentage * Castorice_Rank01_DamageRatio)"
                     },
                     "dmgFormula": "[SUMMONER] Max HP Scaling",
                     "Toughness": {
-                      "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                      "displayLines": "ST Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "ST Toughness Value"
-                      ]
+                      "displayLines": "ST Toughness Value"
                     },
                     "Tags": null,
                     "attackType": "Memosprite",
@@ -180,21 +147,11 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] (SkillP04_P1_HPPercentage) || RETURN",
-                      "displayLines": "SkillP04_P1_HPPercentage",
-                      "constants": [],
-                      "variables": [
-                        "SkillP04_P1_HPPercentage"
-                      ]
+                      "displayLines": "SkillP04_P1_HPPercentage"
                     },
                     "dmgFormula": "[SUMMONER] Max HP Scaling",
                     "Toughness": {
-                      "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                      "displayLines": "ST Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "ST Toughness Value"
-                      ]
+                      "displayLines": "ST Toughness Value"
                     },
                     "Tags": null,
                     "attackType": "Memosprite",
@@ -215,14 +172,7 @@ const configAbility = {
         "target": "{{All Team Members}} -{{Caster}}"
       },
       "healFlat": {
-        "operator": "Variables[0] (CastoriceServant_SummonMaxHP) || Variables[1] (0.06) || MUL || Variables[2] (800) || ADD || RETURN",
-        "displayLines": "((CastoriceServant_SummonMaxHP * 0.06) + 800)",
-        "constants": [],
-        "variables": [
-          "CastoriceServant_SummonMaxHP",
-          0.06,
-          800
-        ]
+        "displayLines": "((CastoriceServant_SummonMaxHP * 0.06) + 800)"
       },
       "formula": "Heal from Base Value"
     },

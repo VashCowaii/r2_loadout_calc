@@ -32,12 +32,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "variableName": "MDF_PassiveMaxLayer"
     }
@@ -64,14 +59,7 @@ const configAbility = {
                   "name": "Change Skill Point Max",
                   "function": "Add",
                   "value": {
-                    "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(2 + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "(2 + 1)"
                   }
                 }
               ],
@@ -80,12 +68,7 @@ const configAbility = {
                   "name": "Change Skill Point Max",
                   "function": "Add",
                   "value": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   }
                 }
               ]
@@ -99,12 +82,7 @@ const configAbility = {
               "name": "Change Skill Point Max",
               "function": "Add",
               "value": {
-                "operator": "Variables[0] (2) || INVERT || RETURN",
-                "displayLines": "-2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "-2"
               }
             }
           ]
@@ -167,12 +145,7 @@ const configAbility = {
                     "value1": "MDF_BPCountAll",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (3) || RETURN",
-                      "displayLines": "3",
-                      "constants": [],
-                      "variables": [
-                        3
-                      ]
+                      "displayLines": "3"
                     }
                   },
                   {
@@ -244,12 +217,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1118089721\">Advanced_Sparkle_Tree03</a>[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.45) || RETURN",
-                      "displayLines": "0.45",
-                      "constants": [],
-                      "variables": [
-                        0.45
-                      ]
+                      "displayLines": "0.45"
                     }
                   }
                 }
@@ -269,12 +237,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_BPCount) || INVERT || RETURN",
-                "displayLines": "-MDF_BPCount",
-                "constants": [],
-                "variables": [
-                  "MDF_BPCount"
-                ]
+                "displayLines": "-MDF_BPCount"
               },
               "variableName": "MDF_BPCount"
             },
@@ -318,13 +281,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_BPCountAll) || Variables[1] (MDF_BPCount) || ADD || RETURN",
-                        "displayLines": "(MDF_BPCountAll + MDF_BPCount)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_BPCountAll",
-                          "MDF_BPCount"
-                        ]
+                        "displayLines": "(MDF_BPCountAll + MDF_BPCount)"
                       },
                       "variableName": "MDF_BPCountAll"
                     }
@@ -365,12 +322,7 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "isFixed": "* ERR"
                     }
@@ -384,54 +336,24 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1755645655\">Advanced_Sparkle_PassiveAbility_Halo</a>[<span class=\"descriptionNumberColor\">Figment</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] (MDF_PassiveMaxLayer) || RETURN",
-                    "displayLines": "MDF_PassiveMaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PassiveMaxLayer"
-                    ]
+                    "displayLines": "MDF_PassiveMaxLayer"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue2": {
-                      "operator": "Variables[0] (0.04) || RETURN",
-                      "displayLines": "0.04",
-                      "constants": [],
-                      "variables": [
-                        0.04
-                      ]
+                      "displayLines": "0.04"
                     },
                     "MDF_PropertyValue3": {
-                      "operator": "Variables[0] (0.06) || RETURN",
-                      "displayLines": "0.06",
-                      "constants": [],
-                      "variables": [
-                        0.06
-                      ]
+                      "displayLines": "0.06"
                     },
                     "MDF_DefenceAddedRatio2": {
-                      "operator": "Variables[0] (0.1) || RETURN",
-                      "displayLines": "0.1",
-                      "constants": [],
-                      "variables": [
-                        0.1
-                      ]
+                      "displayLines": "0.1"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_BPCount) || RETURN",
-                    "displayLines": "MDF_BPCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_BPCount"
-                    ]
+                    "displayLines": "MDF_BPCount"
                   }
                 }
               ]
@@ -471,22 +393,12 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1178065515\">Advanced_Sparkle_SpeedUP</a>[<span class=\"descriptionNumberColor\">Suspension of Disbelief</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "referenceModifier": "<a class=\"gModGreen\" id=\"1020254741\">MReference_SpeedRatioUp</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.15) || RETURN",
-                      "displayLines": "0.15",
-                      "constants": [],
-                      "variables": [
-                        0.15
-                      ]
+                      "displayLines": "0.15"
                     }
                   }
                 }
@@ -508,12 +420,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1118089721\">Advanced_Sparkle_Tree03</a>[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.45) || RETURN",
-                      "displayLines": "0.45",
-                      "constants": [],
-                      "variables": [
-                        0.45
-                      ]
+                      "displayLines": "0.45"
                     }
                   }
                 }

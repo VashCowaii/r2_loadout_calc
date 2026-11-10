@@ -48,14 +48,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_BirdAttackCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(DV_FantasticStory_BaseAbility_BirdAttackCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "DV_FantasticStory_BaseAbility_BirdAttackCount"
-                    ]
+                    "displayLines": "(DV_FantasticStory_BaseAbility_BirdAttackCount + 1)"
                   },
                   "variableName": "DV_FantasticStory_BaseAbility_BirdAttackCount"
                 },
@@ -108,12 +101,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1883595095\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount</a>[<span class=\"descriptionNumberColor\">\"Resound\"</span>]",
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_BirdAttackCount) || RETURN",
-                    "displayLines": "DV_FantasticStory_BaseAbility_BirdAttackCount",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_BaseAbility_BirdAttackCount"
-                    ]
+                    "displayLines": "DV_FantasticStory_BaseAbility_BirdAttackCount"
                   }
                 }
               ]

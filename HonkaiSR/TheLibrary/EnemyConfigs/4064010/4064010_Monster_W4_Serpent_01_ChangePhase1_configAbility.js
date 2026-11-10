@@ -54,12 +54,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1717754231\">Enemy_W4_Serpent_01_Passive_Sub</a>[<span class=\"descriptionNumberColor\">Expedite Verdict</span>]",
       "valuePerStack": {
         "MDF_AllDamageReduce": {
-          "operator": "Variables[0] ({[PassiveSkillInitiate[0]]}) || RETURN",
-          "displayLines": "{[PassiveSkillInitiate[0]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkillInitiate[0]]}"
-          ]
+          "displayLines": "{[PassiveSkillInitiate[0]]}"
         }
       }
     },

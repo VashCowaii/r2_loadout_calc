@@ -186,12 +186,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MWAvatar_PlayerBoy_10_Shield_Value01) || RETURN",
-                    "displayLines": "MWAvatar_PlayerBoy_10_Shield_Value01",
-                    "constants": [],
-                    "variables": [
-                      "MWAvatar_PlayerBoy_10_Shield_Value01"
-                    ]
+                    "displayLines": "MWAvatar_PlayerBoy_10_Shield_Value01"
                   }
                 }
               ]
@@ -218,12 +213,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MAvatar_PlayerBoy_10_DamageResistance_Team_Value01) || RETURN",
-                    "displayLines": "MAvatar_PlayerBoy_10_DamageResistance_Team_Value01",
-                    "constants": [],
-                    "variables": [
-                      "MAvatar_PlayerBoy_10_DamageResistance_Team_Value01"
-                    ]
+                    "displayLines": "MAvatar_PlayerBoy_10_DamageResistance_Team_Value01"
                   }
                 }
               ]
@@ -279,12 +269,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (PlayerBoy_10_DamageResistance_Value01) || RETURN",
-                    "displayLines": "PlayerBoy_10_DamageResistance_Value01",
-                    "constants": [],
-                    "variables": [
-                      "PlayerBoy_10_DamageResistance_Value01"
-                    ]
+                    "displayLines": "PlayerBoy_10_DamageResistance_Value01"
                   }
                 }
               ]
@@ -432,13 +417,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DefenceAddedRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_DefenceAddedRatio * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DefenceAddedRatio",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_DefenceAddedRatio * MDF_Layer)"
                   }
                 }
               ]
@@ -795,12 +774,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MWAvatar_PlayerBoy_10_Shield_Value02) || RETURN",
-                    "displayLines": "MWAvatar_PlayerBoy_10_Shield_Value02",
-                    "constants": [],
-                    "variables": [
-                      "MWAvatar_PlayerBoy_10_Shield_Value02"
-                    ]
+                    "displayLines": "MWAvatar_PlayerBoy_10_Shield_Value02"
                   }
                 }
               ]
@@ -841,23 +815,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"519378514\">PlayerBoy_10_TechniqueUsage_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                       "duration": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "valuePerStack": {
                         "MWPlayerBoy_10_Shield_Value02": {
-                          "operator": "Variables[0] (CasterDefence) || Variables[1] (0.3) || MUL || Variables[2] (384) || ADD || RETURN",
-                          "displayLines": "((CasterDefence * 0.3) + 384)",
-                          "constants": [],
-                          "variables": [
-                            "CasterDefence",
-                            0.3,
-                            384
-                          ]
+                          "displayLines": "((CasterDefence * 0.3) + 384)"
                         }
                       }
                     }
@@ -901,12 +863,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "variableName": "Rank06_Max_Layer"
         },
@@ -922,12 +879,7 @@ const compositeAbilityObject = {
           "name": "Update Displayed Energy Bar",
           "value": 0,
           "maximum": {
-            "operator": "Variables[0] (8) || RETURN",
-            "displayLines": "8",
-            "constants": [],
-            "variables": [
-              8
-            ]
+            "displayLines": "8"
           },
           "assignState": "True",
           "priorState": "Normal",
@@ -944,24 +896,14 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.25) || RETURN",
-                "displayLines": "0.25",
-                "constants": [],
-                "variables": [
-                  0.25
-                ]
+                "displayLines": "0.25"
               },
               "variableName": "Rank01_Ratio"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.5) || RETURN",
-                "displayLines": "0.5",
-                "constants": [],
-                "variables": [
-                  0.5
-                ]
+                "displayLines": "0.5"
               },
               "variableName": "Rank01_ExtraRatio"
             }
@@ -989,24 +931,14 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.02) || RETURN",
-                "displayLines": "0.02",
-                "constants": [],
-                "variables": [
-                  0.02
-                ]
+                "displayLines": "0.02"
               },
               "variableName": "Rank02_Ratio"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (27) || RETURN",
-                "displayLines": "27",
-                "constants": [],
-                "variables": [
-                  27
-                ]
+                "displayLines": "27"
               },
               "variableName": "Rank02_Value"
             }
@@ -1047,12 +979,7 @@ const compositeAbilityObject = {
               },
               "modifierName": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
               "value": {
-                "operator": "Variables[0] (4) || RETURN",
-                "displayLines": "4",
-                "constants": [],
-                "variables": [
-                  4
-                ]
+                "displayLines": "4"
               }
             },
             {
@@ -1064,12 +991,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (4) || RETURN",
-                "displayLines": "4",
-                "constants": [],
-                "variables": [
-                  4
-                ]
+                "displayLines": "4"
               }
             },
             {
@@ -1100,20 +1022,10 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Energy_Count) || RETURN",
-                    "displayLines": "MDF_Energy_Count",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Energy_Count"
-                    ]
+                    "displayLines": "MDF_Energy_Count"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (8) || RETURN",
-                    "displayLines": "8",
-                    "constants": [],
-                    "variables": [
-                      8
-                    ]
+                    "displayLines": "8"
                   },
                   "assignState": "True",
                   "priorState": "Active",
@@ -1125,20 +1037,10 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Energy_Count) || RETURN",
-                    "displayLines": "MDF_Energy_Count",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Energy_Count"
-                    ]
+                    "displayLines": "MDF_Energy_Count"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (8) || RETURN",
-                    "displayLines": "8",
-                    "constants": [],
-                    "variables": [
-                      8
-                    ]
+                    "displayLines": "8"
                   },
                   "assignState": "True",
                   "bar#": 2,
@@ -1182,21 +1084,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1400516150\">MWPlayerBoy_10_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "MWPlayerBoy_10_Shield_Value01": {
-                      "operator": "Variables[0] (TB_PRES_OBJECT_UNUSED_1) || RETURN",
-                      "displayLines": "TB_PRES_OBJECT_UNUSED_1",
-                      "constants": [],
-                      "variables": [
-                        "TB_PRES_OBJECT_UNUSED_1"
-                      ]
+                      "displayLines": "TB_PRES_OBJECT_UNUSED_1"
                     }
                   }
                 },
@@ -1233,12 +1125,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -1284,12 +1171,7 @@ const compositeAbilityObject = {
                       },
                       "modifierName": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
                       "value": {
-                        "operator": "Variables[0] (MDF_Energy_Count) || RETURN",
-                        "displayLines": "MDF_Energy_Count",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Energy_Count"
-                        ]
+                        "displayLines": "MDF_Energy_Count"
                       }
                     },
                     {
@@ -1320,12 +1202,7 @@ const compositeAbilityObject = {
                         "value1": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (8) || RETURN",
-                          "displayLines": "8",
-                          "constants": [],
-                          "variables": [
-                            8
-                          ]
+                          "displayLines": "8"
                         }
                       },
                       "passed": [
@@ -1333,12 +1210,7 @@ const compositeAbilityObject = {
                           "name": "Define Modifier Variable",
                           "modifierName": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
                           "value": {
-                            "operator": "Variables[0] (8) || RETURN",
-                            "displayLines": "8",
-                            "constants": [],
-                            "variables": [
-                              8
-                            ]
+                            "displayLines": "8"
                           }
                         }
                       ]
@@ -1396,20 +1268,10 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MDF_Energy_Count) || RETURN",
-                        "displayLines": "MDF_Energy_Count",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Energy_Count"
-                        ]
+                        "displayLines": "MDF_Energy_Count"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (8) || RETURN",
-                        "displayLines": "8",
-                        "constants": [],
-                        "variables": [
-                          8
-                        ]
+                        "displayLines": "8"
                       },
                       "assignState": "True",
                       "priorState": "Active",
@@ -1421,20 +1283,10 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MDF_Energy_Count) || RETURN",
-                        "displayLines": "MDF_Energy_Count",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Energy_Count"
-                        ]
+                        "displayLines": "MDF_Energy_Count"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (8) || RETURN",
-                        "displayLines": "8",
-                        "constants": [],
-                        "variables": [
-                          8
-                        ]
+                        "displayLines": "8"
                       },
                       "assignState": "True",
                       "bar#": 2,
@@ -1487,12 +1339,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (5) || RETURN",
-                        "displayLines": "5",
-                        "constants": [],
-                        "variables": [
-                          5
-                        ]
+                        "displayLines": "5"
                       },
                       "isFixed": "* ERR"
                     },
@@ -1507,12 +1354,7 @@ const compositeAbilityObject = {
                       "immediateEffect": true,
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.15) || RETURN",
-                          "displayLines": "0.15",
-                          "constants": [],
-                          "variables": [
-                            0.15
-                          ]
+                          "displayLines": "0.15"
                         }
                       }
                     }
@@ -1555,29 +1397,14 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "DamageExtra": {
-              "operator": "Variables[0] (1.5) || RETURN",
-              "displayLines": "1.5",
-              "constants": [],
-              "variables": [
-                1.5
-              ]
+              "displayLines": "1.5"
             },
             "dmgFormulaExtra": "DEF Scaling",
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -1595,20 +1422,10 @@ const compositeAbilityObject = {
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (MDF_Energy_Count) || RETURN",
-            "displayLines": "MDF_Energy_Count",
-            "constants": [],
-            "variables": [
-              "MDF_Energy_Count"
-            ]
+            "displayLines": "MDF_Energy_Count"
           },
           "maximum": {
-            "operator": "Variables[0] (8) || RETURN",
-            "displayLines": "8",
-            "constants": [],
-            "variables": [
-              8
-            ]
+            "displayLines": "8"
           },
           "assignState": "True",
           "priorState": "Active",
@@ -1647,21 +1464,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1564952013\">PlayerBoy_10_Eidolon6_Stack</a>[<span class=\"descriptionNumberColor\">DEF Boost</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "valuePerStack": {
                 "MDF_DefenceAddedRatio": {
-                  "operator": "Variables[0] (0.1) || RETURN",
-                  "displayLines": "0.1",
-                  "constants": [],
-                  "variables": [
-                    0.1
-                  ]
+                  "displayLines": "0.1"
                 }
               }
             }
@@ -1684,25 +1491,11 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1400516150\">MWPlayerBoy_10_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "valuePerStack": {
             "MWPlayerBoy_10_Shield_Value01": {
-              "operator": "Variables[0] (CasterDefence) || Variables[1] (0.06) || Variables[2] (Rank02_Ratio) || ADD || MUL || Variables[3] (80) || ADD || Variables[4] (Rank02_Value) || ADD || RETURN",
-              "displayLines": "(((CasterDefence * (0.06 + Rank02_Ratio)) + 80) + Rank02_Value)",
-              "constants": [],
-              "variables": [
-                "CasterDefence",
-                0.06,
-                "Rank02_Ratio",
-                80,
-                "Rank02_Value"
-              ]
+              "displayLines": "(((CasterDefence * (0.06 + Rank02_Ratio)) + 80) + Rank02_Value)"
             }
           }
         },
@@ -1774,21 +1567,11 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-356032349\">MWPlayerBoy_10_DamageResistance</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
           "duration": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "valuePerStack": {
             "MWPlayerBoy_10_DamageResistance_Value01": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             }
           }
         },
@@ -1807,21 +1590,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-670613406\">PlayerBoy_10_DamageResistance_Team</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
               "duration": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "valuePerStack": {
                 "PlayerBoy_10_DamageResistance_Team_Value01": {
-                  "operator": "Variables[0] (0.15) || RETURN",
-                  "displayLines": "0.15",
-                  "constants": [],
-                  "variables": [
-                    0.15
-                  ]
+                  "displayLines": "0.15"
                 }
               }
             }
@@ -1856,12 +1629,7 @@ const compositeAbilityObject = {
               },
               "modifierName": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
               "value": {
-                "operator": "Variables[0] (MDF_Energy_Count) || RETURN",
-                "displayLines": "MDF_Energy_Count",
-                "constants": [],
-                "variables": [
-                  "MDF_Energy_Count"
-                ]
+                "displayLines": "MDF_Energy_Count"
               }
             },
             {
@@ -1879,12 +1647,7 @@ const compositeAbilityObject = {
                 "value1": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (8) || RETURN",
-                  "displayLines": "8",
-                  "constants": [],
-                  "variables": [
-                    8
-                  ]
+                  "displayLines": "8"
                 }
               },
               "passed": [
@@ -1892,12 +1655,7 @@ const compositeAbilityObject = {
                   "name": "Define Modifier Variable",
                   "modifierName": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
                   "value": {
-                    "operator": "Variables[0] (8) || RETURN",
-                    "displayLines": "8",
-                    "constants": [],
-                    "variables": [
-                      8
-                    ]
+                    "displayLines": "8"
                   }
                 }
               ]
@@ -1955,20 +1713,10 @@ const compositeAbilityObject = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_Energy_Count) || RETURN",
-                "displayLines": "MDF_Energy_Count",
-                "constants": [],
-                "variables": [
-                  "MDF_Energy_Count"
-                ]
+                "displayLines": "MDF_Energy_Count"
               },
               "maximum": {
-                "operator": "Variables[0] (8) || RETURN",
-                "displayLines": "8",
-                "constants": [],
-                "variables": [
-                  8
-                ]
+                "displayLines": "8"
               },
               "assignState": "True",
               "priorState": "Active",
@@ -1980,20 +1728,10 @@ const compositeAbilityObject = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_Energy_Count) || RETURN",
-                "displayLines": "MDF_Energy_Count",
-                "constants": [],
-                "variables": [
-                  "MDF_Energy_Count"
-                ]
+                "displayLines": "MDF_Energy_Count"
               },
               "maximum": {
-                "operator": "Variables[0] (8) || RETURN",
-                "displayLines": "8",
-                "constants": [],
-                "variables": [
-                  8
-                ]
+                "displayLines": "8"
               },
               "assignState": "True",
               "bar#": 2,
@@ -2036,25 +1774,11 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1400516150\">MWPlayerBoy_10_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "valuePerStack": {
             "MWPlayerBoy_10_Shield_Value01": {
-              "operator": "Variables[0] (CasterDefence) || Variables[1] (0.06) || Variables[2] (Rank02_Ratio) || ADD || MUL || Variables[3] (80) || ADD || Variables[4] (Rank02_Value) || ADD || RETURN",
-              "displayLines": "(((CasterDefence * (0.06 + Rank02_Ratio)) + 80) + Rank02_Value)",
-              "constants": [],
-              "variables": [
-                "CasterDefence",
-                0.06,
-                "Rank02_Ratio",
-                80,
-                "Rank02_Value"
-              ]
+              "displayLines": "(((CasterDefence * (0.06 + Rank02_Ratio)) + 80) + Rank02_Value)"
             }
           }
         },
@@ -2066,20 +1790,10 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1488319040\">Standard_CTRL_Taunt</a>[<span class=\"descriptionNumberColor\">Taunt</span>]",
           "duration": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "baseChance": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           }
         },
         "Trigger: Ability End"
@@ -2118,14 +1832,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (1) || Variables[0] (Target_AggroAddedRatio) || ADD || INVERT || RETURN",
-                    "displayLines": "-(1 + Target_AggroAddedRatio)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Target_AggroAddedRatio"
-                    ]
+                    "displayLines": "-(1 + Target_AggroAddedRatio)"
                   }
                 },
                 {
@@ -2136,12 +1843,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">AggroFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (Target_AggroDelta) || RETURN",
-                    "displayLines": "Target_AggroDelta",
-                    "constants": [],
-                    "variables": [
-                      "Target_AggroDelta"
-                    ]
+                    "displayLines": "Target_AggroDelta"
                   }
                 }
               ]
@@ -2264,30 +1966,15 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (1.35) || RETURN",
-              "displayLines": "1.35",
-              "constants": [],
-              "variables": [
-                1.35
-              ]
+              "displayLines": "1.35"
             },
             "DamageExtra": {
-              "operator": "Variables[0] (Rank01_ExtraRatio) || RETURN",
-              "displayLines": "Rank01_ExtraRatio",
-              "constants": [],
-              "variables": [
-                "Rank01_ExtraRatio"
-              ]
+              "displayLines": "Rank01_ExtraRatio"
             },
             "dmgFormulaExtra": "DEF Scaling",
             "HitSplit": 0.5,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -2303,30 +1990,15 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (1.35) || RETURN",
-              "displayLines": "1.35",
-              "constants": [],
-              "variables": [
-                1.35
-              ]
+              "displayLines": "1.35"
             },
             "DamageExtra": {
-              "operator": "Variables[0] (Rank01_ExtraRatio) || RETURN",
-              "displayLines": "Rank01_ExtraRatio",
-              "constants": [],
-              "variables": [
-                "Rank01_ExtraRatio"
-              ]
+              "displayLines": "Rank01_ExtraRatio"
             },
             "dmgFormulaExtra": "DEF Scaling",
             "HitSplit": 0.5,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -2342,29 +2014,14 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (0.54) || RETURN",
-              "displayLines": "0.54",
-              "constants": [],
-              "variables": [
-                0.54
-              ]
+              "displayLines": "0.54"
             },
             "DamageExtra": {
-              "operator": "Variables[0] (Rank01_ExtraRatio) || RETURN",
-              "displayLines": "Rank01_ExtraRatio",
-              "constants": [],
-              "variables": [
-                "Rank01_ExtraRatio"
-              ]
+              "displayLines": "Rank01_ExtraRatio"
             },
             "dmgFormulaExtra": "DEF Scaling",
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null
           }
@@ -2384,12 +2041,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (0.05) || RETURN",
-                "displayLines": "0.05",
-                "constants": [],
-                "variables": [
-                  0.05
-                ]
+                "displayLines": "0.05"
               },
               "formula": "Heal from Healer's MaxHP"
             }
@@ -2410,21 +2062,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1564952013\">PlayerBoy_10_Eidolon6_Stack</a>[<span class=\"descriptionNumberColor\">DEF Boost</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "valuePerStack": {
                 "MDF_DefenceAddedRatio": {
-                  "operator": "Variables[0] (0.1) || RETURN",
-                  "displayLines": "0.1",
-                  "constants": [],
-                  "variables": [
-                    0.1
-                  ]
+                  "displayLines": "0.1"
                 }
               }
             }
@@ -2447,25 +2089,11 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1400516150\">MWPlayerBoy_10_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "valuePerStack": {
             "MWPlayerBoy_10_Shield_Value01": {
-              "operator": "Variables[0] (CasterDefence) || Variables[1] (0.06) || Variables[2] (Rank02_Ratio) || ADD || MUL || Variables[3] (80) || ADD || Variables[4] (Rank02_Value) || ADD || RETURN",
-              "displayLines": "(((CasterDefence * (0.06 + Rank02_Ratio)) + 80) + Rank02_Value)",
-              "constants": [],
-              "variables": [
-                "CasterDefence",
-                0.06,
-                "Rank02_Ratio",
-                80,
-                "Rank02_Value"
-              ]
+              "displayLines": "(((CasterDefence * (0.06 + Rank02_Ratio)) + 80) + Rank02_Value)"
             }
           }
         },
@@ -2542,12 +2170,7 @@ const compositeAbilityObject = {
                   "name": "Define Modifier Variable",
                   "modifierName": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
                   "value": {
-                    "operator": "Variables[0] (MDF_Energy_Count) || RETURN",
-                    "displayLines": "MDF_Energy_Count",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Energy_Count"
-                    ]
+                    "displayLines": "MDF_Energy_Count"
                   }
                 },
                 {
@@ -2611,20 +2234,10 @@ const compositeAbilityObject = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_Energy_Count) || RETURN",
-                "displayLines": "MDF_Energy_Count",
-                "constants": [],
-                "variables": [
-                  "MDF_Energy_Count"
-                ]
+                "displayLines": "MDF_Energy_Count"
               },
               "maximum": {
-                "operator": "Variables[0] (8) || RETURN",
-                "displayLines": "8",
-                "constants": [],
-                "variables": [
-                  8
-                ]
+                "displayLines": "8"
               },
               "assignState": "True",
               "priorState": "Active",
@@ -2636,20 +2249,10 @@ const compositeAbilityObject = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_Energy_Count) || RETURN",
-                "displayLines": "MDF_Energy_Count",
-                "constants": [],
-                "variables": [
-                  "MDF_Energy_Count"
-                ]
+                "displayLines": "MDF_Energy_Count"
               },
               "maximum": {
-                "operator": "Variables[0] (8) || RETURN",
-                "displayLines": "8",
-                "constants": [],
-                "variables": [
-                  8
-                ]
+                "displayLines": "8"
               },
               "assignState": "True",
               "priorState": "Normal",
@@ -2676,12 +2279,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (TB_PRES_OBJECT_UNUSED_2) || RETURN",
-                    "displayLines": "TB_PRES_OBJECT_UNUSED_2",
-                    "constants": [],
-                    "variables": [
-                      "TB_PRES_OBJECT_UNUSED_2"
-                    ]
+                    "displayLines": "TB_PRES_OBJECT_UNUSED_2"
                   }
                 }
               ]
@@ -2763,29 +2361,14 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "DamageExtra": {
-              "operator": "Variables[0] (Rank01_Ratio) || RETURN",
-              "displayLines": "Rank01_Ratio",
-              "constants": [],
-              "variables": [
-                "Rank01_Ratio"
-              ]
+              "displayLines": "Rank01_Ratio"
             },
             "dmgFormulaExtra": "DEF Scaling",
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -2838,12 +2421,7 @@ const compositeAbilityObject = {
                 "value1": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (8) || RETURN",
-                  "displayLines": "8",
-                  "constants": [],
-                  "variables": [
-                    8
-                  ]
+                  "displayLines": "8"
                 }
               },
               "passed": [
@@ -2851,12 +2429,7 @@ const compositeAbilityObject = {
                   "name": "Define Modifier Variable",
                   "modifierName": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
                   "value": {
-                    "operator": "Variables[0] (8) || RETURN",
-                    "displayLines": "8",
-                    "constants": [],
-                    "variables": [
-                      8
-                    ]
+                    "displayLines": "8"
                   }
                 }
               ]
@@ -2914,20 +2487,10 @@ const compositeAbilityObject = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_Energy_Count) || RETURN",
-                "displayLines": "MDF_Energy_Count",
-                "constants": [],
-                "variables": [
-                  "MDF_Energy_Count"
-                ]
+                "displayLines": "MDF_Energy_Count"
               },
               "maximum": {
-                "operator": "Variables[0] (8) || RETURN",
-                "displayLines": "8",
-                "constants": [],
-                "variables": [
-                  8
-                ]
+                "displayLines": "8"
               },
               "assignState": "True",
               "priorState": "Active",
@@ -2939,20 +2502,10 @@ const compositeAbilityObject = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_Energy_Count) || RETURN",
-                "displayLines": "MDF_Energy_Count",
-                "constants": [],
-                "variables": [
-                  "MDF_Energy_Count"
-                ]
+                "displayLines": "MDF_Energy_Count"
               },
               "maximum": {
-                "operator": "Variables[0] (8) || RETURN",
-                "displayLines": "8",
-                "constants": [],
-                "variables": [
-                  8
-                ]
+                "displayLines": "8"
               },
               "assignState": "True",
               "bar#": 2,
@@ -2977,25 +2530,11 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1400516150\">MWPlayerBoy_10_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "valuePerStack": {
             "MWPlayerBoy_10_Shield_Value01": {
-              "operator": "Variables[0] (CasterDefence) || Variables[1] (0.06) || Variables[2] (Rank02_Ratio) || ADD || MUL || Variables[3] (80) || ADD || Variables[4] (Rank02_Value) || ADD || RETURN",
-              "displayLines": "(((CasterDefence * (0.06 + Rank02_Ratio)) + 80) + Rank02_Value)",
-              "constants": [],
-              "variables": [
-                "CasterDefence",
-                0.06,
-                "Rank02_Ratio",
-                80,
-                "Rank02_Value"
-              ]
+              "displayLines": "(((CasterDefence * (0.06 + Rank02_Ratio)) + 80) + Rank02_Value)"
             }
           }
         },

@@ -37,12 +37,7 @@ const configAbility = {
                     "value1": "Modifier_Callback_Value",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (5) || RETURN",
-                      "displayLines": "5",
-                      "constants": [],
-                      "variables": [
-                        5
-                      ]
+                      "displayLines": "5"
                     },
                     "valueType": "Layer"
                   },
@@ -75,12 +70,7 @@ const configAbility = {
                   "variableName": "DOT_TriggerRatio",
                   "eventType": "DOT_Poison",
                   "value": {
-                    "operator": "Variables[0] (0.08) || RETURN",
-                    "displayLines": "0.08",
-                    "constants": [],
-                    "variables": [
-                      0.08
-                    ]
+                    "displayLines": "0.08"
                   }
                 }
               ]
@@ -97,20 +87,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (0.56) || RETURN",
-              "displayLines": "0.56",
-              "constants": [],
-              "variables": [
-                0.56
-              ]
+              "displayLines": "0.56"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"

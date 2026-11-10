@@ -54,13 +54,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.18) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(0.18 * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      0.18,
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(0.18 * MDF_Layer)"
                   }
                 }
               ]
@@ -161,20 +155,10 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"-515052173\">Relic_121_Sub</a>[<span class=\"descriptionNumberColor\">Sacerdos' Relived Ordeal</span>]",
                               "duration": {
-                                "operator": "Variables[0] (2) || RETURN",
-                                "displayLines": "2",
-                                "constants": [],
-                                "variables": [
-                                  2
-                                ]
+                                "displayLines": "2"
                               },
                               "stackLimit": {
-                                "operator": "Variables[0] (2) || RETURN",
-                                "displayLines": "2",
-                                "constants": [],
-                                "variables": [
-                                  2
-                                ]
+                                "displayLines": "2"
                               }
                             }
                           ],
@@ -187,20 +171,10 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"-515052173\">Relic_121_Sub</a>[<span class=\"descriptionNumberColor\">Sacerdos' Relived Ordeal</span>]",
                               "duration": {
-                                "operator": "Variables[0] (2) || RETURN",
-                                "displayLines": "2",
-                                "constants": [],
-                                "variables": [
-                                  2
-                                ]
+                                "displayLines": "2"
                               },
                               "stackLimit": {
-                                "operator": "Variables[0] (2) || RETURN",
-                                "displayLines": "2",
-                                "constants": [],
-                                "variables": [
-                                  2
-                                ]
+                                "displayLines": "2"
                               }
                             }
                           ]

@@ -20,12 +20,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1011992176\">Tribbie_Eidolon6_Bonus_Active</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (7.29) || RETURN",
-              "displayLines": "7.29",
-              "constants": [],
-              "variables": [
-                7.29
-              ]
+              "displayLines": "7.29"
             }
           }
         }
@@ -45,21 +40,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (0.18) || RETURN",
-          "displayLines": "0.18",
-          "constants": [],
-          "variables": [
-            0.18
-          ]
+          "displayLines": "0.18"
         },
         "dmgFormula": "Max HP Scaling",
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "attackType": "Follow-up",
@@ -104,20 +89,10 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"361990450\">Tribbie_PointB1_DamageUpModifier</a>[<span class=\"descriptionNumberColor\">Lamb Outside the Wall...</span>]",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "stackLimit": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           }
         }
       ]

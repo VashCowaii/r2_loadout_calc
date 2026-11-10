@@ -210,23 +210,13 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[PassiveSkill03[1]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[1]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[1]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[1]]}"
           },
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-                "displayLines": "SummonList_ADF_2",
-                "constants": [],
-                "variables": [
-                  "SummonList_ADF_2"
-                ]
+                "displayLines": "SummonList_ADF_2"
               },
               "locationType": "BeforeCaster"
             }
@@ -235,23 +225,13 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[PassiveSkill03[2]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[2]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[2]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[2]]}"
           },
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-                "displayLines": "SummonList_ADF_2",
-                "constants": [],
-                "variables": [
-                  "SummonList_ADF_2"
-                ]
+                "displayLines": "SummonList_ADF_2"
               },
               "locationType": "First"
             }
@@ -260,23 +240,13 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[PassiveSkill03[3]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[3]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[3]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[3]]}"
           },
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
-                "displayLines": "SummonList_ADF_3",
-                "constants": [],
-                "variables": [
-                  "SummonList_ADF_3"
-                ]
+                "displayLines": "SummonList_ADF_3"
               },
               "locationType": "AfterCaster"
             }
@@ -285,23 +255,13 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[PassiveSkill03[4]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[4]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[4]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[4]]}"
           },
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-                "displayLines": "SummonList_ADF_2",
-                "constants": [],
-                "variables": [
-                  "SummonList_ADF_2"
-                ]
+                "displayLines": "SummonList_ADF_2"
               },
               "locationType": "Last"
             }
@@ -357,12 +317,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1039726651\">Monster_W4_Theoroi_Destruction_Self</a>[<span class=\"descriptionNumberColor\">Loading: Mythos</span>]",
       "valuePerStack": {
         "MDF_MaxEntityCount": {
-          "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-          "displayLines": "{[PassiveSkill02[2]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill02[2]]}"
-          ]
+          "displayLines": "{[PassiveSkill02[2]]}"
         }
       }
     },
@@ -375,12 +330,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"2001837227\">Monster_W4_Theoroi_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Corporeal</span>]",
       "valuePerStack": {
         "MDF_DamageTakenUpRatio_PerLayer": {
-          "operator": "Variables[0] ({[Skill16[1]]}) || RETURN",
-          "displayLines": "{[Skill16[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill16[1]]}"
-          ]
+          "displayLines": "{[Skill16[1]]}"
         }
       },
       "addStacksPerTrigger": 1
@@ -399,12 +349,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-86387576\">Monster_W4_Theoroi_ReloadControl</a>",
       "valuePerStack": {
         "MDF_DamageUpRatio": {
-          "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
-          "displayLines": "{[PassiveSkill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill03[0]]}"
-          ]
+          "displayLines": "{[PassiveSkill03[0]]}"
         }
       }
     },

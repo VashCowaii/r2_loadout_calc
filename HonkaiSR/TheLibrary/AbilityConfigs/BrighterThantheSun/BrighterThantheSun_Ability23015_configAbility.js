@@ -45,13 +45,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.18) || Variables[1] (_Layer) || MUL || RETURN",
-                "displayLines": "(0.18 * _Layer)",
-                "constants": [],
-                "variables": [
-                  0.18,
-                  "_Layer"
-                ]
+                "displayLines": "(0.18 * _Layer)"
               }
             },
             {
@@ -62,13 +56,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRate</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.06) || Variables[1] (_Layer) || MUL || RETURN",
-                "displayLines": "(0.06 * _Layer)",
-                "constants": [],
-                "variables": [
-                  0.06,
-                  "_Layer"
-                ]
+                "displayLines": "(0.06 * _Layer)"
               }
             }
           ]
@@ -97,20 +85,10 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"899015137\">LC_23015_Sub</a>[<span class=\"descriptionNumberColor\">Dragon's Call</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   }
                 }
               ]

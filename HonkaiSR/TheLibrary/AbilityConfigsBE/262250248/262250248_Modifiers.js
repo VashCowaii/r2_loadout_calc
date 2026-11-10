@@ -480,15 +480,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (_SkillDamageValue) || Variables[1] (MDF_Layer) || MUL || Constants[0] (0.3) || SUB || RETURN",
-                "displayLines": "((_SkillDamageValue * MDF_Layer) - 0.3)",
-                "constants": [
-                  0.3
-                ],
-                "variables": [
-                  "_SkillDamageValue",
-                  "MDF_Layer"
-                ]
+                "displayLines": "((_SkillDamageValue * MDF_Layer) - 0.3)"
               }
             }
           ]
@@ -514,12 +506,7 @@ const configAbility = {
               },
               "element": null,
               "resReduction": {
-                "operator": "Constants[0] (99) || INVERT || RETURN",
-                "displayLines": "-99",
-                "constants": [
-                  99
-                ],
-                "variables": []
+                "displayLines": "-99"
               },
               "maxImplant": 1
             }
@@ -573,12 +560,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (_AddDamageValue) || RETURN",
-                "displayLines": "_AddDamageValue",
-                "constants": [],
-                "variables": [
-                  "_AddDamageValue"
-                ]
+                "displayLines": "_AddDamageValue"
               }
             }
           ]
@@ -621,13 +603,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (_SkillDamageValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(_SkillDamageValue * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "_SkillDamageValue",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(_SkillDamageValue * MDF_Layer)"
               }
             },
             {
@@ -840,14 +816,7 @@ const configAbility = {
               "duration": 2,
               "valuePerStack": {
                 "MDF_ShowValue": {
-                  "operator": "Constants[0] (0.3) || Variables[0] (_MaxHP) || MUL || RETURN",
-                  "displayLines": "(0.3 * _MaxHP)",
-                  "constants": [
-                    0.3
-                  ],
-                  "variables": [
-                    "_MaxHP"
-                  ]
+                  "displayLines": "(0.3 * _MaxHP)"
                 }
               }
             }
@@ -1068,12 +1037,7 @@ const configAbility = {
                     "value1": "HealCD",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Constants[0] (0) || RETURN",
-                      "displayLines": "0",
-                      "constants": [
-                        0
-                      ],
-                      "variables": []
+                      "displayLines": "0"
                     }
                   },
                   "passed": [
@@ -1168,12 +1132,7 @@ const configAbility = {
                     "value1": "HealCD",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Constants[0] (0) || RETURN",
-                      "displayLines": "0",
-                      "constants": [
-                        0
-                      ],
-                      "variables": []
+                      "displayLines": "0"
                     }
                   },
                   "passed": [
@@ -1670,14 +1629,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (DefDownValue) || SUB || RETURN",
-                "displayLines": "(0 - DefDownValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "DefDownValue"
-                ]
+                "displayLines": "(0 - DefDownValue)"
               }
             }
           ]
@@ -1720,13 +1672,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (UltraSkillDamageValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(UltraSkillDamageValue * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "UltraSkillDamageValue",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(UltraSkillDamageValue * MDF_Layer)"
               }
             }
           ]

@@ -39,13 +39,7 @@ const configAbility = {
           "duration": -1,
           "valuePerStack": {
             "MDF_ShowValue": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || Variables[1] (_MaxHP) || MUL || RETURN",
-              "displayLines": "({[Skill01[1]]} * _MaxHP)",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}",
-                "_MaxHP"
-              ]
+              "displayLines": "({[Skill01[1]]} * _MaxHP)"
             }
           },
           "casterAssign": "TargetSelf"
@@ -62,13 +56,7 @@ const configAbility = {
           "duration": -1,
           "valuePerStack": {
             "MDF_ShowValue": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || Variables[1] (_MaxHP) || MUL || RETURN",
-              "displayLines": "({[Skill01[0]]} * _MaxHP)",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}",
-                "_MaxHP"
-              ]
+              "displayLines": "({[Skill01[0]]} * _MaxHP)"
             }
           },
           "casterAssign": "TargetSelf"

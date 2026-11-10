@@ -16,25 +16,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Avatar_Gilgamesh_00_KingCount) || Variables[1] (KingCountAdd) || ADD || RETURN",
-            "displayLines": "(Avatar_Gilgamesh_00_KingCount + KingCountAdd)",
-            "constants": [],
-            "variables": [
-              "Avatar_Gilgamesh_00_KingCount",
-              "KingCountAdd"
-            ]
+            "displayLines": "(Avatar_Gilgamesh_00_KingCount + KingCountAdd)"
           },
           "variableName": "Avatar_Gilgamesh_00_KingCount"
         },
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (Avatar_Gilgamesh_00_KingCount) || RETURN",
-            "displayLines": "Avatar_Gilgamesh_00_KingCount",
-            "constants": [],
-            "variables": [
-              "Avatar_Gilgamesh_00_KingCount"
-            ]
+            "displayLines": "Avatar_Gilgamesh_00_KingCount"
           },
           "bar#": 4
         },
@@ -56,12 +45,7 @@ const configAbility = {
                 "value1": "Avatar_Gilgamesh_00_IsFirstTime",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Constants[0] (0) || RETURN",
-                  "displayLines": "0",
-                  "constants": [
-                    0
-                  ],
-                  "variables": []
+                  "displayLines": "0"
                 }
               },
               {
@@ -69,12 +53,7 @@ const configAbility = {
                 "value1": "Avatar_Gilgamesh_00_KingCount",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (10) || RETURN",
-                  "displayLines": "10",
-                  "constants": [],
-                  "variables": [
-                    10
-                  ]
+                  "displayLines": "10"
                 }
               }
             ]
@@ -101,12 +80,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (Avatar_Gilgamesh_00_KingCount) || RETURN",
-                "displayLines": "Avatar_Gilgamesh_00_KingCount",
-                "constants": [],
-                "variables": [
-                  "Avatar_Gilgamesh_00_KingCount"
-                ]
+                "displayLines": "Avatar_Gilgamesh_00_KingCount"
               },
               "assignState": "True",
               "priorState": "Active",

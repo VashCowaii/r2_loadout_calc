@@ -61,20 +61,10 @@ const configAbility = {
               "canHitNonTargets": true,
               "valuePerStack": {
                 "Ratio": {
-                  "operator": "Variables[0] (#ADF_1) || RETURN",
-                  "displayLines": "#ADF_1",
-                  "constants": [],
-                  "variables": [
-                    "#ADF_1"
-                  ]
+                  "displayLines": "#ADF_1"
                 },
                 "EliteRatio": {
-                  "operator": "Variables[0] (#ADF_2) || RETURN",
-                  "displayLines": "#ADF_2",
-                  "constants": [],
-                  "variables": [
-                    "#ADF_2"
-                  ]
+                  "displayLines": "#ADF_2"
                 }
               },
               "allowAbilityTriggers": false

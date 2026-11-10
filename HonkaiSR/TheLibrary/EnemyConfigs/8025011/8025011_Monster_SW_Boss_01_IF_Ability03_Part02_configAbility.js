@@ -43,23 +43,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "HitSplit": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || Variables[1] ({[Skill03[1]]}) || SUB || Variables[0] ({[Skill03[0]]}) || DIV || Constants[0] (8) || DIV || RETURN",
-              "displayLines": "((({[Skill03[0]]} - {[Skill03[1]]}) / {[Skill03[0]]}) / 8)",
-              "constants": [
-                8
-              ],
-              "variables": [
-                "{[Skill03[0]]}",
-                "{[Skill03[1]]}"
-              ]
+              "displayLines": "((({[Skill03[0]]} - {[Skill03[1]]}) / {[Skill03[0]]}) / 8)"
             },
             "Toughness": null,
             "Tags": null,
@@ -78,23 +65,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-          "displayLines": "{[Skill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "{[Skill03[0]]}"
         },
         "HitSplit": {
-          "operator": "Variables[0] ({[Skill03[1]]}) || Variables[1] ({[Skill03[0]]}) || DIV || Constants[0] (1) || DIV || RETURN",
-          "displayLines": "(({[Skill03[1]]} / {[Skill03[0]]}) / 1)",
-          "constants": [
-            1
-          ],
-          "variables": [
-            "{[Skill03[1]]}",
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "(({[Skill03[1]]} / {[Skill03[0]]}) / 1)"
         },
         "Toughness": null,
         "Tags": null,
@@ -111,14 +85,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[1]]}) || Constants[0] (1) || DIV || RETURN",
-          "displayLines": "({[Skill03[1]]} / 1)",
-          "constants": [
-            1
-          ],
-          "variables": [
-            "{[Skill03[1]]}"
-          ]
+          "displayLines": "({[Skill03[1]]} / 1)"
         },
         "Toughness": null,
         "Tags": null,

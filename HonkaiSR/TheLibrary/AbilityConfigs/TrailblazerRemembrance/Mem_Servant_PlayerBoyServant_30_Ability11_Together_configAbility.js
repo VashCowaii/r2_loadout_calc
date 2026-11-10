@@ -14,20 +14,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] (Ability11_P2_DamagePercentage) || RETURN",
-          "displayLines": "Ability11_P2_DamagePercentage",
-          "constants": [],
-          "variables": [
-            "Ability11_P2_DamagePercentage"
-          ]
+          "displayLines": "Ability11_P2_DamagePercentage"
         },
         "Toughness": {
-          "operator": "Variables[0] (Skill11_Stance) || RETURN",
-          "displayLines": "Skill11_Stance",
-          "constants": [],
-          "variables": [
-            "Skill11_Stance"
-          ]
+          "displayLines": "Skill11_Stance"
         },
         "Tags": [
           "Joint-Attack"

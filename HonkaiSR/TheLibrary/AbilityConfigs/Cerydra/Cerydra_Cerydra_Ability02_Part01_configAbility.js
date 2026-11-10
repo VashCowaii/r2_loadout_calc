@@ -71,13 +71,7 @@ const configAbility = {
                 "value1": "DV_CurrentPoint",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (6) || Variables[1] (1) || SUB || RETURN",
-                  "displayLines": "(6 - 1)",
-                  "constants": [],
-                  "variables": [
-                    6,
-                    1
-                  ]
+                  "displayLines": "(6 - 1)"
                 }
               },
               "passed": [

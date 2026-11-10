@@ -169,14 +169,7 @@ const compositeAbilityObject = {
                           "variableName": "Thunder_CountDark",
                           "context": "TargetEntity",
                           "value": {
-                            "operator": "Constants[0] (0) || Variables[0] ({[Skill02[3]]}) || SUB || RETURN",
-                            "displayLines": "(0 - {[Skill02[3]]})",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "{[Skill02[3]]}"
-                            ]
+                            "displayLines": "(0 - {[Skill02[3]]})"
                           },
                           "max": 999
                         },
@@ -267,14 +260,7 @@ const compositeAbilityObject = {
                           "variableName": "Sunny_Temperature",
                           "context": "TargetEntity",
                           "value": {
-                            "operator": "Constants[0] (0) || Variables[0] ({[Skill02[4]]}) || SUB || RETURN",
-                            "displayLines": "(0 - {[Skill02[4]]})",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "{[Skill02[4]]}"
-                            ]
+                            "displayLines": "(0 - {[Skill02[4]]})"
                           },
                           "max": 999
                         },
@@ -433,12 +419,7 @@ const compositeAbilityObject = {
               "variableName": "Thunder_CountDark",
               "context": "TargetEntity",
               "value": {
-                "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                "displayLines": "{[Skill02[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill02[0]]}"
-                ]
+                "displayLines": "{[Skill02[0]]}"
               },
               "max": 999
             },
@@ -545,12 +526,7 @@ const compositeAbilityObject = {
               "variableName": "Sunny_Temperature",
               "context": "TargetEntity",
               "value": {
-                "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                "displayLines": "{[Skill02[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill02[1]]}"
-                ]
+                "displayLines": "{[Skill02[1]]}"
               },
               "max": 999
             },
@@ -646,12 +622,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,

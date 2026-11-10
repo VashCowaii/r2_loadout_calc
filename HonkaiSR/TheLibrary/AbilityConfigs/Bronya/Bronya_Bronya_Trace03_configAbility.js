@@ -53,12 +53,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-196204909\">Bronya_Tree03_DamageUp</a>",
               "valuePerStack": {
                 "MDF_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] (0.1) || RETURN",
-                  "displayLines": "0.1",
-                  "constants": [],
-                  "variables": [
-                    0.1
-                  ]
+                  "displayLines": "0.1"
                 }
               }
             }
@@ -86,12 +81,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-196204909\">Bronya_Tree03_DamageUp</a>",
                   "valuePerStack": {
                     "MDF_AllDamageTypeAddedRatio": {
-                      "operator": "Variables[0] (0.1) || RETURN",
-                      "displayLines": "0.1",
-                      "constants": [],
-                      "variables": [
-                        0.1
-                      ]
+                      "displayLines": "0.1"
                     }
                   }
                 }

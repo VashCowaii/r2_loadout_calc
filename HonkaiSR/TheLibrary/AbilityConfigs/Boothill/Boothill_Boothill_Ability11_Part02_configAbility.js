@@ -7,12 +7,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (CurEnhance) || RETURN",
-        "displayLines": "CurEnhance",
-        "constants": [],
-        "variables": [
-          "CurEnhance"
-        ]
+        "displayLines": "CurEnhance"
       },
       "variableName": "_enhance_before_attack"
     },
@@ -85,16 +80,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (MIN) || Variables[1] (_maxStance) || Constants[0] (30) || Variables[2] (16) || MUL || PARAM_2 || FUNCTION || RETURN",
-            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(_maxStance, (30 * 16))",
-            "constants": [
-              30
-            ],
-            "variables": [
-              "MIN",
-              "_maxStance",
-              16
-            ]
+            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(_maxStance, (30 * 16))"
           },
           "variableName": "_maxStance"
         },
@@ -110,12 +96,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (1.7) || RETURN",
-                "displayLines": "1.7",
-                "constants": [],
-                "variables": [
-                  1.7
-                ]
+                "displayLines": "1.7"
               },
               "variableName": "Skill11_BreakDamagePercentage"
             }
@@ -133,12 +114,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (1.2) || RETURN",
-                    "displayLines": "1.2",
-                    "constants": [],
-                    "variables": [
-                      1.2
-                    ]
+                    "displayLines": "1.2"
                   },
                   "variableName": "Skill11_BreakDamagePercentage"
                 }
@@ -147,12 +123,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (0.7) || RETURN",
-                    "displayLines": "0.7",
-                    "constants": [],
-                    "variables": [
-                      0.7
-                    ]
+                    "displayLines": "0.7"
                   },
                   "variableName": "Skill11_BreakDamagePercentage"
                 }
@@ -170,18 +141,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "DamageBreak": {
-              "operator": "Constants[0] (0.2) || Constants[1] (2) || MUL || Variables[0] (_maxStance) || Constants[2] (30) || DIV || Constants[1] (2) || ADD || MUL || Constants[3] (4) || DIV || Variables[1] (Skill11_BreakDamagePercentage) || MUL || RETURN",
-              "displayLines": "((((0.2 * 2) * ((_maxStance / 30) + 2)) / 4) * Skill11_BreakDamagePercentage)",
-              "constants": [
-                0.2,
-                2,
-                30,
-                4
-              ],
-              "variables": [
-                "_maxStance",
-                "Skill11_BreakDamagePercentage"
-              ]
+              "displayLines": "((((0.2 * 2) * ((_maxStance / 30) + 2)) / 4) * Skill11_BreakDamagePercentage)"
             },
             "dmgFormula": "Break DMG Scaling",
             "dmgFormulaFinal": "Pure (No DMG%)",
@@ -207,19 +167,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageBreak": {
-                  "operator": "Constants[0] (0.2) || Constants[1] (2) || MUL || Variables[0] (_maxStance) || Constants[2] (30) || DIV || Constants[1] (2) || ADD || MUL || Constants[3] (4) || DIV || Variables[1] (Skill11_BreakDamagePercentage) || MUL || Variables[2] (0.4) || MUL || RETURN",
-                  "displayLines": "(((((0.2 * 2) * ((_maxStance / 30) + 2)) / 4) * Skill11_BreakDamagePercentage) * 0.4)",
-                  "constants": [
-                    0.2,
-                    2,
-                    30,
-                    4
-                  ],
-                  "variables": [
-                    "_maxStance",
-                    "Skill11_BreakDamagePercentage",
-                    0.4
-                  ]
+                  "displayLines": "(((((0.2 * 2) * ((_maxStance / 30) + 2)) / 4) * Skill11_BreakDamagePercentage) * 0.4)"
                 },
                 "dmgFormula": "Break DMG Scaling",
                 "dmgFormulaFinal": "Pure (No DMG%)",
@@ -238,19 +186,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageBreak": {
-                  "operator": "Constants[0] (0.2) || Constants[1] (2) || MUL || Variables[0] (_maxStance) || Constants[2] (30) || DIV || Constants[1] (2) || ADD || MUL || Constants[3] (4) || DIV || Variables[1] (Skill11_BreakDamagePercentage) || MUL || Variables[2] (0.7) || MUL || RETURN",
-                  "displayLines": "(((((0.2 * 2) * ((_maxStance / 30) + 2)) / 4) * Skill11_BreakDamagePercentage) * 0.7)",
-                  "constants": [
-                    0.2,
-                    2,
-                    30,
-                    4
-                  ],
-                  "variables": [
-                    "_maxStance",
-                    "Skill11_BreakDamagePercentage",
-                    0.7
-                  ]
+                  "displayLines": "(((((0.2 * 2) * ((_maxStance / 30) + 2)) / 4) * Skill11_BreakDamagePercentage) * 0.7)"
                 },
                 "dmgFormula": "Break DMG Scaling",
                 "dmgFormulaFinal": "Pure (No DMG%)",
@@ -271,18 +207,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "DamageBreak": {
-              "operator": "Constants[0] (0.2) || Constants[1] (2) || MUL || Variables[0] (_maxStance) || Constants[2] (30) || DIV || Constants[1] (2) || ADD || MUL || Constants[3] (4) || DIV || Variables[1] (Skill11_BreakDamagePercentage) || MUL || RETURN",
-              "displayLines": "((((0.2 * 2) * ((_maxStance / 30) + 2)) / 4) * Skill11_BreakDamagePercentage)",
-              "constants": [
-                0.2,
-                2,
-                30,
-                4
-              ],
-              "variables": [
-                "_maxStance",
-                "Skill11_BreakDamagePercentage"
-              ]
+              "displayLines": "((((0.2 * 2) * ((_maxStance / 30) + 2)) / 4) * Skill11_BreakDamagePercentage)"
             },
             "dmgFormula": "Break DMG Scaling",
             "dmgFormulaFinal": "Pure (No DMG%)",
@@ -308,19 +233,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageBreak": {
-                  "operator": "Constants[0] (0.2) || Constants[1] (2) || MUL || Variables[0] (_maxStance) || Constants[2] (30) || DIV || Constants[1] (2) || ADD || MUL || Constants[3] (4) || DIV || Variables[1] (Skill11_BreakDamagePercentage) || MUL || Variables[2] (0.4) || MUL || RETURN",
-                  "displayLines": "(((((0.2 * 2) * ((_maxStance / 30) + 2)) / 4) * Skill11_BreakDamagePercentage) * 0.4)",
-                  "constants": [
-                    0.2,
-                    2,
-                    30,
-                    4
-                  ],
-                  "variables": [
-                    "_maxStance",
-                    "Skill11_BreakDamagePercentage",
-                    0.4
-                  ]
+                  "displayLines": "(((((0.2 * 2) * ((_maxStance / 30) + 2)) / 4) * Skill11_BreakDamagePercentage) * 0.4)"
                 },
                 "dmgFormula": "Break DMG Scaling",
                 "dmgFormulaFinal": "Pure (No DMG%)",
@@ -339,19 +252,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageBreak": {
-                  "operator": "Constants[0] (0.2) || Constants[1] (2) || MUL || Variables[0] (_maxStance) || Constants[2] (30) || DIV || Constants[1] (2) || ADD || MUL || Constants[3] (4) || DIV || Variables[1] (Skill11_BreakDamagePercentage) || MUL || Variables[2] (0.7) || MUL || RETURN",
-                  "displayLines": "(((((0.2 * 2) * ((_maxStance / 30) + 2)) / 4) * Skill11_BreakDamagePercentage) * 0.7)",
-                  "constants": [
-                    0.2,
-                    2,
-                    30,
-                    4
-                  ],
-                  "variables": [
-                    "_maxStance",
-                    "Skill11_BreakDamagePercentage",
-                    0.7
-                  ]
+                  "displayLines": "(((((0.2 * 2) * ((_maxStance / 30) + 2)) / 4) * Skill11_BreakDamagePercentage) * 0.7)"
                 },
                 "dmgFormula": "Break DMG Scaling",
                 "dmgFormulaFinal": "Pure (No DMG%)",
@@ -372,18 +273,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "DamageBreak": {
-              "operator": "Constants[0] (0.6) || Constants[1] (2) || MUL || Variables[0] (_maxStance) || Constants[2] (30) || DIV || Constants[1] (2) || ADD || MUL || Constants[3] (4) || DIV || Variables[1] (Skill11_BreakDamagePercentage) || MUL || RETURN",
-              "displayLines": "((((0.6 * 2) * ((_maxStance / 30) + 2)) / 4) * Skill11_BreakDamagePercentage)",
-              "constants": [
-                0.6,
-                2,
-                30,
-                4
-              ],
-              "variables": [
-                "_maxStance",
-                "Skill11_BreakDamagePercentage"
-              ]
+              "displayLines": "((((0.6 * 2) * ((_maxStance / 30) + 2)) / 4) * Skill11_BreakDamagePercentage)"
             },
             "dmgFormula": "Break DMG Scaling",
             "dmgFormulaFinal": "Pure (No DMG%)",
@@ -409,19 +299,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageBreak": {
-                  "operator": "Constants[0] (0.6) || Constants[1] (2) || MUL || Variables[0] (_maxStance) || Constants[2] (30) || DIV || Constants[1] (2) || ADD || MUL || Constants[3] (4) || DIV || Variables[1] (Skill11_BreakDamagePercentage) || MUL || Variables[2] (0.4) || MUL || RETURN",
-                  "displayLines": "(((((0.6 * 2) * ((_maxStance / 30) + 2)) / 4) * Skill11_BreakDamagePercentage) * 0.4)",
-                  "constants": [
-                    0.6,
-                    2,
-                    30,
-                    4
-                  ],
-                  "variables": [
-                    "_maxStance",
-                    "Skill11_BreakDamagePercentage",
-                    0.4
-                  ]
+                  "displayLines": "(((((0.6 * 2) * ((_maxStance / 30) + 2)) / 4) * Skill11_BreakDamagePercentage) * 0.4)"
                 },
                 "dmgFormula": "Break DMG Scaling",
                 "dmgFormulaFinal": "Pure (No DMG%)",
@@ -440,19 +318,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageBreak": {
-                  "operator": "Constants[0] (0.6) || Constants[1] (2) || MUL || Variables[0] (_maxStance) || Constants[2] (30) || DIV || Constants[1] (2) || ADD || MUL || Constants[3] (4) || DIV || Variables[1] (Skill11_BreakDamagePercentage) || MUL || Variables[2] (0.7) || MUL || RETURN",
-                  "displayLines": "(((((0.6 * 2) * ((_maxStance / 30) + 2)) / 4) * Skill11_BreakDamagePercentage) * 0.7)",
-                  "constants": [
-                    0.6,
-                    2,
-                    30,
-                    4
-                  ],
-                  "variables": [
-                    "_maxStance",
-                    "Skill11_BreakDamagePercentage",
-                    0.7
-                  ]
+                  "displayLines": "(((((0.6 * 2) * ((_maxStance / 30) + 2)) / 4) * Skill11_BreakDamagePercentage) * 0.7)"
                 },
                 "dmgFormula": "Break DMG Scaling",
                 "dmgFormulaFinal": "Pure (No DMG%)",
@@ -501,33 +367,13 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (2.2) || RETURN",
-              "displayLines": "2.2",
-              "constants": [],
-              "variables": [
-                2.2
-              ]
+              "displayLines": "2.2"
             },
             "HitSplit": {
-              "operator": "Constants[0] (1) || Constants[1] (6) || DIV || RETURN",
-              "displayLines": "(1 / 6)",
-              "constants": [
-                1,
-                6
-              ],
-              "variables": []
+              "displayLines": "(1 / 6)"
             },
             "Toughness": {
-              "operator": "Constants[0] (1) || Variables[0] (CurEnhance) || Variables[1] (0.5) || MUL || ADD || Variables[2] (ST Toughness Value) || MUL || RETURN",
-              "displayLines": "((1 + (CurEnhance * 0.5)) * ST Toughness Value)",
-              "constants": [
-                1
-              ],
-              "variables": [
-                "CurEnhance",
-                0.5,
-                "ST Toughness Value"
-              ]
+              "displayLines": "((1 + (CurEnhance * 0.5)) * ST Toughness Value)"
             },
             "Tags": null,
             "attackType": "Basic ATK",
@@ -550,33 +396,13 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (2.2) || RETURN",
-              "displayLines": "2.2",
-              "constants": [],
-              "variables": [
-                2.2
-              ]
+              "displayLines": "2.2"
             },
             "HitSplit": {
-              "operator": "Constants[0] (1) || Constants[1] (6) || DIV || RETURN",
-              "displayLines": "(1 / 6)",
-              "constants": [
-                1,
-                6
-              ],
-              "variables": []
+              "displayLines": "(1 / 6)"
             },
             "Toughness": {
-              "operator": "Constants[0] (1) || Variables[0] (CurEnhance) || Variables[1] (0.5) || MUL || ADD || Variables[2] (ST Toughness Value) || MUL || RETURN",
-              "displayLines": "((1 + (CurEnhance * 0.5)) * ST Toughness Value)",
-              "constants": [
-                1
-              ],
-              "variables": [
-                "CurEnhance",
-                0.5,
-                "ST Toughness Value"
-              ]
+              "displayLines": "((1 + (CurEnhance * 0.5)) * ST Toughness Value)"
             },
             "Tags": null,
             "attackType": "Basic ATK",
@@ -607,15 +433,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1542670262\">Boothill_DuelState</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
         },
         "multiplier": {
-          "operator": "Constants[0] (1) || Variables[0] (CurEnhance) || Variables[1] (0.5) || MUL || ADD || RETURN",
-          "displayLines": "(1 + (CurEnhance * 0.5))",
-          "constants": [
-            1
-          ],
-          "variables": [
-            "CurEnhance",
-            0.5
-          ]
+          "displayLines": "(1 + (CurEnhance * 0.5))"
         }
       }
     }

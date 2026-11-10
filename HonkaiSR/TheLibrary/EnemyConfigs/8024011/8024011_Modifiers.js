@@ -116,12 +116,7 @@ const configAbility = {
                     "value1": "HP_Bars_Remaining",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (MaxPhase) || RETURN",
-                      "displayLines": "MaxPhase",
-                      "constants": [],
-                      "variables": [
-                        "MaxPhase"
-                      ]
+                      "displayLines": "MaxPhase"
                     }
                   }
                 ]
@@ -274,12 +269,7 @@ const configAbility = {
                     "value1": "HP_Bars_Remaining",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (MaxPhase) || RETURN",
-                      "displayLines": "MaxPhase",
-                      "constants": [],
-                      "variables": [
-                        "MaxPhase"
-                      ]
+                      "displayLines": "MaxPhase"
                     }
                   }
                 ]
@@ -362,13 +352,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageTakenUpRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(MDF_DamageTakenUpRatio_PerLayer * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageTakenUpRatio_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(MDF_DamageTakenUpRatio_PerLayer * ModifierLayers)"
               }
             }
           ]
@@ -402,13 +386,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageUpRatio_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)"
               }
             }
           ]
@@ -470,13 +448,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (Modifier_Poison_DamagePercentage) || Variables[1] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
-                  "displayLines": "(Modifier_Poison_DamagePercentage * Modifier_Poison_PoisonLayer)",
-                  "constants": [],
-                  "variables": [
-                    "Modifier_Poison_DamagePercentage",
-                    "Modifier_Poison_PoisonLayer"
-                  ]
+                  "displayLines": "(Modifier_Poison_DamagePercentage * Modifier_Poison_PoisonLayer)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -507,14 +479,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Poison_DamagePercentage) || MUL || Variables[2] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
-                  "displayLines": "((DOT_TriggerRatio * Modifier_Poison_DamagePercentage) * Modifier_Poison_PoisonLayer)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "Modifier_Poison_DamagePercentage",
-                    "Modifier_Poison_PoisonLayer"
-                  ]
+                  "displayLines": "((DOT_TriggerRatio * Modifier_Poison_DamagePercentage) * Modifier_Poison_PoisonLayer)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -602,39 +567,19 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"603194622\">Monster_SW_Boss_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
               "duration": {
-                "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                "displayLines": "MDF_LifeTime",
-                "constants": [],
-                "variables": [
-                  "MDF_LifeTime"
-                ]
+                "displayLines": "MDF_LifeTime"
               },
               "baseChance": 1,
               "stackLimit": {
-                "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                "displayLines": "MDF_MaxLayer",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxLayer"
-                ]
+                "displayLines": "MDF_MaxLayer"
               },
               "valuePerStack": {
                 "Modifier_Poison_DamagePercentage": {
-                  "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                  "displayLines": "MDF_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamagePercentage"
-                  ]
+                  "displayLines": "MDF_DamagePercentage"
                 }
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (MDF_Count) || RETURN",
-                "displayLines": "MDF_Count",
-                "constants": [],
-                "variables": [
-                  "MDF_Count"
-                ]
+                "displayLines": "MDF_Count"
               }
             }
           ]

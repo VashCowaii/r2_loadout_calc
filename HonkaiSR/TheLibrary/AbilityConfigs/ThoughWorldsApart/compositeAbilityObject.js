@@ -66,13 +66,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_23051_DamageRatio01) || Variables[1] (MDF_23051_DamageRatio02) || ADD || RETURN",
-                        "displayLines": "(MDF_23051_DamageRatio01 + MDF_23051_DamageRatio02)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_23051_DamageRatio01",
-                          "MDF_23051_DamageRatio02"
-                        ]
+                        "displayLines": "(MDF_23051_DamageRatio01 + MDF_23051_DamageRatio02)"
                       },
                       "variableName": "MDF_PropertyValue"
                     }
@@ -81,12 +75,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_23051_DamageRatio01) || RETURN",
-                        "displayLines": "MDF_23051_DamageRatio01",
-                        "constants": [],
-                        "variables": [
-                          "MDF_23051_DamageRatio01"
-                        ]
+                        "displayLines": "MDF_23051_DamageRatio01"
                       },
                       "variableName": "MDF_PropertyValue"
                     }
@@ -100,12 +89,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -134,29 +118,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-194150391\">LC_23051_Sub</a>[<span class=\"descriptionNumberColor\">Redoubt</span>]",
                       "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "valuePerStack": {
                         "MDF_23051_DamageRatio01": {
-                          "operator": "Variables[0] (0.24) || RETURN",
-                          "displayLines": "0.24",
-                          "constants": [],
-                          "variables": [
-                            0.24
-                          ]
+                          "displayLines": "0.24"
                         },
                         "MDF_23051_DamageRatio02": {
-                          "operator": "Variables[0] (0.12) || RETURN",
-                          "displayLines": "0.12",
-                          "constants": [],
-                          "variables": [
-                            0.12
-                          ]
+                          "displayLines": "0.12"
                         }
                       }
                     },
@@ -167,12 +136,7 @@ const compositeAbilityObject = {
                         "target": "{{All Team Members}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (0.1) || RETURN",
-                        "displayLines": "0.1",
-                        "constants": [],
-                        "variables": [
-                          0.1
-                        ]
+                        "displayLines": "0.1"
                       }
                     },
                     {
@@ -190,12 +154,7 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "healPercent": {
-                            "operator": "Variables[0] (0.1) || RETURN",
-                            "displayLines": "0.1",
-                            "constants": [],
-                            "variables": [
-                              0.1
-                            ]
+                            "displayLines": "0.1"
                           }
                         }
                       ]

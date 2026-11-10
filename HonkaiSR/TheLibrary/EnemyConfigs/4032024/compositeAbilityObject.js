@@ -89,14 +89,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_PersistLoseHP) || Variables[1] (MDF_MaxHP) || Variables[2] (MDF_LoseHPRatio) || MUL || ADD || RETURN",
-                        "displayLines": "(MDF_PersistLoseHP + (MDF_MaxHP * MDF_LoseHPRatio))",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PersistLoseHP",
-                          "MDF_MaxHP",
-                          "MDF_LoseHPRatio"
-                        ]
+                        "displayLines": "(MDF_PersistLoseHP + (MDF_MaxHP * MDF_LoseHPRatio))"
                       },
                       "variableName": "MDF_PersistLoseHP"
                     },
@@ -109,12 +102,7 @@ const compositeAbilityObject = {
                       "modifierName": "<a class=\"gModGreen\" id=\"429916549\">Enemy_W4_FireProwler_PersistLoseHPPreShow</a>",
                       "variableName": "MDF_PersistLoseHP",
                       "value": {
-                        "operator": "Variables[0] (MDF_PersistLoseHP) || RETURN",
-                        "displayLines": "MDF_PersistLoseHP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PersistLoseHP"
-                        ]
+                        "displayLines": "MDF_PersistLoseHP"
                       }
                     },
                     {
@@ -126,12 +114,7 @@ const compositeAbilityObject = {
                       },
                       "previewType": "Persisting HP Loss",
                       "previewValue": {
-                        "operator": "Variables[0] (MDF_PersistLoseHP) || INVERT || RETURN",
-                        "displayLines": "-MDF_PersistLoseHP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PersistLoseHP"
-                        ]
+                        "displayLines": "-MDF_PersistLoseHP"
                       }
                     },
                     {
@@ -143,12 +126,7 @@ const compositeAbilityObject = {
                       },
                       "previewType": "Persisting HP Loss",
                       "previewValue": {
-                        "operator": "Variables[0] (MDF_PersistLoseHP) || INVERT || RETURN",
-                        "displayLines": "-MDF_PersistLoseHP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PersistLoseHP"
-                        ]
+                        "displayLines": "-MDF_PersistLoseHP"
                       }
                     },
                     {
@@ -159,12 +137,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster's Summoner}}"
                       },
                       "consumePercent": {
-                        "operator": "Variables[0] (MDF_LoseHPRatio) || RETURN",
-                        "displayLines": "MDF_LoseHPRatio",
-                        "constants": [],
-                        "variables": [
-                          "MDF_LoseHPRatio"
-                        ]
+                        "displayLines": "MDF_LoseHPRatio"
                       },
                       "attackType": "Unknown",
                       "DamageType": "Physical"
@@ -471,12 +444,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_Speed) || RETURN",
-                    "displayLines": "MDF_Speed",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Speed"
-                    ]
+                    "displayLines": "MDF_Speed"
                   }
                 },
                 {
@@ -557,28 +525,13 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-2020453285\">Enemy_W4_FireProwler_01_DamageValue</a>",
           "valuePerStack": {
             "MDF_Ability01": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "MDF_Ability01_Adjoin": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
+              "displayLines": "{[Skill01[1]]}"
             },
             "MDF_Ability02": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             }
           },
           "casterAssign": "TargetSelf"
@@ -608,28 +561,13 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
           "valuePerStack": {
             "MDF_RallyTransferRatio": {
-              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-              "displayLines": "{[Skill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[1]]}"
-              ]
+              "displayLines": "{[Skill02[1]]}"
             },
             "MDF_Rally_HealPercentage": {
-              "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-              "displayLines": "{[Skill02[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[3]]}"
-              ]
+              "displayLines": "{[Skill02[3]]}"
             },
             "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-              "displayLines": "{[Skill02[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[2]]}"
-              ]
+              "displayLines": "{[Skill02[2]]}"
             }
           }
         },
@@ -642,12 +580,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -710,12 +643,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -732,12 +660,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
+              "displayLines": "{[Skill01[1]]}"
             },
             "Toughness": null,
             "Tags": null,

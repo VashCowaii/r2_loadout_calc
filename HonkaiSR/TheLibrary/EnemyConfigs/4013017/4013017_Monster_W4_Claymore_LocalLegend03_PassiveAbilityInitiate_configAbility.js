@@ -22,64 +22,29 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1282910303\">Enemy_Heaven_StoneShieldController</a>",
       "valuePerStack": {
         "MDF_MaxLayer": {
-          "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[0]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[0]]}"
         },
         "MDF_CrackedEffect": {
-          "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[1]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[1]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[1]]}"
         },
         "MDF_CrackedDamage": {
-          "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[5]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[5]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[5]]}"
         },
         "MDF_DamageResistance": {
-          "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[2]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[2]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[2]]}"
         },
         "MDF_CrackedDamageAfter": {
-          "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[3]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[3]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[3]]}"
         },
         "MDF_ModifySP": {
-          "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[4]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[4]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[4]]}"
         }
       }
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] ({[PassiveSkill03[15]]}) || RETURN",
-        "displayLines": "{[PassiveSkill03[15]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill03[15]]}"
-        ]
+        "displayLines": "{[PassiveSkill03[15]]}"
       },
       "variableName": "_DelayAddedRatio"
     },
@@ -94,36 +59,21 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[0]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[0]]}"
-            ]
+            "displayLines": "{[PassiveSkill02[0]]}"
           },
           "variableName": "_DamageReduceRatio"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[0]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[0]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[0]]}"
           },
           "variableName": "_DelayRatio"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill03[2]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[2]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[2]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[2]]}"
           },
           "variableName": "_HealHPRatio"
         }
@@ -160,36 +110,21 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill02[6]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[6]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[6]]}"
-            ]
+            "displayLines": "{[PassiveSkill02[6]]}"
           },
           "variableName": "_DamageReduceRatio"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill03[13]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[13]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[13]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[13]]}"
           },
           "variableName": "_DelayRatio"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill03[14]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[14]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[14]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[14]]}"
           },
           "variableName": "_HealHPRatio"
         }
@@ -216,36 +151,21 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[5]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[5]]}"
-            ]
+            "displayLines": "{[PassiveSkill02[5]]}"
           },
           "variableName": "_DamageReduceRatio"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill03[11]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[11]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[11]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[11]]}"
           },
           "variableName": "_DelayRatio"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill03[12]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[12]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[12]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[12]]}"
           },
           "variableName": "_HealHPRatio"
         }
@@ -272,36 +192,21 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[4]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[4]]}"
-            ]
+            "displayLines": "{[PassiveSkill02[4]]}"
           },
           "variableName": "_DamageReduceRatio"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill03[9]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[9]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[9]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[9]]}"
           },
           "variableName": "_DelayRatio"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill03[10]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[10]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[10]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[10]]}"
           },
           "variableName": "_HealHPRatio"
         }
@@ -328,36 +233,21 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[3]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[3]]}"
-            ]
+            "displayLines": "{[PassiveSkill02[3]]}"
           },
           "variableName": "_DamageReduceRatio"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill03[7]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[7]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[7]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[7]]}"
           },
           "variableName": "_DelayRatio"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill03[8]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[8]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[8]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[8]]}"
           },
           "variableName": "_HealHPRatio"
         }
@@ -384,36 +274,21 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[2]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[2]]}"
-            ]
+            "displayLines": "{[PassiveSkill02[2]]}"
           },
           "variableName": "_DamageReduceRatio"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[5]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[5]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[5]]}"
           },
           "variableName": "_DelayRatio"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill03[6]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[6]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[6]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[6]]}"
           },
           "variableName": "_HealHPRatio"
         }
@@ -440,36 +315,21 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[1]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[1]]}"
-            ]
+            "displayLines": "{[PassiveSkill02[1]]}"
           },
           "variableName": "_DamageReduceRatio"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill03[3]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[3]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[3]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[3]]}"
           },
           "variableName": "_DelayRatio"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill03[4]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[4]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[4]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[4]]}"
           },
           "variableName": "_HealHPRatio"
         }
@@ -517,12 +377,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] (_DamageReduceRatio) || RETURN",
-          "displayLines": "_DamageReduceRatio",
-          "constants": [],
-          "variables": [
-            "_DamageReduceRatio"
-          ]
+          "displayLines": "_DamageReduceRatio"
         }
       }
     },
@@ -576,12 +431,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-883767978\">Monster_W4_Claymore_01_LocalLegend_DamageAdd</a>",
                   "valuePerStack": {
                     "MDF_DamageAdded": {
-                      "operator": "Variables[0] ({[PassiveSkill02[7]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[7]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[7]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[7]]}"
                     }
                   }
                 }
@@ -709,12 +559,7 @@ const configAbility = {
                     "value1": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                      "displayLines": "MDF_MaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MaxLayer"
-                      ]
+                      "displayLines": "MDF_MaxLayer"
                     },
                     "valueType": "Layer"
                   },
@@ -763,12 +608,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (_DamageReduceRatio) || RETURN",
-                      "displayLines": "_DamageReduceRatio",
-                      "constants": [],
-                      "variables": [
-                        "_DamageReduceRatio"
-                      ]
+                      "displayLines": "_DamageReduceRatio"
                     }
                   }
                 }

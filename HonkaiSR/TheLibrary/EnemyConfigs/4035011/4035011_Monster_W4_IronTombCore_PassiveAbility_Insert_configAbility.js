@@ -24,42 +24,21 @@ const configAbility = {
         "value1": "_WorldErosion",
         "compareType": "<",
         "value2": {
-          "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Constants[0] (100) || MUL || RETURN",
-          "displayLines": "({[PassiveSkill01[0]]} * 100)",
-          "constants": [
-            100
-          ],
-          "variables": [
-            "{[PassiveSkill01[0]]}"
-          ]
+          "displayLines": "({[PassiveSkill01[0]]} * 100)"
         }
       },
       "passed": [
         {
           "name": "Set IronTomb Progress",
           "display": {
-            "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Constants[0] (100) || MUL || RETURN",
-            "displayLines": "({[PassiveSkill01[0]]} * 100)",
-            "constants": [
-              100
-            ],
-            "variables": [
-              "{[PassiveSkill01[0]]}"
-            ]
+            "displayLines": "({[PassiveSkill01[0]]} * 100)"
           },
           "duration": 3
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Constants[0] (100) || MUL || RETURN",
-            "displayLines": "({[PassiveSkill01[0]]} * 100)",
-            "constants": [
-              100
-            ],
-            "variables": [
-              "{[PassiveSkill01[0]]}"
-            ]
+            "displayLines": "({[PassiveSkill01[0]]} * 100)"
           },
           "variableName": "_WorldErosion"
         }

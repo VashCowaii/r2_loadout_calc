@@ -26,12 +26,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (6) || RETURN",
-            "displayLines": "6",
-            "constants": [],
-            "variables": [
-              6
-            ]
+            "displayLines": "6"
           },
           "variableName": "_Xueyi_Count"
         }
@@ -40,12 +35,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (8) || RETURN",
-            "displayLines": "8",
-            "constants": [],
-            "variables": [
-              8
-            ]
+            "displayLines": "8"
           },
           "variableName": "_Xueyi_Count"
         }
@@ -55,12 +45,7 @@ const configAbility = {
       "name": "Update Displayed Energy Bar",
       "value": 0,
       "maximum": {
-        "operator": "Variables[0] (_Xueyi_Count) || RETURN",
-        "displayLines": "_Xueyi_Count",
-        "constants": [],
-        "variables": [
-          "_Xueyi_Count"
-        ]
+        "displayLines": "_Xueyi_Count"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -155,12 +140,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"213600244\">Xueyi_Passive_AddCount</a>",
                       "valuePerStack": {
                         "MDF_Passive_StanceMaxCount": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         }
                       }
                     }
@@ -321,12 +301,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"213600244\">Xueyi_Passive_AddCount</a>",
                           "valuePerStack": {
                             "MDF_Passive_StanceMaxCount": {
-                              "operator": "Variables[0] (1) || RETURN",
-                              "displayLines": "1",
-                              "constants": [],
-                              "variables": [
-                                1
-                              ]
+                              "displayLines": "1"
                             }
                           }
                         }
@@ -377,12 +352,7 @@ const configAbility = {
                     "value1": "_Xueyi_PassiveLayer",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (_Xueyi_Count) || RETURN",
-                      "displayLines": "_Xueyi_Count",
-                      "constants": [],
-                      "variables": [
-                        "_Xueyi_Count"
-                      ]
+                      "displayLines": "_Xueyi_Count"
                     }
                   },
                   "passed": [
@@ -510,12 +480,7 @@ const configAbility = {
                     "value1": "_Xueyi_PassiveLayer",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (_Xueyi_Count) || RETURN",
-                      "displayLines": "_Xueyi_Count",
-                      "constants": [],
-                      "variables": [
-                        "_Xueyi_Count"
-                      ]
+                      "displayLines": "_Xueyi_Count"
                     }
                   },
                   "passed": [
@@ -594,12 +559,7 @@ const configAbility = {
                     "value1": "_Xueyi_PassiveLayer",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (_Xueyi_Count) || RETURN",
-                      "displayLines": "_Xueyi_Count",
-                      "constants": [],
-                      "variables": [
-                        "_Xueyi_Count"
-                      ]
+                      "displayLines": "_Xueyi_Count"
                     }
                   }
                 ]
@@ -701,12 +661,7 @@ const configAbility = {
                     "value1": "_Xueyi_PassiveLayer",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (_Xueyi_Count) || RETURN",
-                      "displayLines": "_Xueyi_Count",
-                      "constants": [],
-                      "variables": [
-                        "_Xueyi_Count"
-                      ]
+                      "displayLines": "_Xueyi_Count"
                     }
                   },
                   "passed": [
@@ -773,12 +728,7 @@ const configAbility = {
                     "value1": "_Xueyi_PassiveLayer",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (_Xueyi_Count) || RETURN",
-                      "displayLines": "_Xueyi_Count",
-                      "constants": [],
-                      "variables": [
-                        "_Xueyi_Count"
-                      ]
+                      "displayLines": "_Xueyi_Count"
                     }
                   },
                   "passed": [
@@ -859,12 +809,7 @@ const configAbility = {
         "show": "Hide",
         "skillType": "Ultimate",
         "toughnessForcedReductionPreview": {
-          "operator": "Variables[0] (MDF_Skill03_StancePreCalc) || RETURN",
-          "displayLines": "MDF_Skill03_StancePreCalc",
-          "constants": [],
-          "variables": [
-            "MDF_Skill03_StancePreCalc"
-          ]
+          "displayLines": "MDF_Skill03_StancePreCalc"
         },
         "showAsForcedReduction": true
       }

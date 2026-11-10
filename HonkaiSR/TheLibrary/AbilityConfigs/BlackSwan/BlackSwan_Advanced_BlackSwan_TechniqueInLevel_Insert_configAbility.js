@@ -13,12 +13,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Constants[0] (1) || RETURN",
-        "displayLines": "1",
-        "constants": [
-          1
-        ],
-        "variables": []
+        "displayLines": "1"
       },
       "variableName": "_can_continue"
     },
@@ -30,12 +25,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (1.5) || RETURN",
-        "displayLines": "1.5",
-        "constants": [],
-        "variables": [
-          1.5
-        ]
+        "displayLines": "1.5"
       },
       "variableName": "_current_chance"
     },
@@ -72,26 +62,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_loop_count) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(_loop_count + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "_loop_count"
-            ]
+            "displayLines": "(_loop_count + 1)"
           },
           "variableName": "_loop_count"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Constants[0] (0) || RETURN",
-            "displayLines": "0",
-            "constants": [
-              0
-            ],
-            "variables": []
+            "displayLines": "0"
           },
           "variableName": "_can_continue"
         },
@@ -127,12 +105,7 @@ const configAbility = {
                   {
                     "name": "Random Chance",
                     "chance": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   }
                 ]
@@ -162,13 +135,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Result_Stack_Layer) || Variables[1] (1) || ADD || RETURN",
-                    "displayLines": "(Result_Stack_Layer + 1)",
-                    "constants": [],
-                    "variables": [
-                      "Result_Stack_Layer",
-                      1
-                    ]
+                    "displayLines": "(Result_Stack_Layer + 1)"
                   },
                   "variableName": "Result_Stack_Layer"
                 }
@@ -182,82 +149,37 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"866598290\">Advanced_BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
               "baseChance": {
-                "operator": "Variables[0] (_current_chance) || RETURN",
-                "displayLines": "_current_chance",
-                "constants": [],
-                "variables": [
-                  "_current_chance"
-                ]
+                "displayLines": "_current_chance"
               },
               "stackLimit": {
-                "operator": "Variables[0] (Max_DOT_Layer) || RETURN",
-                "displayLines": "Max_DOT_Layer",
-                "constants": [],
-                "variables": [
-                  "Max_DOT_Layer"
-                ]
+                "displayLines": "Max_DOT_Layer"
               },
               "valuePerStack": {
                 "Basic_DamagePercentage": {
-                  "operator": "Variables[0] (2.4) || RETURN",
-                  "displayLines": "2.4",
-                  "constants": [],
-                  "variables": [
-                    2.4
-                  ]
+                  "displayLines": "2.4"
                 },
                 "ExtraLayer_DamagePercentage": {
-                  "operator": "Variables[0] (0.12) || RETURN",
-                  "displayLines": "0.12",
-                  "constants": [],
-                  "variables": [
-                    0.12
-                  ]
+                  "displayLines": "0.12"
                 },
                 "Spread_DamagePercentage": {
-                  "operator": "Variables[0] (1.8) || RETURN",
-                  "displayLines": "1.8",
-                  "constants": [],
-                  "variables": [
-                    1.8
-                  ]
+                  "displayLines": "1.8"
                 },
                 "ThresholdLayer": {
-                  "operator": "Variables[0] (DOT_Layer_Threshold) || RETURN",
-                  "displayLines": "DOT_Layer_Threshold",
-                  "constants": [],
-                  "variables": [
-                    "DOT_Layer_Threshold"
-                  ]
+                  "displayLines": "DOT_Layer_Threshold"
                 },
                 "DefenceIgnore": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (Result_Stack_Layer) || RETURN",
-                "displayLines": "Result_Stack_Layer",
-                "constants": [],
-                "variables": [
-                  "Result_Stack_Layer"
-                ]
+                "displayLines": "Result_Stack_Layer"
               },
               "success": [
                 {
                   "name": "Define Custom Variable",
                   "scope": "ContextAbility",
                   "value": {
-                    "operator": "Constants[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [
-                      1
-                    ],
-                    "variables": []
+                    "displayLines": "1"
                   },
                   "variableName": "_can_continue"
                 }
@@ -278,13 +200,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_current_chance) || Variables[1] (0.5) || MUL || RETURN",
-            "displayLines": "(_current_chance * 0.5)",
-            "constants": [],
-            "variables": [
-              "_current_chance",
-              0.5
-            ]
+            "displayLines": "(_current_chance * 0.5)"
           },
           "variableName": "_current_chance"
         },

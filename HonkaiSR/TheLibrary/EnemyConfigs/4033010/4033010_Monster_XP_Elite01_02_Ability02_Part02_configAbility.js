@@ -147,12 +147,7 @@ const configAbility = {
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (SummonType) || RETURN",
-            "displayLines": "SummonType",
-            "constants": [],
-            "variables": [
-              "SummonType"
-            ]
+            "displayLines": "SummonType"
           },
           "caseEvents": [
             {
@@ -214,36 +209,16 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
               "valuePerStack": {
                 "MDF_RallyTransferRatio": {
-                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                  "displayLines": "{[SkillP01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[1]]}"
-                  ]
+                  "displayLines": "{[SkillP01[1]]}"
                 },
                 "MDF_Rally_HealPercentage": {
-                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                  "displayLines": "{[SkillP01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[2]]}"
-                  ]
+                  "displayLines": "{[SkillP01[2]]}"
                 },
                 "MDF_Rally_HealUpRatio": {
-                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                  "displayLines": "{[SkillP01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[3]]}"
-                  ]
+                  "displayLines": "{[SkillP01[3]]}"
                 },
                 "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-                  "displayLines": "{[SkillP01[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[4]]}"
-                  ]
+                  "displayLines": "{[SkillP01[4]]}"
                 }
               }
             },
@@ -256,12 +231,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
+                  "displayLines": "{[Skill02[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,

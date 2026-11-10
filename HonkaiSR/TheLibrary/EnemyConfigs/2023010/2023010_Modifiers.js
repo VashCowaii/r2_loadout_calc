@@ -156,12 +156,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "healPercent": {
-                "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                "displayLines": "{[SkillP01[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP01[0]]}"
-                ]
+                "displayLines": "{[SkillP01[0]]}"
               },
               "formula": "Heal from Target MaxHP"
             }

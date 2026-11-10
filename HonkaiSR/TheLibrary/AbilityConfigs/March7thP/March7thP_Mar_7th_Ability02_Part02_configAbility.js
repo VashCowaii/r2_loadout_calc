@@ -23,12 +23,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "variableName": "_Tree02_LifeTimeAdd"
         }
@@ -51,24 +46,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.04) || RETURN",
-            "displayLines": "0.04",
-            "constants": [],
-            "variables": [
-              0.04
-            ]
+            "displayLines": "0.04"
           },
           "variableName": "_Rank06_HealPercentage"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (106) || RETURN",
-            "displayLines": "106",
-            "constants": [],
-            "variables": [
-              106
-            ]
+            "displayLines": "106"
           },
           "variableName": "_Rank06_HealValue"
         }
@@ -115,12 +100,7 @@ const configAbility = {
         "value1": "CurrentHP%",
         "compareType": ">=",
         "value2": {
-          "operator": "Variables[0] (0.3) || RETURN",
-          "displayLines": "0.3",
-          "constants": [],
-          "variables": [
-            0.3
-          ]
+          "displayLines": "0.3"
         }
       },
       "passed": [
@@ -132,54 +112,23 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1541241593\">March7th_BPAbility_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
           "duration": {
-            "operator": "Variables[0] (3) || Variables[1] (_Tree02_LifeTimeAdd) || ADD || RETURN",
-            "displayLines": "(3 + _Tree02_LifeTimeAdd)",
-            "constants": [],
-            "variables": [
-              3,
-              "_Tree02_LifeTimeAdd"
-            ]
+            "displayLines": "(3 + _Tree02_LifeTimeAdd)"
           },
           "valuePerStack": {
             "MDF_HealPercentage": {
-              "operator": "Variables[0] (_Rank06_HealPercentage) || RETURN",
-              "displayLines": "_Rank06_HealPercentage",
-              "constants": [],
-              "variables": [
-                "_Rank06_HealPercentage"
-              ]
+              "displayLines": "_Rank06_HealPercentage"
             },
             "MDF_HealValue": {
-              "operator": "Variables[0] (_Rank06_HealValue) || RETURN",
-              "displayLines": "_Rank06_HealValue",
-              "constants": [],
-              "variables": [
-                "_Rank06_HealValue"
-              ]
+              "displayLines": "_Rank06_HealValue"
             },
             "MDF_ShieldPercentage": {
-              "operator": "Variables[0] (0.57) || RETURN",
-              "displayLines": "0.57",
-              "constants": [],
-              "variables": [
-                0.57
-              ]
+              "displayLines": "0.57"
             },
             "MDF_ShieldValue": {
-              "operator": "Variables[0] (760) || RETURN",
-              "displayLines": "760",
-              "constants": [],
-              "variables": [
-                760
-              ]
+              "displayLines": "760"
             },
             "MDF_AggroUp": {
-              "operator": "Variables[0] (5) || RETURN",
-              "displayLines": "5",
-              "constants": [],
-              "variables": [
-                5
-              ]
+              "displayLines": "5"
             }
           }
         }
@@ -193,46 +142,20 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1541241593\">March7th_BPAbility_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
           "duration": {
-            "operator": "Variables[0] (3) || Variables[1] (_Tree02_LifeTimeAdd) || ADD || RETURN",
-            "displayLines": "(3 + _Tree02_LifeTimeAdd)",
-            "constants": [],
-            "variables": [
-              3,
-              "_Tree02_LifeTimeAdd"
-            ]
+            "displayLines": "(3 + _Tree02_LifeTimeAdd)"
           },
           "valuePerStack": {
             "MDF_HealPercentage": {
-              "operator": "Variables[0] (_Rank06_HealPercentage) || RETURN",
-              "displayLines": "_Rank06_HealPercentage",
-              "constants": [],
-              "variables": [
-                "_Rank06_HealPercentage"
-              ]
+              "displayLines": "_Rank06_HealPercentage"
             },
             "MDF_HealValue": {
-              "operator": "Variables[0] (_Rank06_HealValue) || RETURN",
-              "displayLines": "_Rank06_HealValue",
-              "constants": [],
-              "variables": [
-                "_Rank06_HealValue"
-              ]
+              "displayLines": "_Rank06_HealValue"
             },
             "MDF_ShieldPercentage": {
-              "operator": "Variables[0] (0.57) || RETURN",
-              "displayLines": "0.57",
-              "constants": [],
-              "variables": [
-                0.57
-              ]
+              "displayLines": "0.57"
             },
             "MDF_ShieldValue": {
-              "operator": "Variables[0] (760) || RETURN",
-              "displayLines": "760",
-              "constants": [],
-              "variables": [
-                760
-              ]
+              "displayLines": "760"
             },
             "MDF_AggroUp": 0
           }

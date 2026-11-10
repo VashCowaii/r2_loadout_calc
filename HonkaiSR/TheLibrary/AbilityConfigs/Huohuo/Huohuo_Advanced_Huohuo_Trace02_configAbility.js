@@ -13,12 +13,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1538917301\">M_Huohuo_Trace02</a>",
       "valuePerStack": {
         "MDF_Resistance": {
-          "operator": "Variables[0] (0.35) || RETURN",
-          "displayLines": "0.35",
-          "constants": [],
-          "variables": [
-            0.35
-          ]
+          "displayLines": "0.35"
         }
       }
     }
@@ -42,12 +37,7 @@ const configAbility = {
               },
               "statName": "STAT_CTRL",
               "value": {
-                "operator": "Variables[0] (MDF_Resistance) || RETURN",
-                "displayLines": "MDF_Resistance",
-                "constants": [],
-                "variables": [
-                  "MDF_Resistance"
-                ]
+                "displayLines": "MDF_Resistance"
               }
             }
           ]

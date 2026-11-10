@@ -56,12 +56,7 @@ const configAbility = {
               },
               "variableName": "AssistSkill02_DamagePercentage",
               "resetValue": {
-                "operator": "Variables[0] (MDF_Assist_DamagePercentage) || RETURN",
-                "displayLines": "MDF_Assist_DamagePercentage",
-                "constants": [],
-                "variables": [
-                  "MDF_Assist_DamagePercentage"
-                ]
+                "displayLines": "MDF_Assist_DamagePercentage"
               },
               "scope": "TargetEntity"
             }

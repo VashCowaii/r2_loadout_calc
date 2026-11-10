@@ -90,13 +90,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (0.32) || Variables[1] (SkillTree_PointB3_BreakDamageAddedValue) || ADD || RETURN",
-                        "displayLines": "(0.32 + SkillTree_PointB3_BreakDamageAddedValue)",
-                        "constants": [],
-                        "variables": [
-                          0.32,
-                          "SkillTree_PointB3_BreakDamageAddedValue"
-                        ]
+                        "displayLines": "(0.32 + SkillTree_PointB3_BreakDamageAddedValue)"
                       }
                     }
                   ],
@@ -109,12 +103,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (0.32) || RETURN",
-                        "displayLines": "0.32",
-                        "constants": [],
-                        "variables": [
-                          0.32
-                        ]
+                        "displayLines": "0.32"
                       }
                     }
                   ]
@@ -278,14 +267,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_BreakAttackToDelay) || Variables[1] (0.2) || MUL || Variables[2] (0.1) || ADD || RETURN",
-                    "displayLines": "((MDF_BreakAttackToDelay * 0.2) + 0.1)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_BreakAttackToDelay",
-                      0.2,
-                      0.1
-                    ]
+                    "displayLines": "((MDF_BreakAttackToDelay * 0.2) + 0.1)"
                   },
                   "variableName": "MDF_BreakAttackToDelay"
                 },
@@ -421,12 +403,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (Ability03_P1_PenetrateRatio) || RETURN",
-                    "displayLines": "Ability03_P1_PenetrateRatio",
-                    "constants": [],
-                    "variables": [
-                      "Ability03_P1_PenetrateRatio"
-                    ]
+                    "displayLines": "Ability03_P1_PenetrateRatio"
                   }
                 },
                 {
@@ -445,20 +422,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1242682284\">RuanMei_Ability03_Area_Eidolon1_Friend</a>[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
                       "valuePerStack": {
                         "Ability03_P1_PenetrateRatio": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
+                          "displayLines": "0.25"
                         },
                         "AbilityRank_Eidolon1_P1_IgnoreDEFRatio_Friend": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     }
@@ -473,12 +440,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1476311818\">RuanMei_Ability03_Area_Friend</a>[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
                       "valuePerStack": {
                         "Ability03_P1_PenetrateRatio": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
+                          "displayLines": "0.25"
                         }
                       }
                     }
@@ -505,12 +467,7 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "Ability03_P1_PenetrateRatio": {
-                  "operator": "Variables[0] (0.25) || RETURN",
-                  "displayLines": "0.25",
-                  "constants": [],
-                  "variables": [
-                    0.25
-                  ]
+                  "displayLines": "0.25"
                 }
               }
             },
@@ -528,12 +485,7 @@ const compositeAbilityObject = {
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             }
@@ -611,12 +563,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (Ability03_P1_PenetrateRatio) || RETURN",
-                    "displayLines": "Ability03_P1_PenetrateRatio",
-                    "constants": [],
-                    "variables": [
-                      "Ability03_P1_PenetrateRatio"
-                    ]
+                    "displayLines": "Ability03_P1_PenetrateRatio"
                   }
                 },
                 {
@@ -635,12 +582,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"68128116\">RuanMei_Ability03_Eidolon1_DefenceIgnore</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     },
@@ -652,13 +594,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"678689072\">RuanMei_Ability03_Area_Eidolon1_Caster</a>[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-                        "displayLines": "(2 + 1)",
-                        "constants": [],
-                        "variables": [
-                          2,
-                          1
-                        ]
+                        "displayLines": "(2 + 1)"
                       }
                     }
                   ],
@@ -679,12 +615,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"68128116\">RuanMei_Ability03_Eidolon1_DefenceIgnore</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.2) || RETURN",
-                              "displayLines": "0.2",
-                              "constants": [],
-                              "variables": [
-                                0.2
-                              ]
+                              "displayLines": "0.2"
                             }
                           }
                         },
@@ -696,12 +627,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"678689072\">RuanMei_Ability03_Area_Eidolon1_Caster</a>[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
                           "duration": {
-                            "operator": "Variables[0] (2) || RETURN",
-                            "displayLines": "2",
-                            "constants": [],
-                            "variables": [
-                              2
-                            ]
+                            "displayLines": "2"
                           }
                         }
                       ],
@@ -714,12 +640,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-995060554\">RuanMei_Ability03_Area_Caster</a>[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
                           "duration": {
-                            "operator": "Variables[0] (2) || RETURN",
-                            "displayLines": "2",
-                            "constants": [],
-                            "variables": [
-                              2
-                            ]
+                            "displayLines": "2"
                           }
                         }
                       ]
@@ -845,12 +766,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"614915339\">RuanMei_Eidolon4_PassiveStackProperty</a>",
                   "valuePerStack": {
                     "AbilityRank_Eidolon4_P1_BreakDamageAdded": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     }
                   }
                 },
@@ -862,12 +778,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"353149410\">RuanMei_Eidolon4_Passive_BreakDamageAddedUp</a>[<span class=\"descriptionNumberColor\">Chatoyant Éclat</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   }
                 }
               ]
@@ -893,12 +804,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (SkillRank_Rank04_P1_BreakDamageAdded) || RETURN",
-                    "displayLines": "SkillRank_Rank04_P1_BreakDamageAdded",
-                    "constants": [],
-                    "variables": [
-                      "SkillRank_Rank04_P1_BreakDamageAdded"
-                    ]
+                    "displayLines": "SkillRank_Rank04_P1_BreakDamageAdded"
                   }
                 }
               ]
@@ -993,16 +899,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (WHOLE) || Variables[1] (SkillTree_PointB3_BreakDamageAddedValue) || Variables[2] (1.2) || SUB || Variables[3] (0.1) || DIV || PARAM_1 || FUNCTION || Variables[4] (0.06) || MUL || RETURN",
-                        "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(((SkillTree_PointB3_BreakDamageAddedValue - 1.2) / 0.1)) * 0.06)",
-                        "constants": [],
-                        "variables": [
-                          "WHOLE",
-                          "SkillTree_PointB3_BreakDamageAddedValue",
-                          1.2,
-                          0.1,
-                          0.06
-                        ]
+                        "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(((SkillTree_PointB3_BreakDamageAddedValue - 1.2) / 0.1)) * 0.06)"
                       },
                       "variableName": "SkillTree_PointB3_BreakDamageAddedValue"
                     },
@@ -1030,12 +927,7 @@ const compositeAbilityObject = {
                             "value1": "SkillTree_PointB3_BreakDamageAddedValue",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (0.36) || RETURN",
-                              "displayLines": "0.36",
-                              "constants": [],
-                              "variables": [
-                                0.36
-                              ]
+                              "displayLines": "0.36"
                             },
                             "contextScope": "ContextCaster"
                           },
@@ -1043,12 +935,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (0.36) || RETURN",
-                                "displayLines": "0.36",
-                                "constants": [],
-                                "variables": [
-                                  0.36
-                                ]
+                                "displayLines": "0.36"
                               },
                               "variableName": "SkillTree_PointB3_BreakDamageAddedValue"
                             }
@@ -1059,13 +946,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (SkillTree_PointB3_BreakDamageAddedValue) || Variables[1] (0.32) || ADD || RETURN",
-                        "displayLines": "(SkillTree_PointB3_BreakDamageAddedValue + 0.32)",
-                        "constants": [],
-                        "variables": [
-                          "SkillTree_PointB3_BreakDamageAddedValue",
-                          0.32
-                        ]
+                        "displayLines": "(SkillTree_PointB3_BreakDamageAddedValue + 0.32)"
                       },
                       "variableName": "Skill02_P1_DamageAddedRatioFinal"
                     },
@@ -1120,20 +1001,10 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"104142449\">RuanMei_Ability02_Area_Friend</a>[<span class=\"descriptionNumberColor\">Overtone</span>]",
                           "valuePerStack": {
                             "Ability02_P1_DamageAddedRatio_Friend": {
-                              "operator": "Variables[0] (Skill02_P1_DamageAddedRatioFinal) || RETURN",
-                              "displayLines": "Skill02_P1_DamageAddedRatioFinal",
-                              "constants": [],
-                              "variables": [
-                                "Skill02_P1_DamageAddedRatioFinal"
-                              ]
+                              "displayLines": "Skill02_P1_DamageAddedRatioFinal"
                             },
                             "Ability02_P2_StanceBreakAddedRatio_Friend": {
-                              "operator": "Variables[0] (0.5) || RETURN",
-                              "displayLines": "0.5",
-                              "constants": [],
-                              "variables": [
-                                0.5
-                              ]
+                              "displayLines": "0.5"
                             }
                           }
                         }
@@ -1153,16 +1024,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (WHOLE) || Variables[1] (SkillTree_PointB3_BreakDamageAddedValue) || Variables[2] (1.2) || SUB || Variables[3] (0.1) || DIV || PARAM_1 || FUNCTION || Variables[4] (0.06) || MUL || RETURN",
-                        "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(((SkillTree_PointB3_BreakDamageAddedValue - 1.2) / 0.1)) * 0.06)",
-                        "constants": [],
-                        "variables": [
-                          "WHOLE",
-                          "SkillTree_PointB3_BreakDamageAddedValue",
-                          1.2,
-                          0.1,
-                          0.06
-                        ]
+                        "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(((SkillTree_PointB3_BreakDamageAddedValue - 1.2) / 0.1)) * 0.06)"
                       },
                       "variableName": "SkillTree_PointB3_BreakDamageAddedValue"
                     },
@@ -1190,12 +1052,7 @@ const compositeAbilityObject = {
                             "value1": "SkillTree_PointB3_BreakDamageAddedValue",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (0.36) || RETURN",
-                              "displayLines": "0.36",
-                              "constants": [],
-                              "variables": [
-                                0.36
-                              ]
+                              "displayLines": "0.36"
                             },
                             "contextScope": "ContextCaster"
                           },
@@ -1203,12 +1060,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (0.36) || RETURN",
-                                "displayLines": "0.36",
-                                "constants": [],
-                                "variables": [
-                                  0.36
-                                ]
+                                "displayLines": "0.36"
                               },
                               "variableName": "SkillTree_PointB3_BreakDamageAddedValue"
                             }
@@ -1219,13 +1071,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (SkillTree_PointB3_BreakDamageAddedValue) || Variables[1] (0.32) || ADD || RETURN",
-                        "displayLines": "(SkillTree_PointB3_BreakDamageAddedValue + 0.32)",
-                        "constants": [],
-                        "variables": [
-                          "SkillTree_PointB3_BreakDamageAddedValue",
-                          0.32
-                        ]
+                        "displayLines": "(SkillTree_PointB3_BreakDamageAddedValue + 0.32)"
                       },
                       "variableName": "Skill02_P1_DamageAddedRatioFinal"
                     },
@@ -1280,20 +1126,10 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"104142449\">RuanMei_Ability02_Area_Friend</a>[<span class=\"descriptionNumberColor\">Overtone</span>]",
                           "valuePerStack": {
                             "Ability02_P1_DamageAddedRatio_Friend": {
-                              "operator": "Variables[0] (Skill02_P1_DamageAddedRatioFinal) || RETURN",
-                              "displayLines": "Skill02_P1_DamageAddedRatioFinal",
-                              "constants": [],
-                              "variables": [
-                                "Skill02_P1_DamageAddedRatioFinal"
-                              ]
+                              "displayLines": "Skill02_P1_DamageAddedRatioFinal"
                             },
                             "Ability02_P2_StanceBreakAddedRatio_Friend": {
-                              "operator": "Variables[0] (0.5) || RETURN",
-                              "displayLines": "0.5",
-                              "constants": [],
-                              "variables": [
-                                0.5
-                              ]
+                              "displayLines": "0.5"
                             }
                           }
                         }
@@ -1319,12 +1155,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (Trace_PointB2_P1_SP) || RETURN",
-                    "displayLines": "Trace_PointB2_P1_SP",
-                    "constants": [],
-                    "variables": [
-                      "Trace_PointB2_P1_SP"
-                    ]
+                    "displayLines": "Trace_PointB2_P1_SP"
                   },
                   "isFixed": "* ERR"
                 }
@@ -1350,12 +1181,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (SkillTree_PointB1_P1_BreakDamageAdded) || RETURN",
-                    "displayLines": "SkillTree_PointB1_P1_BreakDamageAdded",
-                    "constants": [],
-                    "variables": [
-                      "SkillTree_PointB1_P1_BreakDamageAdded"
-                    ]
+                    "displayLines": "SkillTree_PointB1_P1_BreakDamageAdded"
                   }
                 }
               ]
@@ -1771,12 +1597,7 @@ const compositeAbilityObject = {
           "name": "Update Displayed Energy Bar",
           "value": 0,
           "maximum": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "assignState": "True",
           "priorState": "Normal",
@@ -1799,12 +1620,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-780236472\">RuanMei_Tree02_RecoverSP</a>",
               "valuePerStack": {
                 "Trace_PointB2_P1_SP": {
-                  "operator": "Variables[0] (5) || RETURN",
-                  "displayLines": "5",
-                  "constants": [],
-                  "variables": [
-                    5
-                  ]
+                  "displayLines": "5"
                 }
               }
             }
@@ -1834,12 +1650,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.1) || RETURN",
-                    "displayLines": "0.1",
-                    "constants": [],
-                    "variables": [
-                      0.1
-                    ]
+                    "displayLines": "0.1"
                   }
                 }
               ]
@@ -1867,17 +1678,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DV_Passive_Damage_MaxStance) || Constants[0] (30) || DIV || Constants[1] (2) || ADD || Constants[2] (4) || DIV || Variables[1] (SkillP01_FinalBreakDamagePercentage_set) || MUL || RETURN",
-                    "displayLines": "((((DV_Passive_Damage_MaxStance / 30) + 2) / 4) * SkillP01_FinalBreakDamagePercentage_set)",
-                    "constants": [
-                      30,
-                      2,
-                      4
-                    ],
-                    "variables": [
-                      "DV_Passive_Damage_MaxStance",
-                      "SkillP01_FinalBreakDamagePercentage_set"
-                    ]
+                    "displayLines": "((((DV_Passive_Damage_MaxStance / 30) + 2) / 4) * SkillP01_FinalBreakDamagePercentage_set)"
                   },
                   "variableName": "SkillP01_FinalBreakDamagePercentage_set"
                 },
@@ -1891,12 +1692,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "DamageBreak": {
-                      "operator": "Variables[0] (SkillP01_FinalBreakDamagePercentage_set) || RETURN",
-                      "displayLines": "SkillP01_FinalBreakDamagePercentage_set",
-                      "constants": [],
-                      "variables": [
-                        "SkillP01_FinalBreakDamagePercentage_set"
-                      ]
+                      "displayLines": "SkillP01_FinalBreakDamagePercentage_set"
                     },
                     "dmgFormula": "Break DMG Scaling",
                     "dmgFormulaFinal": "Pure (No DMG%)",
@@ -1962,13 +1758,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (1.2) || Variables[1] (2) || ADD || RETURN",
-                            "displayLines": "(1.2 + 2)",
-                            "constants": [],
-                            "variables": [
-                              1.2,
-                              2
-                            ]
+                            "displayLines": "(1.2 + 2)"
                           },
                           "variableName": "_SkillP01_FinalBreakDamagePercentage"
                         }
@@ -1977,12 +1767,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (1.2) || RETURN",
-                            "displayLines": "1.2",
-                            "constants": [],
-                            "variables": [
-                              1.2
-                            ]
+                            "displayLines": "1.2"
                           },
                           "variableName": "_SkillP01_FinalBreakDamagePercentage"
                         }
@@ -1997,28 +1782,13 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"894337794\">RuanMei_Passive_TriggerBreakDamage</a>",
                       "valuePerStack": {
                         "MDF_BreakBaseDamage_set": {
-                          "operator": "Variables[0] (_BreakBaseDamage) || RETURN",
-                          "displayLines": "_BreakBaseDamage",
-                          "constants": [],
-                          "variables": [
-                            "_BreakBaseDamage"
-                          ]
+                          "displayLines": "_BreakBaseDamage"
                         },
                         "MDF_BreakDamageAddedRatio_set": {
-                          "operator": "Variables[0] (_BreakDamageAddedRatio) || RETURN",
-                          "displayLines": "_BreakDamageAddedRatio",
-                          "constants": [],
-                          "variables": [
-                            "_BreakDamageAddedRatio"
-                          ]
+                          "displayLines": "_BreakDamageAddedRatio"
                         },
                         "AbilityP01_FinalBreakDamagePercentage_set": {
-                          "operator": "Variables[0] (_SkillP01_FinalBreakDamagePercentage) || RETURN",
-                          "displayLines": "_SkillP01_FinalBreakDamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "_SkillP01_FinalBreakDamagePercentage"
-                          ]
+                          "displayLines": "_SkillP01_FinalBreakDamagePercentage"
                         }
                       }
                     }
@@ -2087,12 +1857,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (Skill02_EnergyBarCount) || RETURN",
-                        "displayLines": "Skill02_EnergyBarCount",
-                        "constants": [],
-                        "variables": [
-                          "Skill02_EnergyBarCount"
-                        ]
+                        "displayLines": "Skill02_EnergyBarCount"
                       },
                       "assignState": "True",
                       "priorState": "Active",
@@ -2140,12 +1905,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-23155683\">RuanMei_BreakDamageAdded</a>[<span class=\"descriptionNumberColor\">Inert Respiration</span>]",
                       "valuePerStack": {
                         "Trace_PointB1_P1_BreakDamageAdded": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     }
@@ -2191,12 +1951,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-23155683\">RuanMei_BreakDamageAdded</a>[<span class=\"descriptionNumberColor\">Inert Respiration</span>]",
                           "valuePerStack": {
                             "Trace_PointB1_P1_BreakDamageAdded": {
-                              "operator": "Variables[0] (0.2) || RETURN",
-                              "displayLines": "0.2",
-                              "constants": [],
-                              "variables": [
-                                0.2
-                              ]
+                              "displayLines": "0.2"
                             }
                           }
                         }
@@ -2218,12 +1973,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1641844295\">RuanMei_AttackBreakEnemyAttackUp</a>[<span class=\"descriptionNumberColor\">Reedside Promenade</span>]",
                           "valuePerStack": {
                             "AbilityRank_Eidolon2_P1_AttackUpRatio": {
-                              "operator": "Variables[0] (0.4) || RETURN",
-                              "displayLines": "0.4",
-                              "constants": [],
-                              "variables": [
-                                0.4
-                              ]
+                              "displayLines": "0.4"
                             }
                           }
                         }
@@ -2329,12 +2079,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1641844295\">RuanMei_AttackBreakEnemyAttackUp</a>[<span class=\"descriptionNumberColor\">Reedside Promenade</span>]",
                       "valuePerStack": {
                         "AbilityRank_Eidolon2_P1_AttackUpRatio": {
-                          "operator": "Variables[0] (0.4) || RETURN",
-                          "displayLines": "0.4",
-                          "constants": [],
-                          "variables": [
-                            0.4
-                          ]
+                          "displayLines": "0.4"
                         }
                       }
                     }
@@ -2385,12 +2130,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (0.32) || RETURN",
-                        "displayLines": "0.32",
-                        "constants": [],
-                        "variables": [
-                          0.32
-                        ]
+                        "displayLines": "0.32"
                       },
                       "variableName": "Skill02_P1_DamageAddedRatioFinal"
                     }
@@ -2451,17 +2191,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (DV_Ultra_Damage_MaxStance) || Constants[0] (30) || DIV || Constants[1] (2) || ADD || Constants[2] (4) || DIV || Variables[1] (0.5) || MUL || RETURN",
-            "displayLines": "((((DV_Ultra_Damage_MaxStance / 30) + 2) / 4) * 0.5)",
-            "constants": [
-              30,
-              2,
-              4
-            ],
-            "variables": [
-              "DV_Ultra_Damage_MaxStance",
-              0.5
-            ]
+            "displayLines": "((((DV_Ultra_Damage_MaxStance / 30) + 2) / 4) * 0.5)"
           },
           "variableName": "Skill03_FinalBreakDamagePercentage"
         },
@@ -2475,12 +2205,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "DamageBreak": {
-              "operator": "Variables[0] (Skill03_FinalBreakDamagePercentage) || RETURN",
-              "displayLines": "Skill03_FinalBreakDamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill03_FinalBreakDamagePercentage"
-              ]
+              "displayLines": "Skill03_FinalBreakDamagePercentage"
             },
             "dmgFormula": "Break DMG Scaling",
             "dmgFormulaFinal": "Pure (No DMG%)",
@@ -2543,22 +2268,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1385395722\">RuanMei_PassiveArea</a>",
               "duration": {
-                "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-                "displayLines": "(2 + 1)",
-                "constants": [],
-                "variables": [
-                  2,
-                  1
-                ]
+                "displayLines": "(2 + 1)"
               },
               "valuePerStack": {
                 "Ability03_P1_PenetrateRatio": {
-                  "operator": "Variables[0] (0.25) || RETURN",
-                  "displayLines": "0.25",
-                  "constants": [],
-                  "variables": [
-                    0.25
-                  ]
+                  "displayLines": "0.25"
                 }
               }
             }
@@ -2572,21 +2286,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1385395722\">RuanMei_PassiveArea</a>",
               "duration": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "valuePerStack": {
                 "Ability03_P1_PenetrateRatio": {
-                  "operator": "Variables[0] (0.25) || RETURN",
-                  "displayLines": "0.25",
-                  "constants": [],
-                  "variables": [
-                    0.25
-                  ]
+                  "displayLines": "0.25"
                 }
               }
             }
@@ -2657,12 +2361,7 @@ const compositeAbilityObject = {
                           },
                           "modifierName": "<a class=\"gModGreen\" id=\"1385395722\">RuanMei_PassiveArea</a>",
                           "value": {
-                            "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                            "displayLines": "MDF_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_LifeTime"
-                            ]
+                            "displayLines": "MDF_LifeTime"
                           },
                           "valueType": "Duration"
                         }
@@ -2708,12 +2407,7 @@ const compositeAbilityObject = {
                           },
                           "modifierName": "<a class=\"gModGreen\" id=\"1385395722\">RuanMei_PassiveArea</a>",
                           "value": {
-                            "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                            "displayLines": "MDF_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_LifeTime"
-                            ]
+                            "displayLines": "MDF_LifeTime"
                           },
                           "valueType": "Duration"
                         }
@@ -2792,31 +2486,16 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"461506636\">RuanMei_Ability02_Area</a>",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           }
         },
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "maximum": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "assignState": "True",
           "priorState": "Active",
@@ -2901,24 +2580,14 @@ const compositeAbilityObject = {
                           },
                           "modifierName": "<a class=\"gModGreen\" id=\"461506636\">RuanMei_Ability02_Area</a>",
                           "value": {
-                            "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                            "displayLines": "MDF_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_LifeTime"
-                            ]
+                            "displayLines": "MDF_LifeTime"
                           },
                           "valueType": "Duration"
                         },
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                            "displayLines": "MDF_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_LifeTime"
-                            ]
+                            "displayLines": "MDF_LifeTime"
                           }
                         }
                       ]
@@ -2945,12 +2614,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (Ability02_StanceBreakAddedRatio) || RETURN",
-                    "displayLines": "Ability02_StanceBreakAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "Ability02_StanceBreakAddedRatio"
-                    ]
+                    "displayLines": "Ability02_StanceBreakAddedRatio"
                   }
                 }
               ]
@@ -3028,12 +2692,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1526325038\">RuanMei_Ability02_StanceBreakAdded</a>",
                   "valuePerStack": {
                     "Ability02_StanceBreakAddedRatio": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   }
                 },
@@ -3045,12 +2704,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1509368163\">RuanMei_Ability02_Area_Caster</a>[<span class=\"descriptionNumberColor\">Overtone</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   }
                 },
                 {
@@ -3062,20 +2716,10 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"104142449\">RuanMei_Ability02_Area_Friend</a>[<span class=\"descriptionNumberColor\">Overtone</span>]",
                   "valuePerStack": {
                     "Ability02_P1_DamageAddedRatio_Friend": {
-                      "operator": "Variables[0] (Skill02_P1_DamageAddedRatioFinal) || RETURN",
-                      "displayLines": "Skill02_P1_DamageAddedRatioFinal",
-                      "constants": [],
-                      "variables": [
-                        "Skill02_P1_DamageAddedRatioFinal"
-                      ]
+                      "displayLines": "Skill02_P1_DamageAddedRatioFinal"
                     },
                     "Ability02_P2_StanceBreakAddedRatio_Friend": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   }
                 }
@@ -3115,12 +2759,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1526325038\">RuanMei_Ability02_StanceBreakAdded</a>",
                       "valuePerStack": {
                         "Ability02_StanceBreakAddedRatio": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         }
                       }
                     },
@@ -3133,20 +2772,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"104142449\">RuanMei_Ability02_Area_Friend</a>[<span class=\"descriptionNumberColor\">Overtone</span>]",
                       "valuePerStack": {
                         "Ability02_P1_DamageAddedRatio_Friend": {
-                          "operator": "Variables[0] (Skill02_P1_DamageAddedRatioFinal) || RETURN",
-                          "displayLines": "Skill02_P1_DamageAddedRatioFinal",
-                          "constants": [],
-                          "variables": [
-                            "Skill02_P1_DamageAddedRatioFinal"
-                          ]
+                          "displayLines": "Skill02_P1_DamageAddedRatioFinal"
                         },
                         "Ability02_P2_StanceBreakAddedRatio_Friend": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         }
                       }
                     }
@@ -3212,20 +2841,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -3352,16 +2971,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MaxStance) || Constants[0] (30) || DIV || Constants[1] (2) || ADD || Constants[2] (4) || DIV || RETURN",
-                        "displayLines": "(((MaxStance / 30) + 2) / 4)",
-                        "constants": [
-                          30,
-                          2,
-                          4
-                        ],
-                        "variables": [
-                          "MaxStance"
-                        ]
+                        "displayLines": "(((MaxStance / 30) + 2) / 4)"
                       },
                       "variableName": "BreakDamageRatio"
                     },
@@ -3377,16 +2987,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (BreakBaseDamage) || Variables[1] (BreakDamageRatio) || MUL || Constants[0] (1) || Variables[2] (BreakDamageAddedRatio) || ADD || MUL || RETURN",
-                        "displayLines": "((BreakBaseDamage * BreakDamageRatio) * (1 + BreakDamageAddedRatio))",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "BreakBaseDamage",
-                          "BreakDamageRatio",
-                          "BreakDamageAddedRatio"
-                        ]
+                        "displayLines": "((BreakBaseDamage * BreakDamageRatio) * (1 + BreakDamageAddedRatio))"
                       },
                       "variableName": "RuanMei_BreakDamage"
                     },
@@ -3400,13 +3001,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Ice",
                         "DamageBreak": {
-                          "operator": "Variables[0] (BreakDamageRatio) || Variables[1] (RuanMei_BreakDamage) || MUL || RETURN",
-                          "displayLines": "(BreakDamageRatio * RuanMei_BreakDamage)",
-                          "constants": [],
-                          "variables": [
-                            "BreakDamageRatio",
-                            "RuanMei_BreakDamage"
-                          ]
+                          "displayLines": "(BreakDamageRatio * RuanMei_BreakDamage)"
                         },
                         "dmgFormula": "Break DMG Scaling",
                         "dmgFormulaFinal": "Pure (No DMG%)",
@@ -3505,14 +3100,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (FinishRoomNum) || Constants[0] (2) || MUL || RETURN",
-                            "displayLines": "(FinishRoomNum * 2)",
-                            "constants": [
-                              2
-                            ],
-                            "variables": [
-                              "FinishRoomNum"
-                            ]
+                            "displayLines": "(FinishRoomNum * 2)"
                           },
                           "variableName": "BuffNumber"
                         }
@@ -3527,26 +3115,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"319066734\">RuanMei_Maze_Modifier_StanceBreakAdd</a>",
                       "valuePerStack": {
                         "MDF_StanceBreakAdded": {
-                          "operator": "Variables[0] (1) || Variables[1] (MIN) || Variables[2] (20) || Variables[3] (BuffNumber) || PARAM_2 || FUNCTION || MUL || RETURN",
-                          "displayLines": "(1 * &nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(20, BuffNumber))",
-                          "constants": [],
-                          "variables": [
-                            1,
-                            "MIN",
-                            20,
-                            "BuffNumber"
-                          ]
+                          "displayLines": "(1 * &nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(20, BuffNumber))"
                         },
                         "MDF_BreakDamageUp": {
-                          "operator": "Variables[0] (1) || Variables[1] (MIN) || Variables[2] (20) || Variables[3] (BuffNumber) || PARAM_2 || FUNCTION || MUL || RETURN",
-                          "displayLines": "(1 * &nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(20, BuffNumber))",
-                          "constants": [],
-                          "variables": [
-                            1,
-                            "MIN",
-                            20,
-                            "BuffNumber"
-                          ]
+                          "displayLines": "(1 * &nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(20, BuffNumber))"
                         }
                       }
                     },
@@ -3577,15 +3149,7 @@ const compositeAbilityObject = {
                           "adjustmentType": "+",
                           "variableName": "Stance_Added_Ratio",
                           "value": {
-                            "operator": "Variables[0] (1) || Variables[1] (MIN) || Variables[2] (20) || Variables[3] (BuffNumber) || PARAM_2 || FUNCTION || MUL || RETURN",
-                            "displayLines": "(1 * &nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(20, BuffNumber))",
-                            "constants": [],
-                            "variables": [
-                              1,
-                              "MIN",
-                              20,
-                              "BuffNumber"
-                            ]
+                            "displayLines": "(1 * &nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(20, BuffNumber))"
                           }
                         }
                       ]

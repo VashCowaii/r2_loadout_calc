@@ -29,12 +29,7 @@ const configAbility = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_LowHPRatio) || RETURN",
-                      "displayLines": "MDF_LowHPRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_LowHPRatio"
-                      ]
+                      "displayLines": "MDF_LowHPRatio"
                     }
                   },
                   {
@@ -268,12 +263,7 @@ const configAbility = {
               "context": "TargetEntity",
               "value": -1,
               "max": {
-                "operator": "Variables[0] (MDF_MaxMinionCount) || RETURN",
-                "displayLines": "MDF_MaxMinionCount",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxMinionCount"
-                ]
+                "displayLines": "MDF_MaxMinionCount"
               }
             },
             {
@@ -286,12 +276,7 @@ const configAbility = {
               "context": "TargetEntity",
               "value": -1,
               "max": {
-                "operator": "Variables[0] (MDF_MaxMinionCount) || RETURN",
-                "displayLines": "MDF_MaxMinionCount",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxMinionCount"
-                ]
+                "displayLines": "MDF_MaxMinionCount"
               }
             }
           ]
@@ -309,12 +294,7 @@ const configAbility = {
               "context": "TargetEntity",
               "value": 1,
               "max": {
-                "operator": "Variables[0] (MDF_MaxMinionCount) || RETURN",
-                "displayLines": "MDF_MaxMinionCount",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxMinionCount"
-                ]
+                "displayLines": "MDF_MaxMinionCount"
               }
             },
             {
@@ -327,12 +307,7 @@ const configAbility = {
               "context": "TargetEntity",
               "value": 1,
               "max": {
-                "operator": "Variables[0] (MDF_MaxMinionCount) || RETURN",
-                "displayLines": "MDF_MaxMinionCount",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxMinionCount"
-                ]
+                "displayLines": "MDF_MaxMinionCount"
               }
             }
           ]
@@ -356,12 +331,7 @@ const configAbility = {
               "context": "TargetEntity",
               "value": -1,
               "max": {
-                "operator": "Variables[0] (MDF_MaxMinionCount) || RETURN",
-                "displayLines": "MDF_MaxMinionCount",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxMinionCount"
-                ]
+                "displayLines": "MDF_MaxMinionCount"
               }
             },
             {
@@ -374,12 +344,7 @@ const configAbility = {
               "context": "TargetEntity",
               "value": -1,
               "max": {
-                "operator": "Variables[0] (MDF_MaxMinionCount) || RETURN",
-                "displayLines": "MDF_MaxMinionCount",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxMinionCount"
-                ]
+                "displayLines": "MDF_MaxMinionCount"
               }
             }
           ]
@@ -397,12 +362,7 @@ const configAbility = {
               "context": "TargetEntity",
               "value": 1,
               "max": {
-                "operator": "Variables[0] (MDF_MaxMinionCount) || RETURN",
-                "displayLines": "MDF_MaxMinionCount",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxMinionCount"
-                ]
+                "displayLines": "MDF_MaxMinionCount"
               }
             },
             {
@@ -415,12 +375,7 @@ const configAbility = {
               "context": "TargetEntity",
               "value": 1,
               "max": {
-                "operator": "Variables[0] (MDF_MaxMinionCount) || RETURN",
-                "displayLines": "MDF_MaxMinionCount",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxMinionCount"
-                ]
+                "displayLines": "MDF_MaxMinionCount"
               }
             }
           ]
@@ -444,12 +399,7 @@ const configAbility = {
               "context": "TargetEntity",
               "value": -1,
               "max": {
-                "operator": "Variables[0] (MDF_MaxMinionCount) || RETURN",
-                "displayLines": "MDF_MaxMinionCount",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxMinionCount"
-                ]
+                "displayLines": "MDF_MaxMinionCount"
               }
             },
             {
@@ -462,12 +412,7 @@ const configAbility = {
               "context": "TargetEntity",
               "value": -1,
               "max": {
-                "operator": "Variables[0] (MDF_MaxMinionCount) || RETURN",
-                "displayLines": "MDF_MaxMinionCount",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxMinionCount"
-                ]
+                "displayLines": "MDF_MaxMinionCount"
               }
             }
           ]
@@ -485,12 +430,7 @@ const configAbility = {
               "context": "TargetEntity",
               "value": 1,
               "max": {
-                "operator": "Variables[0] (MDF_MaxMinionCount) || RETURN",
-                "displayLines": "MDF_MaxMinionCount",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxMinionCount"
-                ]
+                "displayLines": "MDF_MaxMinionCount"
               }
             },
             {
@@ -503,12 +443,7 @@ const configAbility = {
               "context": "TargetEntity",
               "value": 1,
               "max": {
-                "operator": "Variables[0] (MDF_MaxMinionCount) || RETURN",
-                "displayLines": "MDF_MaxMinionCount",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxMinionCount"
-                ]
+                "displayLines": "MDF_MaxMinionCount"
               }
             }
           ]
@@ -532,12 +467,7 @@ const configAbility = {
               "context": "TargetEntity",
               "value": -1,
               "max": {
-                "operator": "Variables[0] (MDF_MaxMinionCount) || RETURN",
-                "displayLines": "MDF_MaxMinionCount",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxMinionCount"
-                ]
+                "displayLines": "MDF_MaxMinionCount"
               }
             },
             {
@@ -550,12 +480,7 @@ const configAbility = {
               "context": "TargetEntity",
               "value": -1,
               "max": {
-                "operator": "Variables[0] (MDF_MaxMinionCount) || RETURN",
-                "displayLines": "MDF_MaxMinionCount",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxMinionCount"
-                ]
+                "displayLines": "MDF_MaxMinionCount"
               }
             }
           ]
@@ -573,12 +498,7 @@ const configAbility = {
               "context": "TargetEntity",
               "value": 1,
               "max": {
-                "operator": "Variables[0] (MDF_MaxMinionCount) || RETURN",
-                "displayLines": "MDF_MaxMinionCount",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxMinionCount"
-                ]
+                "displayLines": "MDF_MaxMinionCount"
               }
             },
             {
@@ -591,12 +511,7 @@ const configAbility = {
               "context": "TargetEntity",
               "value": 1,
               "max": {
-                "operator": "Variables[0] (MDF_MaxMinionCount) || RETURN",
-                "displayLines": "MDF_MaxMinionCount",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxMinionCount"
-                ]
+                "displayLines": "MDF_MaxMinionCount"
               }
             }
           ]
@@ -624,12 +539,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (Enemy_W2_Xuanlu_10_EnergyDrain_TurnHealRatio) || RETURN",
-                "displayLines": "Enemy_W2_Xuanlu_10_EnergyDrain_TurnHealRatio",
-                "constants": [],
-                "variables": [
-                  "Enemy_W2_Xuanlu_10_EnergyDrain_TurnHealRatio"
-                ]
+                "displayLines": "Enemy_W2_Xuanlu_10_EnergyDrain_TurnHealRatio"
               },
               "formula": "Heal from Healer's MaxHP"
             }
@@ -652,12 +562,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (Enemy_W2_Xuanlu_10_EnergyDrain_TriggerHealRatio) || RETURN",
-                "displayLines": "Enemy_W2_Xuanlu_10_EnergyDrain_TriggerHealRatio",
-                "constants": [],
-                "variables": [
-                  "Enemy_W2_Xuanlu_10_EnergyDrain_TriggerHealRatio"
-                ]
+                "displayLines": "Enemy_W2_Xuanlu_10_EnergyDrain_TriggerHealRatio"
               },
               "formula": "Heal from Healer's MaxHP"
             },
@@ -669,13 +574,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MMonster_W2_Xuanlu_10_EnergyDrain_Layer) || Variables[1] (MMonster_W2_Xuanlu_10_EnergyDrain_ATKUpDelta) || MUL || RETURN",
-                "displayLines": "(MMonster_W2_Xuanlu_10_EnergyDrain_Layer * MMonster_W2_Xuanlu_10_EnergyDrain_ATKUpDelta)",
-                "constants": [],
-                "variables": [
-                  "MMonster_W2_Xuanlu_10_EnergyDrain_Layer",
-                  "MMonster_W2_Xuanlu_10_EnergyDrain_ATKUpDelta"
-                ]
+                "displayLines": "(MMonster_W2_Xuanlu_10_EnergyDrain_Layer * MMonster_W2_Xuanlu_10_EnergyDrain_ATKUpDelta)"
               }
             }
           ]
@@ -709,13 +608,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageUpRatio_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)"
               }
             }
           ]
@@ -769,21 +662,11 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-536192328\">Enemy_W2_Xuanlu_10_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">Vigor Overflow</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                          "displayLines": "MDF_DamageUpRatio_PerLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageUpRatio_PerLayer"
-                          ]
+                          "displayLines": "MDF_DamageUpRatio_PerLayer"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (Monster_W2_Xuanlu_10_Skill14_RageLayer) || RETURN",
-                        "displayLines": "Monster_W2_Xuanlu_10_Skill14_RageLayer",
-                        "constants": [],
-                        "variables": [
-                          "Monster_W2_Xuanlu_10_Skill14_RageLayer"
-                        ]
+                        "displayLines": "Monster_W2_Xuanlu_10_Skill14_RageLayer"
                       }
                     }
                   ]
@@ -824,12 +707,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-536192328\">Enemy_W2_Xuanlu_10_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">Vigor Overflow</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                      "displayLines": "MDF_DamageUpRatio_PerLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageUpRatio_PerLayer"
-                      ]
+                      "displayLines": "MDF_DamageUpRatio_PerLayer"
                     }
                   }
                 }

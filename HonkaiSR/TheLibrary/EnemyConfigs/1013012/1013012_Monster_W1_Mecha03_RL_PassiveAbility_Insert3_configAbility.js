@@ -155,12 +155,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1362109025\">Monster_W1_Mecha04_RL_Part3Passive</a>[<span class=\"descriptionNumberColor\">Combat Speed-Up</span>]",
           "valuePerStack": {
             "MDF_SpeedAddedRatio": {
-              "operator": "Variables[0] (MDF_RogueGoalID) || RETURN",
-              "displayLines": "MDF_RogueGoalID",
-              "constants": [],
-              "variables": [
-                "MDF_RogueGoalID"
-              ]
+              "displayLines": "MDF_RogueGoalID"
             }
           }
         },
@@ -173,12 +168,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-735432971\">Monster_W1_Mecha03_RL_Revenge</a>[<span class=\"descriptionNumberColor\">Obliteration Order</span>]",
           "valuePerStack": {
             "MDF_DamageUpRatio": {
-              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[2]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[2]]}"
             }
           }
         },

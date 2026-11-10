@@ -20,13 +20,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "setValue": {
-        "operator": "Variables[0] (ADF_MaxHPValue) || Variables[1] (0.25) || MUL || RETURN",
-        "displayLines": "(ADF_MaxHPValue * 0.25)",
-        "constants": [],
-        "variables": [
-          "ADF_MaxHPValue",
-          0.25
-        ]
+        "displayLines": "(ADF_MaxHPValue * 0.25)"
       }
     },
     {

@@ -21,22 +21,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (1.5) || Variables[1] (3.5) || MUL || RETURN",
-              "displayLines": "(1.5 * 3.5)",
-              "constants": [],
-              "variables": [
-                1.5,
-                3.5
-              ]
+              "displayLines": "(1.5 * 3.5)"
             },
             "dmgFormula": "Max HP Scaling",
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "instanceTag": "DamageTag_SPRen_Skill31",
             "Tags": null,
@@ -55,21 +44,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (3.5) || RETURN",
-              "displayLines": "3.5",
-              "constants": [],
-              "variables": [
-                3.5
-              ]
+              "displayLines": "3.5"
             },
             "dmgFormula": "Max HP Scaling",
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "instanceTag": "DamageTag_SPRen_Skill31",
             "Tags": null,

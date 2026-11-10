@@ -37,20 +37,10 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1730193233\">Enemy_SW_Boss_01_SummonMinion</a>",
               "valuePerStack": {
                 "MDF_SummonID": {
-                  "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                  "displayLines": "SummonList_ADF_1",
-                  "constants": [],
-                  "variables": [
-                    "SummonList_ADF_1"
-                  ]
+                  "displayLines": "SummonList_ADF_1"
                 },
                 "MDF_SummonDelay": {
-                  "operator": "Variables[0] (SummonDelayRatioPhase2) || RETURN",
-                  "displayLines": "SummonDelayRatioPhase2",
-                  "constants": [],
-                  "variables": [
-                    "SummonDelayRatioPhase2"
-                  ]
+                  "displayLines": "SummonDelayRatioPhase2"
                 }
               }
             }
@@ -80,20 +70,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1730193233\">Enemy_SW_Boss_01_SummonMinion</a>",
                   "valuePerStack": {
                     "MDF_SummonID": {
-                      "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-                      "displayLines": "SummonList_ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "SummonList_ADF_2"
-                      ]
+                      "displayLines": "SummonList_ADF_2"
                     },
                     "MDF_SummonDelay": {
-                      "operator": "Variables[0] (SummonDelayRatioPhase1) || RETURN",
-                      "displayLines": "SummonDelayRatioPhase1",
-                      "constants": [],
-                      "variables": [
-                        "SummonDelayRatioPhase1"
-                      ]
+                      "displayLines": "SummonDelayRatioPhase1"
                     }
                   }
                 },
@@ -110,20 +90,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1730193233\">Enemy_SW_Boss_01_SummonMinion</a>",
                   "valuePerStack": {
                     "MDF_SummonID": {
-                      "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                      "displayLines": "SummonList_ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "SummonList_ADF_1"
-                      ]
+                      "displayLines": "SummonList_ADF_1"
                     },
                     "MDF_SummonDelay": {
-                      "operator": "Variables[0] (SummonDelayRatioPhase2) || RETURN",
-                      "displayLines": "SummonDelayRatioPhase2",
-                      "constants": [],
-                      "variables": [
-                        "SummonDelayRatioPhase2"
-                      ]
+                      "displayLines": "SummonDelayRatioPhase2"
                     }
                   }
                 }
@@ -145,20 +115,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1730193233\">Enemy_SW_Boss_01_SummonMinion</a>",
                       "valuePerStack": {
                         "MDF_SummonID": {
-                          "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-                          "displayLines": "SummonList_ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "SummonList_ADF_2"
-                          ]
+                          "displayLines": "SummonList_ADF_2"
                         },
                         "MDF_SummonDelay": {
-                          "operator": "Variables[0] (SummonDelayRatioPhase1) || RETURN",
-                          "displayLines": "SummonDelayRatioPhase1",
-                          "constants": [],
-                          "variables": [
-                            "SummonDelayRatioPhase1"
-                          ]
+                          "displayLines": "SummonDelayRatioPhase1"
                         }
                       }
                     },
@@ -175,20 +135,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1730193233\">Enemy_SW_Boss_01_SummonMinion</a>",
                       "valuePerStack": {
                         "MDF_SummonID": {
-                          "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                          "displayLines": "SummonList_ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "SummonList_ADF_1"
-                          ]
+                          "displayLines": "SummonList_ADF_1"
                         },
                         "MDF_SummonDelay": {
-                          "operator": "Variables[0] (SummonDelayRatioPhase2) || RETURN",
-                          "displayLines": "SummonDelayRatioPhase2",
-                          "constants": [],
-                          "variables": [
-                            "SummonDelayRatioPhase2"
-                          ]
+                          "displayLines": "SummonDelayRatioPhase2"
                         }
                       }
                     }
@@ -207,20 +157,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1730193233\">Enemy_SW_Boss_01_SummonMinion</a>",
                       "valuePerStack": {
                         "MDF_SummonID": {
-                          "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                          "displayLines": "SummonList_ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "SummonList_ADF_1"
-                          ]
+                          "displayLines": "SummonList_ADF_1"
                         },
                         "MDF_SummonDelay": {
-                          "operator": "Variables[0] (SummonDelayRatioPhase2) || RETURN",
-                          "displayLines": "SummonDelayRatioPhase2",
-                          "constants": [],
-                          "variables": [
-                            "SummonDelayRatioPhase2"
-                          ]
+                          "displayLines": "SummonDelayRatioPhase2"
                         }
                       }
                     },
@@ -237,20 +177,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1730193233\">Enemy_SW_Boss_01_SummonMinion</a>",
                       "valuePerStack": {
                         "MDF_SummonID": {
-                          "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                          "displayLines": "SummonList_ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "SummonList_ADF_1"
-                          ]
+                          "displayLines": "SummonList_ADF_1"
                         },
                         "MDF_SummonDelay": {
-                          "operator": "Variables[0] (SummonDelayRatioPhase2) || RETURN",
-                          "displayLines": "SummonDelayRatioPhase2",
-                          "constants": [],
-                          "variables": [
-                            "SummonDelayRatioPhase2"
-                          ]
+                          "displayLines": "SummonDelayRatioPhase2"
                         }
                       }
                     }
@@ -286,12 +216,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (SummonDelayRatio1Random2) || RETURN",
-                "displayLines": "SummonDelayRatio1Random2",
-                "constants": [],
-                "variables": [
-                  "SummonDelayRatio1Random2"
-                ]
+                "displayLines": "SummonDelayRatio1Random2"
               },
               "variableName": "SummonDelayRatio1"
             }
@@ -307,12 +232,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (SummonDelayRatio1Random3) || RETURN",
-                    "displayLines": "SummonDelayRatio1Random3",
-                    "constants": [],
-                    "variables": [
-                      "SummonDelayRatio1Random3"
-                    ]
+                    "displayLines": "SummonDelayRatio1Random3"
                   },
                   "variableName": "SummonDelayRatio1"
                 }
@@ -321,12 +241,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (SummonDelayRatio1Random1) || RETURN",
-                    "displayLines": "SummonDelayRatio1Random1",
-                    "constants": [],
-                    "variables": [
-                      "SummonDelayRatio1Random1"
-                    ]
+                    "displayLines": "SummonDelayRatio1Random1"
                   },
                   "variableName": "SummonDelayRatio1"
                 }

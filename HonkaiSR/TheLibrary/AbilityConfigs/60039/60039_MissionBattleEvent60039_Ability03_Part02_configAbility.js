@@ -66,23 +66,12 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || Variables[1] (Train_TargetNumber) || DIV || RETURN",
-          "displayLines": "({[Skill03[0]]} / Train_TargetNumber)",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}",
-            "Train_TargetNumber"
-          ]
+          "displayLines": "({[Skill03[0]]} / Train_TargetNumber)"
         },
         "dmgFormula": "Max HP Scaling",
         "HitSplit": 0.2,
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "ToughnessDMGType": {
           "DamageType": "Imaginary"
@@ -101,23 +90,12 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || Variables[1] (Train_TargetNumber) || DIV || RETURN",
-          "displayLines": "({[Skill03[0]]} / Train_TargetNumber)",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}",
-            "Train_TargetNumber"
-          ]
+          "displayLines": "({[Skill03[0]]} / Train_TargetNumber)"
         },
         "dmgFormula": "Max HP Scaling",
         "HitSplit": 0.2,
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "ToughnessDMGType": {
           "DamageType": "Imaginary"
@@ -136,23 +114,12 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || Variables[1] (Train_TargetNumber) || DIV || RETURN",
-          "displayLines": "({[Skill03[0]]} / Train_TargetNumber)",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}",
-            "Train_TargetNumber"
-          ]
+          "displayLines": "({[Skill03[0]]} / Train_TargetNumber)"
         },
         "dmgFormula": "Max HP Scaling",
         "HitSplit": 0.2,
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "ToughnessDMGType": {
           "DamageType": "Imaginary"
@@ -171,23 +138,12 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || Variables[1] (Train_TargetNumber) || DIV || RETURN",
-          "displayLines": "({[Skill03[0]]} / Train_TargetNumber)",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}",
-            "Train_TargetNumber"
-          ]
+          "displayLines": "({[Skill03[0]]} / Train_TargetNumber)"
         },
         "dmgFormula": "Max HP Scaling",
         "HitSplit": 0.2,
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "ToughnessDMGType": {
           "DamageType": "Imaginary"
@@ -206,23 +162,12 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || Variables[1] (Train_TargetNumber) || DIV || RETURN",
-          "displayLines": "({[Skill03[0]]} / Train_TargetNumber)",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}",
-            "Train_TargetNumber"
-          ]
+          "displayLines": "({[Skill03[0]]} / Train_TargetNumber)"
         },
         "dmgFormula": "Max HP Scaling",
         "HitSplit": 0.2,
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "ToughnessDMGType": {
           "DamageType": "Imaginary"

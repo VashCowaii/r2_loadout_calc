@@ -61,13 +61,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Null Type",
                         "DamageFlat": {
-                          "operator": "Variables[0] (TargetHP) || Variables[1] (EliteDamagePercentage) || MUL || RETURN",
-                          "displayLines": "(TargetHP * EliteDamagePercentage)",
-                          "constants": [],
-                          "variables": [
-                            "TargetHP",
-                            "EliteDamagePercentage"
-                          ]
+                          "displayLines": "(TargetHP * EliteDamagePercentage)"
                         },
                         "dmgFormulaFinal": "Converted DMG Base",
                         "Toughness": null,
@@ -87,13 +81,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Null Type",
                         "DamageFlat": {
-                          "operator": "Variables[0] (TargetHP) || Variables[1] (BasicDamagePercentage) || MUL || RETURN",
-                          "displayLines": "(TargetHP * BasicDamagePercentage)",
-                          "constants": [],
-                          "variables": [
-                            "TargetHP",
-                            "BasicDamagePercentage"
-                          ]
+                          "displayLines": "(TargetHP * BasicDamagePercentage)"
                         },
                         "dmgFormulaFinal": "Converted DMG Base",
                         "Toughness": null,

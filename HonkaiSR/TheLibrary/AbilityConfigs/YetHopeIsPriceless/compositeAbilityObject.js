@@ -105,38 +105,21 @@ const compositeAbilityObject = {
                     "value1": "_CasteCriticalDamage",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (1.2) || Variables[1] (0.2) || ADD || RETURN",
-                      "displayLines": "(1.2 + 0.2)",
-                      "constants": [],
-                      "variables": [
-                        1.2,
-                        0.2
-                      ]
+                      "displayLines": "(1.2 + 0.2)"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_CasteCriticalDamage) || Variables[1] (1.2) || SUB || RETURN",
-                        "displayLines": "(_CasteCriticalDamage - 1.2)",
-                        "constants": [],
-                        "variables": [
-                          "_CasteCriticalDamage",
-                          1.2
-                        ]
+                        "displayLines": "(_CasteCriticalDamage - 1.2)"
                       },
                       "variableName": "_CasteCriticalDamage"
                     },
                     {
                       "name": "Looped Event",
                       "maxLoops": {
-                        "operator": "Variables[0] (4) || RETURN",
-                        "displayLines": "4",
-                        "constants": [],
-                        "variables": [
-                          4
-                        ]
+                        "displayLines": "4"
                       },
                       "execute": [
                         {
@@ -146,39 +129,21 @@ const compositeAbilityObject = {
                             "value1": "_CasteCriticalDamage",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (0.2) || RETURN",
-                              "displayLines": "0.2",
-                              "constants": [],
-                              "variables": [
-                                0.2
-                              ]
+                              "displayLines": "0.2"
                             }
                           },
                           "passed": [
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (_CasteCriticalDamage) || Variables[1] (0.2) || SUB || RETURN",
-                                "displayLines": "(_CasteCriticalDamage - 0.2)",
-                                "constants": [],
-                                "variables": [
-                                  "_CasteCriticalDamage",
-                                  0.2
-                                ]
+                                "displayLines": "(_CasteCriticalDamage - 0.2)"
                               },
                               "variableName": "_CasteCriticalDamage"
                             },
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (_Layer) || Constants[0] (1) || ADD || RETURN",
-                                "displayLines": "(_Layer + 1)",
-                                "constants": [
-                                  1
-                                ],
-                                "variables": [
-                                  "_Layer"
-                                ]
+                                "displayLines": "(_Layer + 1)"
                               },
                               "variableName": "_Layer"
                             }
@@ -229,21 +194,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"5448581\">LC_23028_Sub</a>[<span class=\"descriptionNumberColor\">Promise</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     }
@@ -272,21 +227,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"5448581\">LC_23028_Sub</a>[<span class=\"descriptionNumberColor\">Promise</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     }

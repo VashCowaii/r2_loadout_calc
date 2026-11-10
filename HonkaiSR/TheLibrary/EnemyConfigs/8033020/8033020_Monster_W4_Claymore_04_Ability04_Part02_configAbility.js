@@ -41,16 +41,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (1) || Variables[1] ({[Skill04[1]]}) || Variables[2] (MDF_Layer) || MUL || ADD || MUL || RETURN",
-          "displayLines": "({[Skill04[0]]} * (1 + ({[Skill04[1]]} * MDF_Layer)))",
-          "constants": [
-            1
-          ],
-          "variables": [
-            "{[Skill04[0]]}",
-            "{[Skill04[1]]}",
-            "MDF_Layer"
-          ]
+          "displayLines": "({[Skill04[0]]} * (1 + ({[Skill04[1]]} * MDF_Layer)))"
         },
         "HitSplit": 0.2,
         "Toughness": null,
@@ -67,16 +58,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (1) || Variables[1] ({[Skill04[1]]}) || Variables[2] (MDF_Layer) || MUL || ADD || MUL || RETURN",
-          "displayLines": "({[Skill04[0]]} * (1 + ({[Skill04[1]]} * MDF_Layer)))",
-          "constants": [
-            1
-          ],
-          "variables": [
-            "{[Skill04[0]]}",
-            "{[Skill04[1]]}",
-            "MDF_Layer"
-          ]
+          "displayLines": "({[Skill04[0]]} * (1 + ({[Skill04[1]]} * MDF_Layer)))"
         },
         "HitSplit": 0.2,
         "Toughness": null,
@@ -93,16 +75,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (1) || Variables[1] ({[Skill04[1]]}) || Variables[2] (MDF_Layer) || MUL || ADD || MUL || RETURN",
-          "displayLines": "({[Skill04[0]]} * (1 + ({[Skill04[1]]} * MDF_Layer)))",
-          "constants": [
-            1
-          ],
-          "variables": [
-            "{[Skill04[0]]}",
-            "{[Skill04[1]]}",
-            "MDF_Layer"
-          ]
+          "displayLines": "({[Skill04[0]]} * (1 + ({[Skill04[1]]} * MDF_Layer)))"
         },
         "HitSplit": 0.2,
         "Toughness": null,
@@ -119,16 +92,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (1) || Variables[1] ({[Skill04[1]]}) || Variables[2] (MDF_Layer) || MUL || ADD || MUL || RETURN",
-          "displayLines": "({[Skill04[0]]} * (1 + ({[Skill04[1]]} * MDF_Layer)))",
-          "constants": [
-            1
-          ],
-          "variables": [
-            "{[Skill04[0]]}",
-            "{[Skill04[1]]}",
-            "MDF_Layer"
-          ]
+          "displayLines": "({[Skill04[0]]} * (1 + ({[Skill04[1]]} * MDF_Layer)))"
         },
         "HitSplit": 0.2,
         "Toughness": null,
@@ -145,16 +109,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (1) || Variables[1] ({[Skill04[1]]}) || Variables[2] (MDF_Layer) || MUL || ADD || MUL || RETURN",
-          "displayLines": "({[Skill04[0]]} * (1 + ({[Skill04[1]]} * MDF_Layer)))",
-          "constants": [
-            1
-          ],
-          "variables": [
-            "{[Skill04[0]]}",
-            "{[Skill04[1]]}",
-            "MDF_Layer"
-          ]
+          "displayLines": "({[Skill04[0]]} * (1 + ({[Skill04[1]]} * MDF_Layer)))"
         },
         "HitSplit": 0.2,
         "Toughness": null,

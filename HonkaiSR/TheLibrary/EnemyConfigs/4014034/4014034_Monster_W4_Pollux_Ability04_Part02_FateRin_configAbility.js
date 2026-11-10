@@ -30,12 +30,7 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1045360944\">Monster_W4_PolluxPart_Shield_FateRin</a>[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-            "displayLines": "{[Skill04[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill04[1]]}"
-            ]
+            "displayLines": "{[Skill04[1]]}"
           }
         }
       ],
@@ -56,12 +51,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1045360944\">Monster_W4_PolluxPart_Shield_FateRin</a>[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-                "displayLines": "{[Skill04[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[1]]}"
-                ]
+                "displayLines": "{[Skill04[1]]}"
               }
             }
           ]

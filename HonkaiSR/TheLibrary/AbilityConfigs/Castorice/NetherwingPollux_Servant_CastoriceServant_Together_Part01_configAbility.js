@@ -50,24 +50,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] (Castorice_Ability21_P3_HPPercentage) || Variables[1] (Castorice_Rank01_DamageRatio) || MUL || RETURN",
-                  "displayLines": "(Castorice_Ability21_P3_HPPercentage * Castorice_Rank01_DamageRatio)",
-                  "constants": [],
-                  "variables": [
-                    "Castorice_Ability21_P3_HPPercentage",
-                    "Castorice_Rank01_DamageRatio"
-                  ]
+                  "displayLines": "(Castorice_Ability21_P3_HPPercentage * Castorice_Rank01_DamageRatio)"
                 },
                 "dmgFormula": "[SUMMONER] Max HP Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] (_PairStance) || Constants[0] (0.5) || MUL || RETURN",
-                  "displayLines": "(_PairStance * 0.5)",
-                  "constants": [
-                    0.5
-                  ],
-                  "variables": [
-                    "_PairStance"
-                  ]
+                  "displayLines": "(_PairStance * 0.5)"
                 },
                 "ToughnessDMGType": {
                   "DamageType": "Quantum"
@@ -94,23 +81,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (Castorice_Ability21_P3_HPPercentage) || RETURN",
-              "displayLines": "Castorice_Ability21_P3_HPPercentage",
-              "constants": [],
-              "variables": [
-                "Castorice_Ability21_P3_HPPercentage"
-              ]
+              "displayLines": "Castorice_Ability21_P3_HPPercentage"
             },
             "dmgFormula": "[SUMMONER] Max HP Scaling",
             "Toughness": {
-              "operator": "Variables[0] (_PairStance) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "(_PairStance * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "_PairStance"
-              ]
+              "displayLines": "(_PairStance * 0.5)"
             },
             "ToughnessDMGType": {
               "DamageType": "Quantum"

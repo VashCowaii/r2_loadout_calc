@@ -34,12 +34,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.12) || RETURN",
-                "displayLines": "0.12",
-                "constants": [],
-                "variables": [
-                  0.12
-                ]
+                "displayLines": "0.12"
               }
             }
           ]
@@ -68,12 +63,7 @@ const configAbility = {
                 "value1": "StatusCount",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (3) || RETURN",
-                  "displayLines": "3",
-                  "constants": [],
-                  "variables": [
-                    3
-                  ]
+                  "displayLines": "3"
                 }
               },
               "passed": [
@@ -175,12 +165,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"2037149365\">LC_23007_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Aether Code</span>]",
                   "duration": 1,
                   "baseChance": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   }
                 }
               ]

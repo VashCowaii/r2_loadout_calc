@@ -31,14 +31,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (AvatarBurningCount) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(AvatarBurningCount + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "AvatarBurningCount"
-            ]
+            "displayLines": "(AvatarBurningCount + 1)"
           },
           "variableName": "AvatarBurningCount"
         }
@@ -687,13 +680,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__253) || Variables[1] (BurningLayer) || ADD || RETURN",
-            "displayLines": "(ENEMIES_OBJECT_UNUSED__253 + BurningLayer)",
-            "constants": [],
-            "variables": [
-              "ENEMIES_OBJECT_UNUSED__253",
-              "BurningLayer"
-            ]
+            "displayLines": "(ENEMIES_OBJECT_UNUSED__253 + BurningLayer)"
           },
           "variableName": "BurningCount"
         }

@@ -30,12 +30,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.6) || RETURN",
-                "displayLines": "0.6",
-                "constants": [],
-                "variables": [
-                  0.6
-                ]
+                "displayLines": "0.6"
               }
             }
           ]
@@ -53,12 +48,7 @@ const configAbility = {
                 {
                   "name": "Skill Points Modification",
                   "adjustmentValue": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "adjustmentType": "+"
                 }

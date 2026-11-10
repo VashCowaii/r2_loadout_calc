@@ -413,12 +413,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (SkillUltra_DamagePercentage) || RETURN",
-                  "displayLines": "SkillUltra_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "SkillUltra_DamagePercentage"
-                  ]
+                  "displayLines": "SkillUltra_DamagePercentage"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -482,12 +477,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (SkillUltra_DamagePercentage) || RETURN",
-                  "displayLines": "SkillUltra_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "SkillUltra_DamagePercentage"
-                  ]
+                  "displayLines": "SkillUltra_DamagePercentage"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -551,12 +541,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (SkillUltra_DamagePercentage) || RETURN",
-                  "displayLines": "SkillUltra_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "SkillUltra_DamagePercentage"
-                  ]
+                  "displayLines": "SkillUltra_DamagePercentage"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -620,12 +605,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (SkillUltra_DamagePercentage) || RETURN",
-                  "displayLines": "SkillUltra_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "SkillUltra_DamagePercentage"
-                  ]
+                  "displayLines": "SkillUltra_DamagePercentage"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -828,12 +808,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] ({[Skill14[0]]}) || RETURN",
-                    "displayLines": "{[Skill14[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill14[0]]}"
-                    ]
+                    "displayLines": "{[Skill14[0]]}"
                   },
                   "variableName": "SkillUltra_DamagePercentage"
                 }
@@ -855,12 +830,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] ({[Skill14[1]]}) || RETURN",
-                    "displayLines": "{[Skill14[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill14[1]]}"
-                    ]
+                    "displayLines": "{[Skill14[1]]}"
                   },
                   "variableName": "SkillUltra_DamagePercentage"
                 }
@@ -882,12 +852,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] ({[Skill14[2]]}) || RETURN",
-                    "displayLines": "{[Skill14[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill14[2]]}"
-                    ]
+                    "displayLines": "{[Skill14[2]]}"
                   },
                   "variableName": "SkillUltra_DamagePercentage"
                 }
@@ -909,12 +874,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] ({[Skill14[3]]}) || RETURN",
-                    "displayLines": "{[Skill14[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill14[3]]}"
-                    ]
+                    "displayLines": "{[Skill14[3]]}"
                   },
                   "variableName": "SkillUltra_DamagePercentage"
                 }

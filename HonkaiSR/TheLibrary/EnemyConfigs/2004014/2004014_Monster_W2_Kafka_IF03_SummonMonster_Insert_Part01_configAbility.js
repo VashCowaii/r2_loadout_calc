@@ -30,12 +30,7 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[SkillIF01[4]]}) || RETURN",
-            "displayLines": "{[SkillIF01[4]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillIF01[4]]}"
-            ]
+            "displayLines": "{[SkillIF01[4]]}"
           },
           "enemyList": [
             {
@@ -48,12 +43,7 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[SkillIF01[5]]}) || RETURN",
-            "displayLines": "{[SkillIF01[5]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillIF01[5]]}"
-            ]
+            "displayLines": "{[SkillIF01[5]]}"
           },
           "enemyList": [
             {
@@ -69,12 +59,7 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[SkillEX04[1]]}) || RETURN",
-            "displayLines": "{[SkillEX04[1]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillEX04[1]]}"
-            ]
+            "displayLines": "{[SkillEX04[1]]}"
           },
           "enemyList": [
             {
@@ -87,12 +72,7 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[SkillEX04[0]]}) || RETURN",
-            "displayLines": "{[SkillEX04[0]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillEX04[0]]}"
-            ]
+            "displayLines": "{[SkillEX04[0]]}"
           },
           "enemyList": [
             {
@@ -121,12 +101,7 @@ const configAbility = {
               {
                 "name": "Enemy ID",
                 "ID": {
-                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__19) || RETURN",
-                  "displayLines": "ENEMIES_OBJECT_UNUSED__19",
-                  "constants": [],
-                  "variables": [
-                    "ENEMIES_OBJECT_UNUSED__19"
-                  ]
+                  "displayLines": "ENEMIES_OBJECT_UNUSED__19"
                 },
                 "target": {
                   "name": "Target Name",
@@ -137,12 +112,7 @@ const configAbility = {
               {
                 "name": "Enemy ID",
                 "ID": {
-                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__20) || RETURN",
-                  "displayLines": "ENEMIES_OBJECT_UNUSED__20",
-                  "constants": [],
-                  "variables": [
-                    "ENEMIES_OBJECT_UNUSED__20"
-                  ]
+                  "displayLines": "ENEMIES_OBJECT_UNUSED__20"
                 },
                 "target": {
                   "name": "Target Name",
@@ -179,12 +149,7 @@ const configAbility = {
               {
                 "name": "Enemy ID",
                 "ID": {
-                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__21) || RETURN",
-                  "displayLines": "ENEMIES_OBJECT_UNUSED__21",
-                  "constants": [],
-                  "variables": [
-                    "ENEMIES_OBJECT_UNUSED__21"
-                  ]
+                  "displayLines": "ENEMIES_OBJECT_UNUSED__21"
                 },
                 "target": {
                   "name": "Target Name",
@@ -195,12 +160,7 @@ const configAbility = {
               {
                 "name": "Enemy ID",
                 "ID": {
-                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__22) || RETURN",
-                  "displayLines": "ENEMIES_OBJECT_UNUSED__22",
-                  "constants": [],
-                  "variables": [
-                    "ENEMIES_OBJECT_UNUSED__22"
-                  ]
+                  "displayLines": "ENEMIES_OBJECT_UNUSED__22"
                 },
                 "target": {
                   "name": "Target Name",
@@ -257,12 +217,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"206643728\">Enemy_W2_Kafka_IF_SummonDeathrattle</a>",
       "valuePerStack": {
         "MDF_KillBonus": {
-          "operator": "Variables[0] ({[SkillIF01[2]]}) || RETURN",
-          "displayLines": "{[SkillIF01[2]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillIF01[2]]}"
-          ]
+          "displayLines": "{[SkillIF01[2]]}"
         }
       },
       "casterAssign": "CasterSelf"

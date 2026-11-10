@@ -13,12 +13,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "value": {
-        "operator": "Variables[0] (Skill11_EnergyAdd) || RETURN",
-        "displayLines": "Skill11_EnergyAdd",
-        "constants": [],
-        "variables": [
-          "Skill11_EnergyAdd"
-        ]
+        "displayLines": "Skill11_EnergyAdd"
       }
     },
     {
@@ -40,21 +35,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (2.5) || RETURN",
-          "displayLines": "2.5",
-          "constants": [],
-          "variables": [
-            2.5
-          ]
+          "displayLines": "2.5"
         },
         "HitSplit": 0.3,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -70,21 +55,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (0.75) || RETURN",
-          "displayLines": "0.75",
-          "constants": [],
-          "variables": [
-            0.75
-          ]
+          "displayLines": "0.75"
         },
         "HitSplit": 0.3,
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-          "displayLines": "Blast Toughness Value",
-          "constants": [],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "Blast Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -108,21 +83,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (2.5) || RETURN",
-          "displayLines": "2.5",
-          "constants": [],
-          "variables": [
-            2.5
-          ]
+          "displayLines": "2.5"
         },
         "HitSplit": 0.7,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -138,21 +103,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (0.75) || RETURN",
-          "displayLines": "0.75",
-          "constants": [],
-          "variables": [
-            0.75
-          ]
+          "displayLines": "0.75"
         },
         "HitSplit": 0.7,
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-          "displayLines": "Blast Toughness Value",
-          "constants": [],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "Blast Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"

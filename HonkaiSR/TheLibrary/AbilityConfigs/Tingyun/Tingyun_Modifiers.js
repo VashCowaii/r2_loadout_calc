@@ -42,12 +42,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (Tingyun_SpeedUP_Ratio) || RETURN",
-                "displayLines": "Tingyun_SpeedUP_Ratio",
-                "constants": [],
-                "variables": [
-                  "Tingyun_SpeedUP_Ratio"
-                ]
+                "displayLines": "Tingyun_SpeedUP_Ratio"
               }
             }
           ]
@@ -78,12 +73,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_Rank01_SpeedUp_01) || RETURN",
-                "displayLines": "MDF_Rank01_SpeedUp_01",
-                "constants": [],
-                "variables": [
-                  "MDF_Rank01_SpeedUp_01"
-                ]
+                "displayLines": "MDF_Rank01_SpeedUp_01"
               }
             }
           ]
@@ -145,12 +135,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
-                        "displayLines": "TingYun_EnergyBarLayer",
-                        "constants": [],
-                        "variables": [
-                          "TingYun_EnergyBarLayer"
-                        ]
+                        "displayLines": "TingYun_EnergyBarLayer"
                       },
                       "maximum": 3,
                       "assignState": "True",
@@ -162,12 +147,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
-                        "displayLines": "TingYun_EnergyBarLayer",
-                        "constants": [],
-                        "variables": [
-                          "TingYun_EnergyBarLayer"
-                        ]
+                        "displayLines": "TingYun_EnergyBarLayer"
                       },
                       "maximum": 3,
                       "assignState": "True",
@@ -238,12 +218,7 @@ const configAbility = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
-                            "displayLines": "TingYun_EnergyBarLayer",
-                            "constants": [],
-                            "variables": [
-                              "TingYun_EnergyBarLayer"
-                            ]
+                            "displayLines": "TingYun_EnergyBarLayer"
                           },
                           "maximum": 3,
                           "assignState": "True",
@@ -255,12 +230,7 @@ const configAbility = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
-                            "displayLines": "TingYun_EnergyBarLayer",
-                            "constants": [],
-                            "variables": [
-                              "TingYun_EnergyBarLayer"
-                            ]
+                            "displayLines": "TingYun_EnergyBarLayer"
                           },
                           "maximum": 3,
                           "assignState": "True",
@@ -318,12 +288,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
-                        "displayLines": "TingYun_EnergyBarLayer",
-                        "constants": [],
-                        "variables": [
-                          "TingYun_EnergyBarLayer"
-                        ]
+                        "displayLines": "TingYun_EnergyBarLayer"
                       },
                       "maximum": 3,
                       "assignState": "True",
@@ -335,12 +300,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
-                        "displayLines": "TingYun_EnergyBarLayer",
-                        "constants": [],
-                        "variables": [
-                          "TingYun_EnergyBarLayer"
-                        ]
+                        "displayLines": "TingYun_EnergyBarLayer"
                       },
                       "maximum": 3,
                       "assignState": "True",
@@ -396,12 +356,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
-                        "displayLines": "TingYun_EnergyBarLayer",
-                        "constants": [],
-                        "variables": [
-                          "TingYun_EnergyBarLayer"
-                        ]
+                        "displayLines": "TingYun_EnergyBarLayer"
                       },
                       "maximum": 3,
                       "assignState": "True",
@@ -413,12 +368,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
-                        "displayLines": "TingYun_EnergyBarLayer",
-                        "constants": [],
-                        "variables": [
-                          "TingYun_EnergyBarLayer"
-                        ]
+                        "displayLines": "TingYun_EnergyBarLayer"
                       },
                       "maximum": 3,
                       "assignState": "True",
@@ -477,12 +427,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AttackDelta) || RETURN",
-                "displayLines": "MDF_AttackDelta",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackDelta"
-                ]
+                "displayLines": "MDF_AttackDelta"
               }
             }
           ]
@@ -508,12 +453,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_Rank02_SPAdd) || RETURN",
-                    "displayLines": "MDF_Rank02_SPAdd",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Rank02_SPAdd"
-                    ]
+                    "displayLines": "MDF_Rank02_SPAdd"
                   },
                   "isFixed": "* ERR"
                 },
@@ -551,13 +491,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (MDF_Passive_DamagePercentage) || Variables[1] (MDF_Rank04_DamagePercentage) || ADD || RETURN",
-                      "displayLines": "(MDF_Passive_DamagePercentage + MDF_Rank04_DamagePercentage)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Passive_DamagePercentage",
-                        "MDF_Rank04_DamagePercentage"
-                      ]
+                      "displayLines": "(MDF_Passive_DamagePercentage + MDF_Rank04_DamagePercentage)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -600,12 +534,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (MDF_Passive_DamagePercentageSelf) || RETURN",
-                      "displayLines": "MDF_Passive_DamagePercentageSelf",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Passive_DamagePercentageSelf"
-                      ]
+                      "displayLines": "MDF_Passive_DamagePercentageSelf"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -679,12 +608,7 @@ const configAbility = {
                   "duration": 1,
                   "valuePerStack": {
                     "MDF_Eidolon1_SpeedUp_01": {
-                      "operator": "Variables[0] (MDF_Rank01_SpeedUp) || RETURN",
-                      "displayLines": "MDF_Rank01_SpeedUp",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Rank01_SpeedUp"
-                      ]
+                      "displayLines": "MDF_Rank01_SpeedUp"
                     }
                   }
                 }
@@ -738,12 +662,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AttackDelta) || RETURN",
-                "displayLines": "MDF_AttackDelta",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackDelta"
-                ]
+                "displayLines": "MDF_AttackDelta"
               }
             }
           ]
@@ -769,12 +688,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_Rank02_SPAdd) || RETURN",
-                    "displayLines": "MDF_Rank02_SPAdd",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Rank02_SPAdd"
-                    ]
+                    "displayLines": "MDF_Rank02_SPAdd"
                   },
                   "isFixed": "* ERR"
                 },
@@ -812,12 +726,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (MDF_Passive_DamagePercentage) || RETURN",
-                      "displayLines": "MDF_Passive_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Passive_DamagePercentage"
-                      ]
+                      "displayLines": "MDF_Passive_DamagePercentage"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -860,12 +769,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (MDF_Passive_DamagePercentageSelf) || RETURN",
-                      "displayLines": "MDF_Passive_DamagePercentageSelf",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Passive_DamagePercentageSelf"
-                      ]
+                      "displayLines": "MDF_Passive_DamagePercentageSelf"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -939,12 +843,7 @@ const configAbility = {
                   "duration": 1,
                   "valuePerStack": {
                     "MDF_Eidolon1_SpeedUp_01": {
-                      "operator": "Variables[0] (MDF_Rank01_SpeedUp) || RETURN",
-                      "displayLines": "MDF_Rank01_SpeedUp",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Rank01_SpeedUp"
-                      ]
+                      "displayLines": "MDF_Rank01_SpeedUp"
                     }
                   }
                 }
@@ -985,12 +884,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AttackDelta) || RETURN",
-                "displayLines": "MDF_AttackDelta",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackDelta"
-                ]
+                "displayLines": "MDF_AttackDelta"
               }
             }
           ]
@@ -1017,12 +911,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (MDF_Passive_DamagePercentage) || RETURN",
-                      "displayLines": "MDF_Passive_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Passive_DamagePercentage"
-                      ]
+                      "displayLines": "MDF_Passive_DamagePercentage"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1065,12 +954,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (MDF_Passive_DamagePercentageSelf) || RETURN",
-                      "displayLines": "MDF_Passive_DamagePercentageSelf",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Passive_DamagePercentageSelf"
-                      ]
+                      "displayLines": "MDF_Passive_DamagePercentageSelf"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1144,12 +1028,7 @@ const configAbility = {
                   "duration": 1,
                   "valuePerStack": {
                     "MDF_Eidolon1_SpeedUp_01": {
-                      "operator": "Variables[0] (MDF_Rank01_SpeedUp) || RETURN",
-                      "displayLines": "MDF_Rank01_SpeedUp",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Rank01_SpeedUp"
-                      ]
+                      "displayLines": "MDF_Rank01_SpeedUp"
                     }
                   }
                 }
@@ -1190,12 +1069,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AttackDelta) || RETURN",
-                "displayLines": "MDF_AttackDelta",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackDelta"
-                ]
+                "displayLines": "MDF_AttackDelta"
               }
             }
           ]
@@ -1222,12 +1096,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (MDF_Passive_DamagePercentage) || RETURN",
-                      "displayLines": "MDF_Passive_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Passive_DamagePercentage"
-                      ]
+                      "displayLines": "MDF_Passive_DamagePercentage"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1270,12 +1139,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (MDF_Passive_DamagePercentageSelf) || RETURN",
-                      "displayLines": "MDF_Passive_DamagePercentageSelf",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Passive_DamagePercentageSelf"
-                      ]
+                      "displayLines": "MDF_Passive_DamagePercentageSelf"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1412,12 +1276,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
-                "displayLines": "TingYun_EnergyBarLayer",
-                "constants": [],
-                "variables": [
-                  "TingYun_EnergyBarLayer"
-                ]
+                "displayLines": "TingYun_EnergyBarLayer"
               },
               "maximum": 3,
               "assignState": "True",

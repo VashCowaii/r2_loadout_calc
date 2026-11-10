@@ -38,22 +38,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1.2) || Variables[1] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-              "displayLines": "(1.2 * Acheron_PointB2_DamageRatio)",
-              "constants": [],
-              "variables": [
-                1.2,
-                "Acheron_PointB2_DamageRatio"
-              ]
+              "displayLines": "(1.2 * Acheron_PointB2_DamageRatio)"
             },
             "HitSplit": 0.1,
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "attackType": "Ultimate"
@@ -71,21 +60,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1.2) || RETURN",
-              "displayLines": "1.2",
-              "constants": [],
-              "variables": [
-                1.2
-              ]
+              "displayLines": "1.2"
             },
             "HitSplit": 0.1,
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "attackType": "Ultimate"
@@ -110,22 +89,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1.2) || Variables[1] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-              "displayLines": "(1.2 * Acheron_PointB2_DamageRatio)",
-              "constants": [],
-              "variables": [
-                1.2,
-                "Acheron_PointB2_DamageRatio"
-              ]
+              "displayLines": "(1.2 * Acheron_PointB2_DamageRatio)"
             },
             "HitSplit": 0.9,
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "attackType": "Ultimate"
@@ -143,21 +111,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1.2) || RETURN",
-              "displayLines": "1.2",
-              "constants": [],
-              "variables": [
-                1.2
-              ]
+              "displayLines": "1.2"
             },
             "HitSplit": 0.9,
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "attackType": "Ultimate"
@@ -175,12 +133,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (6) || RETURN",
-            "displayLines": "6",
-            "constants": [],
-            "variables": [
-              6
-            ]
+            "displayLines": "6"
           },
           "execute": [
             {
@@ -208,13 +161,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Thunder",
                         "Damage": {
-                          "operator": "Variables[0] (0.25) || Variables[1] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-                          "displayLines": "(0.25 * Acheron_PointB2_DamageRatio)",
-                          "constants": [],
-                          "variables": [
-                            0.25,
-                            "Acheron_PointB2_DamageRatio"
-                          ]
+                          "displayLines": "(0.25 * Acheron_PointB2_DamageRatio)"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -233,12 +180,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Thunder",
                         "Damage": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
+                          "displayLines": "0.25"
                         },
                         "Toughness": null,
                         "Tags": null,

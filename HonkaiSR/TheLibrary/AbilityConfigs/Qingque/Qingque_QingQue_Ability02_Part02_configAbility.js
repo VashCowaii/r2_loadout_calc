@@ -7,14 +7,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (QingQue_BPCount) || Constants[0] (1) || ADD || RETURN",
-        "displayLines": "(QingQue_BPCount + 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "QingQue_BPCount"
-        ]
+        "displayLines": "(QingQue_BPCount + 1)"
       },
       "variableName": "QingQue_BPCount"
     },
@@ -68,22 +61,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-954959718\">QingQue_BPAbility_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackLimit": {
-            "operator": "Variables[0] (4) || RETURN",
-            "displayLines": "4",
-            "constants": [],
-            "variables": [
-              4
-            ]
+            "displayLines": "4"
           },
           "valuePerStack": {
             "MDF_DamageAddedRatio": {
-              "operator": "Variables[0] (0.1) || Variables[1] (0.28) || ADD || RETURN",
-              "displayLines": "(0.1 + 0.28)",
-              "constants": [],
-              "variables": [
-                0.1,
-                0.28
-              ]
+              "displayLines": "(0.1 + 0.28)"
             }
           },
           "addStacksPerTrigger": 1
@@ -98,21 +80,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-954959718\">QingQue_BPAbility_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackLimit": {
-            "operator": "Variables[0] (4) || RETURN",
-            "displayLines": "4",
-            "constants": [],
-            "variables": [
-              4
-            ]
+            "displayLines": "4"
           },
           "valuePerStack": {
             "MDF_DamageAddedRatio": {
-              "operator": "Variables[0] (0.28) || RETURN",
-              "displayLines": "0.28",
-              "constants": [],
-              "variables": [
-                0.28
-              ]
+              "displayLines": "0.28"
             }
           },
           "addStacksPerTrigger": 1
@@ -131,12 +103,7 @@ const configAbility = {
           "conditions": {
             "name": "Random Chance",
             "chance": {
-              "operator": "Variables[0] (0.24) || RETURN",
-              "displayLines": "0.24",
-              "constants": [],
-              "variables": [
-                0.24
-              ]
+              "displayLines": "0.24"
             }
           },
           "passed": [
@@ -165,12 +132,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       },
       "execute": [
         {
@@ -182,12 +144,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1861987598\">QingQue_PassiveCount_QingqueSelf</a>",
           "valuePerStack": {
             "AbilityRank_Eidolon2_P1_SPAdd": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             }
           }
         }
@@ -285,12 +242,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1763556388\">QingQue_Passive_Hu</a>[<span class=\"descriptionNumberColor\">Hidden Hand</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (MDF_PropertyValue01) || RETURN",
-              "displayLines": "MDF_PropertyValue01",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyValue01"
-              ]
+              "displayLines": "MDF_PropertyValue01"
             }
           }
         },
@@ -396,12 +348,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1763556388\">QingQue_Passive_Hu</a>[<span class=\"descriptionNumberColor\">Hidden Hand</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_PropertyValue01) || RETURN",
-                  "displayLines": "MDF_PropertyValue01",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue01"
-                  ]
+                  "displayLines": "MDF_PropertyValue01"
                 }
               }
             },
@@ -507,12 +454,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1763556388\">QingQue_Passive_Hu</a>[<span class=\"descriptionNumberColor\">Hidden Hand</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue01) || RETURN",
-                      "displayLines": "MDF_PropertyValue01",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue01"
-                      ]
+                      "displayLines": "MDF_PropertyValue01"
                     }
                   }
                 },

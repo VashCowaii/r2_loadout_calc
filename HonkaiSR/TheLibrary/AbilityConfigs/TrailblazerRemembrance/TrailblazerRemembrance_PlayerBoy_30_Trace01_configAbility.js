@@ -65,14 +65,7 @@ const configAbility = {
                   "variableName": "CurEnergy",
                   "context": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (0.4) || Constants[0] (100) || MUL || RETURN",
-                    "displayLines": "(0.4 * 100)",
-                    "constants": [
-                      100
-                    ],
-                    "variables": [
-                      0.4
-                    ]
+                    "displayLines": "(0.4 * 100)"
                   }
                 },
                 "Modifier Deletes Itself"

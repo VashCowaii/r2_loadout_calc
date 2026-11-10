@@ -38,12 +38,7 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-1274980234\">PlayerBoy_30_TeamSP</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
       "counter": {
-        "operator": "Variables[0] (CurEnergy) || RETURN",
-        "displayLines": "CurEnergy",
-        "constants": [],
-        "variables": [
-          "CurEnergy"
-        ]
+        "displayLines": "CurEnergy"
       },
       "valuePerStack": {
         "MDF_Max": 1
@@ -52,24 +47,14 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (CurEnergy) || RETURN",
-        "displayLines": "CurEnergy",
-        "constants": [],
-        "variables": [
-          "CurEnergy"
-        ]
+        "displayLines": "CurEnergy"
       },
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}.[[getSummoner]]"
       },
       "maximum": {
-        "operator": "Variables[0] (MDF_Max) || RETURN",
-        "displayLines": "MDF_Max",
-        "constants": [],
-        "variables": [
-          "MDF_Max"
-        ]
+        "displayLines": "MDF_Max"
       },
       "assignState": "True",
       "bar#": "Progress"
@@ -274,20 +259,10 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyConvert": {
-              "operator": "Variables[0] (0.12) || RETURN",
-              "displayLines": "0.12",
-              "constants": [],
-              "variables": [
-                0.12
-              ]
+              "displayLines": "0.12"
             },
             "MDF_PropertyBase": {
-              "operator": "Variables[0] (0.24) || RETURN",
-              "displayLines": "0.24",
-              "constants": [],
-              "variables": [
-                0.24
-              ]
+              "displayLines": "0.24"
             }
           }
         }
@@ -304,12 +279,7 @@ const configAbility = {
                 "target": "{{Caster}}.[[getSummoner]]"
               },
               "maximum": {
-                "operator": "Variables[0] (MDF_Max) || RETURN",
-                "displayLines": "MDF_Max",
-                "constants": [],
-                "variables": [
-                  "MDF_Max"
-                ]
+                "displayLines": "MDF_Max"
               },
               "assignState": "False",
               "bar#": "Progress"
@@ -333,24 +303,14 @@ const configAbility = {
                     "value1": "CurEnergy",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (MDF_Max) || RETURN",
-                      "displayLines": "MDF_Max",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Max"
-                      ]
+                      "displayLines": "MDF_Max"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_Max) || RETURN",
-                        "displayLines": "MDF_Max",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Max"
-                        ]
+                        "displayLines": "MDF_Max"
                       },
                       "variableName": "CurEnergy"
                     }
@@ -363,12 +323,7 @@ const configAbility = {
                     "value1": "CurEnergy",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_Max) || RETURN",
-                      "displayLines": "MDF_Max",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Max"
-                      ]
+                      "displayLines": "MDF_Max"
                     }
                   },
                   "passed": [
@@ -430,23 +385,13 @@ const configAbility = {
                   },
                   "modifierName": "<a class=\"gModGreen\" id=\"-1274980234\">PlayerBoy_30_TeamSP</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                   "value": {
-                    "operator": "Variables[0] (CurEnergy) || RETURN",
-                    "displayLines": "CurEnergy",
-                    "constants": [],
-                    "variables": [
-                      "CurEnergy"
-                    ]
+                    "displayLines": "CurEnergy"
                   }
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (CurEnergy) || RETURN",
-                    "displayLines": "CurEnergy",
-                    "constants": [],
-                    "variables": [
-                      "CurEnergy"
-                    ]
+                    "displayLines": "CurEnergy"
                   },
                   "target": {
                     "name": "Target Name",
@@ -475,20 +420,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1895406948\">Memosprite_PlayerBoyServant_30_CritDmgUp</a>[<span class=\"descriptionNumberColor\">Friends! Together!</span>]",
                   "valuePerStack": {
                     "MDF_PropertyConvert": {
-                      "operator": "Variables[0] (0.12) || RETURN",
-                      "displayLines": "0.12",
-                      "constants": [],
-                      "variables": [
-                        0.12
-                      ]
+                      "displayLines": "0.12"
                     },
                     "MDF_PropertyBase": {
-                      "operator": "Variables[0] (0.24) || RETURN",
-                      "displayLines": "0.24",
-                      "constants": [],
-                      "variables": [
-                        0.24
-                      ]
+                      "displayLines": "0.24"
                     }
                   }
                 }

@@ -85,44 +85,19 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
                       "valuePerStack": {
                         "MDF_PointB2_P3_DelayUp": {
-                          "operator": "Variables[0] (0.15) || RETURN",
-                          "displayLines": "0.15",
-                          "constants": [],
-                          "variables": [
-                            0.15
-                          ]
+                          "displayLines": "0.15"
                         },
                         "MDF_PointB2_P2_AddSP": {
-                          "operator": "Variables[0] (6) || RETURN",
-                          "displayLines": "6",
-                          "constants": [],
-                          "variables": [
-                            6
-                          ]
+                          "displayLines": "6"
                         },
                         "MDF_Eidolon4_AllDamageReduceRatio": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         },
                         "MDF_Eidolon6_AllDamageTypeTakenRatio": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         },
                         "MDF_Eidolon6_DefPentRatio": {
-                          "operator": "Variables[0] (0.12) || RETURN",
-                          "displayLines": "0.12",
-                          "constants": [],
-                          "variables": [
-                            0.12
-                          ]
+                          "displayLines": "0.12"
                         }
                       }
                     }
@@ -137,28 +112,13 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
                       "valuePerStack": {
                         "MDF_PointB2_P3_DelayUp": {
-                          "operator": "Variables[0] (0.15) || RETURN",
-                          "displayLines": "0.15",
-                          "constants": [],
-                          "variables": [
-                            0.15
-                          ]
+                          "displayLines": "0.15"
                         },
                         "MDF_PointB2_P2_AddSP": {
-                          "operator": "Variables[0] (6) || RETURN",
-                          "displayLines": "6",
-                          "constants": [],
-                          "variables": [
-                            6
-                          ]
+                          "displayLines": "6"
                         },
                         "MDF_Eidolon4_AllDamageReduceRatio": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         },
                         "MDF_Eidolon6_AllDamageTypeTakenRatio": 0,
                         "MDF_Eidolon6_DefPentRatio": 0
@@ -177,20 +137,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
                   "valuePerStack": {
                     "MDF_PointB2_P3_DelayUp": {
-                      "operator": "Variables[0] (0.15) || RETURN",
-                      "displayLines": "0.15",
-                      "constants": [],
-                      "variables": [
-                        0.15
-                      ]
+                      "displayLines": "0.15"
                     },
                     "MDF_PointB2_P2_AddSP": {
-                      "operator": "Variables[0] (6) || RETURN",
-                      "displayLines": "6",
-                      "constants": [],
-                      "variables": [
-                        6
-                      ]
+                      "displayLines": "6"
                     },
                     "MDF_Eidolon4_AllDamageReduceRatio": 0,
                     "MDF_Eidolon6_AllDamageTypeTakenRatio": 0,
@@ -226,28 +176,13 @@ const configAbility = {
                         "MDF_PointB2_P3_DelayUp": 0,
                         "MDF_PointB2_P2_AddSP": 0,
                         "MDF_Eidolon4_AllDamageReduceRatio": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         },
                         "MDF_Eidolon6_AllDamageTypeTakenRatio": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         },
                         "MDF_Eidolon6_DefPentRatio": {
-                          "operator": "Variables[0] (0.12) || RETURN",
-                          "displayLines": "0.12",
-                          "constants": [],
-                          "variables": [
-                            0.12
-                          ]
+                          "displayLines": "0.12"
                         }
                       }
                     }
@@ -264,12 +199,7 @@ const configAbility = {
                         "MDF_PointB2_P3_DelayUp": 0,
                         "MDF_PointB2_P2_AddSP": 0,
                         "MDF_Eidolon4_AllDamageReduceRatio": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         },
                         "MDF_Eidolon6_AllDamageTypeTakenRatio": 0,
                         "MDF_Eidolon6_DefPentRatio": 0
@@ -316,20 +246,10 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
               "valuePerStack": {
                 "MDF_PointB2_P3_DelayUp": {
-                  "operator": "Variables[0] (0.15) || RETURN",
-                  "displayLines": "0.15",
-                  "constants": [],
-                  "variables": [
-                    0.15
-                  ]
+                  "displayLines": "0.15"
                 },
                 "MDF_PointB2_P2_AddSP": {
-                  "operator": "Variables[0] (6) || RETURN",
-                  "displayLines": "6",
-                  "constants": [],
-                  "variables": [
-                    6
-                  ]
+                  "displayLines": "6"
                 },
                 "MDF_Eidolon4_AllDamageReduceRatio": 0,
                 "MDF_Eidolon6_AllDamageTypeTakenRatio": 0,
@@ -391,14 +311,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-892900131\">DanHengPT_PointB1_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">Empyreanity</span>]",
           "valuePerStack": {
             "MDF_AttackDelta": {
-              "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (DanHengPT_ConvertAttack) || SUB || Variables[2] (0.15) || MUL || RETURN",
-              "displayLines": "((DanHengPT_Attack - DanHengPT_ConvertAttack) * 0.15)",
-              "constants": [],
-              "variables": [
-                "DanHengPT_Attack",
-                "DanHengPT_ConvertAttack",
-                0.15
-              ]
+              "displayLines": "((DanHengPT_Attack - DanHengPT_ConvertAttack) * 0.15)"
             }
           }
         }
@@ -453,44 +366,19 @@ const configAbility = {
                       },
                       "valuePerStack": {
                         "MDF_Ability03_DamagePercentage": {
-                          "operator": "Variables[0] (0.8) || RETURN",
-                          "displayLines": "0.8",
-                          "constants": [],
-                          "variables": [
-                            0.8
-                          ]
+                          "displayLines": "0.8"
                         },
                         "MDF_Stance": {
-                          "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
-                          "displayLines": "DanHengPT_Stance_All",
-                          "constants": [],
-                          "variables": [
-                            "DanHengPT_Stance_All"
-                          ]
+                          "displayLines": "DanHengPT_Stance_All"
                         },
                         "MDF_Eidolon2_P1_DamageRatio": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         },
                         "MDF_Point03_P1_DamageRatio": {
-                          "operator": "Variables[0] (0.4) || RETURN",
-                          "displayLines": "0.4",
-                          "constants": [],
-                          "variables": [
-                            0.4
-                          ]
+                          "displayLines": "0.4"
                         },
                         "MDF_DisperseNum": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         }
                       }
                     }
@@ -508,37 +396,17 @@ const configAbility = {
                       },
                       "valuePerStack": {
                         "MDF_Ability03_DamagePercentage": {
-                          "operator": "Variables[0] (0.8) || RETURN",
-                          "displayLines": "0.8",
-                          "constants": [],
-                          "variables": [
-                            0.8
-                          ]
+                          "displayLines": "0.8"
                         },
                         "MDF_Stance": {
-                          "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
-                          "displayLines": "DanHengPT_Stance_All",
-                          "constants": [],
-                          "variables": [
-                            "DanHengPT_Stance_All"
-                          ]
+                          "displayLines": "DanHengPT_Stance_All"
                         },
                         "MDF_Eidolon2_P1_DamageRatio": 0,
                         "MDF_Point03_P1_DamageRatio": {
-                          "operator": "Variables[0] (0.4) || RETURN",
-                          "displayLines": "0.4",
-                          "constants": [],
-                          "variables": [
-                            0.4
-                          ]
+                          "displayLines": "0.4"
                         },
                         "MDF_DisperseNum": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         }
                       }
                     }
@@ -569,37 +437,17 @@ const configAbility = {
                       },
                       "valuePerStack": {
                         "MDF_Ability03_DamagePercentage": {
-                          "operator": "Variables[0] (0.8) || RETURN",
-                          "displayLines": "0.8",
-                          "constants": [],
-                          "variables": [
-                            0.8
-                          ]
+                          "displayLines": "0.8"
                         },
                         "MDF_Stance": {
-                          "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
-                          "displayLines": "DanHengPT_Stance_All",
-                          "constants": [],
-                          "variables": [
-                            "DanHengPT_Stance_All"
-                          ]
+                          "displayLines": "DanHengPT_Stance_All"
                         },
                         "MDF_Eidolon2_P1_DamageRatio": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         },
                         "MDF_Point03_P1_DamageRatio": 0,
                         "MDF_DisperseNum": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         }
                       }
                     }
@@ -617,30 +465,15 @@ const configAbility = {
                       },
                       "valuePerStack": {
                         "MDF_Ability03_DamagePercentage": {
-                          "operator": "Variables[0] (0.8) || RETURN",
-                          "displayLines": "0.8",
-                          "constants": [],
-                          "variables": [
-                            0.8
-                          ]
+                          "displayLines": "0.8"
                         },
                         "MDF_Stance": {
-                          "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
-                          "displayLines": "DanHengPT_Stance_All",
-                          "constants": [],
-                          "variables": [
-                            "DanHengPT_Stance_All"
-                          ]
+                          "displayLines": "DanHengPT_Stance_All"
                         },
                         "MDF_Eidolon2_P1_DamageRatio": 0,
                         "MDF_Point03_P1_DamageRatio": 0,
                         "MDF_DisperseNum": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         }
                       }
                     }
@@ -678,44 +511,19 @@ const configAbility = {
                       },
                       "variables": {
                         "MDF_Ability03_DamagePercentage": {
-                          "operator": "Variables[0] (0.8) || RETURN",
-                          "displayLines": "0.8",
-                          "constants": [],
-                          "variables": [
-                            0.8
-                          ]
+                          "displayLines": "0.8"
                         },
                         "MDF_Stance": {
-                          "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
-                          "displayLines": "DanHengPT_Stance_All",
-                          "constants": [],
-                          "variables": [
-                            "DanHengPT_Stance_All"
-                          ]
+                          "displayLines": "DanHengPT_Stance_All"
                         },
                         "MDF_Eidolon2_P1_DamageRatio": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         },
                         "MDF_Point03_P1_DamageRatio": {
-                          "operator": "Variables[0] (0.4) || RETURN",
-                          "displayLines": "0.4",
-                          "constants": [],
-                          "variables": [
-                            0.4
-                          ]
+                          "displayLines": "0.4"
                         },
                         "MDF_DisperseNum": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         }
                       }
                     }
@@ -731,37 +539,17 @@ const configAbility = {
                       },
                       "variables": {
                         "MDF_Ability03_DamagePercentage": {
-                          "operator": "Variables[0] (0.8) || RETURN",
-                          "displayLines": "0.8",
-                          "constants": [],
-                          "variables": [
-                            0.8
-                          ]
+                          "displayLines": "0.8"
                         },
                         "MDF_Stance": {
-                          "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
-                          "displayLines": "DanHengPT_Stance_All",
-                          "constants": [],
-                          "variables": [
-                            "DanHengPT_Stance_All"
-                          ]
+                          "displayLines": "DanHengPT_Stance_All"
                         },
                         "MDF_Eidolon2_P1_DamageRatio": 0,
                         "MDF_Point03_P1_DamageRatio": {
-                          "operator": "Variables[0] (0.4) || RETURN",
-                          "displayLines": "0.4",
-                          "constants": [],
-                          "variables": [
-                            0.4
-                          ]
+                          "displayLines": "0.4"
                         },
                         "MDF_DisperseNum": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         }
                       }
                     }
@@ -790,37 +578,17 @@ const configAbility = {
                       },
                       "variables": {
                         "MDF_Ability03_DamagePercentage": {
-                          "operator": "Variables[0] (0.8) || RETURN",
-                          "displayLines": "0.8",
-                          "constants": [],
-                          "variables": [
-                            0.8
-                          ]
+                          "displayLines": "0.8"
                         },
                         "MDF_Stance": {
-                          "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
-                          "displayLines": "DanHengPT_Stance_All",
-                          "constants": [],
-                          "variables": [
-                            "DanHengPT_Stance_All"
-                          ]
+                          "displayLines": "DanHengPT_Stance_All"
                         },
                         "MDF_Eidolon2_P1_DamageRatio": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         },
                         "MDF_Point03_P1_DamageRatio": 0,
                         "MDF_DisperseNum": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         }
                       }
                     }
@@ -836,30 +604,15 @@ const configAbility = {
                       },
                       "variables": {
                         "MDF_Ability03_DamagePercentage": {
-                          "operator": "Variables[0] (0.8) || RETURN",
-                          "displayLines": "0.8",
-                          "constants": [],
-                          "variables": [
-                            0.8
-                          ]
+                          "displayLines": "0.8"
                         },
                         "MDF_Stance": {
-                          "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
-                          "displayLines": "DanHengPT_Stance_All",
-                          "constants": [],
-                          "variables": [
-                            "DanHengPT_Stance_All"
-                          ]
+                          "displayLines": "DanHengPT_Stance_All"
                         },
                         "MDF_Eidolon2_P1_DamageRatio": 0,
                         "MDF_Point03_P1_DamageRatio": 0,
                         "MDF_DisperseNum": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         }
                       }
                     }
@@ -885,12 +638,7 @@ const configAbility = {
                 "target": "{{Souldragon}}"
               },
               "attackCount": {
-                "operator": "Variables[0] (DanHengPT_Passive_Count) || RETURN",
-                "displayLines": "DanHengPT_Passive_Count",
-                "constants": [],
-                "variables": [
-                  "DanHengPT_Passive_Count"
-                ]
+                "displayLines": "DanHengPT_Passive_Count"
               },
               "show": true
             }

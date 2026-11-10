@@ -153,12 +153,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1665795245\">Enemy_SW_Minion01_03_CommandMarkDarkTeam</a>",
               "duration": {
-                "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                "displayLines": "{[Skill02[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill02[0]]}"
-                ]
+                "displayLines": "{[Skill02[0]]}"
               },
               "casterAssign": "TargetSelf"
             }

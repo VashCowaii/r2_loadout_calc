@@ -278,13 +278,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0050_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_0051_ADF_2) || ADD || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_0050_CountSum + DV_FantasticStory_PlusAbility_0051_ADF_2)",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0050_CountSum",
-                          "DV_FantasticStory_PlusAbility_0051_ADF_2"
-                        ]
+                        "displayLines": "(DV_FantasticStory_BaseAbility_0050_CountSum + DV_FantasticStory_PlusAbility_0051_ADF_2)"
                       },
                       "variableName": "DV_FantasticStory_BaseAbility_0050_CountSum"
                     },
@@ -362,13 +356,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_0042_ADF_2) || ADD || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum + DV_FantasticStory_PlusAbility_0042_ADF_2)",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0040_CountSum",
-                          "DV_FantasticStory_PlusAbility_0042_ADF_2"
-                        ]
+                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum + DV_FantasticStory_PlusAbility_0042_ADF_2)"
                       },
                       "variableName": "DV_FantasticStory_BaseAbility_0040_CountSum"
                     }
@@ -408,14 +396,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_DamageSum) || Variables[1] (_DamageSumRatio) || MUL || Variables[2] (DV_FantasticStory_BaseAbility_0030_DamageSum) || ADD || RETURN",
-                        "displayLines": "((_DamageSum * _DamageSumRatio) + DV_FantasticStory_BaseAbility_0030_DamageSum)",
-                        "constants": [],
-                        "variables": [
-                          "_DamageSum",
-                          "_DamageSumRatio",
-                          "DV_FantasticStory_BaseAbility_0030_DamageSum"
-                        ]
+                        "displayLines": "((_DamageSum * _DamageSumRatio) + DV_FantasticStory_BaseAbility_0030_DamageSum)"
                       },
                       "variableName": "DV_FantasticStory_BaseAbility_0030_DamageSum"
                     }
@@ -465,13 +446,7 @@ const compositeAbilityObject = {
                         "value1": "EntityStockSP",
                         "compareType": "<=",
                         "value2": {
-                          "operator": "Variables[0] (EntityMaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                          "displayLines": "(EntityMaxSP - _CurrentSP)",
-                          "constants": [],
-                          "variables": [
-                            "EntityMaxSP",
-                            "_CurrentSP"
-                          ]
+                          "displayLines": "(EntityMaxSP - _CurrentSP)"
                         }
                       },
                       "passed": [
@@ -482,12 +457,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (EntityStockSP) || RETURN",
-                            "displayLines": "EntityStockSP",
-                            "constants": [],
-                            "variables": [
-                              "EntityStockSP"
-                            ]
+                            "displayLines": "EntityStockSP"
                           },
                           "isFixed": "(Fixed)"
                         },
@@ -514,27 +484,14 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (EntityMaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                            "displayLines": "(EntityMaxSP - _CurrentSP)",
-                            "constants": [],
-                            "variables": [
-                              "EntityMaxSP",
-                              "_CurrentSP"
-                            ]
+                            "displayLines": "(EntityMaxSP - _CurrentSP)"
                           },
                           "isFixed": "(Fixed)"
                         },
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (EntityStockSP) || Variables[1] (EntityMaxSP) || SUB || Variables[2] (_CurrentSP) || ADD || RETURN",
-                            "displayLines": "((EntityStockSP - EntityMaxSP) + _CurrentSP)",
-                            "constants": [],
-                            "variables": [
-                              "EntityStockSP",
-                              "EntityMaxSP",
-                              "_CurrentSP"
-                            ]
+                            "displayLines": "((EntityStockSP - EntityMaxSP) + _CurrentSP)"
                           },
                           "variableName": "EntityStockSP"
                         },
@@ -547,12 +504,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"639067431\">Modifier_FantasticStory_BaseAbility_0030_plus5_StockSPForShow</a>[<span class=\"descriptionNumberColor\">Energy Overflow</span>]",
                           "valuePerStack": {
                             "EntityStockSPForShow": {
-                              "operator": "Variables[0] (EntityStockSP) || RETURN",
-                              "displayLines": "EntityStockSP",
-                              "constants": [],
-                              "variables": [
-                                "EntityStockSP"
-                              ]
+                              "displayLines": "EntityStockSP"
                             }
                           }
                         }
@@ -621,14 +573,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (EntityCurrentSP) || Variables[1] (_AddSP) || Variables[2] (EntityMaxSP) || MUL || ADD || RETURN",
-                        "displayLines": "(EntityCurrentSP + (_AddSP * EntityMaxSP))",
-                        "constants": [],
-                        "variables": [
-                          "EntityCurrentSP",
-                          "_AddSP",
-                          "EntityMaxSP"
-                        ]
+                        "displayLines": "(EntityCurrentSP + (_AddSP * EntityMaxSP))"
                       },
                       "variableName": "EntityCurrentSP"
                     },
@@ -643,12 +588,7 @@ const compositeAbilityObject = {
                         "value1": "EntityCurrentSP",
                         "compareType": "<=",
                         "value2": {
-                          "operator": "Variables[0] (EntityMaxSP) || RETURN",
-                          "displayLines": "EntityMaxSP",
-                          "constants": [],
-                          "variables": [
-                            "EntityMaxSP"
-                          ]
+                          "displayLines": "EntityMaxSP"
                         }
                       },
                       "passed": [
@@ -659,13 +599,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (_AddSP) || Variables[1] (EntityMaxSP) || MUL || RETURN",
-                            "displayLines": "(_AddSP * EntityMaxSP)",
-                            "constants": [],
-                            "variables": [
-                              "_AddSP",
-                              "EntityMaxSP"
-                            ]
+                            "displayLines": "(_AddSP * EntityMaxSP)"
                           },
                           "isFixed": "(Fixed)"
                         }
@@ -687,14 +621,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (EntityStockSP) || Variables[1] (EntityCurrentSP) || ADD || Variables[2] (EntityMaxSP) || SUB || RETURN",
-                            "displayLines": "((EntityStockSP + EntityCurrentSP) - EntityMaxSP)",
-                            "constants": [],
-                            "variables": [
-                              "EntityStockSP",
-                              "EntityCurrentSP",
-                              "EntityMaxSP"
-                            ]
+                            "displayLines": "((EntityStockSP + EntityCurrentSP) - EntityMaxSP)"
                           },
                           "variableName": "EntityStockSP"
                         },
@@ -707,12 +634,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"639067431\">Modifier_FantasticStory_BaseAbility_0030_plus5_StockSPForShow</a>[<span class=\"descriptionNumberColor\">Energy Overflow</span>]",
                           "valuePerStack": {
                             "EntityStockSPForShow": {
-                              "operator": "Variables[0] (EntityStockSP) || RETURN",
-                              "displayLines": "EntityStockSP",
-                              "constants": [],
-                              "variables": [
-                                "EntityStockSP"
-                              ]
+                              "displayLines": "EntityStockSP"
                             }
                           }
                         }
@@ -757,14 +679,7 @@ const compositeAbilityObject = {
             "delayAdvancePreview": {
               "name": "Delay/Advance Preview",
               "previewValue": {
-                "operator": "Constants[0] (0) || Variables[0] (DV_FantasticStory_PlusAbility_0016_ADF_3) || SUB || RETURN",
-                "displayLines": "(0 - DV_FantasticStory_PlusAbility_0016_ADF_3)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "DV_FantasticStory_PlusAbility_0016_ADF_3"
-                ]
+                "displayLines": "(0 - DV_FantasticStory_PlusAbility_0016_ADF_3)"
               }
             }
           },
@@ -796,21 +711,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-2046125016\">Modifier_FantasticStory_BaseAbility_0010_plus6_ultraDmgUp</a>[<span class=\"descriptionNumberColor\">Splash</span>]",
                       "duration": {
-                        "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0016_ADF_2) || RETURN",
-                        "displayLines": "DV_FantasticStory_PlusAbility_0016_ADF_2",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_PlusAbility_0016_ADF_2"
-                        ]
+                        "displayLines": "DV_FantasticStory_PlusAbility_0016_ADF_2"
                       },
                       "valuePerStack": {
                         "DmgAddedRatio": {
-                          "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0016_ADF_1) || RETURN",
-                          "displayLines": "DV_FantasticStory_PlusAbility_0016_ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_PlusAbility_0016_ADF_1"
-                          ]
+                          "displayLines": "DV_FantasticStory_PlusAbility_0016_ADF_1"
                         }
                       }
                     }
@@ -862,21 +767,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-749953922\">Modifier_FantasticStory_BaseAbility_0010_plus5_ReceiveDmgUp</a>[<span class=\"descriptionNumberColor\">Scalded</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0015_ADF_2) || RETURN",
-                        "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_2",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_PlusAbility_0015_ADF_2"
-                        ]
+                        "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_2"
                       },
                       "valuePerStack": {
                         "ReceiveDmgRatio": {
-                          "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0015_ADF_1) || RETURN",
-                          "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_PlusAbility_0015_ADF_1"
-                          ]
+                          "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_1"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -922,21 +817,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-749953922\">Modifier_FantasticStory_BaseAbility_0010_plus5_ReceiveDmgUp</a>[<span class=\"descriptionNumberColor\">Scalded</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0015_ADF_2) || RETURN",
-                        "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_2",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_PlusAbility_0015_ADF_2"
-                        ]
+                        "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_2"
                       },
                       "valuePerStack": {
                         "ReceiveDmgRatio": {
-                          "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0015_ADF_1) || RETURN",
-                          "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_PlusAbility_0015_ADF_1"
-                          ]
+                          "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_1"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -971,13 +856,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_Current_Layer) || Variables[1] (ReceiveDmgRatio) || MUL || RETURN",
-                    "displayLines": "(_Current_Layer * ReceiveDmgRatio)",
-                    "constants": [],
-                    "variables": [
-                      "_Current_Layer",
-                      "ReceiveDmgRatio"
-                    ]
+                    "displayLines": "(_Current_Layer * ReceiveDmgRatio)"
                   },
                   "variableName": "TotalDmgRatio"
                 },
@@ -989,12 +868,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (TotalDmgRatio) || RETURN",
-                    "displayLines": "TotalDmgRatio",
-                    "constants": [],
-                    "variables": [
-                      "TotalDmgRatio"
-                    ]
+                    "displayLines": "TotalDmgRatio"
                   }
                 }
               ]
@@ -1039,12 +913,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0052_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         },
@@ -1056,12 +925,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0052_ADF_2",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_2) || RETURN",
-            "displayLines": "#ADF_2",
-            "constants": [],
-            "variables": [
-              "#ADF_2"
-            ]
+            "displayLines": "#ADF_2"
           },
           "scope": "ContextCaster"
         }
@@ -1088,12 +952,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0051_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         },
@@ -1105,12 +964,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0051_ADF_2",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_2) || RETURN",
-            "displayLines": "#ADF_2",
-            "constants": [],
-            "variables": [
-              "#ADF_2"
-            ]
+            "displayLines": "#ADF_2"
           },
           "scope": "ContextCaster"
         }
@@ -1136,28 +990,14 @@ const compositeAbilityObject = {
             "value1": "DV_FantasticStory_BaseAbility_0050_CountSum",
             "compareType": ">=",
             "value2": {
-              "operator": "Variables[0] (DV_RangeGap_3) || Constants[0] (2) || MUL || RETURN",
-              "displayLines": "(DV_RangeGap_3 * 2)",
-              "constants": [
-                2
-              ],
-              "variables": [
-                "DV_RangeGap_3"
-              ]
+              "displayLines": "(DV_RangeGap_3 * 2)"
             }
           },
           "passed": [
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (DV_RangeGap_3) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(DV_RangeGap_3 - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "DV_RangeGap_3"
-                ]
+                "displayLines": "(DV_RangeGap_3 - 1)"
               },
               "variableName": "DV_FantasticStory_BaseAbility_0050_CountSum"
             }
@@ -1166,13 +1006,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0050_CountSum) || Variables[1] (DV_RangeGap_3) || SUB || RETURN",
-                "displayLines": "(DV_FantasticStory_BaseAbility_0050_CountSum - DV_RangeGap_3)",
-                "constants": [],
-                "variables": [
-                  "DV_FantasticStory_BaseAbility_0050_CountSum",
-                  "DV_RangeGap_3"
-                ]
+                "displayLines": "(DV_FantasticStory_BaseAbility_0050_CountSum - DV_RangeGap_3)"
               },
               "variableName": "DV_FantasticStory_BaseAbility_0050_CountSum"
             }
@@ -1181,12 +1015,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (ADF_2_get) || RETURN",
-            "displayLines": "ADF_2_get",
-            "constants": [],
-            "variables": [
-              "ADF_2_get"
-            ]
+            "displayLines": "ADF_2_get"
           },
           "execute": [
             {
@@ -1208,13 +1037,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "DamageFlat": {
-                      "operator": "Variables[0] (TempHP_get) || Variables[1] (ADF_3_get) || MUL || RETURN",
-                      "displayLines": "(TempHP_get * ADF_3_get)",
-                      "constants": [],
-                      "variables": [
-                        "TempHP_get",
-                        "ADF_3_get"
-                      ]
+                      "displayLines": "(TempHP_get * ADF_3_get)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -1299,14 +1122,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (BattleEvent_BaseHP) || Constants[0] (90) || MUL || RETURN",
-            "displayLines": "(BattleEvent_BaseHP * 90)",
-            "constants": [
-              90
-            ],
-            "variables": [
-              "BattleEvent_BaseHP"
-            ]
+            "displayLines": "(BattleEvent_BaseHP * 90)"
           },
           "variableName": "BattleEvent_BaseHP"
         },
@@ -1327,14 +1143,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_RangeGap_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || Constants[0] (0.33) || MUL || RETURN",
-            "displayLines": "(#ADF_1 * 0.33)",
-            "constants": [
-              0.33
-            ],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "(#ADF_1 * 0.33)"
           },
           "scope": "ContextCaster"
         },
@@ -1346,14 +1155,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_RangeGap_2",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || Constants[0] (0.67) || MUL || RETURN",
-            "displayLines": "(#ADF_1 * 0.67)",
-            "constants": [
-              0.67
-            ],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "(#ADF_1 * 0.67)"
           },
           "scope": "ContextCaster"
         },
@@ -1365,12 +1167,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_RangeGap_3",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         },
@@ -1388,36 +1185,16 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"2041839191\">Modifier_FantasticStory_BaseAbility_0050</a>",
           "valuePerStack": {
             "ADF_1": {
-              "operator": "Variables[0] (#ADF_1) || RETURN",
-              "displayLines": "#ADF_1",
-              "constants": [],
-              "variables": [
-                "#ADF_1"
-              ]
+              "displayLines": "#ADF_1"
             },
             "ADF_2": {
-              "operator": "Variables[0] (#ADF_2) || RETURN",
-              "displayLines": "#ADF_2",
-              "constants": [],
-              "variables": [
-                "#ADF_2"
-              ]
+              "displayLines": "#ADF_2"
             },
             "ADF_3": {
-              "operator": "Variables[0] (#ADF_3) || RETURN",
-              "displayLines": "#ADF_3",
-              "constants": [],
-              "variables": [
-                "#ADF_3"
-              ]
+              "displayLines": "#ADF_3"
             },
             "TempHP": {
-              "operator": "Variables[0] (BattleEvent_BaseHP) || RETURN",
-              "displayLines": "BattleEvent_BaseHP",
-              "constants": [],
-              "variables": [
-                "BattleEvent_BaseHP"
-              ]
+              "displayLines": "BattleEvent_BaseHP"
             }
           }
         }
@@ -1434,14 +1211,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0050_CountSum) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(DV_FantasticStory_BaseAbility_0050_CountSum + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "DV_FantasticStory_BaseAbility_0050_CountSum"
-                    ]
+                    "displayLines": "(DV_FantasticStory_BaseAbility_0050_CountSum + 1)"
                   },
                   "variableName": "DV_FantasticStory_BaseAbility_0050_CountSum"
                 }
@@ -1640,28 +1410,13 @@ const compositeAbilityObject = {
                               "canHitNonTargets": true,
                               "valuePerStack": {
                                 "TempHP_get": {
-                                  "operator": "Variables[0] (TempHP) || RETURN",
-                                  "displayLines": "TempHP",
-                                  "constants": [],
-                                  "variables": [
-                                    "TempHP"
-                                  ]
+                                  "displayLines": "TempHP"
                                 },
                                 "ADF_2_get": {
-                                  "operator": "Variables[0] (ADF_2) || RETURN",
-                                  "displayLines": "ADF_2",
-                                  "constants": [],
-                                  "variables": [
-                                    "ADF_2"
-                                  ]
+                                  "displayLines": "ADF_2"
                                 },
                                 "ADF_3_get": {
-                                  "operator": "Variables[0] (ADF_3) || RETURN",
-                                  "displayLines": "ADF_3",
-                                  "constants": [],
-                                  "variables": [
-                                    "ADF_3"
-                                  ]
+                                  "displayLines": "ADF_3"
                                 }
                               },
                               "allowAbilityTriggers": false
@@ -1737,28 +1492,13 @@ const compositeAbilityObject = {
                           "canHitNonTargets": true,
                           "valuePerStack": {
                             "TempHP_get": {
-                              "operator": "Variables[0] (TempHP) || RETURN",
-                              "displayLines": "TempHP",
-                              "constants": [],
-                              "variables": [
-                                "TempHP"
-                              ]
+                              "displayLines": "TempHP"
                             },
                             "ADF_2_get": {
-                              "operator": "Variables[0] (ADF_2) || RETURN",
-                              "displayLines": "ADF_2",
-                              "constants": [],
-                              "variables": [
-                                "ADF_2"
-                              ]
+                              "displayLines": "ADF_2"
                             },
                             "ADF_3_get": {
-                              "operator": "Variables[0] (ADF_3) || RETURN",
-                              "displayLines": "ADF_3",
-                              "constants": [],
-                              "variables": [
-                                "ADF_3"
-                              ]
+                              "displayLines": "ADF_3"
                             }
                           },
                           "allowAbilityTriggers": false
@@ -1894,28 +1634,13 @@ const compositeAbilityObject = {
                           "canHitNonTargets": true,
                           "valuePerStack": {
                             "TempHP_get": {
-                              "operator": "Variables[0] (TempHP) || RETURN",
-                              "displayLines": "TempHP",
-                              "constants": [],
-                              "variables": [
-                                "TempHP"
-                              ]
+                              "displayLines": "TempHP"
                             },
                             "ADF_2_get": {
-                              "operator": "Variables[0] (ADF_2) || RETURN",
-                              "displayLines": "ADF_2",
-                              "constants": [],
-                              "variables": [
-                                "ADF_2"
-                              ]
+                              "displayLines": "ADF_2"
                             },
                             "ADF_3_get": {
-                              "operator": "Variables[0] (ADF_3) || RETURN",
-                              "displayLines": "ADF_3",
-                              "constants": [],
-                              "variables": [
-                                "ADF_3"
-                              ]
+                              "displayLines": "ADF_3"
                             }
                           },
                           "allowAbilityTriggers": false
@@ -1937,36 +1662,17 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "maxValue": {
-                    "operator": "Variables[0] (DV_RangeGap_1) || RETURN",
-                    "displayLines": "DV_RangeGap_1",
-                    "constants": [],
-                    "variables": [
-                      "DV_RangeGap_1"
-                    ]
+                    "displayLines": "DV_RangeGap_1"
                   },
                   "includeMaxValueInRange": true,
                   "enteringRange": [
                     {
                       "name": "Set Battle Track Progress",
                       "progress": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0050_CountSum) || Variables[1] (#ADF_1) || DIV || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_0050_CountSum / #ADF_1)",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0050_CountSum",
-                          "#ADF_1"
-                        ]
+                        "displayLines": "(DV_FantasticStory_BaseAbility_0050_CountSum / #ADF_1)"
                       },
                       "count": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0050_CountSum) || Variables[1] (#ADF_1) || DIV || Constants[0] (100) || MUL || RETURN",
-                        "displayLines": "((DV_FantasticStory_BaseAbility_0050_CountSum / #ADF_1) * 100)",
-                        "constants": [
-                          100
-                        ],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0050_CountSum",
-                          "#ADF_1"
-                        ]
+                        "displayLines": "((DV_FantasticStory_BaseAbility_0050_CountSum / #ADF_1) * 100)"
                       }
                     }
                   ],
@@ -1974,24 +1680,10 @@ const compositeAbilityObject = {
                     {
                       "name": "Set Battle Track Progress",
                       "progress": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0050_CountSum) || Variables[1] (#ADF_1) || DIV || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_0050_CountSum / #ADF_1)",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0050_CountSum",
-                          "#ADF_1"
-                        ]
+                        "displayLines": "(DV_FantasticStory_BaseAbility_0050_CountSum / #ADF_1)"
                       },
                       "count": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0050_CountSum) || Variables[1] (#ADF_1) || DIV || Constants[0] (100) || MUL || RETURN",
-                        "displayLines": "((DV_FantasticStory_BaseAbility_0050_CountSum / #ADF_1) * 100)",
-                        "constants": [
-                          100
-                        ],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0050_CountSum",
-                          "#ADF_1"
-                        ]
+                        "displayLines": "((DV_FantasticStory_BaseAbility_0050_CountSum / #ADF_1) * 100)"
                       }
                     }
                   ]
@@ -1999,44 +1691,20 @@ const compositeAbilityObject = {
                 {
                   "name": "Variable Value Range Conditions",
                   "minValue": {
-                    "operator": "Variables[0] (DV_RangeGap_1) || RETURN",
-                    "displayLines": "DV_RangeGap_1",
-                    "constants": [],
-                    "variables": [
-                      "DV_RangeGap_1"
-                    ]
+                    "displayLines": "DV_RangeGap_1"
                   },
                   "maxValue": {
-                    "operator": "Variables[0] (DV_RangeGap_2) || RETURN",
-                    "displayLines": "DV_RangeGap_2",
-                    "constants": [],
-                    "variables": [
-                      "DV_RangeGap_2"
-                    ]
+                    "displayLines": "DV_RangeGap_2"
                   },
                   "includeMaxValueInRange": true,
                   "enteringRange": [
                     {
                       "name": "Set Battle Track Progress",
                       "progress": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0050_CountSum) || Variables[1] (#ADF_1) || DIV || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_0050_CountSum / #ADF_1)",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0050_CountSum",
-                          "#ADF_1"
-                        ]
+                        "displayLines": "(DV_FantasticStory_BaseAbility_0050_CountSum / #ADF_1)"
                       },
                       "count": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0050_CountSum) || Variables[1] (#ADF_1) || DIV || Constants[0] (100) || MUL || RETURN",
-                        "displayLines": "((DV_FantasticStory_BaseAbility_0050_CountSum / #ADF_1) * 100)",
-                        "constants": [
-                          100
-                        ],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0050_CountSum",
-                          "#ADF_1"
-                        ]
+                        "displayLines": "((DV_FantasticStory_BaseAbility_0050_CountSum / #ADF_1) * 100)"
                       }
                     }
                   ],
@@ -2044,24 +1712,10 @@ const compositeAbilityObject = {
                     {
                       "name": "Set Battle Track Progress",
                       "progress": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0050_CountSum) || Variables[1] (#ADF_1) || DIV || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_0050_CountSum / #ADF_1)",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0050_CountSum",
-                          "#ADF_1"
-                        ]
+                        "displayLines": "(DV_FantasticStory_BaseAbility_0050_CountSum / #ADF_1)"
                       },
                       "count": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0050_CountSum) || Variables[1] (#ADF_1) || DIV || Constants[0] (100) || MUL || RETURN",
-                        "displayLines": "((DV_FantasticStory_BaseAbility_0050_CountSum / #ADF_1) * 100)",
-                        "constants": [
-                          100
-                        ],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0050_CountSum",
-                          "#ADF_1"
-                        ]
+                        "displayLines": "((DV_FantasticStory_BaseAbility_0050_CountSum / #ADF_1) * 100)"
                       }
                     }
                   ]
@@ -2069,44 +1723,20 @@ const compositeAbilityObject = {
                 {
                   "name": "Variable Value Range Conditions",
                   "minValue": {
-                    "operator": "Variables[0] (DV_RangeGap_2) || RETURN",
-                    "displayLines": "DV_RangeGap_2",
-                    "constants": [],
-                    "variables": [
-                      "DV_RangeGap_2"
-                    ]
+                    "displayLines": "DV_RangeGap_2"
                   },
                   "maxValue": {
-                    "operator": "Variables[0] (DV_RangeGap_3) || RETURN",
-                    "displayLines": "DV_RangeGap_3",
-                    "constants": [],
-                    "variables": [
-                      "DV_RangeGap_3"
-                    ]
+                    "displayLines": "DV_RangeGap_3"
                   },
                   "includeMaxValueInRange": true,
                   "enteringRange": [
                     {
                       "name": "Set Battle Track Progress",
                       "progress": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0050_CountSum) || Variables[1] (#ADF_1) || DIV || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_0050_CountSum / #ADF_1)",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0050_CountSum",
-                          "#ADF_1"
-                        ]
+                        "displayLines": "(DV_FantasticStory_BaseAbility_0050_CountSum / #ADF_1)"
                       },
                       "count": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0050_CountSum) || Variables[1] (#ADF_1) || DIV || Constants[0] (100) || MUL || RETURN",
-                        "displayLines": "((DV_FantasticStory_BaseAbility_0050_CountSum / #ADF_1) * 100)",
-                        "constants": [
-                          100
-                        ],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0050_CountSum",
-                          "#ADF_1"
-                        ]
+                        "displayLines": "((DV_FantasticStory_BaseAbility_0050_CountSum / #ADF_1) * 100)"
                       }
                     }
                   ],
@@ -2114,24 +1744,10 @@ const compositeAbilityObject = {
                     {
                       "name": "Set Battle Track Progress",
                       "progress": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0050_CountSum) || Variables[1] (#ADF_1) || DIV || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_0050_CountSum / #ADF_1)",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0050_CountSum",
-                          "#ADF_1"
-                        ]
+                        "displayLines": "(DV_FantasticStory_BaseAbility_0050_CountSum / #ADF_1)"
                       },
                       "count": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0050_CountSum) || Variables[1] (#ADF_1) || DIV || Constants[0] (100) || MUL || RETURN",
-                        "displayLines": "((DV_FantasticStory_BaseAbility_0050_CountSum / #ADF_1) * 100)",
-                        "constants": [
-                          100
-                        ],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0050_CountSum",
-                          "#ADF_1"
-                        ]
+                        "displayLines": "((DV_FantasticStory_BaseAbility_0050_CountSum / #ADF_1) * 100)"
                       }
                     }
                   ]
@@ -2139,12 +1755,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Variable Value Range Conditions",
                   "minValue": {
-                    "operator": "Variables[0] (DV_RangeGap_3) || RETURN",
-                    "displayLines": "DV_RangeGap_3",
-                    "constants": [],
-                    "variables": [
-                      "DV_RangeGap_3"
-                    ]
+                    "displayLines": "DV_RangeGap_3"
                   },
                   "maxValue": 1000000000,
                   "includeMaxValueInRange": true,
@@ -2189,28 +1800,13 @@ const compositeAbilityObject = {
                           "canHitNonTargets": true,
                           "valuePerStack": {
                             "TempHP_get": {
-                              "operator": "Variables[0] (TempHP) || RETURN",
-                              "displayLines": "TempHP",
-                              "constants": [],
-                              "variables": [
-                                "TempHP"
-                              ]
+                              "displayLines": "TempHP"
                             },
                             "ADF_2_get": {
-                              "operator": "Variables[0] (ADF_2) || RETURN",
-                              "displayLines": "ADF_2",
-                              "constants": [],
-                              "variables": [
-                                "ADF_2"
-                              ]
+                              "displayLines": "ADF_2"
                             },
                             "ADF_3_get": {
-                              "operator": "Variables[0] (ADF_3) || RETURN",
-                              "displayLines": "ADF_3",
-                              "constants": [],
-                              "variables": [
-                                "ADF_3"
-                              ]
+                              "displayLines": "ADF_3"
                             }
                           },
                           "allowAbilityTriggers": false
@@ -2252,12 +1848,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0043_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         }
@@ -2284,12 +1875,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0042_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         },
@@ -2301,12 +1887,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0042_ADF_2",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_2) || RETURN",
-            "displayLines": "#ADF_2",
-            "constants": [],
-            "variables": [
-              "#ADF_2"
-            ]
+            "displayLines": "#ADF_2"
           },
           "scope": "ContextCaster"
         }
@@ -2333,12 +1914,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0041_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         },
@@ -2350,12 +1926,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0041_ADF_2",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_2) || RETURN",
-            "displayLines": "#ADF_2",
-            "constants": [],
-            "variables": [
-              "#ADF_2"
-            ]
+            "displayLines": "#ADF_2"
           },
           "scope": "ContextCaster"
         }
@@ -2386,13 +1957,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (ADF_2_get) || Variables[1] (DV_FantasticStory_PlusAbility_0041) || ADD || RETURN",
-                "displayLines": "(ADF_2_get + DV_FantasticStory_PlusAbility_0041)",
-                "constants": [],
-                "variables": [
-                  "ADF_2_get",
-                  "DV_FantasticStory_PlusAbility_0041"
-                ]
+                "displayLines": "(ADF_2_get + DV_FantasticStory_PlusAbility_0041)"
               },
               "variableName": "ADF_2_get"
             },
@@ -2403,28 +1968,14 @@ const compositeAbilityObject = {
                 "value1": "DV_FantasticStory_BaseAbility_0040_CountSum",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (DV_RangeGap_3) || Constants[0] (2) || MUL || RETURN",
-                  "displayLines": "(DV_RangeGap_3 * 2)",
-                  "constants": [
-                    2
-                  ],
-                  "variables": [
-                    "DV_RangeGap_3"
-                  ]
+                  "displayLines": "(DV_RangeGap_3 * 2)"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DV_RangeGap_3) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(DV_RangeGap_3 - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "DV_RangeGap_3"
-                    ]
+                    "displayLines": "(DV_RangeGap_3 - 1)"
                   },
                   "variableName": "DV_FantasticStory_BaseAbility_0040_CountSum"
                 }
@@ -2433,13 +1984,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (DV_RangeGap_3) || SUB || RETURN",
-                    "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum - DV_RangeGap_3)",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_BaseAbility_0040_CountSum",
-                      "DV_RangeGap_3"
-                    ]
+                    "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum - DV_RangeGap_3)"
                   },
                   "variableName": "DV_FantasticStory_BaseAbility_0040_CountSum"
                 }
@@ -2448,26 +1993,10 @@ const compositeAbilityObject = {
             {
               "name": "Set Battle Track Progress",
               "progress": {
-                "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || Variables[2] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || DIV || RETURN",
-                "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1))",
-                "constants": [],
-                "variables": [
-                  "DV_FantasticStory_BaseAbility_0040_CountSum",
-                  "#ADF_1",
-                  "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                ]
+                "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1))"
               },
               "count": {
-                "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || Variables[2] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || DIV || Constants[0] (100) || MUL || RETURN",
-                "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)) * 100)",
-                "constants": [
-                  100
-                ],
-                "variables": [
-                  "DV_FantasticStory_BaseAbility_0040_CountSum",
-                  "#ADF_1",
-                  "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                ]
+                "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)) * 100)"
               }
             }
           ],
@@ -2479,28 +2008,14 @@ const compositeAbilityObject = {
                 "value1": "DV_FantasticStory_BaseAbility_0040_CountSum",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (DV_RangeGap_3) || Constants[0] (2) || MUL || RETURN",
-                  "displayLines": "(DV_RangeGap_3 * 2)",
-                  "constants": [
-                    2
-                  ],
-                  "variables": [
-                    "DV_RangeGap_3"
-                  ]
+                  "displayLines": "(DV_RangeGap_3 * 2)"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DV_RangeGap_3) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(DV_RangeGap_3 - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "DV_RangeGap_3"
-                    ]
+                    "displayLines": "(DV_RangeGap_3 - 1)"
                   },
                   "variableName": "DV_FantasticStory_BaseAbility_0040_CountSum"
                 }
@@ -2509,13 +2024,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (DV_RangeGap_3) || SUB || RETURN",
-                    "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum - DV_RangeGap_3)",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_BaseAbility_0040_CountSum",
-                      "DV_RangeGap_3"
-                    ]
+                    "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum - DV_RangeGap_3)"
                   },
                   "variableName": "DV_FantasticStory_BaseAbility_0040_CountSum"
                 }
@@ -2524,24 +2033,10 @@ const compositeAbilityObject = {
             {
               "name": "Set Battle Track Progress",
               "progress": {
-                "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || DIV || RETURN",
-                "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1)",
-                "constants": [],
-                "variables": [
-                  "DV_FantasticStory_BaseAbility_0040_CountSum",
-                  "#ADF_1"
-                ]
+                "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1)"
               },
               "count": {
-                "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || DIV || Constants[0] (100) || MUL || RETURN",
-                "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1) * 100)",
-                "constants": [
-                  100
-                ],
-                "variables": [
-                  "DV_FantasticStory_BaseAbility_0040_CountSum",
-                  "#ADF_1"
-                ]
+                "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1) * 100)"
               }
             }
           ]
@@ -2549,12 +2044,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (ADF_2_get) || RETURN",
-            "displayLines": "ADF_2_get",
-            "constants": [],
-            "variables": [
-              "ADF_2_get"
-            ]
+            "displayLines": "ADF_2_get"
           },
           "execute": [
             {
@@ -2576,13 +2066,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "DamageFlat": {
-                      "operator": "Variables[0] (TempHP_get) || Variables[1] (ADF_3_get) || MUL || RETURN",
-                      "displayLines": "(TempHP_get * ADF_3_get)",
-                      "constants": [],
-                      "variables": [
-                        "TempHP_get",
-                        "ADF_3_get"
-                      ]
+                      "displayLines": "(TempHP_get * ADF_3_get)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -2667,14 +2151,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (BattleEvent_BaseHP) || Constants[0] (90) || MUL || RETURN",
-            "displayLines": "(BattleEvent_BaseHP * 90)",
-            "constants": [
-              90
-            ],
-            "variables": [
-              "BattleEvent_BaseHP"
-            ]
+            "displayLines": "(BattleEvent_BaseHP * 90)"
           },
           "variableName": "BattleEvent_BaseHP"
         },
@@ -2695,14 +2172,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_RangeGap_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || Constants[0] (0.33) || MUL || RETURN",
-            "displayLines": "(#ADF_1 * 0.33)",
-            "constants": [
-              0.33
-            ],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "(#ADF_1 * 0.33)"
           },
           "scope": "ContextCaster"
         },
@@ -2714,14 +2184,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_RangeGap_2",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || Constants[0] (0.67) || MUL || RETURN",
-            "displayLines": "(#ADF_1 * 0.67)",
-            "constants": [
-              0.67
-            ],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "(#ADF_1 * 0.67)"
           },
           "scope": "ContextCaster"
         },
@@ -2733,12 +2196,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_RangeGap_3",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         },
@@ -2756,36 +2214,16 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1941026382\">Modifier_FantasticStory_BaseAbility_0040</a>",
           "valuePerStack": {
             "ADF_1": {
-              "operator": "Variables[0] (#ADF_1) || RETURN",
-              "displayLines": "#ADF_1",
-              "constants": [],
-              "variables": [
-                "#ADF_1"
-              ]
+              "displayLines": "#ADF_1"
             },
             "ADF_2": {
-              "operator": "Variables[0] (#ADF_2) || RETURN",
-              "displayLines": "#ADF_2",
-              "constants": [],
-              "variables": [
-                "#ADF_2"
-              ]
+              "displayLines": "#ADF_2"
             },
             "ADF_3": {
-              "operator": "Variables[0] (#ADF_3) || RETURN",
-              "displayLines": "#ADF_3",
-              "constants": [],
-              "variables": [
-                "#ADF_3"
-              ]
+              "displayLines": "#ADF_3"
             },
             "TempHP": {
-              "operator": "Variables[0] (BattleEvent_BaseHP) || RETURN",
-              "displayLines": "BattleEvent_BaseHP",
-              "constants": [],
-              "variables": [
-                "BattleEvent_BaseHP"
-              ]
+              "displayLines": "BattleEvent_BaseHP"
             }
           }
         }
@@ -2806,25 +2244,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0043_ADF_1) || RETURN",
-                    "displayLines": "DV_FantasticStory_PlusAbility_0043_ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_PlusAbility_0043_ADF_1"
-                    ]
+                    "displayLines": "DV_FantasticStory_PlusAbility_0043_ADF_1"
                   },
                   "variableName": "_Extra_Count"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (_Extra_Count) || ADD || RETURN",
-                    "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum + _Extra_Count)",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_BaseAbility_0040_CountSum",
-                      "_Extra_Count"
-                    ]
+                    "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum + _Extra_Count)"
                   },
                   "variableName": "DV_FantasticStory_BaseAbility_0040_CountSum"
                 }
@@ -2879,14 +2306,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0040_CountSum"
-                        ]
+                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum + 1)"
                       },
                       "variableName": "DV_FantasticStory_BaseAbility_0040_CountSum"
                     },
@@ -2983,12 +2403,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"1558011426\">Modifier_FantasticStory_BaseAbility_0040_plus2_sub</a>[<span class=\"descriptionNumberColor\">Ultimate DMG Boost</span>]",
                           "valuePerStack": {
                             "_DamageUpRatio": {
-                              "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0042_ADF_1) || RETURN",
-                              "displayLines": "DV_FantasticStory_PlusAbility_0042_ADF_1",
-                              "constants": [],
-                              "variables": [
-                                "DV_FantasticStory_PlusAbility_0042_ADF_1"
-                              ]
+                              "displayLines": "DV_FantasticStory_PlusAbility_0042_ADF_1"
                             }
                           }
                         }
@@ -3012,12 +2427,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"355925913\">Modifier_FantasticStory_BaseAbility_0040_plus3_sub</a>[<span class=\"descriptionNumberColor\">Bonus Charge</span>]",
                           "valuePerStack": {
                             "_Extra_Count": {
-                              "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0043_ADF_1) || RETURN",
-                              "displayLines": "DV_FantasticStory_PlusAbility_0043_ADF_1",
-                              "constants": [],
-                              "variables": [
-                                "DV_FantasticStory_PlusAbility_0043_ADF_1"
-                              ]
+                              "displayLines": "DV_FantasticStory_PlusAbility_0043_ADF_1"
                             }
                           }
                         }
@@ -3083,28 +2493,13 @@ const compositeAbilityObject = {
                               "canHitNonTargets": true,
                               "valuePerStack": {
                                 "TempHP_get": {
-                                  "operator": "Variables[0] (TempHP) || RETURN",
-                                  "displayLines": "TempHP",
-                                  "constants": [],
-                                  "variables": [
-                                    "TempHP"
-                                  ]
+                                  "displayLines": "TempHP"
                                 },
                                 "ADF_2_get": {
-                                  "operator": "Variables[0] (ADF_2) || RETURN",
-                                  "displayLines": "ADF_2",
-                                  "constants": [],
-                                  "variables": [
-                                    "ADF_2"
-                                  ]
+                                  "displayLines": "ADF_2"
                                 },
                                 "ADF_3_get": {
-                                  "operator": "Variables[0] (ADF_3) || RETURN",
-                                  "displayLines": "ADF_3",
-                                  "constants": [],
-                                  "variables": [
-                                    "ADF_3"
-                                  ]
+                                  "displayLines": "ADF_3"
                                 }
                               },
                               "allowAbilityTriggers": false
@@ -3180,28 +2575,13 @@ const compositeAbilityObject = {
                           "canHitNonTargets": true,
                           "valuePerStack": {
                             "TempHP_get": {
-                              "operator": "Variables[0] (TempHP) || RETURN",
-                              "displayLines": "TempHP",
-                              "constants": [],
-                              "variables": [
-                                "TempHP"
-                              ]
+                              "displayLines": "TempHP"
                             },
                             "ADF_2_get": {
-                              "operator": "Variables[0] (ADF_2) || RETURN",
-                              "displayLines": "ADF_2",
-                              "constants": [],
-                              "variables": [
-                                "ADF_2"
-                              ]
+                              "displayLines": "ADF_2"
                             },
                             "ADF_3_get": {
-                              "operator": "Variables[0] (ADF_3) || RETURN",
-                              "displayLines": "ADF_3",
-                              "constants": [],
-                              "variables": [
-                                "ADF_3"
-                              ]
+                              "displayLines": "ADF_3"
                             }
                           },
                           "allowAbilityTriggers": false
@@ -3227,43 +2607,21 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (#ADF_1) || Variables[1] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || Constants[0] (0.33) || MUL || RETURN",
-                        "displayLines": "((#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1) * 0.33)",
-                        "constants": [
-                          0.33
-                        ],
-                        "variables": [
-                          "#ADF_1",
-                          "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                        ]
+                        "displayLines": "((#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1) * 0.33)"
                       },
                       "variableName": "DV_RangeGap_1"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (#ADF_1) || Variables[1] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || Constants[0] (0.67) || MUL || RETURN",
-                        "displayLines": "((#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1) * 0.67)",
-                        "constants": [
-                          0.67
-                        ],
-                        "variables": [
-                          "#ADF_1",
-                          "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                        ]
+                        "displayLines": "((#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1) * 0.67)"
                       },
                       "variableName": "DV_RangeGap_2"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (#ADF_1) || Variables[1] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || RETURN",
-                        "displayLines": "(#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)",
-                        "constants": [],
-                        "variables": [
-                          "#ADF_1",
-                          "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                        ]
+                        "displayLines": "(#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)"
                       },
                       "variableName": "DV_RangeGap_3"
                     }
@@ -3304,12 +2662,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"1558011426\">Modifier_FantasticStory_BaseAbility_0040_plus2_sub</a>[<span class=\"descriptionNumberColor\">Ultimate DMG Boost</span>]",
                           "valuePerStack": {
                             "_DamageUpRatio": {
-                              "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0042_ADF_1) || RETURN",
-                              "displayLines": "DV_FantasticStory_PlusAbility_0042_ADF_1",
-                              "constants": [],
-                              "variables": [
-                                "DV_FantasticStory_PlusAbility_0042_ADF_1"
-                              ]
+                              "displayLines": "DV_FantasticStory_PlusAbility_0042_ADF_1"
                             }
                           }
                         }
@@ -3335,12 +2688,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"355925913\">Modifier_FantasticStory_BaseAbility_0040_plus3_sub</a>[<span class=\"descriptionNumberColor\">Bonus Charge</span>]",
                       "valuePerStack": {
                         "_Extra_Count": {
-                          "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0043_ADF_1) || RETURN",
-                          "displayLines": "DV_FantasticStory_PlusAbility_0043_ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_PlusAbility_0043_ADF_1"
-                          ]
+                          "displayLines": "DV_FantasticStory_PlusAbility_0043_ADF_1"
                         }
                       }
                     }
@@ -3403,28 +2751,13 @@ const compositeAbilityObject = {
                           "canHitNonTargets": true,
                           "valuePerStack": {
                             "TempHP_get": {
-                              "operator": "Variables[0] (TempHP) || RETURN",
-                              "displayLines": "TempHP",
-                              "constants": [],
-                              "variables": [
-                                "TempHP"
-                              ]
+                              "displayLines": "TempHP"
                             },
                             "ADF_2_get": {
-                              "operator": "Variables[0] (ADF_2) || RETURN",
-                              "displayLines": "ADF_2",
-                              "constants": [],
-                              "variables": [
-                                "ADF_2"
-                              ]
+                              "displayLines": "ADF_2"
                             },
                             "ADF_3_get": {
-                              "operator": "Variables[0] (ADF_3) || RETURN",
-                              "displayLines": "ADF_3",
-                              "constants": [],
-                              "variables": [
-                                "ADF_3"
-                              ]
+                              "displayLines": "ADF_3"
                             }
                           },
                           "allowAbilityTriggers": false
@@ -3446,12 +2779,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "maxValue": {
-                    "operator": "Variables[0] (DV_RangeGap_1) || RETURN",
-                    "displayLines": "DV_RangeGap_1",
-                    "constants": [],
-                    "variables": [
-                      "DV_RangeGap_1"
-                    ]
+                    "displayLines": "DV_RangeGap_1"
                   },
                   "includeMaxValueInRange": true,
                   "enteringRange": [
@@ -3467,26 +2795,10 @@ const compositeAbilityObject = {
                         {
                           "name": "Set Battle Track Progress",
                           "progress": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || Variables[2] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || DIV || RETURN",
-                            "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1))",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_0040_CountSum",
-                              "#ADF_1",
-                              "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                            ]
+                            "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1))"
                           },
                           "count": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || Variables[2] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || DIV || Constants[0] (100) || MUL || RETURN",
-                            "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)) * 100)",
-                            "constants": [
-                              100
-                            ],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_0040_CountSum",
-                              "#ADF_1",
-                              "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                            ]
+                            "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)) * 100)"
                           }
                         }
                       ],
@@ -3494,24 +2806,10 @@ const compositeAbilityObject = {
                         {
                           "name": "Set Battle Track Progress",
                           "progress": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || DIV || RETURN",
-                            "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1)",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_0040_CountSum",
-                              "#ADF_1"
-                            ]
+                            "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1)"
                           },
                           "count": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || DIV || Constants[0] (100) || MUL || RETURN",
-                            "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1) * 100)",
-                            "constants": [
-                              100
-                            ],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_0040_CountSum",
-                              "#ADF_1"
-                            ]
+                            "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1) * 100)"
                           }
                         }
                       ]
@@ -3530,26 +2828,10 @@ const compositeAbilityObject = {
                         {
                           "name": "Set Battle Track Progress",
                           "progress": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || Variables[2] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || DIV || RETURN",
-                            "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1))",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_0040_CountSum",
-                              "#ADF_1",
-                              "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                            ]
+                            "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1))"
                           },
                           "count": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || Variables[2] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || DIV || Constants[0] (100) || MUL || RETURN",
-                            "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)) * 100)",
-                            "constants": [
-                              100
-                            ],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_0040_CountSum",
-                              "#ADF_1",
-                              "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                            ]
+                            "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)) * 100)"
                           }
                         }
                       ],
@@ -3557,24 +2839,10 @@ const compositeAbilityObject = {
                         {
                           "name": "Set Battle Track Progress",
                           "progress": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || DIV || RETURN",
-                            "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1)",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_0040_CountSum",
-                              "#ADF_1"
-                            ]
+                            "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1)"
                           },
                           "count": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || DIV || Constants[0] (100) || MUL || RETURN",
-                            "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1) * 100)",
-                            "constants": [
-                              100
-                            ],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_0040_CountSum",
-                              "#ADF_1"
-                            ]
+                            "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1) * 100)"
                           }
                         }
                       ]
@@ -3584,20 +2852,10 @@ const compositeAbilityObject = {
                 {
                   "name": "Variable Value Range Conditions",
                   "minValue": {
-                    "operator": "Variables[0] (DV_RangeGap_1) || RETURN",
-                    "displayLines": "DV_RangeGap_1",
-                    "constants": [],
-                    "variables": [
-                      "DV_RangeGap_1"
-                    ]
+                    "displayLines": "DV_RangeGap_1"
                   },
                   "maxValue": {
-                    "operator": "Variables[0] (DV_RangeGap_2) || RETURN",
-                    "displayLines": "DV_RangeGap_2",
-                    "constants": [],
-                    "variables": [
-                      "DV_RangeGap_2"
-                    ]
+                    "displayLines": "DV_RangeGap_2"
                   },
                   "includeMaxValueInRange": true,
                   "enteringRange": [
@@ -3613,26 +2871,10 @@ const compositeAbilityObject = {
                         {
                           "name": "Set Battle Track Progress",
                           "progress": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || Variables[2] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || DIV || RETURN",
-                            "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1))",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_0040_CountSum",
-                              "#ADF_1",
-                              "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                            ]
+                            "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1))"
                           },
                           "count": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || Variables[2] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || DIV || Constants[0] (100) || MUL || RETURN",
-                            "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)) * 100)",
-                            "constants": [
-                              100
-                            ],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_0040_CountSum",
-                              "#ADF_1",
-                              "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                            ]
+                            "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)) * 100)"
                           }
                         }
                       ],
@@ -3640,24 +2882,10 @@ const compositeAbilityObject = {
                         {
                           "name": "Set Battle Track Progress",
                           "progress": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || DIV || RETURN",
-                            "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1)",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_0040_CountSum",
-                              "#ADF_1"
-                            ]
+                            "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1)"
                           },
                           "count": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || DIV || Constants[0] (100) || MUL || RETURN",
-                            "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1) * 100)",
-                            "constants": [
-                              100
-                            ],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_0040_CountSum",
-                              "#ADF_1"
-                            ]
+                            "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1) * 100)"
                           }
                         }
                       ]
@@ -3676,26 +2904,10 @@ const compositeAbilityObject = {
                         {
                           "name": "Set Battle Track Progress",
                           "progress": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || Variables[2] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || DIV || RETURN",
-                            "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1))",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_0040_CountSum",
-                              "#ADF_1",
-                              "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                            ]
+                            "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1))"
                           },
                           "count": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || Variables[2] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || DIV || Constants[0] (100) || MUL || RETURN",
-                            "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)) * 100)",
-                            "constants": [
-                              100
-                            ],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_0040_CountSum",
-                              "#ADF_1",
-                              "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                            ]
+                            "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)) * 100)"
                           }
                         }
                       ],
@@ -3703,24 +2915,10 @@ const compositeAbilityObject = {
                         {
                           "name": "Set Battle Track Progress",
                           "progress": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || DIV || RETURN",
-                            "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1)",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_0040_CountSum",
-                              "#ADF_1"
-                            ]
+                            "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1)"
                           },
                           "count": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || DIV || Constants[0] (100) || MUL || RETURN",
-                            "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1) * 100)",
-                            "constants": [
-                              100
-                            ],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_0040_CountSum",
-                              "#ADF_1"
-                            ]
+                            "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1) * 100)"
                           }
                         }
                       ]
@@ -3730,20 +2928,10 @@ const compositeAbilityObject = {
                 {
                   "name": "Variable Value Range Conditions",
                   "minValue": {
-                    "operator": "Variables[0] (DV_RangeGap_2) || RETURN",
-                    "displayLines": "DV_RangeGap_2",
-                    "constants": [],
-                    "variables": [
-                      "DV_RangeGap_2"
-                    ]
+                    "displayLines": "DV_RangeGap_2"
                   },
                   "maxValue": {
-                    "operator": "Variables[0] (DV_RangeGap_3) || RETURN",
-                    "displayLines": "DV_RangeGap_3",
-                    "constants": [],
-                    "variables": [
-                      "DV_RangeGap_3"
-                    ]
+                    "displayLines": "DV_RangeGap_3"
                   },
                   "includeMaxValueInRange": true,
                   "enteringRange": [
@@ -3759,26 +2947,10 @@ const compositeAbilityObject = {
                         {
                           "name": "Set Battle Track Progress",
                           "progress": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || Variables[2] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || DIV || RETURN",
-                            "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1))",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_0040_CountSum",
-                              "#ADF_1",
-                              "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                            ]
+                            "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1))"
                           },
                           "count": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || Variables[2] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || DIV || Constants[0] (100) || MUL || RETURN",
-                            "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)) * 100)",
-                            "constants": [
-                              100
-                            ],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_0040_CountSum",
-                              "#ADF_1",
-                              "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                            ]
+                            "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)) * 100)"
                           }
                         }
                       ],
@@ -3786,24 +2958,10 @@ const compositeAbilityObject = {
                         {
                           "name": "Set Battle Track Progress",
                           "progress": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || DIV || RETURN",
-                            "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1)",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_0040_CountSum",
-                              "#ADF_1"
-                            ]
+                            "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1)"
                           },
                           "count": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || DIV || Constants[0] (100) || MUL || RETURN",
-                            "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1) * 100)",
-                            "constants": [
-                              100
-                            ],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_0040_CountSum",
-                              "#ADF_1"
-                            ]
+                            "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1) * 100)"
                           }
                         }
                       ]
@@ -3822,26 +2980,10 @@ const compositeAbilityObject = {
                         {
                           "name": "Set Battle Track Progress",
                           "progress": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || Variables[2] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || DIV || RETURN",
-                            "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1))",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_0040_CountSum",
-                              "#ADF_1",
-                              "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                            ]
+                            "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1))"
                           },
                           "count": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || Variables[2] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || DIV || Constants[0] (100) || MUL || RETURN",
-                            "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)) * 100)",
-                            "constants": [
-                              100
-                            ],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_0040_CountSum",
-                              "#ADF_1",
-                              "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                            ]
+                            "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)) * 100)"
                           }
                         }
                       ],
@@ -3849,24 +2991,10 @@ const compositeAbilityObject = {
                         {
                           "name": "Set Battle Track Progress",
                           "progress": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || DIV || RETURN",
-                            "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1)",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_0040_CountSum",
-                              "#ADF_1"
-                            ]
+                            "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1)"
                           },
                           "count": {
-                            "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || DIV || Constants[0] (100) || MUL || RETURN",
-                            "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1) * 100)",
-                            "constants": [
-                              100
-                            ],
-                            "variables": [
-                              "DV_FantasticStory_BaseAbility_0040_CountSum",
-                              "#ADF_1"
-                            ]
+                            "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1) * 100)"
                           }
                         }
                       ]
@@ -3876,12 +3004,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Variable Value Range Conditions",
                   "minValue": {
-                    "operator": "Variables[0] (DV_RangeGap_3) || RETURN",
-                    "displayLines": "DV_RangeGap_3",
-                    "constants": [],
-                    "variables": [
-                      "DV_RangeGap_3"
-                    ]
+                    "displayLines": "DV_RangeGap_3"
                   },
                   "maxValue": 1000000000,
                   "includeMaxValueInRange": true,
@@ -3926,28 +3049,13 @@ const compositeAbilityObject = {
                           "canHitNonTargets": true,
                           "valuePerStack": {
                             "TempHP_get": {
-                              "operator": "Variables[0] (TempHP) || RETURN",
-                              "displayLines": "TempHP",
-                              "constants": [],
-                              "variables": [
-                                "TempHP"
-                              ]
+                              "displayLines": "TempHP"
                             },
                             "ADF_2_get": {
-                              "operator": "Variables[0] (ADF_2) || RETURN",
-                              "displayLines": "ADF_2",
-                              "constants": [],
-                              "variables": [
-                                "ADF_2"
-                              ]
+                              "displayLines": "ADF_2"
                             },
                             "ADF_3_get": {
-                              "operator": "Variables[0] (ADF_3) || RETURN",
-                              "displayLines": "ADF_3",
-                              "constants": [],
-                              "variables": [
-                                "ADF_3"
-                              ]
+                              "displayLines": "ADF_3"
                             }
                           },
                           "allowAbilityTriggers": false
@@ -3989,12 +3097,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0036_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         }
@@ -4021,12 +3124,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0035_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         }
@@ -4053,12 +3151,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0034_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         },
@@ -4070,12 +3163,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0034_ADF_2",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_2) || RETURN",
-            "displayLines": "#ADF_2",
-            "constants": [],
-            "variables": [
-              "#ADF_2"
-            ]
+            "displayLines": "#ADF_2"
           },
           "scope": "ContextCaster"
         }
@@ -4102,12 +3190,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0033_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         }
@@ -4149,12 +3232,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0031_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         }
@@ -4193,13 +3271,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageFlat": {
-                  "operator": "Variables[0] (TempHP_get) || Variables[1] (ADF_2_get) || MUL || RETURN",
-                  "displayLines": "(TempHP_get * ADF_2_get)",
-                  "constants": [],
-                  "variables": [
-                    "TempHP_get",
-                    "ADF_2_get"
-                  ]
+                  "displayLines": "(TempHP_get * ADF_2_get)"
                 },
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
@@ -4239,15 +3311,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (ADF_2_get) || Constants[0] (1) || Variables[1] (DV_FantasticStory_PlusAbility_0034_ADF_2) || ADD || MUL || RETURN",
-                "displayLines": "(ADF_2_get * (1 + DV_FantasticStory_PlusAbility_0034_ADF_2))",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "ADF_2_get",
-                  "DV_FantasticStory_PlusAbility_0034_ADF_2"
-                ]
+                "displayLines": "(ADF_2_get * (1 + DV_FantasticStory_PlusAbility_0034_ADF_2))"
               },
               "variableName": "ADF_2_get"
             }
@@ -4274,13 +3338,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageFlat": {
-                  "operator": "Variables[0] (TempHP_get) || Variables[1] (ADF_2_get) || MUL || RETURN",
-                  "displayLines": "(TempHP_get * ADF_2_get)",
-                  "constants": [],
-                  "variables": [
-                    "TempHP_get",
-                    "ADF_2_get"
-                  ]
+                  "displayLines": "(TempHP_get * ADF_2_get)"
                 },
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
@@ -4308,12 +3366,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1329142430\">Modifier_FantasticStory_BaseAbility_0030_plus5_AddSP</a>",
               "valuePerStack": {
                 "_AddSP": {
-                  "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0035_ADF_1) || RETURN",
-                  "displayLines": "DV_FantasticStory_PlusAbility_0035_ADF_1",
-                  "constants": [],
-                  "variables": [
-                    "DV_FantasticStory_PlusAbility_0035_ADF_1"
-                  ]
+                  "displayLines": "DV_FantasticStory_PlusAbility_0035_ADF_1"
                 }
               },
               "casterAssign": "TargetSelf"
@@ -4337,28 +3390,14 @@ const compositeAbilityObject = {
             "value1": "DV_FantasticStory_BaseAbility_0030_DamageSum",
             "compareType": ">=",
             "value2": {
-              "operator": "Variables[0] (DV_RangeGap_3) || Constants[0] (2) || MUL || RETURN",
-              "displayLines": "(DV_RangeGap_3 * 2)",
-              "constants": [
-                2
-              ],
-              "variables": [
-                "DV_RangeGap_3"
-              ]
+              "displayLines": "(DV_RangeGap_3 * 2)"
             }
           },
           "passed": [
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (DV_RangeGap_3) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(DV_RangeGap_3 - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "DV_RangeGap_3"
-                ]
+                "displayLines": "(DV_RangeGap_3 - 1)"
               },
               "variableName": "DV_FantasticStory_BaseAbility_0030_DamageSum"
             }
@@ -4376,13 +3415,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0030_DamageSum) || Variables[1] (DV_RangeGap_3) || SUB || RETURN",
-                    "displayLines": "(DV_FantasticStory_BaseAbility_0030_DamageSum - DV_RangeGap_3)",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_BaseAbility_0030_DamageSum",
-                      "DV_RangeGap_3"
-                    ]
+                    "displayLines": "(DV_FantasticStory_BaseAbility_0030_DamageSum - DV_RangeGap_3)"
                   },
                   "variableName": "DV_FantasticStory_BaseAbility_0030_DamageSum"
                 }
@@ -4489,14 +3522,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (BattleEvent_BaseHP) || Constants[0] (90) || MUL || RETURN",
-            "displayLines": "(BattleEvent_BaseHP * 90)",
-            "constants": [
-              90
-            ],
-            "variables": [
-              "BattleEvent_BaseHP"
-            ]
+            "displayLines": "(BattleEvent_BaseHP * 90)"
           },
           "variableName": "BattleEvent_BaseHP"
         },
@@ -4526,15 +3552,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_RangeGap_1",
           "resetValue": {
-            "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (#ADF_1) || MUL || Constants[0] (0.33) || MUL || RETURN",
-            "displayLines": "((BattleEvent_BaseHP * #ADF_1) * 0.33)",
-            "constants": [
-              0.33
-            ],
-            "variables": [
-              "BattleEvent_BaseHP",
-              "#ADF_1"
-            ]
+            "displayLines": "((BattleEvent_BaseHP * #ADF_1) * 0.33)"
           },
           "scope": "ContextCaster"
         },
@@ -4546,15 +3564,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_RangeGap_2",
           "resetValue": {
-            "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (#ADF_1) || MUL || Constants[0] (0.67) || MUL || RETURN",
-            "displayLines": "((BattleEvent_BaseHP * #ADF_1) * 0.67)",
-            "constants": [
-              0.67
-            ],
-            "variables": [
-              "BattleEvent_BaseHP",
-              "#ADF_1"
-            ]
+            "displayLines": "((BattleEvent_BaseHP * #ADF_1) * 0.67)"
           },
           "scope": "ContextCaster"
         },
@@ -4566,13 +3576,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_RangeGap_3",
           "resetValue": {
-            "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (#ADF_1) || MUL || RETURN",
-            "displayLines": "(BattleEvent_BaseHP * #ADF_1)",
-            "constants": [],
-            "variables": [
-              "BattleEvent_BaseHP",
-              "#ADF_1"
-            ]
+            "displayLines": "(BattleEvent_BaseHP * #ADF_1)"
           },
           "scope": "ContextCaster"
         },
@@ -4585,28 +3589,13 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1973742977\">Modifier_FantasticStory_BaseAbility_0030</a>",
           "valuePerStack": {
             "ADF_1": {
-              "operator": "Variables[0] (#ADF_1) || RETURN",
-              "displayLines": "#ADF_1",
-              "constants": [],
-              "variables": [
-                "#ADF_1"
-              ]
+              "displayLines": "#ADF_1"
             },
             "ADF_2": {
-              "operator": "Variables[0] (#ADF_2) || RETURN",
-              "displayLines": "#ADF_2",
-              "constants": [],
-              "variables": [
-                "#ADF_2"
-              ]
+              "displayLines": "#ADF_2"
             },
             "TempHP": {
-              "operator": "Variables[0] (BattleEvent_BaseHP) || RETURN",
-              "displayLines": "BattleEvent_BaseHP",
-              "constants": [],
-              "variables": [
-                "BattleEvent_BaseHP"
-              ]
+              "displayLines": "BattleEvent_BaseHP"
             }
           }
         }
@@ -4691,14 +3680,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Constants[0] (1) || Variables[0] (DV_FantasticStory_PlusAbility_0034_InsertAtkCount) || ADD || RETURN",
-                                "displayLines": "(1 + DV_FantasticStory_PlusAbility_0034_InsertAtkCount)",
-                                "constants": [
-                                  1
-                                ],
-                                "variables": [
-                                  "DV_FantasticStory_PlusAbility_0034_InsertAtkCount"
-                                ]
+                                "displayLines": "(1 + DV_FantasticStory_PlusAbility_0034_InsertAtkCount)"
                               },
                               "variableName": "DV_FantasticStory_PlusAbility_0034_InsertAtkCount"
                             }
@@ -4718,13 +3700,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (_DamageSum) || Variables[1] (DV_FantasticStory_BaseAbility_0030_DamageSum) || ADD || RETURN",
-                            "displayLines": "(_DamageSum + DV_FantasticStory_BaseAbility_0030_DamageSum)",
-                            "constants": [],
-                            "variables": [
-                              "_DamageSum",
-                              "DV_FantasticStory_BaseAbility_0030_DamageSum"
-                            ]
+                            "displayLines": "(_DamageSum + DV_FantasticStory_BaseAbility_0030_DamageSum)"
                           },
                           "variableName": "DV_FantasticStory_BaseAbility_0030_DamageSum"
                         },
@@ -4932,20 +3908,10 @@ const compositeAbilityObject = {
                           "canHitNonTargets": true,
                           "valuePerStack": {
                             "TempHP_get": {
-                              "operator": "Variables[0] (TempHP) || RETURN",
-                              "displayLines": "TempHP",
-                              "constants": [],
-                              "variables": [
-                                "TempHP"
-                              ]
+                              "displayLines": "TempHP"
                             },
                             "ADF_2_get": {
-                              "operator": "Variables[0] (ADF_2) || RETURN",
-                              "displayLines": "ADF_2",
-                              "constants": [],
-                              "variables": [
-                                "ADF_2"
-                              ]
+                              "displayLines": "ADF_2"
                             }
                           },
                           "allowAbilityTriggers": false
@@ -5006,20 +3972,10 @@ const compositeAbilityObject = {
                           "canHitNonTargets": true,
                           "valuePerStack": {
                             "TempHP_get": {
-                              "operator": "Variables[0] (TempHP) || RETURN",
-                              "displayLines": "TempHP",
-                              "constants": [],
-                              "variables": [
-                                "TempHP"
-                              ]
+                              "displayLines": "TempHP"
                             },
                             "ADF_2_get": {
-                              "operator": "Variables[0] (ADF_2) || RETURN",
-                              "displayLines": "ADF_2",
-                              "constants": [],
-                              "variables": [
-                                "ADF_2"
-                              ]
+                              "displayLines": "ADF_2"
                             }
                           },
                           "allowAbilityTriggers": false
@@ -5059,12 +4015,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1083847243\">Modifier_FantasticStory_BaseAbility_0030_plus6_sub</a>",
                       "valuePerStack": {
                         "_DamageSumRatio": {
-                          "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0036_ADF_1) || RETURN",
-                          "displayLines": "DV_FantasticStory_PlusAbility_0036_ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_PlusAbility_0036_ADF_1"
-                          ]
+                          "displayLines": "DV_FantasticStory_PlusAbility_0036_ADF_1"
                         }
                       }
                     }
@@ -5135,20 +4086,10 @@ const compositeAbilityObject = {
                           "canHitNonTargets": true,
                           "valuePerStack": {
                             "TempHP_get": {
-                              "operator": "Variables[0] (TempHP) || RETURN",
-                              "displayLines": "TempHP",
-                              "constants": [],
-                              "variables": [
-                                "TempHP"
-                              ]
+                              "displayLines": "TempHP"
                             },
                             "ADF_2_get": {
-                              "operator": "Variables[0] (ADF_2) || RETURN",
-                              "displayLines": "ADF_2",
-                              "constants": [],
-                              "variables": [
-                                "ADF_2"
-                              ]
+                              "displayLines": "ADF_2"
                             }
                           },
                           "allowAbilityTriggers": false
@@ -5217,20 +4158,10 @@ const compositeAbilityObject = {
                           "canHitNonTargets": true,
                           "valuePerStack": {
                             "TempHP_get": {
-                              "operator": "Variables[0] (TempHP) || RETURN",
-                              "displayLines": "TempHP",
-                              "constants": [],
-                              "variables": [
-                                "TempHP"
-                              ]
+                              "displayLines": "TempHP"
                             },
                             "ADF_2_get": {
-                              "operator": "Variables[0] (ADF_2) || RETURN",
-                              "displayLines": "ADF_2",
-                              "constants": [],
-                              "variables": [
-                                "ADF_2"
-                              ]
+                              "displayLines": "ADF_2"
                             }
                           },
                           "allowAbilityTriggers": false
@@ -5347,12 +4278,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1083847243\">Modifier_FantasticStory_BaseAbility_0030_plus6_sub</a>",
                           "valuePerStack": {
                             "_DamageSumRatio": {
-                              "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0036_ADF_1) || RETURN",
-                              "displayLines": "DV_FantasticStory_PlusAbility_0036_ADF_1",
-                              "constants": [],
-                              "variables": [
-                                "DV_FantasticStory_PlusAbility_0036_ADF_1"
-                              ]
+                              "displayLines": "DV_FantasticStory_PlusAbility_0036_ADF_1"
                             }
                           }
                         }
@@ -5417,20 +4343,10 @@ const compositeAbilityObject = {
                           "canHitNonTargets": true,
                           "valuePerStack": {
                             "TempHP_get": {
-                              "operator": "Variables[0] (TempHP) || RETURN",
-                              "displayLines": "TempHP",
-                              "constants": [],
-                              "variables": [
-                                "TempHP"
-                              ]
+                              "displayLines": "TempHP"
                             },
                             "ADF_2_get": {
-                              "operator": "Variables[0] (ADF_2) || RETURN",
-                              "displayLines": "ADF_2",
-                              "constants": [],
-                              "variables": [
-                                "ADF_2"
-                              ]
+                              "displayLines": "ADF_2"
                             }
                           },
                           "allowAbilityTriggers": false
@@ -5491,20 +4407,10 @@ const compositeAbilityObject = {
                           "canHitNonTargets": true,
                           "valuePerStack": {
                             "TempHP_get": {
-                              "operator": "Variables[0] (TempHP) || RETURN",
-                              "displayLines": "TempHP",
-                              "constants": [],
-                              "variables": [
-                                "TempHP"
-                              ]
+                              "displayLines": "TempHP"
                             },
                             "ADF_2_get": {
-                              "operator": "Variables[0] (ADF_2) || RETURN",
-                              "displayLines": "ADF_2",
-                              "constants": [],
-                              "variables": [
-                                "ADF_2"
-                              ]
+                              "displayLines": "ADF_2"
                             }
                           },
                           "allowAbilityTriggers": false
@@ -5526,32 +4432,17 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 1,
                   "maxValue": {
-                    "operator": "Variables[0] (DV_RangeGap_1) || RETURN",
-                    "displayLines": "DV_RangeGap_1",
-                    "constants": [],
-                    "variables": [
-                      "DV_RangeGap_1"
-                    ]
+                    "displayLines": "DV_RangeGap_1"
                   },
                   "includeMaxValueInRange": true
                 },
                 {
                   "name": "Variable Value Range Conditions",
                   "minValue": {
-                    "operator": "Variables[0] (DV_RangeGap_1) || RETURN",
-                    "displayLines": "DV_RangeGap_1",
-                    "constants": [],
-                    "variables": [
-                      "DV_RangeGap_1"
-                    ]
+                    "displayLines": "DV_RangeGap_1"
                   },
                   "maxValue": {
-                    "operator": "Variables[0] (DV_RangeGap_2) || RETURN",
-                    "displayLines": "DV_RangeGap_2",
-                    "constants": [],
-                    "variables": [
-                      "DV_RangeGap_2"
-                    ]
+                    "displayLines": "DV_RangeGap_2"
                   },
                   "includeMaxValueInRange": true,
                   "enteringRange": [
@@ -5569,20 +4460,10 @@ const compositeAbilityObject = {
                 {
                   "name": "Variable Value Range Conditions",
                   "minValue": {
-                    "operator": "Variables[0] (DV_RangeGap_2) || RETURN",
-                    "displayLines": "DV_RangeGap_2",
-                    "constants": [],
-                    "variables": [
-                      "DV_RangeGap_2"
-                    ]
+                    "displayLines": "DV_RangeGap_2"
                   },
                   "maxValue": {
-                    "operator": "Variables[0] (DV_RangeGap_3) || RETURN",
-                    "displayLines": "DV_RangeGap_3",
-                    "constants": [],
-                    "variables": [
-                      "DV_RangeGap_3"
-                    ]
+                    "displayLines": "DV_RangeGap_3"
                   },
                   "includeMaxValueInRange": true,
                   "enteringRange": [
@@ -5600,12 +4481,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Variable Value Range Conditions",
                   "minValue": {
-                    "operator": "Variables[0] (DV_RangeGap_3) || RETURN",
-                    "displayLines": "DV_RangeGap_3",
-                    "constants": [],
-                    "variables": [
-                      "DV_RangeGap_3"
-                    ]
+                    "displayLines": "DV_RangeGap_3"
                   },
                   "maxValue": 1000000000,
                   "includeMaxValueInRange": true,
@@ -5645,20 +4521,10 @@ const compositeAbilityObject = {
                           "canHitNonTargets": true,
                           "valuePerStack": {
                             "TempHP_get": {
-                              "operator": "Variables[0] (TempHP) || RETURN",
-                              "displayLines": "TempHP",
-                              "constants": [],
-                              "variables": [
-                                "TempHP"
-                              ]
+                              "displayLines": "TempHP"
                             },
                             "ADF_2_get": {
-                              "operator": "Variables[0] (ADF_2) || RETURN",
-                              "displayLines": "ADF_2",
-                              "constants": [],
-                              "variables": [
-                                "ADF_2"
-                              ]
+                              "displayLines": "ADF_2"
                             }
                           },
                           "allowAbilityTriggers": false
@@ -5709,20 +4575,10 @@ const compositeAbilityObject = {
                               "canHitNonTargets": true,
                               "valuePerStack": {
                                 "TempHP_get": {
-                                  "operator": "Variables[0] (TempHP) || RETURN",
-                                  "displayLines": "TempHP",
-                                  "constants": [],
-                                  "variables": [
-                                    "TempHP"
-                                  ]
+                                  "displayLines": "TempHP"
                                 },
                                 "ADF_2_get": {
-                                  "operator": "Variables[0] (ADF_2) || RETURN",
-                                  "displayLines": "ADF_2",
-                                  "constants": [],
-                                  "variables": [
-                                    "ADF_2"
-                                  ]
+                                  "displayLines": "ADF_2"
                                 }
                               },
                               "allowAbilityTriggers": false
@@ -5798,20 +4654,10 @@ const compositeAbilityObject = {
                           "canHitNonTargets": true,
                           "valuePerStack": {
                             "TempHP_get": {
-                              "operator": "Variables[0] (TempHP) || RETURN",
-                              "displayLines": "TempHP",
-                              "constants": [],
-                              "variables": [
-                                "TempHP"
-                              ]
+                              "displayLines": "TempHP"
                             },
                             "ADF_2_get": {
-                              "operator": "Variables[0] (ADF_2) || RETURN",
-                              "displayLines": "ADF_2",
-                              "constants": [],
-                              "variables": [
-                                "ADF_2"
-                              ]
+                              "displayLines": "ADF_2"
                             }
                           },
                           "allowAbilityTriggers": false
@@ -5846,12 +4692,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0028_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         },
@@ -5863,12 +4704,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0028_ADF_2",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_2) || RETURN",
-            "displayLines": "#ADF_2",
-            "constants": [],
-            "variables": [
-              "#ADF_2"
-            ]
+            "displayLines": "#ADF_2"
           },
           "scope": "ContextCaster"
         },
@@ -5880,12 +4716,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0028_ADF_3",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_3) || RETURN",
-            "displayLines": "#ADF_3",
-            "constants": [],
-            "variables": [
-              "#ADF_3"
-            ]
+            "displayLines": "#ADF_3"
           },
           "scope": "ContextCaster"
         }
@@ -5912,12 +4743,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0027_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         },
@@ -5929,12 +4755,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0027_ADF_2",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_2) || RETURN",
-            "displayLines": "#ADF_2",
-            "constants": [],
-            "variables": [
-              "#ADF_2"
-            ]
+            "displayLines": "#ADF_2"
           },
           "scope": "ContextCaster"
         },
@@ -5946,12 +4767,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0027_ADF_3",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_3) || RETURN",
-            "displayLines": "#ADF_3",
-            "constants": [],
-            "variables": [
-              "#ADF_3"
-            ]
+            "displayLines": "#ADF_3"
           },
           "scope": "ContextCaster"
         },
@@ -5963,12 +4779,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0027_ADF_4",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_4) || RETURN",
-            "displayLines": "#ADF_4",
-            "constants": [],
-            "variables": [
-              "#ADF_4"
-            ]
+            "displayLines": "#ADF_4"
           },
           "scope": "ContextCaster"
         }
@@ -5995,12 +4806,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0026_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         },
@@ -6012,12 +4818,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0026_ADF_2",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_2) || RETURN",
-            "displayLines": "#ADF_2",
-            "constants": [],
-            "variables": [
-              "#ADF_2"
-            ]
+            "displayLines": "#ADF_2"
           },
           "scope": "ContextCaster"
         }
@@ -6044,12 +4845,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0025_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         },
@@ -6061,12 +4857,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0025_ADF_2",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_2) || RETURN",
-            "displayLines": "#ADF_2",
-            "constants": [],
-            "variables": [
-              "#ADF_2"
-            ]
+            "displayLines": "#ADF_2"
           },
           "scope": "ContextCaster"
         },
@@ -6078,12 +4869,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0025_ADF_3",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_3) || RETURN",
-            "displayLines": "#ADF_3",
-            "constants": [],
-            "variables": [
-              "#ADF_3"
-            ]
+            "displayLines": "#ADF_3"
           },
           "scope": "ContextCaster"
         },
@@ -6095,12 +4881,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0025_ADF_4",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_4) || RETURN",
-            "displayLines": "#ADF_4",
-            "constants": [],
-            "variables": [
-              "#ADF_4"
-            ]
+            "displayLines": "#ADF_4"
           },
           "scope": "ContextCaster"
         },
@@ -6112,12 +4893,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0025_ADF_5",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_5) || RETURN",
-            "displayLines": "#ADF_5",
-            "constants": [],
-            "variables": [
-              "#ADF_5"
-            ]
+            "displayLines": "#ADF_5"
           },
           "scope": "ContextCaster"
         }
@@ -6144,12 +4920,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0024_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         }
@@ -6176,12 +4947,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0023_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         },
@@ -6193,12 +4959,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0023_ADF_2",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_2) || RETURN",
-            "displayLines": "#ADF_2",
-            "constants": [],
-            "variables": [
-              "#ADF_2"
-            ]
+            "displayLines": "#ADF_2"
           },
           "scope": "ContextCaster"
         }
@@ -6225,12 +4986,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0022_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         },
@@ -6242,12 +4998,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0022_ADF_2",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_2) || RETURN",
-            "displayLines": "#ADF_2",
-            "constants": [],
-            "variables": [
-              "#ADF_2"
-            ]
+            "displayLines": "#ADF_2"
           },
           "scope": "ContextCaster"
         },
@@ -6259,12 +5010,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0022_ADF_3",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_3) || RETURN",
-            "displayLines": "#ADF_3",
-            "constants": [],
-            "variables": [
-              "#ADF_3"
-            ]
+            "displayLines": "#ADF_3"
           },
           "scope": "ContextCaster"
         }
@@ -6291,12 +5037,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0021_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         }
@@ -6403,14 +5144,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (BattleEvent_BaseHP) || Constants[0] (90) || MUL || RETURN",
-            "displayLines": "(BattleEvent_BaseHP * 90)",
-            "constants": [
-              90
-            ],
-            "variables": [
-              "BattleEvent_BaseHP"
-            ]
+            "displayLines": "(BattleEvent_BaseHP * 90)"
           },
           "variableName": "BattleEvent_BaseHP"
         },
@@ -6423,36 +5157,16 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1872930168\">Modifier_FantasticStory_BaseAbility_0020</a>",
           "valuePerStack": {
             "ADF_1": {
-              "operator": "Variables[0] (#ADF_1) || RETURN",
-              "displayLines": "#ADF_1",
-              "constants": [],
-              "variables": [
-                "#ADF_1"
-              ]
+              "displayLines": "#ADF_1"
             },
             "ADF_2": {
-              "operator": "Variables[0] (#ADF_2) || RETURN",
-              "displayLines": "#ADF_2",
-              "constants": [],
-              "variables": [
-                "#ADF_2"
-              ]
+              "displayLines": "#ADF_2"
             },
             "ADF_3": {
-              "operator": "Variables[0] (#ADF_3) || RETURN",
-              "displayLines": "#ADF_3",
-              "constants": [],
-              "variables": [
-                "#ADF_3"
-              ]
+              "displayLines": "#ADF_3"
             },
             "TempHP": {
-              "operator": "Variables[0] (BattleEvent_BaseHP) || RETURN",
-              "displayLines": "BattleEvent_BaseHP",
-              "constants": [],
-              "variables": [
-                "BattleEvent_BaseHP"
-              ]
+              "displayLines": "BattleEvent_BaseHP"
             }
           }
         }
@@ -6687,12 +5401,7 @@ const compositeAbilityObject = {
                               "variableName": "DOT_TriggerRatio",
                               "eventType": "DOT",
                               "value": {
-                                "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0028_ADF_3) || RETURN",
-                                "displayLines": "DV_FantasticStory_PlusAbility_0028_ADF_3",
-                                "constants": [],
-                                "variables": [
-                                  "DV_FantasticStory_PlusAbility_0028_ADF_3"
-                                ]
+                                "displayLines": "DV_FantasticStory_PlusAbility_0028_ADF_3"
                               }
                             }
                           ],
@@ -6948,12 +5657,7 @@ const compositeAbilityObject = {
                                   "variableName": "DOT_TriggerRatio",
                                   "eventType": "DOT",
                                   "value": {
-                                    "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0028_ADF_2) || RETURN",
-                                    "displayLines": "DV_FantasticStory_PlusAbility_0028_ADF_2",
-                                    "constants": [],
-                                    "variables": [
-                                      "DV_FantasticStory_PlusAbility_0028_ADF_2"
-                                    ]
+                                    "displayLines": "DV_FantasticStory_PlusAbility_0028_ADF_2"
                                   }
                                 }
                               ],
@@ -7135,12 +5839,7 @@ const compositeAbilityObject = {
                                       "variableName": "DOT_TriggerRatio",
                                       "eventType": "DOT",
                                       "value": {
-                                        "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0028_ADF_1) || RETURN",
-                                        "displayLines": "DV_FantasticStory_PlusAbility_0028_ADF_1",
-                                        "constants": [],
-                                        "variables": [
-                                          "DV_FantasticStory_PlusAbility_0028_ADF_1"
-                                        ]
+                                        "displayLines": "DV_FantasticStory_PlusAbility_0028_ADF_1"
                                       }
                                     }
                                   ]
@@ -7207,13 +5906,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "DamageFlat": {
-                      "operator": "Variables[0] (Modifier_Poison_Damage) || Variables[1] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
-                      "displayLines": "(Modifier_Poison_Damage * Modifier_Poison_PoisonLayer)",
-                      "constants": [],
-                      "variables": [
-                        "Modifier_Poison_Damage",
-                        "Modifier_Poison_PoisonLayer"
-                      ]
+                      "displayLines": "(Modifier_Poison_Damage * Modifier_Poison_PoisonLayer)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -7244,14 +5937,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "DamageFlat": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Poison_Damage) || MUL || Variables[2] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
-                      "displayLines": "((DOT_TriggerRatio * Modifier_Poison_Damage) * Modifier_Poison_PoisonLayer)",
-                      "constants": [],
-                      "variables": [
-                        "DOT_TriggerRatio",
-                        "Modifier_Poison_Damage",
-                        "Modifier_Poison_PoisonLayer"
-                      ]
+                      "displayLines": "((DOT_TriggerRatio * Modifier_Poison_Damage) * Modifier_Poison_PoisonLayer)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -7278,30 +5964,14 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1431018009\">Modifier_FantasticStory_BaseAbility_0020_sub6_dot</a>[<span class=\"descriptionNumberColor\">Gimmick</span>]",
                   "duration": {
-                    "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0027_ADF_4) || RETURN",
-                    "displayLines": "DV_FantasticStory_PlusAbility_0027_ADF_4",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_PlusAbility_0027_ADF_4"
-                    ]
+                    "displayLines": "DV_FantasticStory_PlusAbility_0027_ADF_4"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0027_ADF_3) || RETURN",
-                    "displayLines": "DV_FantasticStory_PlusAbility_0027_ADF_3",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_PlusAbility_0027_ADF_3"
-                    ]
+                    "displayLines": "DV_FantasticStory_PlusAbility_0027_ADF_3"
                   },
                   "valuePerStack": {
                     "Modifier_Poison_Damage": {
-                      "operator": "Variables[0] (TempHP_get) || Variables[1] (DV_FantasticStory_PlusAbility_0027_ADF_2) || MUL || RETURN",
-                      "displayLines": "(TempHP_get * DV_FantasticStory_PlusAbility_0027_ADF_2)",
-                      "constants": [],
-                      "variables": [
-                        "TempHP_get",
-                        "DV_FantasticStory_PlusAbility_0027_ADF_2"
-                      ]
+                      "displayLines": "(TempHP_get * DV_FantasticStory_PlusAbility_0027_ADF_2)"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -7329,12 +5999,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0027_ADF_1) || RETURN",
-                    "displayLines": "DV_FantasticStory_PlusAbility_0027_ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_PlusAbility_0027_ADF_1"
-                    ]
+                    "displayLines": "DV_FantasticStory_PlusAbility_0027_ADF_1"
                   }
                 }
               ]
@@ -7361,12 +6026,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (DmgAddedRatio) || RETURN",
-                    "displayLines": "DmgAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "DmgAddedRatio"
-                    ]
+                    "displayLines": "DmgAddedRatio"
                   }
                 },
                 {
@@ -7377,12 +6037,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (SpdAddedRatio) || RETURN",
-                    "displayLines": "SpdAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "SpdAddedRatio"
-                    ]
+                    "displayLines": "SpdAddedRatio"
                   }
                 }
               ]
@@ -7431,13 +6086,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "DamageFlat": {
-                      "operator": "Variables[0] (Modifier_Poison_Damage) || Variables[1] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
-                      "displayLines": "(Modifier_Poison_Damage * Modifier_Poison_PoisonLayer)",
-                      "constants": [],
-                      "variables": [
-                        "Modifier_Poison_Damage",
-                        "Modifier_Poison_PoisonLayer"
-                      ]
+                      "displayLines": "(Modifier_Poison_Damage * Modifier_Poison_PoisonLayer)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -7468,14 +6117,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "DamageFlat": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Poison_Damage) || MUL || Variables[2] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
-                      "displayLines": "((DOT_TriggerRatio * Modifier_Poison_Damage) * Modifier_Poison_PoisonLayer)",
-                      "constants": [],
-                      "variables": [
-                        "DOT_TriggerRatio",
-                        "Modifier_Poison_Damage",
-                        "Modifier_Poison_PoisonLayer"
-                      ]
+                      "displayLines": "((DOT_TriggerRatio * Modifier_Poison_Damage) * Modifier_Poison_PoisonLayer)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -7502,30 +6144,14 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-19171630\">Modifier_FantasticStory_BaseAbility_0020_sub3_dot</a>[<span class=\"descriptionNumberColor\">Argument</span>]",
                   "duration": {
-                    "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0025_ADF_5) || RETURN",
-                    "displayLines": "DV_FantasticStory_PlusAbility_0025_ADF_5",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_PlusAbility_0025_ADF_5"
-                    ]
+                    "displayLines": "DV_FantasticStory_PlusAbility_0025_ADF_5"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0025_ADF_4) || RETURN",
-                    "displayLines": "DV_FantasticStory_PlusAbility_0025_ADF_4",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_PlusAbility_0025_ADF_4"
-                    ]
+                    "displayLines": "DV_FantasticStory_PlusAbility_0025_ADF_4"
                   },
                   "valuePerStack": {
                     "Modifier_Poison_Damage": {
-                      "operator": "Variables[0] (TempHP_get) || Variables[1] (DV_FantasticStory_PlusAbility_0025_ADF_3) || MUL || RETURN",
-                      "displayLines": "(TempHP_get * DV_FantasticStory_PlusAbility_0025_ADF_3)",
-                      "constants": [],
-                      "variables": [
-                        "TempHP_get",
-                        "DV_FantasticStory_PlusAbility_0025_ADF_3"
-                      ]
+                      "displayLines": "(TempHP_get * DV_FantasticStory_PlusAbility_0025_ADF_3)"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -7543,30 +6169,14 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-19171630\">Modifier_FantasticStory_BaseAbility_0020_sub3_dot</a>[<span class=\"descriptionNumberColor\">Argument</span>]",
                   "duration": {
-                    "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0025_ADF_5) || RETURN",
-                    "displayLines": "DV_FantasticStory_PlusAbility_0025_ADF_5",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_PlusAbility_0025_ADF_5"
-                    ]
+                    "displayLines": "DV_FantasticStory_PlusAbility_0025_ADF_5"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0025_ADF_4) || RETURN",
-                    "displayLines": "DV_FantasticStory_PlusAbility_0025_ADF_4",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_PlusAbility_0025_ADF_4"
-                    ]
+                    "displayLines": "DV_FantasticStory_PlusAbility_0025_ADF_4"
                   },
                   "valuePerStack": {
                     "Modifier_Poison_Damage": {
-                      "operator": "Variables[0] (TempHP_get) || Variables[1] (DV_FantasticStory_PlusAbility_0025_ADF_3) || MUL || RETURN",
-                      "displayLines": "(TempHP_get * DV_FantasticStory_PlusAbility_0025_ADF_3)",
-                      "constants": [],
-                      "variables": [
-                        "TempHP_get",
-                        "DV_FantasticStory_PlusAbility_0025_ADF_3"
-                      ]
+                      "displayLines": "(TempHP_get * DV_FantasticStory_PlusAbility_0025_ADF_3)"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -7617,13 +6227,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "DamageFlat": {
-                      "operator": "Variables[0] (Modifier_Poison_Damage) || Variables[1] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
-                      "displayLines": "(Modifier_Poison_Damage * Modifier_Poison_PoisonLayer)",
-                      "constants": [],
-                      "variables": [
-                        "Modifier_Poison_Damage",
-                        "Modifier_Poison_PoisonLayer"
-                      ]
+                      "displayLines": "(Modifier_Poison_Damage * Modifier_Poison_PoisonLayer)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -7654,14 +6258,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "DamageFlat": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Poison_Damage) || MUL || Variables[2] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
-                      "displayLines": "((DOT_TriggerRatio * Modifier_Poison_Damage) * Modifier_Poison_PoisonLayer)",
-                      "constants": [],
-                      "variables": [
-                        "DOT_TriggerRatio",
-                        "Modifier_Poison_Damage",
-                        "Modifier_Poison_PoisonLayer"
-                      ]
+                      "displayLines": "((DOT_TriggerRatio * Modifier_Poison_Damage) * Modifier_Poison_PoisonLayer)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -7688,23 +6285,12 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1561743765\">Modifier_FantasticStory_BaseAbility_0020_sub2_dot</a>[<span class=\"descriptionNumberColor\">Rumor</span>]",
                   "duration": {
-                    "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0022_ADF_3) || RETURN",
-                    "displayLines": "DV_FantasticStory_PlusAbility_0022_ADF_3",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_PlusAbility_0022_ADF_3"
-                    ]
+                    "displayLines": "DV_FantasticStory_PlusAbility_0022_ADF_3"
                   },
                   "stackLimit": 5,
                   "valuePerStack": {
                     "Modifier_Poison_Damage": {
-                      "operator": "Variables[0] (TempHP_get) || Variables[1] (DV_FantasticStory_PlusAbility_0022_ADF_1) || MUL || RETURN",
-                      "displayLines": "(TempHP_get * DV_FantasticStory_PlusAbility_0022_ADF_1)",
-                      "constants": [],
-                      "variables": [
-                        "TempHP_get",
-                        "DV_FantasticStory_PlusAbility_0022_ADF_1"
-                      ]
+                      "displayLines": "(TempHP_get * DV_FantasticStory_PlusAbility_0022_ADF_1)"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -7830,12 +6416,7 @@ const compositeAbilityObject = {
                               },
                               "selfSplit": 1,
                               "targetSplit": {
-                                "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0021_ADF_1 ) || RETURN",
-                                "displayLines": "DV_FantasticStory_PlusAbility_0021_ADF_1 ",
-                                "constants": [],
-                                "variables": [
-                                  "DV_FantasticStory_PlusAbility_0021_ADF_1 "
-                                ]
+                                "displayLines": "DV_FantasticStory_PlusAbility_0021_ADF_1 "
                               }
                             }
                           ]
@@ -7873,12 +6454,7 @@ const compositeAbilityObject = {
                               },
                               "selfSplit": 1,
                               "targetSplit": {
-                                "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0021_ADF_1 ) || RETURN",
-                                "displayLines": "DV_FantasticStory_PlusAbility_0021_ADF_1 ",
-                                "constants": [],
-                                "variables": [
-                                  "DV_FantasticStory_PlusAbility_0021_ADF_1 "
-                                ]
+                                "displayLines": "DV_FantasticStory_PlusAbility_0021_ADF_1 "
                               }
                             }
                           ]
@@ -7916,12 +6492,7 @@ const compositeAbilityObject = {
                               },
                               "selfSplit": 1,
                               "targetSplit": {
-                                "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0021_ADF_1 ) || RETURN",
-                                "displayLines": "DV_FantasticStory_PlusAbility_0021_ADF_1 ",
-                                "constants": [],
-                                "variables": [
-                                  "DV_FantasticStory_PlusAbility_0021_ADF_1 "
-                                ]
+                                "displayLines": "DV_FantasticStory_PlusAbility_0021_ADF_1 "
                               }
                             }
                           ]
@@ -7959,12 +6530,7 @@ const compositeAbilityObject = {
                               },
                               "selfSplit": 1,
                               "targetSplit": {
-                                "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0021_ADF_1 ) || RETURN",
-                                "displayLines": "DV_FantasticStory_PlusAbility_0021_ADF_1 ",
-                                "constants": [],
-                                "variables": [
-                                  "DV_FantasticStory_PlusAbility_0021_ADF_1 "
-                                ]
+                                "displayLines": "DV_FantasticStory_PlusAbility_0021_ADF_1 "
                               }
                             }
                           ]
@@ -8027,12 +6593,7 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "healPercent": {
-                            "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0023_ADF_1) || RETURN",
-                            "displayLines": "DV_FantasticStory_PlusAbility_0023_ADF_1",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_PlusAbility_0023_ADF_1"
-                            ]
+                            "displayLines": "DV_FantasticStory_PlusAbility_0023_ADF_1"
                           },
                           "formula": "Heal from Target MaxHP"
                         },
@@ -8095,12 +6656,7 @@ const compositeAbilityObject = {
                             "STAT_DOT"
                           ],
                           "chance": {
-                            "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0024_ADF_1) || RETURN",
-                            "displayLines": "DV_FantasticStory_PlusAbility_0024_ADF_1",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_PlusAbility_0024_ADF_1"
-                            ]
+                            "displayLines": "DV_FantasticStory_PlusAbility_0024_ADF_1"
                           }
                         }
                       ]
@@ -8186,14 +6742,7 @@ const compositeAbilityObject = {
             "delayAdvancePreview": {
               "name": "Delay/Advance Preview",
               "previewValue": {
-                "operator": "Constants[0] (0) || Variables[0] (ADF_3_get) || SUB || RETURN",
-                "displayLines": "(0 - ADF_3_get)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "ADF_3_get"
-                ]
+                "displayLines": "(0 - ADF_3_get)"
               }
             }
           }
@@ -8231,36 +6780,16 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"444006453\">Modifier_FantasticStory_BaseAbility_0020_sub</a>",
                   "valuePerStack": {
                     "TempHP_get": {
-                      "operator": "Variables[0] (TempHP) || RETURN",
-                      "displayLines": "TempHP",
-                      "constants": [],
-                      "variables": [
-                        "TempHP"
-                      ]
+                      "displayLines": "TempHP"
                     },
                     "ADF_1_get": {
-                      "operator": "Variables[0] (ADF_1) || RETURN",
-                      "displayLines": "ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "ADF_1"
-                      ]
+                      "displayLines": "ADF_1"
                     },
                     "ADF_2_get": {
-                      "operator": "Variables[0] (ADF_2) || RETURN",
-                      "displayLines": "ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "ADF_2"
-                      ]
+                      "displayLines": "ADF_2"
                     },
                     "ADF_3_get": {
-                      "operator": "Variables[0] (ADF_3) || RETURN",
-                      "displayLines": "ADF_3",
-                      "constants": [],
-                      "variables": [
-                        "ADF_3"
-                      ]
+                      "displayLines": "ADF_3"
                     }
                   }
                 }
@@ -8289,36 +6818,16 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"444006453\">Modifier_FantasticStory_BaseAbility_0020_sub</a>",
                       "valuePerStack": {
                         "TempHP_get": {
-                          "operator": "Variables[0] (TempHP) || RETURN",
-                          "displayLines": "TempHP",
-                          "constants": [],
-                          "variables": [
-                            "TempHP"
-                          ]
+                          "displayLines": "TempHP"
                         },
                         "ADF_1_get": {
-                          "operator": "Variables[0] (ADF_1) || RETURN",
-                          "displayLines": "ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "ADF_1"
-                          ]
+                          "displayLines": "ADF_1"
                         },
                         "ADF_2_get": {
-                          "operator": "Variables[0] (ADF_2) || RETURN",
-                          "displayLines": "ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "ADF_2"
-                          ]
+                          "displayLines": "ADF_2"
                         },
                         "ADF_3_get": {
-                          "operator": "Variables[0] (ADF_3) || RETURN",
-                          "displayLines": "ADF_3",
-                          "constants": [],
-                          "variables": [
-                            "ADF_3"
-                          ]
+                          "displayLines": "ADF_3"
                         }
                       }
                     },
@@ -8341,12 +6850,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1353381518\">Modifier_FantasticStory_BaseAbility_0020_sub3</a>",
                           "valuePerStack": {
                             "TempHP_get": {
-                              "operator": "Variables[0] (TempHP) || RETURN",
-                              "displayLines": "TempHP",
-                              "constants": [],
-                              "variables": [
-                                "TempHP"
-                              ]
+                              "displayLines": "TempHP"
                             }
                           }
                         }
@@ -8394,12 +6898,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-769619478\">Modifier_FantasticStory_BaseAbility_0020_sub_preshow</a>",
                       "valuePerStack": {
                         "ADF_3_get": {
-                          "operator": "Variables[0] (ADF_3) || RETURN",
-                          "displayLines": "ADF_3",
-                          "constants": [],
-                          "variables": [
-                            "ADF_3"
-                          ]
+                          "displayLines": "ADF_3"
                         }
                       }
                     },
@@ -8430,12 +6929,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1403714375\">Modifier_FantasticStory_BaseAbility_0020_sub6</a>",
                           "valuePerStack": {
                             "TempHP_get": {
-                              "operator": "Variables[0] (TempHP) || RETURN",
-                              "displayLines": "TempHP",
-                              "constants": [],
-                              "variables": [
-                                "TempHP"
-                              ]
+                              "displayLines": "TempHP"
                             }
                           }
                         }
@@ -8493,12 +6987,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1336603899\">Modifier_FantasticStory_BaseAbility_0020_sub2</a>",
                           "valuePerStack": {
                             "TempHP_get": {
-                              "operator": "Variables[0] (TempHP) || RETURN",
-                              "displayLines": "TempHP",
-                              "constants": [],
-                              "variables": [
-                                "TempHP"
-                              ]
+                              "displayLines": "TempHP"
                             }
                           }
                         }
@@ -8550,20 +7039,10 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1437269613\">Modifier_FantasticStory_BaseAbility_0020_sub4</a>[<span class=\"descriptionNumberColor\">Verification</span>]",
                           "valuePerStack": {
                             "DmgAddedRatio": {
-                              "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0026_ADF_1) || RETURN",
-                              "displayLines": "DV_FantasticStory_PlusAbility_0026_ADF_1",
-                              "constants": [],
-                              "variables": [
-                                "DV_FantasticStory_PlusAbility_0026_ADF_1"
-                              ]
+                              "displayLines": "DV_FantasticStory_PlusAbility_0026_ADF_1"
                             },
                             "SpdAddedRatio": {
-                              "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0026_ADF_2) || RETURN",
-                              "displayLines": "DV_FantasticStory_PlusAbility_0026_ADF_2",
-                              "constants": [],
-                              "variables": [
-                                "DV_FantasticStory_PlusAbility_0026_ADF_2"
-                              ]
+                              "displayLines": "DV_FantasticStory_PlusAbility_0026_ADF_2"
                             }
                           }
                         }
@@ -8596,12 +7075,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-769619478\">Modifier_FantasticStory_BaseAbility_0020_sub_preshow</a>",
                   "valuePerStack": {
                     "ADF_3_get": {
-                      "operator": "Variables[0] (ADF_3) || RETURN",
-                      "displayLines": "ADF_3",
-                      "constants": [],
-                      "variables": [
-                        "ADF_3"
-                      ]
+                      "displayLines": "ADF_3"
                     }
                   }
                 },
@@ -8624,12 +7098,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1336603899\">Modifier_FantasticStory_BaseAbility_0020_sub2</a>",
                       "valuePerStack": {
                         "TempHP_get": {
-                          "operator": "Variables[0] (TempHP) || RETURN",
-                          "displayLines": "TempHP",
-                          "constants": [],
-                          "variables": [
-                            "TempHP"
-                          ]
+                          "displayLines": "TempHP"
                         }
                       }
                     }
@@ -8654,12 +7123,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1353381518\">Modifier_FantasticStory_BaseAbility_0020_sub3</a>",
                       "valuePerStack": {
                         "TempHP_get": {
-                          "operator": "Variables[0] (TempHP) || RETURN",
-                          "displayLines": "TempHP",
-                          "constants": [],
-                          "variables": [
-                            "TempHP"
-                          ]
+                          "displayLines": "TempHP"
                         }
                       }
                     }
@@ -8707,14 +7171,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (DV_Plus6_WarlockCount) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(DV_Plus6_WarlockCount + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "DV_Plus6_WarlockCount"
-                            ]
+                            "displayLines": "(DV_Plus6_WarlockCount + 1)"
                           },
                           "variableName": "DV_Plus6_WarlockCount"
                         }
@@ -8738,20 +7195,10 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1437269613\">Modifier_FantasticStory_BaseAbility_0020_sub4</a>[<span class=\"descriptionNumberColor\">Verification</span>]",
                           "valuePerStack": {
                             "DmgAddedRatio": {
-                              "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0026_ADF_1) || RETURN",
-                              "displayLines": "DV_FantasticStory_PlusAbility_0026_ADF_1",
-                              "constants": [],
-                              "variables": [
-                                "DV_FantasticStory_PlusAbility_0026_ADF_1"
-                              ]
+                              "displayLines": "DV_FantasticStory_PlusAbility_0026_ADF_1"
                             },
                             "SpdAddedRatio": {
-                              "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0026_ADF_2) || RETURN",
-                              "displayLines": "DV_FantasticStory_PlusAbility_0026_ADF_2",
-                              "constants": [],
-                              "variables": [
-                                "DV_FantasticStory_PlusAbility_0026_ADF_2"
-                              ]
+                              "displayLines": "DV_FantasticStory_PlusAbility_0026_ADF_2"
                             }
                           }
                         }
@@ -8786,12 +7233,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1403714375\">Modifier_FantasticStory_BaseAbility_0020_sub6</a>",
                       "valuePerStack": {
                         "TempHP_get": {
-                          "operator": "Variables[0] (TempHP) || RETURN",
-                          "displayLines": "TempHP",
-                          "constants": [],
-                          "variables": [
-                            "TempHP"
-                          ]
+                          "displayLines": "TempHP"
                         }
                       }
                     },
@@ -8851,12 +7293,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0018_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         }
@@ -8883,12 +7320,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0017_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         }
@@ -8915,12 +7347,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0016_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         },
@@ -8932,12 +7359,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0016_ADF_2",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_2) || RETURN",
-            "displayLines": "#ADF_2",
-            "constants": [],
-            "variables": [
-              "#ADF_2"
-            ]
+            "displayLines": "#ADF_2"
           },
           "scope": "ContextCaster"
         },
@@ -8949,12 +7371,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0016_ADF_3",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_3) || RETURN",
-            "displayLines": "#ADF_3",
-            "constants": [],
-            "variables": [
-              "#ADF_3"
-            ]
+            "displayLines": "#ADF_3"
           },
           "scope": "ContextCaster"
         }
@@ -8981,12 +7398,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0015_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         },
@@ -8998,12 +7410,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0015_ADF_2",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_2) || RETURN",
-            "displayLines": "#ADF_2",
-            "constants": [],
-            "variables": [
-              "#ADF_2"
-            ]
+            "displayLines": "#ADF_2"
           },
           "scope": "ContextCaster"
         }
@@ -9030,12 +7437,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0014_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         }
@@ -9062,12 +7464,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0013_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         },
@@ -9079,12 +7476,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0013_ADF_2",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_2) || RETURN",
-            "displayLines": "#ADF_2",
-            "constants": [],
-            "variables": [
-              "#ADF_2"
-            ]
+            "displayLines": "#ADF_2"
           },
           "scope": "ContextCaster"
         }
@@ -9111,12 +7503,7 @@ const compositeAbilityObject = {
           },
           "variableName": "DV_FantasticStory_PlusAbility_0012_ADF_1",
           "resetValue": {
-            "operator": "Variables[0] (#ADF_1) || RETURN",
-            "displayLines": "#ADF_1",
-            "constants": [],
-            "variables": [
-              "#ADF_1"
-            ]
+            "displayLines": "#ADF_1"
           },
           "scope": "ContextCaster"
         }
@@ -9185,16 +7572,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Bomb_Damage_get) || Constants[0] (1) || Variables[1] (Plus5_Layer) || Variables[2] (DV_plus5_ADF_1_get) || MUL || ADD || MUL || RETURN",
-                "displayLines": "(Bomb_Damage_get * (1 + (Plus5_Layer * DV_plus5_ADF_1_get)))",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "Bomb_Damage_get",
-                  "Plus5_Layer",
-                  "DV_plus5_ADF_1_get"
-                ]
+                "displayLines": "(Bomb_Damage_get * (1 + (Plus5_Layer * DV_plus5_ADF_1_get)))"
               },
               "variableName": "Plus5_Bomb_Damage"
             },
@@ -9208,12 +7586,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageFlat": {
-                  "operator": "Variables[0] (Plus5_Bomb_Damage) || RETURN",
-                  "displayLines": "Plus5_Bomb_Damage",
-                  "constants": [],
-                  "variables": [
-                    "Plus5_Bomb_Damage"
-                  ]
+                  "displayLines": "Plus5_Bomb_Damage"
                 },
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
@@ -9264,16 +7637,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Bomb_Damage_get) || Constants[0] (1) || Variables[1] (Plus5_Layer) || Variables[2] (DV_plus5_ADF_1_get) || MUL || ADD || MUL || RETURN",
-                    "displayLines": "(Bomb_Damage_get * (1 + (Plus5_Layer * DV_plus5_ADF_1_get)))",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Bomb_Damage_get",
-                      "Plus5_Layer",
-                      "DV_plus5_ADF_1_get"
-                    ]
+                    "displayLines": "(Bomb_Damage_get * (1 + (Plus5_Layer * DV_plus5_ADF_1_get)))"
                   },
                   "variableName": "Plus5_Bomb_Damage"
                 },
@@ -9287,12 +7651,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "DamageFlat": {
-                      "operator": "Variables[0] (Plus5_Bomb_Damage) || RETURN",
-                      "displayLines": "Plus5_Bomb_Damage",
-                      "constants": [],
-                      "variables": [
-                        "Plus5_Bomb_Damage"
-                      ]
+                      "displayLines": "Plus5_Bomb_Damage"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -9323,15 +7682,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "DamageFlat": {
-                      "operator": "Variables[0] (Bomb_Damage_get) || Constants[0] (1) || Variables[1] (DV_plus7_ADF_1_get) || ADD || MUL || RETURN",
-                      "displayLines": "(Bomb_Damage_get * (1 + DV_plus7_ADF_1_get))",
-                      "constants": [
-                        1
-                      ],
-                      "variables": [
-                        "Bomb_Damage_get",
-                        "DV_plus7_ADF_1_get"
-                      ]
+                      "displayLines": "(Bomb_Damage_get * (1 + DV_plus7_ADF_1_get))"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -9351,12 +7702,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "DamageFlat": {
-                      "operator": "Variables[0] (Bomb_Damage_get) || RETURN",
-                      "displayLines": "Bomb_Damage_get",
-                      "constants": [],
-                      "variables": [
-                        "Bomb_Damage_get"
-                      ]
+                      "displayLines": "Bomb_Damage_get"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -9466,14 +7812,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (BattleEvent_BaseHP) || Constants[0] (90) || MUL || RETURN",
-            "displayLines": "(BattleEvent_BaseHP * 90)",
-            "constants": [
-              90
-            ],
-            "variables": [
-              "BattleEvent_BaseHP"
-            ]
+            "displayLines": "(BattleEvent_BaseHP * 90)"
           },
           "variableName": "BattleEvent_BaseHP"
         },
@@ -9486,28 +7825,13 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-508947277\">Modifier_FantasticStory_BaseAbility_0010</a>",
           "valuePerStack": {
             "ADF_1": {
-              "operator": "Variables[0] (#ADF_1) || RETURN",
-              "displayLines": "#ADF_1",
-              "constants": [],
-              "variables": [
-                "#ADF_1"
-              ]
+              "displayLines": "#ADF_1"
             },
             "ADF_2": {
-              "operator": "Variables[0] (#ADF_2) || RETURN",
-              "displayLines": "#ADF_2",
-              "constants": [],
-              "variables": [
-                "#ADF_2"
-              ]
+              "displayLines": "#ADF_2"
             },
             "TempHP": {
-              "operator": "Variables[0] (BattleEvent_BaseHP) || RETURN",
-              "displayLines": "BattleEvent_BaseHP",
-              "constants": [],
-              "variables": [
-                "BattleEvent_BaseHP"
-              ]
+              "displayLines": "BattleEvent_BaseHP"
             }
           }
         }
@@ -9533,12 +7857,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (DmgAddedRatio) || RETURN",
-                    "displayLines": "DmgAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "DmgAddedRatio"
-                    ]
+                    "displayLines": "DmgAddedRatio"
                   }
                 }
               ]
@@ -9594,13 +7913,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0013_layer) || Variables[1] (DmgAddedRatio) || MUL || RETURN",
-                    "displayLines": "(DV_FantasticStory_PlusAbility_0013_layer * DmgAddedRatio)",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_PlusAbility_0013_layer",
-                      "DmgAddedRatio"
-                    ]
+                    "displayLines": "(DV_FantasticStory_PlusAbility_0013_layer * DmgAddedRatio)"
                   },
                   "variableName": "DV_FantasticStory_PlusAbility_0013_layerDmg"
                 }
@@ -9655,16 +7968,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (Bomb_Damage) || Constants[0] (1) || Variables[1] (Plus5_Layer) || Variables[2] (DV_FantasticStory_PlusAbility_0015_ADF_1) || MUL || ADD || MUL || RETURN",
-                        "displayLines": "(Bomb_Damage * (1 + (Plus5_Layer * DV_FantasticStory_PlusAbility_0015_ADF_1)))",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Bomb_Damage",
-                          "Plus5_Layer",
-                          "DV_FantasticStory_PlusAbility_0015_ADF_1"
-                        ]
+                        "displayLines": "(Bomb_Damage * (1 + (Plus5_Layer * DV_FantasticStory_PlusAbility_0015_ADF_1)))"
                       },
                       "variableName": "Plus5_Bomb_Damage"
                     },
@@ -9678,12 +7982,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Physical",
                         "DamageFlat": {
-                          "operator": "Variables[0] (Plus5_Bomb_Damage) || RETURN",
-                          "displayLines": "Plus5_Bomb_Damage",
-                          "constants": [],
-                          "variables": [
-                            "Plus5_Bomb_Damage"
-                          ]
+                          "displayLines": "Plus5_Bomb_Damage"
                         },
                         "dmgFormulaFinal": "Converted DMG Base",
                         "Toughness": null,
@@ -9734,16 +8033,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (Bomb_Damage) || Constants[0] (1) || Variables[1] (Plus5_Layer) || Variables[2] (DV_FantasticStory_PlusAbility_0015_ADF_1) || MUL || ADD || MUL || RETURN",
-                            "displayLines": "(Bomb_Damage * (1 + (Plus5_Layer * DV_FantasticStory_PlusAbility_0015_ADF_1)))",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Bomb_Damage",
-                              "Plus5_Layer",
-                              "DV_FantasticStory_PlusAbility_0015_ADF_1"
-                            ]
+                            "displayLines": "(Bomb_Damage * (1 + (Plus5_Layer * DV_FantasticStory_PlusAbility_0015_ADF_1)))"
                           },
                           "variableName": "Plus5_Bomb_Damage"
                         },
@@ -9757,12 +8047,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "DamageFlat": {
-                              "operator": "Variables[0] (Plus5_Bomb_Damage) || RETURN",
-                              "displayLines": "Plus5_Bomb_Damage",
-                              "constants": [],
-                              "variables": [
-                                "Plus5_Bomb_Damage"
-                              ]
+                              "displayLines": "Plus5_Bomb_Damage"
                             },
                             "dmgFormulaFinal": "Converted DMG Base",
                             "Toughness": null,
@@ -9794,15 +8079,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "DamageFlat": {
-                              "operator": "Variables[0] (Bomb_Damage) || Constants[0] (1) || Variables[1] (DV_FantasticStory_PlusAbility_0017_ADF_1) || ADD || MUL || RETURN",
-                              "displayLines": "(Bomb_Damage * (1 + DV_FantasticStory_PlusAbility_0017_ADF_1))",
-                              "constants": [
-                                1
-                              ],
-                              "variables": [
-                                "Bomb_Damage",
-                                "DV_FantasticStory_PlusAbility_0017_ADF_1"
-                              ]
+                              "displayLines": "(Bomb_Damage * (1 + DV_FantasticStory_PlusAbility_0017_ADF_1))"
                             },
                             "dmgFormulaFinal": "Converted DMG Base",
                             "Toughness": null,
@@ -9818,29 +8095,14 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"897813244\">Modifier_FantasticStory_BaseAbility_0010_sub2</a>[<span class=\"descriptionNumberColor\">Shatter</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (Bomb_MaxLayer) || RETURN",
-                            "displayLines": "Bomb_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "Bomb_MaxLayer"
-                            ]
+                            "displayLines": "Bomb_MaxLayer"
                           },
                           "valuePerStack": {
                             "Bomb_Damage": {
-                              "operator": "Variables[0] (Bomb_Damage_Initial) || RETURN",
-                              "displayLines": "Bomb_Damage_Initial",
-                              "constants": [],
-                              "variables": [
-                                "Bomb_Damage_Initial"
-                              ]
+                              "displayLines": "Bomb_Damage_Initial"
                             },
                             "Bomb_MaxLayer": {
-                              "operator": "Variables[0] (Bomb_MaxLayer) || RETURN",
-                              "displayLines": "Bomb_MaxLayer",
-                              "constants": [],
-                              "variables": [
-                                "Bomb_MaxLayer"
-                              ]
+                              "displayLines": "Bomb_MaxLayer"
                             }
                           },
                           "addStacksPerTrigger": 1
@@ -9857,12 +8119,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "DamageFlat": {
-                              "operator": "Variables[0] (Bomb_Damage) || RETURN",
-                              "displayLines": "Bomb_Damage",
-                              "constants": [],
-                              "variables": [
-                                "Bomb_Damage"
-                              ]
+                              "displayLines": "Bomb_Damage"
                             },
                             "dmgFormulaFinal": "Converted DMG Base",
                             "Toughness": null,
@@ -9893,25 +8150,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Bomb_Damage) || RETURN",
-                    "displayLines": "Bomb_Damage",
-                    "constants": [],
-                    "variables": [
-                      "Bomb_Damage"
-                    ]
+                    "displayLines": "Bomb_Damage"
                   },
                   "variableName": "Bomb_Damage_Initial"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Bomb_Damage) || Variables[1] (Bomb_Layer) || MUL || RETURN",
-                    "displayLines": "(Bomb_Damage * Bomb_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "Bomb_Damage",
-                      "Bomb_Layer"
-                    ]
+                    "displayLines": "(Bomb_Damage * Bomb_Layer)"
                   },
                   "variableName": "Bomb_Damage"
                 },
@@ -9957,21 +8203,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"637313409\">Modifier_FantasticStory_BaseAbility_0010_plus3_ultraDmgUp</a>[<span class=\"descriptionNumberColor\">Rupture</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0013_ADF_2) || RETURN",
-                        "displayLines": "DV_FantasticStory_PlusAbility_0013_ADF_2",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_PlusAbility_0013_ADF_2"
-                        ]
+                        "displayLines": "DV_FantasticStory_PlusAbility_0013_ADF_2"
                       },
                       "valuePerStack": {
                         "DmgAddedRatio": {
-                          "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0013_ADF_1) || RETURN",
-                          "displayLines": "DV_FantasticStory_PlusAbility_0013_ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_PlusAbility_0013_ADF_1"
-                          ]
+                          "displayLines": "DV_FantasticStory_PlusAbility_0013_ADF_1"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -10002,36 +8238,16 @@ const compositeAbilityObject = {
                       "showInActionOrder": true,
                       "valuePerStack": {
                         "Bomb_Damage_get": {
-                          "operator": "Variables[0] (Bomb_Damage) || RETURN",
-                          "displayLines": "Bomb_Damage",
-                          "constants": [],
-                          "variables": [
-                            "Bomb_Damage"
-                          ]
+                          "displayLines": "Bomb_Damage"
                         },
                         "DV_plus5_get": {
-                          "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0015) || RETURN",
-                          "displayLines": "DV_FantasticStory_PlusAbility_0015",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_PlusAbility_0015"
-                          ]
+                          "displayLines": "DV_FantasticStory_PlusAbility_0015"
                         },
                         "DV_plus5_ADF_1_get": {
-                          "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0015_ADF_1) || RETURN",
-                          "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_PlusAbility_0015_ADF_1"
-                          ]
+                          "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_1"
                         },
                         "DV_plus5_ADF_2_get": {
-                          "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0015_ADF_2) || RETURN",
-                          "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_PlusAbility_0015_ADF_2"
-                          ]
+                          "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_2"
                         }
                       },
                       "allowAbilityTriggers": false
@@ -10062,28 +8278,13 @@ const compositeAbilityObject = {
                           "showInActionOrder": true,
                           "valuePerStack": {
                             "Bomb_Damage_get": {
-                              "operator": "Variables[0] (Bomb_Damage) || RETURN",
-                              "displayLines": "Bomb_Damage",
-                              "constants": [],
-                              "variables": [
-                                "Bomb_Damage"
-                              ]
+                              "displayLines": "Bomb_Damage"
                             },
                             "DV_plus7_get": {
-                              "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0017) || RETURN",
-                              "displayLines": "DV_FantasticStory_PlusAbility_0017",
-                              "constants": [],
-                              "variables": [
-                                "DV_FantasticStory_PlusAbility_0017"
-                              ]
+                              "displayLines": "DV_FantasticStory_PlusAbility_0017"
                             },
                             "DV_plus7_ADF_1_get": {
-                              "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0017_ADF_1) || RETURN",
-                              "displayLines": "DV_FantasticStory_PlusAbility_0017_ADF_1",
-                              "constants": [],
-                              "variables": [
-                                "DV_FantasticStory_PlusAbility_0017_ADF_1"
-                              ]
+                              "displayLines": "DV_FantasticStory_PlusAbility_0017_ADF_1"
                             }
                           },
                           "allowAbilityTriggers": false
@@ -10096,21 +8297,11 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"897813244\">Modifier_FantasticStory_BaseAbility_0010_sub2</a>[<span class=\"descriptionNumberColor\">Shatter</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (Bomb_MaxLayer) || RETURN",
-                            "displayLines": "Bomb_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "Bomb_MaxLayer"
-                            ]
+                            "displayLines": "Bomb_MaxLayer"
                           },
                           "valuePerStack": {
                             "Bomb_Damage": {
-                              "operator": "Variables[0] (Bomb_Damage_Initial) || RETURN",
-                              "displayLines": "Bomb_Damage_Initial",
-                              "constants": [],
-                              "variables": [
-                                "Bomb_Damage_Initial"
-                              ]
+                              "displayLines": "Bomb_Damage_Initial"
                             }
                           },
                           "addStacksPerTrigger": 1
@@ -10131,12 +8322,7 @@ const compositeAbilityObject = {
                           "showInActionOrder": true,
                           "valuePerStack": {
                             "Bomb_Damage_get": {
-                              "operator": "Variables[0] (Bomb_Damage) || RETURN",
-                              "displayLines": "Bomb_Damage",
-                              "constants": [],
-                              "variables": [
-                                "Bomb_Damage"
-                              ]
+                              "displayLines": "Bomb_Damage"
                             }
                           },
                           "allowAbilityTriggers": false
@@ -10242,30 +8428,14 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"897813244\">Modifier_FantasticStory_BaseAbility_0010_sub2</a>[<span class=\"descriptionNumberColor\">Shatter</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (ADF_2_get_pre) || RETURN",
-                            "displayLines": "ADF_2_get_pre",
-                            "constants": [],
-                            "variables": [
-                              "ADF_2_get_pre"
-                            ]
+                            "displayLines": "ADF_2_get_pre"
                           },
                           "valuePerStack": {
                             "Bomb_Damage": {
-                              "operator": "Variables[0] (TempHP_get_pre) || Variables[1] (ADF_1_get_pre) || MUL || RETURN",
-                              "displayLines": "(TempHP_get_pre * ADF_1_get_pre)",
-                              "constants": [],
-                              "variables": [
-                                "TempHP_get_pre",
-                                "ADF_1_get_pre"
-                              ]
+                              "displayLines": "(TempHP_get_pre * ADF_1_get_pre)"
                             },
                             "Bomb_MaxLayer": {
-                              "operator": "Variables[0] (ADF_2_get_pre) || RETURN",
-                              "displayLines": "ADF_2_get_pre",
-                              "constants": [],
-                              "variables": [
-                                "ADF_2_get_pre"
-                              ]
+                              "displayLines": "ADF_2_get_pre"
                             }
                           },
                           "addStacksPerTrigger": 2
@@ -10312,12 +8482,7 @@ const compositeAbilityObject = {
                               {
                                 "name": "Random Chance",
                                 "chance": {
-                                  "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0014) || RETURN",
-                                  "displayLines": "DV_FantasticStory_PlusAbility_0014",
-                                  "constants": [],
-                                  "variables": [
-                                    "DV_FantasticStory_PlusAbility_0014"
-                                  ]
+                                  "displayLines": "DV_FantasticStory_PlusAbility_0014"
                                 }
                               }
                             ]
@@ -10331,30 +8496,14 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"897813244\">Modifier_FantasticStory_BaseAbility_0010_sub2</a>[<span class=\"descriptionNumberColor\">Shatter</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] (ADF_2_get_pre) || RETURN",
-                                "displayLines": "ADF_2_get_pre",
-                                "constants": [],
-                                "variables": [
-                                  "ADF_2_get_pre"
-                                ]
+                                "displayLines": "ADF_2_get_pre"
                               },
                               "valuePerStack": {
                                 "Bomb_Damage": {
-                                  "operator": "Variables[0] (TempHP_get_pre) || Variables[1] (ADF_1_get_pre) || MUL || RETURN",
-                                  "displayLines": "(TempHP_get_pre * ADF_1_get_pre)",
-                                  "constants": [],
-                                  "variables": [
-                                    "TempHP_get_pre",
-                                    "ADF_1_get_pre"
-                                  ]
+                                  "displayLines": "(TempHP_get_pre * ADF_1_get_pre)"
                                 },
                                 "Bomb_MaxLayer": {
-                                  "operator": "Variables[0] (ADF_2_get_pre) || RETURN",
-                                  "displayLines": "ADF_2_get_pre",
-                                  "constants": [],
-                                  "variables": [
-                                    "ADF_2_get_pre"
-                                  ]
+                                  "displayLines": "ADF_2_get_pre"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -10401,12 +8550,7 @@ const compositeAbilityObject = {
                                   "conditions": {
                                     "name": "Random Chance",
                                     "chance": {
-                                      "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0018) || RETURN",
-                                      "displayLines": "DV_FantasticStory_PlusAbility_0018",
-                                      "constants": [],
-                                      "variables": [
-                                        "DV_FantasticStory_PlusAbility_0018"
-                                      ]
+                                      "displayLines": "DV_FantasticStory_PlusAbility_0018"
                                     }
                                   },
                                   "passed": [
@@ -10418,30 +8562,14 @@ const compositeAbilityObject = {
                                       },
                                       "modifier": "<a class=\"gModGreen\" id=\"897813244\">Modifier_FantasticStory_BaseAbility_0010_sub2</a>[<span class=\"descriptionNumberColor\">Shatter</span>]",
                                       "stackLimit": {
-                                        "operator": "Variables[0] (ADF_2_get_pre) || RETURN",
-                                        "displayLines": "ADF_2_get_pre",
-                                        "constants": [],
-                                        "variables": [
-                                          "ADF_2_get_pre"
-                                        ]
+                                        "displayLines": "ADF_2_get_pre"
                                       },
                                       "valuePerStack": {
                                         "Bomb_Damage": {
-                                          "operator": "Variables[0] (TempHP_get_pre) || Variables[1] (ADF_1_get_pre) || MUL || RETURN",
-                                          "displayLines": "(TempHP_get_pre * ADF_1_get_pre)",
-                                          "constants": [],
-                                          "variables": [
-                                            "TempHP_get_pre",
-                                            "ADF_1_get_pre"
-                                          ]
+                                          "displayLines": "(TempHP_get_pre * ADF_1_get_pre)"
                                         },
                                         "Bomb_MaxLayer": {
-                                          "operator": "Variables[0] (ADF_2_get_pre) || RETURN",
-                                          "displayLines": "ADF_2_get_pre",
-                                          "constants": [],
-                                          "variables": [
-                                            "ADF_2_get_pre"
-                                          ]
+                                          "displayLines": "ADF_2_get_pre"
                                         }
                                       },
                                       "addStacksPerTrigger": 1
@@ -10473,30 +8601,14 @@ const compositeAbilityObject = {
                                   },
                                   "modifier": "<a class=\"gModGreen\" id=\"897813244\">Modifier_FantasticStory_BaseAbility_0010_sub2</a>[<span class=\"descriptionNumberColor\">Shatter</span>]",
                                   "stackLimit": {
-                                    "operator": "Variables[0] (ADF_2_get_pre) || RETURN",
-                                    "displayLines": "ADF_2_get_pre",
-                                    "constants": [],
-                                    "variables": [
-                                      "ADF_2_get_pre"
-                                    ]
+                                    "displayLines": "ADF_2_get_pre"
                                   },
                                   "valuePerStack": {
                                     "Bomb_Damage": {
-                                      "operator": "Variables[0] (TempHP_get_pre) || Variables[1] (ADF_1_get_pre) || MUL || RETURN",
-                                      "displayLines": "(TempHP_get_pre * ADF_1_get_pre)",
-                                      "constants": [],
-                                      "variables": [
-                                        "TempHP_get_pre",
-                                        "ADF_1_get_pre"
-                                      ]
+                                      "displayLines": "(TempHP_get_pre * ADF_1_get_pre)"
                                     },
                                     "Bomb_MaxLayer": {
-                                      "operator": "Variables[0] (ADF_2_get_pre) || RETURN",
-                                      "displayLines": "ADF_2_get_pre",
-                                      "constants": [],
-                                      "variables": [
-                                        "ADF_2_get_pre"
-                                      ]
+                                      "displayLines": "ADF_2_get_pre"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10542,28 +8654,13 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-808848134\">Modifier_FantasticStory_BaseAbility_0010_sub2_pre</a>",
                       "valuePerStack": {
                         "TempHP_get_pre": {
-                          "operator": "Variables[0] (TempHP_get) || RETURN",
-                          "displayLines": "TempHP_get",
-                          "constants": [],
-                          "variables": [
-                            "TempHP_get"
-                          ]
+                          "displayLines": "TempHP_get"
                         },
                         "ADF_1_get_pre": {
-                          "operator": "Variables[0] (ADF_1_get) || RETURN",
-                          "displayLines": "ADF_1_get",
-                          "constants": [],
-                          "variables": [
-                            "ADF_1_get"
-                          ]
+                          "displayLines": "ADF_1_get"
                         },
                         "ADF_2_get_pre": {
-                          "operator": "Variables[0] (ADF_2_get) || RETURN",
-                          "displayLines": "ADF_2_get",
-                          "constants": [],
-                          "variables": [
-                            "ADF_2_get"
-                          ]
+                          "displayLines": "ADF_2_get"
                         }
                       }
                     }
@@ -10597,28 +8694,13 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-808848134\">Modifier_FantasticStory_BaseAbility_0010_sub2_pre</a>",
                       "valuePerStack": {
                         "TempHP_get_pre": {
-                          "operator": "Variables[0] (TempHP_get) || RETURN",
-                          "displayLines": "TempHP_get",
-                          "constants": [],
-                          "variables": [
-                            "TempHP_get"
-                          ]
+                          "displayLines": "TempHP_get"
                         },
                         "ADF_1_get_pre": {
-                          "operator": "Variables[0] (ADF_1_get) || RETURN",
-                          "displayLines": "ADF_1_get",
-                          "constants": [],
-                          "variables": [
-                            "ADF_1_get"
-                          ]
+                          "displayLines": "ADF_1_get"
                         },
                         "ADF_2_get_pre": {
-                          "operator": "Variables[0] (ADF_2_get) || RETURN",
-                          "displayLines": "ADF_2_get",
-                          "constants": [],
-                          "variables": [
-                            "ADF_2_get"
-                          ]
+                          "displayLines": "ADF_2_get"
                         }
                       }
                     }
@@ -10654,28 +8736,13 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-808848134\">Modifier_FantasticStory_BaseAbility_0010_sub2_pre</a>",
                       "valuePerStack": {
                         "TempHP_get_pre": {
-                          "operator": "Variables[0] (TempHP_get) || RETURN",
-                          "displayLines": "TempHP_get",
-                          "constants": [],
-                          "variables": [
-                            "TempHP_get"
-                          ]
+                          "displayLines": "TempHP_get"
                         },
                         "ADF_1_get_pre": {
-                          "operator": "Variables[0] (ADF_1_get) || RETURN",
-                          "displayLines": "ADF_1_get",
-                          "constants": [],
-                          "variables": [
-                            "ADF_1_get"
-                          ]
+                          "displayLines": "ADF_1_get"
                         },
                         "ADF_2_get_pre": {
-                          "operator": "Variables[0] (ADF_2_get) || RETURN",
-                          "displayLines": "ADF_2_get",
-                          "constants": [],
-                          "variables": [
-                            "ADF_2_get"
-                          ]
+                          "displayLines": "ADF_2_get"
                         }
                       }
                     }
@@ -10741,28 +8808,13 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"891295398\">Modifier_FantasticStory_BaseAbility_0010_sub</a>",
                   "valuePerStack": {
                     "TempHP_get": {
-                      "operator": "Variables[0] (TempHP) || RETURN",
-                      "displayLines": "TempHP",
-                      "constants": [],
-                      "variables": [
-                        "TempHP"
-                      ]
+                      "displayLines": "TempHP"
                     },
                     "ADF_1_get": {
-                      "operator": "Variables[0] (ADF_1) || RETURN",
-                      "displayLines": "ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "ADF_1"
-                      ]
+                      "displayLines": "ADF_1"
                     },
                     "ADF_2_get": {
-                      "operator": "Variables[0] (ADF_2) || RETURN",
-                      "displayLines": "ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "ADF_2"
-                      ]
+                      "displayLines": "ADF_2"
                     }
                   }
                 }
@@ -10791,28 +8843,13 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"891295398\">Modifier_FantasticStory_BaseAbility_0010_sub</a>",
                       "valuePerStack": {
                         "TempHP_get": {
-                          "operator": "Variables[0] (TempHP) || RETURN",
-                          "displayLines": "TempHP",
-                          "constants": [],
-                          "variables": [
-                            "TempHP"
-                          ]
+                          "displayLines": "TempHP"
                         },
                         "ADF_1_get": {
-                          "operator": "Variables[0] (ADF_1) || RETURN",
-                          "displayLines": "ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "ADF_1"
-                          ]
+                          "displayLines": "ADF_1"
                         },
                         "ADF_2_get": {
-                          "operator": "Variables[0] (ADF_2) || RETURN",
-                          "displayLines": "ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "ADF_2"
-                          ]
+                          "displayLines": "ADF_2"
                         }
                       }
                     },
@@ -10861,12 +8898,7 @@ const compositeAbilityObject = {
                       {
                         "name": "Random Chance",
                         "chance": {
-                          "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0011) || RETURN",
-                          "displayLines": "DV_FantasticStory_PlusAbility_0011",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_PlusAbility_0011"
-                          ]
+                          "displayLines": "DV_FantasticStory_PlusAbility_0011"
                         }
                       }
                     ]
@@ -10880,30 +8912,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"897813244\">Modifier_FantasticStory_BaseAbility_0010_sub2</a>[<span class=\"descriptionNumberColor\">Shatter</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (ADF_2) || RETURN",
-                        "displayLines": "ADF_2",
-                        "constants": [],
-                        "variables": [
-                          "ADF_2"
-                        ]
+                        "displayLines": "ADF_2"
                       },
                       "valuePerStack": {
                         "Bomb_Damage": {
-                          "operator": "Variables[0] (TempHP) || Variables[1] (ADF_1) || MUL || RETURN",
-                          "displayLines": "(TempHP * ADF_1)",
-                          "constants": [],
-                          "variables": [
-                            "TempHP",
-                            "ADF_1"
-                          ]
+                          "displayLines": "(TempHP * ADF_1)"
                         },
                         "Bomb_MaxLayer": {
-                          "operator": "Variables[0] (ADF_2) || RETURN",
-                          "displayLines": "ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "ADF_2"
-                          ]
+                          "displayLines": "ADF_2"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -10983,12 +8999,7 @@ const compositeAbilityObject = {
                           "conditions": {
                             "name": "Random Chance",
                             "chance": {
-                              "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0011) || RETURN",
-                              "displayLines": "DV_FantasticStory_PlusAbility_0011",
-                              "constants": [],
-                              "variables": [
-                                "DV_FantasticStory_PlusAbility_0011"
-                              ]
+                              "displayLines": "DV_FantasticStory_PlusAbility_0011"
                             }
                           },
                           "passed": [
@@ -11000,30 +9011,14 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"897813244\">Modifier_FantasticStory_BaseAbility_0010_sub2</a>[<span class=\"descriptionNumberColor\">Shatter</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] (ADF_2) || RETURN",
-                                "displayLines": "ADF_2",
-                                "constants": [],
-                                "variables": [
-                                  "ADF_2"
-                                ]
+                                "displayLines": "ADF_2"
                               },
                               "valuePerStack": {
                                 "Bomb_Damage": {
-                                  "operator": "Variables[0] (TempHP) || Variables[1] (ADF_1) || MUL || RETURN",
-                                  "displayLines": "(TempHP * ADF_1)",
-                                  "constants": [],
-                                  "variables": [
-                                    "TempHP",
-                                    "ADF_1"
-                                  ]
+                                  "displayLines": "(TempHP * ADF_1)"
                                 },
                                 "Bomb_MaxLayer": {
-                                  "operator": "Variables[0] (ADF_2) || RETURN",
-                                  "displayLines": "ADF_2",
-                                  "constants": [],
-                                  "variables": [
-                                    "ADF_2"
-                                  ]
+                                  "displayLines": "ADF_2"
                                 }
                               },
                               "addStacksPerTrigger": 1

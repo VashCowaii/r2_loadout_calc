@@ -49,20 +49,10 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1833952078\">Monster_W3_AventurinePart_Odds_RL</a>",
               "stackLimit": {
-                "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                "displayLines": "{[Skill05[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill05[1]]}"
-                ]
+                "displayLines": "{[Skill05[1]]}"
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (GambleOdds) || RETURN",
-                "displayLines": "GambleOdds",
-                "constants": [],
-                "variables": [
-                  "GambleOdds"
-                ]
+                "displayLines": "GambleOdds"
               }
             }
           ]
@@ -88,20 +78,10 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1833952078\">Monster_W3_AventurinePart_Odds_RL</a>",
               "stackLimit": {
-                "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-                "displayLines": "{[Skill05[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill05[2]]}"
-                ]
+                "displayLines": "{[Skill05[2]]}"
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (GambleOdds) || RETURN",
-                "displayLines": "GambleOdds",
-                "constants": [],
-                "variables": [
-                  "GambleOdds"
-                ]
+                "displayLines": "GambleOdds"
               }
             }
           ]
@@ -127,20 +107,10 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1833952078\">Monster_W3_AventurinePart_Odds_RL</a>",
               "stackLimit": {
-                "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-                "displayLines": "{[Skill05[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill05[3]]}"
-                ]
+                "displayLines": "{[Skill05[3]]}"
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (GambleOdds) || RETURN",
-                "displayLines": "GambleOdds",
-                "constants": [],
-                "variables": [
-                  "GambleOdds"
-                ]
+                "displayLines": "GambleOdds"
               }
             }
           ]
@@ -199,20 +169,10 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1833952078\">Monster_W3_AventurinePart_Odds_RL</a>",
               "stackLimit": {
-                "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                "displayLines": "{[Skill05[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill05[1]]}"
-                ]
+                "displayLines": "{[Skill05[1]]}"
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (GambleOdds) || RETURN",
-                "displayLines": "GambleOdds",
-                "constants": [],
-                "variables": [
-                  "GambleOdds"
-                ]
+                "displayLines": "GambleOdds"
               }
             }
           ]
@@ -238,20 +198,10 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1833952078\">Monster_W3_AventurinePart_Odds_RL</a>",
               "stackLimit": {
-                "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-                "displayLines": "{[Skill05[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill05[2]]}"
-                ]
+                "displayLines": "{[Skill05[2]]}"
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (GambleOdds) || RETURN",
-                "displayLines": "GambleOdds",
-                "constants": [],
-                "variables": [
-                  "GambleOdds"
-                ]
+                "displayLines": "GambleOdds"
               }
             }
           ]
@@ -277,20 +227,10 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1833952078\">Monster_W3_AventurinePart_Odds_RL</a>",
               "stackLimit": {
-                "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-                "displayLines": "{[Skill05[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill05[3]]}"
-                ]
+                "displayLines": "{[Skill05[3]]}"
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (GambleOdds) || RETURN",
-                "displayLines": "GambleOdds",
-                "constants": [],
-                "variables": [
-                  "GambleOdds"
-                ]
+                "displayLines": "GambleOdds"
               }
             }
           ]

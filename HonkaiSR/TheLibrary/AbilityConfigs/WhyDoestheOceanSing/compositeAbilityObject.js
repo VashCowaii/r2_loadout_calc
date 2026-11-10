@@ -62,12 +62,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_SpeedUpRatio) || RETURN",
-                    "displayLines": "MDF_SpeedUpRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedUpRatio"
-                    ]
+                    "displayLines": "MDF_SpeedUpRatio"
                   }
                 }
               ]
@@ -154,21 +149,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-852967101\">LC_23047_Sub3</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_SpeedUpLifeTimeTemp) || RETURN",
-                        "displayLines": "MDF_SpeedUpLifeTimeTemp",
-                        "constants": [],
-                        "variables": [
-                          "MDF_SpeedUpLifeTimeTemp"
-                        ]
+                        "displayLines": "MDF_SpeedUpLifeTimeTemp"
                       },
                       "valuePerStack": {
                         "MDF_SpeedUpRatio": {
-                          "operator": "Variables[0] (MDF_SpeedUpRatioTemp) || RETURN",
-                          "displayLines": "MDF_SpeedUpRatioTemp",
-                          "constants": [],
-                          "variables": [
-                            "MDF_SpeedUpRatioTemp"
-                          ]
+                          "displayLines": "MDF_SpeedUpRatioTemp"
                         }
                       }
                     }
@@ -232,24 +217,14 @@ const compositeAbilityObject = {
                     "value1": "MDF_CurrentDeBuffCount",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (MDF_DeBonusMaxCount) || RETURN",
-                      "displayLines": "MDF_DeBonusMaxCount",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DeBonusMaxCount"
-                      ]
+                      "displayLines": "MDF_DeBonusMaxCount"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_DeBonusMaxCount) || RETURN",
-                        "displayLines": "MDF_DeBonusMaxCount",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DeBonusMaxCount"
-                        ]
+                        "displayLines": "MDF_DeBonusMaxCount"
                       },
                       "variableName": "MDF_CurrentDeBuffCount"
                     }
@@ -258,13 +233,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_DotDamageAddRatio) || Variables[1] (MDF_CurrentDeBuffCount) || MUL || RETURN",
-                    "displayLines": "(MDF_DotDamageAddRatio * MDF_CurrentDeBuffCount)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DotDamageAddRatio",
-                      "MDF_CurrentDeBuffCount"
-                    ]
+                    "displayLines": "(MDF_DotDamageAddRatio * MDF_CurrentDeBuffCount)"
                   },
                   "variableName": "MDF_TotalDotDamageAddRatio"
                 }
@@ -324,53 +293,23 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-869744720\">LC_23047_Sub2</a>[<span class=\"descriptionNumberColor\">Enthrallment</span>]",
                       "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (0.8) || RETURN",
-                        "displayLines": "0.8",
-                        "constants": [],
-                        "variables": [
-                          0.8
-                        ]
+                        "displayLines": "0.8"
                       },
                       "valuePerStack": {
                         "MDF_DotDamageAddRatio": {
-                          "operator": "Variables[0] (0.05) || RETURN",
-                          "displayLines": "0.05",
-                          "constants": [],
-                          "variables": [
-                            0.05
-                          ]
+                          "displayLines": "0.05"
                         },
                         "MDF_DeBonusMaxCount": {
-                          "operator": "Variables[0] (6) || RETURN",
-                          "displayLines": "6",
-                          "constants": [],
-                          "variables": [
-                            6
-                          ]
+                          "displayLines": "6"
                         },
                         "MDF_SpeedUpRatioTemp": {
-                          "operator": "Variables[0] (0.1) || RETURN",
-                          "displayLines": "0.1",
-                          "constants": [],
-                          "variables": [
-                            0.1
-                          ]
+                          "displayLines": "0.1"
                         },
                         "MDF_SpeedUpLifeTimeTemp": {
-                          "operator": "Variables[0] (3) || RETURN",
-                          "displayLines": "3",
-                          "constants": [],
-                          "variables": [
-                            3
-                          ]
+                          "displayLines": "3"
                         }
                       }
                     }

@@ -86,13 +86,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (0.36) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(0.36 * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      0.36,
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(0.36 * MDF_Layer)"
                   },
                   "variableName": "MDF_DamageAddedRatio"
                 }
@@ -115,12 +109,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (5) || RETURN",
-                    "displayLines": "5",
-                    "constants": [],
-                    "variables": [
-                      5
-                    ]
+                    "displayLines": "5"
                   }
                 }
               ]
@@ -144,12 +133,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"703724880\">LC_23030_Sub</a>[<span class=\"descriptionNumberColor\">Firedance</span>]",
                       "duration": 2,
                       "stackLimit": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "addStacksPerTrigger": 1
                     }

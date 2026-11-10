@@ -13,12 +13,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (AssistSkill01_DamagePercentage) || RETURN",
-          "displayLines": "AssistSkill01_DamagePercentage",
-          "constants": [],
-          "variables": [
-            "AssistSkill01_DamagePercentage"
-          ]
+          "displayLines": "AssistSkill01_DamagePercentage"
         },
         "Toughness": null,
         "Tags": null,

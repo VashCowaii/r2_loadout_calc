@@ -13,21 +13,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (3) || RETURN",
-          "displayLines": "3",
-          "constants": [],
-          "variables": [
-            3
-          ]
+          "displayLines": "3"
         },
         "HitSplit": 0.2,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "attackType": "Skill",
@@ -43,21 +33,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (3) || RETURN",
-          "displayLines": "3",
-          "constants": [],
-          "variables": [
-            3
-          ]
+          "displayLines": "3"
         },
         "HitSplit": 0.2,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "attackType": "Skill",
@@ -73,21 +53,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (3) || RETURN",
-          "displayLines": "3",
-          "constants": [],
-          "variables": [
-            3
-          ]
+          "displayLines": "3"
         },
         "HitSplit": 0.2,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "attackType": "Skill",
@@ -104,21 +74,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (3) || RETURN",
-          "displayLines": "3",
-          "constants": [],
-          "variables": [
-            3
-          ]
+          "displayLines": "3"
         },
         "HitSplit": 0.4,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "attackType": "Skill",
@@ -135,20 +95,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (1.5) || RETURN",
-          "displayLines": "1.5",
-          "constants": [],
-          "variables": [
-            1.5
-          ]
+          "displayLines": "1.5"
         },
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-          "displayLines": "Blast Toughness Value",
-          "constants": [],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "Blast Toughness Value"
         },
         "Tags": null,
         "attackType": "Skill"
@@ -175,12 +125,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "DamageElation": {
-              "operator": "Variables[0] (0.16) || RETURN",
-              "displayLines": "0.16",
-              "constants": [],
-              "variables": [
-                0.16
-              ]
+              "displayLines": "0.16"
             },
             "dmgFormula": "Elation Scaling",
             "Toughness": null,
@@ -194,12 +139,7 @@ const configAbility = {
     {
       "name": "Adjust Team Punchline Value",
       "value": {
-        "operator": "Variables[0] (10) || RETURN",
-        "displayLines": "10",
-        "constants": [],
-        "variables": [
-          10
-        ]
+        "displayLines": "10"
       },
       "adjustment": "Add"
     },

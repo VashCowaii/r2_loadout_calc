@@ -85,12 +85,7 @@ const configAbility = {
         "value1": "DiceResult",
         "compareType": "<",
         "value2": {
-          "operator": "Variables[0] (AvatarDiceResult) || RETURN",
-          "displayLines": "AvatarDiceResult",
-          "constants": [],
-          "variables": [
-            "AvatarDiceResult"
-          ]
+          "displayLines": "AvatarDiceResult"
         }
       }
     },

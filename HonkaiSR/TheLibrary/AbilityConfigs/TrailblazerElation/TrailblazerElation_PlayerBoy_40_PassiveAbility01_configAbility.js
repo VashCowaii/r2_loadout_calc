@@ -71,12 +71,7 @@ const configAbility = {
           "referenceModifier": "<a class=\"gModGreen\" id=\"-143754898\">MReference_CriticalChanceUp</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.15) || RETURN",
-              "displayLines": "0.15",
-              "constants": [],
-              "variables": [
-                0.15
-              ]
+              "displayLines": "0.15"
             }
           }
         },
@@ -191,12 +186,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1940881761\">Player_40_PointB3_P1Mark</a>[<span class=\"descriptionNumberColor\">Aha, Sic 'Em!</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     }
                   }
                 }
@@ -231,12 +221,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Variables[0] (0.5) || INVERT || RETURN",
-            "displayLines": "-0.5",
-            "constants": [],
-            "variables": [
-              0.5
-            ]
+            "displayLines": "-0.5"
           }
         }
       }
@@ -257,12 +242,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGConverted</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               },
               "isRefresh": true
             }
@@ -405,24 +385,14 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (10) || RETURN",
-                "displayLines": "10",
-                "constants": [],
-                "variables": [
-                  10
-                ]
+                "displayLines": "10"
               },
               "isFixed": "(Fixed)"
             },
             {
               "name": "Adjust Team Punchline Value",
               "value": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "adjustment": "Add"
             }
@@ -450,12 +420,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -480,12 +445,7 @@ const configAbility = {
                 {
                   "name": "Skill Points Modification",
                   "adjustmentValue": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "adjustmentType": "+"
                 }
@@ -541,17 +501,7 @@ const configAbility = {
               },
               "variableName": "player_SkillTree_PointB1_AddedValue",
               "resetValue": {
-                "operator": "Variables[0] (WHOLE) || Variables[1] (_CurrentAttack) || Variables[2] (_CurrentAttackConvert) || SUB || Variables[3] (1000) || SUB || Variables[4] (200) || DIV || PARAM_1 || FUNCTION || Variables[5] (0.1) || MUL || RETURN",
-                "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((((_CurrentAttack - _CurrentAttackConvert) - 1000) / 200)) * 0.1)",
-                "constants": [],
-                "variables": [
-                  "WHOLE",
-                  "_CurrentAttack",
-                  "_CurrentAttackConvert",
-                  1000,
-                  200,
-                  0.1
-                ]
+                "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((((_CurrentAttack - _CurrentAttackConvert) - 1000) / 200)) * 0.1)"
               },
               "scope": "ContextCaster"
             },
@@ -587,12 +537,7 @@ const configAbility = {
                     "value1": "player_SkillTree_PointB1_AddedValue",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (0.6) || RETURN",
-                      "displayLines": "0.6",
-                      "constants": [],
-                      "variables": [
-                        0.6
-                      ]
+                      "displayLines": "0.6"
                     },
                     "contextScope": "ContextCaster"
                   },
@@ -600,12 +545,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (0.6) || RETURN",
-                        "displayLines": "0.6",
-                        "constants": [],
-                        "variables": [
-                          0.6
-                        ]
+                        "displayLines": "0.6"
                       },
                       "variableName": "player_SkillTree_PointB1_AddedValue"
                     }
@@ -620,12 +560,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1930250757\">Player_40_Trace01_Bonus</a>[<span class=\"descriptionNumberColor\">On Cloud Nine</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (player_SkillTree_PointB1_AddedValue) || RETURN",
-                      "displayLines": "player_SkillTree_PointB1_AddedValue",
-                      "constants": [],
-                      "variables": [
-                        "player_SkillTree_PointB1_AddedValue"
-                      ]
+                      "displayLines": "player_SkillTree_PointB1_AddedValue"
                     }
                   }
                 }

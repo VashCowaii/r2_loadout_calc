@@ -26,14 +26,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill05[0]]}) || Constants[0] (0.2) || MUL || RETURN",
-          "displayLines": "({[Skill05[0]]} * 0.2)",
-          "constants": [
-            0.2
-          ],
-          "variables": [
-            "{[Skill05[0]]}"
-          ]
+          "displayLines": "({[Skill05[0]]} * 0.2)"
         },
         "Toughness": null,
         "Tags": null,
@@ -50,14 +43,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill05[0]]}) || Constants[0] (0.8) || MUL || RETURN",
-          "displayLines": "({[Skill05[0]]} * 0.8)",
-          "constants": [
-            0.8
-          ],
-          "variables": [
-            "{[Skill05[0]]}"
-          ]
+          "displayLines": "({[Skill05[0]]} * 0.8)"
         },
         "Toughness": null,
         "Tags": null,
@@ -101,12 +87,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"352751855\">Monster_W1_Gepard_RL_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "valuePerStack": {
             "MDF_DamageAddedRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_9045) || RETURN",
-              "displayLines": "UnusedUnderThisBase_9045",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_9045"
-              ]
+              "displayLines": "UnusedUnderThisBase_9045"
             }
           }
         }

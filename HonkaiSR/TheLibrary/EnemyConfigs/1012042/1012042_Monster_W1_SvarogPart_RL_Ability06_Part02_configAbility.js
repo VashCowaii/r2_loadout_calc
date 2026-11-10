@@ -110,12 +110,7 @@ const configAbility = {
         "value1": "CurrentHP%",
         "compareType": "<=",
         "value2": {
-          "operator": "Variables[0] (LowHPRatio) || RETURN",
-          "displayLines": "LowHPRatio",
-          "constants": [],
-          "variables": [
-            "LowHPRatio"
-          ]
+          "displayLines": "LowHPRatio"
         }
       },
       "failed": [

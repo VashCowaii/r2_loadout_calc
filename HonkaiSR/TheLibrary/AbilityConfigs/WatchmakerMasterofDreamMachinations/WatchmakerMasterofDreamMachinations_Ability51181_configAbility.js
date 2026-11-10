@@ -34,12 +34,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.3) || RETURN",
-                "displayLines": "0.3",
-                "constants": [],
-                "variables": [
-                  0.3
-                ]
+                "displayLines": "0.3"
               }
             }
           ]
@@ -82,12 +77,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-663861721\">Relic_118_Sub</a>[<span class=\"descriptionNumberColor\">Watchmaker, Master of Dream Machinations</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       }
                     }
                   ]

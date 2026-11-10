@@ -157,12 +157,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_W4_Unicorn_01_BattleEvent_Ultra_BaseSpeed) || RETURN",
-                "displayLines": "MDF_W4_Unicorn_01_BattleEvent_Ultra_BaseSpeed",
-                "constants": [],
-                "variables": [
-                  "MDF_W4_Unicorn_01_BattleEvent_Ultra_BaseSpeed"
-                ]
+                "displayLines": "MDF_W4_Unicorn_01_BattleEvent_Ultra_BaseSpeed"
               }
             }
           ]

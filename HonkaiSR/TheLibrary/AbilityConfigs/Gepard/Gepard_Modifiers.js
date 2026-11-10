@@ -33,12 +33,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AddStatusResistance) || RETURN",
-                "displayLines": "MDF_AddStatusResistance",
-                "constants": [],
-                "variables": [
-                  "MDF_AddStatusResistance"
-                ]
+                "displayLines": "MDF_AddStatusResistance"
               }
             }
           ]
@@ -68,14 +63,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyRaito) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyRaito)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyRaito"
-                ]
+                "displayLines": "(0 - MDF_PropertyRaito)"
               }
             }
           ]
@@ -121,21 +109,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1613152679\">Gepard_Eidolon2_SpeedDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
                   "duration": {
-                    "operator": "Variables[0] (MDF_Lifetime) || RETURN",
-                    "displayLines": "MDF_Lifetime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Lifetime"
-                    ]
+                    "displayLines": "MDF_Lifetime"
                   },
                   "valuePerStack": {
                     "MDF_PropertyRaito": {
-                      "operator": "Variables[0] (MDF_SPD) || RETURN",
-                      "displayLines": "MDF_SPD",
-                      "constants": [],
-                      "variables": [
-                        "MDF_SPD"
-                      ]
+                      "displayLines": "MDF_SPD"
                     }
                   }
                 },
@@ -162,12 +140,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -220,12 +193,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (MDF_ShowValue) || RETURN",
-                "displayLines": "MDF_ShowValue",
-                "constants": [],
-                "variables": [
-                  "MDF_ShowValue"
-                ]
+                "displayLines": "MDF_ShowValue"
               }
             }
           ]

@@ -25,12 +25,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-259584521\">Monster_W2_Yanqing_BOSS_IceDamage</a>",
       "valuePerStack": {
         "MDF_IceDamageTakenUpRatio_PerLayer": {
-          "operator": "Variables[0] ({[SkillP03[4]]}) || RETURN",
-          "displayLines": "{[SkillP03[4]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP03[4]]}"
-          ]
+          "displayLines": "{[SkillP03[4]]}"
         }
       }
     },
@@ -120,12 +115,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1004973880\">Enemy_W2_Yanqing_Standard_IceDamageTakenUp</a>",
               "valuePerStack": {
                 "IceTakenRatioPerLayer": {
-                  "operator": "Variables[0] (MDF_IceDamageTakenUpRatio_PerLayer) || RETURN",
-                  "displayLines": "MDF_IceDamageTakenUpRatio_PerLayer",
-                  "constants": [],
-                  "variables": [
-                    "MDF_IceDamageTakenUpRatio_PerLayer"
-                  ]
+                  "displayLines": "MDF_IceDamageTakenUpRatio_PerLayer"
                 }
               }
             }
@@ -178,12 +168,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-640160839\">Monster_W2_Yanqing_Sword_IceDamage</a>",
                   "valuePerStack": {
                     "MDF_IceDamageTakenUpRatio_PerLayer": {
-                      "operator": "Variables[0] (MDF_IceDamageTakenUpRatio_PerLayer) || RETURN",
-                      "displayLines": "MDF_IceDamageTakenUpRatio_PerLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_IceDamageTakenUpRatio_PerLayer"
-                      ]
+                      "displayLines": "MDF_IceDamageTakenUpRatio_PerLayer"
                     }
                   }
                 }
@@ -216,12 +201,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1004973880\">Enemy_W2_Yanqing_Standard_IceDamageTakenUp</a>",
                   "valuePerStack": {
                     "IceTakenRatioPerLayer": {
-                      "operator": "Variables[0] (MDF_IceDamageTakenUpRatio_PerLayer) || RETURN",
-                      "displayLines": "MDF_IceDamageTakenUpRatio_PerLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_IceDamageTakenUpRatio_PerLayer"
-                      ]
+                      "displayLines": "MDF_IceDamageTakenUpRatio_PerLayer"
                     }
                   }
                 }

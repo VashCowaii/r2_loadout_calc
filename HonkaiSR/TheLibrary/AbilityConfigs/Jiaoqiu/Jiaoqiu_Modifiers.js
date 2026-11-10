@@ -40,14 +40,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (ResistDownRatio) || SUB || RETURN",
-                "displayLines": "(0 - ResistDownRatio)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "ResistDownRatio"
-                ]
+                "displayLines": "(0 - ResistDownRatio)"
               }
             }
           ]
@@ -81,14 +74,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           ]
@@ -250,24 +236,14 @@ const configAbility = {
                             "value1": "_Layer_Min",
                             "compareType": ">",
                             "value2": {
-                              "operator": "Variables[0] (_TempLayer) || RETURN",
-                              "displayLines": "_TempLayer",
-                              "constants": [],
-                              "variables": [
-                                "_TempLayer"
-                              ]
+                              "displayLines": "_TempLayer"
                             }
                           },
                           "passed": [
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (_TempLayer) || RETURN",
-                                "displayLines": "_TempLayer",
-                                "constants": [],
-                                "variables": [
-                                  "_TempLayer"
-                                ]
+                                "displayLines": "_TempLayer"
                               },
                               "variableName": "_Layer_Min"
                             },
@@ -317,70 +293,30 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "stackLimit": {
-                        "operator": "Variables[0] (_MaxLayer) || RETURN",
-                        "displayLines": "_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "_MaxLayer"
-                        ]
+                        "displayLines": "_MaxLayer"
                       },
                       "valuePerStack": {
                         "DOT_Ratio": {
-                          "operator": "Variables[0] (SkillP01_DotRatio) || RETURN",
-                          "displayLines": "SkillP01_DotRatio",
-                          "constants": [],
-                          "variables": [
-                            "SkillP01_DotRatio"
-                          ]
+                          "displayLines": "SkillP01_DotRatio"
                         },
                         "AbilityRank_Eidolon2_P1_Ratio": {
-                          "operator": "Variables[0] (3) || RETURN",
-                          "displayLines": "3",
-                          "constants": [],
-                          "variables": [
-                            3
-                          ]
+                          "displayLines": "3"
                         },
                         "AbilityRank_Eidolon6_P3_DownRatio": {
-                          "operator": "Variables[0] (0.03) || RETURN",
-                          "displayLines": "0.03",
-                          "constants": [],
-                          "variables": [
-                            0.03
-                          ]
+                          "displayLines": "0.03"
                         },
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.15) || RETURN",
-                          "displayLines": "0.15",
-                          "constants": [],
-                          "variables": [
-                            0.15
-                          ]
+                          "displayLines": "0.15"
                         },
                         "MDF_PropertyValue_2": {
-                          "operator": "Variables[0] (0.05) || RETURN",
-                          "displayLines": "0.05",
-                          "constants": [],
-                          "variables": [
-                            0.05
-                          ]
+                          "displayLines": "0.05"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (MDF_Layer) || RETURN",
-                        "displayLines": "MDF_Layer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Layer"
-                        ]
+                        "displayLines": "MDF_Layer"
                       }
                     },
                     {
@@ -477,12 +413,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.15) || RETURN",
-              "displayLines": "0.15",
-              "constants": [],
-              "variables": [
-                0.15
-              ]
+              "displayLines": "0.15"
             }
           }
         },
@@ -500,12 +431,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.15) || RETURN",
-              "displayLines": "0.15",
-              "constants": [],
-              "variables": [
-                0.15
-              ]
+              "displayLines": "0.15"
             }
           }
         }
@@ -536,12 +462,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (6) || RETURN",
-                "displayLines": "6",
-                "constants": [],
-                "variables": [
-                  6
-                ]
+                "displayLines": "6"
               },
               "variableName": "_Max_Count_Left"
             }
@@ -580,12 +501,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (1) || RETURN",
-                            "displayLines": "1",
-                            "constants": [],
-                            "variables": [
-                              1
-                            ]
+                            "displayLines": "1"
                           },
                           "variableName": "_Layer_Total"
                         }
@@ -625,24 +541,14 @@ const configAbility = {
                             "value1": "_Layer_Total",
                             "compareType": "<=",
                             "value2": {
-                              "operator": "Variables[0] (_Temp_Val) || RETURN",
-                              "displayLines": "_Temp_Val",
-                              "constants": [],
-                              "variables": [
-                                "_Temp_Val"
-                              ]
+                              "displayLines": "_Temp_Val"
                             }
                           },
                           "passed": [
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (_Temp_Val) || RETURN",
-                                "displayLines": "_Temp_Val",
-                                "constants": [],
-                                "variables": [
-                                  "_Temp_Val"
-                                ]
+                                "displayLines": "_Temp_Val"
                               },
                               "variableName": "_Layer_Total"
                             }
@@ -658,70 +564,30 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "stackLimit": {
-                        "operator": "Variables[0] (_MaxLayer) || RETURN",
-                        "displayLines": "_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "_MaxLayer"
-                        ]
+                        "displayLines": "_MaxLayer"
                       },
                       "valuePerStack": {
                         "DOT_Ratio": {
-                          "operator": "Variables[0] (SkillP01_DotRatio) || RETURN",
-                          "displayLines": "SkillP01_DotRatio",
-                          "constants": [],
-                          "variables": [
-                            "SkillP01_DotRatio"
-                          ]
+                          "displayLines": "SkillP01_DotRatio"
                         },
                         "AbilityRank_Eidolon2_P1_Ratio": {
-                          "operator": "Variables[0] (3) || RETURN",
-                          "displayLines": "3",
-                          "constants": [],
-                          "variables": [
-                            3
-                          ]
+                          "displayLines": "3"
                         },
                         "AbilityRank_Eidolon6_P3_DownRatio": {
-                          "operator": "Variables[0] (0.03) || RETURN",
-                          "displayLines": "0.03",
-                          "constants": [],
-                          "variables": [
-                            0.03
-                          ]
+                          "displayLines": "0.03"
                         },
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.15) || RETURN",
-                          "displayLines": "0.15",
-                          "constants": [],
-                          "variables": [
-                            0.15
-                          ]
+                          "displayLines": "0.15"
                         },
                         "MDF_PropertyValue_2": {
-                          "operator": "Variables[0] (0.05) || RETURN",
-                          "displayLines": "0.05",
-                          "constants": [],
-                          "variables": [
-                            0.05
-                          ]
+                          "displayLines": "0.05"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (_Layer_Total) || RETURN",
-                        "displayLines": "_Layer_Total",
-                        "constants": [],
-                        "variables": [
-                          "_Layer_Total"
-                        ]
+                        "displayLines": "_Layer_Total"
                       }
                     }
                   ]
@@ -759,12 +625,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (SkillTree_PointB2_StatusProbabilityValue) || RETURN",
-                "displayLines": "SkillTree_PointB2_StatusProbabilityValue",
-                "constants": [],
-                "variables": [
-                  "SkillTree_PointB2_StatusProbabilityValue"
-                ]
+                "displayLines": "SkillTree_PointB2_StatusProbabilityValue"
               }
             }
           ]
@@ -840,28 +701,13 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] (DOT_Ratio) || RETURN",
-                  "displayLines": "DOT_Ratio",
-                  "constants": [],
-                  "variables": [
-                    "DOT_Ratio"
-                  ]
+                  "displayLines": "DOT_Ratio"
                 },
                 "DamageExtra": {
-                  "operator": "Variables[0] (Modifier_Burn_DamagePercentage_Defence) || RETURN",
-                  "displayLines": "Modifier_Burn_DamagePercentage_Defence",
-                  "constants": [],
-                  "variables": [
-                    "Modifier_Burn_DamagePercentage_Defence"
-                  ]
+                  "displayLines": "Modifier_Burn_DamagePercentage_Defence"
                 },
                 "DamageFlat": {
-                  "operator": "Variables[0] (Modifier_Burn_DamageValue) || RETURN",
-                  "displayLines": "Modifier_Burn_DamageValue",
-                  "constants": [],
-                  "variables": [
-                    "Modifier_Burn_DamageValue"
-                  ]
+                  "displayLines": "Modifier_Burn_DamageValue"
                 },
                 "dmgFormulaExtra": "DEF Scaling",
                 "Toughness": null,
@@ -905,16 +751,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || Constants[0] (1) || SUB || Variables[2] (MDF_PropertyValue_2) || MUL || ADD || RETURN",
-                "displayLines": "(MDF_PropertyValue + ((MDF_Layer - 1) * MDF_PropertyValue_2))",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "MDF_Layer",
-                  "MDF_PropertyValue_2"
-                ]
+                "displayLines": "(MDF_PropertyValue + ((MDF_Layer - 1) * MDF_PropertyValue_2))"
               },
               "variableName": "MDF_PropertyValue"
             },
@@ -926,12 +763,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             },
             {
@@ -945,12 +777,7 @@ const configAbility = {
                 "value1": "_Layer_Total",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] (MDF_Layer) || RETURN",
-                  "displayLines": "MDF_Layer",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Layer"
-                  ]
+                  "displayLines": "MDF_Layer"
                 }
               },
               "passed": [
@@ -961,12 +788,7 @@ const configAbility = {
                     "target": "{{Snapshot Target's Source Owner}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   },
                   "variableName": "_Layer_Total"
                 }
@@ -986,13 +808,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DOT_Ratio) || Variables[1] (SkillRank_Rank02_P1_Ratio) || ADD || RETURN",
-                    "displayLines": "(DOT_Ratio + SkillRank_Rank02_P1_Ratio)",
-                    "constants": [],
-                    "variables": [
-                      "DOT_Ratio",
-                      "SkillRank_Rank02_P1_Ratio"
-                    ]
+                    "displayLines": "(DOT_Ratio + SkillRank_Rank02_P1_Ratio)"
                   },
                   "variableName": "DOT_Ratio"
                 }
@@ -1018,13 +834,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1036174530\">Jiaoqiu_AbilityEidolon6_ResistDown</a>[<span class=\"descriptionNumberColor\">Nonamorphic Pyrobind</span>]",
                   "valuePerStack": {
                     "ResistDownRatio": {
-                      "operator": "Variables[0] (MDF_Layer) || Variables[1] (SkillRank_Rank06_P3_DownRatio) || MUL || RETURN",
-                      "displayLines": "(MDF_Layer * SkillRank_Rank06_P3_DownRatio)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Layer",
-                        "SkillRank_Rank06_P3_DownRatio"
-                      ]
+                      "displayLines": "(MDF_Layer * SkillRank_Rank06_P3_DownRatio)"
                     }
                   }
                 }
@@ -1044,31 +854,13 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (DOT_Ratio) || MUL || RETURN",
-                  "displayLines": "(DOT_TriggerRatio * DOT_Ratio)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "DOT_Ratio"
-                  ]
+                  "displayLines": "(DOT_TriggerRatio * DOT_Ratio)"
                 },
                 "DamageExtra": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Burn_DamagePercentage_Defence) || MUL || RETURN",
-                  "displayLines": "(DOT_TriggerRatio * Modifier_Burn_DamagePercentage_Defence)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "Modifier_Burn_DamagePercentage_Defence"
-                  ]
+                  "displayLines": "(DOT_TriggerRatio * Modifier_Burn_DamagePercentage_Defence)"
                 },
                 "DamageFlat": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Burn_DamageValue) || MUL || RETURN",
-                  "displayLines": "(DOT_TriggerRatio * Modifier_Burn_DamageValue)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "Modifier_Burn_DamageValue"
-                  ]
+                  "displayLines": "(DOT_TriggerRatio * Modifier_Burn_DamageValue)"
                 },
                 "dmgFormulaExtra": "DEF Scaling",
                 "Toughness": null,
@@ -1185,69 +977,29 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (0.6) || RETURN",
-                    "displayLines": "0.6",
-                    "constants": [],
-                    "variables": [
-                      0.6
-                    ]
+                    "displayLines": "0.6"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] (_MaxLayer) || RETURN",
-                    "displayLines": "_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "_MaxLayer"
-                    ]
+                    "displayLines": "_MaxLayer"
                   },
                   "valuePerStack": {
                     "DOT_Ratio": {
-                      "operator": "Variables[0] (SkillP01_DotRatio) || RETURN",
-                      "displayLines": "SkillP01_DotRatio",
-                      "constants": [],
-                      "variables": [
-                        "SkillP01_DotRatio"
-                      ]
+                      "displayLines": "SkillP01_DotRatio"
                     },
                     "AbilityRank_Eidolon2_P1_Ratio": {
-                      "operator": "Variables[0] (3) || RETURN",
-                      "displayLines": "3",
-                      "constants": [],
-                      "variables": [
-                        3
-                      ]
+                      "displayLines": "3"
                     },
                     "AbilityRank_Eidolon6_P3_DownRatio": {
-                      "operator": "Variables[0] (0.03) || RETURN",
-                      "displayLines": "0.03",
-                      "constants": [],
-                      "variables": [
-                        0.03
-                      ]
+                      "displayLines": "0.03"
                     },
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.15) || RETURN",
-                      "displayLines": "0.15",
-                      "constants": [],
-                      "variables": [
-                        0.15
-                      ]
+                      "displayLines": "0.15"
                     },
                     "MDF_PropertyValue_2": {
-                      "operator": "Variables[0] (0.05) || RETURN",
-                      "displayLines": "0.05",
-                      "constants": [],
-                      "variables": [
-                        0.05
-                      ]
+                      "displayLines": "0.05"
                     }
                   },
                   "addStacksPerTrigger": 1,
@@ -1260,14 +1012,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_Max_Count_Left) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(_Max_Count_Left - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_Max_Count_Left"
-                        ]
+                        "displayLines": "(_Max_Count_Left - 1)"
                       },
                       "variableName": "_Max_Count_Left"
                     }
@@ -1312,69 +1057,29 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (0.6) || RETURN",
-                    "displayLines": "0.6",
-                    "constants": [],
-                    "variables": [
-                      0.6
-                    ]
+                    "displayLines": "0.6"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] (_MaxLayer) || RETURN",
-                    "displayLines": "_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "_MaxLayer"
-                    ]
+                    "displayLines": "_MaxLayer"
                   },
                   "valuePerStack": {
                     "DOT_Ratio": {
-                      "operator": "Variables[0] (SkillP01_DotRatio) || RETURN",
-                      "displayLines": "SkillP01_DotRatio",
-                      "constants": [],
-                      "variables": [
-                        "SkillP01_DotRatio"
-                      ]
+                      "displayLines": "SkillP01_DotRatio"
                     },
                     "AbilityRank_Eidolon2_P1_Ratio": {
-                      "operator": "Variables[0] (3) || RETURN",
-                      "displayLines": "3",
-                      "constants": [],
-                      "variables": [
-                        3
-                      ]
+                      "displayLines": "3"
                     },
                     "AbilityRank_Eidolon6_P3_DownRatio": {
-                      "operator": "Variables[0] (0.03) || RETURN",
-                      "displayLines": "0.03",
-                      "constants": [],
-                      "variables": [
-                        0.03
-                      ]
+                      "displayLines": "0.03"
                     },
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.15) || RETURN",
-                      "displayLines": "0.15",
-                      "constants": [],
-                      "variables": [
-                        0.15
-                      ]
+                      "displayLines": "0.15"
                     },
                     "MDF_PropertyValue_2": {
-                      "operator": "Variables[0] (0.05) || RETURN",
-                      "displayLines": "0.05",
-                      "constants": [],
-                      "variables": [
-                        0.05
-                      ]
+                      "displayLines": "0.05"
                     }
                   },
                   "addStacksPerTrigger": 1,
@@ -1387,14 +1092,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_Max_Count_Left) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(_Max_Count_Left - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_Max_Count_Left"
-                        ]
+                        "displayLines": "(_Max_Count_Left - 1)"
                       },
                       "variableName": "_Max_Count_Left"
                     }
@@ -1431,16 +1129,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (WHOLE) || Variables[1] (SkillTree_PointB2_StatusProbabilityValue) || Variables[2] (0.8) || SUB || Variables[3] (0.15) || DIV || PARAM_1 || FUNCTION || Variables[4] (0.6) || MUL || RETURN",
-                "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(((SkillTree_PointB2_StatusProbabilityValue - 0.8) / 0.15)) * 0.6)",
-                "constants": [],
-                "variables": [
-                  "WHOLE",
-                  "SkillTree_PointB2_StatusProbabilityValue",
-                  0.8,
-                  0.15,
-                  0.6
-                ]
+                "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(((SkillTree_PointB2_StatusProbabilityValue - 0.8) / 0.15)) * 0.6)"
               },
               "variableName": "SkillTree_PointB2_StatusProbabilityValue"
             },
@@ -1476,12 +1165,7 @@ const configAbility = {
                     "value1": "SkillTree_PointB2_StatusProbabilityValue",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (2.4) || RETURN",
-                      "displayLines": "2.4",
-                      "constants": [],
-                      "variables": [
-                        2.4
-                      ]
+                      "displayLines": "2.4"
                     },
                     "contextScope": "ContextCaster"
                   },
@@ -1489,12 +1173,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (2.4) || RETURN",
-                        "displayLines": "2.4",
-                        "constants": [],
-                        "variables": [
-                          2.4
-                        ]
+                        "displayLines": "2.4"
                       },
                       "variableName": "SkillTree_PointB2_StatusProbabilityValue"
                     }

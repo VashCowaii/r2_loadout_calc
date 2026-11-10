@@ -42,12 +42,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.15) || RETURN",
-                    "displayLines": "0.15",
-                    "constants": [],
-                    "variables": [
-                      0.15
-                    ]
+                    "displayLines": "0.15"
                   }
                 }
               ]
@@ -231,12 +226,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Shield%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.12) || RETURN",
-                    "displayLines": "0.12",
-                    "constants": [],
-                    "variables": [
-                      0.12
-                    ]
+                    "displayLines": "0.12"
                   }
                 }
               ]
@@ -291,12 +281,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Shield%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.1) || RETURN",
-                    "displayLines": "0.1",
-                    "constants": [],
-                    "variables": [
-                      0.1
-                    ]
+                    "displayLines": "0.1"
                   }
                 }
               ]

@@ -27,12 +27,7 @@ const configAbility = {
     {
       "name": "Adjust Team Punchline Value",
       "value": {
-        "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-        "displayLines": "BattleEvent_P1_ADF",
-        "constants": [],
-        "variables": [
-          "BattleEvent_P1_ADF"
-        ]
+        "displayLines": "BattleEvent_P1_ADF"
       },
       "adjustment": "Add"
     },

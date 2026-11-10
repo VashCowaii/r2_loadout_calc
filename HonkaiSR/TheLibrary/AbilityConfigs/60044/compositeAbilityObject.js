@@ -41,28 +41,13 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"960515933\">MissionBattleEvent60044_Charge</a>",
           "valuePerStack": {
             "DelayToCharge": {
-              "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-              "displayLines": "#BattleEvent_P3_ADF",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P3_ADF"
-              ]
+              "displayLines": "#BattleEvent_P3_ADF"
             },
             "MinionDeathCharge": {
-              "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
-              "displayLines": "#BattleEvent_P4_ADF",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P4_ADF"
-              ]
+              "displayLines": "#BattleEvent_P4_ADF"
             },
             "InitialCharge": {
-              "operator": "Variables[0] (#BattleEvent_P5_ADF) || RETURN",
-              "displayLines": "#BattleEvent_P5_ADF",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P5_ADF"
-              ]
+              "displayLines": "#BattleEvent_P5_ADF"
             }
           }
         },
@@ -168,12 +153,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "valuePercent": {
-                    "operator": "Variables[0] (InitialCharge) || RETURN",
-                    "displayLines": "InitialCharge",
-                    "constants": [],
-                    "variables": [
-                      "InitialCharge"
-                    ]
+                    "displayLines": "InitialCharge"
                   },
                   "isFixed": "(Fixed)",
                   "isSetToValue": true
@@ -215,12 +195,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (MinionDeathCharge) || RETURN",
-                        "displayLines": "MinionDeathCharge",
-                        "constants": [],
-                        "variables": [
-                          "MinionDeathCharge"
-                        ]
+                        "displayLines": "MinionDeathCharge"
                       },
                       "isFixed": "* ERR"
                     }
@@ -244,13 +219,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (DelayAdd) || Variables[1] (DelayToCharge) || MUL || RETURN",
-                    "displayLines": "(DelayAdd * DelayToCharge)",
-                    "constants": [],
-                    "variables": [
-                      "DelayAdd",
-                      "DelayToCharge"
-                    ]
+                    "displayLines": "(DelayAdd * DelayToCharge)"
                   },
                   "isFixed": "* ERR"
                 }
@@ -395,26 +364,13 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "DamageFlat": {
-              "operator": "Variables[0] (#BattleEvent_P1_ADF) || Variables[1] (EnemyBoss_MaxHP) || MUL || Constants[0] (3) || DIV || RETURN",
-              "displayLines": "((#BattleEvent_P1_ADF * EnemyBoss_MaxHP) / 3)",
-              "constants": [
-                3
-              ],
-              "variables": [
-                "#BattleEvent_P1_ADF",
-                "EnemyBoss_MaxHP"
-              ]
+              "displayLines": "((#BattleEvent_P1_ADF * EnemyBoss_MaxHP) / 3)"
             },
             "cantKill": true,
             "dmgFormula": "Max HP Scaling",
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "ToughnessDMGType": {
               "DamageType": "Imaginary"
@@ -493,12 +449,7 @@ const compositeAbilityObject = {
               "duration": -1,
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                  "displayLines": "#BattleEvent_P2_ADF",
-                  "constants": [],
-                  "variables": [
-                    "#BattleEvent_P2_ADF"
-                  ]
+                  "displayLines": "#BattleEvent_P2_ADF"
                 }
               },
               "casterAssign": "TargetSelf"

@@ -7,14 +7,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (BonusAttackCounter) || Constants[0] (1) || ADD || RETURN",
-        "displayLines": "(BonusAttackCounter + 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "BonusAttackCounter"
-        ]
+        "displayLines": "(BonusAttackCounter + 1)"
       },
       "variableName": "BonusAttackCounter"
     },
@@ -265,12 +258,7 @@ const configAbility = {
             {
               "name": "Lock HP",
               "threshold": {
-                "operator": "Constants[0] (0.000010000076) || RETURN",
-                "displayLines": "0.000010000076",
-                "constants": [
-                  0.000010000076
-                ],
-                "variables": []
+                "displayLines": "0.000010000076"
               },
               "target": {
                 "name": "Target Name",

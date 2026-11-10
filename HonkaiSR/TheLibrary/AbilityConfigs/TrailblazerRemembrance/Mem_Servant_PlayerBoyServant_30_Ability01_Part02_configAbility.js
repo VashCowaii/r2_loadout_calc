@@ -19,14 +19,7 @@ const configAbility = {
           },
           "variableName": "CurEnergy",
           "value": {
-            "operator": "Variables[0] (0.05) || Constants[0] (100) || MUL || RETURN",
-            "displayLines": "(0.05 * 100)",
-            "constants": [
-              100
-            ],
-            "variables": [
-              0.05
-            ]
+            "displayLines": "(0.05 * 100)"
           }
         }
       ]
@@ -43,14 +36,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_index) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(_index + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "_index"
-            ]
+            "displayLines": "(_index + 1)"
           },
           "variableName": "_index"
         },
@@ -72,20 +58,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (0.36) || RETURN",
-                  "displayLines": "0.36",
-                  "constants": [],
-                  "variables": [
-                    0.36
-                  ]
+                  "displayLines": "0.36"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Memosprite",
@@ -107,20 +83,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] (0.9) || RETURN",
-          "displayLines": "0.9",
-          "constants": [],
-          "variables": [
-            0.9
-          ]
+          "displayLines": "0.9"
         },
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "attackType": "Memosprite",

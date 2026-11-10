@@ -13,14 +13,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio",
       "resetValue": {
-        "operator": "Variables[0] (ADF_1_Get) || Constants[0] (100) || DIV || RETURN",
-        "displayLines": "(ADF_1_Get / 100)",
-        "constants": [
-          100
-        ],
-        "variables": [
-          "ADF_1_Get"
-        ]
+        "displayLines": "(ADF_1_Get / 100)"
       },
       "scope": "ContextCaster"
     },
@@ -49,14 +42,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "DV_Ratio": {
-              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio) || Constants[0] (100) || MUL || RETURN",
-              "displayLines": "(DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio * 100)",
-              "constants": [
-                100
-              ],
-              "variables": [
-                "DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio"
-              ]
+              "displayLines": "(DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio * 100)"
             }
           }
         }
@@ -87,14 +73,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_EnterFeverValue) || Variables[2] (DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio) || MUL || ADD || RETURN",
-                    "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_EnterFeverValue * DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio))",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_BaseAbility_CountSum",
-                      "DV_EnterFeverValue",
-                      "DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio"
-                    ]
+                    "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_EnterFeverValue * DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio))"
                   },
                   "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                 },
@@ -105,12 +84,7 @@ const configAbility = {
                     "value1": "DV_FantasticStory_BaseAbility_CountSum",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
-                      "displayLines": "DV_EnterFeverValue",
-                      "constants": [],
-                      "variables": [
-                        "DV_EnterFeverValue"
-                      ]
+                      "displayLines": "DV_EnterFeverValue"
                     }
                   },
                   "passed": [
@@ -119,13 +93,7 @@ const configAbility = {
                       "current": 100,
                       "max": 100,
                       "delta": {
-                        "operator": "Variables[0] (DV_EnterFeverValue) || Variables[1] (DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio) || MUL || RETURN",
-                        "displayLines": "(DV_EnterFeverValue * DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio)",
-                        "constants": [],
-                        "variables": [
-                          "DV_EnterFeverValue",
-                          "DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio"
-                        ]
+                        "displayLines": "(DV_EnterFeverValue * DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio)"
                       },
                       "type": "FeverSpecial",
                       "phaseType": "P1"
@@ -135,29 +103,13 @@ const configAbility = {
                     {
                       "name": "Update Surging Grit[PF]",
                       "current": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
-                        "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_CountSum"
-                        ]
+                        "displayLines": "DV_FantasticStory_BaseAbility_CountSum"
                       },
                       "max": {
-                        "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
-                        "displayLines": "DV_EnterFeverValue",
-                        "constants": [],
-                        "variables": [
-                          "DV_EnterFeverValue"
-                        ]
+                        "displayLines": "DV_EnterFeverValue"
                       },
                       "delta": {
-                        "operator": "Variables[0] (DV_EnterFeverValue) || Variables[1] (DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio) || MUL || RETURN",
-                        "displayLines": "(DV_EnterFeverValue * DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio)",
-                        "constants": [],
-                        "variables": [
-                          "DV_EnterFeverValue",
-                          "DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio"
-                        ]
+                        "displayLines": "(DV_EnterFeverValue * DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio)"
                       },
                       "type": "FeverSpecial"
                     }

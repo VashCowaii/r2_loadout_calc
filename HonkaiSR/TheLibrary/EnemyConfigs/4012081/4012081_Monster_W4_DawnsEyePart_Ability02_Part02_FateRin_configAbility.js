@@ -25,12 +25,7 @@ const configAbility = {
           "variableName": "Sunny_Temperature",
           "context": "TargetEntity",
           "value": {
-            "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-            "displayLines": "{[Skill02[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[1]]}"
-            ]
+            "displayLines": "{[Skill02[1]]}"
           },
           "max": 999
         },

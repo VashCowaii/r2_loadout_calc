@@ -32,22 +32,12 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-632542414\">Luka_Eidolon1_Sub</a>[<span class=\"descriptionNumberColor\">Fighting Endlessly</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "stackLimit": 1,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.15) || RETURN",
-              "displayLines": "0.15",
-              "constants": [],
-              "variables": [
-                0.15
-              ]
+              "displayLines": "0.15"
             }
           }
         }
@@ -56,20 +46,10 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (BulletCount) || RETURN",
-        "displayLines": "BulletCount",
-        "constants": [],
-        "variables": [
-          "BulletCount"
-        ]
+        "displayLines": "BulletCount"
       },
       "maximum": {
-        "operator": "Constants[0] (4) || RETURN",
-        "displayLines": "4",
-        "constants": [
-          4
-        ],
-        "variables": []
+        "displayLines": "4"
       },
       "assignState": "True",
       "priorState": "Disable",
@@ -86,20 +66,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (1) || RETURN",
-          "displayLines": "1",
-          "constants": [],
-          "variables": [
-            1
-          ]
+          "displayLines": "1"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -115,12 +85,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1275149529\">Luka_ReloadBullet</a>",
       "valuePerStack": {
         "MDF_AddValue": {
-          "operator": "Variables[0] (1) || RETURN",
-          "displayLines": "1",
-          "constants": [],
-          "variables": [
-            1
-          ]
+          "displayLines": "1"
         }
       }
     },

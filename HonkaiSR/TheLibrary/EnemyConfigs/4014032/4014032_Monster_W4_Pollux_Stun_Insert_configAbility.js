@@ -36,12 +36,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "consumePercent": {
-            "operator": "Variables[0] ({[PassiveSkill04[3]]}) || RETURN",
-            "displayLines": "{[PassiveSkill04[3]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill04[3]]}"
-            ]
+            "displayLines": "{[PassiveSkill04[3]]}"
           }
         }
       ],
@@ -54,12 +49,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "consumePercent": {
-            "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[3]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[3]]}"
-            ]
+            "displayLines": "{[PassiveSkill02[3]]}"
           }
         }
       ]
@@ -94,12 +84,7 @@ const configAbility = {
             "target": "{{Player Team All}}"
           },
           "healPercent": {
-            "operator": "Variables[0] ({[PassiveSkill04[2]]}) || RETURN",
-            "displayLines": "{[PassiveSkill04[2]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill04[2]]}"
-            ]
+            "displayLines": "{[PassiveSkill04[2]]}"
           },
           "formula": "Heal from Target MaxHP"
         }
@@ -112,12 +97,7 @@ const configAbility = {
             "target": "{{Player Team All}}"
           },
           "healPercent": {
-            "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[2]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[2]]}"
-            ]
+            "displayLines": "{[PassiveSkill02[2]]}"
           },
           "formula": "Heal from Target MaxHP"
         }
@@ -149,12 +129,7 @@ const configAbility = {
             {
               "name": "Assign Advance/Delay to Current Ability Use",
               "adjustmentValue": {
-                "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[4]]}"
-                ]
+                "displayLines": "{[PassiveSkill01[4]]}"
               },
               "adjustmentType": "Advance"
             },

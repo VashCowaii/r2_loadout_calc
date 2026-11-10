@@ -74,20 +74,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Will of Steel</span>]",
                       "valuePerStack": {
                         "MDF_SpeedUpPerLayer": {
-                          "operator": "Variables[0] ({[SkillP04[2]]}) || RETURN",
-                          "displayLines": "{[SkillP04[2]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillP04[2]]}"
-                          ]
+                          "displayLines": "{[SkillP04[2]]}"
                         },
                         "MDF_AttackUpPerLayer": {
-                          "operator": "Variables[0] ({[SkillP04[3]]}) || RETURN",
-                          "displayLines": "{[SkillP04[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillP04[3]]}"
-                          ]
+                          "displayLines": "{[SkillP04[3]]}"
                         }
                       }
                     },
@@ -253,12 +243,7 @@ const compositeAbilityObject = {
                                   "conditions": {
                                     "name": "Enemy ID",
                                     "ID": {
-                                      "operator": "Variables[0] (SummonID01) || RETURN",
-                                      "displayLines": "SummonID01",
-                                      "constants": [],
-                                      "variables": [
-                                        "SummonID01"
-                                      ]
+                                      "displayLines": "SummonID01"
                                     },
                                     "target": {
                                       "name": "Target Name",
@@ -513,20 +498,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Will of Steel</span>]",
                       "valuePerStack": {
                         "MDF_SpeedUpPerLayer": {
-                          "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
-                          "displayLines": "{[SkillP04[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillP04[0]]}"
-                          ]
+                          "displayLines": "{[SkillP04[0]]}"
                         },
                         "MDF_AttackUpPerLayer": {
-                          "operator": "Variables[0] ({[SkillP04[1]]}) || RETURN",
-                          "displayLines": "{[SkillP04[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillP04[1]]}"
-                          ]
+                          "displayLines": "{[SkillP04[1]]}"
                         }
                       }
                     }
@@ -541,20 +516,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Will of Steel</span>]",
                       "valuePerStack": {
                         "MDF_SpeedUpPerLayer": {
-                          "operator": "Variables[0] ({[SkillP04[2]]}) || RETURN",
-                          "displayLines": "{[SkillP04[2]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillP04[2]]}"
-                          ]
+                          "displayLines": "{[SkillP04[2]]}"
                         },
                         "MDF_AttackUpPerLayer": {
-                          "operator": "Variables[0] ({[SkillP04[3]]}) || RETURN",
-                          "displayLines": "{[SkillP04[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillP04[3]]}"
-                          ]
+                          "displayLines": "{[SkillP04[3]]}"
                         }
                       }
                     }
@@ -583,13 +548,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_SpeedUpPerLayer) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_SpeedUpPerLayer * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedUpPerLayer",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_SpeedUpPerLayer * MDF_Layer)"
                   }
                 },
                 {
@@ -600,13 +559,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackUpPerLayer) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_AttackUpPerLayer * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackUpPerLayer",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_AttackUpPerLayer * MDF_Layer)"
                   }
                 }
               ]
@@ -639,12 +592,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_SpeedUp) || RETURN",
-                    "displayLines": "MDF_SpeedUp",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedUp"
-                    ]
+                    "displayLines": "MDF_SpeedUp"
                   }
                 }
               ]
@@ -1297,12 +1245,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "consumePercent": {
-                    "operator": "Variables[0] (MDF_MaxHPHitPercentage1) || RETURN",
-                    "displayLines": "MDF_MaxHPHitPercentage1",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxHPHitPercentage1"
-                    ]
+                    "displayLines": "MDF_MaxHPHitPercentage1"
                   },
                   "consumeFloor": 1
                 },
@@ -1314,33 +1257,18 @@ const compositeAbilityObject = {
                     "target": "{{All Team Members(Exclude Self)}}"
                   },
                   "consumePercent": {
-                    "operator": "Variables[0] (MDF_MaxHPHitPercentage2) || RETURN",
-                    "displayLines": "MDF_MaxHPHitPercentage2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxHPHitPercentage2"
-                    ]
+                    "displayLines": "MDF_MaxHPHitPercentage2"
                   },
                   "consumeFloor": 1
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_ShieldValue) || RETURN",
-                    "displayLines": "MDF_ShieldValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ShieldValue"
-                    ]
+                    "displayLines": "MDF_ShieldValue"
                   },
                   "entityClass": "Enemy",
                   "maximum": {
-                    "operator": "Variables[0] (MDF_ShieldValue) || RETURN",
-                    "displayLines": "MDF_ShieldValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ShieldValue"
-                    ]
+                    "displayLines": "MDF_ShieldValue"
                   },
                   "assignState": "False"
                 },
@@ -1492,24 +1420,10 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Constants[0] (0) || RETURN",
-                        "displayLines": "0",
-                        "constants": [
-                          0
-                        ],
-                        "variables": []
+                        "displayLines": "0"
                       },
                       "valuePercent": {
-                        "operator": "Variables[0] (MDF_ShieldPercentage) || Constants[0] (5) || DIV || Variables[1] (MDF_Count) || MUL || Variables[2] (UnusedUnderThisBase_8552) || MUL || RETURN",
-                        "displayLines": "(((MDF_ShieldPercentage / 5) * MDF_Count) * UnusedUnderThisBase_8552)",
-                        "constants": [
-                          5
-                        ],
-                        "variables": [
-                          "MDF_ShieldPercentage",
-                          "MDF_Count",
-                          "UnusedUnderThisBase_8552"
-                        ]
+                        "displayLines": "(((MDF_ShieldPercentage / 5) * MDF_Count) * UnusedUnderThisBase_8552)"
                       },
                       "formula": "HP Scaling (Shield)"
                     }
@@ -1526,23 +1440,10 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Constants[0] (0) || RETURN",
-                        "displayLines": "0",
-                        "constants": [
-                          0
-                        ],
-                        "variables": []
+                        "displayLines": "0"
                       },
                       "valuePercent": {
-                        "operator": "Variables[0] (MDF_ShieldPercentage) || Constants[0] (3) || DIV || Variables[1] (MDF_Count) || MUL || RETURN",
-                        "displayLines": "((MDF_ShieldPercentage / 3) * MDF_Count)",
-                        "constants": [
-                          3
-                        ],
-                        "variables": [
-                          "MDF_ShieldPercentage",
-                          "MDF_Count"
-                        ]
+                        "displayLines": "((MDF_ShieldPercentage / 3) * MDF_Count)"
                       },
                       "formula": "HP Scaling (Shield)"
                     }
@@ -1560,21 +1461,11 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_ShieldValue) || RETURN",
-                    "displayLines": "MDF_ShieldValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ShieldValue"
-                    ]
+                    "displayLines": "MDF_ShieldValue"
                   },
                   "entityClass": "Enemy",
                   "maximum": {
-                    "operator": "Variables[0] (MDF_ShieldValue) || RETURN",
-                    "displayLines": "MDF_ShieldValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ShieldValue"
-                    ]
+                    "displayLines": "MDF_ShieldValue"
                   },
                   "assignState": "True"
                 }
@@ -1595,21 +1486,11 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentShield) || RETURN",
-                    "displayLines": "MDF_CurrentShield",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentShield"
-                    ]
+                    "displayLines": "MDF_CurrentShield"
                   },
                   "entityClass": "Enemy",
                   "maximum": {
-                    "operator": "Variables[0] (MDF_ShieldValue) || RETURN",
-                    "displayLines": "MDF_ShieldValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ShieldValue"
-                    ]
+                    "displayLines": "MDF_ShieldValue"
                   }
                 }
               ]
@@ -1751,12 +1632,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "consumePercent": {
-                    "operator": "Variables[0] (MDF_MaxHPHitPercentage1) || RETURN",
-                    "displayLines": "MDF_MaxHPHitPercentage1",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxHPHitPercentage1"
-                    ]
+                    "displayLines": "MDF_MaxHPHitPercentage1"
                   },
                   "consumeFloor": 1
                 },
@@ -1768,33 +1644,18 @@ const compositeAbilityObject = {
                     "target": "{{All Team Members(Exclude Self)}}"
                   },
                   "consumePercent": {
-                    "operator": "Variables[0] (MDF_MaxHPHitPercentage2) || RETURN",
-                    "displayLines": "MDF_MaxHPHitPercentage2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxHPHitPercentage2"
-                    ]
+                    "displayLines": "MDF_MaxHPHitPercentage2"
                   },
                   "consumeFloor": 1
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_ShieldValue) || RETURN",
-                    "displayLines": "MDF_ShieldValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ShieldValue"
-                    ]
+                    "displayLines": "MDF_ShieldValue"
                   },
                   "entityClass": "Enemy",
                   "maximum": {
-                    "operator": "Variables[0] (MDF_ShieldValue) || RETURN",
-                    "displayLines": "MDF_ShieldValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ShieldValue"
-                    ]
+                    "displayLines": "MDF_ShieldValue"
                   },
                   "assignState": "False"
                 },
@@ -1947,23 +1808,10 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Constants[0] (0) || RETURN",
-                    "displayLines": "0",
-                    "constants": [
-                      0
-                    ],
-                    "variables": []
+                    "displayLines": "0"
                   },
                   "valuePercent": {
-                    "operator": "Variables[0] (MDF_ShieldPercentage) || Constants[0] (3) || DIV || Variables[1] (MDF_Count) || MUL || RETURN",
-                    "displayLines": "((MDF_ShieldPercentage / 3) * MDF_Count)",
-                    "constants": [
-                      3
-                    ],
-                    "variables": [
-                      "MDF_ShieldPercentage",
-                      "MDF_Count"
-                    ]
+                    "displayLines": "((MDF_ShieldPercentage / 3) * MDF_Count)"
                   },
                   "formula": "HP Scaling (Shield)"
                 },
@@ -1979,21 +1827,11 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_ShieldValue) || RETURN",
-                    "displayLines": "MDF_ShieldValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ShieldValue"
-                    ]
+                    "displayLines": "MDF_ShieldValue"
                   },
                   "entityClass": "Enemy",
                   "maximum": {
-                    "operator": "Variables[0] (MDF_ShieldValue) || RETURN",
-                    "displayLines": "MDF_ShieldValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ShieldValue"
-                    ]
+                    "displayLines": "MDF_ShieldValue"
                   },
                   "assignState": "True"
                 }
@@ -2014,21 +1852,11 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentShield) || RETURN",
-                    "displayLines": "MDF_CurrentShield",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentShield"
-                    ]
+                    "displayLines": "MDF_CurrentShield"
                   },
                   "entityClass": "Enemy",
                   "maximum": {
-                    "operator": "Variables[0] (MDF_ShieldValue) || RETURN",
-                    "displayLines": "MDF_ShieldValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ShieldValue"
-                    ]
+                    "displayLines": "MDF_ShieldValue"
                   }
                 }
               ]
@@ -2124,13 +1952,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageAddedRatio) || Variables[1] (MDF_Count) || MUL || RETURN",
-                    "displayLines": "(MDF_DamageAddedRatio * MDF_Count)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageAddedRatio",
-                      "MDF_Count"
-                    ]
+                    "displayLines": "(MDF_DamageAddedRatio * MDF_Count)"
                   }
                 }
               ]
@@ -2576,20 +2398,10 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Will of Steel</span>]",
               "valuePerStack": {
                 "MDF_SpeedUpPerLayer": {
-                  "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
-                  "displayLines": "{[SkillP04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP04[0]]}"
-                  ]
+                  "displayLines": "{[SkillP04[0]]}"
                 },
                 "MDF_AttackUpPerLayer": {
-                  "operator": "Variables[0] ({[SkillP04[1]]}) || RETURN",
-                  "displayLines": "{[SkillP04[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP04[1]]}"
-                  ]
+                  "displayLines": "{[SkillP04[1]]}"
                 }
               }
             }
@@ -2604,20 +2416,10 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Will of Steel</span>]",
               "valuePerStack": {
                 "MDF_SpeedUpPerLayer": {
-                  "operator": "Variables[0] ({[SkillP04[2]]}) || RETURN",
-                  "displayLines": "{[SkillP04[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP04[2]]}"
-                  ]
+                  "displayLines": "{[SkillP04[2]]}"
                 },
                 "MDF_AttackUpPerLayer": {
-                  "operator": "Variables[0] ({[SkillP04[3]]}) || RETURN",
-                  "displayLines": "{[SkillP04[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP04[3]]}"
-                  ]
+                  "displayLines": "{[SkillP04[3]]}"
                 }
               }
             }
@@ -2640,12 +2442,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1430608043\">Enemy_W1_Gepard_IF_03_Enhance</a>[<span class=\"descriptionNumberColor\">Thick and Thin</span>]",
           "valuePerStack": {
             "MDF_SpeedUp": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
+              "displayLines": "{[SkillP01[0]]}"
             }
           }
         },
@@ -2893,20 +2690,10 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Will of Steel</span>]",
               "valuePerStack": {
                 "MDF_SpeedUpPerLayer": {
-                  "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
-                  "displayLines": "{[SkillP04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP04[0]]}"
-                  ]
+                  "displayLines": "{[SkillP04[0]]}"
                 },
                 "MDF_AttackUpPerLayer": {
-                  "operator": "Variables[0] ({[SkillP04[1]]}) || RETURN",
-                  "displayLines": "{[SkillP04[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP04[1]]}"
-                  ]
+                  "displayLines": "{[SkillP04[1]]}"
                 }
               }
             }
@@ -2921,20 +2708,10 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Will of Steel</span>]",
               "valuePerStack": {
                 "MDF_SpeedUpPerLayer": {
-                  "operator": "Variables[0] ({[SkillP04[2]]}) || RETURN",
-                  "displayLines": "{[SkillP04[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP04[2]]}"
-                  ]
+                  "displayLines": "{[SkillP04[2]]}"
                 },
                 "MDF_AttackUpPerLayer": {
-                  "operator": "Variables[0] ({[SkillP04[3]]}) || RETURN",
-                  "displayLines": "{[SkillP04[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP04[3]]}"
-                  ]
+                  "displayLines": "{[SkillP04[3]]}"
                 }
               }
             }
@@ -3013,12 +2790,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]",
               "valuePerStack": {
                 "MDF_SpeedDownRatio": {
-                  "operator": "Variables[0] ({[SkillP03[4]]}) || RETURN",
-                  "displayLines": "{[SkillP03[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP03[4]]}"
-                  ]
+                  "displayLines": "{[SkillP03[4]]}"
                 }
               }
             }
@@ -3144,20 +2916,10 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Will of Steel</span>]",
                   "valuePerStack": {
                     "MDF_SpeedUpPerLayer": {
-                      "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
-                      "displayLines": "{[SkillP04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP04[0]]}"
-                      ]
+                      "displayLines": "{[SkillP04[0]]}"
                     },
                     "MDF_AttackUpPerLayer": {
-                      "operator": "Variables[0] ({[SkillP04[1]]}) || RETURN",
-                      "displayLines": "{[SkillP04[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP04[1]]}"
-                      ]
+                      "displayLines": "{[SkillP04[1]]}"
                     }
                   }
                 },
@@ -3581,12 +3343,7 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-2038076408\">Monster_Gepard_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Aggravate</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill12[0]]}) || RETURN",
-            "displayLines": "{[Skill12[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill12[0]]}"
-            ]
+            "displayLines": "{[Skill12[0]]}"
           }
         },
         "Trigger: Ability End"
@@ -3722,12 +3479,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_14028) || RETURN",
-              "displayLines": "UnusedUnderThisBase_14028",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_14028"
-              ]
+              "displayLines": "UnusedUnderThisBase_14028"
             },
             "Toughness": null,
             "Tags": null,
@@ -3796,12 +3548,7 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-2038076408\">Monster_Gepard_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Aggravate</span>]",
           "duration": {
-            "operator": "Variables[0] (UnusedUnderThisBase_8587) || RETURN",
-            "displayLines": "UnusedUnderThisBase_8587",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_8587"
-            ]
+            "displayLines": "UnusedUnderThisBase_8587"
           }
         },
         {
@@ -3904,20 +3651,10 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Will of Steel</span>]",
                   "valuePerStack": {
                     "MDF_SpeedUpPerLayer": {
-                      "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
-                      "displayLines": "{[SkillP04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP04[0]]}"
-                      ]
+                      "displayLines": "{[SkillP04[0]]}"
                     },
                     "MDF_AttackUpPerLayer": {
-                      "operator": "Variables[0] ({[SkillP04[1]]}) || RETURN",
-                      "displayLines": "{[SkillP04[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP04[1]]}"
-                      ]
+                      "displayLines": "{[SkillP04[1]]}"
                     }
                   }
                 }
@@ -3932,20 +3669,10 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Will of Steel</span>]",
                   "valuePerStack": {
                     "MDF_SpeedUpPerLayer": {
-                      "operator": "Variables[0] ({[SkillP04[2]]}) || RETURN",
-                      "displayLines": "{[SkillP04[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP04[2]]}"
-                      ]
+                      "displayLines": "{[SkillP04[2]]}"
                     },
                     "MDF_AttackUpPerLayer": {
-                      "operator": "Variables[0] ({[SkillP04[3]]}) || RETURN",
-                      "displayLines": "{[SkillP04[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP04[3]]}"
-                      ]
+                      "displayLines": "{[SkillP04[3]]}"
                     }
                   }
                 }
@@ -3989,12 +3716,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1430608043\">Enemy_W1_Gepard_IF_03_Enhance</a>[<span class=\"descriptionNumberColor\">Thick and Thin</span>]",
                   "valuePerStack": {
                     "MDF_SpeedUp": {
-                      "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                      "displayLines": "{[SkillP01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[0]]}"
-                      ]
+                      "displayLines": "{[SkillP01[0]]}"
                     }
                   }
                 },
@@ -4048,12 +3770,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04Insert[0]]}) || RETURN",
-              "displayLines": "{[Skill04Insert[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04Insert[0]]}"
-              ]
+              "displayLines": "{[Skill04Insert[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -4079,29 +3796,14 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
               "duration": {
-                "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                "displayLines": "{[SkillP01[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP01[2]]}"
-                ]
+                "displayLines": "{[SkillP01[2]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                "displayLines": "{[SkillP01[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP01[1]]}"
-                ]
+                "displayLines": "{[SkillP01[1]]}"
               },
               "valuePerStack": {
                 "Modifier_Frozen_DamagePercentage": {
-                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                  "displayLines": "{[SkillP01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[3]]}"
-                  ]
+                  "displayLines": "{[SkillP01[3]]}"
                 }
               }
             }
@@ -4373,12 +4075,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]",
               "valuePerStack": {
                 "MDF_SpeedDownRatio": {
-                  "operator": "Variables[0] ({[SkillP03[4]]}) || RETURN",
-                  "displayLines": "{[SkillP03[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP03[4]]}"
-                  ]
+                  "displayLines": "{[SkillP03[4]]}"
                 }
               }
             },
@@ -4453,20 +4150,10 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Will of Steel</span>]",
               "valuePerStack": {
                 "MDF_SpeedUpPerLayer": {
-                  "operator": "Variables[0] ({[SkillP04[2]]}) || RETURN",
-                  "displayLines": "{[SkillP04[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP04[2]]}"
-                  ]
+                  "displayLines": "{[SkillP04[2]]}"
                 },
                 "MDF_AttackUpPerLayer": {
-                  "operator": "Variables[0] ({[SkillP04[3]]}) || RETURN",
-                  "displayLines": "{[SkillP04[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP04[3]]}"
-                  ]
+                  "displayLines": "{[SkillP04[3]]}"
                 }
               }
             },
@@ -4534,12 +4221,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -4565,29 +4247,14 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
               "duration": {
-                "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                "displayLines": "{[SkillP01[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP01[2]]}"
-                ]
+                "displayLines": "{[SkillP01[2]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                "displayLines": "{[SkillP01[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP01[1]]}"
-                ]
+                "displayLines": "{[SkillP01[1]]}"
               },
               "valuePerStack": {
                 "Modifier_Frozen_DamagePercentage": {
-                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                  "displayLines": "{[SkillP01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[3]]}"
-                  ]
+                  "displayLines": "{[SkillP01[3]]}"
                 }
               }
             }
@@ -4701,12 +4368,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -4770,12 +4432,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,

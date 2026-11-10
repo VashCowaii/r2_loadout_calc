@@ -14,21 +14,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (2.5) || RETURN",
-          "displayLines": "2.5",
-          "constants": [],
-          "variables": [
-            2.5
-          ]
+          "displayLines": "2.5"
         },
         "HitSplit": 0.25,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -44,21 +34,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (2.5) || RETURN",
-          "displayLines": "2.5",
-          "constants": [],
-          "variables": [
-            2.5
-          ]
+          "displayLines": "2.5"
         },
         "HitSplit": 0.15,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -74,21 +54,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (2.5) || RETURN",
-          "displayLines": "2.5",
-          "constants": [],
-          "variables": [
-            2.5
-          ]
+          "displayLines": "2.5"
         },
         "HitSplit": 0.6,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -103,12 +73,7 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-1678215353\">MWGallagher_Ability11_AttackDownModifier</a>[<span class=\"descriptionNumberColor\">ATK Reduction</span>]",
       "duration": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       }
     },
     {

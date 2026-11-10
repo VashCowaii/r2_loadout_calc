@@ -62,12 +62,7 @@ const configAbility = {
                           }
                         },
                         "Damage": {
-                          "operator": "Variables[0] (0.48) || RETURN",
-                          "displayLines": "0.48",
-                          "constants": [],
-                          "variables": [
-                            0.48
-                          ]
+                          "displayLines": "0.48"
                         },
                         "indirectDMG": true,
                         "Toughness": null,

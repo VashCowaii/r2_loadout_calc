@@ -176,12 +176,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                    "displayLines": "{[SkillP01[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillP01[0]]}"
-                    ]
+                    "displayLines": "{[SkillP01[0]]}"
                   },
                   "formula": "Heal from Target MaxHP"
                 }
@@ -505,12 +500,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "consumePercent": {
-                "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                "displayLines": "{[Skill04[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[0]]}"
-                ]
+                "displayLines": "{[Skill04[0]]}"
               },
               "consumeFloor": 1
             },
@@ -708,14 +698,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.1) || MUL || RETURN",
-              "displayLines": "({[Skill03[0]]} * 0.1)",
-              "constants": [
-                0.1
-              ],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "({[Skill03[0]]} * 0.1)"
             },
             "Toughness": null,
             "Tags": null,
@@ -731,14 +714,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.1) || MUL || RETURN",
-              "displayLines": "({[Skill03[0]]} * 0.1)",
-              "constants": [
-                0.1
-              ],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "({[Skill03[0]]} * 0.1)"
             },
             "Toughness": null,
             "Tags": null,
@@ -754,14 +730,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.1) || MUL || RETURN",
-              "displayLines": "({[Skill03[0]]} * 0.1)",
-              "constants": [
-                0.1
-              ],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "({[Skill03[0]]} * 0.1)"
             },
             "Toughness": null,
             "Tags": null,
@@ -777,14 +746,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.1) || MUL || RETURN",
-              "displayLines": "({[Skill03[0]]} * 0.1)",
-              "constants": [
-                0.1
-              ],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "({[Skill03[0]]} * 0.1)"
             },
             "Toughness": null,
             "Tags": null,
@@ -800,14 +762,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.1) || MUL || RETURN",
-              "displayLines": "({[Skill03[0]]} * 0.1)",
-              "constants": [
-                0.1
-              ],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "({[Skill03[0]]} * 0.1)"
             },
             "Toughness": null,
             "Tags": null,
@@ -823,14 +778,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.1) || MUL || RETURN",
-              "displayLines": "({[Skill03[0]]} * 0.1)",
-              "constants": [
-                0.1
-              ],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "({[Skill03[0]]} * 0.1)"
             },
             "Toughness": null,
             "Tags": null,
@@ -846,14 +794,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.1) || MUL || RETURN",
-              "displayLines": "({[Skill03[0]]} * 0.1)",
-              "constants": [
-                0.1
-              ],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "({[Skill03[0]]} * 0.1)"
             },
             "Toughness": null,
             "Tags": null,
@@ -869,14 +810,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.3) || MUL || RETURN",
-              "displayLines": "({[Skill03[0]]} * 0.3)",
-              "constants": [
-                0.3
-              ],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "({[Skill03[0]]} * 0.3)"
             },
             "Toughness": null,
             "Tags": null,
@@ -949,12 +883,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -971,12 +900,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1040,12 +964,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,

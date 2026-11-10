@@ -50,28 +50,10 @@ const configAbility = {
             ]
           },
           "baseDelay": {
-            "operator": "Variables[0] (MDF_FirstHit) || Variables[1] (MDF_EnemyCount) || Constants[0] (1) || ADD || Constants[1] (2) || DIV || DIV || RETURN",
-            "displayLines": "(MDF_FirstHit / ((MDF_EnemyCount + 1) / 2))",
-            "constants": [
-              1,
-              2
-            ],
-            "variables": [
-              "MDF_FirstHit",
-              "MDF_EnemyCount"
-            ]
+            "displayLines": "(MDF_FirstHit / ((MDF_EnemyCount + 1) / 2))"
           },
           "delayInterval": {
-            "operator": "Variables[0] (MDF_FirstHit) || Variables[1] (MDF_EnemyCount) || Constants[0] (1) || ADD || Constants[1] (2) || DIV || DIV || RETURN",
-            "displayLines": "(MDF_FirstHit / ((MDF_EnemyCount + 1) / 2))",
-            "constants": [
-              1,
-              2
-            ],
-            "variables": [
-              "MDF_FirstHit",
-              "MDF_EnemyCount"
-            ]
+            "displayLines": "(MDF_FirstHit / ((MDF_EnemyCount + 1) / 2))"
           },
           "useParamEntitiesForParallelCount": true
         }
@@ -102,28 +84,10 @@ const configAbility = {
             ]
           },
           "baseDelay": {
-            "operator": "Variables[0] (MDF_FirstHit) || Variables[1] (MDF_EnemyCount) || Constants[0] (1) || ADD || Constants[1] (2) || DIV || DIV || RETURN",
-            "displayLines": "(MDF_FirstHit / ((MDF_EnemyCount + 1) / 2))",
-            "constants": [
-              1,
-              2
-            ],
-            "variables": [
-              "MDF_FirstHit",
-              "MDF_EnemyCount"
-            ]
+            "displayLines": "(MDF_FirstHit / ((MDF_EnemyCount + 1) / 2))"
           },
           "delayInterval": {
-            "operator": "Variables[0] (MDF_FirstHit) || Variables[1] (MDF_EnemyCount) || Constants[0] (1) || ADD || Constants[1] (2) || DIV || DIV || RETURN",
-            "displayLines": "(MDF_FirstHit / ((MDF_EnemyCount + 1) / 2))",
-            "constants": [
-              1,
-              2
-            ],
-            "variables": [
-              "MDF_FirstHit",
-              "MDF_EnemyCount"
-            ]
+            "displayLines": "(MDF_FirstHit / ((MDF_EnemyCount + 1) / 2))"
           },
           "useParamEntitiesForParallelCount": true
         }
@@ -166,12 +130,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "DamageElation": {
-                      "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                      "displayLines": "MDF_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamagePercentage"
-                      ]
+                      "displayLines": "MDF_DamagePercentage"
                     },
                     "dmgFormula": "Elation Scaling",
                     "Toughness": null,
@@ -201,12 +160,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "DamageElation": {
-                      "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                      "displayLines": "MDF_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamagePercentage"
-                      ]
+                      "displayLines": "MDF_DamagePercentage"
                     },
                     "dmgFormula": "Elation Scaling",
                     "Toughness": null,
@@ -236,12 +190,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "DamageElation": {
-                      "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                      "displayLines": "MDF_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamagePercentage"
-                      ]
+                      "displayLines": "MDF_DamagePercentage"
                     },
                     "dmgFormula": "Elation Scaling",
                     "Toughness": null,
@@ -271,12 +220,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "DamageElation": {
-                      "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                      "displayLines": "MDF_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamagePercentage"
-                      ]
+                      "displayLines": "MDF_DamagePercentage"
                     },
                     "dmgFormula": "Elation Scaling",
                     "Toughness": null,
@@ -306,12 +250,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "DamageElation": {
-                      "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                      "displayLines": "MDF_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamagePercentage"
-                      ]
+                      "displayLines": "MDF_DamagePercentage"
                     },
                     "dmgFormula": "Elation Scaling",
                     "Toughness": null,
@@ -341,12 +280,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "DamageElation": {
-                      "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                      "displayLines": "MDF_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamagePercentage"
-                      ]
+                      "displayLines": "MDF_DamagePercentage"
                     },
                     "dmgFormula": "Elation Scaling",
                     "Toughness": null,
@@ -376,12 +310,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Imaginary",
                     "DamageElation": {
-                      "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                      "displayLines": "MDF_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamagePercentage"
-                      ]
+                      "displayLines": "MDF_DamagePercentage"
                     },
                     "dmgFormula": "Elation Scaling",
                     "Toughness": null,
@@ -413,12 +342,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "DamageElation": {
-                      "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                      "displayLines": "MDF_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamagePercentage"
-                      ]
+                      "displayLines": "MDF_DamagePercentage"
                     },
                     "dmgFormula": "Elation Scaling",
                     "Toughness": null,
@@ -448,12 +372,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "DamageElation": {
-                      "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                      "displayLines": "MDF_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamagePercentage"
-                      ]
+                      "displayLines": "MDF_DamagePercentage"
                     },
                     "dmgFormula": "Elation Scaling",
                     "Toughness": null,
@@ -483,12 +402,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "DamageElation": {
-                      "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                      "displayLines": "MDF_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamagePercentage"
-                      ]
+                      "displayLines": "MDF_DamagePercentage"
                     },
                     "dmgFormula": "Elation Scaling",
                     "Toughness": null,
@@ -518,12 +432,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "DamageElation": {
-                      "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                      "displayLines": "MDF_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamagePercentage"
-                      ]
+                      "displayLines": "MDF_DamagePercentage"
                     },
                     "dmgFormula": "Elation Scaling",
                     "Toughness": null,
@@ -553,12 +462,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "DamageElation": {
-                      "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                      "displayLines": "MDF_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamagePercentage"
-                      ]
+                      "displayLines": "MDF_DamagePercentage"
                     },
                     "dmgFormula": "Elation Scaling",
                     "Toughness": null,
@@ -588,12 +492,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "DamageElation": {
-                      "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                      "displayLines": "MDF_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamagePercentage"
-                      ]
+                      "displayLines": "MDF_DamagePercentage"
                     },
                     "dmgFormula": "Elation Scaling",
                     "Toughness": null,
@@ -623,12 +522,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Imaginary",
                     "DamageElation": {
-                      "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                      "displayLines": "MDF_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamagePercentage"
-                      ]
+                      "displayLines": "MDF_DamagePercentage"
                     },
                     "dmgFormula": "Elation Scaling",
                     "Toughness": null,

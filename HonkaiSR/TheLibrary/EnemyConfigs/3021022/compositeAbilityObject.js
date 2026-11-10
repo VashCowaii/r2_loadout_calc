@@ -58,13 +58,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_ShowValue2) || Variables[1] (MDF_ShowValue1) || MUL || RETURN",
-                    "displayLines": "(MDF_ShowValue2 * MDF_ShowValue1)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ShowValue2",
-                      "MDF_ShowValue1"
-                    ]
+                    "displayLines": "(MDF_ShowValue2 * MDF_ShowValue1)"
                   }
                 }
               ]
@@ -93,12 +87,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_ShowValue) || RETURN",
-                    "displayLines": "MDF_ShowValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ShowValue"
-                    ]
+                    "displayLines": "MDF_ShowValue"
                   }
                 }
               ]
@@ -1319,32 +1308,15 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "duration": {
-                "operator": "Variables[0] (UnusedUnderThisBase_8956) || RETURN",
-                "displayLines": "UnusedUnderThisBase_8956",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_8956"
-                ]
+                "displayLines": "UnusedUnderThisBase_8956"
               },
               "valuePerStack": {
                 "MDF_ShowValue1": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_8962) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_8962",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_8962"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_8962"
                 }
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (UnusedUnderThisBase_8957) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(UnusedUnderThisBase_8957 - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "UnusedUnderThisBase_8957"
-                ]
+                "displayLines": "(UnusedUnderThisBase_8957 - 1)"
               }
             },
             {
@@ -1355,21 +1327,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "duration": {
-                "operator": "Variables[0] (UnusedUnderThisBase_8956) || RETURN",
-                "displayLines": "UnusedUnderThisBase_8956",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_8956"
-                ]
+                "displayLines": "UnusedUnderThisBase_8956"
               },
               "valuePerStack": {
                 "MDF_ShowValue1": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_8962) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_8962",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_8962"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_8962"
                 }
               },
               "addStacksPerTrigger": 1
@@ -1384,30 +1346,15 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "duration": {
-                "operator": "Variables[0] (UnusedUnderThisBase_8956) || RETURN",
-                "displayLines": "UnusedUnderThisBase_8956",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_8956"
-                ]
+                "displayLines": "UnusedUnderThisBase_8956"
               },
               "valuePerStack": {
                 "MDF_ShowValue1": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_8962) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_8962",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_8962"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_8962"
                 }
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (UnusedUnderThisBase_8963) || RETURN",
-                "displayLines": "UnusedUnderThisBase_8963",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_8963"
-                ]
+                "displayLines": "UnusedUnderThisBase_8963"
               }
             }
           ]

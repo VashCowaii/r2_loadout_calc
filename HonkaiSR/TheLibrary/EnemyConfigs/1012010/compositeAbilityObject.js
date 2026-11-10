@@ -24,12 +24,7 @@ const compositeAbilityObject = {
             "target": "{{All Team Members}}"
           },
           "healPercent": {
-            "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-            "displayLines": "{[Skill05[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill05[0]]}"
-            ]
+            "displayLines": "{[Skill05[0]]}"
           },
           "formula": "Heal from Healer's MaxHP"
         },
@@ -87,12 +82,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,

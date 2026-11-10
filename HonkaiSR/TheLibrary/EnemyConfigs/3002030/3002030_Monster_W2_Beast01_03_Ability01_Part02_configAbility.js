@@ -21,14 +21,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill01[0]]}) || Variables[1] ({[Skill01[1]]}) || Variables[2] (Current_Layer) || MUL || ADD || RETURN",
-          "displayLines": "({[Skill01[0]]} + ({[Skill01[1]]} * Current_Layer))",
-          "constants": [],
-          "variables": [
-            "{[Skill01[0]]}",
-            "{[Skill01[1]]}",
-            "Current_Layer"
-          ]
+          "displayLines": "({[Skill01[0]]} + ({[Skill01[1]]} * Current_Layer))"
         },
         "Toughness": null,
         "Tags": null,

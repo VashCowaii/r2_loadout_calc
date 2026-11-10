@@ -516,25 +516,13 @@ const configAbility = {
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (MDF_CurrentLayer) || RETURN",
-                    "displayLines": "MDF_CurrentLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentLayer"
-                    ]
+                    "displayLines": "MDF_CurrentLayer"
                   },
                   "execute": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_AttackAddRatioCurrent) || Constants[0] (2) || MUL || RETURN",
-                        "displayLines": "(MDF_AttackAddRatioCurrent * 2)",
-                        "constants": [
-                          2
-                        ],
-                        "variables": [
-                          "MDF_AttackAddRatioCurrent"
-                        ]
+                        "displayLines": "(MDF_AttackAddRatioCurrent * 2)"
                       },
                       "variableName": "MDF_AttackAddRatioCurrent"
                     }
@@ -555,13 +543,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_AttackAddRatioCurrent) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyValue * MDF_AttackAddRatioCurrent)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "MDF_AttackAddRatioCurrent"
-                ]
+                "displayLines": "(MDF_PropertyValue * MDF_AttackAddRatioCurrent)"
               },
               "variableName": "MDF_AttackAddRatioCurrent"
             },
@@ -573,12 +555,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AttackAddRatioCurrent) || RETURN",
-                "displayLines": "MDF_AttackAddRatioCurrent",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackAddRatioCurrent"
-                ]
+                "displayLines": "MDF_AttackAddRatioCurrent"
               }
             }
           ]

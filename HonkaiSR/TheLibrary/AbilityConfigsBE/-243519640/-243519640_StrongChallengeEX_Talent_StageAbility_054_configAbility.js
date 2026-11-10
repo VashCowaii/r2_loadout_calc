@@ -31,14 +31,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceQuantumBonus</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_QuantumResistanceDelta) || SUB || RETURN",
-                "displayLines": "(0 - MDF_QuantumResistanceDelta)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_QuantumResistanceDelta"
-                ]
+                "displayLines": "(0 - MDF_QuantumResistanceDelta)"
               }
             }
           ]
@@ -77,13 +70,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1995909540\">MStrongChallengeEX_Talent_StageAbility_MST_054</a>",
                   "valuePerStack": {
                     "MDF_QuantumResistanceDelta": {
-                      "operator": "Variables[0] (#ADF_1) || Variables[1] (_CharacterCount) || MUL || RETURN",
-                      "displayLines": "(#ADF_1 * _CharacterCount)",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1",
-                        "_CharacterCount"
-                      ]
+                      "displayLines": "(#ADF_1 * _CharacterCount)"
                     }
                   }
                 }
@@ -120,13 +107,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1995909540\">MStrongChallengeEX_Talent_StageAbility_MST_054</a>",
               "valuePerStack": {
                 "MDF_QuantumResistanceDelta": {
-                  "operator": "Variables[0] (#ADF_1) || Variables[1] (_CharacterCount) || MUL || RETURN",
-                  "displayLines": "(#ADF_1 * _CharacterCount)",
-                  "constants": [],
-                  "variables": [
-                    "#ADF_1",
-                    "_CharacterCount"
-                  ]
+                  "displayLines": "(#ADF_1 * _CharacterCount)"
                 }
               }
             }

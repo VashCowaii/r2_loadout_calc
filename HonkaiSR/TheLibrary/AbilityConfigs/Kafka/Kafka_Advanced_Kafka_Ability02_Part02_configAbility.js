@@ -24,29 +24,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1537350177\">Advanced_Kafka_PassiveDotDamage_Eidolon1</a>[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "baseChance": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "valuePerStack": {
             "MDF_DotRatio": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             }
           }
         }
@@ -61,21 +46,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (1.6) || RETURN",
-          "displayLines": "1.6",
-          "constants": [],
-          "variables": [
-            1.6
-          ]
+          "displayLines": "1.6"
         },
         "HitSplit": 0.2,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -90,21 +65,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (1.6) || RETURN",
-          "displayLines": "1.6",
-          "constants": [],
-          "variables": [
-            1.6
-          ]
+          "displayLines": "1.6"
         },
         "HitSplit": 0.3,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -120,21 +85,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (1.6) || RETURN",
-          "displayLines": "1.6",
-          "constants": [],
-          "variables": [
-            1.6
-          ]
+          "displayLines": "1.6"
         },
         "HitSplit": 0.5,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -150,20 +105,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (0.6) || RETURN",
-          "displayLines": "0.6",
-          "constants": [],
-          "variables": [
-            0.6
-          ]
+          "displayLines": "0.6"
         },
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-          "displayLines": "Blast Toughness Value",
-          "constants": [],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "Blast Toughness Value"
         },
         "Tags": null
       }
@@ -226,12 +171,7 @@ const configAbility = {
               "variableName": "DOT_TriggerRatio",
               "eventType": "DOT",
               "value": {
-                "operator": "Variables[0] (0.75) || RETURN",
-                "displayLines": "0.75",
-                "constants": [],
-                "variables": [
-                  0.75
-                ]
+                "displayLines": "0.75"
               }
             }
           ],
@@ -245,12 +185,7 @@ const configAbility = {
               "variableName": "DOT_TriggerRatio",
               "eventType": "DOT",
               "value": {
-                "operator": "Variables[0] (0.5) || RETURN",
-                "displayLines": "0.5",
-                "constants": [],
-                "variables": [
-                  0.5
-                ]
+                "displayLines": "0.5"
               }
             }
           ]

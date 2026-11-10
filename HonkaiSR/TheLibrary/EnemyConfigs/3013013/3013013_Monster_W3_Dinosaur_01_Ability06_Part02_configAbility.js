@@ -14,12 +14,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -49,21 +44,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-340009422\">Enemy_W3_Dinosaur_01_Standard_Growth_Enhance</a>[<span class=\"descriptionNumberColor\">Scorchbone Inferno</span>]",
           "stackLimit": {
-            "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-            "displayLines": "{[SkillP01[3]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP01[3]]}"
-            ]
+            "displayLines": "{[SkillP01[3]]}"
           },
           "valuePerStack": {
             "MDF_MaxLayer": {
-              "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-              "displayLines": "{[SkillP01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[3]]}"
-              ]
+              "displayLines": "{[SkillP01[3]]}"
             }
           },
           "addStacksPerTrigger": 1
@@ -79,12 +64,7 @@ const configAbility = {
             "value1": "<a class=\"gModGreen\" id=\"-340009422\">Enemy_W3_Dinosaur_01_Standard_Growth_Enhance</a>[<span class=\"descriptionNumberColor\">Scorchbone Inferno</span>]",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-              "displayLines": "{[SkillP01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[3]]}"
-              ]
+              "displayLines": "{[SkillP01[3]]}"
             },
             "valueType": "Layer"
           }

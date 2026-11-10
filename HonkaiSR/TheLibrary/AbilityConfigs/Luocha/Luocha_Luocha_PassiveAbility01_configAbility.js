@@ -24,12 +24,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-613660626\">Luocha_Passive01_QuickHealthHP</a>",
       "valuePerStack": {
         "MDF_HPRatio": {
-          "operator": "Variables[0] (0.5) || RETURN",
-          "displayLines": "0.5",
-          "constants": [],
-          "variables": [
-            0.5
-          ]
+          "displayLines": "0.5"
         }
       }
     },
@@ -370,12 +365,7 @@ const configAbility = {
                                 "value1": "CurrentHP%",
                                 "compareType": "<=",
                                 "value2": {
-                                  "operator": "Variables[0] (MDF_HPRatio) || RETURN",
-                                  "displayLines": "MDF_HPRatio",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_HPRatio"
-                                  ]
+                                  "displayLines": "MDF_HPRatio"
                                 }
                               },
                               "passed": [

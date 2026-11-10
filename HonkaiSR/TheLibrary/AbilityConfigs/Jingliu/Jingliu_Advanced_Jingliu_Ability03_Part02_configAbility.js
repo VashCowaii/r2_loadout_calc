@@ -19,21 +19,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1838091998\">Advanced_Jingliu_Eidolon1_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Moon Crashes Tianguan Gate</span>]",
           "duration": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.36) || RETURN",
-              "displayLines": "0.36",
-              "constants": [],
-              "variables": [
-                0.36
-              ]
+              "displayLines": "0.36"
             }
           }
         }
@@ -49,21 +39,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] (1.8) || RETURN",
-          "displayLines": "1.8",
-          "constants": [],
-          "variables": [
-            1.8
-          ]
+          "displayLines": "1.8"
         },
         "dmgFormula": "Max HP Scaling",
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -86,21 +66,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (0.9) || RETURN",
-              "displayLines": "0.9",
-              "constants": [],
-              "variables": [
-                0.9
-              ]
+              "displayLines": "0.9"
             },
             "dmgFormula": "Max HP Scaling",
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null
           }
@@ -115,12 +85,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (0.8) || RETURN",
-              "displayLines": "0.8",
-              "constants": [],
-              "variables": [
-                0.8
-              ]
+              "displayLines": "0.8"
             },
             "dmgFormula": "Max HP Scaling",
             "Toughness": null,
@@ -139,21 +104,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (0.9) || RETURN",
-              "displayLines": "0.9",
-              "constants": [],
-              "variables": [
-                0.9
-              ]
+              "displayLines": "0.9"
             },
             "dmgFormula": "Max HP Scaling",
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null
           }
@@ -181,12 +136,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           }
         },
         {
@@ -196,12 +146,7 @@ const configAbility = {
             "value1": "Jingliu_FullMoonFlag",
             "compareType": ">",
             "value2": {
-              "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || RETURN",
-              "displayLines": "Jingliu_FullMoonFlagMax",
-              "constants": [],
-              "variables": [
-                "Jingliu_FullMoonFlagMax"
-              ]
+              "displayLines": "Jingliu_FullMoonFlagMax"
             },
             "contextScope": "ContextCaster"
           },
@@ -215,12 +160,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || RETURN",
-                "displayLines": "Jingliu_FullMoonFlagMax",
-                "constants": [],
-                "variables": [
-                  "Jingliu_FullMoonFlagMax"
-                ]
+                "displayLines": "Jingliu_FullMoonFlagMax"
               }
             }
           ]
@@ -228,20 +168,10 @@ const configAbility = {
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (Jingliu_FullMoonFlag) || RETURN",
-            "displayLines": "Jingliu_FullMoonFlag",
-            "constants": [],
-            "variables": [
-              "Jingliu_FullMoonFlag"
-            ]
+            "displayLines": "Jingliu_FullMoonFlag"
           },
           "maximum": {
-            "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || RETURN",
-            "displayLines": "Jingliu_FullMoonFlagMax",
-            "constants": [],
-            "variables": [
-              "Jingliu_FullMoonFlagMax"
-            ]
+            "displayLines": "Jingliu_FullMoonFlagMax"
           },
           "assignState": "True",
           "priorState": "Active",
@@ -259,31 +189,16 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           }
         },
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (Jingliu_MoonFlag) || RETURN",
-            "displayLines": "Jingliu_MoonFlag",
-            "constants": [],
-            "variables": [
-              "Jingliu_MoonFlag"
-            ]
+            "displayLines": "Jingliu_MoonFlag"
           },
           "maximum": {
-            "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-            "displayLines": "Jingliu_MoonFlagMax",
-            "constants": [],
-            "variables": [
-              "Jingliu_MoonFlagMax"
-            ]
+            "displayLines": "Jingliu_MoonFlagMax"
           },
           "assignState": "True",
           "priorState": "Normal",
@@ -309,12 +224,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"57193716\">Advanced_Jingliu_Eidolon2</a>[<span class=\"descriptionNumberColor\">Crescent Shadows Qixing Dipper</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.8) || RETURN",
-              "displayLines": "0.8",
-              "constants": [],
-              "variables": [
-                0.8
-              ]
+              "displayLines": "0.8"
             }
           }
         }

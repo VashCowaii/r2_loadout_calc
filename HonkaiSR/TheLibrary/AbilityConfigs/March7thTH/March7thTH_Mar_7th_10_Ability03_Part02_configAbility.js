@@ -14,20 +14,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (2.4) || RETURN",
-          "displayLines": "2.4",
-          "constants": [],
-          "variables": [
-            2.4
-          ]
+          "displayLines": "2.4"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -43,28 +33,13 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1546960372\">Mar_7th_10_Ability03_Enhance_Normal</a>[<span class=\"descriptionNumberColor\">March 7th, the Apex Heroine</span>]",
       "valuePerStack": {
         "MDF_Value": {
-          "operator": "Variables[0] (2) || RETURN",
-          "displayLines": "2",
-          "constants": [],
-          "variables": [
-            2
-          ]
+          "displayLines": "2"
         },
         "MDF_Chance": {
-          "operator": "Variables[0] (0.2) || RETURN",
-          "displayLines": "0.2",
-          "constants": [],
-          "variables": [
-            0.2
-          ]
+          "displayLines": "0.2"
         },
         "MDF_PropertyRatio": {
-          "operator": "Variables[0] (0.5) || RETURN",
-          "displayLines": "0.5",
-          "constants": [],
-          "variables": [
-            0.5
-          ]
+          "displayLines": "0.5"
         }
       }
     },
@@ -92,13 +67,7 @@ const configAbility = {
               "name": "Define Custom Variable",
               "scope": "ContextCaster",
               "value": {
-                "operator": "Variables[0] (3) || Variables[1] (MDF_Value) || ADD || RETURN",
-                "displayLines": "(3 + MDF_Value)",
-                "constants": [],
-                "variables": [
-                  3,
-                  "MDF_Value"
-                ]
+                "displayLines": "(3 + MDF_Value)"
               },
               "variableName": "Skill11_BasicCount"
             },
@@ -106,13 +75,7 @@ const configAbility = {
               "name": "Define Custom Variable",
               "scope": "ContextCaster",
               "value": {
-                "operator": "Variables[0] (0.6) || Variables[1] (MDF_Chance) || ADD || RETURN",
-                "displayLines": "(0.6 + MDF_Chance)",
-                "constants": [],
-                "variables": [
-                  0.6,
-                  "MDF_Chance"
-                ]
+                "displayLines": "(0.6 + MDF_Chance)"
               },
               "variableName": "Skill11_FixedChance"
             }
@@ -125,12 +88,7 @@ const configAbility = {
               "name": "Define Custom Variable",
               "scope": "ContextCaster",
               "value": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "variableName": "Skill11_BasicCount"
             },
@@ -138,12 +96,7 @@ const configAbility = {
               "name": "Define Custom Variable",
               "scope": "ContextCaster",
               "value": {
-                "operator": "Variables[0] (0.6) || RETURN",
-                "displayLines": "0.6",
-                "constants": [],
-                "variables": [
-                  0.6
-                ]
+                "displayLines": "0.6"
               },
               "variableName": "Skill11_FixedChance"
             },
@@ -151,12 +104,7 @@ const configAbility = {
               "name": "Define Custom Variable",
               "scope": "ContextCaster",
               "value": {
-                "operator": "Variables[0] (0.8) || RETURN",
-                "displayLines": "0.8",
-                "constants": [],
-                "variables": [
-                  0.8
-                ]
+                "displayLines": "0.8"
               },
               "variableName": "Skill11_DamagePercatage"
             }

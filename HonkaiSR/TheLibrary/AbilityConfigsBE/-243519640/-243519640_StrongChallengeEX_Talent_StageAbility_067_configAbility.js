@@ -34,12 +34,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_CriticalDamage) || RETURN",
-                "displayLines": "MDF_CriticalDamage",
-                "constants": [],
-                "variables": [
-                  "MDF_CriticalDamage"
-                ]
+                "displayLines": "MDF_CriticalDamage"
               }
             },
             {
@@ -50,12 +45,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DefaultStanceBreakRatio) || RETURN",
-                "displayLines": "MDF_DefaultStanceBreakRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_DefaultStanceBreakRatio"
-                ]
+                "displayLines": "MDF_DefaultStanceBreakRatio"
               }
             }
           ]
@@ -95,12 +85,7 @@ const configAbility = {
           ]
         },
         "toughnessReductionPreview": {
-          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-          "displayLines": "MDF_PropertyValue",
-          "constants": [],
-          "variables": [
-            "MDF_PropertyValue"
-          ]
+          "displayLines": "MDF_PropertyValue"
         }
       },
       "execute": [
@@ -122,29 +107,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-2061183531\">MStrongChallengeEX_Talent_StageAbility_TGT_067</a>[<span class=\"descriptionNumberColor\">Unstoppable Momentum</span>]",
                   "duration": {
-                    "operator": "Variables[0] (MDF_PropertyValue3) || RETURN",
-                    "displayLines": "MDF_PropertyValue3",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue3"
-                    ]
+                    "displayLines": "MDF_PropertyValue3"
                   },
                   "valuePerStack": {
                     "MDF_DefaultStanceBreakRatio": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     },
                     "MDF_CriticalDamage": {
-                      "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                      "displayLines": "MDF_PropertyValue2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue2"
-                      ]
+                      "displayLines": "MDF_PropertyValue2"
                     }
                   },
                   "casterAssign": "CasterSelf"
@@ -187,28 +157,13 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1291234305\">MStrongChallengeEX_Talent_StageAbility_PLY_067</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     },
                     "MDF_PropertyValue2": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     },
                     "MDF_PropertyValue3": {
-                      "operator": "Variables[0] (#ADF_3) || RETURN",
-                      "displayLines": "#ADF_3",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_3"
-                      ]
+                      "displayLines": "#ADF_3"
                     }
                   }
                 }

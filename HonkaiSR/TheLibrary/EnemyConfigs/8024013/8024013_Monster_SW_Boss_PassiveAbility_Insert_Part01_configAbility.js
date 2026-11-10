@@ -36,21 +36,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[0]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill02[0]]}"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[5]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[5]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill02[5]]}"
                 },
                 "ToughnessDMGType": {
                   "DamageType": "Wind"
@@ -79,39 +69,18 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-658511969\">Monster_SW_Boss_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill02[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill02[3]]}"
-                    ]
+                    "displayLines": "{[PassiveSkill02[3]]}"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill02[4]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill02[4]]}"
-                    ]
+                    "displayLines": "{[PassiveSkill02[4]]}"
                   },
                   "valuePerStack": {
                     "MDF_DamageTakenUpRatio_PerLayer": {
-                      "operator": "Variables[0] ({[PassiveSkill02[2]]}) || Variables[1] ({[PassiveSkill01[1]]}) || ADD || RETURN",
-                      "displayLines": "({[PassiveSkill02[2]]} + {[PassiveSkill01[1]]})",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[2]]}",
-                        "{[PassiveSkill01[1]]}"
-                      ]
+                      "displayLines": "({[PassiveSkill02[2]]} + {[PassiveSkill01[1]]})"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill02[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill02[1]]}"
-                    ]
+                    "displayLines": "{[PassiveSkill02[1]]}"
                   }
                 }
               ],
@@ -124,38 +93,18 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-658511969\">Monster_SW_Boss_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill02[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill02[3]]}"
-                    ]
+                    "displayLines": "{[PassiveSkill02[3]]}"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill02[4]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill02[4]]}"
-                    ]
+                    "displayLines": "{[PassiveSkill02[4]]}"
                   },
                   "valuePerStack": {
                     "MDF_DamageTakenUpRatio_PerLayer": {
-                      "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[2]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[2]]}"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill02[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill02[1]]}"
-                    ]
+                    "displayLines": "{[PassiveSkill02[1]]}"
                   }
                 }
               ]

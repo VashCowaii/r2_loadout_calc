@@ -20,13 +20,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "consumePercent": {
-        "operator": "Variables[0] ({[SkillP03[4]]}) || Variables[1] (LycanDieCount) || MUL || RETURN",
-        "displayLines": "({[SkillP03[4]]} * LycanDieCount)",
-        "constants": [],
-        "variables": [
-          "{[SkillP03[4]]}",
-          "LycanDieCount"
-        ]
+        "displayLines": "({[SkillP03[4]]} * LycanDieCount)"
       },
       "attackType": "Pursued",
       "DamageType": "AllType"
@@ -34,13 +28,7 @@ const configAbility = {
     {
       "name": "Deal Toughness DMG",
       "value": {
-        "operator": "Variables[0] ({[SkillP03[3]]}) || Variables[1] (LycanDieCount) || MUL || RETURN",
-        "displayLines": "({[SkillP03[3]]} * LycanDieCount)",
-        "constants": [],
-        "variables": [
-          "{[SkillP03[3]]}",
-          "LycanDieCount"
-        ]
+        "displayLines": "({[SkillP03[3]]} * LycanDieCount)"
       },
       "defender": {
         "name": "Target Name",
@@ -52,12 +40,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (LycanDieCount) || RETURN",
-        "displayLines": "LycanDieCount",
-        "constants": [],
-        "variables": [
-          "LycanDieCount"
-        ]
+        "displayLines": "LycanDieCount"
       },
       "execute": [
         {
@@ -176,12 +159,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                "displayLines": "Wolf_AttackCount",
-                "constants": [],
-                "variables": [
-                  "Wolf_AttackCount"
-                ]
+                "displayLines": "Wolf_AttackCount"
               },
               "entityClass": "Enemy",
               "target": {
@@ -189,12 +167,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "maximum": {
-                "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                "displayLines": "Wolf_MaxAttackCount",
-                "constants": [],
-                "variables": [
-                  "Wolf_MaxAttackCount"
-                ]
+                "displayLines": "Wolf_MaxAttackCount"
               },
               "assignState": "True",
               "state": "Normal"

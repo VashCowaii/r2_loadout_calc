@@ -12,29 +12,14 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-1247337710\">G_MortenaxBlade_Debuff_ToEnemy</a>[<span class=\"descriptionNumberColor\">Balefire Bind</span>]",
       "duration": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       },
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] (0.3) || RETURN",
-          "displayLines": "0.3",
-          "constants": [],
-          "variables": [
-            0.3
-          ]
+          "displayLines": "0.3"
         },
         "MDF_PropertyValue2": {
-          "operator": "Variables[0] (0.5) || RETURN",
-          "displayLines": "0.5",
-          "constants": [],
-          "variables": [
-            0.5
-          ]
+          "displayLines": "0.5"
         }
       }
     },
@@ -51,12 +36,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "consumePercent": {
-        "operator": "Variables[0] (0.2) || RETURN",
-        "displayLines": "0.2",
-        "constants": [],
-        "variables": [
-          0.2
-        ]
+        "displayLines": "0.2"
       },
       "consumeFloor": 1,
       "attackType": "Ultra"

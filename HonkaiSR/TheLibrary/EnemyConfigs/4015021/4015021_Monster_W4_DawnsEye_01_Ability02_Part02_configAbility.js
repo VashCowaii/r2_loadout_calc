@@ -18,12 +18,7 @@ const configAbility = {
           {
             "name": "Enemy ID",
             "ID": {
-              "operator": "Variables[0] (PartEntity3_MonsterID) || RETURN",
-              "displayLines": "PartEntity3_MonsterID",
-              "constants": [],
-              "variables": [
-                "PartEntity3_MonsterID"
-              ]
+              "displayLines": "PartEntity3_MonsterID"
             },
             "target": {
               "name": "Target Name",
@@ -97,17 +92,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "DamageFlat": {
-          "operator": "Variables[0] ({[Skill02P3[0]]}) || Variables[1] (BaseAttack) || MUL || Variables[2] (TotalDamageRatio) || MUL || Variables[3] (LightTeamCount) || DIV || Constants[0] (6) || DIV || RETURN",
-          "displayLines": "(((({[Skill02P3[0]]} * BaseAttack) * TotalDamageRatio) / LightTeamCount) / 6)",
-          "constants": [
-            6
-          ],
-          "variables": [
-            "{[Skill02P3[0]]}",
-            "BaseAttack",
-            "TotalDamageRatio",
-            "LightTeamCount"
-          ]
+          "displayLines": "(((({[Skill02P3[0]]} * BaseAttack) * TotalDamageRatio) / LightTeamCount) / 6)"
         },
         "dmgFormulaFinal": "Converted DMG Base",
         "Toughness": null,
@@ -125,17 +110,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "DamageFlat": {
-          "operator": "Variables[0] ({[Skill02P3[0]]}) || Variables[1] (BaseAttack) || MUL || Variables[2] (TotalDamageRatio) || MUL || Variables[3] (LightTeamCount) || DIV || Constants[0] (6) || DIV || RETURN",
-          "displayLines": "(((({[Skill02P3[0]]} * BaseAttack) * TotalDamageRatio) / LightTeamCount) / 6)",
-          "constants": [
-            6
-          ],
-          "variables": [
-            "{[Skill02P3[0]]}",
-            "BaseAttack",
-            "TotalDamageRatio",
-            "LightTeamCount"
-          ]
+          "displayLines": "(((({[Skill02P3[0]]} * BaseAttack) * TotalDamageRatio) / LightTeamCount) / 6)"
         },
         "dmgFormulaFinal": "Converted DMG Base",
         "Toughness": null,
@@ -153,17 +128,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "DamageFlat": {
-          "operator": "Variables[0] ({[Skill02P3[0]]}) || Variables[1] (BaseAttack) || MUL || Variables[2] (TotalDamageRatio) || MUL || Variables[3] (LightTeamCount) || DIV || Constants[0] (6) || DIV || RETURN",
-          "displayLines": "(((({[Skill02P3[0]]} * BaseAttack) * TotalDamageRatio) / LightTeamCount) / 6)",
-          "constants": [
-            6
-          ],
-          "variables": [
-            "{[Skill02P3[0]]}",
-            "BaseAttack",
-            "TotalDamageRatio",
-            "LightTeamCount"
-          ]
+          "displayLines": "(((({[Skill02P3[0]]} * BaseAttack) * TotalDamageRatio) / LightTeamCount) / 6)"
         },
         "dmgFormulaFinal": "Converted DMG Base",
         "Toughness": null,
@@ -181,17 +146,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "DamageFlat": {
-          "operator": "Variables[0] ({[Skill02P3[0]]}) || Variables[1] (BaseAttack) || MUL || Variables[2] (TotalDamageRatio) || MUL || Variables[3] (LightTeamCount) || DIV || Constants[0] (6) || DIV || RETURN",
-          "displayLines": "(((({[Skill02P3[0]]} * BaseAttack) * TotalDamageRatio) / LightTeamCount) / 6)",
-          "constants": [
-            6
-          ],
-          "variables": [
-            "{[Skill02P3[0]]}",
-            "BaseAttack",
-            "TotalDamageRatio",
-            "LightTeamCount"
-          ]
+          "displayLines": "(((({[Skill02P3[0]]} * BaseAttack) * TotalDamageRatio) / LightTeamCount) / 6)"
         },
         "dmgFormulaFinal": "Converted DMG Base",
         "Toughness": null,
@@ -209,17 +164,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "DamageFlat": {
-          "operator": "Variables[0] ({[Skill02P3[0]]}) || Variables[1] (BaseAttack) || MUL || Variables[2] (TotalDamageRatio) || MUL || Variables[3] (LightTeamCount) || DIV || Constants[0] (6) || DIV || RETURN",
-          "displayLines": "(((({[Skill02P3[0]]} * BaseAttack) * TotalDamageRatio) / LightTeamCount) / 6)",
-          "constants": [
-            6
-          ],
-          "variables": [
-            "{[Skill02P3[0]]}",
-            "BaseAttack",
-            "TotalDamageRatio",
-            "LightTeamCount"
-          ]
+          "displayLines": "(((({[Skill02P3[0]]} * BaseAttack) * TotalDamageRatio) / LightTeamCount) / 6)"
         },
         "dmgFormulaFinal": "Converted DMG Base",
         "Toughness": null,
@@ -237,17 +182,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "DamageFlat": {
-          "operator": "Variables[0] ({[Skill02P3[0]]}) || Variables[1] (BaseAttack) || MUL || Variables[2] (TotalDamageRatio) || MUL || Variables[3] (LightTeamCount) || DIV || Constants[0] (6) || DIV || RETURN",
-          "displayLines": "(((({[Skill02P3[0]]} * BaseAttack) * TotalDamageRatio) / LightTeamCount) / 6)",
-          "constants": [
-            6
-          ],
-          "variables": [
-            "{[Skill02P3[0]]}",
-            "BaseAttack",
-            "TotalDamageRatio",
-            "LightTeamCount"
-          ]
+          "displayLines": "(((({[Skill02P3[0]]} * BaseAttack) * TotalDamageRatio) / LightTeamCount) / 6)"
         },
         "dmgFormulaFinal": "Converted DMG Base",
         "Toughness": null,

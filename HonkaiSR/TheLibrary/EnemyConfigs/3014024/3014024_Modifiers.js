@@ -223,12 +223,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_ShowValue1) || RETURN",
-                "displayLines": "MDF_ShowValue1",
-                "constants": [],
-                "variables": [
-                  "MDF_ShowValue1"
-                ]
+                "displayLines": "MDF_ShowValue1"
               }
             }
           ]
@@ -725,12 +720,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (MDF_AddSPValue) || RETURN",
-                "displayLines": "MDF_AddSPValue",
-                "constants": [],
-                "variables": [
-                  "MDF_AddSPValue"
-                ]
+                "displayLines": "MDF_AddSPValue"
               },
               "isFixed": "* ERR"
             },
@@ -741,12 +731,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (MDF_HealHPPercentage) || RETURN",
-                "displayLines": "MDF_HealHPPercentage",
-                "constants": [],
-                "variables": [
-                  "MDF_HealHPPercentage"
-                ]
+                "displayLines": "MDF_HealHPPercentage"
               },
               "formula": "Heal from Target MaxHP"
             }
@@ -838,12 +823,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (MDF_AddSPValue) || RETURN",
-                "displayLines": "MDF_AddSPValue",
-                "constants": [],
-                "variables": [
-                  "MDF_AddSPValue"
-                ]
+                "displayLines": "MDF_AddSPValue"
               },
               "isFixed": "* ERR"
             },
@@ -854,12 +834,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (MDF_HealHPPercentage) || RETURN",
-                "displayLines": "MDF_HealHPPercentage",
-                "constants": [],
-                "variables": [
-                  "MDF_HealHPPercentage"
-                ]
+                "displayLines": "MDF_HealHPPercentage"
               },
               "formula": "Heal from Target MaxHP"
             }
@@ -938,12 +913,7 @@ const configAbility = {
             {
               "name": "Lock HP",
               "threshold": {
-                "operator": "Constants[0] (0.000010000076) || RETURN",
-                "displayLines": "0.000010000076",
-                "constants": [
-                  0.000010000076
-                ],
-                "variables": []
+                "displayLines": "0.000010000076"
               },
               "target": {
                 "name": "Target Name",
@@ -960,20 +930,10 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-804634083\">Death_Control_Modifier</a>",
               "valuePerStack": {
                 "MDF_HealHPPercentage": {
-                  "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                  "displayLines": "{[Skill05[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[0]]}"
-                  ]
+                  "displayLines": "{[Skill05[0]]}"
                 },
                 "MDF_AddSPValue": {
-                  "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                  "displayLines": "{[Skill05[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[1]]}"
-                  ]
+                  "displayLines": "{[Skill05[1]]}"
                 }
               }
             },
@@ -1427,14 +1387,7 @@ const configAbility = {
                     "value1": "BonusAttackCounter",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] ({[PassiveSkill02[0]]}) || Constants[0] (1) || SUB || RETURN",
-                      "displayLines": "({[PassiveSkill02[0]]} - 1)",
-                      "constants": [
-                        1
-                      ],
-                      "variables": [
-                        "{[PassiveSkill02[0]]}"
-                      ]
+                      "displayLines": "({[PassiveSkill02[0]]} - 1)"
                     }
                   },
                   {

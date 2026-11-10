@@ -33,12 +33,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -190,14 +185,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_TeamCount) || Constants[0] (4) || SUB || RETURN",
-            "displayLines": "(_TeamCount - 4)",
-            "constants": [
-              4
-            ],
-            "variables": [
-              "_TeamCount"
-            ]
+            "displayLines": "(_TeamCount - 4)"
           },
           "variableName": "_DamageAddCount"
         },
@@ -213,14 +201,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MIN) || Variables[1] (_DamageAddCount) || Variables[2] (4) || PARAM_2 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(_DamageAddCount, 4)",
-                "constants": [],
-                "variables": [
-                  "MIN",
-                  "_DamageAddCount",
-                  4
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(_DamageAddCount, 4)"
               },
               "variableName": "_DamageAddCount"
             },
@@ -233,13 +214,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1306384815\">Relic_321_Sub</a>[<span class=\"descriptionNumberColor\">Arcadia of Woven Dreams</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (_DamageAddCount) || Variables[1] (0.09) || MUL || RETURN",
-                  "displayLines": "(_DamageAddCount * 0.09)",
-                  "constants": [],
-                  "variables": [
-                    "_DamageAddCount",
-                    0.09
-                  ]
+                  "displayLines": "(_DamageAddCount * 0.09)"
                 }
               }
             },
@@ -252,13 +227,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1306384815\">Relic_321_Sub</a>[<span class=\"descriptionNumberColor\">Arcadia of Woven Dreams</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (_DamageAddCount) || Variables[1] (0.09) || MUL || RETURN",
-                  "displayLines": "(_DamageAddCount * 0.09)",
-                  "constants": [],
-                  "variables": [
-                    "_DamageAddCount",
-                    0.09
-                  ]
+                  "displayLines": "(_DamageAddCount * 0.09)"
                 }
               }
             }
@@ -303,27 +272,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (ABS) || Variables[1] (_DamageAddCount) || PARAM_1 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">ABS</span>(_DamageAddCount)",
-                "constants": [],
-                "variables": [
-                  "ABS",
-                  "_DamageAddCount"
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">ABS</span>(_DamageAddCount)"
               },
               "variableName": "_DamageAddCount"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MIN) || Variables[1] (_DamageAddCount) || Variables[2] (3) || PARAM_2 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(_DamageAddCount, 3)",
-                "constants": [],
-                "variables": [
-                  "MIN",
-                  "_DamageAddCount",
-                  3
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(_DamageAddCount, 3)"
               },
               "variableName": "_DamageAddCount"
             },
@@ -336,13 +292,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1306384815\">Relic_321_Sub</a>[<span class=\"descriptionNumberColor\">Arcadia of Woven Dreams</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (_DamageAddCount) || Variables[1] (0.12) || MUL || RETURN",
-                  "displayLines": "(_DamageAddCount * 0.12)",
-                  "constants": [],
-                  "variables": [
-                    "_DamageAddCount",
-                    0.12
-                  ]
+                  "displayLines": "(_DamageAddCount * 0.12)"
                 }
               }
             },
@@ -355,13 +305,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1306384815\">Relic_321_Sub</a>[<span class=\"descriptionNumberColor\">Arcadia of Woven Dreams</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (_DamageAddCount) || Variables[1] (0.12) || MUL || RETURN",
-                  "displayLines": "(_DamageAddCount * 0.12)",
-                  "constants": [],
-                  "variables": [
-                    "_DamageAddCount",
-                    0.12
-                  ]
+                  "displayLines": "(_DamageAddCount * 0.12)"
                 }
               }
             }

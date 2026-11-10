@@ -62,12 +62,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                    "displayLines": "MDF_SpeedAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedAddedRatio"
-                    ]
+                    "displayLines": "MDF_SpeedAddedRatio"
                   }
                 }
               ]
@@ -93,12 +88,7 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_SpeedAddedRatio": {
-                  "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                  "displayLines": "MDF_SpeedAddedRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_SpeedAddedRatio"
-                  ]
+                  "displayLines": "MDF_SpeedAddedRatio"
                 }
               }
             }
@@ -160,21 +150,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-679741368\">LC_23063_SpeedBonus</a>[<span class=\"descriptionNumberColor\">New Melody</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "valuePerStack": {
                         "MDF_SpeedAddedRatio": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     }

@@ -18,21 +18,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (2.6) || RETURN",
-          "displayLines": "2.6",
-          "constants": [],
-          "variables": [
-            2.6
-          ]
+          "displayLines": "2.6"
         },
         "HitSplit": 0.33,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -41,14 +31,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
-        "displayLines": "(Flag_AttackCount + 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "Flag_AttackCount"
-        ]
+        "displayLines": "(Flag_AttackCount + 1)"
       },
       "variableName": "Flag_AttackCount"
     },
@@ -61,21 +44,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (2.6) || RETURN",
-          "displayLines": "2.6",
-          "constants": [],
-          "variables": [
-            2.6
-          ]
+          "displayLines": "2.6"
         },
         "HitSplit": 0.33,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -84,14 +57,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
-        "displayLines": "(Flag_AttackCount + 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "Flag_AttackCount"
-        ]
+        "displayLines": "(Flag_AttackCount + 1)"
       },
       "variableName": "Flag_AttackCount"
     },
@@ -104,21 +70,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (2.6) || RETURN",
-          "displayLines": "2.6",
-          "constants": [],
-          "variables": [
-            2.6
-          ]
+          "displayLines": "2.6"
         },
         "HitSplit": 0.34,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -128,14 +84,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
-        "displayLines": "(Flag_AttackCount + 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "Flag_AttackCount"
-        ]
+        "displayLines": "(Flag_AttackCount + 1)"
       },
       "variableName": "Flag_AttackCount"
     },

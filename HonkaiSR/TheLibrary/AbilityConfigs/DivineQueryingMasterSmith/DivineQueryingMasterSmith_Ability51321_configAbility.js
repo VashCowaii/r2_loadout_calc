@@ -33,12 +33,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.15) || RETURN",
-                "displayLines": "0.15",
-                "constants": [],
-                "variables": [
-                  0.15
-                ]
+                "displayLines": "0.15"
               }
             }
           ]
@@ -135,12 +130,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"876387843\">Relic_132_Sub</a>[<span class=\"descriptionNumberColor\">Comburent</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   }
                 }
               ]

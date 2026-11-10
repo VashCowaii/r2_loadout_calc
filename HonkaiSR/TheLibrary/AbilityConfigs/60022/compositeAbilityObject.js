@@ -76,14 +76,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_TalkCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_TalkCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_TalkCount"
-                        ]
+                        "displayLines": "(_TalkCount + 1)"
                       },
                       "variableName": "_TalkCount"
                     },
@@ -147,14 +140,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_Layer) || Constants[0] (0.5) || MUL || RETURN",
-                    "displayLines": "(_Layer * 0.5)",
-                    "constants": [
-                      0.5
-                    ],
-                    "variables": [
-                      "_Layer"
-                    ]
+                    "displayLines": "(_Layer * 0.5)"
                   },
                   "variableName": "_DamageRatio"
                 },
@@ -166,12 +152,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (_DamageRatio) || RETURN",
-                    "displayLines": "_DamageRatio",
-                    "constants": [],
-                    "variables": [
-                      "_DamageRatio"
-                    ]
+                    "displayLines": "_DamageRatio"
                   }
                 },
                 {
@@ -186,12 +167,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Lock HP",
                   "threshold": {
-                    "operator": "Constants[0] (0.000010000076) || RETURN",
-                    "displayLines": "0.000010000076",
-                    "constants": [
-                      0.000010000076
-                    ],
-                    "variables": []
+                    "displayLines": "0.000010000076"
                   },
                   "target": {
                     "name": "Target Name",
@@ -295,14 +271,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_TalkNum) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(_TalkNum + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "_TalkNum"
-            ]
+            "displayLines": "(_TalkNum + 1)"
           },
           "variableName": "_TalkNum"
         },

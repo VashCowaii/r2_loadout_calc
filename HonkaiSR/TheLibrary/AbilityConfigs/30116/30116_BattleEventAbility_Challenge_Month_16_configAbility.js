@@ -103,13 +103,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_DamageRatio) || Variables[1] (_MaxHP) || MUL || RETURN",
-                      "displayLines": "(MDF_DamageRatio * _MaxHP)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageRatio",
-                        "_MaxHP"
-                      ]
+                      "displayLines": "(MDF_DamageRatio * _MaxHP)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -195,12 +189,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                "displayLines": "#BattleEvent_P3_ADF",
-                "constants": [],
-                "variables": [
-                  "#BattleEvent_P3_ADF"
-                ]
+                "displayLines": "#BattleEvent_P3_ADF"
               }
             }
           ]
@@ -213,13 +202,7 @@ const configAbility = {
               "conditions": {
                 "name": "Random Chance",
                 "chance": {
-                  "operator": "Variables[0] (#BattleEvent_P1_ADF) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                  "displayLines": "(#BattleEvent_P1_ADF * MDF_Layer)",
-                  "constants": [],
-                  "variables": [
-                    "#BattleEvent_P1_ADF",
-                    "MDF_Layer"
-                  ]
+                  "displayLines": "(#BattleEvent_P1_ADF * MDF_Layer)"
                 }
               },
               "passed": [
@@ -233,12 +216,7 @@ const configAbility = {
                   "duration": 1,
                   "valuePerStack": {
                     "MDF_DamageRatio": {
-                      "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P2_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P2_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P2_ADF"
                     }
                   }
                 }

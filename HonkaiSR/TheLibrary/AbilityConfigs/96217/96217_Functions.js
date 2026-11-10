@@ -23,12 +23,7 @@ const configAbility = {
                 "value1": "G_EnergyCount",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (G_EPMax) || RETURN",
-                  "displayLines": "G_EPMax",
-                  "constants": [],
-                  "variables": [
-                    "G_EPMax"
-                  ]
+                  "displayLines": "G_EPMax"
                 }
               },
               {
@@ -123,12 +118,7 @@ const configAbility = {
                     "value1": "G_EnergyCount",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (G_EPMax) || RETURN",
-                      "displayLines": "G_EPMax",
-                      "constants": [],
-                      "variables": [
-                        "G_EPMax"
-                      ]
+                      "displayLines": "G_EPMax"
                     }
                   },
                   {
@@ -160,12 +150,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (G_EnergyCount) || RETURN",
-                    "displayLines": "G_EnergyCount",
-                    "constants": [],
-                    "variables": [
-                      "G_EnergyCount"
-                    ]
+                    "displayLines": "G_EnergyCount"
                   },
                   "priorState": "Normal"
                 }
@@ -174,12 +159,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (G_EnergyCount) || RETURN",
-                    "displayLines": "G_EnergyCount",
-                    "constants": [],
-                    "variables": [
-                      "G_EnergyCount"
-                    ]
+                    "displayLines": "G_EnergyCount"
                   },
                   "priorState": "Disable"
                 }

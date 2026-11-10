@@ -83,12 +83,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"163974997\">Monster_W2_Xuanlu_10_RL_LowHP</a>",
       "valuePerStack": {
         "MDF_LowHPRatio": {
-          "operator": "Variables[0] ({[Skill14[1]]}) || RETURN",
-          "displayLines": "{[Skill14[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill14[1]]}"
-          ]
+          "displayLines": "{[Skill14[1]]}"
         }
       }
     }

@@ -20,13 +20,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "setValue": {
-        "operator": "Variables[0] (Arlan_MaxHPValue) || Variables[1] (0.25) || MUL || RETURN",
-        "displayLines": "(Arlan_MaxHPValue * 0.25)",
-        "constants": [],
-        "variables": [
-          "Arlan_MaxHPValue",
-          0.25
-        ]
+        "displayLines": "(Arlan_MaxHPValue * 0.25)"
       }
     },
     {

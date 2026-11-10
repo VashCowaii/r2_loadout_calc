@@ -127,12 +127,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-534385253\">Enemy_W5_AsatPramad_Part02</a>",
       "valuePerStack": {
         "MDF_SpeedAddedRatio": {
-          "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-          "displayLines": "{[SkillP01[4]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[4]]}"
-          ]
+          "displayLines": "{[SkillP01[4]]}"
         }
       }
     },
@@ -145,12 +140,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"975723655\">Enemy_W5_AsatPramad_BESpeedUp</a>",
       "valuePerStack": {
         "MDF_SpeedAddedRatio": {
-          "operator": "Variables[0] ({[SkillP04[2]]}) || RETURN",
-          "displayLines": "{[SkillP04[2]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP04[2]]}"
-          ]
+          "displayLines": "{[SkillP04[2]]}"
         }
       }
     },

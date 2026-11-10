@@ -41,20 +41,10 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-2040095871\">Memosprite_EvernightServant_DeathRattle_Speed</a>[<span class=\"descriptionNumberColor\">You, Parting, Beyond Reach</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.1) || RETURN",
-                  "displayLines": "0.1",
-                  "constants": [],
-                  "variables": [
-                    0.1
-                  ]
+                  "displayLines": "0.1"
                 },
                 "MDF_PropertyValue_2": {
-                  "operator": "Variables[0] (0.01) || RETURN",
-                  "displayLines": "0.01",
-                  "constants": [],
-                  "variables": [
-                    0.01
-                  ]
+                  "displayLines": "0.01"
                 }
               },
               "casterAssign": "TargetSelf"

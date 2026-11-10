@@ -62,12 +62,7 @@ const configAbility = {
                       "variableName": "DOT_TriggerRatio",
                       "eventType": "DOT",
                       "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                        "displayLines": "MDF_PropertyValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue"
-                        ]
+                        "displayLines": "MDF_PropertyValue"
                       }
                     }
                   ]
@@ -110,12 +105,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1190568591\">MStrongChallengeEX_Talent_StageAbility_PLY_069</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }

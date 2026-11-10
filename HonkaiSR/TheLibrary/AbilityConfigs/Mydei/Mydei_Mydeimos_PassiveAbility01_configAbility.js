@@ -52,12 +52,7 @@ const configAbility = {
       "name": "Update Displayed Energy Bar",
       "value": 0,
       "maximum": {
-        "operator": "Variables[0] (MYDEI_OBJECT_UNUSED_8[100]) || RETURN",
-        "displayLines": "MYDEI_OBJECT_UNUSED_8[100]",
-        "constants": [],
-        "variables": [
-          "MYDEI_OBJECT_UNUSED_8[100]"
-        ]
+        "displayLines": "MYDEI_OBJECT_UNUSED_8[100]"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -78,12 +73,7 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"951504069\">Mydeimos_Trace01</a>[<span class=\"descriptionNumberColor\">Earth and Water</span>]",
           "counter": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           }
         }
       ]
@@ -91,12 +81,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "variableName": "DV_Tree01_ReviveCount"
     },
@@ -110,12 +95,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (100) || RETURN",
-            "displayLines": "100",
-            "constants": [],
-            "variables": [
-              100
-            ]
+            "displayLines": "100"
           },
           "variableName": "Skill22_Cost"
         }
@@ -124,12 +104,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (150) || RETURN",
-            "displayLines": "150",
-            "constants": [],
-            "variables": [
-              150
-            ]
+            "displayLines": "150"
           },
           "variableName": "Skill22_Cost"
         }
@@ -210,29 +185,13 @@ const configAbility = {
                   },
                   "previewType": null,
                   "previewValue": {
-                    "operator": "Variables[0] (DV_CurrnetHP) || Variables[1] (0.5) || MUL || RETURN",
-                    "displayLines": "(DV_CurrnetHP * 0.5)",
-                    "constants": [],
-                    "variables": [
-                      "DV_CurrnetHP",
-                      0.5
-                    ]
+                    "displayLines": "(DV_CurrnetHP * 0.5)"
                   }
                 },
                 {
                   "name": "Define Custom Variable (VFX)",
                   "value": {
-                    "operator": "Variables[0] (_EnergyBar_CurrentValue) || Variables[1] (0.5) || Constants[0] (100) || Variables[2] (DV_CurrnetHP) || MUL || Variables[3] (DV_MaxHP) || DIV || MUL || ADD || RETURN",
-                    "displayLines": "(_EnergyBar_CurrentValue + (0.5 * ((100 * DV_CurrnetHP) / DV_MaxHP)))",
-                    "constants": [
-                      100
-                    ],
-                    "variables": [
-                      "_EnergyBar_CurrentValue",
-                      0.5,
-                      "DV_CurrnetHP",
-                      "DV_MaxHP"
-                    ]
+                    "displayLines": "(_EnergyBar_CurrentValue + (0.5 * ((100 * DV_CurrnetHP) / DV_MaxHP)))"
                   },
                   "variableName": "DV_HPRatioPreshow"
                 }
@@ -307,15 +266,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (_Passive_HPChangeValue) || Constants[0] (1) || Variables[1] (_Tree03_BeingHitRatio) || ADD || MUL || RETURN",
-                            "displayLines": "(_Passive_HPChangeValue * (1 + _Tree03_BeingHitRatio))",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "_Passive_HPChangeValue",
-                              "_Tree03_BeingHitRatio"
-                            ]
+                            "displayLines": "(_Passive_HPChangeValue * (1 + _Tree03_BeingHitRatio))"
                           },
                           "variableName": "_Passive_HPChangeValue"
                         }
@@ -330,15 +281,7 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (_Passive_HPChangeValue) || INVERT || Variables[1] (_MaxHPValue) || DIV || Constants[0] (100) || MUL || RETURN",
-                        "displayLines": "((-_Passive_HPChangeValue / _MaxHPValue) * 100)",
-                        "constants": [
-                          100
-                        ],
-                        "variables": [
-                          "_Passive_HPChangeValue",
-                          "_MaxHPValue"
-                        ]
+                        "displayLines": "((-_Passive_HPChangeValue / _MaxHPValue) * 100)"
                       }
                     }
                   ]
@@ -537,12 +480,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MYDEI_OBJECT_UNUSED_8[100]) || RETURN",
-                    "displayLines": "MYDEI_OBJECT_UNUSED_8[100]",
-                    "constants": [],
-                    "variables": [
-                      "MYDEI_OBJECT_UNUSED_8[100]"
-                    ]
+                    "displayLines": "MYDEI_OBJECT_UNUSED_8[100]"
                   }
                 }
               ]
@@ -711,12 +649,7 @@ const configAbility = {
                             "value1": "_EnergyBar_CurrentValue",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (MYDEI_OBJECT_UNUSED_8[100]) || RETURN",
-                              "displayLines": "MYDEI_OBJECT_UNUSED_8[100]",
-                              "constants": [],
-                              "variables": [
-                                "MYDEI_OBJECT_UNUSED_8[100]"
-                              ]
+                              "displayLines": "MYDEI_OBJECT_UNUSED_8[100]"
                             }
                           },
                           {
@@ -847,12 +780,7 @@ const configAbility = {
                             "value1": "_EnergyBar_CurrentValue",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (MYDEI_OBJECT_UNUSED_8[100]) || RETURN",
-                              "displayLines": "MYDEI_OBJECT_UNUSED_8[100]",
-                              "constants": [],
-                              "variables": [
-                                "MYDEI_OBJECT_UNUSED_8[100]"
-                              ]
+                              "displayLines": "MYDEI_OBJECT_UNUSED_8[100]"
                             }
                           },
                           {
@@ -877,12 +805,7 @@ const configAbility = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (_EnergyBar_CurrentValue) || RETURN",
-                            "displayLines": "_EnergyBar_CurrentValue",
-                            "constants": [],
-                            "variables": [
-                              "_EnergyBar_CurrentValue"
-                            ]
+                            "displayLines": "_EnergyBar_CurrentValue"
                           },
                           "priorState": "Active"
                         },
@@ -921,12 +844,7 @@ const configAbility = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (_EnergyBar_CurrentValue) || RETURN",
-                            "displayLines": "_EnergyBar_CurrentValue",
-                            "constants": [],
-                            "variables": [
-                              "_EnergyBar_CurrentValue"
-                            ]
+                            "displayLines": "_EnergyBar_CurrentValue"
                           }
                         }
                       ]

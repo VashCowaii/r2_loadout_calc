@@ -9,12 +9,7 @@ const configAbility = {
       "functionName": "<a class=\"gTempYellow\" id=\"1682831339\">Cyrene_ChargeEnergy</a>",
       "variables": {
         "parameter[0]_AddValue": {
-          "operator": "Variables[0] (3) || RETURN",
-          "displayLines": "3",
-          "constants": [],
-          "variables": [
-            3
-          ]
+          "displayLines": "3"
         }
       }
     },
@@ -37,12 +32,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] (0.3) || RETURN",
-          "displayLines": "0.3",
-          "constants": [],
-          "variables": [
-            0.3
-          ]
+          "displayLines": "0.3"
         },
         "dmgFormula": "Max HP Scaling",
         "Toughness": {
@@ -54,12 +44,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (EnemyCount) || RETURN",
-        "displayLines": "EnemyCount",
-        "constants": [],
-        "variables": [
-          "EnemyCount"
-        ]
+        "displayLines": "EnemyCount"
       },
       "execute": [
         {
@@ -92,22 +77,12 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "HitSplit": 0.3,
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "Tags": null
               }
@@ -134,22 +109,12 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] (0.3) || RETURN",
-          "displayLines": "0.3",
-          "constants": [],
-          "variables": [
-            0.3
-          ]
+          "displayLines": "0.3"
         },
         "dmgFormula": "Max HP Scaling",
         "HitSplit": 0.7,
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null
       }

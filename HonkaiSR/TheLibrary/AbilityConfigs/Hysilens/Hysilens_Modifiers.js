@@ -67,14 +67,7 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"-446302809\">ModifyDamageData_IndependentDamageAddedRatio</a>",
                   "variables": {
                     "parameter[0]_IndependentDamageAddedRatio": {
-                      "operator": "Variables[0] (MDF_PropertyRatio) || Constants[0] (1) || SUB || RETURN",
-                      "displayLines": "(MDF_PropertyRatio - 1)",
-                      "constants": [
-                        1
-                      ],
-                      "variables": [
-                        "MDF_PropertyRatio"
-                      ]
+                      "displayLines": "(MDF_PropertyRatio - 1)"
                     }
                   }
                 }
@@ -101,12 +94,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"762236364\">Harscyline_Eidolon1_DamageUp</a>",
               "valuePerStack": {
                 "MDF_PropertyRatio": {
-                  "operator": "Variables[0] (1.16) || RETURN",
-                  "displayLines": "1.16",
-                  "constants": [],
-                  "variables": [
-                    1.16
-                  ]
+                  "displayLines": "1.16"
                 }
               }
             }
@@ -158,13 +146,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (Modifier_Poison_DamagePercentage) || Variables[1] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
-                  "displayLines": "(Modifier_Poison_DamagePercentage * Modifier_Poison_PoisonLayer)",
-                  "constants": [],
-                  "variables": [
-                    "Modifier_Poison_DamagePercentage",
-                    "Modifier_Poison_PoisonLayer"
-                  ]
+                  "displayLines": "(Modifier_Poison_DamagePercentage * Modifier_Poison_PoisonLayer)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -195,14 +177,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Poison_DamagePercentage) || MUL || Variables[2] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
-                  "displayLines": "((DOT_TriggerRatio * Modifier_Poison_DamagePercentage) * Modifier_Poison_PoisonLayer)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "Modifier_Poison_DamagePercentage",
-                    "Modifier_Poison_PoisonLayer"
-                  ]
+                  "displayLines": "((DOT_TriggerRatio * Modifier_Poison_DamagePercentage) * Modifier_Poison_PoisonLayer)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -253,31 +228,13 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] (Modifier_Burn_DamagePercentage) || Variables[1] (_Layer) || MUL || RETURN",
-                  "displayLines": "(Modifier_Burn_DamagePercentage * _Layer)",
-                  "constants": [],
-                  "variables": [
-                    "Modifier_Burn_DamagePercentage",
-                    "_Layer"
-                  ]
+                  "displayLines": "(Modifier_Burn_DamagePercentage * _Layer)"
                 },
                 "DamageExtra": {
-                  "operator": "Variables[0] (Modifier_Burn_DamagePercentage_Defence) || Variables[1] (_Layer) || MUL || RETURN",
-                  "displayLines": "(Modifier_Burn_DamagePercentage_Defence * _Layer)",
-                  "constants": [],
-                  "variables": [
-                    "Modifier_Burn_DamagePercentage_Defence",
-                    "_Layer"
-                  ]
+                  "displayLines": "(Modifier_Burn_DamagePercentage_Defence * _Layer)"
                 },
                 "DamageFlat": {
-                  "operator": "Variables[0] (Modifier_Burn_DamageValue) || Variables[1] (_Layer) || MUL || RETURN",
-                  "displayLines": "(Modifier_Burn_DamageValue * _Layer)",
-                  "constants": [],
-                  "variables": [
-                    "Modifier_Burn_DamageValue",
-                    "_Layer"
-                  ]
+                  "displayLines": "(Modifier_Burn_DamageValue * _Layer)"
                 },
                 "dmgFormulaExtra": "DEF Scaling",
                 "Toughness": null,
@@ -316,34 +273,13 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Burn_DamagePercentage) || MUL || Variables[2] (_Layer) || MUL || RETURN",
-                  "displayLines": "((DOT_TriggerRatio * Modifier_Burn_DamagePercentage) * _Layer)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "Modifier_Burn_DamagePercentage",
-                    "_Layer"
-                  ]
+                  "displayLines": "((DOT_TriggerRatio * Modifier_Burn_DamagePercentage) * _Layer)"
                 },
                 "DamageExtra": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Burn_DamagePercentage_Defence) || MUL || Variables[2] (_Layer) || MUL || RETURN",
-                  "displayLines": "((DOT_TriggerRatio * Modifier_Burn_DamagePercentage_Defence) * _Layer)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "Modifier_Burn_DamagePercentage_Defence",
-                    "_Layer"
-                  ]
+                  "displayLines": "((DOT_TriggerRatio * Modifier_Burn_DamagePercentage_Defence) * _Layer)"
                 },
                 "DamageFlat": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Burn_DamageValue) || MUL || Variables[2] (_Layer) || MUL || RETURN",
-                  "displayLines": "((DOT_TriggerRatio * Modifier_Burn_DamageValue) * _Layer)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "Modifier_Burn_DamageValue",
-                    "_Layer"
-                  ]
+                  "displayLines": "((DOT_TriggerRatio * Modifier_Burn_DamageValue) * _Layer)"
                 },
                 "dmgFormulaExtra": "DEF Scaling",
                 "Toughness": null,
@@ -397,22 +333,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (Modifier_Electric_DamagePercentage) || Variables[1] (_Layer) || MUL || RETURN",
-                  "displayLines": "(Modifier_Electric_DamagePercentage * _Layer)",
-                  "constants": [],
-                  "variables": [
-                    "Modifier_Electric_DamagePercentage",
-                    "_Layer"
-                  ]
+                  "displayLines": "(Modifier_Electric_DamagePercentage * _Layer)"
                 },
                 "DamageFlat": {
-                  "operator": "Variables[0] (Modifier_Electric_DamageValue) || Variables[1] (_Layer) || MUL || RETURN",
-                  "displayLines": "(Modifier_Electric_DamageValue * _Layer)",
-                  "constants": [],
-                  "variables": [
-                    "Modifier_Electric_DamageValue",
-                    "_Layer"
-                  ]
+                  "displayLines": "(Modifier_Electric_DamageValue * _Layer)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -448,24 +372,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Electric_DamagePercentage) || MUL || Variables[2] (_Layer) || MUL || RETURN",
-                  "displayLines": "((DOT_TriggerRatio * Modifier_Electric_DamagePercentage) * _Layer)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "Modifier_Electric_DamagePercentage",
-                    "_Layer"
-                  ]
+                  "displayLines": "((DOT_TriggerRatio * Modifier_Electric_DamagePercentage) * _Layer)"
                 },
                 "DamageFlat": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Electric_DamageValue) || MUL || Variables[2] (_Layer) || MUL || RETURN",
-                  "displayLines": "((DOT_TriggerRatio * Modifier_Electric_DamageValue) * _Layer)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "Modifier_Electric_DamageValue",
-                    "_Layer"
-                  ]
+                  "displayLines": "((DOT_TriggerRatio * Modifier_Electric_DamageValue) * _Layer)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -523,27 +433,14 @@ const configAbility = {
                 "value1": "MDF_TargetMaxHP",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || Variables[2] (Modifier_Tear_DamageRatio) || DIV || RETURN",
-                  "displayLines": "((MDF_CasterAttack * Modifier_Tear_MaxPercentage) / Modifier_Tear_DamageRatio)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_CasterAttack",
-                    "Modifier_Tear_MaxPercentage",
-                    "Modifier_Tear_DamageRatio"
-                  ]
+                  "displayLines": "((MDF_CasterAttack * Modifier_Tear_MaxPercentage) / Modifier_Tear_DamageRatio)"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
-                    "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CasterAttack",
-                      "Modifier_Tear_MaxPercentage"
-                    ]
+                    "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)"
                   },
                   "variableName": "MDF_DamageValue"
                 }
@@ -552,13 +449,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
-                    "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_TargetMaxHP",
-                      "Modifier_Tear_DamageRatio"
-                    ]
+                    "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)"
                   },
                   "variableName": "MDF_DamageValue"
                 }
@@ -594,27 +485,14 @@ const configAbility = {
                 "value1": "MDF_TargetMaxHP",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || Variables[2] (Modifier_Tear_DamageRatio) || DIV || RETURN",
-                  "displayLines": "((MDF_CasterAttack * Modifier_Tear_MaxPercentage) / Modifier_Tear_DamageRatio)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_CasterAttack",
-                    "Modifier_Tear_MaxPercentage",
-                    "Modifier_Tear_DamageRatio"
-                  ]
+                  "displayLines": "((MDF_CasterAttack * Modifier_Tear_MaxPercentage) / Modifier_Tear_DamageRatio)"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
-                    "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CasterAttack",
-                      "Modifier_Tear_MaxPercentage"
-                    ]
+                    "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)"
                   },
                   "variableName": "MDF_DamageValue"
                 }
@@ -623,13 +501,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
-                    "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_TargetMaxHP",
-                      "Modifier_Tear_DamageRatio"
-                    ]
+                    "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)"
                   },
                   "variableName": "MDF_DamageValue"
                 }
@@ -644,12 +516,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageFlat": {
-                  "operator": "Variables[0] (MDF_DamageValue) || RETURN",
-                  "displayLines": "MDF_DamageValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamageValue"
-                  ]
+                  "displayLines": "MDF_DamageValue"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -686,27 +553,14 @@ const configAbility = {
                 "value1": "MDF_TargetMaxHP",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || Variables[2] (Modifier_Tear_DamageRatio) || DIV || RETURN",
-                  "displayLines": "((MDF_CasterAttack * Modifier_Tear_MaxPercentage) / Modifier_Tear_DamageRatio)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_CasterAttack",
-                    "Modifier_Tear_MaxPercentage",
-                    "Modifier_Tear_DamageRatio"
-                  ]
+                  "displayLines": "((MDF_CasterAttack * Modifier_Tear_MaxPercentage) / Modifier_Tear_DamageRatio)"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
-                    "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CasterAttack",
-                      "Modifier_Tear_MaxPercentage"
-                    ]
+                    "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)"
                   },
                   "variableName": "MDF_DamageValue"
                 }
@@ -715,13 +569,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
-                    "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_TargetMaxHP",
-                      "Modifier_Tear_DamageRatio"
-                    ]
+                    "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)"
                   },
                   "variableName": "MDF_DamageValue"
                 }
@@ -736,13 +584,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageFlat": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (MDF_DamageValue) || MUL || RETURN",
-                  "displayLines": "(DOT_TriggerRatio * MDF_DamageValue)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "MDF_DamageValue"
-                  ]
+                  "displayLines": "(DOT_TriggerRatio * MDF_DamageValue)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -797,13 +639,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (Modifier_Poison_DamagePercentage) || Variables[1] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
-                  "displayLines": "(Modifier_Poison_DamagePercentage * Modifier_Poison_PoisonLayer)",
-                  "constants": [],
-                  "variables": [
-                    "Modifier_Poison_DamagePercentage",
-                    "Modifier_Poison_PoisonLayer"
-                  ]
+                  "displayLines": "(Modifier_Poison_DamagePercentage * Modifier_Poison_PoisonLayer)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -834,14 +670,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Poison_DamagePercentage) || MUL || Variables[2] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
-                  "displayLines": "((DOT_TriggerRatio * Modifier_Poison_DamagePercentage) * Modifier_Poison_PoisonLayer)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "Modifier_Poison_DamagePercentage",
-                    "Modifier_Poison_PoisonLayer"
-                  ]
+                  "displayLines": "((DOT_TriggerRatio * Modifier_Poison_DamagePercentage) * Modifier_Poison_PoisonLayer)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -892,31 +721,13 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] (Modifier_Burn_DamagePercentage) || Variables[1] (_Layer) || MUL || RETURN",
-                  "displayLines": "(Modifier_Burn_DamagePercentage * _Layer)",
-                  "constants": [],
-                  "variables": [
-                    "Modifier_Burn_DamagePercentage",
-                    "_Layer"
-                  ]
+                  "displayLines": "(Modifier_Burn_DamagePercentage * _Layer)"
                 },
                 "DamageExtra": {
-                  "operator": "Variables[0] (Modifier_Burn_DamagePercentage_Defence) || Variables[1] (_Layer) || MUL || RETURN",
-                  "displayLines": "(Modifier_Burn_DamagePercentage_Defence * _Layer)",
-                  "constants": [],
-                  "variables": [
-                    "Modifier_Burn_DamagePercentage_Defence",
-                    "_Layer"
-                  ]
+                  "displayLines": "(Modifier_Burn_DamagePercentage_Defence * _Layer)"
                 },
                 "DamageFlat": {
-                  "operator": "Variables[0] (Modifier_Burn_DamageValue) || Variables[1] (_Layer) || MUL || RETURN",
-                  "displayLines": "(Modifier_Burn_DamageValue * _Layer)",
-                  "constants": [],
-                  "variables": [
-                    "Modifier_Burn_DamageValue",
-                    "_Layer"
-                  ]
+                  "displayLines": "(Modifier_Burn_DamageValue * _Layer)"
                 },
                 "dmgFormulaExtra": "DEF Scaling",
                 "Toughness": null,
@@ -955,34 +766,13 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Burn_DamagePercentage) || MUL || Variables[2] (_Layer) || MUL || RETURN",
-                  "displayLines": "((DOT_TriggerRatio * Modifier_Burn_DamagePercentage) * _Layer)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "Modifier_Burn_DamagePercentage",
-                    "_Layer"
-                  ]
+                  "displayLines": "((DOT_TriggerRatio * Modifier_Burn_DamagePercentage) * _Layer)"
                 },
                 "DamageExtra": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Burn_DamagePercentage_Defence) || MUL || Variables[2] (_Layer) || MUL || RETURN",
-                  "displayLines": "((DOT_TriggerRatio * Modifier_Burn_DamagePercentage_Defence) * _Layer)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "Modifier_Burn_DamagePercentage_Defence",
-                    "_Layer"
-                  ]
+                  "displayLines": "((DOT_TriggerRatio * Modifier_Burn_DamagePercentage_Defence) * _Layer)"
                 },
                 "DamageFlat": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Burn_DamageValue) || MUL || Variables[2] (_Layer) || MUL || RETURN",
-                  "displayLines": "((DOT_TriggerRatio * Modifier_Burn_DamageValue) * _Layer)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "Modifier_Burn_DamageValue",
-                    "_Layer"
-                  ]
+                  "displayLines": "((DOT_TriggerRatio * Modifier_Burn_DamageValue) * _Layer)"
                 },
                 "dmgFormulaExtra": "DEF Scaling",
                 "Toughness": null,
@@ -1036,22 +826,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (Modifier_Electric_DamagePercentage) || Variables[1] (_Layer) || MUL || RETURN",
-                  "displayLines": "(Modifier_Electric_DamagePercentage * _Layer)",
-                  "constants": [],
-                  "variables": [
-                    "Modifier_Electric_DamagePercentage",
-                    "_Layer"
-                  ]
+                  "displayLines": "(Modifier_Electric_DamagePercentage * _Layer)"
                 },
                 "DamageFlat": {
-                  "operator": "Variables[0] (Modifier_Electric_DamageValue) || Variables[1] (_Layer) || MUL || RETURN",
-                  "displayLines": "(Modifier_Electric_DamageValue * _Layer)",
-                  "constants": [],
-                  "variables": [
-                    "Modifier_Electric_DamageValue",
-                    "_Layer"
-                  ]
+                  "displayLines": "(Modifier_Electric_DamageValue * _Layer)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1087,24 +865,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Electric_DamagePercentage) || MUL || Variables[2] (_Layer) || MUL || RETURN",
-                  "displayLines": "((DOT_TriggerRatio * Modifier_Electric_DamagePercentage) * _Layer)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "Modifier_Electric_DamagePercentage",
-                    "_Layer"
-                  ]
+                  "displayLines": "((DOT_TriggerRatio * Modifier_Electric_DamagePercentage) * _Layer)"
                 },
                 "DamageFlat": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Electric_DamageValue) || MUL || Variables[2] (_Layer) || MUL || RETURN",
-                  "displayLines": "((DOT_TriggerRatio * Modifier_Electric_DamageValue) * _Layer)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "Modifier_Electric_DamageValue",
-                    "_Layer"
-                  ]
+                  "displayLines": "((DOT_TriggerRatio * Modifier_Electric_DamageValue) * _Layer)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1162,27 +926,14 @@ const configAbility = {
                 "value1": "MDF_TargetMaxHP",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || Variables[2] (Modifier_Tear_DamageRatio) || DIV || RETURN",
-                  "displayLines": "((MDF_CasterAttack * Modifier_Tear_MaxPercentage) / Modifier_Tear_DamageRatio)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_CasterAttack",
-                    "Modifier_Tear_MaxPercentage",
-                    "Modifier_Tear_DamageRatio"
-                  ]
+                  "displayLines": "((MDF_CasterAttack * Modifier_Tear_MaxPercentage) / Modifier_Tear_DamageRatio)"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
-                    "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CasterAttack",
-                      "Modifier_Tear_MaxPercentage"
-                    ]
+                    "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)"
                   },
                   "variableName": "MDF_DamageValue"
                 }
@@ -1191,13 +942,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
-                    "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_TargetMaxHP",
-                      "Modifier_Tear_DamageRatio"
-                    ]
+                    "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)"
                   },
                   "variableName": "MDF_DamageValue"
                 }
@@ -1233,27 +978,14 @@ const configAbility = {
                 "value1": "MDF_TargetMaxHP",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || Variables[2] (Modifier_Tear_DamageRatio) || DIV || RETURN",
-                  "displayLines": "((MDF_CasterAttack * Modifier_Tear_MaxPercentage) / Modifier_Tear_DamageRatio)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_CasterAttack",
-                    "Modifier_Tear_MaxPercentage",
-                    "Modifier_Tear_DamageRatio"
-                  ]
+                  "displayLines": "((MDF_CasterAttack * Modifier_Tear_MaxPercentage) / Modifier_Tear_DamageRatio)"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
-                    "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CasterAttack",
-                      "Modifier_Tear_MaxPercentage"
-                    ]
+                    "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)"
                   },
                   "variableName": "MDF_DamageValue"
                 }
@@ -1262,13 +994,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
-                    "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_TargetMaxHP",
-                      "Modifier_Tear_DamageRatio"
-                    ]
+                    "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)"
                   },
                   "variableName": "MDF_DamageValue"
                 }
@@ -1283,13 +1009,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageFlat": {
-                  "operator": "Variables[0] (MDF_DamageValue) || Variables[1] (_Layer) || MUL || RETURN",
-                  "displayLines": "(MDF_DamageValue * _Layer)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamageValue",
-                    "_Layer"
-                  ]
+                  "displayLines": "(MDF_DamageValue * _Layer)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1341,27 +1061,14 @@ const configAbility = {
                 "value1": "MDF_TargetMaxHP",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || Variables[2] (Modifier_Tear_DamageRatio) || DIV || RETURN",
-                  "displayLines": "((MDF_CasterAttack * Modifier_Tear_MaxPercentage) / Modifier_Tear_DamageRatio)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_CasterAttack",
-                    "Modifier_Tear_MaxPercentage",
-                    "Modifier_Tear_DamageRatio"
-                  ]
+                  "displayLines": "((MDF_CasterAttack * Modifier_Tear_MaxPercentage) / Modifier_Tear_DamageRatio)"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
-                    "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CasterAttack",
-                      "Modifier_Tear_MaxPercentage"
-                    ]
+                    "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)"
                   },
                   "variableName": "MDF_DamageValue"
                 }
@@ -1370,13 +1077,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
-                    "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_TargetMaxHP",
-                      "Modifier_Tear_DamageRatio"
-                    ]
+                    "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)"
                   },
                   "variableName": "MDF_DamageValue"
                 }
@@ -1391,14 +1092,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageFlat": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (MDF_DamageValue) || MUL || Variables[2] (_Layer) || MUL || RETURN",
-                  "displayLines": "((DOT_TriggerRatio * MDF_DamageValue) * _Layer)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "MDF_DamageValue",
-                    "_Layer"
-                  ]
+                  "displayLines": "((DOT_TriggerRatio * MDF_DamageValue) * _Layer)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1442,25 +1136,13 @@ const configAbility = {
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (MDF_DotHitCount) || RETURN",
-                    "displayLines": "MDF_DotHitCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DotHitCount"
-                    ]
+                    "displayLines": "MDF_DotHitCount"
                   },
                   "execute": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (Scoring_Hars_Count) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(Scoring_Hars_Count + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Scoring_Hars_Count"
-                        ]
+                        "displayLines": "(Scoring_Hars_Count + 1)"
                       },
                       "variableName": "Scoring_Hars_Count"
                     },
@@ -1473,12 +1155,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Physical",
                         "Damage": {
-                          "operator": "Variables[0] (MDF_DOTDamagePercentage) || RETURN",
-                          "displayLines": "MDF_DOTDamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DOTDamagePercentage"
-                          ]
+                          "displayLines": "MDF_DOTDamagePercentage"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -1572,12 +1249,7 @@ const configAbility = {
                     "value1": "MDF_DotHitCount",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (MDF_MaxLimit) || RETURN",
-                      "displayLines": "MDF_MaxLimit",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MaxLimit"
-                      ]
+                      "displayLines": "MDF_MaxLimit"
                     }
                   }
                 ]
@@ -1586,14 +1258,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_DotHitCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(MDF_DotHitCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_DotHitCount"
-                    ]
+                    "displayLines": "(MDF_DotHitCount + 1)"
                   },
                   "variableName": "MDF_DotHitCount"
                 },
@@ -1686,12 +1351,7 @@ const configAbility = {
                     "value1": "MDF_DotHitCount",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (MDF_MaxLimit) || RETURN",
-                      "displayLines": "MDF_MaxLimit",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MaxLimit"
-                      ]
+                      "displayLines": "MDF_MaxLimit"
                     },
                     "contextScope": "ContextModifier"
                   },
@@ -1802,14 +1462,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_DotHitCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_DotHitCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_DotHitCount"
-                        ]
+                        "displayLines": "(MDF_DotHitCount + 1)"
                       },
                       "variableName": "MDF_DotHitCount"
                     }
@@ -1852,12 +1505,7 @@ const configAbility = {
                     "value1": "MDF_DotHitCount",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (MDF_MaxLimit) || RETURN",
-                      "displayLines": "MDF_MaxLimit",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MaxLimit"
-                      ]
+                      "displayLines": "MDF_MaxLimit"
                     },
                     "contextScope": "ContextModifier"
                   },
@@ -1865,12 +1513,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_MaxLimit) || RETURN",
-                        "displayLines": "MDF_MaxLimit",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxLimit"
-                        ]
+                        "displayLines": "MDF_MaxLimit"
                       },
                       "variableName": "MDF_DotHitCount"
                     }
@@ -1891,25 +1534,13 @@ const configAbility = {
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (MDF_DotHitCount) || RETURN",
-                    "displayLines": "MDF_DotHitCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DotHitCount"
-                    ]
+                    "displayLines": "MDF_DotHitCount"
                   },
                   "execute": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (Scoring_Hars_Count) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(Scoring_Hars_Count + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Scoring_Hars_Count"
-                        ]
+                        "displayLines": "(Scoring_Hars_Count + 1)"
                       },
                       "variableName": "Scoring_Hars_Count"
                     },
@@ -1922,12 +1553,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Physical",
                         "Damage": {
-                          "operator": "Variables[0] (MDF_DOTDamagePercentage) || RETURN",
-                          "displayLines": "MDF_DOTDamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DOTDamagePercentage"
-                          ]
+                          "displayLines": "MDF_DOTDamagePercentage"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -2202,12 +1828,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             }
           ]
@@ -2237,14 +1858,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_DefenceDownRatio) || SUB || RETURN",
-                "displayLines": "(0 - MDF_DefenceDownRatio)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_DefenceDownRatio"
-                ]
+                "displayLines": "(0 - MDF_DefenceDownRatio)"
               }
             },
             {
@@ -2255,14 +1869,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_AttackDownRatio) || SUB || RETURN",
-                "displayLines": "(0 - MDF_AttackDownRatio)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_AttackDownRatio"
-                ]
+                "displayLines": "(0 - MDF_AttackDownRatio)"
               }
             },
             {
@@ -2284,14 +1891,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_ResistanceDownRatio) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_ResistanceDownRatio)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_ResistanceDownRatio"
-                    ]
+                    "displayLines": "(0 - MDF_ResistanceDownRatio)"
                   }
                 },
                 {
@@ -2324,12 +1924,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             }
           ]
@@ -2369,20 +1964,10 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_MaxLimit": {
-              "operator": "Variables[0] (Skill03_TriggerDotMaxCount) || RETURN",
-              "displayLines": "Skill03_TriggerDotMaxCount",
-              "constants": [],
-              "variables": [
-                "Skill03_TriggerDotMaxCount"
-              ]
+              "displayLines": "Skill03_TriggerDotMaxCount"
             },
             "MDF_DOTDamagePercentage": {
-              "operator": "Variables[0] (MDF_DOTDamagePercentageTemp) || RETURN",
-              "displayLines": "MDF_DOTDamagePercentageTemp",
-              "constants": [],
-              "variables": [
-                "MDF_DOTDamagePercentageTemp"
-              ]
+              "displayLines": "MDF_DOTDamagePercentageTemp"
             }
           }
         },
@@ -2396,20 +1981,10 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_MaxLimit": {
-              "operator": "Variables[0] (Skill03_TriggerDotMaxCount) || RETURN",
-              "displayLines": "Skill03_TriggerDotMaxCount",
-              "constants": [],
-              "variables": [
-                "Skill03_TriggerDotMaxCount"
-              ]
+              "displayLines": "Skill03_TriggerDotMaxCount"
             },
             "MDF_DOTDamagePercentage": {
-              "operator": "Variables[0] (MDF_DOTDamagePercentageTemp) || RETURN",
-              "displayLines": "MDF_DOTDamagePercentageTemp",
-              "constants": [],
-              "variables": [
-                "MDF_DOTDamagePercentageTemp"
-              ]
+              "displayLines": "MDF_DOTDamagePercentageTemp"
             }
           }
         },
@@ -2423,44 +1998,19 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_DOTDamagePercentage": {
-              "operator": "Variables[0] (MDF_DOTDamagePercentageTemp) || RETURN",
-              "displayLines": "MDF_DOTDamagePercentageTemp",
-              "constants": [],
-              "variables": [
-                "MDF_DOTDamagePercentageTemp"
-              ]
+              "displayLines": "MDF_DOTDamagePercentageTemp"
             },
             "MDF_TriggerDOTMaxCount": {
-              "operator": "Variables[0] (MDF_TriggerDOTMaxCountTemp) || RETURN",
-              "displayLines": "MDF_TriggerDOTMaxCountTemp",
-              "constants": [],
-              "variables": [
-                "MDF_TriggerDOTMaxCountTemp"
-              ]
+              "displayLines": "MDF_TriggerDOTMaxCountTemp"
             },
             "MDF_DefenceDownRatio": {
-              "operator": "Variables[0] (MDF_DefenceDownRatioTemp) || RETURN",
-              "displayLines": "MDF_DefenceDownRatioTemp",
-              "constants": [],
-              "variables": [
-                "MDF_DefenceDownRatioTemp"
-              ]
+              "displayLines": "MDF_DefenceDownRatioTemp"
             },
             "MDF_ResistanceDownRatio": {
-              "operator": "Variables[0] (MDF_ResistanceDownRatioTemp) || RETURN",
-              "displayLines": "MDF_ResistanceDownRatioTemp",
-              "constants": [],
-              "variables": [
-                "MDF_ResistanceDownRatioTemp"
-              ]
+              "displayLines": "MDF_ResistanceDownRatioTemp"
             },
             "MDF_AttackDownRatio": {
-              "operator": "Variables[0] (MDF_AttackDownRatioTemp) || RETURN",
-              "displayLines": "MDF_AttackDownRatioTemp",
-              "constants": [],
-              "variables": [
-                "MDF_AttackDownRatioTemp"
-              ]
+              "displayLines": "MDF_AttackDownRatioTemp"
             }
           }
         },
@@ -2493,12 +2043,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyRatio": {
-              "operator": "Variables[0] (SkillTree_PointB3_StatusProbabilityValue) || RETURN",
-              "displayLines": "SkillTree_PointB3_StatusProbabilityValue",
-              "constants": [],
-              "variables": [
-                "SkillTree_PointB3_StatusProbabilityValue"
-              ]
+              "displayLines": "SkillTree_PointB3_StatusProbabilityValue"
             }
           }
         }
@@ -2519,12 +2064,7 @@ const configAbility = {
               "name": "Update Displayed Energy Bar",
               "value": 0,
               "maximum": {
-                "operator": "Variables[0] (Skill03_HaloLifeTime) || RETURN",
-                "displayLines": "Skill03_HaloLifeTime",
-                "constants": [],
-                "variables": [
-                  "Skill03_HaloLifeTime"
-                ]
+                "displayLines": "Skill03_HaloLifeTime"
               },
               "priorState": "Normal"
             }
@@ -2543,20 +2083,10 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_Layer) || RETURN",
-                "displayLines": "MDF_Layer",
-                "constants": [],
-                "variables": [
-                  "MDF_Layer"
-                ]
+                "displayLines": "MDF_Layer"
               },
               "maximum": {
-                "operator": "Variables[0] (Skill03_HaloLifeTime) || RETURN",
-                "displayLines": "Skill03_HaloLifeTime",
-                "constants": [],
-                "variables": [
-                  "Skill03_HaloLifeTime"
-                ]
+                "displayLines": "Skill03_HaloLifeTime"
               }
             }
           ]
@@ -2574,12 +2104,7 @@ const configAbility = {
                 {
                   "name": "Skill Points Modification",
                   "adjustmentValue": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "adjustmentType": "+"
                 }
@@ -2595,20 +2120,10 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_Layer) || RETURN",
-                "displayLines": "MDF_Layer",
-                "constants": [],
-                "variables": [
-                  "MDF_Layer"
-                ]
+                "displayLines": "MDF_Layer"
               },
               "maximum": {
-                "operator": "Variables[0] (Skill03_HaloLifeTime) || RETURN",
-                "displayLines": "Skill03_HaloLifeTime",
-                "constants": [],
-                "variables": [
-                  "Skill03_HaloLifeTime"
-                ]
+                "displayLines": "Skill03_HaloLifeTime"
               },
               "priorState": "Active",
               "bar#": 3

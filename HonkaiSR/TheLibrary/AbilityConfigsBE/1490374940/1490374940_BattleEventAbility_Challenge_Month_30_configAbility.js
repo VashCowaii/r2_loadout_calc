@@ -13,12 +13,7 @@ const configAbility = {
       },
       "variableName": "_Init_Layer",
       "resetValue": {
-        "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-        "displayLines": "#BattleEvent_P1_ADF",
-        "constants": [],
-        "variables": [
-          "#BattleEvent_P1_ADF"
-        ]
+        "displayLines": "#BattleEvent_P1_ADF"
       },
       "scope": "ContextCaster"
     },
@@ -30,12 +25,7 @@ const configAbility = {
       },
       "variableName": "_DmgUp_Ratio",
       "resetValue": {
-        "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-        "displayLines": "#BattleEvent_P2_ADF",
-        "constants": [],
-        "variables": [
-          "#BattleEvent_P2_ADF"
-        ]
+        "displayLines": "#BattleEvent_P2_ADF"
       },
       "scope": "ContextCaster"
     },
@@ -47,12 +37,7 @@ const configAbility = {
       },
       "variableName": "_Damage_Ratio",
       "resetValue": {
-        "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-        "displayLines": "#BattleEvent_P3_ADF",
-        "constants": [],
-        "variables": [
-          "#BattleEvent_P3_ADF"
-        ]
+        "displayLines": "#BattleEvent_P3_ADF"
       },
       "scope": "ContextCaster"
     },
@@ -64,12 +49,7 @@ const configAbility = {
       },
       "variableName": "_Damage_Ratio_2",
       "resetValue": {
-        "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
-        "displayLines": "#BattleEvent_P4_ADF",
-        "constants": [],
-        "variables": [
-          "#BattleEvent_P4_ADF"
-        ]
+        "displayLines": "#BattleEvent_P4_ADF"
       },
       "scope": "ContextCaster"
     },
@@ -207,13 +187,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "DamageFlat": {
-                              "operator": "Variables[0] (_Temp_Hp) || Variables[1] (_Damage_Ratio) || MUL || RETURN",
-                              "displayLines": "(_Temp_Hp * _Damage_Ratio)",
-                              "constants": [],
-                              "variables": [
-                                "_Temp_Hp",
-                                "_Damage_Ratio"
-                              ]
+                              "displayLines": "(_Temp_Hp * _Damage_Ratio)"
                             },
                             "dmgFormulaFinal": "Converted DMG Base",
                             "Toughness": null,
@@ -233,13 +207,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "DamageFlat": {
-                              "operator": "Variables[0] (_Temp_Hp) || Variables[1] (_Damage_Ratio_2) || MUL || RETURN",
-                              "displayLines": "(_Temp_Hp * _Damage_Ratio_2)",
-                              "constants": [],
-                              "variables": [
-                                "_Temp_Hp",
-                                "_Damage_Ratio_2"
-                              ]
+                              "displayLines": "(_Temp_Hp * _Damage_Ratio_2)"
                             },
                             "dmgFormulaFinal": "Converted DMG Base",
                             "Toughness": null,
@@ -322,30 +290,15 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1682404281\">Modifier_BattleEventAbility_Challenge_Month_30_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (_Init_Layer) || RETURN",
-                    "displayLines": "_Init_Layer",
-                    "constants": [],
-                    "variables": [
-                      "_Init_Layer"
-                    ]
+                    "displayLines": "_Init_Layer"
                   },
                   "valuePerStack": {
                     "_DmgUp_Ratio_get": {
-                      "operator": "Variables[0] (_DmgUp_Ratio) || RETURN",
-                      "displayLines": "_DmgUp_Ratio",
-                      "constants": [],
-                      "variables": [
-                        "_DmgUp_Ratio"
-                      ]
+                      "displayLines": "_DmgUp_Ratio"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (_Current_Layer) || RETURN",
-                    "displayLines": "_Current_Layer",
-                    "constants": [],
-                    "variables": [
-                      "_Current_Layer"
-                    ]
+                    "displayLines": "_Current_Layer"
                   }
                 }
               ]
@@ -372,14 +325,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_Current_Layer) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(_Current_Layer + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_Current_Layer"
-                    ]
+                    "displayLines": "(_Current_Layer + 1)"
                   },
                   "variableName": "_Current_Layer"
                 },
@@ -390,12 +336,7 @@ const configAbility = {
                     "value1": "_Current_Layer",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (_Init_Layer) || RETURN",
-                      "displayLines": "_Init_Layer",
-                      "constants": [],
-                      "variables": [
-                        "_Init_Layer"
-                      ]
+                      "displayLines": "_Init_Layer"
                     }
                   },
                   "passed": [
@@ -434,20 +375,10 @@ const configAbility = {
                           "canHitNonTargets": true,
                           "valuePerStack": {
                             "_Damage_Ratio_get": {
-                              "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                              "displayLines": "#BattleEvent_P3_ADF",
-                              "constants": [],
-                              "variables": [
-                                "#BattleEvent_P3_ADF"
-                              ]
+                              "displayLines": "#BattleEvent_P3_ADF"
                             },
                             "_Damage_Ratio_2_get": {
-                              "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
-                              "displayLines": "#BattleEvent_P4_ADF",
-                              "constants": [],
-                              "variables": [
-                                "#BattleEvent_P4_ADF"
-                              ]
+                              "displayLines": "#BattleEvent_P4_ADF"
                             }
                           },
                           "allowAbilityTriggers": false
@@ -546,13 +477,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "DamageFlat": {
-                              "operator": "Variables[0] (_Temp_Hp) || Variables[1] (_Damage_Ratio) || MUL || RETURN",
-                              "displayLines": "(_Temp_Hp * _Damage_Ratio)",
-                              "constants": [],
-                              "variables": [
-                                "_Temp_Hp",
-                                "_Damage_Ratio"
-                              ]
+                              "displayLines": "(_Temp_Hp * _Damage_Ratio)"
                             },
                             "dmgFormulaFinal": "Converted DMG Base",
                             "Toughness": null,
@@ -572,13 +497,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "DamageFlat": {
-                              "operator": "Variables[0] (_Temp_Hp) || Variables[1] (_Damage_Ratio_2) || MUL || RETURN",
-                              "displayLines": "(_Temp_Hp * _Damage_Ratio_2)",
-                              "constants": [],
-                              "variables": [
-                                "_Temp_Hp",
-                                "_Damage_Ratio_2"
-                              ]
+                              "displayLines": "(_Temp_Hp * _Damage_Ratio_2)"
                             },
                             "dmgFormulaFinal": "Converted DMG Base",
                             "Toughness": null,
@@ -704,12 +623,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 1,
               "maxValue": {
-                "operator": "Variables[0] (_Init_Layer) || RETURN",
-                "displayLines": "_Init_Layer",
-                "constants": [],
-                "variables": [
-                  "_Init_Layer"
-                ]
+                "displayLines": "_Init_Layer"
               },
               "includeMaxValueInRange": true,
               "enteringRange": [
@@ -730,30 +644,15 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1682404281\">Modifier_BattleEventAbility_Challenge_Month_30_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (_Init_Layer) || RETURN",
-                        "displayLines": "_Init_Layer",
-                        "constants": [],
-                        "variables": [
-                          "_Init_Layer"
-                        ]
+                        "displayLines": "_Init_Layer"
                       },
                       "valuePerStack": {
                         "_DmgUp_Ratio_get": {
-                          "operator": "Variables[0] (_DmgUp_Ratio) || RETURN",
-                          "displayLines": "_DmgUp_Ratio",
-                          "constants": [],
-                          "variables": [
-                            "_DmgUp_Ratio"
-                          ]
+                          "displayLines": "_DmgUp_Ratio"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (_Current_Layer) || RETURN",
-                        "displayLines": "_Current_Layer",
-                        "constants": [],
-                        "variables": [
-                          "_Current_Layer"
-                        ]
+                        "displayLines": "_Current_Layer"
                       }
                     }
                   ]
@@ -785,30 +684,15 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1682404281\">Modifier_BattleEventAbility_Challenge_Month_30_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (_Init_Layer) || RETURN",
-                        "displayLines": "_Init_Layer",
-                        "constants": [],
-                        "variables": [
-                          "_Init_Layer"
-                        ]
+                        "displayLines": "_Init_Layer"
                       },
                       "valuePerStack": {
                         "_DmgUp_Ratio_get": {
-                          "operator": "Variables[0] (_DmgUp_Ratio) || RETURN",
-                          "displayLines": "_DmgUp_Ratio",
-                          "constants": [],
-                          "variables": [
-                            "_DmgUp_Ratio"
-                          ]
+                          "displayLines": "_DmgUp_Ratio"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (_Current_Layer) || RETURN",
-                        "displayLines": "_Current_Layer",
-                        "constants": [],
-                        "variables": [
-                          "_Current_Layer"
-                        ]
+                        "displayLines": "_Current_Layer"
                       }
                     }
                   ]

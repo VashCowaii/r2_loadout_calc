@@ -57,12 +57,7 @@ const configAbility = {
               },
               "variables": {
                 "parameter[0]_NormalizedValue": {
-                  "operator": "Variables[0] (#ADF_2) || RETURN",
-                  "displayLines": "#ADF_2",
-                  "constants": [],
-                  "variables": [
-                    "#ADF_2"
-                  ]
+                  "displayLines": "#ADF_2"
                 }
               }
             }

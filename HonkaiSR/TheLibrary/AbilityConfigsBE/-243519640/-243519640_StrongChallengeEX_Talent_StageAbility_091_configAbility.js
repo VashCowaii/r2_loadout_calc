@@ -34,12 +34,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_CritDamageAddedRatio) || RETURN",
-                "displayLines": "MDF_CritDamageAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_CritDamageAddedRatio"
-                ]
+                "displayLines": "MDF_CritDamageAddedRatio"
               }
             }
           ]
@@ -84,21 +79,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1149561969\">MStrongChallengeEX_Talent_StageAbility_PLY_091_Self</a>[<span class=\"descriptionNumberColor\">Exploit Opening</span>]",
                   "duration": {
-                    "operator": "Variables[0] (MDF_PLY091_LifeTime) || RETURN",
-                    "displayLines": "MDF_PLY091_LifeTime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PLY091_LifeTime"
-                    ]
+                    "displayLines": "MDF_PLY091_LifeTime"
                   },
                   "valuePerStack": {
                     "MDF_CritDamageAddedRatio": {
-                      "operator": "Variables[0] (MDF_PLY091_CritDamageAddedRatio) || RETURN",
-                      "displayLines": "MDF_PLY091_CritDamageAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PLY091_CritDamageAddedRatio"
-                      ]
+                      "displayLines": "MDF_PLY091_CritDamageAddedRatio"
                     }
                   }
                 }
@@ -140,20 +125,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"923259520\">MStrongChallengeEX_Talent_StageAbility_PLY_091</a>",
                   "valuePerStack": {
                     "MDF_PLY091_CritDamageAddedRatio": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     },
                     "MDF_PLY091_LifeTime": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     }
                   }
                 }

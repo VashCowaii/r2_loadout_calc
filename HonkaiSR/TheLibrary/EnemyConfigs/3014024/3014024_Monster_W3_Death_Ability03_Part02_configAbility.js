@@ -13,21 +13,11 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"606573810\">Monster_W3_Death_AllDamageUp</a>[<span class=\"descriptionNumberColor\">Biting Obituary</span>]",
       "duration": {
-        "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-        "displayLines": "{[Skill03[1]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill03[1]]}"
-        ]
+        "displayLines": "{[Skill03[1]]}"
       },
       "valuePerStack": {
         "MDF_ShowValue1": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-          "displayLines": "{[Skill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "{[Skill03[0]]}"
         }
       }
     },

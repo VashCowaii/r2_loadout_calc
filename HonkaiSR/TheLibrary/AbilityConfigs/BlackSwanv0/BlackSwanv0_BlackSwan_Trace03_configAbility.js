@@ -29,24 +29,14 @@ const configAbility = {
                 "value1": "MDF_PropertyRatio",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (0.72) || RETURN",
-                  "displayLines": "0.72",
-                  "constants": [],
-                  "variables": [
-                    0.72
-                  ]
+                  "displayLines": "0.72"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (0.72) || RETURN",
-                    "displayLines": "0.72",
-                    "constants": [],
-                    "variables": [
-                      0.72
-                    ]
+                    "displayLines": "0.72"
                   },
                   "variableName": "MDF_PropertyRatio"
                 }
@@ -60,12 +50,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             }
           ]
@@ -101,13 +86,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"97197540\">M_BlackSwan_Trace03_Sub</a>",
               "valuePerStack": {
                 "MDF_PropertyRatio": {
-                  "operator": "Variables[0] (CasterStatusProbability) || Variables[1] (0.6) || MUL || RETURN",
-                  "displayLines": "(CasterStatusProbability * 0.6)",
-                  "constants": [],
-                  "variables": [
-                    "CasterStatusProbability",
-                    0.6
-                  ]
+                  "displayLines": "(CasterStatusProbability * 0.6)"
                 }
               }
             }
@@ -142,13 +121,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"97197540\">M_BlackSwan_Trace03_Sub</a>",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (CasterStatusProbability) || Variables[1] (0.6) || MUL || RETURN",
-                      "displayLines": "(CasterStatusProbability * 0.6)",
-                      "constants": [],
-                      "variables": [
-                        "CasterStatusProbability",
-                        0.6
-                      ]
+                      "displayLines": "(CasterStatusProbability * 0.6)"
                     }
                   }
                 }

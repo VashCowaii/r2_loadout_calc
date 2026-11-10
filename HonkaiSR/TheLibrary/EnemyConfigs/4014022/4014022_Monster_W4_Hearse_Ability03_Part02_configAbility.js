@@ -186,17 +186,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[Skill03[0]]}) || Variables[1] ({[Skill03[3]]}) || Constants[0] (4) || Variables[2] (Skill03Count) || SUB || MUL || SUB || Variables[3] ({[Skill03[4]]}) || ADD || RETURN",
-            "displayLines": "(({[Skill03[0]]} - ({[Skill03[3]]} * (4 - Skill03Count))) + {[Skill03[4]]})",
-            "constants": [
-              4
-            ],
-            "variables": [
-              "{[Skill03[0]]}",
-              "{[Skill03[3]]}",
-              "Skill03Count",
-              "{[Skill03[4]]}"
-            ]
+            "displayLines": "(({[Skill03[0]]} - ({[Skill03[3]]} * (4 - Skill03Count))) + {[Skill03[4]]})"
           },
           "variableName": "Skill03Damage"
         }
@@ -205,16 +195,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[Skill03[0]]}) || Variables[1] ({[Skill03[3]]}) || Constants[0] (4) || Variables[2] (Skill03Count) || SUB || MUL || SUB || RETURN",
-            "displayLines": "({[Skill03[0]]} - ({[Skill03[3]]} * (4 - Skill03Count)))",
-            "constants": [
-              4
-            ],
-            "variables": [
-              "{[Skill03[0]]}",
-              "{[Skill03[3]]}",
-              "Skill03Count"
-            ]
+            "displayLines": "({[Skill03[0]]} - ({[Skill03[3]]} * (4 - Skill03Count)))"
           },
           "variableName": "Skill03Damage"
         }
@@ -245,15 +226,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "DamageFlat": {
-              "operator": "Constants[0] (0.1) || Variables[0] (MaxHPValue) || MUL || Variables[1] (Skill03Damage) || MUL || RETURN",
-              "displayLines": "((0.1 * MaxHPValue) * Skill03Damage)",
-              "constants": [
-                0.1
-              ],
-              "variables": [
-                "MaxHPValue",
-                "Skill03Damage"
-              ]
+              "displayLines": "((0.1 * MaxHPValue) * Skill03Damage)"
             },
             "Toughness": null,
             "Tags": null,
@@ -288,15 +261,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "DamageFlat": {
-              "operator": "Constants[0] (0.1) || Variables[0] (MaxHPValue) || MUL || Variables[1] (Skill03Damage) || MUL || RETURN",
-              "displayLines": "((0.1 * MaxHPValue) * Skill03Damage)",
-              "constants": [
-                0.1
-              ],
-              "variables": [
-                "MaxHPValue",
-                "Skill03Damage"
-              ]
+              "displayLines": "((0.1 * MaxHPValue) * Skill03Damage)"
             },
             "Toughness": null,
             "Tags": null,
@@ -331,15 +296,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "DamageFlat": {
-              "operator": "Constants[0] (0.1) || Variables[0] (MaxHPValue) || MUL || Variables[1] (Skill03Damage) || MUL || RETURN",
-              "displayLines": "((0.1 * MaxHPValue) * Skill03Damage)",
-              "constants": [
-                0.1
-              ],
-              "variables": [
-                "MaxHPValue",
-                "Skill03Damage"
-              ]
+              "displayLines": "((0.1 * MaxHPValue) * Skill03Damage)"
             },
             "Toughness": null,
             "Tags": null,
@@ -374,15 +331,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "DamageFlat": {
-              "operator": "Constants[0] (0.7) || Variables[0] (MaxHPValue) || MUL || Variables[1] (Skill03Damage) || MUL || RETURN",
-              "displayLines": "((0.7 * MaxHPValue) * Skill03Damage)",
-              "constants": [
-                0.7
-              ],
-              "variables": [
-                "MaxHPValue",
-                "Skill03Damage"
-              ]
+              "displayLines": "((0.7 * MaxHPValue) * Skill03Damage)"
             },
             "Toughness": null,
             "Tags": null,
@@ -402,22 +351,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
       "duration": 1,
       "baseChance": {
-        "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-        "displayLines": "{[Skill03[1]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill03[1]]}"
-        ]
+        "displayLines": "{[Skill03[1]]}"
       },
       "immediateEffect": true,
       "valuePerStack": {
         "MDF_ActionDelayRatio": {
-          "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-          "displayLines": "{[Skill03[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[2]]}"
-          ]
+          "displayLines": "{[Skill03[2]]}"
         }
       }
     },
@@ -583,15 +522,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (CurrentBlackBloodValue) || Variables[1] (CurrentRemainBlackBloodValue) || SUB || Variables[2] ({[Skill01[2]]}) || MUL || Variables[1] (CurrentRemainBlackBloodValue) || ADD || Variables[3] (CurrentEnhanceBlackBloodValue) || SUB || RETURN",
-                "displayLines": "((((CurrentBlackBloodValue - CurrentRemainBlackBloodValue) * {[Skill01[2]]}) + CurrentRemainBlackBloodValue) - CurrentEnhanceBlackBloodValue)",
-                "constants": [],
-                "variables": [
-                  "CurrentBlackBloodValue",
-                  "CurrentRemainBlackBloodValue",
-                  "{[Skill01[2]]}",
-                  "CurrentEnhanceBlackBloodValue"
-                ]
+                "displayLines": "((((CurrentBlackBloodValue - CurrentRemainBlackBloodValue) * {[Skill01[2]]}) + CurrentRemainBlackBloodValue) - CurrentEnhanceBlackBloodValue)"
               },
               "variableName": "CurrentBlackBloodValue"
             },
@@ -602,24 +533,14 @@ const configAbility = {
                 "value1": "CurrentBlackBloodValue",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                  "displayLines": "{[Skill01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[1]]}"
-                  ]
+                  "displayLines": "{[Skill01[1]]}"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                    "displayLines": "{[Skill01[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill01[1]]}"
-                    ]
+                    "displayLines": "{[Skill01[1]]}"
                   },
                   "variableName": "CurrentBlackBloodValue"
                 }
@@ -634,12 +555,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"241895029\">Monster_W4_HearsePart_BlackBlood_Enhance</a>[<span class=\"descriptionNumberColor\">Conquered Eon</span>]",
               "valuePerStack": {
                 "MDF_DirtyHPRatio": {
-                  "operator": "Variables[0] (CurrentBlackBloodValue) || RETURN",
-                  "displayLines": "CurrentBlackBloodValue",
-                  "constants": [],
-                  "variables": [
-                    "CurrentBlackBloodValue"
-                  ]
+                  "displayLines": "CurrentBlackBloodValue"
                 }
               }
             }

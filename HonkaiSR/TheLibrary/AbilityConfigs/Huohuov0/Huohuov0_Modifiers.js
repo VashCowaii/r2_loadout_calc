@@ -73,14 +73,7 @@ const configAbility = {
                     "name": "Insert Ability Condition",
                     "type": "AbilityOwnerInsertUnusedCount",
                     "typeValue": {
-                      "operator": "Variables[0] (MIN) || Variables[1] (MDF_ReviveCount) || Variables[2] (Passive_HealMark_LifeTime) || PARAM_2 || FUNCTION || RETURN",
-                      "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(MDF_ReviveCount, Passive_HealMark_LifeTime)",
-                      "constants": [],
-                      "variables": [
-                        "MIN",
-                        "MDF_ReviveCount",
-                        "Passive_HealMark_LifeTime"
-                      ]
+                      "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(MDF_ReviveCount, Passive_HealMark_LifeTime)"
                     }
                   },
                   "abilityName": "Huohuo_Eidolon2_Insert",
@@ -98,12 +91,7 @@ const configAbility = {
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "AADF_1": {
-                      "operator": "Variables[0] (MDF_HealPercentage) || RETURN",
-                      "displayLines": "MDF_HealPercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_HealPercentage"
-                      ]
+                      "displayLines": "MDF_HealPercentage"
                     }
                   },
                   "allowAbilityTriggers": false
@@ -135,12 +123,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Huohuo_Rank02_ReviveCount) || RETURN",
-                    "displayLines": "Huohuo_Rank02_ReviveCount",
-                    "constants": [],
-                    "variables": [
-                      "Huohuo_Rank02_ReviveCount"
-                    ]
+                    "displayLines": "Huohuo_Rank02_ReviveCount"
                   },
                   "variableName": "MDF_ReviveCount"
                 },
@@ -175,20 +158,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-2094716401\">Huohuo_Eidolon2</a>",
                       "valuePerStack": {
                         "MDF_HealPercentage": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         },
                         "MDF_ReviveCount": {
-                          "operator": "Variables[0] (Huohuo_Rank02_ReviveCount) || RETURN",
-                          "displayLines": "Huohuo_Rank02_ReviveCount",
-                          "constants": [],
-                          "variables": [
-                            "Huohuo_Rank02_ReviveCount"
-                          ]
+                          "displayLines": "Huohuo_Rank02_ReviveCount"
                         }
                       }
                     }
@@ -242,12 +215,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageAddedRatio) || RETURN",
-                "displayLines": "MDF_DamageAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageAddedRatio"
-                ]
+                "displayLines": "MDF_DamageAddedRatio"
               }
             }
           ]
@@ -282,15 +250,7 @@ const configAbility = {
                   "on": "Healer",
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoingSUM</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.8) || Constants[0] (1) || Variables[1] (CurrentHPRatio) || SUB || MUL || RETURN",
-                    "displayLines": "(0.8 * (1 - CurrentHPRatio))",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      0.8,
-                      "CurrentHPRatio"
-                    ]
+                    "displayLines": "(0.8 * (1 - CurrentHPRatio))"
                   }
                 }
               ]
@@ -322,12 +282,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -354,12 +309,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AttackUP) || RETURN",
-                "displayLines": "MDF_AttackUP",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackUP"
-                ]
+                "displayLines": "MDF_AttackUP"
               }
             }
           ]
@@ -399,12 +349,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "isFixed": "* ERR"
                 }
@@ -426,12 +371,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "dispelCount": {
-                    "operator": "Variables[0] (_DispelNum) || RETURN",
-                    "displayLines": "_DispelNum",
-                    "constants": [],
-                    "variables": [
-                      "_DispelNum"
-                    ]
+                    "displayLines": "_DispelNum"
                   },
                   "dispelOrder": "LastAdded",
                   "counterKey": "_DispelNumSuccess"
@@ -439,13 +379,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Huohuo_Passive_DispelCount) || Variables[1] (_DispelNumSuccess) || SUB || RETURN",
-                    "displayLines": "(Huohuo_Passive_DispelCount - _DispelNumSuccess)",
-                    "constants": [],
-                    "variables": [
-                      "Huohuo_Passive_DispelCount",
-                      "_DispelNumSuccess"
-                    ]
+                    "displayLines": "(Huohuo_Passive_DispelCount - _DispelNumSuccess)"
                   },
                   "variableName": "Huohuo_Passive_DispelCount"
                 }
@@ -466,20 +400,10 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (HPRatio) || RETURN",
-                "displayLines": "HPRatio",
-                "constants": [],
-                "variables": [
-                  "HPRatio"
-                ]
+                "displayLines": "HPRatio"
               },
               "healFlat": {
-                "operator": "Variables[0] (HPValue) || RETURN",
-                "displayLines": "HPValue",
-                "constants": [],
-                "variables": [
-                  "HPValue"
-                ]
+                "displayLines": "HPValue"
               },
               "formula": "Heal from Healer's MaxHP"
             },
@@ -506,12 +430,7 @@ const configAbility = {
                 "value1": "CurrentHP%",
                 "compareType": "<=",
                 "value2": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
+                  "displayLines": "0.5"
                 }
               },
               "ifTargetFound": [
@@ -529,12 +448,7 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "isFixed": "* ERR"
                     }
@@ -556,12 +470,7 @@ const configAbility = {
                         "target": "{{Parameter Target}}"
                       },
                       "dispelCount": {
-                        "operator": "Variables[0] (_DispelNum) || RETURN",
-                        "displayLines": "_DispelNum",
-                        "constants": [],
-                        "variables": [
-                          "_DispelNum"
-                        ]
+                        "displayLines": "_DispelNum"
                       },
                       "dispelOrder": "LastAdded",
                       "counterKey": "_DispelNumSuccess"
@@ -569,13 +478,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (Huohuo_Passive_DispelCount) || Variables[1] (_DispelNumSuccess) || SUB || RETURN",
-                        "displayLines": "(Huohuo_Passive_DispelCount - _DispelNumSuccess)",
-                        "constants": [],
-                        "variables": [
-                          "Huohuo_Passive_DispelCount",
-                          "_DispelNumSuccess"
-                        ]
+                        "displayLines": "(Huohuo_Passive_DispelCount - _DispelNumSuccess)"
                       },
                       "variableName": "Huohuo_Passive_DispelCount"
                     }
@@ -596,20 +499,10 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (HPRatio) || RETURN",
-                    "displayLines": "HPRatio",
-                    "constants": [],
-                    "variables": [
-                      "HPRatio"
-                    ]
+                    "displayLines": "HPRatio"
                   },
                   "healFlat": {
-                    "operator": "Variables[0] (HPValue) || RETURN",
-                    "displayLines": "HPValue",
-                    "constants": [],
-                    "variables": [
-                      "HPValue"
-                    ]
+                    "displayLines": "HPValue"
                   },
                   "formula": "Heal from Healer's MaxHP"
                 },
@@ -649,12 +542,7 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "isFixed": "* ERR"
                     }
@@ -676,12 +564,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "dispelCount": {
-                        "operator": "Variables[0] (_DispelNum) || RETURN",
-                        "displayLines": "_DispelNum",
-                        "constants": [],
-                        "variables": [
-                          "_DispelNum"
-                        ]
+                        "displayLines": "_DispelNum"
                       },
                       "dispelOrder": "LastAdded",
                       "counterKey": "_DispelNumSuccess"
@@ -689,13 +572,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (Huohuo_Passive_DispelCount) || Variables[1] (_DispelNumSuccess) || SUB || RETURN",
-                        "displayLines": "(Huohuo_Passive_DispelCount - _DispelNumSuccess)",
-                        "constants": [],
-                        "variables": [
-                          "Huohuo_Passive_DispelCount",
-                          "_DispelNumSuccess"
-                        ]
+                        "displayLines": "(Huohuo_Passive_DispelCount - _DispelNumSuccess)"
                       },
                       "variableName": "Huohuo_Passive_DispelCount"
                     }
@@ -716,20 +593,10 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (HPRatio) || RETURN",
-                    "displayLines": "HPRatio",
-                    "constants": [],
-                    "variables": [
-                      "HPRatio"
-                    ]
+                    "displayLines": "HPRatio"
                   },
                   "healFlat": {
-                    "operator": "Variables[0] (HPValue) || RETURN",
-                    "displayLines": "HPValue",
-                    "constants": [],
-                    "variables": [
-                      "HPValue"
-                    ]
+                    "displayLines": "HPValue"
                   },
                   "formula": "Heal from Healer's MaxHP"
                 },
@@ -756,12 +623,7 @@ const configAbility = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   },
                   "ifTargetFound": [
@@ -779,12 +641,7 @@ const configAbility = {
                             "target": "{{Caster}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (1) || RETURN",
-                            "displayLines": "1",
-                            "constants": [],
-                            "variables": [
-                              1
-                            ]
+                            "displayLines": "1"
                           },
                           "isFixed": "* ERR"
                         }
@@ -806,12 +663,7 @@ const configAbility = {
                             "target": "{{Parameter Target}}"
                           },
                           "dispelCount": {
-                            "operator": "Variables[0] (_DispelNum) || RETURN",
-                            "displayLines": "_DispelNum",
-                            "constants": [],
-                            "variables": [
-                              "_DispelNum"
-                            ]
+                            "displayLines": "_DispelNum"
                           },
                           "dispelOrder": "LastAdded",
                           "counterKey": "_DispelNumSuccess"
@@ -819,13 +671,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (Huohuo_Passive_DispelCount) || Variables[1] (_DispelNumSuccess) || SUB || RETURN",
-                            "displayLines": "(Huohuo_Passive_DispelCount - _DispelNumSuccess)",
-                            "constants": [],
-                            "variables": [
-                              "Huohuo_Passive_DispelCount",
-                              "_DispelNumSuccess"
-                            ]
+                            "displayLines": "(Huohuo_Passive_DispelCount - _DispelNumSuccess)"
                           },
                           "variableName": "Huohuo_Passive_DispelCount"
                         }
@@ -846,20 +692,10 @@ const configAbility = {
                         "target": "{{Parameter Target}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (HPRatio) || RETURN",
-                        "displayLines": "HPRatio",
-                        "constants": [],
-                        "variables": [
-                          "HPRatio"
-                        ]
+                        "displayLines": "HPRatio"
                       },
                       "healFlat": {
-                        "operator": "Variables[0] (HPValue) || RETURN",
-                        "displayLines": "HPValue",
-                        "constants": [],
-                        "variables": [
-                          "HPValue"
-                        ]
+                        "displayLines": "HPValue"
                       },
                       "formula": "Heal from Healer's MaxHP"
                     },
@@ -899,28 +735,13 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "HPRatio": {
-              "operator": "Variables[0] (MDF_HPRatio) || RETURN",
-              "displayLines": "MDF_HPRatio",
-              "constants": [],
-              "variables": [
-                "MDF_HPRatio"
-              ]
+              "displayLines": "MDF_HPRatio"
             },
             "HPValue": {
-              "operator": "Variables[0] (MDF_HPValue) || RETURN",
-              "displayLines": "MDF_HPValue",
-              "constants": [],
-              "variables": [
-                "MDF_HPValue"
-              ]
+              "displayLines": "MDF_HPValue"
             },
             "_DispelNum": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             }
           }
         },
@@ -938,12 +759,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.12) || RETURN",
-              "displayLines": "0.12",
-              "constants": [],
-              "variables": [
-                0.12
-              ]
+              "displayLines": "0.12"
             }
           }
         }
@@ -1005,36 +821,21 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (Huohuo_Passive_HotCount) || RETURN",
-                "displayLines": "Huohuo_Passive_HotCount",
-                "constants": [],
-                "variables": [
-                  "Huohuo_Passive_HotCount"
-                ]
+                "displayLines": "Huohuo_Passive_HotCount"
               },
               "priorState": "Active"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (6) || RETURN",
-                "displayLines": "6",
-                "constants": [],
-                "variables": [
-                  6
-                ]
+                "displayLines": "6"
               },
               "variableName": "Huohuo_Passive_DispelCount"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Huohuo_Passive_DispelCount) || RETURN",
-                "displayLines": "Huohuo_Passive_DispelCount",
-                "constants": [],
-                "variables": [
-                  "Huohuo_Passive_DispelCount"
-                ]
+                "displayLines": "Huohuo_Passive_DispelCount"
               },
               "variableName": "MDF_DispelCount"
             },
@@ -1056,20 +857,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-2094716401\">Huohuo_Eidolon2</a>",
                   "valuePerStack": {
                     "MDF_HealPercentage": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     },
                     "MDF_ReviveCount": {
-                      "operator": "Variables[0] (Huohuo_Rank02_ReviveCount) || RETURN",
-                      "displayLines": "Huohuo_Rank02_ReviveCount",
-                      "constants": [],
-                      "variables": [
-                        "Huohuo_Rank02_ReviveCount"
-                      ]
+                      "displayLines": "Huohuo_Rank02_ReviveCount"
                     }
                   }
                 }
@@ -1092,12 +883,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Huohuo_Passive_DispelCount) || RETURN",
-                    "displayLines": "Huohuo_Passive_DispelCount",
-                    "constants": [],
-                    "variables": [
-                      "Huohuo_Passive_DispelCount"
-                    ]
+                    "displayLines": "Huohuo_Passive_DispelCount"
                   },
                   "variableName": "MDF_DispelCount"
                 }
@@ -1118,12 +904,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (Huohuo_Passive_HotCount) || RETURN",
-                    "displayLines": "Huohuo_Passive_HotCount",
-                    "constants": [],
-                    "variables": [
-                      "Huohuo_Passive_HotCount"
-                    ]
+                    "displayLines": "Huohuo_Passive_HotCount"
                   },
                   "priorState": "Active"
                 }

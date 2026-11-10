@@ -29,12 +29,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
-                "displayLines": "MDF_AttackAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackAddedRatio"
-                ]
+                "displayLines": "MDF_AttackAddedRatio"
               }
             }
           ]

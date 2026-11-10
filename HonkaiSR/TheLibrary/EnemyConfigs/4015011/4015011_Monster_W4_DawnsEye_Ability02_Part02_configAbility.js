@@ -24,12 +24,7 @@ const configAbility = {
           },
           "variableName": "Sunny_Temperature",
           "value": {
-            "operator": "Variables[0] ({[Skill02P1[2]]}) || RETURN",
-            "displayLines": "{[Skill02P1[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02P1[2]]}"
-            ]
+            "displayLines": "{[Skill02P1[2]]}"
           },
           "max": 999
         },
@@ -44,15 +39,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Sunny_Temperature) || Variables[1] ({[SkillP05[1]]}) || SUB || Constants[0] (10) || ADD || RETURN",
-            "displayLines": "((Sunny_Temperature - {[SkillP05[1]]}) + 10)",
-            "constants": [
-              10
-            ],
-            "variables": [
-              "Sunny_Temperature",
-              "{[SkillP05[1]]}"
-            ]
+            "displayLines": "((Sunny_Temperature - {[SkillP05[1]]}) + 10)"
           },
           "variableName": "DamageAddHeat"
         },
@@ -83,14 +70,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] ({[Skill02P1[0]]}) || Variables[1] ({[Skill02P1[1]]}) || Variables[2] (DamageAddHeat) || MUL || ADD || RETURN",
-          "displayLines": "({[Skill02P1[0]]} + ({[Skill02P1[1]]} * DamageAddHeat))",
-          "constants": [],
-          "variables": [
-            "{[Skill02P1[0]]}",
-            "{[Skill02P1[1]]}",
-            "DamageAddHeat"
-          ]
+          "displayLines": "({[Skill02P1[0]]} + ({[Skill02P1[1]]} * DamageAddHeat))"
         },
         "HitSplit": 0.25,
         "Toughness": null,
@@ -107,14 +87,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] ({[Skill02P1[0]]}) || Variables[1] ({[Skill02P1[1]]}) || Variables[2] (DamageAddHeat) || MUL || ADD || RETURN",
-          "displayLines": "({[Skill02P1[0]]} + ({[Skill02P1[1]]} * DamageAddHeat))",
-          "constants": [],
-          "variables": [
-            "{[Skill02P1[0]]}",
-            "{[Skill02P1[1]]}",
-            "DamageAddHeat"
-          ]
+          "displayLines": "({[Skill02P1[0]]} + ({[Skill02P1[1]]} * DamageAddHeat))"
         },
         "HitSplit": 0.25,
         "Toughness": null,
@@ -131,14 +104,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] ({[Skill02P1[0]]}) || Variables[1] ({[Skill02P1[1]]}) || Variables[2] (DamageAddHeat) || MUL || ADD || RETURN",
-          "displayLines": "({[Skill02P1[0]]} + ({[Skill02P1[1]]} * DamageAddHeat))",
-          "constants": [],
-          "variables": [
-            "{[Skill02P1[0]]}",
-            "{[Skill02P1[1]]}",
-            "DamageAddHeat"
-          ]
+          "displayLines": "({[Skill02P1[0]]} + ({[Skill02P1[1]]} * DamageAddHeat))"
         },
         "HitSplit": 0.25,
         "Toughness": null,
@@ -155,14 +121,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] ({[Skill02P1[0]]}) || Variables[1] ({[Skill02P1[1]]}) || Variables[2] (DamageAddHeat) || MUL || ADD || RETURN",
-          "displayLines": "({[Skill02P1[0]]} + ({[Skill02P1[1]]} * DamageAddHeat))",
-          "constants": [],
-          "variables": [
-            "{[Skill02P1[0]]}",
-            "{[Skill02P1[1]]}",
-            "DamageAddHeat"
-          ]
+          "displayLines": "({[Skill02P1[0]]} + ({[Skill02P1[1]]} * DamageAddHeat))"
         },
         "HitSplit": 0.25,
         "Toughness": null,
@@ -181,12 +140,7 @@ const configAbility = {
       "conditions": {
         "name": "Enemy ID",
         "ID": {
-          "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
-          "displayLines": "PartEntity1_MonsterID",
-          "constants": [],
-          "variables": [
-            "PartEntity1_MonsterID"
-          ]
+          "displayLines": "PartEntity1_MonsterID"
         },
         "target": {
           "name": "Target Name",

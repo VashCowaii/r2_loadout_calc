@@ -158,12 +158,7 @@ const compositeAbilityObject = {
                 },
                 "dmgFormulaExtra": "Max HP Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] (_CurrentStance) || RETURN",
-                  "displayLines": "_CurrentStance",
-                  "constants": [],
-                  "variables": [
-                    "_CurrentStance"
-                  ]
+                  "displayLines": "_CurrentStance"
                 },
                 "Tags": null,
                 "attackType": "Additional DMG",

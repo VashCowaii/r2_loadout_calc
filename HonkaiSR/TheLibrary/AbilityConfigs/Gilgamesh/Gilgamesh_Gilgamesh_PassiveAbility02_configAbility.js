@@ -144,12 +144,7 @@ const configAbility = {
                     "value1": "Saber_Chain",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (8) || RETURN",
-                      "displayLines": "8",
-                      "constants": [],
-                      "variables": [
-                        8
-                      ]
+                      "displayLines": "8"
                     }
                   },
                   {

@@ -57,12 +57,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceIcePEN</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -95,13 +90,7 @@ const configAbility = {
                   },
                   "modifierName": "<a class=\"gModGreen\" id=\"1787645214\">TheHerta_Passive_ExceedSpStatus</a>",
                   "value": {
-                    "operator": "Variables[0] (WHOLE) || Variables[1] (EntityStockSPForShow) || PARAM_1 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(EntityStockSPForShow)",
-                    "constants": [],
-                    "variables": [
-                      "WHOLE",
-                      "EntityStockSPForShow"
-                    ]
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(EntityStockSPForShow)"
                   }
                 }
               ],
@@ -145,12 +134,7 @@ const configAbility = {
                 "value1": "_SPChangeValue",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Variables[0] (_SPChangeValueRaw) || RETURN",
-                  "displayLines": "_SPChangeValueRaw",
-                  "constants": [],
-                  "variables": [
-                    "_SPChangeValueRaw"
-                  ]
+                  "displayLines": "_SPChangeValueRaw"
                 }
               },
               "failed": [
@@ -179,14 +163,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (EntityCurrentSP) || Variables[1] (_SPChangeValue) || SUB || Variables[2] (_SPChangeValueRaw) || ADD || RETURN",
-                        "displayLines": "((EntityCurrentSP - _SPChangeValue) + _SPChangeValueRaw)",
-                        "constants": [],
-                        "variables": [
-                          "EntityCurrentSP",
-                          "_SPChangeValue",
-                          "_SPChangeValueRaw"
-                        ]
+                        "displayLines": "((EntityCurrentSP - _SPChangeValue) + _SPChangeValueRaw)"
                       },
                       "variableName": "EntityCurrentSP"
                     },
@@ -210,12 +187,7 @@ const configAbility = {
                         "value1": "EntityCurrentSP",
                         "compareType": ">",
                         "value2": {
-                          "operator": "Variables[0] (EntityMaxSP) || RETURN",
-                          "displayLines": "EntityMaxSP",
-                          "constants": [],
-                          "variables": [
-                            "EntityMaxSP"
-                          ]
+                          "displayLines": "EntityMaxSP"
                         }
                       },
                       "passed": [
@@ -226,14 +198,7 @@ const configAbility = {
                             "target": "{{Modifier Holder}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (EntityStockSP) || Variables[1] (EntityCurrentSP) || ADD || Variables[2] (EntityMaxSP) || SUB || RETURN",
-                            "displayLines": "((EntityStockSP + EntityCurrentSP) - EntityMaxSP)",
-                            "constants": [],
-                            "variables": [
-                              "EntityStockSP",
-                              "EntityCurrentSP",
-                              "EntityMaxSP"
-                            ]
+                            "displayLines": "((EntityStockSP + EntityCurrentSP) - EntityMaxSP)"
                           },
                           "variableName": "EntityStockSP"
                         },
@@ -244,13 +209,7 @@ const configAbility = {
                             "value1": "EntityStockSP",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (EntityMaxSP) || Variables[1] (T_HERTA_OBJECT_UNUSED_9) || MUL || RETURN",
-                              "displayLines": "(EntityMaxSP * T_HERTA_OBJECT_UNUSED_9)",
-                              "constants": [],
-                              "variables": [
-                                "EntityMaxSP",
-                                "T_HERTA_OBJECT_UNUSED_9"
-                              ]
+                              "displayLines": "(EntityMaxSP * T_HERTA_OBJECT_UNUSED_9)"
                             }
                           },
                           "passed": [
@@ -261,13 +220,7 @@ const configAbility = {
                                 "target": "{{Modifier Holder}}"
                               },
                               "value": {
-                                "operator": "Variables[0] (EntityMaxSP) || Variables[1] (T_HERTA_OBJECT_UNUSED_9) || MUL || RETURN",
-                                "displayLines": "(EntityMaxSP * T_HERTA_OBJECT_UNUSED_9)",
-                                "constants": [],
-                                "variables": [
-                                  "EntityMaxSP",
-                                  "T_HERTA_OBJECT_UNUSED_9"
-                                ]
+                                "displayLines": "(EntityMaxSP * T_HERTA_OBJECT_UNUSED_9)"
                               },
                               "variableName": "EntityStockSP"
                             }
@@ -309,12 +262,7 @@ const configAbility = {
                                 "value1": "_Current_Show_Value",
                                 "compareType": "<",
                                 "value2": {
-                                  "operator": "Variables[0] (EntityStockSP) || RETURN",
-                                  "displayLines": "EntityStockSP",
-                                  "constants": [],
-                                  "variables": [
-                                    "EntityStockSP"
-                                  ]
+                                  "displayLines": "EntityStockSP"
                                 }
                               },
                               "passed": [
@@ -327,12 +275,7 @@ const configAbility = {
                                   "modifier": "<a class=\"gModGreen\" id=\"1787645214\">TheHerta_Passive_ExceedSpStatus</a>",
                                   "valuePerStack": {
                                     "EntityStockSPForShow": {
-                                      "operator": "Variables[0] (EntityStockSP) || RETURN",
-                                      "displayLines": "EntityStockSP",
-                                      "constants": [],
-                                      "variables": [
-                                        "EntityStockSP"
-                                      ]
+                                      "displayLines": "EntityStockSP"
                                     }
                                   }
                                 }
@@ -349,12 +292,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"1787645214\">TheHerta_Passive_ExceedSpStatus</a>",
                               "valuePerStack": {
                                 "EntityStockSPForShow": {
-                                  "operator": "Variables[0] (EntityStockSP) || RETURN",
-                                  "displayLines": "EntityStockSP",
-                                  "constants": [],
-                                  "variables": [
-                                    "EntityStockSP"
-                                  ]
+                                  "displayLines": "EntityStockSP"
                                 }
                               }
                             }
@@ -416,13 +354,7 @@ const configAbility = {
                     "value1": "EntityStockSP",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (EntityMaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                      "displayLines": "(EntityMaxSP - _CurrentSP)",
-                      "constants": [],
-                      "variables": [
-                        "EntityMaxSP",
-                        "_CurrentSP"
-                      ]
+                      "displayLines": "(EntityMaxSP - _CurrentSP)"
                     }
                   },
                   "passed": [
@@ -433,12 +365,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (EntityStockSP) || RETURN",
-                        "displayLines": "EntityStockSP",
-                        "constants": [],
-                        "variables": [
-                          "EntityStockSP"
-                        ]
+                        "displayLines": "EntityStockSP"
                       },
                       "isFixed": "(Fixed)"
                     },
@@ -464,27 +391,14 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (EntityMaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                        "displayLines": "(EntityMaxSP - _CurrentSP)",
-                        "constants": [],
-                        "variables": [
-                          "EntityMaxSP",
-                          "_CurrentSP"
-                        ]
+                        "displayLines": "(EntityMaxSP - _CurrentSP)"
                       },
                       "isFixed": "* ERR"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (EntityStockSP) || Variables[1] (EntityMaxSP) || SUB || Variables[2] (_CurrentSP) || ADD || RETURN",
-                        "displayLines": "((EntityStockSP - EntityMaxSP) + _CurrentSP)",
-                        "constants": [],
-                        "variables": [
-                          "EntityStockSP",
-                          "EntityMaxSP",
-                          "_CurrentSP"
-                        ]
+                        "displayLines": "((EntityStockSP - EntityMaxSP) + _CurrentSP)"
                       },
                       "variableName": "EntityStockSP"
                     },
@@ -497,12 +411,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1787645214\">TheHerta_Passive_ExceedSpStatus</a>",
                       "valuePerStack": {
                         "EntityStockSPForShow": {
-                          "operator": "Variables[0] (EntityStockSP) || RETURN",
-                          "displayLines": "EntityStockSP",
-                          "constants": [],
-                          "variables": [
-                            "EntityStockSP"
-                          ]
+                          "displayLines": "EntityStockSP"
                         }
                       }
                     }
@@ -538,12 +447,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -603,14 +507,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-            "displayLines": "(0 - MDF_PropertyValue)",
-            "constants": [
-              0
-            ],
-            "variables": [
-              "MDF_PropertyValue"
-            ]
+            "displayLines": "(0 - MDF_PropertyValue)"
           }
         }
       }
@@ -642,14 +539,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-            "displayLines": "(0 - MDF_PropertyValue)",
-            "constants": [
-              0
-            ],
-            "variables": [
-              "MDF_PropertyValue"
-            ]
+            "displayLines": "(0 - MDF_PropertyValue)"
           }
         }
       }
@@ -889,27 +779,14 @@ const configAbility = {
                 "value1": "_TMP_VAL",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] (MDF_Count) || Variables[1] (MagicMark_Ratio) || MUL || RETURN",
-                  "displayLines": "(MDF_Count * MagicMark_Ratio)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Count",
-                    "MagicMark_Ratio"
-                  ]
+                  "displayLines": "(MDF_Count * MagicMark_Ratio)"
                 }
               },
               "execute": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_TMP_VAL) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(_TMP_VAL + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_TMP_VAL"
-                    ]
+                    "displayLines": "(_TMP_VAL + 1)"
                   },
                   "variableName": "_TMP_VAL"
                 }
@@ -918,12 +795,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (_TMP_VAL) || RETURN",
-                "displayLines": "_TMP_VAL",
-                "constants": [],
-                "variables": [
-                  "_TMP_VAL"
-                ]
+                "displayLines": "_TMP_VAL"
               },
               "execute": [
                 {
@@ -976,12 +848,7 @@ const configAbility = {
                       "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                       "compareType": "<",
                       "value2": {
-                        "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                        "displayLines": "MagicMark_MaxCount_Max",
-                        "constants": [],
-                        "variables": [
-                          "MagicMark_MaxCount_Max"
-                        ]
+                        "displayLines": "MagicMark_MaxCount_Max"
                       },
                       "valueType": "Layer"
                     }
@@ -1045,12 +912,7 @@ const configAbility = {
                         "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                          "displayLines": "MagicMark_MaxCount_Max",
-                          "constants": [],
-                          "variables": [
-                            "MagicMark_MaxCount_Max"
-                          ]
+                          "displayLines": "MagicMark_MaxCount_Max"
                         },
                         "valueType": "Layer"
                       },
@@ -1063,12 +925,7 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                            "displayLines": "MagicMark_MaxCount_Max",
-                            "constants": [],
-                            "variables": [
-                              "MagicMark_MaxCount_Max"
-                            ]
+                            "displayLines": "MagicMark_MaxCount_Max"
                           },
                           "addStacksPerTrigger": 1
                         }
@@ -1132,12 +989,7 @@ const configAbility = {
                             "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                             "compareType": "<",
                             "value2": {
-                              "operator": "Variables[0] (MagicMark_MaxCount) || RETURN",
-                              "displayLines": "MagicMark_MaxCount",
-                              "constants": [],
-                              "variables": [
-                                "MagicMark_MaxCount"
-                              ]
+                              "displayLines": "MagicMark_MaxCount"
                             },
                             "valueType": "Layer"
                           },
@@ -1150,12 +1002,7 @@ const configAbility = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                                "displayLines": "MagicMark_MaxCount_Max",
-                                "constants": [],
-                                "variables": [
-                                  "MagicMark_MaxCount_Max"
-                                ]
+                                "displayLines": "MagicMark_MaxCount_Max"
                               },
                               "addStacksPerTrigger": 1
                             }
@@ -1223,12 +1070,7 @@ const configAbility = {
                         "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MagicMark_MaxCount) || RETURN",
-                          "displayLines": "MagicMark_MaxCount",
-                          "constants": [],
-                          "variables": [
-                            "MagicMark_MaxCount"
-                          ]
+                          "displayLines": "MagicMark_MaxCount"
                         },
                         "valueType": "Layer"
                       },
@@ -1241,12 +1083,7 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                            "displayLines": "MagicMark_MaxCount_Max",
-                            "constants": [],
-                            "variables": [
-                              "MagicMark_MaxCount_Max"
-                            ]
+                            "displayLines": "MagicMark_MaxCount_Max"
                           },
                           "addStacksPerTrigger": 1
                         }
@@ -1284,27 +1121,14 @@ const configAbility = {
                 "value1": "_TMP_VAL",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] (MDF_Count) || Variables[1] (MagicMark_Ratio) || MUL || RETURN",
-                  "displayLines": "(MDF_Count * MagicMark_Ratio)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Count",
-                    "MagicMark_Ratio"
-                  ]
+                  "displayLines": "(MDF_Count * MagicMark_Ratio)"
                 }
               },
               "execute": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_TMP_VAL) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(_TMP_VAL + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_TMP_VAL"
-                    ]
+                    "displayLines": "(_TMP_VAL + 1)"
                   },
                   "variableName": "_TMP_VAL"
                 }
@@ -1313,12 +1137,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (_TMP_VAL) || RETURN",
-                "displayLines": "_TMP_VAL",
-                "constants": [],
-                "variables": [
-                  "_TMP_VAL"
-                ]
+                "displayLines": "_TMP_VAL"
               },
               "execute": [
                 {
@@ -1371,12 +1190,7 @@ const configAbility = {
                       "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                       "compareType": "<",
                       "value2": {
-                        "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                        "displayLines": "MagicMark_MaxCount_Max",
-                        "constants": [],
-                        "variables": [
-                          "MagicMark_MaxCount_Max"
-                        ]
+                        "displayLines": "MagicMark_MaxCount_Max"
                       },
                       "valueType": "Layer"
                     }
@@ -1440,12 +1254,7 @@ const configAbility = {
                         "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                          "displayLines": "MagicMark_MaxCount_Max",
-                          "constants": [],
-                          "variables": [
-                            "MagicMark_MaxCount_Max"
-                          ]
+                          "displayLines": "MagicMark_MaxCount_Max"
                         },
                         "valueType": "Layer"
                       },
@@ -1458,12 +1267,7 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                            "displayLines": "MagicMark_MaxCount_Max",
-                            "constants": [],
-                            "variables": [
-                              "MagicMark_MaxCount_Max"
-                            ]
+                            "displayLines": "MagicMark_MaxCount_Max"
                           },
                           "addStacksPerTrigger": 1
                         }
@@ -1527,12 +1331,7 @@ const configAbility = {
                             "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                             "compareType": "<",
                             "value2": {
-                              "operator": "Variables[0] (MagicMark_MaxCount) || RETURN",
-                              "displayLines": "MagicMark_MaxCount",
-                              "constants": [],
-                              "variables": [
-                                "MagicMark_MaxCount"
-                              ]
+                              "displayLines": "MagicMark_MaxCount"
                             },
                             "valueType": "Layer"
                           },
@@ -1545,12 +1344,7 @@ const configAbility = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                                "displayLines": "MagicMark_MaxCount_Max",
-                                "constants": [],
-                                "variables": [
-                                  "MagicMark_MaxCount_Max"
-                                ]
+                                "displayLines": "MagicMark_MaxCount_Max"
                               },
                               "addStacksPerTrigger": 1
                             }
@@ -1618,12 +1412,7 @@ const configAbility = {
                         "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MagicMark_MaxCount) || RETURN",
-                          "displayLines": "MagicMark_MaxCount",
-                          "constants": [],
-                          "variables": [
-                            "MagicMark_MaxCount"
-                          ]
+                          "displayLines": "MagicMark_MaxCount"
                         },
                         "valueType": "Layer"
                       },
@@ -1636,12 +1425,7 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                            "displayLines": "MagicMark_MaxCount_Max",
-                            "constants": [],
-                            "variables": [
-                              "MagicMark_MaxCount_Max"
-                            ]
+                            "displayLines": "MagicMark_MaxCount_Max"
                           },
                           "addStacksPerTrigger": 1
                         }
@@ -1836,12 +1620,7 @@ const configAbility = {
                         "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                         "compareType": ">",
                         "value2": {
-                          "operator": "Variables[0] (MDF_Count) || RETURN",
-                          "displayLines": "MDF_Count",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Count"
-                          ]
+                          "displayLines": "MDF_Count"
                         },
                         "valueType": "Layer"
                       }
@@ -2117,27 +1896,14 @@ const configAbility = {
                 "value1": "_TMP_VAL",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] (MDF_Count) || Variables[1] (MagicMark_Ratio) || MUL || RETURN",
-                  "displayLines": "(MDF_Count * MagicMark_Ratio)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Count",
-                    "MagicMark_Ratio"
-                  ]
+                  "displayLines": "(MDF_Count * MagicMark_Ratio)"
                 }
               },
               "execute": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_TMP_VAL) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(_TMP_VAL + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_TMP_VAL"
-                    ]
+                    "displayLines": "(_TMP_VAL + 1)"
                   },
                   "variableName": "_TMP_VAL"
                 }
@@ -2146,12 +1912,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (_TMP_VAL) || RETURN",
-                "displayLines": "_TMP_VAL",
-                "constants": [],
-                "variables": [
-                  "_TMP_VAL"
-                ]
+                "displayLines": "_TMP_VAL"
               },
               "execute": [
                 {
@@ -2204,12 +1965,7 @@ const configAbility = {
                       "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                       "compareType": "<",
                       "value2": {
-                        "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                        "displayLines": "MagicMark_MaxCount_Max",
-                        "constants": [],
-                        "variables": [
-                          "MagicMark_MaxCount_Max"
-                        ]
+                        "displayLines": "MagicMark_MaxCount_Max"
                       },
                       "valueType": "Layer"
                     }
@@ -2273,12 +2029,7 @@ const configAbility = {
                         "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                          "displayLines": "MagicMark_MaxCount_Max",
-                          "constants": [],
-                          "variables": [
-                            "MagicMark_MaxCount_Max"
-                          ]
+                          "displayLines": "MagicMark_MaxCount_Max"
                         },
                         "valueType": "Layer"
                       },
@@ -2291,12 +2042,7 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                            "displayLines": "MagicMark_MaxCount_Max",
-                            "constants": [],
-                            "variables": [
-                              "MagicMark_MaxCount_Max"
-                            ]
+                            "displayLines": "MagicMark_MaxCount_Max"
                           },
                           "addStacksPerTrigger": 1
                         }
@@ -2360,12 +2106,7 @@ const configAbility = {
                             "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                             "compareType": "<",
                             "value2": {
-                              "operator": "Variables[0] (MagicMark_MaxCount) || RETURN",
-                              "displayLines": "MagicMark_MaxCount",
-                              "constants": [],
-                              "variables": [
-                                "MagicMark_MaxCount"
-                              ]
+                              "displayLines": "MagicMark_MaxCount"
                             },
                             "valueType": "Layer"
                           },
@@ -2378,12 +2119,7 @@ const configAbility = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                                "displayLines": "MagicMark_MaxCount_Max",
-                                "constants": [],
-                                "variables": [
-                                  "MagicMark_MaxCount_Max"
-                                ]
+                                "displayLines": "MagicMark_MaxCount_Max"
                               },
                               "addStacksPerTrigger": 1
                             }
@@ -2451,12 +2187,7 @@ const configAbility = {
                         "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MagicMark_MaxCount) || RETURN",
-                          "displayLines": "MagicMark_MaxCount",
-                          "constants": [],
-                          "variables": [
-                            "MagicMark_MaxCount"
-                          ]
+                          "displayLines": "MagicMark_MaxCount"
                         },
                         "valueType": "Layer"
                       },
@@ -2469,12 +2200,7 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                            "displayLines": "MagicMark_MaxCount_Max",
-                            "constants": [],
-                            "variables": [
-                              "MagicMark_MaxCount_Max"
-                            ]
+                            "displayLines": "MagicMark_MaxCount_Max"
                           },
                           "addStacksPerTrigger": 1
                         }
@@ -2556,12 +2282,7 @@ const configAbility = {
                 "value1": "_TMP_MAX",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (_TMP_VAL) || RETURN",
-                  "displayLines": "_TMP_VAL",
-                  "constants": [],
-                  "variables": [
-                    "_TMP_VAL"
-                  ]
+                  "displayLines": "_TMP_VAL"
                 }
               },
               "passed": [
@@ -2574,27 +2295,13 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (_TMP_VAL) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(_TMP_VAL + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_TMP_VAL"
-                    ]
+                    "displayLines": "(_TMP_VAL + 1)"
                   }
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_TMP_VAL) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(_TMP_VAL + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_TMP_VAL"
-                    ]
+                    "displayLines": "(_TMP_VAL + 1)"
                   },
                   "priorState": "Active"
                 }
@@ -2663,12 +2370,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -2709,12 +2411,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-533235219\">TheHerta_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">The Sixteenth Key</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                  "displayLines": "MDF_PropertyValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue"
-                  ]
+                  "displayLines": "MDF_PropertyValue"
                 }
               }
             }
@@ -2756,12 +2453,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-533235219\">TheHerta_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">The Sixteenth Key</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     }
@@ -2807,12 +2499,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-533235219\">TheHerta_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">The Sixteenth Key</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     }
@@ -2849,12 +2536,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -2876,12 +2558,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceIcePEN</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]

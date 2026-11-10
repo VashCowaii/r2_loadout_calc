@@ -325,12 +325,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -352,12 +347,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__32) || RETURN",
-                "displayLines": "ENEMIES_OBJECT_UNUSED__32",
-                "constants": [],
-                "variables": [
-                  "ENEMIES_OBJECT_UNUSED__32"
-                ]
+                "displayLines": "ENEMIES_OBJECT_UNUSED__32"
               }
             },
             {
@@ -376,14 +366,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (_StanceLock) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(_StanceLock - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_StanceLock"
-                ]
+                "displayLines": "(_StanceLock - 1)"
               },
               "variableName": "_StanceLock"
             }
@@ -411,12 +394,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessVulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_StanceBreakTakenRatio) || RETURN",
-                "displayLines": "MDF_StanceBreakTakenRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_StanceBreakTakenRatio"
-                ]
+                "displayLines": "MDF_StanceBreakTakenRatio"
               }
             },
             {
@@ -427,12 +405,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeTakenRatio) || RETURN",
-                "displayLines": "MDF_AllDamageTypeTakenRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeTakenRatio"
-                ]
+                "displayLines": "MDF_AllDamageTypeTakenRatio"
               }
             }
           ]
@@ -631,12 +604,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] (Modifier_DamagePercentage) || RETURN",
-                  "displayLines": "Modifier_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "Modifier_DamagePercentage"
-                  ]
+                  "displayLines": "Modifier_DamagePercentage"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -656,14 +624,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (Modifier_DefenceAddedRatio) || SUB || RETURN",
-                "displayLines": "(0 - Modifier_DefenceAddedRatio)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "Modifier_DefenceAddedRatio"
-                ]
+                "displayLines": "(0 - Modifier_DefenceAddedRatio)"
               }
             }
           ]

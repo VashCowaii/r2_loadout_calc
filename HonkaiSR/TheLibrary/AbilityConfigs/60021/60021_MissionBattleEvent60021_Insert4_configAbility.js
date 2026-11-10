@@ -30,14 +30,7 @@ const configAbility = {
             "DamageType": "Quantum",
             "dmgFormula": "Max HP Scaling",
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || Constants[0] (2) || MUL || RETURN",
-              "displayLines": "(AOE Toughness Value * 2)",
-              "constants": [
-                2
-              ],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "(AOE Toughness Value * 2)"
             },
             "ToughnessDMGType": {
               "DamageType": "AllType"
@@ -81,14 +74,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFireBonus</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             },
             {

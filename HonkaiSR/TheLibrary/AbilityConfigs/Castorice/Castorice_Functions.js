@@ -24,12 +24,7 @@ const configAbility = {
             "value1": "CurrentHP%",
             "compareType": ">",
             "value2": {
-              "operator": "Variables[0] (0.8) || RETURN",
-              "displayLines": "0.8",
-              "constants": [],
-              "variables": [
-                0.8
-              ]
+              "displayLines": "0.8"
             }
           },
           "passed": [
@@ -54,12 +49,7 @@ const configAbility = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (0.8) || RETURN",
-                      "displayLines": "0.8",
-                      "constants": [],
-                      "variables": [
-                        0.8
-                      ]
+                      "displayLines": "0.8"
                     }
                   },
                   {
@@ -71,12 +61,7 @@ const configAbility = {
                     "value1": "CurrentHP%",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   }
                 ]
@@ -85,12 +70,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (1.2) || RETURN",
-                    "displayLines": "1.2",
-                    "constants": [],
-                    "variables": [
-                      1.2
-                    ]
+                    "displayLines": "1.2"
                   },
                   "variableName": "Avatar_Castorice_Rank01_DamageRatio"
                 }
@@ -107,24 +87,14 @@ const configAbility = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (1.4) || RETURN",
-                        "displayLines": "1.4",
-                        "constants": [],
-                        "variables": [
-                          1.4
-                        ]
+                        "displayLines": "1.4"
                       },
                       "variableName": "Avatar_Castorice_Rank01_DamageRatio"
                     }
@@ -162,17 +132,7 @@ const configAbility = {
           "name": "Define Custom Variable",
           "scope": "ContextTaskTemplate",
           "value": {
-            "operator": "Variables[0] (MAX) || Variables[1] (_CurSpecialSP) || Variables[2] (_FixedAddValue) || ADD || Variables[3] (_MaxSpecialSP) || SUB || Constants[0] (0) || PARAM_2 || FUNCTION || RETURN",
-            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(((_CurSpecialSP + _FixedAddValue) - _MaxSpecialSP), 0)",
-            "constants": [
-              0
-            ],
-            "variables": [
-              "MAX",
-              "_CurSpecialSP",
-              "_FixedAddValue",
-              "_MaxSpecialSP"
-            ]
+            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(((_CurSpecialSP + _FixedAddValue) - _MaxSpecialSP), 0)"
           },
           "variableName": "_ExtraSpecialSP"
         },
@@ -194,12 +154,7 @@ const configAbility = {
               },
               "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecialOverflow</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (_ExtraSpecialSP) || RETURN",
-                "displayLines": "_ExtraSpecialSP",
-                "constants": [],
-                "variables": [
-                  "_ExtraSpecialSP"
-                ]
+                "displayLines": "_ExtraSpecialSP"
               }
             }
           ]
@@ -211,12 +166,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (_FixedAddValue) || RETURN",
-            "displayLines": "_FixedAddValue",
-            "constants": [],
-            "variables": [
-              "_FixedAddValue"
-            ]
+            "displayLines": "_FixedAddValue"
           },
           "isFixed": "(Fixed)",
           "ignoreBlock": true,
@@ -242,13 +192,7 @@ const configAbility = {
           "functionName": "<a class=\"gTempYellow\" id=\"-1401999190\">Castorice_AddSpecialSP</a>",
           "variables": {
             "_FixedAddValue": {
-              "operator": "Variables[0] (_CurExtraSpecialSP) || Variables[1] (MDF_ReturnRatio) || MUL || RETURN",
-              "displayLines": "(_CurExtraSpecialSP * MDF_ReturnRatio)",
-              "constants": [],
-              "variables": [
-                "_CurExtraSpecialSP",
-                "MDF_ReturnRatio"
-              ]
+              "displayLines": "(_CurExtraSpecialSP * MDF_ReturnRatio)"
             }
           }
         },

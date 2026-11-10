@@ -54,14 +54,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_PropertyValue2) || Variables[2] (MDF_PropertyValue4) || MUL || ADD || RETURN",
-                "displayLines": "(MDF_PropertyValue + (MDF_PropertyValue2 * MDF_PropertyValue4))",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "MDF_PropertyValue2",
-                  "MDF_PropertyValue4"
-                ]
+                "displayLines": "(MDF_PropertyValue + (MDF_PropertyValue2 * MDF_PropertyValue4))"
               },
               "variableName": "MDF_PropertyValue5"
             }
@@ -96,25 +89,13 @@ const configAbility = {
                   "context": "ContextModifier",
                   "value": 1,
                   "max": {
-                    "operator": "Variables[0] (MDF_PropertyValue3) || RETURN",
-                    "displayLines": "MDF_PropertyValue3",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue3"
-                    ]
+                    "displayLines": "MDF_PropertyValue3"
                   }
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_PropertyValue2) || Variables[2] (MDF_PropertyValue4) || MUL || ADD || RETURN",
-                    "displayLines": "(MDF_PropertyValue + (MDF_PropertyValue2 * MDF_PropertyValue4))",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_PropertyValue2",
-                      "MDF_PropertyValue4"
-                    ]
+                    "displayLines": "(MDF_PropertyValue + (MDF_PropertyValue2 * MDF_PropertyValue4))"
                   },
                   "variableName": "MDF_PropertyValue5"
                 }
@@ -138,36 +119,16 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (#ADF_1) || RETURN",
-              "displayLines": "#ADF_1",
-              "constants": [],
-              "variables": [
-                "#ADF_1"
-              ]
+              "displayLines": "#ADF_1"
             },
             "MDF_PropertyValue2": {
-              "operator": "Variables[0] (#ADF_2) || RETURN",
-              "displayLines": "#ADF_2",
-              "constants": [],
-              "variables": [
-                "#ADF_2"
-              ]
+              "displayLines": "#ADF_2"
             },
             "MDF_PropertyValue3": {
-              "operator": "Variables[0] (#ADF_3) || RETURN",
-              "displayLines": "#ADF_3",
-              "constants": [],
-              "variables": [
-                "#ADF_3"
-              ]
+              "displayLines": "#ADF_3"
             },
             "MDF_PropertyValue4": {
-              "operator": "Variables[0] (MDF_BreakCount) || RETURN",
-              "displayLines": "MDF_BreakCount",
-              "constants": [],
-              "variables": [
-                "MDF_BreakCount"
-              ]
+              "displayLines": "MDF_BreakCount"
             }
           }
         }
@@ -201,12 +162,7 @@ const configAbility = {
                   "variableName": "MDF_BreakCount",
                   "value": 1,
                   "max": {
-                    "operator": "Variables[0] (#ADF_3) || RETURN",
-                    "displayLines": "#ADF_3",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_3"
-                    ]
+                    "displayLines": "#ADF_3"
                   }
                 }
               ]

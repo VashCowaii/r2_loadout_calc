@@ -47,12 +47,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -100,12 +95,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-107032001\">Monster_W2_HuanlongPart_IF_HPIncrease</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-                      "displayLines": "{[SkillEX03[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillEX03[0]]}"
-                      ]
+                      "displayLines": "{[SkillEX03[0]]}"
                     }
                   }
                 }

@@ -26,13 +26,7 @@ const configAbility = {
             "target": "{{Ability Target(ST)}}"
           },
           "value": {
-            "operator": "Variables[0] (50) || Variables[1] (10) || ADD || RETURN",
-            "displayLines": "(50 + 10)",
-            "constants": [],
-            "variables": [
-              50,
-              10
-            ]
+            "displayLines": "(50 + 10)"
           },
           "isFixed": "(Fixed)",
           "tag": "ActiveSkillAdd"
@@ -46,12 +40,7 @@ const configAbility = {
             "target": "{{Ability Target(ST)}}"
           },
           "value": {
-            "operator": "Variables[0] (50) || RETURN",
-            "displayLines": "50",
-            "constants": [],
-            "variables": [
-              50
-            ]
+            "displayLines": "50"
           },
           "isFixed": "(Fixed)",
           "tag": "ActiveSkillAdd"
@@ -66,22 +55,12 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"132060184\">TingYun_Ability03DamageUp</a>[<span class=\"descriptionNumberColor\">Amidst the Rejoicing Clouds</span>]",
       "duration": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       },
       "immediateEffect": true,
       "valuePerStack": {
         "MDF_DamageAddedRatio": {
-          "operator": "Variables[0] (0.5) || RETURN",
-          "displayLines": "0.5",
-          "constants": [],
-          "variables": [
-            0.5
-          ]
+          "displayLines": "0.5"
         }
       }
     },
@@ -121,12 +100,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageAddedRatio) || RETURN",
-                "displayLines": "MDF_DamageAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageAddedRatio"
-                ]
+                "displayLines": "MDF_DamageAddedRatio"
               }
             }
           ]

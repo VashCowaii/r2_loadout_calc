@@ -579,12 +579,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Skill Points Modification",
                   "adjustmentValue": {
-                    "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                    "displayLines": "{[Skill03[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill03[0]]}"
-                    ]
+                    "displayLines": "{[Skill03[0]]}"
                   },
                   "adjustmentType": "+"
                 },
@@ -595,12 +590,7 @@ const compositeAbilityObject = {
                     "target": "{{Player Team(Exclude Memosprites)v2}}"
                   },
                   "value": {
-                    "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-                    "displayLines": "{[Skill03[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill03[1]]}"
-                    ]
+                    "displayLines": "{[Skill03[1]]}"
                   },
                   "isFixed": "* ERR"
                 }
@@ -652,12 +642,7 @@ const compositeAbilityObject = {
                     "target": "{{Player Team(Exclude Memosprites)v2}}"
                   },
                   "value": {
-                    "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                    "displayLines": "{[Skill02[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[0]]}"
-                    ]
+                    "displayLines": "{[Skill02[0]]}"
                   },
                   "isFixed": "* ERR"
                 }
@@ -705,12 +690,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Skill Points Modification",
                   "adjustmentValue": {
-                    "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                    "displayLines": "{[Skill01[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill01[0]]}"
-                    ]
+                    "displayLines": "{[Skill01[0]]}"
                   },
                   "adjustmentType": "+"
                 }
@@ -743,12 +723,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "Toughness": null,
             "Tags": null,

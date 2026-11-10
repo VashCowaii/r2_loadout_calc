@@ -625,20 +625,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1257531972\">MStrongChallengeEX_Talent_StageAbility_PLY_015</a>",
                   "valuePerStack": {
                     "MDF_Insert_DefaultStanceBreakRatio": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     },
                     "MDF_CounterAttack_DefaultStanceBreakRatio": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     }
                   }
                 }

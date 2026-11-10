@@ -416,21 +416,11 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1638600472\">Standard_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill08[1]]}) || RETURN",
-            "displayLines": "{[Skill08[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill08[1]]}"
-            ]
+            "displayLines": "{[Skill08[1]]}"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[Skill08[0]]}) || RETURN",
-              "displayLines": "{[Skill08[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill08[0]]}"
-              ]
+              "displayLines": "{[Skill08[0]]}"
             }
           }
         }

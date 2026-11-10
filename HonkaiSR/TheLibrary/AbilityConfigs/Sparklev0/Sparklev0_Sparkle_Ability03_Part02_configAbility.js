@@ -23,14 +23,7 @@ const configAbility = {
         {
           "name": "Skill Points Modification",
           "adjustmentValue": {
-            "operator": "Variables[0] (4) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(4 + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              4
-            ]
+            "displayLines": "(4 + 1)"
           },
           "adjustmentType": "+"
         },
@@ -43,12 +36,7 @@ const configAbility = {
         {
           "name": "Skill Points Modification",
           "adjustmentValue": {
-            "operator": "Variables[0] (4) || RETURN",
-            "displayLines": "4",
-            "constants": [],
-            "variables": [
-              4
-            ]
+            "displayLines": "4"
           },
           "adjustmentType": "+"
         },
@@ -66,29 +54,14 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"1486907244\">Sparkle_Ability03_PowerUp</a>[<span class=\"descriptionNumberColor\">Cipher</span>]",
       "duration": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       },
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] (0.1) || RETURN",
-          "displayLines": "0.1",
-          "constants": [],
-          "variables": [
-            0.1
-          ]
+          "displayLines": "0.1"
         },
         "MDF_PropertyValue2": {
-          "operator": "Variables[0] (0.4) || RETURN",
-          "displayLines": "0.4",
-          "constants": [],
-          "variables": [
-            0.4
-          ]
+          "displayLines": "0.4"
         }
       }
     },
@@ -111,13 +84,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (MDF_Sparkle_CritDmgValue) || Variables[1] (0.3) || MUL || RETURN",
-            "displayLines": "(MDF_Sparkle_CritDmgValue * 0.3)",
-            "constants": [],
-            "variables": [
-              "MDF_Sparkle_CritDmgValue",
-              0.3
-            ]
+            "displayLines": "(MDF_Sparkle_CritDmgValue * 0.3)"
           },
           "variableName": "NDF_Sparkle_Rank06_CritDmg"
         },
@@ -146,30 +113,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1817279389\">Sparkle_Ability02_CritDmgAddedRatio01</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
               "duration": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "valuePerStack": {
                 "MDF_PropertyValueConvert": {
-                  "operator": "Variables[0] (MDF_CriticalDamageBase_change) || Variables[1] (NDF_Sparkle_Rank06_CritDmg) || ADD || RETURN",
-                  "displayLines": "(MDF_CriticalDamageBase_change + NDF_Sparkle_Rank06_CritDmg)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_CriticalDamageBase_change",
-                    "NDF_Sparkle_Rank06_CritDmg"
-                  ]
+                  "displayLines": "(MDF_CriticalDamageBase_change + NDF_Sparkle_Rank06_CritDmg)"
                 },
                 "MDF_PropertyValueBase": {
-                  "operator": "Variables[0] (0.45) || RETURN",
-                  "displayLines": "0.45",
-                  "constants": [],
-                  "variables": [
-                    0.45
-                  ]
+                  "displayLines": "0.45"
                 }
               }
             }
@@ -217,30 +168,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1766946532\">Sparkle_Ability02_CritDmgAddedRatio02</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
               "duration": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "valuePerStack": {
                 "MDF_PropertyValueConvert2": {
-                  "operator": "Variables[0] (MDF_CriticalDamageBase_change) || Variables[1] (NDF_Sparkle_Rank06_CritDmg) || ADD || RETURN",
-                  "displayLines": "(MDF_CriticalDamageBase_change + NDF_Sparkle_Rank06_CritDmg)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_CriticalDamageBase_change",
-                    "NDF_Sparkle_Rank06_CritDmg"
-                  ]
+                  "displayLines": "(MDF_CriticalDamageBase_change + NDF_Sparkle_Rank06_CritDmg)"
                 },
                 "MDF_PropertyValueBase2": {
-                  "operator": "Variables[0] (0.45) || RETURN",
-                  "displayLines": "0.45",
-                  "constants": [],
-                  "variables": [
-                    0.45
-                  ]
+                  "displayLines": "0.45"
                 }
               }
             }

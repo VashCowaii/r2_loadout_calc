@@ -32,12 +32,7 @@ const configAbility = {
               "conditions": {
                 "name": "Random Chance",
                 "chance": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
+                  "displayLines": "0.5"
                 }
               },
               "passed": [
@@ -80,12 +75,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.3) || RETURN",
-            "displayLines": "0.3",
-            "constants": [],
-            "variables": [
-              0.3
-            ]
+            "displayLines": "0.3"
           },
           "variableName": "Bronya_SpeedUP_Ratio_01"
         },
@@ -98,12 +88,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-308500305\">Bronya_BPAbility_Eidolon2_Listen</a>",
           "valuePerStack": {
             "Bronya_SpeedUP_Ratio_01": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             }
           }
         }
@@ -124,22 +109,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"133730263\">Bronya_BPAbility_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "duration": {
-            "operator": "Variables[0] (1) || Variables[1] (1) || ADD || RETURN",
-            "displayLines": "(1 + 1)",
-            "constants": [],
-            "variables": [
-              1,
-              1
-            ]
+            "displayLines": "(1 + 1)"
           },
           "valuePerStack": {
             "MDF_DamageAddedRatio": {
-              "operator": "Variables[0] (0.66) || RETURN",
-              "displayLines": "0.66",
-              "constants": [],
-              "variables": [
-                0.66
-              ]
+              "displayLines": "0.66"
             }
           }
         }
@@ -153,21 +127,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"133730263\">Bronya_BPAbility_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "duration": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "valuePerStack": {
             "MDF_DamageAddedRatio": {
-              "operator": "Variables[0] (0.66) || RETURN",
-              "displayLines": "0.66",
-              "constants": [],
-              "variables": [
-                0.66
-              ]
+              "displayLines": "0.66"
             }
           }
         }

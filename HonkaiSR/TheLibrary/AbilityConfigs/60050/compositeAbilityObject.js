@@ -521,13 +521,7 @@ const compositeAbilityObject = {
                 "target": "{{Ability Target(ST)}}"
               },
               "value": {
-                "operator": "Variables[0] (_MaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                "displayLines": "(_MaxSP - _CurrentSP)",
-                "constants": [],
-                "variables": [
-                  "_MaxSP",
-                  "_CurrentSP"
-                ]
+                "displayLines": "(_MaxSP - _CurrentSP)"
               },
               "isFixed": "(Fixed)",
               "ignoreBlock": true,
@@ -560,13 +554,7 @@ const compositeAbilityObject = {
                 "target": "{{Ability Target(ST)}}"
               },
               "value": {
-                "operator": "Variables[0] (_MaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                "displayLines": "(_MaxSP - _CurrentSP)",
-                "constants": [],
-                "variables": [
-                  "_MaxSP",
-                  "_CurrentSP"
-                ]
+                "displayLines": "(_MaxSP - _CurrentSP)"
               },
               "isFixed": "(Fixed)"
             }

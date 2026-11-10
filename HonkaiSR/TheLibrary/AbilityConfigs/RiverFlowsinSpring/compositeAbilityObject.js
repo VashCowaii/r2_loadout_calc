@@ -45,12 +45,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.08) || RETURN",
-                    "displayLines": "0.08",
-                    "constants": [],
-                    "variables": [
-                      0.08
-                    ]
+                    "displayLines": "0.08"
                   }
                 },
                 {
@@ -61,12 +56,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.12) || RETURN",
-                    "displayLines": "0.12",
-                    "constants": [],
-                    "variables": [
-                      0.12
-                    ]
+                    "displayLines": "0.12"
                   }
                 }
               ]
@@ -130,12 +120,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (CasterHP) || RETURN",
-                      "displayLines": "CasterHP",
-                      "constants": [],
-                      "variables": [
-                        "CasterHP"
-                      ]
+                      "displayLines": "CasterHP"
                     }
                   },
                   "passed": [

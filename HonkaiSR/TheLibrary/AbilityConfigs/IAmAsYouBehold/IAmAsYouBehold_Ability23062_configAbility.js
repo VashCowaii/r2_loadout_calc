@@ -34,12 +34,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_TeamCriticalDamageBaseAdd) || RETURN",
-                "displayLines": "MDF_TeamCriticalDamageBaseAdd",
-                "constants": [],
-                "variables": [
-                  "MDF_TeamCriticalDamageBaseAdd"
-                ]
+                "displayLines": "MDF_TeamCriticalDamageBaseAdd"
               }
             }
           ]
@@ -65,12 +60,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_TeamCriticalDamageBaseAdd": {
-              "operator": "Variables[0] (MDF_TeamCriticalDamageBaseAdd) || RETURN",
-              "displayLines": "MDF_TeamCriticalDamageBaseAdd",
-              "constants": [],
-              "variables": [
-                "MDF_TeamCriticalDamageBaseAdd"
-              ]
+              "displayLines": "MDF_TeamCriticalDamageBaseAdd"
             }
           }
         }
@@ -112,12 +102,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1000728603\">LC_23062_Sub_Team</a>[<span class=\"descriptionNumberColor\">King's Entertainment</span>]",
                   "valuePerStack": {
                     "MDF_TeamCriticalDamageBaseAdd": {
-                      "operator": "Variables[0] (MDF_TeamCriticalDamageBaseAdd) || RETURN",
-                      "displayLines": "MDF_TeamCriticalDamageBaseAdd",
-                      "constants": [],
-                      "variables": [
-                        "MDF_TeamCriticalDamageBaseAdd"
-                      ]
+                      "displayLines": "MDF_TeamCriticalDamageBaseAdd"
                     }
                   }
                 }
@@ -149,22 +134,11 @@ const configAbility = {
                   "conditions": {
                     "name": "Compare: Variable",
                     "value1": {
-                      "operator": "Variables[0] (0.0019999999) || Variables[1] (MDF_NeedSP) || MUL || RETURN",
-                      "displayLines": "(0.0019999999 * MDF_NeedSP)",
-                      "constants": [],
-                      "variables": [
-                        0.0019999999,
-                        "MDF_NeedSP"
-                      ]
+                      "displayLines": "(0.0019999999 * MDF_NeedSP)"
                     },
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (0.72) || RETURN",
-                      "displayLines": "0.72",
-                      "constants": [],
-                      "variables": [
-                        0.72
-                      ]
+                      "displayLines": "0.72"
                     }
                   },
                   "passed": [
@@ -261,12 +235,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-607118875\">LC_23062_UltraDamageUp_once</a>",
                   "valuePerStack": {
                     "MDF_NeedSP": {
-                      "operator": "Variables[0] (MDF_NeedSP) || RETURN",
-                      "displayLines": "MDF_NeedSP",
-                      "constants": [],
-                      "variables": [
-                        "MDF_NeedSP"
-                      ]
+                      "displayLines": "MDF_NeedSP"
                     }
                   }
                 },
@@ -345,12 +314,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_TempSPChange) || INVERT || RETURN",
-                        "displayLines": "-MDF_TempSPChange",
-                        "constants": [],
-                        "variables": [
-                          "MDF_TempSPChange"
-                        ]
+                        "displayLines": "-MDF_TempSPChange"
                       },
                       "variableName": "MDF_NeedSP"
                     }
@@ -398,21 +362,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"338159187\">LC_23062_Sub</a>[<span class=\"descriptionNumberColor\">King's Entertainment</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_TeamCriticalDamageBaseAdd": {
-                      "operator": "Variables[0] (0.24) || RETURN",
-                      "displayLines": "0.24",
-                      "constants": [],
-                      "variables": [
-                        0.24
-                      ]
+                      "displayLines": "0.24"
                     }
                   }
                 }
@@ -441,21 +395,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"338159187\">LC_23062_Sub</a>[<span class=\"descriptionNumberColor\">King's Entertainment</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_TeamCriticalDamageBaseAdd": {
-                      "operator": "Variables[0] (0.24) || RETURN",
-                      "displayLines": "0.24",
-                      "constants": [],
-                      "variables": [
-                        0.24
-                      ]
+                      "displayLines": "0.24"
                     }
                   }
                 }

@@ -62,12 +62,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
           "valuePerStack": {
             "MDF_DamageUpRatio_PerLayer": {
-              "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill02[0]]}"
-              ]
+              "displayLines": "{[PassiveSkill02[0]]}"
             }
           }
         }
@@ -82,14 +77,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.5) || MUL || RETURN",
-          "displayLines": "({[Skill01[0]]} * 0.5)",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "{[Skill01[0]]}"
-          ]
+          "displayLines": "({[Skill01[0]]} * 0.5)"
         },
         "Toughness": null,
         "Tags": null,
@@ -107,14 +95,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.5) || MUL || RETURN",
-          "displayLines": "({[Skill01[0]]} * 0.5)",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "{[Skill01[0]]}"
-          ]
+          "displayLines": "({[Skill01[0]]} * 0.5)"
         },
         "Toughness": null,
         "Tags": null,
@@ -153,30 +134,15 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
       "duration": {
-        "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-        "displayLines": "{[Skill01[2]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill01[2]]}"
-        ]
+        "displayLines": "{[Skill01[2]]}"
       },
       "baseChance": {
-        "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-        "displayLines": "{[Skill01[1]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill01[1]]}"
-        ]
+        "displayLines": "{[Skill01[1]]}"
       },
       "immediateEffect": true,
       "valuePerStack": {
         "Modifier_Electric_DamagePercentage": {
-          "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-          "displayLines": "{[Skill01[3]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[3]]}"
-          ]
+          "displayLines": "{[Skill01[3]]}"
         }
       },
       "stackFlag": "CharacterSkill"

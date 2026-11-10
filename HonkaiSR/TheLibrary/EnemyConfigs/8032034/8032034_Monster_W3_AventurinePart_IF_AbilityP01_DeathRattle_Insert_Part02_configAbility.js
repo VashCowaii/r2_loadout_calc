@@ -34,12 +34,7 @@ const configAbility = {
         {
           "name": "Deal Toughness DMG",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[0]]}"
-            ]
+            "displayLines": "{[PassiveSkill01[0]]}"
           },
           "attacker": {
             "name": "Target Name",
@@ -67,12 +62,7 @@ const configAbility = {
         {
           "name": "Deal Toughness DMG",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[0]]}"
-            ]
+            "displayLines": "{[PassiveSkill01[0]]}"
           },
           "attacker": {
             "name": "Target Name",
@@ -101,12 +91,7 @@ const configAbility = {
         "target": "{{Caster's Summoner}}"
       },
       "consumePercent": {
-        "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-        "displayLines": "{[PassiveSkill01[1]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill01[1]]}"
-        ]
+        "displayLines": "{[PassiveSkill01[1]]}"
       },
       "consumeFloor": 1
     },
@@ -126,12 +111,7 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-769919494\">Enemy_W3_Aventurine_IF_Score_Light_Add</a>",
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (W3_Aventurine_00_IF_Score) || RETURN",
-        "displayLines": "W3_Aventurine_00_IF_Score",
-        "constants": [],
-        "variables": [
-          "W3_Aventurine_00_IF_Score"
-        ]
+        "displayLines": "W3_Aventurine_00_IF_Score"
       }
     },
     {
@@ -142,12 +122,7 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"197888775\">Enemy_W3_Aventurine_IF_Score_Light_Display</a>",
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (W3_Aventurine_00_IF_Score) || RETURN",
-        "displayLines": "W3_Aventurine_00_IF_Score",
-        "constants": [],
-        "variables": [
-          "W3_Aventurine_00_IF_Score"
-        ]
+        "displayLines": "W3_Aventurine_00_IF_Score"
       }
     },
     {

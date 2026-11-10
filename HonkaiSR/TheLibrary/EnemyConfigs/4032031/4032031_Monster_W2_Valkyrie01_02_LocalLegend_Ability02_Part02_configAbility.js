@@ -23,13 +23,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] ({[Skill02[0]]}) || Variables[1] (TargetCount) || DIV || RETURN",
-          "displayLines": "({[Skill02[0]]} / TargetCount)",
-          "constants": [],
-          "variables": [
-            "{[Skill02[0]]}",
-            "TargetCount"
-          ]
+          "displayLines": "({[Skill02[0]]} / TargetCount)"
         },
         "Toughness": null,
         "Tags": null,

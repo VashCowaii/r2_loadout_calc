@@ -88,12 +88,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-355399980\">Monster_W2_Yanqing_RL_LowHP</a>",
       "valuePerStack": {
         "MDF_LowHPRatio": {
-          "operator": "Variables[0] ({[SkillP01[5]]}) || RETURN",
-          "displayLines": "{[SkillP01[5]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[5]]}"
-          ]
+          "displayLines": "{[SkillP01[5]]}"
         }
       }
     }

@@ -89,12 +89,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "multiBase": {
-        "operator": "Variables[0] ({[SkillP02[0]]}) || RETURN",
-        "displayLines": "{[SkillP02[0]]}",
-        "constants": [],
-        "variables": [
-          "{[SkillP02[0]]}"
-        ]
+        "displayLines": "{[SkillP02[0]]}"
       }
     },
     {

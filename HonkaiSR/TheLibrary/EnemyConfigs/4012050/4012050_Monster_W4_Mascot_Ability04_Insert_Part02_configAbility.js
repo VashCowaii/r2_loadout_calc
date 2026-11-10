@@ -41,12 +41,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1777684731\">Standard_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-          "displayLines": "{[SkillP01[1]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[1]]}"
-          ]
+          "displayLines": "{[SkillP01[1]]}"
         }
       }
     },

@@ -1111,12 +1111,7 @@ const configAbility = {
               },
               "scope": "TargetEntity",
               "value": {
-                "operator": "Variables[0] (MDF_EnhancementLevel) || RETURN",
-                "displayLines": "MDF_EnhancementLevel",
-                "constants": [],
-                "variables": [
-                  "MDF_EnhancementLevel"
-                ]
+                "displayLines": "MDF_EnhancementLevel"
               },
               "variableName": "AML_Boss_00_Part_EnhancementLevel"
             }
@@ -1145,12 +1140,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                "displayLines": "MDF_SpeedAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedAddedRatio"
-                ]
+                "displayLines": "MDF_SpeedAddedRatio"
               }
             }
           ]

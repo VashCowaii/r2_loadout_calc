@@ -485,14 +485,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Skill04Count) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(Skill04Count + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "Skill04Count"
-            ]
+            "displayLines": "(Skill04Count + 1)"
           },
           "variableName": "Skill04Count"
         },
@@ -525,12 +518,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (Skill04Count) || RETURN",
-            "displayLines": "Skill04Count",
-            "constants": [],
-            "variables": [
-              "Skill04Count"
-            ]
+            "displayLines": "Skill04Count"
           },
           "execute": [
             {

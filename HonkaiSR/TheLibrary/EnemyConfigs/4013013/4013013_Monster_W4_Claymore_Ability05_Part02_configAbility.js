@@ -37,48 +37,28 @@ const configAbility = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonID) || RETURN",
-                    "displayLines": "SummonID",
-                    "constants": [],
-                    "variables": [
-                      "SummonID"
-                    ]
+                    "displayLines": "SummonID"
                   },
                   "locationType": "KeepOnEdge"
                 },
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonID) || RETURN",
-                    "displayLines": "SummonID",
-                    "constants": [],
-                    "variables": [
-                      "SummonID"
-                    ]
+                    "displayLines": "SummonID"
                   },
                   "locationType": "KeepOnEdge"
                 },
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonID) || RETURN",
-                    "displayLines": "SummonID",
-                    "constants": [],
-                    "variables": [
-                      "SummonID"
-                    ]
+                    "displayLines": "SummonID"
                   },
                   "locationType": "KeepOnEdge"
                 },
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonID) || RETURN",
-                    "displayLines": "SummonID",
-                    "constants": [],
-                    "variables": [
-                      "SummonID"
-                    ]
+                    "displayLines": "SummonID"
                   },
                   "locationType": "KeepOnEdge"
                 }
@@ -92,24 +72,14 @@ const configAbility = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonID) || RETURN",
-                    "displayLines": "SummonID",
-                    "constants": [],
-                    "variables": [
-                      "SummonID"
-                    ]
+                    "displayLines": "SummonID"
                   },
                   "locationType": "BeforeCaster"
                 },
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonID) || RETURN",
-                    "displayLines": "SummonID",
-                    "constants": [],
-                    "variables": [
-                      "SummonID"
-                    ]
+                    "displayLines": "SummonID"
                   },
                   "locationType": "AfterCaster"
                 }
@@ -146,12 +116,7 @@ const configAbility = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonID) || RETURN",
-                    "displayLines": "SummonID",
-                    "constants": [],
-                    "variables": [
-                      "SummonID"
-                    ]
+                    "displayLines": "SummonID"
                   },
                   "locationType": "AroundCaster"
                 }

@@ -58,12 +58,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (50) || RETURN",
-        "displayLines": "50",
-        "constants": [],
-        "variables": [
-          50
-        ]
+        "displayLines": "50"
       },
       "variableName": "DOT_Layer_Threshold"
     },
@@ -77,13 +72,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (DOT_Layer_Threshold) || Variables[1] (30) || ADD || RETURN",
-            "displayLines": "(DOT_Layer_Threshold + 30)",
-            "constants": [],
-            "variables": [
-              "DOT_Layer_Threshold",
-              30
-            ]
+            "displayLines": "(DOT_Layer_Threshold + 30)"
           },
           "variableName": "DOT_Layer_Threshold"
         }
@@ -152,12 +141,7 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (8) || RETURN",
-                        "displayLines": "8",
-                        "constants": [],
-                        "variables": [
-                          8
-                        ]
+                        "displayLines": "8"
                       },
                       "isFixed": "* ERR"
                     }
@@ -243,12 +227,7 @@ const configAbility = {
                   "variables": {
                     "parameter[0]_AddLayer": 1,
                     "parameter[1]_Chance": {
-                      "operator": "Variables[0] (0.65) || RETURN",
-                      "displayLines": "0.65",
-                      "constants": [],
-                      "variables": [
-                        0.65
-                      ]
+                      "displayLines": "0.65"
                     }
                   }
                 }

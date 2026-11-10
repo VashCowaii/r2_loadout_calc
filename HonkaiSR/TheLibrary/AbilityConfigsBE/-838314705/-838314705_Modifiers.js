@@ -240,13 +240,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_TokenDMGAddRatioPerLayer) || Variables[1] (_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_TokenDMGAddRatioPerLayer * _Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_TokenDMGAddRatioPerLayer",
-                  "_Layer"
-                ]
+                "displayLines": "(MDF_TokenDMGAddRatioPerLayer * _Layer)"
               }
             }
           ]
@@ -316,21 +310,11 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-604897731\">Enemy_W2_Cocolia_IF_Frenzy</a>[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]",
                       "valuePerStack": {
                         "MDF_TokenDMGAddRatioPerLayer": {
-                          "operator": "Variables[0] (MDF_TokenDMGAddRatioPerLayer) || RETURN",
-                          "displayLines": "MDF_TokenDMGAddRatioPerLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_TokenDMGAddRatioPerLayer"
-                          ]
+                          "displayLines": "MDF_TokenDMGAddRatioPerLayer"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (_Layer) || RETURN",
-                        "displayLines": "_Layer",
-                        "constants": [],
-                        "variables": [
-                          "_Layer"
-                        ]
+                        "displayLines": "_Layer"
                       }
                     }
                   ]
@@ -358,12 +342,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_FrenzyStartDelay) || RETURN",
-                    "displayLines": "MDF_FrenzyStartDelay",
-                    "constants": [],
-                    "variables": [
-                      "MDF_FrenzyStartDelay"
-                    ]
+                    "displayLines": "MDF_FrenzyStartDelay"
                   },
                   "variableName": "_StartActionDelay"
                 },
@@ -417,12 +396,7 @@ const configAbility = {
                 "value1": "_Layer",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_MaxFrenzyLayer) || RETURN",
-                  "displayLines": "MDF_MaxFrenzyLayer",
-                  "constants": [],
-                  "variables": [
-                    "MDF_MaxFrenzyLayer"
-                  ]
+                  "displayLines": "MDF_MaxFrenzyLayer"
                 },
                 "invertCondition": true
               },
@@ -434,39 +408,21 @@ const configAbility = {
                     "value1": "_CurrentActionDelay",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_FrenzyIntervalDelay) || RETURN",
-                      "displayLines": "MDF_FrenzyIntervalDelay",
-                      "constants": [],
-                      "variables": [
-                        "MDF_FrenzyIntervalDelay"
-                      ]
+                      "displayLines": "MDF_FrenzyIntervalDelay"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_FrenzyIntervalDelay) || Variables[1] (_CurrentActionDelay) || ADD || RETURN",
-                        "displayLines": "(MDF_FrenzyIntervalDelay + _CurrentActionDelay)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_FrenzyIntervalDelay",
-                          "_CurrentActionDelay"
-                        ]
+                        "displayLines": "(MDF_FrenzyIntervalDelay + _CurrentActionDelay)"
                       },
                       "variableName": "_ThresholdActionDelay"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_Layer) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_Layer + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_Layer"
-                        ]
+                        "displayLines": "(_Layer + 1)"
                       },
                       "variableName": "_Layer"
                     },
@@ -495,21 +451,11 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-604897731\">Enemy_W2_Cocolia_IF_Frenzy</a>[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]",
                       "valuePerStack": {
                         "MDF_TokenDMGAddRatioPerLayer": {
-                          "operator": "Variables[0] (MDF_TokenDMGAddRatioPerLayer) || RETURN",
-                          "displayLines": "MDF_TokenDMGAddRatioPerLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_TokenDMGAddRatioPerLayer"
-                          ]
+                          "displayLines": "MDF_TokenDMGAddRatioPerLayer"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (_Layer) || RETURN",
-                        "displayLines": "_Layer",
-                        "constants": [],
-                        "variables": [
-                          "_Layer"
-                        ]
+                        "displayLines": "_Layer"
                       }
                     },
                     {
@@ -521,21 +467,11 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-604897731\">Enemy_W2_Cocolia_IF_Frenzy</a>[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]",
                       "valuePerStack": {
                         "MDF_TokenDMGAddRatioPerLayer": {
-                          "operator": "Variables[0] (MDF_TokenDMGAddRatioPerLayer) || RETURN",
-                          "displayLines": "MDF_TokenDMGAddRatioPerLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_TokenDMGAddRatioPerLayer"
-                          ]
+                          "displayLines": "MDF_TokenDMGAddRatioPerLayer"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (_Layer) || RETURN",
-                        "displayLines": "_Layer",
-                        "constants": [],
-                        "variables": [
-                          "_Layer"
-                        ]
+                        "displayLines": "_Layer"
                       }
                     }
                   ]
@@ -553,13 +489,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_ThresholdActionDelay) || Variables[1] (_StartActionDelay) || ADD || RETURN",
-                "displayLines": "(_ThresholdActionDelay + _StartActionDelay)",
-                "constants": [],
-                "variables": [
-                  "_ThresholdActionDelay",
-                  "_StartActionDelay"
-                ]
+                "displayLines": "(_ThresholdActionDelay + _StartActionDelay)"
               },
               "variableName": "_ThresholdActionDelay"
             },
@@ -624,12 +554,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeTakenRatio) || RETURN",
-                "displayLines": "MDF_AllDamageTypeTakenRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeTakenRatio"
-                ]
+                "displayLines": "MDF_AllDamageTypeTakenRatio"
               }
             }
           ]
@@ -898,12 +823,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeResistance) || RETURN",
-                "displayLines": "MDF_AllDamageTypeResistance",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeResistance"
-                ]
+                "displayLines": "MDF_AllDamageTypeResistance"
               }
             },
             {
@@ -980,12 +900,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeTakenRatio) || RETURN",
-                "displayLines": "MDF_AllDamageTypeTakenRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeTakenRatio"
-                ]
+                "displayLines": "MDF_AllDamageTypeTakenRatio"
               }
             }
           ]
@@ -1243,12 +1158,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeResistance) || RETURN",
-                "displayLines": "MDF_AllDamageTypeResistance",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeResistance"
-                ]
+                "displayLines": "MDF_AllDamageTypeResistance"
               }
             }
           ]
@@ -1279,12 +1189,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeResistance": {
-                  "operator": "Variables[0] (MDF_IF_BOSS_Common_Defence) || RETURN",
-                  "displayLines": "MDF_IF_BOSS_Common_Defence",
-                  "constants": [],
-                  "variables": [
-                    "MDF_IF_BOSS_Common_Defence"
-                  ]
+                  "displayLines": "MDF_IF_BOSS_Common_Defence"
                 }
               }
             },
@@ -1297,12 +1202,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1963095263\">Standard_MinionsSuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeResistance": {
-                  "operator": "Variables[0] (MDF_IF_BOSS_Common_Defence) || RETURN",
-                  "displayLines": "MDF_IF_BOSS_Common_Defence",
-                  "constants": [],
-                  "variables": [
-                    "MDF_IF_BOSS_Common_Defence"
-                  ]
+                  "displayLines": "MDF_IF_BOSS_Common_Defence"
                 }
               }
             },
@@ -1404,12 +1304,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeResistance": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_Common_Defence) || RETURN",
-                      "displayLines": "MDF_IF_BOSS_Common_Defence",
-                      "constants": [],
-                      "variables": [
-                        "MDF_IF_BOSS_Common_Defence"
-                      ]
+                      "displayLines": "MDF_IF_BOSS_Common_Defence"
                     }
                   }
                 },
@@ -1422,12 +1317,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1963095263\">Standard_MinionsSuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeResistance": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_Common_Defence) || RETURN",
-                      "displayLines": "MDF_IF_BOSS_Common_Defence",
-                      "constants": [],
-                      "variables": [
-                        "MDF_IF_BOSS_Common_Defence"
-                      ]
+                      "displayLines": "MDF_IF_BOSS_Common_Defence"
                     }
                   }
                 }
@@ -1492,12 +1382,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"714067831\">Standard_SuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeTakenRatio": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_WeaknessDMGUpRatio) || RETURN",
-                      "displayLines": "MDF_IF_BOSS_WeaknessDMGUpRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_IF_BOSS_WeaknessDMGUpRatio"
-                      ]
+                      "displayLines": "MDF_IF_BOSS_WeaknessDMGUpRatio"
                     }
                   }
                 },
@@ -1510,12 +1395,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-178829988\">Standard_MinionsSuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeTakenRatio": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_WeaknessDMGUpRatio) || RETURN",
-                      "displayLines": "MDF_IF_BOSS_WeaknessDMGUpRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_IF_BOSS_WeaknessDMGUpRatio"
-                      ]
+                      "displayLines": "MDF_IF_BOSS_WeaknessDMGUpRatio"
                     }
                   }
                 },
@@ -1536,54 +1416,19 @@ const configAbility = {
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "BOSS_BreakDelay_01": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_BreakDelay_01) || Constants[0] (10) || MUL || RETURN",
-                      "displayLines": "(MDF_IF_BOSS_BreakDelay_01 * 10)",
-                      "constants": [
-                        10
-                      ],
-                      "variables": [
-                        "MDF_IF_BOSS_BreakDelay_01"
-                      ]
+                      "displayLines": "(MDF_IF_BOSS_BreakDelay_01 * 10)"
                     },
                     "BOSS_BreakDelay_02": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_BreakDelay_02) || Constants[0] (10) || MUL || RETURN",
-                      "displayLines": "(MDF_IF_BOSS_BreakDelay_02 * 10)",
-                      "constants": [
-                        10
-                      ],
-                      "variables": [
-                        "MDF_IF_BOSS_BreakDelay_02"
-                      ]
+                      "displayLines": "(MDF_IF_BOSS_BreakDelay_02 * 10)"
                     },
                     "BOSS_BreakDelay_03": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_BreakDelay_03) || Constants[0] (10) || MUL || RETURN",
-                      "displayLines": "(MDF_IF_BOSS_BreakDelay_03 * 10)",
-                      "constants": [
-                        10
-                      ],
-                      "variables": [
-                        "MDF_IF_BOSS_BreakDelay_03"
-                      ]
+                      "displayLines": "(MDF_IF_BOSS_BreakDelay_03 * 10)"
                     },
                     "BOSS_BreakDelay_04": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_BreakDelay_04) || Constants[0] (10) || MUL || RETURN",
-                      "displayLines": "(MDF_IF_BOSS_BreakDelay_04 * 10)",
-                      "constants": [
-                        10
-                      ],
-                      "variables": [
-                        "MDF_IF_BOSS_BreakDelay_04"
-                      ]
+                      "displayLines": "(MDF_IF_BOSS_BreakDelay_04 * 10)"
                     },
                     "BOSS_BreakDelay_05": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_BreakDelay_05) || Constants[0] (10) || MUL || RETURN",
-                      "displayLines": "(MDF_IF_BOSS_BreakDelay_05 * 10)",
-                      "constants": [
-                        10
-                      ],
-                      "variables": [
-                        "MDF_IF_BOSS_BreakDelay_05"
-                      ]
+                      "displayLines": "(MDF_IF_BOSS_BreakDelay_05 * 10)"
                     }
                   },
                   "allowAbilityTriggers": false
@@ -1684,12 +1529,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeResistance": {
-                  "operator": "Variables[0] (MDF_IF_BOSS_Common_Defence) || RETURN",
-                  "displayLines": "MDF_IF_BOSS_Common_Defence",
-                  "constants": [],
-                  "variables": [
-                    "MDF_IF_BOSS_Common_Defence"
-                  ]
+                  "displayLines": "MDF_IF_BOSS_Common_Defence"
                 }
               }
             },
@@ -1791,12 +1631,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeResistance": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_Common_Defence) || RETURN",
-                      "displayLines": "MDF_IF_BOSS_Common_Defence",
-                      "constants": [],
-                      "variables": [
-                        "MDF_IF_BOSS_Common_Defence"
-                      ]
+                      "displayLines": "MDF_IF_BOSS_Common_Defence"
                     }
                   }
                 }
@@ -1865,15 +1700,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Constants[0] (10) || Variables[0] (MDF_IF_BOSS_BreakDelay) || MUL || Variables[1] (_ActionDelay) || SUB || Constants[0] (10) || DIV || RETURN",
-                    "displayLines": "(((10 * MDF_IF_BOSS_BreakDelay) - _ActionDelay) / 10)",
-                    "constants": [
-                      10
-                    ],
-                    "variables": [
-                      "MDF_IF_BOSS_BreakDelay",
-                      "_ActionDelay"
-                    ]
+                    "displayLines": "(((10 * MDF_IF_BOSS_BreakDelay) - _ActionDelay) / 10)"
                   },
                   "variableName": "PushDelay"
                 },
@@ -1886,12 +1713,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"714067831\">Standard_SuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeTakenRatio": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_WeaknessDMGUpRatio) || RETURN",
-                      "displayLines": "MDF_IF_BOSS_WeaknessDMGUpRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_IF_BOSS_WeaknessDMGUpRatio"
-                      ]
+                      "displayLines": "MDF_IF_BOSS_WeaknessDMGUpRatio"
                     }
                   }
                 },
@@ -1912,14 +1734,7 @@ const configAbility = {
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "BOSS_BreakDelay": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_BreakDelay) || Constants[0] (10) || MUL || RETURN",
-                      "displayLines": "(MDF_IF_BOSS_BreakDelay * 10)",
-                      "constants": [
-                        10
-                      ],
-                      "variables": [
-                        "MDF_IF_BOSS_BreakDelay"
-                      ]
+                      "displayLines": "(MDF_IF_BOSS_BreakDelay * 10)"
                     }
                   },
                   "allowAbilityTriggers": false
@@ -1959,12 +1774,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeResistance": {
-                  "operator": "Variables[0] (MDF_IF_BOSS_Common_Defence) || RETURN",
-                  "displayLines": "MDF_IF_BOSS_Common_Defence",
-                  "constants": [],
-                  "variables": [
-                    "MDF_IF_BOSS_Common_Defence"
-                  ]
+                  "displayLines": "MDF_IF_BOSS_Common_Defence"
                 }
               }
             },
@@ -2066,12 +1876,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeResistance": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_Common_Defence) || RETURN",
-                      "displayLines": "MDF_IF_BOSS_Common_Defence",
-                      "constants": [],
-                      "variables": [
-                        "MDF_IF_BOSS_Common_Defence"
-                      ]
+                      "displayLines": "MDF_IF_BOSS_Common_Defence"
                     }
                   }
                 }
@@ -2140,15 +1945,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Constants[0] (10) || Variables[0] (MDF_IF_BOSS_BreakDelay) || MUL || Variables[1] (_ActionDelay) || SUB || Constants[0] (10) || DIV || RETURN",
-                    "displayLines": "(((10 * MDF_IF_BOSS_BreakDelay) - _ActionDelay) / 10)",
-                    "constants": [
-                      10
-                    ],
-                    "variables": [
-                      "MDF_IF_BOSS_BreakDelay",
-                      "_ActionDelay"
-                    ]
+                    "displayLines": "(((10 * MDF_IF_BOSS_BreakDelay) - _ActionDelay) / 10)"
                   },
                   "variableName": "PushDelay"
                 },
@@ -2161,12 +1958,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"714067831\">Standard_SuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeTakenRatio": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_WeaknessDMGUpRatio) || RETURN",
-                      "displayLines": "MDF_IF_BOSS_WeaknessDMGUpRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_IF_BOSS_WeaknessDMGUpRatio"
-                      ]
+                      "displayLines": "MDF_IF_BOSS_WeaknessDMGUpRatio"
                     }
                   }
                 },
@@ -2204,14 +1996,7 @@ const configAbility = {
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "BOSS_BreakDelay": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_BreakDelay) || Constants[0] (10) || MUL || RETURN",
-                      "displayLines": "(MDF_IF_BOSS_BreakDelay * 10)",
-                      "constants": [
-                        10
-                      ],
-                      "variables": [
-                        "MDF_IF_BOSS_BreakDelay"
-                      ]
+                      "displayLines": "(MDF_IF_BOSS_BreakDelay * 10)"
                     }
                   },
                   "allowAbilityTriggers": false
@@ -2254,12 +2039,7 @@ const configAbility = {
               },
               "variableName": "Override_ElationPoint",
               "resetValue": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               },
               "scope": "TargetEntity"
             }

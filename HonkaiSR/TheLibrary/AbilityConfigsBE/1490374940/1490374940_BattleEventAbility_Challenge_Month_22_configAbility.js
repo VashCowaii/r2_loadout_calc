@@ -72,30 +72,13 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"985754575\">Modifier_BattleEventAbility_Challenge_Month_22</a>",
           "valuePerStack": {
             "BattleEvent_P1_ADF": {
-              "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-              "displayLines": "#BattleEvent_P1_ADF",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P1_ADF"
-              ]
+              "displayLines": "#BattleEvent_P1_ADF"
             },
             "BattleEvent_P2_ADF": {
-              "operator": "Variables[0] (#BattleEvent_P2_ADF) || Constants[0] (2) || MUL || RETURN",
-              "displayLines": "(#BattleEvent_P2_ADF * 2)",
-              "constants": [
-                2
-              ],
-              "variables": [
-                "#BattleEvent_P2_ADF"
-              ]
+              "displayLines": "(#BattleEvent_P2_ADF * 2)"
             },
             "TempHP": {
-              "operator": "Variables[0] (BattleEvent_BaseHP) || RETURN",
-              "displayLines": "BattleEvent_BaseHP",
-              "constants": [],
-              "variables": [
-                "BattleEvent_BaseHP"
-              ]
+              "displayLines": "BattleEvent_BaseHP"
             }
           }
         }
@@ -110,28 +93,13 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"985754575\">Modifier_BattleEventAbility_Challenge_Month_22</a>",
           "valuePerStack": {
             "BattleEvent_P1_ADF": {
-              "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-              "displayLines": "#BattleEvent_P1_ADF",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P1_ADF"
-              ]
+              "displayLines": "#BattleEvent_P1_ADF"
             },
             "BattleEvent_P2_ADF": {
-              "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-              "displayLines": "#BattleEvent_P2_ADF",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P2_ADF"
-              ]
+              "displayLines": "#BattleEvent_P2_ADF"
             },
             "TempHP": {
-              "operator": "Variables[0] (BattleEvent_BaseHP) || RETURN",
-              "displayLines": "BattleEvent_BaseHP",
-              "constants": [],
-              "variables": [
-                "BattleEvent_BaseHP"
-              ]
+              "displayLines": "BattleEvent_BaseHP"
             }
           }
         }
@@ -184,14 +152,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (DV_BattleEventAbility_Challenge_Month_22_plus3_layerDmg) || Constants[0] (0.1) || MUL || RETURN",
-                "displayLines": "(DV_BattleEventAbility_Challenge_Month_22_plus3_layerDmg * 0.1)",
-                "constants": [
-                  0.1
-                ],
-                "variables": [
-                  "DV_BattleEventAbility_Challenge_Month_22_plus3_layerDmg"
-                ]
+                "displayLines": "(DV_BattleEventAbility_Challenge_Month_22_plus3_layerDmg * 0.1)"
               },
               "variableName": "DV_BattleEventAbility_Challenge_Month_22_plus3_layerDmg"
             }
@@ -220,12 +181,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageFlat": {
-                  "operator": "Variables[0] (Bomb_Damage) || RETURN",
-                  "displayLines": "Bomb_Damage",
-                  "constants": [],
-                  "variables": [
-                    "Bomb_Damage"
-                  ]
+                  "displayLines": "Bomb_Damage"
                 },
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
@@ -242,12 +198,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (Bomb_MaxLayer) || RETURN",
-                "displayLines": "Bomb_MaxLayer",
-                "constants": [],
-                "variables": [
-                  "Bomb_MaxLayer"
-                ]
+                "displayLines": "Bomb_MaxLayer"
               },
               "assignState": "False"
             },
@@ -270,12 +221,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (Bomb_Layer) || RETURN",
-                "displayLines": "Bomb_Layer",
-                "constants": [],
-                "variables": [
-                  "Bomb_Layer"
-                ]
+                "displayLines": "Bomb_Layer"
               },
               "entityClass": "Enemy",
               "target": {
@@ -283,25 +229,14 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (Bomb_MaxLayer) || RETURN",
-                "displayLines": "Bomb_MaxLayer",
-                "constants": [],
-                "variables": [
-                  "Bomb_MaxLayer"
-                ]
+                "displayLines": "Bomb_MaxLayer"
               },
               "assignState": "True"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Bomb_Damage) || Variables[1] (Bomb_Layer) || MUL || RETURN",
-                "displayLines": "(Bomb_Damage * Bomb_Layer)",
-                "constants": [],
-                "variables": [
-                  "Bomb_Damage",
-                  "Bomb_Layer"
-                ]
+                "displayLines": "(Bomb_Damage * Bomb_Layer)"
               },
               "variableName": "Bomb_Damage"
             },
@@ -342,14 +277,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Bomb_Damage) || Constants[0] (1.5) || MUL || RETURN",
-                    "displayLines": "(Bomb_Damage * 1.5)",
-                    "constants": [
-                      1.5
-                    ],
-                    "variables": [
-                      "Bomb_Damage"
-                    ]
+                    "displayLines": "(Bomb_Damage * 1.5)"
                   },
                   "variableName": "Bomb_Damage"
                 },
@@ -379,20 +307,10 @@ const configAbility = {
               "showInActionOrder": true,
               "valuePerStack": {
                 "Bomb_Damage_get": {
-                  "operator": "Variables[0] (Bomb_Damage) || RETURN",
-                  "displayLines": "Bomb_Damage",
-                  "constants": [],
-                  "variables": [
-                    "Bomb_Damage"
-                  ]
+                  "displayLines": "Bomb_Damage"
                 },
                 "DV_plus3_get": {
-                  "operator": "Variables[0] (DV_BattleEventAbility_Challenge_Month_22_plus3) || RETURN",
-                  "displayLines": "DV_BattleEventAbility_Challenge_Month_22_plus3",
-                  "constants": [],
-                  "variables": [
-                    "DV_BattleEventAbility_Challenge_Month_22_plus3"
-                  ]
+                  "displayLines": "DV_BattleEventAbility_Challenge_Month_22_plus3"
                 }
               },
               "allowAbilityTriggers": false
@@ -406,12 +324,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (Bomb_MaxLayer) || RETURN",
-                "displayLines": "Bomb_MaxLayer",
-                "constants": [],
-                "variables": [
-                  "Bomb_MaxLayer"
-                ]
+                "displayLines": "Bomb_MaxLayer"
               },
               "assignState": "False"
             },
@@ -512,12 +425,7 @@ const configAbility = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"-180423488\">Modifier_BattleEventAbility_Challenge_Month_22_sub2</a>",
                               "addStacksPerTrigger": {
-                                "operator": "Variables[0] (TempLayer_get) || RETURN",
-                                "displayLines": "TempLayer_get",
-                                "constants": [],
-                                "variables": [
-                                  "TempLayer_get"
-                                ]
+                                "displayLines": "TempLayer_get"
                               }
                             }
                           ],
@@ -530,30 +438,14 @@ const configAbility = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"-180423488\">Modifier_BattleEventAbility_Challenge_Month_22_sub2</a>",
                               "stackLimit": {
-                                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__51) || RETURN",
-                                "displayLines": "ENEMIES_OBJECT_UNUSED__51",
-                                "constants": [],
-                                "variables": [
-                                  "ENEMIES_OBJECT_UNUSED__51"
-                                ]
+                                "displayLines": "ENEMIES_OBJECT_UNUSED__51"
                               },
                               "valuePerStack": {
                                 "Bomb_Damage": {
-                                  "operator": "Variables[0] (TempHP_get) || Variables[1] (ENEMIES_OBJECT_UNUSED__49) || MUL || RETURN",
-                                  "displayLines": "(TempHP_get * ENEMIES_OBJECT_UNUSED__49)",
-                                  "constants": [],
-                                  "variables": [
-                                    "TempHP_get",
-                                    "ENEMIES_OBJECT_UNUSED__49"
-                                  ]
+                                  "displayLines": "(TempHP_get * ENEMIES_OBJECT_UNUSED__49)"
                                 },
                                 "Bomb_MaxLayer": {
-                                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__51) || RETURN",
-                                  "displayLines": "ENEMIES_OBJECT_UNUSED__51",
-                                  "constants": [],
-                                  "variables": [
-                                    "ENEMIES_OBJECT_UNUSED__51"
-                                  ]
+                                  "displayLines": "ENEMIES_OBJECT_UNUSED__51"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -572,30 +464,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-180423488\">Modifier_BattleEventAbility_Challenge_Month_22_sub2</a>",
                       "stackLimit": {
-                        "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__51) || RETURN",
-                        "displayLines": "ENEMIES_OBJECT_UNUSED__51",
-                        "constants": [],
-                        "variables": [
-                          "ENEMIES_OBJECT_UNUSED__51"
-                        ]
+                        "displayLines": "ENEMIES_OBJECT_UNUSED__51"
                       },
                       "valuePerStack": {
                         "Bomb_Damage": {
-                          "operator": "Variables[0] (TempHP_get) || Variables[1] (ENEMIES_OBJECT_UNUSED__49) || MUL || RETURN",
-                          "displayLines": "(TempHP_get * ENEMIES_OBJECT_UNUSED__49)",
-                          "constants": [],
-                          "variables": [
-                            "TempHP_get",
-                            "ENEMIES_OBJECT_UNUSED__49"
-                          ]
+                          "displayLines": "(TempHP_get * ENEMIES_OBJECT_UNUSED__49)"
                         },
                         "Bomb_MaxLayer": {
-                          "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__51) || RETURN",
-                          "displayLines": "ENEMIES_OBJECT_UNUSED__51",
-                          "constants": [],
-                          "variables": [
-                            "ENEMIES_OBJECT_UNUSED__51"
-                          ]
+                          "displayLines": "ENEMIES_OBJECT_UNUSED__51"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -654,28 +530,13 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"455159922\">Modifier_BattleEventAbility_Challenge_Month_22_sub</a>",
               "valuePerStack": {
                 "TempHP_get": {
-                  "operator": "Variables[0] (TempHP) || RETURN",
-                  "displayLines": "TempHP",
-                  "constants": [],
-                  "variables": [
-                    "TempHP"
-                  ]
+                  "displayLines": "TempHP"
                 },
                 "BattleEvent_P1_ADF_get": {
-                  "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-                  "displayLines": "BattleEvent_P1_ADF",
-                  "constants": [],
-                  "variables": [
-                    "BattleEvent_P1_ADF"
-                  ]
+                  "displayLines": "BattleEvent_P1_ADF"
                 },
                 "BattleEvent_P2_ADF_get": {
-                  "operator": "Variables[0] (BattleEvent_P2_ADF) || RETURN",
-                  "displayLines": "BattleEvent_P2_ADF",
-                  "constants": [],
-                  "variables": [
-                    "BattleEvent_P2_ADF"
-                  ]
+                  "displayLines": "BattleEvent_P2_ADF"
                 }
               }
             }
@@ -704,28 +565,13 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"455159922\">Modifier_BattleEventAbility_Challenge_Month_22_sub</a>",
                   "valuePerStack": {
                     "TempHP_get": {
-                      "operator": "Variables[0] (TempHP) || RETURN",
-                      "displayLines": "TempHP",
-                      "constants": [],
-                      "variables": [
-                        "TempHP"
-                      ]
+                      "displayLines": "TempHP"
                     },
                     "BattleEvent_P1_ADF_get": {
-                      "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "BattleEvent_P1_ADF"
                     },
                     "BattleEvent_P2_ADF_get": {
-                      "operator": "Variables[0] (BattleEvent_P2_ADF) || RETURN",
-                      "displayLines": "BattleEvent_P2_ADF",
-                      "constants": [],
-                      "variables": [
-                        "BattleEvent_P2_ADF"
-                      ]
+                      "displayLines": "BattleEvent_P2_ADF"
                     }
                   }
                 }

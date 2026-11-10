@@ -51,12 +51,7 @@ const configAbility = {
         "AttackScaling": {
           "DamageType": "Physical",
           "Damage": {
-            "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-            "displayLines": "{[Skill04[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill04[0]]}"
-            ]
+            "displayLines": "{[Skill04[0]]}"
           },
           "Toughness": null,
           "Tags": null,
@@ -73,22 +68,12 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
       "duration": {
-        "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-        "displayLines": "{[Skill04[2]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill04[2]]}"
-        ]
+        "displayLines": "{[Skill04[2]]}"
       },
       "baseChance": 1,
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-          "displayLines": "{[Skill04[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[1]]}"
-          ]
+          "displayLines": "{[Skill04[1]]}"
         }
       }
     },

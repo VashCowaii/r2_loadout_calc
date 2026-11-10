@@ -228,13 +228,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0050_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_0051_ADF_2) || ADD || RETURN",
-                    "displayLines": "(DV_FantasticStory_BaseAbility_0050_CountSum + DV_FantasticStory_PlusAbility_0051_ADF_2)",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_BaseAbility_0050_CountSum",
-                      "DV_FantasticStory_PlusAbility_0051_ADF_2"
-                    ]
+                    "displayLines": "(DV_FantasticStory_BaseAbility_0050_CountSum + DV_FantasticStory_PlusAbility_0051_ADF_2)"
                   },
                   "variableName": "DV_FantasticStory_BaseAbility_0050_CountSum"
                 },
@@ -312,13 +306,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_0042_ADF_2) || ADD || RETURN",
-                    "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum + DV_FantasticStory_PlusAbility_0042_ADF_2)",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_BaseAbility_0040_CountSum",
-                      "DV_FantasticStory_PlusAbility_0042_ADF_2"
-                    ]
+                    "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum + DV_FantasticStory_PlusAbility_0042_ADF_2)"
                   },
                   "variableName": "DV_FantasticStory_BaseAbility_0040_CountSum"
                 }
@@ -358,14 +346,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_DamageSum) || Variables[1] (_DamageSumRatio) || MUL || Variables[2] (DV_FantasticStory_BaseAbility_0030_DamageSum) || ADD || RETURN",
-                    "displayLines": "((_DamageSum * _DamageSumRatio) + DV_FantasticStory_BaseAbility_0030_DamageSum)",
-                    "constants": [],
-                    "variables": [
-                      "_DamageSum",
-                      "_DamageSumRatio",
-                      "DV_FantasticStory_BaseAbility_0030_DamageSum"
-                    ]
+                    "displayLines": "((_DamageSum * _DamageSumRatio) + DV_FantasticStory_BaseAbility_0030_DamageSum)"
                   },
                   "variableName": "DV_FantasticStory_BaseAbility_0030_DamageSum"
                 }
@@ -415,13 +396,7 @@ const configAbility = {
                     "value1": "EntityStockSP",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (EntityMaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                      "displayLines": "(EntityMaxSP - _CurrentSP)",
-                      "constants": [],
-                      "variables": [
-                        "EntityMaxSP",
-                        "_CurrentSP"
-                      ]
+                      "displayLines": "(EntityMaxSP - _CurrentSP)"
                     }
                   },
                   "passed": [
@@ -432,12 +407,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (EntityStockSP) || RETURN",
-                        "displayLines": "EntityStockSP",
-                        "constants": [],
-                        "variables": [
-                          "EntityStockSP"
-                        ]
+                        "displayLines": "EntityStockSP"
                       },
                       "isFixed": "(Fixed)"
                     },
@@ -464,27 +434,14 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (EntityMaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                        "displayLines": "(EntityMaxSP - _CurrentSP)",
-                        "constants": [],
-                        "variables": [
-                          "EntityMaxSP",
-                          "_CurrentSP"
-                        ]
+                        "displayLines": "(EntityMaxSP - _CurrentSP)"
                       },
                       "isFixed": "(Fixed)"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (EntityStockSP) || Variables[1] (EntityMaxSP) || SUB || Variables[2] (_CurrentSP) || ADD || RETURN",
-                        "displayLines": "((EntityStockSP - EntityMaxSP) + _CurrentSP)",
-                        "constants": [],
-                        "variables": [
-                          "EntityStockSP",
-                          "EntityMaxSP",
-                          "_CurrentSP"
-                        ]
+                        "displayLines": "((EntityStockSP - EntityMaxSP) + _CurrentSP)"
                       },
                       "variableName": "EntityStockSP"
                     },
@@ -497,12 +454,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"639067431\">Modifier_FantasticStory_BaseAbility_0030_plus5_StockSPForShow</a>[<span class=\"descriptionNumberColor\">Energy Overflow</span>]",
                       "valuePerStack": {
                         "EntityStockSPForShow": {
-                          "operator": "Variables[0] (EntityStockSP) || RETURN",
-                          "displayLines": "EntityStockSP",
-                          "constants": [],
-                          "variables": [
-                            "EntityStockSP"
-                          ]
+                          "displayLines": "EntityStockSP"
                         }
                       }
                     }
@@ -571,14 +523,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (EntityCurrentSP) || Variables[1] (_AddSP) || Variables[2] (EntityMaxSP) || MUL || ADD || RETURN",
-                    "displayLines": "(EntityCurrentSP + (_AddSP * EntityMaxSP))",
-                    "constants": [],
-                    "variables": [
-                      "EntityCurrentSP",
-                      "_AddSP",
-                      "EntityMaxSP"
-                    ]
+                    "displayLines": "(EntityCurrentSP + (_AddSP * EntityMaxSP))"
                   },
                   "variableName": "EntityCurrentSP"
                 },
@@ -593,12 +538,7 @@ const configAbility = {
                     "value1": "EntityCurrentSP",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (EntityMaxSP) || RETURN",
-                      "displayLines": "EntityMaxSP",
-                      "constants": [],
-                      "variables": [
-                        "EntityMaxSP"
-                      ]
+                      "displayLines": "EntityMaxSP"
                     }
                   },
                   "passed": [
@@ -609,13 +549,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (_AddSP) || Variables[1] (EntityMaxSP) || MUL || RETURN",
-                        "displayLines": "(_AddSP * EntityMaxSP)",
-                        "constants": [],
-                        "variables": [
-                          "_AddSP",
-                          "EntityMaxSP"
-                        ]
+                        "displayLines": "(_AddSP * EntityMaxSP)"
                       },
                       "isFixed": "(Fixed)"
                     }
@@ -637,14 +571,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (EntityStockSP) || Variables[1] (EntityCurrentSP) || ADD || Variables[2] (EntityMaxSP) || SUB || RETURN",
-                        "displayLines": "((EntityStockSP + EntityCurrentSP) - EntityMaxSP)",
-                        "constants": [],
-                        "variables": [
-                          "EntityStockSP",
-                          "EntityCurrentSP",
-                          "EntityMaxSP"
-                        ]
+                        "displayLines": "((EntityStockSP + EntityCurrentSP) - EntityMaxSP)"
                       },
                       "variableName": "EntityStockSP"
                     },
@@ -657,12 +584,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"639067431\">Modifier_FantasticStory_BaseAbility_0030_plus5_StockSPForShow</a>[<span class=\"descriptionNumberColor\">Energy Overflow</span>]",
                       "valuePerStack": {
                         "EntityStockSPForShow": {
-                          "operator": "Variables[0] (EntityStockSP) || RETURN",
-                          "displayLines": "EntityStockSP",
-                          "constants": [],
-                          "variables": [
-                            "EntityStockSP"
-                          ]
+                          "displayLines": "EntityStockSP"
                         }
                       }
                     }
@@ -707,14 +629,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Constants[0] (0) || Variables[0] (DV_FantasticStory_PlusAbility_0016_ADF_3) || SUB || RETURN",
-            "displayLines": "(0 - DV_FantasticStory_PlusAbility_0016_ADF_3)",
-            "constants": [
-              0
-            ],
-            "variables": [
-              "DV_FantasticStory_PlusAbility_0016_ADF_3"
-            ]
+            "displayLines": "(0 - DV_FantasticStory_PlusAbility_0016_ADF_3)"
           }
         }
       },
@@ -746,21 +661,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-2046125016\">Modifier_FantasticStory_BaseAbility_0010_plus6_ultraDmgUp</a>[<span class=\"descriptionNumberColor\">Splash</span>]",
                   "duration": {
-                    "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0016_ADF_2) || RETURN",
-                    "displayLines": "DV_FantasticStory_PlusAbility_0016_ADF_2",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_PlusAbility_0016_ADF_2"
-                    ]
+                    "displayLines": "DV_FantasticStory_PlusAbility_0016_ADF_2"
                   },
                   "valuePerStack": {
                     "DmgAddedRatio": {
-                      "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0016_ADF_1) || RETURN",
-                      "displayLines": "DV_FantasticStory_PlusAbility_0016_ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "DV_FantasticStory_PlusAbility_0016_ADF_1"
-                      ]
+                      "displayLines": "DV_FantasticStory_PlusAbility_0016_ADF_1"
                     }
                   }
                 }
@@ -812,21 +717,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-749953922\">Modifier_FantasticStory_BaseAbility_0010_plus5_ReceiveDmgUp</a>[<span class=\"descriptionNumberColor\">Scalded</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0015_ADF_2) || RETURN",
-                    "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_2",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_PlusAbility_0015_ADF_2"
-                    ]
+                    "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_2"
                   },
                   "valuePerStack": {
                     "ReceiveDmgRatio": {
-                      "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0015_ADF_1) || RETURN",
-                      "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "DV_FantasticStory_PlusAbility_0015_ADF_1"
-                      ]
+                      "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_1"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -872,21 +767,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-749953922\">Modifier_FantasticStory_BaseAbility_0010_plus5_ReceiveDmgUp</a>[<span class=\"descriptionNumberColor\">Scalded</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0015_ADF_2) || RETURN",
-                    "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_2",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_PlusAbility_0015_ADF_2"
-                    ]
+                    "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_2"
                   },
                   "valuePerStack": {
                     "ReceiveDmgRatio": {
-                      "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0015_ADF_1) || RETURN",
-                      "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "DV_FantasticStory_PlusAbility_0015_ADF_1"
-                      ]
+                      "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_1"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -921,13 +806,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_Current_Layer) || Variables[1] (ReceiveDmgRatio) || MUL || RETURN",
-                "displayLines": "(_Current_Layer * ReceiveDmgRatio)",
-                "constants": [],
-                "variables": [
-                  "_Current_Layer",
-                  "ReceiveDmgRatio"
-                ]
+                "displayLines": "(_Current_Layer * ReceiveDmgRatio)"
               },
               "variableName": "TotalDmgRatio"
             },
@@ -939,12 +818,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (TotalDmgRatio) || RETURN",
-                "displayLines": "TotalDmgRatio",
-                "constants": [],
-                "variables": [
-                  "TotalDmgRatio"
-                ]
+                "displayLines": "TotalDmgRatio"
               }
             }
           ]

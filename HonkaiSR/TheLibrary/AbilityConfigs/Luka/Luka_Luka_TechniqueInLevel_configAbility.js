@@ -64,12 +64,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Physical",
                         "Damage": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -86,37 +81,17 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1202378594\">Luka_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
                       "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "valuePerStack": {
                         "Modifier_Tear_DamageRatio": {
-                          "operator": "Variables[0] (0.24) || RETURN",
-                          "displayLines": "0.24",
-                          "constants": [],
-                          "variables": [
-                            0.24
-                          ]
+                          "displayLines": "0.24"
                         },
                         "Modifier_Tear_MaxPercentage": {
-                          "operator": "Variables[0] (3.38) || RETURN",
-                          "displayLines": "3.38",
-                          "constants": [],
-                          "variables": [
-                            3.38
-                          ]
+                          "displayLines": "3.38"
                         }
                       }
                     }

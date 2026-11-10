@@ -24,12 +24,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (MinionCount) || RETURN",
-        "displayLines": "MinionCount",
-        "constants": [],
-        "variables": [
-          "MinionCount"
-        ]
+        "displayLines": "MinionCount"
       },
       "variableName": "Skill08_BonusCount"
     },
@@ -42,16 +37,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill08[0]]}) || Constants[0] (1) || Variables[1] (Skill08_BonusCount) || Variables[2] ({[Skill08[1]]}) || MUL || ADD || MUL || RETURN",
-          "displayLines": "({[Skill08[0]]} * (1 + (Skill08_BonusCount * {[Skill08[1]]})))",
-          "constants": [
-            1
-          ],
-          "variables": [
-            "{[Skill08[0]]}",
-            "Skill08_BonusCount",
-            "{[Skill08[1]]}"
-          ]
+          "displayLines": "({[Skill08[0]]} * (1 + (Skill08_BonusCount * {[Skill08[1]]})))"
         },
         "HitSplit": 0.15,
         "Toughness": null,
@@ -73,16 +59,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill08[0]]}) || Constants[0] (1) || Variables[1] (Skill08_BonusCount) || Variables[2] ({[Skill08[1]]}) || MUL || ADD || MUL || RETURN",
-              "displayLines": "({[Skill08[0]]} * (1 + (Skill08_BonusCount * {[Skill08[1]]})))",
-              "constants": [
-                1
-              ],
-              "variables": [
-                "{[Skill08[0]]}",
-                "Skill08_BonusCount",
-                "{[Skill08[1]]}"
-              ]
+              "displayLines": "({[Skill08[0]]} * (1 + (Skill08_BonusCount * {[Skill08[1]]})))"
             },
             "HitSplit": 0.17,
             "Toughness": null,

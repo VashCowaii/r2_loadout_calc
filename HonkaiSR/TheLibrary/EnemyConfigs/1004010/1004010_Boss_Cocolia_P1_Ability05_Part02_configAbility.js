@@ -115,12 +115,7 @@ const configAbility = {
       "duration": 1,
       "valuePerStack": {
         "ModifierDamageUpValue": {
-          "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-          "displayLines": "{[Skill05[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill05[0]]}"
-          ]
+          "displayLines": "{[Skill05[0]]}"
         }
       }
     },

@@ -36,20 +36,10 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (MDF_RestEnergy) || RETURN",
-        "displayLines": "MDF_RestEnergy",
-        "constants": [],
-        "variables": [
-          "MDF_RestEnergy"
-        ]
+        "displayLines": "MDF_RestEnergy"
       },
       "maximum": {
-        "operator": "Variables[0] (4) || RETURN",
-        "displayLines": "4",
-        "constants": [],
-        "variables": [
-          4
-        ]
+        "displayLines": "4"
       },
       "assignState": "True",
       "priorState": "Active",
@@ -79,12 +69,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"816189388\">Archer_Eidolon4_Ability03AddUltraDamage</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (1.5) || RETURN",
-              "displayLines": "1.5",
-              "constants": [],
-              "variables": [
-                1.5
-              ]
+              "displayLines": "1.5"
             }
           }
         }
@@ -106,12 +91,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1962762500\">Archer_Eidolon6_Ability02IgnoreDef</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         }
@@ -1017,13 +997,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_RestEnergy) || Variables[1] (1) || ADD || RETURN",
-                    "displayLines": "(MDF_RestEnergy + 1)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_RestEnergy",
-                      1
-                    ]
+                    "displayLines": "(MDF_RestEnergy + 1)"
                   },
                   "variableName": "MDF_RestEnergy"
                 }
@@ -1080,24 +1054,14 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 1,
               "maxValue": {
-                "operator": "Variables[0] (4) || RETURN",
-                "displayLines": "4",
-                "constants": [],
-                "variables": [
-                  4
-                ]
+                "displayLines": "4"
               },
               "includeMaxValueInRange": true,
               "enteringRange": [
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_RestEnergy) || RETURN",
-                    "displayLines": "MDF_RestEnergy",
-                    "constants": [],
-                    "variables": [
-                      "MDF_RestEnergy"
-                    ]
+                    "displayLines": "MDF_RestEnergy"
                   },
                   "priorState": "Active"
                 }
@@ -1106,12 +1070,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_RestEnergy) || RETURN",
-                    "displayLines": "MDF_RestEnergy",
-                    "constants": [],
-                    "variables": [
-                      "MDF_RestEnergy"
-                    ]
+                    "displayLines": "MDF_RestEnergy"
                   },
                   "priorState": "Normal"
                 }
@@ -1120,12 +1079,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_RestEnergy) || RETURN",
-                    "displayLines": "MDF_RestEnergy",
-                    "constants": [],
-                    "variables": [
-                      "MDF_RestEnergy"
-                    ]
+                    "displayLines": "MDF_RestEnergy"
                   },
                   "priorState": "Active"
                 }

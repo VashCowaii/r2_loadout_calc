@@ -18,12 +18,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1556520356\">Modifier_Monster_W5_Pam_Rage</a>[<span class=\"descriptionNumberColor\">Steam Wash</span>]",
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-          "displayLines": "{[Skill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "{[Skill03[0]]}"
         }
       }
     },
@@ -44,30 +39,15 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-983171602\">Modifier_Monster_W5_Pam_DefenceUp</a>[<span class=\"descriptionNumberColor\">Lasting Antibac</span>]",
           "stackLimit": {
-            "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-            "displayLines": "{[Skill03[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[1]]}"
-            ]
+            "displayLines": "{[Skill03[1]]}"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-              "displayLines": "{[Skill03[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[2]]}"
-              ]
+              "displayLines": "{[Skill03[2]]}"
             }
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-            "displayLines": "{[Skill03[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[1]]}"
-            ]
+            "displayLines": "{[Skill03[1]]}"
           }
         }
       ],
@@ -80,30 +60,15 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-983171602\">Modifier_Monster_W5_Pam_DefenceUp</a>[<span class=\"descriptionNumberColor\">Lasting Antibac</span>]",
           "stackLimit": {
-            "operator": "Variables[0] ({[Skill03[4]]}) || RETURN",
-            "displayLines": "{[Skill03[4]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[4]]}"
-            ]
+            "displayLines": "{[Skill03[4]]}"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[Skill03[5]]}) || RETURN",
-              "displayLines": "{[Skill03[5]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[5]]}"
-              ]
+              "displayLines": "{[Skill03[5]]}"
             }
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] ({[Skill03[4]]}) || RETURN",
-            "displayLines": "{[Skill03[4]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[4]]}"
-            ]
+            "displayLines": "{[Skill03[4]]}"
           }
         }
       ]

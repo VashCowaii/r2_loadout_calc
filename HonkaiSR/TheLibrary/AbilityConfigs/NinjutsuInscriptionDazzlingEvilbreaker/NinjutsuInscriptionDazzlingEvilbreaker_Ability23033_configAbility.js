@@ -67,12 +67,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Variables[0] (0.5) || INVERT || RETURN",
-            "displayLines": "-0.5",
-            "constants": [],
-            "variables": [
-              0.5
-            ]
+            "displayLines": "-0.5"
           }
         }
       }
@@ -113,28 +108,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DV_CastSkill01Count) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(DV_CastSkill01Count + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "DV_CastSkill01Count"
-                    ]
+                    "displayLines": "(DV_CastSkill01Count + 1)"
                   },
                   "variableName": "DV_CastSkill01Count"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DV_CastSkill01CountLeft) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(DV_CastSkill01CountLeft - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "DV_CastSkill01CountLeft"
-                    ]
+                    "displayLines": "(DV_CastSkill01CountLeft - 1)"
                   },
                   "variableName": "DV_CastSkill01CountLeft"
                 },
@@ -169,12 +150,7 @@ const configAbility = {
                         {
                           "name": "Assign Advance/Delay to Current Ability Use",
                           "adjustmentValue": {
-                            "operator": "Variables[0] (0.5) || INVERT || RETURN",
-                            "displayLines": "-0.5",
-                            "constants": [],
-                            "variables": [
-                              0.5
-                            ]
+                            "displayLines": "-0.5"
                           },
                           "adjustmentType": "Advance"
                         }
@@ -238,12 +214,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (30) || RETURN",
-                    "displayLines": "30",
-                    "constants": [],
-                    "variables": [
-                      30
-                    ]
+                    "displayLines": "30"
                   },
                   "isFixed": "* ERR"
                 },

@@ -53,12 +53,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ModifierDamageUpValue) || RETURN",
-                "displayLines": "ModifierDamageUpValue",
-                "constants": [],
-                "variables": [
-                  "ModifierDamageUpValue"
-                ]
+                "displayLines": "ModifierDamageUpValue"
               }
             }
           ]

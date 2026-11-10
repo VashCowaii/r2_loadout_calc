@@ -41,14 +41,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_DamageUpTimes) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(MDF_DamageUpTimes + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_DamageUpTimes"
-                ]
+                "displayLines": "(MDF_DamageUpTimes + 1)"
               },
               "variableName": "MDF_DamageUpTimes"
             },
@@ -80,12 +73,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-2140377444\">Monster_RogueElite_DamageUp</a>[<span class=\"descriptionNumberColor\">Berserk</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                          "displayLines": "#BattleEvent_P1_ADF",
-                          "constants": [],
-                          "variables": [
-                            "#BattleEvent_P1_ADF"
-                          ]
+                          "displayLines": "#BattleEvent_P1_ADF"
                         }
                       }
                     }
@@ -100,21 +88,11 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-2140377444\">Monster_RogueElite_DamageUp</a>[<span class=\"descriptionNumberColor\">Berserk</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                          "displayLines": "#BattleEvent_P1_ADF",
-                          "constants": [],
-                          "variables": [
-                            "#BattleEvent_P1_ADF"
-                          ]
+                          "displayLines": "#BattleEvent_P1_ADF"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (MDF_DamageUpTimes) || RETURN",
-                        "displayLines": "MDF_DamageUpTimes",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DamageUpTimes"
-                        ]
+                        "displayLines": "MDF_DamageUpTimes"
                       }
                     }
                   ]

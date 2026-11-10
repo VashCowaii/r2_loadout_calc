@@ -24,12 +24,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "consumePercent": {
-        "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-        "displayLines": "{[Skill04[1]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill04[1]]}"
-        ]
+        "displayLines": "{[Skill04[1]]}"
       },
       "consumeFloor": 1
     },
@@ -54,28 +49,13 @@ const configAbility = {
           "immediateEffect": true,
           "valuePerStack": {
             "MDF_DamagePercentage": {
-              "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[3]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[3]]}"
             },
             "MDF_SpeedUpRatio": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "MDF_ChangeHPRatio": {
-              "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-              "displayLines": "{[Skill04[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[3]]}"
-              ]
+              "displayLines": "{[Skill04[3]]}"
             }
           }
         }
@@ -91,28 +71,13 @@ const configAbility = {
           "immediateEffect": true,
           "valuePerStack": {
             "MDF_DamagePercentage": {
-              "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[3]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[3]]}"
             },
             "MDF_SpeedUpRatio": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "MDF_ChangeHPRatio": {
-              "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-              "displayLines": "{[Skill04[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[3]]}"
-              ]
+              "displayLines": "{[Skill04[3]]}"
             }
           }
         }
@@ -149,20 +114,10 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1797892283\">Monster_W3_Sam_BurningBP</a>[<span class=\"descriptionNumberColor\">Molten Core</span>]",
       "valuePerStack": {
         "MDF_HealDownRatio": {
-          "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[4]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[4]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[4]]}"
         },
         "MDF_DamageUpRatio": {
-          "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[2]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[2]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[2]]}"
         }
       }
     },

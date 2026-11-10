@@ -67,12 +67,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "consumePercent": {
-                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__85) || RETURN",
-                    "displayLines": "ENEMIES_OBJECT_UNUSED__85",
-                    "constants": [],
-                    "variables": [
-                      "ENEMIES_OBJECT_UNUSED__85"
-                    ]
+                    "displayLines": "ENEMIES_OBJECT_UNUSED__85"
                   },
                   "DamageType": "AllType"
                 }

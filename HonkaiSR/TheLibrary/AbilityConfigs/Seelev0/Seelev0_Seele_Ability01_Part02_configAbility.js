@@ -13,21 +13,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (1) || RETURN",
-          "displayLines": "1",
-          "constants": [],
-          "variables": [
-            1
-          ]
+          "displayLines": "1"
         },
         "HitSplit": 0.3,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -43,21 +33,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (1) || RETURN",
-          "displayLines": "1",
-          "constants": [],
-          "variables": [
-            1
-          ]
+          "displayLines": "1"
         },
         "HitSplit": 0.7,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -94,12 +74,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1624938404\">Seele_Trace02_ModifyAction</a>",
                   "valuePerStack": {
                     "MDF_DelayCost": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 }
@@ -121,12 +96,7 @@ const configAbility = {
             {
               "name": "Assign Advance/Delay to Current Ability Use",
               "adjustmentValue": {
-                "operator": "Variables[0] (0.2) || INVERT || RETURN",
-                "displayLines": "-0.2",
-                "constants": [],
-                "variables": [
-                  0.2
-                ]
+                "displayLines": "-0.2"
               },
               "adjustmentType": "Advance"
             },
@@ -139,12 +109,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"333617615\">Ability01PreShowModifier_AppliedRatio</a>",
               "valuePerStack": {
                 "MDF_Ability01_Delay": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             }
@@ -175,12 +140,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Variables[0] (MDF_Skill01_Delay) || INVERT || RETURN",
-            "displayLines": "-MDF_Skill01_Delay",
-            "constants": [],
-            "variables": [
-              "MDF_Skill01_Delay"
-            ]
+            "displayLines": "-MDF_Skill01_Delay"
           }
         }
       },
@@ -213,12 +173,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Variables[0] (0.2) || INVERT || RETURN",
-            "displayLines": "-0.2",
-            "constants": [],
-            "variables": [
-              0.2
-            ]
+            "displayLines": "-0.2"
           }
         }
       },

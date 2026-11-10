@@ -26,12 +26,7 @@ const configAbility = {
             "value1": "_DebuffCount",
             "compareType": ">=",
             "value2": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             }
           }
         ]
@@ -45,30 +40,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"50824187\">Silwolf_BPAbility_AllDamageTypeResistanceDown</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "baseChance": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.1) || Variables[1] (0.03) || ADD || RETURN",
-              "displayLines": "(0.1 + 0.03)",
-              "constants": [],
-              "variables": [
-                0.1,
-                0.03
-              ]
+              "displayLines": "(0.1 + 0.03)"
             }
           }
         }
@@ -82,29 +61,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"50824187\">Silwolf_BPAbility_AllDamageTypeResistanceDown</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "baseChance": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.1) || RETURN",
-              "displayLines": "0.1",
-              "constants": [],
-              "variables": [
-                0.1
-              ]
+              "displayLines": "0.1"
             }
           }
         }
@@ -125,30 +89,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-56897788\">Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-            "displayLines": "(2 + 1)",
-            "constants": [],
-            "variables": [
-              2,
-              1
-            ]
+            "displayLines": "(2 + 1)"
           },
           "baseChance": {
-            "operator": "Variables[0] (0.85) || RETURN",
-            "displayLines": "0.85",
-            "constants": [],
-            "variables": [
-              0.85
-            ]
+            "displayLines": "0.85"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           },
           "success": [
@@ -176,29 +124,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-56897788\">Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "baseChance": {
-            "operator": "Variables[0] (0.85) || RETURN",
-            "displayLines": "0.85",
-            "constants": [],
-            "variables": [
-              0.85
-            ]
+            "displayLines": "0.85"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           },
           "success": [
@@ -319,20 +252,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (1.96) || RETURN",
-              "displayLines": "1.96",
-              "constants": [],
-              "variables": [
-                1.96
-              ]
+              "displayLines": "1.96"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Skill",
@@ -659,20 +582,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (1.96) || RETURN",
-              "displayLines": "1.96",
-              "constants": [],
-              "variables": [
-                1.96
-              ]
+              "displayLines": "1.96"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"

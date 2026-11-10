@@ -25,12 +25,7 @@ const configAbility = {
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID01) || RETURN",
-                "displayLines": "SummonID01",
-                "constants": [],
-                "variables": [
-                  "SummonID01"
-                ]
+                "displayLines": "SummonID01"
               },
               "locationType": "AroundCasterOnEdge"
             }
@@ -43,12 +38,7 @@ const configAbility = {
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID01) || RETURN",
-                "displayLines": "SummonID01",
-                "constants": [],
-                "variables": [
-                  "SummonID01"
-                ]
+                "displayLines": "SummonID01"
               },
               "locationType": "AroundCasterOnEdge"
             }
@@ -76,12 +66,7 @@ const configAbility = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonID01) || RETURN",
-                    "displayLines": "SummonID01",
-                    "constants": [],
-                    "variables": [
-                      "SummonID01"
-                    ]
+                    "displayLines": "SummonID01"
                   },
                   "locationType": "AroundCasterOnEdge"
                 }

@@ -102,12 +102,7 @@ const compositeAbilityObject = {
                     "value1": "TP_DynamicValue_Origin_MemberCount",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (GP_Chess_Origin_MemberCount_0201) || RETURN",
-                      "displayLines": "GP_Chess_Origin_MemberCount_0201",
-                      "constants": [],
-                      "variables": [
-                        "GP_Chess_Origin_MemberCount_0201"
-                      ]
+                      "displayLines": "GP_Chess_Origin_MemberCount_0201"
                     }
                   },
                   "passed": [
@@ -119,12 +114,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (GP_Chess_Origin_MemberCount_0201) || RETURN",
-                        "displayLines": "GP_Chess_Origin_MemberCount_0201",
-                        "constants": [],
-                        "variables": [
-                          "GP_Chess_Origin_MemberCount_0201"
-                        ]
+                        "displayLines": "GP_Chess_Origin_MemberCount_0201"
                       },
                       "variableName": "TP_DynamicValue_Origin"
                     }
@@ -141,12 +131,7 @@ const compositeAbilityObject = {
                         "value1": "TP_DynamicValue_Origin_MemberCount",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (GP_Chess_Origin_MemberCount_0107) || RETURN",
-                          "displayLines": "GP_Chess_Origin_MemberCount_0107",
-                          "constants": [],
-                          "variables": [
-                            "GP_Chess_Origin_MemberCount_0107"
-                          ]
+                          "displayLines": "GP_Chess_Origin_MemberCount_0107"
                         }
                       },
                       "passed": [
@@ -158,12 +143,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (GP_Chess_Origin_MemberCount_0107) || RETURN",
-                            "displayLines": "GP_Chess_Origin_MemberCount_0107",
-                            "constants": [],
-                            "variables": [
-                              "GP_Chess_Origin_MemberCount_0107"
-                            ]
+                            "displayLines": "GP_Chess_Origin_MemberCount_0107"
                           },
                           "variableName": "TP_DynamicValue_Origin"
                         }
@@ -180,12 +160,7 @@ const compositeAbilityObject = {
                             "value1": "TP_DynamicValue_Origin_MemberCount",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (GP_Chess_Origin_MemberCount_0106) || RETURN",
-                              "displayLines": "GP_Chess_Origin_MemberCount_0106",
-                              "constants": [],
-                              "variables": [
-                                "GP_Chess_Origin_MemberCount_0106"
-                              ]
+                              "displayLines": "GP_Chess_Origin_MemberCount_0106"
                             }
                           },
                           "passed": [
@@ -197,12 +172,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (GP_Chess_Origin_MemberCount_0106) || RETURN",
-                                "displayLines": "GP_Chess_Origin_MemberCount_0106",
-                                "constants": [],
-                                "variables": [
-                                  "GP_Chess_Origin_MemberCount_0106"
-                                ]
+                                "displayLines": "GP_Chess_Origin_MemberCount_0106"
                               },
                               "variableName": "TP_DynamicValue_Origin"
                             }
@@ -219,12 +189,7 @@ const compositeAbilityObject = {
                                 "value1": "TP_DynamicValue_Origin_MemberCount",
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] (GP_Chess_Origin_MemberCount_0105) || RETURN",
-                                  "displayLines": "GP_Chess_Origin_MemberCount_0105",
-                                  "constants": [],
-                                  "variables": [
-                                    "GP_Chess_Origin_MemberCount_0105"
-                                  ]
+                                  "displayLines": "GP_Chess_Origin_MemberCount_0105"
                                 }
                               },
                               "passed": [
@@ -236,12 +201,7 @@ const compositeAbilityObject = {
                                 {
                                   "name": "Define Custom Variable",
                                   "value": {
-                                    "operator": "Variables[0] (GP_Chess_Origin_MemberCount_0105) || RETURN",
-                                    "displayLines": "GP_Chess_Origin_MemberCount_0105",
-                                    "constants": [],
-                                    "variables": [
-                                      "GP_Chess_Origin_MemberCount_0105"
-                                    ]
+                                    "displayLines": "GP_Chess_Origin_MemberCount_0105"
                                   },
                                   "variableName": "TP_DynamicValue_Origin"
                                 }
@@ -278,12 +238,7 @@ const compositeAbilityObject = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (TP_Temp) || RETURN",
-                    "displayLines": "TP_Temp",
-                    "constants": [],
-                    "variables": [
-                      "TP_Temp"
-                    ]
+                    "displayLines": "TP_Temp"
                   },
                   "caseEvents": [
                     {
@@ -371,12 +326,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-785771241\">TP_Modifier_Bonus</a>",
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (BonusLayer) || RETURN",
-                    "displayLines": "BonusLayer",
-                    "constants": [],
-                    "variables": [
-                      "BonusLayer"
-                    ]
+                    "displayLines": "BonusLayer"
                   }
                 }
               ]
@@ -402,12 +352,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-785771241\">TP_Modifier_Bonus</a>",
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (BonusLayer) || RETURN",
-                    "displayLines": "BonusLayer",
-                    "constants": [],
-                    "variables": [
-                      "BonusLayer"
-                    ]
+                    "displayLines": "BonusLayer"
                   }
                 }
               ]

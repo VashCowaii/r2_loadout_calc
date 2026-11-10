@@ -21,28 +21,13 @@ const configAbility = {
       "isUnique": true,
       "odds": [
         {
-          "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-          "displayLines": "{[Skill02[3]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[3]]}"
-          ]
+          "displayLines": "{[Skill02[3]]}"
         },
         {
-          "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
-          "displayLines": "{[Skill02[4]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[4]]}"
-          ]
+          "displayLines": "{[Skill02[4]]}"
         },
         {
-          "operator": "Variables[0] ({[Skill02[5]]}) || RETURN",
-          "displayLines": "{[Skill02[5]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[5]]}"
-          ]
+          "displayLines": "{[Skill02[5]]}"
         }
       ],
       "execute": [
@@ -58,12 +43,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1638600472\">Standard_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
+                  "displayLines": "{[Skill02[0]]}"
                 }
               }
             }
@@ -100,14 +80,7 @@ const configAbility = {
                     {
                       "name": "Assign Advance/Delay to Current Ability Use",
                       "adjustmentValue": {
-                        "operator": "Constants[0] (0) || Variables[0] ({[Skill02[1]]}) || SUB || RETURN",
-                        "displayLines": "(0 - {[Skill02[1]]})",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "{[Skill02[1]]}"
-                        ]
+                        "displayLines": "(0 - {[Skill02[1]]})"
                       },
                       "adjustmentType": "Advance"
                     },
@@ -151,12 +124,7 @@ const configAbility = {
               "baseChance": 1,
               "valuePerStack": {
                 "MDF_ActionDelayRatio": {
-                  "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                  "displayLines": "{[Skill02[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[2]]}"
-                  ]
+                  "displayLines": "{[Skill02[2]]}"
                 }
               }
             }

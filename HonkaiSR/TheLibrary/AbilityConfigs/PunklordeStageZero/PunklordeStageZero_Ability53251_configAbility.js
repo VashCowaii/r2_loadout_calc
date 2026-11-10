@@ -60,12 +60,7 @@ const configAbility = {
                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGSUM</span>&nbsp;",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (0.8) || RETURN",
-                  "displayLines": "0.8",
-                  "constants": [],
-                  "variables": [
-                    0.8
-                  ]
+                  "displayLines": "0.8"
                 }
               },
               "passed": [
@@ -83,12 +78,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1999406789\">Relic_325_Sub</a>[<span class=\"descriptionNumberColor\">Punklorde Stage Zero</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.32) || RETURN",
-                      "displayLines": "0.32",
-                      "constants": [],
-                      "variables": [
-                        0.32
-                      ]
+                      "displayLines": "0.32"
                     }
                   }
                 },
@@ -100,12 +90,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.32) || RETURN",
-                    "displayLines": "0.32",
-                    "constants": [],
-                    "variables": [
-                      0.32
-                    ]
+                    "displayLines": "0.32"
                   },
                   "isRefresh": true
                 },
@@ -130,12 +115,7 @@ const configAbility = {
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGSUM</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (0.4) || RETURN",
-                      "displayLines": "0.4",
-                      "constants": [],
-                      "variables": [
-                        0.4
-                      ]
+                      "displayLines": "0.4"
                     }
                   },
                   "passed": [
@@ -153,12 +133,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1999406789\">Relic_325_Sub</a>[<span class=\"descriptionNumberColor\">Punklorde Stage Zero</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     },
@@ -170,12 +145,7 @@ const configAbility = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (0.2) || RETURN",
-                        "displayLines": "0.2",
-                        "constants": [],
-                        "variables": [
-                          0.2
-                        ]
+                        "displayLines": "0.2"
                       },
                       "isRefresh": true
                     },
@@ -202,20 +172,10 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": {
-                "operator": "Variables[0] (0.4) || RETURN",
-                "displayLines": "0.4",
-                "constants": [],
-                "variables": [
-                  0.4
-                ]
+                "displayLines": "0.4"
               },
               "maxValue": {
-                "operator": "Variables[0] (0.8) || RETURN",
-                "displayLines": "0.8",
-                "constants": [],
-                "variables": [
-                  0.8
-                ]
+                "displayLines": "0.8"
               },
               "enteringRange": [
                 {
@@ -241,12 +201,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1999406789\">Relic_325_Sub</a>[<span class=\"descriptionNumberColor\">Punklorde Stage Zero</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     },
@@ -258,12 +213,7 @@ const configAbility = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (0.2) || RETURN",
-                        "displayLines": "0.2",
-                        "constants": [],
-                        "variables": [
-                          0.2
-                        ]
+                        "displayLines": "0.2"
                       },
                       "isRefresh": true
                     },
@@ -282,12 +232,7 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": {
-                "operator": "Variables[0] (0.8) || RETURN",
-                "displayLines": "0.8",
-                "constants": [],
-                "variables": [
-                  0.8
-                ]
+                "displayLines": "0.8"
               },
               "enteringRange": [
                 {
@@ -313,12 +258,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1999406789\">Relic_325_Sub</a>[<span class=\"descriptionNumberColor\">Punklorde Stage Zero</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.32) || RETURN",
-                          "displayLines": "0.32",
-                          "constants": [],
-                          "variables": [
-                            0.32
-                          ]
+                          "displayLines": "0.32"
                         }
                       }
                     },
@@ -330,12 +270,7 @@ const configAbility = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (0.32) || RETURN",
-                        "displayLines": "0.32",
-                        "constants": [],
-                        "variables": [
-                          0.32
-                        ]
+                        "displayLines": "0.32"
                       },
                       "isRefresh": true
                     },

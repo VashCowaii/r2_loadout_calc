@@ -20,29 +20,14 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"2070937890\">Modifier_BattleEventAbility_Challenge_Month_15_Sub2</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
       "duration": {
-        "operator": "Variables[0] (_LifeTime) || RETURN",
-        "displayLines": "_LifeTime",
-        "constants": [],
-        "variables": [
-          "_LifeTime"
-        ]
+        "displayLines": "_LifeTime"
       },
       "stackLimit": {
-        "operator": "Variables[0] (_MaxLayer) || RETURN",
-        "displayLines": "_MaxLayer",
-        "constants": [],
-        "variables": [
-          "_MaxLayer"
-        ]
+        "displayLines": "_MaxLayer"
       },
       "valuePerStack": {
         "DamageTakenRatio": {
-          "operator": "Variables[0] (_DamageTakenRatio) || RETURN",
-          "displayLines": "_DamageTakenRatio",
-          "constants": [],
-          "variables": [
-            "_DamageTakenRatio"
-          ]
+          "displayLines": "_DamageTakenRatio"
         }
       }
     }
@@ -83,13 +68,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (DamageTakenRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(DamageTakenRatio * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "DamageTakenRatio",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(DamageTakenRatio * MDF_Layer)"
               }
             }
           ]

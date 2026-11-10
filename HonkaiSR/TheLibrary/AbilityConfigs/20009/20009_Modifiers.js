@@ -80,12 +80,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                    "displayLines": "Wolf_AttackCount",
-                    "constants": [],
-                    "variables": [
-                      "Wolf_AttackCount"
-                    ]
+                    "displayLines": "Wolf_AttackCount"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -93,12 +88,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                    "displayLines": "Wolf_MaxAttackCount",
-                    "constants": [],
-                    "variables": [
-                      "Wolf_MaxAttackCount"
-                    ]
+                    "displayLines": "Wolf_MaxAttackCount"
                   },
                   "assignState": "True",
                   "state": "Normal"
@@ -245,12 +235,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                        "displayLines": "Wolf_AttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Wolf_AttackCount"
-                        ]
+                        "displayLines": "Wolf_AttackCount"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -258,12 +243,7 @@ const configAbility = {
                         "target": "{{Parameter Target}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                        "displayLines": "Wolf_MaxAttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Wolf_MaxAttackCount"
-                        ]
+                        "displayLines": "Wolf_MaxAttackCount"
                       },
                       "assignState": "True",
                       "state": "Normal"
@@ -341,12 +321,7 @@ const configAbility = {
                         "value1": "Wolf_MaxAttackCount",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MaxAttackCount) || RETURN",
-                          "displayLines": "MaxAttackCount",
-                          "constants": [],
-                          "variables": [
-                            "MaxAttackCount"
-                          ]
+                          "displayLines": "MaxAttackCount"
                         },
                         "contextScope": "TargetEntity"
                       }
@@ -372,12 +347,7 @@ const configAbility = {
                   },
                   "variableName": "Wolf_MaxAttackCount",
                   "resetValue": {
-                    "operator": "Variables[0] (MaxAttackCount) || RETURN",
-                    "displayLines": "MaxAttackCount",
-                    "constants": [],
-                    "variables": [
-                      "MaxAttackCount"
-                    ]
+                    "displayLines": "MaxAttackCount"
                   },
                   "scope": "TargetEntity"
                 },
@@ -386,12 +356,7 @@ const configAbility = {
                   "abilityName": "BattleEventAbility_Monster_Lycan_RageFinish",
                   "parameters": {
                     "MaxRageCount": {
-                      "operator": "Variables[0] (MaxAttackCount) || RETURN",
-                      "displayLines": "MaxAttackCount",
-                      "constants": [],
-                      "variables": [
-                        "MaxAttackCount"
-                      ]
+                      "displayLines": "MaxAttackCount"
                     }
                   }
                 }
@@ -427,12 +392,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                        "displayLines": "Wolf_AttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Wolf_AttackCount"
-                        ]
+                        "displayLines": "Wolf_AttackCount"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -440,12 +400,7 @@ const configAbility = {
                         "target": "{{Parameter Target}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                        "displayLines": "Wolf_MaxAttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Wolf_MaxAttackCount"
-                        ]
+                        "displayLines": "Wolf_MaxAttackCount"
                       },
                       "assignState": "True",
                       "state": "Normal"
@@ -493,12 +448,7 @@ const configAbility = {
                   },
                   "variableName": "Wolf_MaxAttackCount",
                   "resetValue": {
-                    "operator": "Variables[0] (MaxAttackCount) || RETURN",
-                    "displayLines": "MaxAttackCount",
-                    "constants": [],
-                    "variables": [
-                      "MaxAttackCount"
-                    ]
+                    "displayLines": "MaxAttackCount"
                   },
                   "scope": "TargetEntity"
                 },
@@ -556,12 +506,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1414738413\">Enemy_W2_Lycan_RagePhase1Mark</a>[<span class=\"descriptionNumberColor\">Bloodlust</span>]",
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                        "displayLines": "Wolf_AttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Wolf_AttackCount"
-                        ]
+                        "displayLines": "Wolf_AttackCount"
                       }
                     }
                   ]
@@ -569,12 +514,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                    "displayLines": "Wolf_AttackCount",
-                    "constants": [],
-                    "variables": [
-                      "Wolf_AttackCount"
-                    ]
+                    "displayLines": "Wolf_AttackCount"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -582,12 +522,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                    "displayLines": "Wolf_MaxAttackCount",
-                    "constants": [],
-                    "variables": [
-                      "Wolf_MaxAttackCount"
-                    ]
+                    "displayLines": "Wolf_MaxAttackCount"
                   },
                   "assignState": "True",
                   "state": "Normal"
@@ -672,12 +607,7 @@ const configAbility = {
                   "variableName": "Wolf_AttackCount",
                   "value": 1,
                   "max": {
-                    "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                    "displayLines": "Wolf_MaxAttackCount",
-                    "constants": [],
-                    "variables": [
-                      "Wolf_MaxAttackCount"
-                    ]
+                    "displayLines": "Wolf_MaxAttackCount"
                   }
                 },
                 {
@@ -712,12 +642,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                        "displayLines": "Wolf_AttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Wolf_AttackCount"
-                        ]
+                        "displayLines": "Wolf_AttackCount"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -725,12 +650,7 @@ const configAbility = {
                         "target": "{{Parameter Target}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                        "displayLines": "Wolf_MaxAttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Wolf_MaxAttackCount"
-                        ]
+                        "displayLines": "Wolf_MaxAttackCount"
                       },
                       "assignState": "True",
                       "state": "Normal"
@@ -799,12 +719,7 @@ const configAbility = {
                     "value1": "Wolf_AttackCount",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                      "displayLines": "Wolf_MaxAttackCount",
-                      "constants": [],
-                      "variables": [
-                        "Wolf_MaxAttackCount"
-                      ]
+                      "displayLines": "Wolf_MaxAttackCount"
                     }
                   },
                   "passed": [
@@ -1324,12 +1239,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                        "displayLines": "Wolf_AttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Wolf_AttackCount"
-                        ]
+                        "displayLines": "Wolf_AttackCount"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -1337,12 +1247,7 @@ const configAbility = {
                         "target": "{{Parameter Target}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                        "displayLines": "Wolf_MaxAttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Wolf_MaxAttackCount"
-                        ]
+                        "displayLines": "Wolf_MaxAttackCount"
                       },
                       "assignState": "True",
                       "state": "Normal"

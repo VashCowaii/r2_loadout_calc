@@ -97,12 +97,7 @@ const configAbility = {
                       }
                     },
                     "Damage": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -139,12 +134,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (parameter[0]_AddValue) || RETURN",
-            "displayLines": "parameter[0]_AddValue",
-            "constants": [],
-            "variables": [
-              "parameter[0]_AddValue"
-            ]
+            "displayLines": "parameter[0]_AddValue"
           }
         },
         {
@@ -157,12 +147,7 @@ const configAbility = {
                 "value1": "EnergyBar_CurEnergy",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (EnergyBar_MaxEnergy) || RETURN",
-                  "displayLines": "EnergyBar_MaxEnergy",
-                  "constants": [],
-                  "variables": [
-                    "EnergyBar_MaxEnergy"
-                  ]
+                  "displayLines": "EnergyBar_MaxEnergy"
                 }
               }
             ]
@@ -203,12 +188,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"2055743569\">Mar_7th_10_Enhance</a>",
               "valuePerStack": {
                 "MDF_PropertyRatio": {
-                  "operator": "Variables[0] (0.8) || RETURN",
-                  "displayLines": "0.8",
-                  "constants": [],
-                  "variables": [
-                    0.8
-                  ]
+                  "displayLines": "0.8"
                 }
               }
             }

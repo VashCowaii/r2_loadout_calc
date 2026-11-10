@@ -56,12 +56,7 @@ const configAbility = {
         {
           "name": "Assign Advance/Delay to Current Ability Use",
           "adjustmentValue": {
-            "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-            "displayLines": "{[SkillP01[4]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP01[4]]}"
-            ]
+            "displayLines": "{[SkillP01[4]]}"
           },
           "adjustmentType": "Advance"
         },
@@ -95,21 +90,11 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"1394805142\">Modifier_Monster_W4_Claymore_04_Defeated</a>[<span class=\"descriptionNumberColor\">Ruined</span>]",
       "duration": {
-        "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-        "displayLines": "{[SkillP01[3]]}",
-        "constants": [],
-        "variables": [
-          "{[SkillP01[3]]}"
-        ]
+        "displayLines": "{[SkillP01[3]]}"
       },
       "valuePerStack": {
         "MDF_DamageTakenUpRatio": {
-          "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-          "displayLines": "{[SkillP01[2]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[2]]}"
-          ]
+          "displayLines": "{[SkillP01[2]]}"
         }
       }
     },

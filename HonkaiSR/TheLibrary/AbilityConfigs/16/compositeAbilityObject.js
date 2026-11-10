@@ -27,14 +27,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (count) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(count + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "count"
-                    ]
+                    "displayLines": "(count + 1)"
                   },
                   "variableName": "count"
                 },
@@ -148,12 +141,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageFire</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P1_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P1_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P1_ADF"
                   }
                 }
               ]

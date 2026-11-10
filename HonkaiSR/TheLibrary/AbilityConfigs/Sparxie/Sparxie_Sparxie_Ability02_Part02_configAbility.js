@@ -57,14 +57,7 @@ const configAbility = {
             "value1": "Sparxie_Skill02_MinorPrizeGetNum",
             "compareType": ">=",
             "value2": {
-              "operator": "Variables[0] (7) || Constants[0] (1) || SUB || RETURN",
-              "displayLines": "(7 - 1)",
-              "constants": [
-                1
-              ],
-              "variables": [
-                7
-              ]
+              "displayLines": "(7 - 1)"
             }
           },
           {
@@ -86,20 +79,10 @@ const configAbility = {
           "name": "Random Event",
           "odds": [
             {
-              "operator": "Variables[0] (Sparxie_Skill02_GrandPrizeChance) || RETURN",
-              "displayLines": "Sparxie_Skill02_GrandPrizeChance",
-              "constants": [],
-              "variables": [
-                "Sparxie_Skill02_GrandPrizeChance"
-              ]
+              "displayLines": "Sparxie_Skill02_GrandPrizeChance"
             },
             {
-              "operator": "Variables[0] (Sparxie_Skill02_MinorPrizeChance) || RETURN",
-              "displayLines": "Sparxie_Skill02_MinorPrizeChance",
-              "constants": [],
-              "variables": [
-                "Sparxie_Skill02_MinorPrizeChance"
-              ]
+              "displayLines": "Sparxie_Skill02_MinorPrizeChance"
             }
           ],
           "execute": [
@@ -140,14 +123,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (_SkillUseCount) || Constants[0] (1) || ADD || RETURN",
-        "displayLines": "(_SkillUseCount + 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "_SkillUseCount"
-        ]
+        "displayLines": "(_SkillUseCount + 1)"
       },
       "variableName": "_SkillUseCount"
     },
@@ -158,12 +134,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "value": {
-        "operator": "Variables[0] (_SkillUseCount) || RETURN",
-        "displayLines": "_SkillUseCount",
-        "constants": [],
-        "variables": [
-          "_SkillUseCount"
-        ]
+        "displayLines": "_SkillUseCount"
       }
     },
     {

@@ -12,33 +12,18 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-2059745464\">G_YaoGuang_Ability03_AllDamageTypePenetrate</a>[<span class=\"descriptionNumberColor\">Hexagram of Feathered Fortune</span>]",
       "duration": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] (0.2) || RETURN",
-          "displayLines": "0.2",
-          "constants": [],
-          "variables": [
-            0.2
-          ]
+          "displayLines": "0.2"
         }
       }
     },
     {
       "name": "Adjust Team Punchline Value",
       "value": {
-        "operator": "Variables[0] (5) || RETURN",
-        "displayLines": "5",
-        "constants": [],
-        "variables": [
-          5
-        ]
+        "displayLines": "5"
       },
       "adjustment": "Add"
     },
@@ -54,13 +39,7 @@ const configAbility = {
           "functionName": "<a class=\"gTempYellow\" id=\"101547145\">Elation_StartElationTime</a>",
           "variables": {
             "TryStartElationTime_OverrideElationPoint": {
-              "operator": "Variables[0] (20) || Variables[1] (G_Rank01_AddedElationPoint) || ADD || RETURN",
-              "displayLines": "(20 + G_Rank01_AddedElationPoint)",
-              "constants": [],
-              "variables": [
-                20,
-                "G_Rank01_AddedElationPoint"
-              ]
+              "displayLines": "(20 + G_Rank01_AddedElationPoint)"
             },
             "TryStartElationTime_ElationTimeIsNoConsume": 1
           },
@@ -86,12 +65,7 @@ const configAbility = {
           "functionName": "<a class=\"gTempYellow\" id=\"101547145\">Elation_StartElationTime</a>",
           "variables": {
             "TryStartElationTime_OverrideElationPoint": {
-              "operator": "Variables[0] (20) || RETURN",
-              "displayLines": "20",
-              "constants": [],
-              "variables": [
-                20
-              ]
+              "displayLines": "20"
             },
             "TryStartElationTime_ElationTimeIsNoConsume": 1
           },

@@ -81,12 +81,7 @@ const configAbility = {
                 "target": "{{Player Team(Exclude Memosprites)v2}}"
               },
               "value": {
-                "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                "displayLines": "#BattleEvent_P2_ADF",
-                "constants": [],
-                "variables": [
-                  "#BattleEvent_P2_ADF"
-                ]
+                "displayLines": "#BattleEvent_P2_ADF"
               },
               "isFixed": "(Fixed)"
             }

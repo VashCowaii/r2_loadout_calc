@@ -16,12 +16,7 @@ const configAbility = {
       "name": "Update Displayed Energy Bar",
       "value": 0,
       "maximum": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -61,12 +56,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (15) || RETURN",
-                    "displayLines": "15",
-                    "constants": [],
-                    "variables": [
-                      15
-                    ]
+                    "displayLines": "15"
                   },
                   "isFixed": "* ERR"
                 }
@@ -138,12 +128,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (EnergyBarCount) || RETURN",
-                    "displayLines": "EnergyBarCount",
-                    "constants": [],
-                    "variables": [
-                      "EnergyBarCount"
-                    ]
+                    "displayLines": "EnergyBarCount"
                   },
                   "assignState": "True",
                   "priorState": "Active",
@@ -170,12 +155,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (1.8) || RETURN",
-                "displayLines": "1.8",
-                "constants": [],
-                "variables": [
-                  1.8
-                ]
+                "displayLines": "1.8"
               },
               "variableName": "SkillP01_DotRatio"
             },
@@ -264,12 +244,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (9) || RETURN",
-                    "displayLines": "9",
-                    "constants": [],
-                    "variables": [
-                      9
-                    ]
+                    "displayLines": "9"
                   },
                   "variableName": "_MaxLayer"
                 }
@@ -278,12 +253,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (5) || RETURN",
-                    "displayLines": "5",
-                    "constants": [],
-                    "variables": [
-                      5
-                    ]
+                    "displayLines": "5"
                   },
                   "variableName": "_MaxLayer"
                 }

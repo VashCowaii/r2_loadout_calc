@@ -68,12 +68,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (MDF_HealRatio) || RETURN",
-                        "displayLines": "MDF_HealRatio",
-                        "constants": [],
-                        "variables": [
-                          "MDF_HealRatio"
-                        ]
+                        "displayLines": "MDF_HealRatio"
                       },
                       "formula": "Heal from Healer's MaxHP"
                     }
@@ -116,12 +111,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Skill Points Modification",
                   "adjustmentValue": {
-                    "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill01[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill01[0]]}"
-                    ]
+                    "displayLines": "{[PassiveSkill01[0]]}"
                   },
                   "adjustmentType": "+"
                 }
@@ -185,12 +175,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1471440713\">Monster_W2_HuanlongPart_Heal</a>[<span class=\"descriptionNumberColor\">Vigor</span>]",
               "valuePerStack": {
                 "MDF_HealRatio": {
-                  "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[0]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill02[0]]}"
                 }
               }
             }
@@ -205,12 +190,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1471440713\">Monster_W2_HuanlongPart_Heal</a>[<span class=\"descriptionNumberColor\">Vigor</span>]",
               "valuePerStack": {
                 "MDF_HealRatio": {
-                  "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[0]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill02[0]]}"
                 }
               }
             }
@@ -394,14 +374,7 @@ const compositeAbilityObject = {
         {
           "name": "Skill Points Modification",
           "adjustmentValue": {
-            "operator": "Constants[0] (0) || Variables[0] ({[Skill01[0]]}) || SUB || RETURN",
-            "displayLines": "(0 - {[Skill01[0]]})",
-            "constants": [
-              0
-            ],
-            "variables": [
-              "{[Skill01[0]]}"
-            ]
+            "displayLines": "(0 - {[Skill01[0]]})"
           },
           "adjustmentType": "+"
         },

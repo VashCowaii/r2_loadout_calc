@@ -399,12 +399,7 @@ const compositeAbilityObject = {
                           {
                             "name": "Random Chance",
                             "chance": {
-                              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                              "displayLines": "{[PassiveSkill01[2]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[PassiveSkill01[2]]}"
-                              ]
+                              "displayLines": "{[PassiveSkill01[2]]}"
                             }
                           }
                         ]
@@ -444,12 +439,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[0]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[0]]}"
             },
             "dmgFormula": "Max HP Scaling",
             "Toughness": {
@@ -464,12 +454,7 @@ const compositeAbilityObject = {
         {
           "name": "Adjust Team Punchline Value",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[1]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[1]]}"
-            ]
+            "displayLines": "{[PassiveSkill01[1]]}"
           },
           "adjustment": "Add"
         },
@@ -521,12 +506,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -544,21 +524,11 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-315004140\">Standard_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
           "duration": 1,
           "baseChance": {
-            "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-            "displayLines": "{[Skill02[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[1]]}"
-            ]
+            "displayLines": "{[Skill02[1]]}"
           },
           "valuePerStack": {
             "MDF_ActionDelayRatio": {
-              "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-              "displayLines": "{[Skill02[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[3]]}"
-              ]
+              "displayLines": "{[Skill02[3]]}"
             }
           },
           "success": []
@@ -566,12 +536,7 @@ const compositeAbilityObject = {
         {
           "name": "Adjust Team Punchline Value",
           "value": {
-            "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-            "displayLines": "{[Skill02[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[2]]}"
-            ]
+            "displayLines": "{[Skill02[2]]}"
           },
           "adjustment": "Add"
         },
@@ -680,12 +645,7 @@ const compositeAbilityObject = {
               {
                 "name": "Random Chance",
                 "chance": {
-                  "operator": "Variables[0] (TraitorChace) || RETURN",
-                  "displayLines": "TraitorChace",
-                  "constants": [],
-                  "variables": [
-                    "TraitorChace"
-                  ]
+                  "displayLines": "TraitorChace"
                 }
               }
             ]

@@ -23,13 +23,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "value": {
-        "operator": "Variables[0] (Skill21_ExtraEnergyAdd) || Variables[1] (ADF_EnemyCount) || ADD || RETURN",
-        "displayLines": "(Skill21_ExtraEnergyAdd + ADF_EnemyCount)",
-        "constants": [],
-        "variables": [
-          "Skill21_ExtraEnergyAdd",
-          "ADF_EnemyCount"
-        ]
+        "displayLines": "(Skill21_ExtraEnergyAdd + ADF_EnemyCount)"
       }
     },
     {
@@ -42,14 +36,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Constants[0] (1) || Variables[0] (4) || ADD || RETURN",
-            "displayLines": "(1 + 4)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              4
-            ]
+            "displayLines": "(1 + 4)"
           },
           "variableName": "ADF_AddCount"
         }
@@ -71,21 +58,11 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1985962154\">Phainon_Guard</a>[<span class=\"descriptionNumberColor\">Soulscorch</span>]",
       "valuePerStack": {
         "MDF_PropertyRatio": {
-          "operator": "Variables[0] (0.75) || RETURN",
-          "displayLines": "0.75",
-          "constants": [],
-          "variables": [
-            0.75
-          ]
+          "displayLines": "0.75"
         }
       },
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (ADF_AddCount) || RETURN",
-        "displayLines": "ADF_AddCount",
-        "constants": [],
-        "variables": [
-          "ADF_AddCount"
-        ]
+        "displayLines": "ADF_AddCount"
       }
     },
     {
@@ -295,12 +272,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_Count) || RETURN",
-                "displayLines": "MDF_Count",
-                "constants": [],
-                "variables": [
-                  "MDF_Count"
-                ]
+                "displayLines": "MDF_Count"
               },
               "priorState": "Active",
               "bar#": 4
@@ -419,12 +391,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             }
           ]
@@ -771,12 +738,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Count) || RETURN",
-                    "displayLines": "MDF_Count",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Count"
-                    ]
+                    "displayLines": "MDF_Count"
                   }
                 }
               ]

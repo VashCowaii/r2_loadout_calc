@@ -21,23 +21,13 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[Skill11[0]]}) || RETURN",
-            "displayLines": "{[Skill11[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill11[0]]}"
-            ]
+            "displayLines": "{[Skill11[0]]}"
           },
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonMinionID_2) || RETURN",
-                "displayLines": "SummonMinionID_2",
-                "constants": [],
-                "variables": [
-                  "SummonMinionID_2"
-                ]
+                "displayLines": "SummonMinionID_2"
               },
               "locationType": "AroundCasterOnEdge"
             }
@@ -61,23 +51,13 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[Skill11[1]]}) || RETURN",
-            "displayLines": "{[Skill11[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill11[1]]}"
-            ]
+            "displayLines": "{[Skill11[1]]}"
           },
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonMinionID_2) || RETURN",
-                "displayLines": "SummonMinionID_2",
-                "constants": [],
-                "variables": [
-                  "SummonMinionID_2"
-                ]
+                "displayLines": "SummonMinionID_2"
               },
               "locationType": "AroundCasterOnEdge"
             }
@@ -95,12 +75,7 @@ const configAbility = {
       "conditions": {
         "name": "Enemy ID",
         "ID": {
-          "operator": "Variables[0] (SummonMinionID_2) || RETURN",
-          "displayLines": "SummonMinionID_2",
-          "constants": [],
-          "variables": [
-            "SummonMinionID_2"
-          ]
+          "displayLines": "SummonMinionID_2"
         },
         "target": {
           "name": "Target Name",
@@ -126,12 +101,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1046039771\">Enemy_W2_Xuanlu_10_MinionMark_2</a>",
           "valuePerStack": {
             "MDF_MaxMinionCount": {
-              "operator": "Variables[0] (MaxMinionCount) || RETURN",
-              "displayLines": "MaxMinionCount",
-              "constants": [],
-              "variables": [
-                "MaxMinionCount"
-              ]
+              "displayLines": "MaxMinionCount"
             }
           }
         }

@@ -431,12 +431,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
+                  "displayLines": "{[Skill04[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -520,12 +515,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Constants[0] (1002040) || RETURN",
-                    "displayLines": "1002040",
-                    "constants": [
-                      1002040
-                    ],
-                    "variables": []
+                    "displayLines": "1002040"
                   },
                   "locationType": "First"
                 }
@@ -538,12 +528,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Constants[0] (1002050) || RETURN",
-                    "displayLines": "1002050",
-                    "constants": [
-                      1002050
-                    ],
-                    "variables": []
+                    "displayLines": "1002050"
                   },
                   "locationType": "Last"
                 }
@@ -579,12 +564,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (1002040) || RETURN",
-                        "displayLines": "1002040",
-                        "constants": [
-                          1002040
-                        ],
-                        "variables": []
+                        "displayLines": "1002040"
                       },
                       "locationType": "First"
                     }
@@ -610,12 +590,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (1002050) || RETURN",
-                        "displayLines": "1002050",
-                        "constants": [
-                          1002050
-                        ],
-                        "variables": []
+                        "displayLines": "1002050"
                       },
                       "locationType": "Last"
                     }
@@ -702,21 +677,11 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-409658375\">Enemy_W1_Bronya_RL_Ability02_PowerUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-            "displayLines": "{[Skill02[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[1]]}"
-            ]
+            "displayLines": "{[Skill02[1]]}"
           },
           "valuePerStack": {
             "MDF_DamageAddedRatio": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             }
           }
         },
@@ -760,12 +725,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageAddedRatio) || RETURN",
-                    "displayLines": "MDF_DamageAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageAddedRatio"
-                    ]
+                    "displayLines": "MDF_DamageAddedRatio"
                   }
                 }
               ]
@@ -823,12 +783,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,

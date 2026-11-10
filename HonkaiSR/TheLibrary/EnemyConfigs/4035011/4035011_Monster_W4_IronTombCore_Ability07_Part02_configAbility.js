@@ -204,12 +204,7 @@ const configAbility = {
             "target": "{{Parameter Target}}"
           },
           "setValue": {
-            "operator": "Variables[0] (_MaxHP) || RETURN",
-            "displayLines": "_MaxHP",
-            "constants": [],
-            "variables": [
-              "_MaxHP"
-            ]
+            "displayLines": "_MaxHP"
           }
         }
       ]

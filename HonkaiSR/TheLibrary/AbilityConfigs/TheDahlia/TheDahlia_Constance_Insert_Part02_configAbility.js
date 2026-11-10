@@ -19,21 +19,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-380368106\">Constance_Eidolon4_Property</a>[<span class=\"descriptionNumberColor\">Pity Its Heart Gnawed by Worms</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.12) || RETURN",
-              "displayLines": "0.12",
-              "constants": [],
-              "variables": [
-                0.12
-              ]
+              "displayLines": "0.12"
             }
           }
         }
@@ -87,14 +77,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1367019028\">Constance_Tree02_CD</a>[<span class=\"descriptionNumberColor\">Lament, Lost Soul</span>]",
               "counter": {
-                "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(2 - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  2
-                ]
+                "displayLines": "(2 - 1)"
               }
             }
           ],
@@ -116,14 +99,7 @@ const configAbility = {
       "name": "Define Custom Variable",
       "scope": "ContextAbility",
       "value": {
-        "operator": "Constants[0] (0.1) || Variables[0] (5) || DIV || RETURN",
-        "displayLines": "(0.1 / 5)",
-        "constants": [
-          0.1
-        ],
-        "variables": [
-          5
-        ]
+        "displayLines": "(0.1 / 5)"
       },
       "variableName": "ADF_AttackGap"
     },
@@ -142,13 +118,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (5) || Variables[1] (5) || ADD || RETURN",
-            "displayLines": "(5 + 5)",
-            "constants": [],
-            "variables": [
-              5,
-              5
-            ]
+            "displayLines": "(5 + 5)"
           },
           "variableName": "ADF_BounceCount"
         }
@@ -157,12 +127,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (5) || RETURN",
-            "displayLines": "5",
-            "constants": [],
-            "variables": [
-              5
-            ]
+            "displayLines": "5"
           },
           "variableName": "ADF_BounceCount"
         }
@@ -184,12 +149,7 @@ const configAbility = {
           },
           "variables": {
             "parameter[0]_NormalizedValue": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         }
@@ -198,12 +158,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (ADF_BounceCount) || RETURN",
-        "displayLines": "ADF_BounceCount",
-        "constants": [],
-        "variables": [
-          "ADF_BounceCount"
-        ]
+        "displayLines": "ADF_BounceCount"
       },
       "execute": [
         {
@@ -247,20 +202,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "ToughnessDMGType": {
                   "DamageType": "Fire"
@@ -303,20 +248,10 @@ const configAbility = {
                   },
                   "variables": {
                     "DamagePercentage": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     },
                     "StanceValue": {
-                      "operator": "Variables[0] (ADF_StanceValue) || RETURN",
-                      "displayLines": "ADF_StanceValue",
-                      "constants": [],
-                      "variables": [
-                        "ADF_StanceValue"
-                      ]
+                      "displayLines": "ADF_StanceValue"
                     }
                   }
                 },
@@ -393,13 +328,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_TotalStanceDamage) || Variables[1] (MDF_HitStanceDamage) || ADD || RETURN",
-                    "displayLines": "(MDF_TotalStanceDamage + MDF_HitStanceDamage)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_TotalStanceDamage",
-                      "MDF_HitStanceDamage"
-                    ]
+                    "displayLines": "(MDF_TotalStanceDamage + MDF_HitStanceDamage)"
                   },
                   "variableName": "MDF_TotalStanceDamage"
                 }
@@ -439,12 +368,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]

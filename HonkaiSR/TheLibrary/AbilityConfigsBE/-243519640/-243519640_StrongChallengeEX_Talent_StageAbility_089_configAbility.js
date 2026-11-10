@@ -30,12 +30,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_StanceBreakAddedRatio) || RETURN",
-                "displayLines": "MDF_StanceBreakAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_StanceBreakAddedRatio"
-                ]
+                "displayLines": "MDF_StanceBreakAddedRatio"
               }
             }
           ]
@@ -110,12 +105,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"964206295\">MStrongChallengeEX_Talent_StageAbility_EMY_089</a>",
                   "valuePerStack": {
                     "MDF_Elation_DamageTakenRatio": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 },
@@ -128,12 +118,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"964206295\">MStrongChallengeEX_Talent_StageAbility_EMY_089</a>",
                   "valuePerStack": {
                     "MDF_Elation_DamageTakenRatio": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }
@@ -182,12 +167,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1258664805\">MStrongChallengeEX_Talent_StageAbility_PLY_089</a>",
                       "valuePerStack": {
                         "MDF_StanceBreakAddedRatio": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }

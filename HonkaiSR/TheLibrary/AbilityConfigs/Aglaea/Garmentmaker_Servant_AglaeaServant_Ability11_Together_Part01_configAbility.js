@@ -52,23 +52,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (Ability11_DamagePercentage) || Variables[1] (_Rank06Ratio) || ADD || RETURN",
-          "displayLines": "(Ability11_DamagePercentage + _Rank06Ratio)",
-          "constants": [],
-          "variables": [
-            "Ability11_DamagePercentage",
-            "_Rank06Ratio"
-          ]
+          "displayLines": "(Ability11_DamagePercentage + _Rank06Ratio)"
         },
         "Toughness": {
-          "operator": "Variables[0] (_PairStanceDMG1) || Constants[0] (0.5) || MUL || RETURN",
-          "displayLines": "(_PairStanceDMG1 * 0.5)",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "_PairStanceDMG1"
-          ]
+          "displayLines": "(_PairStanceDMG1 * 0.5)"
         },
         "ToughnessDMGType": {
           "DamageType": "Thunder"
@@ -89,23 +76,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (Ability11_DamagePercentageAD) || Variables[1] (_Rank06Ratio) || ADD || RETURN",
-          "displayLines": "(Ability11_DamagePercentageAD + _Rank06Ratio)",
-          "constants": [],
-          "variables": [
-            "Ability11_DamagePercentageAD",
-            "_Rank06Ratio"
-          ]
+          "displayLines": "(Ability11_DamagePercentageAD + _Rank06Ratio)"
         },
         "Toughness": {
-          "operator": "Variables[0] (_PairStanceDMG2) || Constants[0] (0.5) || MUL || RETURN",
-          "displayLines": "(_PairStanceDMG2 * 0.5)",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "_PairStanceDMG2"
-          ]
+          "displayLines": "(_PairStanceDMG2 * 0.5)"
         },
         "ToughnessDMGType": {
           "DamageType": "Thunder"

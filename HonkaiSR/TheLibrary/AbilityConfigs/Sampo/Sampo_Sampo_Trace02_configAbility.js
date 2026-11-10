@@ -13,12 +13,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"63874351\">M_Ultimate_ExtraSP</a>",
       "valuePerStack": {
         "MDF_AddValue": {
-          "operator": "Variables[0] (10) || RETURN",
-          "displayLines": "10",
-          "constants": [],
-          "variables": [
-            10
-          ]
+          "displayLines": "10"
         }
       }
     }

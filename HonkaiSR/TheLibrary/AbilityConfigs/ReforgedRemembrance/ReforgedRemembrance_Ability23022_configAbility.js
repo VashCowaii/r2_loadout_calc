@@ -83,13 +83,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue1) || Variables[1] (_layer) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyValue1 * _layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue1",
-                  "_layer"
-                ]
+                "displayLines": "(MDF_PropertyValue1 * _layer)"
               }
             }
           ]
@@ -155,37 +149,17 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1313207201\">LC_23022_Sub</a>[<span class=\"descriptionNumberColor\">Prophet</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (4) || RETURN",
-                    "displayLines": "4",
-                    "constants": [],
-                    "variables": [
-                      4
-                    ]
+                    "displayLines": "4"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue1": {
-                      "operator": "Variables[0] (0.05) || RETURN",
-                      "displayLines": "0.05",
-                      "constants": [],
-                      "variables": [
-                        0.05
-                      ]
+                      "displayLines": "0.05"
                     },
                     "MDF_PropertyValue2": {
-                      "operator": "Variables[0] (0.072) || RETURN",
-                      "displayLines": "0.072",
-                      "constants": [],
-                      "variables": [
-                        0.072
-                      ]
+                      "displayLines": "0.072"
                     },
                     "MDF_MaxLayer": {
-                      "operator": "Variables[0] (4) || RETURN",
-                      "displayLines": "4",
-                      "constants": [],
-                      "variables": [
-                        4
-                      ]
+                      "displayLines": "4"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -244,37 +218,17 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1313207201\">LC_23022_Sub</a>[<span class=\"descriptionNumberColor\">Prophet</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (4) || RETURN",
-                    "displayLines": "4",
-                    "constants": [],
-                    "variables": [
-                      4
-                    ]
+                    "displayLines": "4"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue1": {
-                      "operator": "Variables[0] (0.05) || RETURN",
-                      "displayLines": "0.05",
-                      "constants": [],
-                      "variables": [
-                        0.05
-                      ]
+                      "displayLines": "0.05"
                     },
                     "MDF_PropertyValue2": {
-                      "operator": "Variables[0] (0.072) || RETURN",
-                      "displayLines": "0.072",
-                      "constants": [],
-                      "variables": [
-                        0.072
-                      ]
+                      "displayLines": "0.072"
                     },
                     "MDF_MaxLayer": {
-                      "operator": "Variables[0] (4) || RETURN",
-                      "displayLines": "4",
-                      "constants": [],
-                      "variables": [
-                        4
-                      ]
+                      "displayLines": "4"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -333,37 +287,17 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1313207201\">LC_23022_Sub</a>[<span class=\"descriptionNumberColor\">Prophet</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (4) || RETURN",
-                    "displayLines": "4",
-                    "constants": [],
-                    "variables": [
-                      4
-                    ]
+                    "displayLines": "4"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue1": {
-                      "operator": "Variables[0] (0.05) || RETURN",
-                      "displayLines": "0.05",
-                      "constants": [],
-                      "variables": [
-                        0.05
-                      ]
+                      "displayLines": "0.05"
                     },
                     "MDF_PropertyValue2": {
-                      "operator": "Variables[0] (0.072) || RETURN",
-                      "displayLines": "0.072",
-                      "constants": [],
-                      "variables": [
-                        0.072
-                      ]
+                      "displayLines": "0.072"
                     },
                     "MDF_MaxLayer": {
-                      "operator": "Variables[0] (4) || RETURN",
-                      "displayLines": "4",
-                      "constants": [],
-                      "variables": [
-                        4
-                      ]
+                      "displayLines": "4"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -422,37 +356,17 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1313207201\">LC_23022_Sub</a>[<span class=\"descriptionNumberColor\">Prophet</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (4) || RETURN",
-                    "displayLines": "4",
-                    "constants": [],
-                    "variables": [
-                      4
-                    ]
+                    "displayLines": "4"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue1": {
-                      "operator": "Variables[0] (0.05) || RETURN",
-                      "displayLines": "0.05",
-                      "constants": [],
-                      "variables": [
-                        0.05
-                      ]
+                      "displayLines": "0.05"
                     },
                     "MDF_PropertyValue2": {
-                      "operator": "Variables[0] (0.072) || RETURN",
-                      "displayLines": "0.072",
-                      "constants": [],
-                      "variables": [
-                        0.072
-                      ]
+                      "displayLines": "0.072"
                     },
                     "MDF_MaxLayer": {
-                      "operator": "Variables[0] (4) || RETURN",
-                      "displayLines": "4",
-                      "constants": [],
-                      "variables": [
-                        4
-                      ]
+                      "displayLines": "4"
                     }
                   },
                   "addStacksPerTrigger": 1

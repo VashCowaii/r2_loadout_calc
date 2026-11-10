@@ -265,12 +265,7 @@ const configAbility = {
                   {
                     "name": "SWITCH",
                     "switchValue": {
-                      "operator": "Variables[0] (Sequence_i) || RETURN",
-                      "displayLines": "Sequence_i",
-                      "constants": [],
-                      "variables": [
-                        "Sequence_i"
-                      ]
+                      "displayLines": "Sequence_i"
                     },
                     "caseEvents": [
                       {
@@ -340,12 +335,7 @@ const configAbility = {
                           {
                             "name": "SWITCH",
                             "switchValue": {
-                              "operator": "Variables[0] (ForwardReverseFlag) || RETURN",
-                              "displayLines": "ForwardReverseFlag",
-                              "constants": [],
-                              "variables": [
-                                "ForwardReverseFlag"
-                              ]
+                              "displayLines": "ForwardReverseFlag"
                             },
                             "caseEvents": [
                               {
@@ -449,12 +439,7 @@ const configAbility = {
                   {
                     "name": "SWITCH",
                     "switchValue": {
-                      "operator": "Variables[0] (AIFlag) || RETURN",
-                      "displayLines": "AIFlag",
-                      "constants": [],
-                      "variables": [
-                        "AIFlag"
-                      ]
+                      "displayLines": "AIFlag"
                     },
                     "caseEvents": [
                       {
@@ -524,12 +509,7 @@ const configAbility = {
                           {
                             "name": "SWITCH",
                             "switchValue": {
-                              "operator": "Variables[0] (ForwardReverseFlag) || RETURN",
-                              "displayLines": "ForwardReverseFlag",
-                              "constants": [],
-                              "variables": [
-                                "ForwardReverseFlag"
-                              ]
+                              "displayLines": "ForwardReverseFlag"
                             },
                             "caseEvents": [
                               {
@@ -633,12 +613,7 @@ const configAbility = {
                   {
                     "name": "SWITCH",
                     "switchValue": {
-                      "operator": "Variables[0] (ForwardReverseFlag) || RETURN",
-                      "displayLines": "ForwardReverseFlag",
-                      "constants": [],
-                      "variables": [
-                        "ForwardReverseFlag"
-                      ]
+                      "displayLines": "ForwardReverseFlag"
                     },
                     "caseEvents": [
                       {

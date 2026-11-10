@@ -97,12 +97,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                        "displayLines": "Wolf_AttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Wolf_AttackCount"
-                        ]
+                        "displayLines": "Wolf_AttackCount"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -110,12 +105,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                        "displayLines": "Wolf_MaxAttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Wolf_MaxAttackCount"
-                        ]
+                        "displayLines": "Wolf_MaxAttackCount"
                       },
                       "assignState": "True",
                       "state": "Normal"
@@ -262,12 +252,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                            "displayLines": "Wolf_AttackCount",
-                            "constants": [],
-                            "variables": [
-                              "Wolf_AttackCount"
-                            ]
+                            "displayLines": "Wolf_AttackCount"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -275,12 +260,7 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                            "displayLines": "Wolf_MaxAttackCount",
-                            "constants": [],
-                            "variables": [
-                              "Wolf_MaxAttackCount"
-                            ]
+                            "displayLines": "Wolf_MaxAttackCount"
                           },
                           "assignState": "True",
                           "state": "Normal"
@@ -358,12 +338,7 @@ const compositeAbilityObject = {
                             "value1": "Wolf_MaxAttackCount",
                             "compareType": "<",
                             "value2": {
-                              "operator": "Variables[0] (MaxAttackCount) || RETURN",
-                              "displayLines": "MaxAttackCount",
-                              "constants": [],
-                              "variables": [
-                                "MaxAttackCount"
-                              ]
+                              "displayLines": "MaxAttackCount"
                             },
                             "contextScope": "TargetEntity"
                           }
@@ -389,12 +364,7 @@ const compositeAbilityObject = {
                       },
                       "variableName": "Wolf_MaxAttackCount",
                       "resetValue": {
-                        "operator": "Variables[0] (MaxAttackCount) || RETURN",
-                        "displayLines": "MaxAttackCount",
-                        "constants": [],
-                        "variables": [
-                          "MaxAttackCount"
-                        ]
+                        "displayLines": "MaxAttackCount"
                       },
                       "scope": "TargetEntity"
                     },
@@ -403,12 +373,7 @@ const compositeAbilityObject = {
                       "abilityName": "BattleEventAbility_Monster_Lycan_RageFinish",
                       "parameters": {
                         "MaxRageCount": {
-                          "operator": "Variables[0] (MaxAttackCount) || RETURN",
-                          "displayLines": "MaxAttackCount",
-                          "constants": [],
-                          "variables": [
-                            "MaxAttackCount"
-                          ]
+                          "displayLines": "MaxAttackCount"
                         }
                       }
                     }
@@ -444,12 +409,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                            "displayLines": "Wolf_AttackCount",
-                            "constants": [],
-                            "variables": [
-                              "Wolf_AttackCount"
-                            ]
+                            "displayLines": "Wolf_AttackCount"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -457,12 +417,7 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                            "displayLines": "Wolf_MaxAttackCount",
-                            "constants": [],
-                            "variables": [
-                              "Wolf_MaxAttackCount"
-                            ]
+                            "displayLines": "Wolf_MaxAttackCount"
                           },
                           "assignState": "True",
                           "state": "Normal"
@@ -510,12 +465,7 @@ const compositeAbilityObject = {
                       },
                       "variableName": "Wolf_MaxAttackCount",
                       "resetValue": {
-                        "operator": "Variables[0] (MaxAttackCount) || RETURN",
-                        "displayLines": "MaxAttackCount",
-                        "constants": [],
-                        "variables": [
-                          "MaxAttackCount"
-                        ]
+                        "displayLines": "MaxAttackCount"
                       },
                       "scope": "TargetEntity"
                     },
@@ -573,12 +523,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1414738413\">Enemy_W2_Lycan_RagePhase1Mark</a>[<span class=\"descriptionNumberColor\">Bloodlust</span>]",
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                            "displayLines": "Wolf_AttackCount",
-                            "constants": [],
-                            "variables": [
-                              "Wolf_AttackCount"
-                            ]
+                            "displayLines": "Wolf_AttackCount"
                           }
                         }
                       ]
@@ -586,12 +531,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                        "displayLines": "Wolf_AttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Wolf_AttackCount"
-                        ]
+                        "displayLines": "Wolf_AttackCount"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -599,12 +539,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                        "displayLines": "Wolf_MaxAttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Wolf_MaxAttackCount"
-                        ]
+                        "displayLines": "Wolf_MaxAttackCount"
                       },
                       "assignState": "True",
                       "state": "Normal"
@@ -689,12 +624,7 @@ const compositeAbilityObject = {
                       "variableName": "Wolf_AttackCount",
                       "value": 1,
                       "max": {
-                        "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                        "displayLines": "Wolf_MaxAttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Wolf_MaxAttackCount"
-                        ]
+                        "displayLines": "Wolf_MaxAttackCount"
                       }
                     },
                     {
@@ -729,12 +659,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                            "displayLines": "Wolf_AttackCount",
-                            "constants": [],
-                            "variables": [
-                              "Wolf_AttackCount"
-                            ]
+                            "displayLines": "Wolf_AttackCount"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -742,12 +667,7 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                            "displayLines": "Wolf_MaxAttackCount",
-                            "constants": [],
-                            "variables": [
-                              "Wolf_MaxAttackCount"
-                            ]
+                            "displayLines": "Wolf_MaxAttackCount"
                           },
                           "assignState": "True",
                           "state": "Normal"
@@ -816,12 +736,7 @@ const compositeAbilityObject = {
                         "value1": "Wolf_AttackCount",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                          "displayLines": "Wolf_MaxAttackCount",
-                          "constants": [],
-                          "variables": [
-                            "Wolf_MaxAttackCount"
-                          ]
+                          "displayLines": "Wolf_MaxAttackCount"
                         }
                       },
                       "passed": [
@@ -1341,12 +1256,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                            "displayLines": "Wolf_AttackCount",
-                            "constants": [],
-                            "variables": [
-                              "Wolf_AttackCount"
-                            ]
+                            "displayLines": "Wolf_AttackCount"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -1354,12 +1264,7 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                            "displayLines": "Wolf_MaxAttackCount",
-                            "constants": [],
-                            "variables": [
-                              "Wolf_MaxAttackCount"
-                            ]
+                            "displayLines": "Wolf_MaxAttackCount"
                           },
                           "assignState": "True",
                           "state": "Normal"
@@ -1389,12 +1294,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-            "displayLines": "{[Skill02[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[3]]}"
-            ]
+            "displayLines": "{[Skill02[3]]}"
           },
           "variableName": "Wolf_MaxAttackCount"
         },
@@ -1415,12 +1315,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1905621078\">Enemy_W2_Lycan_RageControllerV2</a>",
           "valuePerStack": {
             "MaxAttackCount": {
-              "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-              "displayLines": "{[Skill02[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[3]]}"
-              ]
+              "displayLines": "{[Skill02[3]]}"
             }
           },
           "casterAssign": "TargetSelf"
@@ -1590,12 +1485,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_SpeedUpRatio) || RETURN",
-                    "displayLines": "MDF_SpeedUpRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedUpRatio"
-                    ]
+                    "displayLines": "MDF_SpeedUpRatio"
                   }
                 }
               ]
@@ -1718,12 +1608,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1495768773\">Enemy_W2_Lycan_RageStatus</a>[<span class=\"descriptionNumberColor\">Moon Rage</span>]",
                           "valuePerStack": {
                             "MDF_SpeedUpRatio": {
-                              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                              "displayLines": "{[Skill02[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill02[0]]}"
-                              ]
+                              "displayLines": "{[Skill02[0]]}"
                             }
                           }
                         }
@@ -1891,12 +1776,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1912,12 +1792,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1944,29 +1819,14 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"227784370\">Standard_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                "displayLines": "{[Skill02[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill02[2]]}"
-                ]
+                "displayLines": "{[Skill02[2]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                "displayLines": "{[Skill02[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill02[1]]}"
-                ]
+                "displayLines": "{[Skill02[1]]}"
               },
               "valuePerStack": {
                 "Modifier_Tear_DamageRatio": {
-                  "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
-                  "displayLines": "{[Skill02[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[4]]}"
-                  ]
+                  "displayLines": "{[Skill02[4]]}"
                 },
                 "Modifier_Tear_MaxPercentage": 5
               }
@@ -1979,29 +1839,14 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"227784370\">Standard_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                "displayLines": "{[Skill02[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill02[2]]}"
-                ]
+                "displayLines": "{[Skill02[2]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                "displayLines": "{[Skill02[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill02[1]]}"
-                ]
+                "displayLines": "{[Skill02[1]]}"
               },
               "valuePerStack": {
                 "Modifier_Tear_DamageRatio": {
-                  "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
-                  "displayLines": "{[Skill02[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[4]]}"
-                  ]
+                  "displayLines": "{[Skill02[4]]}"
                 },
                 "Modifier_Tear_MaxPercentage": 5
               }
@@ -2075,12 +1920,7 @@ const compositeAbilityObject = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                "displayLines": "Wolf_MaxAttackCount",
-                "constants": [],
-                "variables": [
-                  "Wolf_MaxAttackCount"
-                ]
+                "displayLines": "Wolf_MaxAttackCount"
               },
               "entityClass": "Enemy",
               "target": {
@@ -2088,12 +1928,7 @@ const compositeAbilityObject = {
                 "target": "{{Parameter Target}}"
               },
               "maximum": {
-                "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                "displayLines": "Wolf_MaxAttackCount",
-                "constants": [],
-                "variables": [
-                  "Wolf_MaxAttackCount"
-                ]
+                "displayLines": "Wolf_MaxAttackCount"
               },
               "assignState": "True",
               "state": "Normal"
@@ -2344,12 +2179,7 @@ const compositeAbilityObject = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                "displayLines": "Wolf_AttackCount",
-                "constants": [],
-                "variables": [
-                  "Wolf_AttackCount"
-                ]
+                "displayLines": "Wolf_AttackCount"
               },
               "entityClass": "Enemy",
               "target": {
@@ -2357,12 +2187,7 @@ const compositeAbilityObject = {
                 "target": "{{Parameter Target}}"
               },
               "maximum": {
-                "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                "displayLines": "Wolf_MaxAttackCount",
-                "constants": [],
-                "variables": [
-                  "Wolf_MaxAttackCount"
-                ]
+                "displayLines": "Wolf_MaxAttackCount"
               },
               "assignState": "True",
               "state": "Active"
@@ -2514,12 +2339,7 @@ const compositeAbilityObject = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                "displayLines": "Wolf_AttackCount",
-                "constants": [],
-                "variables": [
-                  "Wolf_AttackCount"
-                ]
+                "displayLines": "Wolf_AttackCount"
               },
               "entityClass": "Enemy",
               "target": {
@@ -2527,12 +2347,7 @@ const compositeAbilityObject = {
                 "target": "{{Parameter Target}}"
               },
               "maximum": {
-                "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                "displayLines": "Wolf_MaxAttackCount",
-                "constants": [],
-                "variables": [
-                  "Wolf_MaxAttackCount"
-                ]
+                "displayLines": "Wolf_MaxAttackCount"
               },
               "assignState": "True",
               "state": "Normal"

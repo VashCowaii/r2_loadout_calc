@@ -55,12 +55,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             },
             {
@@ -72,20 +67,10 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1130750663\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0010_02</a>[<span class=\"descriptionNumberColor\">Elation Instant</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                  "displayLines": "MDF_PropertyValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue"
-                  ]
+                  "displayLines": "MDF_PropertyValue"
                 },
                 "MDF_PropertyValue2": {
-                  "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                  "displayLines": "MDF_PropertyValue2",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue2"
-                  ]
+                  "displayLines": "MDF_PropertyValue2"
                 }
               }
             }
@@ -130,20 +115,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1130750663\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0010_02</a>[<span class=\"descriptionNumberColor\">Elation Instant</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     },
                     "MDF_PropertyValue2": {
-                      "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                      "displayLines": "MDF_PropertyValue2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue2"
-                      ]
+                      "displayLines": "MDF_PropertyValue2"
                     }
                   }
                 }
@@ -166,20 +141,10 @@ const configAbility = {
               "eventID": 30505,
               "variables": {
                 "Ability01_P1_HitCount": {
-                  "operator": "Variables[0] (#ADF_1) || RETURN",
-                  "displayLines": "#ADF_1",
-                  "constants": [],
-                  "variables": [
-                    "#ADF_1"
-                  ]
+                  "displayLines": "#ADF_1"
                 },
                 "Ability01_P2_DamagePercentage": {
-                  "operator": "Variables[0] (#ADF_2) || RETURN",
-                  "displayLines": "#ADF_2",
-                  "constants": [],
-                  "variables": [
-                    "#ADF_2"
-                  ]
+                  "displayLines": "#ADF_2"
                 }
               }
             }
@@ -216,29 +181,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1130750663\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0010_02</a>[<span class=\"descriptionNumberColor\">Elation Instant</span>]",
                   "duration": {
-                    "operator": "Variables[0] (#ADF_4) || RETURN",
-                    "displayLines": "#ADF_4",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_4"
-                    ]
+                    "displayLines": "#ADF_4"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (#ADF_3) || RETURN",
-                      "displayLines": "#ADF_3",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_3"
-                      ]
+                      "displayLines": "#ADF_3"
                     },
                     "MDF_PropertyValue2": {
-                      "operator": "Variables[0] (#ADF_4) || RETURN",
-                      "displayLines": "#ADF_4",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_4"
-                      ]
+                      "displayLines": "#ADF_4"
                     }
                   }
                 }

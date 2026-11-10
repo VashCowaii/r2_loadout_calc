@@ -31,14 +31,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (count) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(count + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "count"
-                    ]
+                    "displayLines": "(count + 1)"
                   },
                   "variableName": "count"
                 },
@@ -283,12 +276,7 @@ const compositeAbilityObject = {
                   "showInActionOrder": true,
                   "valuePerStack": {
                     "AddValue": {
-                      "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P2_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P2_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P2_ADF"
                     }
                   },
                   "allowAbilityTriggers": false
@@ -334,12 +322,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Constants[0] (800205000) || RETURN",
-                            "displayLines": "800205000",
-                            "constants": [
-                              800205000
-                            ],
-                            "variables": []
+                            "displayLines": "800205000"
                           },
                           "locationType": "LastDie"
                         }
@@ -397,12 +380,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (800205000) || RETURN",
-                        "displayLines": "800205000",
-                        "constants": [
-                          800205000
-                        ],
-                        "variables": []
+                        "displayLines": "800205000"
                       },
                       "locationType": "Last"
                     }
@@ -462,12 +440,7 @@ const compositeAbilityObject = {
         {
           "name": "Skill Points Modification",
           "adjustmentValue": {
-            "operator": "Variables[0] (AddValue) || RETURN",
-            "displayLines": "AddValue",
-            "constants": [],
-            "variables": [
-              "AddValue"
-            ]
+            "displayLines": "AddValue"
           },
           "adjustmentType": "+"
         }
@@ -916,60 +889,25 @@ const compositeAbilityObject = {
               "name": "Random Event",
               "odds": [
                 {
-                  "operator": "Variables[0] (TDF_NoPhysical) || RETURN",
-                  "displayLines": "TDF_NoPhysical",
-                  "constants": [],
-                  "variables": [
-                    "TDF_NoPhysical"
-                  ]
+                  "displayLines": "TDF_NoPhysical"
                 },
                 {
-                  "operator": "Variables[0] (TDF_NoWind) || RETURN",
-                  "displayLines": "TDF_NoWind",
-                  "constants": [],
-                  "variables": [
-                    "TDF_NoWind"
-                  ]
+                  "displayLines": "TDF_NoWind"
                 },
                 {
-                  "operator": "Variables[0] (TDF_NoFire) || RETURN",
-                  "displayLines": "TDF_NoFire",
-                  "constants": [],
-                  "variables": [
-                    "TDF_NoFire"
-                  ]
+                  "displayLines": "TDF_NoFire"
                 },
                 {
-                  "operator": "Variables[0] (TDF_NoThunder) || RETURN",
-                  "displayLines": "TDF_NoThunder",
-                  "constants": [],
-                  "variables": [
-                    "TDF_NoThunder"
-                  ]
+                  "displayLines": "TDF_NoThunder"
                 },
                 {
-                  "operator": "Variables[0] (TDF_NoIce) || RETURN",
-                  "displayLines": "TDF_NoIce",
-                  "constants": [],
-                  "variables": [
-                    "TDF_NoIce"
-                  ]
+                  "displayLines": "TDF_NoIce"
                 },
                 {
-                  "operator": "Variables[0] (TDF_NoQuantum) || RETURN",
-                  "displayLines": "TDF_NoQuantum",
-                  "constants": [],
-                  "variables": [
-                    "TDF_NoQuantum"
-                  ]
+                  "displayLines": "TDF_NoQuantum"
                 },
                 {
-                  "operator": "Variables[0] (TDF_NoImaginary) || RETURN",
-                  "displayLines": "TDF_NoImaginary",
-                  "constants": [],
-                  "variables": [
-                    "TDF_NoImaginary"
-                  ]
+                  "displayLines": "TDF_NoImaginary"
                 }
               ],
               "execute": [

@@ -21,12 +21,7 @@ const configAbility = {
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-            "displayLines": "SummonList_ADF_1",
-            "constants": [],
-            "variables": [
-              "SummonList_ADF_1"
-            ]
+            "displayLines": "SummonList_ADF_1"
           },
           "locationType": "First"
         }
@@ -40,12 +35,7 @@ const configAbility = {
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-            "displayLines": "SummonList_ADF_1",
-            "constants": [],
-            "variables": [
-              "SummonList_ADF_1"
-            ]
+            "displayLines": "SummonList_ADF_1"
           },
           "locationType": "Last"
         }

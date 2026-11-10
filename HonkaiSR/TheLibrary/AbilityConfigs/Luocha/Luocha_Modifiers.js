@@ -34,14 +34,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyRatio) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyRatio)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "(0 - MDF_PropertyRatio)"
               }
             }
           ]
@@ -68,12 +61,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             }
           ]
@@ -205,12 +193,7 @@ const configAbility = {
                 "value1": "HeiyuanLayer",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_PassiveLayer) || RETURN",
-                  "displayLines": "MDF_PassiveLayer",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PassiveLayer"
-                  ]
+                  "displayLines": "MDF_PassiveLayer"
                 }
               },
               "passed": [
@@ -227,12 +210,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (HeiyuanLayer) || RETURN",
-                    "displayLines": "HeiyuanLayer",
-                    "constants": [],
-                    "variables": [
-                      "HeiyuanLayer"
-                    ]
+                    "displayLines": "HeiyuanLayer"
                   },
                   "bar#": 2
                 }
@@ -297,20 +275,10 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (MDF_ShieldValue) || RETURN",
-                "displayLines": "MDF_ShieldValue",
-                "constants": [],
-                "variables": [
-                  "MDF_ShieldValue"
-                ]
+                "displayLines": "MDF_ShieldValue"
               },
               "valuePercent": {
-                "operator": "Variables[0] (MDF_ShieldPercentage) || RETURN",
-                "displayLines": "MDF_ShieldPercentage",
-                "constants": [],
-                "variables": [
-                  "MDF_ShieldPercentage"
-                ]
+                "displayLines": "MDF_ShieldPercentage"
               },
               "formula": "ATK Scaling (Shield)"
             }
@@ -331,12 +299,7 @@ const configAbility = {
               "on": "Healer",
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoingSUM</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AddHealRatio) || RETURN",
-                "displayLines": "MDF_AddHealRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AddHealRatio"
-                ]
+                "displayLines": "MDF_AddHealRatio"
               }
             },
             "Modifier Deletes Itself"

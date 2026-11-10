@@ -39,12 +39,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.25) || RETURN",
-                "displayLines": "0.25",
-                "constants": [],
-                "variables": [
-                  0.25
-                ]
+                "displayLines": "0.25"
               }
             }
           ]
@@ -83,13 +78,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Damage_Total) || Variables[1] (Damage_Hit) || ADD || RETURN",
-                    "displayLines": "(Damage_Total + Damage_Hit)",
-                    "constants": [],
-                    "variables": [
-                      "Damage_Total",
-                      "Damage_Hit"
-                    ]
+                    "displayLines": "(Damage_Total + Damage_Hit)"
                   },
                   "variableName": "Damage_Total"
                 }
@@ -143,13 +132,7 @@ const configAbility = {
                     "value1": "ParameterValue",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (0.25) || INVERT || Variables[1] (_MaxHP) || MUL || RETURN",
-                      "displayLines": "(-0.25 * _MaxHP)",
-                      "constants": [],
-                      "variables": [
-                        0.25,
-                        "_MaxHP"
-                      ]
+                      "displayLines": "(-0.25 * _MaxHP)"
                     }
                   },
                   {
@@ -174,12 +157,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1257997546\">LC_21038_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   }
                 },
                 {
@@ -207,12 +185,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (0.15) || RETURN",
-                        "displayLines": "0.15",
-                        "constants": [],
-                        "variables": [
-                          0.15
-                        ]
+                        "displayLines": "0.15"
                       },
                       "formula": "Heal from Healer's MaxHP"
                     }
@@ -226,14 +199,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1257826563\">LC_21038_CD</a>",
                   "duration": {
-                    "operator": "Variables[0] (3) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(3 - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "(3 - 1)"
                   }
                 }
               ]
@@ -272,13 +238,7 @@ const configAbility = {
                     "value1": "Damage_Total",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (0.25) || Variables[1] (_MaxHP) || MUL || RETURN",
-                      "displayLines": "(0.25 * _MaxHP)",
-                      "constants": [],
-                      "variables": [
-                        0.25,
-                        "_MaxHP"
-                      ]
+                      "displayLines": "(0.25 * _MaxHP)"
                     }
                   },
                   {
@@ -303,12 +263,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1257997546\">LC_21038_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   }
                 },
                 {
@@ -336,12 +291,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (0.15) || RETURN",
-                        "displayLines": "0.15",
-                        "constants": [],
-                        "variables": [
-                          0.15
-                        ]
+                        "displayLines": "0.15"
                       },
                       "formula": "Heal from Healer's MaxHP"
                     }
@@ -355,14 +305,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1257826563\">LC_21038_CD</a>",
                   "duration": {
-                    "operator": "Variables[0] (3) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(3 - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "(3 - 1)"
                   }
                 }
               ]

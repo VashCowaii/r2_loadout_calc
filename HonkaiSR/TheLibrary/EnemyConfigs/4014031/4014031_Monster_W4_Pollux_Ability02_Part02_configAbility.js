@@ -32,12 +32,7 @@ const configAbility = {
             "value1": "CurrentHP%",
             "compareType": ">=",
             "value2": {
-              "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-              "displayLines": "{[Skill02[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[2]]}"
-              ]
+              "displayLines": "{[Skill02[2]]}"
             }
           },
           "passed": [
@@ -59,25 +54,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill02[3]]}) || Variables[1] (_PlayerNum) || DIV || Constants[0] (1) || Variables[2] (_DamageUpTemp) || ADD || MUL || RETURN",
-                  "displayLines": "(({[Skill02[3]]} / _PlayerNum) * (1 + _DamageUpTemp))",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    "{[Skill02[3]]}",
-                    "_PlayerNum",
-                    "_DamageUpTemp"
-                  ]
+                  "displayLines": "(({[Skill02[3]]} / _PlayerNum) * (1 + _DamageUpTemp))"
                 },
                 "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill02[1]]}) || MUL || RETURN",
-                  "displayLines": "(_MaxHP * {[Skill02[1]]})",
-                  "constants": [],
-                  "variables": [
-                    "_MaxHP",
-                    "{[Skill02[1]]}"
-                  ]
+                  "displayLines": "(_MaxHP * {[Skill02[1]]})"
                 },
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
@@ -98,13 +78,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || Variables[1] (_PlayerNum) || DIV || RETURN",
-                  "displayLines": "({[Skill02[0]]} / _PlayerNum)",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}",
-                    "_PlayerNum"
-                  ]
+                  "displayLines": "({[Skill02[0]]} / _PlayerNum)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -142,20 +116,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-2024056044\">Monster_W4_Pollux_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
           "valuePerStack": {
             "MDF_DamagePercentage": {
-              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[1]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[1]]}"
             },
             "MDF_DamageHpAddedRatio": {
-              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[0]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[0]]}"
             }
           }
         }

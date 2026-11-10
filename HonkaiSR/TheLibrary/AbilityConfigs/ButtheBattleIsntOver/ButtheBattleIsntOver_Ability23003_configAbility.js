@@ -88,12 +88,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.3) || RETURN",
-                "displayLines": "0.3",
-                "constants": [],
-                "variables": [
-                  0.3
-                ]
+                "displayLines": "0.3"
               }
             }
           ]
@@ -195,12 +190,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-756547598\">LC_23003_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "duration": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       }
                     }
                   ]

@@ -34,12 +34,7 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (Bullet_Count) || RETURN",
-        "displayLines": "Bullet_Count",
-        "constants": [],
-        "variables": [
-          "Bullet_Count"
-        ]
+        "displayLines": "Bullet_Count"
       },
       "entityClass": "Enemy",
       "maximum": 3,

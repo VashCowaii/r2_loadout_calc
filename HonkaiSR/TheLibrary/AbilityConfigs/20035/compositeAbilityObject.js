@@ -144,12 +144,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   },
                   "execute": [
                     {
@@ -161,21 +156,10 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Ice",
                         "Damage": {
-                          "operator": "Variables[0] (MDF_DotDamageRatio) || RETURN",
-                          "displayLines": "MDF_DotDamageRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DotDamageRatio"
-                          ]
+                          "displayLines": "MDF_DotDamageRatio"
                         },
                         "DamageFlat": {
-                          "operator": "Variables[0] (MDF_DotHPRatio) || Variables[1] (MDF_MaxHp) || MUL || RETURN",
-                          "displayLines": "(MDF_DotHPRatio * MDF_MaxHp)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DotHPRatio",
-                            "MDF_MaxHp"
-                          ]
+                          "displayLines": "(MDF_DotHPRatio * MDF_MaxHp)"
                         },
                         "dmgFormulaFinal": "Converted DMG Base",
                         "Toughness": null,
@@ -219,12 +203,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   },
                   "execute": [
                     {
@@ -236,22 +215,10 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Ice",
                         "Damage": {
-                          "operator": "Variables[0] (MDF_DotDamageRatio) || RETURN",
-                          "displayLines": "MDF_DotDamageRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DotDamageRatio"
-                          ]
+                          "displayLines": "MDF_DotDamageRatio"
                         },
                         "DamageFlat": {
-                          "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (MDF_DotHPRatio) || MUL || Variables[2] (MDF_MaxHp) || MUL || RETURN",
-                          "displayLines": "((DOT_TriggerRatio * MDF_DotHPRatio) * MDF_MaxHp)",
-                          "constants": [],
-                          "variables": [
-                            "DOT_TriggerRatio",
-                            "MDF_DotHPRatio",
-                            "MDF_MaxHp"
-                          ]
+                          "displayLines": "((DOT_TriggerRatio * MDF_DotHPRatio) * MDF_MaxHp)"
                         },
                         "dmgFormulaFinal": "Converted DMG Base",
                         "Toughness": null,
@@ -304,12 +271,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   },
                   "execute": [
                     {
@@ -321,21 +283,10 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Ice",
                         "Damage": {
-                          "operator": "Variables[0] (MDF_DotDamageRatio) || RETURN",
-                          "displayLines": "MDF_DotDamageRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DotDamageRatio"
-                          ]
+                          "displayLines": "MDF_DotDamageRatio"
                         },
                         "DamageFlat": {
-                          "operator": "Variables[0] (MDF_DotHPRatio) || Variables[1] (MDF_MaxHp) || MUL || RETURN",
-                          "displayLines": "(MDF_DotHPRatio * MDF_MaxHp)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DotHPRatio",
-                            "MDF_MaxHp"
-                          ]
+                          "displayLines": "(MDF_DotHPRatio * MDF_MaxHp)"
                         },
                         "dmgFormulaFinal": "Converted DMG Base",
                         "Toughness": null,
@@ -379,12 +330,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   },
                   "execute": [
                     {
@@ -396,22 +342,10 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Ice",
                         "Damage": {
-                          "operator": "Variables[0] (MDF_DotDamageRatio) || RETURN",
-                          "displayLines": "MDF_DotDamageRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DotDamageRatio"
-                          ]
+                          "displayLines": "MDF_DotDamageRatio"
                         },
                         "DamageFlat": {
-                          "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (MDF_DotHPRatio) || MUL || Variables[2] (MDF_MaxHp) || MUL || RETURN",
-                          "displayLines": "((DOT_TriggerRatio * MDF_DotHPRatio) * MDF_MaxHp)",
-                          "constants": [],
-                          "variables": [
-                            "DOT_TriggerRatio",
-                            "MDF_DotHPRatio",
-                            "MDF_MaxHp"
-                          ]
+                          "displayLines": "((DOT_TriggerRatio * MDF_DotHPRatio) * MDF_MaxHp)"
                         },
                         "dmgFormulaFinal": "Converted DMG Base",
                         "Toughness": null,
@@ -464,12 +398,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   },
                   "execute": [
                     {
@@ -481,16 +410,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Ice",
                         "DamageFlat": {
-                          "operator": "Variables[0] (MDF_DotHPRatio) || Variables[1] (MDF_MaxHp) || MUL || Constants[0] (1) || Variables[2] (MDF_DotDamageRatio) || ADD || MUL || RETURN",
-                          "displayLines": "((MDF_DotHPRatio * MDF_MaxHp) * (1 + MDF_DotDamageRatio))",
-                          "constants": [
-                            1
-                          ],
-                          "variables": [
-                            "MDF_DotHPRatio",
-                            "MDF_MaxHp",
-                            "MDF_DotDamageRatio"
-                          ]
+                          "displayLines": "((MDF_DotHPRatio * MDF_MaxHp) * (1 + MDF_DotDamageRatio))"
                         },
                         "dmgFormulaFinal": "Converted DMG Base",
                         "Toughness": null,
@@ -534,12 +454,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   },
                   "execute": [
                     {
@@ -551,17 +466,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Ice",
                         "DamageFlat": {
-                          "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (MDF_DotHPRatio) || MUL || Variables[2] (MDF_MaxHp) || MUL || Constants[0] (1) || Variables[3] (MDF_DotDamageRatio) || ADD || MUL || RETURN",
-                          "displayLines": "(((DOT_TriggerRatio * MDF_DotHPRatio) * MDF_MaxHp) * (1 + MDF_DotDamageRatio))",
-                          "constants": [
-                            1
-                          ],
-                          "variables": [
-                            "DOT_TriggerRatio",
-                            "MDF_DotHPRatio",
-                            "MDF_MaxHp",
-                            "MDF_DotDamageRatio"
-                          ]
+                          "displayLines": "(((DOT_TriggerRatio * MDF_DotHPRatio) * MDF_MaxHp) * (1 + MDF_DotDamageRatio))"
                         },
                         "dmgFormulaFinal": "Converted DMG Base",
                         "Toughness": null,
@@ -613,12 +518,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "assignState": "True",
                   "state": "Normal"
@@ -781,12 +681,7 @@ const compositeAbilityObject = {
                       "variableName": "MDF_Count",
                       "value": 1,
                       "max": {
-                        "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                        "displayLines": "MDF_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxLayer"
-                        ]
+                        "displayLines": "MDF_MaxLayer"
                       }
                     }
                   ]
@@ -816,29 +711,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"799207340\">Enemy_W4_Manta_LocalLegend_Virus_NightMare</a>[<span class=\"descriptionNumberColor\">Glacial Erosion</span>]",
                       "duration": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_12386) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_12386",
-                        "constants": [],
-                        "variables": [
-                          "UnusedUnderThisBase_12386"
-                        ]
+                        "displayLines": "UnusedUnderThisBase_12386"
                       },
                       "valuePerStack": {
                         "MDF_DotHPRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12385) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12385",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_12385"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_12385"
                         },
                         "MDF_DotDamageRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12373) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12373",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_12373"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_12373"
                         }
                       }
                     }
@@ -852,29 +732,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1965379982\">Enemy_W4_Manta_LocalLegend_Virus_Avatar</a>[<span class=\"descriptionNumberColor\">Glacial Erosion</span>]",
                       "duration": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_12386) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_12386",
-                        "constants": [],
-                        "variables": [
-                          "UnusedUnderThisBase_12386"
-                        ]
+                        "displayLines": "UnusedUnderThisBase_12386"
                       },
                       "valuePerStack": {
                         "MDF_DotHPRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12385) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12385",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_12385"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_12385"
                         },
                         "MDF_DotDamageRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12373) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12373",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_12373"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_12373"
                         }
                       }
                     }
@@ -909,24 +774,14 @@ const compositeAbilityObject = {
                         "value1": "MDF_MaxLayer",
                         "compareType": ">",
                         "value2": {
-                          "operator": "Variables[0] (MDF_Count) || RETURN",
-                          "displayLines": "MDF_Count",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Count"
-                          ]
+                          "displayLines": "MDF_Count"
                         }
                       },
                       "passed": [
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (MDF_Count) || RETURN",
-                            "displayLines": "MDF_Count",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Count"
-                            ]
+                            "displayLines": "MDF_Count"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -934,12 +789,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                            "displayLines": "MDF_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxLayer"
-                            ]
+                            "displayLines": "MDF_MaxLayer"
                           },
                           "state": "Normal"
                         }
@@ -953,12 +803,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                            "displayLines": "MDF_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxLayer"
-                            ]
+                            "displayLines": "MDF_MaxLayer"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -966,12 +811,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                            "displayLines": "MDF_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxLayer"
-                            ]
+                            "displayLines": "MDF_MaxLayer"
                           },
                           "state": "Active"
                         },

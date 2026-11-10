@@ -54,24 +54,14 @@ const compositeAbilityObject = {
                     "value1": "MDF_HealRatio",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (0.15) || RETURN",
-                      "displayLines": "0.15",
-                      "constants": [],
-                      "variables": [
-                        0.15
-                      ]
+                      "displayLines": "0.15"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (0.15) || RETURN",
-                        "displayLines": "0.15",
-                        "constants": [],
-                        "variables": [
-                          0.15
-                        ]
+                        "displayLines": "0.15"
                       },
                       "variableName": "MDF_HealRatio"
                     }
@@ -85,12 +75,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoingConverted</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_HealRatio) || RETURN",
-                    "displayLines": "MDF_HealRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HealRatio"
-                    ]
+                    "displayLines": "MDF_HealRatio"
                   }
                 }
               ]
@@ -126,13 +111,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1918533900\">LC_21014_Sub</a>",
                   "valuePerStack": {
                     "MDF_HealRatio": {
-                      "operator": "Variables[0] (CasterStatusResistance) || Variables[1] (0.33) || MUL || RETURN",
-                      "displayLines": "(CasterStatusResistance * 0.33)",
-                      "constants": [],
-                      "variables": [
-                        "CasterStatusResistance",
-                        0.33
-                      ]
+                      "displayLines": "(CasterStatusResistance * 0.33)"
                     }
                   }
                 }
@@ -165,13 +144,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1918533900\">LC_21014_Sub</a>",
                       "valuePerStack": {
                         "MDF_HealRatio": {
-                          "operator": "Variables[0] (CasterStatusResistance) || Variables[1] (0.33) || MUL || RETURN",
-                          "displayLines": "(CasterStatusResistance * 0.33)",
-                          "constants": [],
-                          "variables": [
-                            "CasterStatusResistance",
-                            0.33
-                          ]
+                          "displayLines": "(CasterStatusResistance * 0.33)"
                         }
                       }
                     }

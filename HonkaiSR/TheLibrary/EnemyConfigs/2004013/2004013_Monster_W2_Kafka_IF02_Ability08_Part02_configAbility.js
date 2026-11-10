@@ -31,14 +31,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (MDF_StackCount) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(MDF_StackCount + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "MDF_StackCount"
-            ]
+            "displayLines": "(MDF_StackCount + 1)"
           },
           "variableName": "MDF_StackCount"
         }
@@ -154,12 +147,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
       "valuePerStack": {
         "MDF_DamageUpRatio_PerLayer": {
-          "operator": "Variables[0] ({[Skill08[0]]}) || RETURN",
-          "displayLines": "{[Skill08[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill08[0]]}"
-          ]
+          "displayLines": "{[Skill08[0]]}"
         },
         "Shield_InitValue": 0
       }
@@ -172,12 +160,7 @@ const configAbility = {
       },
       "modifierName": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
       "value": {
-        "operator": "Variables[0] (MDF_StackCount) || RETURN",
-        "displayLines": "MDF_StackCount",
-        "constants": [],
-        "variables": [
-          "MDF_StackCount"
-        ]
+        "displayLines": "MDF_StackCount"
       }
     },
     {

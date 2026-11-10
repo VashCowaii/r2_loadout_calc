@@ -31,12 +31,7 @@ const configAbility = {
                 "value1": "_EnergyBar_CurrentValue",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (Skill22_Cost) || RETURN",
-                  "displayLines": "Skill22_Cost",
-                  "constants": [],
-                  "variables": [
-                    "Skill22_Cost"
-                  ]
+                  "displayLines": "Skill22_Cost"
                 }
               },
               "passed": [
@@ -113,20 +108,10 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_EnergyBar_CurrentValue) || RETURN",
-                    "displayLines": "_EnergyBar_CurrentValue",
-                    "constants": [],
-                    "variables": [
-                      "_EnergyBar_CurrentValue"
-                    ]
+                    "displayLines": "_EnergyBar_CurrentValue"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (Skill22_Cost) || RETURN",
-                    "displayLines": "Skill22_Cost",
-                    "constants": [],
-                    "variables": [
-                      "Skill22_Cost"
-                    ]
+                    "displayLines": "Skill22_Cost"
                   },
                   "priorState": "Active"
                 }
@@ -135,20 +120,10 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_EnergyBar_CurrentValue) || RETURN",
-                    "displayLines": "_EnergyBar_CurrentValue",
-                    "constants": [],
-                    "variables": [
-                      "_EnergyBar_CurrentValue"
-                    ]
+                    "displayLines": "_EnergyBar_CurrentValue"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (Skill22_Cost) || RETURN",
-                    "displayLines": "Skill22_Cost",
-                    "constants": [],
-                    "variables": [
-                      "Skill22_Cost"
-                    ]
+                    "displayLines": "Skill22_Cost"
                   },
                   "priorState": "Normal"
                 }
@@ -166,12 +141,7 @@ const configAbility = {
                     "value1": "_EnergyBar_CurrentValue",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MYDEI_OBJECT_UNUSED_8[100]) || RETURN",
-                      "displayLines": "MYDEI_OBJECT_UNUSED_8[100]",
-                      "constants": [],
-                      "variables": [
-                        "MYDEI_OBJECT_UNUSED_8[100]"
-                      ]
+                      "displayLines": "MYDEI_OBJECT_UNUSED_8[100]"
                     }
                   },
                   {
@@ -196,12 +166,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_EnergyBar_CurrentValue) || RETURN",
-                    "displayLines": "_EnergyBar_CurrentValue",
-                    "constants": [],
-                    "variables": [
-                      "_EnergyBar_CurrentValue"
-                    ]
+                    "displayLines": "_EnergyBar_CurrentValue"
                   },
                   "priorState": "Active"
                 },
@@ -240,12 +205,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_EnergyBar_CurrentValue) || RETURN",
-                    "displayLines": "_EnergyBar_CurrentValue",
-                    "constants": [],
-                    "variables": [
-                      "_EnergyBar_CurrentValue"
-                    ]
+                    "displayLines": "_EnergyBar_CurrentValue"
                   }
                 }
               ]

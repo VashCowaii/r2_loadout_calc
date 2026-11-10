@@ -16,38 +16,21 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (MDF_CriticalDamageBase) || RETURN",
-        "displayLines": "MDF_CriticalDamageBase",
-        "constants": [],
-        "variables": [
-          "MDF_CriticalDamageBase"
-        ]
+        "displayLines": "MDF_CriticalDamageBase"
       },
       "variableName": "MDF_CriticalDamageBase_change"
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (MDF_CriticalDamageBase_change) || Variables[1] (0.16) || MUL || RETURN",
-        "displayLines": "(MDF_CriticalDamageBase_change * 0.16)",
-        "constants": [],
-        "variables": [
-          "MDF_CriticalDamageBase_change",
-          0.16
-        ]
+        "displayLines": "(MDF_CriticalDamageBase_change * 0.16)"
       },
       "variableName": "MDF_CriticalDamageBase_change"
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (MDF_CriticalDamageBase_change) || Variables[1] (0.2) || ADD || RETURN",
-        "displayLines": "(MDF_CriticalDamageBase_change + 0.2)",
-        "constants": [],
-        "variables": [
-          "MDF_CriticalDamageBase_change",
-          0.2
-        ]
+        "displayLines": "(MDF_CriticalDamageBase_change + 0.2)"
       },
       "variableName": "MDF_CriticalDamageBase_Total"
     },
@@ -59,30 +42,15 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-379855100\">Bronya_Ultimate_PowerUp</a>[<span class=\"descriptionNumberColor\">The Belobog March</span>]",
       "duration": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       },
       "immediateEffect": true,
       "valuePerStack": {
         "MDF_AttackAddedRatio": {
-          "operator": "Variables[0] (0.55) || RETURN",
-          "displayLines": "0.55",
-          "constants": [],
-          "variables": [
-            0.55
-          ]
+          "displayLines": "0.55"
         },
         "Bronya_CriticalDamage": {
-          "operator": "Variables[0] (MDF_CriticalDamageBase_Total) || RETURN",
-          "displayLines": "MDF_CriticalDamageBase_Total",
-          "constants": [],
-          "variables": [
-            "MDF_CriticalDamageBase_Total"
-          ]
+          "displayLines": "MDF_CriticalDamageBase_Total"
         }
       }
     },

@@ -46,13 +46,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.05) || Variables[1] (_Layer) || MUL || RETURN",
-                "displayLines": "(0.05 * _Layer)",
-                "constants": [],
-                "variables": [
-                  0.05,
-                  "_Layer"
-                ]
+                "displayLines": "(0.05 * _Layer)"
               }
             }
           ]
@@ -74,12 +68,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-686777299\">Relic_105_Sub</a>[<span class=\"descriptionNumberColor\">Champion of Streetwise Boxing</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (5) || RETURN",
-                "displayLines": "5",
-                "constants": [],
-                "variables": [
-                  5
-                ]
+                "displayLines": "5"
               }
             }
           ]
@@ -95,12 +84,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-686777299\">Relic_105_Sub</a>[<span class=\"descriptionNumberColor\">Champion of Streetwise Boxing</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (5) || RETURN",
-                "displayLines": "5",
-                "constants": [],
-                "variables": [
-                  5
-                ]
+                "displayLines": "5"
               }
             }
           ]

@@ -24,24 +24,14 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (4) || RETURN",
-        "displayLines": "4",
-        "constants": [],
-        "variables": [
-          4
-        ]
+        "displayLines": "4"
       },
       "variableName": "_Partner_CountThresHold"
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (16) || RETURN",
-        "displayLines": "16",
-        "constants": [],
-        "variables": [
-          16
-        ]
+        "displayLines": "16"
       },
       "variableName": "_Partner_Count_Max"
     },
@@ -104,24 +94,14 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (Init_Count) || RETURN",
-        "displayLines": "Init_Count",
-        "constants": [],
-        "variables": [
-          "Init_Count"
-        ]
+        "displayLines": "Init_Count"
       },
       "variableName": "_Partner_Size"
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (Init_Count) || RETURN",
-        "displayLines": "Init_Count",
-        "constants": [],
-        "variables": [
-          "Init_Count"
-        ]
+        "displayLines": "Init_Count"
       },
       "variableName": "_Partner_Count"
     },
@@ -172,14 +152,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": -999,
               "maxValue": {
-                "operator": "Variables[0] (_Partner_CountThresHold) || Constants[0] (0.5) || SUB || RETURN",
-                "displayLines": "(_Partner_CountThresHold - 0.5)",
-                "constants": [
-                  0.5
-                ],
-                "variables": [
-                  "_Partner_CountThresHold"
-                ]
+                "displayLines": "(_Partner_CountThresHold - 0.5)"
               },
               "enteringRange": [
                 {
@@ -211,25 +184,10 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": {
-                "operator": "Variables[0] (_Partner_CountThresHold) || Constants[0] (0.5) || SUB || RETURN",
-                "displayLines": "(_Partner_CountThresHold - 0.5)",
-                "constants": [
-                  0.5
-                ],
-                "variables": [
-                  "_Partner_CountThresHold"
-                ]
+                "displayLines": "(_Partner_CountThresHold - 0.5)"
               },
               "maxValue": {
-                "operator": "Variables[0] (_Partner_CountThresHold) || Constants[0] (2) || MUL || Constants[1] (0.5) || SUB || RETURN",
-                "displayLines": "((_Partner_CountThresHold * 2) - 0.5)",
-                "constants": [
-                  2,
-                  0.5
-                ],
-                "variables": [
-                  "_Partner_CountThresHold"
-                ]
+                "displayLines": "((_Partner_CountThresHold * 2) - 0.5)"
               },
               "enteringRange": [
                 {
@@ -261,26 +219,10 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": {
-                "operator": "Variables[0] (_Partner_CountThresHold) || Constants[0] (2) || MUL || Constants[1] (0.5) || SUB || RETURN",
-                "displayLines": "((_Partner_CountThresHold * 2) - 0.5)",
-                "constants": [
-                  2,
-                  0.5
-                ],
-                "variables": [
-                  "_Partner_CountThresHold"
-                ]
+                "displayLines": "((_Partner_CountThresHold * 2) - 0.5)"
               },
               "maxValue": {
-                "operator": "Variables[0] (_Partner_CountThresHold) || Constants[0] (3) || MUL || Constants[1] (0.5) || SUB || RETURN",
-                "displayLines": "((_Partner_CountThresHold * 3) - 0.5)",
-                "constants": [
-                  3,
-                  0.5
-                ],
-                "variables": [
-                  "_Partner_CountThresHold"
-                ]
+                "displayLines": "((_Partner_CountThresHold * 3) - 0.5)"
               },
               "enteringRange": [
                 {
@@ -312,26 +254,10 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": {
-                "operator": "Variables[0] (_Partner_CountThresHold) || Constants[0] (3) || MUL || Constants[1] (0.5) || SUB || RETURN",
-                "displayLines": "((_Partner_CountThresHold * 3) - 0.5)",
-                "constants": [
-                  3,
-                  0.5
-                ],
-                "variables": [
-                  "_Partner_CountThresHold"
-                ]
+                "displayLines": "((_Partner_CountThresHold * 3) - 0.5)"
               },
               "maxValue": {
-                "operator": "Variables[0] (_Partner_CountThresHold) || Constants[0] (4) || MUL || Constants[1] (0.5) || SUB || RETURN",
-                "displayLines": "((_Partner_CountThresHold * 4) - 0.5)",
-                "constants": [
-                  4,
-                  0.5
-                ],
-                "variables": [
-                  "_Partner_CountThresHold"
-                ]
+                "displayLines": "((_Partner_CountThresHold * 4) - 0.5)"
               },
               "enteringRange": [
                 {
@@ -363,15 +289,7 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": {
-                "operator": "Variables[0] (_Partner_CountThresHold) || Constants[0] (4) || MUL || Constants[1] (0.5) || SUB || RETURN",
-                "displayLines": "((_Partner_CountThresHold * 4) - 0.5)",
-                "constants": [
-                  4,
-                  0.5
-                ],
-                "variables": [
-                  "_Partner_CountThresHold"
-                ]
+                "displayLines": "((_Partner_CountThresHold * 4) - 0.5)"
               },
               "maxValue": 9999,
               "enteringRange": [
@@ -426,14 +344,7 @@ const configAbility = {
                 "value1": "_Partner_Count_Show",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (_Partner_CountThresHold) || Constants[0] (4) || MUL || RETURN",
-                  "displayLines": "(_Partner_CountThresHold * 4)",
-                  "constants": [
-                    4
-                  ],
-                  "variables": [
-                    "_Partner_CountThresHold"
-                  ]
+                  "displayLines": "(_Partner_CountThresHold * 4)"
                 }
               },
               "passed": [
@@ -477,12 +388,7 @@ const configAbility = {
                 "target": "{{Caster's Summoner}}"
               },
               "value": {
-                "operator": "Variables[0] (Init_Count) || RETURN",
-                "displayLines": "Init_Count",
-                "constants": [],
-                "variables": [
-                  "Init_Count"
-                ]
+                "displayLines": "Init_Count"
               },
               "variableName": "_Partner_Count_Show"
             }
@@ -507,12 +413,7 @@ const configAbility = {
                     "target": "{{Caster's Summoner}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (_Partner_Count_Show) || RETURN",
-                    "displayLines": "_Partner_Count_Show",
-                    "constants": [],
-                    "variables": [
-                      "_Partner_Count_Show"
-                    ]
+                    "displayLines": "_Partner_Count_Show"
                   },
                   "variableName": "_Partner_Count_Show"
                 }
@@ -525,12 +426,7 @@ const configAbility = {
                     "target": "{{Caster's Summoner}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (_Partner_Count_Show) || RETURN",
-                    "displayLines": "_Partner_Count_Show",
-                    "constants": [],
-                    "variables": [
-                      "_Partner_Count_Show"
-                    ]
+                    "displayLines": "_Partner_Count_Show"
                   },
                   "variableName": "_Partner_Count_Show"
                 }
@@ -665,12 +561,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               }
             }
           ]
@@ -780,12 +671,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             }
           }
         }
@@ -830,12 +716,7 @@ const configAbility = {
                   },
                   "previewType": null,
                   "previewValue": {
-                    "operator": "Variables[0] (MDF_MaxHP) || RETURN",
-                    "displayLines": "MDF_MaxHP",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxHP"
-                    ]
+                    "displayLines": "MDF_MaxHP"
                   }
                 }
               ]

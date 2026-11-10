@@ -58,14 +58,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (_Count) || Constants[0] (1) || ADD || RETURN",
-        "displayLines": "(_Count + 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "_Count"
-        ]
+        "displayLines": "(_Count + 1)"
       },
       "variableName": "_Count"
     }

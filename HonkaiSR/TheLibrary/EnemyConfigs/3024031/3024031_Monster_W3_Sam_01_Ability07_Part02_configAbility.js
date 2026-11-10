@@ -56,12 +56,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1121915816\">Enemy_W3_Sam_01_TakenDamage</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
       "valuePerStack": {
         "MDF_DamageTakenUpRatio_PerLayer": {
-          "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-          "displayLines": "{[Skill04[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[1]]}"
-          ]
+          "displayLines": "{[Skill04[1]]}"
         }
       }
     },

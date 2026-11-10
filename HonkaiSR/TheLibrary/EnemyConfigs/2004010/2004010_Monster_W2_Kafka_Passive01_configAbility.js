@@ -39,12 +39,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1082518094\">Monster_W2_Kafka_Pursuit</a>",
       "valuePerStack": {
         "MDF_Count": {
-          "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-          "displayLines": "{[Skill06[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[1]]}"
-          ]
+          "displayLines": "{[Skill06[1]]}"
         }
       }
     },

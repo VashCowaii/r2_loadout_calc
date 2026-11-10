@@ -40,29 +40,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "baseChance": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "valuePerStack": {
             "Modifier_Electric_DamagePercentage": {
-              "operator": "Variables[0] (1.04) || RETURN",
-              "displayLines": "1.04",
-              "constants": [],
-              "variables": [
-                1.04
-              ]
+              "displayLines": "1.04"
             }
           },
           "stackFlag": "CharacterSkill"
@@ -79,20 +64,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (1.8) || RETURN",
-          "displayLines": "1.8",
-          "constants": [],
-          "variables": [
-            1.8
-          ]
+          "displayLines": "1.8"
         },
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -126,12 +101,7 @@ const configAbility = {
           ],
           "function": "Add",
           "value": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "valueType": "Duration"
         }

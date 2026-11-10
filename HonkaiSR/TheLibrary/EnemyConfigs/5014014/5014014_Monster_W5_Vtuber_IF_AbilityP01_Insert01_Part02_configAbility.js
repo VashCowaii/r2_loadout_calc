@@ -7,12 +7,7 @@ const configAbility = {
     {
       "name": "Deal Toughness DMG",
       "value": {
-        "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-        "displayLines": "{[PassiveSkill01[4]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill01[4]]}"
-        ]
+        "displayLines": "{[PassiveSkill01[4]]}"
       },
       "defender": {
         "name": "Target Name",
@@ -26,12 +21,7 @@ const configAbility = {
     {
       "name": "Adjust Team Punchline Value",
       "value": {
-        "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
-        "displayLines": "{[PassiveSkill01[5]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill01[5]]}"
-        ]
+        "displayLines": "{[PassiveSkill01[5]]}"
       },
       "adjustment": "Add"
     },

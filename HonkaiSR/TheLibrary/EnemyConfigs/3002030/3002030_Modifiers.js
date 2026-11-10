@@ -65,14 +65,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Owner_MaxHP) || Variables[1] (Modifier_Bleed_DamagePercentage) || MUL || Variables[2] (Modifier_Layer) || MUL || RETURN",
-                "displayLines": "((Owner_MaxHP * Modifier_Bleed_DamagePercentage) * Modifier_Layer)",
-                "constants": [],
-                "variables": [
-                  "Owner_MaxHP",
-                  "Modifier_Bleed_DamagePercentage",
-                  "Modifier_Layer"
-                ]
+                "displayLines": "((Owner_MaxHP * Modifier_Bleed_DamagePercentage) * Modifier_Layer)"
               },
               "variableName": "MDF_CurrentDamage"
             },
@@ -92,26 +85,14 @@ const configAbility = {
                 "value1": "MDF_CurrentDamage",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (Modifier_Bleed_MaxDamagePercentage) || Variables[1] (MDF_CasterMaxHP) || MUL || RETURN",
-                  "displayLines": "(Modifier_Bleed_MaxDamagePercentage * MDF_CasterMaxHP)",
-                  "constants": [],
-                  "variables": [
-                    "Modifier_Bleed_MaxDamagePercentage",
-                    "MDF_CasterMaxHP"
-                  ]
+                  "displayLines": "(Modifier_Bleed_MaxDamagePercentage * MDF_CasterMaxHP)"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Modifier_Bleed_MaxDamagePercentage) || Variables[1] (MDF_CasterMaxHP) || MUL || RETURN",
-                    "displayLines": "(Modifier_Bleed_MaxDamagePercentage * MDF_CasterMaxHP)",
-                    "constants": [],
-                    "variables": [
-                      "Modifier_Bleed_MaxDamagePercentage",
-                      "MDF_CasterMaxHP"
-                    ]
+                    "displayLines": "(Modifier_Bleed_MaxDamagePercentage * MDF_CasterMaxHP)"
                   },
                   "variableName": "MDF_DamageValue"
                 }
@@ -120,14 +101,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Owner_MaxHP) || Variables[1] (Modifier_Bleed_DamagePercentage) || MUL || Variables[2] (Modifier_Layer) || MUL || RETURN",
-                    "displayLines": "((Owner_MaxHP * Modifier_Bleed_DamagePercentage) * Modifier_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "Owner_MaxHP",
-                      "Modifier_Bleed_DamagePercentage",
-                      "Modifier_Layer"
-                    ]
+                    "displayLines": "((Owner_MaxHP * Modifier_Bleed_DamagePercentage) * Modifier_Layer)"
                   },
                   "variableName": "MDF_DamageValue"
                 }
@@ -142,12 +116,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageFlat": {
-                  "operator": "Variables[0] (MDF_DamageValue) || RETURN",
-                  "displayLines": "MDF_DamageValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamageValue"
-                  ]
+                  "displayLines": "MDF_DamageValue"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -184,14 +153,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Owner_MaxHP) || Variables[1] (Modifier_Bleed_DamagePercentage) || MUL || Variables[2] (Modifier_Layer) || MUL || RETURN",
-                "displayLines": "((Owner_MaxHP * Modifier_Bleed_DamagePercentage) * Modifier_Layer)",
-                "constants": [],
-                "variables": [
-                  "Owner_MaxHP",
-                  "Modifier_Bleed_DamagePercentage",
-                  "Modifier_Layer"
-                ]
+                "displayLines": "((Owner_MaxHP * Modifier_Bleed_DamagePercentage) * Modifier_Layer)"
               },
               "variableName": "MDF_CurrentDamage"
             },
@@ -211,26 +173,14 @@ const configAbility = {
                 "value1": "MDF_CurrentDamage",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (Modifier_Bleed_MaxDamagePercentage) || Variables[1] (MDF_CasterMaxHP) || MUL || RETURN",
-                  "displayLines": "(Modifier_Bleed_MaxDamagePercentage * MDF_CasterMaxHP)",
-                  "constants": [],
-                  "variables": [
-                    "Modifier_Bleed_MaxDamagePercentage",
-                    "MDF_CasterMaxHP"
-                  ]
+                  "displayLines": "(Modifier_Bleed_MaxDamagePercentage * MDF_CasterMaxHP)"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Modifier_Bleed_MaxDamagePercentage) || Variables[1] (MDF_CasterMaxHP) || MUL || RETURN",
-                    "displayLines": "(Modifier_Bleed_MaxDamagePercentage * MDF_CasterMaxHP)",
-                    "constants": [],
-                    "variables": [
-                      "Modifier_Bleed_MaxDamagePercentage",
-                      "MDF_CasterMaxHP"
-                    ]
+                    "displayLines": "(Modifier_Bleed_MaxDamagePercentage * MDF_CasterMaxHP)"
                   },
                   "variableName": "MDF_DamageValue"
                 }
@@ -239,14 +189,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Owner_MaxHP) || Variables[1] (Modifier_Bleed_DamagePercentage) || MUL || Variables[2] (Modifier_Layer) || MUL || RETURN",
-                    "displayLines": "((Owner_MaxHP * Modifier_Bleed_DamagePercentage) * Modifier_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "Owner_MaxHP",
-                      "Modifier_Bleed_DamagePercentage",
-                      "Modifier_Layer"
-                    ]
+                    "displayLines": "((Owner_MaxHP * Modifier_Bleed_DamagePercentage) * Modifier_Layer)"
                   },
                   "variableName": "MDF_DamageValue"
                 }
@@ -261,13 +204,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageFlat": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (MDF_DamageValue) || MUL || RETURN",
-                  "displayLines": "(DOT_TriggerRatio * MDF_DamageValue)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "MDF_DamageValue"
-                  ]
+                  "displayLines": "(DOT_TriggerRatio * MDF_DamageValue)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -383,21 +320,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-210849987\">Monster_W2_Beast01_03_LayerCount</a>[<span class=\"descriptionNumberColor\">SoulGlad Revel</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                    "displayLines": "{[SkillP01[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillP01[0]]}"
-                    ]
+                    "displayLines": "{[SkillP01[0]]}"
                   },
                   "valuePerStack": {
                     "MDF_ShowValue": {
-                      "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                      "displayLines": "{[SkillP01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[0]]}"
-                      ]
+                      "displayLines": "{[SkillP01[0]]}"
                     }
                   }
                 }
@@ -416,21 +343,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-210849987\">Monster_W2_Beast01_03_LayerCount</a>[<span class=\"descriptionNumberColor\">SoulGlad Revel</span>]",
               "stackLimit": {
-                "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                "displayLines": "{[SkillP01[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP01[0]]}"
-                ]
+                "displayLines": "{[SkillP01[0]]}"
               },
               "valuePerStack": {
                 "MDF_ShowValue": {
-                  "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                  "displayLines": "{[SkillP01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[0]]}"
-                  ]
+                  "displayLines": "{[SkillP01[0]]}"
                 }
               }
             }
@@ -498,12 +415,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]

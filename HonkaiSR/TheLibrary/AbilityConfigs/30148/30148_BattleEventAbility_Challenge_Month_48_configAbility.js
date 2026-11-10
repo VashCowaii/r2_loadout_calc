@@ -27,12 +27,7 @@ const configAbility = {
               "functionName": "<a class=\"gTempYellow\" id=\"101547145\">Elation_StartElationTime</a>",
               "variables": {
                 "TryStartElationTime_OverrideElationPoint": {
-                  "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                  "displayLines": "#BattleEvent_P2_ADF",
-                  "constants": [],
-                  "variables": [
-                    "#BattleEvent_P2_ADF"
-                  ]
+                  "displayLines": "#BattleEvent_P2_ADF"
                 },
                 "TryStartElationTime_ElationTimeIsNoConsume": 1
               },
@@ -67,12 +62,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1941769548\">ElationTime_PeakBattle_Standard_Mark</a>",
                   "valuePerStack": {
                     "MDF_DamagePercentage": {
-                      "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P1_ADF"
                     }
                   }
                 }

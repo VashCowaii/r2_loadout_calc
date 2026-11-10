@@ -188,12 +188,7 @@ const configAbility = {
                     "value1": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                      "displayLines": "MDF_MaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MaxLayer"
-                      ]
+                      "displayLines": "MDF_MaxLayer"
                     },
                     "valueType": "Layer"
                   }
@@ -253,20 +248,10 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_DamagePercentage": {
-              "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-              "displayLines": "MDF_DamagePercentage",
-              "constants": [],
-              "variables": [
-                "MDF_DamagePercentage"
-              ]
+              "displayLines": "MDF_DamagePercentage"
             },
             "MDF_AddMaxLayer": {
-              "operator": "Variables[0] (MDF_AddMaxLayer) || RETURN",
-              "displayLines": "MDF_AddMaxLayer",
-              "constants": [],
-              "variables": [
-                "MDF_AddMaxLayer"
-              ]
+              "displayLines": "MDF_AddMaxLayer"
             }
           }
         },
@@ -322,20 +307,10 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_DamagePercentage": {
-              "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-              "displayLines": "MDF_DamagePercentage",
-              "constants": [],
-              "variables": [
-                "MDF_DamagePercentage"
-              ]
+              "displayLines": "MDF_DamagePercentage"
             },
             "MDF_AddMaxLayer": {
-              "operator": "Variables[0] (MDF_AddMaxLayer) || RETURN",
-              "displayLines": "MDF_AddMaxLayer",
-              "constants": [],
-              "variables": [
-                "MDF_AddMaxLayer"
-              ]
+              "displayLines": "MDF_AddMaxLayer"
             }
           }
         }

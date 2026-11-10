@@ -26,14 +26,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_LifeTime) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(MDF_LifeTime + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_LifeTime"
-                ]
+                "displayLines": "(MDF_LifeTime + 1)"
               },
               "variableName": "MDF_LifeTime"
             },
@@ -165,12 +158,7 @@ const configAbility = {
                   "showInActionOrder": true,
                   "valuePerStack": {
                     "AADF_1": {
-                      "operator": "Variables[0] (MDF_HealPercentage) || RETURN",
-                      "displayLines": "MDF_HealPercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_HealPercentage"
-                      ]
+                      "displayLines": "MDF_HealPercentage"
                     }
                   },
                   "allowAbilityTriggers": false
@@ -223,12 +211,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1718302990\">GlobalAbility_Castorice_Listen</a>",
               "valuePerStack": {
                 "MDF_HealPercentage": {
-                  "operator": "Variables[0] (MDF_Castorice_CreateBattleEvent) || RETURN",
-                  "displayLines": "MDF_Castorice_CreateBattleEvent",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Castorice_CreateBattleEvent"
-                  ]
+                  "displayLines": "MDF_Castorice_CreateBattleEvent"
                 }
               }
             }
@@ -288,12 +271,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1718302990\">GlobalAbility_Castorice_Listen</a>",
                   "valuePerStack": {
                     "MDF_HealPercentage": {
-                      "operator": "Variables[0] (MDF_Castorice_CreateBattleEvent) || RETURN",
-                      "displayLines": "MDF_Castorice_CreateBattleEvent",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Castorice_CreateBattleEvent"
-                      ]
+                      "displayLines": "MDF_Castorice_CreateBattleEvent"
                     }
                   }
                 }
@@ -319,12 +297,7 @@ const configAbility = {
               "eventID": 11407,
               "variables": {
                 "MDF_Castorice_CreateBattleEvent": {
-                  "operator": "Variables[0] (#ADF_1) || RETURN",
-                  "displayLines": "#ADF_1",
-                  "constants": [],
-                  "variables": [
-                    "#ADF_1"
-                  ]
+                  "displayLines": "#ADF_1"
                 }
               }
             }

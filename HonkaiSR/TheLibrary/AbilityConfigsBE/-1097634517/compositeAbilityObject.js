@@ -135,14 +135,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (count) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(count + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "count"
-                    ]
+                    "displayLines": "(count + 1)"
                   },
                   "variableName": "count"
                 },
@@ -271,12 +264,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (#ADF_1) || RETURN",
-                    "displayLines": "#ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_1"
-                    ]
+                    "displayLines": "#ADF_1"
                   }
                 }
               ]
@@ -298,12 +286,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1581262672\">Modifier_RogueDLCAbundance_Upgrade2_AttackUp</a>[<span class=\"descriptionNumberColor\">Formation Extrapolation: Mountain High</span>]",
                   "duration": {
-                    "operator": "Variables[0] (#ADF_2) || RETURN",
-                    "displayLines": "#ADF_2",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_2"
-                    ]
+                    "displayLines": "#ADF_2"
                   }
                 }
               ]
@@ -381,12 +364,7 @@ const compositeAbilityObject = {
                     "target": "{{Parameter Target}}"
                   },
                   "dispelCount": {
-                    "operator": "Variables[0] (#ADF_1) || RETURN",
-                    "displayLines": "#ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_1"
-                    ]
+                    "displayLines": "#ADF_1"
                   }
                 }
               ]
@@ -467,12 +445,7 @@ const compositeAbilityObject = {
                 "target": "{{Parameter Target}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (EliteRatio) || RETURN",
-                "displayLines": "EliteRatio",
-                "constants": [],
-                "variables": [
-                  "EliteRatio"
-                ]
+                "displayLines": "EliteRatio"
               },
               "formula": "Heal from Target MaxHP"
             }
@@ -505,12 +478,7 @@ const compositeAbilityObject = {
                 "target": "{{Parameter Target}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (Ratio) || RETURN",
-                "displayLines": "Ratio",
-                "constants": [],
-                "variables": [
-                  "Ratio"
-                ]
+                "displayLines": "Ratio"
               },
               "formula": "Heal from Target MaxHP"
             }
@@ -585,20 +553,10 @@ const compositeAbilityObject = {
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "Ratio": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     },
                     "EliteRatio": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     }
                   },
                   "allowAbilityTriggers": false
@@ -833,12 +791,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "ExtraChance",
                   "resetValue": {
-                    "operator": "Variables[0] (#ADF_1) || RETURN",
-                    "displayLines": "#ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_1"
-                    ]
+                    "displayLines": "#ADF_1"
                   },
                   "scope": "TargetEntity"
                 },
@@ -850,12 +803,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "ExtraLifeTime",
                   "resetValue": {
-                    "operator": "Variables[0] (#ADF_2) || RETURN",
-                    "displayLines": "#ADF_2",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_2"
-                    ]
+                    "displayLines": "#ADF_2"
                   },
                   "scope": "TargetEntity"
                 }
@@ -956,31 +904,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
                       "duration": {
-                        "operator": "Variables[0] (LifeTime) || Variables[1] (ExtraLifeTime) || ADD || RETURN",
-                        "displayLines": "(LifeTime + ExtraLifeTime)",
-                        "constants": [],
-                        "variables": [
-                          "LifeTime",
-                          "ExtraLifeTime"
-                        ]
+                        "displayLines": "(LifeTime + ExtraLifeTime)"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (Chance) || Variables[1] (ExtraChance) || ADD || RETURN",
-                        "displayLines": "(Chance + ExtraChance)",
-                        "constants": [],
-                        "variables": [
-                          "Chance",
-                          "ExtraChance"
-                        ]
+                        "displayLines": "(Chance + ExtraChance)"
                       },
                       "valuePerStack": {
                         "Modifier_Electric_DamagePercentage": {
-                          "operator": "Variables[0] (DamagePercentage) || RETURN",
-                          "displayLines": "DamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "DamagePercentage"
-                          ]
+                          "displayLines": "DamagePercentage"
                         }
                       },
                       "stackFlag": "Rogue"
@@ -995,29 +926,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
                       "duration": {
-                        "operator": "Variables[0] (LifeTime) || RETURN",
-                        "displayLines": "LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "LifeTime"
-                        ]
+                        "displayLines": "LifeTime"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (Chance) || RETURN",
-                        "displayLines": "Chance",
-                        "constants": [],
-                        "variables": [
-                          "Chance"
-                        ]
+                        "displayLines": "Chance"
                       },
                       "valuePerStack": {
                         "Modifier_Electric_DamagePercentage": {
-                          "operator": "Variables[0] (DamagePercentage) || RETURN",
-                          "displayLines": "DamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "DamagePercentage"
-                          ]
+                          "displayLines": "DamagePercentage"
                         }
                       },
                       "stackFlag": "Rogue"
@@ -1087,33 +1003,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                       "duration": {
-                        "operator": "Variables[0] (LifeTime) || Variables[1] (ExtraLifeTime) || ADD || RETURN",
-                        "displayLines": "(LifeTime + ExtraLifeTime)",
-                        "constants": [],
-                        "variables": [
-                          "LifeTime",
-                          "ExtraLifeTime"
-                        ]
+                        "displayLines": "(LifeTime + ExtraLifeTime)"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (Chance) || Variables[1] (ExtraChance) || ADD || RETURN",
-                        "displayLines": "(Chance + ExtraChance)",
-                        "constants": [],
-                        "variables": [
-                          "Chance",
-                          "ExtraChance"
-                        ]
+                        "displayLines": "(Chance + ExtraChance)"
                       },
                       "valuePerStack": {
                         "Modifier_Poison_DamagePercentage": {
-                          "operator": "Variables[0] (DamagePercentage) || Constants[0] (0.5) || MUL || RETURN",
-                          "displayLines": "(DamagePercentage * 0.5)",
-                          "constants": [
-                            0.5
-                          ],
-                          "variables": [
-                            "DamagePercentage"
-                          ]
+                          "displayLines": "(DamagePercentage * 0.5)"
                         }
                       },
                       "addStacksPerTrigger": 2,
@@ -1129,31 +1026,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                       "duration": {
-                        "operator": "Variables[0] (LifeTime) || RETURN",
-                        "displayLines": "LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "LifeTime"
-                        ]
+                        "displayLines": "LifeTime"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (Chance) || RETURN",
-                        "displayLines": "Chance",
-                        "constants": [],
-                        "variables": [
-                          "Chance"
-                        ]
+                        "displayLines": "Chance"
                       },
                       "valuePerStack": {
                         "Modifier_Poison_DamagePercentage": {
-                          "operator": "Variables[0] (DamagePercentage) || Constants[0] (0.5) || MUL || RETURN",
-                          "displayLines": "(DamagePercentage * 0.5)",
-                          "constants": [
-                            0.5
-                          ],
-                          "variables": [
-                            "DamagePercentage"
-                          ]
+                          "displayLines": "(DamagePercentage * 0.5)"
                         }
                       },
                       "addStacksPerTrigger": 2,
@@ -1224,31 +1104,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
                       "duration": {
-                        "operator": "Variables[0] (LifeTime) || Variables[1] (ExtraLifeTime) || ADD || RETURN",
-                        "displayLines": "(LifeTime + ExtraLifeTime)",
-                        "constants": [],
-                        "variables": [
-                          "LifeTime",
-                          "ExtraLifeTime"
-                        ]
+                        "displayLines": "(LifeTime + ExtraLifeTime)"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (Chance) || Variables[1] (ExtraChance) || ADD || RETURN",
-                        "displayLines": "(Chance + ExtraChance)",
-                        "constants": [],
-                        "variables": [
-                          "Chance",
-                          "ExtraChance"
-                        ]
+                        "displayLines": "(Chance + ExtraChance)"
                       },
                       "valuePerStack": {
                         "Modifier_Burn_DamagePercentage": {
-                          "operator": "Variables[0] (DamagePercentage) || RETURN",
-                          "displayLines": "DamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "DamagePercentage"
-                          ]
+                          "displayLines": "DamagePercentage"
                         }
                       },
                       "stackFlag": "Rogue"
@@ -1263,29 +1126,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
                       "duration": {
-                        "operator": "Variables[0] (LifeTime) || RETURN",
-                        "displayLines": "LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "LifeTime"
-                        ]
+                        "displayLines": "LifeTime"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (Chance) || RETURN",
-                        "displayLines": "Chance",
-                        "constants": [],
-                        "variables": [
-                          "Chance"
-                        ]
+                        "displayLines": "Chance"
                       },
                       "valuePerStack": {
                         "Modifier_Burn_DamagePercentage": {
-                          "operator": "Variables[0] (DamagePercentage) || RETURN",
-                          "displayLines": "DamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "DamagePercentage"
-                          ]
+                          "displayLines": "DamagePercentage"
                         }
                       },
                       "stackFlag": "Rogue"
@@ -1355,41 +1203,17 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"227784370\">Standard_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
                       "duration": {
-                        "operator": "Variables[0] (LifeTime) || Variables[1] (ExtraLifeTime) || ADD || RETURN",
-                        "displayLines": "(LifeTime + ExtraLifeTime)",
-                        "constants": [],
-                        "variables": [
-                          "LifeTime",
-                          "ExtraLifeTime"
-                        ]
+                        "displayLines": "(LifeTime + ExtraLifeTime)"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (Chance) || Variables[1] (ExtraChance) || ADD || RETURN",
-                        "displayLines": "(Chance + ExtraChance)",
-                        "constants": [],
-                        "variables": [
-                          "Chance",
-                          "ExtraChance"
-                        ]
+                        "displayLines": "(Chance + ExtraChance)"
                       },
                       "valuePerStack": {
                         "Modifier_Tear_DamageRatio": {
-                          "operator": "Variables[0] (BleedPercent) || RETURN",
-                          "displayLines": "BleedPercent",
-                          "constants": [],
-                          "variables": [
-                            "BleedPercent"
-                          ]
+                          "displayLines": "BleedPercent"
                         },
                         "Modifier_Tear_MaxPercentage": {
-                          "operator": "Variables[0] (BleedPercent) || Constants[0] (2) || MUL || RETURN",
-                          "displayLines": "(BleedPercent * 2)",
-                          "constants": [
-                            2
-                          ],
-                          "variables": [
-                            "BleedPercent"
-                          ]
+                          "displayLines": "(BleedPercent * 2)"
                         }
                       },
                       "stackFlag": "Rogue"
@@ -1404,39 +1228,17 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"227784370\">Standard_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
                       "duration": {
-                        "operator": "Variables[0] (LifeTime) || RETURN",
-                        "displayLines": "LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "LifeTime"
-                        ]
+                        "displayLines": "LifeTime"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (Chance) || RETURN",
-                        "displayLines": "Chance",
-                        "constants": [],
-                        "variables": [
-                          "Chance"
-                        ]
+                        "displayLines": "Chance"
                       },
                       "valuePerStack": {
                         "Modifier_Tear_DamageRatio": {
-                          "operator": "Variables[0] (BleedPercent) || RETURN",
-                          "displayLines": "BleedPercent",
-                          "constants": [],
-                          "variables": [
-                            "BleedPercent"
-                          ]
+                          "displayLines": "BleedPercent"
                         },
                         "Modifier_Tear_MaxPercentage": {
-                          "operator": "Variables[0] (BleedPercent) || Constants[0] (2) || MUL || RETURN",
-                          "displayLines": "(BleedPercent * 2)",
-                          "constants": [
-                            2
-                          ],
-                          "variables": [
-                            "BleedPercent"
-                          ]
+                          "displayLines": "(BleedPercent * 2)"
                         }
                       },
                       "stackFlag": "Rogue"
@@ -1501,13 +1303,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (ExtraDamagePercentage) || Variables[1] (_Layer) || MUL || RETURN",
-                    "displayLines": "(ExtraDamagePercentage * _Layer)",
-                    "constants": [],
-                    "variables": [
-                      "ExtraDamagePercentage",
-                      "_Layer"
-                    ]
+                    "displayLines": "(ExtraDamagePercentage * _Layer)"
                   }
                 }
               ]
@@ -1586,44 +1382,19 @@ const compositeAbilityObject = {
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "Chance": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     },
                     "LifeTime": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     },
                     "ExtraDamagePercentage": {
-                      "operator": "Variables[0] (#ADF_3) || RETURN",
-                      "displayLines": "#ADF_3",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_3"
-                      ]
+                      "displayLines": "#ADF_3"
                     },
                     "DamagePercentage": {
-                      "operator": "Variables[0] (#ADF_5) || RETURN",
-                      "displayLines": "#ADF_5",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_5"
-                      ]
+                      "displayLines": "#ADF_5"
                     },
                     "BleedPercent": {
-                      "operator": "Variables[0] (#ADF_6) || RETURN",
-                      "displayLines": "#ADF_6",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_6"
-                      ]
+                      "displayLines": "#ADF_6"
                     }
                   },
                   "allowAbilityTriggers": false
@@ -1786,14 +1557,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (1) || INVERT || Variables[0] (#ADF_1) || MUL || RETURN",
-                    "displayLines": "(-1 * #ADF_1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "#ADF_1"
-                    ]
+                    "displayLines": "(-1 * #ADF_1)"
                   }
                 }
               ]
@@ -1815,12 +1579,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1071238655\">Modifier_RogueDLCRuin_Upgrade1_DefenceDown</a>[<span class=\"descriptionNumberColor\">Formation Extrapolation: Extreme Helium Flash</span>]",
                   "duration": {
-                    "operator": "Variables[0] (#ADF_2) || RETURN",
-                    "displayLines": "#ADF_2",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_2"
-                    ]
+                    "displayLines": "#ADF_2"
                   }
                 }
               ]
@@ -1886,12 +1645,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (DamagePercentage) || RETURN",
-              "displayLines": "DamagePercentage",
-              "constants": [],
-              "variables": [
-                "DamagePercentage"
-              ]
+              "displayLines": "DamagePercentage"
             },
             "Toughness": null,
             "Tags": null,
@@ -1945,13 +1699,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (ExtraDamagePercentage) || Variables[1] (_Layer) || MUL || RETURN",
-                    "displayLines": "(ExtraDamagePercentage * _Layer)",
-                    "constants": [],
-                    "variables": [
-                      "ExtraDamagePercentage",
-                      "_Layer"
-                    ]
+                    "displayLines": "(ExtraDamagePercentage * _Layer)"
                   }
                 }
               ]
@@ -2026,20 +1774,10 @@ const compositeAbilityObject = {
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "DamagePercentage": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     },
                     "ExtraDamagePercentage": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     }
                   },
                   "allowAbilityTriggers": false
@@ -2206,12 +1944,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   },
                   "passed": [
@@ -2363,15 +2096,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "DamageFlat": {
-                  "operator": "Variables[0] (_MaxAttack) || Variables[1] (DamagePercentage) || MUL || Constants[0] (8) || DIV || RETURN",
-                  "displayLines": "((_MaxAttack * DamagePercentage) / 8)",
-                  "constants": [
-                    8
-                  ],
-                  "variables": [
-                    "_MaxAttack",
-                    "DamagePercentage"
-                  ]
+                  "displayLines": "((_MaxAttack * DamagePercentage) / 8)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -2402,15 +2127,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "DamageFlat": {
-                  "operator": "Variables[0] (_MaxAttack) || Variables[1] (DamagePercentage) || MUL || Constants[0] (8) || DIV || RETURN",
-                  "displayLines": "((_MaxAttack * DamagePercentage) / 8)",
-                  "constants": [
-                    8
-                  ],
-                  "variables": [
-                    "_MaxAttack",
-                    "DamagePercentage"
-                  ]
+                  "displayLines": "((_MaxAttack * DamagePercentage) / 8)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -2537,12 +2254,7 @@ const compositeAbilityObject = {
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "DamagePercentage": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   },
                   "allowAbilityTriggers": false
@@ -2652,39 +2364,19 @@ const compositeAbilityObject = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                "displayLines": "#BattleEvent_P1_ADF",
-                "constants": [],
-                "variables": [
-                  "#BattleEvent_P1_ADF"
-                ]
+                "displayLines": "#BattleEvent_P1_ADF"
               },
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (Value_NextMonsterId) || RETURN",
-                    "displayLines": "Value_NextMonsterId",
-                    "constants": [],
-                    "variables": [
-                      "Value_NextMonsterId"
-                    ]
+                    "displayLines": "Value_NextMonsterId"
                   },
                   "overrideActivityGroup": {
-                    "operator": "Variables[0] (Value_NextMonsterEliteGroup) || RETURN",
-                    "displayLines": "Value_NextMonsterEliteGroup",
-                    "constants": [],
-                    "variables": [
-                      "Value_NextMonsterEliteGroup"
-                    ]
+                    "displayLines": "Value_NextMonsterEliteGroup"
                   },
                   "slot": {
-                    "operator": "Variables[0] (Value_MonsterSlotKey) || RETURN",
-                    "displayLines": "Value_MonsterSlotKey",
-                    "constants": [],
-                    "variables": [
-                      "Value_MonsterSlotKey"
-                    ]
+                    "displayLines": "Value_MonsterSlotKey"
                   }
                 }
               ]
@@ -2777,40 +2469,20 @@ const compositeAbilityObject = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                "displayLines": "#BattleEvent_P1_ADF",
-                "constants": [],
-                "variables": [
-                  "#BattleEvent_P1_ADF"
-                ]
+                "displayLines": "#BattleEvent_P1_ADF"
               },
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (Value_NextMonsterId) || RETURN",
-                    "displayLines": "Value_NextMonsterId",
-                    "constants": [],
-                    "variables": [
-                      "Value_NextMonsterId"
-                    ]
+                    "displayLines": "Value_NextMonsterId"
                   },
                   "locationType": "FormationRecord",
                   "overrideActivityGroup": {
-                    "operator": "Variables[0] (Value_NextMonsterEliteGroup) || RETURN",
-                    "displayLines": "Value_NextMonsterEliteGroup",
-                    "constants": [],
-                    "variables": [
-                      "Value_NextMonsterEliteGroup"
-                    ]
+                    "displayLines": "Value_NextMonsterEliteGroup"
                   },
                   "slot": {
-                    "operator": "Variables[0] (Value_MonsterSlotKey) || RETURN",
-                    "displayLines": "Value_MonsterSlotKey",
-                    "constants": [],
-                    "variables": [
-                      "Value_MonsterSlotKey"
-                    ]
+                    "displayLines": "Value_MonsterSlotKey"
                   }
                 }
               ]
@@ -2906,40 +2578,20 @@ const compositeAbilityObject = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                "displayLines": "#BattleEvent_P1_ADF",
-                "constants": [],
-                "variables": [
-                  "#BattleEvent_P1_ADF"
-                ]
+                "displayLines": "#BattleEvent_P1_ADF"
               },
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (Value_NextMonsterId) || RETURN",
-                    "displayLines": "Value_NextMonsterId",
-                    "constants": [],
-                    "variables": [
-                      "Value_NextMonsterId"
-                    ]
+                    "displayLines": "Value_NextMonsterId"
                   },
                   "locationType": "FormationRecord",
                   "overrideActivityGroup": {
-                    "operator": "Variables[0] (Value_NextMonsterEliteGroup) || RETURN",
-                    "displayLines": "Value_NextMonsterEliteGroup",
-                    "constants": [],
-                    "variables": [
-                      "Value_NextMonsterEliteGroup"
-                    ]
+                    "displayLines": "Value_NextMonsterEliteGroup"
                   },
                   "slot": {
-                    "operator": "Variables[0] (Value_MonsterSlotKey) || RETURN",
-                    "displayLines": "Value_MonsterSlotKey",
-                    "constants": [],
-                    "variables": [
-                      "Value_MonsterSlotKey"
-                    ]
+                    "displayLines": "Value_MonsterSlotKey"
                   }
                 }
               ]
@@ -3330,26 +2982,14 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Value_SummonCount) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(Value_SummonCount - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "Value_SummonCount"
-            ]
+            "displayLines": "(Value_SummonCount - 1)"
           },
           "variableName": "Value_SummonCount"
         },
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (SummonCount) || RETURN",
-            "displayLines": "SummonCount",
-            "constants": [],
-            "variables": [
-              "SummonCount"
-            ]
+            "displayLines": "SummonCount"
           },
           "execute": [
             {
@@ -3488,14 +3128,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (SummonCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(SummonCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "SummonCount"
-                        ]
+                        "displayLines": "(SummonCount + 1)"
                       },
                       "variableName": "SummonCount"
                     },
@@ -3590,26 +3223,14 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Value_SummonCount) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(Value_SummonCount - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "Value_SummonCount"
-            ]
+            "displayLines": "(Value_SummonCount - 1)"
           },
           "variableName": "Value_SummonCount"
         },
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (SummonCount) || RETURN",
-            "displayLines": "SummonCount",
-            "constants": [],
-            "variables": [
-              "SummonCount"
-            ]
+            "displayLines": "SummonCount"
           },
           "execute": [
             {
@@ -3726,14 +3347,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (SummonCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(SummonCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "SummonCount"
-                        ]
+                        "displayLines": "(SummonCount + 1)"
                       },
                       "variableName": "SummonCount"
                     },
@@ -3841,12 +3455,7 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Random Chance",
                         "chance": {
-                          "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                          "displayLines": "#BattleEvent_P1_ADF",
-                          "constants": [],
-                          "variables": [
-                            "#BattleEvent_P1_ADF"
-                          ]
+                          "displayLines": "#BattleEvent_P1_ADF"
                         }
                       },
                       "passed": [
@@ -3870,12 +3479,7 @@ const compositeAbilityObject = {
                                 {
                                   "name": "Enemy Entry",
                                   "enemyID": {
-                                    "operator": "Constants[0] (8022020) || RETURN",
-                                    "displayLines": "8022020",
-                                    "constants": [
-                                      8022020
-                                    ],
-                                    "variables": []
+                                    "displayLines": "8022020"
                                   },
                                   "locationType": "First"
                                 }
@@ -3891,12 +3495,7 @@ const compositeAbilityObject = {
                                 {
                                   "name": "Enemy Entry",
                                   "enemyID": {
-                                    "operator": "Constants[0] (8022020) || RETURN",
-                                    "displayLines": "8022020",
-                                    "constants": [
-                                      8022020
-                                    ],
-                                    "variables": []
+                                    "displayLines": "8022020"
                                   },
                                   "locationType": "Last"
                                 }
@@ -3926,12 +3525,7 @@ const compositeAbilityObject = {
                                 {
                                   "name": "Enemy Entry",
                                   "enemyID": {
-                                    "operator": "Constants[0] (8022010) || RETURN",
-                                    "displayLines": "8022010",
-                                    "constants": [
-                                      8022010
-                                    ],
-                                    "variables": []
+                                    "displayLines": "8022010"
                                   },
                                   "locationType": "First"
                                 }
@@ -3947,12 +3541,7 @@ const compositeAbilityObject = {
                                 {
                                   "name": "Enemy Entry",
                                   "enemyID": {
-                                    "operator": "Constants[0] (8022010) || RETURN",
-                                    "displayLines": "8022010",
-                                    "constants": [
-                                      8022010
-                                    ],
-                                    "variables": []
+                                    "displayLines": "8022010"
                                   },
                                   "locationType": "Last"
                                 }
@@ -4013,14 +3602,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageUpTimes) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(MDF_DamageUpTimes + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_DamageUpTimes"
-                    ]
+                    "displayLines": "(MDF_DamageUpTimes + 1)"
                   },
                   "variableName": "MDF_DamageUpTimes"
                 },
@@ -4052,12 +3634,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-2140377444\">Monster_RogueElite_DamageUp</a>[<span class=\"descriptionNumberColor\">Berserk</span>]",
                           "valuePerStack": {
                             "MDF_DamageUpRatio_PerLayer": {
-                              "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                              "displayLines": "#BattleEvent_P1_ADF",
-                              "constants": [],
-                              "variables": [
-                                "#BattleEvent_P1_ADF"
-                              ]
+                              "displayLines": "#BattleEvent_P1_ADF"
                             }
                           }
                         }
@@ -4072,21 +3649,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-2140377444\">Monster_RogueElite_DamageUp</a>[<span class=\"descriptionNumberColor\">Berserk</span>]",
                           "valuePerStack": {
                             "MDF_DamageUpRatio_PerLayer": {
-                              "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                              "displayLines": "#BattleEvent_P1_ADF",
-                              "constants": [],
-                              "variables": [
-                                "#BattleEvent_P1_ADF"
-                              ]
+                              "displayLines": "#BattleEvent_P1_ADF"
                             }
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (MDF_DamageUpTimes) || RETURN",
-                            "displayLines": "MDF_DamageUpTimes",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DamageUpTimes"
-                            ]
+                            "displayLines": "MDF_DamageUpTimes"
                           }
                         }
                       ]
@@ -4121,20 +3688,10 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1221123597\">Monster_RogueLightTeam_Rage</a>[<span class=\"descriptionNumberColor\">Bloody Fight</span>]",
                           "valuePerStack": {
                             "MDF_DamageUpRatio_PerLayer": {
-                              "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                              "displayLines": "#BattleEvent_P2_ADF",
-                              "constants": [],
-                              "variables": [
-                                "#BattleEvent_P2_ADF"
-                              ]
+                              "displayLines": "#BattleEvent_P2_ADF"
                             },
                             "MDF_HealDownRatio_PerLayer": {
-                              "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                              "displayLines": "#BattleEvent_P3_ADF",
-                              "constants": [],
-                              "variables": [
-                                "#BattleEvent_P3_ADF"
-                              ]
+                              "displayLines": "#BattleEvent_P3_ADF"
                             }
                           }
                         }
@@ -4149,29 +3706,14 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1221123597\">Monster_RogueLightTeam_Rage</a>[<span class=\"descriptionNumberColor\">Bloody Fight</span>]",
                           "valuePerStack": {
                             "MDF_DamageUpRatio_PerLayer": {
-                              "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                              "displayLines": "#BattleEvent_P2_ADF",
-                              "constants": [],
-                              "variables": [
-                                "#BattleEvent_P2_ADF"
-                              ]
+                              "displayLines": "#BattleEvent_P2_ADF"
                             },
                             "MDF_HealDownRatio_PerLayer": {
-                              "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                              "displayLines": "#BattleEvent_P3_ADF",
-                              "constants": [],
-                              "variables": [
-                                "#BattleEvent_P3_ADF"
-                              ]
+                              "displayLines": "#BattleEvent_P3_ADF"
                             }
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (MDF_DamageUpTimes) || RETURN",
-                            "displayLines": "MDF_DamageUpTimes",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DamageUpTimes"
-                            ]
+                            "displayLines": "MDF_DamageUpTimes"
                           }
                         }
                       ]
@@ -4285,14 +3827,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageUpTimes) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(MDF_DamageUpTimes + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_DamageUpTimes"
-                    ]
+                    "displayLines": "(MDF_DamageUpTimes + 1)"
                   },
                   "variableName": "MDF_DamageUpTimes"
                 },
@@ -4324,12 +3859,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-2140377444\">Monster_RogueElite_DamageUp</a>[<span class=\"descriptionNumberColor\">Berserk</span>]",
                           "valuePerStack": {
                             "MDF_DamageUpRatio_PerLayer": {
-                              "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                              "displayLines": "#BattleEvent_P1_ADF",
-                              "constants": [],
-                              "variables": [
-                                "#BattleEvent_P1_ADF"
-                              ]
+                              "displayLines": "#BattleEvent_P1_ADF"
                             }
                           }
                         }
@@ -4344,21 +3874,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-2140377444\">Monster_RogueElite_DamageUp</a>[<span class=\"descriptionNumberColor\">Berserk</span>]",
                           "valuePerStack": {
                             "MDF_DamageUpRatio_PerLayer": {
-                              "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                              "displayLines": "#BattleEvent_P1_ADF",
-                              "constants": [],
-                              "variables": [
-                                "#BattleEvent_P1_ADF"
-                              ]
+                              "displayLines": "#BattleEvent_P1_ADF"
                             }
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (MDF_DamageUpTimes) || RETURN",
-                            "displayLines": "MDF_DamageUpTimes",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DamageUpTimes"
-                            ]
+                            "displayLines": "MDF_DamageUpTimes"
                           }
                         }
                       ]
@@ -4478,12 +3998,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-2140377444\">Monster_RogueElite_DamageUp</a>[<span class=\"descriptionNumberColor\">Berserk</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P1_ADF"
                     }
                   }
                 }
@@ -4617,12 +4132,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">PhysicalVulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (ADF_2) || RETURN",
-                    "displayLines": "ADF_2",
-                    "constants": [],
-                    "variables": [
-                      "ADF_2"
-                    ]
+                    "displayLines": "ADF_2"
                   }
                 }
               ]
@@ -4667,12 +4177,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Physical",
                         "Damage": {
-                          "operator": "Variables[0] (ADF_1) || RETURN",
-                          "displayLines": "ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "ADF_1"
-                          ]
+                          "displayLines": "ADF_1"
                         },
                         "dmgFormula": "Max HP Scaling",
                         "Toughness": null,
@@ -4763,12 +4268,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__47) || RETURN",
-                        "displayLines": "ENEMIES_OBJECT_UNUSED__47",
-                        "constants": [],
-                        "variables": [
-                          "ENEMIES_OBJECT_UNUSED__47"
-                        ]
+                        "displayLines": "ENEMIES_OBJECT_UNUSED__47"
                       },
                       "formula": "Heal from Target MaxHP"
                     }
@@ -4802,29 +4302,14 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"2070937890\">Modifier_BattleEventAbility_Challenge_Month_15_Sub2</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
           "duration": {
-            "operator": "Variables[0] (_LifeTime) || RETURN",
-            "displayLines": "_LifeTime",
-            "constants": [],
-            "variables": [
-              "_LifeTime"
-            ]
+            "displayLines": "_LifeTime"
           },
           "stackLimit": {
-            "operator": "Variables[0] (_MaxLayer) || RETURN",
-            "displayLines": "_MaxLayer",
-            "constants": [],
-            "variables": [
-              "_MaxLayer"
-            ]
+            "displayLines": "_MaxLayer"
           },
           "valuePerStack": {
             "DamageTakenRatio": {
-              "operator": "Variables[0] (_DamageTakenRatio) || RETURN",
-              "displayLines": "_DamageTakenRatio",
-              "constants": [],
-              "variables": [
-                "_DamageTakenRatio"
-              ]
+              "displayLines": "_DamageTakenRatio"
             }
           }
         }
@@ -4865,13 +4350,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (DamageTakenRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(DamageTakenRatio * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "DamageTakenRatio",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(DamageTakenRatio * MDF_Layer)"
                   }
                 }
               ]
@@ -5046,28 +4525,13 @@ const compositeAbilityObject = {
                   "showInActionOrder": true,
                   "valuePerStack": {
                     "_LifeTime": {
-                      "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P3_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P3_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P3_ADF"
                     },
                     "_MaxLayer": {
-                      "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P4_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P4_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P4_ADF"
                     },
                     "_DamageTakenRatio": {
-                      "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P2_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P2_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P2_ADF"
                     }
                   },
                   "allowAbilityTriggers": false
@@ -5113,12 +4577,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Constants[0] (800205000) || RETURN",
-                            "displayLines": "800205000",
-                            "constants": [
-                              800205000
-                            ],
-                            "variables": []
+                            "displayLines": "800205000"
                           },
                           "locationType": "LastDie"
                         }
@@ -5176,12 +4635,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (800205000) || RETURN",
-                        "displayLines": "800205000",
-                        "constants": [
-                          800205000
-                        ],
-                        "variables": []
+                        "displayLines": "800205000"
                       },
                       "locationType": "Last"
                     }
@@ -5228,12 +4682,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "DamageFlat": {
-              "operator": "Variables[0] (MDF_DamageValue2) || RETURN",
-              "displayLines": "MDF_DamageValue2",
-              "constants": [],
-              "variables": [
-                "MDF_DamageValue2"
-              ]
+              "displayLines": "MDF_DamageValue2"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -5411,12 +4860,7 @@ const compositeAbilityObject = {
                   "showInActionOrder": true,
                   "valuePerStack": {
                     "MDF_DamageValue2": {
-                      "operator": "Variables[0] (MDF_DamageValue) || RETURN",
-                      "displayLines": "MDF_DamageValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageValue"
-                      ]
+                      "displayLines": "MDF_DamageValue"
                     }
                   },
                   "allowAbilityTriggers": false
@@ -5462,12 +4906,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Constants[0] (800205000) || RETURN",
-                            "displayLines": "800205000",
-                            "constants": [
-                              800205000
-                            ],
-                            "variables": []
+                            "displayLines": "800205000"
                           },
                           "locationType": "LastDie"
                         }
@@ -5519,13 +4958,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-452417085\">Modifier_BattleEventAbility_Challenge_Month_14_Sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
                       "valuePerStack": {
                         "MDF_DamageValue": {
-                          "operator": "Variables[0] (TempHP) || Variables[1] (#BattleEvent_P2_ADF) || MUL || RETURN",
-                          "displayLines": "(TempHP * #BattleEvent_P2_ADF)",
-                          "constants": [],
-                          "variables": [
-                            "TempHP",
-                            "#BattleEvent_P2_ADF"
-                          ]
+                          "displayLines": "(TempHP * #BattleEvent_P2_ADF)"
                         }
                       }
                     }
@@ -5545,12 +4978,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (800205000) || RETURN",
-                        "displayLines": "800205000",
-                        "constants": [
-                          800205000
-                        ],
-                        "variables": []
+                        "displayLines": "800205000"
                       },
                       "locationType": "Last"
                     }
@@ -5579,12 +5007,7 @@ const compositeAbilityObject = {
         {
           "name": "Skill Points Modification",
           "adjustmentValue": {
-            "operator": "Variables[0] (AddValue) || RETURN",
-            "displayLines": "AddValue",
-            "constants": [],
-            "variables": [
-              "AddValue"
-            ]
+            "displayLines": "AddValue"
           },
           "adjustmentType": "+"
         }
@@ -5757,12 +5180,7 @@ const compositeAbilityObject = {
                   "showInActionOrder": true,
                   "valuePerStack": {
                     "AddValue": {
-                      "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P2_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P2_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P2_ADF"
                     }
                   },
                   "allowAbilityTriggers": false
@@ -5808,12 +5226,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Constants[0] (800205000) || RETURN",
-                            "displayLines": "800205000",
-                            "constants": [
-                              800205000
-                            ],
-                            "variables": []
+                            "displayLines": "800205000"
                           },
                           "locationType": "LastDie"
                         }
@@ -5871,12 +5284,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (800205000) || RETURN",
-                        "displayLines": "800205000",
-                        "constants": [
-                          800205000
-                        ],
-                        "variables": []
+                        "displayLines": "800205000"
                       },
                       "locationType": "Last"
                     }
@@ -5972,12 +5380,7 @@ const compositeAbilityObject = {
                           "variableName": "DOT_TriggerRatio",
                           "eventType": "DOT",
                           "value": {
-                            "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                            "displayLines": "#BattleEvent_P1_ADF",
-                            "constants": [],
-                            "variables": [
-                              "#BattleEvent_P1_ADF"
-                            ]
+                            "displayLines": "#BattleEvent_P1_ADF"
                           }
                         }
                       ]
@@ -6075,21 +5478,11 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"541957737\">Standard_AllDamageTypeResistanceDown</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
                           "duration": {
-                            "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                            "displayLines": "#BattleEvent_P2_ADF",
-                            "constants": [],
-                            "variables": [
-                              "#BattleEvent_P2_ADF"
-                            ]
+                            "displayLines": "#BattleEvent_P2_ADF"
                           },
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                              "displayLines": "#BattleEvent_P1_ADF",
-                              "constants": [],
-                              "variables": [
-                                "#BattleEvent_P1_ADF"
-                              ]
+                              "displayLines": "#BattleEvent_P1_ADF"
                             }
                           }
                         }
@@ -6170,13 +5563,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (#BattleEvent_P1_ADF) || Variables[1] (_Layer) || MUL || RETURN",
-                    "displayLines": "(#BattleEvent_P1_ADF * _Layer)",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P1_ADF",
-                      "_Layer"
-                    ]
+                    "displayLines": "(#BattleEvent_P1_ADF * _Layer)"
                   }
                 }
               ]
@@ -6231,21 +5618,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1406945547\">MLevel_BattleEventAbility_Challenge_Month_10_Sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P2_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P2_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P2_ADF"
                       },
                       "valuePerStack": {
                         "_MaxLayer": {
-                          "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                          "displayLines": "#BattleEvent_P2_ADF",
-                          "constants": [],
-                          "variables": [
-                            "#BattleEvent_P2_ADF"
-                          ]
+                          "displayLines": "#BattleEvent_P2_ADF"
                         }
                       }
                     }
@@ -6264,21 +5641,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1406945547\">MLevel_BattleEventAbility_Challenge_Month_10_Sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P2_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P2_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P2_ADF"
                   },
                   "valuePerStack": {
                     "_MaxLayer": {
-                      "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P2_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P2_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P2_ADF"
                     }
                   }
                 }
@@ -6327,24 +5694,14 @@ const compositeAbilityObject = {
                         "value1": "Temp_MDF_Layer",
                         "compareType": ">",
                         "value2": {
-                          "operator": "Variables[0] (MDF_Layer) || RETURN",
-                          "displayLines": "MDF_Layer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Layer"
-                          ]
+                          "displayLines": "MDF_Layer"
                         }
                       },
                       "passed": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (Temp_MDF_Layer) || RETURN",
-                            "displayLines": "Temp_MDF_Layer",
-                            "constants": [],
-                            "variables": [
-                              "Temp_MDF_Layer"
-                            ]
+                            "displayLines": "Temp_MDF_Layer"
                           },
                           "variableName": "MDF_Layer"
                         }
@@ -6384,13 +5741,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Physical",
                         "Damage": {
-                          "operator": "Variables[0] (#BattleEvent_P3_ADF) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                          "displayLines": "(#BattleEvent_P3_ADF * MDF_Layer)",
-                          "constants": [],
-                          "variables": [
-                            "#BattleEvent_P3_ADF",
-                            "MDF_Layer"
-                          ]
+                          "displayLines": "(#BattleEvent_P3_ADF * MDF_Layer)"
                         },
                         "dmgFormula": "Max HP Scaling",
                         "dmgFormulaFinal": "Converted DMG Base",
@@ -6475,12 +5826,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (ADF_1) || RETURN",
-                    "displayLines": "ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "ADF_1"
-                    ]
+                    "displayLines": "ADF_1"
                   }
                 }
               ]
@@ -6524,12 +5870,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P1_ADF"
                     }
                   },
                   "ifTargetFound": [
@@ -6541,21 +5882,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1553026486\">MLevel_BattleEventAbility_Challenge_Month_09</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                       "duration": {
-                        "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P3_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P3_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P3_ADF"
                       },
                       "valuePerStack": {
                         "ADF_1": {
-                          "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                          "displayLines": "#BattleEvent_P2_ADF",
-                          "constants": [],
-                          "variables": [
-                            "#BattleEvent_P2_ADF"
-                          ]
+                          "displayLines": "#BattleEvent_P2_ADF"
                         }
                       }
                     }
@@ -6619,13 +5950,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_Layer) || INVERT || Variables[1] (ADF_1) || MUL || RETURN",
-                    "displayLines": "(-MDF_Layer * ADF_1)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer",
-                      "ADF_1"
-                    ]
+                    "displayLines": "(-MDF_Layer * ADF_1)"
                   }
                 }
               ]
@@ -6698,40 +6023,18 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1569804105\">MLevel_BattleEventAbility_Challenge_Month_08</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P2_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P2_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P2_ADF"
                       },
                       "valuePerStack": {
                         "ADF_1": {
-                          "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                          "displayLines": "#BattleEvent_P1_ADF",
-                          "constants": [],
-                          "variables": [
-                            "#BattleEvent_P1_ADF"
-                          ]
+                          "displayLines": "#BattleEvent_P1_ADF"
                         },
                         "ADF_2": {
-                          "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                          "displayLines": "#BattleEvent_P2_ADF",
-                          "constants": [],
-                          "variables": [
-                            "#BattleEvent_P2_ADF"
-                          ]
+                          "displayLines": "#BattleEvent_P2_ADF"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (_DebuffNumber) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_DebuffNumber + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_DebuffNumber"
-                        ]
+                        "displayLines": "(_DebuffNumber + 1)"
                       }
                     }
                   ]
@@ -6794,13 +6097,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Weaken%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_Layer) || Variables[1] (ADF_1) || MUL || RETURN",
-                    "displayLines": "(MDF_Layer * ADF_1)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer",
-                      "ADF_1"
-                    ]
+                    "displayLines": "(MDF_Layer * ADF_1)"
                   }
                 }
               ]
@@ -6873,40 +6170,18 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1720802676\">MLevel_BattleEventAbility_Challenge_Month_07</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P2_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P2_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P2_ADF"
                       },
                       "valuePerStack": {
                         "ADF_1": {
-                          "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                          "displayLines": "#BattleEvent_P1_ADF",
-                          "constants": [],
-                          "variables": [
-                            "#BattleEvent_P1_ADF"
-                          ]
+                          "displayLines": "#BattleEvent_P1_ADF"
                         },
                         "ADF_2": {
-                          "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                          "displayLines": "#BattleEvent_P2_ADF",
-                          "constants": [],
-                          "variables": [
-                            "#BattleEvent_P2_ADF"
-                          ]
+                          "displayLines": "#BattleEvent_P2_ADF"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (_DebuffNumber) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_DebuffNumber + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_DebuffNumber"
-                        ]
+                        "displayLines": "(_DebuffNumber + 1)"
                       }
                     }
                   ]
@@ -6954,12 +6229,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">LightningVulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (ADF_1) || RETURN",
-                    "displayLines": "ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "ADF_1"
-                    ]
+                    "displayLines": "ADF_1"
                   }
                 }
               ]
@@ -7014,12 +6284,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1737580295\">MLevel_BattleEventAbility_Challenge_Month_06</a>[<span class=\"descriptionNumberColor\">Lightning Vulnerability</span>]",
                   "valuePerStack": {
                     "ADF_1": {
-                      "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P1_ADF"
                     }
                   }
                 }
@@ -7084,12 +6349,7 @@ const compositeAbilityObject = {
                           }
                         },
                         "Damage": {
-                          "operator": "Variables[0] (ADF_1) || RETURN",
-                          "displayLines": "ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "ADF_1"
-                          ]
+                          "displayLines": "ADF_1"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -7143,21 +6403,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1754357914\">MLevel_BattleEventAbility_Challenge_Month_05</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
                   "counter": {
-                    "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P1_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P1_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P1_ADF"
                   },
                   "valuePerStack": {
                     "ADF_1": {
-                      "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P2_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P2_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P2_ADF"
                     }
                   },
                   "casterAssign": "TargetSelf"
@@ -7242,21 +6492,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1777684731\">Standard_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "duration": {
-                        "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P2_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P2_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P2_ADF"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                          "displayLines": "#BattleEvent_P1_ADF",
-                          "constants": [],
-                          "variables": [
-                            "#BattleEvent_P1_ADF"
-                          ]
+                          "displayLines": "#BattleEvent_P1_ADF"
                         }
                       }
                     }
@@ -7373,12 +6613,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1653692200\">MLevel_BattleEventAbility_Challenge_Month_03</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                       "valuePerStack": {
                         "ADF_1": {
-                          "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                          "displayLines": "#BattleEvent_P1_ADF",
-                          "constants": [],
-                          "variables": [
-                            "#BattleEvent_P1_ADF"
-                          ]
+                          "displayLines": "#BattleEvent_P1_ADF"
                         }
                       }
                     }
@@ -7439,13 +6674,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (ADF_1) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(ADF_1 * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "ADF_1",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(ADF_1 * MDF_Layer)"
                   }
                 },
                 {
@@ -7456,13 +6685,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (ADF_2) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(ADF_2 * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "ADF_2",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(ADF_2 * MDF_Layer)"
                   }
                 }
               ]
@@ -7514,37 +6737,17 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1670469819\">MLevel_BattleEventAbility_Challenge_Month_02</a>[<span class=\"descriptionNumberColor\">CRIT Rate, CRIT DMG Boost</span>]",
                       "duration": {
-                        "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P3_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P3_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P3_ADF"
                       },
                       "stackLimit": {
-                        "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P4_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P4_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P4_ADF"
                       },
                       "valuePerStack": {
                         "ADF_1": {
-                          "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                          "displayLines": "#BattleEvent_P2_ADF",
-                          "constants": [],
-                          "variables": [
-                            "#BattleEvent_P2_ADF"
-                          ]
+                          "displayLines": "#BattleEvent_P2_ADF"
                         },
                         "ADF_2": {
-                          "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                          "displayLines": "#BattleEvent_P1_ADF",
-                          "constants": [],
-                          "variables": [
-                            "#BattleEvent_P1_ADF"
-                          ]
+                          "displayLines": "#BattleEvent_P1_ADF"
                         }
                       }
                     }
@@ -7593,12 +6796,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (ADF_1) || RETURN",
-                    "displayLines": "ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "ADF_1"
-                    ]
+                    "displayLines": "ADF_1"
                   }
                 }
               ]
@@ -7663,12 +6861,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1687247438\">MLevel_BattleEventAbility_Challenge_Month_01</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                       "valuePerStack": {
                         "ADF_1": {
-                          "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                          "displayLines": "#BattleEvent_P1_ADF",
-                          "constants": [],
-                          "variables": [
-                            "#BattleEvent_P1_ADF"
-                          ]
+                          "displayLines": "#BattleEvent_P1_ADF"
                         }
                       }
                     }
@@ -7702,12 +6895,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P2_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P2_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P2_ADF"
                       },
                       "formula": "Heal from Target MaxHP"
                     }
@@ -7756,12 +6944,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (ADF_1) || RETURN",
-                    "displayLines": "ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "ADF_1"
-                    ]
+                    "displayLines": "ADF_1"
                   }
                 }
               ]
@@ -7825,12 +7008,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-372579296\">MLevel_BattleEventAbility_Challenge_Group_02</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                       "valuePerStack": {
                         "ADF_1": {
-                          "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                          "displayLines": "#BattleEvent_P1_ADF",
-                          "constants": [],
-                          "variables": [
-                            "#BattleEvent_P1_ADF"
-                          ]
+                          "displayLines": "#BattleEvent_P1_ADF"
                         }
                       }
                     }
@@ -7923,12 +7101,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-322246439\">MLevel_BattleEventAbility_Challenge_Group_01</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "ADF_1": {
-                      "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P1_ADF"
                     }
                   }
                 }
@@ -8008,13 +7181,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1797420881\">Standard_Protect_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                       "valuePerStack": {
                         "MDF_ShowValue": {
-                          "operator": "Variables[0] (EntityMaxHP) || Variables[1] (#BattleEvent_P1_ADF) || MUL || RETURN",
-                          "displayLines": "(EntityMaxHP * #BattleEvent_P1_ADF)",
-                          "constants": [],
-                          "variables": [
-                            "EntityMaxHP",
-                            "#BattleEvent_P1_ADF"
-                          ]
+                          "displayLines": "(EntityMaxHP * #BattleEvent_P1_ADF)"
                         }
                       }
                     }
@@ -8063,12 +7230,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (ADF_1) || RETURN",
-                    "displayLines": "ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "ADF_1"
-                    ]
+                    "displayLines": "ADF_1"
                   }
                 },
                 {
@@ -8079,12 +7241,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (ADF_2) || RETURN",
-                    "displayLines": "ADF_2",
-                    "constants": [],
-                    "variables": [
-                      "ADF_2"
-                    ]
+                    "displayLines": "ADF_2"
                   }
                 }
               ]
@@ -8127,12 +7284,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P1_ADF"
                     }
                   },
                   "ifTargetFound": [
@@ -8144,29 +7296,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1602534417\">MLevel_BattleEventAbility_Challenge_New_06</a>[<span class=\"descriptionNumberColor\">CRIT Rate and CRIT DMG Boost</span>]",
                       "duration": {
-                        "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P4_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P4_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P4_ADF"
                       },
                       "valuePerStack": {
                         "ADF_1": {
-                          "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                          "displayLines": "#BattleEvent_P2_ADF",
-                          "constants": [],
-                          "variables": [
-                            "#BattleEvent_P2_ADF"
-                          ]
+                          "displayLines": "#BattleEvent_P2_ADF"
                         },
                         "ADF_2": {
-                          "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                          "displayLines": "#BattleEvent_P3_ADF",
-                          "constants": [],
-                          "variables": [
-                            "#BattleEvent_P3_ADF"
-                          ]
+                          "displayLines": "#BattleEvent_P3_ADF"
                         }
                       }
                     }
@@ -8244,21 +7381,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1777684731\">Standard_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "duration": {
-                        "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P2_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P2_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P2_ADF"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                          "displayLines": "#BattleEvent_P1_ADF",
-                          "constants": [],
-                          "variables": [
-                            "#BattleEvent_P1_ADF"
-                          ]
+                          "displayLines": "#BattleEvent_P1_ADF"
                         }
                       }
                     }
@@ -8335,12 +7462,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P1_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P1_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P1_ADF"
                       },
                       "formula": "Heal from Target MaxHP"
                     }
@@ -8389,12 +7511,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (ADF_1) || RETURN",
-                    "displayLines": "ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "ADF_1"
-                    ]
+                    "displayLines": "ADF_1"
                   }
                 }
               ]
@@ -8436,12 +7553,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1686422512\">MLevel_BattleEventAbility_Challenge_New_03</a>[<span class=\"descriptionNumberColor\">Weakness Break Efficiency Boost</span>]",
                   "valuePerStack": {
                     "ADF_1": {
-                      "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P1_ADF"
                     }
                   }
                 }
@@ -8523,12 +7635,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Skill Points Modification",
                   "adjustmentValue": {
-                    "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P2_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P2_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P2_ADF"
                   },
                   "adjustmentType": "+"
                 }
@@ -8634,12 +7741,7 @@ const compositeAbilityObject = {
                     "target": "{{Player Team(Exclude Memosprites)v2}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P2_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P2_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P2_ADF"
                   },
                   "isFixed": "(Fixed)"
                 }
@@ -8779,12 +7881,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P1_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P1_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P1_ADF"
                       }
                     }
                   ]
@@ -8859,12 +7956,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P1_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P1_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P1_ADF"
                       }
                     }
                   ]
@@ -8939,12 +8031,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P1_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P1_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P1_ADF"
                       }
                     }
                   ]
@@ -9019,12 +8106,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P1_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P1_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P1_ADF"
                       }
                     }
                   ]
@@ -9474,13 +8556,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (ADF_1) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(ADF_1 * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "ADF_1",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(ADF_1 * MDF_Layer)"
                   }
                 }
               ]
@@ -9515,21 +8591,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1609815276\">MLevel_BattleEventAbility_Challenge_15</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P2_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P2_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P2_ADF"
                   },
                   "valuePerStack": {
                     "ADF_1": {
-                      "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P1_ADF"
                     }
                   }
                 }
@@ -9588,13 +8654,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRate</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (ADF_1) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(ADF_1 * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "ADF_1",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(ADF_1 * MDF_Layer)"
                   }
                 }
               ]
@@ -9629,21 +8689,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1626592895\">MLevel_BattleEventAbility_Challenge_14</a>[<span class=\"descriptionNumberColor\">Effect Hit Rate Boost</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P2_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P2_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P2_ADF"
                   },
                   "valuePerStack": {
                     "ADF_1": {
-                      "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P1_ADF"
                     }
                   }
                 }
@@ -9702,13 +8752,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (ADF_1) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(ADF_1 * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "ADF_1",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(ADF_1 * MDF_Layer)"
                   }
                 }
               ]
@@ -9743,21 +8787,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1576260038\">MLevel_BattleEventAbility_Challenge_13</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P2_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P2_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P2_ADF"
                   },
                   "valuePerStack": {
                     "ADF_1": {
-                      "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P1_ADF"
                     }
                   }
                 }
@@ -9816,13 +8850,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (ADF_1) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(ADF_1 * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "ADF_1",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(ADF_1 * MDF_Layer)"
                   }
                 }
               ]
@@ -9857,21 +8885,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1593037657\">MLevel_BattleEventAbility_Challenge_12</a>[<span class=\"descriptionNumberColor\">DEF Boost</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P2_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P2_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P2_ADF"
                   },
                   "valuePerStack": {
                     "ADF_1": {
-                      "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P1_ADF"
                     }
                   }
                 }
@@ -9930,13 +8948,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (ADF_1) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(ADF_1 * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "ADF_1",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(ADF_1 * MDF_Layer)"
                   }
                 }
               ]
@@ -9971,21 +8983,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1542704800\">MLevel_BattleEventAbility_Challenge_11</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P2_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P2_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P2_ADF"
                   },
                   "valuePerStack": {
                     "ADF_1": {
-                      "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P1_ADF"
                     }
                   }
                 }
@@ -10032,12 +9034,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">PhysicalVulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P2_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P2_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P2_ADF"
                   }
                 }
               ]
@@ -10081,12 +9078,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1559482419\">MLevel_BattleEventAbility_Challenge_10</a>[<span class=\"descriptionNumberColor\">Physical Vulnerability</span>]",
                       "duration": {
-                        "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P3_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P3_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P3_ADF"
                       }
                     }
                   ]
@@ -10134,12 +9126,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">WindVulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P2_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P2_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P2_ADF"
                   }
                 }
               ]
@@ -10183,12 +9170,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-269425147\">MLevel_BattleEventAbility_Challenge_09</a>[<span class=\"descriptionNumberColor\">Wind Vulnerability</span>]",
                       "duration": {
-                        "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P3_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P3_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P3_ADF"
                       }
                     }
                   ]
@@ -10236,12 +9218,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">LightningVulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P2_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P2_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P2_ADF"
                   }
                 }
               ]
@@ -10285,12 +9262,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-286202766\">MLevel_BattleEventAbility_Challenge_08</a>[<span class=\"descriptionNumberColor\">Lightning Vulnerability</span>]",
                       "duration": {
-                        "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P3_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P3_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P3_ADF"
                       }
                     }
                   ]
@@ -10338,12 +9310,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">QuantumVulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P2_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P2_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P2_ADF"
                   }
                 }
               ]
@@ -10387,12 +9354,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-235869909\">MLevel_BattleEventAbility_Challenge_07</a>[<span class=\"descriptionNumberColor\">Quantum Vulnerability</span>]",
                       "duration": {
-                        "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P3_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P3_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P3_ADF"
                       }
                     }
                   ]
@@ -10440,12 +9402,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">IceVulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P2_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P2_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P2_ADF"
                   }
                 }
               ]
@@ -10489,12 +9446,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-252647528\">MLevel_BattleEventAbility_Challenge_06</a>[<span class=\"descriptionNumberColor\">Ice Vulnerability</span>]",
                       "duration": {
-                        "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P3_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P3_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P3_ADF"
                       }
                     }
                   ]
@@ -10537,12 +9489,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageLightning</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P1_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P1_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P1_ADF"
                   }
                 }
               ]
@@ -10602,12 +9549,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamagePhysical</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P1_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P1_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P1_ADF"
                   }
                 }
               ]
@@ -10667,12 +9609,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageFire</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P1_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P1_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P1_ADF"
                   }
                 }
               ]
@@ -10732,12 +9669,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageIce</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P1_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P1_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P1_ADF"
                   }
                 }
               ]
@@ -10797,12 +9729,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageWind</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P1_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P1_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P1_ADF"
                   }
                 }
               ]
@@ -10975,12 +9902,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"775144590\">Modifier_BattleEventAbility_Challenge_Xianzhou_06_Sub2</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (PropertyValue) || RETURN",
-                          "displayLines": "PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "PropertyValue"
-                          ]
+                          "displayLines": "PropertyValue"
                         }
                       }
                     }
@@ -11048,24 +9970,10 @@ const compositeAbilityObject = {
                         "target": "{{Enemy Team All}}"
                       },
                       "selfSplit": {
-                        "operator": "Constants[0] (1) || Variables[0] (DarkTeamCount) || DIV || RETURN",
-                        "displayLines": "(1 / DarkTeamCount)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "DarkTeamCount"
-                        ]
+                        "displayLines": "(1 / DarkTeamCount)"
                       },
                       "targetSplit": {
-                        "operator": "Constants[0] (1) || Variables[0] (DarkTeamCount) || DIV || RETURN",
-                        "displayLines": "(1 / DarkTeamCount)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "DarkTeamCount"
-                        ]
+                        "displayLines": "(1 / DarkTeamCount)"
                       }
                     }
                   ]
@@ -11090,12 +9998,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"758366971\">Modifier_BattleEventAbility_Challenge_Xianzhou_06_Sub1</a>",
                   "valuePerStack": {
                     "PropertyValue": {
-                      "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P1_ADF"
                     }
                   }
                 }
@@ -11145,12 +10048,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"758366971\">Modifier_BattleEventAbility_Challenge_Xianzhou_06_Sub1</a>",
                       "valuePerStack": {
                         "PropertyValue": {
-                          "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                          "displayLines": "#BattleEvent_P1_ADF",
-                          "constants": [],
-                          "variables": [
-                            "#BattleEvent_P1_ADF"
-                          ]
+                          "displayLines": "#BattleEvent_P1_ADF"
                         }
                       }
                     }
@@ -11208,12 +10106,7 @@ const compositeAbilityObject = {
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Constants[0] (201201010) || RETURN",
-                "displayLines": "201201010",
-                "constants": [
-                  201201010
-                ],
-                "variables": []
+                "displayLines": "201201010"
               },
               "locationType": "FormationRecord"
             }
@@ -11291,13 +10184,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_Layer) || Variables[1] (#BattleEvent_P1_ADF) || MUL || RETURN",
-                    "displayLines": "(MDF_Layer * #BattleEvent_P1_ADF)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer",
-                      "#BattleEvent_P1_ADF"
-                    ]
+                    "displayLines": "(MDF_Layer * #BattleEvent_P1_ADF)"
                   }
                 }
               ]
@@ -11475,12 +10362,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"897526972\">Modifier_BattleEventAbility_Challenge_Xianzhou_05_Sub1</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P2_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P2_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P2_ADF"
                       }
                     }
                   ]
@@ -11582,12 +10464,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "DamageFlat": {
-                              "operator": "Variables[0] (MDF_DamageValue) || RETURN",
-                              "displayLines": "MDF_DamageValue",
-                              "constants": [],
-                              "variables": [
-                                "MDF_DamageValue"
-                              ]
+                              "displayLines": "MDF_DamageValue"
                             },
                             "dmgFormulaFinal": "Converted DMG Base",
                             "Toughness": null,
@@ -11628,13 +10505,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1478824350\">Modifier_BattleEventAbility_Challenge_Xianzhou_04_Sub</a>",
                   "valuePerStack": {
                     "MDF_DamageValue": {
-                      "operator": "Variables[0] (TempHP) || Variables[1] (#BattleEvent_P1_ADF) || MUL || RETURN",
-                      "displayLines": "(TempHP * #BattleEvent_P1_ADF)",
-                      "constants": [],
-                      "variables": [
-                        "TempHP",
-                        "#BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "(TempHP * #BattleEvent_P1_ADF)"
                     }
                   },
                   "casterAssign": "TargetSelf"
@@ -11664,13 +10535,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1478824350\">Modifier_BattleEventAbility_Challenge_Xianzhou_04_Sub</a>",
                       "valuePerStack": {
                         "MDF_DamageValue": {
-                          "operator": "Variables[0] (TempHP) || Variables[1] (#BattleEvent_P1_ADF) || MUL || RETURN",
-                          "displayLines": "(TempHP * #BattleEvent_P1_ADF)",
-                          "constants": [],
-                          "variables": [
-                            "TempHP",
-                            "#BattleEvent_P1_ADF"
-                          ]
+                          "displayLines": "(TempHP * #BattleEvent_P1_ADF)"
                         }
                       },
                       "casterAssign": "TargetSelf"
@@ -11728,12 +10593,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P1_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P1_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P1_ADF"
                   }
                 },
                 {
@@ -11744,12 +10604,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P3_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P3_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P3_ADF"
                   }
                 }
               ]
@@ -11820,12 +10675,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-668032397\">Modifier_BattleEventAbility_Challenge_Xianzhou_03_Sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
                       "duration": {
-                        "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P2_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P2_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P2_ADF"
                       }
                     },
                     {
@@ -11836,12 +10686,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-668032397\">Modifier_BattleEventAbility_Challenge_Xianzhou_03_Sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
                       "duration": {
-                        "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P2_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P2_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P2_ADF"
                       }
                     }
                   ]
@@ -11955,31 +10800,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
                       "duration": {
-                        "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P3_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P3_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P3_ADF"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P2_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P2_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P2_ADF"
                       },
                       "valuePerStack": {
                         "Modifier_Electric_DamagePercentage": {
-                          "operator": "Variables[0] (#BattleEvent_P4_ADF) || Constants[0] (1.5) || MUL || RETURN",
-                          "displayLines": "(#BattleEvent_P4_ADF * 1.5)",
-                          "constants": [
-                            1.5
-                          ],
-                          "variables": [
-                            "#BattleEvent_P4_ADF"
-                          ]
+                          "displayLines": "(#BattleEvent_P4_ADF * 1.5)"
                         }
                       },
                       "stackFlag": "Level"
@@ -12003,31 +10831,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                       "duration": {
-                        "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P3_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P3_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P3_ADF"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P2_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P2_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P2_ADF"
                       },
                       "valuePerStack": {
                         "Modifier_Poison_DamagePercentage": {
-                          "operator": "Variables[0] (#BattleEvent_P4_ADF) || Constants[0] (1) || MUL || RETURN",
-                          "displayLines": "(#BattleEvent_P4_ADF * 1)",
-                          "constants": [
-                            1
-                          ],
-                          "variables": [
-                            "#BattleEvent_P4_ADF"
-                          ]
+                          "displayLines": "(#BattleEvent_P4_ADF * 1)"
                         }
                       },
                       "stackFlag": "Level"
@@ -12051,31 +10862,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                       "duration": {
-                        "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P3_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P3_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P3_ADF"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P2_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P2_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P2_ADF"
                       },
                       "valuePerStack": {
                         "Modifier_Poison_DamagePercentage": {
-                          "operator": "Variables[0] (#BattleEvent_P4_ADF) || Constants[0] (1) || MUL || RETURN",
-                          "displayLines": "(#BattleEvent_P4_ADF * 1)",
-                          "constants": [
-                            1
-                          ],
-                          "variables": [
-                            "#BattleEvent_P4_ADF"
-                          ]
+                          "displayLines": "(#BattleEvent_P4_ADF * 1)"
                         }
                       },
                       "stackFlag": "Level"
@@ -12099,31 +10893,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
                       "duration": {
-                        "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P3_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P3_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P3_ADF"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P2_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P2_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P2_ADF"
                       },
                       "valuePerStack": {
                         "Modifier_Burn_DamagePercentage": {
-                          "operator": "Variables[0] (#BattleEvent_P4_ADF) || Constants[0] (1) || MUL || RETURN",
-                          "displayLines": "(#BattleEvent_P4_ADF * 1)",
-                          "constants": [
-                            1
-                          ],
-                          "variables": [
-                            "#BattleEvent_P4_ADF"
-                          ]
+                          "displayLines": "(#BattleEvent_P4_ADF * 1)"
                         }
                       },
                       "stackFlag": "Level"
@@ -12147,32 +10924,15 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"227784370\">Standard_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
                       "duration": {
-                        "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P3_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P3_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P3_ADF"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P2_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P2_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P2_ADF"
                       },
                       "valuePerStack": {
                         "Modifier_Tear_DamageRatio": 0.1,
                         "Modifier_Tear_MaxPercentage": {
-                          "operator": "Variables[0] (#BattleEvent_P4_ADF) || Constants[0] (2.5) || MUL || RETURN",
-                          "displayLines": "(#BattleEvent_P4_ADF * 2.5)",
-                          "constants": [
-                            2.5
-                          ],
-                          "variables": [
-                            "#BattleEvent_P4_ADF"
-                          ]
+                          "displayLines": "(#BattleEvent_P4_ADF * 2.5)"
                         }
                       },
                       "stackFlag": "Level"
@@ -12210,13 +10970,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (TempHP) || Variables[1] (Hardlevel_HP) || SUB || RETURN",
-                    "displayLines": "(TempHP - Hardlevel_HP)",
-                    "constants": [],
-                    "variables": [
-                      "TempHP",
-                      "Hardlevel_HP"
-                    ]
+                    "displayLines": "(TempHP - Hardlevel_HP)"
                   }
                 },
                 {
@@ -12236,15 +10990,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRate</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (1) || Constants[0] (1) || Variables[0] (Hardlevel_StatusResistance) || Constants[1] (0.1) || ADD || SUB || DIV || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "((1 / (1 - (Hardlevel_StatusResistance + 0.1))) - 1)",
-                    "constants": [
-                      1,
-                      0.1
-                    ],
-                    "variables": [
-                      "Hardlevel_StatusResistance"
-                    ]
+                    "displayLines": "((1 / (1 - (Hardlevel_StatusResistance + 0.1))) - 1)"
                   }
                 }
               ]
@@ -12307,12 +11053,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "DamageFlat": {
-              "operator": "Variables[0] (MDF_DamageValue2) || RETURN",
-              "displayLines": "MDF_DamageValue2",
-              "constants": [],
-              "variables": [
-                "MDF_DamageValue2"
-              ]
+              "displayLines": "MDF_DamageValue2"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -12380,12 +11121,7 @@ const compositeAbilityObject = {
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "MDF_DamageValue2": {
-                      "operator": "Variables[0] (MDF_DamageValue) || RETURN",
-                      "displayLines": "MDF_DamageValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageValue"
-                      ]
+                      "displayLines": "MDF_DamageValue"
                     }
                   },
                   "allowAbilityTriggers": false
@@ -12444,24 +11180,14 @@ const compositeAbilityObject = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                            "displayLines": "#BattleEvent_P1_ADF",
-                            "constants": [],
-                            "variables": [
-                              "#BattleEvent_P1_ADF"
-                            ]
+                            "displayLines": "#BattleEvent_P1_ADF"
                           },
                           "refreshPositions": false,
                           "enemyList": [
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Constants[0] (2022010) || RETURN",
-                                "displayLines": "2022010",
-                                "constants": [
-                                  2022010
-                                ],
-                                "variables": []
+                                "displayLines": "2022010"
                               },
                               "locationType": "First"
                             }
@@ -12470,24 +11196,14 @@ const compositeAbilityObject = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                            "displayLines": "#BattleEvent_P1_ADF",
-                            "constants": [],
-                            "variables": [
-                              "#BattleEvent_P1_ADF"
-                            ]
+                            "displayLines": "#BattleEvent_P1_ADF"
                           },
                           "refreshPositions": false,
                           "enemyList": [
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Constants[0] (2022010) || RETURN",
-                                "displayLines": "2022010",
-                                "constants": [
-                                  2022010
-                                ],
-                                "variables": []
+                                "displayLines": "2022010"
                               },
                               "locationType": "Last"
                             }
@@ -12498,24 +11214,14 @@ const compositeAbilityObject = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                            "displayLines": "#BattleEvent_P1_ADF",
-                            "constants": [],
-                            "variables": [
-                              "#BattleEvent_P1_ADF"
-                            ]
+                            "displayLines": "#BattleEvent_P1_ADF"
                           },
                           "refreshPositions": false,
                           "enemyList": [
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Constants[0] (2022040) || RETURN",
-                                "displayLines": "2022040",
-                                "constants": [
-                                  2022040
-                                ],
-                                "variables": []
+                                "displayLines": "2022040"
                               },
                               "locationType": "First"
                             }
@@ -12524,24 +11230,14 @@ const compositeAbilityObject = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                            "displayLines": "#BattleEvent_P1_ADF",
-                            "constants": [],
-                            "variables": [
-                              "#BattleEvent_P1_ADF"
-                            ]
+                            "displayLines": "#BattleEvent_P1_ADF"
                           },
                           "refreshPositions": false,
                           "enemyList": [
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Constants[0] (2022040) || RETURN",
-                                "displayLines": "2022040",
-                                "constants": [
-                                  2022040
-                                ],
-                                "variables": []
+                                "displayLines": "2022040"
                               },
                               "locationType": "Last"
                             }
@@ -12578,13 +11274,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"613022705\">Modifier_BattleEventAbility_Challenge_Xianzhou_01_Sub</a>",
                   "valuePerStack": {
                     "MDF_DamageValue": {
-                      "operator": "Variables[0] (TempHP) || Variables[1] (#BattleEvent_P2_ADF) || MUL || RETURN",
-                      "displayLines": "(TempHP * #BattleEvent_P2_ADF)",
-                      "constants": [],
-                      "variables": [
-                        "TempHP",
-                        "#BattleEvent_P2_ADF"
-                      ]
+                      "displayLines": "(TempHP * #BattleEvent_P2_ADF)"
                     }
                   }
                 }
@@ -12613,13 +11303,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"613022705\">Modifier_BattleEventAbility_Challenge_Xianzhou_01_Sub</a>",
                       "valuePerStack": {
                         "MDF_DamageValue": {
-                          "operator": "Variables[0] (TempHP) || Variables[1] (#BattleEvent_P2_ADF) || MUL || RETURN",
-                          "displayLines": "(TempHP * #BattleEvent_P2_ADF)",
-                          "constants": [],
-                          "variables": [
-                            "TempHP",
-                            "#BattleEvent_P2_ADF"
-                          ]
+                          "displayLines": "(TempHP * #BattleEvent_P2_ADF)"
                         }
                       }
                     }

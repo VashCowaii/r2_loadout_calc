@@ -47,12 +47,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_IF_BOSS_Stance) || RETURN",
-                "displayLines": "MDF_IF_BOSS_Stance",
-                "constants": [],
-                "variables": [
-                  "MDF_IF_BOSS_Stance"
-                ]
+                "displayLines": "MDF_IF_BOSS_Stance"
               }
             }
           ]
@@ -75,14 +70,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1506063698\">Enemy_W3_Sunday_EX04_Stance</a>",
               "valuePerStack": {
                 "MDF_IF_BOSS_Stance": {
-                  "operator": "Variables[0] ({[SkillEX04[0]]}) || Constants[0] (3) || MUL || RETURN",
-                  "displayLines": "({[SkillEX04[0]]} * 3)",
-                  "constants": [
-                    3
-                  ],
-                  "variables": [
-                    "{[SkillEX04[0]]}"
-                  ]
+                  "displayLines": "({[SkillEX04[0]]} * 3)"
                 }
               }
             }
@@ -127,14 +115,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1506063698\">Enemy_W3_Sunday_EX04_Stance</a>",
                   "valuePerStack": {
                     "MDF_IF_BOSS_Stance": {
-                      "operator": "Variables[0] ({[SkillEX04[0]]}) || Constants[0] (3) || MUL || RETURN",
-                      "displayLines": "({[SkillEX04[0]]} * 3)",
-                      "constants": [
-                        3
-                      ],
-                      "variables": [
-                        "{[SkillEX04[0]]}"
-                      ]
+                      "displayLines": "({[SkillEX04[0]]} * 3)"
                     }
                   }
                 }

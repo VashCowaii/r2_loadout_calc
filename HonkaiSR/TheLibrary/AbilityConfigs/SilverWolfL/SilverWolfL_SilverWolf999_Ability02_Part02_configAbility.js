@@ -7,12 +7,7 @@ const configAbility = {
     {
       "name": "Adjust Team Punchline Value",
       "value": {
-        "operator": "Variables[0] (5) || RETURN",
-        "displayLines": "5",
-        "constants": [],
-        "variables": [
-          5
-        ]
+        "displayLines": "5"
       },
       "adjustment": "Add"
     },
@@ -26,20 +21,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (1.6) || RETURN",
-          "displayLines": "1.6",
-          "constants": [],
-          "variables": [
-            1.6
-          ]
+          "displayLines": "1.6"
         },
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "attackType": "Skill"
@@ -66,12 +51,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "DamageElation": {
-              "operator": "Variables[0] (0.4) || RETURN",
-              "displayLines": "0.4",
-              "constants": [],
-              "variables": [
-                0.4
-              ]
+              "displayLines": "0.4"
             },
             "dmgFormula": "Elation Scaling",
             "Toughness": null,

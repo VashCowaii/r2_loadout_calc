@@ -70,21 +70,11 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-47761406\">Memosprite_CastoriceServant_LifeTime</a>",
       "counter": {
-        "operator": "Variables[0] (CastoriceServant_LifeTime) || RETURN",
-        "displayLines": "CastoriceServant_LifeTime",
-        "constants": [],
-        "variables": [
-          "CastoriceServant_LifeTime"
-        ]
+        "displayLines": "CastoriceServant_LifeTime"
       },
       "valuePerStack": {
         "_AttackTime": {
-          "operator": "Variables[0] (CastoriceServant_LifeTime) || RETURN",
-          "displayLines": "CastoriceServant_LifeTime",
-          "constants": [],
-          "variables": [
-            "CastoriceServant_LifeTime"
-          ]
+          "displayLines": "CastoriceServant_LifeTime"
         }
       }
     },
@@ -274,14 +264,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_AttackTime) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(_AttackTime - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_AttackTime"
-                ]
+                "displayLines": "(_AttackTime - 1)"
               },
               "variableName": "_AttackTime"
             },
@@ -293,12 +276,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (_AttackTime) || RETURN",
-                "displayLines": "_AttackTime",
-                "constants": [],
-                "variables": [
-                  "_AttackTime"
-                ]
+                "displayLines": "_AttackTime"
               },
               "target": {
                 "name": "Target Name",
@@ -324,36 +302,21 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_AttackTime) || RETURN",
-                "displayLines": "_AttackTime",
-                "constants": [],
-                "variables": [
-                  "_AttackTime"
-                ]
+                "displayLines": "_AttackTime"
               },
               "variableName": "_AttackMaxTime"
             },
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (_AttackTime) || RETURN",
-                "displayLines": "_AttackTime",
-                "constants": [],
-                "variables": [
-                  "_AttackTime"
-                ]
+                "displayLines": "_AttackTime"
               },
               "target": {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
               "maximum": {
-                "operator": "Variables[0] (_AttackMaxTime) || RETURN",
-                "displayLines": "_AttackMaxTime",
-                "constants": [],
-                "variables": [
-                  "_AttackMaxTime"
-                ]
+                "displayLines": "_AttackMaxTime"
               },
               "assignState": "True",
               "bar#": "Dot"
@@ -407,12 +370,7 @@ const configAbility = {
                 "value1": "CurrentHP%",
                 "compareType": "<=",
                 "value2": {
-                  "operator": "Variables[0] (0.25) || RETURN",
-                  "displayLines": "0.25",
-                  "constants": [],
-                  "variables": [
-                    0.25
-                  ]
+                  "displayLines": "0.25"
                 }
               },
               "passed": [
@@ -451,12 +409,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (CastoriceServant_MaxHP) || RETURN",
-                "displayLines": "CastoriceServant_MaxHP",
-                "constants": [],
-                "variables": [
-                  "CastoriceServant_MaxHP"
-                ]
+                "displayLines": "CastoriceServant_MaxHP"
               }
             },
             {
@@ -499,12 +452,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "setValue": {
-                "operator": "Variables[0] (CastoriceServant_CurrentHP) || RETURN",
-                "displayLines": "CastoriceServant_CurrentHP",
-                "constants": [],
-                "variables": [
-                  "CastoriceServant_CurrentHP"
-                ]
+                "displayLines": "CastoriceServant_CurrentHP"
               }
             }
           ]
@@ -546,13 +494,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (FLOOR) || Variables[1] (CastoriceServant_CurrentCount) || PARAM_1 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(CastoriceServant_CurrentCount)",
-                    "constants": [],
-                    "variables": [
-                      "FLOOR",
-                      "CastoriceServant_CurrentCount"
-                    ]
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(CastoriceServant_CurrentCount)"
                   },
                   "variableName": "CastoriceServant_CurrentCount"
                 }
@@ -574,26 +516,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CastoriceServant_Skill02_AttackCurrent_LostHP) || INVERT || RETURN",
-                    "displayLines": "-CastoriceServant_Skill02_AttackCurrent_LostHP",
-                    "constants": [],
-                    "variables": [
-                      "CastoriceServant_Skill02_AttackCurrent_LostHP"
-                    ]
+                    "displayLines": "-CastoriceServant_Skill02_AttackCurrent_LostHP"
                   },
                   "variableName": "CastoriceServant_Skill02_AttackCurrent_LostHP"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (FLOOR) || Variables[1] (CastoriceServant_Skill02_AttackTotal_LostHP) || Variables[2] (CastoriceServant_Skill02_AttackCurrent_LostHP) || ADD || PARAM_1 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((CastoriceServant_Skill02_AttackTotal_LostHP + CastoriceServant_Skill02_AttackCurrent_LostHP))",
-                    "constants": [],
-                    "variables": [
-                      "FLOOR",
-                      "CastoriceServant_Skill02_AttackTotal_LostHP",
-                      "CastoriceServant_Skill02_AttackCurrent_LostHP"
-                    ]
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((CastoriceServant_Skill02_AttackTotal_LostHP + CastoriceServant_Skill02_AttackCurrent_LostHP))"
                   },
                   "variableName": "CastoriceServant_Skill02_AttackTotal_LostHP"
                 }
@@ -652,12 +582,7 @@ const configAbility = {
                         "value1": "CurrentHP%",
                         "compareType": ">",
                         "value2": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
+                          "displayLines": "0.25"
                         }
                       }
                     ]

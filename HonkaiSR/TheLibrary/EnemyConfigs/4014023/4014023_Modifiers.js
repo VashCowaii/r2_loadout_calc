@@ -87,14 +87,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (DeathCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(DeathCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "DeathCount"
-                    ]
+                    "displayLines": "(DeathCount + 1)"
                   },
                   "variableName": "DeathCount"
                 },
@@ -110,15 +103,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Constants[0] (1) || Variables[0] (MonsterCount) || DIV || Constants[1] (0.0009999999) || ADD || RETURN",
-                    "displayLines": "((1 / MonsterCount) + 0.0009999999)",
-                    "constants": [
-                      1,
-                      0.0009999999
-                    ],
-                    "variables": [
-                      "MonsterCount"
-                    ]
+                    "displayLines": "((1 / MonsterCount) + 0.0009999999)"
                   },
                   "variableName": "ADF_HPDamageRatioValue"
                 },
@@ -138,14 +123,7 @@ const configAbility = {
                     "value1": "ADF_CurrentHPValue",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (ADF_MaxHPValue) || Variables[1] (ADF_HPDamageRatioValue) || MUL || Variables[2] (DeathCount) || MUL || RETURN",
-                      "displayLines": "((ADF_MaxHPValue * ADF_HPDamageRatioValue) * DeathCount)",
-                      "constants": [],
-                      "variables": [
-                        "ADF_MaxHPValue",
-                        "ADF_HPDamageRatioValue",
-                        "DeathCount"
-                      ]
+                      "displayLines": "((ADF_MaxHPValue * ADF_HPDamageRatioValue) * DeathCount)"
                     }
                   },
                   "passed": [
@@ -211,14 +189,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (AchievementCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(AchievementCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "AchievementCount"
-                        ]
+                        "displayLines": "(AchievementCount + 1)"
                       },
                       "variableName": "AchievementCount"
                     }
@@ -743,13 +714,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_Speed) || Variables[1] (MDF_CurrentSpeed) || SUB || RETURN",
-                "displayLines": "(MDF_Speed - MDF_CurrentSpeed)",
-                "constants": [],
-                "variables": [
-                  "MDF_Speed",
-                  "MDF_CurrentSpeed"
-                ]
+                "displayLines": "(MDF_Speed - MDF_CurrentSpeed)"
               }
             }
           ]
@@ -1292,12 +1257,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageTakenUpRatio) || RETURN",
-                "displayLines": "MDF_DamageTakenUpRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageTakenUpRatio"
-                ]
+                "displayLines": "MDF_DamageTakenUpRatio"
               }
             }
           ]
@@ -1314,22 +1274,12 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
               "duration": 1,
               "baseChance": {
-                "operator": "Variables[0] (MDF_ConfineChance) || RETURN",
-                "displayLines": "MDF_ConfineChance",
-                "constants": [],
-                "variables": [
-                  "MDF_ConfineChance"
-                ]
+                "displayLines": "MDF_ConfineChance"
               },
               "immediateEffect": true,
               "valuePerStack": {
                 "MDF_ActionDelayRatio": {
-                  "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-                  "displayLines": "{[Skill03[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[2]]}"
-                  ]
+                  "displayLines": "{[Skill03[2]]}"
                 }
               }
             }
@@ -1362,12 +1312,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageTakenUpRatio) || RETURN",
-                "displayLines": "MDF_DamageTakenUpRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageTakenUpRatio"
-                ]
+                "displayLines": "MDF_DamageTakenUpRatio"
               }
             }
           ]
@@ -1781,14 +1726,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1169900751\">Monster_W4_Hearse_SetSpeed</a>",
                   "valuePerStack": {
                     "MDF_Speed": {
-                      "operator": "Variables[0] (MDF_Speed) || Constants[0] (0) || MUL || RETURN",
-                      "displayLines": "(MDF_Speed * 0)",
-                      "constants": [
-                        0
-                      ],
-                      "variables": [
-                        "MDF_Speed"
-                      ]
+                      "displayLines": "(MDF_Speed * 0)"
                     }
                   }
                 },
@@ -2094,12 +2032,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1774231954\">Monster_W4_HearsePart_Soul</a>[<span class=\"descriptionNumberColor\">Conquer</span>]",
                   "valuePerStack": {
                     "MDF_DamageTakenUpRatio": {
-                      "operator": "Variables[0] (MDF_DamageTakenUpRatio) || RETURN",
-                      "displayLines": "MDF_DamageTakenUpRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageTakenUpRatio"
-                      ]
+                      "displayLines": "MDF_DamageTakenUpRatio"
                     }
                   },
                   "casterAssign": "CasterSelf"
@@ -2115,12 +2048,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"323182003\">Monster_W4_HearsePart_Soul_B</a>[<span class=\"descriptionNumberColor\">Conquer</span>]",
                   "valuePerStack": {
                     "MDF_DamageTakenUpRatio": {
-                      "operator": "Variables[0] (MDF_DamageTakenUpRatio) || RETURN",
-                      "displayLines": "MDF_DamageTakenUpRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageTakenUpRatio"
-                      ]
+                      "displayLines": "MDF_DamageTakenUpRatio"
                     }
                   },
                   "casterAssign": "CasterSelf"

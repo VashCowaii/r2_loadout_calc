@@ -31,12 +31,7 @@ const configAbility = {
           "eventID": 30501,
           "variables": {
             "DV_BE_BaseSpeed": {
-              "operator": "Variables[0] (DV_FeverBESpeed) || RETURN",
-              "displayLines": "DV_FeverBESpeed",
-              "constants": [],
-              "variables": [
-                "DV_FeverBESpeed"
-              ]
+              "displayLines": "DV_FeverBESpeed"
             }
           },
           "whenCreated": [
@@ -75,12 +70,7 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1935126530\">Modifier_FantasticStory_BaseAbility_2260_FeverDmgCount</a>",
           "counter": {
-            "operator": "Variables[0] (DV_TargetDebuffCount) || RETURN",
-            "displayLines": "DV_TargetDebuffCount",
-            "constants": [],
-            "variables": [
-              "DV_TargetDebuffCount"
-            ]
+            "displayLines": "DV_TargetDebuffCount"
           }
         },
         {
@@ -90,24 +80,14 @@ const configAbility = {
             "value1": "DV_TargetDebuffCount",
             "compareType": ">",
             "value2": {
-              "operator": "Variables[0] (DV_TargetDebuffCountMax) || RETURN",
-              "displayLines": "DV_TargetDebuffCountMax",
-              "constants": [],
-              "variables": [
-                "DV_TargetDebuffCountMax"
-              ]
+              "displayLines": "DV_TargetDebuffCountMax"
             }
           },
           "passed": [
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (DV_TargetDebuffCount) || RETURN",
-                "displayLines": "DV_TargetDebuffCount",
-                "constants": [],
-                "variables": [
-                  "DV_TargetDebuffCount"
-                ]
+                "displayLines": "DV_TargetDebuffCount"
               },
               "variableName": "DV_TargetDebuffCountMax"
             }
@@ -133,12 +113,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (DV_TargetDebuffCountMax) || RETURN",
-            "displayLines": "DV_TargetDebuffCountMax",
-            "constants": [],
-            "variables": [
-              "DV_TargetDebuffCountMax"
-            ]
+            "displayLines": "DV_TargetDebuffCountMax"
           },
           "execute": [
             {
@@ -171,13 +146,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Physical",
                         "DamageFlat": {
-                          "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (DV_FantasticStory_BaseAbility_2260_EnterFever_P1_FixedDmgRatio) || MUL || RETURN",
-                          "displayLines": "(BattleEvent_BaseHP * DV_FantasticStory_BaseAbility_2260_EnterFever_P1_FixedDmgRatio)",
-                          "constants": [],
-                          "variables": [
-                            "BattleEvent_BaseHP",
-                            "DV_FantasticStory_BaseAbility_2260_EnterFever_P1_FixedDmgRatio"
-                          ]
+                          "displayLines": "(BattleEvent_BaseHP * DV_FantasticStory_BaseAbility_2260_EnterFever_P1_FixedDmgRatio)"
                         },
                         "dmgFormulaFinal": "Converted DMG Base",
                         "Toughness": null,
@@ -222,12 +191,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Constants[0] (0) || RETURN",
-        "displayLines": "0",
-        "constants": [
-          0
-        ],
-        "variables": []
+        "displayLines": "0"
       },
       "variableName": "DV_FantasticStory_BaseAbility_CountSum"
     }

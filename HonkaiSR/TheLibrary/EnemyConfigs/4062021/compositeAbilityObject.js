@@ -57,12 +57,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Imaginary",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_DamageValue) || RETURN",
-                      "displayLines": "MDF_DamageValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageValue"
-                      ]
+                      "displayLines": "MDF_DamageValue"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -84,13 +79,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Imaginary",
                     "DamageFlat": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (MDF_DamageValue) || MUL || RETURN",
-                      "displayLines": "(DOT_TriggerRatio * MDF_DamageValue)",
-                      "constants": [],
-                      "variables": [
-                        "DOT_TriggerRatio",
-                        "MDF_DamageValue"
-                      ]
+                      "displayLines": "(DOT_TriggerRatio * MDF_DamageValue)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -134,13 +123,7 @@ const compositeAbilityObject = {
                       },
                       "scope": "ContextModifier",
                       "value": {
-                        "operator": "Variables[0] (_TotalDamage) || Variables[1] (_Damage) || ADD || RETURN",
-                        "displayLines": "(_TotalDamage + _Damage)",
-                        "constants": [],
-                        "variables": [
-                          "_TotalDamage",
-                          "_Damage"
-                        ]
+                        "displayLines": "(_TotalDamage + _Damage)"
                       },
                       "variableName": "_TotalDamage"
                     },
@@ -368,13 +351,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1128925615\">Enemy_W2_Beast01_04_AbilityP02_GoldBlood_DOT</a>[<span class=\"descriptionNumberColor\">Hemotort Corruption</span>]",
                       "valuePerStack": {
                         "MDF_DamageValue": {
-                          "operator": "Variables[0] (TargetTotalDamage) || Variables[1] (MDF_GoldBloodDOTDamageRatio) || MUL || RETURN",
-                          "displayLines": "(TargetTotalDamage * MDF_GoldBloodDOTDamageRatio)",
-                          "constants": [],
-                          "variables": [
-                            "TargetTotalDamage",
-                            "MDF_GoldBloodDOTDamageRatio"
-                          ]
+                          "displayLines": "(TargetTotalDamage * MDF_GoldBloodDOTDamageRatio)"
                         }
                       }
                     }
@@ -438,12 +415,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,

@@ -35,12 +35,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -83,13 +78,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (Rank06_SpeedUp_Count) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyValue * Rank06_SpeedUp_Count)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "Rank06_SpeedUp_Count"
-                ]
+                "displayLines": "(MDF_PropertyValue * Rank06_SpeedUp_Count)"
               }
             }
           ]
@@ -119,12 +108,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -156,20 +140,10 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Constants[0] (0) || RETURN",
-                "displayLines": "0",
-                "constants": [
-                  0
-                ],
-                "variables": []
+                "displayLines": "0"
               },
               "maximum": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "assignState": "True",
               "priorState": "Normal",
@@ -196,31 +170,16 @@ const configAbility = {
                   "valueType": "LifeTime",
                   "variableName": "CurrentLifeTime",
                   "multiplier": {
-                    "operator": "Constants[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [
-                      1
-                    ],
-                    "variables": []
+                    "displayLines": "1"
                   }
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (CurrentLifeTime) || RETURN",
-                    "displayLines": "CurrentLifeTime",
-                    "constants": [],
-                    "variables": [
-                      "CurrentLifeTime"
-                    ]
+                    "displayLines": "CurrentLifeTime"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "assignState": "True",
                   "priorState": "Active",
@@ -242,12 +201,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -275,14 +229,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           ]
@@ -308,12 +255,7 @@ const configAbility = {
                 "value1": "CurrentHP%",
                 "compareType": "<=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_HPRatio) || RETURN",
-                  "displayLines": "MDF_HPRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_HPRatio"
-                  ]
+                  "displayLines": "MDF_HPRatio"
                 }
               },
               "passed": [
@@ -326,12 +268,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"420113807\">Sushang_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Guileless</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_AggroDown) || RETURN",
-                      "displayLines": "MDF_AggroDown",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AggroDown"
-                      ]
+                      "displayLines": "MDF_AggroDown"
                     }
                   }
                 }
@@ -353,12 +290,7 @@ const configAbility = {
                 "value1": "CurrentHP%",
                 "compareType": "<=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_HPRatio) || RETURN",
-                  "displayLines": "MDF_HPRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_HPRatio"
-                  ]
+                  "displayLines": "MDF_HPRatio"
                 }
               },
               "passed": [
@@ -371,12 +303,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"420113807\">Sushang_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Guileless</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_AggroDown) || RETURN",
-                      "displayLines": "MDF_AggroDown",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AggroDown"
-                      ]
+                      "displayLines": "MDF_AggroDown"
                     }
                   }
                 }

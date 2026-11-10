@@ -15,12 +15,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-          "displayLines": "{[Skill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "{[Skill03[0]]}"
         },
         "HitSplit": 0.5,
         "Toughness": null,
@@ -39,12 +34,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-          "displayLines": "{[Skill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "{[Skill03[0]]}"
         },
         "HitSplit": 0.5,
         "Toughness": null,
@@ -130,20 +120,10 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-                "displayLines": "{[Skill03[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill03[2]]}"
-                ]
+                "displayLines": "{[Skill03[2]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-                "displayLines": "{[Skill03[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill03[1]]}"
-                ]
+                "displayLines": "{[Skill03[1]]}"
               },
               "valuePerStack": {
                 "MDF_Shake_ActionDelayRatio": 0.7
@@ -193,20 +173,10 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-                "displayLines": "{[Skill03[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill03[2]]}"
-                ]
+                "displayLines": "{[Skill03[2]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-                "displayLines": "{[Skill03[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill03[1]]}"
-                ]
+                "displayLines": "{[Skill03[1]]}"
               },
               "valuePerStack": {
                 "MDF_Shake_ActionDelayRatio": 0.7

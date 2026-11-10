@@ -64,12 +64,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             },
             {
@@ -160,12 +155,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"462082235\">Aventurine_ResistCtrlCD</a>[<span class=\"descriptionNumberColor\">Shot Loaded Right</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   }
                 },
                 "Modifier Deletes Itself"
@@ -350,41 +340,17 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_InitShieldValue": {
-                      "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.072) || MUL || Variables[2] (96) || ADD || RETURN",
-                      "displayLines": "((MDF_CurrentDefence2 * 0.072) + 96)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_CurrentDefence2",
-                        0.072,
-                        96
-                      ]
+                      "displayLines": "((MDF_CurrentDefence2 * 0.072) + 96)"
                     },
                     "MDF_MaxShieldRatio": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     },
                     "MDF_ForceShield": {
-                      "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.24) || MUL || Variables[2] (320) || ADD || RETURN",
-                      "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_CurrentDefence2",
-                        0.24,
-                        320
-                      ]
+                      "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)"
                     }
                   }
                 }
@@ -400,32 +366,13 @@ const configAbility = {
                   "duration": 3,
                   "valuePerStack": {
                     "MDF_InitShieldValue": {
-                      "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.072) || MUL || Variables[2] (96) || ADD || RETURN",
-                      "displayLines": "((MDF_CurrentDefence2 * 0.072) + 96)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_CurrentDefence2",
-                        0.072,
-                        96
-                      ]
+                      "displayLines": "((MDF_CurrentDefence2 * 0.072) + 96)"
                     },
                     "MDF_MaxShieldRatio": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     },
                     "MDF_ForceShield": {
-                      "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.24) || MUL || Variables[2] (320) || ADD || RETURN",
-                      "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_CurrentDefence2",
-                        0.24,
-                        320
-                      ]
+                      "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)"
                     }
                   }
                 }
@@ -462,32 +409,13 @@ const configAbility = {
                   "duration": 3,
                   "valuePerStack": {
                     "MDF_InitShieldValue": {
-                      "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.072) || MUL || Variables[2] (96) || ADD || RETURN",
-                      "displayLines": "((MDF_CurrentDefence2 * 0.072) + 96)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_CurrentDefence2",
-                        0.072,
-                        96
-                      ]
+                      "displayLines": "((MDF_CurrentDefence2 * 0.072) + 96)"
                     },
                     "MDF_MaxShieldRatio": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     },
                     "MDF_ForceShield": {
-                      "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.24) || MUL || Variables[2] (320) || ADD || RETURN",
-                      "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_CurrentDefence2",
-                        0.24,
-                        320
-                      ]
+                      "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)"
                     }
                   }
                 }
@@ -589,28 +517,13 @@ const configAbility = {
                   "valuePerStack": {
                     "MDF_CanTriggerShieldEffect": 0,
                     "MDF_ResistanceRatio": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     },
                     "MDF_TeammateCount": {
-                      "operator": "Variables[0] (MDF_TeammateCount1) || RETURN",
-                      "displayLines": "MDF_TeammateCount1",
-                      "constants": [],
-                      "variables": [
-                        "MDF_TeammateCount1"
-                      ]
+                      "displayLines": "MDF_TeammateCount1"
                     },
                     "MDF_CritDmg1": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 }
@@ -722,21 +635,10 @@ const configAbility = {
             {
               "name": "Stack Shield",
               "stackValue": {
-                "operator": "Variables[0] (MDF_InitShieldValue) || RETURN",
-                "displayLines": "MDF_InitShieldValue",
-                "constants": [],
-                "variables": [
-                  "MDF_InitShieldValue"
-                ]
+                "displayLines": "MDF_InitShieldValue"
               },
               "stackLimit": {
-                "operator": "Variables[0] (MDF_ForceShield) || Variables[1] (MDF_MaxShieldRatio) || MUL || RETURN",
-                "displayLines": "(MDF_ForceShield * MDF_MaxShieldRatio)",
-                "constants": [],
-                "variables": [
-                  "MDF_ForceShield",
-                  "MDF_MaxShieldRatio"
-                ]
+                "displayLines": "(MDF_ForceShield * MDF_MaxShieldRatio)"
               }
             },
             {
@@ -747,12 +649,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.5) || RETURN",
-                "displayLines": "0.5",
-                "constants": [],
-                "variables": [
-                  0.5
-                ]
+                "displayLines": "0.5"
               }
             },
             {
@@ -796,13 +693,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_InsertLeftValue) || Variables[1] (MDF_InsertAttackCount) || SUB || RETURN",
-                "displayLines": "(MDF_InsertLeftValue - MDF_InsertAttackCount)",
-                "constants": [],
-                "variables": [
-                  "MDF_InsertLeftValue",
-                  "MDF_InsertAttackCount"
-                ]
+                "displayLines": "(MDF_InsertLeftValue - MDF_InsertAttackCount)"
               },
               "variableName": "MDF_InsertLeftValue"
             },
@@ -833,13 +724,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1024856711\">Aventurine_Trace03_Status</a>[<span class=\"descriptionNumberColor\">Bingo!</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_InsertLeftValue) || Variables[1] (MDF_InsertAttackCount) || SUB || RETURN",
-                      "displayLines": "(MDF_InsertLeftValue - MDF_InsertAttackCount)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_InsertLeftValue",
-                        "MDF_InsertAttackCount"
-                      ]
+                      "displayLines": "(MDF_InsertLeftValue - MDF_InsertAttackCount)"
                     }
                   }
                 }
@@ -917,12 +802,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AttackAddRatio) || RETURN",
-                "displayLines": "MDF_AttackAddRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackAddRatio"
-                ]
+                "displayLines": "MDF_AttackAddRatio"
               }
             }
           ]
@@ -987,14 +867,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (MDF_ShieldCount) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(MDF_ShieldCount + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "MDF_ShieldCount"
-                            ]
+                            "displayLines": "(MDF_ShieldCount + 1)"
                           },
                           "variableName": "MDF_ShieldCount"
                         }
@@ -1020,13 +893,7 @@ const configAbility = {
                       },
                       "variableName": "_AttackAddedRatio",
                       "resetValue": {
-                        "operator": "Variables[0] (MDF_ShieldCount) || Variables[1] (0.5) || MUL || RETURN",
-                        "displayLines": "(MDF_ShieldCount * 0.5)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_ShieldCount",
-                          0.5
-                        ]
+                        "displayLines": "(MDF_ShieldCount * 0.5)"
                       }
                     },
                     {
@@ -1036,12 +903,7 @@ const configAbility = {
                         "value1": "_AttackAddedRatio",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (1.5) || RETURN",
-                          "displayLines": "1.5",
-                          "constants": [],
-                          "variables": [
-                            1.5
-                          ]
+                          "displayLines": "1.5"
                         }
                       },
                       "passed": [
@@ -1054,12 +916,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1071693817\">Aventurine_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]",
                           "valuePerStack": {
                             "MDF_AttackAddRatio": {
-                              "operator": "Variables[0] (1.5) || RETURN",
-                              "displayLines": "1.5",
-                              "constants": [],
-                              "variables": [
-                                1.5
-                              ]
+                              "displayLines": "1.5"
                             }
                           }
                         }
@@ -1074,13 +931,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1071693817\">Aventurine_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]",
                           "valuePerStack": {
                             "MDF_AttackAddRatio": {
-                              "operator": "Variables[0] (MDF_ShieldCount) || Variables[1] (0.5) || MUL || RETURN",
-                              "displayLines": "(MDF_ShieldCount * 0.5)",
-                              "constants": [],
-                              "variables": [
-                                "MDF_ShieldCount",
-                                0.5
-                              ]
+                              "displayLines": "(MDF_ShieldCount * 0.5)"
                             }
                           }
                         }
@@ -1146,14 +997,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (MDF_ShieldCount) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(MDF_ShieldCount + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "MDF_ShieldCount"
-                            ]
+                            "displayLines": "(MDF_ShieldCount + 1)"
                           },
                           "variableName": "MDF_ShieldCount"
                         }
@@ -1179,13 +1023,7 @@ const configAbility = {
                       },
                       "variableName": "_AttackAddedRatio",
                       "resetValue": {
-                        "operator": "Variables[0] (MDF_ShieldCount) || Variables[1] (0.5) || MUL || RETURN",
-                        "displayLines": "(MDF_ShieldCount * 0.5)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_ShieldCount",
-                          0.5
-                        ]
+                        "displayLines": "(MDF_ShieldCount * 0.5)"
                       }
                     },
                     {
@@ -1195,12 +1033,7 @@ const configAbility = {
                         "value1": "_AttackAddedRatio",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (1.5) || RETURN",
-                          "displayLines": "1.5",
-                          "constants": [],
-                          "variables": [
-                            1.5
-                          ]
+                          "displayLines": "1.5"
                         }
                       },
                       "passed": [
@@ -1213,12 +1046,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1071693817\">Aventurine_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]",
                           "valuePerStack": {
                             "MDF_AttackAddRatio": {
-                              "operator": "Variables[0] (1.5) || RETURN",
-                              "displayLines": "1.5",
-                              "constants": [],
-                              "variables": [
-                                1.5
-                              ]
+                              "displayLines": "1.5"
                             }
                           }
                         }
@@ -1233,13 +1061,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1071693817\">Aventurine_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]",
                           "valuePerStack": {
                             "MDF_AttackAddRatio": {
-                              "operator": "Variables[0] (MDF_ShieldCount) || Variables[1] (0.5) || MUL || RETURN",
-                              "displayLines": "(MDF_ShieldCount * 0.5)",
-                              "constants": [],
-                              "variables": [
-                                "MDF_ShieldCount",
-                                0.5
-                              ]
+                              "displayLines": "(MDF_ShieldCount * 0.5)"
                             }
                           }
                         }
@@ -1310,14 +1132,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           ]
@@ -1338,28 +1153,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (FLOOR) || Variables[1] (MDF_PropertyValue) || Constants[0] (0.01) || MUL || PARAM_1 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_PropertyValue * 0.01))",
-                "constants": [
-                  0.01
-                ],
-                "variables": [
-                  "FLOOR",
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_PropertyValue * 0.01))"
               },
               "variableName": "MDF_Multipler"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_Multipler) || Variables[1] (0.02) || MUL || RETURN",
-                "displayLines": "(MDF_Multipler * 0.02)",
-                "constants": [],
-                "variables": [
-                  "MDF_Multipler",
-                  0.02
-                ]
+                "displayLines": "(MDF_Multipler * 0.02)"
               },
               "variableName": "MDF_PropertyValue2"
             },
@@ -1370,24 +1171,14 @@ const configAbility = {
                 "value1": "MDF_PropertyValue2",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (0.48) || RETURN",
-                  "displayLines": "0.48",
-                  "constants": [],
-                  "variables": [
-                    0.48
-                  ]
+                  "displayLines": "0.48"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (0.48) || RETURN",
-                    "displayLines": "0.48",
-                    "constants": [],
-                    "variables": [
-                      0.48
-                    ]
+                    "displayLines": "0.48"
                   },
                   "variableName": "MDF_PropertyValue2"
                 }
@@ -1401,12 +1192,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateConverted</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                "displayLines": "MDF_PropertyValue2",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue2"
-                ]
+                "displayLines": "MDF_PropertyValue2"
               }
             }
           ]
@@ -1454,13 +1240,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_CurrentDefence) || Variables[1] (MDF_CurrentDefenceConvert) || SUB || RETURN",
-                "displayLines": "(MDF_CurrentDefence - MDF_CurrentDefenceConvert)",
-                "constants": [],
-                "variables": [
-                  "MDF_CurrentDefence",
-                  "MDF_CurrentDefenceConvert"
-                ]
+                "displayLines": "(MDF_CurrentDefence - MDF_CurrentDefenceConvert)"
               },
               "variableName": "MDF_CurrentDefence2"
             },
@@ -1471,14 +1251,7 @@ const configAbility = {
                 "value1": "MDF_CurrentDefence2",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (1600) || Constants[0] (100) || ADD || RETURN",
-                  "displayLines": "(1600 + 100)",
-                  "constants": [
-                    100
-                  ],
-                  "variables": [
-                    1600
-                  ]
+                  "displayLines": "(1600 + 100)"
                 }
               },
               "passed": [
@@ -1502,13 +1275,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-422728063\">Aventurine_Trace01_Sub</a>[<span class=\"descriptionNumberColor\">Leverage</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (1600) || SUB || RETURN",
-                          "displayLines": "(MDF_CurrentDefence2 - 1600)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentDefence2",
-                            1600
-                          ]
+                          "displayLines": "(MDF_CurrentDefence2 - 1600)"
                         }
                       }
                     }
@@ -1523,13 +1290,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-422728063\">Aventurine_Trace01_Sub</a>[<span class=\"descriptionNumberColor\">Leverage</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (1600) || SUB || RETURN",
-                          "displayLines": "(MDF_CurrentDefence2 - 1600)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentDefence2",
-                            1600
-                          ]
+                          "displayLines": "(MDF_CurrentDefence2 - 1600)"
                         }
                       }
                     }
@@ -1592,12 +1353,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.4) || RETURN",
-                "displayLines": "0.4",
-                "constants": [],
-                "variables": [
-                  0.4
-                ]
+                "displayLines": "0.4"
               },
               "variableName": "MDF_DefencePercentage"
             },
@@ -1609,12 +1365,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.4) || RETURN",
-                "displayLines": "0.4",
-                "constants": [],
-                "variables": [
-                  0.4
-                ]
+                "displayLines": "0.4"
               }
             }
           ]
@@ -1676,14 +1427,7 @@ const configAbility = {
               "variableName": "MDF_Coin",
               "min": 1,
               "max": {
-                "operator": "Variables[0] (7) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(7 + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  7
-                ]
+                "displayLines": "(7 + 1)"
               }
             },
             {
@@ -1694,12 +1438,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-346814527\">Aventurine_Passive_ShieldEnergy</a>",
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (MDF_Coin) || RETURN",
-                "displayLines": "MDF_Coin",
-                "constants": [],
-                "variables": [
-                  "MDF_Coin"
-                ]
+                "displayLines": "MDF_Coin"
               }
             },
             "Modifier Deletes Itself"
@@ -1809,12 +1548,7 @@ const configAbility = {
                   "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
                   "variableName": "MDF_PropertyValue",
                   "value": {
-                    "operator": "Variables[0] (MDF_ResistanceRatio) || RETURN",
-                    "displayLines": "MDF_ResistanceRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ResistanceRatio"
-                    ]
+                    "displayLines": "MDF_ResistanceRatio"
                   }
                 },
                 {
@@ -1865,12 +1599,7 @@ const configAbility = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (MDF_CritDmg1) || RETURN",
-                        "displayLines": "MDF_CritDmg1",
-                        "constants": [],
-                        "variables": [
-                          "MDF_CritDmg1"
-                        ]
+                        "displayLines": "MDF_CritDmg1"
                       }
                     },
                     {
@@ -1882,12 +1611,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-2007691702\">Aventurine_Eidolon1_Status</a>[<span class=\"descriptionNumberColor\">Prisoner's Dilemma</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_CritDmg1) || RETURN",
-                          "displayLines": "MDF_CritDmg1",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CritDmg1"
-                          ]
+                          "displayLines": "MDF_CritDmg1"
                         }
                       }
                     }
@@ -1910,12 +1634,7 @@ const configAbility = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (MDF_CritDmg1) || RETURN",
-                        "displayLines": "MDF_CritDmg1",
-                        "constants": [],
-                        "variables": [
-                          "MDF_CritDmg1"
-                        ]
+                        "displayLines": "MDF_CritDmg1"
                       }
                     },
                     {
@@ -1927,12 +1646,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-2007691702\">Aventurine_Eidolon1_Status</a>[<span class=\"descriptionNumberColor\">Prisoner's Dilemma</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_CritDmg1) || RETURN",
-                          "displayLines": "MDF_CritDmg1",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CritDmg1"
-                          ]
+                          "displayLines": "MDF_CritDmg1"
                         }
                       }
                     }
@@ -1970,12 +1684,7 @@ const configAbility = {
                       "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
                       "variableName": "MDF_PropertyValue",
                       "value": {
-                        "operator": "Variables[0] (MDF_ResistanceRatio) || RETURN",
-                        "displayLines": "MDF_ResistanceRatio",
-                        "constants": [],
-                        "variables": [
-                          "MDF_ResistanceRatio"
-                        ]
+                        "displayLines": "MDF_ResistanceRatio"
                       }
                     },
                     {
@@ -2045,12 +1754,7 @@ const configAbility = {
                           "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
                           "variableName": "MDF_PropertyValue",
                           "value": {
-                            "operator": "Variables[0] (MDF_ResistanceRatio) || RETURN",
-                            "displayLines": "MDF_ResistanceRatio",
-                            "constants": [],
-                            "variables": [
-                              "MDF_ResistanceRatio"
-                            ]
+                            "displayLines": "MDF_ResistanceRatio"
                           }
                         },
                         {
@@ -2106,12 +1810,7 @@ const configAbility = {
                           "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
                           "variableName": "MDF_PropertyValue",
                           "value": {
-                            "operator": "Variables[0] (MDF_ResistanceRatio) || RETURN",
-                            "displayLines": "MDF_ResistanceRatio",
-                            "constants": [],
-                            "variables": [
-                              "MDF_ResistanceRatio"
-                            ]
+                            "displayLines": "MDF_ResistanceRatio"
                           }
                         },
                         {
@@ -2172,12 +1871,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   },
                   "maximum": 7,
                   "assignState": "True",
@@ -2215,12 +1909,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   },
                   "maximum": 7,
                   "assignState": "True",
@@ -2494,12 +2183,7 @@ const configAbility = {
                         "value1": "MDF_InsertAttackCount",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (3) || RETURN",
-                          "displayLines": "3",
-                          "constants": [],
-                          "variables": [
-                            3
-                          ]
+                          "displayLines": "3"
                         }
                       }
                     ]
@@ -2573,14 +2257,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1431725730\">Aventurine_Passive_AddEnergyMark</a>",
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (MDF_BlackJackEnergy) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_BlackJackEnergy + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_BlackJackEnergy"
-                        ]
+                        "displayLines": "(MDF_BlackJackEnergy + 1)"
                       }
                     }
                   ],
@@ -2647,14 +2324,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_InsertAttackCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(MDF_InsertAttackCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_InsertAttackCount"
-                    ]
+                    "displayLines": "(MDF_InsertAttackCount + 1)"
                   },
                   "variableName": "MDF_InsertAttackCount"
                 },
@@ -2667,13 +2337,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1024856711\">Aventurine_Trace03_Status</a>[<span class=\"descriptionNumberColor\">Bingo!</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_InsertLeftValue) || Variables[1] (MDF_InsertAttackCount) || SUB || RETURN",
-                      "displayLines": "(MDF_InsertLeftValue - MDF_InsertAttackCount)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_InsertLeftValue",
-                        "MDF_InsertAttackCount"
-                      ]
+                      "displayLines": "(MDF_InsertLeftValue - MDF_InsertAttackCount)"
                     }
                   }
                 },
@@ -2698,12 +2362,7 @@ const configAbility = {
                     "value1": "MDF_InsertAttackCount",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (3) || RETURN",
-                      "displayLines": "3",
-                      "constants": [],
-                      "variables": [
-                        3
-                      ]
+                      "displayLines": "3"
                     }
                   }
                 ]
@@ -2754,12 +2413,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-346814527\">Aventurine_Passive_ShieldEnergy</a>",
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_Layer2) || RETURN",
-                    "displayLines": "MDF_Layer2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer2"
-                    ]
+                    "displayLines": "MDF_Layer2"
                   }
                 },
                 {
@@ -2804,13 +2458,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1024856711\">Aventurine_Trace03_Status</a>[<span class=\"descriptionNumberColor\">Bingo!</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_InsertLeftValue) || Variables[1] (MDF_InsertAttackCount) || SUB || RETURN",
-                      "displayLines": "(MDF_InsertLeftValue - MDF_InsertAttackCount)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_InsertLeftValue",
-                        "MDF_InsertAttackCount"
-                      ]
+                      "displayLines": "(MDF_InsertLeftValue - MDF_InsertAttackCount)"
                     }
                   }
                 }
@@ -2841,12 +2489,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "variableName": "MDF_InsertAttackLimit"
             },
@@ -2859,12 +2502,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"890966085\">Aventurine_Passive_OnAfterBeingAttacked</a>",
               "valuePerStack": {
                 "MDF_BlackJackEnergy": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 }
               }
             },
@@ -2910,12 +2548,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"890966085\">Aventurine_Passive_OnAfterBeingAttacked</a>",
                   "valuePerStack": {
                     "MDF_BlackJackEnergy": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     }
                   }
                 }
@@ -2966,42 +2599,17 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_InitShieldValue": {
-                      "operator": "Variables[0] (1) || Variables[1] (MDF_CurrentDefence2) || Variables[2] (0.24) || MUL || Variables[3] (320) || ADD || MUL || RETURN",
-                      "displayLines": "(1 * ((MDF_CurrentDefence2 * 0.24) + 320))",
-                      "constants": [],
-                      "variables": [
-                        1,
-                        "MDF_CurrentDefence2",
-                        0.24,
-                        320
-                      ]
+                      "displayLines": "(1 * ((MDF_CurrentDefence2 * 0.24) + 320))"
                     },
                     "MDF_MaxShieldRatio": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     },
                     "MDF_ForceShield": {
-                      "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.24) || MUL || Variables[2] (320) || ADD || RETURN",
-                      "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_CurrentDefence2",
-                        0.24,
-                        320
-                      ]
+                      "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)"
                     }
                   }
                 },
@@ -3082,28 +2690,13 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"1566932811\">Aventurine_Ability02_ShieldEffect</a>",
                           "valuePerStack": {
                             "MDF_ResistanceRatio": {
-                              "operator": "Variables[0] (0.5) || RETURN",
-                              "displayLines": "0.5",
-                              "constants": [],
-                              "variables": [
-                                0.5
-                              ]
+                              "displayLines": "0.5"
                             },
                             "MDF_TeammateCount": {
-                              "operator": "Variables[0] (MDF_TeammateCount1) || RETURN",
-                              "displayLines": "MDF_TeammateCount1",
-                              "constants": [],
-                              "variables": [
-                                "MDF_TeammateCount1"
-                              ]
+                              "displayLines": "MDF_TeammateCount1"
                             },
                             "MDF_CritDmg1": {
-                              "operator": "Variables[0] (0.2) || RETURN",
-                              "displayLines": "0.2",
-                              "constants": [],
-                              "variables": [
-                                0.2
-                              ]
+                              "displayLines": "0.2"
                             }
                           }
                         }

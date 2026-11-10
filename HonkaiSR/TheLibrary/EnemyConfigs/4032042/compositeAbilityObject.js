@@ -275,12 +275,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageTypeTakenRatio) || RETURN",
-                    "displayLines": "MDF_AllDamageTypeTakenRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageTypeTakenRatio"
-                    ]
+                    "displayLines": "MDF_AllDamageTypeTakenRatio"
                   }
                 }
               ]
@@ -344,12 +339,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_StealthBreak_AllDamageTypeTakenRatio) || RETURN",
-                    "displayLines": "MDF_StealthBreak_AllDamageTypeTakenRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_StealthBreak_AllDamageTypeTakenRatio"
-                    ]
+                    "displayLines": "MDF_StealthBreak_AllDamageTypeTakenRatio"
                   }
                 }
               ]
@@ -410,20 +400,10 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"264567512\">Enemy_W4_Scholar_01_StealthBreak</a>[<span class=\"descriptionNumberColor\">Flawed</span>]",
                   "valuePerStack": {
                     "MDF_ActionDelayRatio": {
-                      "operator": "Variables[0] (MDF_StealthBreak_ActionDelayRatio) || RETURN",
-                      "displayLines": "MDF_StealthBreak_ActionDelayRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_StealthBreak_ActionDelayRatio"
-                      ]
+                      "displayLines": "MDF_StealthBreak_ActionDelayRatio"
                     },
                     "MDF_AllDamageTypeTakenRatio": {
-                      "operator": "Variables[0] (MDF_StealthBreak_AllDamageTypeTakenRatio) || RETURN",
-                      "displayLines": "MDF_StealthBreak_AllDamageTypeTakenRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_StealthBreak_AllDamageTypeTakenRatio"
-                      ]
+                      "displayLines": "MDF_StealthBreak_AllDamageTypeTakenRatio"
                     }
                   }
                 },
@@ -615,12 +595,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -691,12 +666,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -787,20 +757,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-19048827\">Enemy_W4_Scholar_01_Stealth</a>[<span class=\"descriptionNumberColor\">Lurking</span>]",
           "valuePerStack": {
             "MDF_StealthBreak_ActionDelayRatio": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
+              "displayLines": "{[SkillP01[0]]}"
             },
             "MDF_StealthBreak_AllDamageTypeTakenRatio": {
-              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-              "displayLines": "{[SkillP01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[1]]}"
-              ]
+              "displayLines": "{[SkillP01[1]]}"
             }
           }
         },
@@ -897,16 +857,7 @@ const compositeAbilityObject = {
                   {
                     "name": "Define Custom Variable",
                     "value": {
-                      "operator": "Variables[0] (WHOLE) || Variables[1] (DarkTeamCount) || Constants[0] (2) || DIV || PARAM_1 || FUNCTION || Variables[2] (StealthCondition) || SUB || RETURN",
-                      "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((DarkTeamCount / 2)) - StealthCondition)",
-                      "constants": [
-                        2
-                      ],
-                      "variables": [
-                        "WHOLE",
-                        "DarkTeamCount",
-                        "StealthCondition"
-                      ]
+                      "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((DarkTeamCount / 2)) - StealthCondition)"
                     },
                     "variableName": "StealthCondition"
                   },

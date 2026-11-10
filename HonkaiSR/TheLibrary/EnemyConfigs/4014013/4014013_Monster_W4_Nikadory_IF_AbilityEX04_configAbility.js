@@ -32,20 +32,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"264648512\">Enemy_W4_Nikadory_IF_AbilityEX04_EMY</a>",
           "valuePerStack": {
             "MDF_AllDamageReduce": {
-              "operator": "Variables[0] ({[SkillEX04[0]]}) || RETURN",
-              "displayLines": "{[SkillEX04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX04[0]]}"
-              ]
+              "displayLines": "{[SkillEX04[0]]}"
             },
             "MDF_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[SkillEX04[1]]}) || RETURN",
-              "displayLines": "{[SkillEX04[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX04[1]]}"
-              ]
+              "displayLines": "{[SkillEX04[1]]}"
             }
           }
         }

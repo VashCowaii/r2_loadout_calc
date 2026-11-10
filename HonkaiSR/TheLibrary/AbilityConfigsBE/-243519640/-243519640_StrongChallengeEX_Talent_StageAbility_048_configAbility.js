@@ -56,12 +56,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (#ADF_2) || RETURN",
-                "displayLines": "#ADF_2",
-                "constants": [],
-                "variables": [
-                  "#ADF_2"
-                ]
+                "displayLines": "#ADF_2"
               }
             }
           ]

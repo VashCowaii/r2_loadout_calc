@@ -41,12 +41,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.15) || RETURN",
-                    "displayLines": "0.15",
-                    "constants": [],
-                    "variables": [
-                      0.15
-                    ]
+                    "displayLines": "0.15"
                   }
                 }
               ]
@@ -72,12 +67,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.24) || RETURN",
-                    "displayLines": "0.24",
-                    "constants": [],
-                    "variables": [
-                      0.24
-                    ]
+                    "displayLines": "0.24"
                   }
                 }
               ]

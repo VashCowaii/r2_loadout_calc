@@ -21,15 +21,7 @@ const configAbility = {
           },
           "variableName": "_WorldErosion",
           "value": {
-            "operator": "Variables[0] (_ErosionParam) || Variables[1] (_WorldErosion) || MUL || Constants[0] (100) || MUL || RETURN",
-            "displayLines": "((_ErosionParam * _WorldErosion) * 100)",
-            "constants": [
-              100
-            ],
-            "variables": [
-              "_ErosionParam",
-              "_WorldErosion"
-            ]
+            "displayLines": "((_ErosionParam * _WorldErosion) * 100)"
           },
           "max": 100
         },
@@ -41,14 +33,7 @@ const configAbility = {
           },
           "variableName": "_WorldErosion02",
           "value": {
-            "operator": "Variables[0] (_ErosionParam) || Constants[0] (80) || MUL || RETURN",
-            "displayLines": "(_ErosionParam * 80)",
-            "constants": [
-              80
-            ],
-            "variables": [
-              "_ErosionParam"
-            ]
+            "displayLines": "(_ErosionParam * 80)"
           },
           "min": 1,
           "max": 99
@@ -132,12 +117,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] ({[Skill09[2]]}) || RETURN",
-                        "displayLines": "{[Skill09[2]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill09[2]]}"
-                        ]
+                        "displayLines": "{[Skill09[2]]}"
                       },
                       "variableName": "_WorldErosionCtl"
                     },
@@ -148,12 +128,7 @@ const configAbility = {
                         "target": "{{Irontomb: Part 1}} + {{Irontomb: Part 2}}"
                       },
                       "value": {
-                        "operator": "Variables[0] ({[Skill09[2]]}) || RETURN",
-                        "displayLines": "{[Skill09[2]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill09[2]]}"
-                        ]
+                        "displayLines": "{[Skill09[2]]}"
                       },
                       "variableName": "_WorldErosionCtl"
                     }
@@ -171,12 +146,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] ({[Skill09[1]]}) || RETURN",
-                            "displayLines": "{[Skill09[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill09[1]]}"
-                            ]
+                            "displayLines": "{[Skill09[1]]}"
                           },
                           "variableName": "_WorldErosionCtl"
                         },
@@ -187,12 +157,7 @@ const configAbility = {
                             "target": "{{Irontomb: Part 1}} + {{Irontomb: Part 2}}"
                           },
                           "value": {
-                            "operator": "Variables[0] ({[Skill09[1]]}) || RETURN",
-                            "displayLines": "{[Skill09[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill09[1]]}"
-                            ]
+                            "displayLines": "{[Skill09[1]]}"
                           },
                           "variableName": "_WorldErosionCtl"
                         }
@@ -201,12 +166,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] ({[Skill09[0]]}) || RETURN",
-                            "displayLines": "{[Skill09[0]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill09[0]]}"
-                            ]
+                            "displayLines": "{[Skill09[0]]}"
                           },
                           "variableName": "_WorldErosionCtl"
                         },
@@ -217,12 +177,7 @@ const configAbility = {
                             "target": "{{Irontomb: Part 1}} + {{Irontomb: Part 2}}"
                           },
                           "value": {
-                            "operator": "Variables[0] ({[Skill09[0]]}) || RETURN",
-                            "displayLines": "{[Skill09[0]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill09[0]]}"
-                            ]
+                            "displayLines": "{[Skill09[0]]}"
                           },
                           "variableName": "_WorldErosionCtl"
                         }

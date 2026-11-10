@@ -475,13 +475,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || Variables[1] (Monster_W3_Figure_02_AimTargetCount) || DIV || RETURN",
-              "displayLines": "({[Skill05[0]]} / Monster_W3_Figure_02_AimTargetCount)",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}",
-                "Monster_W3_Figure_02_AimTargetCount"
-              ]
+              "displayLines": "({[Skill05[0]]} / Monster_W3_Figure_02_AimTargetCount)"
             },
             "Toughness": null,
             "Tags": null,

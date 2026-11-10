@@ -28,12 +28,7 @@ const configAbility = {
       "functionName": "<a class=\"gTempYellow\" id=\"2105895650\">SilverWolf999_ModifySP</a>",
       "variables": {
         "parameter[0]_AddValue": {
-          "operator": "Variables[0] (_tmp_OverflowSP) || RETURN",
-          "displayLines": "_tmp_OverflowSP",
-          "constants": [],
-          "variables": [
-            "_tmp_OverflowSP"
-          ]
+          "displayLines": "_tmp_OverflowSP"
         }
       }
     },
@@ -46,12 +41,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1358748576\">SilverWolf999_Ultra</a>[<span class=\"descriptionNumberColor\">Godmode Player</span>]",
       "valuePerStack": {
         "MDF_Count": {
-          "operator": "Variables[0] (3) || RETURN",
-          "displayLines": "3",
-          "constants": [],
-          "variables": [
-            3
-          ]
+          "displayLines": "3"
         }
       }
     },

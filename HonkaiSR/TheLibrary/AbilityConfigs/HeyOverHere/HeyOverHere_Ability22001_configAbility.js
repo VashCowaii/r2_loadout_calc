@@ -34,12 +34,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoing</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.16) || RETURN",
-                "displayLines": "0.16",
-                "constants": [],
-                "variables": [
-                  0.16
-                ]
+                "displayLines": "0.16"
               }
             }
           ]
@@ -68,12 +63,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"222357741\">LC_22001_Sub</a>[<span class=\"descriptionNumberColor\">Outgoing Healing Boost</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   }
                 }
               ]

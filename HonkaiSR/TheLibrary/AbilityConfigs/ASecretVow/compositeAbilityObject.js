@@ -69,12 +69,7 @@ const compositeAbilityObject = {
                     "value1": "_TargetRatio",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (_CasterRatio) || RETURN",
-                      "displayLines": "_CasterRatio",
-                      "constants": [],
-                      "variables": [
-                        "_CasterRatio"
-                      ]
+                      "displayLines": "_CasterRatio"
                     }
                   },
                   "passed": [

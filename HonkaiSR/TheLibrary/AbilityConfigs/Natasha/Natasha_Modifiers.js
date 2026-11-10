@@ -36,12 +36,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -71,12 +66,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Weaken%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -117,20 +107,10 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (MDF_ShowValue1) || RETURN",
-                    "displayLines": "MDF_ShowValue1",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ShowValue1"
-                    ]
+                    "displayLines": "MDF_ShowValue1"
                   },
                   "healFlat": {
-                    "operator": "Variables[0] (MDF_ShowValue2) || RETURN",
-                    "displayLines": "MDF_ShowValue2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ShowValue2"
-                    ]
+                    "displayLines": "MDF_ShowValue2"
                   },
                   "formula": "Heal from Healer's MaxHP"
                 }

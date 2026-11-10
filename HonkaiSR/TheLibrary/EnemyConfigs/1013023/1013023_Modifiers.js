@@ -75,12 +75,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-977376968\">Monster_W1_Mecha04_RL_AfterCharge</a>",
                   "valuePerStack": {
                     "MDF_RogueGoalID": {
-                      "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__33) || RETURN",
-                      "displayLines": "ENEMIES_OBJECT_UNUSED__33",
-                      "constants": [],
-                      "variables": [
-                        "ENEMIES_OBJECT_UNUSED__33"
-                      ]
+                      "displayLines": "ENEMIES_OBJECT_UNUSED__33"
                     }
                   }
                 }
@@ -308,12 +303,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[1]]}"
-                ]
+                "displayLines": "{[PassiveSkill01[1]]}"
               },
               "variableName": "MDF_SpeedAddedRatio_PerLayer"
             },
@@ -331,13 +321,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedAddedRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(MDF_SpeedAddedRatio_PerLayer * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedAddedRatio_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(MDF_SpeedAddedRatio_PerLayer * ModifierLayers)"
               }
             }
           ]
@@ -363,12 +347,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                "displayLines": "MDF_SpeedAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedAddedRatio"
-                ]
+                "displayLines": "MDF_SpeedAddedRatio"
               }
             }
           ]
@@ -903,12 +882,7 @@ const configAbility = {
                                     "target": "{{Parameter Target}}"
                                   },
                                   "value": {
-                                    "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                                    "displayLines": "{[PassiveSkill01[0]]}",
-                                    "constants": [],
-                                    "variables": [
-                                      "{[PassiveSkill01[0]]}"
-                                    ]
+                                    "displayLines": "{[PassiveSkill01[0]]}"
                                   },
                                   "variableName": "Mecha04_00_SpeedAddedBaseRatio"
                                 }
@@ -1069,12 +1043,7 @@ const configAbility = {
                                           },
                                           "modifier": "<a class=\"gModGreen\" id=\"-849878014\">Monster_W1_Mecha04_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Speedy Recovery</span>]",
                                           "duration": {
-                                            "operator": "Variables[0] (UnusedUnderThisBase_8730) || RETURN",
-                                            "displayLines": "UnusedUnderThisBase_8730",
-                                            "constants": [],
-                                            "variables": [
-                                              "UnusedUnderThisBase_8730"
-                                            ]
+                                            "displayLines": "UnusedUnderThisBase_8730"
                                           }
                                         }
                                       ],
@@ -1096,12 +1065,7 @@ const configAbility = {
                                           },
                                           "modifier": "<a class=\"gModGreen\" id=\"-849878014\">Monster_W1_Mecha04_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Speedy Recovery</span>]",
                                           "duration": {
-                                            "operator": "Variables[0] (UnusedUnderThisBase_8743) || RETURN",
-                                            "displayLines": "UnusedUnderThisBase_8743",
-                                            "constants": [],
-                                            "variables": [
-                                              "UnusedUnderThisBase_8743"
-                                            ]
+                                            "displayLines": "UnusedUnderThisBase_8743"
                                           }
                                         }
                                       ]
@@ -1125,12 +1089,7 @@ const configAbility = {
                                     "target": "{{Parameter Target}}"
                                   },
                                   "value": {
-                                    "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                                    "displayLines": "{[PassiveSkill01[0]]}",
-                                    "constants": [],
-                                    "variables": [
-                                      "{[PassiveSkill01[0]]}"
-                                    ]
+                                    "displayLines": "{[PassiveSkill01[0]]}"
                                   },
                                   "variableName": "Mecha04_00_SpeedAddedBaseRatio"
                                 },
@@ -1447,12 +1406,7 @@ const configAbility = {
                                                     "target": "{{Parameter Target}}"
                                                   },
                                                   "value": {
-                                                    "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                                                    "displayLines": "{[PassiveSkill01[0]]}",
-                                                    "constants": [],
-                                                    "variables": [
-                                                      "{[PassiveSkill01[0]]}"
-                                                    ]
+                                                    "displayLines": "{[PassiveSkill01[0]]}"
                                                   },
                                                   "variableName": "Mecha04_00_SpeedAddedBaseRatio"
                                                 }
@@ -1615,12 +1569,7 @@ const configAbility = {
                                                       },
                                                       "modifier": "<a class=\"gModGreen\" id=\"-849878014\">Monster_W1_Mecha04_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Speedy Recovery</span>]",
                                                       "duration": {
-                                                        "operator": "Variables[0] (UnusedUnderThisBase_8730) || RETURN",
-                                                        "displayLines": "UnusedUnderThisBase_8730",
-                                                        "constants": [],
-                                                        "variables": [
-                                                          "UnusedUnderThisBase_8730"
-                                                        ]
+                                                        "displayLines": "UnusedUnderThisBase_8730"
                                                       }
                                                     }
                                                   ],
@@ -1642,12 +1591,7 @@ const configAbility = {
                                                       },
                                                       "modifier": "<a class=\"gModGreen\" id=\"-849878014\">Monster_W1_Mecha04_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Speedy Recovery</span>]",
                                                       "duration": {
-                                                        "operator": "Variables[0] (UnusedUnderThisBase_8743) || RETURN",
-                                                        "displayLines": "UnusedUnderThisBase_8743",
-                                                        "constants": [],
-                                                        "variables": [
-                                                          "UnusedUnderThisBase_8743"
-                                                        ]
+                                                        "displayLines": "UnusedUnderThisBase_8743"
                                                       }
                                                     }
                                                   ]
@@ -1687,12 +1631,7 @@ const configAbility = {
                                                 "target": "{{Parameter Target}}"
                                               },
                                               "value": {
-                                                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                                                "displayLines": "{[PassiveSkill01[0]]}",
-                                                "constants": [],
-                                                "variables": [
-                                                  "{[PassiveSkill01[0]]}"
-                                                ]
+                                                "displayLines": "{[PassiveSkill01[0]]}"
                                               },
                                               "variableName": "Mecha04_00_SpeedAddedBaseRatio"
                                             },
@@ -1815,13 +1754,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (ModifierDamageUpValue) || Variables[1] (Buff_ModifierLayers) || MUL || RETURN",
-                "displayLines": "(ModifierDamageUpValue * Buff_ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "ModifierDamageUpValue",
-                  "Buff_ModifierLayers"
-                ]
+                "displayLines": "(ModifierDamageUpValue * Buff_ModifierLayers)"
               },
               "variableName": "MDF_PropertyValue"
             },
@@ -1833,12 +1766,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -1929,14 +1857,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageFlat": {
-                  "operator": "Variables[0] (Owner_MaxHP) || Variables[1] (Modifier_Bleed_DamagePercentage) || MUL || Variables[2] (Modifier_Layer) || MUL || RETURN",
-                  "displayLines": "((Owner_MaxHP * Modifier_Bleed_DamagePercentage) * Modifier_Layer)",
-                  "constants": [],
-                  "variables": [
-                    "Owner_MaxHP",
-                    "Modifier_Bleed_DamagePercentage",
-                    "Modifier_Layer"
-                  ]
+                  "displayLines": "((Owner_MaxHP * Modifier_Bleed_DamagePercentage) * Modifier_Layer)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1979,15 +1900,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageFlat": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Owner_MaxHP) || MUL || Variables[2] (Modifier_Bleed_DamagePercentage) || MUL || Variables[3] (Modifier_Layer) || MUL || RETURN",
-                  "displayLines": "(((DOT_TriggerRatio * Owner_MaxHP) * Modifier_Bleed_DamagePercentage) * Modifier_Layer)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "Owner_MaxHP",
-                    "Modifier_Bleed_DamagePercentage",
-                    "Modifier_Layer"
-                  ]
+                  "displayLines": "(((DOT_TriggerRatio * Owner_MaxHP) * Modifier_Bleed_DamagePercentage) * Modifier_Layer)"
                 },
                 "Toughness": null,
                 "Tags": null,

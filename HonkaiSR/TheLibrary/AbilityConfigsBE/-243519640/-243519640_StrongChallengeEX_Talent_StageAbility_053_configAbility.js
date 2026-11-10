@@ -33,12 +33,7 @@ const configAbility = {
           }
         },
         "toughnessReductionPreview": {
-          "operator": "Variables[0] (MDF_DefaultStanceBreakRatio) || RETURN",
-          "displayLines": "MDF_DefaultStanceBreakRatio",
-          "constants": [],
-          "variables": [
-            "MDF_DefaultStanceBreakRatio"
-          ]
+          "displayLines": "MDF_DefaultStanceBreakRatio"
         }
       },
       "execute": [
@@ -104,20 +99,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1308834030\">MStrongChallengeEX_Talent_StageAbility_SVT_053</a>",
                   "valuePerStack": {
                     "MDF_DefaultStanceBreakRatio": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     },
                     "MDF_IgnoreDefenceRatioTotal": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     }
                   }
                 }

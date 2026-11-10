@@ -30,12 +30,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (Modifier_AttackAddedRatio) || RETURN",
-                "displayLines": "Modifier_AttackAddedRatio",
-                "constants": [],
-                "variables": [
-                  "Modifier_AttackAddedRatio"
-                ]
+                "displayLines": "Modifier_AttackAddedRatio"
               }
             },
             {
@@ -46,12 +41,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (Modifier_SpeedDelta) || RETURN",
-                "displayLines": "Modifier_SpeedDelta",
-                "constants": [],
-                "variables": [
-                  "Modifier_SpeedDelta"
-                ]
+                "displayLines": "Modifier_SpeedDelta"
               }
             }
           ]

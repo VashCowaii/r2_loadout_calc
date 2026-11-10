@@ -24,12 +24,7 @@ const configAbility = {
     {
       "name": "Deal Toughness DMG",
       "value": {
-        "operator": "Variables[0] (SkillEX02_P1_Core_StanceDamageValue) || RETURN",
-        "displayLines": "SkillEX02_P1_Core_StanceDamageValue",
-        "constants": [],
-        "variables": [
-          "SkillEX02_P1_Core_StanceDamageValue"
-        ]
+        "displayLines": "SkillEX02_P1_Core_StanceDamageValue"
       },
       "attacker": {
         "name": "Target Name",

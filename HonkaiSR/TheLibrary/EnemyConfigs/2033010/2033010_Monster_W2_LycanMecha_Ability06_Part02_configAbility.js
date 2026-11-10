@@ -33,12 +33,7 @@ const configAbility = {
       },
       "variableName": "Wolf_MaxAttackCount",
       "value": {
-        "operator": "Variables[0] ({[SkillP01[1]]}) || INVERT || RETURN",
-        "displayLines": "-{[SkillP01[1]]}",
-        "constants": [],
-        "variables": [
-          "{[SkillP01[1]]}"
-        ]
+        "displayLines": "-{[SkillP01[1]]}"
       }
     },
     {
@@ -52,12 +47,7 @@ const configAbility = {
         "value1": "Wolf_AttackCount",
         "compareType": ">=",
         "value2": {
-          "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-          "displayLines": "Wolf_MaxAttackCount",
-          "constants": [],
-          "variables": [
-            "Wolf_MaxAttackCount"
-          ]
+          "displayLines": "Wolf_MaxAttackCount"
         }
       },
       "passed": [
@@ -68,12 +58,7 @@ const configAbility = {
             "target": "{{Level Entity}}"
           },
           "value": {
-            "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-            "displayLines": "Wolf_MaxAttackCount",
-            "constants": [],
-            "variables": [
-              "Wolf_MaxAttackCount"
-            ]
+            "displayLines": "Wolf_MaxAttackCount"
           },
           "variableName": "Wolf_AttackCount"
         },
@@ -121,12 +106,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "value": {
-                "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                "displayLines": "Wolf_MaxAttackCount",
-                "constants": [],
-                "variables": [
-                  "Wolf_MaxAttackCount"
-                ]
+                "displayLines": "Wolf_MaxAttackCount"
               },
               "variableName": "Wolf_MaxAttackCount"
             },
@@ -137,24 +117,14 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "value": {
-                "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                "displayLines": "Wolf_AttackCount",
-                "constants": [],
-                "variables": [
-                  "Wolf_AttackCount"
-                ]
+                "displayLines": "Wolf_AttackCount"
               },
               "variableName": "Wolf_AttackCount"
             },
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                "displayLines": "Wolf_AttackCount",
-                "constants": [],
-                "variables": [
-                  "Wolf_AttackCount"
-                ]
+                "displayLines": "Wolf_AttackCount"
               },
               "entityClass": "Enemy",
               "target": {
@@ -162,12 +132,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "maximum": {
-                "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                "displayLines": "Wolf_MaxAttackCount",
-                "constants": [],
-                "variables": [
-                  "Wolf_MaxAttackCount"
-                ]
+                "displayLines": "Wolf_MaxAttackCount"
               },
               "assignState": "True",
               "state": "Normal"
@@ -559,24 +524,14 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "value": {
-                "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                "displayLines": "Wolf_MaxAttackCount",
-                "constants": [],
-                "variables": [
-                  "Wolf_MaxAttackCount"
-                ]
+                "displayLines": "Wolf_MaxAttackCount"
               },
               "variableName": "Wolf_MaxAttackCount"
             },
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                "displayLines": "Wolf_AttackCount",
-                "constants": [],
-                "variables": [
-                  "Wolf_AttackCount"
-                ]
+                "displayLines": "Wolf_AttackCount"
               },
               "entityClass": "Enemy",
               "target": {
@@ -584,12 +539,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "maximum": {
-                "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                "displayLines": "Wolf_MaxAttackCount",
-                "constants": [],
-                "variables": [
-                  "Wolf_MaxAttackCount"
-                ]
+                "displayLines": "Wolf_MaxAttackCount"
               },
               "assignState": "True",
               "state": "Normal"

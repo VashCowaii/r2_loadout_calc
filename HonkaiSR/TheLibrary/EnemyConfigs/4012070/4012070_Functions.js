@@ -92,12 +92,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (_EnergyValue) || RETURN",
-                "displayLines": "_EnergyValue",
-                "constants": [],
-                "variables": [
-                  "_EnergyValue"
-                ]
+                "displayLines": "_EnergyValue"
               },
               "entityClass": "Enemy",
               "target": {

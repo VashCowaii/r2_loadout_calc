@@ -239,15 +239,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Constants[0] (4) || Variables[0] (Monster_W3_Figure_02_AimTargetCount) || SUB || Constants[1] (1) || ADD || RETURN",
-                    "displayLines": "((4 - Monster_W3_Figure_02_AimTargetCount) + 1)",
-                    "constants": [
-                      4,
-                      1
-                    ],
-                    "variables": [
-                      "Monster_W3_Figure_02_AimTargetCount"
-                    ]
+                    "displayLines": "((4 - Monster_W3_Figure_02_AimTargetCount) + 1)"
                   },
                   "entityClass": "Enemy",
                   "assignState": "False",
@@ -270,14 +262,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Constants[0] (5) || Variables[0] (Monster_W3_Figure_02_AimTargetCount) || SUB || RETURN",
-                    "displayLines": "(5 - Monster_W3_Figure_02_AimTargetCount)",
-                    "constants": [
-                      5
-                    ],
-                    "variables": [
-                      "Monster_W3_Figure_02_AimTargetCount"
-                    ]
+                    "displayLines": "(5 - Monster_W3_Figure_02_AimTargetCount)"
                   },
                   "variableName": "MDF_DangerLevel"
                 }
@@ -474,15 +459,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Constants[0] (4) || Variables[0] (Monster_W3_Figure_02_AimTargetCount) || SUB || Constants[1] (1) || ADD || RETURN",
-                        "displayLines": "((4 - Monster_W3_Figure_02_AimTargetCount) + 1)",
-                        "constants": [
-                          4,
-                          1
-                        ],
-                        "variables": [
-                          "Monster_W3_Figure_02_AimTargetCount"
-                        ]
+                        "displayLines": "((4 - Monster_W3_Figure_02_AimTargetCount) + 1)"
                       },
                       "entityClass": "Enemy",
                       "assignState": "True",
@@ -527,15 +504,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Update Displayed Energy Bar",
                               "value": {
-                                "operator": "Constants[0] (4) || Variables[0] (Monster_W3_Figure_02_AimTargetCount) || SUB || Constants[1] (1) || ADD || RETURN",
-                                "displayLines": "((4 - Monster_W3_Figure_02_AimTargetCount) + 1)",
-                                "constants": [
-                                  4,
-                                  1
-                                ],
-                                "variables": [
-                                  "Monster_W3_Figure_02_AimTargetCount"
-                                ]
+                                "displayLines": "((4 - Monster_W3_Figure_02_AimTargetCount) + 1)"
                               },
                               "entityClass": "Enemy",
                               "assignState": "True",
@@ -566,15 +535,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Constants[0] (4) || Variables[0] (Monster_W3_Figure_02_AimTargetCount) || SUB || Constants[1] (1) || ADD || RETURN",
-                    "displayLines": "((4 - Monster_W3_Figure_02_AimTargetCount) + 1)",
-                    "constants": [
-                      4,
-                      1
-                    ],
-                    "variables": [
-                      "Monster_W3_Figure_02_AimTargetCount"
-                    ]
+                    "displayLines": "((4 - Monster_W3_Figure_02_AimTargetCount) + 1)"
                   },
                   "entityClass": "Enemy",
                   "assignState": "True",
@@ -995,12 +956,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-              "displayLines": "{[Skill07[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill07[0]]}"
-              ]
+              "displayLines": "{[Skill07[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1702,13 +1658,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill05[0]]}) || Variables[1] (Monster_W3_Figure_02_AimTargetCount) || DIV || RETURN",
-                  "displayLines": "({[Skill05[0]]} / Monster_W3_Figure_02_AimTargetCount)",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[0]]}",
-                    "Monster_W3_Figure_02_AimTargetCount"
-                  ]
+                  "displayLines": "({[Skill05[0]]} / Monster_W3_Figure_02_AimTargetCount)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1987,12 +1937,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -2009,12 +1954,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -2109,12 +2049,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,

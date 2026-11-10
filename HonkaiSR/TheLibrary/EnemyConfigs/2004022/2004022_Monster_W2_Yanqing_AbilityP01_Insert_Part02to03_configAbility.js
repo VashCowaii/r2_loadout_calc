@@ -108,12 +108,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"262387731\">Enemy_W2_Yanqing_AbilityP01_Part03SpeedUp</a>",
       "valuePerStack": {
         "MDF_SpeedDelta": {
-          "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-          "displayLines": "{[SkillP01[4]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[4]]}"
-          ]
+          "displayLines": "{[SkillP01[4]]}"
         }
       }
     },

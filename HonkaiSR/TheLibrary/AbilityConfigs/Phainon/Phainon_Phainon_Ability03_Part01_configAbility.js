@@ -40,12 +40,7 @@ const configAbility = {
     {
       "name": "Set Phainon Charge Points",
       "value": {
-        "operator": "Variables[0] (Skill22_Energy) || RETURN",
-        "displayLines": "Skill22_Energy",
-        "constants": [],
-        "variables": [
-          "Skill22_Energy"
-        ]
+        "displayLines": "Skill22_Energy"
       }
     }
   ],

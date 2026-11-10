@@ -53,14 +53,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Constants[0] (1) || Variables[0] (LoseHPPercentage) || SUB || RETURN",
-                "displayLines": "(1 - LoseHPPercentage)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "LoseHPPercentage"
-                ]
+                "displayLines": "(1 - LoseHPPercentage)"
               },
               "variableName": "LoseHPPercentage"
             },
@@ -71,14 +64,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (LoseHPPercentage) || Constants[0] (100) || MUL || RETURN",
-                "displayLines": "(LoseHPPercentage * 100)",
-                "constants": [
-                  100
-                ],
-                "variables": [
-                  "LoseHPPercentage"
-                ]
+                "displayLines": "(LoseHPPercentage * 100)"
               },
               "variableName": "LoseHPPercentage"
             }
@@ -105,12 +91,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"872000024\">Modifier_ChallengePeakBattle_BaseAbility_0002_03</a>",
               "valuePerStack": {
                 "ChallengePeakBattle_0002_ADF_1": {
-                  "operator": "Variables[0] (ChallengePeakBattle_0002_ADF_1) || RETURN",
-                  "displayLines": "ChallengePeakBattle_0002_ADF_1",
-                  "constants": [],
-                  "variables": [
-                    "ChallengePeakBattle_0002_ADF_1"
-                  ]
+                  "displayLines": "ChallengePeakBattle_0002_ADF_1"
                 }
               }
             }
@@ -145,12 +126,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"888777643\">Modifier_ChallengePeakBattle_BaseAbility_0002_02</a>[<span class=\"descriptionNumberColor\">Tempering</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_0002_ADF_1": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }

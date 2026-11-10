@@ -159,12 +159,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -187,12 +182,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             },
             {
@@ -203,12 +193,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                "displayLines": "MDF_PropertyValue2",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue2"
-                ]
+                "displayLines": "MDF_PropertyValue2"
               }
             }
           ]
@@ -233,12 +218,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -265,12 +245,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -314,35 +289,17 @@ const configAbility = {
             {
               "name": "Stack Shield",
               "stackValue": {
-                "operator": "Variables[0] (MDF_DanHengPT_InitShieldValue) || RETURN",
-                "displayLines": "MDF_DanHengPT_InitShieldValue",
-                "constants": [],
-                "variables": [
-                  "MDF_DanHengPT_InitShieldValue"
-                ]
+                "displayLines": "MDF_DanHengPT_InitShieldValue"
               },
               "stackLimit": {
-                "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (UnusedUnderThisBase_5081) || MUL || Variables[2] (UnusedUnderThisBase_5071) || ADD || Variables[3] (MDF_MaxShieldRatio) || MUL || RETURN",
-                "displayLines": "(((DanHengPT_Attack * UnusedUnderThisBase_5081) + UnusedUnderThisBase_5071) * MDF_MaxShieldRatio)",
-                "constants": [],
-                "variables": [
-                  "DanHengPT_Attack",
-                  "UnusedUnderThisBase_5081",
-                  "UnusedUnderThisBase_5071",
-                  "MDF_MaxShieldRatio"
-                ]
+                "displayLines": "(((DanHengPT_Attack * UnusedUnderThisBase_5081) + UnusedUnderThisBase_5071) * MDF_MaxShieldRatio)"
               }
             },
             {
               "name": "Define Custom Variable",
               "scope": "ContextCaster",
               "value": {
-                "operator": "Variables[0] (MDF_DanHengPT_InitShieldValue) || RETURN",
-                "displayLines": "MDF_DanHengPT_InitShieldValue",
-                "constants": [],
-                "variables": [
-                  "MDF_DanHengPT_InitShieldValue"
-                ]
+                "displayLines": "MDF_DanHengPT_InitShieldValue"
               },
               "variableName": "MDF_AchievementCount"
             },
@@ -379,12 +336,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AttackDelta) || RETURN",
-                "displayLines": "MDF_AttackDelta",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackDelta"
-                ]
+                "displayLines": "MDF_AttackDelta"
               }
             }
           ]
@@ -440,14 +392,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Constants[0] (0) || Variables[0] (MDF_PointB2_P3_DelayUp) || SUB || RETURN",
-            "displayLines": "(0 - MDF_PointB2_P3_DelayUp)",
-            "constants": [
-              0
-            ],
-            "variables": [
-              "MDF_PointB2_P3_DelayUp"
-            ]
+            "displayLines": "(0 - MDF_PointB2_P3_DelayUp)"
           }
         }
       },
@@ -469,12 +414,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (MDF_Rank04_AllDamageReduceRatio) || RETURN",
-              "displayLines": "MDF_Rank04_AllDamageReduceRatio",
-              "constants": [],
-              "variables": [
-                "MDF_Rank04_AllDamageReduceRatio"
-              ]
+              "displayLines": "MDF_Rank04_AllDamageReduceRatio"
             }
           }
         },
@@ -495,12 +435,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (MDF_Rank06_DefPentRatio) || RETURN",
-              "displayLines": "MDF_Rank06_DefPentRatio",
-              "constants": [],
-              "variables": [
-                "MDF_Rank06_DefPentRatio"
-              ]
+              "displayLines": "MDF_Rank06_DefPentRatio"
             }
           }
         },
@@ -521,12 +456,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (MDF_Rank06_AllDamageTypeTakenRatio) || RETURN",
-              "displayLines": "MDF_Rank06_AllDamageTypeTakenRatio",
-              "constants": [],
-              "variables": [
-                "MDF_Rank06_AllDamageTypeTakenRatio"
-              ]
+              "displayLines": "MDF_Rank06_AllDamageTypeTakenRatio"
             }
           }
         }
@@ -663,12 +593,7 @@ const configAbility = {
                     "target": "{{DHPT}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_PointB2_P2_AddSP) || RETURN",
-                    "displayLines": "MDF_PointB2_P2_AddSP",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PointB2_P2_AddSP"
-                    ]
+                    "displayLines": "MDF_PointB2_P2_AddSP"
                   },
                   "isFixed": "* ERR"
                 }
@@ -692,12 +617,7 @@ const configAbility = {
                   },
                   "variables": {
                     "parameter[0]_NormalizedValue": {
-                      "operator": "Variables[0] (MDF_PointB2_P3_DelayUp) || RETURN",
-                      "displayLines": "MDF_PointB2_P3_DelayUp",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PointB2_P3_DelayUp"
-                      ]
+                      "displayLines": "MDF_PointB2_P3_DelayUp"
                     }
                   }
                 }
@@ -738,14 +658,7 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "scope": "ContextCaster",
                   "value": {
-                    "operator": "Variables[0] (DanHengPT_Passive_Count) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(DanHengPT_Passive_Count - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "DanHengPT_Passive_Count"
-                    ]
+                    "displayLines": "(DanHengPT_Passive_Count - 1)"
                   },
                   "variableName": "DanHengPT_Passive_Count"
                 },
@@ -756,12 +669,7 @@ const configAbility = {
                     "target": "{{Souldragon}}"
                   },
                   "attackCount": {
-                    "operator": "Variables[0] (DanHengPT_Passive_Count) || RETURN",
-                    "displayLines": "DanHengPT_Passive_Count",
-                    "constants": [],
-                    "variables": [
-                      "DanHengPT_Passive_Count"
-                    ]
+                    "displayLines": "DanHengPT_Passive_Count"
                   },
                   "show": true
                 },

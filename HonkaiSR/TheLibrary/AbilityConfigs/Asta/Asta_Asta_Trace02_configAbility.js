@@ -53,12 +53,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-653161821\">Asta_FireAddedRatio</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.18) || RETURN",
-                  "displayLines": "0.18",
-                  "constants": [],
-                  "variables": [
-                    0.18
-                  ]
+                  "displayLines": "0.18"
                 }
               }
             }
@@ -86,12 +81,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-653161821\">Asta_FireAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.18) || RETURN",
-                      "displayLines": "0.18",
-                      "constants": [],
-                      "variables": [
-                        0.18
-                      ]
+                      "displayLines": "0.18"
                     }
                   }
                 }

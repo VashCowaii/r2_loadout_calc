@@ -18,12 +18,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-          "displayLines": "{[Skill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "{[Skill03[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -104,14 +99,7 @@ const configAbility = {
             "target": "{{Ability Target(ST)}}"
           },
           "value": {
-            "operator": "Constants[0] (1) || INVERT || Variables[0] ({[Skill03[2]]}) || MUL || RETURN",
-            "displayLines": "(-1 * {[Skill03[2]]})",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "{[Skill03[2]]}"
-            ]
+            "displayLines": "(-1 * {[Skill03[2]]})"
           },
           "isFixed": "(Fixed)"
         },

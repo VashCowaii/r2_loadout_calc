@@ -241,13 +241,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageAddedRatio) || Variables[1] (MDF_Count) || MUL || RETURN",
-                "displayLines": "(MDF_DamageAddedRatio * MDF_Count)",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageAddedRatio",
-                  "MDF_Count"
-                ]
+                "displayLines": "(MDF_DamageAddedRatio * MDF_Count)"
               }
             }
           ]

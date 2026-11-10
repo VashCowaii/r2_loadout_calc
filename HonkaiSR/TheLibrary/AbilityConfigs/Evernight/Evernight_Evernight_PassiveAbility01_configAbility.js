@@ -15,12 +15,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (16) || RETURN",
-        "displayLines": "16",
-        "constants": [],
-        "variables": [
-          16
-        ]
+        "displayLines": "16"
       },
       "variableName": "_Partner_Count_Max"
     },
@@ -46,12 +41,7 @@ const configAbility = {
       "displaySubType": "Fraction",
       "displayShowIcon": "False",
       "maximum": {
-        "operator": "Variables[0] (_Partner_Count_Max) || RETURN",
-        "displayLines": "_Partner_Count_Max",
-        "constants": [],
-        "variables": [
-          "_Partner_Count_Max"
-        ]
+        "displayLines": "_Partner_Count_Max"
       },
       "assignState": "True",
       "bar#": "Number"
@@ -76,12 +66,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1710373270\">Evernight_PointB1_Crit</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.35) || RETURN",
-              "displayLines": "0.35",
-              "constants": [],
-              "variables": [
-                0.35
-              ]
+              "displayLines": "0.35"
             }
           }
         },
@@ -94,28 +79,13 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"557640561\">Evernight_PointB1_Aura</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.15) || RETURN",
-              "displayLines": "0.15",
-              "constants": [],
-              "variables": [
-                0.15
-              ]
+              "displayLines": "0.15"
             },
             "MDF_Cost": {
-              "operator": "Variables[0] (0.05) || RETURN",
-              "displayLines": "0.05",
-              "constants": [],
-              "variables": [
-                0.05
-              ]
+              "displayLines": "0.05"
             },
             "MDF_LifeTime": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             }
           }
         }
@@ -137,12 +107,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1701896777\">Evernight_Eidolon2_Crit</a>[<span class=\"descriptionNumberColor\">Listen Up, the Slumber Speaks Soft</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.4) || RETURN",
-              "displayLines": "0.4",
-              "constants": [],
-              "variables": [
-                0.4
-              ]
+              "displayLines": "0.4"
             }
           }
         }
@@ -186,24 +151,14 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"2043260870\">Evernight_HPChange</a>",
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] (2) || RETURN",
-          "displayLines": "2",
-          "constants": [],
-          "variables": [
-            2
-          ]
+          "displayLines": "2"
         }
       }
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       },
       "variableName": "S03_Duration"
     },
@@ -217,25 +172,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (S03_Duration) || Variables[1] (2) || ADD || RETURN",
-            "displayLines": "(S03_Duration + 2)",
-            "constants": [],
-            "variables": [
-              "S03_Duration",
-              2
-            ]
+            "displayLines": "(S03_Duration + 2)"
           },
           "variableName": "S03_Duration"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "variableName": "_Evernight_00_Extra_Energy"
         }
@@ -336,12 +280,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_Partner_Count) || RETURN",
-                    "displayLines": "_Partner_Count",
-                    "constants": [],
-                    "variables": [
-                      "_Partner_Count"
-                    ]
+                    "displayLines": "_Partner_Count"
                   }
                 }
               ],
@@ -349,12 +288,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_Partner_Count) || RETURN",
-                    "displayLines": "_Partner_Count",
-                    "constants": [],
-                    "variables": [
-                      "_Partner_Count"
-                    ]
+                    "displayLines": "_Partner_Count"
                   }
                 }
               ]
@@ -428,12 +362,7 @@ const configAbility = {
                     "value1": "_Partner_Count_Show",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (16) || RETURN",
-                      "displayLines": "16",
-                      "constants": [],
-                      "variables": [
-                        16
-                      ]
+                      "displayLines": "16"
                     }
                   }
                 ]
@@ -505,12 +434,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": -999,
               "maxValue": {
-                "operator": "Variables[0] (16) || RETURN",
-                "displayLines": "16",
-                "constants": [],
-                "variables": [
-                  16
-                ]
+                "displayLines": "16"
               },
               "enteringRange": [
                 {
@@ -568,12 +492,7 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": {
-                "operator": "Variables[0] (16) || RETURN",
-                "displayLines": "16",
-                "constants": [],
-                "variables": [
-                  16
-                ]
+                "displayLines": "16"
               },
               "maxValue": 99999,
               "enteringRange": [
@@ -753,13 +672,7 @@ const configAbility = {
                       },
                       "variableName": "_Partner_Count_Show",
                       "value": {
-                        "operator": "Variables[0] (1) || Variables[1] (_Evernight_00_Extra_Energy) || ADD || RETURN",
-                        "displayLines": "(1 + _Evernight_00_Extra_Energy)",
-                        "constants": [],
-                        "variables": [
-                          1,
-                          "_Evernight_00_Extra_Energy"
-                        ]
+                        "displayLines": "(1 + _Evernight_00_Extra_Energy)"
                       }
                     },
                     {
@@ -770,13 +683,7 @@ const configAbility = {
                       },
                       "variableName": "_Partner_Count",
                       "value": {
-                        "operator": "Variables[0] (1) || Variables[1] (_Evernight_00_Extra_Energy) || ADD || RETURN",
-                        "displayLines": "(1 + _Evernight_00_Extra_Energy)",
-                        "constants": [],
-                        "variables": [
-                          1,
-                          "_Evernight_00_Extra_Energy"
-                        ]
+                        "displayLines": "(1 + _Evernight_00_Extra_Energy)"
                       }
                     },
                     {
@@ -786,12 +693,7 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (5) || RETURN",
-                        "displayLines": "5",
-                        "constants": [],
-                        "variables": [
-                          5
-                        ]
+                        "displayLines": "5"
                       },
                       "isFixed": "* ERR"
                     }
@@ -819,12 +721,7 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"1497424763\">function_Evernight_TryCreateServant</a>",
                   "variables": {
                     "DV_Partner_Count": {
-                      "operator": "Variables[0] (_Partner_Count) || RETURN",
-                      "displayLines": "_Partner_Count",
-                      "constants": [],
-                      "variables": [
-                        "_Partner_Count"
-                      ]
+                      "displayLines": "_Partner_Count"
                     },
                     "DV_Delay": -1,
                     "DV_HP_Ratio": 0
@@ -864,13 +761,7 @@ const configAbility = {
                   },
                   "variableName": "_Partner_Count_Show",
                   "value": {
-                    "operator": "Variables[0] (1) || Variables[1] (_Evernight_00_Extra_Energy) || ADD || RETURN",
-                    "displayLines": "(1 + _Evernight_00_Extra_Energy)",
-                    "constants": [],
-                    "variables": [
-                      1,
-                      "_Evernight_00_Extra_Energy"
-                    ]
+                    "displayLines": "(1 + _Evernight_00_Extra_Energy)"
                   }
                 },
                 {
@@ -881,13 +772,7 @@ const configAbility = {
                   },
                   "variableName": "_Partner_Count",
                   "value": {
-                    "operator": "Variables[0] (1) || Variables[1] (_Evernight_00_Extra_Energy) || ADD || RETURN",
-                    "displayLines": "(1 + _Evernight_00_Extra_Energy)",
-                    "constants": [],
-                    "variables": [
-                      1,
-                      "_Evernight_00_Extra_Energy"
-                    ]
+                    "displayLines": "(1 + _Evernight_00_Extra_Energy)"
                   }
                 },
                 {
@@ -897,12 +782,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (70) || RETURN",
-                    "displayLines": "70",
-                    "constants": [],
-                    "variables": [
-                      70
-                    ]
+                    "displayLines": "70"
                   },
                   "isFixed": "* ERR"
                 }
@@ -998,12 +878,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (_Alive_Count) || RETURN",
-                    "displayLines": "_Alive_Count",
-                    "constants": [],
-                    "variables": [
-                      "_Alive_Count"
-                    ]
+                    "displayLines": "_Alive_Count"
                   },
                   "caseEvents": [
                     {
@@ -1013,12 +888,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (1.5) || RETURN",
-                            "displayLines": "1.5",
-                            "constants": [],
-                            "variables": [
-                              1.5
-                            ]
+                            "displayLines": "1.5"
                           },
                           "variableName": "_Rank01_Rat"
                         }
@@ -1031,12 +901,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (1.3) || RETURN",
-                            "displayLines": "1.3",
-                            "constants": [],
-                            "variables": [
-                              1.3
-                            ]
+                            "displayLines": "1.3"
                           },
                           "variableName": "_Rank01_Rat"
                         }
@@ -1049,12 +914,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (1.25) || RETURN",
-                            "displayLines": "1.25",
-                            "constants": [],
-                            "variables": [
-                              1.25
-                            ]
+                            "displayLines": "1.25"
                           },
                           "variableName": "_Rank01_Rat"
                         }
@@ -1067,12 +927,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (1.2) || RETURN",
-                            "displayLines": "1.2",
-                            "constants": [],
-                            "variables": [
-                              1.2
-                            ]
+                            "displayLines": "1.2"
                           },
                           "variableName": "_Rank01_Rat"
                         }
@@ -1114,20 +969,10 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue_1": {
-              "operator": "Variables[0] (0.25) || RETURN",
-              "displayLines": "0.25",
-              "constants": [],
-              "variables": [
-                0.25
-              ]
+              "displayLines": "0.25"
             },
             "MDF_PropertyValue_2": {
-              "operator": "Variables[0] (0.25) || RETURN",
-              "displayLines": "0.25",
-              "constants": [],
-              "variables": [
-                0.25
-              ]
+              "displayLines": "0.25"
             }
           }
         }
@@ -1150,12 +995,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         }
@@ -1240,13 +1080,7 @@ const configAbility = {
                   },
                   "previewType": null,
                   "previewValue": {
-                    "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (0.1) || MUL || RETURN",
-                    "displayLines": "(MDF_MaxHP * 0.1)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxHP",
-                      0.1
-                    ]
+                    "displayLines": "(MDF_MaxHP * 0.1)"
                   }
                 }
               ]

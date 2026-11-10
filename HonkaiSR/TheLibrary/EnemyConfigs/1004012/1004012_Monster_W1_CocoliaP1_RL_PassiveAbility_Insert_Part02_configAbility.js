@@ -51,12 +51,7 @@ const configAbility = {
       "name": "Assign Value to Stat",
       "variableName": "BronyaScoreCheck",
       "value": {
-        "operator": "Variables[0] (BronyaScore) || RETURN",
-        "displayLines": "BronyaScore",
-        "constants": [],
-        "variables": [
-          "BronyaScore"
-        ]
+        "displayLines": "BronyaScore"
       }
     },
     {
@@ -137,37 +132,17 @@ const configAbility = {
           },
           "variables": {
             "MDF_CocoliaP1_RL_BattleEvent_DamagePercentage": {
-              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[0]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[0]]}"
             },
             "MDF_CocoliaP1_RL_BattleEvent_SPAdd": {
-              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[1]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[1]]}"
             },
             "MDF_CocoliaP1_RL_BattleEvent_ActionDelay": 0,
             "MDF_CocoliaP1_RL_BattleEvent_BaseSpeed": {
-              "operator": "Variables[0] (BaseSpeed) || RETURN",
-              "displayLines": "BaseSpeed",
-              "constants": [],
-              "variables": [
-                "BaseSpeed"
-              ]
+              "displayLines": "BaseSpeed"
             },
             "MDF_CocoliaP1_RL_BattleEvent_FrozenDamagePerTurn": {
-              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[2]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[2]]}"
             },
             "MDF_CocoliaP1_RL_BattleEvent_Count": 0
           }
@@ -197,37 +172,17 @@ const configAbility = {
           },
           "variables": {
             "MDF_CocoliaP1_RL_BattleEvent_DamagePercentage": {
-              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[0]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[0]]}"
             },
             "MDF_CocoliaP1_RL_BattleEvent_SPAdd": {
-              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[1]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[1]]}"
             },
             "MDF_CocoliaP1_RL_BattleEvent_ActionDelay": 0,
             "MDF_CocoliaP1_RL_BattleEvent_BaseSpeed": {
-              "operator": "Variables[0] (BaseSpeed) || RETURN",
-              "displayLines": "BaseSpeed",
-              "constants": [],
-              "variables": [
-                "BaseSpeed"
-              ]
+              "displayLines": "BaseSpeed"
             },
             "MDF_CocoliaP1_RL_BattleEvent_FrozenDamagePerTurn": {
-              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[2]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[2]]}"
             },
             "MDF_CocoliaP1_RL_BattleEvent_Count": 0
           }

@@ -30,26 +30,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio_PerLayer) || Variables[1] (_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_AllDamageTypeAddedRatio_PerLayer * _Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeAddedRatio_PerLayer",
-                  "_Layer"
-                ]
+                "displayLines": "(MDF_AllDamageTypeAddedRatio_PerLayer * _Layer)"
               },
               "variableName": "MDF_AllDamageReduce"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageReduce_PerLayer) || Variables[1] (_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_AllDamageReduce_PerLayer * _Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageReduce_PerLayer",
-                  "_Layer"
-                ]
+                "displayLines": "(MDF_AllDamageReduce_PerLayer * _Layer)"
               },
               "variableName": "MDF_AllDamageTypeAddedRatio"
             },
@@ -61,12 +49,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                "displayLines": "MDF_AllDamageTypeAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeAddedRatio"
-                ]
+                "displayLines": "MDF_AllDamageTypeAddedRatio"
               }
             },
             {
@@ -77,12 +60,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                "displayLines": "MDF_AllDamageReduce",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageReduce"
-                ]
+                "displayLines": "MDF_AllDamageReduce"
               }
             }
           ]
@@ -232,29 +210,14 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"393866359\">Enemy_W4_Serpent_01_IF_AbilityEX04_TGT</a>[<span class=\"descriptionNumberColor\">Economies of Scale</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageReduce_PerLayer": {
-                      "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                      "displayLines": "MDF_AllDamageReduce",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AllDamageReduce"
-                      ]
+                      "displayLines": "MDF_AllDamageReduce"
                     },
                     "MDF_AllDamageTypeAddedRatio_PerLayer": {
-                      "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                      "displayLines": "MDF_AllDamageTypeAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AllDamageTypeAddedRatio"
-                      ]
+                      "displayLines": "MDF_AllDamageTypeAddedRatio"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (_CharacterNumber) || RETURN",
-                    "displayLines": "_CharacterNumber",
-                    "constants": [],
-                    "variables": [
-                      "_CharacterNumber"
-                    ]
+                    "displayLines": "_CharacterNumber"
                   }
                 }
               ]
@@ -299,12 +262,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_MaxHPAddRatio) || RETURN",
-                "displayLines": "MDF_MaxHPAddRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxHPAddRatio"
-                ]
+                "displayLines": "MDF_MaxHPAddRatio"
               }
             }
           ]
@@ -569,12 +527,7 @@ const configAbility = {
                 {
                   "name": "Deal Toughness DMG",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentStance) || RETURN",
-                    "displayLines": "MDF_CurrentStance",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentStance"
-                    ]
+                    "displayLines": "MDF_CurrentStance"
                   },
                   "attacker": {
                     "name": "Target Name",
@@ -686,12 +639,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] ({[SkillP03[5]]}) || RETURN",
-                "displayLines": "{[SkillP03[5]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP03[5]]}"
-                ]
+                "displayLines": "{[SkillP03[5]]}"
               },
               "variableName": "MDF_BonusPoint"
             },
@@ -703,12 +651,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-92334699\">Enemy_W4_Serpent_01_IF_TiredDisplay</a>[<span class=\"descriptionNumberColor\">Bloodline Frailty</span>]",
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (MDF_BonusPoint) || RETURN",
-                "displayLines": "MDF_BonusPoint",
-                "constants": [],
-                "variables": [
-                  "MDF_BonusPoint"
-                ]
+                "displayLines": "MDF_BonusPoint"
               }
             }
           ]
@@ -942,13 +885,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_Bonus_DefenceDownRatio_PerLayer) || Variables[1] (_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_Bonus_DefenceDownRatio_PerLayer * _Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_Bonus_DefenceDownRatio_PerLayer",
-                  "_Layer"
-                ]
+                "displayLines": "(MDF_Bonus_DefenceDownRatio_PerLayer * _Layer)"
               },
               "variableName": "MDF_Bonus_DefenceDownRatio"
             },
@@ -960,14 +897,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_Bonus_DefenceDownRatio) || SUB || RETURN",
-                "displayLines": "(0 - MDF_Bonus_DefenceDownRatio)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_Bonus_DefenceDownRatio"
-                ]
+                "displayLines": "(0 - MDF_Bonus_DefenceDownRatio)"
               }
             }
           ]
@@ -993,12 +923,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_Original_DefenceAddedRatio) || RETURN",
-                "displayLines": "MDF_Original_DefenceAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_Original_DefenceAddedRatio"
-                ]
+                "displayLines": "MDF_Original_DefenceAddedRatio"
               }
             }
           ]
@@ -1095,12 +1020,7 @@ const configAbility = {
                 {
                   "name": "Deal Toughness DMG",
                   "value": {
-                    "operator": "Variables[0] (MDF_StanceDamage) || RETURN",
-                    "displayLines": "MDF_StanceDamage",
-                    "constants": [],
-                    "variables": [
-                      "MDF_StanceDamage"
-                    ]
+                    "displayLines": "MDF_StanceDamage"
                   },
                   "attacker": {
                     "name": "Target Name",
@@ -1125,12 +1045,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Null Type",
                     "Damage": {
-                      "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                      "displayLines": "MDF_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamagePercentage"
-                      ]
+                      "displayLines": "MDF_DamagePercentage"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "dmgFormulaFinal": "Converted DMG Base",
@@ -1303,20 +1218,10 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-720916793\">Enemy_W4_Serpent_01_IF_DebuffListener</a>[<span class=\"descriptionNumberColor\">Degraded Vessel</span>]",
               "valuePerStack": {
                 "MDF_StanceDamage": {
-                  "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
-                  "displayLines": "{[SkillP04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP04[0]]}"
-                  ]
+                  "displayLines": "{[SkillP04[0]]}"
                 },
                 "MDF_DamagePercentage": {
-                  "operator": "Variables[0] ({[SkillP04[1]]}) || RETURN",
-                  "displayLines": "{[SkillP04[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP04[1]]}"
-                  ]
+                  "displayLines": "{[SkillP04[1]]}"
                 }
               }
             }
@@ -1348,20 +1253,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-720916793\">Enemy_W4_Serpent_01_IF_DebuffListener</a>[<span class=\"descriptionNumberColor\">Degraded Vessel</span>]",
                   "valuePerStack": {
                     "MDF_StanceDamage": {
-                      "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
-                      "displayLines": "{[SkillP04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP04[0]]}"
-                      ]
+                      "displayLines": "{[SkillP04[0]]}"
                     },
                     "MDF_DamagePercentage": {
-                      "operator": "Variables[0] ({[SkillP04[1]]}) || RETURN",
-                      "displayLines": "{[SkillP04[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP04[1]]}"
-                      ]
+                      "displayLines": "{[SkillP04[1]]}"
                     }
                   }
                 }
@@ -1387,12 +1282,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1282840806\">Enemy_W4_Serpent_01_IF_OriginalDefence</a>[<span class=\"descriptionNumberColor\">Enhance Defense</span>]",
               "valuePerStack": {
                 "MDF_Original_DefenceAddedRatio": {
-                  "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                  "displayLines": "{[SkillP01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[0]]}"
-                  ]
+                  "displayLines": "{[SkillP01[0]]}"
                 }
               }
             }
@@ -1443,12 +1333,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"322023732\">Enemy_W4_Serpent_01_IF_BonusDefenceDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
                   "valuePerStack": {
                     "MDF_Bonus_DefenceDownRatio_PerLayer": {
-                      "operator": "Variables[0] ({[SkillP02[0]]}) || RETURN",
-                      "displayLines": "{[SkillP02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP02[0]]}"
-                      ]
+                      "displayLines": "{[SkillP02[0]]}"
                     }
                   }
                 }
@@ -1468,12 +1353,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1282840806\">Enemy_W4_Serpent_01_IF_OriginalDefence</a>[<span class=\"descriptionNumberColor\">Enhance Defense</span>]",
               "valuePerStack": {
                 "MDF_Original_DefenceAddedRatio": {
-                  "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                  "displayLines": "{[SkillP01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[0]]}"
-                  ]
+                  "displayLines": "{[SkillP01[0]]}"
                 }
               }
             },
@@ -1712,12 +1592,7 @@ const configAbility = {
                 {
                   "name": "Deal Toughness DMG",
                   "value": {
-                    "operator": "Variables[0] (MDF_StanceDamage) || RETURN",
-                    "displayLines": "MDF_StanceDamage",
-                    "constants": [],
-                    "variables": [
-                      "MDF_StanceDamage"
-                    ]
+                    "displayLines": "MDF_StanceDamage"
                   },
                   "attacker": {
                     "name": "Target Name",
@@ -1883,12 +1758,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                      "displayLines": "MDF_DamageUpRatio_PerLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageUpRatio_PerLayer"
-                      ]
+                      "displayLines": "MDF_DamageUpRatio_PerLayer"
                     }
                   }
                 }
@@ -2261,12 +2131,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -2371,12 +2236,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Count) || RETURN",
-                    "displayLines": "MDF_Count",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Count"
-                    ]
+                    "displayLines": "MDF_Count"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -2384,12 +2244,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                    "displayLines": "MDF_MaxCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxCount"
-                    ]
+                    "displayLines": "MDF_MaxCount"
                   },
                   "assignState": "True",
                   "state": "Active",
@@ -2471,20 +2326,10 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1710428840\">Enemy_W4_Serpent_01_Charge01_Target</a>[<span class=\"descriptionNumberColor\">Pursuit Target</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                        "displayLines": "MDF_MaxCount",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxCount"
-                        ]
+                        "displayLines": "MDF_MaxCount"
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (MDF_Count) || RETURN",
-                        "displayLines": "MDF_Count",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Count"
-                        ]
+                        "displayLines": "MDF_Count"
                       }
                     }
                   ]
@@ -2539,20 +2384,10 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1710428840\">Enemy_W4_Serpent_01_Charge01_Target</a>[<span class=\"descriptionNumberColor\">Pursuit Target</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                    "displayLines": "MDF_MaxCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxCount"
-                    ]
+                    "displayLines": "MDF_MaxCount"
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_Count) || RETURN",
-                    "displayLines": "MDF_Count",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Count"
-                    ]
+                    "displayLines": "MDF_Count"
                   }
                 }
               ]
@@ -2604,20 +2439,10 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1710428840\">Enemy_W4_Serpent_01_Charge01_Target</a>[<span class=\"descriptionNumberColor\">Pursuit Target</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                        "displayLines": "MDF_MaxCount",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxCount"
-                        ]
+                        "displayLines": "MDF_MaxCount"
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (MDF_Count) || RETURN",
-                        "displayLines": "MDF_Count",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Count"
-                        ]
+                        "displayLines": "MDF_Count"
                       }
                     }
                   ]
@@ -2835,12 +2660,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                  "displayLines": "MDF_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamagePercentage"
-                  ]
+                  "displayLines": "MDF_DamagePercentage"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "dmgFormulaFinal": "Converted DMG Base",
@@ -2857,12 +2677,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeTakenRatio) || RETURN",
-                "displayLines": "MDF_AllDamageTypeTakenRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeTakenRatio"
-                ]
+                "displayLines": "MDF_AllDamageTypeTakenRatio"
               }
             }
           ]
@@ -2929,12 +2744,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                "displayLines": "MDF_AllDamageReduce",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageReduce"
-                ]
+                "displayLines": "MDF_AllDamageReduce"
               }
             }
           ]
@@ -2969,12 +2779,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1717754231\">Enemy_W4_Serpent_01_Passive_Sub</a>[<span class=\"descriptionNumberColor\">Expedite Verdict</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageReduce": {
-                      "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                      "displayLines": "MDF_AllDamageReduce",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AllDamageReduce"
-                      ]
+                      "displayLines": "MDF_AllDamageReduce"
                     }
                   }
                 }
@@ -3002,20 +2807,10 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1922828191\">Enemy_W4_Serpent_01_Passive_Sub2</a>[<span class=\"descriptionNumberColor\">Expedite Verdict</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeTakenRatio": {
-                  "operator": "Variables[0] (MDF_AllDamageTypeTakenRatio) || RETURN",
-                  "displayLines": "MDF_AllDamageTypeTakenRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_AllDamageTypeTakenRatio"
-                  ]
+                  "displayLines": "MDF_AllDamageTypeTakenRatio"
                 },
                 "MDF_DamagePercentage": {
-                  "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                  "displayLines": "MDF_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamagePercentage"
-                  ]
+                  "displayLines": "MDF_DamagePercentage"
                 }
               }
             },
@@ -3042,12 +2837,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1717754231\">Enemy_W4_Serpent_01_Passive_Sub</a>[<span class=\"descriptionNumberColor\">Expedite Verdict</span>]",
               "valuePerStack": {
                 "MDF_AllDamageReduce": {
-                  "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                  "displayLines": "MDF_AllDamageReduce",
-                  "constants": [],
-                  "variables": [
-                    "MDF_AllDamageReduce"
-                  ]
+                  "displayLines": "MDF_AllDamageReduce"
                 }
               }
             },
@@ -3088,12 +2878,7 @@ const configAbility = {
                 {
                   "name": "Deal Toughness DMG",
                   "value": {
-                    "operator": "Variables[0] (MDF_StanceDamage) || RETURN",
-                    "displayLines": "MDF_StanceDamage",
-                    "constants": [],
-                    "variables": [
-                      "MDF_StanceDamage"
-                    ]
+                    "displayLines": "MDF_StanceDamage"
                   },
                   "attacker": {
                     "name": "Target Name",

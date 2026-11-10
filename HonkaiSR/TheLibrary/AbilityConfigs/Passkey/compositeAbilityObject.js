@@ -63,12 +63,7 @@ const compositeAbilityObject = {
                             "target": "{{Caster}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (8) || RETURN",
-                            "displayLines": "8",
-                            "constants": [],
-                            "variables": [
-                              8
-                            ]
+                            "displayLines": "8"
                           },
                           "isFixed": "* ERR"
                         },

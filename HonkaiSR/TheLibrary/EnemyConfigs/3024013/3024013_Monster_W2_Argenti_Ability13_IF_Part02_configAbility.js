@@ -21,44 +21,19 @@ const configAbility = {
           "functionName": "<a class=\"gTempYellow\" id=\"-1462831775\">Argenti_SummonAllMonsters</a>",
           "variables": {
             "SummonMonsterID": {
-              "operator": "Variables[0] (SummonID01) || RETURN",
-              "displayLines": "SummonID01",
-              "constants": [],
-              "variables": [
-                "SummonID01"
-              ]
+              "displayLines": "SummonID01"
             },
             "DelayRatio04": {
-              "operator": "Variables[0] ({[Skill13[0]]}) || RETURN",
-              "displayLines": "{[Skill13[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill13[0]]}"
-              ]
+              "displayLines": "{[Skill13[0]]}"
             },
             "DelayRatio02": {
-              "operator": "Variables[0] ({[Skill13[3]]}) || RETURN",
-              "displayLines": "{[Skill13[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill13[3]]}"
-              ]
+              "displayLines": "{[Skill13[3]]}"
             },
             "DelayRatio01": {
-              "operator": "Variables[0] ({[Skill13[2]]}) || RETURN",
-              "displayLines": "{[Skill13[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill13[2]]}"
-              ]
+              "displayLines": "{[Skill13[2]]}"
             },
             "DelayRatio03": {
-              "operator": "Variables[0] ({[Skill13[1]]}) || RETURN",
-              "displayLines": "{[Skill13[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill13[1]]}"
-              ]
+              "displayLines": "{[Skill13[1]]}"
             }
           }
         },
@@ -67,44 +42,19 @@ const configAbility = {
           "functionName": "<a class=\"gTempYellow\" id=\"-1462831775\">Argenti_SummonAllMonsters</a>",
           "variables": {
             "SummonMonsterID": {
-              "operator": "Variables[0] (SummonID01) || RETURN",
-              "displayLines": "SummonID01",
-              "constants": [],
-              "variables": [
-                "SummonID01"
-              ]
+              "displayLines": "SummonID01"
             },
             "DelayRatio04": {
-              "operator": "Variables[0] ({[Skill13[1]]}) || RETURN",
-              "displayLines": "{[Skill13[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill13[1]]}"
-              ]
+              "displayLines": "{[Skill13[1]]}"
             },
             "DelayRatio02": {
-              "operator": "Variables[0] ({[Skill13[2]]}) || RETURN",
-              "displayLines": "{[Skill13[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill13[2]]}"
-              ]
+              "displayLines": "{[Skill13[2]]}"
             },
             "DelayRatio01": {
-              "operator": "Variables[0] ({[Skill13[3]]}) || RETURN",
-              "displayLines": "{[Skill13[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill13[3]]}"
-              ]
+              "displayLines": "{[Skill13[3]]}"
             },
             "DelayRatio03": {
-              "operator": "Variables[0] ({[Skill13[0]]}) || RETURN",
-              "displayLines": "{[Skill13[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill13[0]]}"
-              ]
+              "displayLines": "{[Skill13[0]]}"
             }
           }
         }

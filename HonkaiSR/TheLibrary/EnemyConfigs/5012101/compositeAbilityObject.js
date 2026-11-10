@@ -47,12 +47,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (ModifierLayers) || RETURN",
-                    "displayLines": "ModifierLayers",
-                    "constants": [],
-                    "variables": [
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "ModifierLayers"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -60,12 +55,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (ModifierMaxLayers) || RETURN",
-                    "displayLines": "ModifierMaxLayers",
-                    "constants": [],
-                    "variables": [
-                      "ModifierMaxLayers"
-                    ]
+                    "displayLines": "ModifierMaxLayers"
                   },
                   "assignState": "True",
                   "state": "Normal",
@@ -257,12 +247,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (ModifierLayers) || RETURN",
-                    "displayLines": "ModifierLayers",
-                    "constants": [],
-                    "variables": [
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "ModifierLayers"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -270,12 +255,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (ModifierMaxLayers) || RETURN",
-                    "displayLines": "ModifierMaxLayers",
-                    "constants": [],
-                    "variables": [
-                      "ModifierMaxLayers"
-                    ]
+                    "displayLines": "ModifierMaxLayers"
                   },
                   "assignState": "True",
                   "state": "Normal"
@@ -428,12 +408,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "HitSplit": 0.1,
                 "Toughness": null,
@@ -453,12 +428,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "HitSplit": 0.4,
             "Toughness": null,

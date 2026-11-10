@@ -27,20 +27,10 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1287044096\">AML_Minion02_01_Rage</a>",
               "valuePerStack": {
                 "PassiveAbilityInitiate_P1_AttackAddedRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_8024) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_8024",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_8024"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_8024"
                 },
                 "PassiveAbilityInitiate_P2_DefenceAddedRatio": {
-                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__187) || RETURN",
-                  "displayLines": "ENEMIES_OBJECT_UNUSED__187",
-                  "constants": [],
-                  "variables": [
-                    "ENEMIES_OBJECT_UNUSED__187"
-                  ]
+                  "displayLines": "ENEMIES_OBJECT_UNUSED__187"
                 }
               }
             }
@@ -107,12 +97,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (PassiveSkillInitiate_P1_AttackAddedRatio) || RETURN",
-                "displayLines": "PassiveSkillInitiate_P1_AttackAddedRatio",
-                "constants": [],
-                "variables": [
-                  "PassiveSkillInitiate_P1_AttackAddedRatio"
-                ]
+                "displayLines": "PassiveSkillInitiate_P1_AttackAddedRatio"
               }
             },
             {
@@ -123,14 +108,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (PassiveSkillInitiate_P2_DefenceAddedRatio) || SUB || RETURN",
-                "displayLines": "(0 - PassiveSkillInitiate_P2_DefenceAddedRatio)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "PassiveSkillInitiate_P2_DefenceAddedRatio"
-                ]
+                "displayLines": "(0 - PassiveSkillInitiate_P2_DefenceAddedRatio)"
               }
             },
             {
@@ -196,12 +174,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
-                "displayLines": "MDF_AttackAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackAddedRatio"
-                ]
+                "displayLines": "MDF_AttackAddedRatio"
               }
             }
           ]
@@ -368,14 +341,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (HealCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(HealCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "HealCount"
-                    ]
+                    "displayLines": "(HealCount + 1)"
                   },
                   "variableName": "HealCount"
                 },
@@ -405,12 +371,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPDebt%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_RallyHP) || RETURN",
-                "displayLines": "MDF_RallyHP",
-                "constants": [],
-                "variables": [
-                  "MDF_RallyHP"
-                ]
+                "displayLines": "MDF_RallyHP"
               }
             }
           ]
@@ -455,12 +416,7 @@ const configAbility = {
                     "value1": "MDF_CurrentHPRatio",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_RallyHP) || RETURN",
-                      "displayLines": "MDF_RallyHP",
-                      "constants": [],
-                      "variables": [
-                        "MDF_RallyHP"
-                      ]
+                      "displayLines": "MDF_RallyHP"
                     }
                   },
                   "passed": [
@@ -473,12 +429,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1714614232\">Enemy_AML_Minion02_01_RallyHP_V2_Strongth</a>[<span class=\"descriptionNumberColor\">Renewal</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageTypeAddedRatio": {
-                          "operator": "Variables[0] (MDF_Strongth_AllDamageTypeAddedRatio) || RETURN",
-                          "displayLines": "MDF_Strongth_AllDamageTypeAddedRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Strongth_AllDamageTypeAddedRatio"
-                          ]
+                          "displayLines": "MDF_Strongth_AllDamageTypeAddedRatio"
                         }
                       }
                     },
@@ -533,18 +484,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "healFlat": {
-                "operator": "Variables[0] (HealCount) || Variables[1] (MDF_HealPercentage) || MUL || Variables[2] (MDF_RallyHP) || Variables[3] (MDF_CurrentHPRatio) || SUB || MUL || Variables[4] (MDF_CurrentHP_DownScale) || MUL || Constants[0] (1) || MUL || RETURN",
-                "displayLines": "((((HealCount * MDF_HealPercentage) * (MDF_RallyHP - MDF_CurrentHPRatio)) * MDF_CurrentHP_DownScale) * 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "HealCount",
-                  "MDF_HealPercentage",
-                  "MDF_RallyHP",
-                  "MDF_CurrentHPRatio",
-                  "MDF_CurrentHP_DownScale"
-                ]
+                "displayLines": "((((HealCount * MDF_HealPercentage) * (MDF_RallyHP - MDF_CurrentHPRatio)) * MDF_CurrentHP_DownScale) * 1)"
               },
               "debtHeal": true
             },
@@ -606,12 +546,7 @@ const configAbility = {
                     "value1": "MDF_CurrentHPRatio",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_RallyHP) || RETURN",
-                      "displayLines": "MDF_RallyHP",
-                      "constants": [],
-                      "variables": [
-                        "MDF_RallyHP"
-                      ]
+                      "displayLines": "MDF_RallyHP"
                     }
                   },
                   "passed": [
@@ -624,12 +559,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1714614232\">Enemy_AML_Minion02_01_RallyHP_V2_Strongth</a>[<span class=\"descriptionNumberColor\">Renewal</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageTypeAddedRatio": {
-                          "operator": "Variables[0] (MDF_Strongth_AllDamageTypeAddedRatio) || RETURN",
-                          "displayLines": "MDF_Strongth_AllDamageTypeAddedRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Strongth_AllDamageTypeAddedRatio"
-                          ]
+                          "displayLines": "MDF_Strongth_AllDamageTypeAddedRatio"
                         }
                       }
                     },
@@ -677,12 +607,7 @@ const configAbility = {
                     "value1": "MDF_CurrentHPRatio",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_RallyHP) || RETURN",
-                      "displayLines": "MDF_RallyHP",
-                      "constants": [],
-                      "variables": [
-                        "MDF_RallyHP"
-                      ]
+                      "displayLines": "MDF_RallyHP"
                     }
                   },
                   "passed": [
@@ -695,12 +620,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1714614232\">Enemy_AML_Minion02_01_RallyHP_V2_Strongth</a>[<span class=\"descriptionNumberColor\">Renewal</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageTypeAddedRatio": {
-                          "operator": "Variables[0] (MDF_Strongth_AllDamageTypeAddedRatio) || RETURN",
-                          "displayLines": "MDF_Strongth_AllDamageTypeAddedRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Strongth_AllDamageTypeAddedRatio"
-                          ]
+                          "displayLines": "MDF_Strongth_AllDamageTypeAddedRatio"
                         }
                       }
                     },
@@ -748,12 +668,7 @@ const configAbility = {
                     "value1": "MDF_CurrentHPRatio",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_RallyHP) || RETURN",
-                      "displayLines": "MDF_RallyHP",
-                      "constants": [],
-                      "variables": [
-                        "MDF_RallyHP"
-                      ]
+                      "displayLines": "MDF_RallyHP"
                     }
                   },
                   "passed": [
@@ -766,12 +681,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1714614232\">Enemy_AML_Minion02_01_RallyHP_V2_Strongth</a>[<span class=\"descriptionNumberColor\">Renewal</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageTypeAddedRatio": {
-                          "operator": "Variables[0] (MDF_Strongth_AllDamageTypeAddedRatio) || RETURN",
-                          "displayLines": "MDF_Strongth_AllDamageTypeAddedRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Strongth_AllDamageTypeAddedRatio"
-                          ]
+                          "displayLines": "MDF_Strongth_AllDamageTypeAddedRatio"
                         }
                       }
                     },
@@ -812,14 +722,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (HealCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(HealCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "HealCount"
-                    ]
+                    "displayLines": "(HealCount + 1)"
                   },
                   "variableName": "HealCount"
                 },
@@ -846,12 +749,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPDebt%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_RallyHP) || RETURN",
-                "displayLines": "MDF_RallyHP",
-                "constants": [],
-                "variables": [
-                  "MDF_RallyHP"
-                ]
+                "displayLines": "MDF_RallyHP"
               }
             }
           ]
@@ -896,12 +794,7 @@ const configAbility = {
                     "value1": "MDF_CurrentHPRatio",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_RallyHP) || RETURN",
-                      "displayLines": "MDF_RallyHP",
-                      "constants": [],
-                      "variables": [
-                        "MDF_RallyHP"
-                      ]
+                      "displayLines": "MDF_RallyHP"
                     }
                   },
                   "passed": [
@@ -922,13 +815,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (HealCount) || Variables[1] (MDF_HealPercentage) || MUL || RETURN",
-                "displayLines": "(HealCount * MDF_HealPercentage)",
-                "constants": [],
-                "variables": [
-                  "HealCount",
-                  "MDF_HealPercentage"
-                ]
+                "displayLines": "(HealCount * MDF_HealPercentage)"
               },
               "formula": "Heal from Target MaxHP",
               "debtHeal": true
@@ -994,12 +881,7 @@ const configAbility = {
                 "value1": "MDF_DefenderCurrentHPRatio_After",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] (MDF_DefenderCurrentHPRatio_Before) || RETURN",
-                  "displayLines": "MDF_DefenderCurrentHPRatio_Before",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DefenderCurrentHPRatio_Before"
-                  ]
+                  "displayLines": "MDF_DefenderCurrentHPRatio_Before"
                 }
               },
               "passed": [
@@ -1033,41 +915,16 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1799178922\">Enemy_AML_Minion02_01_RallyHP_V2</a>[<span class=\"descriptionNumberColor\">Corrosion</span>]",
                       "valuePerStack": {
                         "MDF_RallyHP": {
-                          "operator": "Constants[0] (1) || Variables[0] (MDF_RallyTransferRatio) || SUB || Variables[1] (MDF_DefenderCurrentHPRatio_After) || Variables[2] (MDF_DefenderCurrentHPRatio_Before) || SUB || MUL || Variables[3] (MDF_DefenderRallyHP) || ADD || RETURN",
-                          "displayLines": "(((1 - MDF_RallyTransferRatio) * (MDF_DefenderCurrentHPRatio_After - MDF_DefenderCurrentHPRatio_Before)) + MDF_DefenderRallyHP)",
-                          "constants": [
-                            1
-                          ],
-                          "variables": [
-                            "MDF_RallyTransferRatio",
-                            "MDF_DefenderCurrentHPRatio_After",
-                            "MDF_DefenderCurrentHPRatio_Before",
-                            "MDF_DefenderRallyHP"
-                          ]
+                          "displayLines": "(((1 - MDF_RallyTransferRatio) * (MDF_DefenderCurrentHPRatio_After - MDF_DefenderCurrentHPRatio_Before)) + MDF_DefenderRallyHP)"
                         },
                         "MDF_HealPercentage": {
-                          "operator": "Variables[0] (MDF_Rally_HealPercentage) || RETURN",
-                          "displayLines": "MDF_Rally_HealPercentage",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Rally_HealPercentage"
-                          ]
+                          "displayLines": "MDF_Rally_HealPercentage"
                         },
                         "MDF_HealUpRatio": {
-                          "operator": "Variables[0] (MDF_Rally_HealUpRatio) || RETURN",
-                          "displayLines": "MDF_Rally_HealUpRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Rally_HealUpRatio"
-                          ]
+                          "displayLines": "MDF_Rally_HealUpRatio"
                         },
                         "MDF_Strongth_AllDamageTypeAddedRatio": {
-                          "operator": "Variables[0] (MDF_Rally_Strongth_AllDamageTypeAddedRatio) || RETURN",
-                          "displayLines": "MDF_Rally_Strongth_AllDamageTypeAddedRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Rally_Strongth_AllDamageTypeAddedRatio"
-                          ]
+                          "displayLines": "MDF_Rally_Strongth_AllDamageTypeAddedRatio"
                         }
                       }
                     }
@@ -1082,40 +939,16 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1799178922\">Enemy_AML_Minion02_01_RallyHP_V2</a>[<span class=\"descriptionNumberColor\">Corrosion</span>]",
                       "valuePerStack": {
                         "MDF_RallyHP": {
-                          "operator": "Constants[0] (1) || Variables[0] (MDF_RallyTransferRatio) || SUB || Variables[1] (MDF_DefenderCurrentHPRatio_After) || MUL || Variables[0] (MDF_RallyTransferRatio) || Variables[2] (MDF_DefenderCurrentHPRatio_Before) || MUL || ADD || RETURN",
-                          "displayLines": "(((1 - MDF_RallyTransferRatio) * MDF_DefenderCurrentHPRatio_After) + (MDF_RallyTransferRatio * MDF_DefenderCurrentHPRatio_Before))",
-                          "constants": [
-                            1
-                          ],
-                          "variables": [
-                            "MDF_RallyTransferRatio",
-                            "MDF_DefenderCurrentHPRatio_After",
-                            "MDF_DefenderCurrentHPRatio_Before"
-                          ]
+                          "displayLines": "(((1 - MDF_RallyTransferRatio) * MDF_DefenderCurrentHPRatio_After) + (MDF_RallyTransferRatio * MDF_DefenderCurrentHPRatio_Before))"
                         },
                         "MDF_HealPercentage": {
-                          "operator": "Variables[0] (MDF_Rally_HealPercentage) || RETURN",
-                          "displayLines": "MDF_Rally_HealPercentage",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Rally_HealPercentage"
-                          ]
+                          "displayLines": "MDF_Rally_HealPercentage"
                         },
                         "MDF_HealUpRatio": {
-                          "operator": "Variables[0] (MDF_Rally_HealUpRatio) || RETURN",
-                          "displayLines": "MDF_Rally_HealUpRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Rally_HealUpRatio"
-                          ]
+                          "displayLines": "MDF_Rally_HealUpRatio"
                         },
                         "MDF_Strongth_AllDamageTypeAddedRatio": {
-                          "operator": "Variables[0] (MDF_Rally_Strongth_AllDamageTypeAddedRatio) || RETURN",
-                          "displayLines": "MDF_Rally_Strongth_AllDamageTypeAddedRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Rally_Strongth_AllDamageTypeAddedRatio"
-                          ]
+                          "displayLines": "MDF_Rally_Strongth_AllDamageTypeAddedRatio"
                         }
                       }
                     }
@@ -1197,16 +1030,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Constants[0] (1) || Variables[0] (MDF_DirtyRatio) || SUB || Variables[1] (MDF_DirtyValue) || Variables[2] (MDF_CurrentHP_DownScale) || DIV || Constants[0] (1) || DIV || SUB || RETURN",
-                "displayLines": "((1 - MDF_DirtyRatio) - ((MDF_DirtyValue / MDF_CurrentHP_DownScale) / 1))",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_DirtyRatio",
-                  "MDF_DirtyValue",
-                  "MDF_CurrentHP_DownScale"
-                ]
+                "displayLines": "((1 - MDF_DirtyRatio) - ((MDF_DirtyValue / MDF_CurrentHP_DownScale) / 1))"
               },
               "variableName": "MDF_MaxHP_Dirty_Ratio"
             },
@@ -1221,12 +1045,7 @@ const configAbility = {
                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPDebt%</span>&nbsp;",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (MDF_MaxHP_Dirty_Ratio) || RETURN",
-                  "displayLines": "MDF_MaxHP_Dirty_Ratio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_MaxHP_Dirty_Ratio"
-                  ]
+                  "displayLines": "MDF_MaxHP_Dirty_Ratio"
                 }
               },
               "passed": [
@@ -1241,12 +1060,7 @@ const configAbility = {
                     "value1": "MDF_CurrentHPRatio",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (MDF_MaxHP_Dirty_Ratio) || RETURN",
-                      "displayLines": "MDF_MaxHP_Dirty_Ratio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MaxHP_Dirty_Ratio"
-                      ]
+                      "displayLines": "MDF_MaxHP_Dirty_Ratio"
                     }
                   },
                   "passed": [
@@ -1259,36 +1073,16 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1799178922\">Enemy_AML_Minion02_01_RallyHP_V2</a>[<span class=\"descriptionNumberColor\">Corrosion</span>]",
                       "valuePerStack": {
                         "MDF_RallyHP": {
-                          "operator": "Variables[0] (MDF_MaxHP_Dirty_Ratio) || RETURN",
-                          "displayLines": "MDF_MaxHP_Dirty_Ratio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxHP_Dirty_Ratio"
-                          ]
+                          "displayLines": "MDF_MaxHP_Dirty_Ratio"
                         },
                         "MDF_HealPercentage": {
-                          "operator": "Variables[0] (MDF_Rally_HealPercentage) || RETURN",
-                          "displayLines": "MDF_Rally_HealPercentage",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Rally_HealPercentage"
-                          ]
+                          "displayLines": "MDF_Rally_HealPercentage"
                         },
                         "MDF_HealUpRatio": {
-                          "operator": "Variables[0] (MDF_Rally_HealUpRatio) || RETURN",
-                          "displayLines": "MDF_Rally_HealUpRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Rally_HealUpRatio"
-                          ]
+                          "displayLines": "MDF_Rally_HealUpRatio"
                         },
                         "MDF_Strongth_AllDamageTypeAddedRatio": {
-                          "operator": "Variables[0] (MDF_Rally_Strongth_AllDamageTypeAddedRatio) || RETURN",
-                          "displayLines": "MDF_Rally_Strongth_AllDamageTypeAddedRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Rally_Strongth_AllDamageTypeAddedRatio"
-                          ]
+                          "displayLines": "MDF_Rally_Strongth_AllDamageTypeAddedRatio"
                         }
                       }
                     }
@@ -1374,28 +1168,13 @@ const configAbility = {
                       "valuePerStack": {
                         "MDF_RallyHP": 1,
                         "MDF_HealPercentage": {
-                          "operator": "Variables[0] (MDF_Rally_HealPercentage) || RETURN",
-                          "displayLines": "MDF_Rally_HealPercentage",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Rally_HealPercentage"
-                          ]
+                          "displayLines": "MDF_Rally_HealPercentage"
                         },
                         "MDF_HealUpRatio": {
-                          "operator": "Variables[0] (MDF_Rally_HealUpRatio) || RETURN",
-                          "displayLines": "MDF_Rally_HealUpRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Rally_HealUpRatio"
-                          ]
+                          "displayLines": "MDF_Rally_HealUpRatio"
                         },
                         "MDF_Strongth_AllDamageTypeAddedRatio": {
-                          "operator": "Variables[0] (MDF_Rally_Strongth_AllDamageTypeAddedRatio) || RETURN",
-                          "displayLines": "MDF_Rally_Strongth_AllDamageTypeAddedRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Rally_Strongth_AllDamageTypeAddedRatio"
-                          ]
+                          "displayLines": "MDF_Rally_Strongth_AllDamageTypeAddedRatio"
                         }
                       }
                     }
@@ -1537,12 +1316,7 @@ const configAbility = {
                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] (MDF_DefenderCurrentHP_Before) || RETURN",
-                  "displayLines": "MDF_DefenderCurrentHP_Before",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DefenderCurrentHP_Before"
-                  ]
+                  "displayLines": "MDF_DefenderCurrentHP_Before"
                 }
               },
               "passed": [
@@ -1566,12 +1340,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1719491347\">Enemy_AML_Minion02_01_RallyHP</a>",
                       "valuePerStack": {
                         "MDF_RallyHP": {
-                          "operator": "Variables[0] (MDF_DefenderCurrentHP_Before) || RETURN",
-                          "displayLines": "MDF_DefenderCurrentHP_Before",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DefenderCurrentHP_Before"
-                          ]
+                          "displayLines": "MDF_DefenderCurrentHP_Before"
                         }
                       }
                     }
@@ -1586,12 +1355,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1719491347\">Enemy_AML_Minion02_01_RallyHP</a>",
                       "valuePerStack": {
                         "MDF_RallyHP": {
-                          "operator": "Variables[0] (MDF_DefenderCurrentHP_Before) || RETURN",
-                          "displayLines": "MDF_DefenderCurrentHP_Before",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DefenderCurrentHP_Before"
-                          ]
+                          "displayLines": "MDF_DefenderCurrentHP_Before"
                         }
                       }
                     }

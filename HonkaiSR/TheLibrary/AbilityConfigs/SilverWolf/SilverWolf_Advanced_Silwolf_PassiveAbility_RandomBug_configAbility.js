@@ -53,29 +53,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1672196814\">Advanced_Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_LifeTime"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_Chance"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.1) || RETURN",
-                          "displayLines": "0.1",
-                          "constants": [],
-                          "variables": [
-                            0.1
-                          ]
+                          "displayLines": "0.1"
                         }
                       }
                     },
@@ -87,29 +72,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1655419195\">Advanced_Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_LifeTime"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_Chance"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.12) || RETURN",
-                          "displayLines": "0.12",
-                          "constants": [],
-                          "variables": [
-                            0.12
-                          ]
+                          "displayLines": "0.12"
                         }
                       }
                     },
@@ -121,29 +91,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1638641576\">Advanced_Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_LifeTime"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_Chance"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.06) || RETURN",
-                          "displayLines": "0.06",
-                          "constants": [],
-                          "variables": [
-                            0.06
-                          ]
+                          "displayLines": "0.06"
                         }
                       }
                     }
@@ -159,29 +114,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1638641576\">Advanced_Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
                   "duration": {
-                    "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                    "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Silwolf_00_AddModifier_LifeTime"
-                    ]
+                    "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                    "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Silwolf_00_AddModifier_Chance"
-                    ]
+                    "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.06) || RETURN",
-                      "displayLines": "0.06",
-                      "constants": [],
-                      "variables": [
-                        0.06
-                      ]
+                      "displayLines": "0.06"
                     }
                   }
                 }
@@ -208,29 +148,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1655419195\">Advanced_Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
                   "duration": {
-                    "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                    "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Silwolf_00_AddModifier_LifeTime"
-                    ]
+                    "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                    "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Silwolf_00_AddModifier_Chance"
-                    ]
+                    "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.12) || RETURN",
-                      "displayLines": "0.12",
-                      "constants": [],
-                      "variables": [
-                        0.12
-                      ]
+                      "displayLines": "0.12"
                     }
                   }
                 }
@@ -251,29 +176,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1655419195\">Advanced_Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_LifeTime"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_Chance"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.12) || RETURN",
-                          "displayLines": "0.12",
-                          "constants": [],
-                          "variables": [
-                            0.12
-                          ]
+                          "displayLines": "0.12"
                         }
                       }
                     },
@@ -285,29 +195,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1638641576\">Advanced_Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_LifeTime"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_Chance"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.06) || RETURN",
-                          "displayLines": "0.06",
-                          "constants": [],
-                          "variables": [
-                            0.06
-                          ]
+                          "displayLines": "0.06"
                         }
                       }
                     }
@@ -349,29 +244,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1672196814\">Advanced_Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
                   "duration": {
-                    "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                    "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Silwolf_00_AddModifier_LifeTime"
-                    ]
+                    "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                    "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Silwolf_00_AddModifier_Chance"
-                    ]
+                    "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.1) || RETURN",
-                      "displayLines": "0.1",
-                      "constants": [],
-                      "variables": [
-                        0.1
-                      ]
+                      "displayLines": "0.1"
                     }
                   }
                 }
@@ -392,29 +272,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1672196814\">Advanced_Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_LifeTime"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_Chance"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.1) || RETURN",
-                          "displayLines": "0.1",
-                          "constants": [],
-                          "variables": [
-                            0.1
-                          ]
+                          "displayLines": "0.1"
                         }
                       }
                     },
@@ -426,29 +291,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1638641576\">Advanced_Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_LifeTime"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_Chance"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.06) || RETURN",
-                          "displayLines": "0.06",
-                          "constants": [],
-                          "variables": [
-                            0.06
-                          ]
+                          "displayLines": "0.06"
                         }
                       }
                     }
@@ -484,29 +334,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1672196814\">Advanced_Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_LifeTime"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_Chance"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.1) || RETURN",
-                          "displayLines": "0.1",
-                          "constants": [],
-                          "variables": [
-                            0.1
-                          ]
+                          "displayLines": "0.1"
                         }
                       }
                     },
@@ -518,29 +353,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1655419195\">Advanced_Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_LifeTime"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_Chance"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.12) || RETURN",
-                          "displayLines": "0.12",
-                          "constants": [],
-                          "variables": [
-                            0.12
-                          ]
+                          "displayLines": "0.12"
                         }
                       }
                     }
@@ -564,29 +384,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1672196814\">Advanced_Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_LifeTime"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_Chance"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.1) || RETURN",
-                          "displayLines": "0.1",
-                          "constants": [],
-                          "variables": [
-                            0.1
-                          ]
+                          "displayLines": "0.1"
                         }
                       }
                     },
@@ -598,29 +403,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1655419195\">Advanced_Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_LifeTime"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_Chance"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.12) || RETURN",
-                          "displayLines": "0.12",
-                          "constants": [],
-                          "variables": [
-                            0.12
-                          ]
+                          "displayLines": "0.12"
                         }
                       }
                     },
@@ -632,29 +422,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1638641576\">Advanced_Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_LifeTime"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_Chance"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.06) || RETURN",
-                          "displayLines": "0.06",
-                          "constants": [],
-                          "variables": [
-                            0.06
-                          ]
+                          "displayLines": "0.06"
                         }
                       }
                     }

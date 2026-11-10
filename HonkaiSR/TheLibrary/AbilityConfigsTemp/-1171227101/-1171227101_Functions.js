@@ -279,17 +279,7 @@ const configAbility = {
             "MDF_EliteRatio": 0.07,
             "MDF_StandardRatio": 0.16,
             "MDF_DamageMax": {
-              "operator": "Variables[0] (CasterBreakBaseDamage) || Constants[0] (2) || MUL || Constants[0] (2) || Variables[1] (TargetStance) || Variables[2] (StanceUnit) || DIV || ADD || MUL || Constants[1] (4) || DIV || RETURN",
-              "displayLines": "(((CasterBreakBaseDamage * 2) * (2 + (TargetStance / StanceUnit))) / 4)",
-              "constants": [
-                2,
-                4
-              ],
-              "variables": [
-                "CasterBreakBaseDamage",
-                "TargetStance",
-                "StanceUnit"
-              ]
+              "displayLines": "(((CasterBreakBaseDamage * 2) * (2 + (TargetStance / StanceUnit))) / 4)"
             }
           }
         },
@@ -303,16 +293,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "DamageBreak": {
-              "operator": "Constants[0] (2) || Constants[0] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[1] (4) || DIV || RETURN",
-              "displayLines": "((2 * (2 + (TargetStance / StanceUnit))) / 4)",
-              "constants": [
-                2,
-                4
-              ],
-              "variables": [
-                "TargetStance",
-                "StanceUnit"
-              ]
+              "displayLines": "((2 * (2 + (TargetStance / StanceUnit))) / 4)"
             },
             "dmgFormula": "Break DMG Scaling",
             "dmgFormulaFinal": "Pure (No DMG%)",
@@ -360,17 +341,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "DamageBreak": {
-              "operator": "Constants[0] (1) || Constants[1] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[2] (4) || DIV || RETURN",
-              "displayLines": "((1 * (2 + (TargetStance / StanceUnit))) / 4)",
-              "constants": [
-                1,
-                2,
-                4
-              ],
-              "variables": [
-                "TargetStance",
-                "StanceUnit"
-              ]
+              "displayLines": "((1 * (2 + (TargetStance / StanceUnit))) / 4)"
             },
             "dmgFormula": "Break DMG Scaling",
             "dmgFormulaFinal": "Pure (No DMG%)",
@@ -418,16 +389,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "DamageBreak": {
-              "operator": "Constants[0] (2) || Constants[0] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[1] (4) || DIV || RETURN",
-              "displayLines": "((2 * (2 + (TargetStance / StanceUnit))) / 4)",
-              "constants": [
-                2,
-                4
-              ],
-              "variables": [
-                "TargetStance",
-                "StanceUnit"
-              ]
+              "displayLines": "((2 * (2 + (TargetStance / StanceUnit))) / 4)"
             },
             "dmgFormula": "Break DMG Scaling",
             "dmgFormulaFinal": "Pure (No DMG%)",
@@ -505,17 +467,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Wind",
             "DamageBreak": {
-              "operator": "Constants[0] (1.5) || Constants[1] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[2] (4) || DIV || RETURN",
-              "displayLines": "((1.5 * (2 + (TargetStance / StanceUnit))) / 4)",
-              "constants": [
-                1.5,
-                2,
-                4
-              ],
-              "variables": [
-                "TargetStance",
-                "StanceUnit"
-              ]
+              "displayLines": "((1.5 * (2 + (TargetStance / StanceUnit))) / 4)"
             },
             "dmgFormula": "Break DMG Scaling",
             "dmgFormulaFinal": "Pure (No DMG%)",
@@ -563,17 +515,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "DamageBreak": {
-              "operator": "Constants[0] (1) || Constants[1] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[2] (4) || DIV || RETURN",
-              "displayLines": "((1 * (2 + (TargetStance / StanceUnit))) / 4)",
-              "constants": [
-                1,
-                2,
-                4
-              ],
-              "variables": [
-                "TargetStance",
-                "StanceUnit"
-              ]
+              "displayLines": "((1 * (2 + (TargetStance / StanceUnit))) / 4)"
             },
             "dmgFormula": "Break DMG Scaling",
             "dmgFormulaFinal": "Pure (No DMG%)",
@@ -622,17 +564,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "DamageBreak": {
-              "operator": "Constants[0] (0.5) || Constants[1] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[2] (4) || DIV || RETURN",
-              "displayLines": "((0.5 * (2 + (TargetStance / StanceUnit))) / 4)",
-              "constants": [
-                0.5,
-                2,
-                4
-              ],
-              "variables": [
-                "TargetStance",
-                "StanceUnit"
-              ]
+              "displayLines": "((0.5 * (2 + (TargetStance / StanceUnit))) / 4)"
             },
             "dmgFormula": "Break DMG Scaling",
             "dmgFormulaFinal": "Pure (No DMG%)",
@@ -669,17 +601,7 @@ const configAbility = {
           "valuePerStack": {
             "MDF_ActionDelayRatio": 0.2,
             "MDF_DamagePercentage": {
-              "operator": "Constants[0] (0.6) || Constants[1] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[2] (4) || DIV || RETURN",
-              "displayLines": "((0.6 * (2 + (TargetStance / StanceUnit))) / 4)",
-              "constants": [
-                0.6,
-                2,
-                4
-              ],
-              "variables": [
-                "TargetStance",
-                "StanceUnit"
-              ]
+              "displayLines": "((0.6 * (2 + (TargetStance / StanceUnit))) / 4)"
             }
           }
         },
@@ -693,17 +615,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "DamageBreak": {
-              "operator": "Constants[0] (0.5) || Constants[1] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[2] (4) || DIV || RETURN",
-              "displayLines": "((0.5 * (2 + (TargetStance / StanceUnit))) / 4)",
-              "constants": [
-                0.5,
-                2,
-                4
-              ],
-              "variables": [
-                "TargetStance",
-                "StanceUnit"
-              ]
+              "displayLines": "((0.5 * (2 + (TargetStance / StanceUnit))) / 4)"
             },
             "dmgFormula": "Break DMG Scaling",
             "dmgFormulaFinal": "Pure (No DMG%)",
@@ -738,16 +650,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "DamageBreak": {
-              "operator": "Constants[0] (2) || Constants[0] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[1] (4) || DIV || RETURN",
-              "displayLines": "((2 * (2 + (TargetStance / StanceUnit))) / 4)",
-              "constants": [
-                2,
-                4
-              ],
-              "variables": [
-                "TargetStance",
-                "StanceUnit"
-              ]
+              "displayLines": "((2 * (2 + (TargetStance / StanceUnit))) / 4)"
             },
             "dmgFormula": "Break DMG Scaling",
             "dmgFormulaFinal": "Pure (No DMG%)",
@@ -782,17 +685,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "DamageBreak": {
-              "operator": "Constants[0] (1) || Constants[1] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[2] (4) || DIV || RETURN",
-              "displayLines": "((1 * (2 + (TargetStance / StanceUnit))) / 4)",
-              "constants": [
-                1,
-                2,
-                4
-              ],
-              "variables": [
-                "TargetStance",
-                "StanceUnit"
-              ]
+              "displayLines": "((1 * (2 + (TargetStance / StanceUnit))) / 4)"
             },
             "dmgFormula": "Break DMG Scaling",
             "dmgFormulaFinal": "Pure (No DMG%)",
@@ -827,16 +720,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "DamageBreak": {
-              "operator": "Constants[0] (2) || Constants[0] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[1] (4) || DIV || RETURN",
-              "displayLines": "((2 * (2 + (TargetStance / StanceUnit))) / 4)",
-              "constants": [
-                2,
-                4
-              ],
-              "variables": [
-                "TargetStance",
-                "StanceUnit"
-              ]
+              "displayLines": "((2 * (2 + (TargetStance / StanceUnit))) / 4)"
             },
             "dmgFormula": "Break DMG Scaling",
             "dmgFormulaFinal": "Pure (No DMG%)",
@@ -871,17 +755,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Wind",
             "DamageBreak": {
-              "operator": "Constants[0] (1.5) || Constants[1] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[2] (4) || DIV || RETURN",
-              "displayLines": "((1.5 * (2 + (TargetStance / StanceUnit))) / 4)",
-              "constants": [
-                1.5,
-                2,
-                4
-              ],
-              "variables": [
-                "TargetStance",
-                "StanceUnit"
-              ]
+              "displayLines": "((1.5 * (2 + (TargetStance / StanceUnit))) / 4)"
             },
             "dmgFormula": "Break DMG Scaling",
             "dmgFormulaFinal": "Pure (No DMG%)",
@@ -916,17 +790,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "DamageBreak": {
-              "operator": "Constants[0] (1) || Constants[1] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[2] (4) || DIV || RETURN",
-              "displayLines": "((1 * (2 + (TargetStance / StanceUnit))) / 4)",
-              "constants": [
-                1,
-                2,
-                4
-              ],
-              "variables": [
-                "TargetStance",
-                "StanceUnit"
-              ]
+              "displayLines": "((1 * (2 + (TargetStance / StanceUnit))) / 4)"
             },
             "dmgFormula": "Break DMG Scaling",
             "dmgFormulaFinal": "Pure (No DMG%)",
@@ -961,17 +825,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "DamageBreak": {
-              "operator": "Constants[0] (0.5) || Constants[1] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[2] (4) || DIV || RETURN",
-              "displayLines": "((0.5 * (2 + (TargetStance / StanceUnit))) / 4)",
-              "constants": [
-                0.5,
-                2,
-                4
-              ],
-              "variables": [
-                "TargetStance",
-                "StanceUnit"
-              ]
+              "displayLines": "((0.5 * (2 + (TargetStance / StanceUnit))) / 4)"
             },
             "dmgFormula": "Break DMG Scaling",
             "dmgFormulaFinal": "Pure (No DMG%)",
@@ -1006,17 +860,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "DamageBreak": {
-              "operator": "Constants[0] (0.5) || Constants[1] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[2] (4) || DIV || RETURN",
-              "displayLines": "((0.5 * (2 + (TargetStance / StanceUnit))) / 4)",
-              "constants": [
-                0.5,
-                2,
-                4
-              ],
-              "variables": [
-                "TargetStance",
-                "StanceUnit"
-              ]
+              "displayLines": "((0.5 * (2 + (TargetStance / StanceUnit))) / 4)"
             },
             "dmgFormula": "Break DMG Scaling",
             "dmgFormulaFinal": "Pure (No DMG%)",
@@ -1082,19 +926,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "DamageBreak": {
-              "operator": "Constants[0] (2) || Variables[0] (TEMP_OBJECT_UNUSED_8) || Variables[1] (ExplodeLayer) || MUL || ADD || Constants[0] (2) || MUL || Constants[0] (2) || Variables[2] (TargetStance) || Variables[3] (StanceUnit) || DIV || ADD || MUL || Constants[1] (4) || DIV || Variables[4] (TEMP_OBJECT_UNUSED_7) || MUL || RETURN",
-              "displayLines": "(((((2 + (TEMP_OBJECT_UNUSED_8 * ExplodeLayer)) * 2) * (2 + (TargetStance / StanceUnit))) / 4) * TEMP_OBJECT_UNUSED_7)",
-              "constants": [
-                2,
-                4
-              ],
-              "variables": [
-                "TEMP_OBJECT_UNUSED_8",
-                "ExplodeLayer",
-                "TargetStance",
-                "StanceUnit",
-                "TEMP_OBJECT_UNUSED_7"
-              ]
+              "displayLines": "(((((2 + (TEMP_OBJECT_UNUSED_8 * ExplodeLayer)) * 2) * (2 + (TargetStance / StanceUnit))) / 4) * TEMP_OBJECT_UNUSED_7)"
             },
             "dmgFormula": "Break DMG Scaling",
             "dmgFormulaFinal": "Pure (No DMG%)",
@@ -1113,19 +945,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "DamageBreak": {
-              "operator": "Constants[0] (2) || Variables[0] (TEMP_OBJECT_UNUSED_8) || Variables[1] (ExplodeLayer) || MUL || ADD || Constants[0] (2) || MUL || Constants[0] (2) || Variables[2] (TargetStance) || Variables[3] (StanceUnit) || DIV || ADD || MUL || Constants[1] (4) || DIV || Variables[4] (TEMP_OBJECT_UNUSED_7) || MUL || RETURN",
-              "displayLines": "(((((2 + (TEMP_OBJECT_UNUSED_8 * ExplodeLayer)) * 2) * (2 + (TargetStance / StanceUnit))) / 4) * TEMP_OBJECT_UNUSED_7)",
-              "constants": [
-                2,
-                4
-              ],
-              "variables": [
-                "TEMP_OBJECT_UNUSED_8",
-                "ExplodeLayer",
-                "TargetStance",
-                "StanceUnit",
-                "TEMP_OBJECT_UNUSED_7"
-              ]
+              "displayLines": "(((((2 + (TEMP_OBJECT_UNUSED_8 * ExplodeLayer)) * 2) * (2 + (TargetStance / StanceUnit))) / 4) * TEMP_OBJECT_UNUSED_7)"
             },
             "dmgFormula": "Break DMG Scaling",
             "dmgFormulaFinal": "Pure (No DMG%)",
@@ -1150,15 +970,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "DamageFlat": {
-              "operator": "Variables[0] (ExplodBaseDamage) || Constants[0] (1) || Variables[1] (TEMP_OBJECT_UNUSED_7) || ADD || MUL || RETURN",
-              "displayLines": "(ExplodBaseDamage * (1 + TEMP_OBJECT_UNUSED_7))",
-              "constants": [
-                1
-              ],
-              "variables": [
-                "ExplodBaseDamage",
-                "TEMP_OBJECT_UNUSED_7"
-              ]
+              "displayLines": "(ExplodBaseDamage * (1 + TEMP_OBJECT_UNUSED_7))"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -1182,15 +994,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "DamageFlat": {
-              "operator": "Variables[0] (ExplodBaseDamage) || Constants[0] (1) || Variables[1] (TEMP_OBJECT_UNUSED_7) || ADD || MUL || RETURN",
-              "displayLines": "(ExplodBaseDamage * (1 + TEMP_OBJECT_UNUSED_7))",
-              "constants": [
-                1
-              ],
-              "variables": [
-                "ExplodBaseDamage",
-                "TEMP_OBJECT_UNUSED_7"
-              ]
+              "displayLines": "(ExplodBaseDamage * (1 + TEMP_OBJECT_UNUSED_7))"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -1214,12 +1018,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "DamageFlat": {
-              "operator": "Variables[0] (ExplodBaseDamage) || RETURN",
-              "displayLines": "ExplodBaseDamage",
-              "constants": [],
-              "variables": [
-                "ExplodBaseDamage"
-              ]
+              "displayLines": "ExplodBaseDamage"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -1253,17 +1052,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "DamageBreak": {
-              "operator": "Constants[0] (1) || Constants[1] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[2] (4) || DIV || RETURN",
-              "displayLines": "((1 * (2 + (TargetStance / StanceUnit))) / 4)",
-              "constants": [
-                1,
-                2,
-                4
-              ],
-              "variables": [
-                "TargetStance",
-                "StanceUnit"
-              ]
+              "displayLines": "((1 * (2 + (TargetStance / StanceUnit))) / 4)"
             },
             "dmgFormula": "Break DMG Scaling",
             "dmgFormulaFinal": "Pure (No DMG%)",
@@ -1287,12 +1076,7 @@ const configAbility = {
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (Summon_MonsterIDKey) || RETURN",
-                "displayLines": "Summon_MonsterIDKey",
-                "constants": [],
-                "variables": [
-                  "Summon_MonsterIDKey"
-                ]
+                "displayLines": "Summon_MonsterIDKey"
               },
               "locationType": "FormationRecord"
             }
@@ -2032,14 +1816,7 @@ const configAbility = {
                     {
                       "name": "Assign Advance/Delay to Current Ability Use",
                       "adjustmentValue": {
-                        "operator": "Constants[0] (0) || Variables[0] (parameter[0]_NormalizedValue) || SUB || RETURN",
-                        "displayLines": "(0 - parameter[0]_NormalizedValue)",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "parameter[0]_NormalizedValue"
-                        ]
+                        "displayLines": "(0 - parameter[0]_NormalizedValue)"
                       },
                       "adjustmentType": "Advance"
                     }
@@ -2105,12 +1882,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"564198756\">Standard_ModifyActionDelayOnTurnEnd</a>",
                       "valuePerStack": {
                         "MDF_DelayCost": {
-                          "operator": "Variables[0] (parameter[0]_NormalizedValue) || RETURN",
-                          "displayLines": "parameter[0]_NormalizedValue",
-                          "constants": [],
-                          "variables": [
-                            "parameter[0]_NormalizedValue"
-                          ]
+                          "displayLines": "parameter[0]_NormalizedValue"
                         }
                       }
                     }
@@ -2134,14 +1906,7 @@ const configAbility = {
                         {
                           "name": "Assign Advance/Delay to Current Ability Use",
                           "adjustmentValue": {
-                            "operator": "Constants[0] (0) || Variables[0] (parameter[0]_NormalizedValue) || SUB || RETURN",
-                            "displayLines": "(0 - parameter[0]_NormalizedValue)",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "parameter[0]_NormalizedValue"
-                            ]
+                            "displayLines": "(0 - parameter[0]_NormalizedValue)"
                           },
                           "adjustmentType": "Advance"
                         }
@@ -2218,12 +1983,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (TDF_TotalStanceDamageOnTarget) || RETURN",
-                    "displayLines": "TDF_TotalStanceDamageOnTarget",
-                    "constants": [],
-                    "variables": [
-                      "TDF_TotalStanceDamageOnTarget"
-                    ]
+                    "displayLines": "TDF_TotalStanceDamageOnTarget"
                   },
                   "variableName": "TDF_TotalStanceDamageOnTarget"
                 }
@@ -2259,15 +2019,7 @@ const configAbility = {
                       }
                     },
                     "DamageBreak": {
-                      "operator": "Variables[0] (DamagePercentage) || Variables[1] (StanceValue) || Constants[0] (30) || DIV || MUL || RETURN",
-                      "displayLines": "(DamagePercentage * (StanceValue / 30))",
-                      "constants": [
-                        30
-                      ],
-                      "variables": [
-                        "DamagePercentage",
-                        "StanceValue"
-                      ]
+                      "displayLines": "(DamagePercentage * (StanceValue / 30))"
                     },
                     "dmgFormula": "Break DMG Scaling",
                     "dmgFormulaFinal": "Pure (No DMG%)",
@@ -2339,12 +2091,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (TDF_TotalStanceDamageOnTarget) || RETURN",
-                    "displayLines": "TDF_TotalStanceDamageOnTarget",
-                    "constants": [],
-                    "variables": [
-                      "TDF_TotalStanceDamageOnTarget"
-                    ]
+                    "displayLines": "TDF_TotalStanceDamageOnTarget"
                   },
                   "variableName": "TDF_TotalStanceDamageOnTarget"
                 }
@@ -2380,15 +2127,7 @@ const configAbility = {
                       }
                     },
                     "DamageBreak": {
-                      "operator": "Variables[0] (DamagePercentage) || Variables[1] (StanceValue) || Constants[0] (30) || DIV || MUL || RETURN",
-                      "displayLines": "(DamagePercentage * (StanceValue / 30))",
-                      "constants": [
-                        30
-                      ],
-                      "variables": [
-                        "DamagePercentage",
-                        "StanceValue"
-                      ]
+                      "displayLines": "(DamagePercentage * (StanceValue / 30))"
                     },
                     "dmgFormula": "Break DMG Scaling",
                     "dmgFormulaFinal": "Pure (No DMG%)",
@@ -2466,12 +2205,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (TDF_TotalStanceDamageOnTarget) || RETURN",
-                    "displayLines": "TDF_TotalStanceDamageOnTarget",
-                    "constants": [],
-                    "variables": [
-                      "TDF_TotalStanceDamageOnTarget"
-                    ]
+                    "displayLines": "TDF_TotalStanceDamageOnTarget"
                   },
                   "variableName": "TDF_TotalStanceDamageOnTarget"
                 }
@@ -2480,15 +2214,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (DamagePercentage) || Variables[1] (StanceValue) || Constants[0] (30) || DIV || MUL || RETURN",
-                "displayLines": "(DamagePercentage * (StanceValue / 30))",
-                "constants": [
-                  30
-                ],
-                "variables": [
-                  "DamagePercentage",
-                  "StanceValue"
-                ]
+                "displayLines": "(DamagePercentage * (StanceValue / 30))"
               },
               "variableName": "BreakDamagePercentage"
             },
@@ -2579,12 +2305,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (TDF_TotalStanceDamageOnTarget) || RETURN",
-                    "displayLines": "TDF_TotalStanceDamageOnTarget",
-                    "constants": [],
-                    "variables": [
-                      "TDF_TotalStanceDamageOnTarget"
-                    ]
+                    "displayLines": "TDF_TotalStanceDamageOnTarget"
                   },
                   "variableName": "TDF_TotalStanceDamageOnTarget"
                 }
@@ -2593,15 +2314,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (DamagePercentage) || Variables[1] (StanceValue) || Constants[0] (30) || DIV || MUL || RETURN",
-                "displayLines": "(DamagePercentage * (StanceValue / 30))",
-                "constants": [
-                  30
-                ],
-                "variables": [
-                  "DamagePercentage",
-                  "StanceValue"
-                ]
+                "displayLines": "(DamagePercentage * (StanceValue / 30))"
               },
               "variableName": "BreakDamagePercentage"
             },
@@ -2659,20 +2372,10 @@ const configAbility = {
               "actionTag": null,
               "valuePerStack": {
                 "ElationTime_OverrideElationPointTemp": {
-                  "operator": "Variables[0] (TryStartElationTime_OverrideElationPoint) || RETURN",
-                  "displayLines": "TryStartElationTime_OverrideElationPoint",
-                  "constants": [],
-                  "variables": [
-                    "TryStartElationTime_OverrideElationPoint"
-                  ]
+                  "displayLines": "TryStartElationTime_OverrideElationPoint"
                 },
                 "ElationTime_IsNoConsumeTemp": {
-                  "operator": "Variables[0] (TryStartElationTime_ElationTimeIsNoConsume) || RETURN",
-                  "displayLines": "TryStartElationTime_ElationTimeIsNoConsume",
-                  "constants": [],
-                  "variables": [
-                    "TryStartElationTime_ElationTimeIsNoConsume"
-                  ]
+                  "displayLines": "TryStartElationTime_ElationTimeIsNoConsume"
                 }
               },
               "target": {
@@ -2698,20 +2401,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"291062653\">MBattleEvent_Elation_InsertActionCheck</a>",
                   "valuePerStack": {
                     "MDF_OverrideElationPoint": {
-                      "operator": "Variables[0] (TryStartElationTime_OverrideElationPoint) || RETURN",
-                      "displayLines": "TryStartElationTime_OverrideElationPoint",
-                      "constants": [],
-                      "variables": [
-                        "TryStartElationTime_OverrideElationPoint"
-                      ]
+                      "displayLines": "TryStartElationTime_OverrideElationPoint"
                     },
                     "MDF_ElationTimeIsNoConsume": {
-                      "operator": "Variables[0] (TryStartElationTime_ElationTimeIsNoConsume) || RETURN",
-                      "displayLines": "TryStartElationTime_ElationTimeIsNoConsume",
-                      "constants": [],
-                      "variables": [
-                        "TryStartElationTime_ElationTimeIsNoConsume"
-                      ]
+                      "displayLines": "TryStartElationTime_ElationTimeIsNoConsume"
                     }
                   },
                   "dynamicStringsArray": [
@@ -2749,20 +2442,10 @@ const configAbility = {
                   "actionTag": null,
                   "valuePerStack": {
                     "ElationTime_OverrideElationPointTemp": {
-                      "operator": "Variables[0] (TryStartElationTime_OverrideElationPoint) || RETURN",
-                      "displayLines": "TryStartElationTime_OverrideElationPoint",
-                      "constants": [],
-                      "variables": [
-                        "TryStartElationTime_OverrideElationPoint"
-                      ]
+                      "displayLines": "TryStartElationTime_OverrideElationPoint"
                     },
                     "ElationTime_IsNoConsumeTemp": {
-                      "operator": "Variables[0] (TryStartElationTime_ElationTimeIsNoConsume) || RETURN",
-                      "displayLines": "TryStartElationTime_ElationTimeIsNoConsume",
-                      "constants": [],
-                      "variables": [
-                        "TryStartElationTime_ElationTimeIsNoConsume"
-                      ]
+                      "displayLines": "TryStartElationTime_ElationTimeIsNoConsume"
                     }
                   },
                   "target": {
@@ -2785,20 +2468,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"291062653\">MBattleEvent_Elation_InsertActionCheck</a>",
                       "valuePerStack": {
                         "MDF_OverrideElationPoint": {
-                          "operator": "Variables[0] (TryStartElationTime_OverrideElationPoint) || RETURN",
-                          "displayLines": "TryStartElationTime_OverrideElationPoint",
-                          "constants": [],
-                          "variables": [
-                            "TryStartElationTime_OverrideElationPoint"
-                          ]
+                          "displayLines": "TryStartElationTime_OverrideElationPoint"
                         },
                         "MDF_ElationTimeIsNoConsume": {
-                          "operator": "Variables[0] (TryStartElationTime_ElationTimeIsNoConsume) || RETURN",
-                          "displayLines": "TryStartElationTime_ElationTimeIsNoConsume",
-                          "constants": [],
-                          "variables": [
-                            "TryStartElationTime_ElationTimeIsNoConsume"
-                          ]
+                          "displayLines": "TryStartElationTime_ElationTimeIsNoConsume"
                         }
                       },
                       "dynamicStringsArray": [
@@ -2845,12 +2518,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (AddValue) || RETURN",
-                    "displayLines": "AddValue",
-                    "constants": [],
-                    "variables": [
-                      "AddValue"
-                    ]
+                    "displayLines": "AddValue"
                   },
                   "variableName": "_FinalAddValue"
                 },
@@ -2909,12 +2577,7 @@ const configAbility = {
                                 "value1": "Modifier_Callback_Value",
                                 "compareType": "=",
                                 "value2": {
-                                  "operator": "Variables[0] (_FinalLifeTime) || RETURN",
-                                  "displayLines": "_FinalLifeTime",
-                                  "constants": [],
-                                  "variables": [
-                                    "_FinalLifeTime"
-                                  ]
+                                  "displayLines": "_FinalLifeTime"
                                 },
                                 "valueType": "LifeTime"
                               },
@@ -2923,12 +2586,7 @@ const configAbility = {
                                 "value1": "SpecialEcho",
                                 "compareType": "=",
                                 "value2": {
-                                  "operator": "Variables[0] (SpecialEcho) || RETURN",
-                                  "displayLines": "SpecialEcho",
-                                  "constants": [],
-                                  "variables": [
-                                    "SpecialEcho"
-                                  ]
+                                  "displayLines": "SpecialEcho"
                                 }
                               }
                             ]
@@ -2951,12 +2609,7 @@ const configAbility = {
                                   "variableName": "ElationEchoPoint",
                                   "on": null,
                                   "value": {
-                                    "operator": "Variables[0] (_FinalAddValue) || RETURN",
-                                    "displayLines": "_FinalAddValue",
-                                    "constants": [],
-                                    "variables": [
-                                      "_FinalAddValue"
-                                    ]
+                                    "displayLines": "_FinalAddValue"
                                   }
                                 },
                                 {
@@ -2990,20 +2643,10 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1491295670\">MBattleEvent_Elation_ElationEchoPointBonus</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
                           "valuePerStack": {
                             "ElationEchoPoint": {
-                              "operator": "Variables[0] (_FinalAddValue) || RETURN",
-                              "displayLines": "_FinalAddValue",
-                              "constants": [],
-                              "variables": [
-                                "_FinalAddValue"
-                              ]
+                              "displayLines": "_FinalAddValue"
                             },
                             "SpecialEcho": {
-                              "operator": "Variables[0] (SpecialEcho) || RETURN",
-                              "displayLines": "SpecialEcho",
-                              "constants": [],
-                              "variables": [
-                                "SpecialEcho"
-                              ]
+                              "displayLines": "SpecialEcho"
                             }
                           }
                         }

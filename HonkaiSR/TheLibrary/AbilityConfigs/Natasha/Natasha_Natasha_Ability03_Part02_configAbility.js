@@ -27,12 +27,7 @@ const configAbility = {
             "value1": "CurrentHP%",
             "compareType": "<=",
             "value2": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             }
           },
           "ifTargetFound": [
@@ -44,30 +39,15 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-251008638\">Natasha_Eidolon2_HOT_HPByMaxHP</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
               "duration": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "immediateEffect": true,
               "valuePerStack": {
                 "MDF_ShowValue1": {
-                  "operator": "Variables[0] (0.06) || RETURN",
-                  "displayLines": "0.06",
-                  "constants": [],
-                  "variables": [
-                    0.06
-                  ]
+                  "displayLines": "0.06"
                 },
                 "MDF_ShowValue2": {
-                  "operator": "Variables[0] (160) || RETURN",
-                  "displayLines": "160",
-                  "constants": [],
-                  "variables": [
-                    160
-                  ]
+                  "displayLines": "160"
                 }
               }
             }
@@ -82,20 +62,10 @@ const configAbility = {
         "target": "{{All Team Members}}"
       },
       "healPercent": {
-        "operator": "Variables[0] (0.138) || RETURN",
-        "displayLines": "0.138",
-        "constants": [],
-        "variables": [
-          0.138
-        ]
+        "displayLines": "0.138"
       },
       "healFlat": {
-        "operator": "Variables[0] (368) || RETURN",
-        "displayLines": "368",
-        "constants": [],
-        "variables": [
-          368
-        ]
+        "displayLines": "368"
       },
       "formula": "Heal from Healer's MaxHP"
     },
@@ -171,20 +141,10 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (MDF_ShowValue1) || RETURN",
-                    "displayLines": "MDF_ShowValue1",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ShowValue1"
-                    ]
+                    "displayLines": "MDF_ShowValue1"
                   },
                   "healFlat": {
-                    "operator": "Variables[0] (MDF_ShowValue2) || RETURN",
-                    "displayLines": "MDF_ShowValue2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ShowValue2"
-                    ]
+                    "displayLines": "MDF_ShowValue2"
                   },
                   "formula": "Heal from Healer's MaxHP"
                 }

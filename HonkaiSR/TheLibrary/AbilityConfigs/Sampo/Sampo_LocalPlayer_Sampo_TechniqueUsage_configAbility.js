@@ -24,12 +24,7 @@ const configAbility = {
                   "modifier": null,
                   "ID": "110801(SkillMaze)",
                   "duration": {
-                    "operator": "Variables[0] (10) || RETURN",
-                    "displayLines": "10",
-                    "constants": [],
-                    "variables": [
-                      10
-                    ]
+                    "displayLines": "10"
                   }
                 }
               ]
@@ -57,12 +52,7 @@ const configAbility = {
                   "modifier": null,
                   "ID": "110801(SkillMaze)",
                   "duration": {
-                    "operator": "Variables[0] (10) || RETURN",
-                    "displayLines": "10",
-                    "constants": [],
-                    "variables": [
-                      10
-                    ]
+                    "displayLines": "10"
                   }
                 }
               ]

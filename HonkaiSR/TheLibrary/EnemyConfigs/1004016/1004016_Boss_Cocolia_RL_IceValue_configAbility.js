@@ -62,12 +62,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1124446035\">Monster_W1_CocoliaP1_RL_IcePower</a>",
       "valuePerStack": {
         "MDF_DamageUpRatio_PerLayer": {
-          "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[3]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[3]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[3]]}"
         }
       }
     },
@@ -80,12 +75,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1507922859\">Monster_W1_CocoliaP1_RL_LowHP</a>",
       "valuePerStack": {
         "MDF_LowHPRatio": {
-          "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[5]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[5]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[5]]}"
         }
       }
     }
@@ -125,12 +115,7 @@ const configAbility = {
               "name": "Assign Value to Stat",
               "variableName": "FrozenScoreCheck",
               "value": {
-                "operator": "Variables[0] (FrozenScore) || RETURN",
-                "displayLines": "FrozenScore",
-                "constants": [],
-                "variables": [
-                  "FrozenScore"
-                ]
+                "displayLines": "FrozenScore"
               }
             }
           ]
@@ -332,12 +317,7 @@ const configAbility = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_LowHPRatio) || RETURN",
-                      "displayLines": "MDF_LowHPRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_LowHPRatio"
-                      ]
+                      "displayLines": "MDF_LowHPRatio"
                     }
                   },
                   {
@@ -393,37 +373,17 @@ const configAbility = {
                   },
                   "variables": {
                     "MDF_CocoliaP1_RL_BattleEvent_DamagePercentage": {
-                      "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[0]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill01[0]]}"
                     },
                     "MDF_CocoliaP1_RL_BattleEvent_SPAdd": {
-                      "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill01[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[1]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill01[1]]}"
                     },
                     "MDF_CocoliaP1_RL_BattleEvent_ActionDelay": 0,
                     "MDF_CocoliaP1_RL_BattleEvent_BaseSpeed": {
-                      "operator": "Variables[0] (BaseSpeed) || RETURN",
-                      "displayLines": "BaseSpeed",
-                      "constants": [],
-                      "variables": [
-                        "BaseSpeed"
-                      ]
+                      "displayLines": "BaseSpeed"
                     },
                     "MDF_CocoliaP1_RL_BattleEvent_FrozenDamagePerTurn": {
-                      "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill01[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[2]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill01[2]]}"
                     },
                     "MDF_CocoliaP1_RL_BattleEvent_Count": 0
                   }

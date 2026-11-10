@@ -36,14 +36,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (HeadDelay) || Constants[0] (9.313226e-10) || SUB || RETURN",
-            "displayLines": "(HeadDelay - 9.313226e-10)",
-            "constants": [
-              9.313226e-10
-            ],
-            "variables": [
-              "HeadDelay"
-            ]
+            "displayLines": "(HeadDelay - 9.313226e-10)"
           },
           "variableName": "HeadDelay"
         }
@@ -80,14 +73,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (LimbDelay) || Constants[0] (9.313226e-10) || SUB || RETURN",
-            "displayLines": "(LimbDelay - 9.313226e-10)",
-            "constants": [
-              9.313226e-10
-            ],
-            "variables": [
-              "LimbDelay"
-            ]
+            "displayLines": "(LimbDelay - 9.313226e-10)"
           },
           "variableName": "LimbDelay"
         }
@@ -124,14 +110,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (TailDelay) || Constants[0] (9.313226e-10) || SUB || RETURN",
-            "displayLines": "(TailDelay - 9.313226e-10)",
-            "constants": [
-              9.313226e-10
-            ],
-            "variables": [
-              "TailDelay"
-            ]
+            "displayLines": "(TailDelay - 9.313226e-10)"
           },
           "variableName": "TailDelay"
         }
@@ -153,12 +132,7 @@ const configAbility = {
         "value1": "HeadDelay",
         "compareType": ">=",
         "value2": {
-          "operator": "Variables[0] (TailDelay) || RETURN",
-          "displayLines": "TailDelay",
-          "constants": [],
-          "variables": [
-            "TailDelay"
-          ]
+          "displayLines": "TailDelay"
         }
       },
       "passed": [
@@ -169,12 +143,7 @@ const configAbility = {
             "value1": "TailDelay",
             "compareType": ">=",
             "value2": {
-              "operator": "Variables[0] (LimbDelay) || RETURN",
-              "displayLines": "LimbDelay",
-              "constants": [],
-              "variables": [
-                "LimbDelay"
-              ]
+              "displayLines": "LimbDelay"
             }
           },
           "passed": [
@@ -308,20 +277,10 @@ const configAbility = {
                       },
                       "variables": {
                         "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                          "operator": "Variables[0] (TailDelay) || RETURN",
-                          "displayLines": "TailDelay",
-                          "constants": [],
-                          "variables": [
-                            "TailDelay"
-                          ]
+                          "displayLines": "TailDelay"
                         },
                         "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                          "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                          "displayLines": "CurrentSpeed",
-                          "constants": [],
-                          "variables": [
-                            "CurrentSpeed"
-                          ]
+                          "displayLines": "CurrentSpeed"
                         }
                       }
                     }
@@ -342,20 +301,10 @@ const configAbility = {
                       },
                       "variables": {
                         "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                          "operator": "Variables[0] (TailDelay) || RETURN",
-                          "displayLines": "TailDelay",
-                          "constants": [],
-                          "variables": [
-                            "TailDelay"
-                          ]
+                          "displayLines": "TailDelay"
                         },
                         "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                          "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                          "displayLines": "CurrentSpeed",
-                          "constants": [],
-                          "variables": [
-                            "CurrentSpeed"
-                          ]
+                          "displayLines": "CurrentSpeed"
                         }
                       }
                     }
@@ -488,20 +437,10 @@ const configAbility = {
                       },
                       "variables": {
                         "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                          "operator": "Variables[0] (HeadDelay) || RETURN",
-                          "displayLines": "HeadDelay",
-                          "constants": [],
-                          "variables": [
-                            "HeadDelay"
-                          ]
+                          "displayLines": "HeadDelay"
                         },
                         "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                          "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                          "displayLines": "CurrentSpeed",
-                          "constants": [],
-                          "variables": [
-                            "CurrentSpeed"
-                          ]
+                          "displayLines": "CurrentSpeed"
                         }
                       }
                     }
@@ -522,20 +461,10 @@ const configAbility = {
                       },
                       "variables": {
                         "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                          "operator": "Variables[0] (HeadDelay) || RETURN",
-                          "displayLines": "HeadDelay",
-                          "constants": [],
-                          "variables": [
-                            "HeadDelay"
-                          ]
+                          "displayLines": "HeadDelay"
                         },
                         "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                          "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                          "displayLines": "CurrentSpeed",
-                          "constants": [],
-                          "variables": [
-                            "CurrentSpeed"
-                          ]
+                          "displayLines": "CurrentSpeed"
                         }
                       }
                     }
@@ -552,12 +481,7 @@ const configAbility = {
                 "value1": "HeadDelay",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (LimbDelay) || RETURN",
-                  "displayLines": "LimbDelay",
-                  "constants": [],
-                  "variables": [
-                    "LimbDelay"
-                  ]
+                  "displayLines": "LimbDelay"
                 }
               },
               "passed": [
@@ -691,20 +615,10 @@ const configAbility = {
                           },
                           "variables": {
                             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                              "operator": "Variables[0] (LimbDelay) || RETURN",
-                              "displayLines": "LimbDelay",
-                              "constants": [],
-                              "variables": [
-                                "LimbDelay"
-                              ]
+                              "displayLines": "LimbDelay"
                             },
                             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                              "displayLines": "CurrentSpeed",
-                              "constants": [],
-                              "variables": [
-                                "CurrentSpeed"
-                              ]
+                              "displayLines": "CurrentSpeed"
                             }
                           }
                         }
@@ -730,20 +644,10 @@ const configAbility = {
                           },
                           "variables": {
                             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                              "operator": "Variables[0] (LimbDelay) || RETURN",
-                              "displayLines": "LimbDelay",
-                              "constants": [],
-                              "variables": [
-                                "LimbDelay"
-                              ]
+                              "displayLines": "LimbDelay"
                             },
                             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                              "displayLines": "CurrentSpeed",
-                              "constants": [],
-                              "variables": [
-                                "CurrentSpeed"
-                              ]
+                              "displayLines": "CurrentSpeed"
                             }
                           }
                         }
@@ -876,20 +780,10 @@ const configAbility = {
                           },
                           "variables": {
                             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                              "operator": "Variables[0] (HeadDelay) || RETURN",
-                              "displayLines": "HeadDelay",
-                              "constants": [],
-                              "variables": [
-                                "HeadDelay"
-                              ]
+                              "displayLines": "HeadDelay"
                             },
                             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                              "displayLines": "CurrentSpeed",
-                              "constants": [],
-                              "variables": [
-                                "CurrentSpeed"
-                              ]
+                              "displayLines": "CurrentSpeed"
                             }
                           }
                         }
@@ -910,20 +804,10 @@ const configAbility = {
                           },
                           "variables": {
                             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                              "operator": "Variables[0] (HeadDelay) || RETURN",
-                              "displayLines": "HeadDelay",
-                              "constants": [],
-                              "variables": [
-                                "HeadDelay"
-                              ]
+                              "displayLines": "HeadDelay"
                             },
                             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                              "displayLines": "CurrentSpeed",
-                              "constants": [],
-                              "variables": [
-                                "CurrentSpeed"
-                              ]
+                              "displayLines": "CurrentSpeed"
                             }
                           }
                         }
@@ -1063,20 +947,10 @@ const configAbility = {
                           },
                           "variables": {
                             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                              "operator": "Variables[0] (HeadDelay) || RETURN",
-                              "displayLines": "HeadDelay",
-                              "constants": [],
-                              "variables": [
-                                "HeadDelay"
-                              ]
+                              "displayLines": "HeadDelay"
                             },
                             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                              "displayLines": "CurrentSpeed",
-                              "constants": [],
-                              "variables": [
-                                "CurrentSpeed"
-                              ]
+                              "displayLines": "CurrentSpeed"
                             }
                           }
                         }
@@ -1097,20 +971,10 @@ const configAbility = {
                           },
                           "variables": {
                             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                              "operator": "Variables[0] (HeadDelay) || RETURN",
-                              "displayLines": "HeadDelay",
-                              "constants": [],
-                              "variables": [
-                                "HeadDelay"
-                              ]
+                              "displayLines": "HeadDelay"
                             },
                             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                              "displayLines": "CurrentSpeed",
-                              "constants": [],
-                              "variables": [
-                                "CurrentSpeed"
-                              ]
+                              "displayLines": "CurrentSpeed"
                             }
                           }
                         }
@@ -1243,20 +1107,10 @@ const configAbility = {
                           },
                           "variables": {
                             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                              "operator": "Variables[0] (LimbDelay) || RETURN",
-                              "displayLines": "LimbDelay",
-                              "constants": [],
-                              "variables": [
-                                "LimbDelay"
-                              ]
+                              "displayLines": "LimbDelay"
                             },
                             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                              "displayLines": "CurrentSpeed",
-                              "constants": [],
-                              "variables": [
-                                "CurrentSpeed"
-                              ]
+                              "displayLines": "CurrentSpeed"
                             }
                           }
                         }
@@ -1277,20 +1131,10 @@ const configAbility = {
                           },
                           "variables": {
                             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                              "operator": "Variables[0] (LimbDelay) || RETURN",
-                              "displayLines": "LimbDelay",
-                              "constants": [],
-                              "variables": [
-                                "LimbDelay"
-                              ]
+                              "displayLines": "LimbDelay"
                             },
                             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                              "displayLines": "CurrentSpeed",
-                              "constants": [],
-                              "variables": [
-                                "CurrentSpeed"
-                              ]
+                              "displayLines": "CurrentSpeed"
                             }
                           }
                         }
@@ -1311,12 +1155,7 @@ const configAbility = {
             "value1": "HeadDelay",
             "compareType": ">=",
             "value2": {
-              "operator": "Variables[0] (LimbDelay) || RETURN",
-              "displayLines": "LimbDelay",
-              "constants": [],
-              "variables": [
-                "LimbDelay"
-              ]
+              "displayLines": "LimbDelay"
             }
           },
           "passed": [
@@ -1450,20 +1289,10 @@ const configAbility = {
                       },
                       "variables": {
                         "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                          "operator": "Variables[0] (HeadDelay) || RETURN",
-                          "displayLines": "HeadDelay",
-                          "constants": [],
-                          "variables": [
-                            "HeadDelay"
-                          ]
+                          "displayLines": "HeadDelay"
                         },
                         "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                          "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                          "displayLines": "CurrentSpeed",
-                          "constants": [],
-                          "variables": [
-                            "CurrentSpeed"
-                          ]
+                          "displayLines": "CurrentSpeed"
                         }
                       }
                     }
@@ -1484,20 +1313,10 @@ const configAbility = {
                       },
                       "variables": {
                         "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                          "operator": "Variables[0] (HeadDelay) || RETURN",
-                          "displayLines": "HeadDelay",
-                          "constants": [],
-                          "variables": [
-                            "HeadDelay"
-                          ]
+                          "displayLines": "HeadDelay"
                         },
                         "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                          "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                          "displayLines": "CurrentSpeed",
-                          "constants": [],
-                          "variables": [
-                            "CurrentSpeed"
-                          ]
+                          "displayLines": "CurrentSpeed"
                         }
                       }
                     }
@@ -1630,20 +1449,10 @@ const configAbility = {
                       },
                       "variables": {
                         "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                          "operator": "Variables[0] (TailDelay) || RETURN",
-                          "displayLines": "TailDelay",
-                          "constants": [],
-                          "variables": [
-                            "TailDelay"
-                          ]
+                          "displayLines": "TailDelay"
                         },
                         "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                          "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                          "displayLines": "CurrentSpeed",
-                          "constants": [],
-                          "variables": [
-                            "CurrentSpeed"
-                          ]
+                          "displayLines": "CurrentSpeed"
                         }
                       }
                     }
@@ -1664,20 +1473,10 @@ const configAbility = {
                       },
                       "variables": {
                         "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                          "operator": "Variables[0] (TailDelay) || RETURN",
-                          "displayLines": "TailDelay",
-                          "constants": [],
-                          "variables": [
-                            "TailDelay"
-                          ]
+                          "displayLines": "TailDelay"
                         },
                         "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                          "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                          "displayLines": "CurrentSpeed",
-                          "constants": [],
-                          "variables": [
-                            "CurrentSpeed"
-                          ]
+                          "displayLines": "CurrentSpeed"
                         }
                       }
                     }
@@ -1694,12 +1493,7 @@ const configAbility = {
                 "value1": "TailDelay",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (LimbDelay) || RETURN",
-                  "displayLines": "LimbDelay",
-                  "constants": [],
-                  "variables": [
-                    "LimbDelay"
-                  ]
+                  "displayLines": "LimbDelay"
                 }
               },
               "passed": [
@@ -1833,20 +1627,10 @@ const configAbility = {
                           },
                           "variables": {
                             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                              "operator": "Variables[0] (LimbDelay) || RETURN",
-                              "displayLines": "LimbDelay",
-                              "constants": [],
-                              "variables": [
-                                "LimbDelay"
-                              ]
+                              "displayLines": "LimbDelay"
                             },
                             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                              "displayLines": "CurrentSpeed",
-                              "constants": [],
-                              "variables": [
-                                "CurrentSpeed"
-                              ]
+                              "displayLines": "CurrentSpeed"
                             }
                           }
                         }
@@ -1867,20 +1651,10 @@ const configAbility = {
                           },
                           "variables": {
                             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                              "operator": "Variables[0] (LimbDelay) || RETURN",
-                              "displayLines": "LimbDelay",
-                              "constants": [],
-                              "variables": [
-                                "LimbDelay"
-                              ]
+                              "displayLines": "LimbDelay"
                             },
                             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                              "displayLines": "CurrentSpeed",
-                              "constants": [],
-                              "variables": [
-                                "CurrentSpeed"
-                              ]
+                              "displayLines": "CurrentSpeed"
                             }
                           }
                         }
@@ -2013,20 +1787,10 @@ const configAbility = {
                           },
                           "variables": {
                             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                              "operator": "Variables[0] (TailDelay) || RETURN",
-                              "displayLines": "TailDelay",
-                              "constants": [],
-                              "variables": [
-                                "TailDelay"
-                              ]
+                              "displayLines": "TailDelay"
                             },
                             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                              "displayLines": "CurrentSpeed",
-                              "constants": [],
-                              "variables": [
-                                "CurrentSpeed"
-                              ]
+                              "displayLines": "CurrentSpeed"
                             }
                           }
                         }
@@ -2047,20 +1811,10 @@ const configAbility = {
                           },
                           "variables": {
                             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                              "operator": "Variables[0] (TailDelay) || RETURN",
-                              "displayLines": "TailDelay",
-                              "constants": [],
-                              "variables": [
-                                "TailDelay"
-                              ]
+                              "displayLines": "TailDelay"
                             },
                             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                              "displayLines": "CurrentSpeed",
-                              "constants": [],
-                              "variables": [
-                                "CurrentSpeed"
-                              ]
+                              "displayLines": "CurrentSpeed"
                             }
                           }
                         }
@@ -2200,20 +1954,10 @@ const configAbility = {
                           },
                           "variables": {
                             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                              "operator": "Variables[0] (TailDelay) || RETURN",
-                              "displayLines": "TailDelay",
-                              "constants": [],
-                              "variables": [
-                                "TailDelay"
-                              ]
+                              "displayLines": "TailDelay"
                             },
                             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                              "displayLines": "CurrentSpeed",
-                              "constants": [],
-                              "variables": [
-                                "CurrentSpeed"
-                              ]
+                              "displayLines": "CurrentSpeed"
                             }
                           }
                         }
@@ -2234,20 +1978,10 @@ const configAbility = {
                           },
                           "variables": {
                             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                              "operator": "Variables[0] (TailDelay) || RETURN",
-                              "displayLines": "TailDelay",
-                              "constants": [],
-                              "variables": [
-                                "TailDelay"
-                              ]
+                              "displayLines": "TailDelay"
                             },
                             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                              "displayLines": "CurrentSpeed",
-                              "constants": [],
-                              "variables": [
-                                "CurrentSpeed"
-                              ]
+                              "displayLines": "CurrentSpeed"
                             }
                           }
                         }
@@ -2380,20 +2114,10 @@ const configAbility = {
                           },
                           "variables": {
                             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                              "operator": "Variables[0] (LimbDelay) || RETURN",
-                              "displayLines": "LimbDelay",
-                              "constants": [],
-                              "variables": [
-                                "LimbDelay"
-                              ]
+                              "displayLines": "LimbDelay"
                             },
                             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                              "displayLines": "CurrentSpeed",
-                              "constants": [],
-                              "variables": [
-                                "CurrentSpeed"
-                              ]
+                              "displayLines": "CurrentSpeed"
                             }
                           }
                         }
@@ -2414,20 +2138,10 @@ const configAbility = {
                           },
                           "variables": {
                             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                              "operator": "Variables[0] (LimbDelay) || RETURN",
-                              "displayLines": "LimbDelay",
-                              "constants": [],
-                              "variables": [
-                                "LimbDelay"
-                              ]
+                              "displayLines": "LimbDelay"
                             },
                             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                              "displayLines": "CurrentSpeed",
-                              "constants": [],
-                              "variables": [
-                                "CurrentSpeed"
-                              ]
+                              "displayLines": "CurrentSpeed"
                             }
                           }
                         }

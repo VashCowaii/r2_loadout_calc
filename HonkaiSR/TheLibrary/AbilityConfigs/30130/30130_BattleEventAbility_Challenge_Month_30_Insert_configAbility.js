@@ -65,13 +65,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageFlat": {
-                  "operator": "Variables[0] (_Temp_Hp) || Variables[1] (_Damage_Ratio_get) || MUL || RETURN",
-                  "displayLines": "(_Temp_Hp * _Damage_Ratio_get)",
-                  "constants": [],
-                  "variables": [
-                    "_Temp_Hp",
-                    "_Damage_Ratio_get"
-                  ]
+                  "displayLines": "(_Temp_Hp * _Damage_Ratio_get)"
                 },
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
@@ -91,13 +85,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageFlat": {
-                  "operator": "Variables[0] (_Temp_Hp) || Variables[1] (_Damage_Ratio_2_get) || MUL || RETURN",
-                  "displayLines": "(_Temp_Hp * _Damage_Ratio_2_get)",
-                  "constants": [],
-                  "variables": [
-                    "_Temp_Hp",
-                    "_Damage_Ratio_2_get"
-                  ]
+                  "displayLines": "(_Temp_Hp * _Damage_Ratio_2_get)"
                 },
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,

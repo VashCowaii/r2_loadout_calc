@@ -104,12 +104,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
       "valuePerStack": {
         "MDF_MaxCount": {
-          "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-          "displayLines": "{[Skill05[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill05[0]]}"
-          ]
+          "displayLines": "{[Skill05[0]]}"
         },
         "MDF_PartFlag": 1
       }

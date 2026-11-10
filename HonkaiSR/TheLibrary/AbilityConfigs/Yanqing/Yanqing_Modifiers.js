@@ -34,12 +34,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_CriticalBoost) || RETURN",
-                "displayLines": "MDF_CriticalBoost",
-                "constants": [],
-                "variables": [
-                  "MDF_CriticalBoost"
-                ]
+                "displayLines": "MDF_CriticalBoost"
               }
             }
           ]
@@ -155,15 +150,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">BaseAggroValue</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (1) || INVERT || Variables[0] (Avatar_Yanqing_AggroBase) || MUL || Constants[1] (0.6) || MUL || RETURN",
-                "displayLines": "((-1 * Avatar_Yanqing_AggroBase) * 0.6)",
-                "constants": [
-                  1,
-                  0.6
-                ],
-                "variables": [
-                  "Avatar_Yanqing_AggroBase"
-                ]
+                "displayLines": "((-1 * Avatar_Yanqing_AggroBase) * 0.6)"
               }
             },
             {
@@ -174,12 +161,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_CriticalBoost) || RETURN",
-                "displayLines": "MDF_CriticalBoost",
-                "constants": [],
-                "variables": [
-                  "MDF_CriticalBoost"
-                ]
+                "displayLines": "MDF_CriticalBoost"
               }
             },
             {
@@ -189,13 +171,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (MDF_CriticaDamage) || Variables[1] (MDF_AddCriticalDamage) || ADD || RETURN",
-                "displayLines": "(MDF_CriticaDamage + MDF_AddCriticalDamage)",
-                "constants": [],
-                "variables": [
-                  "MDF_CriticaDamage",
-                  "MDF_AddCriticalDamage"
-                ]
+                "displayLines": "(MDF_CriticaDamage + MDF_AddCriticalDamage)"
               },
               "variableName": "MDF_ALLCriticalDamage"
             },
@@ -207,12 +183,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_ALLCriticalDamage) || RETURN",
-                "displayLines": "MDF_ALLCriticalDamage",
-                "constants": [],
-                "variables": [
-                  "MDF_ALLCriticalDamage"
-                ]
+                "displayLines": "MDF_ALLCriticalDamage"
               }
             },
             {
@@ -239,12 +210,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_StatusResistance) || RETURN",
-                    "displayLines": "MDF_StatusResistance",
-                    "constants": [],
-                    "variables": [
-                      "MDF_StatusResistance"
-                    ]
+                    "displayLines": "MDF_StatusResistance"
                   }
                 }
               ]
@@ -264,12 +230,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRate</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AddSPRatio) || RETURN",
-                    "displayLines": "MDF_AddSPRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AddSPRatio"
-                    ]
+                    "displayLines": "MDF_AddSPRatio"
                   }
                 }
               ]
@@ -363,13 +324,7 @@ const configAbility = {
                   "conditions": {
                     "name": "Random Chance",
                     "chance": {
-                      "operator": "Variables[0] (0.6) || Variables[1] (YANQING_OBJECT_UNUSED_1) || ADD || RETURN",
-                      "displayLines": "(0.6 + YANQING_OBJECT_UNUSED_1)",
-                      "constants": [],
-                      "variables": [
-                        0.6,
-                        "YANQING_OBJECT_UNUSED_1"
-                      ]
+                      "displayLines": "(0.6 + YANQING_OBJECT_UNUSED_1)"
                     }
                   },
                   "passed": [
@@ -460,36 +415,16 @@ const configAbility = {
                   "duration": 1,
                   "valuePerStack": {
                     "MDF_CriticalBoost": {
-                      "operator": "Variables[0] (MDF_CriticalBoost) || RETURN",
-                      "displayLines": "MDF_CriticalBoost",
-                      "constants": [],
-                      "variables": [
-                        "MDF_CriticalBoost"
-                      ]
+                      "displayLines": "MDF_CriticalBoost"
                     },
                     "MDF_CriticaDamage": {
-                      "operator": "Variables[0] (MDF_CriticaDamage) || RETURN",
-                      "displayLines": "MDF_CriticaDamage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_CriticaDamage"
-                      ]
+                      "displayLines": "MDF_CriticaDamage"
                     },
                     "MDF_StatusResistance": {
-                      "operator": "Variables[0] (MDF_StatusResistance) || RETURN",
-                      "displayLines": "MDF_StatusResistance",
-                      "constants": [],
-                      "variables": [
-                        "MDF_StatusResistance"
-                      ]
+                      "displayLines": "MDF_StatusResistance"
                     },
                     "MDF_AddSPRatio": {
-                      "operator": "Variables[0] (MDF_AddSPRatio) || RETURN",
-                      "displayLines": "MDF_AddSPRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AddSPRatio"
-                      ]
+                      "displayLines": "MDF_AddSPRatio"
                     }
                   }
                 }

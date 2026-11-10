@@ -60,12 +60,7 @@ const configAbility = {
       "name": "Update Displayed Energy Bar",
       "value": 0,
       "maximum": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "assignState": "False",
       "bar#": 6,
@@ -149,13 +144,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_PropertyValue * MDF_Layer)"
               }
             }
           ]
@@ -179,12 +168,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (EXSkill01) || RETURN",
-                "displayLines": "EXSkill01",
-                "constants": [],
-                "variables": [
-                  "EXSkill01"
-                ]
+                "displayLines": "EXSkill01"
               },
               "variableName": "BPNeed"
             },
@@ -195,12 +179,7 @@ const configAbility = {
                 "value1": "CurrentSkillPoints",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (BPNeed) || RETURN",
-                  "displayLines": "BPNeed",
-                  "constants": [],
-                  "variables": [
-                    "BPNeed"
-                  ]
+                  "displayLines": "BPNeed"
                 }
               },
               "passed": [
@@ -242,12 +221,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (4) || RETURN",
-                    "displayLines": "4",
-                    "constants": [],
-                    "variables": [
-                      4
-                    ]
+                    "displayLines": "4"
                   },
                   "variableName": "AddMaxLayer"
                 },
@@ -302,12 +276,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (_BPChange) || RETURN",
-                    "displayLines": "_BPChange",
-                    "constants": [],
-                    "variables": [
-                      "_BPChange"
-                    ]
+                    "displayLines": "_BPChange"
                   }
                 }
               ]
@@ -398,12 +367,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (15) || RETURN",
-                    "displayLines": "15",
-                    "constants": [],
-                    "variables": [
-                      15
-                    ]
+                    "displayLines": "15"
                   },
                   "isFixed": "* ERR"
                 }
@@ -444,12 +408,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (EXSkill01) || RETURN",
-                    "displayLines": "EXSkill01",
-                    "constants": [],
-                    "variables": [
-                      "EXSkill01"
-                    ]
+                    "displayLines": "EXSkill01"
                   },
                   "variableName": "BPNeed"
                 },
@@ -460,12 +419,7 @@ const configAbility = {
                     "value1": "CurrentSkillPoints",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (BPNeed) || RETURN",
-                      "displayLines": "BPNeed",
-                      "constants": [],
-                      "variables": [
-                        "BPNeed"
-                      ]
+                      "displayLines": "BPNeed"
                     }
                   },
                   "passed": [
@@ -514,40 +468,18 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1587455609\">DanHengIL_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Righteous Heart</span>]",
                   "duration": 1,
                   "stackLimit": {
-                    "operator": "Variables[0] (6) || Variables[1] (AddMaxLayer) || ADD || RETURN",
-                    "displayLines": "(6 + AddMaxLayer)",
-                    "constants": [],
-                    "variables": [
-                      6,
-                      "AddMaxLayer"
-                    ]
+                    "displayLines": "(6 + AddMaxLayer)"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.1) || RETURN",
-                      "displayLines": "0.1",
-                      "constants": [],
-                      "variables": [
-                        0.1
-                      ]
+                      "displayLines": "0.1"
                     },
                     "MDF_MaxLayer": {
-                      "operator": "Variables[0] (6) || Variables[1] (AddMaxLayer) || ADD || RETURN",
-                      "displayLines": "(6 + AddMaxLayer)",
-                      "constants": [],
-                      "variables": [
-                        6,
-                        "AddMaxLayer"
-                      ]
+                      "displayLines": "(6 + AddMaxLayer)"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (AddLayer) || RETURN",
-                    "displayLines": "AddLayer",
-                    "constants": [],
-                    "variables": [
-                      "AddLayer"
-                    ]
+                    "displayLines": "AddLayer"
                   }
                 }
               ],
@@ -561,40 +493,18 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1587455609\">DanHengIL_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Righteous Heart</span>]",
                   "duration": 1,
                   "stackLimit": {
-                    "operator": "Variables[0] (6) || Variables[1] (AddMaxLayer) || ADD || RETURN",
-                    "displayLines": "(6 + AddMaxLayer)",
-                    "constants": [],
-                    "variables": [
-                      6,
-                      "AddMaxLayer"
-                    ]
+                    "displayLines": "(6 + AddMaxLayer)"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.1) || RETURN",
-                      "displayLines": "0.1",
-                      "constants": [],
-                      "variables": [
-                        0.1
-                      ]
+                      "displayLines": "0.1"
                     },
                     "MDF_MaxLayer": {
-                      "operator": "Variables[0] (6) || Variables[1] (AddMaxLayer) || ADD || RETURN",
-                      "displayLines": "(6 + AddMaxLayer)",
-                      "constants": [],
-                      "variables": [
-                        6,
-                        "AddMaxLayer"
-                      ]
+                      "displayLines": "(6 + AddMaxLayer)"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (AddLayer) || RETURN",
-                    "displayLines": "AddLayer",
-                    "constants": [],
-                    "variables": [
-                      "AddLayer"
-                    ]
+                    "displayLines": "AddLayer"
                   }
                 }
               ]
@@ -617,32 +527,17 @@ const configAbility = {
                   },
                   "function": "Set",
                   "value": {
-                    "operator": "Variables[0] (BPExChange) || RETURN",
-                    "displayLines": "BPExChange",
-                    "constants": [],
-                    "variables": [
-                      "BPExChange"
-                    ]
+                    "displayLines": "BPExChange"
                   },
                   "silentChange": true
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (BPExChange) || RETURN",
-                    "displayLines": "BPExChange",
-                    "constants": [],
-                    "variables": [
-                      "BPExChange"
-                    ]
+                    "displayLines": "BPExChange"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "assignState": "False",
                   "bar#": 6,
@@ -665,12 +560,7 @@ const configAbility = {
                       },
                       "modifierName": "<a class=\"gModGreen\" id=\"115521753\">DanHengIL_BPCostChange</a>[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
                       "value": {
-                        "operator": "Variables[0] (BPExChange) || RETURN",
-                        "displayLines": "BPExChange",
-                        "constants": [],
-                        "variables": [
-                          "BPExChange"
-                        ]
+                        "displayLines": "BPExChange"
                       }
                     },
                     {
@@ -681,29 +571,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"115521753\">DanHengIL_BPCostChange</a>[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
                       "counter": {
-                        "operator": "Variables[0] (BPExChange) || RETURN",
-                        "displayLines": "BPExChange",
-                        "constants": [],
-                        "variables": [
-                          "BPExChange"
-                        ]
+                        "displayLines": "BPExChange"
                       },
                       "valuePerStack": {
                         "MDF_BPExChange": {
-                          "operator": "Variables[0] (BPExChange) || RETURN",
-                          "displayLines": "BPExChange",
-                          "constants": [],
-                          "variables": [
-                            "BPExChange"
-                          ]
+                          "displayLines": "BPExChange"
                         },
                         "MDF_MaxLayer": {
-                          "operator": "Variables[0] (3) || RETURN",
-                          "displayLines": "3",
-                          "constants": [],
-                          "variables": [
-                            3
-                          ]
+                          "displayLines": "3"
                         }
                       }
                     }

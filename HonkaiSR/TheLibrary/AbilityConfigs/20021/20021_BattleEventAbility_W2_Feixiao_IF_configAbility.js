@@ -127,12 +127,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "set": {
-            "operator": "Variables[0] (MDF_W2_Feixiao_BattleEvent_ActionDelay) || RETURN",
-            "displayLines": "MDF_W2_Feixiao_BattleEvent_ActionDelay",
-            "constants": [],
-            "variables": [
-              "MDF_W2_Feixiao_BattleEvent_ActionDelay"
-            ]
+            "displayLines": "MDF_W2_Feixiao_BattleEvent_ActionDelay"
           }
         }
       ]
@@ -514,12 +509,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_W2_Feixiao_BattleEvent_BaseSpeed) || RETURN",
-                "displayLines": "MDF_W2_Feixiao_BattleEvent_BaseSpeed",
-                "constants": [],
-                "variables": [
-                  "MDF_W2_Feixiao_BattleEvent_BaseSpeed"
-                ]
+                "displayLines": "MDF_W2_Feixiao_BattleEvent_BaseSpeed"
               }
             }
           ]

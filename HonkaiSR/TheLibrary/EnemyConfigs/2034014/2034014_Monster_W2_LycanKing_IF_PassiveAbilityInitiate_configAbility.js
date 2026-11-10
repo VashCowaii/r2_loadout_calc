@@ -20,12 +20,7 @@ const configAbility = {
       "eventID": 20018,
       "variables": {
         "Ability03_BPRecover": {
-          "operator": "Variables[0] ({[SkillP02[4]]}) || RETURN",
-          "displayLines": "{[SkillP02[4]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP02[4]]}"
-          ]
+          "displayLines": "{[SkillP02[4]]}"
         }
       },
       "whenCreated": [
@@ -77,44 +72,19 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-71943107\">Enemy_W2_LycanKing_IF_ChampionMarkHalo</a>",
       "valuePerStack": {
         "MDF_MaxLayer": {
-          "operator": "Variables[0] ({[Skill08[3]]}) || RETURN",
-          "displayLines": "{[Skill08[3]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill08[3]]}"
-          ]
+          "displayLines": "{[Skill08[3]]}"
         },
         "MDF_HealPercentage": {
-          "operator": "Variables[0] ({[Skill08[1]]}) || RETURN",
-          "displayLines": "{[Skill08[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill08[1]]}"
-          ]
+          "displayLines": "{[Skill08[1]]}"
         },
         "MDF_AllDamageTypeAddedRatio": {
-          "operator": "Variables[0] ({[Skill08[4]]}) || RETURN",
-          "displayLines": "{[Skill08[4]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill08[4]]}"
-          ]
+          "displayLines": "{[Skill08[4]]}"
         },
         "MDF_DamageStancePerLayer": {
-          "operator": "Variables[0] ({[Skill08[2]]}) || RETURN",
-          "displayLines": "{[Skill08[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill08[2]]}"
-          ]
+          "displayLines": "{[Skill08[2]]}"
         },
         "MDF_BreakDamageAddedRatioBase": {
-          "operator": "Variables[0] ({[Skill08[5]]}) || RETURN",
-          "displayLines": "{[Skill08[5]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill08[5]]}"
-          ]
+          "displayLines": "{[Skill08[5]]}"
         }
       }
     },
@@ -138,28 +108,13 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1587187705\">Enemy_W2_Cocolia_IF_SuperArmorController</a>",
           "valuePerStack": {
             "MDF_IF_BOSS_BreakDelay": {
-              "operator": "Variables[0] ({[SkillEX01[2]]}) || RETURN",
-              "displayLines": "{[SkillEX01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[2]]}"
-              ]
+              "displayLines": "{[SkillEX01[2]]}"
             },
             "MDF_IF_BOSS_WeaknessDMGUpRatio": {
-              "operator": "Variables[0] ({[SkillEX01[1]]}) || RETURN",
-              "displayLines": "{[SkillEX01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[1]]}"
-              ]
+              "displayLines": "{[SkillEX01[1]]}"
             },
             "MDF_IF_BOSS_Standard_Defence": {
-              "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
-              "displayLines": "{[SkillEX01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[0]]}"
-              ]
+              "displayLines": "{[SkillEX01[0]]}"
             }
           }
         },
@@ -172,36 +127,16 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1246789467\">Enemy_W2_Cocolia_IF_SoftFrenzyController</a>",
           "valuePerStack": {
             "MDF_FrenzyStartDelay": {
-              "operator": "Variables[0] ({[SkillEX05[0]]}) || RETURN",
-              "displayLines": "{[SkillEX05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX05[0]]}"
-              ]
+              "displayLines": "{[SkillEX05[0]]}"
             },
             "MDF_FrenzyIntervalDelay": {
-              "operator": "Variables[0] ({[SkillEX05[1]]}) || RETURN",
-              "displayLines": "{[SkillEX05[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX05[1]]}"
-              ]
+              "displayLines": "{[SkillEX05[1]]}"
             },
             "MDF_MaxFrenzyLayer": {
-              "operator": "Variables[0] ({[SkillEX05[2]]}) || RETURN",
-              "displayLines": "{[SkillEX05[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX05[2]]}"
-              ]
+              "displayLines": "{[SkillEX05[2]]}"
             },
             "MDF_TokenDMGAddRatioPerLayer": {
-              "operator": "Variables[0] ({[SkillEX05[3]]}) || RETURN",
-              "displayLines": "{[SkillEX05[3]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX05[3]]}"
-              ]
+              "displayLines": "{[SkillEX05[3]]}"
             }
           }
         }
@@ -244,12 +179,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-        "displayLines": "{[SkillP01[2]]}",
-        "constants": [],
-        "variables": [
-          "{[SkillP01[2]]}"
-        ]
+        "displayLines": "{[SkillP01[2]]}"
       },
       "variableName": "Wolf_MaxAttackCount"
     },
@@ -262,12 +192,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1148945924\">Enemy_W2_LycanKing_IF_RageControllerV2</a>",
       "valuePerStack": {
         "MaxAttackCount": {
-          "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-          "displayLines": "{[SkillP01[2]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[2]]}"
-          ]
+          "displayLines": "{[SkillP01[2]]}"
         }
       },
       "casterAssign": "TargetSelf"
@@ -417,12 +342,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                "displayLines": "Wolf_AttackCount",
-                "constants": [],
-                "variables": [
-                  "Wolf_AttackCount"
-                ]
+                "displayLines": "Wolf_AttackCount"
               },
               "entityClass": "Enemy",
               "target": {
@@ -430,12 +350,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                "displayLines": "Wolf_MaxAttackCount",
-                "constants": [],
-                "variables": [
-                  "Wolf_MaxAttackCount"
-                ]
+                "displayLines": "Wolf_MaxAttackCount"
               },
               "assignState": "True",
               "state": "Normal"
@@ -479,23 +394,13 @@ const configAbility = {
                   "variableName": "MDF_CountDown",
                   "value": -1,
                   "max": {
-                    "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                    "displayLines": "MDF_MaxCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxCount"
-                    ]
+                    "displayLines": "MDF_MaxCount"
                   }
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_CountDown) || RETURN",
-                    "displayLines": "MDF_CountDown",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CountDown"
-                    ]
+                    "displayLines": "MDF_CountDown"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -503,12 +408,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                    "displayLines": "MDF_MaxCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxCount"
-                    ]
+                    "displayLines": "MDF_MaxCount"
                   },
                   "assignState": "True"
                 },
@@ -637,12 +537,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] ({[SkillP02[0]]}) || RETURN",
-                    "displayLines": "{[SkillP02[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillP02[0]]}"
-                    ]
+                    "displayLines": "{[SkillP02[0]]}"
                   },
                   "variableName": "MDF_MaxCount"
                 }
@@ -651,12 +546,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] ({[SkillP02[1]]}) || RETURN",
-                    "displayLines": "{[SkillP02[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillP02[1]]}"
-                    ]
+                    "displayLines": "{[SkillP02[1]]}"
                   },
                   "variableName": "MDF_MaxCount"
                 }
@@ -665,24 +555,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                "displayLines": "MDF_MaxCount",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxCount"
-                ]
+                "displayLines": "MDF_MaxCount"
               },
               "variableName": "MDF_CountDown"
             },
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_CountDown) || RETURN",
-                "displayLines": "MDF_CountDown",
-                "constants": [],
-                "variables": [
-                  "MDF_CountDown"
-                ]
+                "displayLines": "MDF_CountDown"
               },
               "entityClass": "Enemy",
               "target": {
@@ -690,12 +570,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                "displayLines": "MDF_MaxCount",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxCount"
-                ]
+                "displayLines": "MDF_MaxCount"
               },
               "assignState": "True"
             }
@@ -778,12 +653,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "consumePercent": {
-                    "operator": "Variables[0] ({[SkillP02[3]]}) || RETURN",
-                    "displayLines": "{[SkillP02[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillP02[3]]}"
-                    ]
+                    "displayLines": "{[SkillP02[3]]}"
                   },
                   "roundDMG": true,
                   "attackType": "Pursued",
@@ -819,23 +689,13 @@ const configAbility = {
                   "variableName": "MDF_CountDown",
                   "value": -1,
                   "max": {
-                    "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                    "displayLines": "MDF_MaxCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxCount"
-                    ]
+                    "displayLines": "MDF_MaxCount"
                   }
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_CountDown) || RETURN",
-                    "displayLines": "MDF_CountDown",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CountDown"
-                    ]
+                    "displayLines": "MDF_CountDown"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -843,12 +703,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                    "displayLines": "MDF_MaxCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxCount"
-                    ]
+                    "displayLines": "MDF_MaxCount"
                   },
                   "assignState": "True"
                 },
@@ -1058,12 +913,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "set": {
-                    "operator": "Variables[0] (MDF_SpeedUpRatio) || RETURN",
-                    "displayLines": "MDF_SpeedUpRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedUpRatio"
-                    ]
+                    "displayLines": "MDF_SpeedUpRatio"
                   }
                 },
                 {
@@ -1245,12 +1095,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "set": {
-                    "operator": "Variables[0] (MDF_SpeedUpRatio) || RETURN",
-                    "displayLines": "MDF_SpeedUpRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedUpRatio"
-                    ]
+                    "displayLines": "MDF_SpeedUpRatio"
                   }
                 },
                 {
@@ -1389,12 +1234,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1045160712\">Enemy_W2_LycanKing_IF_RageStatusEnhance</a>",
                   "valuePerStack": {
                     "MDF_SpeedAddRatio": {
-                      "operator": "Variables[0] ({[SkillP03[0]]}) || RETURN",
-                      "displayLines": "{[SkillP03[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP03[0]]}"
-                      ]
+                      "displayLines": "{[SkillP03[0]]}"
                     }
                   },
                   "casterAssign": "CasterSelf"
@@ -1504,12 +1344,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1045160712\">Enemy_W2_LycanKing_IF_RageStatusEnhance</a>",
                   "valuePerStack": {
                     "MDF_SpeedAddRatio": {
-                      "operator": "Variables[0] ({[SkillP03[0]]}) || RETURN",
-                      "displayLines": "{[SkillP03[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP03[0]]}"
-                      ]
+                      "displayLines": "{[SkillP03[0]]}"
                     }
                   },
                   "casterAssign": "CasterSelf"
@@ -1595,20 +1430,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"609854366\">Enemy_W2_LycanKing_IF_RageStatus</a>[<span class=\"descriptionNumberColor\">Full Moon's Furor</span>]",
                       "valuePerStack": {
                         "MDF_SpeedUpRatio": {
-                          "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                          "displayLines": "{[SkillP01[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillP01[0]]}"
-                          ]
+                          "displayLines": "{[SkillP01[0]]}"
                         },
                         "MDF_SpeedUpRatioPerWolf": {
-                          "operator": "Variables[0] ({[SkillP03[0]]}) || RETURN",
-                          "displayLines": "{[SkillP03[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillP03[0]]}"
-                          ]
+                          "displayLines": "{[SkillP03[0]]}"
                         }
                       }
                     },
@@ -1661,20 +1486,10 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"327803157\">Enemy_W2_LycanKing_IF_RageStatusPhase2</a>[<span class=\"descriptionNumberColor\">Full Moon's Furor</span>]",
                           "valuePerStack": {
                             "MDF_SpeedUpRatio": {
-                              "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                              "displayLines": "{[SkillP01[3]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[3]]}"
-                              ]
+                              "displayLines": "{[SkillP01[3]]}"
                             },
                             "MDF_SpeedUpRatioPerWolf": {
-                              "operator": "Variables[0] ({[SkillP03[0]]}) || RETURN",
-                              "displayLines": "{[SkillP03[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP03[0]]}"
-                              ]
+                              "displayLines": "{[SkillP03[0]]}"
                             }
                           }
                         },

@@ -33,14 +33,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           ]
@@ -62,12 +55,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         }
@@ -93,12 +81,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -150,14 +133,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           ]
@@ -183,12 +159,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-350940925\">Lingsha_Eidolon1_PassiveStackProperty</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (Rank01_MDF_PropertyValue) || RETURN",
-                  "displayLines": "Rank01_MDF_PropertyValue",
-                  "constants": [],
-                  "variables": [
-                    "Rank01_MDF_PropertyValue"
-                  ]
+                  "displayLines": "Rank01_MDF_PropertyValue"
                 }
               }
             },
@@ -201,12 +172,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-127930650\">Lingsha_Eidolon1_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">Bloom on Vileward Bouquet</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (Rank01_MDF_PropertyValue) || RETURN",
-                  "displayLines": "Rank01_MDF_PropertyValue",
-                  "constants": [],
-                  "variables": [
-                    "Rank01_MDF_PropertyValue"
-                  ]
+                  "displayLines": "Rank01_MDF_PropertyValue"
                 }
               }
             }
@@ -229,12 +195,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -329,12 +290,7 @@ const configAbility = {
                                 "value1": "CurrentHP%",
                                 "compareType": "<=",
                                 "value2": {
-                                  "operator": "Variables[0] (MDF_HPRatio) || RETURN",
-                                  "displayLines": "MDF_HPRatio",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_HPRatio"
-                                  ]
+                                  "displayLines": "MDF_HPRatio"
                                 }
                               },
                               {
@@ -627,14 +583,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_AttackTime) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(_AttackTime - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_AttackTime"
-                ]
+                "displayLines": "(_AttackTime - 1)"
               },
               "variableName": "_AttackTime"
             },
@@ -645,12 +594,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "attackCount": {
-                "operator": "Variables[0] (_AttackTime) || RETURN",
-                "displayLines": "_AttackTime",
-                "constants": [],
-                "variables": [
-                  "_AttackTime"
-                ]
+                "displayLines": "_AttackTime"
               },
               "show": true
             },
@@ -662,24 +606,14 @@ const configAbility = {
               },
               "scope": "TargetEntity",
               "value": {
-                "operator": "Variables[0] (_AttackTime) || RETURN",
-                "displayLines": "_AttackTime",
-                "constants": [],
-                "variables": [
-                  "_AttackTime"
-                ]
+                "displayLines": "_AttackTime"
               },
               "variableName": "Lingsha_AttackTime"
             },
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (_AttackTime) || RETURN",
-                "displayLines": "_AttackTime",
-                "constants": [],
-                "variables": [
-                  "_AttackTime"
-                ]
+                "displayLines": "_AttackTime"
               },
               "target": {
                 "name": "Target Name",
@@ -703,12 +637,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (_AttackTime) || RETURN",
-                "displayLines": "_AttackTime",
-                "constants": [],
-                "variables": [
-                  "_AttackTime"
-                ]
+                "displayLines": "_AttackTime"
               },
               "target": {
                 "name": "Target Name",
@@ -722,12 +651,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "attackCount": {
-                "operator": "Variables[0] (_AttackTime) || RETURN",
-                "displayLines": "_AttackTime",
-                "constants": [],
-                "variables": [
-                  "_AttackTime"
-                ]
+                "displayLines": "_AttackTime"
               },
               "show": true
             }

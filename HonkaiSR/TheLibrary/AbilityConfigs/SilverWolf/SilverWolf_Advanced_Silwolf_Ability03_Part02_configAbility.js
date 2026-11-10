@@ -20,30 +20,15 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-46466503\">Advanced_Silwolf_Ultimate_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
       "duration": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "baseChance": {
-        "operator": "Variables[0] (1.2) || RETURN",
-        "displayLines": "1.2",
-        "constants": [],
-        "variables": [
-          1.2
-        ]
+        "displayLines": "1.2"
       },
       "immediateEffect": true,
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] (0.45) || RETURN",
-          "displayLines": "0.45",
-          "constants": [],
-          "variables": [
-            0.45
-          ]
+          "displayLines": "0.45"
         }
       }
     },
@@ -57,20 +42,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (3.8) || RETURN",
-          "displayLines": "3.8",
-          "constants": [],
-          "variables": [
-            3.8
-          ]
+          "displayLines": "3.8"
         },
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"

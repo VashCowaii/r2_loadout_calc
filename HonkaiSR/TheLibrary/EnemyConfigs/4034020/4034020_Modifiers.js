@@ -52,13 +52,7 @@ const configAbility = {
                 "value1": "DV_CurrentDelay",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Variables[1] (DV_InitDelay) || ADD || RETURN",
-                  "displayLines": "({[PassiveSkill01[0]]} + DV_InitDelay)",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill01[0]]}",
-                    "DV_InitDelay"
-                  ]
+                  "displayLines": "({[PassiveSkill01[0]]} + DV_InitDelay)"
                 }
               },
               "passed": [
@@ -121,13 +115,7 @@ const configAbility = {
                 "value1": "DV_CurrentDelay",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Variables[1] (DV_InitDelay) || ADD || RETURN",
-                  "displayLines": "({[PassiveSkill01[0]]} + DV_InitDelay)",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill01[0]]}",
-                    "DV_InitDelay"
-                  ]
+                  "displayLines": "({[PassiveSkill01[0]]} + DV_InitDelay)"
                 }
               },
               "passed": [
@@ -169,12 +157,7 @@ const configAbility = {
                 "value1": "DV_CurrentDelay",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill01[0]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill01[0]]}"
                 }
               },
               "passed": [

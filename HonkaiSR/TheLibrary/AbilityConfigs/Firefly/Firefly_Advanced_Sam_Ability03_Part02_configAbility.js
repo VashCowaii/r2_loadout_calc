@@ -10,12 +10,7 @@ const configAbility = {
       "eventID": 113101,
       "variables": {
         "BattleEvent_Sam_BaseSpeed": {
-          "operator": "Variables[0] (70) || RETURN",
-          "displayLines": "70",
-          "constants": [],
-          "variables": [
-            70
-          ]
+          "displayLines": "70"
         }
       }
     },
@@ -28,28 +23,13 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-508204277\">Advanced_Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]",
       "valuePerStack": {
         "MDF_SpeedUP": {
-          "operator": "Variables[0] (60) || RETURN",
-          "displayLines": "60",
-          "constants": [],
-          "variables": [
-            60
-          ]
+          "displayLines": "60"
         },
         "MDF_StatusResistance": {
-          "operator": "Variables[0] (0.3) || RETURN",
-          "displayLines": "0.3",
-          "constants": [],
-          "variables": [
-            0.3
-          ]
+          "displayLines": "0.3"
         },
         "MDF_PropertyValue": {
-          "operator": "Variables[0] (0.2) || RETURN",
-          "displayLines": "0.2",
-          "constants": [],
-          "variables": [
-            0.2
-          ]
+          "displayLines": "0.2"
         }
       }
     },

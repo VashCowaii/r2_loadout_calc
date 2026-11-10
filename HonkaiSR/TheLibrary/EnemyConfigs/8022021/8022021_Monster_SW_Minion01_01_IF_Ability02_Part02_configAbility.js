@@ -33,12 +33,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-          "displayLines": "{[Skill02[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[0]]}"
-          ]
+          "displayLines": "{[Skill02[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -55,12 +50,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-          "displayLines": "{[Skill02[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[1]]}"
-          ]
+          "displayLines": "{[Skill02[1]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -77,12 +67,7 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-1794338335\">Standard_CTRL_Crazy</a>[<span class=\"descriptionNumberColor\">Outrage</span>]",
       "duration": {
-        "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-        "displayLines": "{[Skill02[2]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill02[2]]}"
-        ]
+        "displayLines": "{[Skill02[2]]}"
       },
       "baseChance": 1
     },
@@ -94,12 +79,7 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-1794338335\">Standard_CTRL_Crazy</a>[<span class=\"descriptionNumberColor\">Outrage</span>]",
       "duration": {
-        "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-        "displayLines": "{[Skill02[2]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill02[2]]}"
-        ]
+        "displayLines": "{[Skill02[2]]}"
       },
       "baseChance": 1
     },

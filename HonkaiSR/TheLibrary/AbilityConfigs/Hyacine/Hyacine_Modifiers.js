@@ -41,13 +41,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_MaxHPRatio) || Variables[1] (MDF_ExtraMaxHPRatio) || ADD || RETURN",
-                "displayLines": "(MDF_MaxHPRatio + MDF_ExtraMaxHPRatio)",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxHPRatio",
-                  "MDF_ExtraMaxHPRatio"
-                ]
+                "displayLines": "(MDF_MaxHPRatio + MDF_ExtraMaxHPRatio)"
               },
               "variableName": "MDF_PropertyValue"
             },
@@ -59,12 +53,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             },
             {
@@ -75,12 +64,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_MaxHPValue) || RETURN",
-                "displayLines": "MDF_MaxHPValue",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxHPValue"
-                ]
+                "displayLines": "MDF_MaxHPValue"
               }
             }
           ]
@@ -134,21 +118,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1897109390\">Memosprite_HyacineServant_Eidolon2SpeedUp</a>[<span class=\"descriptionNumberColor\">Come Sit in My Courtyard</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "MDF_SpeedUpRatio": {
-                      "operator": "Variables[0] (0.3) || RETURN",
-                      "displayLines": "0.3",
-                      "constants": [],
-                      "variables": [
-                        0.3
-                      ]
+                      "displayLines": "0.3"
                     }
                   }
                 }
@@ -179,36 +153,16 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_CurrentHP": {
-              "operator": "Variables[0] (_CurrenMaxtHP) || RETURN",
-              "displayLines": "_CurrenMaxtHP",
-              "constants": [],
-              "variables": [
-                "_CurrenMaxtHP"
-              ]
+              "displayLines": "_CurrenMaxtHP"
             },
             "MDF_MaxHPRatio": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             },
             "MDF_MaxHPValue": {
-              "operator": "Variables[0] (600) || RETURN",
-              "displayLines": "600",
-              "constants": [],
-              "variables": [
-                600
-              ]
+              "displayLines": "600"
             },
             "MDF_ExtraMaxHPRatio": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             }
           }
         }
@@ -225,20 +179,10 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (_Energy) || RETURN",
-                "displayLines": "_Energy",
-                "constants": [],
-                "variables": [
-                  "_Energy"
-                ]
+                "displayLines": "_Energy"
               },
               "maximum": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "assignState": "True",
               "bar#": "Dot"
@@ -258,20 +202,10 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (_Energy) || RETURN",
-                "displayLines": "_Energy",
-                "constants": [],
-                "variables": [
-                  "_Energy"
-                ]
+                "displayLines": "_Energy"
               },
               "maximum": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "assignState": "True",
               "bar#": "Dot"
@@ -298,13 +232,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_HaloMaxHPRatio) || Variables[1] (MDF_ExtraMaxHPRatio) || ADD || RETURN",
-                "displayLines": "(MDF_HaloMaxHPRatio + MDF_ExtraMaxHPRatio)",
-                "constants": [],
-                "variables": [
-                  "MDF_HaloMaxHPRatio",
-                  "MDF_ExtraMaxHPRatio"
-                ]
+                "displayLines": "(MDF_HaloMaxHPRatio + MDF_ExtraMaxHPRatio)"
               },
               "variableName": "MDF_PropertyValue"
             },
@@ -316,12 +244,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             },
             {
@@ -332,12 +255,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_HaloMaxHPValue) || RETURN",
-                "displayLines": "MDF_HaloMaxHPValue",
-                "constants": [],
-                "variables": [
-                  "MDF_HaloMaxHPValue"
-                ]
+                "displayLines": "MDF_HaloMaxHPValue"
               }
             },
             {
@@ -350,20 +268,10 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (_Energy) || RETURN",
-                "displayLines": "_Energy",
-                "constants": [],
-                "variables": [
-                  "_Energy"
-                ]
+                "displayLines": "_Energy"
               },
               "maximum": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "assignState": "True",
               "bar#": "Dot"
@@ -408,12 +316,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (0.08) || RETURN",
-                    "displayLines": "0.08",
-                    "constants": [],
-                    "variables": [
-                      0.08
-                    ]
+                    "displayLines": "0.08"
                   },
                   "formula": "Heal from Healer's MaxHP"
                 }
@@ -463,20 +366,10 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_Energy) || RETURN",
-                    "displayLines": "_Energy",
-                    "constants": [],
-                    "variables": [
-                      "_Energy"
-                    ]
+                    "displayLines": "_Energy"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "assignState": "True",
                   "bar#": "Dot"
@@ -508,13 +401,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_DamageAddRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_DamageAddRatio * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageAddRatio",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_DamageAddRatio * MDF_Layer)"
               },
               "variableName": "MDF_DamageAddRatioTotal"
             },
@@ -526,12 +413,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageAddRatioTotal) || RETURN",
-                "displayLines": "MDF_DamageAddRatioTotal",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageAddRatioTotal"
-                ]
+                "displayLines": "MDF_DamageAddRatioTotal"
               }
             }
           ]
@@ -553,12 +435,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -583,12 +460,7 @@ const configAbility = {
                 "value1": "CurrentHP%",
                 "compareType": "<=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_HPRatio) || RETURN",
-                  "displayLines": "MDF_HPRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_HPRatio"
-                  ]
+                  "displayLines": "MDF_HPRatio"
                 }
               },
               "passed": [
@@ -597,12 +469,7 @@ const configAbility = {
                   "on": "Healer",
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoingSUM</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_HealRatio) || RETURN",
-                    "displayLines": "MDF_HealRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HealRatio"
-                    ]
+                    "displayLines": "MDF_HealRatio"
                   }
                 }
               ]
@@ -620,12 +487,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_CritChance) || RETURN",
-                "displayLines": "MDF_CritChance",
-                "constants": [],
-                "variables": [
-                  "MDF_CritChance"
-                ]
+                "displayLines": "MDF_CritChance"
               }
             }
           ]
@@ -648,28 +510,13 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"672502407\">Hyacine_PointB1_Effect</a>",
               "valuePerStack": {
                 "MDF_CritChance": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 },
                 "MDF_HPRatio": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
+                  "displayLines": "0.5"
                 },
                 "MDF_HealRatio": {
-                  "operator": "Variables[0] (0.25) || RETURN",
-                  "displayLines": "0.25",
-                  "constants": [],
-                  "variables": [
-                    0.25
-                  ]
+                  "displayLines": "0.25"
                 }
               }
             }
@@ -701,28 +548,13 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"672502407\">Hyacine_PointB1_Effect</a>",
                   "valuePerStack": {
                     "MDF_CritChance": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     },
                     "MDF_HPRatio": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     },
                     "MDF_HealRatio": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     }
                   }
                 }
@@ -751,12 +583,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (_MaxHPAdd) || RETURN",
-                "displayLines": "_MaxHPAdd",
-                "constants": [],
-                "variables": [
-                  "_MaxHPAdd"
-                ]
+                "displayLines": "_MaxHPAdd"
               }
             },
             {
@@ -767,12 +594,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoingConverted</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (_HealHPRatioAdd) || RETURN",
-                "displayLines": "_HealHPRatioAdd",
-                "constants": [],
-                "variables": [
-                  "_HealHPRatioAdd"
-                ]
+                "displayLines": "_HealHPRatioAdd"
               }
             },
             {
@@ -805,12 +627,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (_MaxCritDmgAdd) || RETURN",
-                    "displayLines": "_MaxCritDmgAdd",
-                    "constants": [],
-                    "variables": [
-                      "_MaxCritDmgAdd"
-                    ]
+                    "displayLines": "_MaxCritDmgAdd"
                   }
                 }
               ]
@@ -847,12 +664,7 @@ const configAbility = {
                 "value1": "_CurrentSpeed",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (200) || RETURN",
-                  "displayLines": "200",
-                  "constants": [],
-                  "variables": [
-                    200
-                  ]
+                  "displayLines": "200"
                 }
               },
               "passed": [
@@ -868,26 +680,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (_CurrentSpeedConvert) || SUB || RETURN",
-                    "displayLines": "(_CurrentSpeed - _CurrentSpeedConvert)",
-                    "constants": [],
-                    "variables": [
-                      "_CurrentSpeed",
-                      "_CurrentSpeedConvert"
-                    ]
+                    "displayLines": "(_CurrentSpeed - _CurrentSpeedConvert)"
                   },
                   "variableName": "_CurrentSpeed"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (200) || SUB || RETURN",
-                    "displayLines": "(_CurrentSpeed - 200)",
-                    "constants": [],
-                    "variables": [
-                      "_CurrentSpeed",
-                      200
-                    ]
+                    "displayLines": "(_CurrentSpeed - 200)"
                   },
                   "variableName": "_OverCountSpeedValue"
                 },
@@ -898,24 +698,14 @@ const configAbility = {
                     "value1": "_OverCountSpeedValue",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (200) || RETURN",
-                      "displayLines": "200",
-                      "constants": [],
-                      "variables": [
-                        200
-                      ]
+                      "displayLines": "200"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (200) || RETURN",
-                        "displayLines": "200",
-                        "constants": [],
-                        "variables": [
-                          200
-                        ]
+                        "displayLines": "200"
                       },
                       "variableName": "_OverCountSpeedValue"
                     }
@@ -928,27 +718,14 @@ const configAbility = {
                     "value1": "_OverCountSpeedValue",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (FLOOR) || Variables[1] (_OverCountSpeedValue) || Variables[2] (1) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.01) || MUL || RETURN",
-                        "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_OverCountSpeedValue / 1)) * 0.01)",
-                        "constants": [],
-                        "variables": [
-                          "FLOOR",
-                          "_OverCountSpeedValue",
-                          1,
-                          0.01
-                        ]
+                        "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_OverCountSpeedValue / 1)) * 0.01)"
                       },
                       "variableName": "_HealHPRatioAdd"
                     },
@@ -962,15 +739,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (FLOOR) || Variables[1] (_OverCountSpeedValue) || Variables[2] (1) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.02) || MUL || RETURN",
-                            "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_OverCountSpeedValue / 1)) * 0.02)",
-                            "constants": [],
-                            "variables": [
-                              "FLOOR",
-                              "_OverCountSpeedValue",
-                              1,
-                              0.02
-                            ]
+                            "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_OverCountSpeedValue / 1)) * 0.02)"
                           },
                           "variableName": "_MaxCritDmgAdd"
                         }
@@ -999,28 +768,13 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1110430040\">Hyacine_PointB3_Effect</a>[<span class=\"descriptionNumberColor\">Tempestuous Halt</span>]",
                   "valuePerStack": {
                     "_MaxHPAdd": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     },
                     "_HealHPRatioAdd": {
-                      "operator": "Variables[0] (_HealHPRatioAdd) || RETURN",
-                      "displayLines": "_HealHPRatioAdd",
-                      "constants": [],
-                      "variables": [
-                        "_HealHPRatioAdd"
-                      ]
+                      "displayLines": "_HealHPRatioAdd"
                     },
                     "_MaxCritDmgAdd": {
-                      "operator": "Variables[0] (_MaxCritDmgAdd) || RETURN",
-                      "displayLines": "_MaxCritDmgAdd",
-                      "constants": [],
-                      "variables": [
-                        "_MaxCritDmgAdd"
-                      ]
+                      "displayLines": "_MaxCritDmgAdd"
                     }
                   }
                 }

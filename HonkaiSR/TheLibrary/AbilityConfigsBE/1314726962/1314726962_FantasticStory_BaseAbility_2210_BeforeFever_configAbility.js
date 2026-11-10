@@ -13,12 +13,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2210_BeforeFever_P1_MaxCount",
       "resetValue": {
-        "operator": "Variables[0] (ADF_1_Get) || RETURN",
-        "displayLines": "ADF_1_Get",
-        "constants": [],
-        "variables": [
-          "ADF_1_Get"
-        ]
+        "displayLines": "ADF_1_Get"
       },
       "scope": "ContextCaster"
     },
@@ -30,12 +25,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2210_BeforeFever_P2_Ratio",
       "resetValue": {
-        "operator": "Variables[0] (ADF_2_Get) || RETURN",
-        "displayLines": "ADF_2_Get",
-        "constants": [],
-        "variables": [
-          "ADF_2_Get"
-        ]
+        "displayLines": "ADF_2_Get"
       },
       "scope": "ContextCaster"
     },
@@ -47,12 +37,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2210_BeforeFever_P3_ElationPoint",
       "resetValue": {
-        "operator": "Variables[0] (ADF_3_Get) || RETURN",
-        "displayLines": "ADF_3_Get",
-        "constants": [],
-        "variables": [
-          "ADF_3_Get"
-        ]
+        "displayLines": "ADF_3_Get"
       },
       "scope": "ContextCaster"
     },
@@ -70,20 +55,10 @@ const configAbility = {
       "eventID": 30505,
       "variables": {
         "Ability01_P1_HitCount": {
-          "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2210_BeforeFever_P1_MaxCount) || RETURN",
-          "displayLines": "DV_FantasticStory_BaseAbility_2210_BeforeFever_P1_MaxCount",
-          "constants": [],
-          "variables": [
-            "DV_FantasticStory_BaseAbility_2210_BeforeFever_P1_MaxCount"
-          ]
+          "displayLines": "DV_FantasticStory_BaseAbility_2210_BeforeFever_P1_MaxCount"
         },
         "Ability01_P2_DamagePercentage": {
-          "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2210_BeforeFever_P2_Ratio) || RETURN",
-          "displayLines": "DV_FantasticStory_BaseAbility_2210_BeforeFever_P2_Ratio",
-          "constants": [],
-          "variables": [
-            "DV_FantasticStory_BaseAbility_2210_BeforeFever_P2_Ratio"
-          ]
+          "displayLines": "DV_FantasticStory_BaseAbility_2210_BeforeFever_P2_Ratio"
         }
       }
     }
@@ -127,12 +102,7 @@ const configAbility = {
                 {
                   "name": "Adjust Team Punchline Value",
                   "value": {
-                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2210_BeforeFever_P3_ElationPoint) || RETURN",
-                    "displayLines": "DV_FantasticStory_BaseAbility_2210_BeforeFever_P3_ElationPoint",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_BaseAbility_2210_BeforeFever_P3_ElationPoint"
-                    ]
+                    "displayLines": "DV_FantasticStory_BaseAbility_2210_BeforeFever_P3_ElationPoint"
                   },
                   "adjustment": "Add"
                 }

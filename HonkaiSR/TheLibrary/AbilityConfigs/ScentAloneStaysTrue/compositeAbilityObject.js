@@ -59,12 +59,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -90,13 +85,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (SkillEquip_23032_BreakDamageRatioByOwner) || Variables[1] (SkillEquip_23032_BreakDamageRatioConvertByOwner[*?]) || SUB || RETURN",
-                    "displayLines": "(SkillEquip_23032_BreakDamageRatioByOwner - SkillEquip_23032_BreakDamageRatioConvertByOwner[*?])",
-                    "constants": [],
-                    "variables": [
-                      "SkillEquip_23032_BreakDamageRatioByOwner",
-                      "SkillEquip_23032_BreakDamageRatioConvertByOwner[*?]"
-                    ]
+                    "displayLines": "(SkillEquip_23032_BreakDamageRatioByOwner - SkillEquip_23032_BreakDamageRatioConvertByOwner[*?])"
                   },
                   "variableName": "SkillEquip_23032_BreakDamageRatioByCompare"
                 },
@@ -121,12 +110,7 @@ const compositeAbilityObject = {
                             "value1": "SkillEquip_23032_BreakDamageRatioByCompare",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (1.5) || RETURN",
-                              "displayLines": "1.5",
-                              "constants": [],
-                              "variables": [
-                                1.5
-                              ]
+                              "displayLines": "1.5"
                             }
                           },
                           "passed": [
@@ -138,22 +122,11 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"-887920794\">LC_23032_Sub</a>[<span class=\"descriptionNumberColor\">Woefree</span>]",
                               "duration": {
-                                "operator": "Variables[0] (2) || RETURN",
-                                "displayLines": "2",
-                                "constants": [],
-                                "variables": [
-                                  2
-                                ]
+                                "displayLines": "2"
                               },
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (0.1) || Variables[1] (0.08) || ADD || RETURN",
-                                  "displayLines": "(0.1 + 0.08)",
-                                  "constants": [],
-                                  "variables": [
-                                    0.1,
-                                    0.08
-                                  ]
+                                  "displayLines": "(0.1 + 0.08)"
                                 }
                               }
                             }
@@ -167,21 +140,11 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"-887920794\">LC_23032_Sub</a>[<span class=\"descriptionNumberColor\">Woefree</span>]",
                               "duration": {
-                                "operator": "Variables[0] (2) || RETURN",
-                                "displayLines": "2",
-                                "constants": [],
-                                "variables": [
-                                  2
-                                ]
+                                "displayLines": "2"
                               },
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (0.1) || RETURN",
-                                  "displayLines": "0.1",
-                                  "constants": [],
-                                  "variables": [
-                                    0.1
-                                  ]
+                                  "displayLines": "0.1"
                                 }
                               }
                             }

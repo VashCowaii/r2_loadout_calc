@@ -58,14 +58,7 @@ const configAbility = {
           },
           "searchRandom": true,
           "maxTargets": {
-            "operator": "Constants[0] (2) || Variables[0] (_TargetCount) || SUB || RETURN",
-            "displayLines": "(2 - _TargetCount)",
-            "constants": [
-              2
-            ],
-            "variables": [
-              "_TargetCount"
-            ]
+            "displayLines": "(2 - _TargetCount)"
           },
           "conditions": {
             "name": "Has Modifier",

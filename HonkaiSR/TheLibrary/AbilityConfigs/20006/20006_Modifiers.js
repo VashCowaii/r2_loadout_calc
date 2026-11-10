@@ -38,20 +38,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Will of Steel</span>]",
                   "valuePerStack": {
                     "MDF_SpeedUpPerLayer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_8512) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_8512",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_8512"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_8512"
                     },
                     "MDF_AttackUpPerLayer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_8531) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_8531",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_8531"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_8531"
                     }
                   }
                 },
@@ -217,12 +207,7 @@ const configAbility = {
                               "conditions": {
                                 "name": "Enemy ID",
                                 "ID": {
-                                  "operator": "Variables[0] (SummonID01) || RETURN",
-                                  "displayLines": "SummonID01",
-                                  "constants": [],
-                                  "variables": [
-                                    "SummonID01"
-                                  ]
+                                  "displayLines": "SummonID01"
                                 },
                                 "target": {
                                   "name": "Target Name",
@@ -477,20 +462,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Will of Steel</span>]",
                   "valuePerStack": {
                     "MDF_SpeedUpPerLayer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_8516) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_8516",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_8516"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_8516"
                     },
                     "MDF_AttackUpPerLayer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_8515) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_8515",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_8515"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_8515"
                     }
                   }
                 }
@@ -505,20 +480,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Will of Steel</span>]",
                   "valuePerStack": {
                     "MDF_SpeedUpPerLayer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_8512) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_8512",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_8512"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_8512"
                     },
                     "MDF_AttackUpPerLayer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_8531) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_8531",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_8531"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_8531"
                     }
                   }
                 }
@@ -547,13 +512,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedUpPerLayer) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_SpeedUpPerLayer * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedUpPerLayer",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_SpeedUpPerLayer * MDF_Layer)"
               }
             },
             {
@@ -564,13 +523,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AttackUpPerLayer) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_AttackUpPerLayer * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackUpPerLayer",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_AttackUpPerLayer * MDF_Layer)"
               }
             }
           ]
@@ -603,12 +556,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedUp) || RETURN",
-                "displayLines": "MDF_SpeedUp",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedUp"
-                ]
+                "displayLines": "MDF_SpeedUp"
               }
             }
           ]

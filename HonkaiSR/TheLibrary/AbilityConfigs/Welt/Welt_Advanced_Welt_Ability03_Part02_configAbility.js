@@ -13,21 +13,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (1.5) || RETURN",
-          "displayLines": "1.5",
-          "constants": [],
-          "variables": [
-            1.5
-          ]
+          "displayLines": "1.5"
         },
         "HitSplit": 0.1,
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -43,21 +33,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (1.5) || RETURN",
-          "displayLines": "1.5",
-          "constants": [],
-          "variables": [
-            1.5
-          ]
+          "displayLines": "1.5"
         },
         "HitSplit": 0.9,
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -73,30 +53,15 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
       "duration": 1,
       "baseChance": {
-        "operator": "Variables[0] (1) || RETURN",
-        "displayLines": "1",
-        "constants": [],
-        "variables": [
-          1
-        ]
+        "displayLines": "1"
       },
       "immediateEffect": true,
       "valuePerStack": {
         "MDF_SpeedDownRatio": {
-          "operator": "Variables[0] (0.1) || RETURN",
-          "displayLines": "0.1",
-          "constants": [],
-          "variables": [
-            0.1
-          ]
+          "displayLines": "0.1"
         },
         "MDF_ActionDelayRatio": {
-          "operator": "Variables[0] (0.12) || RETURN",
-          "displayLines": "0.12",
-          "constants": [],
-          "variables": [
-            0.12
-          ]
+          "displayLines": "0.12"
         }
       }
     },

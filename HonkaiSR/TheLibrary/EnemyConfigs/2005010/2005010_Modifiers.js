@@ -92,14 +92,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Feixiao_BattleScore2_Flag) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(Feixiao_BattleScore2_Flag + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Feixiao_BattleScore2_Flag"
-                    ]
+                    "displayLines": "(Feixiao_BattleScore2_Flag + 1)"
                   },
                   "variableName": "Feixiao_BattleScore2_Flag"
                 },
@@ -535,12 +528,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1482768789\">Monster_W2_Feixiao_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]",
                   "valuePerStack": {
                     "MDF_StanceBreakTakenRatio": {
-                      "operator": "Variables[0] (MDF_StanceBreakTakenRatio) || RETURN",
-                      "displayLines": "MDF_StanceBreakTakenRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_StanceBreakTakenRatio"
-                      ]
+                      "displayLines": "MDF_StanceBreakTakenRatio"
                     }
                   }
                 }
@@ -640,14 +628,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (BaseSpeed) || SUB || RETURN",
-                "displayLines": "(0 - BaseSpeed)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "BaseSpeed"
-                ]
+                "displayLines": "(0 - BaseSpeed)"
               }
             }
           ]
@@ -769,12 +750,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"73301376\">Standard_SuperArmor</a>[<span class=\"descriptionNumberColor\">Safeguard</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeResistance": {
-                  "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[0]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill02[0]]}"
                 }
               }
             },
@@ -804,12 +780,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"221422164\">Monster_W2_Feixiao_ModifyActionDelay</a>",
               "valuePerStack": {
                 "MDF_BreakActionDelay": {
-                  "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[1]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill02[1]]}"
                 }
               }
             },
@@ -822,12 +793,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1917647041\">Standard_SuperArmorBreak</a>[<span class=\"descriptionNumberColor\">Safeguard Broken</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeTakenRatio": {
-                  "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[2]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill02[2]]}"
                 }
               }
             }
@@ -853,12 +819,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"73301376\">Standard_SuperArmor</a>[<span class=\"descriptionNumberColor\">Safeguard</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeResistance": {
-                  "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[0]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill02[0]]}"
                 }
               }
             },
@@ -1483,12 +1444,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessVulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_StanceBreakTakenRatio) || RETURN",
-                "displayLines": "MDF_StanceBreakTakenRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_StanceBreakTakenRatio"
-                ]
+                "displayLines": "MDF_StanceBreakTakenRatio"
               }
             },
             {
@@ -1720,12 +1676,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessVulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_StanceBreakTakenRatio) || RETURN",
-                "displayLines": "MDF_StanceBreakTakenRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_StanceBreakTakenRatio"
-                ]
+                "displayLines": "MDF_StanceBreakTakenRatio"
               }
             },
             {

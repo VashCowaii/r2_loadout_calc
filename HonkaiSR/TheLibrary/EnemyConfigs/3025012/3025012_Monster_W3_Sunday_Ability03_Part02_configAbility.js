@@ -13,20 +13,10 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"2144716663\">Standard_CTRL_Sleep</a>[<span class=\"descriptionNumberColor\">Alien Dream</span>]",
       "duration": {
-        "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-        "displayLines": "{[Skill03[1]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill03[1]]}"
-        ]
+        "displayLines": "{[Skill03[1]]}"
       },
       "baseChance": {
-        "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-        "displayLines": "{[Skill03[0]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill03[0]]}"
-        ]
+        "displayLines": "{[Skill03[0]]}"
       },
       "valuePerStack": {
         "MDF_AllDamageAddedRatio": 0.5

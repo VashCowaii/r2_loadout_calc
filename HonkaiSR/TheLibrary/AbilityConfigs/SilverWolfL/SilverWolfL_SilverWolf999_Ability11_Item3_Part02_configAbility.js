@@ -15,12 +15,7 @@ const configAbility = {
     {
       "name": "Adjust Team Punchline Value",
       "value": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "adjustment": "Add"
     },
@@ -69,12 +64,7 @@ const configAbility = {
     {
       "name": "SWITCH",
       "switchValue": {
-        "operator": "Variables[0] (TDF_EnemyCountForPerformance) || RETURN",
-        "displayLines": "TDF_EnemyCountForPerformance",
-        "constants": [],
-        "variables": [
-          "TDF_EnemyCountForPerformance"
-        ]
+        "displayLines": "TDF_EnemyCountForPerformance"
       },
       "hasBreak": false,
       "caseEvents": [
@@ -228,26 +218,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (#CL_ADF_Index) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(#CL_ADF_Index + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "#CL_ADF_Index"
-            ]
+            "displayLines": "(#CL_ADF_Index + 1)"
           },
           "variableName": "#CL_ADF_Index"
         },
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (#CL_ADF_Index) || RETURN",
-            "displayLines": "#CL_ADF_Index",
-            "constants": [],
-            "variables": [
-              "#CL_ADF_Index"
-            ]
+            "displayLines": "#CL_ADF_Index"
           },
           "hasBreak": false,
           "caseEvents": [
@@ -258,12 +236,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (#CL_ADF_Delay1) || RETURN",
-                    "displayLines": "#CL_ADF_Delay1",
-                    "constants": [],
-                    "variables": [
-                      "#CL_ADF_Delay1"
-                    ]
+                    "displayLines": "#CL_ADF_Delay1"
                   },
                   "variableName": "#CL_ADF_Delay"
                 }
@@ -276,12 +249,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (#CL_ADF_Delay2) || RETURN",
-                    "displayLines": "#CL_ADF_Delay2",
-                    "constants": [],
-                    "variables": [
-                      "#CL_ADF_Delay2"
-                    ]
+                    "displayLines": "#CL_ADF_Delay2"
                   },
                   "variableName": "#CL_ADF_Delay"
                 }
@@ -294,12 +262,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (#CL_ADF_Delay3) || RETURN",
-                    "displayLines": "#CL_ADF_Delay3",
-                    "constants": [],
-                    "variables": [
-                      "#CL_ADF_Delay3"
-                    ]
+                    "displayLines": "#CL_ADF_Delay3"
                   },
                   "variableName": "#CL_ADF_Delay"
                 }
@@ -312,12 +275,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (#CL_ADF_Delay4) || RETURN",
-                    "displayLines": "#CL_ADF_Delay4",
-                    "constants": [],
-                    "variables": [
-                      "#CL_ADF_Delay4"
-                    ]
+                    "displayLines": "#CL_ADF_Delay4"
                   },
                   "variableName": "#CL_ADF_Delay"
                 }
@@ -330,12 +288,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (#CL_ADF_Delay5) || RETURN",
-                    "displayLines": "#CL_ADF_Delay5",
-                    "constants": [],
-                    "variables": [
-                      "#CL_ADF_Delay5"
-                    ]
+                    "displayLines": "#CL_ADF_Delay5"
                   },
                   "variableName": "#CL_ADF_Delay"
                 }
@@ -394,31 +347,14 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "DamageElation": {
-                  "operator": "Variables[0] (0.9) || RETURN",
-                  "displayLines": "0.9",
-                  "constants": [],
-                  "variables": [
-                    0.9
-                  ]
+                  "displayLines": "0.9"
                 },
                 "dmgFormula": "Elation Scaling",
                 "HitSplit": {
-                  "operator": "Constants[0] (1) || Variables[0] (TDF_EnemyCountForDamage) || DIV || RETURN",
-                  "displayLines": "(1 / TDF_EnemyCountForDamage)",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    "TDF_EnemyCountForDamage"
-                  ]
+                  "displayLines": "(1 / TDF_EnemyCountForDamage)"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "ToughnessDMGType": {
                   "DamageType": "Imaginary"

@@ -8,12 +8,7 @@ const configAbility = {
       "name": "Create Enemy as Body Part",
       "partName": "Middle",
       "value": {
-        "operator": "Variables[0] (PartEntity2_MonsterID) || RETURN",
-        "displayLines": "PartEntity2_MonsterID",
-        "constants": [],
-        "variables": [
-          "PartEntity2_MonsterID"
-        ]
+        "displayLines": "PartEntity2_MonsterID"
       },
       "offset": -2,
       "type": 2
@@ -26,12 +21,7 @@ const configAbility = {
         "target": "{{Target Part 2}}"
       },
       "set": {
-        "operator": "Variables[0] ({[SkillP01[5]]}) || RETURN",
-        "displayLines": "{[SkillP01[5]]}",
-        "constants": [],
-        "variables": [
-          "{[SkillP01[5]]}"
-        ]
+        "displayLines": "{[SkillP01[5]]}"
       }
     },
     {
@@ -60,12 +50,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-2081849040\">Enemy_AML_Boss_IF_Part_Revive</a>",
       "valuePerStack": {
         "MDF_PartReviveDelay": {
-          "operator": "Variables[0] ({[SkillP01[5]]}) || RETURN",
-          "displayLines": "{[SkillP01[5]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[5]]}"
-          ]
+          "displayLines": "{[SkillP01[5]]}"
         }
       }
     },
@@ -147,12 +132,7 @@ const configAbility = {
           },
           "scope": "TargetEntity",
           "value": {
-            "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-            "displayLines": "{[SkillEX03[0]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillEX03[0]]}"
-            ]
+            "displayLines": "{[SkillEX03[0]]}"
           },
           "variableName": "SkillEX03_P1_AttackAddedRatio"
         },
@@ -164,12 +144,7 @@ const configAbility = {
           },
           "scope": "TargetEntity",
           "value": {
-            "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
-            "displayLines": "{[SkillEX03[1]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillEX03[1]]}"
-            ]
+            "displayLines": "{[SkillEX03[1]]}"
           },
           "variableName": "SkillEX03_P2_SpeedAddedRatio"
         },
@@ -181,12 +156,7 @@ const configAbility = {
           },
           "scope": "TargetEntity",
           "value": {
-            "operator": "Variables[0] ({[SkillEX03[2]]}) || RETURN",
-            "displayLines": "{[SkillEX03[2]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillEX03[2]]}"
-            ]
+            "displayLines": "{[SkillEX03[2]]}"
           },
           "variableName": "SkillEX03_P3_HealHPRatio"
         },
@@ -198,12 +168,7 @@ const configAbility = {
           },
           "scope": "TargetEntity",
           "value": {
-            "operator": "Variables[0] ({[SkillEX03[3]]}) || RETURN",
-            "displayLines": "{[SkillEX03[3]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillEX03[3]]}"
-            ]
+            "displayLines": "{[SkillEX03[3]]}"
           },
           "variableName": "SkillEX03_P4_ActionDelayRatio"
         }
@@ -229,20 +194,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-146543153\">Enemy_W2_Cocolia_IF_WeaknessCount</a>",
           "valuePerStack": {
             "MDF_TokenDamageReduceRatio": {
-              "operator": "Variables[0] ({[SkillEX04[0]]}) || RETURN",
-              "displayLines": "{[SkillEX04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX04[0]]}"
-              ]
+              "displayLines": "{[SkillEX04[0]]}"
             },
             "MDF_TokenDamageAddRatioPerlayer": {
-              "operator": "Variables[0] ({[SkillEX04[1]]}) || RETURN",
-              "displayLines": "{[SkillEX04[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX04[1]]}"
-              ]
+              "displayLines": "{[SkillEX04[1]]}"
             }
           }
         }

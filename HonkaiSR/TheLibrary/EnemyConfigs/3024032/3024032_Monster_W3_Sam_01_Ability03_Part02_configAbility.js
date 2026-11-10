@@ -22,12 +22,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-          "displayLines": "{[Skill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "{[Skill03[0]]}"
         },
         "HitSplit": 0.4,
         "Toughness": null,
@@ -45,12 +40,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-          "displayLines": "{[Skill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "{[Skill03[0]]}"
         },
         "HitSplit": 0.6,
         "Toughness": null,
@@ -82,12 +72,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (SummonMonsterCount) || RETURN",
-            "displayLines": "SummonMonsterCount",
-            "constants": [],
-            "variables": [
-              "SummonMonsterCount"
-            ]
+            "displayLines": "SummonMonsterCount"
           },
           "execute": [
             {
@@ -100,12 +85,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-                  "displayLines": "{[Skill03[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[1]]}"
-                  ]
+                  "displayLines": "{[Skill03[1]]}"
                 },
                 "Toughness": null,
                 "Tags": null,

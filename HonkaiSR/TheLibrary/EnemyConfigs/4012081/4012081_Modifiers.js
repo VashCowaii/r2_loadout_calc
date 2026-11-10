@@ -153,14 +153,7 @@ const configAbility = {
                       "variableName": "Thunder_CountDark",
                       "context": "TargetEntity",
                       "value": {
-                        "operator": "Constants[0] (0) || Variables[0] ({[Skill02[3]]}) || SUB || RETURN",
-                        "displayLines": "(0 - {[Skill02[3]]})",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "{[Skill02[3]]}"
-                        ]
+                        "displayLines": "(0 - {[Skill02[3]]})"
                       },
                       "max": 999
                     },
@@ -251,14 +244,7 @@ const configAbility = {
                       "variableName": "Sunny_Temperature",
                       "context": "TargetEntity",
                       "value": {
-                        "operator": "Constants[0] (0) || Variables[0] ({[Skill02[4]]}) || SUB || RETURN",
-                        "displayLines": "(0 - {[Skill02[4]]})",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "{[Skill02[4]]}"
-                        ]
+                        "displayLines": "(0 - {[Skill02[4]]})"
                       },
                       "max": 999
                     },

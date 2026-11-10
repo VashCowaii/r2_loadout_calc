@@ -26,12 +26,7 @@ const configAbility = {
           "eventID": 30501,
           "variables": {
             "DV_BE_BaseSpeed": {
-              "operator": "Variables[0] (DV_FeverBESpeed) || RETURN",
-              "displayLines": "DV_FeverBESpeed",
-              "constants": [],
-              "variables": [
-                "DV_FeverBESpeed"
-              ]
+              "displayLines": "DV_FeverBESpeed"
             }
           },
           "whenCreated": [
@@ -62,12 +57,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"773567825\">Modifier_FantasticStory_BaseAbility_2110_AddSP</a>",
       "valuePerStack": {
         "BattleEvent_P1_ADF_Get": {
-          "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2110_EnterFever_P1_Ratio) || RETURN",
-          "displayLines": "DV_FantasticStory_BaseAbility_2110_EnterFever_P1_Ratio",
-          "constants": [],
-          "variables": [
-            "DV_FantasticStory_BaseAbility_2110_EnterFever_P1_Ratio"
-          ]
+          "displayLines": "DV_FantasticStory_BaseAbility_2110_EnterFever_P1_Ratio"
         }
       },
       "casterAssign": "TargetSelf"
@@ -93,12 +83,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Constants[0] (0) || RETURN",
-        "displayLines": "0",
-        "constants": [
-          0
-        ],
-        "variables": []
+        "displayLines": "0"
       },
       "variableName": "DV_FantasticStory_BaseAbility_CountSum"
     }

@@ -182,14 +182,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] ({[Skill03[0]]}) || Variables[1] (Skill03ExtraCount) || Variables[2] ({[Skill03[1]]}) || MUL || ADD || RETURN",
-        "displayLines": "({[Skill03[0]]} + (Skill03ExtraCount * {[Skill03[1]]}))",
-        "constants": [],
-        "variables": [
-          "{[Skill03[0]]}",
-          "Skill03ExtraCount",
-          "{[Skill03[1]]}"
-        ]
+        "displayLines": "({[Skill03[0]]} + (Skill03ExtraCount * {[Skill03[1]]}))"
       },
       "variableName": "Skill03TotalDamage"
     },
@@ -202,12 +195,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (Skill03TotalDamage) || RETURN",
-          "displayLines": "Skill03TotalDamage",
-          "constants": [],
-          "variables": [
-            "Skill03TotalDamage"
-          ]
+          "displayLines": "Skill03TotalDamage"
         },
         "HitSplit": 0.1,
         "Toughness": null,
@@ -225,12 +213,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (Skill03TotalDamage) || RETURN",
-          "displayLines": "Skill03TotalDamage",
-          "constants": [],
-          "variables": [
-            "Skill03TotalDamage"
-          ]
+          "displayLines": "Skill03TotalDamage"
         },
         "HitSplit": 0.1,
         "Toughness": null,
@@ -248,12 +231,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (Skill03TotalDamage) || RETURN",
-          "displayLines": "Skill03TotalDamage",
-          "constants": [],
-          "variables": [
-            "Skill03TotalDamage"
-          ]
+          "displayLines": "Skill03TotalDamage"
         },
         "HitSplit": 0.1,
         "Toughness": null,
@@ -271,12 +249,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (Skill03TotalDamage) || RETURN",
-          "displayLines": "Skill03TotalDamage",
-          "constants": [],
-          "variables": [
-            "Skill03TotalDamage"
-          ]
+          "displayLines": "Skill03TotalDamage"
         },
         "HitSplit": 0.7,
         "Toughness": null,

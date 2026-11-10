@@ -19,23 +19,13 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[Skill12[0]]}) || RETURN",
-            "displayLines": "{[Skill12[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill12[0]]}"
-            ]
+            "displayLines": "{[Skill12[0]]}"
           },
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID3) || RETURN",
-                "displayLines": "SummonID3",
-                "constants": [],
-                "variables": [
-                  "SummonID3"
-                ]
+                "displayLines": "SummonID3"
               },
               "locationType": "BeforeCaster"
             }
@@ -46,23 +36,13 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[Skill12[0]]}) || RETURN",
-            "displayLines": "{[Skill12[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill12[0]]}"
-            ]
+            "displayLines": "{[Skill12[0]]}"
           },
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID3) || RETURN",
-                "displayLines": "SummonID3",
-                "constants": [],
-                "variables": [
-                  "SummonID3"
-                ]
+                "displayLines": "SummonID3"
               },
               "locationType": "AfterCaster"
             }
@@ -85,23 +65,13 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[Skill12[1]]}) || RETURN",
-            "displayLines": "{[Skill12[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill12[1]]}"
-            ]
+            "displayLines": "{[Skill12[1]]}"
           },
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID3) || RETURN",
-                "displayLines": "SummonID3",
-                "constants": [],
-                "variables": [
-                  "SummonID3"
-                ]
+                "displayLines": "SummonID3"
               },
               "locationType": "BeforeCaster"
             }
@@ -112,23 +82,13 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[Skill12[1]]}) || RETURN",
-            "displayLines": "{[Skill12[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill12[1]]}"
-            ]
+            "displayLines": "{[Skill12[1]]}"
           },
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID3) || RETURN",
-                "displayLines": "SummonID3",
-                "constants": [],
-                "variables": [
-                  "SummonID3"
-                ]
+                "displayLines": "SummonID3"
               },
               "locationType": "AfterCaster"
             }
@@ -157,12 +117,7 @@ const configAbility = {
           {
             "name": "Enemy ID",
             "ID": {
-              "operator": "Variables[0] (SummonID3) || RETURN",
-              "displayLines": "SummonID3",
-              "constants": [],
-              "variables": [
-                "SummonID3"
-              ]
+              "displayLines": "SummonID3"
             },
             "target": {
               "name": "Target Name",
@@ -195,12 +150,7 @@ const configAbility = {
           {
             "name": "Enemy ID",
             "ID": {
-              "operator": "Variables[0] (SummonID3) || RETURN",
-              "displayLines": "SummonID3",
-              "constants": [],
-              "variables": [
-                "SummonID3"
-              ]
+              "displayLines": "SummonID3"
             },
             "target": {
               "name": "Target Name",

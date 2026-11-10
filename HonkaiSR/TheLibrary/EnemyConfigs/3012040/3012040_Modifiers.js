@@ -396,12 +396,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1632940892\">Enemy_W3_Ghost_Ability01_Parasitize_Target_ElementDamageTakenUp</a>",
               "valuePerStack": {
                 "MDF_Property": {
-                  "operator": "Variables[0] (MDF_ElementDamageTakenUp) || RETURN",
-                  "displayLines": "MDF_ElementDamageTakenUp",
-                  "constants": [],
-                  "variables": [
-                    "MDF_ElementDamageTakenUp"
-                  ]
+                  "displayLines": "MDF_ElementDamageTakenUp"
                 }
               }
             }
@@ -473,13 +468,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Damage_Total) || Variables[1] (Damage_Hit) || ADD || RETURN",
-                    "displayLines": "(Damage_Total + Damage_Hit)",
-                    "constants": [],
-                    "variables": [
-                      "Damage_Total",
-                      "Damage_Hit"
-                    ]
+                    "displayLines": "(Damage_Total + Damage_Hit)"
                   },
                   "variableName": "Damage_Total"
                 }
@@ -587,13 +576,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "healFlat": {
-                    "operator": "Variables[0] (Damage_Total) || Variables[1] (MDF_HealPercentage_BeAttacked) || MUL || RETURN",
-                    "displayLines": "(Damage_Total * MDF_HealPercentage_BeAttacked)",
-                    "constants": [],
-                    "variables": [
-                      "Damage_Total",
-                      "MDF_HealPercentage_BeAttacked"
-                    ]
+                    "displayLines": "(Damage_Total * MDF_HealPercentage_BeAttacked)"
                   },
                   "formula": "Heal from Healer's MaxHP"
                 }

@@ -12,16 +12,7 @@ const configAbility = {
       },
       "variableName": "ADF_Effect_Index",
       "resetValue": {
-        "operator": "Variables[0] (UNKNOWN_OBJECT_FUNCTION_1[Vash is aware]) || Variables[1] (FLOOR) || Variables[2] (ComboHitCount) || Constants[0] (2) || DIV || PARAM_1 || FUNCTION || Constants[0] (2) || PARAM_2 || FUNCTION || RETURN",
-        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">UNKNOWN_OBJECT_FUNCTION_1[Vash is aware]</span>(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((ComboHitCount / 2)), 2)",
-        "constants": [
-          2
-        ],
-        "variables": [
-          "UNKNOWN_OBJECT_FUNCTION_1[Vash is aware]",
-          "FLOOR",
-          "ComboHitCount"
-        ]
+        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">UNKNOWN_OBJECT_FUNCTION_1[Vash is aware]</span>(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((ComboHitCount / 2)), 2)"
       },
       "scope": "ContextAbility"
     },

@@ -43,12 +43,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                "displayLines": "#BattleEvent_P1_ADF",
-                "constants": [],
-                "variables": [
-                  "#BattleEvent_P1_ADF"
-                ]
+                "displayLines": "#BattleEvent_P1_ADF"
               }
             },
             {
@@ -59,12 +54,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                "displayLines": "#BattleEvent_P3_ADF",
-                "constants": [],
-                "variables": [
-                  "#BattleEvent_P3_ADF"
-                ]
+                "displayLines": "#BattleEvent_P3_ADF"
               }
             }
           ]
@@ -135,12 +125,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-668032397\">Modifier_BattleEventAbility_Challenge_Xianzhou_03_Sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
                   "duration": {
-                    "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P2_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P2_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P2_ADF"
                   }
                 },
                 {
@@ -151,12 +136,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-668032397\">Modifier_BattleEventAbility_Challenge_Xianzhou_03_Sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
                   "duration": {
-                    "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P2_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P2_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P2_ADF"
                   }
                 }
               ]

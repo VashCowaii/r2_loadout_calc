@@ -54,12 +54,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (10) || RETURN",
-                    "displayLines": "10",
-                    "constants": [],
-                    "variables": [
-                      10
-                    ]
+                    "displayLines": "10"
                   }
                 },
                 {
@@ -74,12 +69,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (EnergyBar_GemNum_Shadow) || RETURN",
-                        "displayLines": "EnergyBar_GemNum_Shadow",
-                        "constants": [],
-                        "variables": [
-                          "EnergyBar_GemNum_Shadow"
-                        ]
+                        "displayLines": "EnergyBar_GemNum_Shadow"
                       },
                       "priorState": "Normal"
                     }
@@ -88,12 +78,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                        "displayLines": "EnergyBar_GemNum",
-                        "constants": [],
-                        "variables": [
-                          "EnergyBar_GemNum"
-                        ]
+                        "displayLines": "EnergyBar_GemNum"
                       },
                       "priorState": "Normal"
                     }

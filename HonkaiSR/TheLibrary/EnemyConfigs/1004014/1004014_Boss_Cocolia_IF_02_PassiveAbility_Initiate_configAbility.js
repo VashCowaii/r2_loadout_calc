@@ -8,26 +8,14 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (Ice_Lance_ID) || Variables[1] (HardLevel) || ADD || RETURN",
-        "displayLines": "(Ice_Lance_ID + HardLevel)",
-        "constants": [],
-        "variables": [
-          "Ice_Lance_ID",
-          "HardLevel"
-        ]
+        "displayLines": "(Ice_Lance_ID + HardLevel)"
       },
       "variableName": "Ice_Lance_ID"
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (Ice_Lance_ID_2) || Variables[1] (HardLevel) || ADD || RETURN",
-        "displayLines": "(Ice_Lance_ID_2 + HardLevel)",
-        "constants": [],
-        "variables": [
-          "Ice_Lance_ID_2",
-          "HardLevel"
-        ]
+        "displayLines": "(Ice_Lance_ID_2 + HardLevel)"
       },
       "variableName": "Ice_Lance_ID_2"
     },

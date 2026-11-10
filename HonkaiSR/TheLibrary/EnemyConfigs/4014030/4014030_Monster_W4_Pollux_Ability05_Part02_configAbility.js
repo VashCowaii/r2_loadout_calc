@@ -39,12 +39,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_TempAIFlag) || RETURN",
-            "displayLines": "_TempAIFlag",
-            "constants": [],
-            "variables": [
-              "_TempAIFlag"
-            ]
+            "displayLines": "_TempAIFlag"
           },
           "variableName": "AIFlag"
         }
@@ -69,14 +64,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_TargetCurrentHp) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(_TargetCurrentHp - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "_TargetCurrentHp"
-            ]
+            "displayLines": "(_TargetCurrentHp - 1)"
           },
           "variableName": "_TargetCurrentHp"
         },
@@ -89,15 +77,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "DamageFlat": {
-              "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || Constants[0] (4) || DIV || RETURN",
-              "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 4)",
-              "constants": [
-                4
-              ],
-              "variables": [
-                "_TargetCurrentHp",
-                "_Skill05_LoseHpRatio"
-              ]
+              "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 4)"
             },
             "cantKill": true,
             "dmgFormulaFinal": "Converted DMG Base",
@@ -130,14 +110,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_TargetCurrentHp) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(_TargetCurrentHp - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "_TargetCurrentHp"
-            ]
+            "displayLines": "(_TargetCurrentHp - 1)"
           },
           "variableName": "_TargetCurrentHp"
         },
@@ -150,15 +123,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "DamageFlat": {
-              "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || Constants[0] (4) || DIV || RETURN",
-              "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 4)",
-              "constants": [
-                4
-              ],
-              "variables": [
-                "_TargetCurrentHp",
-                "_Skill05_LoseHpRatio"
-              ]
+              "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 4)"
             },
             "cantKill": true,
             "dmgFormulaFinal": "Converted DMG Base",
@@ -191,14 +156,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_TargetCurrentHp) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(_TargetCurrentHp - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "_TargetCurrentHp"
-            ]
+            "displayLines": "(_TargetCurrentHp - 1)"
           },
           "variableName": "_TargetCurrentHp"
         },
@@ -211,15 +169,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "DamageFlat": {
-              "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || Constants[0] (3) || DIV || RETURN",
-              "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 3)",
-              "constants": [
-                3
-              ],
-              "variables": [
-                "_TargetCurrentHp",
-                "_Skill05_LoseHpRatio"
-              ]
+              "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 3)"
             },
             "cantKill": true,
             "dmgFormulaFinal": "Converted DMG Base",
@@ -252,14 +202,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_TargetCurrentHp) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(_TargetCurrentHp - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "_TargetCurrentHp"
-            ]
+            "displayLines": "(_TargetCurrentHp - 1)"
           },
           "variableName": "_TargetCurrentHp"
         },
@@ -272,15 +215,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "DamageFlat": {
-              "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || Constants[0] (3) || DIV || RETURN",
-              "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 3)",
-              "constants": [
-                3
-              ],
-              "variables": [
-                "_TargetCurrentHp",
-                "_Skill05_LoseHpRatio"
-              ]
+              "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 3)"
             },
             "cantKill": true,
             "dmgFormulaFinal": "Converted DMG Base",
@@ -313,14 +248,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_TargetCurrentHp) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(_TargetCurrentHp - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "_TargetCurrentHp"
-            ]
+            "displayLines": "(_TargetCurrentHp - 1)"
           },
           "variableName": "_TargetCurrentHp"
         },
@@ -333,15 +261,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "DamageFlat": {
-              "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || Constants[0] (2) || DIV || RETURN",
-              "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 2)",
-              "constants": [
-                2
-              ],
-              "variables": [
-                "_TargetCurrentHp",
-                "_Skill05_LoseHpRatio"
-              ]
+              "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 2)"
             },
             "cantKill": true,
             "dmgFormulaFinal": "Converted DMG Base",
@@ -374,14 +294,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_TargetCurrentHp) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(_TargetCurrentHp - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "_TargetCurrentHp"
-            ]
+            "displayLines": "(_TargetCurrentHp - 1)"
           },
           "variableName": "_TargetCurrentHp"
         },
@@ -394,15 +307,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "DamageFlat": {
-              "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || Constants[0] (2) || DIV || RETURN",
-              "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 2)",
-              "constants": [
-                2
-              ],
-              "variables": [
-                "_TargetCurrentHp",
-                "_Skill05_LoseHpRatio"
-              ]
+              "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 2)"
             },
             "cantKill": true,
             "dmgFormulaFinal": "Converted DMG Base",
@@ -435,14 +340,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_TargetCurrentHp) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(_TargetCurrentHp - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "_TargetCurrentHp"
-            ]
+            "displayLines": "(_TargetCurrentHp - 1)"
           },
           "variableName": "_TargetCurrentHp"
         },
@@ -455,13 +353,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "DamageFlat": {
-              "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || RETURN",
-              "displayLines": "(_TargetCurrentHp * _Skill05_LoseHpRatio)",
-              "constants": [],
-              "variables": [
-                "_TargetCurrentHp",
-                "_Skill05_LoseHpRatio"
-              ]
+              "displayLines": "(_TargetCurrentHp * _Skill05_LoseHpRatio)"
             },
             "cantKill": true,
             "dmgFormulaFinal": "Converted DMG Base",
@@ -494,14 +386,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_TargetCurrentHp) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(_TargetCurrentHp - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "_TargetCurrentHp"
-            ]
+            "displayLines": "(_TargetCurrentHp - 1)"
           },
           "variableName": "_TargetCurrentHp"
         },
@@ -514,13 +399,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "DamageFlat": {
-              "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || RETURN",
-              "displayLines": "(_TargetCurrentHp * _Skill05_LoseHpRatio)",
-              "constants": [],
-              "variables": [
-                "_TargetCurrentHp",
-                "_Skill05_LoseHpRatio"
-              ]
+              "displayLines": "(_TargetCurrentHp * _Skill05_LoseHpRatio)"
             },
             "cantKill": true,
             "dmgFormulaFinal": "Converted DMG Base",
@@ -560,20 +439,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-2024056044\">Monster_W4_Pollux_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
           "valuePerStack": {
             "MDF_DamagePercentage": {
-              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[1]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[1]]}"
             },
             "MDF_DamageHpAddedRatio": {
-              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[0]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[0]]}"
             }
           }
         }
@@ -611,20 +480,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-84648127\">Monster_W4_Pollux_BloodRange</a>[<span class=\"descriptionNumberColor\">Indulging Slumber</span>]",
           "valuePerStack": {
             "_HpLimitRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_12838) || RETURN",
-              "displayLines": "UnusedUnderThisBase_12838",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_12838"
-              ]
+              "displayLines": "UnusedUnderThisBase_12838"
             },
             "_FatigueRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_12871) || RETURN",
-              "displayLines": "UnusedUnderThisBase_12871",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_12871"
-              ]
+              "displayLines": "UnusedUnderThisBase_12871"
             }
           }
         }
@@ -639,20 +498,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-84648127\">Monster_W4_Pollux_BloodRange</a>[<span class=\"descriptionNumberColor\">Indulging Slumber</span>]",
           "valuePerStack": {
             "_HpLimitRatio": {
-              "operator": "Variables[0] ({[Skill05[4]]}) || RETURN",
-              "displayLines": "{[Skill05[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[4]]}"
-              ]
+              "displayLines": "{[Skill05[4]]}"
             },
             "_FatigueRatio": {
-              "operator": "Variables[0] ({[Skill05[5]]}) || RETURN",
-              "displayLines": "{[Skill05[5]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[5]]}"
-              ]
+              "displayLines": "{[Skill05[5]]}"
             }
           }
         }
@@ -690,20 +539,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
           "valuePerStack": {
             "MDF_ShowValue1": {
-              "operator": "Variables[0] (UnusedUnderThisBase_12837) || RETURN",
-              "displayLines": "UnusedUnderThisBase_12837",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_12837"
-              ]
+              "displayLines": "UnusedUnderThisBase_12837"
             },
             "MDF_SpeedUpRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_12837) || RETURN",
-              "displayLines": "UnusedUnderThisBase_12837",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_12837"
-              ]
+              "displayLines": "UnusedUnderThisBase_12837"
             }
           }
         }
@@ -718,20 +557,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
           "valuePerStack": {
             "MDF_ShowValue1": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "{[Skill05[0]]}"
             },
             "MDF_SpeedUpRatio": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "{[Skill05[0]]}"
             }
           }
         }

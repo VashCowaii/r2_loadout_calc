@@ -44,14 +44,7 @@ const configAbility = {
       "valuePerStack": {
         "MDF_BPMaxCost": 4,
         "MDF_DirtyHPRatio_PerLayer": {
-          "operator": "Constants[0] (4) || Variables[0] ({[PassiveSkill01[4]]}) || MUL || RETURN",
-          "displayLines": "(4 * {[PassiveSkill01[4]]})",
-          "constants": [
-            4
-          ],
-          "variables": [
-            "{[PassiveSkill01[4]]}"
-          ]
+          "displayLines": "(4 * {[PassiveSkill01[4]]})"
         }
       }
     },

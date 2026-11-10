@@ -118,12 +118,7 @@ const configAbility = {
       "variableName": "AttackCount",
       "modifierName": "<a class=\"gModGreen\" id=\"33624492\">Enemy_W4_FireProwler_TimePower</a>[<span class=\"descriptionNumberColor\">Calamity Power</span>]",
       "multiplier": {
-        "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-        "displayLines": "{[Skill07[0]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill07[0]]}"
-        ]
+        "displayLines": "{[Skill07[0]]}"
       }
     },
     {
@@ -134,13 +129,7 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"33624492\">Enemy_W4_FireProwler_TimePower</a>[<span class=\"descriptionNumberColor\">Calamity Power</span>]",
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (AttackCount) || INVERT || Variables[1] ({[Skill07[0]]}) || DIV || RETURN",
-        "displayLines": "(-AttackCount / {[Skill07[0]]})",
-        "constants": [],
-        "variables": [
-          "AttackCount",
-          "{[Skill07[0]]}"
-        ]
+        "displayLines": "(-AttackCount / {[Skill07[0]]})"
       }
     },
     {
@@ -162,12 +151,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill07[2]]}) || RETURN",
-          "displayLines": "{[Skill07[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill07[2]]}"
-          ]
+          "displayLines": "{[Skill07[2]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -178,12 +162,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (AttackCount) || RETURN",
-        "displayLines": "AttackCount",
-        "constants": [],
-        "variables": [
-          "AttackCount"
-        ]
+        "displayLines": "AttackCount"
       },
       "execute": [
         {
@@ -196,12 +175,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill07[1]]}) || RETURN",
-              "displayLines": "{[Skill07[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill07[1]]}"
-              ]
+              "displayLines": "{[Skill07[1]]}"
             },
             "Toughness": null,
             "Tags": null,

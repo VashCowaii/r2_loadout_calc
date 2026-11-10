@@ -49,12 +49,7 @@ const configAbility = {
               "canHitNonTargets": true,
               "valuePerStack": {
                 "BaseAttack": {
-                  "operator": "Variables[0] (BaseAttack) || RETURN",
-                  "displayLines": "BaseAttack",
-                  "constants": [],
-                  "variables": [
-                    "BaseAttack"
-                  ]
+                  "displayLines": "BaseAttack"
                 }
               },
               "allowAbilityTriggers": false

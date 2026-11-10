@@ -34,16 +34,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Bomb_Damage_get) || Constants[0] (1) || Variables[1] (Plus5_Layer) || Variables[2] (DV_plus5_ADF_1_get) || MUL || ADD || MUL || RETURN",
-            "displayLines": "(Bomb_Damage_get * (1 + (Plus5_Layer * DV_plus5_ADF_1_get)))",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "Bomb_Damage_get",
-              "Plus5_Layer",
-              "DV_plus5_ADF_1_get"
-            ]
+            "displayLines": "(Bomb_Damage_get * (1 + (Plus5_Layer * DV_plus5_ADF_1_get)))"
           },
           "variableName": "Plus5_Bomb_Damage"
         },
@@ -57,12 +48,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "DamageFlat": {
-              "operator": "Variables[0] (Plus5_Bomb_Damage) || RETURN",
-              "displayLines": "Plus5_Bomb_Damage",
-              "constants": [],
-              "variables": [
-                "Plus5_Bomb_Damage"
-              ]
+              "displayLines": "Plus5_Bomb_Damage"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -113,16 +99,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Bomb_Damage_get) || Constants[0] (1) || Variables[1] (Plus5_Layer) || Variables[2] (DV_plus5_ADF_1_get) || MUL || ADD || MUL || RETURN",
-                "displayLines": "(Bomb_Damage_get * (1 + (Plus5_Layer * DV_plus5_ADF_1_get)))",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "Bomb_Damage_get",
-                  "Plus5_Layer",
-                  "DV_plus5_ADF_1_get"
-                ]
+                "displayLines": "(Bomb_Damage_get * (1 + (Plus5_Layer * DV_plus5_ADF_1_get)))"
               },
               "variableName": "Plus5_Bomb_Damage"
             },
@@ -136,12 +113,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageFlat": {
-                  "operator": "Variables[0] (Plus5_Bomb_Damage) || RETURN",
-                  "displayLines": "Plus5_Bomb_Damage",
-                  "constants": [],
-                  "variables": [
-                    "Plus5_Bomb_Damage"
-                  ]
+                  "displayLines": "Plus5_Bomb_Damage"
                 },
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
@@ -172,15 +144,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageFlat": {
-                  "operator": "Variables[0] (Bomb_Damage_get) || Constants[0] (1) || Variables[1] (DV_plus7_ADF_1_get) || ADD || MUL || RETURN",
-                  "displayLines": "(Bomb_Damage_get * (1 + DV_plus7_ADF_1_get))",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    "Bomb_Damage_get",
-                    "DV_plus7_ADF_1_get"
-                  ]
+                  "displayLines": "(Bomb_Damage_get * (1 + DV_plus7_ADF_1_get))"
                 },
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
@@ -200,12 +164,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageFlat": {
-                  "operator": "Variables[0] (Bomb_Damage_get) || RETURN",
-                  "displayLines": "Bomb_Damage_get",
-                  "constants": [],
-                  "variables": [
-                    "Bomb_Damage_get"
-                  ]
+                  "displayLines": "Bomb_Damage_get"
                 },
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,

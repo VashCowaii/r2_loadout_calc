@@ -21,21 +21,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "HitSplit": 0.3,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -46,14 +36,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
-        "displayLines": "(Flag_AttackCount + 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "Flag_AttackCount"
-        ]
+        "displayLines": "(Flag_AttackCount + 1)"
       },
       "variableName": "Flag_AttackCount"
     },
@@ -67,21 +50,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (1) || RETURN",
-          "displayLines": "1",
-          "constants": [],
-          "variables": [
-            1
-          ]
+          "displayLines": "1"
         },
         "HitSplit": 0.7,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -91,14 +64,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
-        "displayLines": "(Flag_AttackCount + 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "Flag_AttackCount"
-        ]
+        "displayLines": "(Flag_AttackCount + 1)"
       },
       "variableName": "Flag_AttackCount"
     },

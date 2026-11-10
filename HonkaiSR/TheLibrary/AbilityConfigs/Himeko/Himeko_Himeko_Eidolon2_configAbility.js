@@ -13,20 +13,10 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"867071212\">Himeko_Eidolon2_DamageUP</a>",
       "valuePerStack": {
         "MDF_HPRatio": {
-          "operator": "Variables[0] (0.5) || RETURN",
-          "displayLines": "0.5",
-          "constants": [],
-          "variables": [
-            0.5
-          ]
+          "displayLines": "0.5"
         },
         "MDF_PropertyValue": {
-          "operator": "Variables[0] (0.15) || RETURN",
-          "displayLines": "0.15",
-          "constants": [],
-          "variables": [
-            0.15
-          ]
+          "displayLines": "0.15"
         }
       }
     }
@@ -54,12 +44,7 @@ const configAbility = {
                 "value1": "CurrentHP%",
                 "compareType": "<=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_HPRatio) || RETURN",
-                  "displayLines": "MDF_HPRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_HPRatio"
-                  ]
+                  "displayLines": "MDF_HPRatio"
                 }
               },
               "passed": [

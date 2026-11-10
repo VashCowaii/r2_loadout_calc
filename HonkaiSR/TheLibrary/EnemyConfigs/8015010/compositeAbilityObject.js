@@ -193,12 +193,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
-                    "displayLines": "MDF_AttackAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackAddedRatio"
-                    ]
+                    "displayLines": "MDF_AttackAddedRatio"
                   }
                 },
                 {
@@ -449,12 +444,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
-                    "displayLines": "MDF_AttackAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackAddedRatio"
-                    ]
+                    "displayLines": "MDF_AttackAddedRatio"
                   }
                 }
               ]
@@ -732,12 +722,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                    "displayLines": "MDF_SpeedAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedAddedRatio"
-                    ]
+                    "displayLines": "MDF_SpeedAddedRatio"
                   }
                 }
               ]
@@ -797,12 +782,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnemyVulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -1516,12 +1496,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -1610,12 +1585,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1881731748\">Enemy_AML_Boss_DamageTakenUp</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill02[0]]}"
-              ]
+              "displayLines": "{[PassiveSkill02[0]]}"
             }
           }
         }
@@ -1654,12 +1624,7 @@ const compositeAbilityObject = {
           "name": "Create Enemy as Body Part",
           "partName": "R_Hand",
           "value": {
-            "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
-            "displayLines": "PartEntity1_MonsterID",
-            "constants": [],
-            "variables": [
-              "PartEntity1_MonsterID"
-            ]
+            "displayLines": "PartEntity1_MonsterID"
           },
           "offset": -3
         },
@@ -1667,12 +1632,7 @@ const compositeAbilityObject = {
           "name": "Create Enemy as Body Part",
           "partName": "Middle",
           "value": {
-            "operator": "Variables[0] (PartEntity2_MonsterID) || RETURN",
-            "displayLines": "PartEntity2_MonsterID",
-            "constants": [],
-            "variables": [
-              "PartEntity2_MonsterID"
-            ]
+            "displayLines": "PartEntity2_MonsterID"
           },
           "offset": -2,
           "type": 2
@@ -1681,12 +1641,7 @@ const compositeAbilityObject = {
           "name": "Create Enemy as Body Part",
           "partName": "L_Hand",
           "value": {
-            "operator": "Variables[0] (PartEntity3_MonsterID) || RETURN",
-            "displayLines": "PartEntity3_MonsterID",
-            "constants": [],
-            "variables": [
-              "PartEntity3_MonsterID"
-            ]
+            "displayLines": "PartEntity3_MonsterID"
           },
           "offset": -1,
           "type": 3
@@ -1797,12 +1752,7 @@ const compositeAbilityObject = {
                   "name": "Create Enemy as Body Part",
                   "partName": "R_Hand",
                   "value": {
-                    "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
-                    "displayLines": "PartEntity1_MonsterID",
-                    "constants": [],
-                    "variables": [
-                      "PartEntity1_MonsterID"
-                    ]
+                    "displayLines": "PartEntity1_MonsterID"
                   },
                   "offset": -3
                 },
@@ -1810,12 +1760,7 @@ const compositeAbilityObject = {
                   "name": "Create Enemy as Body Part",
                   "partName": "Middle",
                   "value": {
-                    "operator": "Variables[0] (PartEntity2_MonsterID) || RETURN",
-                    "displayLines": "PartEntity2_MonsterID",
-                    "constants": [],
-                    "variables": [
-                      "PartEntity2_MonsterID"
-                    ]
+                    "displayLines": "PartEntity2_MonsterID"
                   },
                   "offset": -2,
                   "type": 2
@@ -1824,12 +1769,7 @@ const compositeAbilityObject = {
                   "name": "Create Enemy as Body Part",
                   "partName": "L_Hand",
                   "value": {
-                    "operator": "Variables[0] (PartEntity3_MonsterID) || RETURN",
-                    "displayLines": "PartEntity3_MonsterID",
-                    "constants": [],
-                    "variables": [
-                      "PartEntity3_MonsterID"
-                    ]
+                    "displayLines": "PartEntity3_MonsterID"
                   },
                   "offset": -1,
                   "type": 3
@@ -1970,12 +1910,7 @@ const compositeAbilityObject = {
           "name": "Create Enemy as Body Part",
           "partName": "R_Hand",
           "value": {
-            "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
-            "displayLines": "PartEntity1_MonsterID",
-            "constants": [],
-            "variables": [
-              "PartEntity1_MonsterID"
-            ]
+            "displayLines": "PartEntity1_MonsterID"
           },
           "offset": -3
         },
@@ -1983,12 +1918,7 @@ const compositeAbilityObject = {
           "name": "Create Enemy as Body Part",
           "partName": "Middle",
           "value": {
-            "operator": "Variables[0] (PartEntity2_MonsterID) || RETURN",
-            "displayLines": "PartEntity2_MonsterID",
-            "constants": [],
-            "variables": [
-              "PartEntity2_MonsterID"
-            ]
+            "displayLines": "PartEntity2_MonsterID"
           },
           "offset": -2,
           "type": 2
@@ -1997,12 +1927,7 @@ const compositeAbilityObject = {
           "name": "Create Enemy as Body Part",
           "partName": "L_Hand",
           "value": {
-            "operator": "Variables[0] (PartEntity3_MonsterID) || RETURN",
-            "displayLines": "PartEntity3_MonsterID",
-            "constants": [],
-            "variables": [
-              "PartEntity3_MonsterID"
-            ]
+            "displayLines": "PartEntity3_MonsterID"
           },
           "offset": -1,
           "type": 3

@@ -447,131 +447,56 @@ const configAbility = {
             "value1": "TDF_NoImaginary",
             "compareType": ">=",
             "value2": {
-              "operator": "Constants[0] (1) || Variables[0] (TDF_NoQuantum) || SUB || Variables[1] (TDF_NoIce) || SUB || Variables[2] (TDF_NoThunder) || SUB || Variables[3] (TDF_NoFire) || SUB || Variables[4] (TDF_NoWind) || SUB || Variables[5] (TDF_NoPhysical) || SUB || RETURN",
-              "displayLines": "((((((1 - TDF_NoQuantum) - TDF_NoIce) - TDF_NoThunder) - TDF_NoFire) - TDF_NoWind) - TDF_NoPhysical)",
-              "constants": [
-                1
-              ],
-              "variables": [
-                "TDF_NoQuantum",
-                "TDF_NoIce",
-                "TDF_NoThunder",
-                "TDF_NoFire",
-                "TDF_NoWind",
-                "TDF_NoPhysical"
-              ]
+              "displayLines": "((((((1 - TDF_NoQuantum) - TDF_NoIce) - TDF_NoThunder) - TDF_NoFire) - TDF_NoWind) - TDF_NoPhysical)"
             }
           },
           "passed": [
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MAX) || Variables[1] (TDF_NoPhysical) || Constants[0] (1) || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((TDF_NoPhysical - 1), 0)",
-                "constants": [
-                  1,
-                  0
-                ],
-                "variables": [
-                  "MAX",
-                  "TDF_NoPhysical"
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((TDF_NoPhysical - 1), 0)"
               },
               "variableName": "TDF_NoPhysical"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MAX) || Variables[1] (TDF_NoWind) || Constants[0] (1) || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((TDF_NoWind - 1), 0)",
-                "constants": [
-                  1,
-                  0
-                ],
-                "variables": [
-                  "MAX",
-                  "TDF_NoWind"
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((TDF_NoWind - 1), 0)"
               },
               "variableName": "TDF_NoWind"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MAX) || Variables[1] (TDF_NoFire) || Constants[0] (1) || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((TDF_NoFire - 1), 0)",
-                "constants": [
-                  1,
-                  0
-                ],
-                "variables": [
-                  "MAX",
-                  "TDF_NoFire"
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((TDF_NoFire - 1), 0)"
               },
               "variableName": "TDF_NoFire"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MAX) || Variables[1] (TDF_NoThunder) || Constants[0] (1) || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((TDF_NoThunder - 1), 0)",
-                "constants": [
-                  1,
-                  0
-                ],
-                "variables": [
-                  "MAX",
-                  "TDF_NoThunder"
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((TDF_NoThunder - 1), 0)"
               },
               "variableName": "TDF_NoThunder"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MAX) || Variables[1] (TDF_NoIce) || Constants[0] (1) || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((TDF_NoIce - 1), 0)",
-                "constants": [
-                  1,
-                  0
-                ],
-                "variables": [
-                  "MAX",
-                  "TDF_NoIce"
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((TDF_NoIce - 1), 0)"
               },
               "variableName": "TDF_NoIce"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MAX) || Variables[1] (TDF_NoQuantum) || Constants[0] (1) || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((TDF_NoQuantum - 1), 0)",
-                "constants": [
-                  1,
-                  0
-                ],
-                "variables": [
-                  "MAX",
-                  "TDF_NoQuantum"
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((TDF_NoQuantum - 1), 0)"
               },
               "variableName": "TDF_NoQuantum"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MAX) || Variables[1] (TDF_NoImaginary) || Constants[0] (1) || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((TDF_NoImaginary - 1), 0)",
-                "constants": [
-                  1,
-                  0
-                ],
-                "variables": [
-                  "MAX",
-                  "TDF_NoImaginary"
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((TDF_NoImaginary - 1), 0)"
               },
               "variableName": "TDF_NoImaginary"
             }
@@ -581,60 +506,25 @@ const configAbility = {
           "name": "Random Event",
           "odds": [
             {
-              "operator": "Variables[0] (TDF_NoPhysical) || RETURN",
-              "displayLines": "TDF_NoPhysical",
-              "constants": [],
-              "variables": [
-                "TDF_NoPhysical"
-              ]
+              "displayLines": "TDF_NoPhysical"
             },
             {
-              "operator": "Variables[0] (TDF_NoWind) || RETURN",
-              "displayLines": "TDF_NoWind",
-              "constants": [],
-              "variables": [
-                "TDF_NoWind"
-              ]
+              "displayLines": "TDF_NoWind"
             },
             {
-              "operator": "Variables[0] (TDF_NoFire) || RETURN",
-              "displayLines": "TDF_NoFire",
-              "constants": [],
-              "variables": [
-                "TDF_NoFire"
-              ]
+              "displayLines": "TDF_NoFire"
             },
             {
-              "operator": "Variables[0] (TDF_NoThunder) || RETURN",
-              "displayLines": "TDF_NoThunder",
-              "constants": [],
-              "variables": [
-                "TDF_NoThunder"
-              ]
+              "displayLines": "TDF_NoThunder"
             },
             {
-              "operator": "Variables[0] (TDF_NoIce) || RETURN",
-              "displayLines": "TDF_NoIce",
-              "constants": [],
-              "variables": [
-                "TDF_NoIce"
-              ]
+              "displayLines": "TDF_NoIce"
             },
             {
-              "operator": "Variables[0] (TDF_NoQuantum) || RETURN",
-              "displayLines": "TDF_NoQuantum",
-              "constants": [],
-              "variables": [
-                "TDF_NoQuantum"
-              ]
+              "displayLines": "TDF_NoQuantum"
             },
             {
-              "operator": "Variables[0] (TDF_NoImaginary) || RETURN",
-              "displayLines": "TDF_NoImaginary",
-              "constants": [],
-              "variables": [
-                "TDF_NoImaginary"
-              ]
+              "displayLines": "TDF_NoImaginary"
             }
           ],
           "execute": [
@@ -646,12 +536,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1724958950\">Standard_WeakType_Physical</a>[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               }
             },
             {
@@ -662,12 +547,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1938125975\">Standard_WeakType_Wind</a>[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               }
             },
             {
@@ -678,12 +558,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-2009288629\">Standard_WeakType_Fire</a>[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               }
             },
             {
@@ -694,12 +569,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1930557999\">Standard_WeakType_Thunder</a>[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               }
             },
             {
@@ -710,12 +580,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1497676034\">Standard_WeakType_Ice</a>[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               }
             },
             {
@@ -726,12 +591,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1012677236\">Standard_WeakType_Quantum</a>[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               }
             },
             {
@@ -742,12 +602,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1118024096\">Standard_WeakType_Imaginary</a>[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               }
             }
           ]
@@ -768,22 +623,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (0.7) || RETURN",
-              "displayLines": "0.7",
-              "constants": [],
-              "variables": [
-                0.7
-              ]
+              "displayLines": "0.7"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || Constants[0] (2) || DIV || RETURN",
-              "displayLines": "(ST Toughness Value / 2)",
-              "constants": [
-                2
-              ],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "(ST Toughness Value / 2)"
             },
             "instanceTag": "Anaxa_00_BP",
             "Tags": null,

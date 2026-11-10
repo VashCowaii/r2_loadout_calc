@@ -58,31 +58,14 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"833308356\">LC_23035_BreakDebuff</a>",
                   "baseChance": {
-                    "operator": "Variables[0] (LC_23035_Chance) || RETURN",
-                    "displayLines": "LC_23035_Chance",
-                    "constants": [],
-                    "variables": [
-                      "LC_23035_Chance"
-                    ]
+                    "displayLines": "LC_23035_Chance"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] (LC_23035_MaxLayer) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(LC_23035_MaxLayer + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "LC_23035_MaxLayer"
-                    ]
+                    "displayLines": "(LC_23035_MaxLayer + 1)"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue1": {
-                      "operator": "Variables[0] (LC_23035_PropertyRatio) || RETURN",
-                      "displayLines": "LC_23035_PropertyRatio",
-                      "constants": [],
-                      "variables": [
-                        "LC_23035_PropertyRatio"
-                      ]
+                      "displayLines": "LC_23035_PropertyRatio"
                     }
                   },
                   "addStacksPerTrigger": 1,
@@ -95,37 +78,17 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-2009182373\">LC_23035_Sub</a>[<span class=\"descriptionNumberColor\">Charring</span>]",
                       "duration": {
-                        "operator": "Variables[0] (LC_23035_LifeTime) || RETURN",
-                        "displayLines": "LC_23035_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "LC_23035_LifeTime"
-                        ]
+                        "displayLines": "LC_23035_LifeTime"
                       },
                       "stackLimit": {
-                        "operator": "Variables[0] (LC_23035_MaxLayer) || RETURN",
-                        "displayLines": "LC_23035_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "LC_23035_MaxLayer"
-                        ]
+                        "displayLines": "LC_23035_MaxLayer"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue1": {
-                          "operator": "Variables[0] (LC_23035_PropertyRatio) || RETURN",
-                          "displayLines": "LC_23035_PropertyRatio",
-                          "constants": [],
-                          "variables": [
-                            "LC_23035_PropertyRatio"
-                          ]
+                          "displayLines": "LC_23035_PropertyRatio"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (LC_23035_MaxLayer) || RETURN",
-                          "displayLines": "LC_23035_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "LC_23035_MaxLayer"
-                          ]
+                          "displayLines": "LC_23035_MaxLayer"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -209,15 +172,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue1) || Variables[1] (MDF_Layer) || Constants[0] (1) || SUB || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue1 * (MDF_Layer - 1))",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue1",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_PropertyValue1 * (MDF_Layer - 1))"
                   },
                   "variableName": "MDF_PropertyValue1"
                 }
@@ -272,14 +227,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"833308356\">LC_23035_BreakDebuff</a>",
                           "addStacksPerTrigger": {
-                            "operator": "Constants[0] (1) || Variables[0] (Layer_Count) || SUB || RETURN",
-                            "displayLines": "(1 - Layer_Count)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Layer_Count"
-                            ]
+                            "displayLines": "(1 - Layer_Count)"
                           }
                         }
                       ]
@@ -334,14 +282,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"833308356\">LC_23035_BreakDebuff</a>",
                       "stackLimit": {
-                        "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(2 + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "(2 + 1)"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue1": 0,
@@ -372,36 +313,16 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-662975105\">LC_23035_ListenBreak</a>",
                       "valuePerStack": {
                         "LC_23035_MaxLayer": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         },
                         "LC_23035_LifeTime": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         },
                         "LC_23035_PropertyRatio": {
-                          "operator": "Variables[0] (0.18) || RETURN",
-                          "displayLines": "0.18",
-                          "constants": [],
-                          "variables": [
-                            0.18
-                          ]
+                          "displayLines": "0.18"
                         },
                         "LC_23035_Chance": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         }
                       }
                     }
@@ -441,14 +362,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"833308356\">LC_23035_BreakDebuff</a>",
                       "stackLimit": {
-                        "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(2 + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "(2 + 1)"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue1": 0,
@@ -467,36 +381,16 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-662975105\">LC_23035_ListenBreak</a>",
                   "valuePerStack": {
                     "LC_23035_MaxLayer": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     },
                     "LC_23035_LifeTime": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     },
                     "LC_23035_PropertyRatio": {
-                      "operator": "Variables[0] (0.18) || RETURN",
-                      "displayLines": "0.18",
-                      "constants": [],
-                      "variables": [
-                        0.18
-                      ]
+                      "displayLines": "0.18"
                     },
                     "LC_23035_Chance": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     }
                   }
                 }

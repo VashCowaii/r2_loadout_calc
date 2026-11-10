@@ -28,24 +28,14 @@ const configAbility = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] (DelayRatio04) || RETURN",
-                "displayLines": "DelayRatio04",
-                "constants": [],
-                "variables": [
-                  "DelayRatio04"
-                ]
+                "displayLines": "DelayRatio04"
               },
               "refreshPositions": false,
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonMonsterID) || RETURN",
-                    "displayLines": "SummonMonsterID",
-                    "constants": [],
-                    "variables": [
-                      "SummonMonsterID"
-                    ]
+                    "displayLines": "SummonMonsterID"
                   },
                   "locationType": "First"
                 }
@@ -56,24 +46,14 @@ const configAbility = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] (DelayRatio04) || RETURN",
-                "displayLines": "DelayRatio04",
-                "constants": [],
-                "variables": [
-                  "DelayRatio04"
-                ]
+                "displayLines": "DelayRatio04"
               },
               "refreshPositions": false,
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonMonsterID) || RETURN",
-                    "displayLines": "SummonMonsterID",
-                    "constants": [],
-                    "variables": [
-                      "SummonMonsterID"
-                    ]
+                    "displayLines": "SummonMonsterID"
                   },
                   "locationType": "Last"
                 }
@@ -96,24 +76,14 @@ const configAbility = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] (DelayRatio02) || RETURN",
-                "displayLines": "DelayRatio02",
-                "constants": [],
-                "variables": [
-                  "DelayRatio02"
-                ]
+                "displayLines": "DelayRatio02"
               },
               "refreshPositions": false,
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonMonsterID) || RETURN",
-                    "displayLines": "SummonMonsterID",
-                    "constants": [],
-                    "variables": [
-                      "SummonMonsterID"
-                    ]
+                    "displayLines": "SummonMonsterID"
                   },
                   "locationType": "First"
                 }
@@ -124,24 +94,14 @@ const configAbility = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] (DelayRatio02) || RETURN",
-                "displayLines": "DelayRatio02",
-                "constants": [],
-                "variables": [
-                  "DelayRatio02"
-                ]
+                "displayLines": "DelayRatio02"
               },
               "refreshPositions": false,
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonMonsterID) || RETURN",
-                    "displayLines": "SummonMonsterID",
-                    "constants": [],
-                    "variables": [
-                      "SummonMonsterID"
-                    ]
+                    "displayLines": "SummonMonsterID"
                   },
                   "locationType": "Last"
                 }
@@ -164,24 +124,14 @@ const configAbility = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] (DelayRatio01) || RETURN",
-                "displayLines": "DelayRatio01",
-                "constants": [],
-                "variables": [
-                  "DelayRatio01"
-                ]
+                "displayLines": "DelayRatio01"
               },
               "refreshPositions": false,
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonMonsterID) || RETURN",
-                    "displayLines": "SummonMonsterID",
-                    "constants": [],
-                    "variables": [
-                      "SummonMonsterID"
-                    ]
+                    "displayLines": "SummonMonsterID"
                   },
                   "locationType": "First"
                 }
@@ -192,24 +142,14 @@ const configAbility = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] (DelayRatio01) || RETURN",
-                "displayLines": "DelayRatio01",
-                "constants": [],
-                "variables": [
-                  "DelayRatio01"
-                ]
+                "displayLines": "DelayRatio01"
               },
               "refreshPositions": false,
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonMonsterID) || RETURN",
-                    "displayLines": "SummonMonsterID",
-                    "constants": [],
-                    "variables": [
-                      "SummonMonsterID"
-                    ]
+                    "displayLines": "SummonMonsterID"
                   },
                   "locationType": "Last"
                 }
@@ -232,24 +172,14 @@ const configAbility = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] (DelayRatio03) || RETURN",
-                "displayLines": "DelayRatio03",
-                "constants": [],
-                "variables": [
-                  "DelayRatio03"
-                ]
+                "displayLines": "DelayRatio03"
               },
               "refreshPositions": false,
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonMonsterID) || RETURN",
-                    "displayLines": "SummonMonsterID",
-                    "constants": [],
-                    "variables": [
-                      "SummonMonsterID"
-                    ]
+                    "displayLines": "SummonMonsterID"
                   },
                   "locationType": "First"
                 }
@@ -260,24 +190,14 @@ const configAbility = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] (DelayRatio03) || RETURN",
-                "displayLines": "DelayRatio03",
-                "constants": [],
-                "variables": [
-                  "DelayRatio03"
-                ]
+                "displayLines": "DelayRatio03"
               },
               "refreshPositions": false,
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonMonsterID) || RETURN",
-                    "displayLines": "SummonMonsterID",
-                    "constants": [],
-                    "variables": [
-                      "SummonMonsterID"
-                    ]
+                    "displayLines": "SummonMonsterID"
                   },
                   "locationType": "Last"
                 }
@@ -445,12 +365,7 @@ const configAbility = {
             "value1": "SummonMonsterID",
             "compareType": "=",
             "value2": {
-              "operator": "Variables[0] (SummonID02) || RETURN",
-              "displayLines": "SummonID02",
-              "constants": [],
-              "variables": [
-                "SummonID02"
-              ]
+              "displayLines": "SummonID02"
             }
           },
           "passed": [
@@ -471,12 +386,7 @@ const configAbility = {
             "value1": "SummonMonsterID",
             "compareType": "=",
             "value2": {
-              "operator": "Variables[0] (SummonID03) || RETURN",
-              "displayLines": "SummonID03",
-              "constants": [],
-              "variables": [
-                "SummonID03"
-              ]
+              "displayLines": "SummonID03"
             }
           },
           "passed": [

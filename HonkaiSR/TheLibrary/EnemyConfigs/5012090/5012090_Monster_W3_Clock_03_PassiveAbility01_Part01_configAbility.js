@@ -326,12 +326,7 @@ const configAbility = {
                       {
                         "name": "Random Chance",
                         "chance": {
-                          "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill01[2]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill01[2]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill01[2]]}"
                         }
                       }
                     ]

@@ -89,12 +89,7 @@ const configAbility = {
               "name": "Assign Value to Stat",
               "variableName": "FrozenScoreCheck",
               "value": {
-                "operator": "Variables[0] (FrozenScore) || RETURN",
-                "displayLines": "FrozenScore",
-                "constants": [],
-                "variables": [
-                  "FrozenScore"
-                ]
+                "displayLines": "FrozenScore"
               }
             }
           ]

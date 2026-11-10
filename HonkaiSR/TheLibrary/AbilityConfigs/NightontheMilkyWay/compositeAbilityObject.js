@@ -39,12 +39,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -72,12 +67,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -125,13 +115,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-434068914\">LC_23000_AttackAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.09) || Variables[1] (EnemyCount) || MUL || RETURN",
-                      "displayLines": "(0.09 * EnemyCount)",
-                      "constants": [],
-                      "variables": [
-                        0.09,
-                        "EnemyCount"
-                      ]
+                      "displayLines": "(0.09 * EnemyCount)"
                     }
                   }
                 }
@@ -192,13 +176,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-434068914\">LC_23000_AttackAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.09) || Variables[1] (EnemyCount) || MUL || RETURN",
-                      "displayLines": "(0.09 * EnemyCount)",
-                      "constants": [],
-                      "variables": [
-                        0.09,
-                        "EnemyCount"
-                      ]
+                      "displayLines": "(0.09 * EnemyCount)"
                     }
                   }
                 }
@@ -216,12 +194,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-651116041\">LC_23000_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.3) || RETURN",
-                      "displayLines": "0.3",
-                      "constants": [],
-                      "variables": [
-                        0.3
-                      ]
+                      "displayLines": "0.3"
                     }
                   }
                 }
@@ -267,13 +240,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-434068914\">LC_23000_AttackAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.09) || Variables[1] (EnemyCount) || MUL || RETURN",
-                      "displayLines": "(0.09 * EnemyCount)",
-                      "constants": [],
-                      "variables": [
-                        0.09,
-                        "EnemyCount"
-                      ]
+                      "displayLines": "(0.09 * EnemyCount)"
                     }
                   }
                 }

@@ -14,14 +14,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill08[0]]}) || Constants[0] (0.2) || MUL || RETURN",
-          "displayLines": "({[Skill08[0]]} * 0.2)",
-          "constants": [
-            0.2
-          ],
-          "variables": [
-            "{[Skill08[0]]}"
-          ]
+          "displayLines": "({[Skill08[0]]} * 0.2)"
         },
         "Toughness": null,
         "Tags": null,
@@ -37,14 +30,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill08[0]]}) || Constants[0] (0.8) || MUL || RETURN",
-          "displayLines": "({[Skill08[0]]} * 0.8)",
-          "constants": [
-            0.8
-          ],
-          "variables": [
-            "{[Skill08[0]]}"
-          ]
+          "displayLines": "({[Skill08[0]]} * 0.8)"
         },
         "Toughness": null,
         "Tags": null,
@@ -61,38 +47,18 @@ const configAbility = {
       "duration": 2,
       "baseChance": 1,
       "stackLimit": {
-        "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-        "displayLines": "{[Skill06[3]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill06[3]]}"
-        ]
+        "displayLines": "{[Skill06[3]]}"
       },
       "valuePerStack": {
         "Modifier_Bleed_DamagePercentage": {
-          "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-          "displayLines": "{[Skill06[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[1]]}"
-          ]
+          "displayLines": "{[Skill06[1]]}"
         },
         "MDF_MaxLayer": {
-          "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-          "displayLines": "{[Skill06[3]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[3]]}"
-          ]
+          "displayLines": "{[Skill06[3]]}"
         }
       },
       "addStacksPerTrigger": {
-        "operator": "Variables[0] ({[Skill08[1]]}) || RETURN",
-        "displayLines": "{[Skill08[1]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill08[1]]}"
-        ]
+        "displayLines": "{[Skill08[1]]}"
       }
     },
     "Trigger: Attack End",

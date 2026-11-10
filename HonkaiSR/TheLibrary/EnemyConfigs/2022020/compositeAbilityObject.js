@@ -162,12 +162,7 @@ const compositeAbilityObject = {
                       },
                       "searchRandom": true,
                       "maxTargets": {
-                        "operator": "Variables[0] (LightTeam_Count) || RETURN",
-                        "displayLines": "LightTeam_Count",
-                        "constants": [],
-                        "variables": [
-                          "LightTeam_Count"
-                        ]
+                        "displayLines": "LightTeam_Count"
                       },
                       "conditions": {
                         "name": "Has Modifier",
@@ -235,12 +230,7 @@ const compositeAbilityObject = {
                       },
                       "searchRandom": true,
                       "maxTargets": {
-                        "operator": "Variables[0] (LightTeam_Count) || RETURN",
-                        "displayLines": "LightTeam_Count",
-                        "constants": [],
-                        "variables": [
-                          "LightTeam_Count"
-                        ]
+                        "displayLines": "LightTeam_Count"
                       },
                       "conditions": {
                         "name": "Has Modifier",
@@ -456,12 +446,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill01[0]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill01[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -643,12 +628,7 @@ const compositeAbilityObject = {
                   },
                   "searchRandom": true,
                   "maxTargets": {
-                    "operator": "Variables[0] (LightTeam_Count) || RETURN",
-                    "displayLines": "LightTeam_Count",
-                    "constants": [],
-                    "variables": [
-                      "LightTeam_Count"
-                    ]
+                    "displayLines": "LightTeam_Count"
                   },
                   "conditions": {
                     "name": "Has Modifier",
@@ -746,12 +726,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
+                  "displayLines": "{[Skill02[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,

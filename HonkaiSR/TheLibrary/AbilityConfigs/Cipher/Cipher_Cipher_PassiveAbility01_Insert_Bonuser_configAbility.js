@@ -37,14 +37,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Passive_Trigger_Count) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(Passive_Trigger_Count + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "Passive_Trigger_Count"
-            ]
+            "displayLines": "(Passive_Trigger_Count + 1)"
           },
           "variableName": "Passive_Trigger_Count"
         },
@@ -55,12 +48,7 @@ const configAbility = {
             "value1": "Passive_Trigger_Count",
             "compareType": ">=",
             "value2": {
-              "operator": "Variables[0] (Passive_Max_Count) || RETURN",
-              "displayLines": "Passive_Max_Count",
-              "constants": [],
-              "variables": [
-                "Passive_Max_Count"
-              ]
+              "displayLines": "Passive_Max_Count"
             }
           },
           "passed": [
@@ -137,14 +125,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Passive_Trigger_Count) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(Passive_Trigger_Count + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "Passive_Trigger_Count"
-                ]
+                "displayLines": "(Passive_Trigger_Count + 1)"
               },
               "variableName": "Passive_Trigger_Count"
             },
@@ -155,12 +136,7 @@ const configAbility = {
                 "value1": "Passive_Trigger_Count",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (Passive_Max_Count) || RETURN",
-                  "displayLines": "Passive_Max_Count",
-                  "constants": [],
-                  "variables": [
-                    "Passive_Max_Count"
-                  ]
+                  "displayLines": "Passive_Max_Count"
                 }
               },
               "passed": [

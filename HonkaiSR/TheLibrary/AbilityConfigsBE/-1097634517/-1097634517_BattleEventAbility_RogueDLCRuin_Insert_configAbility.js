@@ -17,12 +17,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (DamagePercentage) || RETURN",
-          "displayLines": "DamagePercentage",
-          "constants": [],
-          "variables": [
-            "DamagePercentage"
-          ]
+          "displayLines": "DamagePercentage"
         },
         "Toughness": null,
         "Tags": null,
@@ -76,13 +71,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ExtraDamagePercentage) || Variables[1] (_Layer) || MUL || RETURN",
-                "displayLines": "(ExtraDamagePercentage * _Layer)",
-                "constants": [],
-                "variables": [
-                  "ExtraDamagePercentage",
-                  "_Layer"
-                ]
+                "displayLines": "(ExtraDamagePercentage * _Layer)"
               }
             }
           ]

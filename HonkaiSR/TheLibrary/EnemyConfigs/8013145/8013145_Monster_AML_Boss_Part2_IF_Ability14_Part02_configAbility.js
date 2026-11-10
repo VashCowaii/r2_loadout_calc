@@ -14,12 +14,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill14[0]]}) || RETURN",
-          "displayLines": "{[Skill14[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill14[0]]}"
-          ]
+          "displayLines": "{[Skill14[0]]}"
         },
         "HitSplit": 0.16,
         "Toughness": null,
@@ -37,12 +32,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill14[0]]}) || RETURN",
-          "displayLines": "{[Skill14[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill14[0]]}"
-          ]
+          "displayLines": "{[Skill14[0]]}"
         },
         "HitSplit": 0.16,
         "Toughness": null,
@@ -60,12 +50,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill14[0]]}) || RETURN",
-          "displayLines": "{[Skill14[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill14[0]]}"
-          ]
+          "displayLines": "{[Skill14[0]]}"
         },
         "HitSplit": 0.16,
         "Toughness": null,
@@ -83,12 +68,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill14[0]]}) || RETURN",
-          "displayLines": "{[Skill14[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill14[0]]}"
-          ]
+          "displayLines": "{[Skill14[0]]}"
         },
         "HitSplit": 0.16,
         "Toughness": null,
@@ -106,12 +86,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill14[0]]}) || RETURN",
-          "displayLines": "{[Skill14[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill14[0]]}"
-          ]
+          "displayLines": "{[Skill14[0]]}"
         },
         "HitSplit": 0.18,
         "Toughness": null,
@@ -129,12 +104,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill14[0]]}) || RETURN",
-          "displayLines": "{[Skill14[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill14[0]]}"
-          ]
+          "displayLines": "{[Skill14[0]]}"
         },
         "HitSplit": 0.18,
         "Toughness": null,
@@ -165,12 +135,7 @@ const configAbility = {
           "duration": 1,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (SkillEX03_P1_AttackAddedRatio) || RETURN",
-              "displayLines": "SkillEX03_P1_AttackAddedRatio",
-              "constants": [],
-              "variables": [
-                "SkillEX03_P1_AttackAddedRatio"
-              ]
+              "displayLines": "SkillEX03_P1_AttackAddedRatio"
             }
           }
         }

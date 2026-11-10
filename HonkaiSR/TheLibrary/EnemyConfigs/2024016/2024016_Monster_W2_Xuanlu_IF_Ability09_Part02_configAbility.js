@@ -12,12 +12,7 @@ const configAbility = {
         "target": "{{Caster's Minions}}"
       },
       "healPercent": {
-        "operator": "Variables[0] ({[Skill09[0]]}) || RETURN",
-        "displayLines": "{[Skill09[0]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill09[0]]}"
-        ]
+        "displayLines": "{[Skill09[0]]}"
       },
       "formula": "Heal from Healer's MaxHP"
     },

@@ -103,12 +103,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1653692200\">MLevel_BattleEventAbility_Challenge_Month_03</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                   "valuePerStack": {
                     "ADF_1": {
-                      "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P1_ADF"
                     }
                   }
                 }

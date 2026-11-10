@@ -27,12 +27,7 @@ const configAbility = {
                 "value1": "CurrentHP%",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (0.25) || RETURN",
-                  "displayLines": "0.25",
-                  "constants": [],
-                  "variables": [
-                    0.25
-                  ]
+                  "displayLines": "0.25"
                 }
               },
               {
@@ -117,12 +112,7 @@ const configAbility = {
             "value1": "CurrentHP%",
             "compareType": ">",
             "value2": {
-              "operator": "Variables[0] (CastoriceServant_Eidolon1_HPRatio01) || RETURN",
-              "displayLines": "CastoriceServant_Eidolon1_HPRatio01",
-              "constants": [],
-              "variables": [
-                "CastoriceServant_Eidolon1_HPRatio01"
-              ]
+              "displayLines": "CastoriceServant_Eidolon1_HPRatio01"
             }
           },
           "passed": [
@@ -147,12 +137,7 @@ const configAbility = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (CastoriceServant_Eidolon1_HPRatio01) || RETURN",
-                      "displayLines": "CastoriceServant_Eidolon1_HPRatio01",
-                      "constants": [],
-                      "variables": [
-                        "CastoriceServant_Eidolon1_HPRatio01"
-                      ]
+                      "displayLines": "CastoriceServant_Eidolon1_HPRatio01"
                     }
                   },
                   {
@@ -164,12 +149,7 @@ const configAbility = {
                     "value1": "CurrentHP%",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (CastoriceServant_Eidolon1_HPRatio02) || RETURN",
-                      "displayLines": "CastoriceServant_Eidolon1_HPRatio02",
-                      "constants": [],
-                      "variables": [
-                        "CastoriceServant_Eidolon1_HPRatio02"
-                      ]
+                      "displayLines": "CastoriceServant_Eidolon1_HPRatio02"
                     }
                   }
                 ]
@@ -178,12 +158,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CastoriceServant_Eidolon1_DamageRatio01) || RETURN",
-                    "displayLines": "CastoriceServant_Eidolon1_DamageRatio01",
-                    "constants": [],
-                    "variables": [
-                      "CastoriceServant_Eidolon1_DamageRatio01"
-                    ]
+                    "displayLines": "CastoriceServant_Eidolon1_DamageRatio01"
                   },
                   "variableName": "Castorice_Rank01_DamageRatio"
                 }
@@ -200,24 +175,14 @@ const configAbility = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (CastoriceServant_Eidolon1_HPRatio02) || RETURN",
-                      "displayLines": "CastoriceServant_Eidolon1_HPRatio02",
-                      "constants": [],
-                      "variables": [
-                        "CastoriceServant_Eidolon1_HPRatio02"
-                      ]
+                      "displayLines": "CastoriceServant_Eidolon1_HPRatio02"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (CastoriceServant_Eidolon1_DamageRatio02) || RETURN",
-                        "displayLines": "CastoriceServant_Eidolon1_DamageRatio02",
-                        "constants": [],
-                        "variables": [
-                          "CastoriceServant_Eidolon1_DamageRatio02"
-                        ]
+                        "displayLines": "CastoriceServant_Eidolon1_DamageRatio02"
                       },
                       "variableName": "Castorice_Rank01_DamageRatio"
                     }
@@ -414,12 +379,7 @@ const configAbility = {
                 "value1": "CurrentHP%",
                 "compareType": "<=",
                 "value2": {
-                  "operator": "Variables[0] (0.25) || RETURN",
-                  "displayLines": "0.25",
-                  "constants": [],
-                  "variables": [
-                    0.25
-                  ]
+                  "displayLines": "0.25"
                 }
               },
               "passed": [
@@ -571,12 +531,7 @@ const configAbility = {
                   "duration": 1,
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (CastoriceServant_PointB2_SpeedRatio) || RETURN",
-                      "displayLines": "CastoriceServant_PointB2_SpeedRatio",
-                      "constants": [],
-                      "variables": [
-                        "CastoriceServant_PointB2_SpeedRatio"
-                      ]
+                      "displayLines": "CastoriceServant_PointB2_SpeedRatio"
                     }
                   }
                 }
@@ -721,12 +676,7 @@ const configAbility = {
                           "duration": 1,
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (CastoriceServant_PointB2_SpeedRatio) || RETURN",
-                              "displayLines": "CastoriceServant_PointB2_SpeedRatio",
-                              "constants": [],
-                              "variables": [
-                                "CastoriceServant_PointB2_SpeedRatio"
-                              ]
+                              "displayLines": "CastoriceServant_PointB2_SpeedRatio"
                             }
                           }
                         }
@@ -1024,14 +974,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (CastoriceServant_BattleViewModeLevel) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(CastoriceServant_BattleViewModeLevel + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "CastoriceServant_BattleViewModeLevel"
-                ]
+                "displayLines": "(CastoriceServant_BattleViewModeLevel + 1)"
               },
               "variableName": "CastoriceServant_BattleViewModeLevel"
             }

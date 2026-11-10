@@ -49,12 +49,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           }
         },
         {
@@ -72,30 +67,15 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1328926688\">Saber_Trace03_Bonus_02</a>[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (8) || RETURN",
-                "displayLines": "8",
-                "constants": [],
-                "variables": [
-                  8
-                ]
+                "displayLines": "8"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.04) || RETURN",
-                  "displayLines": "0.04",
-                  "constants": [],
-                  "variables": [
-                    0.04
-                  ]
+                  "displayLines": "0.04"
                 }
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               }
             }
           ]
@@ -115,30 +95,15 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1058966793\">Saber_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">The Lost Oath of the Round Table</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (15) || RETURN",
-                "displayLines": "15",
-                "constants": [],
-                "variables": [
-                  15
-                ]
+                "displayLines": "15"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.01) || RETURN",
-                  "displayLines": "0.01",
-                  "constants": [],
-                  "variables": [
-                    0.01
-                  ]
+                  "displayLines": "0.01"
                 }
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               }
             }
           ]
@@ -146,12 +111,7 @@ const configAbility = {
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (DV_SurgePoint) || RETURN",
-            "displayLines": "DV_SurgePoint",
-            "constants": [],
-            "variables": [
-              "DV_SurgePoint"
-            ]
+            "displayLines": "DV_SurgePoint"
           }
         }
       ]
@@ -166,21 +126,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] (1.5) || RETURN",
-          "displayLines": "1.5",
-          "constants": [],
-          "variables": [
-            1.5
-          ]
+          "displayLines": "1.5"
         },
         "HitSplit": 0.5,
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": [
           "Basic ATK (Saber)"
@@ -216,12 +166,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (1.5) || RETURN",
-                  "displayLines": "1.5",
-                  "constants": [],
-                  "variables": [
-                    1.5
-                  ]
+                  "displayLines": "1.5"
                 },
                 "Toughness": null,
                 "Tags": [
@@ -243,12 +188,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (2.2) || RETURN",
-              "displayLines": "2.2",
-              "constants": [],
-              "variables": [
-                2.2
-              ]
+              "displayLines": "2.2"
             },
             "Toughness": null,
             "Tags": [
@@ -268,21 +208,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] (1.5) || RETURN",
-          "displayLines": "1.5",
-          "constants": [],
-          "variables": [
-            1.5
-          ]
+          "displayLines": "1.5"
         },
         "HitSplit": 0.5,
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": [
           "Basic ATK (Saber)"

@@ -45,12 +45,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "consumePercent": {
-            "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[0]]}"
-            ]
+            "displayLines": "{[PassiveSkill01[0]]}"
           },
           "consumeFloor": 1
         },
@@ -74,12 +69,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-498176717\">Enemy_W3_Sam_RLBoss_AttackAddRatio</a>[<span class=\"descriptionNumberColor\">Thermocumulative Upgrade</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_10710) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_10710",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_10710"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_10710"
                 }
               },
               "addStacksPerTrigger": 1
@@ -97,12 +87,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-          "displayLines": "{[Skill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "{[Skill03[0]]}"
         },
         "Toughness": null,
         "Tags": null,

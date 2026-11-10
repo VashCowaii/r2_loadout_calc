@@ -31,24 +31,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (4.5) || Constants[0] (1) || MUL || RETURN",
-          "displayLines": "(4.5 * 1)",
-          "constants": [
-            1
-          ],
-          "variables": [
-            4.5
-          ]
+          "displayLines": "(4.5 * 1)"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Constants[0] (1) || MUL || RETURN",
-          "displayLines": "(ST Toughness Value * 1)",
-          "constants": [
-            1
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(ST Toughness Value * 1)"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"

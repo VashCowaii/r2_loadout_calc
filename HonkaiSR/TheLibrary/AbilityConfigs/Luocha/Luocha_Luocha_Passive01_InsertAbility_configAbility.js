@@ -27,69 +27,29 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-1807885982\">Luocha_Passive01_HealHPArea</a>",
       "duration": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       },
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] (0.18) || RETURN",
-          "displayLines": "0.18",
-          "constants": [],
-          "variables": [
-            0.18
-          ]
+          "displayLines": "0.18"
         },
         "MDF_PropertyRatio": {
-          "operator": "Variables[0] (0.12) || RETURN",
-          "displayLines": "0.12",
-          "constants": [],
-          "variables": [
-            0.12
-          ]
+          "displayLines": "0.12"
         },
         "MDF_PropertyHealValue": {
-          "operator": "Variables[0] (240) || RETURN",
-          "displayLines": "240",
-          "constants": [],
-          "variables": [
-            240
-          ]
+          "displayLines": "240"
         },
         "MDF_PropertyValueTraceB2": {
-          "operator": "Variables[0] (0.07) || RETURN",
-          "displayLines": "0.07",
-          "constants": [],
-          "variables": [
-            0.07
-          ]
+          "displayLines": "0.07"
         },
         "MDF_PropertyHealValueTraceB2": {
-          "operator": "Variables[0] (93) || RETURN",
-          "displayLines": "93",
-          "constants": [],
-          "variables": [
-            93
-          ]
+          "displayLines": "93"
         },
         "MDF_PropertyRatio_Eidolon1": {
-          "operator": "Variables[0] (0.2) || RETURN",
-          "displayLines": "0.2",
-          "constants": [],
-          "variables": [
-            0.2
-          ]
+          "displayLines": "0.2"
         },
         "MDF_LifeTime": {
-          "operator": "Variables[0] (2) || RETURN",
-          "displayLines": "2",
-          "constants": [],
-          "variables": [
-            2
-          ]
+          "displayLines": "2"
         }
       }
     },
@@ -134,12 +94,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Weaken%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             }
           ]
@@ -164,20 +119,10 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               },
               "healFlat": {
-                "operator": "Variables[0] (MDF_PropertyHealValue) || RETURN",
-                "displayLines": "MDF_PropertyHealValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyHealValue"
-                ]
+                "displayLines": "MDF_PropertyHealValue"
               }
             },
             {
@@ -194,20 +139,10 @@ const configAbility = {
                     "target": "{{Modifier Holder's Team Members(Exclude Self)}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (MDF_PropertyValueSkillTreeB2) || RETURN",
-                    "displayLines": "MDF_PropertyValueSkillTreeB2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValueSkillTreeB2"
-                    ]
+                    "displayLines": "MDF_PropertyValueSkillTreeB2"
                   },
                   "healFlat": {
-                    "operator": "Variables[0] (MDF_PropertyHealValueSkillTreeB2) || RETURN",
-                    "displayLines": "MDF_PropertyHealValueSkillTreeB2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyHealValueSkillTreeB2"
-                    ]
+                    "displayLines": "MDF_PropertyHealValueSkillTreeB2"
                   }
                 }
               ]
@@ -234,20 +169,10 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               },
               "healFlat": {
-                "operator": "Variables[0] (MDF_PropertyHealValue) || RETURN",
-                "displayLines": "MDF_PropertyHealValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyHealValue"
-                ]
+                "displayLines": "MDF_PropertyHealValue"
               }
             },
             {
@@ -264,20 +189,10 @@ const configAbility = {
                     "target": "{{Modifier Holder's Team Members(Exclude Self)}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (MDF_PropertyValueSkillTreeB2) || RETURN",
-                    "displayLines": "MDF_PropertyValueSkillTreeB2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValueSkillTreeB2"
-                    ]
+                    "displayLines": "MDF_PropertyValueSkillTreeB2"
                   },
                   "healFlat": {
-                    "operator": "Variables[0] (MDF_PropertyHealValueSkillTreeB2) || RETURN",
-                    "displayLines": "MDF_PropertyHealValueSkillTreeB2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyHealValueSkillTreeB2"
-                    ]
+                    "displayLines": "MDF_PropertyHealValueSkillTreeB2"
                   }
                 }
               ]
@@ -311,45 +226,20 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1838655775\">Luocha_Passive01_HealHPSelf</a>[<span class=\"descriptionNumberColor\">Cycle of Life</span>]",
           "duration": {
-            "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-            "displayLines": "MDF_LifeTime",
-            "constants": [],
-            "variables": [
-              "MDF_LifeTime"
-            ]
+            "displayLines": "MDF_LifeTime"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-              "displayLines": "MDF_PropertyValue",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyValue"
-              ]
+              "displayLines": "MDF_PropertyValue"
             },
             "MDF_PropertyHealValue": {
-              "operator": "Variables[0] (MDF_PropertyHealValue) || RETURN",
-              "displayLines": "MDF_PropertyHealValue",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyHealValue"
-              ]
+              "displayLines": "MDF_PropertyHealValue"
             },
             "MDF_PropertyValueTraceB2": {
-              "operator": "Variables[0] (MDF_PropertyValueSkillTreeB2) || RETURN",
-              "displayLines": "MDF_PropertyValueSkillTreeB2",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyValueSkillTreeB2"
-              ]
+              "displayLines": "MDF_PropertyValueSkillTreeB2"
             },
             "MDF_PropertyHealValueTraceB2": {
-              "operator": "Variables[0] (MDF_PropertyHealValueSkillTreeB2) || RETURN",
-              "displayLines": "MDF_PropertyHealValueSkillTreeB2",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyHealValueSkillTreeB2"
-              ]
+              "displayLines": "MDF_PropertyHealValueSkillTreeB2"
             }
           }
         },
@@ -363,36 +253,16 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-              "displayLines": "MDF_PropertyValue",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyValue"
-              ]
+              "displayLines": "MDF_PropertyValue"
             },
             "MDF_PropertyHealValue": {
-              "operator": "Variables[0] (MDF_PropertyHealValue) || RETURN",
-              "displayLines": "MDF_PropertyHealValue",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyHealValue"
-              ]
+              "displayLines": "MDF_PropertyHealValue"
             },
             "MDF_PropertyValueTraceB2": {
-              "operator": "Variables[0] (MDF_PropertyValueSkillTreeB2) || RETURN",
-              "displayLines": "MDF_PropertyValueSkillTreeB2",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyValueSkillTreeB2"
-              ]
+              "displayLines": "MDF_PropertyValueSkillTreeB2"
             },
             "MDF_PropertyHealValueTraceB2": {
-              "operator": "Variables[0] (MDF_PropertyHealValueSkillTreeB2) || RETURN",
-              "displayLines": "MDF_PropertyHealValueSkillTreeB2",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyHealValueSkillTreeB2"
-              ]
+              "displayLines": "MDF_PropertyHealValueSkillTreeB2"
             }
           }
         },
@@ -410,12 +280,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyRatio": {
-              "operator": "Variables[0] (MDF_PropertyRatio_Rank01) || RETURN",
-              "displayLines": "MDF_PropertyRatio_Rank01",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyRatio_Rank01"
-              ]
+              "displayLines": "MDF_PropertyRatio_Rank01"
             }
           }
         },
@@ -433,12 +298,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyRatio": {
-              "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-              "displayLines": "MDF_PropertyRatio",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyRatio"
-              ]
+              "displayLines": "MDF_PropertyRatio"
             }
           }
         }

@@ -13,12 +13,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2310_BaseAddOn_P1_Charge",
       "resetValue": {
-        "operator": "Variables[0] (ADF_1_Get) || RETURN",
-        "displayLines": "ADF_1_Get",
-        "constants": [],
-        "variables": [
-          "ADF_1_Get"
-        ]
+        "displayLines": "ADF_1_Get"
       },
       "scope": "ContextCaster"
     },
@@ -47,12 +42,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "DV_Charge": {
-              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2310_BaseAddOn_P1_Charge) || RETURN",
-              "displayLines": "DV_FantasticStory_BaseAbility_2310_BaseAddOn_P1_Charge",
-              "constants": [],
-              "variables": [
-                "DV_FantasticStory_BaseAbility_2310_BaseAddOn_P1_Charge"
-              ]
+              "displayLines": "DV_FantasticStory_BaseAbility_2310_BaseAddOn_P1_Charge"
             }
           }
         },

@@ -49,29 +49,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1203634791\">Yukong_Passive_BonusCD</a>",
           "duration": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "valuePerStack": {
             "MDF_AddDamagePercentage": {
-              "operator": "Variables[0] (0.8) || RETURN",
-              "displayLines": "0.8",
-              "constants": [],
-              "variables": [
-                0.8
-              ]
+              "displayLines": "0.8"
             },
             "MDF_StanceBreakAddedRatio": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             }
           }
         },
@@ -121,20 +106,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Basic ATK",
@@ -161,25 +136,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (1) || Variables[1] (0.8) || ADD || RETURN",
-                  "displayLines": "(1 + 0.8)",
-                  "constants": [],
-                  "variables": [
-                    1,
-                    0.8
-                  ]
+                  "displayLines": "(1 + 0.8)"
                 },
                 "HitSplit": 0.2,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || Constants[0] (1) || Variables[1] (1) || ADD || MUL || RETURN",
-                  "displayLines": "(ST Toughness Value * (1 + 1))",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    "ST Toughness Value",
-                    1
-                  ]
+                  "displayLines": "(ST Toughness Value * (1 + 1))"
                 },
                 "Tags": null,
                 "attackType": "Basic ATK",
@@ -200,25 +161,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (1) || Variables[1] (0.8) || ADD || RETURN",
-                  "displayLines": "(1 + 0.8)",
-                  "constants": [],
-                  "variables": [
-                    1,
-                    0.8
-                  ]
+                  "displayLines": "(1 + 0.8)"
                 },
                 "HitSplit": 0.2,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || Constants[0] (1) || Variables[1] (1) || ADD || MUL || RETURN",
-                  "displayLines": "(ST Toughness Value * (1 + 1))",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    "ST Toughness Value",
-                    1
-                  ]
+                  "displayLines": "(ST Toughness Value * (1 + 1))"
                 },
                 "Tags": null,
                 "attackType": "Basic ATK",
@@ -239,25 +186,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (1) || Variables[1] (0.8) || ADD || RETURN",
-                  "displayLines": "(1 + 0.8)",
-                  "constants": [],
-                  "variables": [
-                    1,
-                    0.8
-                  ]
+                  "displayLines": "(1 + 0.8)"
                 },
                 "HitSplit": 0.6,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || Constants[0] (1) || Variables[1] (1) || ADD || MUL || RETURN",
-                  "displayLines": "(ST Toughness Value * (1 + 1))",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    "ST Toughness Value",
-                    1
-                  ]
+                  "displayLines": "(ST Toughness Value * (1 + 1))"
                 },
                 "Tags": null,
                 "attackType": "Basic ATK",
@@ -287,14 +220,7 @@ const configAbility = {
           "invertCondition": true
         },
         "multiplier": {
-          "operator": "Constants[0] (1) || Variables[0] (1) || ADD || RETURN",
-          "displayLines": "(1 + 1)",
-          "constants": [
-            1
-          ],
-          "variables": [
-            1
-          ]
+          "displayLines": "(1 + 1)"
         }
       }
     }

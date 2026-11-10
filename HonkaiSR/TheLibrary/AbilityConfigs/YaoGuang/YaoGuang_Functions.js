@@ -22,21 +22,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (0.9) || RETURN",
-              "displayLines": "0.9",
-              "constants": [],
-              "variables": [
-                0.9
-              ]
+              "displayLines": "0.9"
             },
             "HitSplit": 0.25,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Basic ATK",
@@ -52,21 +42,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             },
             "HitSplit": 0.25,
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null,
             "attackType": "Basic ATK"
@@ -81,15 +61,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_DeltaY) || Constants[0] (1000) || DIV || Constants[1] (1.15) || ADD || RETURN",
-            "displayLines": "((_DeltaY / 1000) + 1.15)",
-            "constants": [
-              1000,
-              1.15
-            ],
-            "variables": [
-              "_DeltaY"
-            ]
+            "displayLines": "((_DeltaY / 1000) + 1.15)"
           },
           "variableName": "_DeltaY"
         },
@@ -102,15 +74,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_DeltaY_R) || Constants[0] (1000) || DIV || Constants[1] (1.3) || ADD || RETURN",
-            "displayLines": "((_DeltaY_R / 1000) + 1.3)",
-            "constants": [
-              1000,
-              1.3
-            ],
-            "variables": [
-              "_DeltaY_R"
-            ]
+            "displayLines": "((_DeltaY_R / 1000) + 1.3)"
           },
           "variableName": "_DeltaY_R"
         },
@@ -123,15 +87,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_DeltaY_L) || Constants[0] (1000) || DIV || Constants[1] (1.1) || ADD || RETURN",
-            "displayLines": "((_DeltaY_L / 1000) + 1.1)",
-            "constants": [
-              1000,
-              1.1
-            ],
-            "variables": [
-              "_DeltaY_L"
-            ]
+            "displayLines": "((_DeltaY_L / 1000) + 1.1)"
           },
           "variableName": "_DeltaY_L"
         }
@@ -150,21 +106,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (0.9) || RETURN",
-              "displayLines": "0.9",
-              "constants": [],
-              "variables": [
-                0.9
-              ]
+              "displayLines": "0.9"
             },
             "HitSplit": 0.25,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Basic ATK",
@@ -180,21 +126,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             },
             "HitSplit": 0.25,
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null,
             "attackType": "Basic ATK"
@@ -209,15 +145,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_DeltaY) || Constants[0] (1000) || DIV || Constants[1] (1.15) || ADD || RETURN",
-            "displayLines": "((_DeltaY / 1000) + 1.15)",
-            "constants": [
-              1000,
-              1.15
-            ],
-            "variables": [
-              "_DeltaY"
-            ]
+            "displayLines": "((_DeltaY / 1000) + 1.15)"
           },
           "variableName": "_DeltaY"
         },
@@ -230,15 +158,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_DeltaY_R) || Constants[0] (1000) || DIV || Constants[1] (1.3) || ADD || RETURN",
-            "displayLines": "((_DeltaY_R / 1000) + 1.3)",
-            "constants": [
-              1000,
-              1.3
-            ],
-            "variables": [
-              "_DeltaY_R"
-            ]
+            "displayLines": "((_DeltaY_R / 1000) + 1.3)"
           },
           "variableName": "_DeltaY_R"
         },
@@ -251,15 +171,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_DeltaY_L) || Constants[0] (1000) || DIV || Constants[1] (1.1) || ADD || RETURN",
-            "displayLines": "((_DeltaY_L / 1000) + 1.1)",
-            "constants": [
-              1000,
-              1.1
-            ],
-            "variables": [
-              "_DeltaY_L"
-            ]
+            "displayLines": "((_DeltaY_L / 1000) + 1.1)"
           },
           "variableName": "_DeltaY_L"
         }

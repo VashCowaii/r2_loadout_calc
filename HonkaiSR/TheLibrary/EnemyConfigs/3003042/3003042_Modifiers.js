@@ -34,13 +34,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AttackUPRatio) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(MDF_AttackUPRatio * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackUPRatio",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(MDF_AttackUPRatio * ModifierLayers)"
               }
             }
           ]
@@ -102,14 +96,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (SleepNum) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(SleepNum + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "SleepNum"
-                        ]
+                        "displayLines": "(SleepNum + 1)"
                       },
                       "variableName": "SleepNum"
                     }
@@ -124,21 +111,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1025576815\">Enemy_W3_Figure_RLElite_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                   "valuePerStack": {
                     "MDF_AttackUPRatio": {
-                      "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[0]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[0]]}"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (SleepNum) || RETURN",
-                    "displayLines": "SleepNum",
-                    "constants": [],
-                    "variables": [
-                      "SleepNum"
-                    ]
+                    "displayLines": "SleepNum"
                   }
                 },
                 {
@@ -201,14 +178,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (SleepNum) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(SleepNum + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "SleepNum"
-                        ]
+                        "displayLines": "(SleepNum + 1)"
                       },
                       "variableName": "SleepNum"
                     }
@@ -223,21 +193,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1025576815\">Enemy_W3_Figure_RLElite_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                   "valuePerStack": {
                     "MDF_AttackUPRatio": {
-                      "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[0]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[0]]}"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (SleepNum) || RETURN",
-                    "displayLines": "SleepNum",
-                    "constants": [],
-                    "variables": [
-                      "SleepNum"
-                    ]
+                    "displayLines": "SleepNum"
                   }
                 },
                 {

@@ -66,12 +66,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-491528476\">Relic_117_DamageUp</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.12) || RETURN",
-                  "displayLines": "0.12",
-                  "constants": [],
-                  "variables": [
-                    0.12
-                  ]
+                  "displayLines": "0.12"
                 }
               }
             }

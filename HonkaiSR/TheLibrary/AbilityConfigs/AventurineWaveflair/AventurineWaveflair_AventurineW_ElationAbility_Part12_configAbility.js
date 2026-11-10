@@ -78,20 +78,10 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1333939602\">AventurineW_Passive_Energy</a>",
               "stackLimit": {
-                "operator": "Variables[0] (_MaxEnergyPoint) || RETURN",
-                "displayLines": "_MaxEnergyPoint",
-                "constants": [],
-                "variables": [
-                  "_MaxEnergyPoint"
-                ]
+                "displayLines": "_MaxEnergyPoint"
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (MDF_Layer) || INVERT || RETURN",
-                "displayLines": "-MDF_Layer",
-                "constants": [],
-                "variables": [
-                  "MDF_Layer"
-                ]
+                "displayLines": "-MDF_Layer"
               }
             }
           ],
@@ -116,20 +106,10 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1333939602\">AventurineW_Passive_Energy</a>",
                   "stackLimit": {
-                    "operator": "Variables[0] (_MaxEnergyPoint) || RETURN",
-                    "displayLines": "_MaxEnergyPoint",
-                    "constants": [],
-                    "variables": [
-                      "_MaxEnergyPoint"
-                    ]
+                    "displayLines": "_MaxEnergyPoint"
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_Layer) || INVERT || RETURN",
-                    "displayLines": "-MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "-MDF_Layer"
                   }
                 }
               ]
@@ -146,20 +126,10 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1333939602\">AventurineW_Passive_Energy</a>",
           "stackLimit": {
-            "operator": "Variables[0] (_MaxEnergyPoint) || RETURN",
-            "displayLines": "_MaxEnergyPoint",
-            "constants": [],
-            "variables": [
-              "_MaxEnergyPoint"
-            ]
+            "displayLines": "_MaxEnergyPoint"
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] (MDF_Layer) || INVERT || RETURN",
-            "displayLines": "-MDF_Layer",
-            "constants": [],
-            "variables": [
-              "MDF_Layer"
-            ]
+            "displayLines": "-MDF_Layer"
           }
         }
       ]
@@ -174,22 +144,12 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "DamageElation": {
-          "operator": "Variables[0] (0.6) || RETURN",
-          "displayLines": "0.6",
-          "constants": [],
-          "variables": [
-            0.6
-          ]
+          "displayLines": "0.6"
         },
         "dmgFormula": "Elation Scaling",
         "HitSplit": 0.2,
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "instanceTag": "ElationSkill_2",
         "Tags": null,
@@ -200,13 +160,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (_TempLayer_get) || Variables[1] (10) || ADD || RETURN",
-        "displayLines": "(_TempLayer_get + 10)",
-        "constants": [],
-        "variables": [
-          "_TempLayer_get",
-          10
-        ]
+        "displayLines": "(_TempLayer_get + 10)"
       },
       "execute": [
         {
@@ -224,12 +178,7 @@ const configAbility = {
                 "value1": "_CurrentDamageNumber",
                 "compareType": "<=",
                 "value2": {
-                  "operator": "Variables[0] (10) || RETURN",
-                  "displayLines": "10",
-                  "constants": [],
-                  "variables": [
-                    10
-                  ]
+                  "displayLines": "10"
                 },
                 "contextScope": "ContextAbility"
               },
@@ -244,21 +193,11 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "DamageElation": {
-                      "operator": "Variables[0] (0.18) || RETURN",
-                      "displayLines": "0.18",
-                      "constants": [],
-                      "variables": [
-                        0.18
-                      ]
+                      "displayLines": "0.18"
                     },
                     "dmgFormula": "Elation Scaling",
                     "Toughness": {
-                      "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                      "displayLines": "ST Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "ST Toughness Value"
-                      ]
+                      "displayLines": "ST Toughness Value"
                     },
                     "instanceTag": "ElationSkill_2",
                     "Tags": null,
@@ -276,13 +215,7 @@ const configAbility = {
                   "value": 1,
                   "min": 1,
                   "max": {
-                    "operator": "Variables[0] (_TempLayer_get) || Variables[1] (10) || ADD || RETURN",
-                    "displayLines": "(_TempLayer_get + 10)",
-                    "constants": [],
-                    "variables": [
-                      "_TempLayer_get",
-                      10
-                    ]
+                    "displayLines": "(_TempLayer_get + 10)"
                   }
                 }
               ],
@@ -297,12 +230,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "DamageElation": {
-                      "operator": "Variables[0] (0.21) || RETURN",
-                      "displayLines": "0.21",
-                      "constants": [],
-                      "variables": [
-                        0.21
-                      ]
+                      "displayLines": "0.21"
                     },
                     "dmgFormula": "Elation Scaling",
                     "Toughness": null,
@@ -327,22 +255,12 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "DamageElation": {
-          "operator": "Variables[0] (0.6) || RETURN",
-          "displayLines": "0.6",
-          "constants": [],
-          "variables": [
-            0.6
-          ]
+          "displayLines": "0.6"
         },
         "dmgFormula": "Elation Scaling",
         "HitSplit": 0.2,
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "instanceTag": "ElationSkill_2",
         "Tags": null,
@@ -360,22 +278,12 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "DamageElation": {
-          "operator": "Variables[0] (0.6) || RETURN",
-          "displayLines": "0.6",
-          "constants": [],
-          "variables": [
-            0.6
-          ]
+          "displayLines": "0.6"
         },
         "dmgFormula": "Elation Scaling",
         "HitSplit": 0.2,
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "instanceTag": "ElationSkill_2",
         "Tags": null,
@@ -393,22 +301,12 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "DamageElation": {
-          "operator": "Variables[0] (0.6) || RETURN",
-          "displayLines": "0.6",
-          "constants": [],
-          "variables": [
-            0.6
-          ]
+          "displayLines": "0.6"
         },
         "dmgFormula": "Elation Scaling",
         "HitSplit": 0.2,
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "instanceTag": "ElationSkill_2",
         "Tags": null,
@@ -426,22 +324,12 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "DamageElation": {
-          "operator": "Variables[0] (0.6) || RETURN",
-          "displayLines": "0.6",
-          "constants": [],
-          "variables": [
-            0.6
-          ]
+          "displayLines": "0.6"
         },
         "dmgFormula": "Elation Scaling",
         "HitSplit": 0.2,
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "instanceTag": "ElationSkill_2",
         "Tags": null,

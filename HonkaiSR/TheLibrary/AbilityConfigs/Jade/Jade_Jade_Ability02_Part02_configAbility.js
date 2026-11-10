@@ -82,21 +82,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"553729296\">Jade_Eidolon6_BPAbilitySelf</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "valuePerStack": {
                 "MDF_PropertyRatio": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             }
@@ -110,12 +100,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1687174133\">Jade_BPAbilitySelf</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               }
             }
           ]
@@ -130,12 +115,7 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-252730677\">Jade_BPAbilityBonusListen</a>",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           }
         },
         {
@@ -153,55 +133,25 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"119818662\">Jade_Eidolon6_BPAbility</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (30) || RETURN",
-                  "displayLines": "30",
-                  "constants": [],
-                  "variables": [
-                    30
-                  ]
+                  "displayLines": "30"
                 },
                 "MDF_PropertyRatio": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 },
                 "MDF_Eidolon1_Flag": 1,
                 "MDF_Eidolon1_HitNumb": 0,
                 "MDF_LoseHP": {
-                  "operator": "Variables[0] (0.02) || RETURN",
-                  "displayLines": "0.02",
-                  "constants": [],
-                  "variables": [
-                    0.02
-                  ]
+                  "displayLines": "0.02"
                 },
                 "MDF_Eidolon1_AddRateLayer": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 },
                 "MDF_Eidolon1_AddRateLayer02": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
+                  "displayLines": "2"
                 }
               }
             }
@@ -222,47 +172,22 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1749110767\">Jade_BPAbility</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (30) || RETURN",
-                      "displayLines": "30",
-                      "constants": [],
-                      "variables": [
-                        30
-                      ]
+                      "displayLines": "30"
                     },
                     "MDF_Eidolon1_Flag": 1,
                     "MDF_Eidolon1_HitNumb": 0,
                     "MDF_LoseHP": {
-                      "operator": "Variables[0] (0.02) || RETURN",
-                      "displayLines": "0.02",
-                      "constants": [],
-                      "variables": [
-                        0.02
-                      ]
+                      "displayLines": "0.02"
                     },
                     "MDF_Eidolon1_AddRateLayer": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     },
                     "MDF_Eidolon1_AddRateLayer02": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     }
                   }
                 }
@@ -276,31 +201,16 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1749110767\">Jade_BPAbility</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (30) || RETURN",
-                      "displayLines": "30",
-                      "constants": [],
-                      "variables": [
-                        30
-                      ]
+                      "displayLines": "30"
                     },
                     "MDF_Eidolon1_Flag": 0,
                     "MDF_Eidolon1_HitNumb": 0,
                     "MDF_LoseHP": {
-                      "operator": "Variables[0] (0.02) || RETURN",
-                      "displayLines": "0.02",
-                      "constants": [],
-                      "variables": [
-                        0.02
-                      ]
+                      "displayLines": "0.02"
                     },
                     "MDF_Eidolon1_AddRateLayer": 0,
                     "MDF_Eidolon1_AddRateLayer02": 0
@@ -380,12 +290,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"68476876\">Jade_Eidolon6_QuantumPenetrate</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 }
@@ -413,12 +318,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] (_Pursued_DamagePercentage) || RETURN",
-                      "displayLines": "_Pursued_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "_Pursued_DamagePercentage"
-                      ]
+                      "displayLines": "_Pursued_DamagePercentage"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -519,12 +419,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             },
             {
@@ -542,21 +437,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"553729296\">Jade_Eidolon6_BPAbilitySelf</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 }
@@ -575,12 +460,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "consumePercent": {
-                "operator": "Variables[0] (MDF_LoseHP) || RETURN",
-                "displayLines": "MDF_LoseHP",
-                "constants": [],
-                "variables": [
-                  "MDF_LoseHP"
-                ]
+                "displayLines": "MDF_LoseHP"
               },
               "consumeFloor": 1,
               "attackType": "BPSkill"
@@ -610,12 +490,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] (_Pursued_DamagePercentage) || RETURN",
-                      "displayLines": "_Pursued_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "_Pursued_DamagePercentage"
-                      ]
+                      "displayLines": "_Pursued_DamagePercentage"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -645,13 +520,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_RateLayer) || Variables[1] (MDF_Eidolon1_AddRateLayer) || ADD || RETURN",
-                        "displayLines": "(_RateLayer + MDF_Eidolon1_AddRateLayer)",
-                        "constants": [],
-                        "variables": [
-                          "_RateLayer",
-                          "MDF_Eidolon1_AddRateLayer"
-                        ]
+                        "displayLines": "(_RateLayer + MDF_Eidolon1_AddRateLayer)"
                       },
                       "variableName": "_RateLayer"
                     }
@@ -669,13 +538,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (_RateLayer) || Variables[1] (MDF_Eidolon1_AddRateLayer02) || ADD || RETURN",
-                            "displayLines": "(_RateLayer + MDF_Eidolon1_AddRateLayer02)",
-                            "constants": [],
-                            "variables": [
-                              "_RateLayer",
-                              "MDF_Eidolon1_AddRateLayer02"
-                            ]
+                            "displayLines": "(_RateLayer + MDF_Eidolon1_AddRateLayer02)"
                           },
                           "variableName": "_RateLayer"
                         }
@@ -739,12 +602,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] (_Pursued_DamagePercentage) || RETURN",
-                      "displayLines": "_Pursued_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "_Pursued_DamagePercentage"
-                      ]
+                      "displayLines": "_Pursued_DamagePercentage"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -844,12 +702,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -865,12 +718,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "consumePercent": {
-                "operator": "Variables[0] (MDF_LoseHP) || RETURN",
-                "displayLines": "MDF_LoseHP",
-                "constants": [],
-                "variables": [
-                  "MDF_LoseHP"
-                ]
+                "displayLines": "MDF_LoseHP"
               },
               "consumeFloor": 1,
               "attackType": "BPSkill"
@@ -900,12 +748,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] (_Pursued_DamagePercentage) || RETURN",
-                      "displayLines": "_Pursued_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "_Pursued_DamagePercentage"
-                      ]
+                      "displayLines": "_Pursued_DamagePercentage"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -935,13 +778,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_RateLayer) || Variables[1] (MDF_Eidolon1_AddRateLayer) || ADD || RETURN",
-                        "displayLines": "(_RateLayer + MDF_Eidolon1_AddRateLayer)",
-                        "constants": [],
-                        "variables": [
-                          "_RateLayer",
-                          "MDF_Eidolon1_AddRateLayer"
-                        ]
+                        "displayLines": "(_RateLayer + MDF_Eidolon1_AddRateLayer)"
                       },
                       "variableName": "_RateLayer"
                     }
@@ -959,13 +796,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (_RateLayer) || Variables[1] (MDF_Eidolon1_AddRateLayer02) || ADD || RETURN",
-                            "displayLines": "(_RateLayer + MDF_Eidolon1_AddRateLayer02)",
-                            "constants": [],
-                            "variables": [
-                              "_RateLayer",
-                              "MDF_Eidolon1_AddRateLayer02"
-                            ]
+                            "displayLines": "(_RateLayer + MDF_Eidolon1_AddRateLayer02)"
                           },
                           "variableName": "_RateLayer"
                         }

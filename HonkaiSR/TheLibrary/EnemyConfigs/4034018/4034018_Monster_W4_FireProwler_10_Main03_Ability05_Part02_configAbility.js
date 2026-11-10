@@ -30,13 +30,7 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"33624492\">Enemy_W4_FireProwler_TimePower</a>[<span class=\"descriptionNumberColor\">Calamity Power</span>]",
           "addStacksPerTrigger": {
-            "operator": "Variables[0] (AttackCount) || INVERT || Variables[1] ({[Skill05[0]]}) || DIV || RETURN",
-            "displayLines": "(-AttackCount / {[Skill05[0]]})",
-            "constants": [],
-            "variables": [
-              "AttackCount",
-              "{[Skill05[0]]}"
-            ]
+            "displayLines": "(-AttackCount / {[Skill05[0]]})"
           }
         },
         {
@@ -66,12 +60,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                  "displayLines": "{[Skill05[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[1]]}"
-                  ]
+                  "displayLines": "{[Skill05[1]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -87,12 +76,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                  "displayLines": "{[Skill05[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[1]]}"
-                  ]
+                  "displayLines": "{[Skill05[1]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -119,12 +103,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                  "displayLines": "{[Skill05[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[1]]}"
-                  ]
+                  "displayLines": "{[Skill05[1]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -140,12 +119,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                  "displayLines": "{[Skill05[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[1]]}"
-                  ]
+                  "displayLines": "{[Skill05[1]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -161,12 +135,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                  "displayLines": "{[Skill05[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[1]]}"
-                  ]
+                  "displayLines": "{[Skill05[1]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -182,12 +151,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                  "displayLines": "{[Skill05[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[1]]}"
-                  ]
+                  "displayLines": "{[Skill05[1]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -214,12 +178,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                  "displayLines": "{[Skill05[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[1]]}"
-                  ]
+                  "displayLines": "{[Skill05[1]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -235,12 +194,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                  "displayLines": "{[Skill05[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[1]]}"
-                  ]
+                  "displayLines": "{[Skill05[1]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -256,12 +210,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                  "displayLines": "{[Skill05[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[1]]}"
-                  ]
+                  "displayLines": "{[Skill05[1]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -286,14 +235,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill05[1]]}) || Constants[0] (2) || MUL || RETURN",
-                      "displayLines": "({[Skill05[1]]} * 2)",
-                      "constants": [
-                        2
-                      ],
-                      "variables": [
-                        "{[Skill05[1]]}"
-                      ]
+                      "displayLines": "({[Skill05[1]]} * 2)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -311,12 +253,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                  "displayLines": "{[Skill05[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[1]]}"
-                  ]
+                  "displayLines": "{[Skill05[1]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -332,12 +269,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                  "displayLines": "{[Skill05[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[1]]}"
-                  ]
+                  "displayLines": "{[Skill05[1]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -353,12 +285,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                  "displayLines": "{[Skill05[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[1]]}"
-                  ]
+                  "displayLines": "{[Skill05[1]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -389,12 +316,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-              "displayLines": "{[Skill05[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[2]]}"
-              ]
+              "displayLines": "{[Skill05[2]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -457,12 +379,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-              "displayLines": "{[Skill05[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[2]]}"
-              ]
+              "displayLines": "{[Skill05[2]]}"
             },
             "Toughness": null,
             "Tags": null,

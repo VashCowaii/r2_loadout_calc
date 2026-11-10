@@ -46,12 +46,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (ChallengePeakBattle_0005_ADF_1) || RETURN",
-                    "displayLines": "ChallengePeakBattle_0005_ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "ChallengePeakBattle_0005_ADF_1"
-                    ]
+                    "displayLines": "ChallengePeakBattle_0005_ADF_1"
                   },
                   "isFixed": "(Fixed)"
                 },
@@ -105,12 +100,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (ChallengePeakBattle_0005_ADF_2) || INVERT || RETURN",
-                    "displayLines": "-ChallengePeakBattle_0005_ADF_2",
-                    "constants": [],
-                    "variables": [
-                      "ChallengePeakBattle_0005_ADF_2"
-                    ]
+                    "displayLines": "-ChallengePeakBattle_0005_ADF_2"
                   },
                   "isFixed": "(Fixed)"
                 },
@@ -168,20 +158,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1618051580\">Modifier_ChallengePeakBattle_BaseAbility_0005_02</a>[<span class=\"descriptionNumberColor\">Energy Absorption</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_0005_ADF_1": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     },
                     "ChallengePeakBattle_0005_ADF_2": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     }
                   }
                 }

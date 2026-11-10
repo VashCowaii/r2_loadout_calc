@@ -74,12 +74,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (BattleEvent_Sam_BaseSpeed) || RETURN",
-                "displayLines": "BattleEvent_Sam_BaseSpeed",
-                "constants": [],
-                "variables": [
-                  "BattleEvent_Sam_BaseSpeed"
-                ]
+                "displayLines": "BattleEvent_Sam_BaseSpeed"
               }
             },
             {

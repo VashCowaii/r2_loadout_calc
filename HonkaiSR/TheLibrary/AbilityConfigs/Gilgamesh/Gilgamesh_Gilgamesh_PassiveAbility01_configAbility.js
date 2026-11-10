@@ -98,12 +98,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"453870700\">Gilgamesh_Eidolon6_TeamBonusHalo</a>",
           "valuePerStack": {
             "MDF_AllDamageTypePenetrate": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         }

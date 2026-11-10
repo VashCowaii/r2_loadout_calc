@@ -93,12 +93,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageTakenUpRatio) || RETURN",
-                    "displayLines": "MDF_DamageTakenUpRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageTakenUpRatio"
-                    ]
+                    "displayLines": "MDF_DamageTakenUpRatio"
                   }
                 }
               ]
@@ -171,12 +166,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "variableName": "MDF_Layer"
                 },
@@ -197,38 +187,18 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-950617106\">Modifier_Monster_W4_Claymore_04_Enhanced</a>[<span class=\"descriptionNumberColor\">Inspire</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "valuePerStack": {
                     "MDF_DamageResistanceRatio": {
-                      "operator": "Variables[0] (MDF_DamageResistanceRatio) || RETURN",
-                      "displayLines": "MDF_DamageResistanceRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageResistanceRatio"
-                      ]
+                      "displayLines": "MDF_DamageResistanceRatio"
                     },
                     "MDF_SpeedAddedRatio": {
-                      "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                      "displayLines": "MDF_SpeedAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_SpeedAddedRatio"
-                      ]
+                      "displayLines": "MDF_SpeedAddedRatio"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   }
                 }
               ]
@@ -263,38 +233,18 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-950617106\">Modifier_Monster_W4_Claymore_04_Enhanced</a>[<span class=\"descriptionNumberColor\">Inspire</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                        "displayLines": "MDF_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxLayer"
-                        ]
+                        "displayLines": "MDF_MaxLayer"
                       },
                       "valuePerStack": {
                         "MDF_DamageResistanceRatio": {
-                          "operator": "Variables[0] (MDF_DamageResistanceRatio) || RETURN",
-                          "displayLines": "MDF_DamageResistanceRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageResistanceRatio"
-                          ]
+                          "displayLines": "MDF_DamageResistanceRatio"
                         },
                         "MDF_SpeedAddedRatio": {
-                          "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                          "displayLines": "MDF_SpeedAddedRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_SpeedAddedRatio"
-                          ]
+                          "displayLines": "MDF_SpeedAddedRatio"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (MDF_Layer) || RETURN",
-                        "displayLines": "MDF_Layer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Layer"
-                        ]
+                        "displayLines": "MDF_Layer"
                       }
                     }
                   ]
@@ -382,12 +332,7 @@ const compositeAbilityObject = {
                             "value1": "MDF_Layer",
                             "compareType": "<",
                             "value2": {
-                              "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                              "displayLines": "MDF_MaxLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxLayer"
-                              ]
+                              "displayLines": "MDF_MaxLayer"
                             }
                           },
                           "passed": [
@@ -418,20 +363,10 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"-950617106\">Modifier_Monster_W4_Claymore_04_Enhanced</a>[<span class=\"descriptionNumberColor\">Inspire</span>]",
                               "valuePerStack": {
                                 "MDF_DamageResistanceRatio": {
-                                  "operator": "Variables[0] (MDF_DamageResistanceRatio) || RETURN",
-                                  "displayLines": "MDF_DamageResistanceRatio",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_DamageResistanceRatio"
-                                  ]
+                                  "displayLines": "MDF_DamageResistanceRatio"
                                 },
                                 "MDF_SpeedAddedRatio": {
-                                  "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                                  "displayLines": "MDF_SpeedAddedRatio",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_SpeedAddedRatio"
-                                  ]
+                                  "displayLines": "MDF_SpeedAddedRatio"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -540,12 +475,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-998413100\">Modifier_Monster_W4_Claymore_04_Honor</a>[<span class=\"descriptionNumberColor\">All Wishes</span>]",
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (MDF_Layer) || INVERT || RETURN",
-                            "displayLines": "-MDF_Layer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Layer"
-                            ]
+                            "displayLines": "-MDF_Layer"
                           }
                         },
                         {
@@ -556,12 +486,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-950617106\">Modifier_Monster_W4_Claymore_04_Enhanced</a>[<span class=\"descriptionNumberColor\">Inspire</span>]",
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (MDF_Layer) || INVERT || RETURN",
-                            "displayLines": "-MDF_Layer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Layer"
-                            ]
+                            "displayLines": "-MDF_Layer"
                           }
                         },
                         {
@@ -639,29 +564,14 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-950617106\">Modifier_Monster_W4_Claymore_04_Enhanced</a>[<span class=\"descriptionNumberColor\">Inspire</span>]",
                   "valuePerStack": {
                     "MDF_DamageResistanceRatio": {
-                      "operator": "Variables[0] (MDF_DamageResistanceRatio) || RETURN",
-                      "displayLines": "MDF_DamageResistanceRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageResistanceRatio"
-                      ]
+                      "displayLines": "MDF_DamageResistanceRatio"
                     },
                     "MDF_SpeedAddedRatio": {
-                      "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                      "displayLines": "MDF_SpeedAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_SpeedAddedRatio"
-                      ]
+                      "displayLines": "MDF_SpeedAddedRatio"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   }
                 }
               ]
@@ -685,29 +595,14 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-950617106\">Modifier_Monster_W4_Claymore_04_Enhanced</a>[<span class=\"descriptionNumberColor\">Inspire</span>]",
                   "valuePerStack": {
                     "MDF_DamageResistanceRatio": {
-                      "operator": "Variables[0] (MDF_DamageResistanceRatio) || RETURN",
-                      "displayLines": "MDF_DamageResistanceRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageResistanceRatio"
-                      ]
+                      "displayLines": "MDF_DamageResistanceRatio"
                     },
                     "MDF_SpeedAddedRatio": {
-                      "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                      "displayLines": "MDF_SpeedAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_SpeedAddedRatio"
-                      ]
+                      "displayLines": "MDF_SpeedAddedRatio"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__334) || RETURN",
-                    "displayLines": "ENEMIES_OBJECT_UNUSED__334",
-                    "constants": [],
-                    "variables": [
-                      "ENEMIES_OBJECT_UNUSED__334"
-                    ]
+                    "displayLines": "ENEMIES_OBJECT_UNUSED__334"
                   }
                 }
               ]
@@ -744,13 +639,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageResistanceRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_DamageResistanceRatio * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageResistanceRatio",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_DamageResistanceRatio * MDF_Layer)"
                   }
                 },
                 {
@@ -812,12 +701,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -825,12 +709,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "assignState": "True",
                   "state": "Active"
@@ -903,12 +782,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MDF_Layer) || RETURN",
-                        "displayLines": "MDF_Layer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Layer"
-                        ]
+                        "displayLines": "MDF_Layer"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -916,12 +790,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                        "displayLines": "MDF_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxLayer"
-                        ]
+                        "displayLines": "MDF_MaxLayer"
                       },
                       "assignState": "True",
                       "state": "Active"
@@ -931,12 +800,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MDF_Layer) || RETURN",
-                        "displayLines": "MDF_Layer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Layer"
-                        ]
+                        "displayLines": "MDF_Layer"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -944,12 +808,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                        "displayLines": "MDF_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxLayer"
-                        ]
+                        "displayLines": "MDF_MaxLayer"
                       },
                       "assignState": "True",
                       "state": "CoolDown"
@@ -1002,12 +861,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -1015,12 +869,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "assignState": "True",
                   "barType": "Hulei"
@@ -1072,14 +921,7 @@ const compositeAbilityObject = {
                         "value1": "MDF_Layer",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MDF_MaxLayer) || Constants[0] (2) || DIV || RETURN",
-                          "displayLines": "(MDF_MaxLayer / 2)",
-                          "constants": [
-                            2
-                          ],
-                          "variables": [
-                            "MDF_MaxLayer"
-                          ]
+                          "displayLines": "(MDF_MaxLayer / 2)"
                         }
                       },
                       {
@@ -1108,14 +950,7 @@ const compositeAbilityObject = {
                         "value1": "MDF_Layer",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (MDF_MaxLayer) || Constants[0] (2) || DIV || RETURN",
-                          "displayLines": "(MDF_MaxLayer / 2)",
-                          "constants": [
-                            2
-                          ],
-                          "variables": [
-                            "MDF_MaxLayer"
-                          ]
+                          "displayLines": "(MDF_MaxLayer / 2)"
                         }
                       },
                       {
@@ -1196,12 +1031,7 @@ const compositeAbilityObject = {
             {
               "name": "Assign Advance/Delay to Current Ability Use",
               "adjustmentValue": {
-                "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-                "displayLines": "{[SkillP01[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP01[4]]}"
-                ]
+                "displayLines": "{[SkillP01[4]]}"
               },
               "adjustmentType": "Advance"
             },
@@ -1235,21 +1065,11 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1394805142\">Modifier_Monster_W4_Claymore_04_Defeated</a>[<span class=\"descriptionNumberColor\">Ruined</span>]",
           "duration": {
-            "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-            "displayLines": "{[SkillP01[3]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP01[3]]}"
-            ]
+            "displayLines": "{[SkillP01[3]]}"
           },
           "valuePerStack": {
             "MDF_DamageTakenUpRatio": {
-              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-              "displayLines": "{[SkillP01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[2]]}"
-              ]
+              "displayLines": "{[SkillP01[2]]}"
             }
           }
         },
@@ -1496,16 +1316,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (1) || Variables[1] ({[Skill04[1]]}) || Variables[2] (MDF_Layer) || MUL || ADD || MUL || RETURN",
-              "displayLines": "({[Skill04[0]]} * (1 + ({[Skill04[1]]} * MDF_Layer)))",
-              "constants": [
-                1
-              ],
-              "variables": [
-                "{[Skill04[0]]}",
-                "{[Skill04[1]]}",
-                "MDF_Layer"
-              ]
+              "displayLines": "({[Skill04[0]]} * (1 + ({[Skill04[1]]} * MDF_Layer)))"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -1522,16 +1333,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (1) || Variables[1] ({[Skill04[1]]}) || Variables[2] (MDF_Layer) || MUL || ADD || MUL || RETURN",
-              "displayLines": "({[Skill04[0]]} * (1 + ({[Skill04[1]]} * MDF_Layer)))",
-              "constants": [
-                1
-              ],
-              "variables": [
-                "{[Skill04[0]]}",
-                "{[Skill04[1]]}",
-                "MDF_Layer"
-              ]
+              "displayLines": "({[Skill04[0]]} * (1 + ({[Skill04[1]]} * MDF_Layer)))"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -1548,16 +1350,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (1) || Variables[1] ({[Skill04[1]]}) || Variables[2] (MDF_Layer) || MUL || ADD || MUL || RETURN",
-              "displayLines": "({[Skill04[0]]} * (1 + ({[Skill04[1]]} * MDF_Layer)))",
-              "constants": [
-                1
-              ],
-              "variables": [
-                "{[Skill04[0]]}",
-                "{[Skill04[1]]}",
-                "MDF_Layer"
-              ]
+              "displayLines": "({[Skill04[0]]} * (1 + ({[Skill04[1]]} * MDF_Layer)))"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -1574,16 +1367,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (1) || Variables[1] ({[Skill04[1]]}) || Variables[2] (MDF_Layer) || MUL || ADD || MUL || RETURN",
-              "displayLines": "({[Skill04[0]]} * (1 + ({[Skill04[1]]} * MDF_Layer)))",
-              "constants": [
-                1
-              ],
-              "variables": [
-                "{[Skill04[0]]}",
-                "{[Skill04[1]]}",
-                "MDF_Layer"
-              ]
+              "displayLines": "({[Skill04[0]]} * (1 + ({[Skill04[1]]} * MDF_Layer)))"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -1600,16 +1384,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (1) || Variables[1] ({[Skill04[1]]}) || Variables[2] (MDF_Layer) || MUL || ADD || MUL || RETURN",
-              "displayLines": "({[Skill04[0]]} * (1 + ({[Skill04[1]]} * MDF_Layer)))",
-              "constants": [
-                1
-              ],
-              "variables": [
-                "{[Skill04[0]]}",
-                "{[Skill04[1]]}",
-                "MDF_Layer"
-              ]
+              "displayLines": "({[Skill04[0]]} * (1 + ({[Skill04[1]]} * MDF_Layer)))"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -1761,29 +1536,14 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-998413100\">Modifier_Monster_W4_Claymore_04_Honor</a>[<span class=\"descriptionNumberColor\">All Wishes</span>]",
           "valuePerStack": {
             "MDF_MaxLayer": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "MDF_DamageAddedRatio": {
-              "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-              "displayLines": "{[Skill04[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[1]]}"
-              ]
+              "displayLines": "{[Skill04[1]]}"
             }
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-            "displayLines": "{[Skill03[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[0]]}"
-            ]
+            "displayLines": "{[Skill03[0]]}"
           }
         },
         {
@@ -1795,48 +1555,23 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-374062983\">Modifier_Monster_W4_Claymore_04_Ability03_Charge</a>",
           "valuePerStack": {
             "MDF_MaxLayer": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "MDF_DamageResistanceRatio": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
+              "displayLines": "{[SkillP01[0]]}"
             },
             "MDF_SpeedAddedRatio": {
-              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-              "displayLines": "{[SkillP01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[1]]}"
-              ]
+              "displayLines": "{[SkillP01[1]]}"
             },
             "MDF_ActionDelayRatio": {
-              "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-              "displayLines": "{[Skill03[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[1]]}"
-              ]
+              "displayLines": "{[Skill03[1]]}"
             }
           }
         },
         {
           "name": "Assign Advance/Delay to Current Ability Use",
           "adjustmentValue": {
-            "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-            "displayLines": "{[Skill03[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[1]]}"
-            ]
+            "displayLines": "{[Skill03[1]]}"
           },
           "adjustmentType": "Advance"
         },
@@ -1920,23 +1655,13 @@ const compositeAbilityObject = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                    "displayLines": "{[Skill02[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[0]]}"
-                    ]
+                    "displayLines": "{[Skill02[0]]}"
                   },
                   "enemyList": [
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                        "displayLines": "SummonList_ADF_1",
-                        "constants": [],
-                        "variables": [
-                          "SummonList_ADF_1"
-                        ]
+                        "displayLines": "SummonList_ADF_1"
                       },
                       "locationType": "First"
                     }
@@ -1963,23 +1688,13 @@ const compositeAbilityObject = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                    "displayLines": "{[Skill02[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[1]]}"
-                    ]
+                    "displayLines": "{[Skill02[1]]}"
                   },
                   "enemyList": [
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                        "displayLines": "SummonList_ADF_1",
-                        "constants": [],
-                        "variables": [
-                          "SummonList_ADF_1"
-                        ]
+                        "displayLines": "SummonList_ADF_1"
                       },
                       "locationType": "Last"
                     }
@@ -2006,23 +1721,13 @@ const compositeAbilityObject = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                    "displayLines": "{[Skill02[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[2]]}"
-                    ]
+                    "displayLines": "{[Skill02[2]]}"
                   },
                   "enemyList": [
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                        "displayLines": "SummonList_ADF_1",
-                        "constants": [],
-                        "variables": [
-                          "SummonList_ADF_1"
-                        ]
+                        "displayLines": "SummonList_ADF_1"
                       },
                       "locationType": "First"
                     }
@@ -2049,23 +1754,13 @@ const compositeAbilityObject = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                    "displayLines": "{[Skill02[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[3]]}"
-                    ]
+                    "displayLines": "{[Skill02[3]]}"
                   },
                   "enemyList": [
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                        "displayLines": "SummonList_ADF_1",
-                        "constants": [],
-                        "variables": [
-                          "SummonList_ADF_1"
-                        ]
+                        "displayLines": "SummonList_ADF_1"
                       },
                       "locationType": "Last"
                     }
@@ -2094,23 +1789,13 @@ const compositeAbilityObject = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                    "displayLines": "{[Skill02[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[0]]}"
-                    ]
+                    "displayLines": "{[Skill02[0]]}"
                   },
                   "enemyList": [
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                        "displayLines": "SummonList_ADF_1",
-                        "constants": [],
-                        "variables": [
-                          "SummonList_ADF_1"
-                        ]
+                        "displayLines": "SummonList_ADF_1"
                       },
                       "locationType": "Last"
                     }
@@ -2137,23 +1822,13 @@ const compositeAbilityObject = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                    "displayLines": "{[Skill02[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[1]]}"
-                    ]
+                    "displayLines": "{[Skill02[1]]}"
                   },
                   "enemyList": [
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                        "displayLines": "SummonList_ADF_1",
-                        "constants": [],
-                        "variables": [
-                          "SummonList_ADF_1"
-                        ]
+                        "displayLines": "SummonList_ADF_1"
                       },
                       "locationType": "First"
                     }
@@ -2180,23 +1855,13 @@ const compositeAbilityObject = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                    "displayLines": "{[Skill02[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[2]]}"
-                    ]
+                    "displayLines": "{[Skill02[2]]}"
                   },
                   "enemyList": [
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                        "displayLines": "SummonList_ADF_1",
-                        "constants": [],
-                        "variables": [
-                          "SummonList_ADF_1"
-                        ]
+                        "displayLines": "SummonList_ADF_1"
                       },
                       "locationType": "Last"
                     }
@@ -2223,23 +1888,13 @@ const compositeAbilityObject = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                    "displayLines": "{[Skill02[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[3]]}"
-                    ]
+                    "displayLines": "{[Skill02[3]]}"
                   },
                   "enemyList": [
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                        "displayLines": "SummonList_ADF_1",
-                        "constants": [],
-                        "variables": [
-                          "SummonList_ADF_1"
-                        ]
+                        "displayLines": "SummonList_ADF_1"
                       },
                       "locationType": "First"
                     }
@@ -2295,23 +1950,13 @@ const compositeAbilityObject = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                        "displayLines": "{[Skill02[0]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill02[0]]}"
-                        ]
+                        "displayLines": "{[Skill02[0]]}"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                            "displayLines": "SummonList_ADF_1",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_1"
-                            ]
+                            "displayLines": "SummonList_ADF_1"
                           },
                           "locationType": "First"
                         }
@@ -2338,23 +1983,13 @@ const compositeAbilityObject = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                        "displayLines": "{[Skill02[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill02[1]]}"
-                        ]
+                        "displayLines": "{[Skill02[1]]}"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                            "displayLines": "SummonList_ADF_1",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_1"
-                            ]
+                            "displayLines": "SummonList_ADF_1"
                           },
                           "locationType": "Last"
                         }
@@ -2381,23 +2016,13 @@ const compositeAbilityObject = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                        "displayLines": "{[Skill02[2]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill02[2]]}"
-                        ]
+                        "displayLines": "{[Skill02[2]]}"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                            "displayLines": "SummonList_ADF_1",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_1"
-                            ]
+                            "displayLines": "SummonList_ADF_1"
                           },
                           "locationType": "First"
                         }
@@ -2426,23 +2051,13 @@ const compositeAbilityObject = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                        "displayLines": "{[Skill02[0]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill02[0]]}"
-                        ]
+                        "displayLines": "{[Skill02[0]]}"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                            "displayLines": "SummonList_ADF_1",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_1"
-                            ]
+                            "displayLines": "SummonList_ADF_1"
                           },
                           "locationType": "Last"
                         }
@@ -2469,23 +2084,13 @@ const compositeAbilityObject = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                        "displayLines": "{[Skill02[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill02[1]]}"
-                        ]
+                        "displayLines": "{[Skill02[1]]}"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                            "displayLines": "SummonList_ADF_1",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_1"
-                            ]
+                            "displayLines": "SummonList_ADF_1"
                           },
                           "locationType": "First"
                         }
@@ -2512,23 +2117,13 @@ const compositeAbilityObject = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                        "displayLines": "{[Skill02[2]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill02[2]]}"
-                        ]
+                        "displayLines": "{[Skill02[2]]}"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                            "displayLines": "SummonList_ADF_1",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_1"
-                            ]
+                            "displayLines": "SummonList_ADF_1"
                           },
                           "locationType": "Last"
                         }
@@ -2584,23 +2179,13 @@ const compositeAbilityObject = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                            "displayLines": "{[Skill02[0]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill02[0]]}"
-                            ]
+                            "displayLines": "{[Skill02[0]]}"
                           },
                           "enemyList": [
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                                "displayLines": "SummonList_ADF_1",
-                                "constants": [],
-                                "variables": [
-                                  "SummonList_ADF_1"
-                                ]
+                                "displayLines": "SummonList_ADF_1"
                               },
                               "locationType": "First"
                             }
@@ -2627,23 +2212,13 @@ const compositeAbilityObject = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                            "displayLines": "{[Skill02[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill02[1]]}"
-                            ]
+                            "displayLines": "{[Skill02[1]]}"
                           },
                           "enemyList": [
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                                "displayLines": "SummonList_ADF_1",
-                                "constants": [],
-                                "variables": [
-                                  "SummonList_ADF_1"
-                                ]
+                                "displayLines": "SummonList_ADF_1"
                               },
                               "locationType": "Last"
                             }
@@ -2672,23 +2247,13 @@ const compositeAbilityObject = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                            "displayLines": "{[Skill02[0]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill02[0]]}"
-                            ]
+                            "displayLines": "{[Skill02[0]]}"
                           },
                           "enemyList": [
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                                "displayLines": "SummonList_ADF_1",
-                                "constants": [],
-                                "variables": [
-                                  "SummonList_ADF_1"
-                                ]
+                                "displayLines": "SummonList_ADF_1"
                               },
                               "locationType": "Last"
                             }
@@ -2715,23 +2280,13 @@ const compositeAbilityObject = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                            "displayLines": "{[Skill02[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill02[1]]}"
-                            ]
+                            "displayLines": "{[Skill02[1]]}"
                           },
                           "enemyList": [
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                                "displayLines": "SummonList_ADF_1",
-                                "constants": [],
-                                "variables": [
-                                  "SummonList_ADF_1"
-                                ]
+                                "displayLines": "SummonList_ADF_1"
                               },
                               "locationType": "First"
                             }
@@ -2787,23 +2342,13 @@ const compositeAbilityObject = {
                             {
                               "name": "Create Enemies",
                               "delayPercent": {
-                                "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                                "displayLines": "{[Skill02[0]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[Skill02[0]]}"
-                                ]
+                                "displayLines": "{[Skill02[0]]}"
                               },
                               "enemyList": [
                                 {
                                   "name": "Enemy Entry",
                                   "enemyID": {
-                                    "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                                    "displayLines": "SummonList_ADF_1",
-                                    "constants": [],
-                                    "variables": [
-                                      "SummonList_ADF_1"
-                                    ]
+                                    "displayLines": "SummonList_ADF_1"
                                   },
                                   "locationType": "First"
                                 }
@@ -2832,23 +2377,13 @@ const compositeAbilityObject = {
                             {
                               "name": "Create Enemies",
                               "delayPercent": {
-                                "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                                "displayLines": "{[Skill02[0]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[Skill02[0]]}"
-                                ]
+                                "displayLines": "{[Skill02[0]]}"
                               },
                               "enemyList": [
                                 {
                                   "name": "Enemy Entry",
                                   "enemyID": {
-                                    "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                                    "displayLines": "SummonList_ADF_1",
-                                    "constants": [],
-                                    "variables": [
-                                      "SummonList_ADF_1"
-                                    ]
+                                    "displayLines": "SummonList_ADF_1"
                                   },
                                   "locationType": "Last"
                                 }
@@ -3073,12 +2608,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -3095,12 +2625,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
+              "displayLines": "{[Skill01[1]]}"
             },
             "Toughness": null,
             "Tags": null,

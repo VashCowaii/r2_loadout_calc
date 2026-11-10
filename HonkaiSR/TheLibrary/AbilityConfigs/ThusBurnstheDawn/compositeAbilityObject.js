@@ -90,12 +90,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -125,12 +120,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"613021115\">LC_23044_Sub</a>[<span class=\"descriptionNumberColor\">Blazing Sun</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.6) || RETURN",
-                          "displayLines": "0.6",
-                          "constants": [],
-                          "variables": [
-                            0.6
-                          ]
+                          "displayLines": "0.6"
                         }
                       }
                     }
@@ -151,12 +141,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"237864619\">LC_23044_Sub2</a>[<span class=\"descriptionNumberColor\">Dispossession</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.18) || RETURN",
-                      "displayLines": "0.18",
-                      "constants": [],
-                      "variables": [
-                        0.18
-                      ]
+                      "displayLines": "0.18"
                     }
                   }
                 }

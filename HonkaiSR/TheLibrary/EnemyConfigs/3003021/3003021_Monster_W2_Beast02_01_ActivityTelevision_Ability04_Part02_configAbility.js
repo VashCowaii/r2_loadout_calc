@@ -67,12 +67,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-917579162\">W2_Beast02_01_ActivityTelevision_ModifyDelay</a>",
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-          "displayLines": "{[Skill04[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}"
-          ]
+          "displayLines": "{[Skill04[0]]}"
         }
       }
     },

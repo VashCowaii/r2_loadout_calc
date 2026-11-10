@@ -29,28 +29,13 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"960515933\">MissionBattleEvent60044_Charge</a>",
       "valuePerStack": {
         "DelayToCharge": {
-          "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-          "displayLines": "#BattleEvent_P3_ADF",
-          "constants": [],
-          "variables": [
-            "#BattleEvent_P3_ADF"
-          ]
+          "displayLines": "#BattleEvent_P3_ADF"
         },
         "MinionDeathCharge": {
-          "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
-          "displayLines": "#BattleEvent_P4_ADF",
-          "constants": [],
-          "variables": [
-            "#BattleEvent_P4_ADF"
-          ]
+          "displayLines": "#BattleEvent_P4_ADF"
         },
         "InitialCharge": {
-          "operator": "Variables[0] (#BattleEvent_P5_ADF) || RETURN",
-          "displayLines": "#BattleEvent_P5_ADF",
-          "constants": [],
-          "variables": [
-            "#BattleEvent_P5_ADF"
-          ]
+          "displayLines": "#BattleEvent_P5_ADF"
         }
       }
     },
@@ -156,12 +141,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "valuePercent": {
-                "operator": "Variables[0] (InitialCharge) || RETURN",
-                "displayLines": "InitialCharge",
-                "constants": [],
-                "variables": [
-                  "InitialCharge"
-                ]
+                "displayLines": "InitialCharge"
               },
               "isFixed": "(Fixed)",
               "isSetToValue": true
@@ -203,12 +183,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MinionDeathCharge) || RETURN",
-                    "displayLines": "MinionDeathCharge",
-                    "constants": [],
-                    "variables": [
-                      "MinionDeathCharge"
-                    ]
+                    "displayLines": "MinionDeathCharge"
                   },
                   "isFixed": "* ERR"
                 }
@@ -232,13 +207,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (DelayAdd) || Variables[1] (DelayToCharge) || MUL || RETURN",
-                "displayLines": "(DelayAdd * DelayToCharge)",
-                "constants": [],
-                "variables": [
-                  "DelayAdd",
-                  "DelayToCharge"
-                ]
+                "displayLines": "(DelayAdd * DelayToCharge)"
               },
               "isFixed": "* ERR"
             }

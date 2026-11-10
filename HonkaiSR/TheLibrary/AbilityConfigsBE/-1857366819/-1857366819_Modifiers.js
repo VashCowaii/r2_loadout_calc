@@ -33,12 +33,7 @@ const configAbility = {
               },
               "function": "Set",
               "value": {
-                "operator": "Variables[0] (BPExChange) || RETURN",
-                "displayLines": "BPExChange",
-                "constants": [],
-                "variables": [
-                  "BPExChange"
-                ]
+                "displayLines": "BPExChange"
               },
               "silentChange": true
             },

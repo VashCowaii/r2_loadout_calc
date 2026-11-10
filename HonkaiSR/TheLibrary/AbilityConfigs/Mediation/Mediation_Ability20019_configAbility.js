@@ -37,12 +37,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (12) || RETURN",
-                "displayLines": "12",
-                "constants": [],
-                "variables": [
-                  12
-                ]
+                "displayLines": "12"
               }
             }
           ]
@@ -74,12 +69,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1847667722\">LC_20019_Sub</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                   "duration": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   }
                 }
               ]

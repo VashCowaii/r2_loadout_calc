@@ -41,20 +41,10 @@ const configAbility = {
                   },
                   "variables": {
                     "parameter[0]_AddLayer": {
-                      "operator": "Variables[0] (30) || RETURN",
-                      "displayLines": "30",
-                      "constants": [],
-                      "variables": [
-                        30
-                      ]
+                      "displayLines": "30"
                     },
                     "parameter[1]_Chance": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     }
                   }
                 }
@@ -81,20 +71,10 @@ const configAbility = {
               },
               "variables": {
                 "parameter[0]_AddLayer": {
-                  "operator": "Variables[0] (30) || RETURN",
-                  "displayLines": "30",
-                  "constants": [],
-                  "variables": [
-                    30
-                  ]
+                  "displayLines": "30"
                 },
                 "parameter[1]_Chance": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 }
               }
             },

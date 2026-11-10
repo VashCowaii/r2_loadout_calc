@@ -8,12 +8,7 @@ const configAbility = {
       "name": "Define Custom Variable",
       "scope": "ContextCaster",
       "value": {
-        "operator": "Variables[0] (20) || RETURN",
-        "displayLines": "20",
-        "constants": [],
-        "variables": [
-          20
-        ]
+        "displayLines": "20"
       },
       "variableName": "DV_PursuedDamage_LimitCount"
     },
@@ -52,12 +47,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1716749059\">Cerydra_Ability02_Target</a>",
               "valuePerStack": {
                 "DV_PointAdded_Get": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 }
               }
             }
@@ -89,12 +79,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1716749059\">Cerydra_Ability02_Target</a>",
                   "valuePerStack": {
                     "DV_PointAdded_Get": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     }
                   }
                 }
@@ -109,12 +94,7 @@ const configAbility = {
       "functionName": "<a class=\"gTempYellow\" id=\"1612575312\">Cerydra_Template_MaxPointHandle</a>",
       "variables": {
         "DV_AddPoint": {
-          "operator": "Variables[0] (2) || RETURN",
-          "displayLines": "2",
-          "constants": [],
-          "variables": [
-            2
-          ]
+          "displayLines": "2"
         }
       }
     },
@@ -128,21 +108,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] (2.4) || Variables[1] (2.4) || ADD || RETURN",
-          "displayLines": "(2.4 + 2.4)",
-          "constants": [],
-          "variables": [
-            2.4,
-            2.4
-          ]
+          "displayLines": "(2.4 + 2.4)"
         },
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "instanceTag": "Cerydra_Skill03_Attack",
         "Tags": null,

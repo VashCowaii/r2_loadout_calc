@@ -32,13 +32,7 @@ const configAbility = {
           "name": "Update Displayed Energy Bar",
           "value": 0,
           "maximum": {
-            "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-            "displayLines": "(2 + 1)",
-            "constants": [],
-            "variables": [
-              2,
-              1
-            ]
+            "displayLines": "(2 + 1)"
           },
           "assignState": "True",
           "priorState": "Normal",
@@ -58,12 +52,7 @@ const configAbility = {
           "name": "Update Displayed Energy Bar",
           "value": 0,
           "maximum": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "assignState": "True",
           "priorState": "Normal",
@@ -81,12 +70,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "variableName": "Huohuo_Rank02_ReviveCount"
         },
@@ -99,20 +83,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1683962968\">Huohuo_Eidolon2_ReviveCount</a>[<span class=\"descriptionNumberColor\">Sealed in Tail, Wraith Subdued</span>]",
           "valuePerStack": {
             "MDF_HealRatio": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             },
             "MDF_ReviveCount": {
-              "operator": "Variables[0] (Huohuo_Rank02_ReviveCount) || RETURN",
-              "displayLines": "Huohuo_Rank02_ReviveCount",
-              "constants": [],
-              "variables": [
-                "Huohuo_Rank02_ReviveCount"
-              ]
+              "displayLines": "Huohuo_Rank02_ReviveCount"
             }
           }
         }
@@ -184,21 +158,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-2048047648\">Huohuo_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "MDF_DamageAddedRatio": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   }
                 }
@@ -231,46 +195,20 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1522612454\">Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-                        "displayLines": "(2 + 1)",
-                        "constants": [],
-                        "variables": [
-                          2,
-                          1
-                        ]
+                        "displayLines": "(2 + 1)"
                       },
                       "valuePerStack": {
                         "MDF_HPRatio": {
-                          "operator": "Variables[0] (0.044999998) || RETURN",
-                          "displayLines": "0.044999998",
-                          "constants": [],
-                          "variables": [
-                            0.044999998
-                          ]
+                          "displayLines": "0.044999998"
                         },
                         "MDF_HPValue": {
-                          "operator": "Variables[0] (120) || RETURN",
-                          "displayLines": "120",
-                          "constants": [],
-                          "variables": [
-                            120
-                          ]
+                          "displayLines": "120"
                         },
                         "MDF_LowHP": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         },
                         "MDF_DispelNum": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         }
                       }
                     }
@@ -284,45 +222,20 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1522612454\">Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "valuePerStack": {
                         "MDF_HPRatio": {
-                          "operator": "Variables[0] (0.044999998) || RETURN",
-                          "displayLines": "0.044999998",
-                          "constants": [],
-                          "variables": [
-                            0.044999998
-                          ]
+                          "displayLines": "0.044999998"
                         },
                         "MDF_HPValue": {
-                          "operator": "Variables[0] (120) || RETURN",
-                          "displayLines": "120",
-                          "constants": [],
-                          "variables": [
-                            120
-                          ]
+                          "displayLines": "120"
                         },
                         "MDF_LowHP": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         },
                         "MDF_DispelNum": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         }
                       }
                     }
@@ -362,45 +275,20 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1522612454\">Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
                   "duration": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "valuePerStack": {
                     "MDF_HPRatio": {
-                      "operator": "Variables[0] (0.044999998) || RETURN",
-                      "displayLines": "0.044999998",
-                      "constants": [],
-                      "variables": [
-                        0.044999998
-                      ]
+                      "displayLines": "0.044999998"
                     },
                     "MDF_HPValue": {
-                      "operator": "Variables[0] (120) || RETURN",
-                      "displayLines": "120",
-                      "constants": [],
-                      "variables": [
-                        120
-                      ]
+                      "displayLines": "120"
                     },
                     "MDF_LowHP": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     },
                     "MDF_DispelNum": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     }
                   }
                 }

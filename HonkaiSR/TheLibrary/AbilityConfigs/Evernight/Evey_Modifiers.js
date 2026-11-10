@@ -61,12 +61,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-              "displayLines": "MDF_PropertyValue",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyValue"
-              ]
+              "displayLines": "MDF_PropertyValue"
             }
           }
         },
@@ -81,12 +76,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (MDF_PropertyValue_2) || RETURN",
-              "displayLines": "MDF_PropertyValue_2",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyValue_2"
-              ]
+              "displayLines": "MDF_PropertyValue_2"
             }
           }
         }
@@ -145,12 +135,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -425,12 +410,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -459,12 +439,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -497,13 +472,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_Conv) || Variables[1] (MDF_CritBase) || MUL || RETURN",
-                "displayLines": "(MDF_Conv * MDF_CritBase)",
-                "constants": [],
-                "variables": [
-                  "MDF_Conv",
-                  "MDF_CritBase"
-                ]
+                "displayLines": "(MDF_Conv * MDF_CritBase)"
               },
               "variableName": "MDF_PropertyValue"
             },
@@ -515,12 +484,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               },
               "isRefresh": true
             }
@@ -546,12 +510,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   },
                   "isRefresh": true
                 }
@@ -580,12 +539,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_Conv": {
-              "operator": "Variables[0] (MDF_CritBase) || RETURN",
-              "displayLines": "MDF_CritBase",
-              "constants": [],
-              "variables": [
-                "MDF_CritBase"
-              ]
+              "displayLines": "MDF_CritBase"
             }
           }
         },
@@ -614,12 +568,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-              "displayLines": "MDF_PropertyValue",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyValue"
-              ]
+              "displayLines": "MDF_PropertyValue"
             }
           }
         }
@@ -645,26 +594,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_7830) || Variables[1] (S02_ExtraRatio) || ADD || RETURN",
-                    "displayLines": "(UnusedUnderThisBase_7830 + S02_ExtraRatio)",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_7830",
-                      "S02_ExtraRatio"
-                    ]
+                    "displayLines": "(UnusedUnderThisBase_7830 + S02_ExtraRatio)"
                   },
                   "variableName": "MDF_Conv"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_Conv) || Variables[1] (MDF_CritBase) || MUL || RETURN",
-                    "displayLines": "(MDF_Conv * MDF_CritBase)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Conv",
-                      "MDF_CritBase"
-                    ]
+                    "displayLines": "(MDF_Conv * MDF_CritBase)"
                   },
                   "variableName": "_TMP_NEW_VAL"
                 },
@@ -695,12 +632,7 @@ const configAbility = {
                           "modifierName": "<a class=\"gModGreen\" id=\"-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
                           "variableName": "MDF_PropertyValue",
                           "value": {
-                            "operator": "Variables[0] (_TMP_NEW_VAL) || RETURN",
-                            "displayLines": "_TMP_NEW_VAL",
-                            "constants": [],
-                            "variables": [
-                              "_TMP_NEW_VAL"
-                            ]
+                            "displayLines": "_TMP_NEW_VAL"
                           }
                         }
                       ],
@@ -714,12 +646,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
                           "valuePerStack": {
                             "MDF_Conv": {
-                              "operator": "Variables[0] (MDF_CritBase) || RETURN",
-                              "displayLines": "MDF_CritBase",
-                              "constants": [],
-                              "variables": [
-                                "MDF_CritBase"
-                              ]
+                              "displayLines": "MDF_CritBase"
                             }
                           }
                         }
@@ -752,13 +679,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_Conv) || Variables[1] (MDF_CritBase) || MUL || RETURN",
-                    "displayLines": "(MDF_Conv * MDF_CritBase)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Conv",
-                      "MDF_CritBase"
-                    ]
+                    "displayLines": "(MDF_Conv * MDF_CritBase)"
                   },
                   "variableName": "_TMP_NEW_VAL"
                 },
@@ -789,12 +710,7 @@ const configAbility = {
                           "modifierName": "<a class=\"gModGreen\" id=\"-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
                           "variableName": "MDF_PropertyValue",
                           "value": {
-                            "operator": "Variables[0] (_TMP_NEW_VAL) || RETURN",
-                            "displayLines": "_TMP_NEW_VAL",
-                            "constants": [],
-                            "variables": [
-                              "_TMP_NEW_VAL"
-                            ]
+                            "displayLines": "_TMP_NEW_VAL"
                           }
                         }
                       ],
@@ -808,12 +724,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
                           "valuePerStack": {
                             "MDF_Conv": {
-                              "operator": "Variables[0] (MDF_CritBase) || RETURN",
-                              "displayLines": "MDF_CritBase",
-                              "constants": [],
-                              "variables": [
-                                "MDF_CritBase"
-                              ]
+                              "displayLines": "MDF_CritBase"
                             }
                           }
                         }
@@ -846,12 +757,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -878,12 +784,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -906,21 +807,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1497104623\">Evernight_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
               "duration": {
-                "operator": "Variables[0] (UnusedUnderThisBase_5173) || RETURN",
-                "displayLines": "UnusedUnderThisBase_5173",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_5173"
-                ]
+                "displayLines": "UnusedUnderThisBase_5173"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (3) || RETURN",
-                  "displayLines": "3",
-                  "constants": [],
-                  "variables": [
-                    3
-                  ]
+                  "displayLines": "3"
                 }
               }
             },
@@ -932,21 +823,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1497104623\">Evernight_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
               "duration": {
-                "operator": "Variables[0] (UnusedUnderThisBase_5173) || RETURN",
-                "displayLines": "UnusedUnderThisBase_5173",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_5173"
-                ]
+                "displayLines": "UnusedUnderThisBase_5173"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (3) || RETURN",
-                  "displayLines": "3",
-                  "constants": [],
-                  "variables": [
-                    3
-                  ]
+                  "displayLines": "3"
                 }
               }
             },
@@ -986,13 +867,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue_1) || Variables[1] (MDF_PropertyValue_2) || ADD || RETURN",
-                    "displayLines": "(MDF_PropertyValue_1 + MDF_PropertyValue_2)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue_1",
-                      "MDF_PropertyValue_2"
-                    ]
+                    "displayLines": "(MDF_PropertyValue_1 + MDF_PropertyValue_2)"
                   },
                   "variableName": "MDF_PropertyValue"
                 }
@@ -1001,12 +876,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue_1) || RETURN",
-                    "displayLines": "MDF_PropertyValue_1",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue_1"
-                    ]
+                    "displayLines": "MDF_PropertyValue_1"
                   },
                   "variableName": "MDF_PropertyValue"
                 }
@@ -1020,12 +890,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -1054,12 +919,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -1312,13 +1172,7 @@ const configAbility = {
                           },
                           "variableName": "_Partner_Count_Show",
                           "value": {
-                            "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (_Evernight_00_Extra_Energy) || ADD || RETURN",
-                            "displayLines": "(MDF_PropertyValue + _Evernight_00_Extra_Energy)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_PropertyValue",
-                              "_Evernight_00_Extra_Energy"
-                            ]
+                            "displayLines": "(MDF_PropertyValue + _Evernight_00_Extra_Energy)"
                           }
                         },
                         {
@@ -1343,13 +1197,7 @@ const configAbility = {
                               "variableName": "_Partner_Count",
                               "context": "TargetEntity",
                               "value": {
-                                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (_Evernight_00_Extra_Energy) || ADD || RETURN",
-                                "displayLines": "(MDF_PropertyValue + _Evernight_00_Extra_Energy)",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_PropertyValue",
-                                  "_Evernight_00_Extra_Energy"
-                                ]
+                                "displayLines": "(MDF_PropertyValue + _Evernight_00_Extra_Energy)"
                               }
                             }
                           ]
@@ -1419,12 +1267,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -1482,12 +1325,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -1512,12 +1350,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "consumePercent": {
-                "operator": "Variables[0] (MDF_Cost) || RETURN",
-                "displayLines": "MDF_Cost",
-                "constants": [],
-                "variables": [
-                  "MDF_Cost"
-                ]
+                "displayLines": "MDF_Cost"
               },
               "consumeFloor": 1,
               "attackType": "Unknown"
@@ -1530,21 +1363,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1391660847\">Evernight_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
               "duration": {
-                "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                "displayLines": "MDF_LifeTime",
-                "constants": [],
-                "variables": [
-                  "MDF_LifeTime"
-                ]
+                "displayLines": "MDF_LifeTime"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                  "displayLines": "MDF_PropertyValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue"
-                  ]
+                  "displayLines": "MDF_PropertyValue"
                 }
               }
             },
@@ -1556,21 +1379,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1391660847\">Evernight_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
               "duration": {
-                "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                "displayLines": "MDF_LifeTime",
-                "constants": [],
-                "variables": [
-                  "MDF_LifeTime"
-                ]
+                "displayLines": "MDF_LifeTime"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                  "displayLines": "MDF_PropertyValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue"
-                  ]
+                  "displayLines": "MDF_PropertyValue"
                 }
               }
             }
@@ -1592,28 +1405,13 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-              "displayLines": "MDF_PropertyValue",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyValue"
-              ]
+              "displayLines": "MDF_PropertyValue"
             },
             "MDF_Cost": {
-              "operator": "Variables[0] (MDF_Cost) || RETURN",
-              "displayLines": "MDF_Cost",
-              "constants": [],
-              "variables": [
-                "MDF_Cost"
-              ]
+              "displayLines": "MDF_Cost"
             },
             "MDF_LifeTime": {
-              "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-              "displayLines": "MDF_LifeTime",
-              "constants": [],
-              "variables": [
-                "MDF_LifeTime"
-              ]
+              "displayLines": "MDF_LifeTime"
             }
           }
         }
@@ -1630,12 +1428,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "consumePercent": {
-                "operator": "Variables[0] (MDF_Cost) || RETURN",
-                "displayLines": "MDF_Cost",
-                "constants": [],
-                "variables": [
-                  "MDF_Cost"
-                ]
+                "displayLines": "MDF_Cost"
               },
               "consumeFloor": 1,
               "attackType": "Unknown"
@@ -1648,21 +1441,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1391660847\">Evernight_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
               "duration": {
-                "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                "displayLines": "MDF_LifeTime",
-                "constants": [],
-                "variables": [
-                  "MDF_LifeTime"
-                ]
+                "displayLines": "MDF_LifeTime"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                  "displayLines": "MDF_PropertyValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue"
-                  ]
+                  "displayLines": "MDF_PropertyValue"
                 }
               }
             },
@@ -1674,21 +1457,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1391660847\">Evernight_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
               "duration": {
-                "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                "displayLines": "MDF_LifeTime",
-                "constants": [],
-                "variables": [
-                  "MDF_LifeTime"
-                ]
+                "displayLines": "MDF_LifeTime"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                  "displayLines": "MDF_PropertyValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue"
-                  ]
+                  "displayLines": "MDF_PropertyValue"
                 }
               }
             }
@@ -2094,12 +1867,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -2129,14 +1897,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_PropertyValue_2) || Variables[2] (_Evernight_00_DeathRattle_Layer) || MUL || ADD || RETURN",
-                "displayLines": "(MDF_PropertyValue + (MDF_PropertyValue_2 * _Evernight_00_DeathRattle_Layer))",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "MDF_PropertyValue_2",
-                  "_Evernight_00_DeathRattle_Layer"
-                ]
+                "displayLines": "(MDF_PropertyValue + (MDF_PropertyValue_2 * _Evernight_00_DeathRattle_Layer))"
               },
               "variableName": "MDF_Show"
             },
@@ -2148,12 +1909,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_Show) || RETURN",
-                "displayLines": "MDF_Show",
-                "constants": [],
-                "variables": [
-                  "MDF_Show"
-                ]
+                "displayLines": "MDF_Show"
               }
             }
           ]

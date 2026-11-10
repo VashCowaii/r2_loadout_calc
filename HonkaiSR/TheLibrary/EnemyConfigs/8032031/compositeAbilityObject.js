@@ -45,12 +45,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -58,12 +53,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "assignState": "True",
                   "state": "Active"
@@ -104,12 +94,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__67) || RETURN",
-                        "displayLines": "ENEMIES_OBJECT_UNUSED__67",
-                        "constants": [],
-                        "variables": [
-                          "ENEMIES_OBJECT_UNUSED__67"
-                        ]
+                        "displayLines": "ENEMIES_OBJECT_UNUSED__67"
                       },
                       "formula": "Heal from Target MaxHP"
                     }
@@ -194,12 +179,7 @@ const compositeAbilityObject = {
                         "value1": "<a class=\"gModGreen\" id=\"-1833952078\">Monster_W3_AventurinePart_Odds_RL</a>",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                          "displayLines": "MDF_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer"
-                          ]
+                          "displayLines": "MDF_MaxLayer"
                         },
                         "valueType": "Layer"
                       }
@@ -261,32 +241,17 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-96862504\">Monster_W3_AventurinePart_Odds_EnergyBar_RL</a>[<span class=\"descriptionNumberColor\">Odds</span>]",
                   "valuePerStack": {
                     "MDF_Layer": {
-                      "operator": "Variables[0] (MDF_Layer) || RETURN",
-                      "displayLines": "MDF_Layer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Layer"
-                      ]
+                      "displayLines": "MDF_Layer"
                     },
                     "MDF_MaxLayer": {
-                      "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                      "displayLines": "MDF_MaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MaxLayer"
-                      ]
+                      "displayLines": "MDF_MaxLayer"
                     }
                   }
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -294,12 +259,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "assignState": "True",
                   "state": "Active"
@@ -307,12 +267,7 @@ const compositeAbilityObject = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (GambleOdds) || RETURN",
-                    "displayLines": "GambleOdds",
-                    "constants": [],
-                    "variables": [
-                      "GambleOdds"
-                    ]
+                    "displayLines": "GambleOdds"
                   },
                   "caseEvents": [
                     {
@@ -341,12 +296,7 @@ const compositeAbilityObject = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (GambleOdds) || RETURN",
-                    "displayLines": "GambleOdds",
-                    "constants": [],
-                    "variables": [
-                      "GambleOdds"
-                    ]
+                    "displayLines": "GambleOdds"
                   },
                   "caseEvents": [
                     {
@@ -980,15 +930,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (WHOLE) || Variables[1] (MDF_DiceResult_RL) || Constants[0] (10) || DIV || PARAM_1 || FUNCTION || RETURN",
-                            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((MDF_DiceResult_RL / 10))",
-                            "constants": [
-                              10
-                            ],
-                            "variables": [
-                              "WHOLE",
-                              "MDF_DiceResult_RL"
-                            ]
+                            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((MDF_DiceResult_RL / 10))"
                           },
                           "variableName": "MDF_DiceResult_RL"
                         },
@@ -1009,12 +951,7 @@ const compositeAbilityObject = {
                             {
                               "name": "SWITCH",
                               "switchValue": {
-                                "operator": "Variables[0] (MDF_DiceResult_RL) || RETURN",
-                                "displayLines": "MDF_DiceResult_RL",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_DiceResult_RL"
-                                ]
+                                "displayLines": "MDF_DiceResult_RL"
                               },
                               "caseEvents": [
                                 {
@@ -1075,14 +1012,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (MDF_DiceResult_RL) || Constants[0] (10) || MOD || RETURN",
-                            "displayLines": "(MDF_DiceResult_RL % 10)",
-                            "constants": [
-                              10
-                            ],
-                            "variables": [
-                              "MDF_DiceResult_RL"
-                            ]
+                            "displayLines": "(MDF_DiceResult_RL % 10)"
                           },
                           "variableName": "MDF_DiceResult_RL"
                         },
@@ -1119,12 +1049,7 @@ const compositeAbilityObject = {
                             {
                               "name": "SWITCH",
                               "switchValue": {
-                                "operator": "Variables[0] (MDF_DiceResult_RL) || RETURN",
-                                "displayLines": "MDF_DiceResult_RL",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_DiceResult_RL"
-                                ]
+                                "displayLines": "MDF_DiceResult_RL"
                               },
                               "caseEvents": [
                                 {
@@ -1191,12 +1116,7 @@ const compositeAbilityObject = {
                         "value1": "DiceResult",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MDF_CurrentDiceResult) || RETURN",
-                          "displayLines": "MDF_CurrentDiceResult",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentDiceResult"
-                          ]
+                          "displayLines": "MDF_CurrentDiceResult"
                         }
                       }
                     }
@@ -1434,12 +1354,7 @@ const compositeAbilityObject = {
                         "value1": "DiceResult",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MDF_CurrentDiceResult) || RETURN",
-                          "displayLines": "MDF_CurrentDiceResult",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentDiceResult"
-                          ]
+                          "displayLines": "MDF_CurrentDiceResult"
                         }
                       }
                     }
@@ -1655,15 +1570,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (WHOLE) || Variables[1] (MDF_DiceResult_RL) || Constants[0] (10) || DIV || PARAM_1 || FUNCTION || RETURN",
-                            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((MDF_DiceResult_RL / 10))",
-                            "constants": [
-                              10
-                            ],
-                            "variables": [
-                              "WHOLE",
-                              "MDF_DiceResult_RL"
-                            ]
+                            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((MDF_DiceResult_RL / 10))"
                           },
                           "variableName": "MDF_DiceResult_RL"
                         },
@@ -1684,12 +1591,7 @@ const compositeAbilityObject = {
                             {
                               "name": "SWITCH",
                               "switchValue": {
-                                "operator": "Variables[0] (MDF_DiceResult_RL) || RETURN",
-                                "displayLines": "MDF_DiceResult_RL",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_DiceResult_RL"
-                                ]
+                                "displayLines": "MDF_DiceResult_RL"
                               },
                               "caseEvents": [
                                 {
@@ -1750,14 +1652,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (MDF_DiceResult_RL) || Constants[0] (10) || MOD || RETURN",
-                            "displayLines": "(MDF_DiceResult_RL % 10)",
-                            "constants": [
-                              10
-                            ],
-                            "variables": [
-                              "MDF_DiceResult_RL"
-                            ]
+                            "displayLines": "(MDF_DiceResult_RL % 10)"
                           },
                           "variableName": "MDF_DiceResult_RL"
                         },
@@ -1794,12 +1689,7 @@ const compositeAbilityObject = {
                             {
                               "name": "SWITCH",
                               "switchValue": {
-                                "operator": "Variables[0] (MDF_DiceResult_RL) || RETURN",
-                                "displayLines": "MDF_DiceResult_RL",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_DiceResult_RL"
-                                ]
+                                "displayLines": "MDF_DiceResult_RL"
                               },
                               "caseEvents": [
                                 {
@@ -1892,12 +1782,7 @@ const compositeAbilityObject = {
                         "value1": "DiceResult",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MDF_CurrentDiceResult) || RETURN",
-                          "displayLines": "MDF_CurrentDiceResult",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentDiceResult"
-                          ]
+                          "displayLines": "MDF_CurrentDiceResult"
                         }
                       }
                     }
@@ -2100,15 +1985,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (WHOLE) || Variables[1] (MDF_DiceResult_RL) || Constants[0] (10) || DIV || PARAM_1 || FUNCTION || RETURN",
-                            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((MDF_DiceResult_RL / 10))",
-                            "constants": [
-                              10
-                            ],
-                            "variables": [
-                              "WHOLE",
-                              "MDF_DiceResult_RL"
-                            ]
+                            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((MDF_DiceResult_RL / 10))"
                           },
                           "variableName": "MDF_DiceResult_RL"
                         },
@@ -2129,12 +2006,7 @@ const compositeAbilityObject = {
                             {
                               "name": "SWITCH",
                               "switchValue": {
-                                "operator": "Variables[0] (MDF_DiceResult_RL) || RETURN",
-                                "displayLines": "MDF_DiceResult_RL",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_DiceResult_RL"
-                                ]
+                                "displayLines": "MDF_DiceResult_RL"
                               },
                               "caseEvents": [
                                 {
@@ -2195,14 +2067,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (MDF_DiceResult_RL) || Constants[0] (10) || MOD || RETURN",
-                            "displayLines": "(MDF_DiceResult_RL % 10)",
-                            "constants": [
-                              10
-                            ],
-                            "variables": [
-                              "MDF_DiceResult_RL"
-                            ]
+                            "displayLines": "(MDF_DiceResult_RL % 10)"
                           },
                           "variableName": "MDF_DiceResult_RL"
                         },
@@ -2239,12 +2104,7 @@ const compositeAbilityObject = {
                             {
                               "name": "SWITCH",
                               "switchValue": {
-                                "operator": "Variables[0] (MDF_DiceResult_RL) || RETURN",
-                                "displayLines": "MDF_DiceResult_RL",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_DiceResult_RL"
-                                ]
+                                "displayLines": "MDF_DiceResult_RL"
                               },
                               "caseEvents": [
                                 {
@@ -2311,12 +2171,7 @@ const compositeAbilityObject = {
                         "value1": "DiceResult",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MDF_CurrentDiceResult) || RETURN",
-                          "displayLines": "MDF_CurrentDiceResult",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentDiceResult"
-                          ]
+                          "displayLines": "MDF_CurrentDiceResult"
                         }
                       }
                     }
@@ -2366,12 +2221,7 @@ const compositeAbilityObject = {
                       },
                       "scope": "TargetEntity",
                       "value": {
-                        "operator": "Variables[0] (MDF_DiceResult) || RETURN",
-                        "displayLines": "MDF_DiceResult",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DiceResult"
-                        ]
+                        "displayLines": "MDF_DiceResult"
                       },
                       "variableName": "DiceResult"
                     }
@@ -2454,12 +2304,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-699513905\">Monster_W3_AventurinePart_ResultCount</a>",
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (MDF_DiceResult) || RETURN",
-                            "displayLines": "MDF_DiceResult",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DiceResult"
-                            ]
+                            "displayLines": "MDF_DiceResult"
                           }
                         }
                       ]
@@ -2517,12 +2362,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-699513905\">Monster_W3_AventurinePart_ResultCount</a>",
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (MDF_DiceResult) || RETURN",
-                            "displayLines": "MDF_DiceResult",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DiceResult"
-                            ]
+                            "displayLines": "MDF_DiceResult"
                           }
                         }
                       ]
@@ -2985,27 +2825,13 @@ const compositeAbilityObject = {
                                     {
                                       "name": "Looped Event",
                                       "maxLoops": {
-                                        "operator": "Variables[0] (MDF_MaxLoopCount_RL) || Constants[0] (1) || SUB || RETURN",
-                                        "displayLines": "(MDF_MaxLoopCount_RL - 1)",
-                                        "constants": [
-                                          1
-                                        ],
-                                        "variables": [
-                                          "MDF_MaxLoopCount_RL"
-                                        ]
+                                        "displayLines": "(MDF_MaxLoopCount_RL - 1)"
                                       },
                                       "execute": [
                                         {
                                           "name": "Define Custom Variable",
                                           "value": {
-                                            "operator": "Variables[0] (MDF_DiceResult) || Constants[0] (1) || ADD || RETURN",
-                                            "displayLines": "(MDF_DiceResult + 1)",
-                                            "constants": [
-                                              1
-                                            ],
-                                            "variables": [
-                                              "MDF_DiceResult"
-                                            ]
+                                            "displayLines": "(MDF_DiceResult + 1)"
                                           },
                                           "variableName": "MDF_DiceResult"
                                         }
@@ -3041,27 +2867,13 @@ const compositeAbilityObject = {
                                         {
                                           "name": "Looped Event",
                                           "maxLoops": {
-                                            "operator": "Variables[0] (MDF_MaxLoopCount_RL) || Constants[0] (1) || SUB || RETURN",
-                                            "displayLines": "(MDF_MaxLoopCount_RL - 1)",
-                                            "constants": [
-                                              1
-                                            ],
-                                            "variables": [
-                                              "MDF_MaxLoopCount_RL"
-                                            ]
+                                            "displayLines": "(MDF_MaxLoopCount_RL - 1)"
                                           },
                                           "execute": [
                                             {
                                               "name": "Define Custom Variable",
                                               "value": {
-                                                "operator": "Variables[0] (MDF_DiceResult) || Constants[0] (2) || ADD || RETURN",
-                                                "displayLines": "(MDF_DiceResult + 2)",
-                                                "constants": [
-                                                  2
-                                                ],
-                                                "variables": [
-                                                  "MDF_DiceResult"
-                                                ]
+                                                "displayLines": "(MDF_DiceResult + 2)"
                                               },
                                               "variableName": "MDF_DiceResult"
                                             }
@@ -3102,27 +2914,13 @@ const compositeAbilityObject = {
                                             {
                                               "name": "Looped Event",
                                               "maxLoops": {
-                                                "operator": "Variables[0] (MDF_MaxLoopCount_RL) || Constants[0] (1) || SUB || RETURN",
-                                                "displayLines": "(MDF_MaxLoopCount_RL - 1)",
-                                                "constants": [
-                                                  1
-                                                ],
-                                                "variables": [
-                                                  "MDF_MaxLoopCount_RL"
-                                                ]
+                                                "displayLines": "(MDF_MaxLoopCount_RL - 1)"
                                               },
                                               "execute": [
                                                 {
                                                   "name": "Define Custom Variable",
                                                   "value": {
-                                                    "operator": "Variables[0] (MDF_DiceResult) || Constants[0] (3) || ADD || RETURN",
-                                                    "displayLines": "(MDF_DiceResult + 3)",
-                                                    "constants": [
-                                                      3
-                                                    ],
-                                                    "variables": [
-                                                      "MDF_DiceResult"
-                                                    ]
+                                                    "displayLines": "(MDF_DiceResult + 3)"
                                                   },
                                                   "variableName": "MDF_DiceResult"
                                                 }
@@ -3163,27 +2961,13 @@ const compositeAbilityObject = {
                                                 {
                                                   "name": "Looped Event",
                                                   "maxLoops": {
-                                                    "operator": "Variables[0] (MDF_MaxLoopCount_RL) || Constants[0] (1) || SUB || RETURN",
-                                                    "displayLines": "(MDF_MaxLoopCount_RL - 1)",
-                                                    "constants": [
-                                                      1
-                                                    ],
-                                                    "variables": [
-                                                      "MDF_MaxLoopCount_RL"
-                                                    ]
+                                                    "displayLines": "(MDF_MaxLoopCount_RL - 1)"
                                                   },
                                                   "execute": [
                                                     {
                                                       "name": "Define Custom Variable",
                                                       "value": {
-                                                        "operator": "Variables[0] (MDF_DiceResult) || Constants[0] (4) || ADD || RETURN",
-                                                        "displayLines": "(MDF_DiceResult + 4)",
-                                                        "constants": [
-                                                          4
-                                                        ],
-                                                        "variables": [
-                                                          "MDF_DiceResult"
-                                                        ]
+                                                        "displayLines": "(MDF_DiceResult + 4)"
                                                       },
                                                       "variableName": "MDF_DiceResult"
                                                     }
@@ -3224,27 +3008,13 @@ const compositeAbilityObject = {
                                                     {
                                                       "name": "Looped Event",
                                                       "maxLoops": {
-                                                        "operator": "Variables[0] (MDF_MaxLoopCount_RL) || Constants[0] (1) || SUB || RETURN",
-                                                        "displayLines": "(MDF_MaxLoopCount_RL - 1)",
-                                                        "constants": [
-                                                          1
-                                                        ],
-                                                        "variables": [
-                                                          "MDF_MaxLoopCount_RL"
-                                                        ]
+                                                        "displayLines": "(MDF_MaxLoopCount_RL - 1)"
                                                       },
                                                       "execute": [
                                                         {
                                                           "name": "Define Custom Variable",
                                                           "value": {
-                                                            "operator": "Variables[0] (MDF_DiceResult) || Constants[0] (5) || ADD || RETURN",
-                                                            "displayLines": "(MDF_DiceResult + 5)",
-                                                            "constants": [
-                                                              5
-                                                            ],
-                                                            "variables": [
-                                                              "MDF_DiceResult"
-                                                            ]
+                                                            "displayLines": "(MDF_DiceResult + 5)"
                                                           },
                                                           "variableName": "MDF_DiceResult"
                                                         }
@@ -3273,27 +3043,13 @@ const compositeAbilityObject = {
                                                     {
                                                       "name": "Looped Event",
                                                       "maxLoops": {
-                                                        "operator": "Variables[0] (MDF_MaxLoopCount_RL) || Constants[0] (1) || SUB || RETURN",
-                                                        "displayLines": "(MDF_MaxLoopCount_RL - 1)",
-                                                        "constants": [
-                                                          1
-                                                        ],
-                                                        "variables": [
-                                                          "MDF_MaxLoopCount_RL"
-                                                        ]
+                                                        "displayLines": "(MDF_MaxLoopCount_RL - 1)"
                                                       },
                                                       "execute": [
                                                         {
                                                           "name": "Define Custom Variable",
                                                           "value": {
-                                                            "operator": "Variables[0] (MDF_DiceResult) || Constants[0] (6) || ADD || RETURN",
-                                                            "displayLines": "(MDF_DiceResult + 6)",
-                                                            "constants": [
-                                                              6
-                                                            ],
-                                                            "variables": [
-                                                              "MDF_DiceResult"
-                                                            ]
+                                                            "displayLines": "(MDF_DiceResult + 6)"
                                                           },
                                                           "variableName": "MDF_DiceResult"
                                                         }
@@ -3543,13 +3299,7 @@ const compositeAbilityObject = {
                       },
                       "scope": "TargetEntity",
                       "value": {
-                        "operator": "Variables[0] (DiceResult) || Variables[1] (MDF_DiceResult) || ADD || RETURN",
-                        "displayLines": "(DiceResult + MDF_DiceResult)",
-                        "constants": [],
-                        "variables": [
-                          "DiceResult",
-                          "MDF_DiceResult"
-                        ]
+                        "displayLines": "(DiceResult + MDF_DiceResult)"
                       },
                       "variableName": "DiceResult"
                     }
@@ -3574,12 +3324,7 @@ const compositeAbilityObject = {
                   },
                   "scope": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (MDF_DiceResult) || RETURN",
-                    "displayLines": "MDF_DiceResult",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DiceResult"
-                    ]
+                    "displayLines": "MDF_DiceResult"
                   },
                   "variableName": "DiceResult"
                 }
@@ -3941,23 +3686,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || Variables[1] (DeathRattle_RL_Count) || MUL || RETURN",
-              "displayLines": "({[Skill01[0]]} * DeathRattle_RL_Count)",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}",
-                "DeathRattle_RL_Count"
-              ]
+              "displayLines": "({[Skill01[0]]} * DeathRattle_RL_Count)"
             },
             "dmgFormula": "Max HP Scaling",
             "Toughness": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || Variables[1] (DeathRattle_RL_Count) || MUL || RETURN",
-              "displayLines": "({[Skill01[1]]} * DeathRattle_RL_Count)",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}",
-                "DeathRattle_RL_Count"
-              ]
+              "displayLines": "({[Skill01[1]]} * DeathRattle_RL_Count)"
             },
             "ToughnessDMGType": {
               "DamageType": "Imaginary"
@@ -4074,20 +3807,10 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1833952078\">Monster_W3_AventurinePart_Odds_RL</a>",
                   "stackLimit": {
-                    "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                    "displayLines": "{[Skill05[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill05[1]]}"
-                    ]
+                    "displayLines": "{[Skill05[1]]}"
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (GambleOdds) || RETURN",
-                    "displayLines": "GambleOdds",
-                    "constants": [],
-                    "variables": [
-                      "GambleOdds"
-                    ]
+                    "displayLines": "GambleOdds"
                   }
                 }
               ]
@@ -4113,20 +3836,10 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1833952078\">Monster_W3_AventurinePart_Odds_RL</a>",
                   "stackLimit": {
-                    "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-                    "displayLines": "{[Skill05[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill05[2]]}"
-                    ]
+                    "displayLines": "{[Skill05[2]]}"
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (GambleOdds) || RETURN",
-                    "displayLines": "GambleOdds",
-                    "constants": [],
-                    "variables": [
-                      "GambleOdds"
-                    ]
+                    "displayLines": "GambleOdds"
                   }
                 }
               ]
@@ -4152,20 +3865,10 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1833952078\">Monster_W3_AventurinePart_Odds_RL</a>",
                   "stackLimit": {
-                    "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-                    "displayLines": "{[Skill05[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill05[3]]}"
-                    ]
+                    "displayLines": "{[Skill05[3]]}"
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (GambleOdds) || RETURN",
-                    "displayLines": "GambleOdds",
-                    "constants": [],
-                    "variables": [
-                      "GambleOdds"
-                    ]
+                    "displayLines": "GambleOdds"
                   }
                 }
               ]
@@ -4224,20 +3927,10 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1833952078\">Monster_W3_AventurinePart_Odds_RL</a>",
                   "stackLimit": {
-                    "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                    "displayLines": "{[Skill05[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill05[1]]}"
-                    ]
+                    "displayLines": "{[Skill05[1]]}"
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (GambleOdds) || RETURN",
-                    "displayLines": "GambleOdds",
-                    "constants": [],
-                    "variables": [
-                      "GambleOdds"
-                    ]
+                    "displayLines": "GambleOdds"
                   }
                 }
               ]
@@ -4263,20 +3956,10 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1833952078\">Monster_W3_AventurinePart_Odds_RL</a>",
                   "stackLimit": {
-                    "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-                    "displayLines": "{[Skill05[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill05[2]]}"
-                    ]
+                    "displayLines": "{[Skill05[2]]}"
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (GambleOdds) || RETURN",
-                    "displayLines": "GambleOdds",
-                    "constants": [],
-                    "variables": [
-                      "GambleOdds"
-                    ]
+                    "displayLines": "GambleOdds"
                   }
                 }
               ]
@@ -4302,20 +3985,10 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1833952078\">Monster_W3_AventurinePart_Odds_RL</a>",
                   "stackLimit": {
-                    "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-                    "displayLines": "{[Skill05[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill05[3]]}"
-                    ]
+                    "displayLines": "{[Skill05[3]]}"
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (GambleOdds) || RETURN",
-                    "displayLines": "GambleOdds",
-                    "constants": [],
-                    "variables": [
-                      "GambleOdds"
-                    ]
+                    "displayLines": "GambleOdds"
                   }
                 }
               ]
@@ -4517,12 +4190,7 @@ const compositeAbilityObject = {
             "value1": "DiceResult",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] (AvatarDiceResult) || RETURN",
-              "displayLines": "AvatarDiceResult",
-              "constants": [],
-              "variables": [
-                "AvatarDiceResult"
-              ]
+              "displayLines": "AvatarDiceResult"
             }
           }
         },

@@ -14,12 +14,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] ({[Skill08[2]]}) || RETURN",
-          "displayLines": "{[Skill08[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill08[2]]}"
-          ]
+          "displayLines": "{[Skill08[2]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -47,12 +42,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (LightTeam_Count) || RETURN",
-        "displayLines": "LightTeam_Count",
-        "constants": [],
-        "variables": [
-          "LightTeam_Count"
-        ]
+        "displayLines": "LightTeam_Count"
       },
       "execute": [
         {
@@ -81,12 +71,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill08[0]]}) || RETURN",
-                  "displayLines": "{[Skill08[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill08[0]]}"
-                  ]
+                  "displayLines": "{[Skill08[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -102,12 +87,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill08[1]]}) || RETURN",
-                  "displayLines": "{[Skill08[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill08[1]]}"
-                  ]
+                  "displayLines": "{[Skill08[1]]}"
                 },
                 "Toughness": null,
                 "Tags": null,

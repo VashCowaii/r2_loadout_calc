@@ -27,14 +27,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (count) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(count + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "count"
-                    ]
+                    "displayLines": "(count + 1)"
                   },
                   "variableName": "count"
                 },
@@ -207,12 +200,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "DamageFlat": {
-                              "operator": "Variables[0] (MDF_DamageValue) || RETURN",
-                              "displayLines": "MDF_DamageValue",
-                              "constants": [],
-                              "variables": [
-                                "MDF_DamageValue"
-                              ]
+                              "displayLines": "MDF_DamageValue"
                             },
                             "dmgFormulaFinal": "Converted DMG Base",
                             "Toughness": null,
@@ -253,13 +241,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1478824350\">Modifier_BattleEventAbility_Challenge_Xianzhou_04_Sub</a>",
                   "valuePerStack": {
                     "MDF_DamageValue": {
-                      "operator": "Variables[0] (TempHP) || Variables[1] (#BattleEvent_P1_ADF) || MUL || RETURN",
-                      "displayLines": "(TempHP * #BattleEvent_P1_ADF)",
-                      "constants": [],
-                      "variables": [
-                        "TempHP",
-                        "#BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "(TempHP * #BattleEvent_P1_ADF)"
                     }
                   },
                   "casterAssign": "TargetSelf"
@@ -289,13 +271,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1478824350\">Modifier_BattleEventAbility_Challenge_Xianzhou_04_Sub</a>",
                       "valuePerStack": {
                         "MDF_DamageValue": {
-                          "operator": "Variables[0] (TempHP) || Variables[1] (#BattleEvent_P1_ADF) || MUL || RETURN",
-                          "displayLines": "(TempHP * #BattleEvent_P1_ADF)",
-                          "constants": [],
-                          "variables": [
-                            "TempHP",
-                            "#BattleEvent_P1_ADF"
-                          ]
+                          "displayLines": "(TempHP * #BattleEvent_P1_ADF)"
                         }
                       },
                       "casterAssign": "TargetSelf"

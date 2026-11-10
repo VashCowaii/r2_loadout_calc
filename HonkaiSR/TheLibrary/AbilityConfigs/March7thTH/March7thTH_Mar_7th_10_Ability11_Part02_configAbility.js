@@ -16,14 +16,7 @@ const configAbility = {
         "value1": "Skill11_HitCount",
         "compareType": ">",
         "value2": {
-          "operator": "Constants[0] (4) || Variables[0] (Skill11_BasicCount) || SUB || RETURN",
-          "displayLines": "(4 - Skill11_BasicCount)",
-          "constants": [
-            4
-          ],
-          "variables": [
-            "Skill11_BasicCount"
-          ]
+          "displayLines": "(4 - Skill11_BasicCount)"
         },
         "contextScope": "ContextCaster"
       },
@@ -96,15 +89,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (Skill11_BasicCount) || Variables[1] (Skill11_HitCount) || ADD || Constants[0] (5) || SUB || RETURN",
-            "displayLines": "((Skill11_BasicCount + Skill11_HitCount) - 5)",
-            "constants": [
-              5
-            ],
-            "variables": [
-              "Skill11_BasicCount",
-              "Skill11_HitCount"
-            ]
+            "displayLines": "((Skill11_BasicCount + Skill11_HitCount) - 5)"
           },
           "execute": [
             {
@@ -120,14 +105,7 @@ const configAbility = {
             "value1": "Skill11_HitCount",
             "compareType": ">",
             "value2": {
-              "operator": "Constants[0] (5) || Variables[0] (Skill11_BasicCount) || SUB || RETURN",
-              "displayLines": "(5 - Skill11_BasicCount)",
-              "constants": [
-                5
-              ],
-              "variables": [
-                "Skill11_BasicCount"
-              ]
+              "displayLines": "(5 - Skill11_BasicCount)"
             },
             "contextScope": "ContextCaster"
           }
@@ -158,15 +136,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (Skill11_BasicCount) || Variables[1] (Skill11_HitCount) || ADD || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "((Skill11_BasicCount + Skill11_HitCount) - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "Skill11_BasicCount",
-              "Skill11_HitCount"
-            ]
+            "displayLines": "((Skill11_BasicCount + Skill11_HitCount) - 1)"
           },
           "execute": [
             {
@@ -187,14 +157,7 @@ const configAbility = {
       "functionName": "<a class=\"gTempYellow\" id=\"-1762944127\">Mar_7th_10_GainEnergyWithCheck</a>",
       "variables": {
         "parameter[0]_AddValue": {
-          "operator": "Constants[0] (0) || Variables[0] (EnergyBar_MaxEnergy) || SUB || RETURN",
-          "displayLines": "(0 - EnergyBar_MaxEnergy)",
-          "constants": [
-            0
-          ],
-          "variables": [
-            "EnergyBar_MaxEnergy"
-          ]
+          "displayLines": "(0 - EnergyBar_MaxEnergy)"
         }
       }
     },
@@ -316,21 +279,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (Skill11_DamagePercatage) || RETURN",
-                  "displayLines": "Skill11_DamagePercatage",
-                  "constants": [],
-                  "variables": [
-                    "Skill11_DamagePercatage"
-                  ]
+                  "displayLines": "Skill11_DamagePercatage"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || Variables[1] (Normal_StanceRatio) || MUL || RETURN",
-                  "displayLines": "(ST Toughness Value * Normal_StanceRatio)",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value",
-                    "Normal_StanceRatio"
-                  ]
+                  "displayLines": "(ST Toughness Value * Normal_StanceRatio)"
                 },
                 "Tags": null
               }
@@ -347,21 +299,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (Skill11_DamagePercatage) || RETURN",
-                  "displayLines": "Skill11_DamagePercatage",
-                  "constants": [],
-                  "variables": [
-                    "Skill11_DamagePercatage"
-                  ]
+                  "displayLines": "Skill11_DamagePercatage"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || Variables[1] (Normal_StanceRatio) || MUL || RETURN",
-                  "displayLines": "(ST Toughness Value * Normal_StanceRatio)",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value",
-                    "Normal_StanceRatio"
-                  ]
+                  "displayLines": "(ST Toughness Value * Normal_StanceRatio)"
                 },
                 "Tags": null
               }
@@ -461,21 +402,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] (Skill11_DamagePercatage) || RETURN",
-              "displayLines": "Skill11_DamagePercatage",
-              "constants": [],
-              "variables": [
-                "Skill11_DamagePercatage"
-              ]
+              "displayLines": "Skill11_DamagePercatage"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || Variables[1] (Normal_StanceRatio) || MUL || RETURN",
-              "displayLines": "(ST Toughness Value * Normal_StanceRatio)",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value",
-                "Normal_StanceRatio"
-              ]
+              "displayLines": "(ST Toughness Value * Normal_StanceRatio)"
             },
             "Tags": null
           }
@@ -573,21 +503,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] (Skill11_DamagePercatage) || RETURN",
-              "displayLines": "Skill11_DamagePercatage",
-              "constants": [],
-              "variables": [
-                "Skill11_DamagePercatage"
-              ]
+              "displayLines": "Skill11_DamagePercatage"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || Variables[1] (Normal_StanceRatio) || MUL || RETURN",
-              "displayLines": "(ST Toughness Value * Normal_StanceRatio)",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value",
-                "Normal_StanceRatio"
-              ]
+              "displayLines": "(ST Toughness Value * Normal_StanceRatio)"
             },
             "Tags": null
           }
@@ -623,13 +542,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"2055743569\">Mar_7th_10_Enhance</a>"
         },
         "multiplier": {
-          "operator": "Variables[0] (Normal_StanceRatio) || Variables[1] (Skill11_BasicCount) || MUL || RETURN",
-          "displayLines": "(Normal_StanceRatio * Skill11_BasicCount)",
-          "constants": [],
-          "variables": [
-            "Normal_StanceRatio",
-            "Skill11_BasicCount"
-          ]
+          "displayLines": "(Normal_StanceRatio * Skill11_BasicCount)"
         }
       }
     }

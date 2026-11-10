@@ -49,14 +49,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1169900751\">Monster_W4_Hearse_SetSpeed</a>",
       "valuePerStack": {
         "MDF_Speed": {
-          "operator": "Variables[0] (Nikadory_Speed) || Constants[0] (0) || MUL || RETURN",
-          "displayLines": "(Nikadory_Speed * 0)",
-          "constants": [
-            0
-          ],
-          "variables": [
-            "Nikadory_Speed"
-          ]
+          "displayLines": "(Nikadory_Speed * 0)"
         }
       }
     },

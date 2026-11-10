@@ -35,14 +35,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_Yanqing_KillCount) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(MDF_Yanqing_KillCount + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_Yanqing_KillCount"
-                ]
+                "displayLines": "(MDF_Yanqing_KillCount + 1)"
               },
               "variableName": "MDF_Yanqing_KillCount"
             }
@@ -123,14 +116,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_KillCount) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(MDF_KillCount + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_KillCount"
-                ]
+                "displayLines": "(MDF_KillCount + 1)"
               },
               "variableName": "MDF_KillCount"
             }
@@ -159,12 +145,7 @@ const configAbility = {
                 "value1": "MDF_Yanqing_KillCount",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_KillCount) || RETURN",
-                  "displayLines": "MDF_KillCount",
-                  "constants": [],
-                  "variables": [
-                    "MDF_KillCount"
-                  ]
+                  "displayLines": "MDF_KillCount"
                 }
               },
               "passed": [
@@ -203,12 +184,7 @@ const configAbility = {
                     "value1": "MDF_KillCount",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (MDF_Yanqing_KillCount) || RETURN",
-                      "displayLines": "MDF_Yanqing_KillCount",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Yanqing_KillCount"
-                      ]
+                      "displayLines": "MDF_Yanqing_KillCount"
                     }
                   },
                   "passed": [
@@ -288,12 +264,7 @@ const configAbility = {
                     "value1": "MDF_Yanqing_KillCount",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (MDF_KillCount) || RETURN",
-                      "displayLines": "MDF_KillCount",
-                      "constants": [],
-                      "variables": [
-                        "MDF_KillCount"
-                      ]
+                      "displayLines": "MDF_KillCount"
                     }
                   },
                   "passed": [

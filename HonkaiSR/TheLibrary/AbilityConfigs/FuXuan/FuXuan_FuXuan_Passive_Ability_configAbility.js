@@ -20,14 +20,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (GDF_ExChangeHPCount) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(GDF_ExChangeHPCount - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "GDF_ExChangeHPCount"
-            ]
+            "displayLines": "(GDF_ExChangeHPCount - 1)"
           },
           "variableName": "GDF_ExChangeHPCount"
         },
@@ -48,12 +41,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (GDF_ExChangeHPCount) || RETURN",
-                "displayLines": "GDF_ExChangeHPCount",
-                "constants": [],
-                "variables": [
-                  "GDF_ExChangeHPCount"
-                ]
+                "displayLines": "GDF_ExChangeHPCount"
               },
               "maximum": 2,
               "assignState": "True",
@@ -65,12 +53,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (GDF_ExChangeHPCount) || RETURN",
-                "displayLines": "GDF_ExChangeHPCount",
-                "constants": [],
-                "variables": [
-                  "GDF_ExChangeHPCount"
-                ]
+                "displayLines": "GDF_ExChangeHPCount"
               },
               "maximum": 2,
               "assignState": "True",
@@ -91,12 +74,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "healPercent": {
-            "operator": "Variables[0] (0.9) || RETURN",
-            "displayLines": "0.9",
-            "constants": [],
-            "variables": [
-              0.9
-            ]
+            "displayLines": "0.9"
           },
           "formula": "Heal from Target's MissingHP"
         }

@@ -313,13 +313,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageTakenUpRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(MDF_DamageTakenUpRatio_PerLayer * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageTakenUpRatio_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(MDF_DamageTakenUpRatio_PerLayer * ModifierLayers)"
               }
             }
           ]
@@ -575,12 +569,7 @@ const configAbility = {
                   "conditions": {
                     "name": "Enemy ID",
                     "ID": {
-                      "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-                      "displayLines": "SummonList_ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "SummonList_ADF_2"
-                      ]
+                      "displayLines": "SummonList_ADF_2"
                     },
                     "target": {
                       "name": "Target Name",
@@ -686,23 +675,13 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (MDF_SummonDelay) || RETURN",
-                        "displayLines": "MDF_SummonDelay",
-                        "constants": [],
-                        "variables": [
-                          "MDF_SummonDelay"
-                        ]
+                        "displayLines": "MDF_SummonDelay"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (MDF_SummonID) || RETURN",
-                            "displayLines": "MDF_SummonID",
-                            "constants": [],
-                            "variables": [
-                              "MDF_SummonID"
-                            ]
+                            "displayLines": "MDF_SummonID"
                           },
                           "locationType": "First"
                         }
@@ -765,23 +744,13 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (MDF_SummonDelay) || RETURN",
-                        "displayLines": "MDF_SummonDelay",
-                        "constants": [],
-                        "variables": [
-                          "MDF_SummonDelay"
-                        ]
+                        "displayLines": "MDF_SummonDelay"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (MDF_SummonID) || RETURN",
-                            "displayLines": "MDF_SummonID",
-                            "constants": [],
-                            "variables": [
-                              "MDF_SummonID"
-                            ]
+                            "displayLines": "MDF_SummonID"
                           },
                           "locationType": "Last"
                         }

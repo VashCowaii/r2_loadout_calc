@@ -54,12 +54,7 @@ const configAbility = {
                     "value1": "_count",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (_maxLimit) || RETURN",
-                      "displayLines": "_maxLimit",
-                      "constants": [],
-                      "variables": [
-                        "_maxLimit"
-                      ]
+                      "displayLines": "_maxLimit"
                     },
                     "contextScope": "ContextModifier"
                   },
@@ -211,26 +206,14 @@ const configAbility = {
                   "conditions": {
                     "name": "Random Chance",
                     "chance": {
-                      "operator": "Variables[0] (Rank06_Chance) || RETURN",
-                      "displayLines": "Rank06_Chance",
-                      "constants": [],
-                      "variables": [
-                        "Rank06_Chance"
-                      ]
+                      "displayLines": "Rank06_Chance"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Constants[0] (1) || Variables[0] (Rank06_Extra_Layer) || ADD || RETURN",
-                        "displayLines": "(1 + Rank06_Extra_Layer)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Rank06_Extra_Layer"
-                        ]
+                        "displayLines": "(1 + Rank06_Extra_Layer)"
                       },
                       "variableName": "Rank06_Weighted_Stack_Layer"
                     }
@@ -239,12 +222,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Constants[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [
-                          1
-                        ],
-                        "variables": []
+                        "displayLines": "1"
                       },
                       "variableName": "Rank06_Weighted_Stack_Layer"
                     }
@@ -258,79 +236,34 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                   "baseChance": {
-                    "operator": "Variables[0] (0.65) || RETURN",
-                    "displayLines": "0.65",
-                    "constants": [],
-                    "variables": [
-                      0.65
-                    ]
+                    "displayLines": "0.65"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] (Max_DOT_Layer) || RETURN",
-                    "displayLines": "Max_DOT_Layer",
-                    "constants": [],
-                    "variables": [
-                      "Max_DOT_Layer"
-                    ]
+                    "displayLines": "Max_DOT_Layer"
                   },
                   "valuePerStack": {
                     "Basic_DamagePercentage": {
-                      "operator": "Variables[0] (2.4) || RETURN",
-                      "displayLines": "2.4",
-                      "constants": [],
-                      "variables": [
-                        2.4
-                      ]
+                      "displayLines": "2.4"
                     },
                     "ExtraLayer_DamagePercentage": {
-                      "operator": "Variables[0] (0.12) || RETURN",
-                      "displayLines": "0.12",
-                      "constants": [],
-                      "variables": [
-                        0.12
-                      ]
+                      "displayLines": "0.12"
                     },
                     "SecondLayer": {
-                      "operator": "Variables[0] (3) || RETURN",
-                      "displayLines": "3",
-                      "constants": [],
-                      "variables": [
-                        3
-                      ]
+                      "displayLines": "3"
                     },
                     "Spread_DamagePercentage": {
-                      "operator": "Variables[0] (1.8) || RETURN",
-                      "displayLines": "1.8",
-                      "constants": [],
-                      "variables": [
-                        1.8
-                      ]
+                      "displayLines": "1.8"
                     },
                     "ThirdLayer": {
-                      "operator": "Variables[0] (7) || RETURN",
-                      "displayLines": "7",
-                      "constants": [],
-                      "variables": [
-                        7
-                      ]
+                      "displayLines": "7"
                     },
                     "DefenceIgnore": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     },
                     "Cast_By_Level": 0
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (Rank06_Weighted_Stack_Layer) || RETURN",
-                    "displayLines": "Rank06_Weighted_Stack_Layer",
-                    "constants": [],
-                    "variables": [
-                      "Rank06_Weighted_Stack_Layer"
-                    ]
+                    "displayLines": "Rank06_Weighted_Stack_Layer"
                   }
                 }
               ]
@@ -366,12 +299,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-993235017\">M_BlackSwan_Tree02_ListenAddPoison_SubOnEnemy</a>",
                   "valuePerStack": {
                     "_maxLimit": {
-                      "operator": "Variables[0] (3) || RETURN",
-                      "displayLines": "3",
-                      "constants": [],
-                      "variables": [
-                        3
-                      ]
+                      "displayLines": "3"
                     }
                   }
                 }
@@ -406,26 +334,14 @@ const configAbility = {
                       "conditions": {
                         "name": "Random Chance",
                         "chance": {
-                          "operator": "Variables[0] (Rank06_Chance) || RETURN",
-                          "displayLines": "Rank06_Chance",
-                          "constants": [],
-                          "variables": [
-                            "Rank06_Chance"
-                          ]
+                          "displayLines": "Rank06_Chance"
                         }
                       },
                       "passed": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Constants[0] (1) || Variables[0] (Rank06_Extra_Layer) || ADD || RETURN",
-                            "displayLines": "(1 + Rank06_Extra_Layer)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Rank06_Extra_Layer"
-                            ]
+                            "displayLines": "(1 + Rank06_Extra_Layer)"
                           },
                           "variableName": "Rank06_Weighted_Stack_Layer"
                         }
@@ -434,12 +350,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Constants[0] (1) || RETURN",
-                            "displayLines": "1",
-                            "constants": [
-                              1
-                            ],
-                            "variables": []
+                            "displayLines": "1"
                           },
                           "variableName": "Rank06_Weighted_Stack_Layer"
                         }
@@ -453,79 +364,34 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                       "baseChance": {
-                        "operator": "Variables[0] (0.65) || RETURN",
-                        "displayLines": "0.65",
-                        "constants": [],
-                        "variables": [
-                          0.65
-                        ]
+                        "displayLines": "0.65"
                       },
                       "stackLimit": {
-                        "operator": "Variables[0] (Max_DOT_Layer) || RETURN",
-                        "displayLines": "Max_DOT_Layer",
-                        "constants": [],
-                        "variables": [
-                          "Max_DOT_Layer"
-                        ]
+                        "displayLines": "Max_DOT_Layer"
                       },
                       "valuePerStack": {
                         "Basic_DamagePercentage": {
-                          "operator": "Variables[0] (2.4) || RETURN",
-                          "displayLines": "2.4",
-                          "constants": [],
-                          "variables": [
-                            2.4
-                          ]
+                          "displayLines": "2.4"
                         },
                         "ExtraLayer_DamagePercentage": {
-                          "operator": "Variables[0] (0.12) || RETURN",
-                          "displayLines": "0.12",
-                          "constants": [],
-                          "variables": [
-                            0.12
-                          ]
+                          "displayLines": "0.12"
                         },
                         "SecondLayer": {
-                          "operator": "Variables[0] (3) || RETURN",
-                          "displayLines": "3",
-                          "constants": [],
-                          "variables": [
-                            3
-                          ]
+                          "displayLines": "3"
                         },
                         "Spread_DamagePercentage": {
-                          "operator": "Variables[0] (1.8) || RETURN",
-                          "displayLines": "1.8",
-                          "constants": [],
-                          "variables": [
-                            1.8
-                          ]
+                          "displayLines": "1.8"
                         },
                         "ThirdLayer": {
-                          "operator": "Variables[0] (7) || RETURN",
-                          "displayLines": "7",
-                          "constants": [],
-                          "variables": [
-                            7
-                          ]
+                          "displayLines": "7"
                         },
                         "DefenceIgnore": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         },
                         "Cast_By_Level": 0
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (Rank06_Weighted_Stack_Layer) || RETURN",
-                        "displayLines": "Rank06_Weighted_Stack_Layer",
-                        "constants": [],
-                        "variables": [
-                          "Rank06_Weighted_Stack_Layer"
-                        ]
+                        "displayLines": "Rank06_Weighted_Stack_Layer"
                       }
                     }
                   ]
@@ -557,26 +423,14 @@ const configAbility = {
                   "conditions": {
                     "name": "Random Chance",
                     "chance": {
-                      "operator": "Variables[0] (Rank06_Chance) || RETURN",
-                      "displayLines": "Rank06_Chance",
-                      "constants": [],
-                      "variables": [
-                        "Rank06_Chance"
-                      ]
+                      "displayLines": "Rank06_Chance"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Constants[0] (1) || Variables[0] (Rank06_Extra_Layer) || ADD || RETURN",
-                        "displayLines": "(1 + Rank06_Extra_Layer)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Rank06_Extra_Layer"
-                        ]
+                        "displayLines": "(1 + Rank06_Extra_Layer)"
                       },
                       "variableName": "Rank06_Weighted_Stack_Layer"
                     }
@@ -585,12 +439,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Constants[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [
-                          1
-                        ],
-                        "variables": []
+                        "displayLines": "1"
                       },
                       "variableName": "Rank06_Weighted_Stack_Layer"
                     }
@@ -604,79 +453,34 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                   "baseChance": {
-                    "operator": "Variables[0] (0.65) || RETURN",
-                    "displayLines": "0.65",
-                    "constants": [],
-                    "variables": [
-                      0.65
-                    ]
+                    "displayLines": "0.65"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] (Max_DOT_Layer) || RETURN",
-                    "displayLines": "Max_DOT_Layer",
-                    "constants": [],
-                    "variables": [
-                      "Max_DOT_Layer"
-                    ]
+                    "displayLines": "Max_DOT_Layer"
                   },
                   "valuePerStack": {
                     "Basic_DamagePercentage": {
-                      "operator": "Variables[0] (2.4) || RETURN",
-                      "displayLines": "2.4",
-                      "constants": [],
-                      "variables": [
-                        2.4
-                      ]
+                      "displayLines": "2.4"
                     },
                     "ExtraLayer_DamagePercentage": {
-                      "operator": "Variables[0] (0.12) || RETURN",
-                      "displayLines": "0.12",
-                      "constants": [],
-                      "variables": [
-                        0.12
-                      ]
+                      "displayLines": "0.12"
                     },
                     "SecondLayer": {
-                      "operator": "Variables[0] (3) || RETURN",
-                      "displayLines": "3",
-                      "constants": [],
-                      "variables": [
-                        3
-                      ]
+                      "displayLines": "3"
                     },
                     "Spread_DamagePercentage": {
-                      "operator": "Variables[0] (1.8) || RETURN",
-                      "displayLines": "1.8",
-                      "constants": [],
-                      "variables": [
-                        1.8
-                      ]
+                      "displayLines": "1.8"
                     },
                     "ThirdLayer": {
-                      "operator": "Variables[0] (7) || RETURN",
-                      "displayLines": "7",
-                      "constants": [],
-                      "variables": [
-                        7
-                      ]
+                      "displayLines": "7"
                     },
                     "DefenceIgnore": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     },
                     "Cast_By_Level": 0
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (Rank06_Weighted_Stack_Layer) || RETURN",
-                    "displayLines": "Rank06_Weighted_Stack_Layer",
-                    "constants": [],
-                    "variables": [
-                      "Rank06_Weighted_Stack_Layer"
-                    ]
+                    "displayLines": "Rank06_Weighted_Stack_Layer"
                   },
                   "success": [
                     {

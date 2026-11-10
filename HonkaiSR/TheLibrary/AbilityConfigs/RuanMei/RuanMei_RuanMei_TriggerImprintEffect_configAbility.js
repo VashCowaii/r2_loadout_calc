@@ -33,17 +33,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (DV_Ultra_Damage_MaxStance) || Constants[0] (30) || DIV || Constants[1] (2) || ADD || Constants[2] (4) || DIV || Variables[1] (0.5) || MUL || RETURN",
-        "displayLines": "((((DV_Ultra_Damage_MaxStance / 30) + 2) / 4) * 0.5)",
-        "constants": [
-          30,
-          2,
-          4
-        ],
-        "variables": [
-          "DV_Ultra_Damage_MaxStance",
-          0.5
-        ]
+        "displayLines": "((((DV_Ultra_Damage_MaxStance / 30) + 2) / 4) * 0.5)"
       },
       "variableName": "Skill03_FinalBreakDamagePercentage"
     },
@@ -57,12 +47,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "DamageBreak": {
-          "operator": "Variables[0] (Skill03_FinalBreakDamagePercentage) || RETURN",
-          "displayLines": "Skill03_FinalBreakDamagePercentage",
-          "constants": [],
-          "variables": [
-            "Skill03_FinalBreakDamagePercentage"
-          ]
+          "displayLines": "Skill03_FinalBreakDamagePercentage"
         },
         "dmgFormula": "Break DMG Scaling",
         "dmgFormulaFinal": "Pure (No DMG%)",

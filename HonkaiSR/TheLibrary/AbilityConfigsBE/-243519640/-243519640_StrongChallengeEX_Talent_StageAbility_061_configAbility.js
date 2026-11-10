@@ -31,12 +31,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_CriticalDamage) || RETURN",
-                "displayLines": "MDF_CriticalDamage",
-                "constants": [],
-                "variables": [
-                  "MDF_CriticalDamage"
-                ]
+                "displayLines": "MDF_CriticalDamage"
               }
             }
           ]
@@ -91,21 +86,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"2133118051\">MStrongChallengeEX_Talent_StageAbility_TGT_061</a>",
                   "duration": {
-                    "operator": "Variables[0] (#ADF_2) || RETURN",
-                    "displayLines": "#ADF_2",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_2"
-                    ]
+                    "displayLines": "#ADF_2"
                   },
                   "valuePerStack": {
                     "MDF_CriticalDamage": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }

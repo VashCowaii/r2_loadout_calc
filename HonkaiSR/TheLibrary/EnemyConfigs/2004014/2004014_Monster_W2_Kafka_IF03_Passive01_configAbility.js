@@ -74,36 +74,16 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1246789467\">Enemy_W2_Cocolia_IF_SoftFrenzyController</a>",
       "valuePerStack": {
         "MDF_FrenzyStartDelay": {
-          "operator": "Variables[0] ({[SkillEX05[0]]}) || RETURN",
-          "displayLines": "{[SkillEX05[0]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillEX05[0]]}"
-          ]
+          "displayLines": "{[SkillEX05[0]]}"
         },
         "MDF_FrenzyIntervalDelay": {
-          "operator": "Variables[0] ({[SkillEX05[1]]}) || RETURN",
-          "displayLines": "{[SkillEX05[1]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillEX05[1]]}"
-          ]
+          "displayLines": "{[SkillEX05[1]]}"
         },
         "MDF_MaxFrenzyLayer": {
-          "operator": "Variables[0] ({[SkillEX05[2]]}) || RETURN",
-          "displayLines": "{[SkillEX05[2]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillEX05[2]]}"
-          ]
+          "displayLines": "{[SkillEX05[2]]}"
         },
         "MDF_TokenDMGAddRatioPerLayer": {
-          "operator": "Variables[0] ({[SkillEX05[3]]}) || RETURN",
-          "displayLines": "{[SkillEX05[3]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillEX05[3]]}"
-          ]
+          "displayLines": "{[SkillEX05[3]]}"
         }
       }
     },
@@ -116,76 +96,31 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1808450599\">Monster_W2_Kafka_IF03_SummonControl</a>",
       "valuePerStack": {
         "MDF_WeakDMGReduceRatio": {
-          "operator": "Variables[0] ({[SkillEX01[3]]}) || RETURN",
-          "displayLines": "{[SkillEX01[3]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillEX01[3]]}"
-          ]
+          "displayLines": "{[SkillEX01[3]]}"
         },
         "MDF_WeakStatusProbReduceRatio": {
-          "operator": "Variables[0] ({[SkillEX01[4]]}) || RETURN",
-          "displayLines": "{[SkillEX01[4]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillEX01[4]]}"
-          ]
+          "displayLines": "{[SkillEX01[4]]}"
         },
         "MDF_WeakStanceSliceRatio": {
-          "operator": "Variables[0] ({[SkillEX01[5]]}) || RETURN",
-          "displayLines": "{[SkillEX01[5]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillEX01[5]]}"
-          ]
+          "displayLines": "{[SkillEX01[5]]}"
         },
         "MDF_BreakDMGTokenAddRatio": {
-          "operator": "Variables[0] ({[SkillEX02[1]]}) || RETURN",
-          "displayLines": "{[SkillEX02[1]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillEX02[1]]}"
-          ]
+          "displayLines": "{[SkillEX02[1]]}"
         },
         "MDF_BreakDelayRatio": {
-          "operator": "Variables[0] ({[SkillEX02[2]]}) || RETURN",
-          "displayLines": "{[SkillEX02[2]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillEX02[2]]}"
-          ]
+          "displayLines": "{[SkillEX02[2]]}"
         },
         "MDF_FrenzyDMGTokenAddRatio": {
-          "operator": "Variables[0] ({[SkillEX02[3]]}) || RETURN",
-          "displayLines": "{[SkillEX02[3]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillEX02[3]]}"
-          ]
+          "displayLines": "{[SkillEX02[3]]}"
         },
         "MDF_FrenzySpeedAddRatio": {
-          "operator": "Variables[0] ({[SkillEX02[4]]}) || RETURN",
-          "displayLines": "{[SkillEX02[4]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillEX02[4]]}"
-          ]
+          "displayLines": "{[SkillEX02[4]]}"
         },
         "MDF_FrenzyStanceSliceRatio": {
-          "operator": "Variables[0] ({[SkillEX02[5]]}) || RETURN",
-          "displayLines": "{[SkillEX02[5]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillEX02[5]]}"
-          ]
+          "displayLines": "{[SkillEX02[5]]}"
         },
         "MDF_StanceDMGPerTeamMate": {
-          "operator": "Variables[0] ({[SkillEX02[0]]}) || RETURN",
-          "displayLines": "{[SkillEX02[0]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillEX02[0]]}"
-          ]
+          "displayLines": "{[SkillEX02[0]]}"
         }
       }
     },

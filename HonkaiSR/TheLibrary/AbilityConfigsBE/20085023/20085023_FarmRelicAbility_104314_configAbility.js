@@ -35,13 +35,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageAddedRatio) || Variables[1] (MDF_SummonCount) || MUL || RETURN",
-                "displayLines": "(MDF_DamageAddedRatio * MDF_SummonCount)",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageAddedRatio",
-                  "MDF_SummonCount"
-                ]
+                "displayLines": "(MDF_DamageAddedRatio * MDF_SummonCount)"
               }
             }
           ]
@@ -217,14 +211,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_SummonCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_SummonCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_SummonCount"
-                        ]
+                        "displayLines": "(MDF_SummonCount + 1)"
                       },
                       "variableName": "MDF_SummonCount"
                     }
@@ -241,12 +228,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-772982810\">MFarmRelic_104314_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "valuePerStack": {
                 "MDF_SummonCount": {
-                  "operator": "Variables[0] (MDF_SummonCount) || RETURN",
-                  "displayLines": "MDF_SummonCount",
-                  "constants": [],
-                  "variables": [
-                    "MDF_SummonCount"
-                  ]
+                  "displayLines": "MDF_SummonCount"
                 }
               }
             }

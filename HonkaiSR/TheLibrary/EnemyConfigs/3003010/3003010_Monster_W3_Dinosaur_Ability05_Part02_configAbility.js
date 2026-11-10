@@ -78,12 +78,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-          "displayLines": "{[Skill05[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill05[2]]}"
-          ]
+          "displayLines": "{[Skill05[2]]}"
         },
         "dmgFormula": "Max HP Scaling",
         "dmgFormulaFinal": "Converted DMG Base",
@@ -100,12 +95,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-          "displayLines": "{[Skill05[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill05[1]]}"
-          ]
+          "displayLines": "{[Skill05[1]]}"
         },
         "dmgFormula": "Max HP Scaling",
         "dmgFormulaFinal": "Converted DMG Base",
@@ -148,12 +138,7 @@ const configAbility = {
         {
           "name": "Assign Advance/Delay to Current Ability Use",
           "adjustmentValue": {
-            "operator": "Variables[0] (UnusedUnderThisBase_10320) || RETURN",
-            "displayLines": "UnusedUnderThisBase_10320",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_10320"
-            ]
+            "displayLines": "UnusedUnderThisBase_10320"
           },
           "adjustmentType": "="
         }
@@ -185,12 +170,7 @@ const configAbility = {
           "duration": -1,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-              "displayLines": "{[Skill05[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[3]]}"
-              ]
+              "displayLines": "{[Skill05[3]]}"
             }
           }
         },
@@ -279,12 +259,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
               "valuePerStack": {
                 "MDF_MaxCount": {
-                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                  "displayLines": "{[Skill03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[0]]}"
-                  ]
+                  "displayLines": "{[Skill03[0]]}"
                 },
                 "MDF_PartFlag": 0
               }
@@ -300,12 +275,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
               "valuePerStack": {
                 "MDF_MaxCount": {
-                  "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                  "displayLines": "{[Skill05[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[0]]}"
-                  ]
+                  "displayLines": "{[Skill05[0]]}"
                 },
                 "MDF_PartFlag": 1
               }

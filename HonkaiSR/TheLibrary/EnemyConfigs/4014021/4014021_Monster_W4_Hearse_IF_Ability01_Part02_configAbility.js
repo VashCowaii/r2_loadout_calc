@@ -216,100 +216,40 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1562180674\">Enemy_W4_Nikadory_IF_StoneShieldController</a>",
       "valuePerStack": {
         "MDF_MaxLayer": {
-          "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-          "displayLines": "{[Skill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[0]]}"
-          ]
+          "displayLines": "{[Skill01[0]]}"
         },
         "MDF_ActionDelayRatio": {
-          "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-          "displayLines": "{[Skill01[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[1]]}"
-          ]
+          "displayLines": "{[Skill01[1]]}"
         },
         "MDF_CrackedDamage": {
-          "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-          "displayLines": "{[Skill01[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[2]]}"
-          ]
+          "displayLines": "{[Skill01[2]]}"
         },
         "MDF_BPRecoverValue": {
-          "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-          "displayLines": "{[Skill01[3]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[3]]}"
-          ]
+          "displayLines": "{[Skill01[3]]}"
         },
         "MDF_AllDamageReduce": {
-          "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-          "displayLines": "{[Skill01[4]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[4]]}"
-          ]
+          "displayLines": "{[Skill01[4]]}"
         },
         "MDF_CrackedDamageAfter": {
-          "operator": "Variables[0] ({[Skill01[5]]}) || RETURN",
-          "displayLines": "{[Skill01[5]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[5]]}"
-          ]
+          "displayLines": "{[Skill01[5]]}"
         },
         "MDF_DamageStanceValue": {
-          "operator": "Variables[0] ({[Skill01[6]]}) || RETURN",
-          "displayLines": "{[Skill01[6]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[6]]}"
-          ]
+          "displayLines": "{[Skill01[6]]}"
         },
         "MDF_SuperShield_MaxLayer": {
-          "operator": "Variables[0] ({[Skill01[7]]}) || RETURN",
-          "displayLines": "{[Skill01[7]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[7]]}"
-          ]
+          "displayLines": "{[Skill01[7]]}"
         },
         "MDF_SuperShield_BPRecoverValue": {
-          "operator": "Variables[0] ({[Skill01[8]]}) || RETURN",
-          "displayLines": "{[Skill01[8]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[8]]}"
-          ]
+          "displayLines": "{[Skill01[8]]}"
         },
         "MDF_BraveBonusLayer": {
-          "operator": "Variables[0] ({[Skill01[9]]}) || RETURN",
-          "displayLines": "{[Skill01[9]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[9]]}"
-          ]
+          "displayLines": "{[Skill01[9]]}"
         },
         "MDF_SuperShield_ActionDelayRatio": {
-          "operator": "Variables[0] ({[Skill01[10]]}) || RETURN",
-          "displayLines": "{[Skill01[10]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[10]]}"
-          ]
+          "displayLines": "{[Skill01[10]]}"
         },
         "MDF_SuperShield_DamageStanceValue": {
-          "operator": "Variables[0] ({[Skill01[11]]}) || RETURN",
-          "displayLines": "{[Skill01[11]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[11]]}"
-          ]
+          "displayLines": "{[Skill01[11]]}"
         }
       },
       "casterAssign": "TargetSelf"
@@ -368,36 +308,16 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1085270043\">Enemy_W4_HearsePart_IF_Passive</a>",
               "valuePerStack": {
                 "MDF_BPRecoverValue": {
-                  "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                  "displayLines": "{[Skill01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[3]]}"
-                  ]
+                  "displayLines": "{[Skill01[3]]}"
                 },
                 "MDF_Part01LoseHPRatio": {
-                  "operator": "Variables[0] ({[Skill01[12]]}) || RETURN",
-                  "displayLines": "{[Skill01[12]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[12]]}"
-                  ]
+                  "displayLines": "{[Skill01[12]]}"
                 },
                 "MDF_Part02LoseHPRatio": {
-                  "operator": "Variables[0] ({[Skill01[13]]}) || RETURN",
-                  "displayLines": "{[Skill01[13]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[13]]}"
-                  ]
+                  "displayLines": "{[Skill01[13]]}"
                 },
                 "MDF_DamageStanceValue": {
-                  "operator": "Variables[0] ({[Skill01[14]]}) || RETURN",
-                  "displayLines": "{[Skill01[14]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[14]]}"
-                  ]
+                  "displayLines": "{[Skill01[14]]}"
                 }
               }
             }
@@ -412,44 +332,19 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1085270043\">Enemy_W4_HearsePart_IF_Passive</a>",
               "valuePerStack": {
                 "MDF_BPRecoverValue": {
-                  "operator": "Variables[0] ({[Skill01[8]]}) || RETURN",
-                  "displayLines": "{[Skill01[8]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[8]]}"
-                  ]
+                  "displayLines": "{[Skill01[8]]}"
                 },
                 "MDF_BraveBonusLayer": {
-                  "operator": "Variables[0] ({[Skill01[9]]}) || RETURN",
-                  "displayLines": "{[Skill01[9]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[9]]}"
-                  ]
+                  "displayLines": "{[Skill01[9]]}"
                 },
                 "MDF_Part01LoseHPRatio": {
-                  "operator": "Variables[0] ({[Skill01[12]]}) || RETURN",
-                  "displayLines": "{[Skill01[12]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[12]]}"
-                  ]
+                  "displayLines": "{[Skill01[12]]}"
                 },
                 "MDF_Part02LoseHPRatio": {
-                  "operator": "Variables[0] ({[Skill01[13]]}) || RETURN",
-                  "displayLines": "{[Skill01[13]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[13]]}"
-                  ]
+                  "displayLines": "{[Skill01[13]]}"
                 },
                 "MDF_DamageStanceValue": {
-                  "operator": "Variables[0] ({[Skill01[14]]}) || RETURN",
-                  "displayLines": "{[Skill01[14]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[14]]}"
-                  ]
+                  "displayLines": "{[Skill01[14]]}"
                 }
               }
             }

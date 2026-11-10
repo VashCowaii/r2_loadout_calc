@@ -21,14 +21,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (MDF_Skill02UseCount) || Constants[0] (1) || ADD || RETURN",
-        "displayLines": "(MDF_Skill02UseCount + 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "MDF_Skill02UseCount"
-        ]
+        "displayLines": "(MDF_Skill02UseCount + 1)"
       },
       "variableName": "MDF_Skill02UseCount"
     },
@@ -44,14 +37,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (MDF_Skill02UseCountInCaps) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(MDF_Skill02UseCountInCaps + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "MDF_Skill02UseCountInCaps"
-            ]
+            "displayLines": "(MDF_Skill02UseCountInCaps + 1)"
           },
           "variableName": "MDF_Skill02UseCountInCaps"
         }
@@ -67,21 +53,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (3.6) || Variables[1] (ARCHER_OBJECT_UNUSED_1) || MUL || RETURN",
-          "displayLines": "(3.6 * ARCHER_OBJECT_UNUSED_1)",
-          "constants": [],
-          "variables": [
-            3.6,
-            "ARCHER_OBJECT_UNUSED_1"
-          ]
+          "displayLines": "(3.6 * ARCHER_OBJECT_UNUSED_1)"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -102,24 +77,14 @@ const configAbility = {
             "value1": "MDF_Skill02UseCount",
             "compareType": "=",
             "value2": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             }
           },
           "passed": [
             {
               "name": "Skill Points Modification",
               "adjustmentValue": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "adjustmentType": "+"
             }
@@ -143,22 +108,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"308886295\">Archer_BPAbility_AddDamagePercentage</a>[<span class=\"descriptionNumberColor\">Circuit Connection</span>]",
           "stackLimit": {
-            "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-            "displayLines": "(2 + 1)",
-            "constants": [],
-            "variables": [
-              2,
-              1
-            ]
+            "displayLines": "(2 + 1)"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             }
           },
           "addStacksPerTrigger": 1
@@ -173,21 +127,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"308886295\">Archer_BPAbility_AddDamagePercentage</a>[<span class=\"descriptionNumberColor\">Circuit Connection</span>]",
           "stackLimit": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             }
           },
           "addStacksPerTrigger": 1
@@ -210,12 +154,7 @@ const configAbility = {
             "value1": "CurrentSkillPoints",
             "compareType": ">=",
             "value2": {
-              "operator": "Variables[0] (MDF_BPNeed) || RETURN",
-              "displayLines": "MDF_BPNeed",
-              "constants": [],
-              "variables": [
-                "MDF_BPNeed"
-              ]
+              "displayLines": "MDF_BPNeed"
             }
           },
           {
@@ -226,12 +165,7 @@ const configAbility = {
                 "value1": "MDF_Skill02UseCountInCaps",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] (5) || RETURN",
-                  "displayLines": "5",
-                  "constants": [],
-                  "variables": [
-                    5
-                  ]
+                  "displayLines": "5"
                 }
               },
               {
@@ -252,12 +186,7 @@ const configAbility = {
                 "value1": "MDF_Skill02UseCountInCaps",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Variables[0] (5) || RETURN",
-                  "displayLines": "5",
-                  "constants": [],
-                  "variables": [
-                    5
-                  ]
+                  "displayLines": "5"
                 }
               },
               {

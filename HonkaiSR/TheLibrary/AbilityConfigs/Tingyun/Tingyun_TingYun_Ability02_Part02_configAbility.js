@@ -21,12 +21,7 @@ const configAbility = {
           "duration": 1,
           "valuePerStack": {
             "Tingyun_SpeedUP_Ratio": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         }
@@ -53,26 +48,14 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (MDF_Target_CurrentAttack) || Variables[1] (0.5) || MUL || RETURN",
-        "displayLines": "(MDF_Target_CurrentAttack * 0.5)",
-        "constants": [],
-        "variables": [
-          "MDF_Target_CurrentAttack",
-          0.5
-        ]
+        "displayLines": "(MDF_Target_CurrentAttack * 0.5)"
       },
       "variableName": "MDF_Target_CurrentAttack"
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (MDF_Tingyun_Attack) || Variables[1] (0.25) || MUL || RETURN",
-        "displayLines": "(MDF_Tingyun_Attack * 0.25)",
-        "constants": [],
-        "variables": [
-          "MDF_Tingyun_Attack",
-          0.25
-        ]
+        "displayLines": "(MDF_Tingyun_Attack * 0.25)"
       },
       "variableName": "MDF_Tingyun_Attack"
     },
@@ -83,24 +66,14 @@ const configAbility = {
         "value1": "MDF_Target_CurrentAttack",
         "compareType": ">",
         "value2": {
-          "operator": "Variables[0] (MDF_Tingyun_Attack) || RETURN",
-          "displayLines": "MDF_Tingyun_Attack",
-          "constants": [],
-          "variables": [
-            "MDF_Tingyun_Attack"
-          ]
+          "displayLines": "MDF_Tingyun_Attack"
         }
       },
       "passed": [
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (MDF_Tingyun_Attack) || RETURN",
-            "displayLines": "MDF_Tingyun_Attack",
-            "constants": [],
-            "variables": [
-              "MDF_Tingyun_Attack"
-            ]
+            "displayLines": "MDF_Tingyun_Attack"
           },
           "variableName": "MDF_Skill02_Attack"
         }
@@ -109,12 +82,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (MDF_Target_CurrentAttack) || RETURN",
-            "displayLines": "MDF_Target_CurrentAttack",
-            "constants": [],
-            "variables": [
-              "MDF_Target_CurrentAttack"
-            ]
+            "displayLines": "MDF_Target_CurrentAttack"
           },
           "variableName": "MDF_Skill02_Attack"
         }
@@ -157,29 +125,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "valuePerStack": {
             "MDF_AttackDelta": {
-              "operator": "Variables[0] (MDF_Skill02_Attack) || RETURN",
-              "displayLines": "MDF_Skill02_Attack",
-              "constants": [],
-              "variables": [
-                "MDF_Skill02_Attack"
-              ]
+              "displayLines": "MDF_Skill02_Attack"
             },
             "MDF_Eidolon1_SpeedUp": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             },
             "MDF_Eidolon1_Count": 1
           }
@@ -194,29 +147,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "valuePerStack": {
             "MDF_AttackDelta": {
-              "operator": "Variables[0] (MDF_Skill02_Attack) || RETURN",
-              "displayLines": "MDF_Skill02_Attack",
-              "constants": [],
-              "variables": [
-                "MDF_Skill02_Attack"
-              ]
+              "displayLines": "MDF_Skill02_Attack"
             },
             "MDF_Eidolon1_SpeedUp": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             },
             "MDF_Eidolon1_Count": 0
           }
@@ -307,52 +245,22 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-888637681\">TingYun_Passive_LeiLing_Eidolon4</a>",
           "valuePerStack": {
             "MDF_Passive_DamagePercentage": {
-              "operator": "Variables[0] (0.4) || RETURN",
-              "displayLines": "0.4",
-              "constants": [],
-              "variables": [
-                0.4
-              ]
+              "displayLines": "0.4"
             },
             "MDF_Passive_DamagePercentageSelf": {
-              "operator": "Variables[0] (0.6) || RETURN",
-              "displayLines": "0.6",
-              "constants": [],
-              "variables": [
-                0.6
-              ]
+              "displayLines": "0.6"
             },
             "MDF_Eidolon1_SpeedUp": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             },
             "MDF_Eidolon2_SPAdd": {
-              "operator": "Variables[0] (5) || RETURN",
-              "displayLines": "5",
-              "constants": [],
-              "variables": [
-                5
-              ]
+              "displayLines": "5"
             },
             "MDF_Eidolon4_DamagePercentage": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             },
             "MDF_AttackDelta": {
-              "operator": "Variables[0] (MDF_Skill02_Attack) || RETURN",
-              "displayLines": "MDF_Skill02_Attack",
-              "constants": [],
-              "variables": [
-                "MDF_Skill02_Attack"
-              ]
+              "displayLines": "MDF_Skill02_Attack"
             }
           },
           "casterAssign": "TargetSelf"
@@ -375,44 +283,19 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-922192919\">TingYun_Passive_LeiLing_Eidolon2</a>",
               "valuePerStack": {
                 "MDF_Passive_DamagePercentage": {
-                  "operator": "Variables[0] (0.4) || RETURN",
-                  "displayLines": "0.4",
-                  "constants": [],
-                  "variables": [
-                    0.4
-                  ]
+                  "displayLines": "0.4"
                 },
                 "MDF_Passive_DamagePercentageSelf": {
-                  "operator": "Variables[0] (0.6) || RETURN",
-                  "displayLines": "0.6",
-                  "constants": [],
-                  "variables": [
-                    0.6
-                  ]
+                  "displayLines": "0.6"
                 },
                 "MDF_Eidolon1_SpeedUp": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 },
                 "MDF_Eidolon2_SPAdd": {
-                  "operator": "Variables[0] (5) || RETURN",
-                  "displayLines": "5",
-                  "constants": [],
-                  "variables": [
-                    5
-                  ]
+                  "displayLines": "5"
                 },
                 "MDF_AttackDelta": {
-                  "operator": "Variables[0] (MDF_Skill02_Attack) || RETURN",
-                  "displayLines": "MDF_Skill02_Attack",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Skill02_Attack"
-                  ]
+                  "displayLines": "MDF_Skill02_Attack"
                 }
               },
               "casterAssign": "TargetSelf"
@@ -435,36 +318,16 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-972525776\">TingYun_Passive_LeiLing_Eidolon1</a>",
                   "valuePerStack": {
                     "MDF_Passive_DamagePercentage": {
-                      "operator": "Variables[0] (0.4) || RETURN",
-                      "displayLines": "0.4",
-                      "constants": [],
-                      "variables": [
-                        0.4
-                      ]
+                      "displayLines": "0.4"
                     },
                     "MDF_Passive_DamagePercentageSelf": {
-                      "operator": "Variables[0] (0.6) || RETURN",
-                      "displayLines": "0.6",
-                      "constants": [],
-                      "variables": [
-                        0.6
-                      ]
+                      "displayLines": "0.6"
                     },
                     "MDF_Eidolon1_SpeedUp": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     },
                     "MDF_AttackDelta": {
-                      "operator": "Variables[0] (MDF_Skill02_Attack) || RETURN",
-                      "displayLines": "MDF_Skill02_Attack",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Skill02_Attack"
-                      ]
+                      "displayLines": "MDF_Skill02_Attack"
                     }
                   },
                   "casterAssign": "TargetSelf"
@@ -480,28 +343,13 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1351488572\">TingYun_Passive_LeiLing</a>",
                   "valuePerStack": {
                     "MDF_Passive_DamagePercentage": {
-                      "operator": "Variables[0] (0.4) || RETURN",
-                      "displayLines": "0.4",
-                      "constants": [],
-                      "variables": [
-                        0.4
-                      ]
+                      "displayLines": "0.4"
                     },
                     "MDF_Passive_DamagePercentageSelf": {
-                      "operator": "Variables[0] (0.6) || RETURN",
-                      "displayLines": "0.6",
-                      "constants": [],
-                      "variables": [
-                        0.6
-                      ]
+                      "displayLines": "0.6"
                     },
                     "MDF_AttackDelta": {
-                      "operator": "Variables[0] (MDF_Skill02_Attack) || RETURN",
-                      "displayLines": "MDF_Skill02_Attack",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Skill02_Attack"
-                      ]
+                      "displayLines": "MDF_Skill02_Attack"
                     }
                   },
                   "casterAssign": "TargetSelf"
@@ -515,12 +363,7 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
-        "displayLines": "TingYun_EnergyBarLayer",
-        "constants": [],
-        "variables": [
-          "TingYun_EnergyBarLayer"
-        ]
+        "displayLines": "TingYun_EnergyBarLayer"
       },
       "maximum": 3,
       "assignState": "True",

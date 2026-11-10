@@ -13,21 +13,11 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-2023283041\">Enemy_W2_Xuanlu_Ability07_NoWeakness</a>[<span class=\"descriptionNumberColor\">Hardy Leaf Sheath</span>]",
       "duration": {
-        "operator": "Variables[0] ({[Skill07[1]]}) || RETURN",
-        "displayLines": "{[Skill07[1]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill07[1]]}"
-        ]
+        "displayLines": "{[Skill07[1]]}"
       },
       "valuePerStack": {
         "MDF_DefenceAddedRatio": {
-          "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-          "displayLines": "{[Skill07[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill07[0]]}"
-          ]
+          "displayLines": "{[Skill07[0]]}"
         }
       }
     },
@@ -80,12 +70,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DefenceAddedRatio) || RETURN",
-                "displayLines": "MDF_DefenceAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_DefenceAddedRatio"
-                ]
+                "displayLines": "MDF_DefenceAddedRatio"
               }
             }
           ]

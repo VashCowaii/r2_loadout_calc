@@ -75,12 +75,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__254) || RETURN",
-                    "displayLines": "ENEMIES_OBJECT_UNUSED__254",
-                    "constants": [],
-                    "variables": [
-                      "ENEMIES_OBJECT_UNUSED__254"
-                    ]
+                    "displayLines": "ENEMIES_OBJECT_UNUSED__254"
                   },
                   "variableName": "_LightCharge"
                 },
@@ -124,12 +119,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DMGReduceRatio) || RETURN",
-                    "displayLines": "MDF_DMGReduceRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DMGReduceRatio"
-                    ]
+                    "displayLines": "MDF_DMGReduceRatio"
                   }
                 }
               ]
@@ -274,12 +264,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (BE_AetherDivide_W2_Mecha03_00_BaseSpeed) || RETURN",
-                    "displayLines": "BE_AetherDivide_W2_Mecha03_00_BaseSpeed",
-                    "constants": [],
-                    "variables": [
-                      "BE_AetherDivide_W2_Mecha03_00_BaseSpeed"
-                    ]
+                    "displayLines": "BE_AetherDivide_W2_Mecha03_00_BaseSpeed"
                   }
                 }
               ]

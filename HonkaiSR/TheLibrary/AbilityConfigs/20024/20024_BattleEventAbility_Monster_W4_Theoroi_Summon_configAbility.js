@@ -13,12 +13,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "multiBase": {
-        "operator": "Variables[0] (SummonInitDelay) || RETURN",
-        "displayLines": "SummonInitDelay",
-        "constants": [],
-        "variables": [
-          "SummonInitDelay"
-        ]
+        "displayLines": "SummonInitDelay"
       }
     },
     {

@@ -12,12 +12,7 @@ const configAbility = {
         "target": "{{All Team Members}} - {{Caster's Memosprite}}"
       },
       "consumePercent": {
-        "operator": "Variables[0] (0.4) || RETURN",
-        "displayLines": "0.4",
-        "constants": [],
-        "variables": [
-          0.4
-        ]
+        "displayLines": "0.4"
       },
       "consumeFloor": 1,
       "attackType": "Unknown"
@@ -55,24 +50,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] (0.3) || Variables[1] (Avatar_Castorice_Rank01_DamageRatio) || MUL || RETURN",
-                  "displayLines": "(0.3 * Avatar_Castorice_Rank01_DamageRatio)",
-                  "constants": [],
-                  "variables": [
-                    0.3,
-                    "Avatar_Castorice_Rank01_DamageRatio"
-                  ]
+                  "displayLines": "(0.3 * Avatar_Castorice_Rank01_DamageRatio)"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || Constants[0] (0.5) || MUL || RETURN",
-                  "displayLines": "(AOE Toughness Value * 0.5)",
-                  "constants": [
-                    0.5
-                  ],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "(AOE Toughness Value * 0.5)"
                 },
                 "instanceTag": "CastoricePairsDamage",
                 "Tags": [
@@ -96,23 +78,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             },
             "dmgFormula": "Max HP Scaling",
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "(AOE Toughness Value * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "(AOE Toughness Value * 0.5)"
             },
             "instanceTag": "CastoricePairsDamage",
             "Tags": [
@@ -162,13 +132,7 @@ const configAbility = {
           "functionName": "<a class=\"gTempYellow\" id=\"-1401999190\">Castorice_AddSpecialSP</a>",
           "variables": {
             "_FixedAddValue": {
-              "operator": "Variables[0] (Castorice_Rank02_MaxSpecialSP) || Variables[1] (0.3) || MUL || RETURN",
-              "displayLines": "(Castorice_Rank02_MaxSpecialSP * 0.3)",
-              "constants": [],
-              "variables": [
-                "Castorice_Rank02_MaxSpecialSP",
-                0.3
-              ]
+              "displayLines": "(Castorice_Rank02_MaxSpecialSP * 0.3)"
             }
           }
         },

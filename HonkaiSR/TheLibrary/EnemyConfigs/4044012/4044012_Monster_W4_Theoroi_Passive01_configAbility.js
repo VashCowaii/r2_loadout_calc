@@ -40,12 +40,7 @@ const configAbility = {
     {
       "name": "Divide BossHP into Bars",
       "splitBarCount": {
-        "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-        "displayLines": "{[PassiveSkill03[5]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill03[5]]}"
-        ]
+        "displayLines": "{[PassiveSkill03[5]]}"
       }
     },
     {
@@ -73,12 +68,7 @@ const configAbility = {
           "eventID": 20024,
           "variables": {
             "SummonInitDelay": {
-              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[1]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[1]]}"
             }
           }
         }

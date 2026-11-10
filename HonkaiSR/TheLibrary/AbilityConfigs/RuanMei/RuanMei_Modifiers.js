@@ -67,13 +67,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.32) || Variables[1] (SkillTree_PointB3_BreakDamageAddedValue) || ADD || RETURN",
-                    "displayLines": "(0.32 + SkillTree_PointB3_BreakDamageAddedValue)",
-                    "constants": [],
-                    "variables": [
-                      0.32,
-                      "SkillTree_PointB3_BreakDamageAddedValue"
-                    ]
+                    "displayLines": "(0.32 + SkillTree_PointB3_BreakDamageAddedValue)"
                   }
                 }
               ],
@@ -86,12 +80,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.32) || RETURN",
-                    "displayLines": "0.32",
-                    "constants": [],
-                    "variables": [
-                      0.32
-                    ]
+                    "displayLines": "0.32"
                   }
                 }
               ]
@@ -255,14 +244,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_BreakAttackToDelay) || Variables[1] (0.2) || MUL || Variables[2] (0.1) || ADD || RETURN",
-                "displayLines": "((MDF_BreakAttackToDelay * 0.2) + 0.1)",
-                "constants": [],
-                "variables": [
-                  "MDF_BreakAttackToDelay",
-                  0.2,
-                  0.1
-                ]
+                "displayLines": "((MDF_BreakAttackToDelay * 0.2) + 0.1)"
               },
               "variableName": "MDF_BreakAttackToDelay"
             },
@@ -398,12 +380,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (Ability03_P1_PenetrateRatio) || RETURN",
-                "displayLines": "Ability03_P1_PenetrateRatio",
-                "constants": [],
-                "variables": [
-                  "Ability03_P1_PenetrateRatio"
-                ]
+                "displayLines": "Ability03_P1_PenetrateRatio"
               }
             },
             {
@@ -422,20 +399,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1242682284\">RuanMei_Ability03_Area_Eidolon1_Friend</a>[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
                   "valuePerStack": {
                     "Ability03_P1_PenetrateRatio": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     },
                     "AbilityRank_Eidolon1_P1_IgnoreDEFRatio_Friend": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 }
@@ -450,12 +417,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1476311818\">RuanMei_Ability03_Area_Friend</a>[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
                   "valuePerStack": {
                     "Ability03_P1_PenetrateRatio": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     }
                   }
                 }
@@ -482,12 +444,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "Ability03_P1_PenetrateRatio": {
-              "operator": "Variables[0] (0.25) || RETURN",
-              "displayLines": "0.25",
-              "constants": [],
-              "variables": [
-                0.25
-              ]
+              "displayLines": "0.25"
             }
           }
         },
@@ -505,12 +462,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         }
@@ -588,12 +540,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (Ability03_P1_PenetrateRatio) || RETURN",
-                "displayLines": "Ability03_P1_PenetrateRatio",
-                "constants": [],
-                "variables": [
-                  "Ability03_P1_PenetrateRatio"
-                ]
+                "displayLines": "Ability03_P1_PenetrateRatio"
               }
             },
             {
@@ -612,12 +559,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"68128116\">RuanMei_Ability03_Eidolon1_DefenceIgnore</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 },
@@ -629,13 +571,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"678689072\">RuanMei_Ability03_Area_Eidolon1_Caster</a>[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-                    "displayLines": "(2 + 1)",
-                    "constants": [],
-                    "variables": [
-                      2,
-                      1
-                    ]
+                    "displayLines": "(2 + 1)"
                   }
                 }
               ],
@@ -656,12 +592,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"68128116\">RuanMei_Ability03_Eidolon1_DefenceIgnore</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     },
@@ -673,12 +604,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"678689072\">RuanMei_Ability03_Area_Eidolon1_Caster</a>[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       }
                     }
                   ],
@@ -691,12 +617,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-995060554\">RuanMei_Ability03_Area_Caster</a>[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       }
                     }
                   ]
@@ -822,12 +743,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"614915339\">RuanMei_Eidolon4_PassiveStackProperty</a>",
               "valuePerStack": {
                 "AbilityRank_Eidolon4_P1_BreakDamageAdded": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 }
               }
             },
@@ -839,12 +755,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"353149410\">RuanMei_Eidolon4_Passive_BreakDamageAddedUp</a>[<span class=\"descriptionNumberColor\">Chatoyant Éclat</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               }
             }
           ]
@@ -870,12 +781,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (SkillRank_Rank04_P1_BreakDamageAdded) || RETURN",
-                "displayLines": "SkillRank_Rank04_P1_BreakDamageAdded",
-                "constants": [],
-                "variables": [
-                  "SkillRank_Rank04_P1_BreakDamageAdded"
-                ]
+                "displayLines": "SkillRank_Rank04_P1_BreakDamageAdded"
               }
             }
           ]
@@ -970,16 +876,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (WHOLE) || Variables[1] (SkillTree_PointB3_BreakDamageAddedValue) || Variables[2] (1.2) || SUB || Variables[3] (0.1) || DIV || PARAM_1 || FUNCTION || Variables[4] (0.06) || MUL || RETURN",
-                    "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(((SkillTree_PointB3_BreakDamageAddedValue - 1.2) / 0.1)) * 0.06)",
-                    "constants": [],
-                    "variables": [
-                      "WHOLE",
-                      "SkillTree_PointB3_BreakDamageAddedValue",
-                      1.2,
-                      0.1,
-                      0.06
-                    ]
+                    "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(((SkillTree_PointB3_BreakDamageAddedValue - 1.2) / 0.1)) * 0.06)"
                   },
                   "variableName": "SkillTree_PointB3_BreakDamageAddedValue"
                 },
@@ -1007,12 +904,7 @@ const configAbility = {
                         "value1": "SkillTree_PointB3_BreakDamageAddedValue",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (0.36) || RETURN",
-                          "displayLines": "0.36",
-                          "constants": [],
-                          "variables": [
-                            0.36
-                          ]
+                          "displayLines": "0.36"
                         },
                         "contextScope": "ContextCaster"
                       },
@@ -1020,12 +912,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (0.36) || RETURN",
-                            "displayLines": "0.36",
-                            "constants": [],
-                            "variables": [
-                              0.36
-                            ]
+                            "displayLines": "0.36"
                           },
                           "variableName": "SkillTree_PointB3_BreakDamageAddedValue"
                         }
@@ -1036,13 +923,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (SkillTree_PointB3_BreakDamageAddedValue) || Variables[1] (0.32) || ADD || RETURN",
-                    "displayLines": "(SkillTree_PointB3_BreakDamageAddedValue + 0.32)",
-                    "constants": [],
-                    "variables": [
-                      "SkillTree_PointB3_BreakDamageAddedValue",
-                      0.32
-                    ]
+                    "displayLines": "(SkillTree_PointB3_BreakDamageAddedValue + 0.32)"
                   },
                   "variableName": "Skill02_P1_DamageAddedRatioFinal"
                 },
@@ -1097,20 +978,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"104142449\">RuanMei_Ability02_Area_Friend</a>[<span class=\"descriptionNumberColor\">Overtone</span>]",
                       "valuePerStack": {
                         "Ability02_P1_DamageAddedRatio_Friend": {
-                          "operator": "Variables[0] (Skill02_P1_DamageAddedRatioFinal) || RETURN",
-                          "displayLines": "Skill02_P1_DamageAddedRatioFinal",
-                          "constants": [],
-                          "variables": [
-                            "Skill02_P1_DamageAddedRatioFinal"
-                          ]
+                          "displayLines": "Skill02_P1_DamageAddedRatioFinal"
                         },
                         "Ability02_P2_StanceBreakAddedRatio_Friend": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         }
                       }
                     }
@@ -1130,16 +1001,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (WHOLE) || Variables[1] (SkillTree_PointB3_BreakDamageAddedValue) || Variables[2] (1.2) || SUB || Variables[3] (0.1) || DIV || PARAM_1 || FUNCTION || Variables[4] (0.06) || MUL || RETURN",
-                    "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(((SkillTree_PointB3_BreakDamageAddedValue - 1.2) / 0.1)) * 0.06)",
-                    "constants": [],
-                    "variables": [
-                      "WHOLE",
-                      "SkillTree_PointB3_BreakDamageAddedValue",
-                      1.2,
-                      0.1,
-                      0.06
-                    ]
+                    "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(((SkillTree_PointB3_BreakDamageAddedValue - 1.2) / 0.1)) * 0.06)"
                   },
                   "variableName": "SkillTree_PointB3_BreakDamageAddedValue"
                 },
@@ -1167,12 +1029,7 @@ const configAbility = {
                         "value1": "SkillTree_PointB3_BreakDamageAddedValue",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (0.36) || RETURN",
-                          "displayLines": "0.36",
-                          "constants": [],
-                          "variables": [
-                            0.36
-                          ]
+                          "displayLines": "0.36"
                         },
                         "contextScope": "ContextCaster"
                       },
@@ -1180,12 +1037,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (0.36) || RETURN",
-                            "displayLines": "0.36",
-                            "constants": [],
-                            "variables": [
-                              0.36
-                            ]
+                            "displayLines": "0.36"
                           },
                           "variableName": "SkillTree_PointB3_BreakDamageAddedValue"
                         }
@@ -1196,13 +1048,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (SkillTree_PointB3_BreakDamageAddedValue) || Variables[1] (0.32) || ADD || RETURN",
-                    "displayLines": "(SkillTree_PointB3_BreakDamageAddedValue + 0.32)",
-                    "constants": [],
-                    "variables": [
-                      "SkillTree_PointB3_BreakDamageAddedValue",
-                      0.32
-                    ]
+                    "displayLines": "(SkillTree_PointB3_BreakDamageAddedValue + 0.32)"
                   },
                   "variableName": "Skill02_P1_DamageAddedRatioFinal"
                 },
@@ -1257,20 +1103,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"104142449\">RuanMei_Ability02_Area_Friend</a>[<span class=\"descriptionNumberColor\">Overtone</span>]",
                       "valuePerStack": {
                         "Ability02_P1_DamageAddedRatio_Friend": {
-                          "operator": "Variables[0] (Skill02_P1_DamageAddedRatioFinal) || RETURN",
-                          "displayLines": "Skill02_P1_DamageAddedRatioFinal",
-                          "constants": [],
-                          "variables": [
-                            "Skill02_P1_DamageAddedRatioFinal"
-                          ]
+                          "displayLines": "Skill02_P1_DamageAddedRatioFinal"
                         },
                         "Ability02_P2_StanceBreakAddedRatio_Friend": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         }
                       }
                     }
@@ -1296,12 +1132,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (Trace_PointB2_P1_SP) || RETURN",
-                "displayLines": "Trace_PointB2_P1_SP",
-                "constants": [],
-                "variables": [
-                  "Trace_PointB2_P1_SP"
-                ]
+                "displayLines": "Trace_PointB2_P1_SP"
               },
               "isFixed": "* ERR"
             }
@@ -1327,12 +1158,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (SkillTree_PointB1_P1_BreakDamageAdded) || RETURN",
-                "displayLines": "SkillTree_PointB1_P1_BreakDamageAdded",
-                "constants": [],
-                "variables": [
-                  "SkillTree_PointB1_P1_BreakDamageAdded"
-                ]
+                "displayLines": "SkillTree_PointB1_P1_BreakDamageAdded"
               }
             }
           ]

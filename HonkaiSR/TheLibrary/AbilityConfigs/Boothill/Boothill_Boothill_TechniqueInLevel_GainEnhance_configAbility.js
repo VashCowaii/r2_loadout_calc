@@ -35,32 +35,17 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "variableName": "MaxEnhance"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (CurEnhance) || RETURN",
-                    "displayLines": "CurEnhance",
-                    "constants": [],
-                    "variables": [
-                      "CurEnhance"
-                    ]
+                    "displayLines": "CurEnhance"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MaxEnhance) || RETURN",
-                    "displayLines": "MaxEnhance",
-                    "constants": [],
-                    "variables": [
-                      "MaxEnhance"
-                    ]
+                    "displayLines": "MaxEnhance"
                   },
                   "assignState": "False",
                   "bar#": 6,
@@ -74,39 +59,19 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1894494257\">Boothill_SelfModification</a>[<span class=\"descriptionNumberColor\">Pocket Trickshot</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_MaxLayer": {
-                      "operator": "Variables[0] (3) || RETURN",
-                      "displayLines": "3",
-                      "constants": [],
-                      "variables": [
-                        3
-                      ]
+                      "displayLines": "3"
                     },
                     "MDF_StanceAdded": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     },
                     "MDF_GainFromPassive": 0
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (#ADF_1) || RETURN",
-                    "displayLines": "#ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_1"
-                    ]
+                    "displayLines": "#ADF_1"
                   }
                 }
               ]

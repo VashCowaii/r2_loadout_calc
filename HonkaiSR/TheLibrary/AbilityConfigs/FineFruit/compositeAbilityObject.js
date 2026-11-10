@@ -47,12 +47,7 @@ const compositeAbilityObject = {
                         "target": "{{Player Team(Exclude Memosprites)v2}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (6) || RETURN",
-                        "displayLines": "6",
-                        "constants": [],
-                        "variables": [
-                          6
-                        ]
+                        "displayLines": "6"
                       },
                       "isFixed": "* ERR"
                     }

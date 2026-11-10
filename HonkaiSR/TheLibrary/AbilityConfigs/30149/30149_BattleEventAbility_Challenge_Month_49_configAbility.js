@@ -27,12 +27,7 @@ const configAbility = {
               "functionName": "<a class=\"gTempYellow\" id=\"101547145\">Elation_StartElationTime</a>",
               "variables": {
                 "TryStartElationTime_OverrideElationPoint": {
-                  "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                  "displayLines": "#BattleEvent_P2_ADF",
-                  "constants": [],
-                  "variables": [
-                    "#BattleEvent_P2_ADF"
-                  ]
+                  "displayLines": "#BattleEvent_P2_ADF"
                 },
                 "TryStartElationTime_ElationTimeIsNoConsume": 1
               },
@@ -71,12 +66,7 @@ const configAbility = {
                 {
                   "name": "Adjust Team Punchline Value",
                   "value": {
-                    "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P1_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P1_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P1_ADF"
                   },
                   "adjustment": "Add"
                 }

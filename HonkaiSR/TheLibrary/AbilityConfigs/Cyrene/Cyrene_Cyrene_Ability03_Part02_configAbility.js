@@ -60,12 +60,7 @@ const configAbility = {
       },
       "scope": "TargetEntity",
       "value": {
-        "operator": "Variables[0] (CurSpecialSP) || RETURN",
-        "displayLines": "CurSpecialSP",
-        "constants": [],
-        "variables": [
-          "CurSpecialSP"
-        ]
+        "displayLines": "CurSpecialSP"
       },
       "variableName": "CurSpecialSP"
     },
@@ -141,12 +136,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1356425425\">Cyrene_Ability02_Bonus_Main</a>[<span class=\"descriptionNumberColor\">Bloom, Elysium of Beyond</span>]",
       "valuePerStack": {
         "MDF_OriginDamagePercentage": {
-          "operator": "Variables[0] (0.24) || RETURN",
-          "displayLines": "0.24",
-          "constants": [],
-          "variables": [
-            0.24
-          ]
+          "displayLines": "0.24"
         }
       }
     },

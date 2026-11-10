@@ -51,28 +51,13 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"985901670\">Modifier_BattleEventAbility_Challenge_Month_18</a>",
       "valuePerStack": {
         "BattleEvent_P1_ADF": {
-          "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-          "displayLines": "#BattleEvent_P1_ADF",
-          "constants": [],
-          "variables": [
-            "#BattleEvent_P1_ADF"
-          ]
+          "displayLines": "#BattleEvent_P1_ADF"
         },
         "BattleEvent_P2_ADF": {
-          "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-          "displayLines": "#BattleEvent_P2_ADF",
-          "constants": [],
-          "variables": [
-            "#BattleEvent_P2_ADF"
-          ]
+          "displayLines": "#BattleEvent_P2_ADF"
         },
         "BattleEvent_P3_ADF": {
-          "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-          "displayLines": "#BattleEvent_P3_ADF",
-          "constants": [],
-          "variables": [
-            "#BattleEvent_P3_ADF"
-          ]
+          "displayLines": "#BattleEvent_P3_ADF"
         }
       }
     },
@@ -149,13 +134,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CurrentLayerAddSP) || Variables[1] (BattleEvent_P3_ADF_Get) || MUL || RETURN",
-                    "displayLines": "(CurrentLayerAddSP * BattleEvent_P3_ADF_Get)",
-                    "constants": [],
-                    "variables": [
-                      "CurrentLayerAddSP",
-                      "BattleEvent_P3_ADF_Get"
-                    ]
+                    "displayLines": "(CurrentLayerAddSP * BattleEvent_P3_ADF_Get)"
                   },
                   "variableName": "CurrentLayerAddSP"
                 },
@@ -175,13 +154,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (EntityCurrentSP) || Variables[1] (CurrentLayerAddSP) || ADD || RETURN",
-                    "displayLines": "(EntityCurrentSP + CurrentLayerAddSP)",
-                    "constants": [],
-                    "variables": [
-                      "EntityCurrentSP",
-                      "CurrentLayerAddSP"
-                    ]
+                    "displayLines": "(EntityCurrentSP + CurrentLayerAddSP)"
                   },
                   "variableName": "EntityCurrentSP"
                 },
@@ -205,12 +178,7 @@ const configAbility = {
                     "value1": "EntityCurrentSP",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (EntityMaxSP) || RETURN",
-                      "displayLines": "EntityMaxSP",
-                      "constants": [],
-                      "variables": [
-                        "EntityMaxSP"
-                      ]
+                      "displayLines": "EntityMaxSP"
                     }
                   },
                   "passed": [
@@ -221,12 +189,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (CurrentLayerAddSP) || RETURN",
-                        "displayLines": "CurrentLayerAddSP",
-                        "constants": [],
-                        "variables": [
-                          "CurrentLayerAddSP"
-                        ]
+                        "displayLines": "CurrentLayerAddSP"
                       },
                       "isFixed": "(Fixed)"
                     }
@@ -248,14 +211,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (EntityStockSP) || Variables[1] (EntityCurrentSP) || ADD || Variables[2] (EntityMaxSP) || SUB || RETURN",
-                        "displayLines": "((EntityStockSP + EntityCurrentSP) - EntityMaxSP)",
-                        "constants": [],
-                        "variables": [
-                          "EntityStockSP",
-                          "EntityCurrentSP",
-                          "EntityMaxSP"
-                        ]
+                        "displayLines": "((EntityStockSP + EntityCurrentSP) - EntityMaxSP)"
                       },
                       "variableName": "EntityStockSP"
                     },
@@ -268,12 +224,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1989287647\">Modifier_BattleEventAbility_Challenge_Month_18_Sub4</a>[<span class=\"descriptionNumberColor\">Energy Overflow</span>]",
                       "valuePerStack": {
                         "EntityStockSPForShow": {
-                          "operator": "Variables[0] (EntityStockSP) || RETURN",
-                          "displayLines": "EntityStockSP",
-                          "constants": [],
-                          "variables": [
-                            "EntityStockSP"
-                          ]
+                          "displayLines": "EntityStockSP"
                         }
                       }
                     }
@@ -321,13 +272,7 @@ const configAbility = {
                     "value1": "EntityStockSP",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (EntityMaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                      "displayLines": "(EntityMaxSP - _CurrentSP)",
-                      "constants": [],
-                      "variables": [
-                        "EntityMaxSP",
-                        "_CurrentSP"
-                      ]
+                      "displayLines": "(EntityMaxSP - _CurrentSP)"
                     }
                   },
                   "passed": [
@@ -338,12 +283,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (EntityStockSP) || RETURN",
-                        "displayLines": "EntityStockSP",
-                        "constants": [],
-                        "variables": [
-                          "EntityStockSP"
-                        ]
+                        "displayLines": "EntityStockSP"
                       },
                       "isFixed": "(Fixed)"
                     },
@@ -370,27 +310,14 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (EntityMaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                        "displayLines": "(EntityMaxSP - _CurrentSP)",
-                        "constants": [],
-                        "variables": [
-                          "EntityMaxSP",
-                          "_CurrentSP"
-                        ]
+                        "displayLines": "(EntityMaxSP - _CurrentSP)"
                       },
                       "isFixed": "(Fixed)"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (EntityStockSP) || Variables[1] (EntityMaxSP) || SUB || Variables[2] (_CurrentSP) || ADD || RETURN",
-                        "displayLines": "((EntityStockSP - EntityMaxSP) + _CurrentSP)",
-                        "constants": [],
-                        "variables": [
-                          "EntityStockSP",
-                          "EntityMaxSP",
-                          "_CurrentSP"
-                        ]
+                        "displayLines": "((EntityStockSP - EntityMaxSP) + _CurrentSP)"
                       },
                       "variableName": "EntityStockSP"
                     },
@@ -403,12 +330,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1989287647\">Modifier_BattleEventAbility_Challenge_Month_18_Sub4</a>[<span class=\"descriptionNumberColor\">Energy Overflow</span>]",
                       "valuePerStack": {
                         "EntityStockSPForShow": {
-                          "operator": "Variables[0] (EntityStockSP) || RETURN",
-                          "displayLines": "EntityStockSP",
-                          "constants": [],
-                          "variables": [
-                            "EntityStockSP"
-                          ]
+                          "displayLines": "EntityStockSP"
                         }
                       }
                     }
@@ -477,36 +399,16 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1972510028\">Modifier_BattleEventAbility_Challenge_Month_18_Sub3</a>",
               "valuePerStack": {
                 "BattleEvent_P1_ADF_Get": {
-                  "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-                  "displayLines": "BattleEvent_P1_ADF",
-                  "constants": [],
-                  "variables": [
-                    "BattleEvent_P1_ADF"
-                  ]
+                  "displayLines": "BattleEvent_P1_ADF"
                 },
                 "BattleEvent_P2_ADF_Get": {
-                  "operator": "Variables[0] (BattleEvent_P2_ADF) || RETURN",
-                  "displayLines": "BattleEvent_P2_ADF",
-                  "constants": [],
-                  "variables": [
-                    "BattleEvent_P2_ADF"
-                  ]
+                  "displayLines": "BattleEvent_P2_ADF"
                 },
                 "BattleEvent_P3_ADF_Get": {
-                  "operator": "Variables[0] (BattleEvent_P3_ADF) || RETURN",
-                  "displayLines": "BattleEvent_P3_ADF",
-                  "constants": [],
-                  "variables": [
-                    "BattleEvent_P3_ADF"
-                  ]
+                  "displayLines": "BattleEvent_P3_ADF"
                 },
                 "CurrentLayerAddSP": {
-                  "operator": "Variables[0] (CurrentLayer) || RETURN",
-                  "displayLines": "CurrentLayer",
-                  "constants": [],
-                  "variables": [
-                    "CurrentLayer"
-                  ]
+                  "displayLines": "CurrentLayer"
                 }
               },
               "casterAssign": "TargetSelf"
@@ -570,20 +472,10 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1785729743\">Modifier_BattleEventAbility_Challenge_Month_18_Sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (BattleEvent_P2_ADF) || RETURN",
-                    "displayLines": "BattleEvent_P2_ADF",
-                    "constants": [],
-                    "variables": [
-                      "BattleEvent_P2_ADF"
-                    ]
+                    "displayLines": "BattleEvent_P2_ADF"
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-                    "displayLines": "BattleEvent_P1_ADF",
-                    "constants": [],
-                    "variables": [
-                      "BattleEvent_P1_ADF"
-                    ]
+                    "displayLines": "BattleEvent_P1_ADF"
                   }
                 },
                 {
@@ -600,12 +492,7 @@ const configAbility = {
                     "target": "{{Monthly Challenge Battle Event}}"
                   },
                   "attackCount": {
-                    "operator": "Variables[0] (CurrentLayer) || RETURN",
-                    "displayLines": "CurrentLayer",
-                    "constants": [],
-                    "variables": [
-                      "CurrentLayer"
-                    ]
+                    "displayLines": "CurrentLayer"
                   },
                   "show": true
                 }

@@ -29,12 +29,7 @@ const configAbility = {
       "duration": 1,
       "stackLimit": 3,
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-        "displayLines": "ModifierStackLayer",
-        "constants": [],
-        "variables": [
-          "ModifierStackLayer"
-        ]
+        "displayLines": "ModifierStackLayer"
       },
       "execute": [
         {
@@ -54,13 +49,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedAddedRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(MDF_SpeedAddedRatio_PerLayer * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedAddedRatio_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(MDF_SpeedAddedRatio_PerLayer * ModifierLayers)"
               }
             }
           ]

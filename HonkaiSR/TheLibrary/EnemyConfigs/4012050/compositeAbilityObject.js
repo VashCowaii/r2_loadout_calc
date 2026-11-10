@@ -138,12 +138,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                    "displayLines": "MDF_AllDamageReduce",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageReduce"
-                    ]
+                    "displayLines": "MDF_AllDamageReduce"
                   }
                 }
               ]
@@ -399,12 +394,7 @@ const compositeAbilityObject = {
                         {
                           "name": "SWITCH",
                           "switchValue": {
-                            "operator": "Variables[0] (InsertFlag) || RETURN",
-                            "displayLines": "InsertFlag",
-                            "constants": [],
-                            "variables": [
-                              "InsertFlag"
-                            ]
+                            "displayLines": "InsertFlag"
                           },
                           "caseEvents": [
                             {
@@ -656,13 +646,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "DamageFlat": {
-                              "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (MDF_SuccessDamageRatio) || MUL || RETURN",
-                              "displayLines": "(MDF_MaxHP * MDF_SuccessDamageRatio)",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxHP",
-                                "MDF_SuccessDamageRatio"
-                              ]
+                              "displayLines": "(MDF_MaxHP * MDF_SuccessDamageRatio)"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -1473,12 +1457,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1777684731\">Standard_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-              "displayLines": "{[SkillP01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[1]]}"
-              ]
+              "displayLines": "{[SkillP01[1]]}"
             }
           }
         },
@@ -1534,12 +1513,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"407991733\">Enemy_W4_Mascot_ListenCorrectInteract</a>",
           "valuePerStack": {
             "MDF_SuccessDamageRatio": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
+              "displayLines": "{[SkillP01[0]]}"
             }
           }
         }
@@ -1578,12 +1552,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-348410444\">Enemy_W4_Mascot_MuteBreak</a>",
           "valuePerStack": {
             "MDF_AllDamageReduce": {
-              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-              "displayLines": "{[SkillP01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[2]]}"
-              ]
+              "displayLines": "{[SkillP01[2]]}"
             }
           }
         }
@@ -2413,12 +2382,7 @@ const compositeAbilityObject = {
                       {
                         "name": "SWITCH",
                         "switchValue": {
-                          "operator": "Variables[0] (Sequence_i) || RETURN",
-                          "displayLines": "Sequence_i",
-                          "constants": [],
-                          "variables": [
-                            "Sequence_i"
-                          ]
+                          "displayLines": "Sequence_i"
                         },
                         "caseEvents": [
                           {
@@ -2488,12 +2452,7 @@ const compositeAbilityObject = {
                               {
                                 "name": "SWITCH",
                                 "switchValue": {
-                                  "operator": "Variables[0] (ForwardReverseFlag) || RETURN",
-                                  "displayLines": "ForwardReverseFlag",
-                                  "constants": [],
-                                  "variables": [
-                                    "ForwardReverseFlag"
-                                  ]
+                                  "displayLines": "ForwardReverseFlag"
                                 },
                                 "caseEvents": [
                                   {
@@ -2597,12 +2556,7 @@ const compositeAbilityObject = {
                       {
                         "name": "SWITCH",
                         "switchValue": {
-                          "operator": "Variables[0] (AIFlag) || RETURN",
-                          "displayLines": "AIFlag",
-                          "constants": [],
-                          "variables": [
-                            "AIFlag"
-                          ]
+                          "displayLines": "AIFlag"
                         },
                         "caseEvents": [
                           {
@@ -2672,12 +2626,7 @@ const compositeAbilityObject = {
                               {
                                 "name": "SWITCH",
                                 "switchValue": {
-                                  "operator": "Variables[0] (ForwardReverseFlag) || RETURN",
-                                  "displayLines": "ForwardReverseFlag",
-                                  "constants": [],
-                                  "variables": [
-                                    "ForwardReverseFlag"
-                                  ]
+                                  "displayLines": "ForwardReverseFlag"
                                 },
                                 "caseEvents": [
                                   {
@@ -2781,12 +2730,7 @@ const compositeAbilityObject = {
                       {
                         "name": "SWITCH",
                         "switchValue": {
-                          "operator": "Variables[0] (ForwardReverseFlag) || RETURN",
-                          "displayLines": "ForwardReverseFlag",
-                          "constants": [],
-                          "variables": [
-                            "ForwardReverseFlag"
-                          ]
+                          "displayLines": "ForwardReverseFlag"
                         },
                         "caseEvents": [
                           {

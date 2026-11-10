@@ -47,13 +47,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (3) || Variables[1] (1) || ADD || RETURN",
-            "displayLines": "(3 + 1)",
-            "constants": [],
-            "variables": [
-              3,
-              1
-            ]
+            "displayLines": "(3 + 1)"
           },
           "variableName": "_P01_LifeTime"
         }
@@ -62,12 +56,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "variableName": "_P01_LifeTime"
         }
@@ -101,12 +90,7 @@ const configAbility = {
       "name": "Update Displayed Energy Bar",
       "value": 0,
       "maximum": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -136,14 +120,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Constants[0] (0) || Variables[0] (UnusedUnderThisBase_4842) || SUB || RETURN",
-            "displayLines": "(0 - UnusedUnderThisBase_4842)",
-            "constants": [
-              0
-            ],
-            "variables": [
-              "UnusedUnderThisBase_4842"
-            ]
+            "displayLines": "(0 - UnusedUnderThisBase_4842)"
           }
         }
       }
@@ -162,12 +139,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (8) || RETURN",
-                "displayLines": "8",
-                "constants": [],
-                "variables": [
-                  8
-                ]
+                "displayLines": "8"
               },
               "isFixed": "* ERR"
             }
@@ -234,12 +206,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (25) || RETURN",
-                    "displayLines": "25",
-                    "constants": [],
-                    "variables": [
-                      25
-                    ]
+                    "displayLines": "25"
                   },
                   "isFixed": "* ERR"
                 }
@@ -339,12 +306,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "variableName": "_SkillP01_StackingLayer"
                 }

@@ -13,31 +13,16 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "value": {
-        "operator": "Variables[0] (1) || RETURN",
-        "displayLines": "1",
-        "constants": [],
-        "variables": [
-          1
-        ]
+        "displayLines": "1"
       }
     },
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (Jingliu_MoonFlag) || RETURN",
-        "displayLines": "Jingliu_MoonFlag",
-        "constants": [],
-        "variables": [
-          "Jingliu_MoonFlag"
-        ]
+        "displayLines": "Jingliu_MoonFlag"
       },
       "maximum": {
-        "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-        "displayLines": "Jingliu_MoonFlagMax",
-        "constants": [],
-        "variables": [
-          "Jingliu_MoonFlagMax"
-        ]
+        "displayLines": "Jingliu_MoonFlagMax"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -57,21 +42,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (1.5) || RETURN",
-              "displayLines": "1.5",
-              "constants": [],
-              "variables": [
-                1.5
-              ]
+              "displayLines": "1.5"
             },
             "dmgFormula": "Max HP Scaling",
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -94,12 +69,7 @@ const configAbility = {
             "target": "{{Modifier Holder}}"
           },
           "value": {
-            "operator": "Variables[0] (15) || RETURN",
-            "displayLines": "15",
-            "constants": [],
-            "variables": [
-              15
-            ]
+            "displayLines": "15"
           },
           "isFixed": "* ERR"
         }

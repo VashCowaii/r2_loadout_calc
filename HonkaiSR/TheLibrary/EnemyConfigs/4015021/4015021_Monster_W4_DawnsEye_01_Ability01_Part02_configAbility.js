@@ -15,12 +15,7 @@ const configAbility = {
       "conditions": {
         "name": "Enemy ID",
         "ID": {
-          "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
-          "displayLines": "PartEntity1_MonsterID",
-          "constants": [],
-          "variables": [
-            "PartEntity1_MonsterID"
-          ]
+          "displayLines": "PartEntity1_MonsterID"
         },
         "target": {
           "name": "Target Name",
@@ -99,14 +94,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "DamageFlat": {
-          "operator": "Variables[0] (BaseAttack) || Variables[1] (TotalDamageRatio) || MUL || Variables[2] ({[Skill01P3[0]]}) || MUL || RETURN",
-          "displayLines": "((BaseAttack * TotalDamageRatio) * {[Skill01P3[0]]})",
-          "constants": [],
-          "variables": [
-            "BaseAttack",
-            "TotalDamageRatio",
-            "{[Skill01P3[0]]}"
-          ]
+          "displayLines": "((BaseAttack * TotalDamageRatio) * {[Skill01P3[0]]})"
         },
         "dmgFormulaFinal": "Converted DMG Base",
         "Toughness": null,
@@ -124,13 +112,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1789818614\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokSub</a>[<span class=\"descriptionNumberColor\">Rot</span>]",
       "valuePerStack": {
         "MDF_DamageValue": {
-          "operator": "Variables[0] ({[Skill01P3[3]]}) || Variables[1] (BaseAttack) || MUL || RETURN",
-          "displayLines": "({[Skill01P3[3]]} * BaseAttack)",
-          "constants": [],
-          "variables": [
-            "{[Skill01P3[3]]}",
-            "BaseAttack"
-          ]
+          "displayLines": "({[Skill01P3[3]]} * BaseAttack)"
         }
       }
     },

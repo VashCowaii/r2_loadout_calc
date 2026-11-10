@@ -109,12 +109,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Null Type",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_Eidolon6_DamageValue) || RETURN",
-                      "displayLines": "MDF_Eidolon6_DamageValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Eidolon6_DamageValue"
-                      ]
+                      "displayLines": "MDF_Eidolon6_DamageValue"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -307,13 +302,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageRatio) || Variables[1] (MDF_ModifierLayers) || MUL || RETURN",
-                    "displayLines": "(MDF_DamageRatio * MDF_ModifierLayers)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageRatio",
-                      "MDF_ModifierLayers"
-                    ]
+                    "displayLines": "(MDF_DamageRatio * MDF_ModifierLayers)"
                   },
                   "variableName": "MDF_FinalDamageRatio"
                 },
@@ -325,12 +314,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_FinalDamageRatio) || RETURN",
-                    "displayLines": "MDF_FinalDamageRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_FinalDamageRatio"
-                    ]
+                    "displayLines": "MDF_FinalDamageRatio"
                   }
                 }
               ]
@@ -515,13 +499,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (SpeedUp_Count) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * SpeedUp_Count)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "SpeedUp_Count"
-                    ]
+                    "displayLines": "(MDF_PropertyValue * SpeedUp_Count)"
                   }
                 }
               ]
@@ -551,12 +529,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -587,12 +560,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (seele_dmg_percent) || RETURN",
-                    "displayLines": "seele_dmg_percent",
-                    "constants": [],
-                    "variables": [
-                      "seele_dmg_percent"
-                    ]
+                    "displayLines": "seele_dmg_percent"
                   }
                 },
                 {
@@ -614,12 +582,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceQuantumPEN</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (MDF_Penetrate) || RETURN",
-                        "displayLines": "MDF_Penetrate",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Penetrate"
-                        ]
+                        "displayLines": "MDF_Penetrate"
                       }
                     }
                   ]
@@ -700,13 +663,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (FinalUltraDamage) || Variables[1] (AddUltraDamage) || ADD || RETURN",
-                        "displayLines": "(FinalUltraDamage + AddUltraDamage)",
-                        "constants": [],
-                        "variables": [
-                          "FinalUltraDamage",
-                          "AddUltraDamage"
-                        ]
+                        "displayLines": "(FinalUltraDamage + AddUltraDamage)"
                       },
                       "variableName": "FinalUltraDamage"
                     }
@@ -734,28 +691,13 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-391270654\">Seele_Trace01</a>",
           "valuePerStack": {
             "MDF_MaxLayer": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             },
             "MDF_DamageRatio": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             },
             "MDF_LiftTime": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             }
           }
         }
@@ -781,29 +723,14 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1550591182\">Advanced_Seele_Trace01_KillDamageRatio</a>[<span class=\"descriptionNumberColor\">Nightshade</span>]",
                   "duration": {
-                    "operator": "Variables[0] (MDF_LiftTime) || RETURN",
-                    "displayLines": "MDF_LiftTime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_LiftTime"
-                    ]
+                    "displayLines": "MDF_LiftTime"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "valuePerStack": {
                     "MDF_DamageRatio": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   }
                 }
@@ -831,12 +758,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-301677957\">Seele_Eidolon6</a>",
           "valuePerStack": {
             "MDF_LiftTime": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             }
           }
         },
@@ -888,22 +810,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1484506463\">Advanced_Seele_Eidolon6_Flag</a>[<span class=\"descriptionNumberColor\">Butterfly Flurry</span>]",
                       "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "valuePerStack": {
                         "MDF_Eidolon6_DamageValue": {
-                          "operator": "Variables[0] (FinalUltraDamage) || Variables[1] (0.3) || MUL || RETURN",
-                          "displayLines": "(FinalUltraDamage * 0.3)",
-                          "constants": [],
-                          "variables": [
-                            "FinalUltraDamage",
-                            0.3
-                          ]
+                          "displayLines": "(FinalUltraDamage * 0.3)"
                         }
                       }
                     }
@@ -933,12 +844,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-268122719\">Seele_Eidolon4</a>",
           "valuePerStack": {
             "MDF_AddSP": {
-              "operator": "Variables[0] (15) || RETURN",
-              "displayLines": "15",
-              "constants": [],
-              "variables": [
-                15
-              ]
+              "displayLines": "15"
             }
           }
         }
@@ -961,12 +867,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_AddSP) || RETURN",
-                    "displayLines": "MDF_AddSP",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AddSP"
-                    ]
+                    "displayLines": "MDF_AddSP"
                   },
                   "isFixed": "* ERR"
                 }
@@ -1013,12 +914,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (0.8) || RETURN",
-                      "displayLines": "0.8",
-                      "constants": [],
-                      "variables": [
-                        0.8
-                      ]
+                      "displayLines": "0.8"
                     }
                   },
                   "passed": [
@@ -1491,12 +1387,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] (3.6) || RETURN",
-                              "displayLines": "3.6",
-                              "constants": [],
-                              "variables": [
-                                3.6
-                              ]
+                              "displayLines": "3.6"
                             },
                             "Toughness": null,
                             "instanceTag": "SeeleMazeDamage",
@@ -1551,29 +1442,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-472499117\">Advanced_Seele_Passive_DamageUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
                       "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "valuePerStack": {
                         "seele_dmg_percent": {
-                          "operator": "Variables[0] (0.8) || RETURN",
-                          "displayLines": "0.8",
-                          "constants": [],
-                          "variables": [
-                            0.8
-                          ]
+                          "displayLines": "0.8"
                         },
                         "MDF_Penetrate": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
+                          "displayLines": "0.25"
                         }
                       }
                     }
@@ -1660,12 +1536,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1743016793\">Ability01PreShowModifier_Fixed</a>",
               "valuePerStack": {
                 "MDF_Ability01_Delay": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             }
@@ -1688,12 +1559,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"959272575\">Local_Seele_ListenKill</a>",
           "valuePerStack": {
             "dmg_percent": {
-              "operator": "Variables[0] (0.8) || RETURN",
-              "displayLines": "0.8",
-              "constants": [],
-              "variables": [
-                0.8
-              ]
+              "displayLines": "0.8"
             }
           }
         },
@@ -1770,12 +1636,7 @@ const compositeAbilityObject = {
                             "value1": "CurrentHP%",
                             "compareType": "<=",
                             "value2": {
-                              "operator": "Variables[0] (0.5) || RETURN",
-                              "displayLines": "0.5",
-                              "constants": [],
-                              "variables": [
-                                0.5
-                              ]
+                              "displayLines": "0.5"
                             }
                           },
                           {
@@ -1940,29 +1801,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-472499117\">Advanced_Seele_Passive_DamageUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
                       "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "valuePerStack": {
                         "seele_dmg_percent": {
-                          "operator": "Variables[0] (dmg_percent) || RETURN",
-                          "displayLines": "dmg_percent",
-                          "constants": [],
-                          "variables": [
-                            "dmg_percent"
-                          ]
+                          "displayLines": "dmg_percent"
                         },
                         "MDF_Penetrate": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
+                          "displayLines": "0.25"
                         }
                       }
                     }
@@ -1988,14 +1834,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (Seele_BonusInsertActionCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(Seele_BonusInsertActionCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Seele_BonusInsertActionCount"
-                        ]
+                        "displayLines": "(Seele_BonusInsertActionCount + 1)"
                       },
                       "variableName": "Seele_BonusInsertActionCount"
                     },
@@ -2014,14 +1853,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (Seele_BonusInsertActionCount) || Constants[0] (1) || SUB || RETURN",
-                            "displayLines": "(Seele_BonusInsertActionCount - 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Seele_BonusInsertActionCount"
-                            ]
+                            "displayLines": "(Seele_BonusInsertActionCount - 1)"
                           },
                           "variableName": "Seele_BonusInsertActionCount"
                         },
@@ -2054,29 +1886,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-472499117\">Advanced_Seele_Passive_DamageUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
                       "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "valuePerStack": {
                         "seele_dmg_percent": {
-                          "operator": "Variables[0] (dmg_percent) || RETURN",
-                          "displayLines": "dmg_percent",
-                          "constants": [],
-                          "variables": [
-                            "dmg_percent"
-                          ]
+                          "displayLines": "dmg_percent"
                         },
                         "MDF_Penetrate": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
+                          "displayLines": "0.25"
                         }
                       }
                     }
@@ -2138,29 +1955,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-472499117\">Advanced_Seele_Passive_DamageUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
                       "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "valuePerStack": {
                         "seele_dmg_percent": {
-                          "operator": "Variables[0] (dmg_percent) || RETURN",
-                          "displayLines": "dmg_percent",
-                          "constants": [],
-                          "variables": [
-                            "dmg_percent"
-                          ]
+                          "displayLines": "dmg_percent"
                         },
                         "MDF_Penetrate": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
+                          "displayLines": "0.25"
                         }
                       }
                     }
@@ -2224,14 +2026,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (Seele_BonusInsertActionCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(Seele_BonusInsertActionCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Seele_BonusInsertActionCount"
-                        ]
+                        "displayLines": "(Seele_BonusInsertActionCount + 1)"
                       },
                       "variableName": "Seele_BonusInsertActionCount"
                     },
@@ -2250,14 +2045,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (Seele_BonusInsertActionCount) || Constants[0] (1) || SUB || RETURN",
-                            "displayLines": "(Seele_BonusInsertActionCount - 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Seele_BonusInsertActionCount"
-                            ]
+                            "displayLines": "(Seele_BonusInsertActionCount - 1)"
                           },
                           "variableName": "Seele_BonusInsertActionCount"
                         },
@@ -2322,14 +2110,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (Seele_BonusInsertActionCount) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(Seele_BonusInsertActionCount - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Seele_BonusInsertActionCount"
-                        ]
+                        "displayLines": "(Seele_BonusInsertActionCount - 1)"
                       },
                       "variableName": "Seele_BonusInsertActionCount"
                     }
@@ -2438,12 +2219,7 @@ const compositeAbilityObject = {
                       "value1": "<a class=\"gModGreen\" id=\"1818761365\">Advanced_Seele_BPAbility_SpeedUpEidolon2</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                       "compareType": "<",
                       "value2": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "valueType": "Layer"
                     }
@@ -2476,12 +2252,7 @@ const compositeAbilityObject = {
             "delayAdvancePreview": {
               "name": "Delay/Advance Preview",
               "previewValue": {
-                "operator": "Variables[0] (MDF_Skill01_Delay) || INVERT || RETURN",
-                "displayLines": "-MDF_Skill01_Delay",
-                "constants": [],
-                "variables": [
-                  "MDF_Skill01_Delay"
-                ]
+                "displayLines": "-MDF_Skill01_Delay"
               }
             }
           }
@@ -2518,29 +2289,14 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-472499117\">Advanced_Seele_Passive_DamageUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "valuePerStack": {
             "seele_dmg_percent": {
-              "operator": "Variables[0] (0.8) || RETURN",
-              "displayLines": "0.8",
-              "constants": [],
-              "variables": [
-                0.8
-              ]
+              "displayLines": "0.8"
             },
             "MDF_Penetrate": {
-              "operator": "Variables[0] (0.25) || RETURN",
-              "displayLines": "0.25",
-              "constants": [],
-              "variables": [
-                0.25
-              ]
+              "displayLines": "0.25"
             }
           }
         },
@@ -2554,20 +2310,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (7.2) || RETURN",
-              "displayLines": "7.2",
-              "constants": [],
-              "variables": [
-                7.2
-              ]
+              "displayLines": "7.2"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "instanceTag": "SeeleUltraDamage",
             "Tags": null,
@@ -2651,29 +2397,14 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1818761365\">Advanced_Seele_BPAbility_SpeedUpEidolon2</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "stackLimit": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.25) || RETURN",
-                  "displayLines": "0.25",
-                  "constants": [],
-                  "variables": [
-                    0.25
-                  ]
+                  "displayLines": "0.25"
                 }
               }
             }
@@ -2687,21 +2418,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1301190315\">Advanced_Seele_BPAbility_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.25) || RETURN",
-                  "displayLines": "0.25",
-                  "constants": [],
-                  "variables": [
-                    0.25
-                  ]
+                  "displayLines": "0.25"
                 }
               }
             }
@@ -2716,21 +2437,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (3.6) || RETURN",
-              "displayLines": "3.6",
-              "constants": [],
-              "variables": [
-                3.6
-              ]
+              "displayLines": "3.6"
             },
             "HitSplit": 0.2,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -2745,21 +2456,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (3.6) || RETURN",
-              "displayLines": "3.6",
-              "constants": [],
-              "variables": [
-                3.6
-              ]
+              "displayLines": "3.6"
             },
             "HitSplit": 0.1,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -2774,21 +2475,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (3.6) || RETURN",
-              "displayLines": "3.6",
-              "constants": [],
-              "variables": [
-                3.6
-              ]
+              "displayLines": "3.6"
             },
             "HitSplit": 0.1,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -2804,21 +2495,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (3.6) || RETURN",
-              "displayLines": "3.6",
-              "constants": [],
-              "variables": [
-                3.6
-              ]
+              "displayLines": "3.6"
             },
             "HitSplit": 0.6,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -2883,21 +2564,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "HitSplit": 0.3,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -2913,21 +2584,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "HitSplit": 0.7,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -2964,12 +2625,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1624938404\">Seele_Trace02_ModifyAction</a>",
                       "valuePerStack": {
                         "MDF_DelayCost": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     }
@@ -2991,12 +2647,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Assign Advance/Delay to Current Ability Use",
                   "adjustmentValue": {
-                    "operator": "Variables[0] (0.2) || INVERT || RETURN",
-                    "displayLines": "-0.2",
-                    "constants": [],
-                    "variables": [
-                      0.2
-                    ]
+                    "displayLines": "-0.2"
                   },
                   "adjustmentType": "Advance"
                 },
@@ -3009,12 +2660,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"333617615\">Ability01PreShowModifier_AppliedRatio</a>",
                   "valuePerStack": {
                     "MDF_Ability01_Delay": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 }
@@ -3045,12 +2691,7 @@ const compositeAbilityObject = {
             "delayAdvancePreview": {
               "name": "Delay/Advance Preview",
               "previewValue": {
-                "operator": "Variables[0] (MDF_Skill01_Delay) || INVERT || RETURN",
-                "displayLines": "-MDF_Skill01_Delay",
-                "constants": [],
-                "variables": [
-                  "MDF_Skill01_Delay"
-                ]
+                "displayLines": "-MDF_Skill01_Delay"
               }
             }
           },
@@ -3083,12 +2724,7 @@ const compositeAbilityObject = {
             "delayAdvancePreview": {
               "name": "Delay/Advance Preview",
               "previewValue": {
-                "operator": "Variables[0] (0.2) || INVERT || RETURN",
-                "displayLines": "-0.2",
-                "constants": [],
-                "variables": [
-                  0.2
-                ]
+                "displayLines": "-0.2"
               }
             }
           },

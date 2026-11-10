@@ -46,25 +46,13 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (SummonLayer) || RETURN",
-        "displayLines": "SummonLayer",
-        "constants": [],
-        "variables": [
-          "SummonLayer"
-        ]
+        "displayLines": "SummonLayer"
       },
       "execute": [
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (SummonCount) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(SummonCount + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "SummonCount"
-            ]
+            "displayLines": "(SummonCount + 1)"
           },
           "variableName": "SummonCount"
         },
@@ -80,12 +68,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[2]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[2]]}"
-                ]
+                "displayLines": "{[PassiveSkill03[2]]}"
               },
               "variableName": "DelayRatio"
             }
@@ -99,12 +82,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[4]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[4]]}"
-                ]
+                "displayLines": "{[PassiveSkill03[4]]}"
               },
               "variableName": "DelayRatio"
             }
@@ -131,12 +109,7 @@ const configAbility = {
                 "conditions": {
                   "name": "Enemy ID",
                   "ID": {
-                    "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
-                    "displayLines": "SummonList_ADF_3",
-                    "constants": [],
-                    "variables": [
-                      "SummonList_ADF_3"
-                    ]
+                    "displayLines": "SummonList_ADF_3"
                   },
                   "target": {
                     "name": "Target Name",
@@ -149,23 +122,13 @@ const configAbility = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] (DelayRatio) || RETURN",
-                    "displayLines": "DelayRatio",
-                    "constants": [],
-                    "variables": [
-                      "DelayRatio"
-                    ]
+                    "displayLines": "DelayRatio"
                   },
                   "enemyList": [
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-                        "displayLines": "SummonList_ADF_2",
-                        "constants": [],
-                        "variables": [
-                          "SummonList_ADF_2"
-                        ]
+                        "displayLines": "SummonList_ADF_2"
                       },
                       "locationType": "FormationRecord"
                     }
@@ -176,23 +139,13 @@ const configAbility = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] (DelayRatio) || RETURN",
-                    "displayLines": "DelayRatio",
-                    "constants": [],
-                    "variables": [
-                      "DelayRatio"
-                    ]
+                    "displayLines": "DelayRatio"
                   },
                   "enemyList": [
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
-                        "displayLines": "SummonList_ADF_3",
-                        "constants": [],
-                        "variables": [
-                          "SummonList_ADF_3"
-                        ]
+                        "displayLines": "SummonList_ADF_3"
                       },
                       "locationType": "FormationRecord"
                     }
@@ -205,23 +158,13 @@ const configAbility = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] (DelayRatio) || RETURN",
-                "displayLines": "DelayRatio",
-                "constants": [],
-                "variables": [
-                  "DelayRatio"
-                ]
+                "displayLines": "DelayRatio"
               },
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-                    "displayLines": "SummonList_ADF_2",
-                    "constants": [],
-                    "variables": [
-                      "SummonList_ADF_2"
-                    ]
+                    "displayLines": "SummonList_ADF_2"
                   },
                   "locationType": "FormationRecord"
                 }

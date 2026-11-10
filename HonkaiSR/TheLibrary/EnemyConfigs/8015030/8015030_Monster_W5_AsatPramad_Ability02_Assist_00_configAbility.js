@@ -13,14 +13,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill02P3[0]]}) || Constants[0] (3) || DIV || RETURN",
-          "displayLines": "({[Skill02P3[0]]} / 3)",
-          "constants": [
-            3
-          ],
-          "variables": [
-            "{[Skill02P3[0]]}"
-          ]
+          "displayLines": "({[Skill02P3[0]]} / 3)"
         },
         "Toughness": null,
         "Tags": null,
@@ -37,14 +30,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] ({[Skill02P3[0]]}) || Constants[0] (3) || DIV || RETURN",
-          "displayLines": "({[Skill02P3[0]]} / 3)",
-          "constants": [
-            3
-          ],
-          "variables": [
-            "{[Skill02P3[0]]}"
-          ]
+          "displayLines": "({[Skill02P3[0]]} / 3)"
         },
         "Toughness": null,
         "Tags": null,
@@ -61,14 +47,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill02P3[0]]}) || Constants[0] (3) || DIV || RETURN",
-          "displayLines": "({[Skill02P3[0]]} / 3)",
-          "constants": [
-            3
-          ],
-          "variables": [
-            "{[Skill02P3[0]]}"
-          ]
+          "displayLines": "({[Skill02P3[0]]} / 3)"
         },
         "Toughness": null,
         "Tags": null,

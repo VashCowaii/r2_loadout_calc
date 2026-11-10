@@ -195,12 +195,7 @@ const configAbility = {
               "canHitNonTargets": true,
               "valuePerStack": {
                 "DV_DmgValue": {
-                  "operator": "Variables[0] (MDF_DamageValue) || RETURN",
-                  "displayLines": "MDF_DamageValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamageValue"
-                  ]
+                  "displayLines": "MDF_DamageValue"
                 }
               },
               "allowAbilityTriggers": false
@@ -236,12 +231,7 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (FirstPuman) || RETURN",
-                        "displayLines": "FirstPuman",
-                        "constants": [],
-                        "variables": [
-                          "FirstPuman"
-                        ]
+                        "displayLines": "FirstPuman"
                       },
                       "locationType": "First"
                     }
@@ -253,12 +243,7 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SecondPuman) || RETURN",
-                        "displayLines": "SecondPuman",
-                        "constants": [],
-                        "variables": [
-                          "SecondPuman"
-                        ]
+                        "displayLines": "SecondPuman"
                       },
                       "locationType": "Last"
                     }
@@ -369,13 +354,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"953871196\">Modifier_BattleEventAbility_Challenge_Month_33_Sub</a>",
                   "valuePerStack": {
                     "MDF_DamageValue": {
-                      "operator": "Variables[0] (TempHP) || Variables[1] (#BattleEvent_P2_ADF) || MUL || RETURN",
-                      "displayLines": "(TempHP * #BattleEvent_P2_ADF)",
-                      "constants": [],
-                      "variables": [
-                        "TempHP",
-                        "#BattleEvent_P2_ADF"
-                      ]
+                      "displayLines": "(TempHP * #BattleEvent_P2_ADF)"
                     }
                   }
                 }
@@ -716,12 +695,7 @@ const configAbility = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (FirstPuman) || RETURN",
-                    "displayLines": "FirstPuman",
-                    "constants": [],
-                    "variables": [
-                      "FirstPuman"
-                    ]
+                    "displayLines": "FirstPuman"
                   },
                   "locationType": "First"
                 }
@@ -733,12 +707,7 @@ const configAbility = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SecondPuman) || RETURN",
-                    "displayLines": "SecondPuman",
-                    "constants": [],
-                    "variables": [
-                      "SecondPuman"
-                    ]
+                    "displayLines": "SecondPuman"
                   },
                   "locationType": "Last"
                 }

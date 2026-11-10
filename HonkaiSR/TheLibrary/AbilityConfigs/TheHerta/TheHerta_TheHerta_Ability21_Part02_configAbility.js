@@ -126,14 +126,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (S03_Mark_Count) || Variables[1] (_ADJ_TMP_COUNT) || Variables[2] (0.5) || MUL || ADD || RETURN",
-                    "displayLines": "(S03_Mark_Count + (_ADJ_TMP_COUNT * 0.5))",
-                    "constants": [],
-                    "variables": [
-                      "S03_Mark_Count",
-                      "_ADJ_TMP_COUNT",
-                      0.5
-                    ]
+                    "displayLines": "(S03_Mark_Count + (_ADJ_TMP_COUNT * 0.5))"
                   },
                   "variableName": "S03_Mark_Count"
                 }
@@ -166,12 +159,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1341843949\">TheHerta_PointB1_42</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   }
                 }
@@ -193,14 +181,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (S03_Mark_Count) || Constants[0] (2) || MUL || RETURN",
-                "displayLines": "(S03_Mark_Count * 2)",
-                "constants": [
-                  2
-                ],
-                "variables": [
-                  "S03_Mark_Count"
-                ]
+                "displayLines": "(S03_Mark_Count * 2)"
               },
               "variableName": "S03_Mark_Count"
             }
@@ -234,46 +215,21 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (42) || RETURN",
-                "displayLines": "42",
-                "constants": [],
-                "variables": [
-                  42
-                ]
+                "displayLines": "42"
               },
               "valuePerStack": {
                 "MagicMark_MaxCount_Max": {
-                  "operator": "Variables[0] (42) || RETURN",
-                  "displayLines": "42",
-                  "constants": [],
-                  "variables": [
-                    42
-                  ]
+                  "displayLines": "42"
                 },
                 "MagicMark_MaxCount": {
-                  "operator": "Variables[0] (42) || RETURN",
-                  "displayLines": "42",
-                  "constants": [],
-                  "variables": [
-                    42
-                  ]
+                  "displayLines": "42"
                 },
                 "MagicMark_Ratio": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 }
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (15) || RETURN",
-                "displayLines": "15",
-                "constants": [],
-                "variables": [
-                  15
-                ]
+                "displayLines": "15"
               }
             }
           ],
@@ -286,37 +242,17 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (42) || RETURN",
-                "displayLines": "42",
-                "constants": [],
-                "variables": [
-                  42
-                ]
+                "displayLines": "42"
               },
               "valuePerStack": {
                 "MagicMark_MaxCount_Max": {
-                  "operator": "Variables[0] (42) || RETURN",
-                  "displayLines": "42",
-                  "constants": [],
-                  "variables": [
-                    42
-                  ]
+                  "displayLines": "42"
                 },
                 "MagicMark_MaxCount": {
-                  "operator": "Variables[0] (42) || RETURN",
-                  "displayLines": "42",
-                  "constants": [],
-                  "variables": [
-                    42
-                  ]
+                  "displayLines": "42"
                 },
                 "MagicMark_Ratio": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 }
               },
               "addStacksPerTrigger": 1
@@ -330,28 +266,13 @@ const configAbility = {
       "functionName": "<a class=\"gTempYellow\" id=\"1142002606\">TheHerta_SKL02</a>",
       "variables": {
         "DV_DamageRatio1": {
-          "operator": "Variables[0] (0.8) || RETURN",
-          "displayLines": "0.8",
-          "constants": [],
-          "variables": [
-            0.8
-          ]
+          "displayLines": "0.8"
         },
         "DV_MarkAddLayer": {
-          "operator": "Variables[0] (1) || RETURN",
-          "displayLines": "1",
-          "constants": [],
-          "variables": [
-            1
-          ]
+          "displayLines": "1"
         },
         "DV_MarkMaxLayer": {
-          "operator": "Variables[0] (42) || RETURN",
-          "displayLines": "42",
-          "constants": [],
-          "variables": [
-            42
-          ]
+          "displayLines": "42"
         }
       }
     },
@@ -396,13 +317,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (S03_Mark_Count) || Variables[1] (0.08) || MUL || RETURN",
-                "displayLines": "(S03_Mark_Count * 0.08)",
-                "constants": [],
-                "variables": [
-                  "S03_Mark_Count",
-                  0.08
-                ]
+                "displayLines": "(S03_Mark_Count * 0.08)"
               },
               "variableName": "S03_Mark_Damage"
             },
@@ -430,14 +345,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (S03_Mark_Count) || Variables[1] (0.08) || MUL || Variables[2] (0.4) || ADD || RETURN",
-                      "displayLines": "((S03_Mark_Count * 0.08) + 0.4)",
-                      "constants": [],
-                      "variables": [
-                        "S03_Mark_Count",
-                        0.08,
-                        0.4
-                      ]
+                      "displayLines": "((S03_Mark_Count * 0.08) + 0.4)"
                     },
                     "Toughness": {
                       "displayLines": 15
@@ -457,14 +365,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (S03_Mark_Count) || Variables[1] (0.04) || MUL || Variables[2] (0.4) || ADD || RETURN",
-                      "displayLines": "((S03_Mark_Count * 0.04) + 0.4)",
-                      "constants": [],
-                      "variables": [
-                        "S03_Mark_Count",
-                        0.04,
-                        0.4
-                      ]
+                      "displayLines": "((S03_Mark_Count * 0.04) + 0.4)"
                     },
                     "Toughness": {
                       "displayLines": 15
@@ -486,12 +387,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (0.4) || RETURN",
-                  "displayLines": "0.4",
-                  "constants": [],
-                  "variables": [
-                    0.4
-                  ]
+                  "displayLines": "0.4"
                 },
                 "Toughness": {
                   "displayLines": 15
@@ -520,12 +416,7 @@ const configAbility = {
           },
           "variables": {
             "parameter[0]_NormalizedValue": {
-              "operator": "Variables[0] (0.35) || RETURN",
-              "displayLines": "0.35",
-              "constants": [],
-              "variables": [
-                0.35
-              ]
+              "displayLines": "0.35"
             }
           }
         }
@@ -590,12 +481,7 @@ const configAbility = {
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (Skill21_Layer) || RETURN",
-            "displayLines": "Skill21_Layer",
-            "constants": [],
-            "variables": [
-              "Skill21_Layer"
-            ]
+            "displayLines": "Skill21_Layer"
           },
           "priorState": "Active"
         }
@@ -604,12 +490,7 @@ const configAbility = {
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (Skill21_Layer) || RETURN",
-            "displayLines": "Skill21_Layer",
-            "constants": [],
-            "variables": [
-              "Skill21_Layer"
-            ]
+            "displayLines": "Skill21_Layer"
           },
           "priorState": "Normal"
         },

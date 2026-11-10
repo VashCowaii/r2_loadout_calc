@@ -196,21 +196,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-330148584\">DanHengIL_Eidolon6_ImaginaryPenetrate</a>[<span class=\"descriptionNumberColor\">Reign, Returned</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 }
@@ -248,12 +238,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (EXSkill01) || RETURN",
-                "displayLines": "EXSkill01",
-                "constants": [],
-                "variables": [
-                  "EXSkill01"
-                ]
+                "displayLines": "EXSkill01"
               },
               "variableName": "BPNeed"
             },
@@ -264,12 +249,7 @@ const configAbility = {
                 "value1": "CurrentSkillPoints",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (BPNeed) || RETURN",
-                  "displayLines": "BPNeed",
-                  "constants": [],
-                  "variables": [
-                    "BPNeed"
-                  ]
+                  "displayLines": "BPNeed"
                 }
               },
               "passed": [
@@ -284,12 +264,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (EXSkill01) || RETURN",
-                "displayLines": "EXSkill01",
-                "constants": [],
-                "variables": [
-                  "EXSkill01"
-                ]
+                "displayLines": "EXSkill01"
               },
               "variableName": "BPNeed"
             },
@@ -300,12 +275,7 @@ const configAbility = {
                 "value1": "CurrentSkillPoints",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (BPNeed) || RETURN",
-                  "displayLines": "BPNeed",
-                  "constants": [],
-                  "variables": [
-                    "BPNeed"
-                  ]
+                  "displayLines": "BPNeed"
                 }
               },
               "passed": [
@@ -346,13 +316,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AddCriticalDamage) || Variables[1] (CurrentLayer) || MUL || RETURN",
-                "displayLines": "(MDF_AddCriticalDamage * CurrentLayer)",
-                "constants": [],
-                "variables": [
-                  "MDF_AddCriticalDamage",
-                  "CurrentLayer"
-                ]
+                "displayLines": "(MDF_AddCriticalDamage * CurrentLayer)"
               }
             }
           ]

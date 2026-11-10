@@ -11,12 +11,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "healPercent": {
-        "operator": "Variables[0] (0.2) || RETURN",
-        "displayLines": "0.2",
-        "constants": [],
-        "variables": [
-          0.2
-        ]
+        "displayLines": "0.2"
       },
       "formula": "Heal from Target MaxHP"
     },
@@ -29,12 +24,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "value": {
-        "operator": "Variables[0] (20) || RETURN",
-        "displayLines": "20",
-        "constants": [],
-        "variables": [
-          20
-        ]
+        "displayLines": "20"
       }
     },
     {
@@ -47,21 +37,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (1.6) || RETURN",
-          "displayLines": "1.6",
-          "constants": [],
-          "variables": [
-            1.6
-          ]
+          "displayLines": "1.6"
         },
         "dmgFormula": "Max HP Scaling",
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -77,21 +57,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (1) || RETURN",
-          "displayLines": "1",
-          "constants": [],
-          "variables": [
-            1
-          ]
+          "displayLines": "1"
         },
         "dmgFormula": "Max HP Scaling",
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-          "displayLines": "Blast Toughness Value",
-          "constants": [],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "Blast Toughness Value"
         },
         "Tags": null
       }
@@ -105,12 +75,7 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-1488319040\">Standard_CTRL_Taunt</a>[<span class=\"descriptionNumberColor\">Taunt</span>]",
       "duration": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       }
     },
     {

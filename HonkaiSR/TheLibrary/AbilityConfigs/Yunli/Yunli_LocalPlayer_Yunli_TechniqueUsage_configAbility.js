@@ -14,12 +14,7 @@ const configAbility = {
       "modifier": null,
       "ID": "122101(SkillMaze)",
       "duration": {
-        "operator": "Variables[0] (20) || RETURN",
-        "displayLines": "20",
-        "constants": [],
-        "variables": [
-          20
-        ]
+        "displayLines": "20"
       }
     },
     "Submit Technique Use"

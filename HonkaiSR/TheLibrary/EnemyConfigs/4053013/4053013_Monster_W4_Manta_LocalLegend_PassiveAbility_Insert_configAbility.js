@@ -15,23 +15,13 @@ const configAbility = {
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-        "displayLines": "{[PassiveSkill02[0]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill02[0]]}"
-        ]
+        "displayLines": "{[PassiveSkill02[0]]}"
       },
       "enemyList": [
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-            "displayLines": "SummonList_ADF_1",
-            "constants": [],
-            "variables": [
-              "SummonList_ADF_1"
-            ]
+            "displayLines": "SummonList_ADF_1"
           },
           "locationType": "BeforeCaster"
         }
@@ -40,23 +30,13 @@ const configAbility = {
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-        "displayLines": "{[PassiveSkill02[1]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill02[1]]}"
-        ]
+        "displayLines": "{[PassiveSkill02[1]]}"
       },
       "enemyList": [
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-            "displayLines": "SummonList_ADF_2",
-            "constants": [],
-            "variables": [
-              "SummonList_ADF_2"
-            ]
+            "displayLines": "SummonList_ADF_2"
           },
           "locationType": "AfterCaster"
         }
@@ -65,23 +45,13 @@ const configAbility = {
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-        "displayLines": "{[PassiveSkill02[2]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill02[2]]}"
-        ]
+        "displayLines": "{[PassiveSkill02[2]]}"
       },
       "enemyList": [
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
-            "displayLines": "SummonList_ADF_3",
-            "constants": [],
-            "variables": [
-              "SummonList_ADF_3"
-            ]
+            "displayLines": "SummonList_ADF_3"
           },
           "locationType": "BeforeCaster"
         }
@@ -90,23 +60,13 @@ const configAbility = {
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-        "displayLines": "{[PassiveSkill02[2]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill02[2]]}"
-        ]
+        "displayLines": "{[PassiveSkill02[2]]}"
       },
       "enemyList": [
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
-            "displayLines": "SummonList_ADF_3",
-            "constants": [],
-            "variables": [
-              "SummonList_ADF_3"
-            ]
+            "displayLines": "SummonList_ADF_3"
           },
           "locationType": "AfterCaster"
         }

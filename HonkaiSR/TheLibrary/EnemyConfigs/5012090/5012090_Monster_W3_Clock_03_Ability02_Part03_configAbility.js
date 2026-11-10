@@ -13,12 +13,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[0]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[0]]}"
         },
         "dmgFormula": "Max HP Scaling",
         "Toughness": {
@@ -33,12 +28,7 @@ const configAbility = {
     {
       "name": "Adjust Team Punchline Value",
       "value": {
-        "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-        "displayLines": "{[PassiveSkill01[1]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill01[1]]}"
-        ]
+        "displayLines": "{[PassiveSkill01[1]]}"
       },
       "adjustment": "Add"
     },

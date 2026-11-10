@@ -74,12 +74,7 @@ const configAbility = {
       "type": "Debuff",
       "stackLimit": 10,
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-        "displayLines": "ModifierStackLayer",
-        "constants": [],
-        "variables": [
-          "ModifierStackLayer"
-        ]
+        "displayLines": "ModifierStackLayer"
       },
       "execute": [
         {
@@ -99,15 +94,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_DefenceAddedRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || SUB || RETURN",
-                "displayLines": "(0 - (MDF_DefenceAddedRatio_PerLayer * ModifierLayers))",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_DefenceAddedRatio_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(0 - (MDF_DefenceAddedRatio_PerLayer * ModifierLayers))"
               }
             }
           ]
@@ -128,12 +115,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (DebuffCurrentCount) || RETURN",
-                "displayLines": "DebuffCurrentCount",
-                "constants": [],
-                "variables": [
-                  "DebuffCurrentCount"
-                ]
+                "displayLines": "DebuffCurrentCount"
               },
               "variableName": "DebuffLastCount"
             },
@@ -156,12 +138,7 @@ const configAbility = {
                 "value1": "DebuffCurrentCount",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Variables[0] (DebuffLastCount) || RETURN",
-                  "displayLines": "DebuffLastCount",
-                  "constants": [],
-                  "variables": [
-                    "DebuffLastCount"
-                  ]
+                  "displayLines": "DebuffLastCount"
                 }
               },
               "failed": [
@@ -228,37 +205,17 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"783092667\">Monster_XP_Elite02_DebuffEnhanceEffect</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                            "displayLines": "{[PassiveSkill01[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[PassiveSkill01[1]]}"
-                            ]
+                            "displayLines": "{[PassiveSkill01[1]]}"
                           },
                           "valuePerStack": {
                             "ModifierStackLayer": {
-                              "operator": "Variables[0] (DebuffCurrentCount) || RETURN",
-                              "displayLines": "DebuffCurrentCount",
-                              "constants": [],
-                              "variables": [
-                                "DebuffCurrentCount"
-                              ]
+                              "displayLines": "DebuffCurrentCount"
                             },
                             "MDF_DefenceAddedRatio_PerLayer": {
-                              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                              "displayLines": "{[PassiveSkill01[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[PassiveSkill01[0]]}"
-                              ]
+                              "displayLines": "{[PassiveSkill01[0]]}"
                             },
                             "MDF_MaxLayer": {
-                              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                              "displayLines": "{[PassiveSkill01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[PassiveSkill01[1]]}"
-                              ]
+                              "displayLines": "{[PassiveSkill01[1]]}"
                             }
                           }
                         }
@@ -272,37 +229,17 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"783092667\">Monster_XP_Elite02_DebuffEnhanceEffect</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                            "displayLines": "{[PassiveSkill01[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[PassiveSkill01[1]]}"
-                            ]
+                            "displayLines": "{[PassiveSkill01[1]]}"
                           },
                           "valuePerStack": {
                             "ModifierStackLayer": {
-                              "operator": "Variables[0] (DebuffCurrentCount) || RETURN",
-                              "displayLines": "DebuffCurrentCount",
-                              "constants": [],
-                              "variables": [
-                                "DebuffCurrentCount"
-                              ]
+                              "displayLines": "DebuffCurrentCount"
                             },
                             "MDF_DefenceAddedRatio_PerLayer": {
-                              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                              "displayLines": "{[PassiveSkill01[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[PassiveSkill01[0]]}"
-                              ]
+                              "displayLines": "{[PassiveSkill01[0]]}"
                             },
                             "MDF_MaxLayer": {
-                              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                              "displayLines": "{[PassiveSkill01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[PassiveSkill01[1]]}"
-                              ]
+                              "displayLines": "{[PassiveSkill01[1]]}"
                             }
                           }
                         }
@@ -324,12 +261,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (DebuffCurrentCount) || RETURN",
-                "displayLines": "DebuffCurrentCount",
-                "constants": [],
-                "variables": [
-                  "DebuffCurrentCount"
-                ]
+                "displayLines": "DebuffCurrentCount"
               },
               "variableName": "DebuffLastCount"
             },
@@ -352,12 +284,7 @@ const configAbility = {
                 "value1": "DebuffCurrentCount",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Variables[0] (DebuffLastCount) || RETURN",
-                  "displayLines": "DebuffLastCount",
-                  "constants": [],
-                  "variables": [
-                    "DebuffLastCount"
-                  ]
+                  "displayLines": "DebuffLastCount"
                 }
               },
               "failed": [
@@ -424,37 +351,17 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"783092667\">Monster_XP_Elite02_DebuffEnhanceEffect</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                            "displayLines": "{[PassiveSkill01[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[PassiveSkill01[1]]}"
-                            ]
+                            "displayLines": "{[PassiveSkill01[1]]}"
                           },
                           "valuePerStack": {
                             "ModifierStackLayer": {
-                              "operator": "Variables[0] (DebuffCurrentCount) || RETURN",
-                              "displayLines": "DebuffCurrentCount",
-                              "constants": [],
-                              "variables": [
-                                "DebuffCurrentCount"
-                              ]
+                              "displayLines": "DebuffCurrentCount"
                             },
                             "MDF_DefenceAddedRatio_PerLayer": {
-                              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                              "displayLines": "{[PassiveSkill01[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[PassiveSkill01[0]]}"
-                              ]
+                              "displayLines": "{[PassiveSkill01[0]]}"
                             },
                             "MDF_MaxLayer": {
-                              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                              "displayLines": "{[PassiveSkill01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[PassiveSkill01[1]]}"
-                              ]
+                              "displayLines": "{[PassiveSkill01[1]]}"
                             }
                           }
                         }
@@ -468,37 +375,17 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"783092667\">Monster_XP_Elite02_DebuffEnhanceEffect</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                            "displayLines": "{[PassiveSkill01[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[PassiveSkill01[1]]}"
-                            ]
+                            "displayLines": "{[PassiveSkill01[1]]}"
                           },
                           "valuePerStack": {
                             "ModifierStackLayer": {
-                              "operator": "Variables[0] (DebuffCurrentCount) || RETURN",
-                              "displayLines": "DebuffCurrentCount",
-                              "constants": [],
-                              "variables": [
-                                "DebuffCurrentCount"
-                              ]
+                              "displayLines": "DebuffCurrentCount"
                             },
                             "MDF_DefenceAddedRatio_PerLayer": {
-                              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                              "displayLines": "{[PassiveSkill01[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[PassiveSkill01[0]]}"
-                              ]
+                              "displayLines": "{[PassiveSkill01[0]]}"
                             },
                             "MDF_MaxLayer": {
-                              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                              "displayLines": "{[PassiveSkill01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[PassiveSkill01[1]]}"
-                              ]
+                              "displayLines": "{[PassiveSkill01[1]]}"
                             }
                           }
                         }

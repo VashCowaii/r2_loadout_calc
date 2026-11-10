@@ -165,12 +165,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                    "displayLines": "{[SkillP01[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillP01[1]]}"
-                    ]
+                    "displayLines": "{[SkillP01[1]]}"
                   },
                   "isFixed": "(Fixed)"
                 }

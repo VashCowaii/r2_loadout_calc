@@ -50,20 +50,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-117751249\">MissionBattleEvent60024_Charge</a>",
           "valuePerStack": {
             "MDF_MaxHPRatio": {
-              "operator": "Variables[0] (#BattleEvent_P8_ADF) || RETURN",
-              "displayLines": "#BattleEvent_P8_ADF",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P8_ADF"
-              ]
+              "displayLines": "#BattleEvent_P8_ADF"
             },
             "MDF_ExtraSP": {
-              "operator": "Variables[0] (#BattleEvent_P9_ADF) || RETURN",
-              "displayLines": "#BattleEvent_P9_ADF",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P9_ADF"
-              ]
+              "displayLines": "#BattleEvent_P9_ADF"
             }
           }
         }
@@ -207,12 +197,7 @@ const configAbility = {
                 "value1": "CurrentHP%",
                 "compareType": "<=",
                 "value2": {
-                  "operator": "Variables[0] (W4_DawnsEye_01_HPRatio) || RETURN",
-                  "displayLines": "W4_DawnsEye_01_HPRatio",
-                  "constants": [],
-                  "variables": [
-                    "W4_DawnsEye_01_HPRatio"
-                  ]
+                  "displayLines": "W4_DawnsEye_01_HPRatio"
                 }
               },
               "passed": [
@@ -227,25 +212,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (W4_DawnsEye_01_HPRatio) || Variables[1] (MDF_HPRatioCurrent) || SUB || RETURN",
-                    "displayLines": "(W4_DawnsEye_01_HPRatio - MDF_HPRatioCurrent)",
-                    "constants": [],
-                    "variables": [
-                      "W4_DawnsEye_01_HPRatio",
-                      "MDF_HPRatioCurrent"
-                    ]
+                    "displayLines": "(W4_DawnsEye_01_HPRatio - MDF_HPRatioCurrent)"
                   },
                   "variableName": "MDF_HPChangeRatioDelta"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_HPRatioCurrent) || RETURN",
-                    "displayLines": "MDF_HPRatioCurrent",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HPRatioCurrent"
-                    ]
+                    "displayLines": "MDF_HPRatioCurrent"
                   },
                   "variableName": "W4_DawnsEye_01_HPRatio"
                 },
@@ -256,15 +230,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_HPChangeRatioDelta) || Variables[1] (MDF_MaxHPRatio) || DIV || Constants[0] (100) || MUL || RETURN",
-                    "displayLines": "((MDF_HPChangeRatioDelta / MDF_MaxHPRatio) * 100)",
-                    "constants": [
-                      100
-                    ],
-                    "variables": [
-                      "MDF_HPChangeRatioDelta",
-                      "MDF_MaxHPRatio"
-                    ]
+                    "displayLines": "((MDF_HPChangeRatioDelta / MDF_MaxHPRatio) * 100)"
                   },
                   "isFixed": "(Fixed)"
                 }
@@ -302,12 +268,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_ExtraSP) || RETURN",
-                    "displayLines": "MDF_ExtraSP",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ExtraSP"
-                    ]
+                    "displayLines": "MDF_ExtraSP"
                   },
                   "isFixed": "(Fixed)"
                 }

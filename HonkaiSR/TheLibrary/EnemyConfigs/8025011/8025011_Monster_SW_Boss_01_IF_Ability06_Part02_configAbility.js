@@ -7,12 +7,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-        "displayLines": "{[Skill06[0]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill06[0]]}"
-        ]
+        "displayLines": "{[Skill06[0]]}"
       },
       "variableName": "Skill06FinalDamage"
     },
@@ -59,12 +54,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (Skill06FinalDamage) || RETURN",
-          "displayLines": "Skill06FinalDamage",
-          "constants": [],
-          "variables": [
-            "Skill06FinalDamage"
-          ]
+          "displayLines": "Skill06FinalDamage"
         },
         "HitSplit": 0.1,
         "Toughness": null,
@@ -87,12 +77,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (Skill06FinalDamage) || RETURN",
-              "displayLines": "Skill06FinalDamage",
-              "constants": [],
-              "variables": [
-                "Skill06FinalDamage"
-              ]
+              "displayLines": "Skill06FinalDamage"
             },
             "HitSplit": 0.05,
             "Toughness": null,
@@ -117,12 +102,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (Skill06FinalDamage) || RETURN",
-              "displayLines": "Skill06FinalDamage",
-              "constants": [],
-              "variables": [
-                "Skill06FinalDamage"
-              ]
+              "displayLines": "Skill06FinalDamage"
             },
             "HitSplit": 0.065,
             "Toughness": null,

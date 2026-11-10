@@ -13,21 +13,11 @@ const configAbility = {
       "modifier": null,
       "ID": "120702()",
       "duration": {
-        "operator": "Variables[0] (20) || RETURN",
-        "displayLines": "20",
-        "constants": [],
-        "variables": [
-          20
-        ]
+        "displayLines": "20"
       },
       "valuePerStack": {
         "MDF_MoveSpeedRatio": {
-          "operator": "Variables[0] (0.35) || RETURN",
-          "displayLines": "0.35",
-          "constants": [],
-          "variables": [
-            0.35
-          ]
+          "displayLines": "0.35"
         }
       }
     }

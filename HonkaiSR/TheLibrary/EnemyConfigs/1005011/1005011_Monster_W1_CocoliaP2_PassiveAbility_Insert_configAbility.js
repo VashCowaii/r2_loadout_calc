@@ -95,12 +95,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1981362800\">Enemy_W1_CocoliaP2_FinalPhase_SpeedUp</a>",
               "valuePerStack": {
                 "MDF_SpeedDelta": {
-                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                  "displayLines": "{[SkillP01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[2]]}"
-                  ]
+                  "displayLines": "{[SkillP01[2]]}"
                 }
               }
             },
@@ -218,12 +213,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedDelta) || RETURN",
-                "displayLines": "MDF_SpeedDelta",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedDelta"
-                ]
+                "displayLines": "MDF_SpeedDelta"
               }
             }
           ]

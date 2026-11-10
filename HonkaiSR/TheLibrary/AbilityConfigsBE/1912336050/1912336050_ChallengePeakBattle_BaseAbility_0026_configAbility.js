@@ -106,12 +106,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1898064779\">Modifier_ChallengePeakBattle_BaseAbility_0026_02</a>[<span class=\"descriptionNumberColor\">Unwavering</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_0026_ADF_1": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }

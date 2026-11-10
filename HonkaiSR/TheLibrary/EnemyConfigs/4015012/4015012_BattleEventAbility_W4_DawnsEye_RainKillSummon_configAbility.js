@@ -33,13 +33,7 @@ const configAbility = {
         "value1": "Thunder_CountDark",
         "compareType": ">",
         "value2": {
-          "operator": "Variables[0] (ThunderKillCount) || Variables[1] ({[SkillP02[4]]}) || MUL || RETURN",
-          "displayLines": "(ThunderKillCount * {[SkillP02[4]]})",
-          "constants": [],
-          "variables": [
-            "ThunderKillCount",
-            "{[SkillP02[4]]}"
-          ]
+          "displayLines": "(ThunderKillCount * {[SkillP02[4]]})"
         }
       },
       "passed": [
@@ -56,16 +50,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] ({[SkillP02[1]]}) || Variables[1] (ThunderKillCount) || Variables[2] ({[SkillP02[4]]}) || MUL || Constants[0] (3) || DIV || MUL || RETURN",
-                  "displayLines": "({[SkillP02[1]]} * ((ThunderKillCount * {[SkillP02[4]]}) / 3))",
-                  "constants": [
-                    3
-                  ],
-                  "variables": [
-                    "{[SkillP02[1]]}",
-                    "ThunderKillCount",
-                    "{[SkillP02[4]]}"
-                  ]
+                  "displayLines": "({[SkillP02[1]]} * ((ThunderKillCount * {[SkillP02[4]]}) / 3))"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "dmgFormulaFinal": "Converted DMG Base",
@@ -91,15 +76,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] ({[SkillP02[1]]}) || Variables[1] (Thunder_CountDark) || MUL || Constants[0] (3) || DIV || RETURN",
-                  "displayLines": "(({[SkillP02[1]]} * Thunder_CountDark) / 3)",
-                  "constants": [
-                    3
-                  ],
-                  "variables": [
-                    "{[SkillP02[1]]}",
-                    "Thunder_CountDark"
-                  ]
+                  "displayLines": "(({[SkillP02[1]]} * Thunder_CountDark) / 3)"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "dmgFormulaFinal": "Converted DMG Base",
@@ -121,15 +98,7 @@ const configAbility = {
       },
       "variableName": "Thunder_CountDark",
       "value": {
-        "operator": "Constants[0] (0) || Variables[0] (ThunderKillCount) || Variables[1] ({[SkillP02[4]]}) || MUL || SUB || RETURN",
-        "displayLines": "(0 - (ThunderKillCount * {[SkillP02[4]]}))",
-        "constants": [
-          0
-        ],
-        "variables": [
-          "ThunderKillCount",
-          "{[SkillP02[4]]}"
-        ]
+        "displayLines": "(0 - (ThunderKillCount * {[SkillP02[4]]}))"
       },
       "max": 999
     },

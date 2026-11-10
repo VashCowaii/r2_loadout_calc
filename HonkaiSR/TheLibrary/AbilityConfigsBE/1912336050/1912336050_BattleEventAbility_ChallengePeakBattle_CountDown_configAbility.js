@@ -14,28 +14,13 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1148970670\">Modifier_BattleEventAbility_ChallengePeakBattle_CountDown</a>",
       "valuePerStack": {
         "BattleEventTurnLeftParam": {
-          "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-          "displayLines": "#BattleEvent_P2_ADF",
-          "constants": [],
-          "variables": [
-            "#BattleEvent_P2_ADF"
-          ]
+          "displayLines": "#BattleEvent_P2_ADF"
         },
         "BattleEventTurnLeftParam2": {
-          "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-          "displayLines": "#BattleEvent_P3_ADF",
-          "constants": [],
-          "variables": [
-            "#BattleEvent_P3_ADF"
-          ]
+          "displayLines": "#BattleEvent_P3_ADF"
         },
         "BattleEventTurnLeftParam3": {
-          "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
-          "displayLines": "#BattleEvent_P4_ADF",
-          "constants": [],
-          "variables": [
-            "#BattleEvent_P4_ADF"
-          ]
+          "displayLines": "#BattleEvent_P4_ADF"
         }
       }
     },
@@ -70,15 +55,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">BaseDMGMultiplier</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (1) || Variables[0] (BE_ChallengePeakBattle_Rage_AllDamageTypeAddedRatio) || Variables[1] (MDF_Layer) || MUL || ADD || RETURN",
-                "displayLines": "(1 + (BE_ChallengePeakBattle_Rage_AllDamageTypeAddedRatio * MDF_Layer))",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "BE_ChallengePeakBattle_Rage_AllDamageTypeAddedRatio",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(1 + (BE_ChallengePeakBattle_Rage_AllDamageTypeAddedRatio * MDF_Layer))"
               }
             }
           ]
@@ -122,14 +99,7 @@ const configAbility = {
                     "value1": "BattleEventTurnLeftParam",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (BattleEventTurnLeftParam2) || Constants[0] (1) || ADD || RETURN",
-                      "displayLines": "(BattleEventTurnLeftParam2 + 1)",
-                      "constants": [
-                        1
-                      ],
-                      "variables": [
-                        "BattleEventTurnLeftParam2"
-                      ]
+                      "displayLines": "(BattleEventTurnLeftParam2 + 1)"
                     }
                   },
                   {
@@ -167,16 +137,7 @@ const configAbility = {
             {
               "name": "Set Warning Countdown",
               "countdownTime": {
-                "operator": "Variables[0] (MAX) || Variables[1] (BattleEventTurnLeftParam) || Constants[0] (1) || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((BattleEventTurnLeftParam - 1), 0)",
-                "constants": [
-                  1,
-                  0
-                ],
-                "variables": [
-                  "MAX",
-                  "BattleEventTurnLeftParam"
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((BattleEventTurnLeftParam - 1), 0)"
               }
             },
             {
@@ -189,12 +150,7 @@ const configAbility = {
                     "value1": "BattleEventTurnLeftParam",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (BattleEventTurnLeftParam2) || RETURN",
-                      "displayLines": "BattleEventTurnLeftParam2",
-                      "constants": [],
-                      "variables": [
-                        "BattleEventTurnLeftParam2"
-                      ]
+                      "displayLines": "BattleEventTurnLeftParam2"
                     }
                   },
                   {
@@ -226,12 +182,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-936105590\">Modifier_BattleEventAbility_ChallengePeakBattle_Rage</a>[<span class=\"descriptionNumberColor\">Middlegame Mayhem</span>]",
                   "valuePerStack": {
                     "BE_ChallengePeakBattle_Rage_AllDamageTypeAddedRatio": {
-                      "operator": "Variables[0] (BattleEventTurnLeftParam3) || RETURN",
-                      "displayLines": "BattleEventTurnLeftParam3",
-                      "constants": [],
-                      "variables": [
-                        "BattleEventTurnLeftParam3"
-                      ]
+                      "displayLines": "BattleEventTurnLeftParam3"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -327,21 +278,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-936105590\">Modifier_BattleEventAbility_ChallengePeakBattle_Rage</a>[<span class=\"descriptionNumberColor\">Middlegame Mayhem</span>]",
                   "valuePerStack": {
                     "BE_ChallengePeakBattle_Rage_AllDamageTypeAddedRatio": {
-                      "operator": "Variables[0] (BattleEventTurnLeftParam3) || RETURN",
-                      "displayLines": "BattleEventTurnLeftParam3",
-                      "constants": [],
-                      "variables": [
-                        "BattleEventTurnLeftParam3"
-                      ]
+                      "displayLines": "BattleEventTurnLeftParam3"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (RageTime) || RETURN",
-                    "displayLines": "RageTime",
-                    "constants": [],
-                    "variables": [
-                      "RageTime"
-                    ]
+                    "displayLines": "RageTime"
                   }
                 }
               ]
@@ -372,14 +313,7 @@ const configAbility = {
                 {
                   "name": "Set Warning Countdown",
                   "countdownTime": {
-                    "operator": "Variables[0] (BattleEventTurnLeftParam) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(BattleEventTurnLeftParam - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "BattleEventTurnLeftParam"
-                    ]
+                    "displayLines": "(BattleEventTurnLeftParam - 1)"
                   }
                 }
               ]

@@ -17,12 +17,7 @@ const configAbility = {
           "modifier": null,
           "ID": "131401(SkillMaze)",
           "duration": {
-            "operator": "Variables[0] (10) || RETURN",
-            "displayLines": "10",
-            "constants": [],
-            "variables": [
-              10
-            ]
+            "displayLines": "10"
           }
         },
         {
@@ -33,12 +28,7 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1106061455\">ADV_StageAbility_Maze_Jade_Flag</a>",
           "duration": {
-            "operator": "Variables[0] (10) || RETURN",
-            "displayLines": "10",
-            "constants": [],
-            "variables": [
-              10
-            ]
+            "displayLines": "10"
           }
         }
       ]

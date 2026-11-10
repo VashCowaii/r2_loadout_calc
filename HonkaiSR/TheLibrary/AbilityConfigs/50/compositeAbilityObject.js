@@ -95,13 +95,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                    "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageUpRatio_PerLayer",
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)"
                   }
                 }
               ]
@@ -114,12 +108,7 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "stackLimit": 5,
           "addStacksPerTrigger": {
-            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-            "displayLines": "ModifierStackLayer",
-            "constants": [],
-            "variables": [
-              "ModifierStackLayer"
-            ]
+            "displayLines": "ModifierStackLayer"
           },
           "execute": [
             {
@@ -139,15 +128,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_SpeedAddedRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || SUB || RETURN",
-                    "displayLines": "(0 - (MDF_SpeedAddedRatio_PerLayer * ModifierLayers))",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_SpeedAddedRatio_PerLayer",
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "(0 - (MDF_SpeedAddedRatio_PerLayer * ModifierLayers))"
                   }
                 },
                 {
@@ -156,12 +137,7 @@ const compositeAbilityObject = {
                     "name": "Compare: Variable",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED_3) || RETURN",
-                      "displayLines": "ENEMIES_OBJECT_UNUSED_3",
-                      "constants": [],
-                      "variables": [
-                        "ENEMIES_OBJECT_UNUSED_3"
-                      ]
+                      "displayLines": "ENEMIES_OBJECT_UNUSED_3"
                     },
                     "valueType": "Layer"
                   },
@@ -176,12 +152,7 @@ const compositeAbilityObject = {
                       "duration": 1,
                       "valuePerStack": {
                         "Modifier_Frozen_DamagePercentage": {
-                          "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED_4) || RETURN",
-                          "displayLines": "ENEMIES_OBJECT_UNUSED_4",
-                          "constants": [],
-                          "variables": [
-                            "ENEMIES_OBJECT_UNUSED_4"
-                          ]
+                          "displayLines": "ENEMIES_OBJECT_UNUSED_4"
                         }
                       }
                     },
@@ -194,12 +165,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                          "displayLines": "MDF_DamageUpRatio_PerLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageUpRatio_PerLayer"
-                          ]
+                          "displayLines": "MDF_DamageUpRatio_PerLayer"
                         }
                       }
                     },
@@ -237,12 +203,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Looped Event",
                       "maxLoops": {
-                        "operator": "Variables[0] (DamageUpFlag) || RETURN",
-                        "displayLines": "DamageUpFlag",
-                        "constants": [],
-                        "variables": [
-                          "DamageUpFlag"
-                        ]
+                        "displayLines": "DamageUpFlag"
                       },
                       "execute": [
                         {
@@ -254,12 +215,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "valuePerStack": {
                             "MDF_DamageUpRatio_PerLayer": {
-                              "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                              "displayLines": "MDF_DamageUpRatio_PerLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_DamageUpRatio_PerLayer"
-                              ]
+                              "displayLines": "MDF_DamageUpRatio_PerLayer"
                             }
                           }
                         }
@@ -298,12 +254,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Looped Event",
                       "maxLoops": {
-                        "operator": "Variables[0] (DamageUpFlag) || RETURN",
-                        "displayLines": "DamageUpFlag",
-                        "constants": [],
-                        "variables": [
-                          "DamageUpFlag"
-                        ]
+                        "displayLines": "DamageUpFlag"
                       },
                       "execute": [
                         {
@@ -315,12 +266,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "valuePerStack": {
                             "MDF_DamageUpRatio_PerLayer": {
-                              "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                              "displayLines": "MDF_DamageUpRatio_PerLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_DamageUpRatio_PerLayer"
-                              ]
+                              "displayLines": "MDF_DamageUpRatio_PerLayer"
                             }
                           }
                         }
@@ -397,12 +343,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Looped Event",
                       "maxLoops": {
-                        "operator": "Variables[0] (DamageUpFlag) || RETURN",
-                        "displayLines": "DamageUpFlag",
-                        "constants": [],
-                        "variables": [
-                          "DamageUpFlag"
-                        ]
+                        "displayLines": "DamageUpFlag"
                       },
                       "execute": [
                         {
@@ -414,12 +355,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "valuePerStack": {
                             "MDF_DamageUpRatio_PerLayer": {
-                              "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                              "displayLines": "MDF_DamageUpRatio_PerLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_DamageUpRatio_PerLayer"
-                              ]
+                              "displayLines": "MDF_DamageUpRatio_PerLayer"
                             }
                           }
                         }
@@ -458,12 +394,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Looped Event",
                       "maxLoops": {
-                        "operator": "Variables[0] (DamageUpFlag) || RETURN",
-                        "displayLines": "DamageUpFlag",
-                        "constants": [],
-                        "variables": [
-                          "DamageUpFlag"
-                        ]
+                        "displayLines": "DamageUpFlag"
                       },
                       "execute": [
                         {
@@ -475,12 +406,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "valuePerStack": {
                             "MDF_DamageUpRatio_PerLayer": {
-                              "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                              "displayLines": "MDF_DamageUpRatio_PerLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_DamageUpRatio_PerLayer"
-                              ]
+                              "displayLines": "MDF_DamageUpRatio_PerLayer"
                             }
                           }
                         }
@@ -563,12 +489,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (ModifierDamageUpValue) || RETURN",
-                    "displayLines": "ModifierDamageUpValue",
-                    "constants": [],
-                    "variables": [
-                      "ModifierDamageUpValue"
-                    ]
+                    "displayLines": "ModifierDamageUpValue"
                   }
                 }
               ]
@@ -753,14 +674,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage) || Constants[0] (0.2) || MUL || RETURN",
-              "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)",
-              "constants": [
-                0.2
-              ],
-              "variables": [
-                "MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage"
-              ]
+              "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)"
             },
             "Toughness": null,
             "Tags": null,
@@ -779,14 +693,7 @@ const compositeAbilityObject = {
             "target": "{{Player Team All}}"
           },
           "value": {
-            "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_SPAdd) || Constants[0] (0.2) || MUL || RETURN",
-            "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)",
-            "constants": [
-              0.2
-            ],
-            "variables": [
-              "MDF_CocoliaP1_00_RL_BattleEvent_SPAdd"
-            ]
+            "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)"
           },
           "isFixed": "* ERR"
         },
@@ -800,14 +707,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage) || Constants[0] (0.2) || MUL || RETURN",
-              "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)",
-              "constants": [
-                0.2
-              ],
-              "variables": [
-                "MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage"
-              ]
+              "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)"
             },
             "Toughness": null,
             "Tags": null,
@@ -826,14 +726,7 @@ const compositeAbilityObject = {
             "target": "{{Player Team All}}"
           },
           "value": {
-            "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_SPAdd) || Constants[0] (0.2) || MUL || RETURN",
-            "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)",
-            "constants": [
-              0.2
-            ],
-            "variables": [
-              "MDF_CocoliaP1_00_RL_BattleEvent_SPAdd"
-            ]
+            "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)"
           },
           "isFixed": "* ERR"
         },
@@ -847,14 +740,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage) || Constants[0] (0.2) || MUL || RETURN",
-              "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)",
-              "constants": [
-                0.2
-              ],
-              "variables": [
-                "MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage"
-              ]
+              "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)"
             },
             "Toughness": null,
             "Tags": null,
@@ -873,14 +759,7 @@ const compositeAbilityObject = {
             "target": "{{Player Team All}}"
           },
           "value": {
-            "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_SPAdd) || Constants[0] (0.2) || MUL || RETURN",
-            "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)",
-            "constants": [
-              0.2
-            ],
-            "variables": [
-              "MDF_CocoliaP1_00_RL_BattleEvent_SPAdd"
-            ]
+            "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)"
           },
           "isFixed": "* ERR"
         },
@@ -894,14 +773,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage) || Constants[0] (0.2) || MUL || RETURN",
-              "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)",
-              "constants": [
-                0.2
-              ],
-              "variables": [
-                "MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage"
-              ]
+              "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)"
             },
             "Toughness": null,
             "Tags": null,
@@ -920,14 +792,7 @@ const compositeAbilityObject = {
             "target": "{{Player Team All}}"
           },
           "value": {
-            "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_SPAdd) || Constants[0] (0.2) || MUL || RETURN",
-            "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)",
-            "constants": [
-              0.2
-            ],
-            "variables": [
-              "MDF_CocoliaP1_00_RL_BattleEvent_SPAdd"
-            ]
+            "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)"
           },
           "isFixed": "* ERR"
         },
@@ -941,14 +806,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage) || Constants[0] (0.2) || MUL || RETURN",
-              "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)",
-              "constants": [
-                0.2
-              ],
-              "variables": [
-                "MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage"
-              ]
+              "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)"
             },
             "Toughness": null,
             "Tags": null,
@@ -967,14 +825,7 @@ const compositeAbilityObject = {
             "target": "{{Player Team All}}"
           },
           "value": {
-            "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_SPAdd) || Constants[0] (0.2) || MUL || RETURN",
-            "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)",
-            "constants": [
-              0.2
-            ],
-            "variables": [
-              "MDF_CocoliaP1_00_RL_BattleEvent_SPAdd"
-            ]
+            "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)"
           },
           "isFixed": "* ERR"
         },
@@ -1023,12 +874,7 @@ const compositeAbilityObject = {
                   "baseChance": 1,
                   "valuePerStack": {
                     "Modifier_Frozen_DamagePercentage": {
-                      "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_FrozenDamagePerTurn) || RETURN",
-                      "displayLines": "MDF_CocoliaP1_00_RL_BattleEvent_FrozenDamagePerTurn",
-                      "constants": [],
-                      "variables": [
-                        "MDF_CocoliaP1_00_RL_BattleEvent_FrozenDamagePerTurn"
-                      ]
+                      "displayLines": "MDF_CocoliaP1_00_RL_BattleEvent_FrozenDamagePerTurn"
                     }
                   }
                 }
@@ -1067,12 +913,7 @@ const compositeAbilityObject = {
                   "baseChance": 1,
                   "valuePerStack": {
                     "Modifier_Frozen_DamagePercentage": {
-                      "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_FrozenDamagePerTurn) || RETURN",
-                      "displayLines": "MDF_CocoliaP1_00_RL_BattleEvent_FrozenDamagePerTurn",
-                      "constants": [],
-                      "variables": [
-                        "MDF_CocoliaP1_00_RL_BattleEvent_FrozenDamagePerTurn"
-                      ]
+                      "displayLines": "MDF_CocoliaP1_00_RL_BattleEvent_FrozenDamagePerTurn"
                     }
                   }
                 }
@@ -1136,12 +977,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_BaseSpeed) || RETURN",
-                    "displayLines": "MDF_CocoliaP1_00_RL_BattleEvent_BaseSpeed",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CocoliaP1_00_RL_BattleEvent_BaseSpeed"
-                    ]
+                    "displayLines": "MDF_CocoliaP1_00_RL_BattleEvent_BaseSpeed"
                   }
                 }
               ]

@@ -12,14 +12,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (_AMMO) || Constants[0] (1) || SUB || RETURN",
-        "displayLines": "(_AMMO - 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "_AMMO"
-        ]
+        "displayLines": "(_AMMO - 1)"
       },
       "variableName": "_AMMO"
     },
@@ -62,20 +55,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "instanceTag": "Rappa_UltraAttack_Damage",
                 "Tags": null,
@@ -102,20 +85,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "instanceTag": "Rappa_UltraAttack_Damage",
                 "Tags": null,
@@ -148,21 +121,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Constants[0] (0.5) || Variables[0] (DV_Ultra_Damage_MaxStance) || Constants[1] (30) || DIV || Constants[2] (2) || ADD || MUL || Constants[3] (4) || DIV || Variables[1] (0.6) || Variables[2] (_PassiveBreakCountBase) || Variables[3] (DV_TempCount) || ADD || Variables[4] (0.5) || MUL || ADD || MUL || RETURN",
-            "displayLines": "(((0.5 * ((DV_Ultra_Damage_MaxStance / 30) + 2)) / 4) * (0.6 + ((_PassiveBreakCountBase + DV_TempCount) * 0.5)))",
-            "constants": [
-              0.5,
-              30,
-              2,
-              4
-            ],
-            "variables": [
-              "DV_Ultra_Damage_MaxStance",
-              0.6,
-              "_PassiveBreakCountBase",
-              "DV_TempCount",
-              0.5
-            ]
+            "displayLines": "(((0.5 * ((DV_Ultra_Damage_MaxStance / 30) + 2)) / 4) * (0.6 + ((_PassiveBreakCountBase + DV_TempCount) * 0.5)))"
           },
           "variableName": "DV_FinalBreakDamagePercentage"
         },
@@ -184,27 +143,12 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "DamageBreak": {
-              "operator": "Variables[0] (DV_FinalBreakDamagePercentage) || RETURN",
-              "displayLines": "DV_FinalBreakDamagePercentage",
-              "constants": [],
-              "variables": [
-                "DV_FinalBreakDamagePercentage"
-              ]
+              "displayLines": "DV_FinalBreakDamagePercentage"
             },
             "dmgFormula": "Break DMG Scaling",
             "dmgFormulaFinal": "Pure (No DMG%)",
             "Toughness": {
-              "operator": "Variables[0] (2) || Variables[1] (_PassiveBreakCountBase) || Variables[2] (DV_TempCount) || ADD || Variables[3] (1) || MUL || ADD || Constants[0] (3) || MUL || RETURN",
-              "displayLines": "((2 + ((_PassiveBreakCountBase + DV_TempCount) * 1)) * 3)",
-              "constants": [
-                3
-              ],
-              "variables": [
-                2,
-                "_PassiveBreakCountBase",
-                "DV_TempCount",
-                1
-              ]
+              "displayLines": "((2 + ((_PassiveBreakCountBase + DV_TempCount) * 1)) * 3)"
             },
             "instanceTag": "Rappa_UltraAttack_Damage",
             "Tags": null,
@@ -258,21 +202,10 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1458859803\">Rappa_Break_Modifier_ForShow</a>[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
           "stackLimit": {
-            "operator": "Variables[0] (_PassiveBreakCountMax) || RETURN",
-            "displayLines": "_PassiveBreakCountMax",
-            "constants": [],
-            "variables": [
-              "_PassiveBreakCountMax"
-            ]
+            "displayLines": "_PassiveBreakCountMax"
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] (_PassiveBreakCountBase) || Variables[1] (_PassiveBreakCount) || ADD || RETURN",
-            "displayLines": "(_PassiveBreakCountBase + _PassiveBreakCount)",
-            "constants": [],
-            "variables": [
-              "_PassiveBreakCountBase",
-              "_PassiveBreakCount"
-            ]
+            "displayLines": "(_PassiveBreakCountBase + _PassiveBreakCount)"
           }
         }
       ]
@@ -321,12 +254,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "value": {
-        "operator": "Constants[0] (1) || INVERT || RETURN",
-        "displayLines": "-1",
-        "constants": [
-          1
-        ],
-        "variables": []
+        "displayLines": "-1"
       }
     },
     "Trigger: Ability End",

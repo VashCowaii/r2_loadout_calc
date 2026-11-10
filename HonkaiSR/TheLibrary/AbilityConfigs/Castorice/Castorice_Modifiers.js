@@ -151,12 +151,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingIncoming</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -241,21 +236,11 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"555330029\">Castorice_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Ardent Will</span>]",
                       "counter": {
-                        "operator": "Variables[0] (Castorice_Rank02_Count) || RETURN",
-                        "displayLines": "Castorice_Rank02_Count",
-                        "constants": [],
-                        "variables": [
-                          "Castorice_Rank02_Count"
-                        ]
+                        "displayLines": "Castorice_Rank02_Count"
                       },
                       "valuePerStack": {
                         "MDF_MaxLayer": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         }
                       }
                     }
@@ -313,13 +298,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_PropertyValue * MDF_Layer)"
               }
             }
           ]
@@ -354,13 +333,7 @@ const configAbility = {
               "name": "Define Custom Variable",
               "skipWhenMindControlled": false,
               "value": {
-                "operator": "Variables[0] (Castorice_MaxSpecialSP) || Variables[1] (Castorice_PointB1_HealRatioDown) || MUL || RETURN",
-                "displayLines": "(Castorice_MaxSpecialSP * Castorice_PointB1_HealRatioDown)",
-                "constants": [],
-                "variables": [
-                  "Castorice_MaxSpecialSP",
-                  "Castorice_PointB1_HealRatioDown"
-                ]
+                "displayLines": "(Castorice_MaxSpecialSP * Castorice_PointB1_HealRatioDown)"
               },
               "variableName": "Castorice_MaxSpecialSP"
             },
@@ -368,16 +341,7 @@ const configAbility = {
               "name": "Define Custom Variable",
               "skipWhenMindControlled": false,
               "value": {
-                "operator": "Variables[0] (MIN) || Variables[1] (Castorice_BeingHealValue) || Variables[2] (Castorice_PointB1_HPPercent) || MUL || Variables[3] (Castorice_MaxSpecialSP) || Variables[4] (Castorice_SumBeingHealValue) || SUB || PARAM_2 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((Castorice_BeingHealValue * Castorice_PointB1_HPPercent), (Castorice_MaxSpecialSP - Castorice_SumBeingHealValue))",
-                "constants": [],
-                "variables": [
-                  "MIN",
-                  "Castorice_BeingHealValue",
-                  "Castorice_PointB1_HPPercent",
-                  "Castorice_MaxSpecialSP",
-                  "Castorice_SumBeingHealValue"
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((Castorice_BeingHealValue * Castorice_PointB1_HPPercent), (Castorice_MaxSpecialSP - Castorice_SumBeingHealValue))"
               },
               "variableName": "HealAmount_CasterAdd"
             },
@@ -394,13 +358,7 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "skipWhenMindControlled": false,
                   "value": {
-                    "operator": "Variables[0] (Castorice_SumBeingHealValue) || Variables[1] (HealAmount_CasterAdd) || ADD || RETURN",
-                    "displayLines": "(Castorice_SumBeingHealValue + HealAmount_CasterAdd)",
-                    "constants": [],
-                    "variables": [
-                      "Castorice_SumBeingHealValue",
-                      "HealAmount_CasterAdd"
-                    ]
+                    "displayLines": "(Castorice_SumBeingHealValue + HealAmount_CasterAdd)"
                   },
                   "variableName": "Castorice_SumBeingHealValue"
                 },
@@ -419,12 +377,7 @@ const configAbility = {
                       "name": "Define Custom Variable",
                       "skipWhenMindControlled": false,
                       "value": {
-                        "operator": "Variables[0] (HealAmount_CasterAdd) || RETURN",
-                        "displayLines": "HealAmount_CasterAdd",
-                        "constants": [],
-                        "variables": [
-                          "HealAmount_CasterAdd"
-                        ]
+                        "displayLines": "HealAmount_CasterAdd"
                       },
                       "variableName": "HealAmount_ServantAdd"
                     },
@@ -466,13 +419,7 @@ const configAbility = {
                                 "target": "{{Caster's Memosprite}}"
                               },
                               "setValue": {
-                                "operator": "Variables[0] (CastoriceServant_CurrentHP) || Variables[1] (HealAmount_ServantAdd) || ADD || RETURN",
-                                "displayLines": "(CastoriceServant_CurrentHP + HealAmount_ServantAdd)",
-                                "constants": [],
-                                "variables": [
-                                  "CastoriceServant_CurrentHP",
-                                  "HealAmount_ServantAdd"
-                                ]
+                                "displayLines": "(CastoriceServant_CurrentHP + HealAmount_ServantAdd)"
                               }
                             }
                           ]
@@ -486,12 +433,7 @@ const configAbility = {
                       "functionName": "<a class=\"gTempYellow\" id=\"-1401999190\">Castorice_AddSpecialSP</a>",
                       "variables": {
                         "_FixedAddValue": {
-                          "operator": "Variables[0] (HealAmount_CasterAdd) || RETURN",
-                          "displayLines": "HealAmount_CasterAdd",
-                          "constants": [],
-                          "variables": [
-                            "HealAmount_CasterAdd"
-                          ]
+                          "displayLines": "HealAmount_CasterAdd"
                         }
                       }
                     }
@@ -551,20 +493,10 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "Castorice_PointB1_HPPercent": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "Castorice_PointB1_HealRatioDown": {
-              "operator": "Variables[0] (0.12) || RETURN",
-              "displayLines": "0.12",
-              "constants": [],
-              "variables": [
-                0.12
-              ]
+              "displayLines": "0.12"
             }
           }
         }
@@ -593,12 +525,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -624,12 +551,7 @@ const configAbility = {
                 "value1": "CurrentHP%",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (Castorice_PointB2_HPRatio) || RETURN",
-                  "displayLines": "Castorice_PointB2_HPRatio",
-                  "constants": [],
-                  "variables": [
-                    "Castorice_PointB2_HPRatio"
-                  ]
+                  "displayLines": "Castorice_PointB2_HPRatio"
                 }
               },
               "passed": [
@@ -642,12 +564,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (Castorice_PointB2_SpeedRatio) || RETURN",
-                      "displayLines": "Castorice_PointB2_SpeedRatio",
-                      "constants": [],
-                      "variables": [
-                        "Castorice_PointB2_SpeedRatio"
-                      ]
+                      "displayLines": "Castorice_PointB2_SpeedRatio"
                     }
                   }
                 }
@@ -676,12 +593,7 @@ const configAbility = {
                     "value1": "CurrentHP%",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (Castorice_PointB2_HPRatio) || RETURN",
-                      "displayLines": "Castorice_PointB2_HPRatio",
-                      "constants": [],
-                      "variables": [
-                        "Castorice_PointB2_HPRatio"
-                      ]
+                      "displayLines": "Castorice_PointB2_HPRatio"
                     }
                   },
                   "passed": [
@@ -706,12 +618,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (Castorice_PointB2_SpeedRatio) || RETURN",
-                              "displayLines": "Castorice_PointB2_SpeedRatio",
-                              "constants": [],
-                              "variables": [
-                                "Castorice_PointB2_SpeedRatio"
-                              ]
+                              "displayLines": "Castorice_PointB2_SpeedRatio"
                             }
                           }
                         }
@@ -778,13 +685,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_PropertyValue * MDF_Layer)"
               }
             }
           ]
@@ -811,14 +712,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           ]
@@ -844,12 +738,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         }
@@ -886,22 +775,12 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (Castorice_Passive_Count) || RETURN",
-                "displayLines": "Castorice_Passive_Count",
-                "constants": [],
-                "variables": [
-                  "Castorice_Passive_Count"
-                ]
+                "displayLines": "Castorice_Passive_Count"
               },
               "displaySubType": "Percent",
               "displayShowIcon": "False",
               "maximum": {
-                "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
-                "displayLines": "Castorice_Passive_MaxCount",
-                "constants": [],
-                "variables": [
-                  "Castorice_Passive_MaxCount"
-                ]
+                "displayLines": "Castorice_Passive_MaxCount"
               },
               "assignState": "True",
               "bar#": "Number"
@@ -1019,13 +898,7 @@ const configAbility = {
                           },
                           "previewType": null,
                           "previewValue": {
-                            "operator": "Variables[0] (MDF_PreShowCurrentHP) || Variables[1] (MDF_LoseHPRatio02) || MUL || RETURN",
-                            "displayLines": "(MDF_PreShowCurrentHP * MDF_LoseHPRatio02)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_PreShowCurrentHP",
-                              "MDF_LoseHPRatio02"
-                            ]
+                            "displayLines": "(MDF_PreShowCurrentHP * MDF_LoseHPRatio02)"
                           }
                         }
                       ],
@@ -1042,13 +915,7 @@ const configAbility = {
                           },
                           "previewType": null,
                           "previewValue": {
-                            "operator": "Variables[0] (MDF_PreShowCurrentHP) || Variables[1] (MDF_LoseHPRatio01) || MUL || RETURN",
-                            "displayLines": "(MDF_PreShowCurrentHP * MDF_LoseHPRatio01)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_PreShowCurrentHP",
-                              "MDF_LoseHPRatio01"
-                            ]
+                            "displayLines": "(MDF_PreShowCurrentHP * MDF_LoseHPRatio01)"
                           }
                         }
                       ]

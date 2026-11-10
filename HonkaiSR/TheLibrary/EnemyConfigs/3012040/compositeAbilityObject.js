@@ -412,12 +412,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1632940892\">Enemy_W3_Ghost_Ability01_Parasitize_Target_ElementDamageTakenUp</a>",
                   "valuePerStack": {
                     "MDF_Property": {
-                      "operator": "Variables[0] (MDF_ElementDamageTakenUp) || RETURN",
-                      "displayLines": "MDF_ElementDamageTakenUp",
-                      "constants": [],
-                      "variables": [
-                        "MDF_ElementDamageTakenUp"
-                      ]
+                      "displayLines": "MDF_ElementDamageTakenUp"
                     }
                   }
                 }
@@ -489,13 +484,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (Damage_Total) || Variables[1] (Damage_Hit) || ADD || RETURN",
-                        "displayLines": "(Damage_Total + Damage_Hit)",
-                        "constants": [],
-                        "variables": [
-                          "Damage_Total",
-                          "Damage_Hit"
-                        ]
+                        "displayLines": "(Damage_Total + Damage_Hit)"
                       },
                       "variableName": "Damage_Total"
                     }
@@ -603,13 +592,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "healFlat": {
-                        "operator": "Variables[0] (Damage_Total) || Variables[1] (MDF_HealPercentage_BeAttacked) || MUL || RETURN",
-                        "displayLines": "(Damage_Total * MDF_HealPercentage_BeAttacked)",
-                        "constants": [],
-                        "variables": [
-                          "Damage_Total",
-                          "MDF_HealPercentage_BeAttacked"
-                        ]
+                        "displayLines": "(Damage_Total * MDF_HealPercentage_BeAttacked)"
                       },
                       "formula": "Heal from Healer's MaxHP"
                     }
@@ -864,20 +847,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-892811864\">Enemy_W3_Ghost_Ability01_Parasitize_Target</a>[<span class=\"descriptionNumberColor\">Deception's Crown</span>]",
           "valuePerStack": {
             "MDF_HealPercentage_BeAttacked": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
+              "displayLines": "{[SkillP01[0]]}"
             },
             "MDF_ElementDamageTakenUp": {
-              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-              "displayLines": "{[SkillP01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[1]]}"
-              ]
+              "displayLines": "{[SkillP01[1]]}"
             }
           }
         },

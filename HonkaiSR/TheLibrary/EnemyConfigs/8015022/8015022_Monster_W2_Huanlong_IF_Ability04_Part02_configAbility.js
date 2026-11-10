@@ -18,12 +18,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-          "displayLines": "{[Skill04[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}"
-          ]
+          "displayLines": "{[Skill04[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -105,29 +100,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-            "displayLines": "{[Skill04[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill04[3]]}"
-            ]
+            "displayLines": "{[Skill04[3]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[Skill04[4]]}) || RETURN",
-            "displayLines": "{[Skill04[4]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill04[4]]}"
-            ]
+            "displayLines": "{[Skill04[4]]}"
           },
           "valuePerStack": {
             "MDF_DirtyHPRatio": {
-              "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-              "displayLines": "{[Skill04[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[2]]}"
-              ]
+              "displayLines": "{[Skill04[2]]}"
             }
           },
           "success": [

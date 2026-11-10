@@ -59,21 +59,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "HitSplit": {
-                  "operator": "Constants[0] (1) || Constants[1] (3) || DIV || RETURN",
-                  "displayLines": "(1 / 3)",
-                  "constants": [
-                    1,
-                    3
-                  ],
-                  "variables": []
+                  "displayLines": "(1 / 3)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -92,21 +81,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "HitSplit": {
-                  "operator": "Constants[0] (1) || Constants[1] (3) || DIV || RETURN",
-                  "displayLines": "(1 / 3)",
-                  "constants": [
-                    1,
-                    3
-                  ],
-                  "variables": []
+                  "displayLines": "(1 / 3)"
                 },
                 "Toughness": null,
                 "Tags": null,

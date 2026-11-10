@@ -29,14 +29,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (count) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(count + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "count"
-                    ]
+                    "displayLines": "(count + 1)"
                   },
                   "variableName": "count"
                 },
@@ -180,13 +173,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_Layer) || Variables[1] (#BattleEvent_P1_ADF) || MUL || RETURN",
-                    "displayLines": "(MDF_Layer * #BattleEvent_P1_ADF)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer",
-                      "#BattleEvent_P1_ADF"
-                    ]
+                    "displayLines": "(MDF_Layer * #BattleEvent_P1_ADF)"
                   }
                 }
               ]
@@ -364,12 +351,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"897526972\">Modifier_BattleEventAbility_Challenge_Xianzhou_05_Sub1</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P2_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P2_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P2_ADF"
                       }
                     }
                   ]
@@ -426,12 +408,7 @@ const compositeAbilityObject = {
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Constants[0] (201201010) || RETURN",
-                "displayLines": "201201010",
-                "constants": [
-                  201201010
-                ],
-                "variables": []
+                "displayLines": "201201010"
               },
               "locationType": "FormationRecord"
             }
@@ -886,60 +863,25 @@ const compositeAbilityObject = {
               "name": "Random Event",
               "odds": [
                 {
-                  "operator": "Variables[0] (TDF_NoPhysical) || RETURN",
-                  "displayLines": "TDF_NoPhysical",
-                  "constants": [],
-                  "variables": [
-                    "TDF_NoPhysical"
-                  ]
+                  "displayLines": "TDF_NoPhysical"
                 },
                 {
-                  "operator": "Variables[0] (TDF_NoWind) || RETURN",
-                  "displayLines": "TDF_NoWind",
-                  "constants": [],
-                  "variables": [
-                    "TDF_NoWind"
-                  ]
+                  "displayLines": "TDF_NoWind"
                 },
                 {
-                  "operator": "Variables[0] (TDF_NoFire) || RETURN",
-                  "displayLines": "TDF_NoFire",
-                  "constants": [],
-                  "variables": [
-                    "TDF_NoFire"
-                  ]
+                  "displayLines": "TDF_NoFire"
                 },
                 {
-                  "operator": "Variables[0] (TDF_NoThunder) || RETURN",
-                  "displayLines": "TDF_NoThunder",
-                  "constants": [],
-                  "variables": [
-                    "TDF_NoThunder"
-                  ]
+                  "displayLines": "TDF_NoThunder"
                 },
                 {
-                  "operator": "Variables[0] (TDF_NoIce) || RETURN",
-                  "displayLines": "TDF_NoIce",
-                  "constants": [],
-                  "variables": [
-                    "TDF_NoIce"
-                  ]
+                  "displayLines": "TDF_NoIce"
                 },
                 {
-                  "operator": "Variables[0] (TDF_NoQuantum) || RETURN",
-                  "displayLines": "TDF_NoQuantum",
-                  "constants": [],
-                  "variables": [
-                    "TDF_NoQuantum"
-                  ]
+                  "displayLines": "TDF_NoQuantum"
                 },
                 {
-                  "operator": "Variables[0] (TDF_NoImaginary) || RETURN",
-                  "displayLines": "TDF_NoImaginary",
-                  "constants": [],
-                  "variables": [
-                    "TDF_NoImaginary"
-                  ]
+                  "displayLines": "TDF_NoImaginary"
                 }
               ],
               "execute": [

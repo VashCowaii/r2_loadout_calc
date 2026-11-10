@@ -13,12 +13,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2310_EnterFever_P1_SP",
       "resetValue": {
-        "operator": "Variables[0] (ADF_1_Get) || RETURN",
-        "displayLines": "ADF_1_Get",
-        "constants": [],
-        "variables": [
-          "ADF_1_Get"
-        ]
+        "displayLines": "ADF_1_Get"
       },
       "scope": "ContextCaster"
     },
@@ -30,12 +25,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2310_EnterFever_P2_DmgTakenUp",
       "resetValue": {
-        "operator": "Variables[0] (ADF_2_Get) || RETURN",
-        "displayLines": "ADF_2_Get",
-        "constants": [],
-        "variables": [
-          "ADF_2_Get"
-        ]
+        "displayLines": "ADF_2_Get"
       },
       "scope": "ContextCaster"
     },
@@ -47,12 +37,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2310_EnterFever_P3_AddDmgUp",
       "resetValue": {
-        "operator": "Variables[0] (ADF_3_Get) || RETURN",
-        "displayLines": "ADF_3_Get",
-        "constants": [],
-        "variables": [
-          "ADF_3_Get"
-        ]
+        "displayLines": "ADF_3_Get"
       },
       "scope": "ContextCaster"
     },
@@ -120,13 +105,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1377474696\">Modifier_FantasticStory_BaseAbility_2310_EnterFever_sub</a>[<span class=\"descriptionNumberColor\">Surging Grit</span>]",
                       "valuePerStack": {
                         "DV_Ratio_Get": {
-                          "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2310_EnterFever_P2_DmgTakenUp) || Variables[1] (DV_FantasticStory_PlusAbility_2313) || ADD || RETURN",
-                          "displayLines": "(DV_FantasticStory_BaseAbility_2310_EnterFever_P2_DmgTakenUp + DV_FantasticStory_PlusAbility_2313)",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_BaseAbility_2310_EnterFever_P2_DmgTakenUp",
-                            "DV_FantasticStory_PlusAbility_2313"
-                          ]
+                          "displayLines": "(DV_FantasticStory_BaseAbility_2310_EnterFever_P2_DmgTakenUp + DV_FantasticStory_PlusAbility_2313)"
                         }
                       }
                     }
@@ -141,12 +120,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1377474696\">Modifier_FantasticStory_BaseAbility_2310_EnterFever_sub</a>[<span class=\"descriptionNumberColor\">Surging Grit</span>]",
                       "valuePerStack": {
                         "DV_Ratio_Get": {
-                          "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2310_EnterFever_P2_DmgTakenUp) || RETURN",
-                          "displayLines": "DV_FantasticStory_BaseAbility_2310_EnterFever_P2_DmgTakenUp",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_BaseAbility_2310_EnterFever_P2_DmgTakenUp"
-                          ]
+                          "displayLines": "DV_FantasticStory_BaseAbility_2310_EnterFever_P2_DmgTakenUp"
                         }
                       }
                     }
@@ -184,13 +158,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1377474696\">Modifier_FantasticStory_BaseAbility_2310_EnterFever_sub</a>[<span class=\"descriptionNumberColor\">Surging Grit</span>]",
                       "valuePerStack": {
                         "DV_Ratio_Get": {
-                          "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2310_EnterFever_P2_DmgTakenUp) || Variables[1] (DV_FantasticStory_PlusAbility_2313) || ADD || RETURN",
-                          "displayLines": "(DV_FantasticStory_BaseAbility_2310_EnterFever_P2_DmgTakenUp + DV_FantasticStory_PlusAbility_2313)",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_BaseAbility_2310_EnterFever_P2_DmgTakenUp",
-                            "DV_FantasticStory_PlusAbility_2313"
-                          ]
+                          "displayLines": "(DV_FantasticStory_BaseAbility_2310_EnterFever_P2_DmgTakenUp + DV_FantasticStory_PlusAbility_2313)"
                         }
                       }
                     }
@@ -205,12 +173,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1377474696\">Modifier_FantasticStory_BaseAbility_2310_EnterFever_sub</a>[<span class=\"descriptionNumberColor\">Surging Grit</span>]",
                       "valuePerStack": {
                         "DV_Ratio_Get": {
-                          "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2310_EnterFever_P2_DmgTakenUp) || RETURN",
-                          "displayLines": "DV_FantasticStory_BaseAbility_2310_EnterFever_P2_DmgTakenUp",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_BaseAbility_2310_EnterFever_P2_DmgTakenUp"
-                          ]
+                          "displayLines": "DV_FantasticStory_BaseAbility_2310_EnterFever_P2_DmgTakenUp"
                         }
                       }
                     }

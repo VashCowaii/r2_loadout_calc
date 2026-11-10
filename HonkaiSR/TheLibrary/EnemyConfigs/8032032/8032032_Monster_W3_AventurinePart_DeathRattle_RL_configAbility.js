@@ -100,23 +100,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill01[0]]}) || Variables[1] (DeathRattle_RL_Count) || MUL || RETURN",
-          "displayLines": "({[Skill01[0]]} * DeathRattle_RL_Count)",
-          "constants": [],
-          "variables": [
-            "{[Skill01[0]]}",
-            "DeathRattle_RL_Count"
-          ]
+          "displayLines": "({[Skill01[0]]} * DeathRattle_RL_Count)"
         },
         "dmgFormula": "Max HP Scaling",
         "Toughness": {
-          "operator": "Variables[0] ({[Skill01[1]]}) || Variables[1] (DeathRattle_RL_Count) || MUL || RETURN",
-          "displayLines": "({[Skill01[1]]} * DeathRattle_RL_Count)",
-          "constants": [],
-          "variables": [
-            "{[Skill01[1]]}",
-            "DeathRattle_RL_Count"
-          ]
+          "displayLines": "({[Skill01[1]]} * DeathRattle_RL_Count)"
         },
         "ToughnessDMGType": {
           "DamageType": "Imaginary"

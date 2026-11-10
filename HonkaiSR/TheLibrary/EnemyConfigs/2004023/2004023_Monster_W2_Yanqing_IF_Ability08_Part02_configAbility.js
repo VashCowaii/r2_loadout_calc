@@ -71,14 +71,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Constants[0] (0.5) || Variables[0] ({[Skill08[0]]}) || MUL || RETURN",
-          "displayLines": "(0.5 * {[Skill08[0]]})",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "{[Skill08[0]]}"
-          ]
+          "displayLines": "(0.5 * {[Skill08[0]]})"
         },
         "Toughness": null,
         "Tags": null,
@@ -94,14 +87,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Constants[0] (0.5) || Variables[0] ({[Skill08[0]]}) || MUL || RETURN",
-          "displayLines": "(0.5 * {[Skill08[0]]})",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "{[Skill08[0]]}"
-          ]
+          "displayLines": "(0.5 * {[Skill08[0]]})"
         },
         "Toughness": null,
         "Tags": null
@@ -110,14 +96,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (W2_Yanqing_00_Skill07_AllTeamMemberNumber) || Constants[0] (1) || SUB || RETURN",
-        "displayLines": "(W2_Yanqing_00_Skill07_AllTeamMemberNumber - 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
-        ]
+        "displayLines": "(W2_Yanqing_00_Skill07_AllTeamMemberNumber - 1)"
       },
       "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
     },
@@ -130,14 +109,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Constants[0] (0.5) || Variables[0] ({[Skill08[0]]}) || MUL || RETURN",
-          "displayLines": "(0.5 * {[Skill08[0]]})",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "{[Skill08[0]]}"
-          ]
+          "displayLines": "(0.5 * {[Skill08[0]]})"
         },
         "Toughness": null,
         "Tags": null
@@ -146,14 +118,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (W2_Yanqing_00_Skill07_AllTeamMemberNumber) || Constants[0] (1) || SUB || RETURN",
-        "displayLines": "(W2_Yanqing_00_Skill07_AllTeamMemberNumber - 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
-        ]
+        "displayLines": "(W2_Yanqing_00_Skill07_AllTeamMemberNumber - 1)"
       },
       "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
     },
@@ -166,14 +131,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Constants[0] (0.5) || Variables[0] ({[Skill08[0]]}) || MUL || RETURN",
-          "displayLines": "(0.5 * {[Skill08[0]]})",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "{[Skill08[0]]}"
-          ]
+          "displayLines": "(0.5 * {[Skill08[0]]})"
         },
         "Toughness": null,
         "Tags": null
@@ -182,14 +140,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (W2_Yanqing_00_Skill07_AllTeamMemberNumber) || Constants[0] (1) || SUB || RETURN",
-        "displayLines": "(W2_Yanqing_00_Skill07_AllTeamMemberNumber - 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
-        ]
+        "displayLines": "(W2_Yanqing_00_Skill07_AllTeamMemberNumber - 1)"
       },
       "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
     },
@@ -202,14 +153,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Constants[0] (0.5) || Variables[0] ({[Skill08[0]]}) || MUL || RETURN",
-          "displayLines": "(0.5 * {[Skill08[0]]})",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "{[Skill08[0]]}"
-          ]
+          "displayLines": "(0.5 * {[Skill08[0]]})"
         },
         "Toughness": null,
         "Tags": null
@@ -224,14 +168,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Constants[0] (0.5) || Variables[0] ({[Skill08[0]]}) || MUL || RETURN",
-          "displayLines": "(0.5 * {[Skill08[0]]})",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "{[Skill08[0]]}"
-          ]
+          "displayLines": "(0.5 * {[Skill08[0]]})"
         },
         "Toughness": null,
         "Tags": null,

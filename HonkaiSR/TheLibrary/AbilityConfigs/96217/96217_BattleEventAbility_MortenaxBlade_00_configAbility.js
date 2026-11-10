@@ -22,12 +22,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1508029303\">MortenaxBlade_PassiveAbility01_BattleEvent_BaseSpeed</a>",
       "valuePerStack": {
         "BattleEvent_BaseSpeed": {
-          "operator": "Variables[0] (BattleEvent_00_BaseSpeed) || RETURN",
-          "displayLines": "BattleEvent_00_BaseSpeed",
-          "constants": [],
-          "variables": [
-            "BattleEvent_00_BaseSpeed"
-          ]
+          "displayLines": "BattleEvent_00_BaseSpeed"
         }
       }
     },
@@ -63,12 +58,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (BattleEvent_00_BaseSpeed) || RETURN",
-                "displayLines": "BattleEvent_00_BaseSpeed",
-                "constants": [],
-                "variables": [
-                  "BattleEvent_00_BaseSpeed"
-                ]
+                "displayLines": "BattleEvent_00_BaseSpeed"
               }
             }
           ]

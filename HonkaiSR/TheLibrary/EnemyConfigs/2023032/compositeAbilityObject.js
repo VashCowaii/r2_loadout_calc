@@ -119,12 +119,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "MDF_MaxDirtyHPRatio",
                   "resetValue": {
-                    "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                    "displayLines": "{[SkillP01[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillP01[0]]}"
-                    ]
+                    "displayLines": "{[SkillP01[0]]}"
                   }
                 }
               ]
@@ -149,20 +144,10 @@ const compositeAbilityObject = {
                   },
                   "variableName": "MDF_CurrentDirtyHPRatio",
                   "value": {
-                    "operator": "Variables[0] (MDF_DirtyHPAddedRatio) || RETURN",
-                    "displayLines": "MDF_DirtyHPAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DirtyHPAddedRatio"
-                    ]
+                    "displayLines": "MDF_DirtyHPAddedRatio"
                   },
                   "max": {
-                    "operator": "Variables[0] (MDF_MaxDirtyHPRatio) || RETURN",
-                    "displayLines": "MDF_MaxDirtyHPRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxDirtyHPRatio"
-                    ]
+                    "displayLines": "MDF_MaxDirtyHPRatio"
                   }
                 },
                 {
@@ -204,21 +189,11 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                           "duration": {
-                            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                            "displayLines": "{[Skill05[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[1]]}"
-                            ]
+                            "displayLines": "{[Skill05[1]]}"
                           },
                           "valuePerStack": {
                             "MDF_DirtyHPRatio": {
-                              "operator": "Variables[0] (MDF_CurrentDirtyHPRatio) || RETURN",
-                              "displayLines": "MDF_CurrentDirtyHPRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_CurrentDirtyHPRatio"
-                              ]
+                              "displayLines": "MDF_CurrentDirtyHPRatio"
                             }
                           }
                         }
@@ -240,21 +215,11 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                           "duration": {
-                            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                            "displayLines": "{[Skill05[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[1]]}"
-                            ]
+                            "displayLines": "{[Skill05[1]]}"
                           },
                           "valuePerStack": {
                             "MDF_DirtyHPRatio": {
-                              "operator": "Variables[0] (MDF_CurrentDirtyHPRatio) || RETURN",
-                              "displayLines": "MDF_CurrentDirtyHPRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_CurrentDirtyHPRatio"
-                              ]
+                              "displayLines": "MDF_CurrentDirtyHPRatio"
                             }
                           }
                         }
@@ -270,29 +235,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                       "duration": {
-                        "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                        "displayLines": "{[Skill05[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill05[1]]}"
-                        ]
+                        "displayLines": "{[Skill05[1]]}"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-                        "displayLines": "{[Skill05[2]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill05[2]]}"
-                        ]
+                        "displayLines": "{[Skill05[2]]}"
                       },
                       "valuePerStack": {
                         "MDF_DirtyHPRatio": {
-                          "operator": "Variables[0] (MDF_CurrentDirtyHPRatio) || RETURN",
-                          "displayLines": "MDF_CurrentDirtyHPRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentDirtyHPRatio"
-                          ]
+                          "displayLines": "MDF_CurrentDirtyHPRatio"
                         }
                       }
                     }
@@ -391,21 +341,10 @@ const compositeAbilityObject = {
                       },
                       "variableName": "MDF_CurrentDirtyHPRatio",
                       "value": {
-                        "operator": "Variables[0] (MDF_HPRatioAfterAttacked) || Variables[1] (MDF_HPRatioBeforeAttacked) || SUB || RETURN",
-                        "displayLines": "(MDF_HPRatioAfterAttacked - MDF_HPRatioBeforeAttacked)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_HPRatioAfterAttacked",
-                          "MDF_HPRatioBeforeAttacked"
-                        ]
+                        "displayLines": "(MDF_HPRatioAfterAttacked - MDF_HPRatioBeforeAttacked)"
                       },
                       "max": {
-                        "operator": "Variables[0] (MDF_MaxDirtyHPRatio) || RETURN",
-                        "displayLines": "MDF_MaxDirtyHPRatio",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxDirtyHPRatio"
-                        ]
+                        "displayLines": "MDF_MaxDirtyHPRatio"
                       }
                     },
                     {
@@ -435,21 +374,11 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                           "duration": {
-                            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                            "displayLines": "{[Skill05[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[1]]}"
-                            ]
+                            "displayLines": "{[Skill05[1]]}"
                           },
                           "valuePerStack": {
                             "MDF_DirtyHPRatio": {
-                              "operator": "Variables[0] (MDF_CurrentDirtyHPRatio) || RETURN",
-                              "displayLines": "MDF_CurrentDirtyHPRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_CurrentDirtyHPRatio"
-                              ]
+                              "displayLines": "MDF_CurrentDirtyHPRatio"
                             }
                           }
                         },
@@ -514,12 +443,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_CurrentChargeCount) || RETURN",
-                    "displayLines": "_CurrentChargeCount",
-                    "constants": [],
-                    "variables": [
-                      "_CurrentChargeCount"
-                    ]
+                    "displayLines": "_CurrentChargeCount"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -527,12 +451,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_MaxChargeCount) || RETURN",
-                    "displayLines": "MDF_MaxChargeCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxChargeCount"
-                    ]
+                    "displayLines": "MDF_MaxChargeCount"
                   },
                   "assignState": "True",
                   "state": "Active"
@@ -557,12 +476,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (_CurrentChargeCount) || RETURN",
-                        "displayLines": "_CurrentChargeCount",
-                        "constants": [],
-                        "variables": [
-                          "_CurrentChargeCount"
-                        ]
+                        "displayLines": "_CurrentChargeCount"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -570,12 +484,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_MaxChargeCount) || RETURN",
-                        "displayLines": "MDF_MaxChargeCount",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxChargeCount"
-                        ]
+                        "displayLines": "MDF_MaxChargeCount"
                       },
                       "assignState": "True",
                       "state": "Active"
@@ -592,12 +501,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Enemy ID",
                     "ID": {
-                      "operator": "Variables[0] (SummonList_ADF_4) || RETURN",
-                      "displayLines": "SummonList_ADF_4",
-                      "constants": [],
-                      "variables": [
-                        "SummonList_ADF_4"
-                      ]
+                      "displayLines": "SummonList_ADF_4"
                     },
                     "target": {
                       "name": "Target Name",
@@ -615,23 +519,13 @@ const compositeAbilityObject = {
                       "variableName": "_CurrentChargeCount",
                       "value": 1,
                       "max": {
-                        "operator": "Variables[0] (MDF_MaxChargeCount) || RETURN",
-                        "displayLines": "MDF_MaxChargeCount",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxChargeCount"
-                        ]
+                        "displayLines": "MDF_MaxChargeCount"
                       }
                     },
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (_CurrentChargeCount) || RETURN",
-                        "displayLines": "_CurrentChargeCount",
-                        "constants": [],
-                        "variables": [
-                          "_CurrentChargeCount"
-                        ]
+                        "displayLines": "_CurrentChargeCount"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -639,12 +533,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_MaxChargeCount) || RETURN",
-                        "displayLines": "MDF_MaxChargeCount",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxChargeCount"
-                        ]
+                        "displayLines": "MDF_MaxChargeCount"
                       },
                       "assignState": "True",
                       "state": "Active"
@@ -660,12 +549,7 @@ const compositeAbilityObject = {
                         "value1": "_CurrentChargeCount",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] (MDF_MaxChargeCount) || RETURN",
-                          "displayLines": "MDF_MaxChargeCount",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxChargeCount"
-                          ]
+                          "displayLines": "MDF_MaxChargeCount"
                         }
                       },
                       "passed": [
@@ -705,12 +589,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_CurrentChargeCount) || RETURN",
-                    "displayLines": "_CurrentChargeCount",
-                    "constants": [],
-                    "variables": [
-                      "_CurrentChargeCount"
-                    ]
+                    "displayLines": "_CurrentChargeCount"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -718,12 +597,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_MaxChargeCount) || RETURN",
-                    "displayLines": "MDF_MaxChargeCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxChargeCount"
-                    ]
+                    "displayLines": "MDF_MaxChargeCount"
                   },
                   "assignState": "True",
                   "state": "Active"
@@ -964,12 +838,7 @@ const compositeAbilityObject = {
                         "value1": "_CurrentChargeCount",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MDF_MaxChargeCount) || RETURN",
-                          "displayLines": "MDF_MaxChargeCount",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxChargeCount"
-                          ]
+                          "displayLines": "MDF_MaxChargeCount"
                         }
                       },
                       "passed": [
@@ -1404,13 +1273,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio_PerLayer) || Variables[1] (_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_AllDamageTypeAddedRatio_PerLayer * _Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageTypeAddedRatio_PerLayer",
-                      "_Layer"
-                    ]
+                    "displayLines": "(MDF_AllDamageTypeAddedRatio_PerLayer * _Layer)"
                   },
                   "variableName": "MDF_AllDamageReduce"
                 },
@@ -1422,12 +1285,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                    "displayLines": "MDF_AllDamageReduce",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageReduce"
-                    ]
+                    "displayLines": "MDF_AllDamageReduce"
                   }
                 }
               ]
@@ -1558,21 +1416,11 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"2055606231\">Enemy_W2_Xuanlu_IF_DamageReduceP2_TGT</a>[<span class=\"descriptionNumberColor\">Boss DMG Reduction</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageReduce_PerLayer": {
-                          "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                          "displayLines": "MDF_AllDamageReduce",
-                          "constants": [],
-                          "variables": [
-                            "MDF_AllDamageReduce"
-                          ]
+                          "displayLines": "MDF_AllDamageReduce"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (_CharacterNumber) || RETURN",
-                        "displayLines": "_CharacterNumber",
-                        "constants": [],
-                        "variables": [
-                          "_CharacterNumber"
-                        ]
+                        "displayLines": "_CharacterNumber"
                       }
                     }
                   ]
@@ -1733,12 +1581,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio_Sub) || RETURN",
-                    "displayLines": "MDF_AllDamageTypeAddedRatio_Sub",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageTypeAddedRatio_Sub"
-                    ]
+                    "displayLines": "MDF_AllDamageTypeAddedRatio_Sub"
                   }
                 },
                 {
@@ -1749,12 +1592,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageReduce_Sub) || RETURN",
-                    "displayLines": "MDF_AllDamageReduce_Sub",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageReduce_Sub"
-                    ]
+                    "displayLines": "MDF_AllDamageReduce_Sub"
                   }
                 }
               ]
@@ -1791,20 +1629,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1364394188\">Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_EX04_Sub_Sub</a>[<span class=\"descriptionNumberColor\">Dazzling Halo</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageReduce_Sub": {
-                          "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                          "displayLines": "MDF_AllDamageReduce",
-                          "constants": [],
-                          "variables": [
-                            "MDF_AllDamageReduce"
-                          ]
+                          "displayLines": "MDF_AllDamageReduce"
                         },
                         "MDF_AllDamageTypeAddedRatio_Sub": {
-                          "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                          "displayLines": "MDF_AllDamageTypeAddedRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_AllDamageTypeAddedRatio"
-                          ]
+                          "displayLines": "MDF_AllDamageTypeAddedRatio"
                         }
                       }
                     }
@@ -1850,20 +1678,10 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1364394188\">Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_EX04_Sub_Sub</a>[<span class=\"descriptionNumberColor\">Dazzling Halo</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageReduce_Sub": {
-                      "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                      "displayLines": "MDF_AllDamageReduce",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AllDamageReduce"
-                      ]
+                      "displayLines": "MDF_AllDamageReduce"
                     },
                     "MDF_AllDamageTypeAddedRatio_Sub": {
-                      "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                      "displayLines": "MDF_AllDamageTypeAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AllDamageTypeAddedRatio"
-                      ]
+                      "displayLines": "MDF_AllDamageTypeAddedRatio"
                     }
                   }
                 }
@@ -1924,20 +1742,10 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_AllDamageReduce": {
-                  "operator": "Variables[0] (AbilityEX04_P1_DamageReduceRatio) || RETURN",
-                  "displayLines": "AbilityEX04_P1_DamageReduceRatio",
-                  "constants": [],
-                  "variables": [
-                    "AbilityEX04_P1_DamageReduceRatio"
-                  ]
+                  "displayLines": "AbilityEX04_P1_DamageReduceRatio"
                 },
                 "MDF_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] (AbilityEX04_P2_AllDamageTypeAddedRatio) || RETURN",
-                  "displayLines": "AbilityEX04_P2_AllDamageTypeAddedRatio",
-                  "constants": [],
-                  "variables": [
-                    "AbilityEX04_P2_AllDamageTypeAddedRatio"
-                  ]
+                  "displayLines": "AbilityEX04_P2_AllDamageTypeAddedRatio"
                 }
               }
             }
@@ -1992,20 +1800,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1640618291\">Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_EX04_Sub</a>",
                       "valuePerStack": {
                         "MDF_AllDamageReduce": {
-                          "operator": "Variables[0] (AbilityEX04_P1_DamageReduceRatio) || RETURN",
-                          "displayLines": "AbilityEX04_P1_DamageReduceRatio",
-                          "constants": [],
-                          "variables": [
-                            "AbilityEX04_P1_DamageReduceRatio"
-                          ]
+                          "displayLines": "AbilityEX04_P1_DamageReduceRatio"
                         },
                         "MDF_AllDamageTypeAddedRatio": {
-                          "operator": "Variables[0] (AbilityEX04_P2_AllDamageTypeAddedRatio) || RETURN",
-                          "displayLines": "AbilityEX04_P2_AllDamageTypeAddedRatio",
-                          "constants": [],
-                          "variables": [
-                            "AbilityEX04_P2_AllDamageTypeAddedRatio"
-                          ]
+                          "displayLines": "AbilityEX04_P2_AllDamageTypeAddedRatio"
                         }
                       }
                     }
@@ -2036,12 +1834,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (MDF_HealMaxHPRatio) || RETURN",
-                    "displayLines": "MDF_HealMaxHPRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HealMaxHPRatio"
-                    ]
+                    "displayLines": "MDF_HealMaxHPRatio"
                   },
                   "formula": "Heal from Target MaxHP"
                 }
@@ -2111,12 +1904,7 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_HealMaxHPRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9903) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9903",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_9903"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_9903"
                 }
               }
             }
@@ -2174,12 +1962,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"749231853\">Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_03_Sub</a>[<span class=\"descriptionNumberColor\">Resurrection Halo</span>]",
                       "valuePerStack": {
                         "MDF_HealMaxHPRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_9903) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_9903",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_9903"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_9903"
                         }
                       }
                     }
@@ -2273,12 +2056,7 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_ActionDelayRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9882) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9882",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_9882"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_9882"
                 }
               }
             }
@@ -2336,12 +2114,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1326470310\">Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_02_Sub</a>[<span class=\"descriptionNumberColor\">Agility Halo</span>]",
                       "valuePerStack": {
                         "MDF_ActionDelayRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_9882) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_9882",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_9882"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_9882"
                         }
                       }
                     }
@@ -2449,12 +2222,7 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_AllDamageReduce": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9902) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9902",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_9902"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_9902"
                 }
               }
             }
@@ -2512,12 +2280,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-401086193\">Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_01_Sub</a>[<span class=\"descriptionNumberColor\">Tranquility Halo</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageReduce": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_9902) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_9902",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_9902"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_9902"
                         }
                       }
                     }
@@ -2554,13 +2317,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (_Layer) || Variables[1] (MDF_PropertyValue) || MUL || RETURN",
-                    "displayLines": "(_Layer * MDF_PropertyValue)",
-                    "constants": [],
-                    "variables": [
-                      "_Layer",
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "(_Layer * MDF_PropertyValue)"
                   }
                 }
               ]
@@ -2601,12 +2358,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1349189357\">Enemy_W2_Xuanlu_IF_Bonus_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Power of Sustenance</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (AbilityP04_P1_Bonus_DamageAddedRatio) || RETURN",
-                          "displayLines": "AbilityP04_P1_Bonus_DamageAddedRatio",
-                          "constants": [],
-                          "variables": [
-                            "AbilityP04_P1_Bonus_DamageAddedRatio"
-                          ]
+                          "displayLines": "AbilityP04_P1_Bonus_DamageAddedRatio"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -2654,12 +2406,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Null Type",
                         "Damage": {
-                          "operator": "Variables[0] (MDF_DamageRatio) || RETURN",
-                          "displayLines": "MDF_DamageRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageRatio"
-                          ]
+                          "displayLines": "MDF_DamageRatio"
                         },
                         "dmgFormula": "Max HP Scaling",
                         "dmgFormulaFinal": "Converted DMG Base",
@@ -2687,12 +2434,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Deal Toughness DMG",
                           "value": {
-                            "operator": "Variables[0] (MDF_DamageStanceValue) || RETURN",
-                            "displayLines": "MDF_DamageStanceValue",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DamageStanceValue"
-                            ]
+                            "displayLines": "MDF_DamageStanceValue"
                           },
                           "attacker": {
                             "name": "Target Name",
@@ -2712,12 +2454,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Deal Toughness DMG",
                           "value": {
-                            "operator": "Variables[0] (MDF_DamageStanceValue) || RETURN",
-                            "displayLines": "MDF_DamageStanceValue",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DamageStanceValue"
-                            ]
+                            "displayLines": "MDF_DamageStanceValue"
                           },
                           "attacker": {
                             "name": "Target Name",
@@ -2754,14 +2491,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "set": {
-                    "operator": "Variables[0] (MDF_BossBreakCurrentDelay) || Constants[0] (0.01) || ADD || RETURN",
-                    "displayLines": "(MDF_BossBreakCurrentDelay + 0.01)",
-                    "constants": [
-                      0.01
-                    ],
-                    "variables": [
-                      "MDF_BossBreakCurrentDelay"
-                    ]
+                    "displayLines": "(MDF_BossBreakCurrentDelay + 0.01)"
                   }
                 },
                 "Modifier Deletes Itself"
@@ -2785,12 +2515,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-809289172\">Enemy_W2_Xuanlu_IF_Bonus_SpecialMark</a>",
                   "valuePerStack": {
                     "AbilityP04_P1_Bonus_DamageAddedRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_9904) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_9904",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_9904"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_9904"
                     }
                   }
                 }
@@ -2822,20 +2547,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"427800791\">Enemy_W2_Xuanlu_IF_MinionsSuperArmorController</a>",
                       "valuePerStack": {
                         "MDF_MinionsSuperArmor_AllDamageReduce": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13793) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13793",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_13793"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_13793"
                         },
                         "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13759) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13759",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_13759"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_13759"
                         }
                       }
                     },
@@ -2860,20 +2575,10 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-924434401\">Enemy_W2_Xuanlu_IF_Servant</a>",
                           "valuePerStack": {
                             "MDF_DamageRatio": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_9879) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_9879",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_9879"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_9879"
                             },
                             "MDF_DamageStanceValue": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_9884) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_9884",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_9884"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_9884"
                             }
                           }
                         }
@@ -2900,20 +2605,10 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-924434401\">Enemy_W2_Xuanlu_IF_Servant</a>",
                           "valuePerStack": {
                             "MDF_DamageRatio": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_9885) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_9885",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_9885"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_9885"
                             },
                             "MDF_DamageStanceValue": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_9901) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_9901",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_9901"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_9901"
                             }
                           }
                         }
@@ -2927,12 +2622,7 @@ const compositeAbilityObject = {
                           {
                             "name": "Enemy ID",
                             "ID": {
-                              "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                              "displayLines": "SummonList_ADF_1",
-                              "constants": [],
-                              "variables": [
-                                "SummonList_ADF_1"
-                              ]
+                              "displayLines": "SummonList_ADF_1"
                             },
                             "target": {
                               "name": "Target Name",
@@ -2943,12 +2633,7 @@ const compositeAbilityObject = {
                           {
                             "name": "Enemy ID",
                             "ID": {
-                              "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-                              "displayLines": "SummonList_ADF_2",
-                              "constants": [],
-                              "variables": [
-                                "SummonList_ADF_2"
-                              ]
+                              "displayLines": "SummonList_ADF_2"
                             },
                             "target": {
                               "name": "Target Name",
@@ -2959,12 +2644,7 @@ const compositeAbilityObject = {
                           {
                             "name": "Enemy ID",
                             "ID": {
-                              "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
-                              "displayLines": "SummonList_ADF_3",
-                              "constants": [],
-                              "variables": [
-                                "SummonList_ADF_3"
-                              ]
+                              "displayLines": "SummonList_ADF_3"
                             },
                             "target": {
                               "name": "Target Name",
@@ -2975,12 +2655,7 @@ const compositeAbilityObject = {
                           {
                             "name": "Enemy ID",
                             "ID": {
-                              "operator": "Variables[0] (SummonList_ADF_4) || RETURN",
-                              "displayLines": "SummonList_ADF_4",
-                              "constants": [],
-                              "variables": [
-                                "SummonList_ADF_4"
-                              ]
+                              "displayLines": "SummonList_ADF_4"
                             },
                             "target": {
                               "name": "Target Name",
@@ -3009,12 +2684,7 @@ const compositeAbilityObject = {
                           {
                             "name": "Enemy ID",
                             "ID": {
-                              "operator": "Variables[0] (SummonList_ADF_5) || RETURN",
-                              "displayLines": "SummonList_ADF_5",
-                              "constants": [],
-                              "variables": [
-                                "SummonList_ADF_5"
-                              ]
+                              "displayLines": "SummonList_ADF_5"
                             },
                             "target": {
                               "name": "Target Name",
@@ -3025,12 +2695,7 @@ const compositeAbilityObject = {
                           {
                             "name": "Enemy ID",
                             "ID": {
-                              "operator": "Variables[0] (SummonList_ADF_6) || RETURN",
-                              "displayLines": "SummonList_ADF_6",
-                              "constants": [],
-                              "variables": [
-                                "SummonList_ADF_6"
-                              ]
+                              "displayLines": "SummonList_ADF_6"
                             },
                             "target": {
                               "name": "Target Name",
@@ -3056,12 +2721,7 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Enemy ID",
                         "ID": {
-                          "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                          "displayLines": "SummonList_ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "SummonList_ADF_1"
-                          ]
+                          "displayLines": "SummonList_ADF_1"
                         },
                         "target": {
                           "name": "Target Name",
@@ -3106,12 +2766,7 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Enemy ID",
                         "ID": {
-                          "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-                          "displayLines": "SummonList_ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "SummonList_ADF_2"
-                          ]
+                          "displayLines": "SummonList_ADF_2"
                         },
                         "target": {
                           "name": "Target Name",
@@ -3156,12 +2811,7 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Enemy ID",
                         "ID": {
-                          "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
-                          "displayLines": "SummonList_ADF_3",
-                          "constants": [],
-                          "variables": [
-                            "SummonList_ADF_3"
-                          ]
+                          "displayLines": "SummonList_ADF_3"
                         },
                         "target": {
                           "name": "Target Name",
@@ -3220,12 +2870,7 @@ const compositeAbilityObject = {
                               {
                                 "name": "Enemy ID",
                                 "ID": {
-                                  "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                                  "displayLines": "SummonList_ADF_1",
-                                  "constants": [],
-                                  "variables": [
-                                    "SummonList_ADF_1"
-                                  ]
+                                  "displayLines": "SummonList_ADF_1"
                                 },
                                 "target": {
                                   "name": "Target Name",
@@ -3236,12 +2881,7 @@ const compositeAbilityObject = {
                               {
                                 "name": "Enemy ID",
                                 "ID": {
-                                  "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-                                  "displayLines": "SummonList_ADF_2",
-                                  "constants": [],
-                                  "variables": [
-                                    "SummonList_ADF_2"
-                                  ]
+                                  "displayLines": "SummonList_ADF_2"
                                 },
                                 "target": {
                                   "name": "Target Name",
@@ -3252,12 +2892,7 @@ const compositeAbilityObject = {
                               {
                                 "name": "Enemy ID",
                                 "ID": {
-                                  "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
-                                  "displayLines": "SummonList_ADF_3",
-                                  "constants": [],
-                                  "variables": [
-                                    "SummonList_ADF_3"
-                                  ]
+                                  "displayLines": "SummonList_ADF_3"
                                 },
                                 "target": {
                                   "name": "Target Name",
@@ -3277,20 +2912,10 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"1959486176\">Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_EX04</a>",
                               "valuePerStack": {
                                 "AbilityEX04_P1_DamageReduceRatio": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_9877) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_9877",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_9877"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_9877"
                                 },
                                 "AbilityEX04_P2_AllDamageTypeAddedRatio": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_9883) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_9883",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_9883"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_9883"
                                 }
                               }
                             }
@@ -3325,12 +2950,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-809289172\">Enemy_W2_Xuanlu_IF_Bonus_SpecialMark</a>",
                       "valuePerStack": {
                         "AbilityP04_P1_Bonus_DamageAddedRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_9904) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_9904",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_9904"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_9904"
                         }
                       }
                     }
@@ -3393,12 +3013,7 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"374159355\">Enemy_W2_Xuanlu_IF_TurnOwnerDelay</a>",
                               "valuePerStack": {
                                 "MDF_BossBreakCurrentDelay": {
-                                  "operator": "Variables[0] (MDF_BossBreakCurrentDelay) || RETURN",
-                                  "displayLines": "MDF_BossBreakCurrentDelay",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_BossBreakCurrentDelay"
-                                  ]
+                                  "displayLines": "MDF_BossBreakCurrentDelay"
                                 }
                               }
                             }
@@ -3412,14 +3027,7 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "set": {
-                            "operator": "Variables[0] (MDF_BossBreakCurrentDelay) || Constants[0] (0.01) || ADD || RETURN",
-                            "displayLines": "(MDF_BossBreakCurrentDelay + 0.01)",
-                            "constants": [
-                              0.01
-                            ],
-                            "variables": [
-                              "MDF_BossBreakCurrentDelay"
-                            ]
+                            "displayLines": "(MDF_BossBreakCurrentDelay + 0.01)"
                           }
                         }
                       ]
@@ -3564,12 +3172,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageTypeTakenRatio) || RETURN",
-                    "displayLines": "MDF_AllDamageTypeTakenRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageTypeTakenRatio"
-                    ]
+                    "displayLines": "MDF_AllDamageTypeTakenRatio"
                   }
                 }
               ]
@@ -3804,12 +3407,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                    "displayLines": "MDF_AllDamageReduce",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageReduce"
-                    ]
+                    "displayLines": "MDF_AllDamageReduce"
                   }
                 }
               ]
@@ -3850,12 +3448,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"924404347\">Enemy_W2_Xuanlu_IF_MinionsSuperArmor</a>[<span class=\"descriptionNumberColor\">Synchronized DMG Reduction</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageReduce": {
-                          "operator": "Variables[0] (MDF_MinionsSuperArmor_AllDamageReduce) || RETURN",
-                          "displayLines": "MDF_MinionsSuperArmor_AllDamageReduce",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MinionsSuperArmor_AllDamageReduce"
-                          ]
+                          "displayLines": "MDF_MinionsSuperArmor_AllDamageReduce"
                         }
                       }
                     }
@@ -3881,12 +3474,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1785429522\">Enemy_W2_Xuanlu_IF_MinionsSuperArmorBreak</a>[<span class=\"descriptionNumberColor\">Synchronized Vulnerability</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageTypeTakenRatio": {
-                          "operator": "Variables[0] (MDF_MinionsSuperArmor_AllDamageTypeTakenRatio) || RETURN",
-                          "displayLines": "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio"
-                          ]
+                          "displayLines": "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio"
                         }
                       }
                     }
@@ -3921,12 +3509,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"924404347\">Enemy_W2_Xuanlu_IF_MinionsSuperArmor</a>[<span class=\"descriptionNumberColor\">Synchronized DMG Reduction</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageReduce": {
-                      "operator": "Variables[0] (MDF_MinionsSuperArmor_AllDamageReduce) || RETURN",
-                      "displayLines": "MDF_MinionsSuperArmor_AllDamageReduce",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MinionsSuperArmor_AllDamageReduce"
-                      ]
+                      "displayLines": "MDF_MinionsSuperArmor_AllDamageReduce"
                     }
                   }
                 },
@@ -3970,12 +3553,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1785429522\">Enemy_W2_Xuanlu_IF_MinionsSuperArmorBreak</a>[<span class=\"descriptionNumberColor\">Synchronized Vulnerability</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageTypeTakenRatio": {
-                          "operator": "Variables[0] (MDF_MinionsSuperArmor_AllDamageTypeTakenRatio) || RETURN",
-                          "displayLines": "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio"
-                          ]
+                          "displayLines": "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio"
                         }
                       }
                     }
@@ -4032,12 +3610,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"924404347\">Enemy_W2_Xuanlu_IF_MinionsSuperArmor</a>[<span class=\"descriptionNumberColor\">Synchronized DMG Reduction</span>]",
                           "valuePerStack": {
                             "MDF_AllDamageReduce": {
-                              "operator": "Variables[0] (MDF_MinionsSuperArmor_AllDamageReduce) || RETURN",
-                              "displayLines": "MDF_MinionsSuperArmor_AllDamageReduce",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MinionsSuperArmor_AllDamageReduce"
-                              ]
+                              "displayLines": "MDF_MinionsSuperArmor_AllDamageReduce"
                             }
                           }
                         }
@@ -4133,12 +3706,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DefenceAddedRatio) || RETURN",
-                    "displayLines": "MDF_DefenceAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DefenceAddedRatio"
-                    ]
+                    "displayLines": "MDF_DefenceAddedRatio"
                   }
                 }
               ]
@@ -4253,12 +3821,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                       "duration": {
-                        "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                        "displayLines": "{[Skill05[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill05[1]]}"
-                        ]
+                        "displayLines": "{[Skill05[1]]}"
                       },
                       "valuePerStack": {
                         "MDF_DirtyHPRatio": 0.1
@@ -4305,12 +3868,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "MDF_MaxDirtyHPRatio",
                   "resetValue": {
-                    "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                    "displayLines": "{[SkillP01[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillP01[0]]}"
-                    ]
+                    "displayLines": "{[SkillP01[0]]}"
                   }
                 }
               ]
@@ -4335,20 +3893,10 @@ const compositeAbilityObject = {
                   },
                   "variableName": "MDF_CurrentDirtyHPRatio",
                   "value": {
-                    "operator": "Variables[0] (MDF_DirtyHPAddedRatio) || RETURN",
-                    "displayLines": "MDF_DirtyHPAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DirtyHPAddedRatio"
-                    ]
+                    "displayLines": "MDF_DirtyHPAddedRatio"
                   },
                   "max": {
-                    "operator": "Variables[0] (MDF_MaxDirtyHPRatio) || RETURN",
-                    "displayLines": "MDF_MaxDirtyHPRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxDirtyHPRatio"
-                    ]
+                    "displayLines": "MDF_MaxDirtyHPRatio"
                   }
                 },
                 {
@@ -4390,21 +3938,11 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                           "duration": {
-                            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                            "displayLines": "{[Skill05[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[1]]}"
-                            ]
+                            "displayLines": "{[Skill05[1]]}"
                           },
                           "valuePerStack": {
                             "MDF_DirtyHPRatio": {
-                              "operator": "Variables[0] (MDF_CurrentDirtyHPRatio) || RETURN",
-                              "displayLines": "MDF_CurrentDirtyHPRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_CurrentDirtyHPRatio"
-                              ]
+                              "displayLines": "MDF_CurrentDirtyHPRatio"
                             }
                           }
                         }
@@ -4426,21 +3964,11 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                           "duration": {
-                            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                            "displayLines": "{[Skill05[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[1]]}"
-                            ]
+                            "displayLines": "{[Skill05[1]]}"
                           },
                           "valuePerStack": {
                             "MDF_DirtyHPRatio": {
-                              "operator": "Variables[0] (MDF_CurrentDirtyHPRatio) || RETURN",
-                              "displayLines": "MDF_CurrentDirtyHPRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_CurrentDirtyHPRatio"
-                              ]
+                              "displayLines": "MDF_CurrentDirtyHPRatio"
                             }
                           }
                         }
@@ -4456,29 +3984,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                       "duration": {
-                        "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                        "displayLines": "{[Skill05[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill05[1]]}"
-                        ]
+                        "displayLines": "{[Skill05[1]]}"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-                        "displayLines": "{[Skill05[2]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill05[2]]}"
-                        ]
+                        "displayLines": "{[Skill05[2]]}"
                       },
                       "valuePerStack": {
                         "MDF_DirtyHPRatio": {
-                          "operator": "Variables[0] (MDF_CurrentDirtyHPRatio) || RETURN",
-                          "displayLines": "MDF_CurrentDirtyHPRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentDirtyHPRatio"
-                          ]
+                          "displayLines": "MDF_CurrentDirtyHPRatio"
                         }
                       }
                     }
@@ -4579,21 +4092,10 @@ const compositeAbilityObject = {
                       },
                       "variableName": "MDF_CurrentDirtyHPRatio",
                       "value": {
-                        "operator": "Variables[0] (MDF_HPRatioAfterAttacked) || Variables[1] (MDF_HPRatioBeforeAttacked) || SUB || RETURN",
-                        "displayLines": "(MDF_HPRatioAfterAttacked - MDF_HPRatioBeforeAttacked)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_HPRatioAfterAttacked",
-                          "MDF_HPRatioBeforeAttacked"
-                        ]
+                        "displayLines": "(MDF_HPRatioAfterAttacked - MDF_HPRatioBeforeAttacked)"
                       },
                       "max": {
-                        "operator": "Variables[0] (MDF_MaxDirtyHPRatio) || RETURN",
-                        "displayLines": "MDF_MaxDirtyHPRatio",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxDirtyHPRatio"
-                        ]
+                        "displayLines": "MDF_MaxDirtyHPRatio"
                       }
                     },
                     {
@@ -4623,21 +4125,11 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                           "duration": {
-                            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                            "displayLines": "{[Skill05[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[1]]}"
-                            ]
+                            "displayLines": "{[Skill05[1]]}"
                           },
                           "valuePerStack": {
                             "MDF_DirtyHPRatio": {
-                              "operator": "Variables[0] (MDF_CurrentDirtyHPRatio) || RETURN",
-                              "displayLines": "MDF_CurrentDirtyHPRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_CurrentDirtyHPRatio"
-                              ]
+                              "displayLines": "MDF_CurrentDirtyHPRatio"
                             }
                           }
                         },
@@ -4854,12 +4346,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1559685116\">Monster_XP_Elite02_02_IF_DirtyHPListener</a>",
           "valuePerStack": {
             "MDF_DirtyHPAddedRatio": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "{[Skill05[0]]}"
             }
           }
         },
@@ -4938,12 +4425,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -4959,29 +4441,14 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-            "displayLines": "{[Skill03[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[2]]}"
-            ]
+            "displayLines": "{[Skill03[2]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-            "displayLines": "{[Skill03[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[1]]}"
-            ]
+            "displayLines": "{[Skill03[1]]}"
           },
           "valuePerStack": {
             "Modifier_Poison_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill03[3]]}) || RETURN",
-              "displayLines": "{[Skill03[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[3]]}"
-              ]
+              "displayLines": "{[Skill03[3]]}"
             }
           },
           "stackFlag": "CharacterSkill"
@@ -5089,12 +4556,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -5110,29 +4572,14 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-            "displayLines": "{[Skill02[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[2]]}"
-            ]
+            "displayLines": "{[Skill02[2]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-            "displayLines": "{[Skill02[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[1]]}"
-            ]
+            "displayLines": "{[Skill02[1]]}"
           },
           "valuePerStack": {
             "Modifier_Poison_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-              "displayLines": "{[Skill02[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[3]]}"
-              ]
+              "displayLines": "{[Skill02[3]]}"
             }
           },
           "stackFlag": "CharacterSkill"
@@ -5188,12 +4635,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -5209,29 +4651,14 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-            "displayLines": "{[Skill02[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[2]]}"
-            ]
+            "displayLines": "{[Skill02[2]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-            "displayLines": "{[Skill02[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[1]]}"
-            ]
+            "displayLines": "{[Skill02[1]]}"
           },
           "valuePerStack": {
             "Modifier_Poison_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-              "displayLines": "{[Skill02[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[3]]}"
-              ]
+              "displayLines": "{[Skill02[3]]}"
             }
           },
           "stackFlag": "CharacterSkill"
@@ -5339,12 +4766,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -5360,29 +4782,14 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                "displayLines": "{[Skill01[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[2]]}"
-                ]
+                "displayLines": "{[Skill01[2]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                "displayLines": "{[Skill01[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[1]]}"
-                ]
+                "displayLines": "{[Skill01[1]]}"
               },
               "valuePerStack": {
                 "Modifier_Poison_DamagePercentage": {
-                  "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                  "displayLines": "{[Skill01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[3]]}"
-                  ]
+                  "displayLines": "{[Skill01[3]]}"
                 }
               },
               "stackFlag": "CharacterSkill"
@@ -5456,12 +4863,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                      "displayLines": "{[Skill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[0]]}"
-                      ]
+                      "displayLines": "{[Skill01[0]]}"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -5477,29 +4879,14 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                    "displayLines": "{[Skill01[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill01[2]]}"
-                    ]
+                    "displayLines": "{[Skill01[2]]}"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                    "displayLines": "{[Skill01[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill01[1]]}"
-                    ]
+                    "displayLines": "{[Skill01[1]]}"
                   },
                   "valuePerStack": {
                     "Modifier_Poison_DamagePercentage": {
-                      "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                      "displayLines": "{[Skill01[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[3]]}"
-                      ]
+                      "displayLines": "{[Skill01[3]]}"
                     }
                   },
                   "stackFlag": "CharacterSkill"
@@ -5568,12 +4955,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                      "displayLines": "{[Skill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[0]]}"
-                      ]
+                      "displayLines": "{[Skill01[0]]}"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -5589,29 +4971,14 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                    "displayLines": "{[Skill01[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill01[2]]}"
-                    ]
+                    "displayLines": "{[Skill01[2]]}"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                    "displayLines": "{[Skill01[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill01[1]]}"
-                    ]
+                    "displayLines": "{[Skill01[1]]}"
                   },
                   "valuePerStack": {
                     "Modifier_Poison_DamagePercentage": {
-                      "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                      "displayLines": "{[Skill01[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[3]]}"
-                      ]
+                      "displayLines": "{[Skill01[3]]}"
                     }
                   },
                   "stackFlag": "CharacterSkill"

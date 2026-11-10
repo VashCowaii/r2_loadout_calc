@@ -35,12 +35,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.08) || RETURN",
-                "displayLines": "0.08",
-                "constants": [],
-                "variables": [
-                  0.08
-                ]
+                "displayLines": "0.08"
               }
             }
           ]
@@ -89,12 +84,7 @@ const configAbility = {
                         "target": "{{Parameter Target}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (0.3) || RETURN",
-                        "displayLines": "0.3",
-                        "constants": [],
-                        "variables": [
-                          0.3
-                        ]
+                        "displayLines": "0.3"
                       },
                       "formula": "Heal from Target's MissingHP"
                     }
@@ -108,12 +98,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-531007870\">LC_21023_Sub</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
                   "duration": {
-                    "operator": "Variables[0] (5) || RETURN",
-                    "displayLines": "5",
-                    "constants": [],
-                    "variables": [
-                      5
-                    ]
+                    "displayLines": "5"
                   }
                 }
               ]

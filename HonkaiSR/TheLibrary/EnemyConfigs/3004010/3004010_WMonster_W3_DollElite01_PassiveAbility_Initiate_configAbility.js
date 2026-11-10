@@ -54,44 +54,19 @@ const configAbility = {
       "abilityName": "Monster_W3_DollElite_Standard_Ability01_Insert_EnterCombat",
       "parameters": {
         "P1_BreakDelayRatio": {
-          "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-          "displayLines": "{[Skill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[0]]}"
-          ]
+          "displayLines": "{[Skill01[0]]}"
         },
         "P2_ChosenOneSpeedUp": {
-          "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-          "displayLines": "{[Skill01[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[1]]}"
-          ]
+          "displayLines": "{[Skill01[1]]}"
         },
         "P3_ExploreDamagePercentage": {
-          "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-          "displayLines": "{[Skill01[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[2]]}"
-          ]
+          "displayLines": "{[Skill01[2]]}"
         },
         "P4_ExploreDelayRatio": {
-          "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-          "displayLines": "{[Skill01[3]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[3]]}"
-          ]
+          "displayLines": "{[Skill01[3]]}"
         },
         "P5_ExploreDamageUpRatio": {
-          "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-          "displayLines": "{[Skill01[4]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[4]]}"
-          ]
+          "displayLines": "{[Skill01[4]]}"
         }
       }
     },
@@ -100,44 +75,19 @@ const configAbility = {
       "abilityName": "Monster_W3_DollElite_Standard_Ability02_Insert_Restart",
       "parameters": {
         "P1_BreakDelayRatio": {
-          "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-          "displayLines": "{[Skill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[0]]}"
-          ]
+          "displayLines": "{[Skill01[0]]}"
         },
         "P2_ChosenOneSpeedUp": {
-          "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-          "displayLines": "{[Skill01[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[1]]}"
-          ]
+          "displayLines": "{[Skill01[1]]}"
         },
         "P3_ExploreDamagePercentage": {
-          "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-          "displayLines": "{[Skill01[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[2]]}"
-          ]
+          "displayLines": "{[Skill01[2]]}"
         },
         "P4_ExploreDelayRatio": {
-          "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-          "displayLines": "{[Skill01[3]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[3]]}"
-          ]
+          "displayLines": "{[Skill01[3]]}"
         },
         "P5_ExploreDamageUpRatio": {
-          "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-          "displayLines": "{[Skill01[4]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[4]]}"
-          ]
+          "displayLines": "{[Skill01[4]]}"
         }
       }
     },
@@ -146,44 +96,19 @@ const configAbility = {
       "abilityName": "Monster_W3_DollElite_Standard_Ability03_Insert_Transform",
       "parameters": {
         "P1_BreakDelayRatio": {
-          "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-          "displayLines": "{[Skill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[0]]}"
-          ]
+          "displayLines": "{[Skill01[0]]}"
         },
         "P2_ChosenOneSpeedUp": {
-          "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-          "displayLines": "{[Skill01[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[1]]}"
-          ]
+          "displayLines": "{[Skill01[1]]}"
         },
         "P3_ExploreDamagePercentage": {
-          "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-          "displayLines": "{[Skill01[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[2]]}"
-          ]
+          "displayLines": "{[Skill01[2]]}"
         },
         "P4_ExploreDelayRatio": {
-          "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-          "displayLines": "{[Skill01[3]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[3]]}"
-          ]
+          "displayLines": "{[Skill01[3]]}"
         },
         "P5_ExploreDamageUpRatio": {
-          "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-          "displayLines": "{[Skill01[4]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[4]]}"
-          ]
+          "displayLines": "{[Skill01[4]]}"
         }
       }
     },
@@ -192,44 +117,19 @@ const configAbility = {
       "abilityName": "Monster_W3_DollElite_Standard_Ability04_Insert_Explode",
       "parameters": {
         "P1_BreakDelayRatio": {
-          "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-          "displayLines": "{[Skill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[0]]}"
-          ]
+          "displayLines": "{[Skill01[0]]}"
         },
         "P2_ChosenOneSpeedUp": {
-          "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-          "displayLines": "{[Skill01[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[1]]}"
-          ]
+          "displayLines": "{[Skill01[1]]}"
         },
         "P3_ExploreDamagePercentage": {
-          "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-          "displayLines": "{[Skill01[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[2]]}"
-          ]
+          "displayLines": "{[Skill01[2]]}"
         },
         "P4_ExploreDelayRatio": {
-          "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-          "displayLines": "{[Skill01[3]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[3]]}"
-          ]
+          "displayLines": "{[Skill01[3]]}"
         },
         "P5_ExploreDamageUpRatio": {
-          "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-          "displayLines": "{[Skill01[4]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[4]]}"
-          ]
+          "displayLines": "{[Skill01[4]]}"
         }
       }
     },
@@ -238,44 +138,19 @@ const configAbility = {
       "abilityName": "Monster_W3_DollElite_Standard_Ability02_Insert_RestartPhase2",
       "parameters": {
         "P1_BreakDelayRatio": {
-          "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-          "displayLines": "{[Skill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[0]]}"
-          ]
+          "displayLines": "{[Skill01[0]]}"
         },
         "P2_ChosenOneSpeedUp": {
-          "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-          "displayLines": "{[Skill01[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[1]]}"
-          ]
+          "displayLines": "{[Skill01[1]]}"
         },
         "P3_ExploreDamagePercentage": {
-          "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-          "displayLines": "{[Skill01[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[2]]}"
-          ]
+          "displayLines": "{[Skill01[2]]}"
         },
         "P4_ExploreDelayRatio": {
-          "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-          "displayLines": "{[Skill01[3]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[3]]}"
-          ]
+          "displayLines": "{[Skill01[3]]}"
         },
         "P5_ExploreDamageUpRatio": {
-          "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-          "displayLines": "{[Skill01[4]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[4]]}"
-          ]
+          "displayLines": "{[Skill01[4]]}"
         }
       }
     },

@@ -42,13 +42,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || Variables[1] (Train_TargetNumber) || DIV || RETURN",
-          "displayLines": "({[Skill03[0]]} / Train_TargetNumber)",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}",
-            "Train_TargetNumber"
-          ]
+          "displayLines": "({[Skill03[0]]} / Train_TargetNumber)"
         },
         "dmgFormula": "Max HP Scaling",
         "HitSplit": 0.15,
@@ -63,14 +57,7 @@ const configAbility = {
     {
       "name": "Deal Toughness DMG",
       "value": {
-        "operator": "Variables[0] ({[Skill03[1]]}) || Constants[0] (0.15) || MUL || RETURN",
-        "displayLines": "({[Skill03[1]]} * 0.15)",
-        "constants": [
-          0.15
-        ],
-        "variables": [
-          "{[Skill03[1]]}"
-        ]
+        "displayLines": "({[Skill03[1]]} * 0.15)"
       },
       "defender": {
         "name": "Target Sequence",
@@ -98,14 +85,7 @@ const configAbility = {
     {
       "name": "Deal Toughness DMG",
       "value": {
-        "operator": "Variables[0] ({[Skill03[2]]}) || Constants[0] (0.15) || MUL || RETURN",
-        "displayLines": "({[Skill03[2]]} * 0.15)",
-        "constants": [
-          0.15
-        ],
-        "variables": [
-          "{[Skill03[2]]}"
-        ]
+        "displayLines": "({[Skill03[2]]} * 0.15)"
       },
       "defender": {
         "name": "Target Sequence",
@@ -140,13 +120,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || Variables[1] (Train_TargetNumber) || DIV || RETURN",
-          "displayLines": "({[Skill03[0]]} / Train_TargetNumber)",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}",
-            "Train_TargetNumber"
-          ]
+          "displayLines": "({[Skill03[0]]} / Train_TargetNumber)"
         },
         "dmgFormula": "Max HP Scaling",
         "HitSplit": 0.15,
@@ -161,14 +135,7 @@ const configAbility = {
     {
       "name": "Deal Toughness DMG",
       "value": {
-        "operator": "Variables[0] ({[Skill03[1]]}) || Constants[0] (0.15) || MUL || RETURN",
-        "displayLines": "({[Skill03[1]]} * 0.15)",
-        "constants": [
-          0.15
-        ],
-        "variables": [
-          "{[Skill03[1]]}"
-        ]
+        "displayLines": "({[Skill03[1]]} * 0.15)"
       },
       "defender": {
         "name": "Target Sequence",
@@ -196,14 +163,7 @@ const configAbility = {
     {
       "name": "Deal Toughness DMG",
       "value": {
-        "operator": "Variables[0] ({[Skill03[2]]}) || Constants[0] (0.15) || MUL || RETURN",
-        "displayLines": "({[Skill03[2]]} * 0.15)",
-        "constants": [
-          0.15
-        ],
-        "variables": [
-          "{[Skill03[2]]}"
-        ]
+        "displayLines": "({[Skill03[2]]} * 0.15)"
       },
       "defender": {
         "name": "Target Sequence",
@@ -238,13 +198,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || Variables[1] (Train_TargetNumber) || DIV || RETURN",
-          "displayLines": "({[Skill03[0]]} / Train_TargetNumber)",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}",
-            "Train_TargetNumber"
-          ]
+          "displayLines": "({[Skill03[0]]} / Train_TargetNumber)"
         },
         "dmgFormula": "Max HP Scaling",
         "HitSplit": 0.15,
@@ -259,14 +213,7 @@ const configAbility = {
     {
       "name": "Deal Toughness DMG",
       "value": {
-        "operator": "Variables[0] ({[Skill03[1]]}) || Constants[0] (0.15) || MUL || RETURN",
-        "displayLines": "({[Skill03[1]]} * 0.15)",
-        "constants": [
-          0.15
-        ],
-        "variables": [
-          "{[Skill03[1]]}"
-        ]
+        "displayLines": "({[Skill03[1]]} * 0.15)"
       },
       "defender": {
         "name": "Target Sequence",
@@ -294,14 +241,7 @@ const configAbility = {
     {
       "name": "Deal Toughness DMG",
       "value": {
-        "operator": "Variables[0] ({[Skill03[2]]}) || Constants[0] (0.15) || MUL || RETURN",
-        "displayLines": "({[Skill03[2]]} * 0.15)",
-        "constants": [
-          0.15
-        ],
-        "variables": [
-          "{[Skill03[2]]}"
-        ]
+        "displayLines": "({[Skill03[2]]} * 0.15)"
       },
       "defender": {
         "name": "Target Sequence",
@@ -336,13 +276,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || Variables[1] (Train_TargetNumber) || DIV || RETURN",
-          "displayLines": "({[Skill03[0]]} / Train_TargetNumber)",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}",
-            "Train_TargetNumber"
-          ]
+          "displayLines": "({[Skill03[0]]} / Train_TargetNumber)"
         },
         "dmgFormula": "Max HP Scaling",
         "HitSplit": 0.15,
@@ -357,14 +291,7 @@ const configAbility = {
     {
       "name": "Deal Toughness DMG",
       "value": {
-        "operator": "Variables[0] ({[Skill03[1]]}) || Constants[0] (0.15) || MUL || RETURN",
-        "displayLines": "({[Skill03[1]]} * 0.15)",
-        "constants": [
-          0.15
-        ],
-        "variables": [
-          "{[Skill03[1]]}"
-        ]
+        "displayLines": "({[Skill03[1]]} * 0.15)"
       },
       "defender": {
         "name": "Target Sequence",
@@ -392,14 +319,7 @@ const configAbility = {
     {
       "name": "Deal Toughness DMG",
       "value": {
-        "operator": "Variables[0] ({[Skill03[2]]}) || Constants[0] (0.15) || MUL || RETURN",
-        "displayLines": "({[Skill03[2]]} * 0.15)",
-        "constants": [
-          0.15
-        ],
-        "variables": [
-          "{[Skill03[2]]}"
-        ]
+        "displayLines": "({[Skill03[2]]} * 0.15)"
       },
       "defender": {
         "name": "Target Sequence",
@@ -434,13 +354,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || Variables[1] (Train_TargetNumber) || DIV || RETURN",
-          "displayLines": "({[Skill03[0]]} / Train_TargetNumber)",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}",
-            "Train_TargetNumber"
-          ]
+          "displayLines": "({[Skill03[0]]} / Train_TargetNumber)"
         },
         "dmgFormula": "Max HP Scaling",
         "HitSplit": 0.15,
@@ -455,14 +369,7 @@ const configAbility = {
     {
       "name": "Deal Toughness DMG",
       "value": {
-        "operator": "Variables[0] ({[Skill03[1]]}) || Constants[0] (0.15) || MUL || RETURN",
-        "displayLines": "({[Skill03[1]]} * 0.15)",
-        "constants": [
-          0.15
-        ],
-        "variables": [
-          "{[Skill03[1]]}"
-        ]
+        "displayLines": "({[Skill03[1]]} * 0.15)"
       },
       "defender": {
         "name": "Target Sequence",
@@ -490,14 +397,7 @@ const configAbility = {
     {
       "name": "Deal Toughness DMG",
       "value": {
-        "operator": "Variables[0] ({[Skill03[2]]}) || Constants[0] (0.15) || MUL || RETURN",
-        "displayLines": "({[Skill03[2]]} * 0.15)",
-        "constants": [
-          0.15
-        ],
-        "variables": [
-          "{[Skill03[2]]}"
-        ]
+        "displayLines": "({[Skill03[2]]} * 0.15)"
       },
       "defender": {
         "name": "Target Sequence",
@@ -532,13 +432,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || Variables[1] (Train_TargetNumber) || DIV || RETURN",
-          "displayLines": "({[Skill03[0]]} / Train_TargetNumber)",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}",
-            "Train_TargetNumber"
-          ]
+          "displayLines": "({[Skill03[0]]} / Train_TargetNumber)"
         },
         "dmgFormula": "Max HP Scaling",
         "HitSplit": 0.25,
@@ -553,14 +447,7 @@ const configAbility = {
     {
       "name": "Deal Toughness DMG",
       "value": {
-        "operator": "Variables[0] ({[Skill03[1]]}) || Constants[0] (0.25) || MUL || RETURN",
-        "displayLines": "({[Skill03[1]]} * 0.25)",
-        "constants": [
-          0.25
-        ],
-        "variables": [
-          "{[Skill03[1]]}"
-        ]
+        "displayLines": "({[Skill03[1]]} * 0.25)"
       },
       "defender": {
         "name": "Target Sequence",
@@ -588,14 +475,7 @@ const configAbility = {
     {
       "name": "Deal Toughness DMG",
       "value": {
-        "operator": "Variables[0] ({[Skill03[2]]}) || Constants[0] (0.25) || MUL || RETURN",
-        "displayLines": "({[Skill03[2]]} * 0.25)",
-        "constants": [
-          0.25
-        ],
-        "variables": [
-          "{[Skill03[2]]}"
-        ]
+        "displayLines": "({[Skill03[2]]} * 0.25)"
       },
       "defender": {
         "name": "Target Sequence",

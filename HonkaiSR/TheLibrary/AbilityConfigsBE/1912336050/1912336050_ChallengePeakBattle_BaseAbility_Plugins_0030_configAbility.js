@@ -34,12 +34,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ChallengePeakBattle_Plugins_0030_ADF_1) || RETURN",
-                "displayLines": "ChallengePeakBattle_Plugins_0030_ADF_1",
-                "constants": [],
-                "variables": [
-                  "ChallengePeakBattle_Plugins_0030_ADF_1"
-                ]
+                "displayLines": "ChallengePeakBattle_Plugins_0030_ADF_1"
               }
             }
           ]
@@ -164,12 +159,7 @@ const configAbility = {
                 "value1": "TeamCharacterCount",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Variables[0] (ServantNumLast) || RETURN",
-                  "displayLines": "ServantNumLast",
-                  "constants": [],
-                  "variables": [
-                    "ServantNumLast"
-                  ]
+                  "displayLines": "ServantNumLast"
                 },
                 "conditions": {
                   "name": "Is Entity Type",
@@ -224,12 +214,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-785489005\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0030_02</a>[<span class=\"descriptionNumberColor\">Memoria Swarm</span>]",
                       "valuePerStack": {
                         "ChallengePeakBattle_Plugins_0030_ADF_1": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -253,12 +238,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"-785489005\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0030_02</a>[<span class=\"descriptionNumberColor\">Memoria Swarm</span>]",
                           "valuePerStack": {
                             "ChallengePeakBattle_Plugins_0030_ADF_1": {
-                              "operator": "Variables[0] (#ADF_2) || RETURN",
-                              "displayLines": "#ADF_2",
-                              "constants": [],
-                              "variables": [
-                                "#ADF_2"
-                              ]
+                              "displayLines": "#ADF_2"
                             }
                           }
                         }
@@ -282,12 +262,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-785489005\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0030_02</a>[<span class=\"descriptionNumberColor\">Memoria Swarm</span>]",
                               "valuePerStack": {
                                 "ChallengePeakBattle_Plugins_0030_ADF_1": {
-                                  "operator": "Variables[0] (#ADF_3) || RETURN",
-                                  "displayLines": "#ADF_3",
-                                  "constants": [],
-                                  "variables": [
-                                    "#ADF_3"
-                                  ]
+                                  "displayLines": "#ADF_3"
                                 }
                               }
                             }
@@ -311,12 +286,7 @@ const configAbility = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-785489005\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0030_02</a>[<span class=\"descriptionNumberColor\">Memoria Swarm</span>]",
                                   "valuePerStack": {
                                     "ChallengePeakBattle_Plugins_0030_ADF_1": {
-                                      "operator": "Variables[0] (#ADF_4) || RETURN",
-                                      "displayLines": "#ADF_4",
-                                      "constants": [],
-                                      "variables": [
-                                        "#ADF_4"
-                                      ]
+                                      "displayLines": "#ADF_4"
                                     }
                                   }
                                 }
@@ -331,12 +301,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (ServantNumCurrent) || RETURN",
-                    "displayLines": "ServantNumCurrent",
-                    "constants": [],
-                    "variables": [
-                      "ServantNumCurrent"
-                    ]
+                    "displayLines": "ServantNumCurrent"
                   },
                   "variableName": "ServantNumLast"
                 }

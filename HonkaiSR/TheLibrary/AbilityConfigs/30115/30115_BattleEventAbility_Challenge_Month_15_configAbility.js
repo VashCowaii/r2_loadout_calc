@@ -161,28 +161,13 @@ const configAbility = {
               "showInActionOrder": true,
               "valuePerStack": {
                 "_LifeTime": {
-                  "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                  "displayLines": "#BattleEvent_P3_ADF",
-                  "constants": [],
-                  "variables": [
-                    "#BattleEvent_P3_ADF"
-                  ]
+                  "displayLines": "#BattleEvent_P3_ADF"
                 },
                 "_MaxLayer": {
-                  "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
-                  "displayLines": "#BattleEvent_P4_ADF",
-                  "constants": [],
-                  "variables": [
-                    "#BattleEvent_P4_ADF"
-                  ]
+                  "displayLines": "#BattleEvent_P4_ADF"
                 },
                 "_DamageTakenRatio": {
-                  "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                  "displayLines": "#BattleEvent_P2_ADF",
-                  "constants": [],
-                  "variables": [
-                    "#BattleEvent_P2_ADF"
-                  ]
+                  "displayLines": "#BattleEvent_P2_ADF"
                 }
               },
               "allowAbilityTriggers": false
@@ -228,12 +213,7 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (800205000) || RETURN",
-                        "displayLines": "800205000",
-                        "constants": [
-                          800205000
-                        ],
-                        "variables": []
+                        "displayLines": "800205000"
                       },
                       "locationType": "LastDie"
                     }
@@ -291,12 +271,7 @@ const configAbility = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Constants[0] (800205000) || RETURN",
-                    "displayLines": "800205000",
-                    "constants": [
-                      800205000
-                    ],
-                    "variables": []
+                    "displayLines": "800205000"
                   },
                   "locationType": "Last"
                 }

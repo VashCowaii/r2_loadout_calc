@@ -39,24 +39,14 @@ const configAbility = {
                 "value1": "_DebuffCount",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                  "displayLines": "MDF_MaxCount",
-                  "constants": [],
-                  "variables": [
-                    "MDF_MaxCount"
-                  ]
+                  "displayLines": "MDF_MaxCount"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                    "displayLines": "MDF_MaxCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxCount"
-                    ]
+                    "displayLines": "MDF_MaxCount"
                   },
                   "variableName": "_DebuffCount"
                 }
@@ -92,20 +82,10 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"448296367\">LC_21001_DamageUp_Debuff</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.12) || RETURN",
-                  "displayLines": "0.12",
-                  "constants": [],
-                  "variables": [
-                    0.12
-                  ]
+                  "displayLines": "0.12"
                 },
                 "MDF_MaxCount": {
-                  "operator": "Variables[0] (3) || RETURN",
-                  "displayLines": "3",
-                  "constants": [],
-                  "variables": [
-                    3
-                  ]
+                  "displayLines": "3"
                 }
               }
             }

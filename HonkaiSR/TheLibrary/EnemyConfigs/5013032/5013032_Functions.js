@@ -16,12 +16,7 @@ const configAbility = {
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-            "displayLines": "CurrentColorSlotIndex",
-            "constants": [],
-            "variables": [
-              "CurrentColorSlotIndex"
-            ]
+            "displayLines": "CurrentColorSlotIndex"
           },
           "caseEvents": [
             {
@@ -31,12 +26,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
-                    "displayLines": "TaskListDF_ColorValue",
-                    "constants": [],
-                    "variables": [
-                      "TaskListDF_ColorValue"
-                    ]
+                    "displayLines": "TaskListDF_ColorValue"
                   },
                   "variableName": "ColorSlot1"
                 },
@@ -46,12 +36,7 @@ const configAbility = {
                   "variables": {
                     "TaskListDF_ColorScoreValue": 1.16,
                     "TaskListDF_ColorValue": {
-                      "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
-                      "displayLines": "TaskListDF_ColorValue",
-                      "constants": [],
-                      "variables": [
-                        "TaskListDF_ColorValue"
-                      ]
+                      "displayLines": "TaskListDF_ColorValue"
                     }
                   }
                 },
@@ -69,12 +54,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
-                    "displayLines": "TaskListDF_ColorValue",
-                    "constants": [],
-                    "variables": [
-                      "TaskListDF_ColorValue"
-                    ]
+                    "displayLines": "TaskListDF_ColorValue"
                   },
                   "variableName": "ColorSlot2"
                 },
@@ -84,12 +64,7 @@ const configAbility = {
                   "variables": {
                     "TaskListDF_ColorScoreValue": 1.08,
                     "TaskListDF_ColorValue": {
-                      "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
-                      "displayLines": "TaskListDF_ColorValue",
-                      "constants": [],
-                      "variables": [
-                        "TaskListDF_ColorValue"
-                      ]
+                      "displayLines": "TaskListDF_ColorValue"
                     }
                   }
                 },
@@ -107,12 +82,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
-                    "displayLines": "TaskListDF_ColorValue",
-                    "constants": [],
-                    "variables": [
-                      "TaskListDF_ColorValue"
-                    ]
+                    "displayLines": "TaskListDF_ColorValue"
                   },
                   "variableName": "ColorSlot3"
                 },
@@ -122,12 +92,7 @@ const configAbility = {
                   "variables": {
                     "TaskListDF_ColorScoreValue": 1.04,
                     "TaskListDF_ColorValue": {
-                      "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
-                      "displayLines": "TaskListDF_ColorValue",
-                      "constants": [],
-                      "variables": [
-                        "TaskListDF_ColorValue"
-                      ]
+                      "displayLines": "TaskListDF_ColorValue"
                     }
                   }
                 },
@@ -145,12 +110,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
-                    "displayLines": "TaskListDF_ColorValue",
-                    "constants": [],
-                    "variables": [
-                      "TaskListDF_ColorValue"
-                    ]
+                    "displayLines": "TaskListDF_ColorValue"
                   },
                   "variableName": "ColorSlot4"
                 },
@@ -160,12 +120,7 @@ const configAbility = {
                   "variables": {
                     "TaskListDF_ColorScoreValue": 1.02,
                     "TaskListDF_ColorValue": {
-                      "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
-                      "displayLines": "TaskListDF_ColorValue",
-                      "constants": [],
-                      "variables": [
-                        "TaskListDF_ColorValue"
-                      ]
+                      "displayLines": "TaskListDF_ColorValue"
                     }
                   }
                 },
@@ -183,12 +138,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
-                    "displayLines": "TaskListDF_ColorValue",
-                    "constants": [],
-                    "variables": [
-                      "TaskListDF_ColorValue"
-                    ]
+                    "displayLines": "TaskListDF_ColorValue"
                   },
                   "variableName": "ColorSlot5"
                 },
@@ -198,12 +148,7 @@ const configAbility = {
                   "variables": {
                     "TaskListDF_ColorScoreValue": 1.01,
                     "TaskListDF_ColorValue": {
-                      "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
-                      "displayLines": "TaskListDF_ColorValue",
-                      "constants": [],
-                      "variables": [
-                        "TaskListDF_ColorValue"
-                      ]
+                      "displayLines": "TaskListDF_ColorValue"
                     }
                   }
                 },
@@ -221,12 +166,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
-                    "displayLines": "TaskListDF_ColorValue",
-                    "constants": [],
-                    "variables": [
-                      "TaskListDF_ColorValue"
-                    ]
+                    "displayLines": "TaskListDF_ColorValue"
                   },
                   "variableName": "ColorSlot6"
                 },
@@ -236,12 +176,7 @@ const configAbility = {
                   "variables": {
                     "TaskListDF_ColorScoreValue": 1,
                     "TaskListDF_ColorValue": {
-                      "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
-                      "displayLines": "TaskListDF_ColorValue",
-                      "constants": [],
-                      "variables": [
-                        "TaskListDF_ColorValue"
-                      ]
+                      "displayLines": "TaskListDF_ColorValue"
                     }
                   }
                 },
@@ -341,12 +276,7 @@ const configAbility = {
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
-            "displayLines": "TaskListDF_ColorValue",
-            "constants": [],
-            "variables": [
-              "TaskListDF_ColorValue"
-            ]
+            "displayLines": "TaskListDF_ColorValue"
           },
           "caseEvents": [
             {
@@ -362,12 +292,7 @@ const configAbility = {
                   "variableName": "FireScore",
                   "context": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (TaskListDF_ColorScoreValue) || RETURN",
-                    "displayLines": "TaskListDF_ColorScoreValue",
-                    "constants": [],
-                    "variables": [
-                      "TaskListDF_ColorScoreValue"
-                    ]
+                    "displayLines": "TaskListDF_ColorScoreValue"
                   },
                   "max": 100
                 }
@@ -386,12 +311,7 @@ const configAbility = {
                   "variableName": "IceScore",
                   "context": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (TaskListDF_ColorScoreValue) || RETURN",
-                    "displayLines": "TaskListDF_ColorScoreValue",
-                    "constants": [],
-                    "variables": [
-                      "TaskListDF_ColorScoreValue"
-                    ]
+                    "displayLines": "TaskListDF_ColorScoreValue"
                   },
                   "max": 100
                 }
@@ -410,12 +330,7 @@ const configAbility = {
                   "variableName": "ImaginaryScore",
                   "context": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (TaskListDF_ColorScoreValue) || RETURN",
-                    "displayLines": "TaskListDF_ColorScoreValue",
-                    "constants": [],
-                    "variables": [
-                      "TaskListDF_ColorScoreValue"
-                    ]
+                    "displayLines": "TaskListDF_ColorScoreValue"
                   },
                   "max": 100
                 }
@@ -434,12 +349,7 @@ const configAbility = {
                   "variableName": "PhysicalScore",
                   "context": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (TaskListDF_ColorScoreValue) || RETURN",
-                    "displayLines": "TaskListDF_ColorScoreValue",
-                    "constants": [],
-                    "variables": [
-                      "TaskListDF_ColorScoreValue"
-                    ]
+                    "displayLines": "TaskListDF_ColorScoreValue"
                   },
                   "max": 100
                 }
@@ -458,12 +368,7 @@ const configAbility = {
                   "variableName": "QuantumScore",
                   "context": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (TaskListDF_ColorScoreValue) || RETURN",
-                    "displayLines": "TaskListDF_ColorScoreValue",
-                    "constants": [],
-                    "variables": [
-                      "TaskListDF_ColorScoreValue"
-                    ]
+                    "displayLines": "TaskListDF_ColorScoreValue"
                   },
                   "max": 100
                 }
@@ -482,12 +387,7 @@ const configAbility = {
                   "variableName": "ThunderScore",
                   "context": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (TaskListDF_ColorScoreValue) || RETURN",
-                    "displayLines": "TaskListDF_ColorScoreValue",
-                    "constants": [],
-                    "variables": [
-                      "TaskListDF_ColorScoreValue"
-                    ]
+                    "displayLines": "TaskListDF_ColorScoreValue"
                   },
                   "max": 100
                 }
@@ -506,12 +406,7 @@ const configAbility = {
                   "variableName": "WindScore",
                   "context": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (TaskListDF_ColorScoreValue) || RETURN",
-                    "displayLines": "TaskListDF_ColorScoreValue",
-                    "constants": [],
-                    "variables": [
-                      "TaskListDF_ColorScoreValue"
-                    ]
+                    "displayLines": "TaskListDF_ColorScoreValue"
                   },
                   "max": 100
                 }
@@ -529,12 +424,7 @@ const configAbility = {
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (DynamicString_ColorSlotX) || RETURN",
-            "displayLines": "DynamicString_ColorSlotX",
-            "constants": [],
-            "variables": [
-              "DynamicString_ColorSlotX"
-            ]
+            "displayLines": "DynamicString_ColorSlotX"
           },
           "caseEvents": [
             {
@@ -544,12 +434,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (ColorSlot1) || RETURN",
-                    "displayLines": "ColorSlot1",
-                    "constants": [],
-                    "variables": [
-                      "ColorSlot1"
-                    ]
+                    "displayLines": "ColorSlot1"
                   },
                   "caseEvents": [
                     {
@@ -565,12 +450,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -593,12 +473,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -621,12 +496,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -649,12 +519,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -677,12 +542,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -705,12 +565,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -733,12 +588,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -765,12 +615,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (ColorSlot2) || RETURN",
-                    "displayLines": "ColorSlot2",
-                    "constants": [],
-                    "variables": [
-                      "ColorSlot2"
-                    ]
+                    "displayLines": "ColorSlot2"
                   },
                   "caseEvents": [
                     {
@@ -786,12 +631,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -814,12 +654,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -842,12 +677,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -870,12 +700,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -898,12 +723,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -926,12 +746,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -954,12 +769,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -986,12 +796,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (ColorSlot3) || RETURN",
-                    "displayLines": "ColorSlot3",
-                    "constants": [],
-                    "variables": [
-                      "ColorSlot3"
-                    ]
+                    "displayLines": "ColorSlot3"
                   },
                   "caseEvents": [
                     {
@@ -1007,12 +812,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1035,12 +835,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1063,12 +858,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1091,12 +881,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1119,12 +904,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1147,12 +927,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1175,12 +950,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1207,12 +977,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (ColorSlot4) || RETURN",
-                    "displayLines": "ColorSlot4",
-                    "constants": [],
-                    "variables": [
-                      "ColorSlot4"
-                    ]
+                    "displayLines": "ColorSlot4"
                   },
                   "caseEvents": [
                     {
@@ -1228,12 +993,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1256,12 +1016,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1284,12 +1039,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1312,12 +1062,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1340,12 +1085,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1368,12 +1108,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1396,12 +1131,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1428,12 +1158,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (ColorSlot5) || RETURN",
-                    "displayLines": "ColorSlot5",
-                    "constants": [],
-                    "variables": [
-                      "ColorSlot5"
-                    ]
+                    "displayLines": "ColorSlot5"
                   },
                   "caseEvents": [
                     {
@@ -1449,12 +1174,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1477,12 +1197,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1505,12 +1220,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1533,12 +1243,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1561,12 +1266,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1589,12 +1289,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1617,12 +1312,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1649,12 +1339,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (ColorSlot6) || RETURN",
-                    "displayLines": "ColorSlot6",
-                    "constants": [],
-                    "variables": [
-                      "ColorSlot6"
-                    ]
+                    "displayLines": "ColorSlot6"
                   },
                   "caseEvents": [
                     {
@@ -1670,12 +1355,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1698,12 +1378,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1726,12 +1401,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1754,12 +1424,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1782,12 +1447,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1810,12 +1470,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1838,12 +1493,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1885,12 +1535,7 @@ const configAbility = {
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (DynamicString_ColorSlotX) || RETURN",
-            "displayLines": "DynamicString_ColorSlotX",
-            "constants": [],
-            "variables": [
-              "DynamicString_ColorSlotX"
-            ]
+            "displayLines": "DynamicString_ColorSlotX"
           },
           "caseEvents": [
             {
@@ -1900,12 +1545,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (ColorSlot1) || RETURN",
-                    "displayLines": "ColorSlot1",
-                    "constants": [],
-                    "variables": [
-                      "ColorSlot1"
-                    ]
+                    "displayLines": "ColorSlot1"
                   },
                   "caseEvents": [
                     {
@@ -1921,12 +1561,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1949,12 +1584,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1977,12 +1607,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2005,12 +1630,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2033,12 +1653,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2061,12 +1676,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2089,12 +1699,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2121,12 +1726,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (ColorSlot2) || RETURN",
-                    "displayLines": "ColorSlot2",
-                    "constants": [],
-                    "variables": [
-                      "ColorSlot2"
-                    ]
+                    "displayLines": "ColorSlot2"
                   },
                   "caseEvents": [
                     {
@@ -2142,12 +1742,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2170,12 +1765,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2198,12 +1788,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2226,12 +1811,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2254,12 +1834,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2282,12 +1857,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2310,12 +1880,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2342,12 +1907,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (ColorSlot3) || RETURN",
-                    "displayLines": "ColorSlot3",
-                    "constants": [],
-                    "variables": [
-                      "ColorSlot3"
-                    ]
+                    "displayLines": "ColorSlot3"
                   },
                   "caseEvents": [
                     {
@@ -2363,12 +1923,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2391,12 +1946,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2419,12 +1969,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2447,12 +1992,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2475,12 +2015,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2503,12 +2038,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2531,12 +2061,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2563,12 +2088,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (ColorSlot4) || RETURN",
-                    "displayLines": "ColorSlot4",
-                    "constants": [],
-                    "variables": [
-                      "ColorSlot4"
-                    ]
+                    "displayLines": "ColorSlot4"
                   },
                   "caseEvents": [
                     {
@@ -2584,12 +2104,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2612,12 +2127,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2640,12 +2150,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2668,12 +2173,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2696,12 +2196,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2724,12 +2219,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2752,12 +2242,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2784,12 +2269,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (ColorSlot5) || RETURN",
-                    "displayLines": "ColorSlot5",
-                    "constants": [],
-                    "variables": [
-                      "ColorSlot5"
-                    ]
+                    "displayLines": "ColorSlot5"
                   },
                   "caseEvents": [
                     {
@@ -2805,12 +2285,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2833,12 +2308,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2861,12 +2331,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2889,12 +2354,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2917,12 +2377,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2945,12 +2400,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2973,12 +2423,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -3005,12 +2450,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (ColorSlot6) || RETURN",
-                    "displayLines": "ColorSlot6",
-                    "constants": [],
-                    "variables": [
-                      "ColorSlot6"
-                    ]
+                    "displayLines": "ColorSlot6"
                   },
                   "caseEvents": [
                     {
@@ -3026,12 +2466,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -3054,12 +2489,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -3082,12 +2512,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -3110,12 +2535,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -3138,12 +2558,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -3166,12 +2581,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -3194,12 +2604,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13525",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13525"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13525"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -3241,12 +2646,7 @@ const configAbility = {
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (DynamicString_ColorSlotX) || RETURN",
-            "displayLines": "DynamicString_ColorSlotX",
-            "constants": [],
-            "variables": [
-              "DynamicString_ColorSlotX"
-            ]
+            "displayLines": "DynamicString_ColorSlotX"
           },
           "caseEvents": [
             {
@@ -3345,12 +2745,7 @@ const configAbility = {
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (DynamicString_ColorSlotX) || RETURN",
-            "displayLines": "DynamicString_ColorSlotX",
-            "constants": [],
-            "variables": [
-              "DynamicString_ColorSlotX"
-            ]
+            "displayLines": "DynamicString_ColorSlotX"
           },
           "caseEvents": [
             {
@@ -3360,12 +2755,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (ColorSlot1) || RETURN",
-                    "displayLines": "ColorSlot1",
-                    "constants": [],
-                    "variables": [
-                      "ColorSlot1"
-                    ]
+                    "displayLines": "ColorSlot1"
                   },
                   "caseEvents": [
                     {
@@ -3393,12 +2783,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3414,12 +2799,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3453,12 +2833,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3474,12 +2849,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3513,12 +2883,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3534,12 +2899,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3573,12 +2933,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3594,12 +2949,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3633,12 +2983,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3654,12 +2999,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3693,12 +3033,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3714,12 +3049,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3753,12 +3083,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3774,12 +3099,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3800,12 +3120,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (ColorSlot2) || RETURN",
-                    "displayLines": "ColorSlot2",
-                    "constants": [],
-                    "variables": [
-                      "ColorSlot2"
-                    ]
+                    "displayLines": "ColorSlot2"
                   },
                   "caseEvents": [
                     {
@@ -3833,12 +3148,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3854,12 +3164,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3893,12 +3198,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3914,12 +3214,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3953,12 +3248,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3974,12 +3264,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4013,12 +3298,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4034,12 +3314,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4073,12 +3348,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4094,12 +3364,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4133,12 +3398,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4154,12 +3414,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4193,12 +3448,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4214,12 +3464,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4240,12 +3485,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (ColorSlot3) || RETURN",
-                    "displayLines": "ColorSlot3",
-                    "constants": [],
-                    "variables": [
-                      "ColorSlot3"
-                    ]
+                    "displayLines": "ColorSlot3"
                   },
                   "caseEvents": [
                     {
@@ -4273,12 +3513,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4294,12 +3529,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4333,12 +3563,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4354,12 +3579,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4393,12 +3613,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4414,12 +3629,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4453,12 +3663,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4474,12 +3679,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4513,12 +3713,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4534,12 +3729,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4573,12 +3763,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4594,12 +3779,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4633,12 +3813,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4654,12 +3829,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4680,12 +3850,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (ColorSlot4) || RETURN",
-                    "displayLines": "ColorSlot4",
-                    "constants": [],
-                    "variables": [
-                      "ColorSlot4"
-                    ]
+                    "displayLines": "ColorSlot4"
                   },
                   "caseEvents": [
                     {
@@ -4713,12 +3878,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4734,12 +3894,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4773,12 +3928,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4794,12 +3944,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4833,12 +3978,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4854,12 +3994,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4893,12 +4028,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4914,12 +4044,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4953,12 +4078,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4974,12 +4094,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5013,12 +4128,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5034,12 +4144,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5073,12 +4178,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5094,12 +4194,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5120,12 +4215,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (ColorSlot5) || RETURN",
-                    "displayLines": "ColorSlot5",
-                    "constants": [],
-                    "variables": [
-                      "ColorSlot5"
-                    ]
+                    "displayLines": "ColorSlot5"
                   },
                   "caseEvents": [
                     {
@@ -5153,12 +4243,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5174,12 +4259,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5213,12 +4293,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5234,12 +4309,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5273,12 +4343,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5294,12 +4359,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5333,12 +4393,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5354,12 +4409,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5393,12 +4443,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5414,12 +4459,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5453,12 +4493,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5474,12 +4509,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5513,12 +4543,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5534,12 +4559,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5560,12 +4580,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (ColorSlot6) || RETURN",
-                    "displayLines": "ColorSlot6",
-                    "constants": [],
-                    "variables": [
-                      "ColorSlot6"
-                    ]
+                    "displayLines": "ColorSlot6"
                   },
                   "caseEvents": [
                     {
@@ -5593,12 +4608,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5614,12 +4624,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5653,12 +4658,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5674,12 +4674,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5713,12 +4708,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5734,12 +4724,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5773,12 +4758,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5794,12 +4774,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5833,12 +4808,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5854,12 +4824,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5893,12 +4858,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5914,12 +4874,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5953,12 +4908,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5974,12 +4924,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13535",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13535"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13535"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -6005,12 +4950,7 @@ const configAbility = {
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (ColorInInsertFlag) || RETURN",
-            "displayLines": "ColorInInsertFlag",
-            "constants": [],
-            "variables": [
-              "ColorInInsertFlag"
-            ]
+            "displayLines": "ColorInInsertFlag"
           },
           "caseEvents": [
             {
@@ -6038,12 +4978,7 @@ const configAbility = {
                       "stackLimit": 10,
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13535",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_13535"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_13535"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -6059,12 +4994,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13535",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_13535"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_13535"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -6098,12 +5028,7 @@ const configAbility = {
                       "stackLimit": 10,
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13535",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_13535"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_13535"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -6119,12 +5044,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13535",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_13535"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_13535"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -6158,12 +5078,7 @@ const configAbility = {
                       "stackLimit": 10,
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13535",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_13535"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_13535"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -6179,12 +5094,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13535",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_13535"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_13535"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -6218,12 +5128,7 @@ const configAbility = {
                       "stackLimit": 10,
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13535",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_13535"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_13535"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -6239,12 +5144,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13535",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_13535"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_13535"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -6278,12 +5178,7 @@ const configAbility = {
                       "stackLimit": 10,
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13535",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_13535"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_13535"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -6299,12 +5194,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13535",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_13535"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_13535"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -6338,12 +5228,7 @@ const configAbility = {
                       "stackLimit": 10,
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13535",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_13535"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_13535"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -6359,12 +5244,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13535",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_13535"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_13535"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -6398,12 +5278,7 @@ const configAbility = {
                       "stackLimit": 10,
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13535",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_13535"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_13535"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -6419,12 +5294,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13535",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_13535"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_13535"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -6445,12 +5315,7 @@ const configAbility = {
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (DynamicString_ColorSlotX) || RETURN",
-            "displayLines": "DynamicString_ColorSlotX",
-            "constants": [],
-            "variables": [
-              "DynamicString_ColorSlotX"
-            ]
+            "displayLines": "DynamicString_ColorSlotX"
           },
           "caseEvents": [
             {
@@ -6460,12 +5325,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (ColorSlot1) || RETURN",
-                    "displayLines": "ColorSlot1",
-                    "constants": [],
-                    "variables": [
-                      "ColorSlot1"
-                    ]
+                    "displayLines": "ColorSlot1"
                   },
                   "caseEvents": [
                     {
@@ -6485,12 +5345,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6514,12 +5369,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6543,12 +5393,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6572,12 +5417,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6601,12 +5441,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6630,12 +5465,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6659,12 +5489,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6687,12 +5512,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (ColorSlot2) || RETURN",
-                    "displayLines": "ColorSlot2",
-                    "constants": [],
-                    "variables": [
-                      "ColorSlot2"
-                    ]
+                    "displayLines": "ColorSlot2"
                   },
                   "caseEvents": [
                     {
@@ -6712,12 +5532,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6741,12 +5556,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6770,12 +5580,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6799,12 +5604,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6828,12 +5628,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6857,12 +5652,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6886,12 +5676,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6914,12 +5699,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (ColorSlot3) || RETURN",
-                    "displayLines": "ColorSlot3",
-                    "constants": [],
-                    "variables": [
-                      "ColorSlot3"
-                    ]
+                    "displayLines": "ColorSlot3"
                   },
                   "caseEvents": [
                     {
@@ -6939,12 +5719,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6968,12 +5743,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6997,12 +5767,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -7026,12 +5791,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -7055,12 +5815,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -7084,12 +5839,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -7113,12 +5863,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -7141,12 +5886,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (ColorSlot4) || RETURN",
-                    "displayLines": "ColorSlot4",
-                    "constants": [],
-                    "variables": [
-                      "ColorSlot4"
-                    ]
+                    "displayLines": "ColorSlot4"
                   },
                   "caseEvents": [
                     {
@@ -7166,12 +5906,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -7195,12 +5930,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -7224,12 +5954,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -7253,12 +5978,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -7282,12 +6002,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -7311,12 +6026,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -7340,12 +6050,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -7368,12 +6073,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (ColorSlot5) || RETURN",
-                    "displayLines": "ColorSlot5",
-                    "constants": [],
-                    "variables": [
-                      "ColorSlot5"
-                    ]
+                    "displayLines": "ColorSlot5"
                   },
                   "caseEvents": [
                     {
@@ -7393,12 +6093,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -7422,12 +6117,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -7451,12 +6141,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -7480,12 +6165,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -7509,12 +6189,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -7538,12 +6213,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -7567,12 +6237,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -7595,12 +6260,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (ColorSlot6) || RETURN",
-                    "displayLines": "ColorSlot6",
-                    "constants": [],
-                    "variables": [
-                      "ColorSlot6"
-                    ]
+                    "displayLines": "ColorSlot6"
                   },
                   "caseEvents": [
                     {
@@ -7620,12 +6280,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -7649,12 +6304,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -7678,12 +6328,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -7707,12 +6352,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -7736,12 +6376,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -7765,12 +6400,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -7794,12 +6424,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13536",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13536"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13536"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",

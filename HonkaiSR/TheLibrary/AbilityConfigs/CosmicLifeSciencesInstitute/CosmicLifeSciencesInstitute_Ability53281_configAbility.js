@@ -32,12 +32,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (_DamageAdd) || RETURN",
-                "displayLines": "_DamageAdd",
-                "constants": [],
-                "variables": [
-                  "_DamageAdd"
-                ]
+                "displayLines": "_DamageAdd"
               }
             }
           ]
@@ -77,26 +72,14 @@ const configAbility = {
                     "value1": "_CasterMaxSP",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (200) || RETURN",
-                      "displayLines": "200",
-                      "constants": [],
-                      "variables": [
-                        200
-                      ]
+                      "displayLines": "200"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_CasterMaxSP) || Variables[1] (200) || SUB || Variables[2] (0.0019999999) || MUL || RETURN",
-                        "displayLines": "((_CasterMaxSP - 200) * 0.0019999999)",
-                        "constants": [],
-                        "variables": [
-                          "_CasterMaxSP",
-                          200,
-                          0.0019999999
-                        ]
+                        "displayLines": "((_CasterMaxSP - 200) * 0.0019999999)"
                       },
                       "variableName": "_DamageAdd"
                     },
@@ -107,24 +90,14 @@ const configAbility = {
                         "value1": "_DamageAdd",
                         "compareType": ">",
                         "value2": {
-                          "operator": "Variables[0] (0.32) || RETURN",
-                          "displayLines": "0.32",
-                          "constants": [],
-                          "variables": [
-                            0.32
-                          ]
+                          "displayLines": "0.32"
                         }
                       },
                       "passed": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (0.32) || RETURN",
-                            "displayLines": "0.32",
-                            "constants": [],
-                            "variables": [
-                              0.32
-                            ]
+                            "displayLines": "0.32"
                           },
                           "variableName": "_DamageAdd"
                         }

@@ -59,12 +59,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.2) || RETURN",
-                    "displayLines": "0.2",
-                    "constants": [],
-                    "variables": [
-                      0.2
-                    ]
+                    "displayLines": "0.2"
                   }
                 }
               ]
@@ -252,14 +247,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (WeakEnemyCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(WeakEnemyCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "WeakEnemyCount"
-                        ]
+                        "displayLines": "(WeakEnemyCount + 1)"
                       },
                       "variableName": "WeakEnemyCount"
                     },
@@ -289,12 +277,7 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"852520097\">LC_21040_Sub</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
                               "duration": {
-                                "operator": "Variables[0] (2) || RETURN",
-                                "displayLines": "2",
-                                "constants": [],
-                                "variables": [
-                                  2
-                                ]
+                                "displayLines": "2"
                               }
                             },
                             {

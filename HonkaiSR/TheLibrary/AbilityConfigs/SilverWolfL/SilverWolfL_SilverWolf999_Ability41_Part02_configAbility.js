@@ -7,12 +7,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (6) || RETURN",
-        "displayLines": "6",
-        "constants": [],
-        "variables": [
-          6
-        ]
+        "displayLines": "6"
       },
       "execute": [
         {
@@ -33,21 +28,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "DamageElation": {
-                  "operator": "Variables[0] (0.9) || RETURN",
-                  "displayLines": "0.9",
-                  "constants": [],
-                  "variables": [
-                    0.9
-                  ]
+                  "displayLines": "0.9"
                 },
                 "dmgFormula": "Elation Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "instanceTag": "SilverWolf999_00_Skill41_Damage",
                 "Tags": null,
@@ -73,12 +58,7 @@ const configAbility = {
             "value1": "Elation_Skill_Punchline_Value",
             "compareType": ">=",
             "value2": {
-              "operator": "Variables[0] (40) || RETURN",
-              "displayLines": "40",
-              "constants": [],
-              "variables": [
-                40
-              ]
+              "displayLines": "40"
             }
           },
           "passed": [
@@ -87,13 +67,7 @@ const configAbility = {
               "functionName": "<a class=\"gTempYellow\" id=\"2105895650\">SilverWolf999_ModifySP</a>",
               "variables": {
                 "parameter[0]_AddValue": {
-                  "operator": "Variables[0] (20) || Variables[1] (20) || ADD || RETURN",
-                  "displayLines": "(20 + 20)",
-                  "constants": [],
-                  "variables": [
-                    20,
-                    20
-                  ]
+                  "displayLines": "(20 + 20)"
                 }
               }
             }
@@ -106,12 +80,7 @@ const configAbility = {
                 "value1": "Elation_Skill_Punchline_Value",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (20) || RETURN",
-                  "displayLines": "20",
-                  "constants": [],
-                  "variables": [
-                    20
-                  ]
+                  "displayLines": "20"
                 }
               },
               "passed": [
@@ -120,12 +89,7 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"2105895650\">SilverWolf999_ModifySP</a>",
                   "variables": {
                     "parameter[0]_AddValue": {
-                      "operator": "Variables[0] (20) || RETURN",
-                      "displayLines": "20",
-                      "constants": [],
-                      "variables": [
-                        20
-                      ]
+                      "displayLines": "20"
                     }
                   }
                 }
@@ -138,12 +102,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (TriggerItemBaseChance) || RETURN",
-        "displayLines": "TriggerItemBaseChance",
-        "constants": [],
-        "variables": [
-          "TriggerItemBaseChance"
-        ]
+        "displayLines": "TriggerItemBaseChance"
       },
       "variableName": "TriggerItemChance"
     },

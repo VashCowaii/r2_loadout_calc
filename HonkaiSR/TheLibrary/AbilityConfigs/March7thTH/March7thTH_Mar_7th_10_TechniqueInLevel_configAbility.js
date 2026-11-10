@@ -46,12 +46,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (30) || RETURN",
-                    "displayLines": "30",
-                    "constants": [],
-                    "variables": [
-                      30
-                    ]
+                    "displayLines": "30"
                   },
                   "isFixed": "* ERR"
                 }

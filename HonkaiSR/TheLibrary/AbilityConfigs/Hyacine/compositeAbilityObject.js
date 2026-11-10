@@ -69,13 +69,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_MaxHPRatio) || Variables[1] (MDF_ExtraMaxHPRatio) || ADD || RETURN",
-                    "displayLines": "(MDF_MaxHPRatio + MDF_ExtraMaxHPRatio)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxHPRatio",
-                      "MDF_ExtraMaxHPRatio"
-                    ]
+                    "displayLines": "(MDF_MaxHPRatio + MDF_ExtraMaxHPRatio)"
                   },
                   "variableName": "MDF_PropertyValue"
                 },
@@ -87,12 +81,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 },
                 {
@@ -103,12 +92,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_MaxHPValue) || RETURN",
-                    "displayLines": "MDF_MaxHPValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxHPValue"
-                    ]
+                    "displayLines": "MDF_MaxHPValue"
                   }
                 }
               ]
@@ -162,21 +146,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1897109390\">Memosprite_HyacineServant_Eidolon2SpeedUp</a>[<span class=\"descriptionNumberColor\">Come Sit in My Courtyard</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "valuePerStack": {
                         "MDF_SpeedUpRatio": {
-                          "operator": "Variables[0] (0.3) || RETURN",
-                          "displayLines": "0.3",
-                          "constants": [],
-                          "variables": [
-                            0.3
-                          ]
+                          "displayLines": "0.3"
                         }
                       }
                     }
@@ -207,36 +181,16 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_CurrentHP": {
-                  "operator": "Variables[0] (_CurrenMaxtHP) || RETURN",
-                  "displayLines": "_CurrenMaxtHP",
-                  "constants": [],
-                  "variables": [
-                    "_CurrenMaxtHP"
-                  ]
+                  "displayLines": "_CurrenMaxtHP"
                 },
                 "MDF_MaxHPRatio": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 },
                 "MDF_MaxHPValue": {
-                  "operator": "Variables[0] (600) || RETURN",
-                  "displayLines": "600",
-                  "constants": [],
-                  "variables": [
-                    600
-                  ]
+                  "displayLines": "600"
                 },
                 "MDF_ExtraMaxHPRatio": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
+                  "displayLines": "0.5"
                 }
               }
             }
@@ -253,20 +207,10 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_Energy) || RETURN",
-                    "displayLines": "_Energy",
-                    "constants": [],
-                    "variables": [
-                      "_Energy"
-                    ]
+                    "displayLines": "_Energy"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "assignState": "True",
                   "bar#": "Dot"
@@ -286,20 +230,10 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_Energy) || RETURN",
-                    "displayLines": "_Energy",
-                    "constants": [],
-                    "variables": [
-                      "_Energy"
-                    ]
+                    "displayLines": "_Energy"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "assignState": "True",
                   "bar#": "Dot"
@@ -326,13 +260,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_HaloMaxHPRatio) || Variables[1] (MDF_ExtraMaxHPRatio) || ADD || RETURN",
-                    "displayLines": "(MDF_HaloMaxHPRatio + MDF_ExtraMaxHPRatio)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HaloMaxHPRatio",
-                      "MDF_ExtraMaxHPRatio"
-                    ]
+                    "displayLines": "(MDF_HaloMaxHPRatio + MDF_ExtraMaxHPRatio)"
                   },
                   "variableName": "MDF_PropertyValue"
                 },
@@ -344,12 +272,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 },
                 {
@@ -360,12 +283,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_HaloMaxHPValue) || RETURN",
-                    "displayLines": "MDF_HaloMaxHPValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HaloMaxHPValue"
-                    ]
+                    "displayLines": "MDF_HaloMaxHPValue"
                   }
                 },
                 {
@@ -378,20 +296,10 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_Energy) || RETURN",
-                    "displayLines": "_Energy",
-                    "constants": [],
-                    "variables": [
-                      "_Energy"
-                    ]
+                    "displayLines": "_Energy"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "assignState": "True",
                   "bar#": "Dot"
@@ -436,12 +344,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (0.08) || RETURN",
-                        "displayLines": "0.08",
-                        "constants": [],
-                        "variables": [
-                          0.08
-                        ]
+                        "displayLines": "0.08"
                       },
                       "formula": "Heal from Healer's MaxHP"
                     }
@@ -491,20 +394,10 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (_Energy) || RETURN",
-                        "displayLines": "_Energy",
-                        "constants": [],
-                        "variables": [
-                          "_Energy"
-                        ]
+                        "displayLines": "_Energy"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "assignState": "True",
                       "bar#": "Dot"
@@ -536,13 +429,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageAddRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_DamageAddRatio * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageAddRatio",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_DamageAddRatio * MDF_Layer)"
                   },
                   "variableName": "MDF_DamageAddRatioTotal"
                 },
@@ -554,12 +441,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageAddRatioTotal) || RETURN",
-                    "displayLines": "MDF_DamageAddRatioTotal",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageAddRatioTotal"
-                    ]
+                    "displayLines": "MDF_DamageAddRatioTotal"
                   }
                 }
               ]
@@ -581,12 +463,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -611,12 +488,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_HPRatio) || RETURN",
-                      "displayLines": "MDF_HPRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_HPRatio"
-                      ]
+                      "displayLines": "MDF_HPRatio"
                     }
                   },
                   "passed": [
@@ -625,12 +497,7 @@ const compositeAbilityObject = {
                       "on": "Healer",
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoingSUM</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (MDF_HealRatio) || RETURN",
-                        "displayLines": "MDF_HealRatio",
-                        "constants": [],
-                        "variables": [
-                          "MDF_HealRatio"
-                        ]
+                        "displayLines": "MDF_HealRatio"
                       }
                     }
                   ]
@@ -648,12 +515,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_CritChance) || RETURN",
-                    "displayLines": "MDF_CritChance",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CritChance"
-                    ]
+                    "displayLines": "MDF_CritChance"
                   }
                 }
               ]
@@ -676,28 +538,13 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"672502407\">Hyacine_PointB1_Effect</a>",
                   "valuePerStack": {
                     "MDF_CritChance": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     },
                     "MDF_HPRatio": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     },
                     "MDF_HealRatio": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     }
                   }
                 }
@@ -729,28 +576,13 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"672502407\">Hyacine_PointB1_Effect</a>",
                       "valuePerStack": {
                         "MDF_CritChance": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         },
                         "MDF_HPRatio": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         },
                         "MDF_HealRatio": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
+                          "displayLines": "0.25"
                         }
                       }
                     }
@@ -779,12 +611,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (_MaxHPAdd) || RETURN",
-                    "displayLines": "_MaxHPAdd",
-                    "constants": [],
-                    "variables": [
-                      "_MaxHPAdd"
-                    ]
+                    "displayLines": "_MaxHPAdd"
                   }
                 },
                 {
@@ -795,12 +622,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoingConverted</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (_HealHPRatioAdd) || RETURN",
-                    "displayLines": "_HealHPRatioAdd",
-                    "constants": [],
-                    "variables": [
-                      "_HealHPRatioAdd"
-                    ]
+                    "displayLines": "_HealHPRatioAdd"
                   }
                 },
                 {
@@ -833,12 +655,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (_MaxCritDmgAdd) || RETURN",
-                        "displayLines": "_MaxCritDmgAdd",
-                        "constants": [],
-                        "variables": [
-                          "_MaxCritDmgAdd"
-                        ]
+                        "displayLines": "_MaxCritDmgAdd"
                       }
                     }
                   ]
@@ -875,12 +692,7 @@ const compositeAbilityObject = {
                     "value1": "_CurrentSpeed",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (200) || RETURN",
-                      "displayLines": "200",
-                      "constants": [],
-                      "variables": [
-                        200
-                      ]
+                      "displayLines": "200"
                     }
                   },
                   "passed": [
@@ -896,26 +708,14 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (_CurrentSpeedConvert) || SUB || RETURN",
-                        "displayLines": "(_CurrentSpeed - _CurrentSpeedConvert)",
-                        "constants": [],
-                        "variables": [
-                          "_CurrentSpeed",
-                          "_CurrentSpeedConvert"
-                        ]
+                        "displayLines": "(_CurrentSpeed - _CurrentSpeedConvert)"
                       },
                       "variableName": "_CurrentSpeed"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (200) || SUB || RETURN",
-                        "displayLines": "(_CurrentSpeed - 200)",
-                        "constants": [],
-                        "variables": [
-                          "_CurrentSpeed",
-                          200
-                        ]
+                        "displayLines": "(_CurrentSpeed - 200)"
                       },
                       "variableName": "_OverCountSpeedValue"
                     },
@@ -926,24 +726,14 @@ const compositeAbilityObject = {
                         "value1": "_OverCountSpeedValue",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (200) || RETURN",
-                          "displayLines": "200",
-                          "constants": [],
-                          "variables": [
-                            200
-                          ]
+                          "displayLines": "200"
                         }
                       },
                       "passed": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (200) || RETURN",
-                            "displayLines": "200",
-                            "constants": [],
-                            "variables": [
-                              200
-                            ]
+                            "displayLines": "200"
                           },
                           "variableName": "_OverCountSpeedValue"
                         }
@@ -956,27 +746,14 @@ const compositeAbilityObject = {
                         "value1": "_OverCountSpeedValue",
                         "compareType": ">",
                         "value2": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         }
                       },
                       "passed": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (FLOOR) || Variables[1] (_OverCountSpeedValue) || Variables[2] (1) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.01) || MUL || RETURN",
-                            "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_OverCountSpeedValue / 1)) * 0.01)",
-                            "constants": [],
-                            "variables": [
-                              "FLOOR",
-                              "_OverCountSpeedValue",
-                              1,
-                              0.01
-                            ]
+                            "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_OverCountSpeedValue / 1)) * 0.01)"
                           },
                           "variableName": "_HealHPRatioAdd"
                         },
@@ -990,15 +767,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (FLOOR) || Variables[1] (_OverCountSpeedValue) || Variables[2] (1) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.02) || MUL || RETURN",
-                                "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_OverCountSpeedValue / 1)) * 0.02)",
-                                "constants": [],
-                                "variables": [
-                                  "FLOOR",
-                                  "_OverCountSpeedValue",
-                                  1,
-                                  0.02
-                                ]
+                                "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_OverCountSpeedValue / 1)) * 0.02)"
                               },
                               "variableName": "_MaxCritDmgAdd"
                             }
@@ -1027,28 +796,13 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1110430040\">Hyacine_PointB3_Effect</a>[<span class=\"descriptionNumberColor\">Tempestuous Halt</span>]",
                       "valuePerStack": {
                         "_MaxHPAdd": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         },
                         "_HealHPRatioAdd": {
-                          "operator": "Variables[0] (_HealHPRatioAdd) || RETURN",
-                          "displayLines": "_HealHPRatioAdd",
-                          "constants": [],
-                          "variables": [
-                            "_HealHPRatioAdd"
-                          ]
+                          "displayLines": "_HealHPRatioAdd"
                         },
                         "_MaxCritDmgAdd": {
-                          "operator": "Variables[0] (_MaxCritDmgAdd) || RETURN",
-                          "displayLines": "_MaxCritDmgAdd",
-                          "constants": [],
-                          "variables": [
-                            "_MaxCritDmgAdd"
-                          ]
+                          "displayLines": "_MaxCritDmgAdd"
                         }
                       }
                     }
@@ -1374,12 +1128,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (_MaxHPAdd) || RETURN",
-                    "displayLines": "_MaxHPAdd",
-                    "constants": [],
-                    "variables": [
-                      "_MaxHPAdd"
-                    ]
+                    "displayLines": "_MaxHPAdd"
                   }
                 }
               ]
@@ -1410,20 +1159,10 @@ const compositeAbilityObject = {
                         "target": "{{Player Team All}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (0.3) || RETURN",
-                        "displayLines": "0.3",
-                        "constants": [],
-                        "variables": [
-                          0.3
-                        ]
+                        "displayLines": "0.3"
                       },
                       "healFlat": {
-                        "operator": "Variables[0] (600) || RETURN",
-                        "displayLines": "600",
-                        "constants": [],
-                        "variables": [
-                          600
-                        ]
+                        "displayLines": "600"
                       },
                       "formula": "Heal from Healer's MaxHP"
                     },
@@ -1435,21 +1174,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1998064298\">Hyacine_Maze_AddMaxHp</a>[<span class=\"descriptionNumberColor\">Day So Right, Life So Fine!</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "valuePerStack": {
                         "_MaxHPAdd": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     }
@@ -1494,12 +1223,7 @@ const compositeAbilityObject = {
           "name": "Update Displayed Energy Bar",
           "value": 0,
           "maximum": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "assignState": "True",
           "bar#": "Dot"
@@ -1551,12 +1275,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"931141896\">Hyacine_PointB2</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
+                  "displayLines": "0.5"
                 }
               }
             }
@@ -1579,29 +1298,14 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1132518124\">Hyacine_Passive_Effect</a>[<span class=\"descriptionNumberColor\">First Light Heals the World</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_DamageAddRatio": {
-                      "operator": "Variables[0] (0.8) || RETURN",
-                      "displayLines": "0.8",
-                      "constants": [],
-                      "variables": [
-                        0.8
-                      ]
+                      "displayLines": "0.8"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -1625,14 +1329,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_HealCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_HealCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_HealCount"
-                        ]
+                        "displayLines": "(_HealCount + 1)"
                       },
                       "variableName": "_HealCount"
                     }
@@ -1650,28 +1347,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_HealValue) || Constants[0] (1) || Variables[1] (ExtraHealRatio) || ADD || MUL || RETURN",
-                    "displayLines": "(_HealValue * (1 + ExtraHealRatio))",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_HealValue",
-                      "ExtraHealRatio"
-                    ]
+                    "displayLines": "(_HealValue * (1 + ExtraHealRatio))"
                   },
                   "variableName": "_HealValue"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_HealValueTotal) || Variables[1] (_HealValue) || ADD || RETURN",
-                    "displayLines": "(_HealValueTotal + _HealValue)",
-                    "constants": [],
-                    "variables": [
-                      "_HealValueTotal",
-                      "_HealValue"
-                    ]
+                    "displayLines": "(_HealValueTotal + _HealValue)"
                   },
                   "variableName": "_HealValueTotal"
                 },
@@ -1682,12 +1365,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster's Memosprite}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (_HealValueTotal) || RETURN",
-                    "displayLines": "_HealValueTotal",
-                    "constants": [],
-                    "variables": [
-                      "_HealValueTotal"
-                    ]
+                    "displayLines": "_HealValueTotal"
                   },
                   "variableName": "_SummonerHealValueTotal"
                 },
@@ -1798,12 +1476,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster's Memosprite}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (_HealCount) || RETURN",
-                        "displayLines": "_HealCount",
-                        "constants": [],
-                        "variables": [
-                          "_HealCount"
-                        ]
+                        "displayLines": "_HealCount"
                       },
                       "variableName": "_SummonerHealCount"
                     }
@@ -1959,36 +1632,16 @@ const compositeAbilityObject = {
               "memoID": 11409,
               "valuePerStack": {
                 "_SummonerHealValueTotal": {
-                  "operator": "Variables[0] (_HealValueTotal) || RETURN",
-                  "displayLines": "_HealValueTotal",
-                  "constants": [],
-                  "variables": [
-                    "_HealValueTotal"
-                  ]
+                  "displayLines": "_HealValueTotal"
                 },
                 "AbilityP01_P3_DamageIncrease": {
-                  "operator": "Variables[0] (0.8) || RETURN",
-                  "displayLines": "0.8",
-                  "constants": [],
-                  "variables": [
-                    0.8
-                  ]
+                  "displayLines": "0.8"
                 },
                 "AbilityP01_P4_LifeTime": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
+                  "displayLines": "2"
                 },
                 "AbilityP01_P5_Layer": {
-                  "operator": "Variables[0] (3) || RETURN",
-                  "displayLines": "3",
-                  "constants": [],
-                  "variables": [
-                    3
-                  ]
+                  "displayLines": "3"
                 }
               }
             }
@@ -2008,12 +1661,7 @@ const compositeAbilityObject = {
                 "target": "{{All Team Members}}"
               },
               "dispelCount": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "dispelOrder": "LastAdded"
             }
@@ -2026,20 +1674,10 @@ const compositeAbilityObject = {
             "target": "{{All Team Members}} - {{Caster}}.[[getMemosprite]]"
           },
           "healPercent": {
-            "operator": "Variables[0] (0.1) || RETURN",
-            "displayLines": "0.1",
-            "constants": [],
-            "variables": [
-              0.1
-            ]
+            "displayLines": "0.1"
           },
           "healFlat": {
-            "operator": "Variables[0] (200) || RETURN",
-            "displayLines": "200",
-            "constants": [],
-            "variables": [
-              200
-            ]
+            "displayLines": "200"
           },
           "formula": "Heal from Healer's MaxHP"
         },
@@ -2050,20 +1688,10 @@ const compositeAbilityObject = {
             "target": "{{Caster's Memosprite}}"
           },
           "healPercent": {
-            "operator": "Variables[0] (0.12) || RETURN",
-            "displayLines": "0.12",
-            "constants": [],
-            "variables": [
-              0.12
-            ]
+            "displayLines": "0.12"
           },
           "healFlat": {
-            "operator": "Variables[0] (240) || RETURN",
-            "displayLines": "240",
-            "constants": [],
-            "variables": [
-              240
-            ]
+            "displayLines": "240"
           },
           "formula": "Heal from Healer's MaxHP"
         },
@@ -2088,13 +1716,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_CurrenMaxtHP) || Variables[1] (_CurrentHPConvert) || SUB || RETURN",
-            "displayLines": "(_CurrenMaxtHP - _CurrentHPConvert)",
-            "constants": [],
-            "variables": [
-              "_CurrenMaxtHP",
-              "_CurrentHPConvert"
-            ]
+            "displayLines": "(_CurrenMaxtHP - _CurrentHPConvert)"
           },
           "variableName": "_CurrenMaxtHP"
         },
@@ -2106,45 +1728,20 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1902777328\">Memosprite_HyacineServant_MaxHpHalo</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "valuePerStack": {
             "MDF_HaloCurrentHP": {
-              "operator": "Variables[0] (_CurrenMaxtHP) || RETURN",
-              "displayLines": "_CurrenMaxtHP",
-              "constants": [],
-              "variables": [
-                "_CurrenMaxtHP"
-              ]
+              "displayLines": "_CurrenMaxtHP"
             },
             "MDF_HaloMaxHPRatio": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             },
             "MDF_HaloMaxHPValue": {
-              "operator": "Variables[0] (600) || RETURN",
-              "displayLines": "600",
-              "constants": [],
-              "variables": [
-                600
-              ]
+              "displayLines": "600"
             },
             "MDF_ExtraMaxHPRatio": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             }
           }
         },
@@ -2172,20 +1769,10 @@ const compositeAbilityObject = {
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "maximum": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "assignState": "True",
           "bar#": "Dot"
@@ -2278,36 +1865,16 @@ const compositeAbilityObject = {
               "memoID": 11409,
               "valuePerStack": {
                 "_SummonerHealValueTotal": {
-                  "operator": "Variables[0] (_HealValueTotal) || RETURN",
-                  "displayLines": "_HealValueTotal",
-                  "constants": [],
-                  "variables": [
-                    "_HealValueTotal"
-                  ]
+                  "displayLines": "_HealValueTotal"
                 },
                 "AbilityP01_P3_DamageIncrease": {
-                  "operator": "Variables[0] (0.8) || RETURN",
-                  "displayLines": "0.8",
-                  "constants": [],
-                  "variables": [
-                    0.8
-                  ]
+                  "displayLines": "0.8"
                 },
                 "AbilityP01_P4_LifeTime": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
+                  "displayLines": "2"
                 },
                 "AbilityP01_P5_Layer": {
-                  "operator": "Variables[0] (3) || RETURN",
-                  "displayLines": "3",
-                  "constants": [],
-                  "variables": [
-                    3
-                  ]
+                  "displayLines": "3"
                 }
               }
             },
@@ -2339,12 +1906,7 @@ const compositeAbilityObject = {
                 "target": "{{All Team Members}}"
               },
               "dispelCount": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "dispelOrder": "LastAdded"
             }
@@ -2357,20 +1919,10 @@ const compositeAbilityObject = {
             "target": "{{All Team Members}} - {{Caster}}.[[getMemosprite]]"
           },
           "healPercent": {
-            "operator": "Variables[0] (0.08) || RETURN",
-            "displayLines": "0.08",
-            "constants": [],
-            "variables": [
-              0.08
-            ]
+            "displayLines": "0.08"
           },
           "healFlat": {
-            "operator": "Variables[0] (160) || RETURN",
-            "displayLines": "160",
-            "constants": [],
-            "variables": [
-              160
-            ]
+            "displayLines": "160"
           },
           "formula": "Heal from Healer's MaxHP"
         },
@@ -2381,20 +1933,10 @@ const compositeAbilityObject = {
             "target": "{{Caster's Memosprite}}"
           },
           "healPercent": {
-            "operator": "Variables[0] (0.1) || RETURN",
-            "displayLines": "0.1",
-            "constants": [],
-            "variables": [
-              0.1
-            ]
+            "displayLines": "0.1"
           },
           "healFlat": {
-            "operator": "Variables[0] (200) || RETURN",
-            "displayLines": "200",
-            "constants": [],
-            "variables": [
-              200
-            ]
+            "displayLines": "200"
           },
           "formula": "Heal from Healer's MaxHP"
         },
@@ -2487,21 +2029,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             },
             "dmgFormula": "Max HP Scaling",
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -2586,12 +2118,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PenetrateRatio) || RETURN",
-                    "displayLines": "MDF_PenetrateRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PenetrateRatio"
-                    ]
+                    "displayLines": "MDF_PenetrateRatio"
                   }
                 }
               ]
@@ -2612,12 +2139,7 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PenetrateRatio": {
-                  "operator": "Variables[0] (MDF_PenetrateRatio) || RETURN",
-                  "displayLines": "MDF_PenetrateRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PenetrateRatio"
-                  ]
+                  "displayLines": "MDF_PenetrateRatio"
                 }
               }
             }
@@ -2646,12 +2168,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_SpeedUpRatio) || RETURN",
-                    "displayLines": "MDF_SpeedUpRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedUpRatio"
-                    ]
+                    "displayLines": "MDF_SpeedUpRatio"
                   }
                 }
               ]
@@ -2706,14 +2223,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentHP) || Variables[1] (MDF_MaxHPRatio) || MUL || Variables[2] (MDF_MaxHPValue) || ADD || RETURN",
-                    "displayLines": "((MDF_CurrentHP * MDF_MaxHPRatio) + MDF_MaxHPValue)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentHP",
-                      "MDF_MaxHPRatio",
-                      "MDF_MaxHPValue"
-                    ]
+                    "displayLines": "((MDF_CurrentHP * MDF_MaxHPRatio) + MDF_MaxHPValue)"
                   }
                 }
               ]
@@ -2738,13 +2248,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (_ServantHealValueTotal) || Variables[1] (_SummonerHealValueTotal) || ADD || RETURN",
-                    "displayLines": "(_ServantHealValueTotal + _SummonerHealValueTotal)",
-                    "constants": [],
-                    "variables": [
-                      "_ServantHealValueTotal",
-                      "_SummonerHealValueTotal"
-                    ]
+                    "displayLines": "(_ServantHealValueTotal + _SummonerHealValueTotal)"
                   },
                   "variableName": "MDF_HealValueTotal"
                 }
@@ -2798,12 +2302,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "consumePercent": {
-                        "operator": "Variables[0] (0.04) || RETURN",
-                        "displayLines": "0.04",
-                        "constants": [],
-                        "variables": [
-                          0.04
-                        ]
+                        "displayLines": "0.04"
                       },
                       "dynamicAssignment": "_RealRatio",
                       "attackType": "Pursued"
@@ -2820,13 +2319,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_RealRatio) || Variables[1] (_ServantMaxHP) || MUL || RETURN",
-                        "displayLines": "(_RealRatio * _ServantMaxHP)",
-                        "constants": [],
-                        "variables": [
-                          "_RealRatio",
-                          "_ServantMaxHP"
-                        ]
+                        "displayLines": "(_RealRatio * _ServantMaxHP)"
                       },
                       "variableName": "_ServantLoseHPValue"
                     },
@@ -2850,13 +2343,7 @@ const compositeAbilityObject = {
                       "modifierName": "<a class=\"gModGreen\" id=\"1467878909\">Memosprite_HyacineServant_ChallangeScore</a>",
                       "variableName": "_ServantLoseHPValueTotal",
                       "value": {
-                        "operator": "Variables[0] (_ServantLoseHPValueTotal2) || Variables[1] (_ServantLoseHPValue) || ADD || RETURN",
-                        "displayLines": "(_ServantLoseHPValueTotal2 + _ServantLoseHPValue)",
-                        "constants": [],
-                        "variables": [
-                          "_ServantLoseHPValueTotal2",
-                          "_ServantLoseHPValue"
-                        ]
+                        "displayLines": "(_ServantLoseHPValueTotal2 + _ServantLoseHPValue)"
                       }
                     },
                     {
@@ -2901,14 +2388,7 @@ const compositeAbilityObject = {
                                 "target": "{{Parameter Target}}"
                               },
                               "healFlat": {
-                                "operator": "Variables[0] (Summoner_MaxHP) || Variables[1] (0.02) || MUL || Variables[2] (20) || ADD || RETURN",
-                                "displayLines": "((Summoner_MaxHP * 0.02) + 20)",
-                                "constants": [],
-                                "variables": [
-                                  "Summoner_MaxHP",
-                                  0.02,
-                                  20
-                                ]
+                                "displayLines": "((Summoner_MaxHP * 0.02) + 20)"
                               },
                               "formula": "Heal from Healer's MaxHP"
                             },
@@ -2938,14 +2418,7 @@ const compositeAbilityObject = {
                             "target": "{{Player Team All}}"
                           },
                           "healFlat": {
-                            "operator": "Variables[0] (Summoner_MaxHP) || Variables[1] (0.02) || MUL || Variables[2] (20) || ADD || RETURN",
-                            "displayLines": "((Summoner_MaxHP * 0.02) + 20)",
-                            "constants": [],
-                            "variables": [
-                              "Summoner_MaxHP",
-                              0.02,
-                              20
-                            ]
+                            "displayLines": "((Summoner_MaxHP * 0.02) + 20)"
                           },
                           "formula": "Heal from Healer's MaxHP"
                         }
@@ -2982,14 +2455,7 @@ const compositeAbilityObject = {
                                 "target": "{{Parameter Target}}"
                               },
                               "healFlat": {
-                                "operator": "Variables[0] (Summoner_MaxHP) || Variables[1] (0.02) || MUL || Variables[2] (20) || ADD || RETURN",
-                                "displayLines": "((Summoner_MaxHP * 0.02) + 20)",
-                                "constants": [],
-                                "variables": [
-                                  "Summoner_MaxHP",
-                                  0.02,
-                                  20
-                                ]
+                                "displayLines": "((Summoner_MaxHP * 0.02) + 20)"
                               },
                               "formula": "Heal from Healer's MaxHP"
                             },
@@ -3026,29 +2492,14 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1132518124\">Hyacine_Passive_Effect</a>[<span class=\"descriptionNumberColor\">First Light Heals the World</span>]",
                   "duration": {
-                    "operator": "Variables[0] (AbilityP01_P4_LifeTime) || RETURN",
-                    "displayLines": "AbilityP01_P4_LifeTime",
-                    "constants": [],
-                    "variables": [
-                      "AbilityP01_P4_LifeTime"
-                    ]
+                    "displayLines": "AbilityP01_P4_LifeTime"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] (_ServantLoseHPValueTotal) || RETURN",
-                    "displayLines": "_ServantLoseHPValueTotal",
-                    "constants": [],
-                    "variables": [
-                      "_ServantLoseHPValueTotal"
-                    ]
+                    "displayLines": "_ServantLoseHPValueTotal"
                   },
                   "valuePerStack": {
                     "MDF_DamageAddRatio": {
-                      "operator": "Variables[0] (AbilityP01_P3_DamageIncrease) || RETURN",
-                      "displayLines": "AbilityP01_P3_DamageIncrease",
-                      "constants": [],
-                      "variables": [
-                        "AbilityP01_P3_DamageIncrease"
-                      ]
+                      "displayLines": "AbilityP01_P3_DamageIncrease"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -3070,13 +2521,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_ServantHealValueTotal) || Variables[1] (_ServantHealValue) || ADD || RETURN",
-                    "displayLines": "(_ServantHealValueTotal + _ServantHealValue)",
-                    "constants": [],
-                    "variables": [
-                      "_ServantHealValueTotal",
-                      "_ServantHealValue"
-                    ]
+                    "displayLines": "(_ServantHealValueTotal + _ServantHealValue)"
                   },
                   "variableName": "_ServantHealValueTotal"
                 },
@@ -3169,12 +2614,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster's Summoner}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (_ServantHealValueTotal) || RETURN",
-                    "displayLines": "_ServantHealValueTotal",
-                    "constants": [],
-                    "variables": [
-                      "_ServantHealValueTotal"
-                    ]
+                    "displayLines": "_ServantHealValueTotal"
                   },
                   "variableName": "_TempServantHealValueTotal"
                 }
@@ -3316,12 +2756,7 @@ const compositeAbilityObject = {
                             "target": "{{Caster}}"
                           },
                           "consumePercent": {
-                            "operator": "Variables[0] (0.04) || RETURN",
-                            "displayLines": "0.04",
-                            "constants": [],
-                            "variables": [
-                              0.04
-                            ]
+                            "displayLines": "0.04"
                           },
                           "dynamicAssignment": "_RealRatio",
                           "attackType": "Pursued"
@@ -3338,13 +2773,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (_RealRatio) || Variables[1] (_ServantMaxHP) || MUL || RETURN",
-                            "displayLines": "(_RealRatio * _ServantMaxHP)",
-                            "constants": [],
-                            "variables": [
-                              "_RealRatio",
-                              "_ServantMaxHP"
-                            ]
+                            "displayLines": "(_RealRatio * _ServantMaxHP)"
                           },
                           "variableName": "_ServantLoseHPValue"
                         },
@@ -3368,13 +2797,7 @@ const compositeAbilityObject = {
                           "modifierName": "<a class=\"gModGreen\" id=\"1467878909\">Memosprite_HyacineServant_ChallangeScore</a>",
                           "variableName": "_ServantLoseHPValueTotal",
                           "value": {
-                            "operator": "Variables[0] (_ServantLoseHPValueTotal2) || Variables[1] (_ServantLoseHPValue) || ADD || RETURN",
-                            "displayLines": "(_ServantLoseHPValueTotal2 + _ServantLoseHPValue)",
-                            "constants": [],
-                            "variables": [
-                              "_ServantLoseHPValueTotal2",
-                              "_ServantLoseHPValue"
-                            ]
+                            "displayLines": "(_ServantLoseHPValueTotal2 + _ServantLoseHPValue)"
                           }
                         },
                         {
@@ -3419,14 +2842,7 @@ const compositeAbilityObject = {
                                     "target": "{{Parameter Target}}"
                                   },
                                   "healFlat": {
-                                    "operator": "Variables[0] (Summoner_MaxHP) || Variables[1] (0.02) || MUL || Variables[2] (20) || ADD || RETURN",
-                                    "displayLines": "((Summoner_MaxHP * 0.02) + 20)",
-                                    "constants": [],
-                                    "variables": [
-                                      "Summoner_MaxHP",
-                                      0.02,
-                                      20
-                                    ]
+                                    "displayLines": "((Summoner_MaxHP * 0.02) + 20)"
                                   },
                                   "formula": "Heal from Healer's MaxHP"
                                 },
@@ -3456,14 +2872,7 @@ const compositeAbilityObject = {
                                 "target": "{{Player Team All}}"
                               },
                               "healFlat": {
-                                "operator": "Variables[0] (Summoner_MaxHP) || Variables[1] (0.02) || MUL || Variables[2] (20) || ADD || RETURN",
-                                "displayLines": "((Summoner_MaxHP * 0.02) + 20)",
-                                "constants": [],
-                                "variables": [
-                                  "Summoner_MaxHP",
-                                  0.02,
-                                  20
-                                ]
+                                "displayLines": "((Summoner_MaxHP * 0.02) + 20)"
                               },
                               "formula": "Heal from Healer's MaxHP"
                             }
@@ -3500,14 +2909,7 @@ const compositeAbilityObject = {
                                     "target": "{{Parameter Target}}"
                                   },
                                   "healFlat": {
-                                    "operator": "Variables[0] (Summoner_MaxHP) || Variables[1] (0.02) || MUL || Variables[2] (20) || ADD || RETURN",
-                                    "displayLines": "((Summoner_MaxHP * 0.02) + 20)",
-                                    "constants": [],
-                                    "variables": [
-                                      "Summoner_MaxHP",
-                                      0.02,
-                                      20
-                                    ]
+                                    "displayLines": "((Summoner_MaxHP * 0.02) + 20)"
                                   },
                                   "formula": "Heal from Healer's MaxHP"
                                 },
@@ -3640,13 +3042,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster's Summoner}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (15) || Variables[1] (30) || ADD || RETURN",
-                        "displayLines": "(15 + 30)",
-                        "constants": [],
-                        "variables": [
-                          15,
-                          30
-                        ]
+                        "displayLines": "(15 + 30)"
                       },
                       "isFixed": "* ERR"
                     },
@@ -3668,12 +3064,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster's Summoner}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (15) || RETURN",
-                        "displayLines": "15",
-                        "constants": [],
-                        "variables": [
-                          15
-                        ]
+                        "displayLines": "15"
                       },
                       "isFixed": "* ERR"
                     }
@@ -3749,12 +3140,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"3098173\">Memosprite_HyacineServant_Eidolon6_PenetrateRatio_Halo</a>",
               "valuePerStack": {
                 "MDF_PenetrateRatio": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             }
@@ -3804,25 +3190,14 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_ServantHealValueTotal) || Variables[1] (_SummonerHealValueTotal) || ADD || RETURN",
-            "displayLines": "(_ServantHealValueTotal + _SummonerHealValueTotal)",
-            "constants": [],
-            "variables": [
-              "_ServantHealValueTotal",
-              "_SummonerHealValueTotal"
-            ]
+            "displayLines": "(_ServantHealValueTotal + _SummonerHealValueTotal)"
           },
           "variableName": "_ServantHealValueTotal"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_ServantHealValueTotal) || RETURN",
-            "displayLines": "_ServantHealValueTotal",
-            "constants": [],
-            "variables": [
-              "_ServantHealValueTotal"
-            ]
+            "displayLines": "_ServantHealValueTotal"
           },
           "variableName": "_ServantHealValueTotalNew"
         },
@@ -3841,13 +3216,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_ServantHealValueTotal) || Variables[0] (_ServantHealValueTotal) || Variables[1] (0.5) || MUL || SUB || RETURN",
-                "displayLines": "(_ServantHealValueTotal - (_ServantHealValueTotal * 0.5))",
-                "constants": [],
-                "variables": [
-                  "_ServantHealValueTotal",
-                  0.5
-                ]
+                "displayLines": "(_ServantHealValueTotal - (_ServantHealValueTotal * 0.5))"
               },
               "variableName": "_ServantHealValueTotal"
             }
@@ -3856,13 +3225,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_ServantHealValueTotal) || Variables[0] (_ServantHealValueTotal) || Variables[1] (0.12) || MUL || SUB || RETURN",
-                "displayLines": "(_ServantHealValueTotal - (_ServantHealValueTotal * 0.12))",
-                "constants": [],
-                "variables": [
-                  "_ServantHealValueTotal",
-                  0.12
-                ]
+                "displayLines": "(_ServantHealValueTotal - (_ServantHealValueTotal * 0.12))"
               },
               "variableName": "_ServantHealValueTotal"
             }
@@ -3909,21 +3272,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "DamageFlat": {
-              "operator": "Variables[0] (_ServantHealValueTotalNew) || Variables[1] (0.2) || MUL || RETURN",
-              "displayLines": "(_ServantHealValueTotalNew * 0.2)",
-              "constants": [],
-              "variables": [
-                "_ServantHealValueTotalNew",
-                0.2
-              ]
+              "displayLines": "(_ServantHealValueTotalNew * 0.2)"
             },
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "ToughnessDMGType": {
               "DamageType": "Wind"

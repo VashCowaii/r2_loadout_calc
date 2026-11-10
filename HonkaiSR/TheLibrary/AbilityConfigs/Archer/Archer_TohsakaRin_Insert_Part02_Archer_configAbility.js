@@ -43,12 +43,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (Archer_1508_DMG) || RETURN",
-          "displayLines": "Archer_1508_DMG",
-          "constants": [],
-          "variables": [
-            "Archer_1508_DMG"
-          ]
+          "displayLines": "Archer_1508_DMG"
         },
         "HitSplit": 0.25,
         "Toughness": null,
@@ -67,12 +62,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (Archer_1508_DMG) || RETURN",
-          "displayLines": "Archer_1508_DMG",
-          "constants": [],
-          "variables": [
-            "Archer_1508_DMG"
-          ]
+          "displayLines": "Archer_1508_DMG"
         },
         "HitSplit": 0.25,
         "Toughness": null,
@@ -91,12 +81,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (Archer_1508_DMG) || RETURN",
-          "displayLines": "Archer_1508_DMG",
-          "constants": [],
-          "variables": [
-            "Archer_1508_DMG"
-          ]
+          "displayLines": "Archer_1508_DMG"
         },
         "HitSplit": 0.25,
         "Toughness": null,
@@ -115,12 +100,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (Archer_1508_DMG) || RETURN",
-          "displayLines": "Archer_1508_DMG",
-          "constants": [],
-          "variables": [
-            "Archer_1508_DMG"
-          ]
+          "displayLines": "Archer_1508_DMG"
         },
         "HitSplit": 0.25,
         "Toughness": null,

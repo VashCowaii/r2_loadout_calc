@@ -18,12 +18,7 @@ const configAbility = {
       "statusName": "ATK Boost",
       "stackLimit": 10,
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-        "displayLines": "ModifierStackLayer",
-        "constants": [],
-        "variables": [
-          "ModifierStackLayer"
-        ]
+        "displayLines": "ModifierStackLayer"
       },
       "execute": [
         {
@@ -38,13 +33,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (PassiveSkillInitiate_P1_AttackAddedRatio) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(PassiveSkillInitiate_P1_AttackAddedRatio * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "PassiveSkillInitiate_P1_AttackAddedRatio",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(PassiveSkillInitiate_P1_AttackAddedRatio * ModifierLayers)"
               },
               "variableName": "ModifierAttackAddedRatio"
             },
@@ -56,23 +45,13 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ModifierAttackAddedRatio) || RETURN",
-                "displayLines": "ModifierAttackAddedRatio",
-                "constants": [],
-                "variables": [
-                  "ModifierAttackAddedRatio"
-                ]
+                "displayLines": "ModifierAttackAddedRatio"
               }
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] ({[PassiveSkillInitiate[2]]}) || RETURN",
-                "displayLines": "{[PassiveSkillInitiate[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkillInitiate[2]]}"
-                ]
+                "displayLines": "{[PassiveSkillInitiate[2]]}"
               },
               "variableName": "ModifierMaxLayer"
             }
@@ -145,30 +124,15 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
               "duration": {
-                "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                "displayLines": "MDF_LifeTime",
-                "constants": [],
-                "variables": [
-                  "MDF_LifeTime"
-                ]
+                "displayLines": "MDF_LifeTime"
               },
               "baseChance": 1,
               "stackLimit": {
-                "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                "displayLines": "MDF_MaxLayer",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxLayer"
-                ]
+                "displayLines": "MDF_MaxLayer"
               },
               "valuePerStack": {
                 "Modifier_Poison_DamagePercentage": {
-                  "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                  "displayLines": "MDF_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamagePercentage"
-                  ]
+                  "displayLines": "MDF_DamagePercentage"
                 }
               },
               "stackFlag": "CharacterSkill"

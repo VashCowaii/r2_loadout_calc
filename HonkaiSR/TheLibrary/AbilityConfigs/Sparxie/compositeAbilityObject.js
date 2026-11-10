@@ -65,12 +65,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -97,12 +92,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -132,21 +122,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"2009365349\">Sparxie_Eidolon4_Sub</a>[<span class=\"descriptionNumberColor\">#LockedIn #FaceCard</span>]",
                       "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.36) || RETURN",
-                          "displayLines": "0.36",
-                          "constants": [],
-                          "variables": [
-                            0.36
-                          ]
+                          "displayLines": "0.36"
                         }
                       }
                     }
@@ -181,13 +161,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * _Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "_Layer"
-                    ]
+                    "displayLines": "(MDF_PropertyValue * _Layer)"
                   }
                 }
               ]
@@ -214,12 +188,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -241,12 +210,7 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                  "displayLines": "MDF_PropertyValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue"
-                  ]
+                  "displayLines": "MDF_PropertyValue"
                 }
               }
             }
@@ -263,12 +227,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Adjust Team Punchline Value",
                   "value": {
-                    "operator": "Variables[0] (5) || RETURN",
-                    "displayLines": "5",
-                    "constants": [],
-                    "variables": [
-                      5
-                    ]
+                    "displayLines": "5"
                   },
                   "adjustment": "Add"
                 }
@@ -292,13 +251,7 @@ const compositeAbilityObject = {
                     "value1": "#SkillRank_Rank01_P3_EPDamageAddRatioMax",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (0.015) || Variables[1] (_CurrentEP) || MUL || RETURN",
-                      "displayLines": "(0.015 * _CurrentEP)",
-                      "constants": [],
-                      "variables": [
-                        0.015,
-                        "_CurrentEP"
-                      ]
+                      "displayLines": "(0.015 * _CurrentEP)"
                     }
                   },
                   "passed": [
@@ -311,12 +264,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"416920765\">Sparxie_Eidolon1_Sub01</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.15) || RETURN",
-                          "displayLines": "0.15",
-                          "constants": [],
-                          "variables": [
-                            0.15
-                          ]
+                          "displayLines": "0.15"
                         }
                       }
                     }
@@ -331,13 +279,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"416920765\">Sparxie_Eidolon1_Sub01</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.015) || Variables[1] (_CurrentEP) || MUL || RETURN",
-                          "displayLines": "(0.015 * _CurrentEP)",
-                          "constants": [],
-                          "variables": [
-                            0.015,
-                            "_CurrentEP"
-                          ]
+                          "displayLines": "(0.015 * _CurrentEP)"
                         }
                       }
                     }
@@ -367,13 +309,7 @@ const compositeAbilityObject = {
                     "value1": "#SkillRank_Rank01_P3_EPDamageAddRatioMax",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (0.015) || Variables[1] (_CurrentEP) || MUL || RETURN",
-                      "displayLines": "(0.015 * _CurrentEP)",
-                      "constants": [],
-                      "variables": [
-                        0.015,
-                        "_CurrentEP"
-                      ]
+                      "displayLines": "(0.015 * _CurrentEP)"
                     }
                   },
                   "passed": [
@@ -386,12 +322,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"416920765\">Sparxie_Eidolon1_Sub01</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.15) || RETURN",
-                          "displayLines": "0.15",
-                          "constants": [],
-                          "variables": [
-                            0.15
-                          ]
+                          "displayLines": "0.15"
                         }
                       }
                     }
@@ -406,13 +337,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"416920765\">Sparxie_Eidolon1_Sub01</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.015) || Variables[1] (_CurrentEP) || MUL || RETURN",
-                          "displayLines": "(0.015 * _CurrentEP)",
-                          "constants": [],
-                          "variables": [
-                            0.015,
-                            "_CurrentEP"
-                          ]
+                          "displayLines": "(0.015 * _CurrentEP)"
                         }
                       }
                     }
@@ -502,12 +427,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   },
                   "execute": [
                     {
@@ -567,12 +487,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -594,12 +509,7 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                  "displayLines": "MDF_PropertyValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue"
-                  ]
+                  "displayLines": "MDF_PropertyValue"
                 }
               }
             }
@@ -626,13 +536,7 @@ const compositeAbilityObject = {
                     "value1": "#SkillTree_PointB3_P2_CriticalDamageMax",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (0.08) || Variables[1] (_CurrentEP) || MUL || RETURN",
-                      "displayLines": "(0.08 * _CurrentEP)",
-                      "constants": [],
-                      "variables": [
-                        0.08,
-                        "_CurrentEP"
-                      ]
+                      "displayLines": "(0.08 * _CurrentEP)"
                     }
                   },
                   "passed": [
@@ -645,12 +549,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1399447832\">Sparxie_Trace03_Sub01</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.8) || RETURN",
-                          "displayLines": "0.8",
-                          "constants": [],
-                          "variables": [
-                            0.8
-                          ]
+                          "displayLines": "0.8"
                         }
                       }
                     }
@@ -665,13 +564,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1399447832\">Sparxie_Trace03_Sub01</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.08) || Variables[1] (_CurrentEP) || MUL || RETURN",
-                          "displayLines": "(0.08 * _CurrentEP)",
-                          "constants": [],
-                          "variables": [
-                            0.08,
-                            "_CurrentEP"
-                          ]
+                          "displayLines": "(0.08 * _CurrentEP)"
                         }
                       }
                     }
@@ -701,13 +594,7 @@ const compositeAbilityObject = {
                     "value1": "#SkillTree_PointB3_P2_CriticalDamageMax",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (0.08) || Variables[1] (_CurrentEP) || MUL || RETURN",
-                      "displayLines": "(0.08 * _CurrentEP)",
-                      "constants": [],
-                      "variables": [
-                        0.08,
-                        "_CurrentEP"
-                      ]
+                      "displayLines": "(0.08 * _CurrentEP)"
                     }
                   },
                   "passed": [
@@ -720,12 +607,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1399447832\">Sparxie_Trace03_Sub01</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.8) || RETURN",
-                          "displayLines": "0.8",
-                          "constants": [],
-                          "variables": [
-                            0.8
-                          ]
+                          "displayLines": "0.8"
                         }
                       }
                     }
@@ -740,13 +622,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1399447832\">Sparxie_Trace03_Sub01</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.08) || Variables[1] (_CurrentEP) || MUL || RETURN",
-                          "displayLines": "(0.08 * _CurrentEP)",
-                          "constants": [],
-                          "variables": [
-                            0.08,
-                            "_CurrentEP"
-                          ]
+                          "displayLines": "(0.08 * _CurrentEP)"
                         }
                       }
                     }
@@ -795,12 +671,7 @@ const compositeAbilityObject = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (_Elation_Count) || RETURN",
-                    "displayLines": "_Elation_Count",
-                    "constants": [],
-                    "variables": [
-                      "_Elation_Count"
-                    ]
+                    "displayLines": "_Elation_Count"
                   },
                   "compareType": ">=",
                   "caseEvents": [
@@ -811,24 +682,14 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (8) || RETURN",
-                            "displayLines": "8",
-                            "constants": [],
-                            "variables": [
-                              8
-                            ]
+                            "displayLines": "8"
                           },
                           "variableName": "Sparxie_SkillTree_PointB2_UltraEPAddValue"
                         },
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (4) || RETURN",
-                            "displayLines": "4",
-                            "constants": [],
-                            "variables": [
-                              4
-                            ]
+                            "displayLines": "4"
                           },
                           "variableName": "Sparxie_SkillTree_PointB2_UltraBPAddValue"
                         }
@@ -841,24 +702,14 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (4) || RETURN",
-                            "displayLines": "4",
-                            "constants": [],
-                            "variables": [
-                              4
-                            ]
+                            "displayLines": "4"
                           },
                           "variableName": "Sparxie_SkillTree_PointB2_UltraEPAddValue"
                         },
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (1) || RETURN",
-                            "displayLines": "1",
-                            "constants": [],
-                            "variables": [
-                              1
-                            ]
+                            "displayLines": "1"
                           },
                           "variableName": "Sparxie_SkillTree_PointB2_UltraBPAddValue"
                         }
@@ -871,24 +722,14 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (2) || RETURN",
-                            "displayLines": "2",
-                            "constants": [],
-                            "variables": [
-                              2
-                            ]
+                            "displayLines": "2"
                           },
                           "variableName": "Sparxie_SkillTree_PointB2_UltraEPAddValue"
                         },
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (1) || RETURN",
-                            "displayLines": "1",
-                            "constants": [],
-                            "variables": [
-                              1
-                            ]
+                            "displayLines": "1"
                           },
                           "variableName": "Sparxie_SkillTree_PointB2_UltraBPAddValue"
                         }
@@ -932,12 +773,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -985,17 +821,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (WHOLE) || Variables[1] (_CurrentAttack) || Variables[2] (_CurrentAttackConvert) || SUB || Variables[3] (2000) || SUB || Variables[4] (100) || DIV || PARAM_1 || FUNCTION || Variables[5] (0.05) || MUL || RETURN",
-                    "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((((_CurrentAttack - _CurrentAttackConvert) - 2000) / 100)) * 0.05)",
-                    "constants": [],
-                    "variables": [
-                      "WHOLE",
-                      "_CurrentAttack",
-                      "_CurrentAttackConvert",
-                      2000,
-                      100,
-                      0.05
-                    ]
+                    "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((((_CurrentAttack - _CurrentAttackConvert) - 2000) / 100)) * 0.05)"
                   },
                   "variableName": "Sparxie_SkillTree_PointB1_AddedValue"
                 },
@@ -1031,12 +857,7 @@ const compositeAbilityObject = {
                         "value1": "Sparxie_SkillTree_PointB1_AddedValue",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (0.8) || RETURN",
-                          "displayLines": "0.8",
-                          "constants": [],
-                          "variables": [
-                            0.8
-                          ]
+                          "displayLines": "0.8"
                         },
                         "contextScope": "ContextCaster"
                       },
@@ -1044,12 +865,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (0.8) || RETURN",
-                            "displayLines": "0.8",
-                            "constants": [],
-                            "variables": [
-                              0.8
-                            ]
+                            "displayLines": "0.8"
                           },
                           "variableName": "Sparxie_SkillTree_PointB1_AddedValue"
                         }
@@ -1064,12 +880,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1914794720\">Sparxie_Trace01_Bonus</a>[<span class=\"descriptionNumberColor\">Sweet! Punchline Signing</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (Sparxie_SkillTree_PointB1_AddedValue) || RETURN",
-                          "displayLines": "Sparxie_SkillTree_PointB1_AddedValue",
-                          "constants": [],
-                          "variables": [
-                            "Sparxie_SkillTree_PointB1_AddedValue"
-                          ]
+                          "displayLines": "Sparxie_SkillTree_PointB1_AddedValue"
                         }
                       }
                     }
@@ -1190,12 +1001,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (_BPChange) || RETURN",
-                        "displayLines": "_BPChange",
-                        "constants": [],
-                        "variables": [
-                          "_BPChange"
-                        ]
+                        "displayLines": "_BPChange"
                       }
                     }
                   ]
@@ -1295,12 +1101,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       }
                     },
                     {
@@ -1311,12 +1112,7 @@ const compositeAbilityObject = {
                       },
                       "function": "Set",
                       "value": {
-                        "operator": "Variables[0] (Sparxie_EnergyPoint) || RETURN",
-                        "displayLines": "Sparxie_EnergyPoint",
-                        "constants": [],
-                        "variables": [
-                          "Sparxie_EnergyPoint"
-                        ]
+                        "displayLines": "Sparxie_EnergyPoint"
                       },
                       "silentChange": true
                     }
@@ -1426,12 +1222,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (Sparxie_EnergyPoint) || RETURN",
-                            "displayLines": "Sparxie_EnergyPoint",
-                            "constants": [],
-                            "variables": [
-                              "Sparxie_EnergyPoint"
-                            ]
+                            "displayLines": "Sparxie_EnergyPoint"
                           },
                           "priorState": "Active"
                         }
@@ -1440,12 +1231,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (Sparxie_EnergyPoint) || RETURN",
-                            "displayLines": "Sparxie_EnergyPoint",
-                            "constants": [],
-                            "variables": [
-                              "Sparxie_EnergyPoint"
-                            ]
+                            "displayLines": "Sparxie_EnergyPoint"
                           },
                           "priorState": "Normal"
                         }
@@ -1463,12 +1249,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"153929564\">Sparxie_EnergyPoint</a>[<span class=\"descriptionNumberColor\">Thrill</span>]",
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (_EPChange) || RETURN",
-                        "displayLines": "_EPChange",
-                        "constants": [],
-                        "variables": [
-                          "_EPChange"
-                        ]
+                        "displayLines": "_EPChange"
                       }
                     },
                     {
@@ -1497,38 +1278,18 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"510555115\">Sparxie_Eidolon2_CriticalDamage</a>[<span class=\"descriptionNumberColor\">#AudienceKnows</span>]",
                           "duration": {
-                            "operator": "Variables[0] (2) || RETURN",
-                            "displayLines": "2",
-                            "constants": [],
-                            "variables": [
-                              2
-                            ]
+                            "displayLines": "2"
                           },
                           "stackLimit": {
-                            "operator": "Variables[0] (4) || RETURN",
-                            "displayLines": "4",
-                            "constants": [],
-                            "variables": [
-                              4
-                            ]
+                            "displayLines": "4"
                           },
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.1) || RETURN",
-                              "displayLines": "0.1",
-                              "constants": [],
-                              "variables": [
-                                0.1
-                              ]
+                              "displayLines": "0.1"
                             }
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (_EPChange) || INVERT || RETURN",
-                            "displayLines": "-_EPChange",
-                            "constants": [],
-                            "variables": [
-                              "_EPChange"
-                            ]
+                            "displayLines": "-_EPChange"
                           }
                         }
                       ]
@@ -1550,25 +1311,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "variableName": "Sparxie_Skill02_GrandPrizeChance"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (28) || Variables[1] (Sparxie_Skill02_GrandPrizeChance) || SUB || RETURN",
-                    "displayLines": "(28 - Sparxie_Skill02_GrandPrizeChance)",
-                    "constants": [],
-                    "variables": [
-                      28,
-                      "Sparxie_Skill02_GrandPrizeChance"
-                    ]
+                    "displayLines": "(28 - Sparxie_Skill02_GrandPrizeChance)"
                   },
                   "variableName": "Sparxie_Skill02_MinorPrizeChance"
                 }
@@ -1856,12 +1606,7 @@ const compositeAbilityObject = {
               "modifier": null,
               "ID": "150101(SkillMaze)",
               "duration": {
-                "operator": "Variables[0] (10) || RETURN",
-                "displayLines": "10",
-                "constants": [],
-                "variables": [
-                  10
-                ]
+                "displayLines": "10"
               }
             }
           ]
@@ -2078,12 +1823,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Fire",
                         "Damage": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         },
                         "Toughness": null,
                         "Tags": null
@@ -2093,12 +1833,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Skill Points Modification",
                       "adjustmentValue": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "adjustmentType": "+"
                     }
@@ -2141,25 +1876,14 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "variableName": "Sparxie_Skill02_GrandPrizeChance"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (28) || Variables[1] (Sparxie_Skill02_GrandPrizeChance) || SUB || RETURN",
-            "displayLines": "(28 - Sparxie_Skill02_GrandPrizeChance)",
-            "constants": [],
-            "variables": [
-              28,
-              "Sparxie_Skill02_GrandPrizeChance"
-            ]
+            "displayLines": "(28 - Sparxie_Skill02_GrandPrizeChance)"
           },
           "variableName": "Sparxie_Skill02_MinorPrizeChance"
         },
@@ -2175,12 +1899,7 @@ const compositeAbilityObject = {
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (Sparxie_EnergyPoint) || RETURN",
-            "displayLines": "Sparxie_EnergyPoint",
-            "constants": [],
-            "variables": [
-              "Sparxie_EnergyPoint"
-            ]
+            "displayLines": "Sparxie_EnergyPoint"
           },
           "maximum": 1,
           "assignState": "True",
@@ -2270,12 +1989,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-769743474\">Sparxie_Eidolon6</a>[<span class=\"descriptionNumberColor\">#BuiltDifferent #GoingExtinct</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             }
@@ -2313,12 +2027,7 @@ const compositeAbilityObject = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           }
         },
         {
@@ -2329,12 +2038,7 @@ const compositeAbilityObject = {
           },
           "function": "Set",
           "value": {
-            "operator": "Variables[0] (Sparxie_EnergyPoint) || RETURN",
-            "displayLines": "Sparxie_EnergyPoint",
-            "constants": [],
-            "variables": [
-              "Sparxie_EnergyPoint"
-            ]
+            "displayLines": "Sparxie_EnergyPoint"
           },
           "silentChange": true
         },
@@ -2352,14 +2056,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (FLOOR) || Variables[1] (_CurrentEP) || Variables[2] (1) || DIV || PARAM_1 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_CurrentEP / 1))",
-                "constants": [],
-                "variables": [
-                  "FLOOR",
-                  "_CurrentEP",
-                  1
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_CurrentEP / 1))"
               },
               "variableName": "_Rank06_ExtraDamage"
             },
@@ -2370,26 +2067,14 @@ const compositeAbilityObject = {
                 "value1": "_Rank06_ExtraDamage",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (40) || Variables[1] (20) || SUB || RETURN",
-                  "displayLines": "(40 - 20)",
-                  "constants": [],
-                  "variables": [
-                    40,
-                    20
-                  ]
+                  "displayLines": "(40 - 20)"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (40) || Variables[1] (20) || SUB || RETURN",
-                    "displayLines": "(40 - 20)",
-                    "constants": [],
-                    "variables": [
-                      40,
-                      20
-                    ]
+                    "displayLines": "(40 - 20)"
                   },
                   "variableName": "_Rank06_ExtraDamage"
                 }
@@ -2400,13 +2085,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (20) || Variables[1] (_Rank06_ExtraDamage) || ADD || RETURN",
-            "displayLines": "(20 + _Rank06_ExtraDamage)",
-            "constants": [],
-            "variables": [
-              20,
-              "_Rank06_ExtraDamage"
-            ]
+            "displayLines": "(20 + _Rank06_ExtraDamage)"
           },
           "execute": [
             {
@@ -2475,12 +2154,7 @@ const compositeAbilityObject = {
             {
               "name": "Adjust Team Punchline Value",
               "value": {
-                "operator": "Variables[0] (5) || RETURN",
-                "displayLines": "5",
-                "constants": [],
-                "variables": [
-                  5
-                ]
+                "displayLines": "5"
               },
               "adjustment": "Add"
             }
@@ -2489,13 +2163,7 @@ const compositeAbilityObject = {
         {
           "name": "Adjust Team Punchline Value",
           "value": {
-            "operator": "Variables[0] (2) || Variables[1] (Sparxie_SkillTree_PointB2_UltraEPAddValue) || ADD || RETURN",
-            "displayLines": "(2 + Sparxie_SkillTree_PointB2_UltraEPAddValue)",
-            "constants": [],
-            "variables": [
-              2,
-              "Sparxie_SkillTree_PointB2_UltraEPAddValue"
-            ]
+            "displayLines": "(2 + Sparxie_SkillTree_PointB2_UltraEPAddValue)"
           },
           "adjustment": "Add"
         },
@@ -2515,12 +2183,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (Sparxie_SkillTree_PointB2_UltraBPAddValue) || RETURN",
-                "displayLines": "Sparxie_SkillTree_PointB2_UltraBPAddValue",
-                "constants": [],
-                "variables": [
-                  "Sparxie_SkillTree_PointB2_UltraBPAddValue"
-                ]
+                "displayLines": "Sparxie_SkillTree_PointB2_UltraBPAddValue"
               }
             },
             {
@@ -2531,12 +2194,7 @@ const compositeAbilityObject = {
               },
               "function": "Set",
               "value": {
-                "operator": "Variables[0] (Sparxie_EnergyPoint) || RETURN",
-                "displayLines": "Sparxie_EnergyPoint",
-                "constants": [],
-                "variables": [
-                  "Sparxie_EnergyPoint"
-                ]
+                "displayLines": "Sparxie_EnergyPoint"
               },
               "silentChange": true
             }
@@ -2561,22 +2219,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (_CurrentElationDamage) || Variables[1] (0.6) || MUL || Variables[2] (0.5) || ADD || RETURN",
-              "displayLines": "((_CurrentElationDamage * 0.6) + 0.5)",
-              "constants": [],
-              "variables": [
-                "_CurrentElationDamage",
-                0.6,
-                0.5
-              ]
+              "displayLines": "((_CurrentElationDamage * 0.6) + 0.5)"
             },
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -2603,12 +2249,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "DamageElation": {
-                  "operator": "Variables[0] (0.48) || RETURN",
-                  "displayLines": "0.48",
-                  "constants": [],
-                  "variables": [
-                    0.48
-                  ]
+                  "displayLines": "0.48"
                 },
                 "dmgFormula": "Elation Scaling",
                 "Toughness": null,
@@ -2691,14 +2332,7 @@ const compositeAbilityObject = {
                 "value1": "Sparxie_Skill02_MinorPrizeGetNum",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (7) || Constants[0] (1) || SUB || RETURN",
-                  "displayLines": "(7 - 1)",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    7
-                  ]
+                  "displayLines": "(7 - 1)"
                 }
               },
               {
@@ -2720,20 +2354,10 @@ const compositeAbilityObject = {
               "name": "Random Event",
               "odds": [
                 {
-                  "operator": "Variables[0] (Sparxie_Skill02_GrandPrizeChance) || RETURN",
-                  "displayLines": "Sparxie_Skill02_GrandPrizeChance",
-                  "constants": [],
-                  "variables": [
-                    "Sparxie_Skill02_GrandPrizeChance"
-                  ]
+                  "displayLines": "Sparxie_Skill02_GrandPrizeChance"
                 },
                 {
-                  "operator": "Variables[0] (Sparxie_Skill02_MinorPrizeChance) || RETURN",
-                  "displayLines": "Sparxie_Skill02_MinorPrizeChance",
-                  "constants": [],
-                  "variables": [
-                    "Sparxie_Skill02_MinorPrizeChance"
-                  ]
+                  "displayLines": "Sparxie_Skill02_MinorPrizeChance"
                 }
               ],
               "execute": [
@@ -2774,14 +2398,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_SkillUseCount) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(_SkillUseCount + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "_SkillUseCount"
-            ]
+            "displayLines": "(_SkillUseCount + 1)"
           },
           "variableName": "_SkillUseCount"
         },
@@ -2792,26 +2409,13 @@ const compositeAbilityObject = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (_SkillUseCount) || RETURN",
-            "displayLines": "_SkillUseCount",
-            "constants": [],
-            "variables": [
-              "_SkillUseCount"
-            ]
+            "displayLines": "_SkillUseCount"
           }
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_PKLineProgress) || Constants[0] (0.8) || Variables[0] (_PKLineProgress) || SUB || Constants[1] (4) || DIV || ADD || RETURN",
-            "displayLines": "(_PKLineProgress + ((0.8 - _PKLineProgress) / 4))",
-            "constants": [
-              0.8,
-              4
-            ],
-            "variables": [
-              "_PKLineProgress"
-            ]
+            "displayLines": "(_PKLineProgress + ((0.8 - _PKLineProgress) / 4))"
           },
           "variableName": "_PKLineProgress"
         },
@@ -2838,12 +2442,7 @@ const compositeAbilityObject = {
             "value1": "_SkillUseCount",
             "compareType": ">=",
             "value2": {
-              "operator": "Variables[0] (20) || RETURN",
-              "displayLines": "20",
-              "constants": [],
-              "variables": [
-                20
-              ]
+              "displayLines": "20"
             }
           },
           "passed": [
@@ -2967,14 +2566,7 @@ const compositeAbilityObject = {
                 "value1": "Sparxie_Skill02_MinorPrizeGetNum",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (7) || Constants[0] (1) || SUB || RETURN",
-                  "displayLines": "(7 - 1)",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    7
-                  ]
+                  "displayLines": "(7 - 1)"
                 }
               },
               {
@@ -2996,20 +2588,10 @@ const compositeAbilityObject = {
               "name": "Random Event",
               "odds": [
                 {
-                  "operator": "Variables[0] (Sparxie_Skill02_GrandPrizeChance) || RETURN",
-                  "displayLines": "Sparxie_Skill02_GrandPrizeChance",
-                  "constants": [],
-                  "variables": [
-                    "Sparxie_Skill02_GrandPrizeChance"
-                  ]
+                  "displayLines": "Sparxie_Skill02_GrandPrizeChance"
                 },
                 {
-                  "operator": "Variables[0] (Sparxie_Skill02_MinorPrizeChance) || RETURN",
-                  "displayLines": "Sparxie_Skill02_MinorPrizeChance",
-                  "constants": [],
-                  "variables": [
-                    "Sparxie_Skill02_MinorPrizeChance"
-                  ]
+                  "displayLines": "Sparxie_Skill02_MinorPrizeChance"
                 }
               ],
               "execute": [
@@ -3050,14 +2632,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_SkillUseCount) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(_SkillUseCount + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "_SkillUseCount"
-            ]
+            "displayLines": "(_SkillUseCount + 1)"
           },
           "variableName": "_SkillUseCount"
         },
@@ -3068,12 +2643,7 @@ const compositeAbilityObject = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (_SkillUseCount) || RETURN",
-            "displayLines": "_SkillUseCount",
-            "constants": [],
-            "variables": [
-              "_SkillUseCount"
-            ]
+            "displayLines": "_SkillUseCount"
           }
         },
         {
@@ -3269,22 +2839,10 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] (1) || Variables[1] (0.2) || Variables[2] (_SkillUseCount) || MUL || ADD || RETURN",
-                  "displayLines": "(1 + (0.2 * _SkillUseCount))",
-                  "constants": [],
-                  "variables": [
-                    1,
-                    0.2,
-                    "_SkillUseCount"
-                  ]
+                  "displayLines": "(1 + (0.2 * _SkillUseCount))"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Basic ATK",
@@ -3301,22 +2859,10 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] (0.5) || Variables[1] (0.1) || Variables[2] (_SkillUseCount) || MUL || ADD || RETURN",
-                  "displayLines": "(0.5 + (0.1 * _SkillUseCount))",
-                  "constants": [],
-                  "variables": [
-                    0.5,
-                    0.1,
-                    "_SkillUseCount"
-                  ]
+                  "displayLines": "(0.5 + (0.1 * _SkillUseCount))"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Basic ATK"
@@ -3332,12 +2878,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "DamageElation": {
-                  "operator": "Variables[0] (0.4) || RETURN",
-                  "displayLines": "0.4",
-                  "constants": [],
-                  "variables": [
-                    0.4
-                  ]
+                  "displayLines": "0.4"
                 },
                 "dmgFormula": "Elation Scaling",
                 "Toughness": null,
@@ -3356,12 +2897,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "DamageElation": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 },
                 "dmgFormula": "Elation Scaling",
                 "Toughness": null,
@@ -3373,12 +2909,7 @@ const compositeAbilityObject = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (_SkillUseCount) || RETURN",
-                "displayLines": "_SkillUseCount",
-                "constants": [],
-                "variables": [
-                  "_SkillUseCount"
-                ]
+                "displayLines": "_SkillUseCount"
               },
               "execute": [
                 {
@@ -3398,12 +2929,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Fire",
                         "DamageElation": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         },
                         "dmgFormula": "Elation Scaling",
                         "Toughness": {
@@ -3430,22 +2956,10 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] (1) || Variables[1] (0.2) || Variables[2] (_SkillUseCount) || MUL || ADD || RETURN",
-                  "displayLines": "(1 + (0.2 * _SkillUseCount))",
-                  "constants": [],
-                  "variables": [
-                    1,
-                    0.2,
-                    "_SkillUseCount"
-                  ]
+                  "displayLines": "(1 + (0.2 * _SkillUseCount))"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Basic ATK",
@@ -3462,22 +2976,10 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] (0.5) || Variables[1] (0.1) || Variables[2] (_SkillUseCount) || MUL || ADD || RETURN",
-                  "displayLines": "(0.5 + (0.1 * _SkillUseCount))",
-                  "constants": [],
-                  "variables": [
-                    0.5,
-                    0.1,
-                    "_SkillUseCount"
-                  ]
+                  "displayLines": "(0.5 + (0.1 * _SkillUseCount))"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Basic ATK"
@@ -3513,25 +3015,14 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "variableName": "Sparxie_Skill02_GrandPrizeChance"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (28) || Variables[1] (Sparxie_Skill02_GrandPrizeChance) || SUB || RETURN",
-            "displayLines": "(28 - Sparxie_Skill02_GrandPrizeChance)",
-            "constants": [],
-            "variables": [
-              28,
-              "Sparxie_Skill02_GrandPrizeChance"
-            ]
+            "displayLines": "(28 - Sparxie_Skill02_GrandPrizeChance)"
           },
           "variableName": "Sparxie_Skill02_MinorPrizeChance"
         },
@@ -3637,20 +3128,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Basic ATK",
@@ -3724,21 +3205,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "DamageElation": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
+                  "displayLines": "0.5"
                 },
                 "dmgFormula": "Elation Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Elation DMG",
@@ -3768,21 +3239,11 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "DamageElation": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     },
                     "dmgFormula": "Elation Scaling",
                     "Toughness": {
-                      "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                      "displayLines": "ST Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "ST Toughness Value"
-                      ]
+                      "displayLines": "ST Toughness Value"
                     },
                     "Tags": null,
                     "attackType": "Elation DMG"
@@ -3811,28 +3272,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Sparxie_Skill02_MinorPrizeChance) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(Sparxie_Skill02_MinorPrizeChance - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Sparxie_Skill02_MinorPrizeChance"
-                    ]
+                    "displayLines": "(Sparxie_Skill02_MinorPrizeChance - 1)"
                   },
                   "variableName": "Sparxie_Skill02_MinorPrizeChance"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Sparxie_Skill02_MinorPrizeGetNum) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(Sparxie_Skill02_MinorPrizeGetNum + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Sparxie_Skill02_MinorPrizeGetNum"
-                    ]
+                    "displayLines": "(Sparxie_Skill02_MinorPrizeGetNum + 1)"
                   },
                   "variableName": "Sparxie_Skill02_MinorPrizeGetNum"
                 },
@@ -3859,25 +3306,14 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "variableName": "Sparxie_Skill02_GrandPrizeChance"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (28) || Variables[1] (Sparxie_Skill02_GrandPrizeChance) || SUB || RETURN",
-                        "displayLines": "(28 - Sparxie_Skill02_GrandPrizeChance)",
-                        "constants": [],
-                        "variables": [
-                          28,
-                          "Sparxie_Skill02_GrandPrizeChance"
-                        ]
+                        "displayLines": "(28 - Sparxie_Skill02_GrandPrizeChance)"
                       },
                       "variableName": "Sparxie_Skill02_MinorPrizeChance"
                     }
@@ -3896,12 +3332,7 @@ const compositeAbilityObject = {
             {
               "name": "Adjust Team Punchline Value",
               "value": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "adjustment": "Add"
             }
@@ -3935,14 +3366,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Sparxie_Skill02_GrandPrizeChance) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(Sparxie_Skill02_GrandPrizeChance - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Sparxie_Skill02_GrandPrizeChance"
-                    ]
+                    "displayLines": "(Sparxie_Skill02_GrandPrizeChance - 1)"
                   },
                   "variableName": "Sparxie_Skill02_GrandPrizeChance"
                 },
@@ -3974,25 +3398,14 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "variableName": "Sparxie_Skill02_GrandPrizeChance"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (28) || Variables[1] (Sparxie_Skill02_GrandPrizeChance) || SUB || RETURN",
-                        "displayLines": "(28 - Sparxie_Skill02_GrandPrizeChance)",
-                        "constants": [],
-                        "variables": [
-                          28,
-                          "Sparxie_Skill02_GrandPrizeChance"
-                        ]
+                        "displayLines": "(28 - Sparxie_Skill02_GrandPrizeChance)"
                       },
                       "variableName": "Sparxie_Skill02_MinorPrizeChance"
                     }
@@ -4011,24 +3424,14 @@ const compositeAbilityObject = {
             {
               "name": "Skill Points Modification",
               "adjustmentValue": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "adjustmentType": "+"
             },
             {
               "name": "Adjust Team Punchline Value",
               "value": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "adjustment": "Add"
             }

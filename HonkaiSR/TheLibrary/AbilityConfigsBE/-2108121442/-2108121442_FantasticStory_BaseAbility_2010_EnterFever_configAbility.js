@@ -13,12 +13,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2010_EnterFever_P1_Ratio",
       "resetValue": {
-        "operator": "Variables[0] (ADF_1_Get) || RETURN",
-        "displayLines": "ADF_1_Get",
-        "constants": [],
-        "variables": [
-          "ADF_1_Get"
-        ]
+        "displayLines": "ADF_1_Get"
       },
       "scope": "ContextCaster"
     },
@@ -30,12 +25,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2010_EnterFever_P2_Ratio",
       "resetValue": {
-        "operator": "Variables[0] (ADF_2_Get) || RETURN",
-        "displayLines": "ADF_2_Get",
-        "constants": [],
-        "variables": [
-          "ADF_2_Get"
-        ]
+        "displayLines": "ADF_2_Get"
       },
       "scope": "ContextCaster"
     },
@@ -47,12 +37,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2010_EnterFever_P3_Ratio",
       "resetValue": {
-        "operator": "Variables[0] (ADF_3_Get) || RETURN",
-        "displayLines": "ADF_3_Get",
-        "constants": [],
-        "variables": [
-          "ADF_3_Get"
-        ]
+        "displayLines": "ADF_3_Get"
       },
       "scope": "ContextCaster"
     },
@@ -107,12 +92,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1762727873\">Modifier_FantasticStory_BaseAbility_2010_EnterFever_sub</a>[<span class=\"descriptionNumberColor\">Surging Grit</span>]",
                   "valuePerStack": {
                     "DV_Ratio_Get": {
-                      "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2010_EnterFever_P2_Ratio) || RETURN",
-                      "displayLines": "DV_FantasticStory_BaseAbility_2010_EnterFever_P2_Ratio",
-                      "constants": [],
-                      "variables": [
-                        "DV_FantasticStory_BaseAbility_2010_EnterFever_P2_Ratio"
-                      ]
+                      "displayLines": "DV_FantasticStory_BaseAbility_2010_EnterFever_P2_Ratio"
                     }
                   }
                 }
@@ -291,13 +271,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Physical",
                         "DamageFlat": {
-                          "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (DV_FantasticStory_BaseAbility_2010_BeforeFever_P1_Ratio) || MUL || RETURN",
-                          "displayLines": "(BattleEvent_BaseHP * DV_FantasticStory_BaseAbility_2010_BeforeFever_P1_Ratio)",
-                          "constants": [],
-                          "variables": [
-                            "BattleEvent_BaseHP",
-                            "DV_FantasticStory_BaseAbility_2010_BeforeFever_P1_Ratio"
-                          ]
+                          "displayLines": "(BattleEvent_BaseHP * DV_FantasticStory_BaseAbility_2010_BeforeFever_P1_Ratio)"
                         },
                         "dmgFormulaFinal": "Converted DMG Base",
                         "Toughness": null,
@@ -315,13 +289,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Physical",
                         "DamageFlat": {
-                          "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (DV_FantasticStory_BaseAbility_2010_EnterFever_P3_Ratio) || MUL || RETURN",
-                          "displayLines": "(BattleEvent_BaseHP * DV_FantasticStory_BaseAbility_2010_EnterFever_P3_Ratio)",
-                          "constants": [],
-                          "variables": [
-                            "BattleEvent_BaseHP",
-                            "DV_FantasticStory_BaseAbility_2010_EnterFever_P3_Ratio"
-                          ]
+                          "displayLines": "(BattleEvent_BaseHP * DV_FantasticStory_BaseAbility_2010_EnterFever_P3_Ratio)"
                         },
                         "dmgFormulaFinal": "Converted DMG Base",
                         "Toughness": null,
@@ -354,12 +322,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1762727873\">Modifier_FantasticStory_BaseAbility_2010_EnterFever_sub</a>[<span class=\"descriptionNumberColor\">Surging Grit</span>]",
                   "valuePerStack": {
                     "DV_Ratio_Get": {
-                      "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2010_EnterFever_P2_Ratio) || RETURN",
-                      "displayLines": "DV_FantasticStory_BaseAbility_2010_EnterFever_P2_Ratio",
-                      "constants": [],
-                      "variables": [
-                        "DV_FantasticStory_BaseAbility_2010_EnterFever_P2_Ratio"
-                      ]
+                      "displayLines": "DV_FantasticStory_BaseAbility_2010_EnterFever_P2_Ratio"
                     }
                   }
                 },

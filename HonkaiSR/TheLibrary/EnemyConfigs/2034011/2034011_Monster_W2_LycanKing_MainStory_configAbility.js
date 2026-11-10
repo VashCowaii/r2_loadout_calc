@@ -79,12 +79,7 @@ const configAbility = {
               "abilityName": "Monster_W2_LycanKing_MainStoryPhase02Start",
               "parameters": {
                 "P1_LoseHPRatio": {
-                  "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[0]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill02[0]]}"
                 }
               }
             },
@@ -194,12 +189,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                    "displayLines": "Wolf_AttackCount",
-                    "constants": [],
-                    "variables": [
-                      "Wolf_AttackCount"
-                    ]
+                    "displayLines": "Wolf_AttackCount"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -207,12 +197,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                    "displayLines": "Wolf_MaxAttackCount",
-                    "constants": [],
-                    "variables": [
-                      "Wolf_MaxAttackCount"
-                    ]
+                    "displayLines": "Wolf_MaxAttackCount"
                   },
                   "assignState": "True",
                   "state": "Normal"

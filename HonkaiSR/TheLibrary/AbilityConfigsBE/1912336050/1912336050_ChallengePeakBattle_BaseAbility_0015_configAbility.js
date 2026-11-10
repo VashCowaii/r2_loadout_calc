@@ -41,13 +41,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ChallengePeakBattle_0015_ADF_2) || INVERT || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(-ChallengePeakBattle_0015_ADF_2 * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "ChallengePeakBattle_0015_ADF_2",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(-ChallengePeakBattle_0015_ADF_2 * MDF_Layer)"
               }
             },
             {
@@ -113,29 +107,14 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1480313555\">Modifier_ChallengePeakBattle_BaseAbility_0015_02</a>[<span class=\"descriptionNumberColor\">Honing the Blade</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_0015_ADF_1": {
-                      "operator": "Variables[0] (ChallengePeakBattle_0015_ADF_1) || RETURN",
-                      "displayLines": "ChallengePeakBattle_0015_ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "ChallengePeakBattle_0015_ADF_1"
-                      ]
+                      "displayLines": "ChallengePeakBattle_0015_ADF_1"
                     },
                     "ChallengePeakBattle_0015_ADF_2": {
-                      "operator": "Variables[0] (ChallengePeakBattle_0015_ADF_2) || RETURN",
-                      "displayLines": "ChallengePeakBattle_0015_ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "ChallengePeakBattle_0015_ADF_2"
-                      ]
+                      "displayLines": "ChallengePeakBattle_0015_ADF_2"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   }
                 }
               ]
@@ -184,12 +163,7 @@ const configAbility = {
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (MDF_BPCost) || INVERT || RETURN",
-                    "displayLines": "-MDF_BPCost",
-                    "constants": [],
-                    "variables": [
-                      "MDF_BPCost"
-                    ]
+                    "displayLines": "-MDF_BPCost"
                   },
                   "execute": [
                     {
@@ -201,20 +175,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1480313555\">Modifier_ChallengePeakBattle_BaseAbility_0015_02</a>[<span class=\"descriptionNumberColor\">Honing the Blade</span>]",
                       "valuePerStack": {
                         "ChallengePeakBattle_0015_ADF_1": {
-                          "operator": "Variables[0] (ChallengePeakBattle_0015_ADF_1) || RETURN",
-                          "displayLines": "ChallengePeakBattle_0015_ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "ChallengePeakBattle_0015_ADF_1"
-                          ]
+                          "displayLines": "ChallengePeakBattle_0015_ADF_1"
                         },
                         "ChallengePeakBattle_0015_ADF_2": {
-                          "operator": "Variables[0] (ChallengePeakBattle_0015_ADF_2) || RETURN",
-                          "displayLines": "ChallengePeakBattle_0015_ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "ChallengePeakBattle_0015_ADF_2"
-                          ]
+                          "displayLines": "ChallengePeakBattle_0015_ADF_2"
                         }
                       }
                     },
@@ -227,20 +191,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1480313555\">Modifier_ChallengePeakBattle_BaseAbility_0015_02</a>[<span class=\"descriptionNumberColor\">Honing the Blade</span>]",
                       "valuePerStack": {
                         "ChallengePeakBattle_0015_ADF_1": {
-                          "operator": "Variables[0] (ChallengePeakBattle_0015_ADF_1) || RETURN",
-                          "displayLines": "ChallengePeakBattle_0015_ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "ChallengePeakBattle_0015_ADF_1"
-                          ]
+                          "displayLines": "ChallengePeakBattle_0015_ADF_1"
                         },
                         "ChallengePeakBattle_0015_ADF_2": {
-                          "operator": "Variables[0] (ChallengePeakBattle_0015_ADF_2) || RETURN",
-                          "displayLines": "ChallengePeakBattle_0015_ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "ChallengePeakBattle_0015_ADF_2"
-                          ]
+                          "displayLines": "ChallengePeakBattle_0015_ADF_2"
                         }
                       }
                     }
@@ -292,29 +246,14 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1480313555\">Modifier_ChallengePeakBattle_BaseAbility_0015_02</a>[<span class=\"descriptionNumberColor\">Honing the Blade</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_0015_ADF_1": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     },
                     "ChallengePeakBattle_0015_ADF_2": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (#ADF_1) || RETURN",
-                    "displayLines": "#ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_1"
-                    ]
+                    "displayLines": "#ADF_1"
                   }
                 }
               ]

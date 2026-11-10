@@ -37,14 +37,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_Layer) || Variables[1] (MDF_MaxLayer) || DIV || Variables[2] (MDF_PropertyValue) || MUL || RETURN",
-                    "displayLines": "((MDF_Layer / MDF_MaxLayer) * MDF_PropertyValue)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer",
-                      "MDF_MaxLayer",
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "((MDF_Layer / MDF_MaxLayer) * MDF_PropertyValue)"
                   },
                   "variableName": "MDF_PropertyValue"
                 },
@@ -56,12 +49,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -215,12 +203,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -228,12 +211,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "assignState": "True",
                   "state": "Normal",
@@ -284,12 +262,7 @@ const compositeAbilityObject = {
                             "value1": "MDF_Layer",
                             "compareType": "<",
                             "value2": {
-                              "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                              "displayLines": "MDF_MaxLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxLayer"
-                              ]
+                              "displayLines": "MDF_MaxLayer"
                             }
                           }
                         }
@@ -313,12 +286,7 @@ const compositeAbilityObject = {
                     "value1": "<a class=\"gModGreen\" id=\"1006247126\">Enemy_W5_VtuberPart01_Charge</a>[<span class=\"descriptionNumberColor\">Ally Popularity</span>]",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                      "displayLines": "MDF_MaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MaxLayer"
-                      ]
+                      "displayLines": "MDF_MaxLayer"
                     },
                     "valueType": "Layer"
                   },
@@ -420,46 +388,21 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"2117470935\">Enemy_W5_Vtuber_CriticalDamageAdd</a>[<span class=\"descriptionNumberColor\">Ally Gratuity</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                            "displayLines": "MDF_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxLayer"
-                            ]
+                            "displayLines": "MDF_MaxLayer"
                           },
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                              "displayLines": "MDF_PropertyValue",
-                              "constants": [],
-                              "variables": [
-                                "MDF_PropertyValue"
-                              ]
+                              "displayLines": "MDF_PropertyValue"
                             },
                             "MDF_Layer": {
-                              "operator": "Variables[0] (MDF_Layer) || RETURN",
-                              "displayLines": "MDF_Layer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_Layer"
-                              ]
+                              "displayLines": "MDF_Layer"
                             },
                             "MDF_MaxLayer": {
-                              "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                              "displayLines": "MDF_MaxLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxLayer"
-                              ]
+                              "displayLines": "MDF_MaxLayer"
                             }
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (MDF_Layer) || RETURN",
-                            "displayLines": "MDF_Layer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Layer"
-                            ]
+                            "displayLines": "MDF_Layer"
                           },
                           "casterAssign": "TargetSelf"
                         }
@@ -475,12 +418,7 @@ const compositeAbilityObject = {
                         },
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                          "displayLines": "MDF_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer"
-                          ]
+                          "displayLines": "MDF_MaxLayer"
                         },
                         "valueType": "Layer"
                       },
@@ -626,12 +564,7 @@ const compositeAbilityObject = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (MDF_InsertTrigger) || RETURN",
-                "displayLines": "MDF_InsertTrigger",
-                "constants": [],
-                "variables": [
-                  "MDF_InsertTrigger"
-                ]
+                "displayLines": "MDF_InsertTrigger"
               },
               "caseEvents": [
                 {

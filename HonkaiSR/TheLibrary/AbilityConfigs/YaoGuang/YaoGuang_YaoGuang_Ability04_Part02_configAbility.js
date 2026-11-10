@@ -12,21 +12,11 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"179366080\">G_YaoGuang_Ability04_AllDamageTypeTaken</a>[<span class=\"descriptionNumberColor\">Woe's Whisper</span>]",
       "duration": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] (0.16) || RETURN",
-          "displayLines": "0.16",
-          "constants": [],
-          "variables": [
-            0.16
-          ]
+          "displayLines": "0.16"
         }
       }
     },
@@ -46,24 +36,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "DamageElation": {
-              "operator": "Variables[0] (1) || Constants[0] (1) || Variables[1] (1) || ADD || MUL || RETURN",
-              "displayLines": "(1 * (1 + 1))",
-              "constants": [
-                1
-              ],
-              "variables": [
-                1,
-                1
-              ]
+              "displayLines": "(1 * (1 + 1))"
             },
             "dmgFormula": "Elation Scaling",
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "attackType": "Elation DMG",
@@ -73,12 +50,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (5) || RETURN",
-            "displayLines": "5",
-            "constants": [],
-            "variables": [
-              5
-            ]
+            "displayLines": "5"
           },
           "execute": [
             {
@@ -98,24 +70,11 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "DamageElation": {
-                      "operator": "Variables[0] (0.2) || Constants[0] (1) || Variables[1] (1) || ADD || MUL || RETURN",
-                      "displayLines": "(0.2 * (1 + 1))",
-                      "constants": [
-                        1
-                      ],
-                      "variables": [
-                        0.2,
-                        1
-                      ]
+                      "displayLines": "(0.2 * (1 + 1))"
                     },
                     "dmgFormula": "Elation Scaling",
                     "Toughness": {
-                      "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                      "displayLines": "ST Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "ST Toughness Value"
-                      ]
+                      "displayLines": "ST Toughness Value"
                     },
                     "Tags": null,
                     "attackType": "Elation DMG"
@@ -136,21 +95,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "DamageElation": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "dmgFormula": "Elation Scaling",
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "attackType": "Elation DMG",
@@ -160,12 +109,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (5) || RETURN",
-            "displayLines": "5",
-            "constants": [],
-            "variables": [
-              5
-            ]
+            "displayLines": "5"
           },
           "execute": [
             {
@@ -185,21 +129,11 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "DamageElation": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     },
                     "dmgFormula": "Elation Scaling",
                     "Toughness": {
-                      "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                      "displayLines": "ST Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "ST Toughness Value"
-                      ]
+                      "displayLines": "ST Toughness Value"
                     },
                     "Tags": null,
                     "attackType": "Elation DMG"

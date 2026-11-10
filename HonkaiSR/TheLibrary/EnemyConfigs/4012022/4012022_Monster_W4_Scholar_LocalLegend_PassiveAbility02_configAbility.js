@@ -22,20 +22,10 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1076100196\">MModifier_Monster_W4_Scholar_LocalLegend_BookKillerListener</a>",
       "valuePerStack": {
         "MDF_SpeedUpRatio": {
-          "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-          "displayLines": "{[PassiveSkill02[0]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill02[0]]}"
-          ]
+          "displayLines": "{[PassiveSkill02[0]]}"
         },
         "MDF_LifeTime": {
-          "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-          "displayLines": "{[PassiveSkill02[2]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill02[2]]}"
-          ]
+          "displayLines": "{[PassiveSkill02[2]]}"
         }
       }
     }

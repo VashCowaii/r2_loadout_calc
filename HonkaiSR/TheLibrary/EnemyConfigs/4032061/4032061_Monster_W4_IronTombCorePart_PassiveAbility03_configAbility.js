@@ -51,12 +51,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_TempAIFlag) || RETURN",
-            "displayLines": "_TempAIFlag",
-            "constants": [],
-            "variables": [
-              "_TempAIFlag"
-            ]
+            "displayLines": "_TempAIFlag"
           },
           "variableName": "AIFlag"
         },

@@ -169,12 +169,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"63874351\">M_Ultimate_ExtraSP</a>",
           "valuePerStack": {
             "MDF_AddValue": {
-              "operator": "Variables[0] (10) || RETURN",
-              "displayLines": "10",
-              "constants": [],
-              "variables": [
-                10
-              ]
+              "displayLines": "10"
             }
           }
         }
@@ -262,12 +257,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (1) || RETURN",
-                                "displayLines": "1",
-                                "constants": [],
-                                "variables": [
-                                  1
-                                ]
+                                "displayLines": "1"
                               },
                               "variableName": "_Tree01_LifeTimeAdd"
                             }
@@ -290,12 +280,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (0.15) || RETURN",
-                                "displayLines": "0.15",
-                                "constants": [],
-                                "variables": [
-                                  0.15
-                                ]
+                                "displayLines": "0.15"
                               },
                               "variableName": "_Rank06_DamagePercentageAdd"
                             }
@@ -316,48 +301,21 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                           "duration": {
-                            "operator": "Variables[0] (3) || Variables[1] (_Tree01_LifeTimeAdd) || ADD || RETURN",
-                            "displayLines": "(3 + _Tree01_LifeTimeAdd)",
-                            "constants": [],
-                            "variables": [
-                              3,
-                              "_Tree01_LifeTimeAdd"
-                            ]
+                            "displayLines": "(3 + _Tree01_LifeTimeAdd)"
                           },
                           "baseChance": {
-                            "operator": "Variables[0] (1) || RETURN",
-                            "displayLines": "1",
-                            "constants": [],
-                            "variables": [
-                              1
-                            ]
+                            "displayLines": "1"
                           },
                           "stackLimit": {
-                            "operator": "Variables[0] (5) || RETURN",
-                            "displayLines": "5",
-                            "constants": [],
-                            "variables": [
-                              5
-                            ]
+                            "displayLines": "5"
                           },
                           "valuePerStack": {
                             "Modifier_Poison_DamagePercentage": {
-                              "operator": "Variables[0] (0.52) || Variables[1] (_Rank06_DamagePercentageAdd) || ADD || RETURN",
-                              "displayLines": "(0.52 + _Rank06_DamagePercentageAdd)",
-                              "constants": [],
-                              "variables": [
-                                0.52,
-                                "_Rank06_DamagePercentageAdd"
-                              ]
+                              "displayLines": "(0.52 + _Rank06_DamagePercentageAdd)"
                             }
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (1) || RETURN",
-                            "displayLines": "1",
-                            "constants": [],
-                            "variables": [
-                              1
-                            ]
+                            "displayLines": "1"
                           },
                           "stackFlag": "CharacterSkill"
                         }
@@ -586,12 +544,7 @@ const compositeAbilityObject = {
                       "modifier": null,
                       "ID": "110801(SkillMaze)",
                       "duration": {
-                        "operator": "Variables[0] (10) || RETURN",
-                        "displayLines": "10",
-                        "constants": [],
-                        "variables": [
-                          10
-                        ]
+                        "displayLines": "10"
                       }
                     }
                   ]
@@ -619,12 +572,7 @@ const compositeAbilityObject = {
                       "modifier": null,
                       "ID": "110801(SkillMaze)",
                       "duration": {
-                        "operator": "Variables[0] (10) || RETURN",
-                        "displayLines": "10",
-                        "constants": [],
-                        "variables": [
-                          10
-                        ]
+                        "displayLines": "10"
                       }
                     }
                   ]
@@ -761,12 +709,7 @@ const compositeAbilityObject = {
                           "conditions": {
                             "name": "Random Chance",
                             "chance": {
-                              "operator": "Variables[0] (1) || RETURN",
-                              "displayLines": "1",
-                              "constants": [],
-                              "variables": [
-                                1
-                              ]
+                              "displayLines": "1"
                             }
                           },
                           "passed": [
@@ -838,12 +781,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "variableName": "_Tree01_LifeTimeAdd"
                     }
@@ -866,12 +804,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (0.15) || RETURN",
-                        "displayLines": "0.15",
-                        "constants": [],
-                        "variables": [
-                          0.15
-                        ]
+                        "displayLines": "0.15"
                       },
                       "variableName": "_Rank06_DamagePercentageAdd"
                     }
@@ -892,39 +825,17 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || Variables[1] (_Tree01_LifeTimeAdd) || ADD || RETURN",
-                    "displayLines": "(3 + _Tree01_LifeTimeAdd)",
-                    "constants": [],
-                    "variables": [
-                      3,
-                      "_Tree01_LifeTimeAdd"
-                    ]
+                    "displayLines": "(3 + _Tree01_LifeTimeAdd)"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (0.65) || RETURN",
-                    "displayLines": "0.65",
-                    "constants": [],
-                    "variables": [
-                      0.65
-                    ]
+                    "displayLines": "0.65"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] (5) || RETURN",
-                    "displayLines": "5",
-                    "constants": [],
-                    "variables": [
-                      5
-                    ]
+                    "displayLines": "5"
                   },
                   "valuePerStack": {
                     "Modifier_Poison_DamagePercentage": {
-                      "operator": "Variables[0] (0.52) || Variables[1] (_Rank06_DamagePercentageAdd) || ADD || RETURN",
-                      "displayLines": "(0.52 + _Rank06_DamagePercentageAdd)",
-                      "constants": [],
-                      "variables": [
-                        0.52,
-                        "_Rank06_DamagePercentageAdd"
-                      ]
+                      "displayLines": "(0.52 + _Rank06_DamagePercentageAdd)"
                     }
                   },
                   "stackFlag": "CharacterSkill"
@@ -991,24 +902,10 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (1.6) || Constants[0] (0.25) || MUL || RETURN",
-                  "displayLines": "(1.6 * 0.25)",
-                  "constants": [
-                    0.25
-                  ],
-                  "variables": [
-                    1.6
-                  ]
+                  "displayLines": "(1.6 * 0.25)"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || Constants[0] (0.25) || MUL || RETURN",
-                  "displayLines": "(AOE Toughness Value * 0.25)",
-                  "constants": [
-                    0.25
-                  ],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "(AOE Toughness Value * 0.25)"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "25%"
@@ -1025,30 +922,15 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-2131103330\">Sampo_Ultimate_DOTTakenUp</a>[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "baseChance": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "immediateEffect": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             }
           }
         },
@@ -1112,12 +994,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "variableName": "_Rank01_LoopTimeAdd"
             }
@@ -1133,13 +1010,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (4) || Variables[1] (_Rank01_LoopTimeAdd) || ADD || RETURN",
-            "displayLines": "(4 + _Rank01_LoopTimeAdd)",
-            "constants": [],
-            "variables": [
-              4,
-              "_Rank01_LoopTimeAdd"
-            ]
+            "displayLines": "(4 + _Rank01_LoopTimeAdd)"
           },
           "execute": [
             {
@@ -1184,12 +1055,7 @@ const compositeAbilityObject = {
                                 "value1": "Modifier_Callback_Value",
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] (5) || RETURN",
-                                  "displayLines": "5",
-                                  "constants": [],
-                                  "variables": [
-                                    5
-                                  ]
+                                  "displayLines": "5"
                                 },
                                 "valueType": "Layer"
                               },
@@ -1222,12 +1088,7 @@ const compositeAbilityObject = {
                               "variableName": "DOT_TriggerRatio",
                               "eventType": "DOT_Poison",
                               "value": {
-                                "operator": "Variables[0] (0.08) || RETURN",
-                                "displayLines": "0.08",
-                                "constants": [],
-                                "variables": [
-                                  0.08
-                                ]
+                                "displayLines": "0.08"
                               }
                             }
                           ]
@@ -1244,22 +1105,10 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Wind",
                         "Damage": {
-                          "operator": "Variables[0] (0.56) || RETURN",
-                          "displayLines": "0.56",
-                          "constants": [],
-                          "variables": [
-                            0.56
-                          ]
+                          "displayLines": "0.56"
                         },
                         "Toughness": {
-                          "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.5) || MUL || RETURN",
-                          "displayLines": "(ST Toughness Value * 0.5)",
-                          "constants": [
-                            0.5
-                          ],
-                          "variables": [
-                            "ST Toughness Value"
-                          ]
+                          "displayLines": "(ST Toughness Value * 0.5)"
                         },
                         "Tags": null,
                         "EnergyGainPercent": "100%"
@@ -1322,12 +1171,7 @@ const compositeAbilityObject = {
                         "value1": "Modifier_Callback_Value",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (5) || RETURN",
-                          "displayLines": "5",
-                          "constants": [],
-                          "variables": [
-                            5
-                          ]
+                          "displayLines": "5"
                         },
                         "valueType": "Layer"
                       },
@@ -1360,12 +1204,7 @@ const compositeAbilityObject = {
                       "variableName": "DOT_TriggerRatio",
                       "eventType": "DOT_Poison",
                       "value": {
-                        "operator": "Variables[0] (0.08) || RETURN",
-                        "displayLines": "0.08",
-                        "constants": [],
-                        "variables": [
-                          0.08
-                        ]
+                        "displayLines": "0.08"
                       }
                     }
                   ]
@@ -1382,20 +1221,10 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (0.56) || RETURN",
-                  "displayLines": "0.56",
-                  "constants": [],
-                  "variables": [
-                    0.56
-                  ]
+                  "displayLines": "0.56"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -1471,24 +1300,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (1) || Constants[0] (0.3) || MUL || RETURN",
-              "displayLines": "(1 * 0.3)",
-              "constants": [
-                0.3
-              ],
-              "variables": [
-                1
-              ]
+              "displayLines": "(1 * 0.3)"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.3) || MUL || RETURN",
-              "displayLines": "(ST Toughness Value * 0.3)",
-              "constants": [
-                0.3
-              ],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "(ST Toughness Value * 0.3)"
             },
             "Tags": null,
             "EnergyGainPercent": "30%"
@@ -1503,24 +1318,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (1) || Constants[0] (0.3) || MUL || RETURN",
-              "displayLines": "(1 * 0.3)",
-              "constants": [
-                0.3
-              ],
-              "variables": [
-                1
-              ]
+              "displayLines": "(1 * 0.3)"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.3) || MUL || RETURN",
-              "displayLines": "(ST Toughness Value * 0.3)",
-              "constants": [
-                0.3
-              ],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "(ST Toughness Value * 0.3)"
             },
             "Tags": null,
             "EnergyGainPercent": "30%"
@@ -1536,24 +1337,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (1) || Constants[0] (0.4) || MUL || RETURN",
-              "displayLines": "(1 * 0.4)",
-              "constants": [
-                0.4
-              ],
-              "variables": [
-                1
-              ]
+              "displayLines": "(1 * 0.4)"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.4) || MUL || RETURN",
-              "displayLines": "(ST Toughness Value * 0.4)",
-              "constants": [
-                0.4
-              ],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "(ST Toughness Value * 0.4)"
             },
             "Tags": null,
             "EnergyGainPercent": "40%"

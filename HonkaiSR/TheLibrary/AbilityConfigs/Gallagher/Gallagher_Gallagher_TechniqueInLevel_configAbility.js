@@ -89,12 +89,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] (0.5) || RETURN",
-                              "displayLines": "0.5",
-                              "constants": [],
-                              "variables": [
-                                0.5
-                              ]
+                              "displayLines": "0.5"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -105,14 +100,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (Effect_Random_Key) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(Effect_Random_Key + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Effect_Random_Key"
-                            ]
+                            "displayLines": "(Effect_Random_Key + 1)"
                           },
                           "variableName": "Effect_Random_Key"
                         }
@@ -137,12 +125,7 @@ const configAbility = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] (0.5) || RETURN",
-                                  "displayLines": "0.5",
-                                  "constants": [],
-                                  "variables": [
-                                    0.5
-                                  ]
+                                  "displayLines": "0.5"
                                 },
                                 "Toughness": null,
                                 "Tags": null,
@@ -153,14 +136,7 @@ const configAbility = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (Effect_Random_Key) || Constants[0] (1) || ADD || RETURN",
-                                "displayLines": "(Effect_Random_Key + 1)",
-                                "constants": [
-                                  1
-                                ],
-                                "variables": [
-                                  "Effect_Random_Key"
-                                ]
+                                "displayLines": "(Effect_Random_Key + 1)"
                               },
                               "variableName": "Effect_Random_Key"
                             }
@@ -176,12 +152,7 @@ const configAbility = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] (0.5) || RETURN",
-                                  "displayLines": "0.5",
-                                  "constants": [],
-                                  "variables": [
-                                    0.5
-                                  ]
+                                  "displayLines": "0.5"
                                 },
                                 "Toughness": null,
                                 "Tags": null,
@@ -238,21 +209,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-606062756\">MWGallagher_Ability03_DeBonusModifier</a>[<span class=\"descriptionNumberColor\">Besotted</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "PointB3_Active": {
-                      "operator": "Variables[0] (PointB3_Active) || RETURN",
-                      "displayLines": "PointB3_Active",
-                      "constants": [],
-                      "variables": [
-                        "PointB3_Active"
-                      ]
+                      "displayLines": "PointB3_Active"
                     }
                   }
                 }

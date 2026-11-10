@@ -46,12 +46,7 @@ const configAbility = {
               "conditions": {
                 "name": "Enemy ID",
                 "ID": {
-                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__19) || RETURN",
-                  "displayLines": "ENEMIES_OBJECT_UNUSED__19",
-                  "constants": [],
-                  "variables": [
-                    "ENEMIES_OBJECT_UNUSED__19"
-                  ]
+                  "displayLines": "ENEMIES_OBJECT_UNUSED__19"
                 },
                 "target": {
                   "name": "Target Name",
@@ -81,12 +76,7 @@ const configAbility = {
               {
                 "name": "Enemy ID",
                 "ID": {
-                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__19) || RETURN",
-                  "displayLines": "ENEMIES_OBJECT_UNUSED__19",
-                  "constants": [],
-                  "variables": [
-                    "ENEMIES_OBJECT_UNUSED__19"
-                  ]
+                  "displayLines": "ENEMIES_OBJECT_UNUSED__19"
                 },
                 "target": {
                   "name": "Target Name",
@@ -97,12 +87,7 @@ const configAbility = {
               {
                 "name": "Enemy ID",
                 "ID": {
-                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__20) || RETURN",
-                  "displayLines": "ENEMIES_OBJECT_UNUSED__20",
-                  "constants": [],
-                  "variables": [
-                    "ENEMIES_OBJECT_UNUSED__20"
-                  ]
+                  "displayLines": "ENEMIES_OBJECT_UNUSED__20"
                 },
                 "target": {
                   "name": "Target Name",
@@ -149,12 +134,7 @@ const configAbility = {
           "conditions": {
             "name": "Enemy ID",
             "ID": {
-              "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__19) || RETURN",
-              "displayLines": "ENEMIES_OBJECT_UNUSED__19",
-              "constants": [],
-              "variables": [
-                "ENEMIES_OBJECT_UNUSED__19"
-              ]
+              "displayLines": "ENEMIES_OBJECT_UNUSED__19"
             },
             "target": {
               "name": "Target Name",
@@ -173,12 +153,7 @@ const configAbility = {
           "conditions": {
             "name": "Enemy ID",
             "ID": {
-              "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__21) || RETURN",
-              "displayLines": "ENEMIES_OBJECT_UNUSED__21",
-              "constants": [],
-              "variables": [
-                "ENEMIES_OBJECT_UNUSED__21"
-              ]
+              "displayLines": "ENEMIES_OBJECT_UNUSED__21"
             },
             "target": {
               "name": "Target Name",
@@ -197,12 +172,7 @@ const configAbility = {
           "conditions": {
             "name": "Enemy ID",
             "ID": {
-              "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__20) || RETURN",
-              "displayLines": "ENEMIES_OBJECT_UNUSED__20",
-              "constants": [],
-              "variables": [
-                "ENEMIES_OBJECT_UNUSED__20"
-              ]
+              "displayLines": "ENEMIES_OBJECT_UNUSED__20"
             },
             "target": {
               "name": "Target Name",
@@ -221,12 +191,7 @@ const configAbility = {
           "conditions": {
             "name": "Enemy ID",
             "ID": {
-              "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__22) || RETURN",
-              "displayLines": "ENEMIES_OBJECT_UNUSED__22",
-              "constants": [],
-              "variables": [
-                "ENEMIES_OBJECT_UNUSED__22"
-              ]
+              "displayLines": "ENEMIES_OBJECT_UNUSED__22"
             },
             "target": {
               "name": "Target Name",
@@ -248,12 +213,7 @@ const configAbility = {
               {
                 "name": "Enemy ID",
                 "ID": {
-                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__20) || RETURN",
-                  "displayLines": "ENEMIES_OBJECT_UNUSED__20",
-                  "constants": [],
-                  "variables": [
-                    "ENEMIES_OBJECT_UNUSED__20"
-                  ]
+                  "displayLines": "ENEMIES_OBJECT_UNUSED__20"
                 },
                 "target": {
                   "name": "Target Name",
@@ -318,12 +278,7 @@ const configAbility = {
               {
                 "name": "Enemy ID",
                 "ID": {
-                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__22) || RETURN",
-                  "displayLines": "ENEMIES_OBJECT_UNUSED__22",
-                  "constants": [],
-                  "variables": [
-                    "ENEMIES_OBJECT_UNUSED__22"
-                  ]
+                  "displayLines": "ENEMIES_OBJECT_UNUSED__22"
                 },
                 "target": {
                   "name": "Target Name",

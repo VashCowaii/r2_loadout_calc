@@ -113,12 +113,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1648872677\">Monster_W1_Mecha03_RL_AfterCharge</a>",
                       "valuePerStack": {
                         "MDF_RogueGoalID": {
-                          "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__33) || RETURN",
-                          "displayLines": "ENEMIES_OBJECT_UNUSED__33",
-                          "constants": [],
-                          "variables": [
-                            "ENEMIES_OBJECT_UNUSED__33"
-                          ]
+                          "displayLines": "ENEMIES_OBJECT_UNUSED__33"
                         }
                       }
                     }
@@ -248,13 +243,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                    "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageUpRatio_PerLayer",
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)"
                   }
                 }
               ]
@@ -280,12 +269,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageUpRatio) || RETURN",
-                    "displayLines": "MDF_DamageUpRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageUpRatio"
-                    ]
+                    "displayLines": "MDF_DamageUpRatio"
                   }
                 }
               ]
@@ -801,12 +785,7 @@ const compositeAbilityObject = {
                                         "target": "{{Parameter Target}}"
                                       },
                                       "value": {
-                                        "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                                        "displayLines": "{[Skill02[0]]}",
-                                        "constants": [],
-                                        "variables": [
-                                          "{[Skill02[0]]}"
-                                        ]
+                                        "displayLines": "{[Skill02[0]]}"
                                       },
                                       "variableName": "Mecha03_00_DamageUpPercentage"
                                     },
@@ -843,12 +822,7 @@ const compositeAbilityObject = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "value": {
-                                            "operator": "Variables[0] (UnusedUnderThisBase_8637) || RETURN",
-                                            "displayLines": "UnusedUnderThisBase_8637",
-                                            "constants": [],
-                                            "variables": [
-                                              "UnusedUnderThisBase_8637"
-                                            ]
+                                            "displayLines": "UnusedUnderThisBase_8637"
                                           },
                                           "variableName": "Mecha03_00_DamageUpBasePercentage"
                                         }
@@ -976,12 +950,7 @@ const compositeAbilityObject = {
                                               },
                                               "modifier": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]",
                                               "duration": {
-                                                "operator": "Variables[0] (UnusedUnderThisBase_8648) || RETURN",
-                                                "displayLines": "UnusedUnderThisBase_8648",
-                                                "constants": [],
-                                                "variables": [
-                                                  "UnusedUnderThisBase_8648"
-                                                ]
+                                                "displayLines": "UnusedUnderThisBase_8648"
                                               }
                                             }
                                           ],
@@ -1003,12 +972,7 @@ const compositeAbilityObject = {
                                               },
                                               "modifier": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]",
                                               "duration": {
-                                                "operator": "Variables[0] (UnusedUnderThisBase_8649) || RETURN",
-                                                "displayLines": "UnusedUnderThisBase_8649",
-                                                "constants": [],
-                                                "variables": [
-                                                  "UnusedUnderThisBase_8649"
-                                                ]
+                                                "displayLines": "UnusedUnderThisBase_8649"
                                               }
                                             }
                                           ]
@@ -1032,12 +996,7 @@ const compositeAbilityObject = {
                                         "target": "{{Parameter Target}}"
                                       },
                                       "value": {
-                                        "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                                        "displayLines": "{[Skill02[0]]}",
-                                        "constants": [],
-                                        "variables": [
-                                          "{[Skill02[0]]}"
-                                        ]
+                                        "displayLines": "{[Skill02[0]]}"
                                       },
                                       "variableName": "Mecha03_00_DamageUpPercentage"
                                     },
@@ -1074,12 +1033,7 @@ const compositeAbilityObject = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "value": {
-                                            "operator": "Variables[0] (UnusedUnderThisBase_8637) || RETURN",
-                                            "displayLines": "UnusedUnderThisBase_8637",
-                                            "constants": [],
-                                            "variables": [
-                                              "UnusedUnderThisBase_8637"
-                                            ]
+                                            "displayLines": "UnusedUnderThisBase_8637"
                                           },
                                           "variableName": "Mecha03_00_DamageUpBasePercentage"
                                         }
@@ -1467,12 +1421,7 @@ const compositeAbilityObject = {
                                                         "target": "{{Parameter Target}}"
                                                       },
                                                       "value": {
-                                                        "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                                                        "displayLines": "{[Skill02[0]]}",
-                                                        "constants": [],
-                                                        "variables": [
-                                                          "{[Skill02[0]]}"
-                                                        ]
+                                                        "displayLines": "{[Skill02[0]]}"
                                                       },
                                                       "variableName": "Mecha03_00_DamageUpPercentage"
                                                     },
@@ -1509,12 +1458,7 @@ const compositeAbilityObject = {
                                                             "target": "{{Parameter Target}}"
                                                           },
                                                           "value": {
-                                                            "operator": "Variables[0] (UnusedUnderThisBase_8637) || RETURN",
-                                                            "displayLines": "UnusedUnderThisBase_8637",
-                                                            "constants": [],
-                                                            "variables": [
-                                                              "UnusedUnderThisBase_8637"
-                                                            ]
+                                                            "displayLines": "UnusedUnderThisBase_8637"
                                                           },
                                                           "variableName": "Mecha03_00_DamageUpBasePercentage"
                                                         }
@@ -1644,12 +1588,7 @@ const compositeAbilityObject = {
                                                           },
                                                           "modifier": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]",
                                                           "duration": {
-                                                            "operator": "Variables[0] (UnusedUnderThisBase_8648) || RETURN",
-                                                            "displayLines": "UnusedUnderThisBase_8648",
-                                                            "constants": [],
-                                                            "variables": [
-                                                              "UnusedUnderThisBase_8648"
-                                                            ]
+                                                            "displayLines": "UnusedUnderThisBase_8648"
                                                           }
                                                         }
                                                       ],
@@ -1671,12 +1610,7 @@ const compositeAbilityObject = {
                                                           },
                                                           "modifier": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]",
                                                           "duration": {
-                                                            "operator": "Variables[0] (UnusedUnderThisBase_8649) || RETURN",
-                                                            "displayLines": "UnusedUnderThisBase_8649",
-                                                            "constants": [],
-                                                            "variables": [
-                                                              "UnusedUnderThisBase_8649"
-                                                            ]
+                                                            "displayLines": "UnusedUnderThisBase_8649"
                                                           }
                                                         }
                                                       ]
@@ -1716,12 +1650,7 @@ const compositeAbilityObject = {
                                                     "target": "{{Parameter Target}}"
                                                   },
                                                   "value": {
-                                                    "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                                                    "displayLines": "{[Skill02[0]]}",
-                                                    "constants": [],
-                                                    "variables": [
-                                                      "{[Skill02[0]]}"
-                                                    ]
+                                                    "displayLines": "{[Skill02[0]]}"
                                                   },
                                                   "variableName": "Mecha03_00_DamageUpPercentage"
                                                 },
@@ -1758,12 +1687,7 @@ const compositeAbilityObject = {
                                                         "target": "{{Parameter Target}}"
                                                       },
                                                       "value": {
-                                                        "operator": "Variables[0] (UnusedUnderThisBase_8637) || RETURN",
-                                                        "displayLines": "UnusedUnderThisBase_8637",
-                                                        "constants": [],
-                                                        "variables": [
-                                                          "UnusedUnderThisBase_8637"
-                                                        ]
+                                                        "displayLines": "UnusedUnderThisBase_8637"
                                                       },
                                                       "variableName": "Mecha03_00_DamageUpBasePercentage"
                                                     }
@@ -1998,12 +1922,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-735432971\">Monster_W1_Mecha03_RL_Revenge</a>[<span class=\"descriptionNumberColor\">Obliteration Order</span>]",
           "valuePerStack": {
             "MDF_DamageUpRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_8637) || RETURN",
-              "displayLines": "UnusedUnderThisBase_8637",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_8637"
-              ]
+              "displayLines": "UnusedUnderThisBase_8637"
             }
           }
         },
@@ -2609,14 +2528,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || Constants[0] (0.3) || MUL || RETURN",
-              "displayLines": "({[Skill06[0]]} * 0.3)",
-              "constants": [
-                0.3
-              ],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "({[Skill06[0]]} * 0.3)"
             },
             "Toughness": null,
             "Tags": null,
@@ -2633,14 +2545,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || Constants[0] (0.3) || MUL || RETURN",
-              "displayLines": "({[Skill06[0]]} * 0.3)",
-              "constants": [
-                0.3
-              ],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "({[Skill06[0]]} * 0.3)"
             },
             "Toughness": null,
             "Tags": null,
@@ -2657,14 +2562,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || Constants[0] (0.4) || MUL || RETURN",
-              "displayLines": "({[Skill06[0]]} * 0.4)",
-              "constants": [
-                0.4
-              ],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "({[Skill06[0]]} * 0.4)"
             },
             "Toughness": null,
             "Tags": null,
@@ -3784,20 +3682,10 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1488319040\">Standard_CTRL_Taunt</a>[<span class=\"descriptionNumberColor\">Taunt</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-                "displayLines": "{[Skill04[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[1]]}"
-                ]
+                "displayLines": "{[Skill04[1]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-                "displayLines": "{[Skill04[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[2]]}"
-                ]
+                "displayLines": "{[Skill04[2]]}"
               },
               "failed": [
                 {
@@ -3890,14 +3778,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.7) || MUL || RETURN",
-              "displayLines": "({[Skill03[0]]} * 0.7)",
-              "constants": [
-                0.7
-              ],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "({[Skill03[0]]} * 0.7)"
             },
             "Toughness": null,
             "Tags": null,
@@ -3913,14 +3794,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.3) || MUL || RETURN",
-              "displayLines": "({[Skill03[0]]} * 0.3)",
-              "constants": [
-                0.3
-              ],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "({[Skill03[0]]} * 0.3)"
             },
             "Toughness": null,
             "Tags": null,
@@ -4084,12 +3958,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"118150896\">Monster_W1_Mecha03_RL_Ability03_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill01[0]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill01[0]]}"
                 }
               }
             }
@@ -4113,12 +3982,7 @@ const compositeAbilityObject = {
               "duration": 1,
               "valuePerStack": {
                 "ModifierDamageUpValue": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
+                  "displayLines": "{[Skill02[0]]}"
                 }
               }
             }
@@ -4244,14 +4108,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.2) || MUL || RETURN",
-                  "displayLines": "({[Skill01[0]]} * 0.2)",
-                  "constants": [
-                    0.2
-                  ],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "({[Skill01[0]]} * 0.2)"
                 },
                 "Toughness": null,
                 "Tags": null,

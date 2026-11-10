@@ -62,12 +62,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_2107) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_2107",
-                        "constants": [],
-                        "variables": [
-                          "UnusedUnderThisBase_2107"
-                        ]
+                        "displayLines": "UnusedUnderThisBase_2107"
                       },
                       "isFixed": "* ERR"
                     }
@@ -694,12 +689,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1744828077\">G_MortenaxBlade_BE_ModifyActionDelay</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_2113) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_2113",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_2113"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_2113"
                         }
                       }
                     }
@@ -729,12 +719,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || INVERT || RETURN",
-                    "displayLines": "-MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "-MDF_PropertyValue"
                   }
                 }
               ]
@@ -787,12 +772,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -819,12 +799,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -851,12 +826,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -882,12 +852,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 },
                 {
@@ -898,12 +863,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                    "displayLines": "MDF_PropertyValue2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue2"
-                    ]
+                    "displayLines": "MDF_PropertyValue2"
                   }
                 },
                 {
@@ -914,12 +874,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingIncoming</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue3) || RETURN",
-                    "displayLines": "MDF_PropertyValue3",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue3"
-                    ]
+                    "displayLines": "MDF_PropertyValue3"
                   }
                 }
               ]
@@ -984,12 +939,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || INVERT || RETURN",
-                    "displayLines": "-MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "-MDF_PropertyValue"
                   }
                 },
                 {
@@ -1000,12 +950,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                    "displayLines": "MDF_PropertyValue2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue2"
-                    ]
+                    "displayLines": "MDF_PropertyValue2"
                   }
                 }
               ]
@@ -1027,29 +972,14 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1247337710\">G_MortenaxBlade_Debuff_ToEnemy</a>[<span class=\"descriptionNumberColor\">Balefire Bind</span>]",
                   "duration": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_2086) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_2086",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_2086"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_2086"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_2089) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_2089",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_2089"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_2089"
                     },
                     "MDF_PropertyValue2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_4082) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_4082",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_4082"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_4082"
                     }
                   }
                 },
@@ -1083,12 +1013,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 },
                 {
@@ -1099,12 +1024,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                    "displayLines": "MDF_PropertyValue2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue2"
-                    ]
+                    "displayLines": "MDF_PropertyValue2"
                   }
                 }
               ]
@@ -1273,28 +1193,13 @@ const compositeAbilityObject = {
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_6500) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_6500",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_6500"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_6500"
                 },
                 "MDF_PropertyValue2": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_4923) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_4923",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_4923"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_4923"
                 },
                 "MDF_PropertyValue3": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_2111) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_2111",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_2111"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_2111"
                 }
               }
             },
@@ -1340,12 +1245,7 @@ const compositeAbilityObject = {
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_2093) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_2093",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_2093"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_2093"
                 }
               }
             },
@@ -1391,13 +1291,7 @@ const compositeAbilityObject = {
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_2093) || Variables[1] (UnusedUnderThisBase_2094) || ADD || RETURN",
-                  "displayLines": "(UnusedUnderThisBase_2093 + UnusedUnderThisBase_2094)",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_2093",
-                    "UnusedUnderThisBase_2094"
-                  ]
+                  "displayLines": "(UnusedUnderThisBase_2093 + UnusedUnderThisBase_2094)"
                 }
               }
             },
@@ -1442,20 +1336,10 @@ const compositeAbilityObject = {
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_2093) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_2093",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_2093"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_2093"
                 },
                 "MDF_PropertyValue2": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_2091) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_2091",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_2091"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_2091"
                 }
               }
             },
@@ -1500,13 +1384,7 @@ const compositeAbilityObject = {
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_2093) || Variables[1] (UnusedUnderThisBase_7190) || ADD || RETURN",
-                  "displayLines": "(UnusedUnderThisBase_2093 + UnusedUnderThisBase_7190)",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_2093",
-                    "UnusedUnderThisBase_7190"
-                  ]
+                  "displayLines": "(UnusedUnderThisBase_2093 + UnusedUnderThisBase_7190)"
                 }
               }
             },
@@ -1551,14 +1429,7 @@ const compositeAbilityObject = {
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_2093) || Variables[1] (UnusedUnderThisBase_7190) || ADD || Variables[2] (UnusedUnderThisBase_2094) || ADD || RETURN",
-                  "displayLines": "((UnusedUnderThisBase_2093 + UnusedUnderThisBase_7190) + UnusedUnderThisBase_2094)",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_2093",
-                    "UnusedUnderThisBase_7190",
-                    "UnusedUnderThisBase_2094"
-                  ]
+                  "displayLines": "((UnusedUnderThisBase_2093 + UnusedUnderThisBase_7190) + UnusedUnderThisBase_2094)"
                 }
               }
             },
@@ -1602,21 +1473,10 @@ const compositeAbilityObject = {
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_2093) || Variables[1] (UnusedUnderThisBase_7190) || ADD || RETURN",
-                  "displayLines": "(UnusedUnderThisBase_2093 + UnusedUnderThisBase_7190)",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_2093",
-                    "UnusedUnderThisBase_7190"
-                  ]
+                  "displayLines": "(UnusedUnderThisBase_2093 + UnusedUnderThisBase_7190)"
                 },
                 "MDF_PropertyValue2": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_2091) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_2091",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_2091"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_2091"
                 }
               }
             },
@@ -1647,12 +1507,7 @@ const compositeAbilityObject = {
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_7186) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_7186",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_7186"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_7186"
                 }
               }
             },
@@ -1686,12 +1541,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (G_EnergyCount) || RETURN",
-                    "displayLines": "G_EnergyCount",
-                    "constants": [],
-                    "variables": [
-                      "G_EnergyCount"
-                    ]
+                    "displayLines": "G_EnergyCount"
                   },
                   "priorState": "Disable"
                 },
@@ -1762,12 +1612,7 @@ const compositeAbilityObject = {
                   "eventID": 96217,
                   "variables": {
                     "BattleEvent_BaseSpeed": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_3687) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_3687",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_3687"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_3687"
                     }
                   }
                 },
@@ -1780,20 +1625,10 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-19531616\">G_MortenaxBlade_Ability03_Bonus</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_4083) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_4083",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_4083"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_4083"
                     },
                     "MDF_PropertyValue2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_4090) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_4090",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_4090"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_4090"
                     }
                   }
                 }
@@ -1870,12 +1705,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1123291765\">G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToOtherMember</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_2093) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_2093",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_2093"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_2093"
                         }
                       }
                     },
@@ -1888,13 +1718,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1420064965\">G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToSelf</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_2093) || Variables[1] (UnusedUnderThisBase_2094) || ADD || RETURN",
-                          "displayLines": "(UnusedUnderThisBase_2093 + UnusedUnderThisBase_2094)",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_2093",
-                            "UnusedUnderThisBase_2094"
-                          ]
+                          "displayLines": "(UnusedUnderThisBase_2093 + UnusedUnderThisBase_2094)"
                         }
                       }
                     }
@@ -1967,20 +1791,10 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"917600023\">G_MortenaxBlade_PointB3_DamageUp_Warlock_ToAllLT</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_2093) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_2093",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_2093"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_2093"
                             },
                             "MDF_PropertyValue2": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_2091) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_2091",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_2091"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_2091"
                             }
                           }
                         }
@@ -2053,13 +1867,7 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"1123291765\">G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToOtherMember</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_2093) || Variables[1] (UnusedUnderThisBase_7190) || ADD || RETURN",
-                                  "displayLines": "(UnusedUnderThisBase_2093 + UnusedUnderThisBase_7190)",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_2093",
-                                    "UnusedUnderThisBase_7190"
-                                  ]
+                                  "displayLines": "(UnusedUnderThisBase_2093 + UnusedUnderThisBase_7190)"
                                 }
                               }
                             },
@@ -2072,14 +1880,7 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"1420064965\">G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToSelf</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_2093) || Variables[1] (UnusedUnderThisBase_7190) || ADD || Variables[2] (UnusedUnderThisBase_2094) || ADD || RETURN",
-                                  "displayLines": "((UnusedUnderThisBase_2093 + UnusedUnderThisBase_7190) + UnusedUnderThisBase_2094)",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_2093",
-                                    "UnusedUnderThisBase_7190",
-                                    "UnusedUnderThisBase_2094"
-                                  ]
+                                  "displayLines": "((UnusedUnderThisBase_2093 + UnusedUnderThisBase_7190) + UnusedUnderThisBase_2094)"
                                 }
                               }
                             }
@@ -2151,21 +1952,10 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"917600023\">G_MortenaxBlade_PointB3_DamageUp_Warlock_ToAllLT</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_2093) || Variables[1] (UnusedUnderThisBase_7190) || ADD || RETURN",
-                                      "displayLines": "(UnusedUnderThisBase_2093 + UnusedUnderThisBase_7190)",
-                                      "constants": [],
-                                      "variables": [
-                                        "UnusedUnderThisBase_2093",
-                                        "UnusedUnderThisBase_7190"
-                                      ]
+                                      "displayLines": "(UnusedUnderThisBase_2093 + UnusedUnderThisBase_7190)"
                                     },
                                     "MDF_PropertyValue2": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_2091) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_2091",
-                                      "constants": [],
-                                      "variables": [
-                                        "UnusedUnderThisBase_2091"
-                                      ]
+                                      "displayLines": "UnusedUnderThisBase_2091"
                                     }
                                   }
                                 }
@@ -2258,29 +2048,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1247337710\">G_MortenaxBlade_Debuff_ToEnemy</a>[<span class=\"descriptionNumberColor\">Balefire Bind</span>]",
                       "duration": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_2086) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_2086",
-                        "constants": [],
-                        "variables": [
-                          "UnusedUnderThisBase_2086"
-                        ]
+                        "displayLines": "UnusedUnderThisBase_2086"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_2089) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_2089",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_2089"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_2089"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_4082) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_4082",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_4082"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_4082"
                         }
                       }
                     }
@@ -2343,23 +2118,13 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "maxValue": {
-                    "operator": "Variables[0] (G_EPMax) || RETURN",
-                    "displayLines": "G_EPMax",
-                    "constants": [],
-                    "variables": [
-                      "G_EPMax"
-                    ]
+                    "displayLines": "G_EPMax"
                   },
                   "enteringRange": [
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (G_EnergyCount) || RETURN",
-                        "displayLines": "G_EnergyCount",
-                        "constants": [],
-                        "variables": [
-                          "G_EnergyCount"
-                        ]
+                        "displayLines": "G_EnergyCount"
                       },
                       "priorState": "Normal"
                     }
@@ -2368,12 +2133,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (G_EnergyCount) || RETURN",
-                        "displayLines": "G_EnergyCount",
-                        "constants": [],
-                        "variables": [
-                          "G_EnergyCount"
-                        ]
+                        "displayLines": "G_EnergyCount"
                       },
                       "priorState": "Normal"
                     }
@@ -2382,23 +2142,13 @@ const compositeAbilityObject = {
                 {
                   "name": "Variable Value Range Conditions",
                   "minValue": {
-                    "operator": "Variables[0] (G_EPMax) || RETURN",
-                    "displayLines": "G_EPMax",
-                    "constants": [],
-                    "variables": [
-                      "G_EPMax"
-                    ]
+                    "displayLines": "G_EPMax"
                   },
                   "enteringRange": [
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (G_EnergyCount) || RETURN",
-                        "displayLines": "G_EnergyCount",
-                        "constants": [],
-                        "variables": [
-                          "G_EnergyCount"
-                        ]
+                        "displayLines": "G_EnergyCount"
                       },
                       "priorState": "Active"
                     },
@@ -2411,12 +2161,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (G_EnergyCount) || RETURN",
-                        "displayLines": "G_EnergyCount",
-                        "constants": [],
-                        "variables": [
-                          "G_EnergyCount"
-                        ]
+                        "displayLines": "G_EnergyCount"
                       },
                       "priorState": "Active"
                     },
@@ -2457,12 +2202,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1508029303\">MortenaxBlade_PassiveAbility01_BattleEvent_BaseSpeed</a>",
           "valuePerStack": {
             "BattleEvent_BaseSpeed": {
-              "operator": "Variables[0] (BattleEvent_00_BaseSpeed) || RETURN",
-              "displayLines": "BattleEvent_00_BaseSpeed",
-              "constants": [],
-              "variables": [
-                "BattleEvent_00_BaseSpeed"
-              ]
+              "displayLines": "BattleEvent_00_BaseSpeed"
             }
           }
         },
@@ -2498,12 +2238,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (BattleEvent_00_BaseSpeed) || RETURN",
-                    "displayLines": "BattleEvent_00_BaseSpeed",
-                    "constants": [],
-                    "variables": [
-                      "BattleEvent_00_BaseSpeed"
-                    ]
+                    "displayLines": "BattleEvent_00_BaseSpeed"
                   }
                 }
               ]
@@ -2540,12 +2275,7 @@ const compositeAbilityObject = {
                     "value1": "G_EnergyCount",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (G_EPMax) || RETURN",
-                      "displayLines": "G_EPMax",
-                      "constants": [],
-                      "variables": [
-                        "G_EPMax"
-                      ]
+                      "displayLines": "G_EPMax"
                     }
                   },
                   {
@@ -2640,12 +2370,7 @@ const compositeAbilityObject = {
                         "value1": "G_EnergyCount",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (G_EPMax) || RETURN",
-                          "displayLines": "G_EPMax",
-                          "constants": [],
-                          "variables": [
-                            "G_EPMax"
-                          ]
+                          "displayLines": "G_EPMax"
                         }
                       },
                       {
@@ -2677,12 +2402,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (G_EnergyCount) || RETURN",
-                        "displayLines": "G_EnergyCount",
-                        "constants": [],
-                        "variables": [
-                          "G_EnergyCount"
-                        ]
+                        "displayLines": "G_EnergyCount"
                       },
                       "priorState": "Normal"
                     }
@@ -2691,12 +2411,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (G_EnergyCount) || RETURN",
-                        "displayLines": "G_EnergyCount",
-                        "constants": [],
-                        "variables": [
-                          "G_EnergyCount"
-                        ]
+                        "displayLines": "G_EnergyCount"
                       },
                       "priorState": "Disable"
                     }

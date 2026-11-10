@@ -39,13 +39,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (SpeedupLayer) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyValue * SpeedupLayer)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "SpeedupLayer"
-                ]
+                "displayLines": "(MDF_PropertyValue * SpeedupLayer)"
               }
             }
           ]
@@ -111,13 +105,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (Passive02Add) || Variables[1] (Passive02_PropertyValue) || ADD || RETURN",
-                "displayLines": "(Passive02Add + Passive02_PropertyValue)",
-                "constants": [],
-                "variables": [
-                  "Passive02Add",
-                  "Passive02_PropertyValue"
-                ]
+                "displayLines": "(Passive02Add + Passive02_PropertyValue)"
               },
               "variableName": "Passive02_PropertyValue"
             }
@@ -141,12 +129,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -178,12 +161,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             },
             {
@@ -220,12 +198,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             },
             {
@@ -262,12 +235,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             },
             {
@@ -298,13 +266,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_MDF_Layer) || Variables[1] (MDF_DamageUpPerKill) || MUL || RETURN",
-                "displayLines": "(_MDF_Layer * MDF_DamageUpPerKill)",
-                "constants": [],
-                "variables": [
-                  "_MDF_Layer",
-                  "MDF_DamageUpPerKill"
-                ]
+                "displayLines": "(_MDF_Layer * MDF_DamageUpPerKill)"
               },
               "variableName": "MDF_Zaika_Pass01_DamageUp"
             },
@@ -316,12 +278,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_Zaika_Pass01_DamageUp) || RETURN",
-                "displayLines": "MDF_Zaika_Pass01_DamageUp",
-                "constants": [],
-                "variables": [
-                  "MDF_Zaika_Pass01_DamageUp"
-                ]
+                "displayLines": "MDF_Zaika_Pass01_DamageUp"
               }
             }
           ]
@@ -344,12 +301,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_Zaika_Pass02_AttackUp) || RETURN",
-                "displayLines": "MDF_Zaika_Pass02_AttackUp",
-                "constants": [],
-                "variables": [
-                  "MDF_Zaika_Pass02_AttackUp"
-                ]
+                "displayLines": "MDF_Zaika_Pass02_AttackUp"
               }
             }
           ]
@@ -374,12 +326,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedValue) || RETURN",
-                "displayLines": "MDF_SpeedValue",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedValue"
-                ]
+                "displayLines": "MDF_SpeedValue"
               }
             }
           ]
@@ -402,12 +349,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRate</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -423,12 +365,7 @@ const configAbility = {
       ],
       "stackLimit": 6,
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (StackModifierLayers) || RETURN",
-        "displayLines": "StackModifierLayers",
-        "constants": [],
-        "variables": [
-          "StackModifierLayers"
-        ]
+        "displayLines": "StackModifierLayers"
       },
       "execute": [
         {
@@ -449,13 +386,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_CriticalDamage) || Variables[1] (DeliveryNumber) || MUL || RETURN",
-                "displayLines": "(MDF_CriticalDamage * DeliveryNumber)",
-                "constants": [],
-                "variables": [
-                  "MDF_CriticalDamage",
-                  "DeliveryNumber"
-                ]
+                "displayLines": "(MDF_CriticalDamage * DeliveryNumber)"
               }
             },
             {
@@ -466,13 +397,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_Speed) || Variables[1] (DeliveryNumber) || MUL || RETURN",
-                "displayLines": "(MDF_Speed * DeliveryNumber)",
-                "constants": [],
-                "variables": [
-                  "MDF_Speed",
-                  "DeliveryNumber"
-                ]
+                "displayLines": "(MDF_Speed * DeliveryNumber)"
               }
             },
             {
@@ -527,12 +452,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "Damage": {
-                      "operator": "Variables[0] (Modifier_SqueeBigBomb_DamagePercentage) || RETURN",
-                      "displayLines": "Modifier_SqueeBigBomb_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "Modifier_SqueeBigBomb_DamagePercentage"
-                      ]
+                      "displayLines": "Modifier_SqueeBigBomb_DamagePercentage"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -548,12 +468,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "Damage": {
-                      "operator": "Variables[0] (Modifier_SqueeBigBomb_Spread_DamagePercentage) || RETURN",
-                      "displayLines": "Modifier_SqueeBigBomb_Spread_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "Modifier_SqueeBigBomb_Spread_DamagePercentage"
-                      ]
+                      "displayLines": "Modifier_SqueeBigBomb_Spread_DamagePercentage"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -576,12 +491,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] (Modifier_SqueeBigBomb_Spread_DamagePercentage) || RETURN",
-                  "displayLines": "Modifier_SqueeBigBomb_Spread_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "Modifier_SqueeBigBomb_Spread_DamagePercentage"
-                  ]
+                  "displayLines": "Modifier_SqueeBigBomb_Spread_DamagePercentage"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -621,12 +531,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "Damage": {
-                      "operator": "Variables[0] (Modifier_SqueeSmallBomb_DamagePercentage) || RETURN",
-                      "displayLines": "Modifier_SqueeSmallBomb_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "Modifier_SqueeSmallBomb_DamagePercentage"
-                      ]
+                      "displayLines": "Modifier_SqueeSmallBomb_DamagePercentage"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -642,12 +547,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "Damage": {
-                      "operator": "Variables[0] (Modifier_SqueeSmallBomb_Spread_DamagePercentage) || RETURN",
-                      "displayLines": "Modifier_SqueeSmallBomb_Spread_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "Modifier_SqueeSmallBomb_Spread_DamagePercentage"
-                      ]
+                      "displayLines": "Modifier_SqueeSmallBomb_Spread_DamagePercentage"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -670,12 +570,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] (Modifier_SqueeSmallBomb_Spread_DamagePercentage) || RETURN",
-                  "displayLines": "Modifier_SqueeSmallBomb_Spread_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "Modifier_SqueeSmallBomb_Spread_DamagePercentage"
-                  ]
+                  "displayLines": "Modifier_SqueeSmallBomb_Spread_DamagePercentage"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -705,12 +600,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (STANDARDSPECIFIC_OBJECT_UNUSED_17) || RETURN",
-                  "displayLines": "STANDARDSPECIFIC_OBJECT_UNUSED_17",
-                  "constants": [],
-                  "variables": [
-                    "STANDARDSPECIFIC_OBJECT_UNUSED_17"
-                  ]
+                  "displayLines": "STANDARDSPECIFIC_OBJECT_UNUSED_17"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -761,13 +651,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (_Caster_MaxHP) || Variables[1] (Modifier_IceShield_ShieldPercentage) || MUL || RETURN",
-                "displayLines": "(_Caster_MaxHP * Modifier_IceShield_ShieldPercentage)",
-                "constants": [],
-                "variables": [
-                  "_Caster_MaxHP",
-                  "Modifier_IceShield_ShieldPercentage"
-                ]
+                "displayLines": "(_Caster_MaxHP * Modifier_IceShield_ShieldPercentage)"
               }
             }
           ]
@@ -809,12 +693,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageWind</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (Modifier_LaTiaoPassiveWindRatio) || RETURN",
-                "displayLines": "Modifier_LaTiaoPassiveWindRatio",
-                "constants": [],
-                "variables": [
-                  "Modifier_LaTiaoPassiveWindRatio"
-                ]
+                "displayLines": "Modifier_LaTiaoPassiveWindRatio"
               }
             }
           ]
@@ -854,12 +733,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (MDF_DamagePercantage) || RETURN",
-                  "displayLines": "MDF_DamagePercantage",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamagePercantage"
-                  ]
+                  "displayLines": "MDF_DamagePercantage"
                 },
                 "indirectDMG": true,
                 "Toughness": null,

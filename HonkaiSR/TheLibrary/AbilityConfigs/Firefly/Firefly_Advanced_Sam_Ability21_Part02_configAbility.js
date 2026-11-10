@@ -13,12 +13,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-385959697\">Advanced_Sam_Ultimate_BreakDamageAddRatio</a>",
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] (0.2) || RETURN",
-          "displayLines": "0.2",
-          "constants": [],
-          "variables": [
-            0.2
-          ]
+          "displayLines": "0.2"
         }
       }
     },
@@ -54,21 +49,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (Skill21_DamagePercentage) || RETURN",
-              "displayLines": "Skill21_DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill21_DamagePercentage"
-              ]
+              "displayLines": "Skill21_DamagePercentage"
             },
             "HitSplit": 0.15,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "ToughnessDMGType": {
               "DamageType": "Fire"
@@ -97,21 +82,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] (Skill21_DamagePercentageAD) || RETURN",
-                  "displayLines": "Skill21_DamagePercentageAD",
-                  "constants": [],
-                  "variables": [
-                    "Skill21_DamagePercentageAD"
-                  ]
+                  "displayLines": "Skill21_DamagePercentageAD"
                 },
                 "HitSplit": 0.15,
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "ToughnessDMGType": {
                   "DamageType": "Fire"
@@ -134,21 +109,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (Skill21_DamagePercentage) || RETURN",
-          "displayLines": "Skill21_DamagePercentage",
-          "constants": [],
-          "variables": [
-            "Skill21_DamagePercentage"
-          ]
+          "displayLines": "Skill21_DamagePercentage"
         },
         "HitSplit": 0.4,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "ToughnessDMGType": {
           "DamageType": "Fire"
@@ -177,21 +142,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (Skill21_DamagePercentageAD) || RETURN",
-              "displayLines": "Skill21_DamagePercentageAD",
-              "constants": [],
-              "variables": [
-                "Skill21_DamagePercentageAD"
-              ]
+              "displayLines": "Skill21_DamagePercentageAD"
             },
             "HitSplit": 0.4,
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "ToughnessDMGType": {
               "DamageType": "Fire"

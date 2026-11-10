@@ -38,36 +38,16 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1745730475\">LC_23056_Main</a>",
           "valuePerStack": {
             "MDF_InsertTargetCount": {
-              "operator": "Variables[0] (4) || RETURN",
-              "displayLines": "4",
-              "constants": [],
-              "variables": [
-                4
-              ]
+              "displayLines": "4"
             },
             "MDF_LifeTime": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             },
             "MDF_AttackUpTemp": {
-              "operator": "Variables[0] (0.4) || RETURN",
-              "displayLines": "0.4",
-              "constants": [],
-              "variables": [
-                0.4
-              ]
+              "displayLines": "0.4"
             },
             "MDF_DamageTakenUpTemp": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         }
@@ -95,12 +75,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageTakenUp) || RETURN",
-                    "displayLines": "MDF_DamageTakenUp",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageTakenUp"
-                    ]
+                    "displayLines": "MDF_DamageTakenUp"
                   }
                 }
               ]
@@ -129,12 +104,7 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_DamageTakenUp": {
-                  "operator": "Variables[0] (MDF_DamageTakenUpTemp2) || RETURN",
-                  "displayLines": "MDF_DamageTakenUpTemp2",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamageTakenUpTemp2"
-                  ]
+                  "displayLines": "MDF_DamageTakenUpTemp2"
                 }
               }
             }
@@ -165,12 +135,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackUp) || RETURN",
-                    "displayLines": "MDF_AttackUp",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackUp"
-                    ]
+                    "displayLines": "MDF_AttackUp"
                   }
                 }
               ]
@@ -194,12 +159,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1374108116\">LC_23056_Main_Sub2</a>[<span class=\"descriptionNumberColor\">Umbra Devourer</span>]",
                       "valuePerStack": {
                         "MDF_DamageTakenUp": {
-                          "operator": "Variables[0] (MDF_DamageTakenUpTemp2) || RETURN",
-                          "displayLines": "MDF_DamageTakenUpTemp2",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageTakenUpTemp2"
-                          ]
+                          "displayLines": "MDF_DamageTakenUpTemp2"
                         }
                       }
                     }
@@ -247,14 +207,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_Cal) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_Cal + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_Cal"
-                        ]
+                        "displayLines": "(MDF_Cal + 1)"
                       },
                       "variableName": "MDF_Cal"
                     },
@@ -265,12 +218,7 @@ const compositeAbilityObject = {
                         "value1": "MDF_Cal",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (MDF_InsertTargetCount) || RETURN",
-                          "displayLines": "MDF_InsertTargetCount",
-                          "constants": [],
-                          "variables": [
-                            "MDF_InsertTargetCount"
-                          ]
+                          "displayLines": "MDF_InsertTargetCount"
                         }
                       },
                       "passed": [
@@ -287,29 +235,14 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1424440973\">LC_23056_Main_Sub1</a>[<span class=\"descriptionNumberColor\">Umbra Devourer</span>]",
                           "duration": {
-                            "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                            "displayLines": "MDF_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_LifeTime"
-                            ]
+                            "displayLines": "MDF_LifeTime"
                           },
                           "valuePerStack": {
                             "MDF_AttackUp": {
-                              "operator": "Variables[0] (MDF_AttackUpTemp) || RETURN",
-                              "displayLines": "MDF_AttackUpTemp",
-                              "constants": [],
-                              "variables": [
-                                "MDF_AttackUpTemp"
-                              ]
+                              "displayLines": "MDF_AttackUpTemp"
                             },
                             "MDF_DamageTakenUpTemp2": {
-                              "operator": "Variables[0] (MDF_DamageTakenUpTemp) || RETURN",
-                              "displayLines": "MDF_DamageTakenUpTemp",
-                              "constants": [],
-                              "variables": [
-                                "MDF_DamageTakenUpTemp"
-                              ]
+                              "displayLines": "MDF_DamageTakenUpTemp"
                             }
                           }
                         }
@@ -340,29 +273,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1424440973\">LC_23056_Main_Sub1</a>[<span class=\"descriptionNumberColor\">Umbra Devourer</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                        "displayLines": "MDF_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_LifeTime"
-                        ]
+                        "displayLines": "MDF_LifeTime"
                       },
                       "valuePerStack": {
                         "MDF_AttackUp": {
-                          "operator": "Variables[0] (MDF_AttackUpTemp) || RETURN",
-                          "displayLines": "MDF_AttackUpTemp",
-                          "constants": [],
-                          "variables": [
-                            "MDF_AttackUpTemp"
-                          ]
+                          "displayLines": "MDF_AttackUpTemp"
                         },
                         "MDF_DamageTakenUpTemp2": {
-                          "operator": "Variables[0] (MDF_DamageTakenUpTemp) || RETURN",
-                          "displayLines": "MDF_DamageTakenUpTemp",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageTakenUpTemp"
-                          ]
+                          "displayLines": "MDF_DamageTakenUpTemp"
                         }
                       }
                     }

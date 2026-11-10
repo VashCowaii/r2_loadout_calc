@@ -168,12 +168,7 @@ const configAbility = {
                               "conditions": {
                                 "name": "Enemy ID",
                                 "ID": {
-                                  "operator": "Variables[0] (SummonID01) || RETURN",
-                                  "displayLines": "SummonID01",
-                                  "constants": [],
-                                  "variables": [
-                                    "SummonID01"
-                                  ]
+                                  "displayLines": "SummonID01"
                                 },
                                 "target": {
                                   "name": "Target Name",
@@ -378,20 +373,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
                   "valuePerStack": {
                     "MDF_SpeedUpPerLayer": {
-                      "operator": "Variables[0] ({[SkillP04[2]]}) || RETURN",
-                      "displayLines": "{[SkillP04[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP04[2]]}"
-                      ]
+                      "displayLines": "{[SkillP04[2]]}"
                     },
                     "MDF_AttackUpPerLayer": {
-                      "operator": "Variables[0] ({[SkillP04[3]]}) || RETURN",
-                      "displayLines": "{[SkillP04[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP04[3]]}"
-                      ]
+                      "displayLines": "{[SkillP04[3]]}"
                     }
                   }
                 },
@@ -420,14 +405,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_SpeedDownRatio) || SUB || RETURN",
-                "displayLines": "(0 - MDF_SpeedDownRatio)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_SpeedDownRatio"
-                ]
+                "displayLines": "(0 - MDF_SpeedDownRatio)"
               }
             }
           ]
@@ -524,20 +502,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
                   "valuePerStack": {
                     "MDF_SpeedUpPerLayer": {
-                      "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
-                      "displayLines": "{[SkillP04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP04[0]]}"
-                      ]
+                      "displayLines": "{[SkillP04[0]]}"
                     },
                     "MDF_AttackUpPerLayer": {
-                      "operator": "Variables[0] ({[SkillP04[1]]}) || RETURN",
-                      "displayLines": "{[SkillP04[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP04[1]]}"
-                      ]
+                      "displayLines": "{[SkillP04[1]]}"
                     }
                   }
                 }
@@ -552,20 +520,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
                   "valuePerStack": {
                     "MDF_SpeedUpPerLayer": {
-                      "operator": "Variables[0] ({[SkillP04[2]]}) || RETURN",
-                      "displayLines": "{[SkillP04[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP04[2]]}"
-                      ]
+                      "displayLines": "{[SkillP04[2]]}"
                     },
                     "MDF_AttackUpPerLayer": {
-                      "operator": "Variables[0] ({[SkillP04[3]]}) || RETURN",
-                      "displayLines": "{[SkillP04[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP04[3]]}"
-                      ]
+                      "displayLines": "{[SkillP04[3]]}"
                     }
                   }
                 }
@@ -594,13 +552,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedUpPerLayer) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_SpeedUpPerLayer * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedUpPerLayer",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_SpeedUpPerLayer * MDF_Layer)"
               }
             },
             {
@@ -611,13 +563,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AttackUpPerLayer) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_AttackUpPerLayer * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackUpPerLayer",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_AttackUpPerLayer * MDF_Layer)"
               }
             }
           ]
@@ -652,12 +598,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedUp) || RETURN",
-                "displayLines": "MDF_SpeedUp",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedUp"
-                ]
+                "displayLines": "MDF_SpeedUp"
               }
             }
           ]
@@ -819,12 +760,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageAddedRatio) || RETURN",
-                "displayLines": "MDF_DamageAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageAddedRatio"
-                ]
+                "displayLines": "MDF_DamageAddedRatio"
               }
             }
           ]

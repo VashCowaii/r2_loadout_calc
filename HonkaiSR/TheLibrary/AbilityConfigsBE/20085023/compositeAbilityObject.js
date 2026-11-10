@@ -56,12 +56,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "consumePercent": {
-                    "operator": "Variables[0] (MDF_DamageByRatio) || RETURN",
-                    "displayLines": "MDF_DamageByRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageByRatio"
-                    ]
+                    "displayLines": "MDF_DamageByRatio"
                   }
                 }
               ]
@@ -77,12 +72,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                    "displayLines": "MDF_AllDamageReduce",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageReduce"
-                    ]
+                    "displayLines": "MDF_AllDamageReduce"
                   }
                 }
               ]
@@ -108,12 +98,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                    "displayLines": "MDF_AllDamageReduce",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageReduce"
-                    ]
+                    "displayLines": "MDF_AllDamageReduce"
                   }
                 },
                 {
@@ -125,20 +110,10 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-299648287\">Standard_EliteField_Servant</a>[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageReduce": {
-                      "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                      "displayLines": "MDF_AllDamageReduce",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AllDamageReduce"
-                      ]
+                      "displayLines": "MDF_AllDamageReduce"
                     },
                     "MDF_DamageByRatio": {
-                      "operator": "Variables[0] (MDF_DamageByRatio) || RETURN",
-                      "displayLines": "MDF_DamageByRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageByRatio"
-                      ]
+                      "displayLines": "MDF_DamageByRatio"
                     }
                   }
                 }
@@ -167,20 +142,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-299648287\">Standard_EliteField_Servant</a>[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageReduce": {
-                          "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                          "displayLines": "MDF_AllDamageReduce",
-                          "constants": [],
-                          "variables": [
-                            "MDF_AllDamageReduce"
-                          ]
+                          "displayLines": "MDF_AllDamageReduce"
                         },
                         "MDF_DamageByRatio": {
-                          "operator": "Variables[0] (MDF_DamageByRatio) || RETURN",
-                          "displayLines": "MDF_DamageByRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageByRatio"
-                          ]
+                          "displayLines": "MDF_DamageByRatio"
                         }
                       }
                     }
@@ -325,12 +290,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -664,13 +624,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageAddedRatio) || Variables[1] (MDF_SummonCount) || MUL || RETURN",
-                    "displayLines": "(MDF_DamageAddedRatio * MDF_SummonCount)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageAddedRatio",
-                      "MDF_SummonCount"
-                    ]
+                    "displayLines": "(MDF_DamageAddedRatio * MDF_SummonCount)"
                   }
                 }
               ]
@@ -846,14 +800,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (MDF_SummonCount) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(MDF_SummonCount + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "MDF_SummonCount"
-                            ]
+                            "displayLines": "(MDF_SummonCount + 1)"
                           },
                           "variableName": "MDF_SummonCount"
                         }
@@ -870,12 +817,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-772982810\">MFarmRelic_104314_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "MDF_SummonCount": {
-                      "operator": "Variables[0] (MDF_SummonCount) || RETURN",
-                      "displayLines": "MDF_SummonCount",
-                      "constants": [],
-                      "variables": [
-                        "MDF_SummonCount"
-                      ]
+                      "displayLines": "MDF_SummonCount"
                     }
                   }
                 }
@@ -934,13 +876,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (ModifierLayers) || Variables[1] (DamageAddedRatio) || MUL || RETURN",
-                    "displayLines": "(ModifierLayers * DamageAddedRatio)",
-                    "constants": [],
-                    "variables": [
-                      "ModifierLayers",
-                      "DamageAddedRatio"
-                    ]
+                    "displayLines": "(ModifierLayers * DamageAddedRatio)"
                   }
                 }
               ]
@@ -1383,13 +1319,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_1) || Variables[1] (_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_1 * _Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_1",
-                      "_Layer"
-                    ]
+                    "displayLines": "(MDF_1 * _Layer)"
                   }
                 },
                 {
@@ -1491,13 +1421,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1769154752\">MFarmRelic_104309_Sub2</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (DOT_Layer) || Variables[1] (Modifier_Layer) || SUB || RETURN",
-                        "displayLines": "(DOT_Layer - Modifier_Layer)",
-                        "constants": [],
-                        "variables": [
-                          "DOT_Layer",
-                          "Modifier_Layer"
-                        ]
+                        "displayLines": "(DOT_Layer - Modifier_Layer)"
                       }
                     }
                   ]
@@ -1583,13 +1507,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1769154752\">MFarmRelic_104309_Sub2</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (DOT_Layer) || Variables[1] (Modifier_Layer) || SUB || RETURN",
-                        "displayLines": "(DOT_Layer - Modifier_Layer)",
-                        "constants": [],
-                        "variables": [
-                          "DOT_Layer",
-                          "Modifier_Layer"
-                        ]
+                        "displayLines": "(DOT_Layer - Modifier_Layer)"
                       }
                     }
                   ]
@@ -1853,15 +1771,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (TempAttack) || Constants[0] (93) || MUL || Variables[1] (Hardlevel_HP) || SUB || RETURN",
-                    "displayLines": "((TempAttack * 93) - Hardlevel_HP)",
-                    "constants": [
-                      93
-                    ],
-                    "variables": [
-                      "TempAttack",
-                      "Hardlevel_HP"
-                    ]
+                    "displayLines": "((TempAttack * 93) - Hardlevel_HP)"
                   }
                 }
               ]

@@ -39,12 +39,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "variableName": "_Tree01_LifeTimeAdd"
                 }
@@ -67,12 +62,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (0.15) || RETURN",
-                    "displayLines": "0.15",
-                    "constants": [],
-                    "variables": [
-                      0.15
-                    ]
+                    "displayLines": "0.15"
                   },
                   "variableName": "_Rank06_DamagePercentageAdd"
                 }
@@ -93,39 +83,17 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || Variables[1] (_Tree01_LifeTimeAdd) || ADD || RETURN",
-                "displayLines": "(3 + _Tree01_LifeTimeAdd)",
-                "constants": [],
-                "variables": [
-                  3,
-                  "_Tree01_LifeTimeAdd"
-                ]
+                "displayLines": "(3 + _Tree01_LifeTimeAdd)"
               },
               "baseChance": {
-                "operator": "Variables[0] (0.65) || RETURN",
-                "displayLines": "0.65",
-                "constants": [],
-                "variables": [
-                  0.65
-                ]
+                "displayLines": "0.65"
               },
               "stackLimit": {
-                "operator": "Variables[0] (5) || RETURN",
-                "displayLines": "5",
-                "constants": [],
-                "variables": [
-                  5
-                ]
+                "displayLines": "5"
               },
               "valuePerStack": {
                 "Modifier_Poison_DamagePercentage": {
-                  "operator": "Variables[0] (0.52) || Variables[1] (_Rank06_DamagePercentageAdd) || ADD || RETURN",
-                  "displayLines": "(0.52 + _Rank06_DamagePercentageAdd)",
-                  "constants": [],
-                  "variables": [
-                    0.52,
-                    "_Rank06_DamagePercentageAdd"
-                  ]
+                  "displayLines": "(0.52 + _Rank06_DamagePercentageAdd)"
                 }
               },
               "stackFlag": "CharacterSkill"

@@ -77,23 +77,13 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-            "displayLines": "{[Skill06[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill06[3]]}"
-            ]
+            "displayLines": "{[Skill06[3]]}"
           },
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID01) || RETURN",
-                "displayLines": "SummonID01",
-                "constants": [],
-                "variables": [
-                  "SummonID01"
-                ]
+                "displayLines": "SummonID01"
               },
               "locationType": "AroundCasterOnEdge"
             }
@@ -102,23 +92,13 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[Skill06[2]]}) || RETURN",
-            "displayLines": "{[Skill06[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill06[2]]}"
-            ]
+            "displayLines": "{[Skill06[2]]}"
           },
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID04) || RETURN",
-                "displayLines": "SummonID04",
-                "constants": [],
-                "variables": [
-                  "SummonID04"
-                ]
+                "displayLines": "SummonID04"
               },
               "locationType": "AfterCaster"
             }
@@ -129,23 +109,13 @@ const configAbility = {
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-        "displayLines": "{[Skill06[1]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill06[1]]}"
-        ]
+        "displayLines": "{[Skill06[1]]}"
       },
       "enemyList": [
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonID02) || RETURN",
-            "displayLines": "SummonID02",
-            "constants": [],
-            "variables": [
-              "SummonID02"
-            ]
+            "displayLines": "SummonID02"
           },
           "locationType": "BeforeCaster"
         }
@@ -154,23 +124,13 @@ const configAbility = {
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-        "displayLines": "{[Skill06[0]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill06[0]]}"
-        ]
+        "displayLines": "{[Skill06[0]]}"
       },
       "enemyList": [
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonID01) || RETURN",
-            "displayLines": "SummonID01",
-            "constants": [],
-            "variables": [
-              "SummonID01"
-            ]
+            "displayLines": "SummonID01"
           },
           "locationType": "AroundCasterOnEdge"
         }
@@ -196,24 +156,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[Skill06[4]]}) || RETURN",
-            "displayLines": "{[Skill06[4]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill06[4]]}"
-            ]
+            "displayLines": "{[Skill06[4]]}"
           },
           "variableName": "_ModifyActionDelay"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[3]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[3]]}"
-            ]
+            "displayLines": "{[PassiveSkill01[3]]}"
           },
           "variableName": "_Basic_AllDamageReduceRatio"
         }
@@ -250,24 +200,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[Skill06[10]]}) || RETURN",
-            "displayLines": "{[Skill06[10]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill06[10]]}"
-            ]
+            "displayLines": "{[Skill06[10]]}"
           },
           "variableName": "_ModifyActionDelay"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[5]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[5]]}"
-            ]
+            "displayLines": "{[PassiveSkill02[5]]}"
           },
           "variableName": "_Basic_AllDamageReduceRatio"
         }
@@ -294,24 +234,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[Skill06[9]]}) || RETURN",
-            "displayLines": "{[Skill06[9]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill06[9]]}"
-            ]
+            "displayLines": "{[Skill06[9]]}"
           },
           "variableName": "_ModifyActionDelay"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[4]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[4]]}"
-            ]
+            "displayLines": "{[PassiveSkill02[4]]}"
           },
           "variableName": "_Basic_AllDamageReduceRatio"
         }
@@ -338,24 +268,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[Skill06[8]]}) || RETURN",
-            "displayLines": "{[Skill06[8]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill06[8]]}"
-            ]
+            "displayLines": "{[Skill06[8]]}"
           },
           "variableName": "_ModifyActionDelay"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[3]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[3]]}"
-            ]
+            "displayLines": "{[PassiveSkill02[3]]}"
           },
           "variableName": "_Basic_AllDamageReduceRatio"
         }
@@ -382,24 +302,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[Skill06[7]]}) || RETURN",
-            "displayLines": "{[Skill06[7]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill06[7]]}"
-            ]
+            "displayLines": "{[Skill06[7]]}"
           },
           "variableName": "_ModifyActionDelay"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[2]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[2]]}"
-            ]
+            "displayLines": "{[PassiveSkill02[2]]}"
           },
           "variableName": "_Basic_AllDamageReduceRatio"
         }
@@ -426,24 +336,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[Skill06[6]]}) || RETURN",
-            "displayLines": "{[Skill06[6]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill06[6]]}"
-            ]
+            "displayLines": "{[Skill06[6]]}"
           },
           "variableName": "_ModifyActionDelay"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[1]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[1]]}"
-            ]
+            "displayLines": "{[PassiveSkill02[1]]}"
           },
           "variableName": "_Basic_AllDamageReduceRatio"
         }
@@ -470,24 +370,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[Skill06[5]]}) || RETURN",
-            "displayLines": "{[Skill06[5]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill06[5]]}"
-            ]
+            "displayLines": "{[Skill06[5]]}"
           },
           "variableName": "_ModifyActionDelay"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[0]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[0]]}"
-            ]
+            "displayLines": "{[PassiveSkill02[0]]}"
           },
           "variableName": "_Basic_AllDamageReduceRatio"
         }
@@ -654,12 +544,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_ShowValue1) || RETURN",
-                "displayLines": "MDF_ShowValue1",
-                "constants": [],
-                "variables": [
-                  "MDF_ShowValue1"
-                ]
+                "displayLines": "MDF_ShowValue1"
               }
             }
           ]
@@ -688,12 +573,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (_Basic_AllDamageReduceRatio) || RETURN",
-                  "displayLines": "_Basic_AllDamageReduceRatio",
-                  "constants": [],
-                  "variables": [
-                    "_Basic_AllDamageReduceRatio"
-                  ]
+                  "displayLines": "_Basic_AllDamageReduceRatio"
                 }
               }
             }
@@ -763,13 +643,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"354987416\">Enemy_XP_Elite01_02_LocalLegend_DamageAdded</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "MDF_ShowValue1": {
-                      "operator": "Variables[0] (_CharacterCount) || Variables[1] ({[PassiveSkill01[1]]}) || MUL || RETURN",
-                      "displayLines": "(_CharacterCount * {[PassiveSkill01[1]]})",
-                      "constants": [],
-                      "variables": [
-                        "_CharacterCount",
-                        "{[PassiveSkill01[1]]}"
-                      ]
+                      "displayLines": "(_CharacterCount * {[PassiveSkill01[1]]})"
                     }
                   }
                 }
@@ -813,12 +687,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (_Basic_AllDamageReduceRatio) || RETURN",
-                          "displayLines": "_Basic_AllDamageReduceRatio",
-                          "constants": [],
-                          "variables": [
-                            "_Basic_AllDamageReduceRatio"
-                          ]
+                          "displayLines": "_Basic_AllDamageReduceRatio"
                         }
                       }
                     }
@@ -957,13 +826,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"354987416\">Enemy_XP_Elite01_02_LocalLegend_DamageAdded</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "MDF_ShowValue1": {
-                      "operator": "Variables[0] (_CharacterCount) || Variables[1] ({[PassiveSkill01[1]]}) || MUL || RETURN",
-                      "displayLines": "(_CharacterCount * {[PassiveSkill01[1]]})",
-                      "constants": [],
-                      "variables": [
-                        "_CharacterCount",
-                        "{[PassiveSkill01[1]]}"
-                      ]
+                      "displayLines": "(_CharacterCount * {[PassiveSkill01[1]]})"
                     }
                   }
                 }
@@ -1051,13 +914,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"354987416\">Enemy_XP_Elite01_02_LocalLegend_DamageAdded</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "MDF_ShowValue1": {
-                          "operator": "Variables[0] (_CharacterCount) || Variables[1] ({[PassiveSkill01[1]]}) || MUL || RETURN",
-                          "displayLines": "(_CharacterCount * {[PassiveSkill01[1]]})",
-                          "constants": [],
-                          "variables": [
-                            "_CharacterCount",
-                            "{[PassiveSkill01[1]]}"
-                          ]
+                          "displayLines": "(_CharacterCount * {[PassiveSkill01[1]]})"
                         }
                       }
                     }

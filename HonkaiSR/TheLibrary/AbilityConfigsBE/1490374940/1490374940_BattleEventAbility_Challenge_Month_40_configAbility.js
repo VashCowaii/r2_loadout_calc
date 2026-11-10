@@ -14,44 +14,19 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"817684195\">Modifier_BattleEventAbility_Challenge_Month_40</a>",
       "valuePerStack": {
         "BattleEvent_P1_ADF": {
-          "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-          "displayLines": "#BattleEvent_P1_ADF",
-          "constants": [],
-          "variables": [
-            "#BattleEvent_P1_ADF"
-          ]
+          "displayLines": "#BattleEvent_P1_ADF"
         },
         "BattleEvent_P2_ADF": {
-          "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-          "displayLines": "#BattleEvent_P2_ADF",
-          "constants": [],
-          "variables": [
-            "#BattleEvent_P2_ADF"
-          ]
+          "displayLines": "#BattleEvent_P2_ADF"
         },
         "BattleEvent_P3_ADF": {
-          "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-          "displayLines": "#BattleEvent_P3_ADF",
-          "constants": [],
-          "variables": [
-            "#BattleEvent_P3_ADF"
-          ]
+          "displayLines": "#BattleEvent_P3_ADF"
         },
         "BattleEvent_P4_ADF": {
-          "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
-          "displayLines": "#BattleEvent_P4_ADF",
-          "constants": [],
-          "variables": [
-            "#BattleEvent_P4_ADF"
-          ]
+          "displayLines": "#BattleEvent_P4_ADF"
         },
         "BattleEvent_P5_ADF": {
-          "operator": "Variables[0] (#BattleEvent_P5_ADF) || RETURN",
-          "displayLines": "#BattleEvent_P5_ADF",
-          "constants": [],
-          "variables": [
-            "#BattleEvent_P5_ADF"
-          ]
+          "displayLines": "#BattleEvent_P5_ADF"
         }
       }
     }
@@ -77,12 +52,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-                "displayLines": "BattleEvent_P1_ADF",
-                "constants": [],
-                "variables": [
-                  "BattleEvent_P1_ADF"
-                ]
+                "displayLines": "BattleEvent_P1_ADF"
               }
             }
           ]
@@ -144,14 +114,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_SummonCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_SummonCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_SummonCount"
-                        ]
+                        "displayLines": "(MDF_SummonCount + 1)"
                       },
                       "variableName": "MDF_SummonCount"
                     }
@@ -162,14 +125,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MIN) || Variables[1] (MDF_SummonCount) || Variables[2] (BattleEvent_P5_ADF) || PARAM_2 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(MDF_SummonCount, BattleEvent_P5_ADF)",
-                "constants": [],
-                "variables": [
-                  "MIN",
-                  "MDF_SummonCount",
-                  "BattleEvent_P5_ADF"
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(MDF_SummonCount, BattleEvent_P5_ADF)"
               },
               "variableName": "MDF_SummonCount"
             },
@@ -220,14 +176,7 @@ const configAbility = {
                     {
                       "name": "Looped Event",
                       "maxLoops": {
-                        "operator": "Variables[0] (MDF_SummonCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_SummonCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_SummonCount"
-                        ]
+                        "displayLines": "(MDF_SummonCount + 1)"
                       },
                       "execute": [
                         {
@@ -240,13 +189,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "DamageFlat": {
-                              "operator": "Variables[0] (_Temp_Hp_TeamDark) || Variables[1] (BattleEvent_P2_ADF) || MUL || RETURN",
-                              "displayLines": "(_Temp_Hp_TeamDark * BattleEvent_P2_ADF)",
-                              "constants": [],
-                              "variables": [
-                                "_Temp_Hp_TeamDark",
-                                "BattleEvent_P2_ADF"
-                              ]
+                              "displayLines": "(_Temp_Hp_TeamDark * BattleEvent_P2_ADF)"
                             },
                             "dmgFormulaFinal": "Converted DMG Base",
                             "Toughness": null,
@@ -273,14 +216,7 @@ const configAbility = {
                         {
                           "name": "Looped Event",
                           "maxLoops": {
-                            "operator": "Variables[0] (MDF_SummonCount) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(MDF_SummonCount + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "MDF_SummonCount"
-                            ]
+                            "displayLines": "(MDF_SummonCount + 1)"
                           },
                           "execute": [
                             {
@@ -293,13 +229,7 @@ const configAbility = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "DamageFlat": {
-                                  "operator": "Variables[0] (_Temp_Hp_TeamDark) || Variables[1] (BattleEvent_P3_ADF) || MUL || RETURN",
-                                  "displayLines": "(_Temp_Hp_TeamDark * BattleEvent_P3_ADF)",
-                                  "constants": [],
-                                  "variables": [
-                                    "_Temp_Hp_TeamDark",
-                                    "BattleEvent_P3_ADF"
-                                  ]
+                                  "displayLines": "(_Temp_Hp_TeamDark * BattleEvent_P3_ADF)"
                                 },
                                 "dmgFormulaFinal": "Converted DMG Base",
                                 "Toughness": null,
@@ -314,14 +244,7 @@ const configAbility = {
                         {
                           "name": "Looped Event",
                           "maxLoops": {
-                            "operator": "Variables[0] (MDF_SummonCount) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(MDF_SummonCount + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "MDF_SummonCount"
-                            ]
+                            "displayLines": "(MDF_SummonCount + 1)"
                           },
                           "execute": [
                             {
@@ -334,13 +257,7 @@ const configAbility = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "DamageFlat": {
-                                  "operator": "Variables[0] (_Temp_Hp_TeamDark) || Variables[1] (BattleEvent_P4_ADF) || MUL || RETURN",
-                                  "displayLines": "(_Temp_Hp_TeamDark * BattleEvent_P4_ADF)",
-                                  "constants": [],
-                                  "variables": [
-                                    "_Temp_Hp_TeamDark",
-                                    "BattleEvent_P4_ADF"
-                                  ]
+                                  "displayLines": "(_Temp_Hp_TeamDark * BattleEvent_P4_ADF)"
                                 },
                                 "dmgFormulaFinal": "Converted DMG Base",
                                 "Toughness": null,
@@ -552,12 +469,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"407459594\">Modifier_BattleEventAbility_Challenge_Month_40_Sub_PLY</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "BattleEvent_P1_ADF": {
-                      "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "BattleEvent_P1_ADF"
                     }
                   }
                 }

@@ -30,13 +30,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "DamageFlat": {
-              "operator": "Variables[0] (TempHP_get) || Variables[1] (ADF_2_get) || MUL || RETURN",
-              "displayLines": "(TempHP_get * ADF_2_get)",
-              "constants": [],
-              "variables": [
-                "TempHP_get",
-                "ADF_2_get"
-              ]
+              "displayLines": "(TempHP_get * ADF_2_get)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,

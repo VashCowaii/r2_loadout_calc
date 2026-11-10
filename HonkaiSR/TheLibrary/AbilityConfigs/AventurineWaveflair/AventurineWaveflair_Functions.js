@@ -20,12 +20,7 @@ const configAbility = {
             "value1": "_SpecialAttackEnergyPointTriggerCount",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] (6) || RETURN",
-              "displayLines": "6",
-              "constants": [],
-              "variables": [
-                6
-              ]
+              "displayLines": "6"
             },
             "contextScope": "ContextCaster"
           },
@@ -48,22 +43,12 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1708522086\">AventurineW_CritDamage_PointB3_AfterTeamMateCastAbility</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "referenceModifier": "<a class=\"gModGreen\" id=\"1042665863\">MReference_CriticalDamageUp</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.48) || RETURN",
-                  "displayLines": "0.48",
-                  "constants": [],
-                  "variables": [
-                    0.48
-                  ]
+                  "displayLines": "0.48"
                 }
               }
             },
@@ -75,20 +60,10 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1333939602\">AventurineW_Passive_Energy</a>",
               "stackLimit": {
-                "operator": "Variables[0] (_MaxEnergyPoint) || RETURN",
-                "displayLines": "_MaxEnergyPoint",
-                "constants": [],
-                "variables": [
-                  "_MaxEnergyPoint"
-                ]
+                "displayLines": "_MaxEnergyPoint"
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               }
             }
           ]

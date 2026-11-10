@@ -31,12 +31,7 @@ const configAbility = {
       "name": "Update Displayed Energy Bar",
       "value": 0,
       "maximum": {
-        "operator": "Variables[0] (5) || RETURN",
-        "displayLines": "5",
-        "constants": [],
-        "variables": [
-          5
-        ]
+        "displayLines": "5"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -99,12 +94,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1721297245\">Lingsha_Eidolon1_Listen</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             }
           }
         }
@@ -120,14 +110,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (5) || Constants[0] (3) || MUL || RETURN",
-            "displayLines": "(5 * 3)",
-            "constants": [
-              3
-            ],
-            "variables": [
-              5
-            ]
+            "displayLines": "(5 * 3)"
           },
           "variableName": "Lingsha_Rank06_StanceDamage"
         }
@@ -157,12 +140,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Variables[0] (1) || INVERT || RETURN",
-            "displayLines": "-1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "-1"
           }
         }
       }
@@ -189,12 +167,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Variables[0] (0.2) || INVERT || RETURN",
-            "displayLines": "-0.2",
-            "constants": [],
-            "variables": [
-              0.2
-            ]
+            "displayLines": "-0.2"
           }
         }
       }
@@ -219,12 +192,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Variables[0] (0.2) || INVERT || RETURN",
-            "displayLines": "-0.2",
-            "constants": [],
-            "variables": [
-              0.2
-            ]
+            "displayLines": "-0.2"
           }
         }
       }
@@ -245,12 +213,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoingConverted</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             }
           ]
@@ -282,13 +245,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || Variables[1] (Lingsha_BaseAttack) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyRatio * Lingsha_BaseAttack)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio",
-                  "Lingsha_BaseAttack"
-                ]
+                "displayLines": "(MDF_PropertyRatio * Lingsha_BaseAttack)"
               }
             }
           ]
@@ -324,15 +281,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-988682847\">Lingsha_PointB1_Sub</a>",
               "valuePerStack": {
                 "MDF_PropertyRatio": {
-                  "operator": "Variables[0] (MIN) || Variables[1] (Lingsha_BreakDamageAdded) || Variables[2] (0.25) || MUL || Variables[3] (0.5) || PARAM_2 || FUNCTION || RETURN",
-                  "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((Lingsha_BreakDamageAdded * 0.25), 0.5)",
-                  "constants": [],
-                  "variables": [
-                    "MIN",
-                    "Lingsha_BreakDamageAdded",
-                    0.25,
-                    0.5
-                  ]
+                  "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((Lingsha_BreakDamageAdded * 0.25), 0.5)"
                 }
               }
             },
@@ -345,15 +294,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-835950999\">Lingsha_PointB1_Sub2</a>",
               "valuePerStack": {
                 "MDF_PropertyRatio": {
-                  "operator": "Variables[0] (MIN) || Variables[1] (Lingsha_BreakDamageAdded) || Variables[2] (0.1) || MUL || Variables[3] (0.2) || PARAM_2 || FUNCTION || RETURN",
-                  "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((Lingsha_BreakDamageAdded * 0.1), 0.2)",
-                  "constants": [],
-                  "variables": [
-                    "MIN",
-                    "Lingsha_BreakDamageAdded",
-                    0.1,
-                    0.2
-                  ]
+                  "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((Lingsha_BreakDamageAdded * 0.1), 0.2)"
                 }
               }
             }
@@ -388,15 +329,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-988682847\">Lingsha_PointB1_Sub</a>",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (MIN) || Variables[1] (Lingsha_BreakDamageAdded) || Variables[2] (0.25) || MUL || Variables[3] (0.5) || PARAM_2 || FUNCTION || RETURN",
-                      "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((Lingsha_BreakDamageAdded * 0.25), 0.5)",
-                      "constants": [],
-                      "variables": [
-                        "MIN",
-                        "Lingsha_BreakDamageAdded",
-                        0.25,
-                        0.5
-                      ]
+                      "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((Lingsha_BreakDamageAdded * 0.25), 0.5)"
                     }
                   }
                 },
@@ -409,15 +342,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-835950999\">Lingsha_PointB1_Sub2</a>",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (MIN) || Variables[1] (Lingsha_BreakDamageAdded) || Variables[2] (0.1) || MUL || Variables[3] (0.2) || PARAM_2 || FUNCTION || RETURN",
-                      "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((Lingsha_BreakDamageAdded * 0.1), 0.2)",
-                      "constants": [],
-                      "variables": [
-                        "MIN",
-                        "Lingsha_BreakDamageAdded",
-                        0.1,
-                        0.2
-                      ]
+                      "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((Lingsha_BreakDamageAdded * 0.1), 0.2)"
                     }
                   }
                 }
@@ -484,12 +409,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1709120566\">Lingsha_Eidolon1_ListenBreak</a>",
                       "valuePerStack": {
                         "Eidolon1_MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     }
@@ -527,12 +447,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1709120566\">Lingsha_Eidolon1_ListenBreak</a>",
                   "valuePerStack": {
                     "Eidolon1_MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 }

@@ -394,14 +394,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyRatio) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyRatio)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "(0 - MDF_PropertyRatio)"
               }
             },
             {
@@ -671,12 +664,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-              "displayLines": "MDF_PropertyValue",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyValue"
-              ]
+              "displayLines": "MDF_PropertyValue"
             }
           }
         }
@@ -688,12 +676,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_Aura_Lifetime) || RETURN",
-                "displayLines": "MDF_Aura_Lifetime",
-                "constants": [],
-                "variables": [
-                  "MDF_Aura_Lifetime"
-                ]
+                "displayLines": "MDF_Aura_Lifetime"
               },
               "priorState": "Active"
             },
@@ -732,12 +715,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -754,12 +732,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Aura_Lifetime) || RETURN",
-                    "displayLines": "MDF_Aura_Lifetime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Aura_Lifetime"
-                    ]
+                    "displayLines": "MDF_Aura_Lifetime"
                   }
                 },
                 {

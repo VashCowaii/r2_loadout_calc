@@ -24,12 +24,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "variableName": "Rank06_Max_Layer"
     },
@@ -45,12 +40,7 @@ const configAbility = {
       "name": "Update Displayed Energy Bar",
       "value": 0,
       "maximum": {
-        "operator": "Variables[0] (8) || RETURN",
-        "displayLines": "8",
-        "constants": [],
-        "variables": [
-          8
-        ]
+        "displayLines": "8"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -67,24 +57,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.25) || RETURN",
-            "displayLines": "0.25",
-            "constants": [],
-            "variables": [
-              0.25
-            ]
+            "displayLines": "0.25"
           },
           "variableName": "Rank01_Ratio"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.5) || RETURN",
-            "displayLines": "0.5",
-            "constants": [],
-            "variables": [
-              0.5
-            ]
+            "displayLines": "0.5"
           },
           "variableName": "Rank01_ExtraRatio"
         }
@@ -112,24 +92,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.02) || RETURN",
-            "displayLines": "0.02",
-            "constants": [],
-            "variables": [
-              0.02
-            ]
+            "displayLines": "0.02"
           },
           "variableName": "Rank02_Ratio"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (27) || RETURN",
-            "displayLines": "27",
-            "constants": [],
-            "variables": [
-              27
-            ]
+            "displayLines": "27"
           },
           "variableName": "Rank02_Value"
         }
@@ -170,12 +140,7 @@ const configAbility = {
           },
           "modifierName": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
           "value": {
-            "operator": "Variables[0] (4) || RETURN",
-            "displayLines": "4",
-            "constants": [],
-            "variables": [
-              4
-            ]
+            "displayLines": "4"
           }
         },
         {
@@ -187,12 +152,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (4) || RETURN",
-            "displayLines": "4",
-            "constants": [],
-            "variables": [
-              4
-            ]
+            "displayLines": "4"
           }
         },
         {
@@ -223,20 +183,10 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_Energy_Count) || RETURN",
-                "displayLines": "MDF_Energy_Count",
-                "constants": [],
-                "variables": [
-                  "MDF_Energy_Count"
-                ]
+                "displayLines": "MDF_Energy_Count"
               },
               "maximum": {
-                "operator": "Variables[0] (8) || RETURN",
-                "displayLines": "8",
-                "constants": [],
-                "variables": [
-                  8
-                ]
+                "displayLines": "8"
               },
               "assignState": "True",
               "priorState": "Active",
@@ -248,20 +198,10 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_Energy_Count) || RETURN",
-                "displayLines": "MDF_Energy_Count",
-                "constants": [],
-                "variables": [
-                  "MDF_Energy_Count"
-                ]
+                "displayLines": "MDF_Energy_Count"
               },
               "maximum": {
-                "operator": "Variables[0] (8) || RETURN",
-                "displayLines": "8",
-                "constants": [],
-                "variables": [
-                  8
-                ]
+                "displayLines": "8"
               },
               "assignState": "True",
               "bar#": 2,
@@ -305,21 +245,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1400516150\">MWPlayerBoy_10_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
               "duration": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "valuePerStack": {
                 "MWPlayerBoy_10_Shield_Value01": {
-                  "operator": "Variables[0] (TB_PRES_OBJECT_UNUSED_1) || RETURN",
-                  "displayLines": "TB_PRES_OBJECT_UNUSED_1",
-                  "constants": [],
-                  "variables": [
-                    "TB_PRES_OBJECT_UNUSED_1"
-                  ]
+                  "displayLines": "TB_PRES_OBJECT_UNUSED_1"
                 }
               }
             },
@@ -356,12 +286,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -407,12 +332,7 @@ const configAbility = {
                   },
                   "modifierName": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
                   "value": {
-                    "operator": "Variables[0] (MDF_Energy_Count) || RETURN",
-                    "displayLines": "MDF_Energy_Count",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Energy_Count"
-                    ]
+                    "displayLines": "MDF_Energy_Count"
                   }
                 },
                 {
@@ -443,12 +363,7 @@ const configAbility = {
                     "value1": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (8) || RETURN",
-                      "displayLines": "8",
-                      "constants": [],
-                      "variables": [
-                        8
-                      ]
+                      "displayLines": "8"
                     }
                   },
                   "passed": [
@@ -456,12 +371,7 @@ const configAbility = {
                       "name": "Define Modifier Variable",
                       "modifierName": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
                       "value": {
-                        "operator": "Variables[0] (8) || RETURN",
-                        "displayLines": "8",
-                        "constants": [],
-                        "variables": [
-                          8
-                        ]
+                        "displayLines": "8"
                       }
                     }
                   ]
@@ -519,20 +429,10 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Energy_Count) || RETURN",
-                    "displayLines": "MDF_Energy_Count",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Energy_Count"
-                    ]
+                    "displayLines": "MDF_Energy_Count"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (8) || RETURN",
-                    "displayLines": "8",
-                    "constants": [],
-                    "variables": [
-                      8
-                    ]
+                    "displayLines": "8"
                   },
                   "assignState": "True",
                   "priorState": "Active",
@@ -544,20 +444,10 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Energy_Count) || RETURN",
-                    "displayLines": "MDF_Energy_Count",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Energy_Count"
-                    ]
+                    "displayLines": "MDF_Energy_Count"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (8) || RETURN",
-                    "displayLines": "8",
-                    "constants": [],
-                    "variables": [
-                      8
-                    ]
+                    "displayLines": "8"
                   },
                   "assignState": "True",
                   "bar#": 2,
@@ -610,12 +500,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (5) || RETURN",
-                    "displayLines": "5",
-                    "constants": [],
-                    "variables": [
-                      5
-                    ]
+                    "displayLines": "5"
                   },
                   "isFixed": "* ERR"
                 },
@@ -630,12 +515,7 @@ const configAbility = {
                   "immediateEffect": true,
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.15) || RETURN",
-                      "displayLines": "0.15",
-                      "constants": [],
-                      "variables": [
-                        0.15
-                      ]
+                      "displayLines": "0.15"
                     }
                   }
                 }

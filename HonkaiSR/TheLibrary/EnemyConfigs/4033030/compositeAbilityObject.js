@@ -269,15 +269,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (_Attack) || Variables[1] ({[Skill02[1]]}) || Constants[0] (1) || SUB || MUL || RETURN",
-                    "displayLines": "(_Attack * ({[Skill02[1]]} - 1))",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_Attack",
-                      "{[Skill02[1]]}"
-                    ]
+                    "displayLines": "(_Attack * ({[Skill02[1]]} - 1))"
                   }
                 },
                 {
@@ -297,15 +289,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill02[0]]}) || Constants[0] (1) || SUB || MUL || RETURN",
-                    "displayLines": "(_MaxHP * ({[Skill02[0]]} - 1))",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_MaxHP",
-                      "{[Skill02[0]]}"
-                    ]
+                    "displayLines": "(_MaxHP * ({[Skill02[0]]} - 1))"
                   }
                 }
               ]
@@ -321,12 +305,7 @@ const compositeAbilityObject = {
                     "target": "{{Summoner of Modifier Holder}}"
                   },
                   "consumePercent": {
-                    "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                    "displayLines": "{[Skill02[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[2]]}"
-                    ]
+                    "displayLines": "{[Skill02[2]]}"
                   }
                 }
               ]
@@ -524,25 +503,14 @@ const compositeAbilityObject = {
                 "value1": "_RallyHP",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (_CurrentHPRatio) || RETURN",
-                  "displayLines": "_CurrentHPRatio",
-                  "constants": [],
-                  "variables": [
-                    "_CurrentHPRatio"
-                  ]
+                  "displayLines": "_CurrentHPRatio"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_RallyHP) || Variables[1] (_CurrentHPRatio) || SUB || RETURN",
-                    "displayLines": "(_RallyHP - _CurrentHPRatio)",
-                    "constants": [],
-                    "variables": [
-                      "_RallyHP",
-                      "_CurrentHPRatio"
-                    ]
+                    "displayLines": "(_RallyHP - _CurrentHPRatio)"
                   },
                   "variableName": "_RallyHP"
                 }
@@ -573,22 +541,10 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
+                  "displayLines": "{[Skill04[0]]}"
                 },
                 "DamageFlat": {
-                  "operator": "Variables[0] (_RallyHP) || Variables[1] (_MaxHP) || MUL || Variables[2] ({[Skill04[1]]}) || MUL || RETURN",
-                  "displayLines": "((_RallyHP * _MaxHP) * {[Skill04[1]]})",
-                  "constants": [],
-                  "variables": [
-                    "_RallyHP",
-                    "_MaxHP",
-                    "{[Skill04[1]]}"
-                  ]
+                  "displayLines": "((_RallyHP * _MaxHP) * {[Skill04[1]]})"
                 },
                 "HitSplit": 0.55,
                 "Toughness": null,
@@ -607,12 +563,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "HitSplit": 0.15,
             "Toughness": null,
@@ -629,12 +580,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "HitSplit": 0.15,
             "Toughness": null,
@@ -651,12 +597,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "HitSplit": 0.15,
             "Toughness": null,
@@ -815,12 +756,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonID01) || RETURN",
-                        "displayLines": "SummonID01",
-                        "constants": [],
-                        "variables": [
-                          "SummonID01"
-                        ]
+                        "displayLines": "SummonID01"
                       },
                       "locationType": "First"
                     }
@@ -834,12 +770,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonID01) || RETURN",
-                        "displayLines": "SummonID01",
-                        "constants": [],
-                        "variables": [
-                          "SummonID01"
-                        ]
+                        "displayLines": "SummonID01"
                       },
                       "locationType": "Last"
                     }
@@ -973,36 +904,16 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
               "valuePerStack": {
                 "MDF_RallyTransferRatio": {
-                  "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                  "displayLines": "{[Skill01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[1]]}"
-                  ]
+                  "displayLines": "{[Skill01[1]]}"
                 },
                 "MDF_Rally_HealPercentage": {
-                  "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                  "displayLines": "{[Skill01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[2]]}"
-                  ]
+                  "displayLines": "{[Skill01[2]]}"
                 },
                 "MDF_Rally_HealUpRatio": {
-                  "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                  "displayLines": "{[Skill01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[3]]}"
-                  ]
+                  "displayLines": "{[Skill01[3]]}"
                 },
                 "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                  "displayLines": "{[Skill01[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[4]]}"
-                  ]
+                  "displayLines": "{[Skill01[4]]}"
                 }
               }
             },
@@ -1015,12 +926,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1037,36 +943,16 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
               "valuePerStack": {
                 "MDF_RallyTransferRatio": {
-                  "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                  "displayLines": "{[Skill01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[1]]}"
-                  ]
+                  "displayLines": "{[Skill01[1]]}"
                 },
                 "MDF_Rally_HealPercentage": {
-                  "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                  "displayLines": "{[Skill01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[2]]}"
-                  ]
+                  "displayLines": "{[Skill01[2]]}"
                 },
                 "MDF_Rally_HealUpRatio": {
-                  "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                  "displayLines": "{[Skill01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[3]]}"
-                  ]
+                  "displayLines": "{[Skill01[3]]}"
                 },
                 "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                  "displayLines": "{[Skill01[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[4]]}"
-                  ]
+                  "displayLines": "{[Skill01[4]]}"
                 }
               }
             },
@@ -1079,12 +965,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1101,36 +982,16 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
               "valuePerStack": {
                 "MDF_RallyTransferRatio": {
-                  "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                  "displayLines": "{[Skill01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[1]]}"
-                  ]
+                  "displayLines": "{[Skill01[1]]}"
                 },
                 "MDF_Rally_HealPercentage": {
-                  "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                  "displayLines": "{[Skill01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[2]]}"
-                  ]
+                  "displayLines": "{[Skill01[2]]}"
                 },
                 "MDF_Rally_HealUpRatio": {
-                  "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                  "displayLines": "{[Skill01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[3]]}"
-                  ]
+                  "displayLines": "{[Skill01[3]]}"
                 },
                 "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                  "displayLines": "{[Skill01[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[4]]}"
-                  ]
+                  "displayLines": "{[Skill01[4]]}"
                 }
               }
             },
@@ -1143,12 +1004,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1165,36 +1021,16 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
               "valuePerStack": {
                 "MDF_RallyTransferRatio": {
-                  "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                  "displayLines": "{[Skill01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[1]]}"
-                  ]
+                  "displayLines": "{[Skill01[1]]}"
                 },
                 "MDF_Rally_HealPercentage": {
-                  "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                  "displayLines": "{[Skill01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[2]]}"
-                  ]
+                  "displayLines": "{[Skill01[2]]}"
                 },
                 "MDF_Rally_HealUpRatio": {
-                  "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                  "displayLines": "{[Skill01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[3]]}"
-                  ]
+                  "displayLines": "{[Skill01[3]]}"
                 },
                 "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                  "displayLines": "{[Skill01[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[4]]}"
-                  ]
+                  "displayLines": "{[Skill01[4]]}"
                 }
               }
             },
@@ -1207,12 +1043,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1240,36 +1071,16 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
               "valuePerStack": {
                 "MDF_RallyTransferRatio": {
-                  "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                  "displayLines": "{[Skill01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[1]]}"
-                  ]
+                  "displayLines": "{[Skill01[1]]}"
                 },
                 "MDF_Rally_HealPercentage": {
-                  "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                  "displayLines": "{[Skill01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[2]]}"
-                  ]
+                  "displayLines": "{[Skill01[2]]}"
                 },
                 "MDF_Rally_HealUpRatio": {
-                  "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                  "displayLines": "{[Skill01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[3]]}"
-                  ]
+                  "displayLines": "{[Skill01[3]]}"
                 },
                 "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                  "displayLines": "{[Skill01[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[4]]}"
-                  ]
+                  "displayLines": "{[Skill01[4]]}"
                 }
               }
             },
@@ -1282,12 +1093,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1304,36 +1110,16 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
               "valuePerStack": {
                 "MDF_RallyTransferRatio": {
-                  "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                  "displayLines": "{[Skill01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[1]]}"
-                  ]
+                  "displayLines": "{[Skill01[1]]}"
                 },
                 "MDF_Rally_HealPercentage": {
-                  "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                  "displayLines": "{[Skill01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[2]]}"
-                  ]
+                  "displayLines": "{[Skill01[2]]}"
                 },
                 "MDF_Rally_HealUpRatio": {
-                  "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                  "displayLines": "{[Skill01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[3]]}"
-                  ]
+                  "displayLines": "{[Skill01[3]]}"
                 },
                 "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                  "displayLines": "{[Skill01[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[4]]}"
-                  ]
+                  "displayLines": "{[Skill01[4]]}"
                 }
               }
             },
@@ -1346,12 +1132,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1368,36 +1149,16 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
               "valuePerStack": {
                 "MDF_RallyTransferRatio": {
-                  "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                  "displayLines": "{[Skill01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[1]]}"
-                  ]
+                  "displayLines": "{[Skill01[1]]}"
                 },
                 "MDF_Rally_HealPercentage": {
-                  "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                  "displayLines": "{[Skill01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[2]]}"
-                  ]
+                  "displayLines": "{[Skill01[2]]}"
                 },
                 "MDF_Rally_HealUpRatio": {
-                  "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                  "displayLines": "{[Skill01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[3]]}"
-                  ]
+                  "displayLines": "{[Skill01[3]]}"
                 },
                 "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                  "displayLines": "{[Skill01[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[4]]}"
-                  ]
+                  "displayLines": "{[Skill01[4]]}"
                 }
               }
             },
@@ -1410,12 +1171,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1443,36 +1199,16 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
               "valuePerStack": {
                 "MDF_RallyTransferRatio": {
-                  "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                  "displayLines": "{[Skill01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[1]]}"
-                  ]
+                  "displayLines": "{[Skill01[1]]}"
                 },
                 "MDF_Rally_HealPercentage": {
-                  "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                  "displayLines": "{[Skill01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[2]]}"
-                  ]
+                  "displayLines": "{[Skill01[2]]}"
                 },
                 "MDF_Rally_HealUpRatio": {
-                  "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                  "displayLines": "{[Skill01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[3]]}"
-                  ]
+                  "displayLines": "{[Skill01[3]]}"
                 },
                 "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                  "displayLines": "{[Skill01[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[4]]}"
-                  ]
+                  "displayLines": "{[Skill01[4]]}"
                 }
               }
             },
@@ -1485,12 +1221,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1507,36 +1238,16 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
               "valuePerStack": {
                 "MDF_RallyTransferRatio": {
-                  "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                  "displayLines": "{[Skill01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[1]]}"
-                  ]
+                  "displayLines": "{[Skill01[1]]}"
                 },
                 "MDF_Rally_HealPercentage": {
-                  "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                  "displayLines": "{[Skill01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[2]]}"
-                  ]
+                  "displayLines": "{[Skill01[2]]}"
                 },
                 "MDF_Rally_HealUpRatio": {
-                  "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                  "displayLines": "{[Skill01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[3]]}"
-                  ]
+                  "displayLines": "{[Skill01[3]]}"
                 },
                 "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                  "displayLines": "{[Skill01[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[4]]}"
-                  ]
+                  "displayLines": "{[Skill01[4]]}"
                 }
               }
             },
@@ -1549,12 +1260,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1582,36 +1288,16 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
               "valuePerStack": {
                 "MDF_RallyTransferRatio": {
-                  "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                  "displayLines": "{[Skill01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[1]]}"
-                  ]
+                  "displayLines": "{[Skill01[1]]}"
                 },
                 "MDF_Rally_HealPercentage": {
-                  "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                  "displayLines": "{[Skill01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[2]]}"
-                  ]
+                  "displayLines": "{[Skill01[2]]}"
                 },
                 "MDF_Rally_HealUpRatio": {
-                  "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                  "displayLines": "{[Skill01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[3]]}"
-                  ]
+                  "displayLines": "{[Skill01[3]]}"
                 },
                 "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                  "displayLines": "{[Skill01[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[4]]}"
-                  ]
+                  "displayLines": "{[Skill01[4]]}"
                 }
               }
             },
@@ -1624,12 +1310,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1729,36 +1410,16 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
           "valuePerStack": {
             "MDF_RallyTransferRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_13197) || RETURN",
-              "displayLines": "UnusedUnderThisBase_13197",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_13197"
-              ]
+              "displayLines": "UnusedUnderThisBase_13197"
             },
             "MDF_Rally_HealPercentage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_13195) || RETURN",
-              "displayLines": "UnusedUnderThisBase_13195",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_13195"
-              ]
+              "displayLines": "UnusedUnderThisBase_13195"
             },
             "MDF_Rally_HealUpRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_13198) || RETURN",
-              "displayLines": "UnusedUnderThisBase_13198",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_13198"
-              ]
+              "displayLines": "UnusedUnderThisBase_13198"
             },
             "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_13199) || RETURN",
-              "displayLines": "UnusedUnderThisBase_13199",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_13199"
-              ]
+              "displayLines": "UnusedUnderThisBase_13199"
             }
           }
         },
@@ -1780,12 +1441,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,

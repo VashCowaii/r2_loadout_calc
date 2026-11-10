@@ -66,13 +66,7 @@ const compositeAbilityObject = {
                     "value1": "DV_CurrentDelay",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Variables[1] (DV_InitDelay) || ADD || RETURN",
-                      "displayLines": "({[PassiveSkill01[0]]} + DV_InitDelay)",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[0]]}",
-                        "DV_InitDelay"
-                      ]
+                      "displayLines": "({[PassiveSkill01[0]]} + DV_InitDelay)"
                     }
                   },
                   "passed": [
@@ -135,13 +129,7 @@ const compositeAbilityObject = {
                     "value1": "DV_CurrentDelay",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Variables[1] (DV_InitDelay) || ADD || RETURN",
-                      "displayLines": "({[PassiveSkill01[0]]} + DV_InitDelay)",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[0]]}",
-                        "DV_InitDelay"
-                      ]
+                      "displayLines": "({[PassiveSkill01[0]]} + DV_InitDelay)"
                     }
                   },
                   "passed": [
@@ -183,12 +171,7 @@ const compositeAbilityObject = {
                     "value1": "DV_CurrentDelay",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[0]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill01[0]]}"
                     }
                   },
                   "passed": [
@@ -609,13 +592,7 @@ const compositeAbilityObject = {
                     "target": "{{Parameter Target}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (_MaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                    "displayLines": "(_MaxSP - _CurrentSP)",
-                    "constants": [],
-                    "variables": [
-                      "_MaxSP",
-                      "_CurrentSP"
-                    ]
+                    "displayLines": "(_MaxSP - _CurrentSP)"
                   },
                   "isFixed": "(Fixed)",
                   "ignoreBlock": true,
@@ -648,13 +625,7 @@ const compositeAbilityObject = {
                     "target": "{{Parameter Target}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (_MaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                    "displayLines": "(_MaxSP - _CurrentSP)",
-                    "constants": [],
-                    "variables": [
-                      "_MaxSP",
-                      "_CurrentSP"
-                    ]
+                    "displayLines": "(_MaxSP - _CurrentSP)"
                   },
                   "isFixed": "(Fixed)"
                 }
@@ -936,14 +907,7 @@ const compositeAbilityObject = {
                         "value1": "MDF_CurrentSP",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MDF_MaxSP) || Constants[0] (0.5) || MUL || RETURN",
-                          "displayLines": "(MDF_MaxSP * 0.5)",
-                          "constants": [
-                            0.5
-                          ],
-                          "variables": [
-                            "MDF_MaxSP"
-                          ]
+                          "displayLines": "(MDF_MaxSP * 0.5)"
                         }
                       },
                       "passed": [
@@ -954,14 +918,7 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (MDF_MaxSP) || Constants[0] (0.5) || MUL || RETURN",
-                            "displayLines": "(MDF_MaxSP * 0.5)",
-                            "constants": [
-                              0.5
-                            ],
-                            "variables": [
-                              "MDF_MaxSP"
-                            ]
+                            "displayLines": "(MDF_MaxSP * 0.5)"
                           },
                           "isFixed": "* ERR",
                           "isSetToValue": true

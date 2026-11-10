@@ -88,12 +88,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1374245116\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0011_02</a>[<span class=\"descriptionNumberColor\">Tears Behind Smiles</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }

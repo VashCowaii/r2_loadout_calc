@@ -34,12 +34,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (#ADF_1) || RETURN",
-                "displayLines": "#ADF_1",
-                "constants": [],
-                "variables": [
-                  "#ADF_1"
-                ]
+                "displayLines": "#ADF_1"
               }
             }
           ]
@@ -61,12 +56,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1581262672\">Modifier_RogueDLCAbundance_Upgrade2_AttackUp</a>[<span class=\"descriptionNumberColor\">Formation Extrapolation: Mountain High</span>]",
               "duration": {
-                "operator": "Variables[0] (#ADF_2) || RETURN",
-                "displayLines": "#ADF_2",
-                "constants": [],
-                "variables": [
-                  "#ADF_2"
-                ]
+                "displayLines": "#ADF_2"
               }
             }
           ]

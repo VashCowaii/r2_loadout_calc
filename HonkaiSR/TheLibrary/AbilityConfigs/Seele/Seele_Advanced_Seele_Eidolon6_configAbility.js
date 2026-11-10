@@ -13,12 +13,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-301677957\">Seele_Eidolon6</a>",
       "valuePerStack": {
         "MDF_LiftTime": {
-          "operator": "Variables[0] (3) || RETURN",
-          "displayLines": "3",
-          "constants": [],
-          "variables": [
-            3
-          ]
+          "displayLines": "3"
         }
       }
     },
@@ -70,22 +65,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1484506463\">Advanced_Seele_Eidolon6_Flag</a>[<span class=\"descriptionNumberColor\">Butterfly Flurry</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_Eidolon6_DamageValue": {
-                      "operator": "Variables[0] (FinalUltraDamage) || Variables[1] (0.3) || MUL || RETURN",
-                      "displayLines": "(FinalUltraDamage * 0.3)",
-                      "constants": [],
-                      "variables": [
-                        "FinalUltraDamage",
-                        0.3
-                      ]
+                      "displayLines": "(FinalUltraDamage * 0.3)"
                     }
                   }
                 }

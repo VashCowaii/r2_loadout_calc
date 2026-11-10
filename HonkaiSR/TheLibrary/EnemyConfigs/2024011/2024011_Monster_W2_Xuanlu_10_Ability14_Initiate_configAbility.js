@@ -17,12 +17,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1367728749\">Enemy_W2_Xuanlu_10_RL_RageHandler</a>",
       "valuePerStack": {
         "MDF_DamageUpRatio_PerLayer": {
-          "operator": "Variables[0] ({[Skill14[0]]}) || RETURN",
-          "displayLines": "{[Skill14[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill14[0]]}"
-          ]
+          "displayLines": "{[Skill14[0]]}"
         }
       }
     }

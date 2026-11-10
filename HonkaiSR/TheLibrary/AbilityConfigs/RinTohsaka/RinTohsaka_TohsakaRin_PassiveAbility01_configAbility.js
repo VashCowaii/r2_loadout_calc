@@ -39,24 +39,14 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "variableName": "EnergyBar_CostGemNum"
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (15) || RETURN",
-        "displayLines": "15",
-        "constants": [],
-        "variables": [
-          15
-        ]
+        "displayLines": "15"
       },
       "variableName": "EnergyBar_ActiveGemNum"
     },
@@ -96,20 +86,10 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-        "displayLines": "EnergyBar_GemNum",
-        "constants": [],
-        "variables": [
-          "EnergyBar_GemNum"
-        ]
+        "displayLines": "EnergyBar_GemNum"
       },
       "maximum": {
-        "operator": "Variables[0] (EnergyBar_ActiveGemNum) || RETURN",
-        "displayLines": "EnergyBar_ActiveGemNum",
-        "constants": [],
-        "variables": [
-          "EnergyBar_ActiveGemNum"
-        ]
+        "displayLines": "EnergyBar_ActiveGemNum"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -174,12 +154,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1863098959\">TohsakaRin_Eidolon2_SelfAbilityBonus</a>[<span class=\"descriptionNumberColor\">Dimensional Traveler</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             }
           }
         },
@@ -192,12 +167,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1630247172\">TohsakaRin_Eidolon2_TeamAbilityBonus</a>[<span class=\"descriptionNumberColor\">Dimensional Traveler</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (1.3) || RETURN",
-              "displayLines": "1.3",
-              "constants": [],
-              "variables": [
-                1.3
-              ]
+              "displayLines": "1.3"
             }
           }
         },
@@ -227,12 +197,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-889730965\">TohsakaRin_Eidolon6_Penetrate</a>[<span class=\"descriptionNumberColor\">Nailed It This Time!</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         }
@@ -284,12 +249,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1630247172\">TohsakaRin_Eidolon2_TeamAbilityBonus</a>[<span class=\"descriptionNumberColor\">Dimensional Traveler</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (1.3) || RETURN",
-                      "displayLines": "1.3",
-                      "constants": [],
-                      "variables": [
-                        1.3
-                      ]
+                      "displayLines": "1.3"
                     }
                   }
                 }
@@ -374,21 +334,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1935988058\">TohsakaRin_PointB2_Bonus</a>[<span class=\"descriptionNumberColor\">Ladylike Poise</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 }
@@ -417,21 +367,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1935988058\">TohsakaRin_PointB2_Bonus</a>[<span class=\"descriptionNumberColor\">Ladylike Poise</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 }
@@ -458,12 +398,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "variableName": "MDF_MaxLayer"
                 }
@@ -547,37 +482,17 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"945078119\">TohsakaRin_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">Gem Magecraft</span>]",
                           "duration": {
-                            "operator": "Variables[0] (2) || RETURN",
-                            "displayLines": "2",
-                            "constants": [],
-                            "variables": [
-                              2
-                            ]
+                            "displayLines": "2"
                           },
                           "stackLimit": {
-                            "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                            "displayLines": "MDF_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxLayer"
-                            ]
+                            "displayLines": "MDF_MaxLayer"
                           },
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.7) || RETURN",
-                              "displayLines": "0.7",
-                              "constants": [],
-                              "variables": [
-                                0.7
-                              ]
+                              "displayLines": "0.7"
                             },
                             "MDF_CurrentMaxLayer": {
-                              "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                              "displayLines": "MDF_MaxLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxLayer"
-                              ]
+                              "displayLines": "MDF_MaxLayer"
                             }
                           },
                           "addStacksPerTrigger": 1
@@ -592,21 +507,11 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"945078119\">TohsakaRin_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">Gem Magecraft</span>]",
                           "duration": {
-                            "operator": "Variables[0] (2) || RETURN",
-                            "displayLines": "2",
-                            "constants": [],
-                            "variables": [
-                              2
-                            ]
+                            "displayLines": "2"
                           },
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.7) || RETURN",
-                              "displayLines": "0.7",
-                              "constants": [],
-                              "variables": [
-                                0.7
-                              ]
+                              "displayLines": "0.7"
                             },
                             "MDF_CurrentMaxLayer": 1
                           }
@@ -617,24 +522,14 @@ const configAbility = {
                       "name": "Define Custom Variable",
                       "scope": "ContextModifier",
                       "value": {
-                        "operator": "Variables[0] (_BPAddValue) || INVERT || RETURN",
-                        "displayLines": "-_BPAddValue",
-                        "constants": [],
-                        "variables": [
-                          "_BPAddValue"
-                        ]
+                        "displayLines": "-_BPAddValue"
                       },
                       "variableName": "_BPAddValue"
                     },
                     {
                       "name": "Looped Event",
                       "maxLoops": {
-                        "operator": "Variables[0] (_BPAddValue) || RETURN",
-                        "displayLines": "_BPAddValue",
-                        "constants": [],
-                        "variables": [
-                          "_BPAddValue"
-                        ]
+                        "displayLines": "_BPAddValue"
                       },
                       "execute": [
                         {
@@ -661,12 +556,7 @@ const configAbility = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (EnergyBar_GemNum_Shadow) || RETURN",
-                            "displayLines": "EnergyBar_GemNum_Shadow",
-                            "constants": [],
-                            "variables": [
-                              "EnergyBar_GemNum_Shadow"
-                            ]
+                            "displayLines": "EnergyBar_GemNum_Shadow"
                           },
                           "priorState": "Normal"
                         }
@@ -675,12 +565,7 @@ const configAbility = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                            "displayLines": "EnergyBar_GemNum",
-                            "constants": [],
-                            "variables": [
-                              "EnergyBar_GemNum"
-                            ]
+                            "displayLines": "EnergyBar_GemNum"
                           },
                           "priorState": "Normal"
                         }
@@ -698,12 +583,7 @@ const configAbility = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (EnergyBar_GemNum_Shadow) || RETURN",
-                            "displayLines": "EnergyBar_GemNum_Shadow",
-                            "constants": [],
-                            "variables": [
-                              "EnergyBar_GemNum_Shadow"
-                            ]
+                            "displayLines": "EnergyBar_GemNum_Shadow"
                           },
                           "priorState": "Normal"
                         }
@@ -712,12 +592,7 @@ const configAbility = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                            "displayLines": "EnergyBar_GemNum",
-                            "constants": [],
-                            "variables": [
-                              "EnergyBar_GemNum"
-                            ]
+                            "displayLines": "EnergyBar_GemNum"
                           },
                           "priorState": "Normal"
                         }
@@ -788,37 +663,17 @@ const configAbility = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"945078119\">TohsakaRin_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">Gem Magecraft</span>]",
                               "duration": {
-                                "operator": "Variables[0] (2) || RETURN",
-                                "displayLines": "2",
-                                "constants": [],
-                                "variables": [
-                                  2
-                                ]
+                                "displayLines": "2"
                               },
                               "stackLimit": {
-                                "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                "displayLines": "MDF_MaxLayer",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_MaxLayer"
-                                ]
+                                "displayLines": "MDF_MaxLayer"
                               },
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (0.7) || RETURN",
-                                  "displayLines": "0.7",
-                                  "constants": [],
-                                  "variables": [
-                                    0.7
-                                  ]
+                                  "displayLines": "0.7"
                                 },
                                 "MDF_CurrentMaxLayer": {
-                                  "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                  "displayLines": "MDF_MaxLayer",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_MaxLayer"
-                                  ]
+                                  "displayLines": "MDF_MaxLayer"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -833,21 +688,11 @@ const configAbility = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"945078119\">TohsakaRin_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">Gem Magecraft</span>]",
                               "duration": {
-                                "operator": "Variables[0] (2) || RETURN",
-                                "displayLines": "2",
-                                "constants": [],
-                                "variables": [
-                                  2
-                                ]
+                                "displayLines": "2"
                               },
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (0.7) || RETURN",
-                                  "displayLines": "0.7",
-                                  "constants": [],
-                                  "variables": [
-                                    0.7
-                                  ]
+                                  "displayLines": "0.7"
                                 },
                                 "MDF_CurrentMaxLayer": 1
                               }
@@ -857,12 +702,7 @@ const configAbility = {
                         {
                           "name": "Looped Event",
                           "maxLoops": {
-                            "operator": "Variables[0] (_BPAddValue) || RETURN",
-                            "displayLines": "_BPAddValue",
-                            "constants": [],
-                            "variables": [
-                              "_BPAddValue"
-                            ]
+                            "displayLines": "_BPAddValue"
                           },
                           "execute": [
                             {
@@ -889,12 +729,7 @@ const configAbility = {
                             {
                               "name": "Update Displayed Energy Bar",
                               "value": {
-                                "operator": "Variables[0] (EnergyBar_GemNum_Shadow) || RETURN",
-                                "displayLines": "EnergyBar_GemNum_Shadow",
-                                "constants": [],
-                                "variables": [
-                                  "EnergyBar_GemNum_Shadow"
-                                ]
+                                "displayLines": "EnergyBar_GemNum_Shadow"
                               },
                               "priorState": "Normal"
                             }
@@ -903,12 +738,7 @@ const configAbility = {
                             {
                               "name": "Update Displayed Energy Bar",
                               "value": {
-                                "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                                "displayLines": "EnergyBar_GemNum",
-                                "constants": [],
-                                "variables": [
-                                  "EnergyBar_GemNum"
-                                ]
+                                "displayLines": "EnergyBar_GemNum"
                               },
                               "priorState": "Normal"
                             }
@@ -993,12 +823,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (20) || RETURN",
-                    "displayLines": "20",
-                    "constants": [],
-                    "variables": [
-                      20
-                    ]
+                    "displayLines": "20"
                   }
                 },
                 {
@@ -1013,12 +838,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (EnergyBar_GemNum_Shadow) || RETURN",
-                        "displayLines": "EnergyBar_GemNum_Shadow",
-                        "constants": [],
-                        "variables": [
-                          "EnergyBar_GemNum_Shadow"
-                        ]
+                        "displayLines": "EnergyBar_GemNum_Shadow"
                       },
                       "priorState": "Normal"
                     }
@@ -1027,12 +847,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                        "displayLines": "EnergyBar_GemNum",
-                        "constants": [],
-                        "variables": [
-                          "EnergyBar_GemNum"
-                        ]
+                        "displayLines": "EnergyBar_GemNum"
                       },
                       "priorState": "Normal"
                     }
@@ -1122,12 +937,7 @@ const configAbility = {
               "name": "Change Skill Point Max",
               "function": "Add",
               "value": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               }
             }
           ]
@@ -1139,12 +949,7 @@ const configAbility = {
               "name": "Change Skill Point Max",
               "function": "Add",
               "value": {
-                "operator": "Variables[0] (2) || INVERT || RETURN",
-                "displayLines": "-2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "-2"
               }
             }
           ]
@@ -1171,20 +976,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-171150355\">TohsakaRin_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Elegant Conduct</span>]",
                   "valuePerStack": {
                     "MDF_AttackAddedRatio": {
-                      "operator": "Variables[0] (1.5) || RETURN",
-                      "displayLines": "1.5",
-                      "constants": [],
-                      "variables": [
-                        1.5
-                      ]
+                      "displayLines": "1.5"
                     },
                     "MDF_Penetrate": {
-                      "operator": "Variables[0] (0.15) || RETURN",
-                      "displayLines": "0.15",
-                      "constants": [],
-                      "variables": [
-                        0.15
-                      ]
+                      "displayLines": "0.15"
                     }
                   }
                 },
@@ -1215,20 +1010,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-171150355\">TohsakaRin_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Elegant Conduct</span>]",
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
-                          "operator": "Variables[0] (1.5) || RETURN",
-                          "displayLines": "1.5",
-                          "constants": [],
-                          "variables": [
-                            1.5
-                          ]
+                          "displayLines": "1.5"
                         },
                         "MDF_Penetrate": {
-                          "operator": "Variables[0] (0.15) || RETURN",
-                          "displayLines": "0.15",
-                          "constants": [],
-                          "variables": [
-                            0.15
-                          ]
+                          "displayLines": "0.15"
                         }
                       }
                     }
@@ -1315,12 +1100,7 @@ const configAbility = {
                     "value1": "CurrentSkillPoints",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (7) || RETURN",
-                      "displayLines": "7",
-                      "constants": [],
-                      "variables": [
-                        7
-                      ]
+                      "displayLines": "7"
                     }
                   },
                   {
@@ -1328,12 +1108,7 @@ const configAbility = {
                     "value1": "EnergyBar_GemNum",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (EnergyBar_ActiveGemNum) || RETURN",
-                      "displayLines": "EnergyBar_ActiveGemNum",
-                      "constants": [],
-                      "variables": [
-                        "EnergyBar_ActiveGemNum"
-                      ]
+                      "displayLines": "EnergyBar_ActiveGemNum"
                     }
                   },
                   {
@@ -1360,12 +1135,7 @@ const configAbility = {
                     "value1": "CurrentSkillPoints",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     }
                   },
                   "passed": [
@@ -1376,15 +1146,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (TMP_CUR_BP) || Variables[1] (2) || SUB || Variables[2] (2) || MUL || Variables[3] (EnergyBar_GemNum) || ADD || RETURN",
-                        "displayLines": "(((TMP_CUR_BP - 2) * 2) + EnergyBar_GemNum)",
-                        "constants": [],
-                        "variables": [
-                          "TMP_CUR_BP",
-                          2,
-                          2,
-                          "EnergyBar_GemNum"
-                        ]
+                        "displayLines": "(((TMP_CUR_BP - 2) * 2) + EnergyBar_GemNum)"
                       },
                       "variableName": "EnergyBar_CostGemNum_Real"
                     }
@@ -1393,12 +1155,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                        "displayLines": "EnergyBar_GemNum",
-                        "constants": [],
-                        "variables": [
-                          "EnergyBar_GemNum"
-                        ]
+                        "displayLines": "EnergyBar_GemNum"
                       },
                       "variableName": "EnergyBar_CostGemNum_Real"
                     }
@@ -1422,12 +1179,7 @@ const configAbility = {
                         "value1": "DamageCarry",
                         "compareType": ">",
                         "value2": {
-                          "operator": "Variables[0] (Tohsakarin_00_DamageCarry) || RETURN",
-                          "displayLines": "Tohsakarin_00_DamageCarry",
-                          "constants": [],
-                          "variables": [
-                            "Tohsakarin_00_DamageCarry"
-                          ]
+                          "displayLines": "Tohsakarin_00_DamageCarry"
                         },
                         "contextScope": "AITag"
                       },
@@ -1435,12 +1187,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                            "displayLines": "EnergyBar_GemNum",
-                            "constants": [],
-                            "variables": [
-                              "EnergyBar_GemNum"
-                            ]
+                            "displayLines": "EnergyBar_GemNum"
                           },
                           "variableName": "EnergyBar_CostGemNum_Real"
                         }
@@ -1455,12 +1202,7 @@ const configAbility = {
                     "value1": "EnergyBar_CostGemNum_Real",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__320) || RETURN",
-                      "displayLines": "ENEMIES_OBJECT_UNUSED__320",
-                      "constants": [],
-                      "variables": [
-                        "ENEMIES_OBJECT_UNUSED__320"
-                      ]
+                      "displayLines": "ENEMIES_OBJECT_UNUSED__320"
                     }
                   },
                   "passed": [
@@ -1528,12 +1270,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": -999,
               "maxValue": {
-                "operator": "Variables[0] (EnergyBar_MaxGemNum) || RETURN",
-                "displayLines": "EnergyBar_MaxGemNum",
-                "constants": [],
-                "variables": [
-                  "EnergyBar_MaxGemNum"
-                ]
+                "displayLines": "EnergyBar_MaxGemNum"
               },
               "enteringRange": [
                 {
@@ -1543,12 +1280,7 @@ const configAbility = {
                     "value1": "EnergyBar_GemNum",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Constants[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [
-                        1
-                      ],
-                      "variables": []
+                      "displayLines": "1"
                     }
                   },
                   "passed": [
@@ -1568,12 +1300,7 @@ const configAbility = {
                       },
                       "modifierName": "<a class=\"gModGreen\" id=\"253442980\">TohsakaRin_GemStone_Show</a>[<span class=\"descriptionNumberColor\">Gem Energy</span>]",
                       "value": {
-                        "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                        "displayLines": "EnergyBar_GemNum",
-                        "constants": [],
-                        "variables": [
-                          "EnergyBar_GemNum"
-                        ]
+                        "displayLines": "EnergyBar_GemNum"
                       }
                     }
                   ],
@@ -1661,12 +1388,7 @@ const configAbility = {
                     "value1": "EnergyBar_GemNum",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Constants[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [
-                        1
-                      ],
-                      "variables": []
+                      "displayLines": "1"
                     }
                   },
                   "passed": [
@@ -1686,12 +1408,7 @@ const configAbility = {
                       },
                       "modifierName": "<a class=\"gModGreen\" id=\"253442980\">TohsakaRin_GemStone_Show</a>[<span class=\"descriptionNumberColor\">Gem Energy</span>]",
                       "value": {
-                        "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                        "displayLines": "EnergyBar_GemNum",
-                        "constants": [],
-                        "variables": [
-                          "EnergyBar_GemNum"
-                        ]
+                        "displayLines": "EnergyBar_GemNum"
                       }
                     }
                   ],
@@ -1711,12 +1428,7 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": {
-                "operator": "Variables[0] (EnergyBar_MaxGemNum) || RETURN",
-                "displayLines": "EnergyBar_MaxGemNum",
-                "constants": [],
-                "variables": [
-                  "EnergyBar_MaxGemNum"
-                ]
+                "displayLines": "EnergyBar_MaxGemNum"
               },
               "maxValue": 999,
               "includeMaxValueInRange": true,
@@ -1728,12 +1440,7 @@ const configAbility = {
                     "value1": "EnergyBar_GemNum",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Constants[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [
-                        1
-                      ],
-                      "variables": []
+                      "displayLines": "1"
                     }
                   },
                   "passed": [
@@ -1753,12 +1460,7 @@ const configAbility = {
                       },
                       "modifierName": "<a class=\"gModGreen\" id=\"253442980\">TohsakaRin_GemStone_Show</a>[<span class=\"descriptionNumberColor\">Gem Energy</span>]",
                       "value": {
-                        "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                        "displayLines": "EnergyBar_GemNum",
-                        "constants": [],
-                        "variables": [
-                          "EnergyBar_GemNum"
-                        ]
+                        "displayLines": "EnergyBar_GemNum"
                       }
                     }
                   ],
@@ -1803,12 +1505,7 @@ const configAbility = {
                     "value1": "EnergyBar_GemNum",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Constants[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [
-                        1
-                      ],
-                      "variables": []
+                      "displayLines": "1"
                     }
                   },
                   "passed": [
@@ -1828,12 +1525,7 @@ const configAbility = {
                       },
                       "modifierName": "<a class=\"gModGreen\" id=\"253442980\">TohsakaRin_GemStone_Show</a>[<span class=\"descriptionNumberColor\">Gem Energy</span>]",
                       "value": {
-                        "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                        "displayLines": "EnergyBar_GemNum",
-                        "constants": [],
-                        "variables": [
-                          "EnergyBar_GemNum"
-                        ]
+                        "displayLines": "EnergyBar_GemNum"
                       }
                     }
                   ],

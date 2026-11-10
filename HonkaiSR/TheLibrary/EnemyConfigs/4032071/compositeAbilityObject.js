@@ -200,12 +200,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_TempAIFlag) || RETURN",
-                "displayLines": "_TempAIFlag",
-                "constants": [],
-                "variables": [
-                  "_TempAIFlag"
-                ]
+                "displayLines": "_TempAIFlag"
               },
               "variableName": "AIFlag"
             },
@@ -290,13 +285,7 @@ const compositeAbilityObject = {
                 "target": "{{Parameter Target}}"
               },
               "value": {
-                "operator": "Variables[0] ({[PassiveSkill02[0]]}) || Variables[1] (_TargetMaxSP) || MUL || RETURN",
-                "displayLines": "({[PassiveSkill02[0]]} * _TargetMaxSP)",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill02[0]]}",
-                  "_TargetMaxSP"
-                ]
+                "displayLines": "({[PassiveSkill02[0]]} * _TargetMaxSP)"
               },
               "isFixed": "(Fixed)"
             }
@@ -433,44 +422,19 @@ const compositeAbilityObject = {
                   "isUnique": true,
                   "odds": [
                     {
-                      "operator": "Variables[0] (_Break01Odds) || RETURN",
-                      "displayLines": "_Break01Odds",
-                      "constants": [],
-                      "variables": [
-                        "_Break01Odds"
-                      ]
+                      "displayLines": "_Break01Odds"
                     },
                     {
-                      "operator": "Variables[0] (_Break02Odds) || RETURN",
-                      "displayLines": "_Break02Odds",
-                      "constants": [],
-                      "variables": [
-                        "_Break02Odds"
-                      ]
+                      "displayLines": "_Break02Odds"
                     },
                     {
-                      "operator": "Variables[0] (_Break03Odds) || RETURN",
-                      "displayLines": "_Break03Odds",
-                      "constants": [],
-                      "variables": [
-                        "_Break03Odds"
-                      ]
+                      "displayLines": "_Break03Odds"
                     },
                     {
-                      "operator": "Variables[0] (_Break04Odds) || RETURN",
-                      "displayLines": "_Break04Odds",
-                      "constants": [],
-                      "variables": [
-                        "_Break04Odds"
-                      ]
+                      "displayLines": "_Break04Odds"
                     },
                     {
-                      "operator": "Variables[0] (_Break05Odds) || RETURN",
-                      "displayLines": "_Break05Odds",
-                      "constants": [],
-                      "variables": [
-                        "_Break05Odds"
-                      ]
+                      "displayLines": "_Break05Odds"
                     }
                   ],
                   "execute": [
@@ -639,12 +603,7 @@ const compositeAbilityObject = {
                         "target": "{{Irontomb: Core}}"
                       },
                       "flatConsume": {
-                        "operator": "Variables[0] (MDF_HPChange) || INVERT || RETURN",
-                        "displayLines": "-MDF_HPChange",
-                        "constants": [],
-                        "variables": [
-                          "MDF_HPChange"
-                        ]
+                        "displayLines": "-MDF_HPChange"
                       }
                     }
                   ]
@@ -675,12 +634,7 @@ const compositeAbilityObject = {
                         "target": "{{Irontomb: Core}}"
                       },
                       "flatConsume": {
-                        "operator": "Variables[0] (MDF_HPOverflow) || INVERT || RETURN",
-                        "displayLines": "-MDF_HPOverflow",
-                        "constants": [],
-                        "variables": [
-                          "MDF_HPOverflow"
-                        ]
+                        "displayLines": "-MDF_HPOverflow"
                       }
                     }
                   ]
@@ -790,14 +744,7 @@ const compositeAbilityObject = {
         {
           "name": "Skill Points Modification",
           "adjustmentValue": {
-            "operator": "Constants[0] (0) || Variables[0] ({[Skill04[0]]}) || SUB || RETURN",
-            "displayLines": "(0 - {[Skill04[0]]})",
-            "constants": [
-              0
-            ],
-            "variables": [
-              "{[Skill04[0]]}"
-            ]
+            "displayLines": "(0 - {[Skill04[0]]})"
           },
           "adjustmentType": "+"
         },
@@ -810,12 +757,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-              "displayLines": "{[Skill04[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[1]]}"
-              ]
+              "displayLines": "{[Skill04[1]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -828,12 +770,7 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"1699523791\">W4_IronTombCore_CalWorldErosion</a>",
           "variables": {
             "_ErosionParam": {
-              "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-              "displayLines": "{[Skill04[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[2]]}"
-              ]
+              "displayLines": "{[Skill04[2]]}"
             }
           }
         },
@@ -942,12 +879,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -964,12 +896,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-              "displayLines": "{[Skill03[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[1]]}"
-              ]
+              "displayLines": "{[Skill03[1]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -983,12 +910,7 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"1699523791\">W4_IronTombCore_CalWorldErosion</a>",
           "variables": {
             "_ErosionParam": {
-              "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-              "displayLines": "{[Skill03[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[2]]}"
-              ]
+              "displayLines": "{[Skill03[2]]}"
             }
           }
         },
@@ -1218,12 +1140,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1240,12 +1157,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
+              "displayLines": "{[Skill01[1]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1259,12 +1171,7 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"1699523791\">W4_IronTombCore_CalWorldErosion</a>",
           "variables": {
             "_ErosionParam": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
+              "displayLines": "{[Skill01[2]]}"
             }
           }
         },

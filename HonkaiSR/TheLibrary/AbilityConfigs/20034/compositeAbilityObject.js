@@ -438,24 +438,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_DamageAddedRatio) || RETURN",
-                    "displayLines": "_DamageAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "_DamageAddedRatio"
-                    ]
+                    "displayLines": "_DamageAddedRatio"
                   },
                   "variableName": "MDF_ShowValue1"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_DamageReduceRatio) || RETURN",
-                    "displayLines": "_DamageReduceRatio",
-                    "constants": [],
-                    "variables": [
-                      "_DamageReduceRatio"
-                    ]
+                    "displayLines": "_DamageReduceRatio"
                   },
                   "variableName": "MDF_ShowValue2"
                 },
@@ -467,12 +457,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (_DamageAddedRatio) || RETURN",
-                    "displayLines": "_DamageAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "_DamageAddedRatio"
-                    ]
+                    "displayLines": "_DamageAddedRatio"
                   }
                 },
                 {
@@ -483,12 +468,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (_DamageReduceRatio) || RETURN",
-                    "displayLines": "_DamageReduceRatio",
-                    "constants": [],
-                    "variables": [
-                      "_DamageReduceRatio"
-                    ]
+                    "displayLines": "_DamageReduceRatio"
                   }
                 }
               ]
@@ -1039,12 +1019,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-883767978\">Monster_W4_Claymore_01_LocalLegend_DamageAdd</a>",
                       "valuePerStack": {
                         "MDF_DamageAdded": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_11363) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_11363",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_11363"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_11363"
                         }
                       }
                     }
@@ -1357,15 +1332,7 @@ const compositeAbilityObject = {
                               "name": "Set Battle Track Progress",
                               "progress": 0,
                               "count": {
-                                "operator": "Variables[0] (WHOLE) || Variables[1] (_CurrentHPRatio) || Constants[0] (100) || MUL || PARAM_1 || FUNCTION || RETURN",
-                                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((_CurrentHPRatio * 100))",
-                                "constants": [
-                                  100
-                                ],
-                                "variables": [
-                                  "WHOLE",
-                                  "_CurrentHPRatio"
-                                ]
+                                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((_CurrentHPRatio * 100))"
                               },
                               "ID": "#1%"
                             }
@@ -1448,15 +1415,7 @@ const compositeAbilityObject = {
                               "name": "Set Battle Track Progress",
                               "progress": 0,
                               "count": {
-                                "operator": "Variables[0] (WHOLE) || Variables[1] (_CurrentHPRatio) || Constants[0] (100) || MUL || PARAM_1 || FUNCTION || RETURN",
-                                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((_CurrentHPRatio * 100))",
-                                "constants": [
-                                  100
-                                ],
-                                "variables": [
-                                  "WHOLE",
-                                  "_CurrentHPRatio"
-                                ]
+                                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((_CurrentHPRatio * 100))"
                               },
                               "ID": "#1%"
                             }
@@ -1487,12 +1446,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1806977974\">Enemy_W4_Claymore_01_LocalLegend_Fatigue</a>[<span class=\"descriptionNumberColor\">DMG Reduction</span>]",
                       "valuePerStack": {
                         "MDF_ShowValue1": {
-                          "operator": "Variables[0] (_AttackDownRatio) || RETURN",
-                          "displayLines": "_AttackDownRatio",
-                          "constants": [],
-                          "variables": [
-                            "_AttackDownRatio"
-                          ]
+                          "displayLines": "_AttackDownRatio"
                         }
                       }
                     }
@@ -1845,13 +1799,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (_DelayRatio) || Variables[1] (_DelayAddedRatio) || ADD || RETURN",
-                        "displayLines": "(_DelayRatio + _DelayAddedRatio)",
-                        "constants": [],
-                        "variables": [
-                          "_DelayRatio",
-                          "_DelayAddedRatio"
-                        ]
+                        "displayLines": "(_DelayRatio + _DelayAddedRatio)"
                       },
                       "variableName": "_DelayRatio"
                     },
@@ -1862,13 +1810,7 @@ const compositeAbilityObject = {
                         "target": "{{EVENT[RoT] Light Praetor: 3}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (_DelayRatio) || Variables[1] (_DelayAddedRatio) || ADD || RETURN",
-                        "displayLines": "(_DelayRatio + _DelayAddedRatio)",
-                        "constants": [],
-                        "variables": [
-                          "_DelayRatio",
-                          "_DelayAddedRatio"
-                        ]
+                        "displayLines": "(_DelayRatio + _DelayAddedRatio)"
                       },
                       "variableName": "_DelayRatio"
                     },
@@ -2086,13 +2028,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (_DelayRatio) || Variables[1] (_DelayAddedRatio) || ADD || RETURN",
-                        "displayLines": "(_DelayRatio + _DelayAddedRatio)",
-                        "constants": [],
-                        "variables": [
-                          "_DelayRatio",
-                          "_DelayAddedRatio"
-                        ]
+                        "displayLines": "(_DelayRatio + _DelayAddedRatio)"
                       },
                       "variableName": "_DelayRatio"
                     },
@@ -2103,13 +2039,7 @@ const compositeAbilityObject = {
                         "target": "{{EVENT[RoT] Light Praetor: 3}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (_DelayRatio) || Variables[1] (_DelayAddedRatio) || ADD || RETURN",
-                        "displayLines": "(_DelayRatio + _DelayAddedRatio)",
-                        "constants": [],
-                        "variables": [
-                          "_DelayRatio",
-                          "_DelayAddedRatio"
-                        ]
+                        "displayLines": "(_DelayRatio + _DelayAddedRatio)"
                       },
                       "variableName": "_DelayRatio"
                     },
@@ -2203,13 +2133,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1777684731\">Standard_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_Layer) || Variables[1] (MDF_DamageAdded) || MUL || RETURN",
-                      "displayLines": "(MDF_Layer * MDF_DamageAdded)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Layer",
-                        "MDF_DamageAdded"
-                      ]
+                      "displayLines": "(MDF_Layer * MDF_DamageAdded)"
                     }
                   }
                 }

@@ -65,60 +65,23 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"683860338\">Lynx_HPAddedRatio02</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]",
               "duration": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_Lynx_MaxHpValue) || Variables[1] (MDF_Lynx_MaxHpConvert) || SUB || Variables[2] (0.075) || Variables[3] (0.06) || ADD || MUL || Variables[4] (200) || ADD || RETURN",
-                  "displayLines": "(((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * (0.075 + 0.06)) + 200)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Lynx_MaxHpValue",
-                    "MDF_Lynx_MaxHpConvert",
-                    0.075,
-                    0.06,
-                    200
-                  ]
+                  "displayLines": "(((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * (0.075 + 0.06)) + 200)"
                 },
                 "MDF_HPAddValueConvert": {
-                  "operator": "Variables[0] (MDF_Lynx_MaxHpValue) || Variables[1] (MDF_Lynx_MaxHpConvert) || SUB || Variables[2] (0.075) || Variables[3] (0.06) || ADD || MUL || RETURN",
-                  "displayLines": "((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * (0.075 + 0.06))",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Lynx_MaxHpValue",
-                    "MDF_Lynx_MaxHpConvert",
-                    0.075,
-                    0.06
-                  ]
+                  "displayLines": "((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * (0.075 + 0.06))"
                 },
                 "MDF_HPDelta": {
-                  "operator": "Variables[0] (200) || RETURN",
-                  "displayLines": "200",
-                  "constants": [],
-                  "variables": [
-                    200
-                  ]
+                  "displayLines": "200"
                 },
                 "MDF_AggroUp": {
-                  "operator": "Variables[0] (5) || RETURN",
-                  "displayLines": "5",
-                  "constants": [],
-                  "variables": [
-                    5
-                  ]
+                  "displayLines": "5"
                 },
                 "MDF_AddStatusResistance": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 }
               }
             }
@@ -132,53 +95,21 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"683860338\">Lynx_HPAddedRatio02</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]",
               "duration": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_Lynx_MaxHpValue) || Variables[1] (MDF_Lynx_MaxHpConvert) || SUB || Variables[2] (0.075) || Variables[3] (0.06) || ADD || MUL || Variables[4] (200) || ADD || RETURN",
-                  "displayLines": "(((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * (0.075 + 0.06)) + 200)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Lynx_MaxHpValue",
-                    "MDF_Lynx_MaxHpConvert",
-                    0.075,
-                    0.06,
-                    200
-                  ]
+                  "displayLines": "(((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * (0.075 + 0.06)) + 200)"
                 },
                 "MDF_HPAddValueConvert": {
-                  "operator": "Variables[0] (MDF_Lynx_MaxHpValue) || Variables[1] (MDF_Lynx_MaxHpConvert) || SUB || Variables[2] (0.075) || Variables[3] (0.06) || ADD || MUL || RETURN",
-                  "displayLines": "((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * (0.075 + 0.06))",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Lynx_MaxHpValue",
-                    "MDF_Lynx_MaxHpConvert",
-                    0.075,
-                    0.06
-                  ]
+                  "displayLines": "((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * (0.075 + 0.06))"
                 },
                 "MDF_HPDelta": {
-                  "operator": "Variables[0] (200) || RETURN",
-                  "displayLines": "200",
-                  "constants": [],
-                  "variables": [
-                    200
-                  ]
+                  "displayLines": "200"
                 },
                 "MDF_AggroUp": 0,
                 "MDF_AddStatusResistance": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 }
               }
             }
@@ -222,50 +153,20 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"667082719\">Lynx_HPAddedRatio01</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]",
               "duration": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_Lynx_MaxHpValue) || Variables[1] (MDF_Lynx_MaxHpConvert) || SUB || Variables[2] (0.075) || MUL || Variables[3] (200) || ADD || RETURN",
-                  "displayLines": "(((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * 0.075) + 200)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Lynx_MaxHpValue",
-                    "MDF_Lynx_MaxHpConvert",
-                    0.075,
-                    200
-                  ]
+                  "displayLines": "(((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * 0.075) + 200)"
                 },
                 "MDF_HPAddValueConvert": {
-                  "operator": "Variables[0] (MDF_Lynx_MaxHpValue) || Variables[1] (MDF_Lynx_MaxHpConvert) || SUB || Variables[2] (0.075) || MUL || RETURN",
-                  "displayLines": "((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * 0.075)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Lynx_MaxHpValue",
-                    "MDF_Lynx_MaxHpConvert",
-                    0.075
-                  ]
+                  "displayLines": "((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * 0.075)"
                 },
                 "MDF_HPDelta": {
-                  "operator": "Variables[0] (200) || RETURN",
-                  "displayLines": "200",
-                  "constants": [],
-                  "variables": [
-                    200
-                  ]
+                  "displayLines": "200"
                 },
                 "MDF_AggroUp": {
-                  "operator": "Variables[0] (5) || RETURN",
-                  "displayLines": "5",
-                  "constants": [],
-                  "variables": [
-                    5
-                  ]
+                  "displayLines": "5"
                 }
               }
             }
@@ -279,42 +180,17 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"667082719\">Lynx_HPAddedRatio01</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]",
               "duration": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_Lynx_MaxHpValue) || Variables[1] (MDF_Lynx_MaxHpConvert) || SUB || Variables[2] (0.075) || MUL || Variables[3] (200) || ADD || RETURN",
-                  "displayLines": "(((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * 0.075) + 200)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Lynx_MaxHpValue",
-                    "MDF_Lynx_MaxHpConvert",
-                    0.075,
-                    200
-                  ]
+                  "displayLines": "(((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * 0.075) + 200)"
                 },
                 "MDF_HPAddValueConvert": {
-                  "operator": "Variables[0] (MDF_Lynx_MaxHpValue) || Variables[1] (MDF_Lynx_MaxHpConvert) || SUB || Variables[2] (0.075) || MUL || RETURN",
-                  "displayLines": "((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * 0.075)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Lynx_MaxHpValue",
-                    "MDF_Lynx_MaxHpConvert",
-                    0.075
-                  ]
+                  "displayLines": "((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * 0.075)"
                 },
                 "MDF_HPDelta": {
-                  "operator": "Variables[0] (200) || RETURN",
-                  "displayLines": "200",
-                  "constants": [],
-                  "variables": [
-                    200
-                  ]
+                  "displayLines": "200"
                 },
                 "MDF_AggroUp": 0
               }
@@ -355,23 +231,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-96135638\">Lynx_Eidolon4_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "duration": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (MDF_Lynx_MaxHpValue) || Variables[1] (MDF_Lynx_MaxHpConvert) || SUB || Variables[2] (0.03) || MUL || RETURN",
-              "displayLines": "((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * 0.03)",
-              "constants": [],
-              "variables": [
-                "MDF_Lynx_MaxHpValue",
-                "MDF_Lynx_MaxHpConvert",
-                0.03
-              ]
+              "displayLines": "((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * 0.03)"
             }
           }
         }
@@ -384,20 +248,10 @@ const configAbility = {
         "target": "{{Ability Target(ST)}}"
       },
       "healPercent": {
-        "operator": "Variables[0] (0.12) || RETURN",
-        "displayLines": "0.12",
-        "constants": [],
-        "variables": [
-          0.12
-        ]
+        "displayLines": "0.12"
       },
       "healFlat": {
-        "operator": "Variables[0] (320) || RETURN",
-        "displayLines": "320",
-        "constants": [],
-        "variables": [
-          320
-        ]
+        "displayLines": "320"
       },
       "formula": "Heal from Healer's MaxHP"
     },
@@ -416,46 +270,20 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-704553388\">Lynx_HOT_HealByMaxHp</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-            "displayLines": "(2 + 1)",
-            "constants": [],
-            "variables": [
-              2,
-              1
-            ]
+            "displayLines": "(2 + 1)"
           },
           "valuePerStack": {
             "MDF_HOT_HOTPercentage": {
-              "operator": "Variables[0] (0.036) || RETURN",
-              "displayLines": "0.036",
-              "constants": [],
-              "variables": [
-                0.036
-              ]
+              "displayLines": "0.036"
             },
             "MDF_HOT_HealValue": {
-              "operator": "Variables[0] (96) || RETURN",
-              "displayLines": "96",
-              "constants": [],
-              "variables": [
-                96
-              ]
+              "displayLines": "96"
             },
             "MDF_HOT_AggroUp_HOTPercentage": {
-              "operator": "Variables[0] (0.044999998) || RETURN",
-              "displayLines": "0.044999998",
-              "constants": [],
-              "variables": [
-                0.044999998
-              ]
+              "displayLines": "0.044999998"
             },
             "MDF_HOT_AggroUp_HealValue": {
-              "operator": "Variables[0] (120) || RETURN",
-              "displayLines": "120",
-              "constants": [],
-              "variables": [
-                120
-              ]
+              "displayLines": "120"
             }
           }
         }
@@ -469,45 +297,20 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-704553388\">Lynx_HOT_HealByMaxHp</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "valuePerStack": {
             "MDF_HOT_HOTPercentage": {
-              "operator": "Variables[0] (0.036) || RETURN",
-              "displayLines": "0.036",
-              "constants": [],
-              "variables": [
-                0.036
-              ]
+              "displayLines": "0.036"
             },
             "MDF_HOT_HealValue": {
-              "operator": "Variables[0] (96) || RETURN",
-              "displayLines": "96",
-              "constants": [],
-              "variables": [
-                96
-              ]
+              "displayLines": "96"
             },
             "MDF_HOT_AggroUp_HOTPercentage": {
-              "operator": "Variables[0] (0.044999998) || RETURN",
-              "displayLines": "0.044999998",
-              "constants": [],
-              "variables": [
-                0.044999998
-              ]
+              "displayLines": "0.044999998"
             },
             "MDF_HOT_AggroUp_HealValue": {
-              "operator": "Variables[0] (120) || RETURN",
-              "displayLines": "120",
-              "constants": [],
-              "variables": [
-                120
-              ]
+              "displayLines": "120"
             }
           }
         }

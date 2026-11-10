@@ -16,12 +16,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (DV_SurgePoint) || RETURN",
-            "displayLines": "DV_SurgePoint",
-            "constants": [],
-            "variables": [
-              "DV_SurgePoint"
-            ]
+            "displayLines": "DV_SurgePoint"
           },
           "variableName": "DV_SurgePointShow"
         },
@@ -61,16 +56,7 @@ const configAbility = {
           },
           "previewType": "Energy Gain",
           "previewValue": {
-            "operator": "Variables[0] (8) || Variables[1] (DV_SurgePointShow) || MUL || Constants[0] (30) || Variables[2] (_SP_R) || MUL || ADD || RETURN",
-            "displayLines": "((8 * DV_SurgePointShow) + (30 * _SP_R))",
-            "constants": [
-              30
-            ],
-            "variables": [
-              8,
-              "DV_SurgePointShow",
-              "_SP_R"
-            ]
+            "displayLines": "((8 * DV_SurgePointShow) + (30 * _SP_R))"
           }
         },
         {
@@ -89,17 +75,7 @@ const configAbility = {
                 "value1": "_MaxSP",
                 "compareType": "<=",
                 "value2": {
-                  "operator": "Variables[0] (_C_SP) || Variables[1] (8) || Variables[2] (DV_SurgePointShow) || MUL || ADD || Constants[0] (30) || Variables[3] (_SP_R) || MUL || ADD || RETURN",
-                  "displayLines": "((_C_SP + (8 * DV_SurgePointShow)) + (30 * _SP_R))",
-                  "constants": [
-                    30
-                  ],
-                  "variables": [
-                    "_C_SP",
-                    8,
-                    "DV_SurgePointShow",
-                    "_SP_R"
-                  ]
+                  "displayLines": "((_C_SP + (8 * DV_SurgePointShow)) + (30 * _SP_R))"
                 }
               }
             ]
@@ -200,17 +176,7 @@ const configAbility = {
                 "value1": "_MaxSP",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (_C_SP) || Variables[1] (8) || Variables[2] (DV_SurgePointShow) || MUL || ADD || Constants[0] (30) || Variables[3] (_SP_R) || MUL || ADD || RETURN",
-                  "displayLines": "((_C_SP + (8 * DV_SurgePointShow)) + (30 * _SP_R))",
-                  "constants": [
-                    30
-                  ],
-                  "variables": [
-                    "_C_SP",
-                    8,
-                    "DV_SurgePointShow",
-                    "_SP_R"
-                  ]
+                  "displayLines": "((_C_SP + (8 * DV_SurgePointShow)) + (30 * _SP_R))"
                 }
               }
             ]
@@ -247,25 +213,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Avatar_Gilgamesh_00_KingCount) || Variables[1] (KingCountAdd) || ADD || RETURN",
-            "displayLines": "(Avatar_Gilgamesh_00_KingCount + KingCountAdd)",
-            "constants": [],
-            "variables": [
-              "Avatar_Gilgamesh_00_KingCount",
-              "KingCountAdd"
-            ]
+            "displayLines": "(Avatar_Gilgamesh_00_KingCount + KingCountAdd)"
           },
           "variableName": "Avatar_Gilgamesh_00_KingCount"
         },
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (Avatar_Gilgamesh_00_KingCount) || RETURN",
-            "displayLines": "Avatar_Gilgamesh_00_KingCount",
-            "constants": [],
-            "variables": [
-              "Avatar_Gilgamesh_00_KingCount"
-            ]
+            "displayLines": "Avatar_Gilgamesh_00_KingCount"
           },
           "bar#": 4
         },
@@ -287,12 +242,7 @@ const configAbility = {
                 "value1": "Avatar_Gilgamesh_00_IsFirstTime",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Constants[0] (0) || RETURN",
-                  "displayLines": "0",
-                  "constants": [
-                    0
-                  ],
-                  "variables": []
+                  "displayLines": "0"
                 }
               },
               {
@@ -300,12 +250,7 @@ const configAbility = {
                 "value1": "Avatar_Gilgamesh_00_KingCount",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_7489) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_7489",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_7489"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_7489"
                 }
               }
             ]
@@ -332,12 +277,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (Avatar_Gilgamesh_00_KingCount) || RETURN",
-                "displayLines": "Avatar_Gilgamesh_00_KingCount",
-                "constants": [],
-                "variables": [
-                  "Avatar_Gilgamesh_00_KingCount"
-                ]
+                "displayLines": "Avatar_Gilgamesh_00_KingCount"
               },
               "assignState": "True",
               "priorState": "Active",

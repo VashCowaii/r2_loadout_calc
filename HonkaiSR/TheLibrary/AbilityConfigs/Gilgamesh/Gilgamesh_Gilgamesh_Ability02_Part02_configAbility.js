@@ -24,24 +24,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "variableName": "Gilgamesh_00_Rank02_MainTargetDamageAdded"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.5) || RETURN",
-            "displayLines": "0.5",
-            "constants": [],
-            "variables": [
-              0.5
-            ]
+            "displayLines": "0.5"
           },
           "variableName": "Gilgamesh_00_Rank02_AdjacentTargetDamageAdded"
         }
@@ -62,29 +52,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1516158451\">Gilgamesh_DroneAnalysis_Team</a>[<span class=\"descriptionNumberColor\">King's Acknowledgement</span>]",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "valuePerStack": {
             "MDF_DefenceDownRatio": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             },
             "MDF_AttackAdd": {
-              "operator": "Variables[0] (0.6) || RETURN",
-              "displayLines": "0.6",
-              "constants": [],
-              "variables": [
-                0.6
-              ]
+              "displayLines": "0.6"
             }
           }
         }
@@ -98,21 +73,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1220268105\">Gilgamesh_DroneAnalysis</a>[<span class=\"descriptionNumberColor\">King's Acknowledgement</span>]",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "valuePerStack": {
             "MDF_DefenceDownRatio": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             }
           }
         }
@@ -128,22 +93,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (2.8) || Variables[1] (Gilgamesh_00_Rank02_MainTargetDamageAdded) || ADD || RETURN",
-          "displayLines": "(2.8 + Gilgamesh_00_Rank02_MainTargetDamageAdded)",
-          "constants": [],
-          "variables": [
-            2.8,
-            "Gilgamesh_00_Rank02_MainTargetDamageAdded"
-          ]
+          "displayLines": "(2.8 + Gilgamesh_00_Rank02_MainTargetDamageAdded)"
         },
         "HitSplit": 0.1,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -159,22 +113,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (1.4) || Variables[1] (Gilgamesh_00_Rank02_AdjacentTargetDamageAdded) || ADD || RETURN",
-          "displayLines": "(1.4 + Gilgamesh_00_Rank02_AdjacentTargetDamageAdded)",
-          "constants": [],
-          "variables": [
-            1.4,
-            "Gilgamesh_00_Rank02_AdjacentTargetDamageAdded"
-          ]
+          "displayLines": "(1.4 + Gilgamesh_00_Rank02_AdjacentTargetDamageAdded)"
         },
         "HitSplit": 0.1,
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-          "displayLines": "Blast Toughness Value",
-          "constants": [],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "Blast Toughness Value"
         },
         "Tags": null
       }
@@ -189,22 +132,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (2.8) || Variables[1] (Gilgamesh_00_Rank02_MainTargetDamageAdded) || ADD || RETURN",
-          "displayLines": "(2.8 + Gilgamesh_00_Rank02_MainTargetDamageAdded)",
-          "constants": [],
-          "variables": [
-            2.8,
-            "Gilgamesh_00_Rank02_MainTargetDamageAdded"
-          ]
+          "displayLines": "(2.8 + Gilgamesh_00_Rank02_MainTargetDamageAdded)"
         },
         "HitSplit": 0.1,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -220,22 +152,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (1.4) || Variables[1] (Gilgamesh_00_Rank02_AdjacentTargetDamageAdded) || ADD || RETURN",
-          "displayLines": "(1.4 + Gilgamesh_00_Rank02_AdjacentTargetDamageAdded)",
-          "constants": [],
-          "variables": [
-            1.4,
-            "Gilgamesh_00_Rank02_AdjacentTargetDamageAdded"
-          ]
+          "displayLines": "(1.4 + Gilgamesh_00_Rank02_AdjacentTargetDamageAdded)"
         },
         "HitSplit": 0.1,
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-          "displayLines": "Blast Toughness Value",
-          "constants": [],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "Blast Toughness Value"
         },
         "Tags": null
       }
@@ -250,22 +171,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (2.8) || Variables[1] (Gilgamesh_00_Rank02_MainTargetDamageAdded) || ADD || RETURN",
-          "displayLines": "(2.8 + Gilgamesh_00_Rank02_MainTargetDamageAdded)",
-          "constants": [],
-          "variables": [
-            2.8,
-            "Gilgamesh_00_Rank02_MainTargetDamageAdded"
-          ]
+          "displayLines": "(2.8 + Gilgamesh_00_Rank02_MainTargetDamageAdded)"
         },
         "HitSplit": 0.2,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -281,22 +191,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (1.4) || Variables[1] (Gilgamesh_00_Rank02_AdjacentTargetDamageAdded) || ADD || RETURN",
-          "displayLines": "(1.4 + Gilgamesh_00_Rank02_AdjacentTargetDamageAdded)",
-          "constants": [],
-          "variables": [
-            1.4,
-            "Gilgamesh_00_Rank02_AdjacentTargetDamageAdded"
-          ]
+          "displayLines": "(1.4 + Gilgamesh_00_Rank02_AdjacentTargetDamageAdded)"
         },
         "HitSplit": 0.2,
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-          "displayLines": "Blast Toughness Value",
-          "constants": [],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "Blast Toughness Value"
         },
         "Tags": null
       }
@@ -311,22 +210,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (2.8) || Variables[1] (Gilgamesh_00_Rank02_MainTargetDamageAdded) || ADD || RETURN",
-          "displayLines": "(2.8 + Gilgamesh_00_Rank02_MainTargetDamageAdded)",
-          "constants": [],
-          "variables": [
-            2.8,
-            "Gilgamesh_00_Rank02_MainTargetDamageAdded"
-          ]
+          "displayLines": "(2.8 + Gilgamesh_00_Rank02_MainTargetDamageAdded)"
         },
         "HitSplit": 0.2,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -342,22 +230,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (1.4) || Variables[1] (Gilgamesh_00_Rank02_AdjacentTargetDamageAdded) || ADD || RETURN",
-          "displayLines": "(1.4 + Gilgamesh_00_Rank02_AdjacentTargetDamageAdded)",
-          "constants": [],
-          "variables": [
-            1.4,
-            "Gilgamesh_00_Rank02_AdjacentTargetDamageAdded"
-          ]
+          "displayLines": "(1.4 + Gilgamesh_00_Rank02_AdjacentTargetDamageAdded)"
         },
         "HitSplit": 0.2,
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-          "displayLines": "Blast Toughness Value",
-          "constants": [],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "Blast Toughness Value"
         },
         "Tags": null
       }
@@ -372,22 +249,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (2.8) || Variables[1] (Gilgamesh_00_Rank02_MainTargetDamageAdded) || ADD || RETURN",
-          "displayLines": "(2.8 + Gilgamesh_00_Rank02_MainTargetDamageAdded)",
-          "constants": [],
-          "variables": [
-            2.8,
-            "Gilgamesh_00_Rank02_MainTargetDamageAdded"
-          ]
+          "displayLines": "(2.8 + Gilgamesh_00_Rank02_MainTargetDamageAdded)"
         },
         "HitSplit": 0.4,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -403,22 +269,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (1.4) || Variables[1] (Gilgamesh_00_Rank02_AdjacentTargetDamageAdded) || ADD || RETURN",
-          "displayLines": "(1.4 + Gilgamesh_00_Rank02_AdjacentTargetDamageAdded)",
-          "constants": [],
-          "variables": [
-            1.4,
-            "Gilgamesh_00_Rank02_AdjacentTargetDamageAdded"
-          ]
+          "displayLines": "(1.4 + Gilgamesh_00_Rank02_AdjacentTargetDamageAdded)"
         },
         "HitSplit": 0.4,
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-          "displayLines": "Blast Toughness Value",
-          "constants": [],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "Blast Toughness Value"
         },
         "Tags": null
       }

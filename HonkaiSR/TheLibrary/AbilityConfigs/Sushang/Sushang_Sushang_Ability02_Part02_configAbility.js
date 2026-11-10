@@ -42,24 +42,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (2.1) || Constants[0] (0.3) || MUL || RETURN",
-          "displayLines": "(2.1 * 0.3)",
-          "constants": [
-            0.3
-          ],
-          "variables": [
-            2.1
-          ]
+          "displayLines": "(2.1 * 0.3)"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.3) || MUL || RETURN",
-          "displayLines": "(ST Toughness Value * 0.3)",
-          "constants": [
-            0.3
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(ST Toughness Value * 0.3)"
         },
         "Tags": null,
         "EnergyGainPercent": "30%"
@@ -115,24 +101,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (2.1) || Constants[0] (0.7) || MUL || RETURN",
-          "displayLines": "(2.1 * 0.7)",
-          "constants": [
-            0.7
-          ],
-          "variables": [
-            2.1
-          ]
+          "displayLines": "(2.1 * 0.7)"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.7) || MUL || RETURN",
-          "displayLines": "(ST Toughness Value * 0.7)",
-          "constants": [
-            0.7
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(ST Toughness Value * 0.7)"
         },
         "Tags": null,
         "EnergyGainPercent": "70%"
@@ -186,12 +158,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1401762003\">Sushang_BP_PassiveCheck_01</a>",
               "baseChance": {
-                "operator": "Variables[0] (0.33) || RETURN",
-                "displayLines": "0.33",
-                "constants": [],
-                "variables": [
-                  0.33
-                ]
+                "displayLines": "0.33"
               }
             },
             {
@@ -202,12 +169,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1418539622\">Sushang_BP_PassiveCheck_02</a>",
               "baseChance": {
-                "operator": "Variables[0] (0.33) || RETURN",
-                "displayLines": "0.33",
-                "constants": [],
-                "variables": [
-                  0.33
-                ]
+                "displayLines": "0.33"
               }
             }
           ]
@@ -243,12 +205,7 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"699476095\">Sushang_BP_PassiveCheck</a>",
           "baseChance": {
-            "operator": "Variables[0] (0.33) || RETURN",
-            "displayLines": "0.33",
-            "constants": [],
-            "variables": [
-              0.33
-            ]
+            "displayLines": "0.33"
           }
         }
       ]
@@ -345,13 +302,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-236050172\">Sushang_BP_PointB2_DMGModifier</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (PointB2_Layer) || Variables[1] (0.025) || MUL || RETURN",
-              "displayLines": "(PointB2_Layer * 0.025)",
-              "constants": [],
-              "variables": [
-                "PointB2_Layer",
-                0.025
-              ]
+              "displayLines": "(PointB2_Layer * 0.025)"
             }
           }
         },
@@ -364,13 +315,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (1) || Variables[1] (0.5) || MUL || RETURN",
-              "displayLines": "(1 * 0.5)",
-              "constants": [],
-              "variables": [
-                1,
-                0.5
-              ]
+              "displayLines": "(1 * 0.5)"
             },
             "Toughness": null,
             "Tags": null,
@@ -413,12 +358,7 @@ const configAbility = {
                   "duration": 1,
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 }
@@ -441,29 +381,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1886129975\">Sushang_PointB2_Bonus</a>[<span class=\"descriptionNumberColor\">Riposte</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (10) || RETURN",
-                "displayLines": "10",
-                "constants": [],
-                "variables": [
-                  10
-                ]
+                "displayLines": "10"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.025) || RETURN",
-                  "displayLines": "0.025",
-                  "constants": [],
-                  "variables": [
-                    0.025
-                  ]
+                  "displayLines": "0.025"
                 },
                 "MDF_Max_Layer": {
-                  "operator": "Variables[0] (10) || RETURN",
-                  "displayLines": "10",
-                  "constants": [],
-                  "variables": [
-                    10
-                  ]
+                  "displayLines": "10"
                 }
               }
             }
@@ -563,13 +488,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-236050172\">Sushang_BP_PointB2_DMGModifier</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (PointB2_Layer) || Variables[1] (0.025) || MUL || RETURN",
-              "displayLines": "(PointB2_Layer * 0.025)",
-              "constants": [],
-              "variables": [
-                "PointB2_Layer",
-                0.025
-              ]
+              "displayLines": "(PointB2_Layer * 0.025)"
             }
           }
         },
@@ -582,13 +501,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (1) || Variables[1] (0.5) || MUL || RETURN",
-              "displayLines": "(1 * 0.5)",
-              "constants": [],
-              "variables": [
-                1,
-                0.5
-              ]
+              "displayLines": "(1 * 0.5)"
             },
             "Toughness": null,
             "Tags": null,
@@ -631,12 +544,7 @@ const configAbility = {
                   "duration": 1,
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 }
@@ -659,29 +567,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1886129975\">Sushang_PointB2_Bonus</a>[<span class=\"descriptionNumberColor\">Riposte</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (10) || RETURN",
-                "displayLines": "10",
-                "constants": [],
-                "variables": [
-                  10
-                ]
+                "displayLines": "10"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.025) || RETURN",
-                  "displayLines": "0.025",
-                  "constants": [],
-                  "variables": [
-                    0.025
-                  ]
+                  "displayLines": "0.025"
                 },
                 "MDF_Max_Layer": {
-                  "operator": "Variables[0] (10) || RETURN",
-                  "displayLines": "10",
-                  "constants": [],
-                  "variables": [
-                    10
-                  ]
+                  "displayLines": "10"
                 }
               }
             }
@@ -755,13 +648,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-236050172\">Sushang_BP_PointB2_DMGModifier</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (PointB2_Layer) || Variables[1] (0.025) || MUL || RETURN",
-              "displayLines": "(PointB2_Layer * 0.025)",
-              "constants": [],
-              "variables": [
-                "PointB2_Layer",
-                0.025
-              ]
+              "displayLines": "(PointB2_Layer * 0.025)"
             }
           }
         },
@@ -774,12 +661,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "Toughness": null,
             "Tags": null,
@@ -822,12 +704,7 @@ const configAbility = {
                   "duration": 1,
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 }
@@ -850,29 +727,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1886129975\">Sushang_PointB2_Bonus</a>[<span class=\"descriptionNumberColor\">Riposte</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (10) || RETURN",
-                "displayLines": "10",
-                "constants": [],
-                "variables": [
-                  10
-                ]
+                "displayLines": "10"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.025) || RETURN",
-                  "displayLines": "0.025",
-                  "constants": [],
-                  "variables": [
-                    0.025
-                  ]
+                  "displayLines": "0.025"
                 },
                 "MDF_Max_Layer": {
-                  "operator": "Variables[0] (10) || RETURN",
-                  "displayLines": "10",
-                  "constants": [],
-                  "variables": [
-                    10
-                  ]
+                  "displayLines": "10"
                 }
               }
             }
@@ -973,12 +835,7 @@ const configAbility = {
               },
               "variables": {
                 "parameter[0]_NormalizedValue": {
-                  "operator": "Variables[0] (0.15) || RETURN",
-                  "displayLines": "0.15",
-                  "constants": [],
-                  "variables": [
-                    0.15
-                  ]
+                  "displayLines": "0.15"
                 }
               }
             }

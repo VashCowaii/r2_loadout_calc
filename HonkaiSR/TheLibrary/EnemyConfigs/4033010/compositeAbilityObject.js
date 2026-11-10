@@ -133,12 +133,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                    "displayLines": "{[SkillP01[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillP01[0]]}"
-                    ]
+                    "displayLines": "{[SkillP01[0]]}"
                   },
                   "assignState": "False"
                 }
@@ -156,12 +151,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                    "displayLines": "{[SkillP01[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillP01[0]]}"
-                    ]
+                    "displayLines": "{[SkillP01[0]]}"
                   },
                   "assignState": "True"
                 }
@@ -195,12 +185,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (_CurrentCount) || RETURN",
-                        "displayLines": "_CurrentCount",
-                        "constants": [],
-                        "variables": [
-                          "_CurrentCount"
-                        ]
+                        "displayLines": "_CurrentCount"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -208,12 +193,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                        "displayLines": "{[SkillP01[0]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillP01[0]]}"
-                        ]
+                        "displayLines": "{[SkillP01[0]]}"
                       },
                       "assignState": "True"
                     }
@@ -234,14 +214,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_CurrentCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_CurrentCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_CurrentCount"
-                        ]
+                        "displayLines": "(_CurrentCount + 1)"
                       },
                       "variableName": "_CurrentCount"
                     },
@@ -252,24 +225,14 @@ const compositeAbilityObject = {
                         "value1": "_CurrentCount",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                          "displayLines": "{[SkillP01[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillP01[0]]}"
-                          ]
+                          "displayLines": "{[SkillP01[0]]}"
                         }
                       },
                       "passed": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                            "displayLines": "{[SkillP01[0]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[SkillP01[0]]}"
-                            ]
+                            "displayLines": "{[SkillP01[0]]}"
                           },
                           "variableName": "_CurrentCount"
                         },
@@ -286,12 +249,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (_CurrentCount) || RETURN",
-                        "displayLines": "_CurrentCount",
-                        "constants": [],
-                        "variables": [
-                          "_CurrentCount"
-                        ]
+                        "displayLines": "_CurrentCount"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -299,12 +257,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                        "displayLines": "{[SkillP01[0]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillP01[0]]}"
-                        ]
+                        "displayLines": "{[SkillP01[0]]}"
                       },
                       "assignState": "True"
                     }
@@ -337,12 +290,7 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"550129180\">Enemy_XP_Elite01_02_DefenceDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-            "displayLines": "{[Skill06[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill06[1]]}"
-            ]
+            "displayLines": "{[Skill06[1]]}"
           }
         },
         {
@@ -381,14 +329,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (1) || INVERT || Variables[0] ({[Skill06[0]]}) || MUL || RETURN",
-                    "displayLines": "(-1 * {[Skill06[0]]})",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "{[Skill06[0]]}"
-                    ]
+                    "displayLines": "(-1 * {[Skill06[0]]})"
                   }
                 }
               ]
@@ -452,12 +393,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "{[Skill05[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -491,12 +427,7 @@ const compositeAbilityObject = {
                     "target": "{{Parameter Target}}"
                   },
                   "consumePercent": {
-                    "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                    "displayLines": "{[Skill05[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill05[1]]}"
-                    ]
+                    "displayLines": "{[Skill05[1]]}"
                   },
                   "consumeFloor": 1
                 }
@@ -519,36 +450,16 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
                   "valuePerStack": {
                     "MDF_RallyTransferRatio": {
-                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                      "displayLines": "{[SkillP01[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[1]]}"
-                      ]
+                      "displayLines": "{[SkillP01[1]]}"
                     },
                     "MDF_Rally_HealPercentage": {
-                      "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                      "displayLines": "{[SkillP01[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[2]]}"
-                      ]
+                      "displayLines": "{[SkillP01[2]]}"
                     },
                     "MDF_Rally_HealUpRatio": {
-                      "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                      "displayLines": "{[SkillP01[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[3]]}"
-                      ]
+                      "displayLines": "{[SkillP01[3]]}"
                     },
                     "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-                      "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-                      "displayLines": "{[SkillP01[4]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[4]]}"
-                      ]
+                      "displayLines": "{[SkillP01[4]]}"
                     }
                   }
                 },
@@ -561,28 +472,13 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1799178922\">Enemy_AML_Minion02_01_RallyHP_V2</a>[<span class=\"descriptionNumberColor\">Corrosion</span>]",
                   "valuePerStack": {
                     "MDF_RallyHP": {
-                      "operator": "Variables[0] (_CurrentHP) || RETURN",
-                      "displayLines": "_CurrentHP",
-                      "constants": [],
-                      "variables": [
-                        "_CurrentHP"
-                      ]
+                      "displayLines": "_CurrentHP"
                     },
                     "MDF_HealPercentage": {
-                      "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                      "displayLines": "{[SkillP01[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[2]]}"
-                      ]
+                      "displayLines": "{[SkillP01[2]]}"
                     },
                     "MDF_HealUpRatio": {
-                      "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                      "displayLines": "{[SkillP01[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[3]]}"
-                      ]
+                      "displayLines": "{[SkillP01[3]]}"
                     }
                   }
                 },
@@ -594,12 +490,7 @@ const compositeAbilityObject = {
                     "target": "{{Parameter Target}}"
                   },
                   "consumePercent": {
-                    "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                    "displayLines": "{[Skill05[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill05[1]]}"
-                    ]
+                    "displayLines": "{[Skill05[1]]}"
                   },
                   "consumeFloor": 1
                 }
@@ -758,14 +649,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (RallyCount) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(RallyCount + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "RallyCount"
-                ]
+                "displayLines": "(RallyCount + 1)"
               },
               "variableName": "RallyCount"
             },
@@ -794,14 +678,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (RallyCount) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(RallyCount - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "RallyCount"
-                ]
+                "displayLines": "(RallyCount - 1)"
               },
               "variableName": "RallyCount"
             }
@@ -825,14 +702,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (RallyCount) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(RallyCount + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "RallyCount"
-                ]
+                "displayLines": "(RallyCount + 1)"
               },
               "variableName": "RallyCount"
             }
@@ -853,14 +723,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (RallyCount) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(RallyCount - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "RallyCount"
-                ]
+                "displayLines": "(RallyCount - 1)"
               },
               "variableName": "RallyCount"
             }
@@ -884,14 +747,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (RallyCount) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(RallyCount + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "RallyCount"
-                ]
+                "displayLines": "(RallyCount + 1)"
               },
               "variableName": "RallyCount"
             }
@@ -912,14 +768,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (RallyCount) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(RallyCount - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "RallyCount"
-                ]
+                "displayLines": "(RallyCount - 1)"
               },
               "variableName": "RallyCount"
             }
@@ -943,14 +792,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (RallyCount) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(RallyCount + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "RallyCount"
-                ]
+                "displayLines": "(RallyCount + 1)"
               },
               "variableName": "RallyCount"
             }
@@ -1015,14 +857,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (RallyCount) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(RallyCount - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "RallyCount"
-                ]
+                "displayLines": "(RallyCount - 1)"
               },
               "variableName": "RallyCount"
             }
@@ -1044,14 +879,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (RallyCount) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(RallyCount - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "RallyCount"
-            ]
+            "displayLines": "(RallyCount - 1)"
           },
           "variableName": "RallyCount"
         },
@@ -1238,12 +1066,7 @@ const compositeAbilityObject = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (SummonType) || RETURN",
-                "displayLines": "SummonType",
-                "constants": [],
-                "variables": [
-                  "SummonType"
-                ]
+                "displayLines": "SummonType"
               },
               "caseEvents": [
                 {
@@ -1305,36 +1128,16 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
                   "valuePerStack": {
                     "MDF_RallyTransferRatio": {
-                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                      "displayLines": "{[SkillP01[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[1]]}"
-                      ]
+                      "displayLines": "{[SkillP01[1]]}"
                     },
                     "MDF_Rally_HealPercentage": {
-                      "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                      "displayLines": "{[SkillP01[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[2]]}"
-                      ]
+                      "displayLines": "{[SkillP01[2]]}"
                     },
                     "MDF_Rally_HealUpRatio": {
-                      "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                      "displayLines": "{[SkillP01[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[3]]}"
-                      ]
+                      "displayLines": "{[SkillP01[3]]}"
                     },
                     "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-                      "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-                      "displayLines": "{[SkillP01[4]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[4]]}"
-                      ]
+                      "displayLines": "{[SkillP01[4]]}"
                     }
                   }
                 },
@@ -1347,12 +1150,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
+                      "displayLines": "{[Skill02[0]]}"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1428,36 +1226,16 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
               "valuePerStack": {
                 "MDF_RallyTransferRatio": {
-                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                  "displayLines": "{[SkillP01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[1]]}"
-                  ]
+                  "displayLines": "{[SkillP01[1]]}"
                 },
                 "MDF_Rally_HealPercentage": {
-                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                  "displayLines": "{[SkillP01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[2]]}"
-                  ]
+                  "displayLines": "{[SkillP01[2]]}"
                 },
                 "MDF_Rally_HealUpRatio": {
-                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                  "displayLines": "{[SkillP01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[3]]}"
-                  ]
+                  "displayLines": "{[SkillP01[3]]}"
                 },
                 "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-                  "displayLines": "{[SkillP01[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[4]]}"
-                  ]
+                  "displayLines": "{[SkillP01[4]]}"
                 }
               }
             },
@@ -1470,12 +1248,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,

@@ -7,14 +7,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (MDF_RestEnergy) || Constants[0] (1) || SUB || RETURN",
-        "displayLines": "(MDF_RestEnergy - 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "MDF_RestEnergy"
-        ]
+        "displayLines": "(MDF_RestEnergy - 1)"
       },
       "variableName": "MDF_RestEnergy"
     },
@@ -28,20 +21,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (2) || RETURN",
-          "displayLines": "2",
-          "constants": [],
-          "variables": [
-            2
-          ]
+          "displayLines": "2"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "attackType": "Follow-up",

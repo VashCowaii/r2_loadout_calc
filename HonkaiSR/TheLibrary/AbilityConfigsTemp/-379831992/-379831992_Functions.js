@@ -20,24 +20,14 @@ const configAbility = {
             "value1": "_CrrCount",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] (MaxCount) || RETURN",
-              "displayLines": "MaxCount",
-              "constants": [],
-              "variables": [
-                "MaxCount"
-              ]
+              "displayLines": "MaxCount"
             }
           },
           "passed": [
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (_CrrCount) || RETURN",
-                "displayLines": "_CrrCount",
-                "constants": [],
-                "variables": [
-                  "_CrrCount"
-                ]
+                "displayLines": "_CrrCount"
               },
               "target": {
                 "name": "Target Name",
@@ -50,12 +40,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (_CrrCount) || RETURN",
-                "displayLines": "_CrrCount",
-                "constants": [],
-                "variables": [
-                  "_CrrCount"
-                ]
+                "displayLines": "_CrrCount"
               },
               "target": {
                 "name": "Target Name",
@@ -98,12 +83,7 @@ const configAbility = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (TEMP_OBJECT_UNUSED_5) || RETURN",
-                "displayLines": "TEMP_OBJECT_UNUSED_5",
-                "constants": [],
-                "variables": [
-                  "TEMP_OBJECT_UNUSED_5"
-                ]
+                "displayLines": "TEMP_OBJECT_UNUSED_5"
               },
               "caseEvents": [
                 {
@@ -183,12 +163,7 @@ const configAbility = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (TEMP_OBJECT_UNUSED_5) || RETURN",
-                "displayLines": "TEMP_OBJECT_UNUSED_5",
-                "constants": [],
-                "variables": [
-                  "TEMP_OBJECT_UNUSED_5"
-                ]
+                "displayLines": "TEMP_OBJECT_UNUSED_5"
               },
               "caseEvents": [
                 {
@@ -393,12 +368,7 @@ const configAbility = {
                 ]
               },
               "maxTargets": {
-                "operator": "Variables[0] (TEMP_OBJECT_UNUSED_6) || RETURN",
-                "displayLines": "TEMP_OBJECT_UNUSED_6",
-                "constants": [],
-                "variables": [
-                  "TEMP_OBJECT_UNUSED_6"
-                ]
+                "displayLines": "TEMP_OBJECT_UNUSED_6"
               },
               "conditions": {
                 "name": "Has Currency Wars Trait",
@@ -452,12 +422,7 @@ const configAbility = {
                 ]
               },
               "maxTargets": {
-                "operator": "Variables[0] (TEMP_OBJECT_UNUSED_6) || RETURN",
-                "displayLines": "TEMP_OBJECT_UNUSED_6",
-                "constants": [],
-                "variables": [
-                  "TEMP_OBJECT_UNUSED_6"
-                ]
+                "displayLines": "TEMP_OBJECT_UNUSED_6"
               },
               "conditions": {
                 "name": "Has Currency Wars Trait",
@@ -666,12 +631,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (MDF_CoinDrop) || RETURN",
-                "displayLines": "MDF_CoinDrop",
-                "constants": [],
-                "variables": [
-                  "MDF_CoinDrop"
-                ]
+                "displayLines": "MDF_CoinDrop"
               },
               "execute": [
                 {
@@ -714,12 +674,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (MDF_OrbDrop) || RETURN",
-                "displayLines": "MDF_OrbDrop",
-                "constants": [],
-                "variables": [
-                  "MDF_OrbDrop"
-                ]
+                "displayLines": "MDF_OrbDrop"
               },
               "execute": [
                 {
@@ -769,12 +724,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (MDF_Orb2Drop) || RETURN",
-                "displayLines": "MDF_Orb2Drop",
-                "constants": [],
-                "variables": [
-                  "MDF_Orb2Drop"
-                ]
+                "displayLines": "MDF_Orb2Drop"
               },
               "execute": [
                 {
@@ -824,12 +774,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (MDF_Orb3Drop) || RETURN",
-                "displayLines": "MDF_Orb3Drop",
-                "constants": [],
-                "variables": [
-                  "MDF_Orb3Drop"
-                ]
+                "displayLines": "MDF_Orb3Drop"
               },
               "execute": [
                 {
@@ -879,12 +824,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (MDF_Orb4Drop) || RETURN",
-                "displayLines": "MDF_Orb4Drop",
-                "constants": [],
-                "variables": [
-                  "MDF_Orb4Drop"
-                ]
+                "displayLines": "MDF_Orb4Drop"
               },
               "execute": [
                 {
@@ -956,12 +896,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (MDF_CoinDrop) || RETURN",
-                "displayLines": "MDF_CoinDrop",
-                "constants": [],
-                "variables": [
-                  "MDF_CoinDrop"
-                ]
+                "displayLines": "MDF_CoinDrop"
               },
               "execute": [
                 {
@@ -1004,12 +939,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (MDF_OrbDrop) || RETURN",
-                "displayLines": "MDF_OrbDrop",
-                "constants": [],
-                "variables": [
-                  "MDF_OrbDrop"
-                ]
+                "displayLines": "MDF_OrbDrop"
               },
               "execute": [
                 {
@@ -1059,12 +989,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (MDF_Orb2Drop) || RETURN",
-                "displayLines": "MDF_Orb2Drop",
-                "constants": [],
-                "variables": [
-                  "MDF_Orb2Drop"
-                ]
+                "displayLines": "MDF_Orb2Drop"
               },
               "execute": [
                 {
@@ -1114,12 +1039,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (MDF_Orb3Drop) || RETURN",
-                "displayLines": "MDF_Orb3Drop",
-                "constants": [],
-                "variables": [
-                  "MDF_Orb3Drop"
-                ]
+                "displayLines": "MDF_Orb3Drop"
               },
               "execute": [
                 {
@@ -1169,12 +1089,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (MDF_Orb4Drop) || RETURN",
-                "displayLines": "MDF_Orb4Drop",
-                "constants": [],
-                "variables": [
-                  "MDF_Orb4Drop"
-                ]
+                "displayLines": "MDF_Orb4Drop"
               },
               "execute": [
                 {

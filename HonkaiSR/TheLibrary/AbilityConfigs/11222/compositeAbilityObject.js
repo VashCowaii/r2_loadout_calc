@@ -38,14 +38,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "(0 - MDF_PropertyValue)"
                   }
                 }
               ]
@@ -67,12 +60,7 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_5768) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_5768",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_5768"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_5768"
                 }
               }
             }
@@ -98,12 +86,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -155,14 +138,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "(0 - MDF_PropertyValue)"
                   }
                 }
               ]
@@ -188,12 +164,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-350940925\">Lingsha_Eidolon1_PassiveStackProperty</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (Rank01_MDF_PropertyValue) || RETURN",
-                      "displayLines": "Rank01_MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "Rank01_MDF_PropertyValue"
-                      ]
+                      "displayLines": "Rank01_MDF_PropertyValue"
                     }
                   }
                 },
@@ -206,12 +177,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-127930650\">Lingsha_Eidolon1_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">Bloom on Vileward Bouquet</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (Rank01_MDF_PropertyValue) || RETURN",
-                      "displayLines": "Rank01_MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "Rank01_MDF_PropertyValue"
-                      ]
+                      "displayLines": "Rank01_MDF_PropertyValue"
                     }
                   }
                 }
@@ -234,12 +200,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -334,12 +295,7 @@ const compositeAbilityObject = {
                                     "value1": "CurrentHP%",
                                     "compareType": "<=",
                                     "value2": {
-                                      "operator": "Variables[0] (MDF_HPRatio) || RETURN",
-                                      "displayLines": "MDF_HPRatio",
-                                      "constants": [],
-                                      "variables": [
-                                        "MDF_HPRatio"
-                                      ]
+                                      "displayLines": "MDF_HPRatio"
                                     }
                                   },
                                   {
@@ -632,14 +588,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_AttackTime) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(_AttackTime - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_AttackTime"
-                    ]
+                    "displayLines": "(_AttackTime - 1)"
                   },
                   "variableName": "_AttackTime"
                 },
@@ -650,12 +599,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "attackCount": {
-                    "operator": "Variables[0] (_AttackTime) || RETURN",
-                    "displayLines": "_AttackTime",
-                    "constants": [],
-                    "variables": [
-                      "_AttackTime"
-                    ]
+                    "displayLines": "_AttackTime"
                   },
                   "show": true
                 },
@@ -667,24 +611,14 @@ const compositeAbilityObject = {
                   },
                   "scope": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (_AttackTime) || RETURN",
-                    "displayLines": "_AttackTime",
-                    "constants": [],
-                    "variables": [
-                      "_AttackTime"
-                    ]
+                    "displayLines": "_AttackTime"
                   },
                   "variableName": "Lingsha_AttackTime"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_AttackTime) || RETURN",
-                    "displayLines": "_AttackTime",
-                    "constants": [],
-                    "variables": [
-                      "_AttackTime"
-                    ]
+                    "displayLines": "_AttackTime"
                   },
                   "target": {
                     "name": "Target Name",
@@ -708,12 +642,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_AttackTime) || RETURN",
-                    "displayLines": "_AttackTime",
-                    "constants": [],
-                    "variables": [
-                      "_AttackTime"
-                    ]
+                    "displayLines": "_AttackTime"
                   },
                   "target": {
                     "name": "Target Name",
@@ -727,12 +656,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "attackCount": {
-                    "operator": "Variables[0] (_AttackTime) || RETURN",
-                    "displayLines": "_AttackTime",
-                    "constants": [],
-                    "variables": [
-                      "_AttackTime"
-                    ]
+                    "displayLines": "_AttackTime"
                   },
                   "show": true
                 }
@@ -835,12 +759,7 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1795719445\">Lingsha_BPAbility_BattleEvent</a>",
           "counter": {
-            "operator": "Variables[0] (BattleEvent_Lingsha_PointB3) || RETURN",
-            "displayLines": "BattleEvent_Lingsha_PointB3",
-            "constants": [],
-            "variables": [
-              "BattleEvent_Lingsha_PointB3"
-            ]
+            "displayLines": "BattleEvent_Lingsha_PointB3"
           }
         },
         {
@@ -851,21 +770,11 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1876847773\">Lingsha_BPAbility_BattleEvent_LifeTime</a>",
           "counter": {
-            "operator": "Variables[0] (BattleEvent_Lingsha_AttackTime) || RETURN",
-            "displayLines": "BattleEvent_Lingsha_AttackTime",
-            "constants": [],
-            "variables": [
-              "BattleEvent_Lingsha_AttackTime"
-            ]
+            "displayLines": "BattleEvent_Lingsha_AttackTime"
           },
           "valuePerStack": {
             "_AttackTime": {
-              "operator": "Variables[0] (BattleEvent_Lingsha_AttackTime) || RETURN",
-              "displayLines": "BattleEvent_Lingsha_AttackTime",
-              "constants": [],
-              "variables": [
-                "BattleEvent_Lingsha_AttackTime"
-              ]
+              "displayLines": "BattleEvent_Lingsha_AttackTime"
             }
           }
         }
@@ -929,12 +838,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (BattleEvent_Lingsha_BaseSpeed) || RETURN",
-                    "displayLines": "BattleEvent_Lingsha_BaseSpeed",
-                    "constants": [],
-                    "variables": [
-                      "BattleEvent_Lingsha_BaseSpeed"
-                    ]
+                    "displayLines": "BattleEvent_Lingsha_BaseSpeed"
                   }
                 }
               ]
@@ -1016,20 +920,10 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "Damage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_5758) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_5758",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_5758"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_5758"
                     },
                     "Toughness": {
-                      "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                      "displayLines": "AOE Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "AOE Toughness Value"
-                      ]
+                      "displayLines": "AOE Toughness Value"
                     },
                     "Tags": [
                       "Summon-Tag DMG"
@@ -1081,20 +975,10 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Fire",
                         "Damage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_5758) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_5758",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_5758"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_5758"
                         },
                         "Toughness": {
-                          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                          "displayLines": "AOE Toughness Value",
-                          "constants": [],
-                          "variables": [
-                            "AOE Toughness Value"
-                          ]
+                          "displayLines": "AOE Toughness Value"
                         },
                         "Tags": [
                           "Summon-Tag DMG"
@@ -1133,20 +1017,10 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_5758) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_5758",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_5758"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_5758"
                             },
                             "Toughness": {
-                              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                              "displayLines": "AOE Toughness Value",
-                              "constants": [],
-                              "variables": [
-                                "AOE Toughness Value"
-                              ]
+                              "displayLines": "AOE Toughness Value"
                             },
                             "Tags": [
                               "Summon-Tag DMG"
@@ -1175,20 +1049,10 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_5758) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_5758",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_5758"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_5758"
                                 },
                                 "Toughness": {
-                                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                                  "displayLines": "AOE Toughness Value",
-                                  "constants": [],
-                                  "variables": [
-                                    "AOE Toughness Value"
-                                  ]
+                                  "displayLines": "AOE Toughness Value"
                                 },
                                 "Tags": [
                                   "Summon-Tag DMG"
@@ -1213,12 +1077,7 @@ const compositeAbilityObject = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (UnusedUnderThisBase_5761) || RETURN",
-                "displayLines": "UnusedUnderThisBase_5761",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_5761"
-                ]
+                "displayLines": "UnusedUnderThisBase_5761"
               },
               "execute": [
                 {
@@ -1273,20 +1132,10 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Fire",
                         "Damage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_5773) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_5773",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_5773"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_5773"
                         },
                         "Toughness": {
-                          "operator": "Variables[0] (Lingsha_Rank06_StanceDamage) || RETURN",
-                          "displayLines": "Lingsha_Rank06_StanceDamage",
-                          "constants": [],
-                          "variables": [
-                            "Lingsha_Rank06_StanceDamage"
-                          ]
+                          "displayLines": "Lingsha_Rank06_StanceDamage"
                         },
                         "Tags": [
                           "Summon-Tag DMG"
@@ -1338,20 +1187,10 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_5773) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_5773",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_5773"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_5773"
                             },
                             "Toughness": {
-                              "operator": "Variables[0] (Lingsha_Rank06_StanceDamage) || RETURN",
-                              "displayLines": "Lingsha_Rank06_StanceDamage",
-                              "constants": [],
-                              "variables": [
-                                "Lingsha_Rank06_StanceDamage"
-                              ]
+                              "displayLines": "Lingsha_Rank06_StanceDamage"
                             },
                             "Tags": [
                               "Summon-Tag DMG"
@@ -1390,20 +1229,10 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_5773) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_5773",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_5773"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_5773"
                                 },
                                 "Toughness": {
-                                  "operator": "Variables[0] (Lingsha_Rank06_StanceDamage) || RETURN",
-                                  "displayLines": "Lingsha_Rank06_StanceDamage",
-                                  "constants": [],
-                                  "variables": [
-                                    "Lingsha_Rank06_StanceDamage"
-                                  ]
+                                  "displayLines": "Lingsha_Rank06_StanceDamage"
                                 },
                                 "Tags": [
                                   "Summon-Tag DMG"
@@ -1432,20 +1261,10 @@ const compositeAbilityObject = {
                                   "AttackScaling": {
                                     "DamageType": "Fire",
                                     "Damage": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_5773) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_5773",
-                                      "constants": [],
-                                      "variables": [
-                                        "UnusedUnderThisBase_5773"
-                                      ]
+                                      "displayLines": "UnusedUnderThisBase_5773"
                                     },
                                     "Toughness": {
-                                      "operator": "Variables[0] (Lingsha_Rank06_StanceDamage) || RETURN",
-                                      "displayLines": "Lingsha_Rank06_StanceDamage",
-                                      "constants": [],
-                                      "variables": [
-                                        "Lingsha_Rank06_StanceDamage"
-                                      ]
+                                      "displayLines": "Lingsha_Rank06_StanceDamage"
                                     },
                                     "Tags": [
                                       "Summon-Tag DMG"

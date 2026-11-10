@@ -599,13 +599,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageTakenUpRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(MDF_DamageTakenUpRatio_PerLayer * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageTakenUpRatio_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(MDF_DamageTakenUpRatio_PerLayer * ModifierLayers)"
               }
             },
             {
@@ -1711,12 +1705,7 @@ const configAbility = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"-1043458445\">Monster_W2_HuanlongPart_01_Dormancy</a>[<span class=\"descriptionNumberColor\">Repose</span>]",
                               "duration": {
-                                "operator": "Variables[0] (MDF_DormancyLifeTime) || RETURN",
-                                "displayLines": "MDF_DormancyLifeTime",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_DormancyLifeTime"
-                                ]
+                                "displayLines": "MDF_DormancyLifeTime"
                               }
                             }
                           ]
@@ -1771,12 +1760,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1043458445\">Monster_W2_HuanlongPart_01_Dormancy</a>[<span class=\"descriptionNumberColor\">Repose</span>]",
                   "duration": {
-                    "operator": "Variables[0] (MDF_DormancyLifeTime) || RETURN",
-                    "displayLines": "MDF_DormancyLifeTime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DormancyLifeTime"
-                    ]
+                    "displayLines": "MDF_DormancyLifeTime"
                   }
                 }
               ]

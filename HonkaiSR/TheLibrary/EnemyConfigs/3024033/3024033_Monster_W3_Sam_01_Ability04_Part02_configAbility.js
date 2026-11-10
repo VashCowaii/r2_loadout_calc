@@ -31,47 +31,27 @@ const configAbility = {
       "immediateEffect": true,
       "valuePerStack": {
         "MDF_SpeedUpRatio": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-          "displayLines": "{[Skill04[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}"
-          ]
+          "displayLines": "{[Skill04[0]]}"
         }
       }
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] ({[PassiveSkill03[2]]}) || RETURN",
-        "displayLines": "{[PassiveSkill03[2]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill03[2]]}"
-        ]
+        "displayLines": "{[PassiveSkill03[2]]}"
       },
       "variableName": "MinionDelay"
     },
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] (MinionDelay) || RETURN",
-        "displayLines": "MinionDelay",
-        "constants": [],
-        "variables": [
-          "MinionDelay"
-        ]
+        "displayLines": "MinionDelay"
       },
       "enemyList": [
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-            "displayLines": "SummonList_ADF_1",
-            "constants": [],
-            "variables": [
-              "SummonList_ADF_1"
-            ]
+            "displayLines": "SummonList_ADF_1"
           },
           "locationType": "BeforeCaster"
         }
@@ -80,36 +60,20 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (MinionDelay) || Variables[1] ({[PassiveSkill03[3]]}) || ADD || RETURN",
-        "displayLines": "(MinionDelay + {[PassiveSkill03[3]]})",
-        "constants": [],
-        "variables": [
-          "MinionDelay",
-          "{[PassiveSkill03[3]]}"
-        ]
+        "displayLines": "(MinionDelay + {[PassiveSkill03[3]]})"
       },
       "variableName": "MinionDelay"
     },
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] (MinionDelay) || RETURN",
-        "displayLines": "MinionDelay",
-        "constants": [],
-        "variables": [
-          "MinionDelay"
-        ]
+        "displayLines": "MinionDelay"
       },
       "enemyList": [
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-            "displayLines": "SummonList_ADF_1",
-            "constants": [],
-            "variables": [
-              "SummonList_ADF_1"
-            ]
+            "displayLines": "SummonList_ADF_1"
           },
           "locationType": "AfterCaster"
         }
@@ -118,13 +82,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (MinionDelay) || Variables[1] ({[PassiveSkill03[3]]}) || ADD || RETURN",
-        "displayLines": "(MinionDelay + {[PassiveSkill03[3]]})",
-        "constants": [],
-        "variables": [
-          "MinionDelay",
-          "{[PassiveSkill03[3]]}"
-        ]
+        "displayLines": "(MinionDelay + {[PassiveSkill03[3]]})"
       },
       "variableName": "MinionDelay"
     },
@@ -178,23 +136,13 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] (MinionDelay) || RETURN",
-            "displayLines": "MinionDelay",
-            "constants": [],
-            "variables": [
-              "MinionDelay"
-            ]
+            "displayLines": "MinionDelay"
           },
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                "displayLines": "SummonList_ADF_1",
-                "constants": [],
-                "variables": [
-                  "SummonList_ADF_1"
-                ]
+                "displayLines": "SummonList_ADF_1"
               },
               "locationType": "First"
             }
@@ -203,36 +151,20 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (MinionDelay) || Variables[1] ({[PassiveSkill03[3]]}) || ADD || RETURN",
-            "displayLines": "(MinionDelay + {[PassiveSkill03[3]]})",
-            "constants": [],
-            "variables": [
-              "MinionDelay",
-              "{[PassiveSkill03[3]]}"
-            ]
+            "displayLines": "(MinionDelay + {[PassiveSkill03[3]]})"
           },
           "variableName": "MinionDelay"
         },
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] (MinionDelay) || RETURN",
-            "displayLines": "MinionDelay",
-            "constants": [],
-            "variables": [
-              "MinionDelay"
-            ]
+            "displayLines": "MinionDelay"
           },
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                "displayLines": "SummonList_ADF_1",
-                "constants": [],
-                "variables": [
-                  "SummonList_ADF_1"
-                ]
+                "displayLines": "SummonList_ADF_1"
               },
               "locationType": "Last"
             }
@@ -241,13 +173,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (MinionDelay) || Variables[1] ({[PassiveSkill03[3]]}) || ADD || RETURN",
-            "displayLines": "(MinionDelay + {[PassiveSkill03[3]]})",
-            "constants": [],
-            "variables": [
-              "MinionDelay",
-              "{[PassiveSkill03[3]]}"
-            ]
+            "displayLines": "(MinionDelay + {[PassiveSkill03[3]]})"
           },
           "variableName": "MinionDelay"
         }

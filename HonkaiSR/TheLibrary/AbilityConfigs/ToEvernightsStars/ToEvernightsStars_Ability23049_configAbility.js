@@ -49,12 +49,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-651011458\">LC_23049_Sub2</a>[<span class=\"descriptionNumberColor\">Sleepless</span>]",
               "valuePerStack": {
                 "MDF_Show": {
-                  "operator": "Variables[0] (MDF_PropertyValue_2) || RETURN",
-                  "displayLines": "MDF_PropertyValue_2",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue_2"
-                  ]
+                  "displayLines": "MDF_PropertyValue_2"
                 }
               }
             },
@@ -67,12 +62,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-634233839\">LC_23049_Sub3</a>[<span class=\"descriptionNumberColor\">Sleepless</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                  "displayLines": "MDF_PropertyValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue"
-                  ]
+                  "displayLines": "MDF_PropertyValue"
                 }
               }
             }
@@ -118,12 +108,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-634233839\">LC_23049_Sub3</a>[<span class=\"descriptionNumberColor\">Sleepless</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -157,12 +142,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-651011458\">LC_23049_Sub2</a>[<span class=\"descriptionNumberColor\">Sleepless</span>]",
                   "valuePerStack": {
                     "MDF_Show": {
-                      "operator": "Variables[0] (MDF_PropertyValue_2) || RETURN",
-                      "displayLines": "MDF_PropertyValue_2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue_2"
-                      ]
+                      "displayLines": "MDF_PropertyValue_2"
                     }
                   }
                 }
@@ -188,12 +168,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-634233839\">LC_23049_Sub3</a>[<span class=\"descriptionNumberColor\">Sleepless</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -259,12 +234,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_Show) || RETURN",
-                "displayLines": "MDF_Show",
-                "constants": [],
-                "variables": [
-                  "MDF_Show"
-                ]
+                "displayLines": "MDF_Show"
               }
             }
           ]
@@ -300,12 +270,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue_3) || RETURN",
-                    "displayLines": "MDF_PropertyValue_3",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue_3"
-                    ]
+                    "displayLines": "MDF_PropertyValue_3"
                   },
                   "isFixed": "* ERR"
                 }
@@ -325,28 +290,13 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"474890872\">LC_23049_Sub</a>[<span class=\"descriptionNumberColor\">Noctis</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                  "displayLines": "MDF_PropertyValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue"
-                  ]
+                  "displayLines": "MDF_PropertyValue"
                 },
                 "MDF_PropertyValue_2": {
-                  "operator": "Variables[0] (MDF_PropertyValue_2) || RETURN",
-                  "displayLines": "MDF_PropertyValue_2",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue_2"
-                  ]
+                  "displayLines": "MDF_PropertyValue_2"
                 },
                 "MDF_PropertyValue_3": {
-                  "operator": "Variables[0] (MDF_PropertyValue_3) || RETURN",
-                  "displayLines": "MDF_PropertyValue_3",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue_3"
-                  ]
+                  "displayLines": "MDF_PropertyValue_3"
                 }
               }
             }
@@ -370,28 +320,13 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1202124053\">LC_23049_Listen</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 },
                 "MDF_PropertyValue_2": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 },
                 "MDF_PropertyValue_3": {
-                  "operator": "Variables[0] (8) || RETURN",
-                  "displayLines": "8",
-                  "constants": [],
-                  "variables": [
-                    8
-                  ]
+                  "displayLines": "8"
                 }
               }
             }
@@ -423,28 +358,13 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1202124053\">LC_23049_Listen</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     },
                     "MDF_PropertyValue_2": {
-                      "operator": "Variables[0] (0.3) || RETURN",
-                      "displayLines": "0.3",
-                      "constants": [],
-                      "variables": [
-                        0.3
-                      ]
+                      "displayLines": "0.3"
                     },
                     "MDF_PropertyValue_3": {
-                      "operator": "Variables[0] (8) || RETURN",
-                      "displayLines": "8",
-                      "constants": [],
-                      "variables": [
-                        8
-                      ]
+                      "displayLines": "8"
                     }
                   }
                 }

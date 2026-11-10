@@ -318,12 +318,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -331,12 +326,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "assignState": "True",
                   "state": "Active"
@@ -711,28 +701,13 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
           "valuePerStack": {
             "MDF_RallyTransferRatio": {
-              "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-              "displayLines": "{[Skill05[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[1]]}"
-              ]
+              "displayLines": "{[Skill05[1]]}"
             },
             "MDF_Rally_HealPercentage": {
-              "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-              "displayLines": "{[Skill05[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[2]]}"
-              ]
+              "displayLines": "{[Skill05[2]]}"
             },
             "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-              "displayLines": "{[Skill05[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[3]]}"
-              ]
+              "displayLines": "{[Skill05[3]]}"
             }
           }
         },
@@ -753,12 +728,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "{[Skill05[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -886,28 +856,13 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
           "valuePerStack": {
             "MDF_RallyTransferRatio": {
-              "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-              "displayLines": "{[Skill05[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[1]]}"
-              ]
+              "displayLines": "{[Skill05[1]]}"
             },
             "MDF_Rally_HealPercentage": {
-              "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-              "displayLines": "{[Skill05[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[2]]}"
-              ]
+              "displayLines": "{[Skill05[2]]}"
             },
             "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-              "displayLines": "{[Skill05[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[3]]}"
-              ]
+              "displayLines": "{[Skill05[3]]}"
             }
           }
         },
@@ -928,12 +883,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "{[Skill05[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -990,28 +940,13 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
           "valuePerStack": {
             "MDF_RallyTransferRatio": {
-              "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-              "displayLines": "{[Skill04[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[1]]}"
-              ]
+              "displayLines": "{[Skill04[1]]}"
             },
             "MDF_Rally_HealPercentage": {
-              "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-              "displayLines": "{[Skill04[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[2]]}"
-              ]
+              "displayLines": "{[Skill04[2]]}"
             },
             "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-              "displayLines": "{[Skill04[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[3]]}"
-              ]
+              "displayLines": "{[Skill04[3]]}"
             }
           }
         },
@@ -1030,14 +965,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || Variables[1] ({[Skill04[4]]}) || Variables[2] (Skill04_AttackCount) || MUL || ADD || RETURN",
-              "displayLines": "({[Skill04[0]]} + ({[Skill04[4]]} * Skill04_AttackCount))",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}",
-                "{[Skill04[4]]}",
-                "Skill04_AttackCount"
-              ]
+              "displayLines": "({[Skill04[0]]} + ({[Skill04[4]]} * Skill04_AttackCount))"
             },
             "HitSplit": 0.1,
             "Toughness": null,
@@ -1054,14 +982,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || Variables[1] ({[Skill04[4]]}) || Variables[2] (Skill04_AttackCount) || MUL || ADD || RETURN",
-              "displayLines": "({[Skill04[0]]} + ({[Skill04[4]]} * Skill04_AttackCount))",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}",
-                "{[Skill04[4]]}",
-                "Skill04_AttackCount"
-              ]
+              "displayLines": "({[Skill04[0]]} + ({[Skill04[4]]} * Skill04_AttackCount))"
             },
             "HitSplit": 0.1,
             "Toughness": null,
@@ -1078,14 +999,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || Variables[1] ({[Skill04[4]]}) || Variables[2] (Skill04_AttackCount) || MUL || ADD || RETURN",
-              "displayLines": "({[Skill04[0]]} + ({[Skill04[4]]} * Skill04_AttackCount))",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}",
-                "{[Skill04[4]]}",
-                "Skill04_AttackCount"
-              ]
+              "displayLines": "({[Skill04[0]]} + ({[Skill04[4]]} * Skill04_AttackCount))"
             },
             "HitSplit": 0.1,
             "Toughness": null,
@@ -1102,14 +1016,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || Variables[1] ({[Skill04[4]]}) || Variables[2] (Skill04_AttackCount) || MUL || ADD || RETURN",
-              "displayLines": "({[Skill04[0]]} + ({[Skill04[4]]} * Skill04_AttackCount))",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}",
-                "{[Skill04[4]]}",
-                "Skill04_AttackCount"
-              ]
+              "displayLines": "({[Skill04[0]]} + ({[Skill04[4]]} * Skill04_AttackCount))"
             },
             "HitSplit": 0.1,
             "Toughness": null,
@@ -1126,14 +1033,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || Variables[1] ({[Skill04[4]]}) || Variables[2] (Skill04_AttackCount) || MUL || ADD || RETURN",
-              "displayLines": "({[Skill04[0]]} + ({[Skill04[4]]} * Skill04_AttackCount))",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}",
-                "{[Skill04[4]]}",
-                "Skill04_AttackCount"
-              ]
+              "displayLines": "({[Skill04[0]]} + ({[Skill04[4]]} * Skill04_AttackCount))"
             },
             "HitSplit": 0.1,
             "Toughness": null,
@@ -1150,14 +1050,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || Variables[1] ({[Skill04[4]]}) || Variables[2] (Skill04_AttackCount) || MUL || ADD || RETURN",
-              "displayLines": "({[Skill04[0]]} + ({[Skill04[4]]} * Skill04_AttackCount))",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}",
-                "{[Skill04[4]]}",
-                "Skill04_AttackCount"
-              ]
+              "displayLines": "({[Skill04[0]]} + ({[Skill04[4]]} * Skill04_AttackCount))"
             },
             "HitSplit": 0.1,
             "Toughness": null,
@@ -1174,14 +1067,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || Variables[1] ({[Skill04[4]]}) || Variables[2] (Skill04_AttackCount) || MUL || ADD || RETURN",
-              "displayLines": "({[Skill04[0]]} + ({[Skill04[4]]} * Skill04_AttackCount))",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}",
-                "{[Skill04[4]]}",
-                "Skill04_AttackCount"
-              ]
+              "displayLines": "({[Skill04[0]]} + ({[Skill04[4]]} * Skill04_AttackCount))"
             },
             "HitSplit": 0.4,
             "Toughness": null,
@@ -1288,20 +1174,10 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-919299430\">Enemy_W4_Serpent_Charge</a>[<span class=\"descriptionNumberColor\">Whirl</span>]",
           "stackLimit": {
-            "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-            "displayLines": "{[Skill03[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[0]]}"
-            ]
+            "displayLines": "{[Skill03[0]]}"
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-            "displayLines": "{[Skill03[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[0]]}"
-            ]
+            "displayLines": "{[Skill03[0]]}"
           }
         },
         {
@@ -1324,21 +1200,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13031) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13031",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_13031"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_13031"
                 }
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                "displayLines": "{[Skill03[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill03[0]]}"
-                ]
+                "displayLines": "{[Skill03[0]]}"
               }
             }
           ]
@@ -1406,12 +1272,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Imaginary",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                      "displayLines": "{[Skill02[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[1]]}"
-                      ]
+                      "displayLines": "{[Skill02[1]]}"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1447,12 +1308,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Imaginary",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
+                      "displayLines": "{[Skill02[0]]}"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1475,12 +1331,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Imaginary",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
+                      "displayLines": "{[Skill02[0]]}"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1546,12 +1397,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,

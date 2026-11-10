@@ -29,12 +29,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.15) || RETURN",
-                "displayLines": "0.15",
-                "constants": [],
-                "variables": [
-                  0.15
-                ]
+                "displayLines": "0.15"
               }
             }
           ]
@@ -59,12 +54,7 @@ const configAbility = {
                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateSUM</span>&nbsp;",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
+                  "displayLines": "0.5"
                 }
               },
               "passed": [
@@ -90,12 +80,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": -1,
               "maxValue": {
-                "operator": "Variables[0] (0.5) || RETURN",
-                "displayLines": "0.5",
-                "constants": [],
-                "variables": [
-                  0.5
-                ]
+                "displayLines": "0.5"
               },
               "enteringRange": [
                 {

@@ -43,12 +43,7 @@ const configAbility = {
             {
               "name": "Assign Advance/Delay to Current Ability Use",
               "adjustmentValue": {
-                "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-                "displayLines": "{[SkillEX03[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillEX03[0]]}"
-                ]
+                "displayLines": "{[SkillEX03[0]]}"
               },
               "adjustmentType": "Advance"
             }
@@ -73,12 +68,7 @@ const configAbility = {
             "target": "{{Parameter Target}}"
           },
           "consumePercent": {
-            "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
-            "displayLines": "{[SkillEX03[1]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillEX03[1]]}"
-            ]
+            "displayLines": "{[SkillEX03[1]]}"
           },
           "DamageType": "AllType"
         },

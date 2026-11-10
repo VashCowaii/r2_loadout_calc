@@ -148,15 +148,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (CurrentBlackBloodValue) || Variables[1] (CurrentRemainBlackBloodValue) || SUB || Variables[2] ({[Skill01[2]]}) || MUL || Variables[1] (CurrentRemainBlackBloodValue) || ADD || Variables[3] (CurrentEnhanceBlackBloodValue) || SUB || RETURN",
-                "displayLines": "((((CurrentBlackBloodValue - CurrentRemainBlackBloodValue) * {[Skill01[2]]}) + CurrentRemainBlackBloodValue) - CurrentEnhanceBlackBloodValue)",
-                "constants": [],
-                "variables": [
-                  "CurrentBlackBloodValue",
-                  "CurrentRemainBlackBloodValue",
-                  "{[Skill01[2]]}",
-                  "CurrentEnhanceBlackBloodValue"
-                ]
+                "displayLines": "((((CurrentBlackBloodValue - CurrentRemainBlackBloodValue) * {[Skill01[2]]}) + CurrentRemainBlackBloodValue) - CurrentEnhanceBlackBloodValue)"
               },
               "variableName": "CurrentBlackBloodValue"
             },
@@ -167,24 +159,14 @@ const configAbility = {
                 "value1": "CurrentBlackBloodValue",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                  "displayLines": "{[Skill01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[1]]}"
-                  ]
+                  "displayLines": "{[Skill01[1]]}"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                    "displayLines": "{[Skill01[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill01[1]]}"
-                    ]
+                    "displayLines": "{[Skill01[1]]}"
                   },
                   "variableName": "CurrentBlackBloodValue"
                 }
@@ -199,12 +181,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"241895029\">Monster_W4_HearsePart_BlackBlood_Enhance</a>[<span class=\"descriptionNumberColor\">Conquered Eon</span>]",
               "valuePerStack": {
                 "MDF_DirtyHPRatio": {
-                  "operator": "Variables[0] (CurrentBlackBloodValue) || RETURN",
-                  "displayLines": "CurrentBlackBloodValue",
-                  "constants": [],
-                  "variables": [
-                    "CurrentBlackBloodValue"
-                  ]
+                  "displayLines": "CurrentBlackBloodValue"
                 }
               }
             }
@@ -691,12 +668,7 @@ const configAbility = {
             "target": "{{Parameter Target}}"
           },
           "value": {
-            "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-            "displayLines": "{[Skill01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[0]]}"
-            ]
+            "displayLines": "{[Skill01[0]]}"
           },
           "variableName": "SoulHPRatio"
         },
@@ -794,12 +766,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1382334396\">Monster_W4_HearsePart_BlackBlood</a>[<span class=\"descriptionNumberColor\">Conquered</span>]",
       "valuePerStack": {
         "MDF_DirtyHPRatio": {
-          "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-          "displayLines": "{[Skill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[0]]}"
-          ]
+          "displayLines": "{[Skill01[0]]}"
         }
       }
     },

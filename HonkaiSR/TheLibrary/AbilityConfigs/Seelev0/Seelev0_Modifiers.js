@@ -95,13 +95,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (SpeedUp_Count) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyValue * SpeedUp_Count)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "SpeedUp_Count"
-                ]
+                "displayLines": "(MDF_PropertyValue * SpeedUp_Count)"
               }
             }
           ]
@@ -131,12 +125,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -167,12 +156,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (seele_dmg_percent) || RETURN",
-                "displayLines": "seele_dmg_percent",
-                "constants": [],
-                "variables": [
-                  "seele_dmg_percent"
-                ]
+                "displayLines": "seele_dmg_percent"
               }
             },
             {
@@ -194,12 +178,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceQuantumPEN</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_Penetrate) || RETURN",
-                    "displayLines": "MDF_Penetrate",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Penetrate"
-                    ]
+                    "displayLines": "MDF_Penetrate"
                   }
                 }
               ]

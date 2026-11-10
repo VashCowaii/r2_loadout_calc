@@ -50,26 +50,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.4) || RETURN",
-            "displayLines": "0.4",
-            "constants": [],
-            "variables": [
-              0.4
-            ]
+            "displayLines": "0.4"
           },
           "variableName": "_Dr_Ratio_InsertChance"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_Dr_Ratio_InsertChance) || Variables[1] (_DebuffCount) || Variables[2] (0.2) || MUL || ADD || RETURN",
-            "displayLines": "(_Dr_Ratio_InsertChance + (_DebuffCount * 0.2))",
-            "constants": [],
-            "variables": [
-              "_Dr_Ratio_InsertChance",
-              "_DebuffCount",
-              0.2
-            ]
+            "displayLines": "(_Dr_Ratio_InsertChance + (_DebuffCount * 0.2))"
           },
           "variableName": "_Dr_Ratio_InsertChance"
         }
@@ -78,12 +66,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.4) || RETURN",
-            "displayLines": "0.4",
-            "constants": [],
-            "variables": [
-              0.4
-            ]
+            "displayLines": "0.4"
           },
           "variableName": "_Dr_Ratio_InsertChance"
         }
@@ -103,12 +86,7 @@ const configAbility = {
           "conditions": {
             "name": "Random Chance",
             "chance": {
-              "operator": "Variables[0] (_Dr_Ratio_InsertChance) || RETURN",
-              "displayLines": "_Dr_Ratio_InsertChance",
-              "constants": [],
-              "variables": [
-                "_Dr_Ratio_InsertChance"
-              ]
+              "displayLines": "_Dr_Ratio_InsertChance"
             }
           },
           "passed": [
@@ -159,12 +137,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_DebuffCount) || RETURN",
-                    "displayLines": "_DebuffCount",
-                    "constants": [],
-                    "variables": [
-                      "_DebuffCount"
-                    ]
+                    "displayLines": "_DebuffCount"
                   },
                   "variableName": "_EffDebuffCount"
                 }
@@ -198,14 +171,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_DebuffCount) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(_DebuffCount - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_DebuffCount"
-                ]
+                "displayLines": "(_DebuffCount - 1)"
               },
               "variableName": "_DebuffCount"
             },
@@ -249,30 +215,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1828934114\">Dr_Ratio_Ability03_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Summation</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (6) || Variables[1] (4) || ADD || RETURN",
-                    "displayLines": "(6 + 4)",
-                    "constants": [],
-                    "variables": [
-                      6,
-                      4
-                    ]
+                    "displayLines": "(6 + 4)"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue01": {
-                      "operator": "Variables[0] (0.025) || RETURN",
-                      "displayLines": "0.025",
-                      "constants": [],
-                      "variables": [
-                        0.025
-                      ]
+                      "displayLines": "0.025"
                     },
                     "MDF_PropertyValue02": {
-                      "operator": "Variables[0] (0.05) || RETURN",
-                      "displayLines": "0.05",
-                      "constants": [],
-                      "variables": [
-                        0.05
-                      ]
+                      "displayLines": "0.05"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -287,29 +237,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1828934114\">Dr_Ratio_Ability03_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Summation</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (6) || RETURN",
-                    "displayLines": "6",
-                    "constants": [],
-                    "variables": [
-                      6
-                    ]
+                    "displayLines": "6"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue01": {
-                      "operator": "Variables[0] (0.025) || RETURN",
-                      "displayLines": "0.025",
-                      "constants": [],
-                      "variables": [
-                        0.025
-                      ]
+                      "displayLines": "0.025"
                     },
                     "MDF_PropertyValue02": {
-                      "operator": "Variables[0] (0.05) || RETURN",
-                      "displayLines": "0.05",
-                      "constants": [],
-                      "variables": [
-                        0.05
-                      ]
+                      "displayLines": "0.05"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -330,14 +265,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_EffDebuffCount) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(_EffDebuffCount - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_EffDebuffCount"
-                ]
+                "displayLines": "(_EffDebuffCount - 1)"
               },
               "variableName": "_EffDebuffCount"
             }
@@ -366,20 +294,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (1.5) || RETURN",
-          "displayLines": "1.5",
-          "constants": [],
-          "variables": [
-            1.5
-          ]
+          "displayLines": "1.5"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -401,29 +319,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1051491293\">Dr_Ratio_Slow</a>[<span class=\"descriptionNumberColor\">Effect RES Reduction</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "baseChance": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.1) || RETURN",
-              "displayLines": "0.1",
-              "constants": [],
-              "variables": [
-                0.1
-              ]
+              "displayLines": "0.1"
             }
           }
         }
@@ -482,14 +385,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           ]

@@ -120,12 +120,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ReduceRatio) || RETURN",
-                "displayLines": "ReduceRatio",
-                "constants": [],
-                "variables": [
-                  "ReduceRatio"
-                ]
+                "displayLines": "ReduceRatio"
               }
             }
           ]

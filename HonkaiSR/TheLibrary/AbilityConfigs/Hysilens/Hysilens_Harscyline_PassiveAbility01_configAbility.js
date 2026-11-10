@@ -15,12 +15,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "variableName": "Skill03_HaloLifeTime"
     },
@@ -28,12 +23,7 @@ const configAbility = {
       "name": "Update Displayed Energy Bar",
       "value": 0,
       "maximum": {
-        "operator": "Variables[0] (Skill03_HaloLifeTime) || RETURN",
-        "displayLines": "Skill03_HaloLifeTime",
-        "constants": [],
-        "variables": [
-          "Skill03_HaloLifeTime"
-        ]
+        "displayLines": "Skill03_HaloLifeTime"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -50,12 +40,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (12) || RETURN",
-            "displayLines": "12",
-            "constants": [],
-            "variables": [
-              12
-            ]
+            "displayLines": "12"
           },
           "variableName": "Skill03_TriggerDotMaxCount"
         }
@@ -64,12 +49,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (8) || RETURN",
-            "displayLines": "8",
-            "constants": [],
-            "variables": [
-              8
-            ]
+            "displayLines": "8"
           },
           "variableName": "Skill03_TriggerDotMaxCount"
         }
@@ -85,13 +65,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.8) || Variables[1] (0.2) || ADD || RETURN",
-            "displayLines": "(0.8 + 0.2)",
-            "constants": [],
-            "variables": [
-              0.8,
-              0.2
-            ]
+            "displayLines": "(0.8 + 0.2)"
           },
           "variableName": "Skill03_DOTDamagePercentage"
         }
@@ -100,12 +74,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.8) || RETURN",
-            "displayLines": "0.8",
-            "constants": [],
-            "variables": [
-              0.8
-            ]
+            "displayLines": "0.8"
           },
           "variableName": "Skill03_DOTDamagePercentage"
         }
@@ -169,12 +138,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1305457610\">Harscyline_DOTDamageUpPre</a>",
           "valuePerStack": {
             "MDF_DamageUpRatio": {
-              "operator": "Variables[0] (1.16) || RETURN",
-              "displayLines": "1.16",
-              "constants": [],
-              "variables": [
-                1.16
-              ]
+              "displayLines": "1.16"
             }
           }
         }
@@ -224,29 +188,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (SkillTree_PointB3_StatusProbabilityPlusConvertValue) || Variables[1] (SkillTree_PointB3_StatusProbabilityConvertValue) || SUB || RETURN",
-                "displayLines": "(SkillTree_PointB3_StatusProbabilityPlusConvertValue - SkillTree_PointB3_StatusProbabilityConvertValue)",
-                "constants": [],
-                "variables": [
-                  "SkillTree_PointB3_StatusProbabilityPlusConvertValue",
-                  "SkillTree_PointB3_StatusProbabilityConvertValue"
-                ]
+                "displayLines": "(SkillTree_PointB3_StatusProbabilityPlusConvertValue - SkillTree_PointB3_StatusProbabilityConvertValue)"
               },
               "variableName": "SkillTree_PointB3_StatusProbabilityValue"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (WHOLE) || Variables[1] (SkillTree_PointB3_StatusProbabilityValue) || Variables[2] (0.6) || SUB || Variables[3] (0.1) || DIV || PARAM_1 || FUNCTION || Variables[4] (0.15) || MUL || RETURN",
-                "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(((SkillTree_PointB3_StatusProbabilityValue - 0.6) / 0.1)) * 0.15)",
-                "constants": [],
-                "variables": [
-                  "WHOLE",
-                  "SkillTree_PointB3_StatusProbabilityValue",
-                  0.6,
-                  0.1,
-                  0.15
-                ]
+                "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(((SkillTree_PointB3_StatusProbabilityValue - 0.6) / 0.1)) * 0.15)"
               },
               "variableName": "SkillTree_PointB3_StatusProbabilityValue"
             },
@@ -274,12 +223,7 @@ const configAbility = {
                     "value1": "SkillTree_PointB3_StatusProbabilityValue",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (0.9) || RETURN",
-                      "displayLines": "0.9",
-                      "constants": [],
-                      "variables": [
-                        0.9
-                      ]
+                      "displayLines": "0.9"
                     },
                     "contextScope": "ContextCaster"
                   },
@@ -287,12 +231,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (0.9) || RETURN",
-                        "displayLines": "0.9",
-                        "constants": [],
-                        "variables": [
-                          0.9
-                        ]
+                        "displayLines": "0.9"
                       },
                       "variableName": "SkillTree_PointB3_StatusProbabilityValue"
                     }
@@ -349,12 +288,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1957610629\">Harscyline_PointB3_DamageAdded</a>[<span class=\"descriptionNumberColor\">The Fiddle of Pearls</span>]",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
-                          "operator": "Variables[0] (SkillTree_PointB3_StatusProbabilityValue) || RETURN",
-                          "displayLines": "SkillTree_PointB3_StatusProbabilityValue",
-                          "constants": [],
-                          "variables": [
-                            "SkillTree_PointB3_StatusProbabilityValue"
-                          ]
+                          "displayLines": "SkillTree_PointB3_StatusProbabilityValue"
                         }
                       }
                     }
@@ -369,12 +303,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1957610629\">Harscyline_PointB3_DamageAdded</a>[<span class=\"descriptionNumberColor\">The Fiddle of Pearls</span>]",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
-                          "operator": "Variables[0] (SkillTree_PointB3_StatusProbabilityValue) || RETURN",
-                          "displayLines": "SkillTree_PointB3_StatusProbabilityValue",
-                          "constants": [],
-                          "variables": [
-                            "SkillTree_PointB3_StatusProbabilityValue"
-                          ]
+                          "displayLines": "SkillTree_PointB3_StatusProbabilityValue"
                         }
                       }
                     }
@@ -519,53 +448,23 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1383903101\">Harscyline_Ability03_HaloStatus</a>",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_DOTDamagePercentageTemp": {
-                      "operator": "Variables[0] (Skill03_DOTDamagePercentage) || RETURN",
-                      "displayLines": "Skill03_DOTDamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "Skill03_DOTDamagePercentage"
-                      ]
+                      "displayLines": "Skill03_DOTDamagePercentage"
                     },
                     "MDF_TriggerDOTMaxCountTemp": {
-                      "operator": "Variables[0] (Skill03_TriggerDotMaxCount) || RETURN",
-                      "displayLines": "Skill03_TriggerDotMaxCount",
-                      "constants": [],
-                      "variables": [
-                        "Skill03_TriggerDotMaxCount"
-                      ]
+                      "displayLines": "Skill03_TriggerDotMaxCount"
                     },
                     "MDF_DefenceDownRatioTemp": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     },
                     "MDF_ResistanceDownRatioTemp": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     },
                     "MDF_AttackDownRatioTemp": {
-                      "operator": "Variables[0] (0.15) || RETURN",
-                      "displayLines": "0.15",
-                      "constants": [],
-                      "variables": [
-                        0.15
-                      ]
+                      "displayLines": "0.15"
                     }
                   }
                 }

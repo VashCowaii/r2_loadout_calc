@@ -67,47 +67,27 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1575455810\">Enemy_W4_Manta_LocalLegend_Statues</a>[<span class=\"descriptionNumberColor\">Respite By The Waters</span>]",
       "valuePerStack": {
         "MDF_MaxLayer": {
-          "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[0]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[0]]}"
         }
       }
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-        "displayLines": "{[PassiveSkill01[1]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill01[1]]}"
-        ]
+        "displayLines": "{[PassiveSkill01[1]]}"
       },
       "variableName": "_DotDamageRatio"
     },
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-        "displayLines": "{[PassiveSkill02[0]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill02[0]]}"
-        ]
+        "displayLines": "{[PassiveSkill02[0]]}"
       },
       "enemyList": [
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-            "displayLines": "SummonList_ADF_1",
-            "constants": [],
-            "variables": [
-              "SummonList_ADF_1"
-            ]
+            "displayLines": "SummonList_ADF_1"
           },
           "locationType": "BeforeCaster"
         }
@@ -116,23 +96,13 @@ const configAbility = {
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-        "displayLines": "{[PassiveSkill02[1]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill02[1]]}"
-        ]
+        "displayLines": "{[PassiveSkill02[1]]}"
       },
       "enemyList": [
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
-            "displayLines": "SummonList_ADF_3",
-            "constants": [],
-            "variables": [
-              "SummonList_ADF_3"
-            ]
+            "displayLines": "SummonList_ADF_3"
           },
           "locationType": "BeforeCaster"
         }
@@ -141,23 +111,13 @@ const configAbility = {
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-        "displayLines": "{[PassiveSkill02[2]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill02[2]]}"
-        ]
+        "displayLines": "{[PassiveSkill02[2]]}"
       },
       "enemyList": [
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
-            "displayLines": "SummonList_ADF_3",
-            "constants": [],
-            "variables": [
-              "SummonList_ADF_3"
-            ]
+            "displayLines": "SummonList_ADF_3"
           },
           "locationType": "AfterCaster"
         }

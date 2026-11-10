@@ -21,36 +21,16 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1214365283\">GuiNaiFen_PassiveAbility01_Modifier</a>",
       "valuePerStack": {
         "MDF_Chance": {
-          "operator": "Variables[0] (1) || RETURN",
-          "displayLines": "1",
-          "constants": [],
-          "variables": [
-            1
-          ]
+          "displayLines": "1"
         },
         "MDF_Damage": {
-          "operator": "Variables[0] (UnusedUnderThisBase_5348) || RETURN",
-          "displayLines": "UnusedUnderThisBase_5348",
-          "constants": [],
-          "variables": [
-            "UnusedUnderThisBase_5348"
-          ]
+          "displayLines": "UnusedUnderThisBase_5348"
         },
         "MDF_LifeTime": {
-          "operator": "Variables[0] (UnusedUnderThisBase_6532) || RETURN",
-          "displayLines": "UnusedUnderThisBase_6532",
-          "constants": [],
-          "variables": [
-            "UnusedUnderThisBase_6532"
-          ]
+          "displayLines": "UnusedUnderThisBase_6532"
         },
         "SpAdded2": {
-          "operator": "Variables[0] (2) || RETURN",
-          "displayLines": "2",
-          "constants": [],
-          "variables": [
-            2
-          ]
+          "displayLines": "2"
         }
       }
     }

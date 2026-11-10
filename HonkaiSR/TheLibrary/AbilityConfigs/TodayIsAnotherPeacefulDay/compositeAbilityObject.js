@@ -46,24 +46,14 @@ const compositeAbilityObject = {
                     "value1": "CasterMaxSP",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (160) || RETURN",
-                      "displayLines": "160",
-                      "constants": [],
-                      "variables": [
-                        160
-                      ]
+                      "displayLines": "160"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (160) || RETURN",
-                        "displayLines": "160",
-                        "constants": [],
-                        "variables": [
-                          160
-                        ]
+                        "displayLines": "160"
                       },
                       "variableName": "CasterMaxSP"
                     }
@@ -77,13 +67,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.0019999999) || Variables[1] (CasterMaxSP) || MUL || RETURN",
-                    "displayLines": "(0.0019999999 * CasterMaxSP)",
-                    "constants": [],
-                    "variables": [
-                      0.0019999999,
-                      "CasterMaxSP"
-                    ]
+                    "displayLines": "(0.0019999999 * CasterMaxSP)"
                   }
                 }
               ]

@@ -106,34 +106,13 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (9.6) || Constants[0] (1) || Variables[1] (ADF_BECount) || Variables[2] (0.125) || MUL || SUB || MUL || RETURN",
-          "displayLines": "(9.6 * (1 - (ADF_BECount * 0.125)))",
-          "constants": [
-            1
-          ],
-          "variables": [
-            9.6,
-            "ADF_BECount",
-            0.125
-          ]
+          "displayLines": "(9.6 * (1 - (ADF_BECount * 0.125)))"
         },
         "HitSplit": {
-          "operator": "Constants[0] (1) || Variables[0] (ADF_TargetCount) || DIV || RETURN",
-          "displayLines": "(1 / ADF_TargetCount)",
-          "constants": [
-            1
-          ],
-          "variables": [
-            "ADF_TargetCount"
-          ]
+          "displayLines": "(1 / ADF_TargetCount)"
         },
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "attackType": "Ultimate"
@@ -187,12 +166,7 @@ const configAbility = {
         {
           "name": "Set Phainon Charge Points",
           "value": {
-            "operator": "Variables[0] (Skill22_Energy) || RETURN",
-            "displayLines": "Skill22_Energy",
-            "constants": [],
-            "variables": [
-              "Skill22_Energy"
-            ]
+            "displayLines": "Skill22_Energy"
           }
         },
         {
@@ -237,12 +211,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (ADF_ExtraEnergy) || RETURN",
-                    "displayLines": "ADF_ExtraEnergy",
-                    "constants": [],
-                    "variables": [
-                      "ADF_ExtraEnergy"
-                    ]
+                    "displayLines": "ADF_ExtraEnergy"
                   }
                 }
               ]
@@ -257,12 +226,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (8) || RETURN",
-            "displayLines": "8",
-            "constants": [],
-            "variables": [
-              8
-            ]
+            "displayLines": "8"
           },
           "execute": [
             {
@@ -271,43 +235,20 @@ const configAbility = {
               "eventID": 11408,
               "variables": {
                 "BE_Index": {
-                  "operator": "Variables[0] (ADF_Index) || RETURN",
-                  "displayLines": "ADF_Index",
-                  "constants": [],
-                  "variables": [
-                    "ADF_Index"
-                  ]
+                  "displayLines": "ADF_Index"
                 },
                 "BE_Count": {
-                  "operator": "Variables[0] (8) || RETURN",
-                  "displayLines": "8",
-                  "constants": [],
-                  "variables": [
-                    8
-                  ]
+                  "displayLines": "8"
                 },
                 "BE_Speed": {
-                  "operator": "Variables[0] (CDF_SpeedConvertRatio) || Variables[1] (Phainon_BaseSpeed) || MUL || RETURN",
-                  "displayLines": "(CDF_SpeedConvertRatio * Phainon_BaseSpeed)",
-                  "constants": [],
-                  "variables": [
-                    "CDF_SpeedConvertRatio",
-                    "Phainon_BaseSpeed"
-                  ]
+                  "displayLines": "(CDF_SpeedConvertRatio * Phainon_BaseSpeed)"
                 }
               }
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (ADF_Index) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(ADF_Index + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "ADF_Index"
-                ]
+                "displayLines": "(ADF_Index + 1)"
               },
               "variableName": "ADF_Index"
             }

@@ -65,12 +65,7 @@ const configAbility = {
       "name": "Create Enemy as Body Part",
       "partName": "Head",
       "value": {
-        "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
-        "displayLines": "PartEntity1_MonsterID",
-        "constants": [],
-        "variables": [
-          "PartEntity1_MonsterID"
-        ]
+        "displayLines": "PartEntity1_MonsterID"
       },
       "offset": 2,
       "linkHitByPart": true
@@ -79,12 +74,7 @@ const configAbility = {
       "name": "Create Enemy as Body Part",
       "partName": "Limb",
       "value": {
-        "operator": "Variables[0] (PartEntity2_MonsterID) || RETURN",
-        "displayLines": "PartEntity2_MonsterID",
-        "constants": [],
-        "variables": [
-          "PartEntity2_MonsterID"
-        ]
+        "displayLines": "PartEntity2_MonsterID"
       },
       "offset": -1,
       "type": 2,
@@ -94,12 +84,7 @@ const configAbility = {
       "name": "Create Enemy as Body Part",
       "partName": "Tail",
       "value": {
-        "operator": "Variables[0] (PartEntity3_MonsterID) || RETURN",
-        "displayLines": "PartEntity3_MonsterID",
-        "constants": [],
-        "variables": [
-          "PartEntity3_MonsterID"
-        ]
+        "displayLines": "PartEntity3_MonsterID"
       },
       "offset": -2,
       "type": 3,

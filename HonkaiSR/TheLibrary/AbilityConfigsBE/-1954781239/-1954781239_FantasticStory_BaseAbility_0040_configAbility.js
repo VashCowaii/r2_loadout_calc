@@ -53,14 +53,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (BattleEvent_BaseHP) || Constants[0] (90) || MUL || RETURN",
-        "displayLines": "(BattleEvent_BaseHP * 90)",
-        "constants": [
-          90
-        ],
-        "variables": [
-          "BattleEvent_BaseHP"
-        ]
+        "displayLines": "(BattleEvent_BaseHP * 90)"
       },
       "variableName": "BattleEvent_BaseHP"
     },
@@ -81,14 +74,7 @@ const configAbility = {
       },
       "variableName": "DV_RangeGap_1",
       "resetValue": {
-        "operator": "Variables[0] (#ADF_1) || Constants[0] (0.33) || MUL || RETURN",
-        "displayLines": "(#ADF_1 * 0.33)",
-        "constants": [
-          0.33
-        ],
-        "variables": [
-          "#ADF_1"
-        ]
+        "displayLines": "(#ADF_1 * 0.33)"
       },
       "scope": "ContextCaster"
     },
@@ -100,14 +86,7 @@ const configAbility = {
       },
       "variableName": "DV_RangeGap_2",
       "resetValue": {
-        "operator": "Variables[0] (#ADF_1) || Constants[0] (0.67) || MUL || RETURN",
-        "displayLines": "(#ADF_1 * 0.67)",
-        "constants": [
-          0.67
-        ],
-        "variables": [
-          "#ADF_1"
-        ]
+        "displayLines": "(#ADF_1 * 0.67)"
       },
       "scope": "ContextCaster"
     },
@@ -119,12 +98,7 @@ const configAbility = {
       },
       "variableName": "DV_RangeGap_3",
       "resetValue": {
-        "operator": "Variables[0] (#ADF_1) || RETURN",
-        "displayLines": "#ADF_1",
-        "constants": [],
-        "variables": [
-          "#ADF_1"
-        ]
+        "displayLines": "#ADF_1"
       },
       "scope": "ContextCaster"
     },
@@ -142,36 +116,16 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1941026382\">Modifier_FantasticStory_BaseAbility_0040</a>",
       "valuePerStack": {
         "ADF_1": {
-          "operator": "Variables[0] (#ADF_1) || RETURN",
-          "displayLines": "#ADF_1",
-          "constants": [],
-          "variables": [
-            "#ADF_1"
-          ]
+          "displayLines": "#ADF_1"
         },
         "ADF_2": {
-          "operator": "Variables[0] (#ADF_2) || RETURN",
-          "displayLines": "#ADF_2",
-          "constants": [],
-          "variables": [
-            "#ADF_2"
-          ]
+          "displayLines": "#ADF_2"
         },
         "ADF_3": {
-          "operator": "Variables[0] (#ADF_3) || RETURN",
-          "displayLines": "#ADF_3",
-          "constants": [],
-          "variables": [
-            "#ADF_3"
-          ]
+          "displayLines": "#ADF_3"
         },
         "TempHP": {
-          "operator": "Variables[0] (BattleEvent_BaseHP) || RETURN",
-          "displayLines": "BattleEvent_BaseHP",
-          "constants": [],
-          "variables": [
-            "BattleEvent_BaseHP"
-          ]
+          "displayLines": "BattleEvent_BaseHP"
         }
       }
     }
@@ -192,25 +146,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0043_ADF_1) || RETURN",
-                "displayLines": "DV_FantasticStory_PlusAbility_0043_ADF_1",
-                "constants": [],
-                "variables": [
-                  "DV_FantasticStory_PlusAbility_0043_ADF_1"
-                ]
+                "displayLines": "DV_FantasticStory_PlusAbility_0043_ADF_1"
               },
               "variableName": "_Extra_Count"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (_Extra_Count) || ADD || RETURN",
-                "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum + _Extra_Count)",
-                "constants": [],
-                "variables": [
-                  "DV_FantasticStory_BaseAbility_0040_CountSum",
-                  "_Extra_Count"
-                ]
+                "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum + _Extra_Count)"
               },
               "variableName": "DV_FantasticStory_BaseAbility_0040_CountSum"
             }
@@ -265,14 +208,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "DV_FantasticStory_BaseAbility_0040_CountSum"
-                    ]
+                    "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum + 1)"
                   },
                   "variableName": "DV_FantasticStory_BaseAbility_0040_CountSum"
                 },
@@ -369,12 +305,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1558011426\">Modifier_FantasticStory_BaseAbility_0040_plus2_sub</a>[<span class=\"descriptionNumberColor\">Ultimate DMG Boost</span>]",
                       "valuePerStack": {
                         "_DamageUpRatio": {
-                          "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0042_ADF_1) || RETURN",
-                          "displayLines": "DV_FantasticStory_PlusAbility_0042_ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_PlusAbility_0042_ADF_1"
-                          ]
+                          "displayLines": "DV_FantasticStory_PlusAbility_0042_ADF_1"
                         }
                       }
                     }
@@ -398,12 +329,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"355925913\">Modifier_FantasticStory_BaseAbility_0040_plus3_sub</a>[<span class=\"descriptionNumberColor\">Bonus Charge</span>]",
                       "valuePerStack": {
                         "_Extra_Count": {
-                          "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0043_ADF_1) || RETURN",
-                          "displayLines": "DV_FantasticStory_PlusAbility_0043_ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_PlusAbility_0043_ADF_1"
-                          ]
+                          "displayLines": "DV_FantasticStory_PlusAbility_0043_ADF_1"
                         }
                       }
                     }
@@ -469,28 +395,13 @@ const configAbility = {
                           "canHitNonTargets": true,
                           "valuePerStack": {
                             "TempHP_get": {
-                              "operator": "Variables[0] (TempHP) || RETURN",
-                              "displayLines": "TempHP",
-                              "constants": [],
-                              "variables": [
-                                "TempHP"
-                              ]
+                              "displayLines": "TempHP"
                             },
                             "ADF_2_get": {
-                              "operator": "Variables[0] (ADF_2) || RETURN",
-                              "displayLines": "ADF_2",
-                              "constants": [],
-                              "variables": [
-                                "ADF_2"
-                              ]
+                              "displayLines": "ADF_2"
                             },
                             "ADF_3_get": {
-                              "operator": "Variables[0] (ADF_3) || RETURN",
-                              "displayLines": "ADF_3",
-                              "constants": [],
-                              "variables": [
-                                "ADF_3"
-                              ]
+                              "displayLines": "ADF_3"
                             }
                           },
                           "allowAbilityTriggers": false
@@ -566,28 +477,13 @@ const configAbility = {
                       "canHitNonTargets": true,
                       "valuePerStack": {
                         "TempHP_get": {
-                          "operator": "Variables[0] (TempHP) || RETURN",
-                          "displayLines": "TempHP",
-                          "constants": [],
-                          "variables": [
-                            "TempHP"
-                          ]
+                          "displayLines": "TempHP"
                         },
                         "ADF_2_get": {
-                          "operator": "Variables[0] (ADF_2) || RETURN",
-                          "displayLines": "ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "ADF_2"
-                          ]
+                          "displayLines": "ADF_2"
                         },
                         "ADF_3_get": {
-                          "operator": "Variables[0] (ADF_3) || RETURN",
-                          "displayLines": "ADF_3",
-                          "constants": [],
-                          "variables": [
-                            "ADF_3"
-                          ]
+                          "displayLines": "ADF_3"
                         }
                       },
                       "allowAbilityTriggers": false
@@ -613,43 +509,21 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (#ADF_1) || Variables[1] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || Constants[0] (0.33) || MUL || RETURN",
-                    "displayLines": "((#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1) * 0.33)",
-                    "constants": [
-                      0.33
-                    ],
-                    "variables": [
-                      "#ADF_1",
-                      "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                    ]
+                    "displayLines": "((#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1) * 0.33)"
                   },
                   "variableName": "DV_RangeGap_1"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (#ADF_1) || Variables[1] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || Constants[0] (0.67) || MUL || RETURN",
-                    "displayLines": "((#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1) * 0.67)",
-                    "constants": [
-                      0.67
-                    ],
-                    "variables": [
-                      "#ADF_1",
-                      "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                    ]
+                    "displayLines": "((#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1) * 0.67)"
                   },
                   "variableName": "DV_RangeGap_2"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (#ADF_1) || Variables[1] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || RETURN",
-                    "displayLines": "(#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_1",
-                      "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                    ]
+                    "displayLines": "(#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)"
                   },
                   "variableName": "DV_RangeGap_3"
                 }
@@ -690,12 +564,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1558011426\">Modifier_FantasticStory_BaseAbility_0040_plus2_sub</a>[<span class=\"descriptionNumberColor\">Ultimate DMG Boost</span>]",
                       "valuePerStack": {
                         "_DamageUpRatio": {
-                          "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0042_ADF_1) || RETURN",
-                          "displayLines": "DV_FantasticStory_PlusAbility_0042_ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_PlusAbility_0042_ADF_1"
-                          ]
+                          "displayLines": "DV_FantasticStory_PlusAbility_0042_ADF_1"
                         }
                       }
                     }
@@ -721,12 +590,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"355925913\">Modifier_FantasticStory_BaseAbility_0040_plus3_sub</a>[<span class=\"descriptionNumberColor\">Bonus Charge</span>]",
                   "valuePerStack": {
                     "_Extra_Count": {
-                      "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0043_ADF_1) || RETURN",
-                      "displayLines": "DV_FantasticStory_PlusAbility_0043_ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "DV_FantasticStory_PlusAbility_0043_ADF_1"
-                      ]
+                      "displayLines": "DV_FantasticStory_PlusAbility_0043_ADF_1"
                     }
                   }
                 }
@@ -789,28 +653,13 @@ const configAbility = {
                       "canHitNonTargets": true,
                       "valuePerStack": {
                         "TempHP_get": {
-                          "operator": "Variables[0] (TempHP) || RETURN",
-                          "displayLines": "TempHP",
-                          "constants": [],
-                          "variables": [
-                            "TempHP"
-                          ]
+                          "displayLines": "TempHP"
                         },
                         "ADF_2_get": {
-                          "operator": "Variables[0] (ADF_2) || RETURN",
-                          "displayLines": "ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "ADF_2"
-                          ]
+                          "displayLines": "ADF_2"
                         },
                         "ADF_3_get": {
-                          "operator": "Variables[0] (ADF_3) || RETURN",
-                          "displayLines": "ADF_3",
-                          "constants": [],
-                          "variables": [
-                            "ADF_3"
-                          ]
+                          "displayLines": "ADF_3"
                         }
                       },
                       "allowAbilityTriggers": false
@@ -832,12 +681,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": {
-                "operator": "Variables[0] (DV_RangeGap_1) || RETURN",
-                "displayLines": "DV_RangeGap_1",
-                "constants": [],
-                "variables": [
-                  "DV_RangeGap_1"
-                ]
+                "displayLines": "DV_RangeGap_1"
               },
               "includeMaxValueInRange": true,
               "enteringRange": [
@@ -853,26 +697,10 @@ const configAbility = {
                     {
                       "name": "Set Battle Track Progress",
                       "progress": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || Variables[2] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || DIV || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1))",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0040_CountSum",
-                          "#ADF_1",
-                          "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                        ]
+                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1))"
                       },
                       "count": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || Variables[2] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || DIV || Constants[0] (100) || MUL || RETURN",
-                        "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)) * 100)",
-                        "constants": [
-                          100
-                        ],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0040_CountSum",
-                          "#ADF_1",
-                          "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                        ]
+                        "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)) * 100)"
                       }
                     }
                   ],
@@ -880,24 +708,10 @@ const configAbility = {
                     {
                       "name": "Set Battle Track Progress",
                       "progress": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || DIV || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1)",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0040_CountSum",
-                          "#ADF_1"
-                        ]
+                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1)"
                       },
                       "count": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || DIV || Constants[0] (100) || MUL || RETURN",
-                        "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1) * 100)",
-                        "constants": [
-                          100
-                        ],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0040_CountSum",
-                          "#ADF_1"
-                        ]
+                        "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1) * 100)"
                       }
                     }
                   ]
@@ -916,26 +730,10 @@ const configAbility = {
                     {
                       "name": "Set Battle Track Progress",
                       "progress": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || Variables[2] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || DIV || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1))",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0040_CountSum",
-                          "#ADF_1",
-                          "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                        ]
+                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1))"
                       },
                       "count": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || Variables[2] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || DIV || Constants[0] (100) || MUL || RETURN",
-                        "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)) * 100)",
-                        "constants": [
-                          100
-                        ],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0040_CountSum",
-                          "#ADF_1",
-                          "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                        ]
+                        "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)) * 100)"
                       }
                     }
                   ],
@@ -943,24 +741,10 @@ const configAbility = {
                     {
                       "name": "Set Battle Track Progress",
                       "progress": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || DIV || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1)",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0040_CountSum",
-                          "#ADF_1"
-                        ]
+                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1)"
                       },
                       "count": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || DIV || Constants[0] (100) || MUL || RETURN",
-                        "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1) * 100)",
-                        "constants": [
-                          100
-                        ],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0040_CountSum",
-                          "#ADF_1"
-                        ]
+                        "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1) * 100)"
                       }
                     }
                   ]
@@ -970,20 +754,10 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": {
-                "operator": "Variables[0] (DV_RangeGap_1) || RETURN",
-                "displayLines": "DV_RangeGap_1",
-                "constants": [],
-                "variables": [
-                  "DV_RangeGap_1"
-                ]
+                "displayLines": "DV_RangeGap_1"
               },
               "maxValue": {
-                "operator": "Variables[0] (DV_RangeGap_2) || RETURN",
-                "displayLines": "DV_RangeGap_2",
-                "constants": [],
-                "variables": [
-                  "DV_RangeGap_2"
-                ]
+                "displayLines": "DV_RangeGap_2"
               },
               "includeMaxValueInRange": true,
               "enteringRange": [
@@ -999,26 +773,10 @@ const configAbility = {
                     {
                       "name": "Set Battle Track Progress",
                       "progress": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || Variables[2] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || DIV || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1))",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0040_CountSum",
-                          "#ADF_1",
-                          "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                        ]
+                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1))"
                       },
                       "count": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || Variables[2] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || DIV || Constants[0] (100) || MUL || RETURN",
-                        "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)) * 100)",
-                        "constants": [
-                          100
-                        ],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0040_CountSum",
-                          "#ADF_1",
-                          "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                        ]
+                        "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)) * 100)"
                       }
                     }
                   ],
@@ -1026,24 +784,10 @@ const configAbility = {
                     {
                       "name": "Set Battle Track Progress",
                       "progress": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || DIV || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1)",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0040_CountSum",
-                          "#ADF_1"
-                        ]
+                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1)"
                       },
                       "count": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || DIV || Constants[0] (100) || MUL || RETURN",
-                        "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1) * 100)",
-                        "constants": [
-                          100
-                        ],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0040_CountSum",
-                          "#ADF_1"
-                        ]
+                        "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1) * 100)"
                       }
                     }
                   ]
@@ -1062,26 +806,10 @@ const configAbility = {
                     {
                       "name": "Set Battle Track Progress",
                       "progress": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || Variables[2] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || DIV || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1))",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0040_CountSum",
-                          "#ADF_1",
-                          "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                        ]
+                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1))"
                       },
                       "count": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || Variables[2] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || DIV || Constants[0] (100) || MUL || RETURN",
-                        "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)) * 100)",
-                        "constants": [
-                          100
-                        ],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0040_CountSum",
-                          "#ADF_1",
-                          "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                        ]
+                        "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)) * 100)"
                       }
                     }
                   ],
@@ -1089,24 +817,10 @@ const configAbility = {
                     {
                       "name": "Set Battle Track Progress",
                       "progress": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || DIV || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1)",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0040_CountSum",
-                          "#ADF_1"
-                        ]
+                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1)"
                       },
                       "count": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || DIV || Constants[0] (100) || MUL || RETURN",
-                        "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1) * 100)",
-                        "constants": [
-                          100
-                        ],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0040_CountSum",
-                          "#ADF_1"
-                        ]
+                        "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1) * 100)"
                       }
                     }
                   ]
@@ -1116,20 +830,10 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": {
-                "operator": "Variables[0] (DV_RangeGap_2) || RETURN",
-                "displayLines": "DV_RangeGap_2",
-                "constants": [],
-                "variables": [
-                  "DV_RangeGap_2"
-                ]
+                "displayLines": "DV_RangeGap_2"
               },
               "maxValue": {
-                "operator": "Variables[0] (DV_RangeGap_3) || RETURN",
-                "displayLines": "DV_RangeGap_3",
-                "constants": [],
-                "variables": [
-                  "DV_RangeGap_3"
-                ]
+                "displayLines": "DV_RangeGap_3"
               },
               "includeMaxValueInRange": true,
               "enteringRange": [
@@ -1145,26 +849,10 @@ const configAbility = {
                     {
                       "name": "Set Battle Track Progress",
                       "progress": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || Variables[2] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || DIV || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1))",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0040_CountSum",
-                          "#ADF_1",
-                          "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                        ]
+                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1))"
                       },
                       "count": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || Variables[2] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || DIV || Constants[0] (100) || MUL || RETURN",
-                        "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)) * 100)",
-                        "constants": [
-                          100
-                        ],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0040_CountSum",
-                          "#ADF_1",
-                          "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                        ]
+                        "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)) * 100)"
                       }
                     }
                   ],
@@ -1172,24 +860,10 @@ const configAbility = {
                     {
                       "name": "Set Battle Track Progress",
                       "progress": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || DIV || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1)",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0040_CountSum",
-                          "#ADF_1"
-                        ]
+                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1)"
                       },
                       "count": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || DIV || Constants[0] (100) || MUL || RETURN",
-                        "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1) * 100)",
-                        "constants": [
-                          100
-                        ],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0040_CountSum",
-                          "#ADF_1"
-                        ]
+                        "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1) * 100)"
                       }
                     }
                   ]
@@ -1208,26 +882,10 @@ const configAbility = {
                     {
                       "name": "Set Battle Track Progress",
                       "progress": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || Variables[2] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || DIV || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1))",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0040_CountSum",
-                          "#ADF_1",
-                          "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                        ]
+                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1))"
                       },
                       "count": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || Variables[2] (DV_FantasticStory_PlusAbility_0041_ADF_1) || SUB || DIV || Constants[0] (100) || MUL || RETURN",
-                        "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)) * 100)",
-                        "constants": [
-                          100
-                        ],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0040_CountSum",
-                          "#ADF_1",
-                          "DV_FantasticStory_PlusAbility_0041_ADF_1"
-                        ]
+                        "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / (#ADF_1 - DV_FantasticStory_PlusAbility_0041_ADF_1)) * 100)"
                       }
                     }
                   ],
@@ -1235,24 +893,10 @@ const configAbility = {
                     {
                       "name": "Set Battle Track Progress",
                       "progress": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || DIV || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1)",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0040_CountSum",
-                          "#ADF_1"
-                        ]
+                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1)"
                       },
                       "count": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (#ADF_1) || DIV || Constants[0] (100) || MUL || RETURN",
-                        "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1) * 100)",
-                        "constants": [
-                          100
-                        ],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0040_CountSum",
-                          "#ADF_1"
-                        ]
+                        "displayLines": "((DV_FantasticStory_BaseAbility_0040_CountSum / #ADF_1) * 100)"
                       }
                     }
                   ]
@@ -1262,12 +906,7 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": {
-                "operator": "Variables[0] (DV_RangeGap_3) || RETURN",
-                "displayLines": "DV_RangeGap_3",
-                "constants": [],
-                "variables": [
-                  "DV_RangeGap_3"
-                ]
+                "displayLines": "DV_RangeGap_3"
               },
               "maxValue": 1000000000,
               "includeMaxValueInRange": true,
@@ -1312,28 +951,13 @@ const configAbility = {
                       "canHitNonTargets": true,
                       "valuePerStack": {
                         "TempHP_get": {
-                          "operator": "Variables[0] (TempHP) || RETURN",
-                          "displayLines": "TempHP",
-                          "constants": [],
-                          "variables": [
-                            "TempHP"
-                          ]
+                          "displayLines": "TempHP"
                         },
                         "ADF_2_get": {
-                          "operator": "Variables[0] (ADF_2) || RETURN",
-                          "displayLines": "ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "ADF_2"
-                          ]
+                          "displayLines": "ADF_2"
                         },
                         "ADF_3_get": {
-                          "operator": "Variables[0] (ADF_3) || RETURN",
-                          "displayLines": "ADF_3",
-                          "constants": [],
-                          "variables": [
-                            "ADF_3"
-                          ]
+                          "displayLines": "ADF_3"
                         }
                       },
                       "allowAbilityTriggers": false

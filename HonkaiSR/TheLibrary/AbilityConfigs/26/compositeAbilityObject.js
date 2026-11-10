@@ -27,14 +27,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (count) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(count + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "count"
-                    ]
+                    "displayLines": "(count + 1)"
                   },
                   "variableName": "count"
                 },
@@ -153,12 +146,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">PhysicalVulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P2_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P2_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P2_ADF"
                   }
                 }
               ]
@@ -202,12 +190,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1559482419\">MLevel_BattleEventAbility_Challenge_10</a>[<span class=\"descriptionNumberColor\">Physical Vulnerability</span>]",
                       "duration": {
-                        "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P3_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P3_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P3_ADF"
                       }
                     }
                   ]

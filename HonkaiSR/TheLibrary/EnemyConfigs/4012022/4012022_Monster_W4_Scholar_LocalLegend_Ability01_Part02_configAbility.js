@@ -14,12 +14,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"2022021618\">MModifier_Monster_W4_Scholar_LocalLegend_BookTarget</a>[<span class=\"descriptionNumberColor\">Gleaned Instruction</span>]",
       "valuePerStack": {
         "MDF_SpeedUpRatio": {
-          "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-          "displayLines": "{[Skill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[0]]}"
-          ]
+          "displayLines": "{[Skill01[0]]}"
         }
       },
       "casterAssign": "CasterSelf"

@@ -17,14 +17,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "({[Skill03[0]]} * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "({[Skill03[0]]} * 0.1)"
         },
         "Toughness": null,
         "Tags": null,
@@ -40,14 +33,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "({[Skill03[0]]} * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "({[Skill03[0]]} * 0.1)"
         },
         "Toughness": null,
         "Tags": null,
@@ -63,14 +49,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "({[Skill03[0]]} * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "({[Skill03[0]]} * 0.1)"
         },
         "Toughness": null,
         "Tags": null,
@@ -86,14 +65,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "({[Skill03[0]]} * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "({[Skill03[0]]} * 0.1)"
         },
         "Toughness": null,
         "Tags": null,
@@ -109,14 +81,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "({[Skill03[0]]} * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "({[Skill03[0]]} * 0.1)"
         },
         "Toughness": null,
         "Tags": null,
@@ -132,14 +97,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "({[Skill03[0]]} * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "({[Skill03[0]]} * 0.1)"
         },
         "Toughness": null,
         "Tags": null,
@@ -155,14 +113,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "({[Skill03[0]]} * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "({[Skill03[0]]} * 0.1)"
         },
         "Toughness": null,
         "Tags": null,
@@ -178,14 +129,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.3) || MUL || RETURN",
-          "displayLines": "({[Skill03[0]]} * 0.3)",
-          "constants": [
-            0.3
-          ],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "({[Skill03[0]]} * 0.3)"
         },
         "Toughness": null,
         "Tags": null,

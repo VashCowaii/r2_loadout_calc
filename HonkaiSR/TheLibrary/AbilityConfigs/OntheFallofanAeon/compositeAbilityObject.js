@@ -43,12 +43,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.12) || RETURN",
-                    "displayLines": "0.12",
-                    "constants": [],
-                    "variables": [
-                      0.12
-                    ]
+                    "displayLines": "0.12"
                   }
                 }
               ]
@@ -87,13 +82,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.08) || Variables[1] (_Layer) || MUL || RETURN",
-                    "displayLines": "(0.08 * _Layer)",
-                    "constants": [],
-                    "variables": [
-                      0.08,
-                      "_Layer"
-                    ]
+                    "displayLines": "(0.08 * _Layer)"
                   }
                 }
               ]
@@ -129,12 +118,7 @@ const compositeAbilityObject = {
                         "value1": "<a class=\"gModGreen\" id=\"844192795\">LC_24000_AttackAddedRatio</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (4) || RETURN",
-                          "displayLines": "4",
-                          "constants": [],
-                          "variables": [
-                            4
-                          ]
+                          "displayLines": "4"
                         },
                         "valueType": "Layer"
                       },
@@ -157,12 +141,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"844192795\">LC_24000_AttackAddedRatio</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (4) || RETURN",
-                            "displayLines": "4",
-                            "constants": [],
-                            "variables": [
-                              4
-                            ]
+                            "displayLines": "4"
                           }
                         }
                       ]
@@ -187,12 +166,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"844192795\">LC_24000_AttackAddedRatio</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (4) || RETURN",
-                        "displayLines": "4",
-                        "constants": [],
-                        "variables": [
-                          4
-                        ]
+                        "displayLines": "4"
                       }
                     }
                   ]
@@ -210,12 +184,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"410951674\">LC_24000_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   }
                 }
               ]

@@ -66,52 +66,22 @@ const configAbility = {
               "memoID": 11413,
               "valuePerStack": {
                 "Init_Count": {
-                  "operator": "Variables[0] (DV_Partner_Count) || RETURN",
-                  "displayLines": "DV_Partner_Count",
-                  "constants": [],
-                  "variables": [
-                    "DV_Partner_Count"
-                  ]
+                  "displayLines": "DV_Partner_Count"
                 },
                 "Init_HP_Ratio": {
-                  "operator": "Variables[0] (DV_HP_Ratio) || RETURN",
-                  "displayLines": "DV_HP_Ratio",
-                  "constants": [],
-                  "variables": [
-                    "DV_HP_Ratio"
-                  ]
+                  "displayLines": "DV_HP_Ratio"
                 },
                 "Init_Delay": {
-                  "operator": "Variables[0] (DV_Delay) || RETURN",
-                  "displayLines": "DV_Delay",
-                  "constants": [],
-                  "variables": [
-                    "DV_Delay"
-                  ]
+                  "displayLines": "DV_Delay"
                 },
                 "AbilityP01_P1_AddCount": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
+                  "displayLines": "2"
                 },
                 "_Evernight_Extra_Energy": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
+                  "displayLines": "2"
                 },
                 "AbilityRank_Eidolon6_P1_Ratio": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 }
               },
               "afterSummoning": [
@@ -140,12 +110,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1710373270\">Evernight_PointB1_Crit</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.35) || RETURN",
-                          "displayLines": "0.35",
-                          "constants": [],
-                          "variables": [
-                            0.35
-                          ]
+                          "displayLines": "0.35"
                         }
                       }
                     }
@@ -171,12 +136,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1701896777\">Evernight_Eidolon2_Crit</a>[<span class=\"descriptionNumberColor\">Listen Up, the Slumber Speaks Soft</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.4) || RETURN",
-                          "displayLines": "0.4",
-                          "constants": [],
-                          "variables": [
-                            0.4
-                          ]
+                          "displayLines": "0.4"
                         }
                       }
                     }
@@ -191,12 +151,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"2043260870\">Evernight_HPChange</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     }
                   }
                 },
@@ -207,12 +162,7 @@ const configAbility = {
                     "value1": "DV_Partner_Count",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (_Partner_Count_Max) || RETURN",
-                      "displayLines": "_Partner_Count_Max",
-                      "constants": [],
-                      "variables": [
-                        "_Partner_Count_Max"
-                      ]
+                      "displayLines": "_Partner_Count_Max"
                     }
                   },
                   "failed": [

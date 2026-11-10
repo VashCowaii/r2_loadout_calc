@@ -12,20 +12,10 @@ const configAbility = {
           "name": "Random Event",
           "odds": [
             {
-              "operator": "Variables[0] (UnusedUnderThisBase_3388) || RETURN",
-              "displayLines": "UnusedUnderThisBase_3388",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_3388"
-              ]
+              "displayLines": "UnusedUnderThisBase_3388"
             },
             {
-              "operator": "Variables[0] (UnusedUnderThisBase_3383) || RETURN",
-              "displayLines": "UnusedUnderThisBase_3383",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_3383"
-              ]
+              "displayLines": "UnusedUnderThisBase_3383"
             }
           ],
           "execute": [
@@ -60,12 +50,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_3384) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_3384",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_3384"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_3384"
                   },
                   "isFixed": "* ERR"
                 }
@@ -88,12 +73,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "DamageElation": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_3386) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_3386",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_3386"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_3386"
                     },
                     "dmgFormula": "Elation Scaling",
                     "Toughness": null,
@@ -168,14 +148,7 @@ const configAbility = {
         {
           "name": "Adjust Team Punchline Value",
           "value": {
-            "operator": "Variables[0] (Elation_Character_Num) || Constants[0] (1) || MUL || RETURN",
-            "displayLines": "(Elation_Character_Num * 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "Elation_Character_Num"
-            ]
+            "displayLines": "(Elation_Character_Num * 1)"
           },
           "adjustment": "Add"
         }

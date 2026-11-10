@@ -21,12 +21,7 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"1354829025\">Monster_W2_Beast01_03_BeAttackedListener</a>",
       "stackLimit": {
-        "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-        "displayLines": "{[SkillP01[0]]}",
-        "constants": [],
-        "variables": [
-          "{[SkillP01[0]]}"
-        ]
+        "displayLines": "{[SkillP01[0]]}"
       }
     },
     {

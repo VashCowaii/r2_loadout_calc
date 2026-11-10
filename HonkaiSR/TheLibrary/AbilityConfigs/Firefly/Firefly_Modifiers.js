@@ -168,14 +168,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Constants[0] (1000) || Variables[0] (_SamSpeed) || DIV || RETURN",
-                "displayLines": "(1000 / _SamSpeed)",
-                "constants": [
-                  1000
-                ],
-                "variables": [
-                  "_SamSpeed"
-                ]
+                "displayLines": "(1000 / _SamSpeed)"
               },
               "variableName": "_SamActionDelay"
             },
@@ -236,12 +229,7 @@ const configAbility = {
                     "value1": "_SamActionDelay",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (_BEActionDelay) || RETURN",
-                      "displayLines": "_BEActionDelay",
-                      "constants": [],
-                      "variables": [
-                        "_BEActionDelay"
-                      ]
+                      "displayLines": "_BEActionDelay"
                     }
                   },
                   "passed": [
@@ -299,12 +287,7 @@ const configAbility = {
               "priorState": "CoolDown",
               "bar#": 1,
               "cooldown": {
-                "operator": "Variables[0] (Rank02_CD) || RETURN",
-                "displayLines": "Rank02_CD",
-                "constants": [],
-                "variables": [
-                  "Rank02_CD"
-                ]
+                "displayLines": "Rank02_CD"
               }
             },
             "Modifier Deletes Itself"
@@ -400,12 +383,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFirePEN</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -435,12 +413,7 @@ const configAbility = {
                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (3) || RETURN",
-                  "displayLines": "3",
-                  "constants": [],
-                  "variables": [
-                    3
-                  ]
+                  "displayLines": "3"
                 }
               },
               "passed": [
@@ -453,12 +426,7 @@ const configAbility = {
                   },
                   "variables": {
                     "DamagePercentage": {
-                      "operator": "Variables[0] (1.5) || RETURN",
-                      "displayLines": "1.5",
-                      "constants": [],
-                      "variables": [
-                        1.5
-                      ]
+                      "displayLines": "1.5"
                     }
                   }
                 }
@@ -475,12 +443,7 @@ const configAbility = {
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (1.5) || RETURN",
-                      "displayLines": "1.5",
-                      "constants": [],
-                      "variables": [
-                        1.5
-                      ]
+                      "displayLines": "1.5"
                     }
                   },
                   "passed": [
@@ -493,12 +456,7 @@ const configAbility = {
                       },
                       "variables": {
                         "DamagePercentage": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         }
                       }
                     }
@@ -529,12 +487,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -591,12 +544,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -650,12 +598,7 @@ const configAbility = {
                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (1.5) || RETURN",
-                  "displayLines": "1.5",
-                  "constants": [],
-                  "variables": [
-                    1.5
-                  ]
+                  "displayLines": "1.5"
                 }
               }
             ]
@@ -795,16 +738,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Constants[0] (1) || Variables[0] (_HPRatioCurrent) || SUB || Constants[0] (1) || Variables[1] (0.2) || SUB || DIV || Variables[2] (_RedModeResRatio) || ADD || RETURN",
-                    "displayLines": "(((1 - _HPRatioCurrent) / (1 - 0.2)) + _RedModeResRatio)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_HPRatioCurrent",
-                      0.2,
-                      "_RedModeResRatio"
-                    ]
+                    "displayLines": "(((1 - _HPRatioCurrent) / (1 - 0.2)) + _RedModeResRatio)"
                   },
                   "variableName": "_PassiveResRatio"
                 },
@@ -817,13 +751,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"468515060\">Advanced_Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.4) || Variables[1] (_PassiveResRatio) || MUL || RETURN",
-                      "displayLines": "(0.4 * _PassiveResRatio)",
-                      "constants": [],
-                      "variables": [
-                        0.4,
-                        "_PassiveResRatio"
-                      ]
+                      "displayLines": "(0.4 * _PassiveResRatio)"
                     }
                   }
                 }
@@ -844,14 +772,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Rank02_CD) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(Rank02_CD - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Rank02_CD"
-                    ]
+                    "displayLines": "(Rank02_CD - 1)"
                   },
                   "variableName": "Rank02_CD"
                 },
@@ -870,12 +791,7 @@ const configAbility = {
                       "priorState": "CoolDown",
                       "bar#": 1,
                       "cooldown": {
-                        "operator": "Variables[0] (Rank02_CD) || RETURN",
-                        "displayLines": "Rank02_CD",
-                        "constants": [],
-                        "variables": [
-                          "Rank02_CD"
-                        ]
+                        "displayLines": "Rank02_CD"
                       }
                     }
                   ],
@@ -1008,16 +924,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Constants[0] (1) || Variables[0] (_HPRatioCurrent) || SUB || Constants[0] (1) || Variables[1] (0.2) || SUB || DIV || Variables[2] (_RedModeResRatio) || ADD || RETURN",
-                "displayLines": "(((1 - _HPRatioCurrent) / (1 - 0.2)) + _RedModeResRatio)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_HPRatioCurrent",
-                  0.2,
-                  "_RedModeResRatio"
-                ]
+                "displayLines": "(((1 - _HPRatioCurrent) / (1 - 0.2)) + _RedModeResRatio)"
               },
               "variableName": "_PassiveResRatio"
             },
@@ -1030,13 +937,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"468515060\">Advanced_Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.4) || Variables[1] (_PassiveResRatio) || MUL || RETURN",
-                  "displayLines": "(0.4 * _PassiveResRatio)",
-                  "constants": [],
-                  "variables": [
-                    0.4,
-                    "_PassiveResRatio"
-                  ]
+                  "displayLines": "(0.4 * _PassiveResRatio)"
                 }
               }
             },
@@ -1059,13 +960,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (0.5) || Variables[1] (0.5) || ADD || RETURN",
-                    "displayLines": "(0.5 + 0.5)",
-                    "constants": [],
-                    "variables": [
-                      0.5,
-                      0.5
-                    ]
+                    "displayLines": "(0.5 + 0.5)"
                   },
                   "variableName": "MDF_FinalDamageUP"
                 }
@@ -1074,12 +969,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (0.5) || RETURN",
-                    "displayLines": "0.5",
-                    "constants": [],
-                    "variables": [
-                      0.5
-                    ]
+                    "displayLines": "0.5"
                   },
                   "variableName": "MDF_FinalDamageUP"
                 }
@@ -1093,12 +983,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedUP) || RETURN",
-                "displayLines": "MDF_SpeedUP",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedUP"
-                ]
+                "displayLines": "MDF_SpeedUP"
               }
             },
             {
@@ -1111,13 +996,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_StatusResistance) || Variables[1] (0.5) || ADD || RETURN",
-                    "displayLines": "(MDF_StatusResistance + 0.5)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_StatusResistance",
-                      0.5
-                    ]
+                    "displayLines": "(MDF_StatusResistance + 0.5)"
                   },
                   "variableName": "MDF_StatusResistance"
                 },
@@ -1129,12 +1008,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_StatusResistance) || RETURN",
-                    "displayLines": "MDF_StatusResistance",
-                    "constants": [],
-                    "variables": [
-                      "MDF_StatusResistance"
-                    ]
+                    "displayLines": "MDF_StatusResistance"
                   }
                 }
               ],
@@ -1147,12 +1021,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_StatusResistance) || RETURN",
-                    "displayLines": "MDF_StatusResistance",
-                    "constants": [],
-                    "variables": [
-                      "MDF_StatusResistance"
-                    ]
+                    "displayLines": "MDF_StatusResistance"
                   }
                 }
               ]
@@ -1173,36 +1042,21 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-688726584\">Advanced_Sam_PointB1_BreakDamageAddedRatioBase</a>[<span class=\"descriptionNumberColor\">Module α: Antilag Outburst</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     }
                   }
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "variableName": "_PointB1_Times"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_PointB1_Times) || RETURN",
-                    "displayLines": "_PointB1_Times",
-                    "constants": [],
-                    "variables": [
-                      "_PointB1_Times"
-                    ]
+                    "displayLines": "_PointB1_Times"
                   },
                   "variableName": "MDF_PointB1_Times"
                 },
@@ -1228,12 +1082,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"770661145\">Advanced_Sam_Eidolon6_FirePenetrate</a>[<span class=\"descriptionNumberColor\">In Finalized Morrow, I Full Bloom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 }
@@ -1276,14 +1125,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Rank02_CD) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(Rank02_CD + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Rank02_CD"
-                    ]
+                    "displayLines": "(Rank02_CD + 1)"
                   },
                   "variableName": "Rank02_CD"
                 },
@@ -1301,14 +1143,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (Rank02_CD) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(Rank02_CD - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Rank02_CD"
-                        ]
+                        "displayLines": "(Rank02_CD - 1)"
                       },
                       "variableName": "Rank02_CD"
                     },
@@ -1358,14 +1193,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Rank02_CD) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(Rank02_CD + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Rank02_CD"
-                    ]
+                    "displayLines": "(Rank02_CD + 1)"
                   },
                   "variableName": "Rank02_CD"
                 },
@@ -1383,14 +1211,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (Rank02_CD) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(Rank02_CD - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Rank02_CD"
-                        ]
+                        "displayLines": "(Rank02_CD - 1)"
                       },
                       "variableName": "Rank02_CD"
                     },
@@ -1440,26 +1261,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_PointB1_Times) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(_PointB1_Times - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_PointB1_Times"
-                    ]
+                    "displayLines": "(_PointB1_Times - 1)"
                   },
                   "variableName": "_PointB1_Times"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_PointB1_Times) || RETURN",
-                    "displayLines": "_PointB1_Times",
-                    "constants": [],
-                    "variables": [
-                      "_PointB1_Times"
-                    ]
+                    "displayLines": "_PointB1_Times"
                   },
                   "variableName": "MDF_PointB1_Times"
                 },
@@ -1522,14 +1331,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Rank02_CD) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(Rank02_CD + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Rank02_CD"
-                    ]
+                    "displayLines": "(Rank02_CD + 1)"
                   },
                   "variableName": "Rank02_CD"
                 },
@@ -1547,14 +1349,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (Rank02_CD) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(Rank02_CD - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Rank02_CD"
-                        ]
+                        "displayLines": "(Rank02_CD - 1)"
                       },
                       "variableName": "Rank02_CD"
                     },
@@ -1681,12 +1476,7 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": {
-                "operator": "Variables[0] (1.5) || RETURN",
-                "displayLines": "1.5",
-                "constants": [],
-                "variables": [
-                  1.5
-                ]
+                "displayLines": "1.5"
               },
               "enteringRange": [
                 {

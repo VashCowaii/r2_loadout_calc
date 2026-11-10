@@ -169,12 +169,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"73301376\">Standard_SuperArmor</a>[<span class=\"descriptionNumberColor\">Safeguard</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageTypeResistance": {
-                          "operator": "Variables[0] (MDF_SuperArmorDamageResistance) || RETURN",
-                          "displayLines": "MDF_SuperArmorDamageResistance",
-                          "constants": [],
-                          "variables": [
-                            "MDF_SuperArmorDamageResistance"
-                          ]
+                          "displayLines": "MDF_SuperArmorDamageResistance"
                         }
                       }
                     }
@@ -189,12 +184,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"73301376\">Standard_SuperArmor</a>[<span class=\"descriptionNumberColor\">Safeguard</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageTypeResistance": {
-                          "operator": "Variables[0] (MDF_SuperArmorDamageResistance) || RETURN",
-                          "displayLines": "MDF_SuperArmorDamageResistance",
-                          "constants": [],
-                          "variables": [
-                            "MDF_SuperArmorDamageResistance"
-                          ]
+                          "displayLines": "MDF_SuperArmorDamageResistance"
                         }
                       }
                     }
@@ -224,12 +214,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"221422164\">Monster_W2_Feixiao_ModifyActionDelay</a>",
               "valuePerStack": {
                 "MDF_BreakActionDelay": {
-                  "operator": "Variables[0] (MDF_BreakActionDelay) || RETURN",
-                  "displayLines": "MDF_BreakActionDelay",
-                  "constants": [],
-                  "variables": [
-                    "MDF_BreakActionDelay"
-                  ]
+                  "displayLines": "MDF_BreakActionDelay"
                 }
               }
             },
@@ -242,12 +227,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1917647041\">Standard_SuperArmorBreak</a>[<span class=\"descriptionNumberColor\">Safeguard Broken</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeTakenRatio": {
-                  "operator": "Variables[0] (MDF_SuperArmorBreakDamageAddedRatio) || RETURN",
-                  "displayLines": "MDF_SuperArmorBreakDamageAddedRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_SuperArmorBreakDamageAddedRatio"
-                  ]
+                  "displayLines": "MDF_SuperArmorBreakDamageAddedRatio"
                 }
               }
             }
@@ -273,12 +253,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"73301376\">Standard_SuperArmor</a>[<span class=\"descriptionNumberColor\">Safeguard</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeResistance": {
-                  "operator": "Variables[0] (MDF_SuperArmorDamageResistance) || RETURN",
-                  "displayLines": "MDF_SuperArmorDamageResistance",
-                  "constants": [],
-                  "variables": [
-                    "MDF_SuperArmorDamageResistance"
-                  ]
+                  "displayLines": "MDF_SuperArmorDamageResistance"
                 }
               }
             }
@@ -631,14 +606,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (EnhancePartNum) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(EnhancePartNum - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "EnhancePartNum"
-                        ]
+                        "displayLines": "(EnhancePartNum - 1)"
                       },
                       "variableName": "EnhancePartNum"
                     }
@@ -656,14 +624,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (EnhancePartNum) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(EnhancePartNum - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "EnhancePartNum"
-                        ]
+                        "displayLines": "(EnhancePartNum - 1)"
                       },
                       "variableName": "EnhancePartNum"
                     }
@@ -681,14 +642,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (EnhancePartNum) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(EnhancePartNum - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "EnhancePartNum"
-                        ]
+                        "displayLines": "(EnhancePartNum - 1)"
                       },
                       "variableName": "EnhancePartNum"
                     }
@@ -743,14 +697,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (EnhancePartNum) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(EnhancePartNum - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "EnhancePartNum"
-                        ]
+                        "displayLines": "(EnhancePartNum - 1)"
                       },
                       "variableName": "EnhancePartNum"
                     }
@@ -768,14 +715,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (EnhancePartNum) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(EnhancePartNum - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "EnhancePartNum"
-                        ]
+                        "displayLines": "(EnhancePartNum - 1)"
                       },
                       "variableName": "EnhancePartNum"
                     }
@@ -793,14 +733,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (EnhancePartNum) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(EnhancePartNum - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "EnhancePartNum"
-                        ]
+                        "displayLines": "(EnhancePartNum - 1)"
                       },
                       "variableName": "EnhancePartNum"
                     }
@@ -855,14 +788,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (EnhancePartNum) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(EnhancePartNum - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "EnhancePartNum"
-                        ]
+                        "displayLines": "(EnhancePartNum - 1)"
                       },
                       "variableName": "EnhancePartNum"
                     }
@@ -880,14 +806,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (EnhancePartNum) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(EnhancePartNum - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "EnhancePartNum"
-                        ]
+                        "displayLines": "(EnhancePartNum - 1)"
                       },
                       "variableName": "EnhancePartNum"
                     }
@@ -905,14 +824,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (EnhancePartNum) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(EnhancePartNum - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "EnhancePartNum"
-                        ]
+                        "displayLines": "(EnhancePartNum - 1)"
                       },
                       "variableName": "EnhancePartNum"
                     }

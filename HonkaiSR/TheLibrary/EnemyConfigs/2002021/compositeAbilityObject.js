@@ -1044,12 +1044,7 @@ const compositeAbilityObject = {
                     "value1": "HP_Bars_Remaining",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (W2_Yanqing_00_MaxPhaseNum) || RETURN",
-                      "displayLines": "W2_Yanqing_00_MaxPhaseNum",
-                      "constants": [],
-                      "variables": [
-                        "W2_Yanqing_00_MaxPhaseNum"
-                      ]
+                      "displayLines": "W2_Yanqing_00_MaxPhaseNum"
                     }
                   }
                 }
@@ -1081,12 +1076,7 @@ const compositeAbilityObject = {
                     "value1": "HP_Bars_Remaining",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (W2_Yanqing_00_MaxPhaseNum) || RETURN",
-                      "displayLines": "W2_Yanqing_00_MaxPhaseNum",
-                      "constants": [],
-                      "variables": [
-                        "W2_Yanqing_00_MaxPhaseNum"
-                      ]
+                      "displayLines": "W2_Yanqing_00_MaxPhaseNum"
                     }
                   }
                 }
@@ -1118,12 +1108,7 @@ const compositeAbilityObject = {
                     "value1": "HP_Bars_Remaining",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (W2_Yanqing_00_MaxPhaseNum) || RETURN",
-                      "displayLines": "W2_Yanqing_00_MaxPhaseNum",
-                      "constants": [],
-                      "variables": [
-                        "W2_Yanqing_00_MaxPhaseNum"
-                      ]
+                      "displayLines": "W2_Yanqing_00_MaxPhaseNum"
                     }
                   }
                 }
@@ -2237,14 +2222,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (W2_Yanqing_00_Skill02_AccumulateRevealed) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(W2_Yanqing_00_Skill02_AccumulateRevealed + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "W2_Yanqing_00_Skill02_AccumulateRevealed"
-                            ]
+                            "displayLines": "(W2_Yanqing_00_Skill02_AccumulateRevealed + 1)"
                           },
                           "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed"
                         }
@@ -2350,12 +2328,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_SpeedDelta) || RETURN",
-                    "displayLines": "MDF_SpeedDelta",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedDelta"
-                    ]
+                    "displayLines": "MDF_SpeedDelta"
                   }
                 }
               ]
@@ -2402,26 +2375,14 @@ const compositeAbilityObject = {
                         "value1": "W2_Yanqing_00_Skill02_AccumulateRevealed",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (W2_Yanqing_00_Skill02_SummonNumber) || RETURN",
-                          "displayLines": "W2_Yanqing_00_Skill02_SummonNumber",
-                          "constants": [],
-                          "variables": [
-                            "W2_Yanqing_00_Skill02_SummonNumber"
-                          ]
+                          "displayLines": "W2_Yanqing_00_Skill02_SummonNumber"
                         }
                       },
                       "passed": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (W2_Yanqing_00_Skill02_AccumulateRevealed) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(W2_Yanqing_00_Skill02_AccumulateRevealed + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "W2_Yanqing_00_Skill02_AccumulateRevealed"
-                            ]
+                            "displayLines": "(W2_Yanqing_00_Skill02_AccumulateRevealed + 1)"
                           },
                           "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed"
                         }
@@ -2454,12 +2415,7 @@ const compositeAbilityObject = {
                         "value1": "W2_Yanqing_00_Skill02_AccumulateRevealed",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] (W2_Yanqing_00_Skill02_SummonNumber) || RETURN",
-                          "displayLines": "W2_Yanqing_00_Skill02_SummonNumber",
-                          "constants": [],
-                          "variables": [
-                            "W2_Yanqing_00_Skill02_SummonNumber"
-                          ]
+                          "displayLines": "W2_Yanqing_00_Skill02_SummonNumber"
                         }
                       }
                     ]
@@ -2930,12 +2886,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                      "displayLines": "{[Skill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[0]]}"
-                      ]
+                      "displayLines": "{[Skill01[0]]}"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -2958,12 +2909,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                      "displayLines": "{[Skill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[0]]}"
-                      ]
+                      "displayLines": "{[Skill01[0]]}"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -2994,29 +2940,14 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                "displayLines": "{[Skill01[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[2]]}"
-                ]
+                "displayLines": "{[Skill01[2]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                "displayLines": "{[Skill01[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[1]]}"
-                ]
+                "displayLines": "{[Skill01[1]]}"
               },
               "valuePerStack": {
                 "Modifier_Frozen_DamagePercentage": {
-                  "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                  "displayLines": "{[Skill01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[3]]}"
-                  ]
+                  "displayLines": "{[Skill01[3]]}"
                 }
               }
             }

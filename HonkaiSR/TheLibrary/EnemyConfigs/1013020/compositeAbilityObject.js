@@ -87,13 +87,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (ModifierDamageUpValue) || Variables[1] (Buff_ModifierLayers) || MUL || RETURN",
-                    "displayLines": "(ModifierDamageUpValue * Buff_ModifierLayers)",
-                    "constants": [],
-                    "variables": [
-                      "ModifierDamageUpValue",
-                      "Buff_ModifierLayers"
-                    ]
+                    "displayLines": "(ModifierDamageUpValue * Buff_ModifierLayers)"
                   },
                   "variableName": "MDF_PropertyValue"
                 },
@@ -105,12 +99,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -201,14 +190,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "DamageFlat": {
-                      "operator": "Variables[0] (Owner_MaxHP) || Variables[1] (Modifier_Bleed_DamagePercentage) || MUL || Variables[2] (Modifier_Layer) || MUL || RETURN",
-                      "displayLines": "((Owner_MaxHP * Modifier_Bleed_DamagePercentage) * Modifier_Layer)",
-                      "constants": [],
-                      "variables": [
-                        "Owner_MaxHP",
-                        "Modifier_Bleed_DamagePercentage",
-                        "Modifier_Layer"
-                      ]
+                      "displayLines": "((Owner_MaxHP * Modifier_Bleed_DamagePercentage) * Modifier_Layer)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -251,15 +233,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "DamageFlat": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Owner_MaxHP) || MUL || Variables[2] (Modifier_Bleed_DamagePercentage) || MUL || Variables[3] (Modifier_Layer) || MUL || RETURN",
-                      "displayLines": "(((DOT_TriggerRatio * Owner_MaxHP) * Modifier_Bleed_DamagePercentage) * Modifier_Layer)",
-                      "constants": [],
-                      "variables": [
-                        "DOT_TriggerRatio",
-                        "Owner_MaxHP",
-                        "Modifier_Bleed_DamagePercentage",
-                        "Modifier_Layer"
-                      ]
+                      "displayLines": "(((DOT_TriggerRatio * Owner_MaxHP) * Modifier_Bleed_DamagePercentage) * Modifier_Layer)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1132,12 +1106,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill11[0]]}) || RETURN",
-              "displayLines": "{[Skill11[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill11[0]]}"
-              ]
+              "displayLines": "{[Skill11[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1155,29 +1124,14 @@ const compositeAbilityObject = {
           "duration": 2,
           "baseChance": 1,
           "stackLimit": {
-            "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-            "displayLines": "{[Skill06[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill06[3]]}"
-            ]
+            "displayLines": "{[Skill06[3]]}"
           },
           "valuePerStack": {
             "Modifier_Bleed_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-              "displayLines": "{[Skill06[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[1]]}"
-              ]
+              "displayLines": "{[Skill06[1]]}"
             },
             "MDF_MaxLayer": {
-              "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-              "displayLines": "{[Skill06[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[3]]}"
-              ]
+              "displayLines": "{[Skill06[3]]}"
             }
           }
         },
@@ -1236,12 +1190,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill09[0]]}) || RETURN",
-              "displayLines": "{[Skill09[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill09[0]]}"
-              ]
+              "displayLines": "{[Skill09[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1259,29 +1208,14 @@ const compositeAbilityObject = {
           "duration": 2,
           "baseChance": 1,
           "stackLimit": {
-            "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-            "displayLines": "{[Skill06[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill06[3]]}"
-            ]
+            "displayLines": "{[Skill06[3]]}"
           },
           "valuePerStack": {
             "Modifier_Bleed_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-              "displayLines": "{[Skill06[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[1]]}"
-              ]
+              "displayLines": "{[Skill06[1]]}"
             },
             "MDF_MaxLayer": {
-              "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-              "displayLines": "{[Skill06[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[3]]}"
-              ]
+              "displayLines": "{[Skill06[3]]}"
             }
           }
         },
@@ -1694,14 +1628,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill06[2]]}) || Constants[0] (0.1) || MUL || RETURN",
-                  "displayLines": "({[Skill06[2]]} * 0.1)",
-                  "constants": [
-                    0.1
-                  ],
-                  "variables": [
-                    "{[Skill06[2]]}"
-                  ]
+                  "displayLines": "({[Skill06[2]]} * 0.1)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1717,37 +1644,17 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-95545360\">W1_Mecha02_ThunderDOT</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
               "duration": 2,
               "baseChance": {
-                "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-                "displayLines": "{[Skill06[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill06[0]]}"
-                ]
+                "displayLines": "{[Skill06[0]]}"
               },
               "stackLimit": {
-                "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-                "displayLines": "{[Skill06[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill06[3]]}"
-                ]
+                "displayLines": "{[Skill06[3]]}"
               },
               "valuePerStack": {
                 "Modifier_Bleed_DamagePercentage": {
-                  "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-                  "displayLines": "{[Skill06[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill06[1]]}"
-                  ]
+                  "displayLines": "{[Skill06[1]]}"
                 },
                 "MDF_MaxLayer": {
-                  "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-                  "displayLines": "{[Skill06[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill06[3]]}"
-                  ]
+                  "displayLines": "{[Skill06[3]]}"
                 }
               }
             }
@@ -1766,14 +1673,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill06[2]]}) || Constants[0] (0.1) || MUL || RETURN",
-                  "displayLines": "({[Skill06[2]]} * 0.1)",
-                  "constants": [
-                    0.1
-                  ],
-                  "variables": [
-                    "{[Skill06[2]]}"
-                  ]
+                  "displayLines": "({[Skill06[2]]} * 0.1)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1789,37 +1689,17 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-95545360\">W1_Mecha02_ThunderDOT</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
               "duration": 2,
               "baseChance": {
-                "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-                "displayLines": "{[Skill06[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill06[0]]}"
-                ]
+                "displayLines": "{[Skill06[0]]}"
               },
               "stackLimit": {
-                "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-                "displayLines": "{[Skill06[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill06[3]]}"
-                ]
+                "displayLines": "{[Skill06[3]]}"
               },
               "valuePerStack": {
                 "Modifier_Bleed_DamagePercentage": {
-                  "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-                  "displayLines": "{[Skill06[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill06[1]]}"
-                  ]
+                  "displayLines": "{[Skill06[1]]}"
                 },
                 "MDF_MaxLayer": {
-                  "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-                  "displayLines": "{[Skill06[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill06[3]]}"
-                  ]
+                  "displayLines": "{[Skill06[3]]}"
                 }
               }
             }

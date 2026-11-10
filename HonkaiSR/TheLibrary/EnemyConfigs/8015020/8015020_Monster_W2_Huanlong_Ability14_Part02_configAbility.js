@@ -30,13 +30,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "DamageFlat": {
-          "operator": "Variables[0] (MaxHPValue) || Variables[1] (ENEMIES_OBJECT_UNUSED__84) || MUL || RETURN",
-          "displayLines": "(MaxHPValue * ENEMIES_OBJECT_UNUSED__84)",
-          "constants": [],
-          "variables": [
-            "MaxHPValue",
-            "ENEMIES_OBJECT_UNUSED__84"
-          ]
+          "displayLines": "(MaxHPValue * ENEMIES_OBJECT_UNUSED__84)"
         },
         "Toughness": null,
         "Tags": null,

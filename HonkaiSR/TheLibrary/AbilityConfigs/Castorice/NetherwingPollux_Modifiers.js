@@ -16,12 +16,7 @@ const configAbility = {
         "show": "Hide",
         "skillType": "Memosprite",
         "toughnessForcedReductionPreview": {
-          "operator": "Variables[0] (CASTORICE_OBJECT_UNUSED_8) || RETURN",
-          "displayLines": "CASTORICE_OBJECT_UNUSED_8",
-          "constants": [],
-          "variables": [
-            "CASTORICE_OBJECT_UNUSED_8"
-          ]
+          "displayLines": "CASTORICE_OBJECT_UNUSED_8"
         },
         "showAsForcedReduction": true
       },
@@ -42,12 +37,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (CASTORICE_OBJECT_UNUSED_8) || RETURN",
-                    "displayLines": "CASTORICE_OBJECT_UNUSED_8",
-                    "constants": [],
-                    "variables": [
-                      "CASTORICE_OBJECT_UNUSED_8"
-                    ]
+                    "displayLines": "CASTORICE_OBJECT_UNUSED_8"
                   }
                 }
               ]
@@ -75,12 +65,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (CASTORICE_OBJECT_UNUSED_8) || RETURN",
-                "displayLines": "CASTORICE_OBJECT_UNUSED_8",
-                "constants": [],
-                "variables": [
-                  "CASTORICE_OBJECT_UNUSED_8"
-                ]
+                "displayLines": "CASTORICE_OBJECT_UNUSED_8"
               }
             }
           ]
@@ -521,13 +506,7 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "flatConsume": {
-                        "operator": "Variables[0] (MDF_OwnerDeltaHP) || INVERT || Variables[1] (5) || MUL || RETURN",
-                        "displayLines": "(-MDF_OwnerDeltaHP * 5)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_OwnerDeltaHP",
-                          5
-                        ]
+                        "displayLines": "(-MDF_OwnerDeltaHP * 5)"
                       },
                       "attackType": "Unknown"
                     }
@@ -645,12 +624,7 @@ const configAbility = {
                       },
                       "previewType": null,
                       "previewValue": {
-                        "operator": "Variables[0] (MDF_PreShowMaxHP) || RETURN",
-                        "displayLines": "MDF_PreShowMaxHP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PreShowMaxHP"
-                        ]
+                        "displayLines": "MDF_PreShowMaxHP"
                       }
                     }
                   ],
@@ -667,13 +641,7 @@ const configAbility = {
                       },
                       "previewType": null,
                       "previewValue": {
-                        "operator": "Variables[0] (MDF_PreShowMaxHP) || Variables[1] (0.25) || MUL || RETURN",
-                        "displayLines": "(MDF_PreShowMaxHP * 0.25)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PreShowMaxHP",
-                          0.25
-                        ]
+                        "displayLines": "(MDF_PreShowMaxHP * 0.25)"
                       }
                     }
                   ]
@@ -704,12 +672,7 @@ const configAbility = {
                       },
                       "previewType": null,
                       "previewValue": {
-                        "operator": "Variables[0] (MDF_PreShowMaxHP) || RETURN",
-                        "displayLines": "MDF_PreShowMaxHP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PreShowMaxHP"
-                        ]
+                        "displayLines": "MDF_PreShowMaxHP"
                       }
                     },
                     {
@@ -722,20 +685,10 @@ const configAbility = {
                         {
                           "name": "Set Netherwing's Ardent Will Stacks",
                           "displayNum": {
-                            "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
-                            "displayLines": "CastoriceServant_Rank02_Count",
-                            "constants": [],
-                            "variables": [
-                              "CastoriceServant_Rank02_Count"
-                            ]
+                            "displayLines": "CastoriceServant_Rank02_Count"
                           },
                           "previewNum": {
-                            "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
-                            "displayLines": "CastoriceServant_Rank02_Count",
-                            "constants": [],
-                            "variables": [
-                              "CastoriceServant_Rank02_Count"
-                            ]
+                            "displayLines": "CastoriceServant_Rank02_Count"
                           }
                         }
                       ]
@@ -752,12 +705,7 @@ const configAbility = {
                         {
                           "name": "Set Netherwing's Ardent Will Stacks",
                           "displayNum": {
-                            "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
-                            "displayLines": "CastoriceServant_Rank02_Count",
-                            "constants": [],
-                            "variables": [
-                              "CastoriceServant_Rank02_Count"
-                            ]
+                            "displayLines": "CastoriceServant_Rank02_Count"
                           },
                           "previewNum": 1
                         }
@@ -791,12 +739,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]

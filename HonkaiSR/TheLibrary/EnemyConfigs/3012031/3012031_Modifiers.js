@@ -148,24 +148,13 @@ const configAbility = {
                 {
                   "name": "Override HP Lost",
                   "finalDMGFlat": {
-                    "operator": "Variables[0] (MDF_DamagerPerHit) || RETURN",
-                    "displayLines": "MDF_DamagerPerHit",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamagerPerHit"
-                    ]
+                    "displayLines": "MDF_DamagerPerHit"
                   }
                 },
                 {
                   "name": "Override HP Lost",
                   "finalDMGFlat": {
-                    "operator": "Variables[0] (MDF_DamagerPerHit) || Variables[1] (MDF_BeingAttackCountDown) || MUL || RETURN",
-                    "displayLines": "(MDF_DamagerPerHit * MDF_BeingAttackCountDown)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamagerPerHit",
-                      "MDF_BeingAttackCountDown"
-                    ]
+                    "displayLines": "(MDF_DamagerPerHit * MDF_BeingAttackCountDown)"
                   }
                 },
                 {
@@ -178,12 +167,7 @@ const configAbility = {
                 {
                   "name": "Override HP Lost",
                   "finalDMGFlat": {
-                    "operator": "Variables[0] (MDF_DamagerPerHit) || RETURN",
-                    "displayLines": "MDF_DamagerPerHit",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamagerPerHit"
-                    ]
+                    "displayLines": "MDF_DamagerPerHit"
                   }
                 }
               ]
@@ -298,14 +282,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CEIL) || Variables[1] (MDF_MaxHP) || Variables[2] (MDF_ShowValue) || DIV || PARAM_1 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>((MDF_MaxHP / MDF_ShowValue))",
-                    "constants": [],
-                    "variables": [
-                      "CEIL",
-                      "MDF_MaxHP",
-                      "MDF_ShowValue"
-                    ]
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>((MDF_MaxHP / MDF_ShowValue))"
                   },
                   "variableName": "MDF_DamagerPerHit"
                 }

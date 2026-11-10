@@ -14,60 +14,25 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"901719385\">Modifier_BattleEventAbility_Challenge_Month_37</a>",
       "valuePerStack": {
         "DV_LifeTime": {
-          "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-          "displayLines": "#BattleEvent_P1_ADF",
-          "constants": [],
-          "variables": [
-            "#BattleEvent_P1_ADF"
-          ]
+          "displayLines": "#BattleEvent_P1_ADF"
         },
         "DV_DmgPercentage": {
-          "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-          "displayLines": "#BattleEvent_P2_ADF",
-          "constants": [],
-          "variables": [
-            "#BattleEvent_P2_ADF"
-          ]
+          "displayLines": "#BattleEvent_P2_ADF"
         },
         "DV_Count": {
-          "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-          "displayLines": "#BattleEvent_P3_ADF",
-          "constants": [],
-          "variables": [
-            "#BattleEvent_P3_ADF"
-          ]
+          "displayLines": "#BattleEvent_P3_ADF"
         },
         "DV_CountMax": {
-          "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
-          "displayLines": "#BattleEvent_P4_ADF",
-          "constants": [],
-          "variables": [
-            "#BattleEvent_P4_ADF"
-          ]
+          "displayLines": "#BattleEvent_P4_ADF"
         },
         "BattleEvent_P5_ADF": {
-          "operator": "Variables[0] (#BattleEvent_P5_ADF) || RETURN",
-          "displayLines": "#BattleEvent_P5_ADF",
-          "constants": [],
-          "variables": [
-            "#BattleEvent_P5_ADF"
-          ]
+          "displayLines": "#BattleEvent_P5_ADF"
         },
         "BattleEvent_P6_ADF": {
-          "operator": "Variables[0] (#BattleEvent_P6_ADF) || RETURN",
-          "displayLines": "#BattleEvent_P6_ADF",
-          "constants": [],
-          "variables": [
-            "#BattleEvent_P6_ADF"
-          ]
+          "displayLines": "#BattleEvent_P6_ADF"
         },
         "BattleEvent_P7_ADF": {
-          "operator": "Variables[0] (#BattleEvent_P7_ADF) || RETURN",
-          "displayLines": "#BattleEvent_P7_ADF",
-          "constants": [],
-          "variables": [
-            "#BattleEvent_P7_ADF"
-          ]
+          "displayLines": "#BattleEvent_P7_ADF"
         }
       }
     },
@@ -110,12 +75,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (DV_DmgPercentage_get) || RETURN",
-                "displayLines": "DV_DmgPercentage_get",
-                "constants": [],
-                "variables": [
-                  "DV_DmgPercentage_get"
-                ]
+                "displayLines": "DV_DmgPercentage_get"
               }
             }
           ]
@@ -126,13 +86,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_Count) || Variables[1] (DV_Count2) || ADD || RETURN",
-                "displayLines": "(MDF_Count + DV_Count2)",
-                "constants": [],
-                "variables": [
-                  "MDF_Count",
-                  "DV_Count2"
-                ]
+                "displayLines": "(MDF_Count + DV_Count2)"
               },
               "variableName": "MDF_Count"
             },
@@ -143,12 +97,7 @@ const configAbility = {
                 "value1": "MDF_Count",
                 "compareType": "<=",
                 "value2": {
-                  "operator": "Variables[0] (DV_CountMax) || RETURN",
-                  "displayLines": "DV_CountMax",
-                  "constants": [],
-                  "variables": [
-                    "DV_CountMax"
-                  ]
+                  "displayLines": "DV_CountMax"
                 }
               },
               "passed": [
@@ -159,12 +108,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "attackCount": {
-                    "operator": "Variables[0] (MDF_Count) || RETURN",
-                    "displayLines": "MDF_Count",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Count"
-                    ]
+                    "displayLines": "MDF_Count"
                   },
                   "show": true
                 }
@@ -177,24 +121,14 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "attackCount": {
-                    "operator": "Variables[0] (DV_CountMax) || RETURN",
-                    "displayLines": "DV_CountMax",
-                    "constants": [],
-                    "variables": [
-                      "DV_CountMax"
-                    ]
+                    "displayLines": "DV_CountMax"
                   },
                   "show": true
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DV_CountMax) || RETURN",
-                    "displayLines": "DV_CountMax",
-                    "constants": [],
-                    "variables": [
-                      "DV_CountMax"
-                    ]
+                    "displayLines": "DV_CountMax"
                   },
                   "variableName": "MDF_Count"
                 }
@@ -227,37 +161,17 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-976285872\">Modifier_BattleEventAbility_Challenge_Month_37_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
                   "duration": {
-                    "operator": "Variables[0] (DV_LifeTime) || RETURN",
-                    "displayLines": "DV_LifeTime",
-                    "constants": [],
-                    "variables": [
-                      "DV_LifeTime"
-                    ]
+                    "displayLines": "DV_LifeTime"
                   },
                   "valuePerStack": {
                     "DV_DmgPercentage_get": {
-                      "operator": "Variables[0] (DV_DmgPercentage) || RETURN",
-                      "displayLines": "DV_DmgPercentage",
-                      "constants": [],
-                      "variables": [
-                        "DV_DmgPercentage"
-                      ]
+                      "displayLines": "DV_DmgPercentage"
                     },
                     "DV_Count": {
-                      "operator": "Variables[0] (DV_Count2) || RETURN",
-                      "displayLines": "DV_Count2",
-                      "constants": [],
-                      "variables": [
-                        "DV_Count2"
-                      ]
+                      "displayLines": "DV_Count2"
                     },
                     "DV_CountMax": {
-                      "operator": "Variables[0] (DV_CountMax) || RETURN",
-                      "displayLines": "DV_CountMax",
-                      "constants": [],
-                      "variables": [
-                        "DV_CountMax"
-                      ]
+                      "displayLines": "DV_CountMax"
                     }
                   }
                 },
@@ -280,37 +194,17 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-976285872\">Modifier_BattleEventAbility_Challenge_Month_37_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
                       "duration": {
-                        "operator": "Variables[0] (DV_LifeTime) || RETURN",
-                        "displayLines": "DV_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "DV_LifeTime"
-                        ]
+                        "displayLines": "DV_LifeTime"
                       },
                       "valuePerStack": {
                         "DV_DmgPercentage_get": {
-                          "operator": "Variables[0] (DV_DmgPercentage) || RETURN",
-                          "displayLines": "DV_DmgPercentage",
-                          "constants": [],
-                          "variables": [
-                            "DV_DmgPercentage"
-                          ]
+                          "displayLines": "DV_DmgPercentage"
                         },
                         "DV_Count": {
-                          "operator": "Variables[0] (DV_Count2) || RETURN",
-                          "displayLines": "DV_Count2",
-                          "constants": [],
-                          "variables": [
-                            "DV_Count2"
-                          ]
+                          "displayLines": "DV_Count2"
                         },
                         "DV_CountMax": {
-                          "operator": "Variables[0] (DV_CountMax) || RETURN",
-                          "displayLines": "DV_CountMax",
-                          "constants": [],
-                          "variables": [
-                            "DV_CountMax"
-                          ]
+                          "displayLines": "DV_CountMax"
                         }
                       }
                     }
@@ -352,12 +246,7 @@ const configAbility = {
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (MDF_Count) || RETURN",
-                    "displayLines": "MDF_Count",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Count"
-                    ]
+                    "displayLines": "MDF_Count"
                   },
                   "execute": [
                     {
@@ -415,13 +304,7 @@ const configAbility = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "DamageFlat": {
-                                  "operator": "Variables[0] (_Temp_Hp_TeamDark) || Variables[1] (BattleEvent_P5_ADF) || MUL || RETURN",
-                                  "displayLines": "(_Temp_Hp_TeamDark * BattleEvent_P5_ADF)",
-                                  "constants": [],
-                                  "variables": [
-                                    "_Temp_Hp_TeamDark",
-                                    "BattleEvent_P5_ADF"
-                                  ]
+                                  "displayLines": "(_Temp_Hp_TeamDark * BattleEvent_P5_ADF)"
                                 },
                                 "dmgFormulaFinal": "Converted DMG Base",
                                 "Toughness": null,
@@ -453,13 +336,7 @@ const configAbility = {
                                   "AttackScaling": {
                                     "DamageType": "Physical",
                                     "DamageFlat": {
-                                      "operator": "Variables[0] (_Temp_Hp_TeamDark) || Variables[1] (BattleEvent_P6_ADF) || MUL || RETURN",
-                                      "displayLines": "(_Temp_Hp_TeamDark * BattleEvent_P6_ADF)",
-                                      "constants": [],
-                                      "variables": [
-                                        "_Temp_Hp_TeamDark",
-                                        "BattleEvent_P6_ADF"
-                                      ]
+                                      "displayLines": "(_Temp_Hp_TeamDark * BattleEvent_P6_ADF)"
                                     },
                                     "dmgFormulaFinal": "Converted DMG Base",
                                     "Toughness": null,
@@ -479,13 +356,7 @@ const configAbility = {
                                   "AttackScaling": {
                                     "DamageType": "Physical",
                                     "DamageFlat": {
-                                      "operator": "Variables[0] (_Temp_Hp_TeamDark) || Variables[1] (BattleEvent_P7_ADF) || MUL || RETURN",
-                                      "displayLines": "(_Temp_Hp_TeamDark * BattleEvent_P7_ADF)",
-                                      "constants": [],
-                                      "variables": [
-                                        "_Temp_Hp_TeamDark",
-                                        "BattleEvent_P7_ADF"
-                                      ]
+                                      "displayLines": "(_Temp_Hp_TeamDark * BattleEvent_P7_ADF)"
                                     },
                                     "dmgFormulaFinal": "Converted DMG Base",
                                     "Toughness": null,
@@ -541,36 +412,16 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-228203803\">Modifier_BattleEventAbility_Challenge_Month_37_PLY</a>",
               "valuePerStack": {
                 "DV_LifeTime": {
-                  "operator": "Variables[0] (DV_LifeTime) || RETURN",
-                  "displayLines": "DV_LifeTime",
-                  "constants": [],
-                  "variables": [
-                    "DV_LifeTime"
-                  ]
+                  "displayLines": "DV_LifeTime"
                 },
                 "DV_DmgPercentage": {
-                  "operator": "Variables[0] (DV_DmgPercentage) || RETURN",
-                  "displayLines": "DV_DmgPercentage",
-                  "constants": [],
-                  "variables": [
-                    "DV_DmgPercentage"
-                  ]
+                  "displayLines": "DV_DmgPercentage"
                 },
                 "DV_Count": {
-                  "operator": "Variables[0] (DV_Count2) || RETURN",
-                  "displayLines": "DV_Count2",
-                  "constants": [],
-                  "variables": [
-                    "DV_Count2"
-                  ]
+                  "displayLines": "DV_Count2"
                 },
                 "DV_CountMax": {
-                  "operator": "Variables[0] (DV_CountMax) || RETURN",
-                  "displayLines": "DV_CountMax",
-                  "constants": [],
-                  "variables": [
-                    "DV_CountMax"
-                  ]
+                  "displayLines": "DV_CountMax"
                 }
               }
             }

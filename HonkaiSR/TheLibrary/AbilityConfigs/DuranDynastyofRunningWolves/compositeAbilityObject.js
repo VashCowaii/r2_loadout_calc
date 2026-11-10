@@ -83,12 +83,7 @@ const compositeAbilityObject = {
                     "value1": "_Layer",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (5) || RETURN",
-                      "displayLines": "5",
-                      "constants": [],
-                      "variables": [
-                        5
-                      ]
+                      "displayLines": "5"
                     }
                   },
                   "passed": [
@@ -100,12 +95,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (0.25) || RETURN",
-                        "displayLines": "0.25",
-                        "constants": [],
-                        "variables": [
-                          0.25
-                        ]
+                        "displayLines": "0.25"
                       }
                     }
                   ]
@@ -169,12 +159,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1040962330\">Relic_315_Sub</a>[<span class=\"descriptionNumberColor\">Merit</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (5) || RETURN",
-                        "displayLines": "5",
-                        "constants": [],
-                        "variables": [
-                          5
-                        ]
+                        "displayLines": "5"
                       }
                     },
                     {
@@ -198,14 +183,7 @@ const compositeAbilityObject = {
                             "value1": "CasterLayer",
                             "compareType": "=",
                             "value2": {
-                              "operator": "Variables[0] (5) || Constants[0] (1) || SUB || RETURN",
-                              "displayLines": "(5 - 1)",
-                              "constants": [
-                                1
-                              ],
-                              "variables": [
-                                5
-                              ]
+                              "displayLines": "(5 - 1)"
                             }
                           }
                         ]

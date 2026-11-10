@@ -7,12 +7,7 @@ const configAbility = {
     {
       "name": "SWITCH",
       "switchValue": {
-        "operator": "Variables[0] (CurrentRanger) || RETURN",
-        "displayLines": "CurrentRanger",
-        "constants": [],
-        "variables": [
-          "CurrentRanger"
-        ]
+        "displayLines": "CurrentRanger"
       },
       "caseEvents": [
         {
@@ -50,12 +45,7 @@ const configAbility = {
     {
       "name": "SWITCH",
       "switchValue": {
-        "operator": "Variables[0] (CurrentRanger) || RETURN",
-        "displayLines": "CurrentRanger",
-        "constants": [],
-        "variables": [
-          "CurrentRanger"
-        ]
+        "displayLines": "CurrentRanger"
       },
       "caseEvents": [
         {
@@ -104,12 +94,7 @@ const configAbility = {
     {
       "name": "SWITCH",
       "switchValue": {
-        "operator": "Variables[0] (CurrentRanger) || RETURN",
-        "displayLines": "CurrentRanger",
-        "constants": [],
-        "variables": [
-          "CurrentRanger"
-        ]
+        "displayLines": "CurrentRanger"
       },
       "caseEvents": [
         {
@@ -125,12 +110,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
+                  "displayLines": "{[Skill04[0]]}"
                 },
                 "HitSplit": 0.55,
                 "Toughness": null,
@@ -154,12 +134,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
+                  "displayLines": "{[Skill04[0]]}"
                 },
                 "HitSplit": 0.55,
                 "Toughness": null,
@@ -183,12 +158,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
+                  "displayLines": "{[Skill04[0]]}"
                 },
                 "HitSplit": 0.55,
                 "Toughness": null,
@@ -212,12 +182,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
+                  "displayLines": "{[Skill04[0]]}"
                 },
                 "HitSplit": 0.55,
                 "Toughness": null,
@@ -242,12 +207,7 @@ const configAbility = {
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (CurrentRanger) || RETURN",
-            "displayLines": "CurrentRanger",
-            "constants": [],
-            "variables": [
-              "CurrentRanger"
-            ]
+            "displayLines": "CurrentRanger"
           },
           "caseEvents": [
             {
@@ -263,12 +223,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                      "displayLines": "{[Skill04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[0]]}"
-                      ]
+                      "displayLines": "{[Skill04[0]]}"
                     },
                     "HitSplit": 0.05,
                     "Toughness": null,
@@ -292,12 +247,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                      "displayLines": "{[Skill04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[0]]}"
-                      ]
+                      "displayLines": "{[Skill04[0]]}"
                     },
                     "HitSplit": 0.05,
                     "Toughness": null,
@@ -321,12 +271,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Imaginary",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                      "displayLines": "{[Skill04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[0]]}"
-                      ]
+                      "displayLines": "{[Skill04[0]]}"
                     },
                     "HitSplit": 0.05,
                     "Toughness": null,
@@ -350,12 +295,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                      "displayLines": "{[Skill04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[0]]}"
-                      ]
+                      "displayLines": "{[Skill04[0]]}"
                     },
                     "HitSplit": 0.05,
                     "Toughness": null,

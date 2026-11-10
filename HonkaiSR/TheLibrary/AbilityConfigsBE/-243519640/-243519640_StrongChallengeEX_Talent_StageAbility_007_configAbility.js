@@ -42,28 +42,13 @@ const configAbility = {
               "canHitNonTargets": true,
               "valuePerStack": {
                 "PropertyValue": {
-                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                  "displayLines": "MDF_PropertyValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue"
-                  ]
+                  "displayLines": "MDF_PropertyValue"
                 },
                 "LifeTime": {
-                  "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                  "displayLines": "MDF_LifeTime",
-                  "constants": [],
-                  "variables": [
-                    "MDF_LifeTime"
-                  ]
+                  "displayLines": "MDF_LifeTime"
                 },
                 "MaxLayer": {
-                  "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                  "displayLines": "MDF_MaxLayer",
-                  "constants": [],
-                  "variables": [
-                    "MDF_MaxLayer"
-                  ]
+                  "displayLines": "MDF_MaxLayer"
                 }
               },
               "allowAbilityTriggers": false
@@ -108,28 +93,13 @@ const configAbility = {
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     },
                     "LifeTime": {
-                      "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                      "displayLines": "MDF_LifeTime",
-                      "constants": [],
-                      "variables": [
-                        "MDF_LifeTime"
-                      ]
+                      "displayLines": "MDF_LifeTime"
                     },
                     "MaxLayer": {
-                      "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                      "displayLines": "MDF_MaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MaxLayer"
-                      ]
+                      "displayLines": "MDF_MaxLayer"
                     }
                   },
                   "allowAbilityTriggers": false
@@ -244,28 +214,13 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1732992681\">MStrongChallengeEX_Talent_StageAbility_BOSS_007</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     },
                     "MDF_LifeTime": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     },
                     "MDF_MaxLayer": {
-                      "operator": "Variables[0] (#ADF_3) || RETURN",
-                      "displayLines": "#ADF_3",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_3"
-                      ]
+                      "displayLines": "#ADF_3"
                     }
                   }
                 }

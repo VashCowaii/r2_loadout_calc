@@ -7,14 +7,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (EXSkill01) || Constants[0] (1) || ADD || RETURN",
-        "displayLines": "(EXSkill01 + 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "EXSkill01"
-        ]
+        "displayLines": "(EXSkill01 + 1)"
       },
       "variableName": "EXSkill01"
     },
@@ -90,12 +83,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (EXSkill01) || RETURN",
-        "displayLines": "EXSkill01",
-        "constants": [],
-        "variables": [
-          "EXSkill01"
-        ]
+        "displayLines": "EXSkill01"
       },
       "variableName": "BPNeed"
     },
@@ -106,12 +94,7 @@ const configAbility = {
         "value1": "CurrentSkillPoints",
         "compareType": ">",
         "value2": {
-          "operator": "Variables[0] (BPNeed) || RETURN",
-          "displayLines": "BPNeed",
-          "constants": [],
-          "variables": [
-            "BPNeed"
-          ]
+          "displayLines": "BPNeed"
         }
       },
       "passed": [

@@ -19,22 +19,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1385395722\">RuanMei_PassiveArea</a>",
           "duration": {
-            "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-            "displayLines": "(2 + 1)",
-            "constants": [],
-            "variables": [
-              2,
-              1
-            ]
+            "displayLines": "(2 + 1)"
           },
           "valuePerStack": {
             "Ability03_P1_PenetrateRatio": {
-              "operator": "Variables[0] (0.25) || RETURN",
-              "displayLines": "0.25",
-              "constants": [],
-              "variables": [
-                0.25
-              ]
+              "displayLines": "0.25"
             }
           }
         }
@@ -48,21 +37,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1385395722\">RuanMei_PassiveArea</a>",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "valuePerStack": {
             "Ability03_P1_PenetrateRatio": {
-              "operator": "Variables[0] (0.25) || RETURN",
-              "displayLines": "0.25",
-              "constants": [],
-              "variables": [
-                0.25
-              ]
+              "displayLines": "0.25"
             }
           }
         }
@@ -133,12 +112,7 @@ const configAbility = {
                       },
                       "modifierName": "<a class=\"gModGreen\" id=\"1385395722\">RuanMei_PassiveArea</a>",
                       "value": {
-                        "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                        "displayLines": "MDF_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_LifeTime"
-                        ]
+                        "displayLines": "MDF_LifeTime"
                       },
                       "valueType": "Duration"
                     }
@@ -184,12 +158,7 @@ const configAbility = {
                       },
                       "modifierName": "<a class=\"gModGreen\" id=\"1385395722\">RuanMei_PassiveArea</a>",
                       "value": {
-                        "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                        "displayLines": "MDF_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_LifeTime"
-                        ]
+                        "displayLines": "MDF_LifeTime"
                       },
                       "valueType": "Duration"
                     }

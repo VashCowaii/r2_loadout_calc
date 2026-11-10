@@ -40,21 +40,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (1.2) || RETURN",
-          "displayLines": "1.2",
-          "constants": [],
-          "variables": [
-            1.2
-          ]
+          "displayLines": "1.2"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Variables[1] (Blast Toughness Value) || SUB || RETURN",
-          "displayLines": "(ST Toughness Value - Blast Toughness Value)",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value",
-            "Blast Toughness Value"
-          ]
+          "displayLines": "(ST Toughness Value - Blast Toughness Value)"
         },
         "Tags": null
       }
@@ -68,15 +57,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Null Type",
         "DamageFlat": {
-          "operator": "Variables[0] (SkillP01_FinalDamage) || Constants[0] (0.2) || MUL || Variables[1] (0.25) || MUL || RETURN",
-          "displayLines": "((SkillP01_FinalDamage * 0.2) * 0.25)",
-          "constants": [
-            0.2
-          ],
-          "variables": [
-            "SkillP01_FinalDamage",
-            0.25
-          ]
+          "displayLines": "((SkillP01_FinalDamage * 0.2) * 0.25)"
         },
         "dmgFormulaFinal": "Converted DMG Base",
         "Toughness": null,
@@ -94,15 +75,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Null Type",
         "DamageFlat": {
-          "operator": "Variables[0] (SkillP01_FinalDamage) || Constants[0] (0.2) || MUL || Variables[1] (0.25) || MUL || RETURN",
-          "displayLines": "((SkillP01_FinalDamage * 0.2) * 0.25)",
-          "constants": [
-            0.2
-          ],
-          "variables": [
-            "SkillP01_FinalDamage",
-            0.25
-          ]
+          "displayLines": "((SkillP01_FinalDamage * 0.2) * 0.25)"
         },
         "dmgFormulaFinal": "Converted DMG Base",
         "Toughness": null,
@@ -120,15 +93,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Null Type",
         "DamageFlat": {
-          "operator": "Variables[0] (SkillP01_FinalDamage) || Constants[0] (0.2) || MUL || Variables[1] (0.25) || MUL || RETURN",
-          "displayLines": "((SkillP01_FinalDamage * 0.2) * 0.25)",
-          "constants": [
-            0.2
-          ],
-          "variables": [
-            "SkillP01_FinalDamage",
-            0.25
-          ]
+          "displayLines": "((SkillP01_FinalDamage * 0.2) * 0.25)"
         },
         "dmgFormulaFinal": "Converted DMG Base",
         "Toughness": null,
@@ -146,15 +111,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Null Type",
         "DamageFlat": {
-          "operator": "Variables[0] (SkillP01_FinalDamage) || Constants[0] (0.2) || MUL || Variables[1] (0.25) || MUL || RETURN",
-          "displayLines": "((SkillP01_FinalDamage * 0.2) * 0.25)",
-          "constants": [
-            0.2
-          ],
-          "variables": [
-            "SkillP01_FinalDamage",
-            0.25
-          ]
+          "displayLines": "((SkillP01_FinalDamage * 0.2) * 0.25)"
         },
         "dmgFormulaFinal": "Converted DMG Base",
         "Toughness": null,
@@ -172,15 +129,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Null Type",
         "DamageFlat": {
-          "operator": "Variables[0] (SkillP01_FinalDamage) || Constants[0] (0.2) || MUL || Variables[1] (0.25) || MUL || RETURN",
-          "displayLines": "((SkillP01_FinalDamage * 0.2) * 0.25)",
-          "constants": [
-            0.2
-          ],
-          "variables": [
-            "SkillP01_FinalDamage",
-            0.25
-          ]
+          "displayLines": "((SkillP01_FinalDamage * 0.2) * 0.25)"
         },
         "dmgFormulaFinal": "Converted DMG Base",
         "Toughness": null,
@@ -199,20 +148,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (0.4) || RETURN",
-          "displayLines": "0.4",
-          "constants": [],
-          "variables": [
-            0.4
-          ]
+          "displayLines": "0.4"
         },
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-          "displayLines": "Blast Toughness Value",
-          "constants": [],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "Blast Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -261,14 +200,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Null Type",
             "DamageFlat": {
-              "operator": "Variables[0] (SkillP01_FinalDamage) || Variables[1] (0.75) || MUL || Variables[2] (S03_Alive_Count) || DIV || RETURN",
-              "displayLines": "((SkillP01_FinalDamage * 0.75) / S03_Alive_Count)",
-              "constants": [],
-              "variables": [
-                "SkillP01_FinalDamage",
-                0.75,
-                "S03_Alive_Count"
-              ]
+              "displayLines": "((SkillP01_FinalDamage * 0.75) / S03_Alive_Count)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -296,14 +228,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Null Type",
             "DamageFlat": {
-              "operator": "Variables[0] (SkillP01_FinalDamage) || Variables[1] (0.75) || MUL || Variables[2] (S03_Alive_Count) || DIV || RETURN",
-              "displayLines": "((SkillP01_FinalDamage * 0.75) / S03_Alive_Count)",
-              "constants": [],
-              "variables": [
-                "SkillP01_FinalDamage",
-                0.75,
-                "S03_Alive_Count"
-              ]
+              "displayLines": "((SkillP01_FinalDamage * 0.75) / S03_Alive_Count)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -330,24 +255,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (SkillP01_TotalDamage) || RETURN",
-            "displayLines": "SkillP01_TotalDamage",
-            "constants": [],
-            "variables": [
-              "SkillP01_TotalDamage"
-            ]
+            "displayLines": "SkillP01_TotalDamage"
           },
           "variableName": "Rank06_RecordedTotal"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (SkillP01_FinalDamage) || RETURN",
-            "displayLines": "SkillP01_FinalDamage",
-            "constants": [],
-            "variables": [
-              "SkillP01_FinalDamage"
-            ]
+            "displayLines": "SkillP01_FinalDamage"
           },
           "variableName": "Rank06_RecordedFinal"
         }
@@ -373,26 +288,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Rank06_RecordedTotal) || Variables[1] (0.2) || MUL || RETURN",
-            "displayLines": "(Rank06_RecordedTotal * 0.2)",
-            "constants": [],
-            "variables": [
-              "Rank06_RecordedTotal",
-              0.2
-            ]
+            "displayLines": "(Rank06_RecordedTotal * 0.2)"
           },
           "variableName": "SkillP01_TotalDamage"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Rank06_RecordedFinal) || Variables[1] (0.2) || MUL || RETURN",
-            "displayLines": "(Rank06_RecordedFinal * 0.2)",
-            "constants": [],
-            "variables": [
-              "Rank06_RecordedFinal",
-              0.2
-            ]
+            "displayLines": "(Rank06_RecordedFinal * 0.2)"
           },
           "variableName": "SkillP01_FinalDamage"
         }
@@ -401,22 +304,10 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (SkillP01_FinalDamage) || Constants[0] (1000) || DIV || RETURN",
-        "displayLines": "(SkillP01_FinalDamage / 1000)",
-        "constants": [
-          1000
-        ],
-        "variables": [
-          "SkillP01_FinalDamage"
-        ]
+        "displayLines": "(SkillP01_FinalDamage / 1000)"
       },
       "maximum": {
-        "operator": "Constants[0] (99999) || RETURN",
-        "displayLines": "99999",
-        "constants": [
-          99999
-        ],
-        "variables": []
+        "displayLines": "99999"
       },
       "assignState": "True",
       "priorState": "Normal",

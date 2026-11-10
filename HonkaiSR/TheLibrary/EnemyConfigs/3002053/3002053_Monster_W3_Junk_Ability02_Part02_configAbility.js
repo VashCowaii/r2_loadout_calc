@@ -22,12 +22,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1796573830\">Monster_W3_Junk_AttackAddRatio1</a>[<span class=\"descriptionNumberColor\">The Can's Battle Pose</span>]",
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-          "displayLines": "{[Skill02[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[0]]}"
-          ]
+          "displayLines": "{[Skill02[0]]}"
         }
       }
     },

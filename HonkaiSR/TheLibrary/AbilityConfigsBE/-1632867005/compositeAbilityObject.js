@@ -32,12 +32,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">StageFinalDMG</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (#StageBattleEvent_P1_ADF) || RETURN",
-                    "displayLines": "#StageBattleEvent_P1_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#StageBattleEvent_P1_ADF"
-                    ]
+                    "displayLines": "#StageBattleEvent_P1_ADF"
                   }
                 },
                 {
@@ -197,12 +192,7 @@ const compositeAbilityObject = {
                         ]
                       },
                       "value": {
-                        "operator": "Variables[0] (AddSPValue) || RETURN",
-                        "displayLines": "AddSPValue",
-                        "constants": [],
-                        "variables": [
-                          "AddSPValue"
-                        ]
+                        "displayLines": "AddSPValue"
                       },
                       "isFixed": "(Fixed)"
                     },
@@ -250,12 +240,7 @@ const compositeAbilityObject = {
                       "duration": 1,
                       "valuePerStack": {
                         "AddSPValue": {
-                          "operator": "Variables[0] (#StageBattleEvent_P1_ADF) || RETURN",
-                          "displayLines": "#StageBattleEvent_P1_ADF",
-                          "constants": [],
-                          "variables": [
-                            "#StageBattleEvent_P1_ADF"
-                          ]
+                          "displayLines": "#StageBattleEvent_P1_ADF"
                         }
                       }
                     }
@@ -323,12 +308,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">StageFinalDMG</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (#StageBattleEvent_P1_ADF) || RETURN",
-                    "displayLines": "#StageBattleEvent_P1_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#StageBattleEvent_P1_ADF"
-                    ]
+                    "displayLines": "#StageBattleEvent_P1_ADF"
                   }
                 }
               ]
@@ -349,12 +329,7 @@ const compositeAbilityObject = {
                     "target": "{{Parameter Target}}"
                   },
                   "dispelCount": {
-                    "operator": "Variables[0] (#StageBattleEvent_P1_ADF) || RETURN",
-                    "displayLines": "#StageBattleEvent_P1_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#StageBattleEvent_P1_ADF"
-                    ]
+                    "displayLines": "#StageBattleEvent_P1_ADF"
                   },
                   "dispelOrder": "LastAdded"
                 }
@@ -377,12 +352,7 @@ const compositeAbilityObject = {
                   },
                   "typeOverride": "Buff",
                   "dispelCount": {
-                    "operator": "Variables[0] (#StageBattleEvent_P1_ADF) || RETURN",
-                    "displayLines": "#StageBattleEvent_P1_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#StageBattleEvent_P1_ADF"
-                    ]
+                    "displayLines": "#StageBattleEvent_P1_ADF"
                   },
                   "dispelOrder": "LastAdded"
                 }
@@ -458,12 +428,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (#StageBattleEvent_P1_ADF) || RETURN",
-                    "displayLines": "#StageBattleEvent_P1_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#StageBattleEvent_P1_ADF"
-                    ]
+                    "displayLines": "#StageBattleEvent_P1_ADF"
                   },
                   "formula": "Heal from Target MaxHP"
                 }
@@ -481,12 +446,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Skill Points Modification",
                   "adjustmentValue": {
-                    "operator": "Variables[0] (#StageBattleEvent_P1_ADF) || RETURN",
-                    "displayLines": "#StageBattleEvent_P1_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#StageBattleEvent_P1_ADF"
-                    ]
+                    "displayLines": "#StageBattleEvent_P1_ADF"
                   },
                   "adjustmentType": "+"
                 }
@@ -508,12 +468,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (#StageBattleEvent_P1_ADF) || RETURN",
-                    "displayLines": "#StageBattleEvent_P1_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#StageBattleEvent_P1_ADF"
-                    ]
+                    "displayLines": "#StageBattleEvent_P1_ADF"
                   },
                   "isFixed": "* ERR"
                 }
@@ -536,12 +491,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">StageFinalDMG</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (#StageBattleEvent_P1_ADF) || RETURN",
-                    "displayLines": "#StageBattleEvent_P1_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#StageBattleEvent_P1_ADF"
-                    ]
+                    "displayLines": "#StageBattleEvent_P1_ADF"
                   }
                 }
               ]

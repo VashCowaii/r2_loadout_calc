@@ -33,12 +33,7 @@ const configAbility = {
                   "modifierName": "<a class=\"gModGreen\" id=\"-228290033\">ParamModifier</a>",
                   "function": "Add",
                   "value": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "valueType": "Duration"
                 }

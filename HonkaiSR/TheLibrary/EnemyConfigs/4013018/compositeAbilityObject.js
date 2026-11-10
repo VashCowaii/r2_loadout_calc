@@ -256,13 +256,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (MDF_CountBefore) || Variables[1] (MDF_CountAfter) || SUB || RETURN",
-                        "displayLines": "(MDF_CountBefore - MDF_CountAfter)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_CountBefore",
-                          "MDF_CountAfter"
-                        ]
+                        "displayLines": "(MDF_CountBefore - MDF_CountAfter)"
                       },
                       "variableName": "MDF_CountBreak"
                     },
@@ -455,12 +449,7 @@ const compositeAbilityObject = {
                             "value1": "W4_Claymore_00_BattleScore2_TargetCountBefore",
                             "compareType": "=",
                             "value2": {
-                              "operator": "Variables[0] (W4_Claymore_00_BattleScore2_TargetCountAfter) || RETURN",
-                              "displayLines": "W4_Claymore_00_BattleScore2_TargetCountAfter",
-                              "constants": [],
-                              "variables": [
-                                "W4_Claymore_00_BattleScore2_TargetCountAfter"
-                              ]
+                              "displayLines": "W4_Claymore_00_BattleScore2_TargetCountAfter"
                             }
                           }
                         ]
@@ -1025,12 +1014,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (MDF_DamageResistance) || RETURN",
-                        "displayLines": "MDF_DamageResistance",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DamageResistance"
-                        ]
+                        "displayLines": "MDF_DamageResistance"
                       }
                     }
                   ]
@@ -1049,12 +1033,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MDF_Layer) || RETURN",
-                        "displayLines": "MDF_Layer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Layer"
-                        ]
+                        "displayLines": "MDF_Layer"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -1062,12 +1041,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                        "displayLines": "MDF_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxLayer"
-                        ]
+                        "displayLines": "MDF_MaxLayer"
                       },
                       "assignState": "True",
                       "state": "Active"
@@ -1091,12 +1065,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (MDF_Layer) || RETURN",
-                            "displayLines": "MDF_Layer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Layer"
-                            ]
+                            "displayLines": "MDF_Layer"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -1104,12 +1073,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                            "displayLines": "MDF_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxLayer"
-                            ]
+                            "displayLines": "MDF_MaxLayer"
                           },
                           "assignState": "True",
                           "state": "CoolDown"
@@ -1119,12 +1083,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (MDF_Layer) || RETURN",
-                            "displayLines": "MDF_Layer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Layer"
-                            ]
+                            "displayLines": "MDF_Layer"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -1132,12 +1091,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                            "displayLines": "MDF_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxLayer"
-                            ]
+                            "displayLines": "MDF_MaxLayer"
                           },
                           "assignState": "True",
                           "state": "Active"
@@ -1236,46 +1190,21 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                "displayLines": "MDF_MaxLayer",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_MaxLayer"
-                                ]
+                                "displayLines": "MDF_MaxLayer"
                               },
                               "valuePerStack": {
                                 "MDF_DamageResistance": {
-                                  "operator": "Variables[0] (MDF_DamageResistance) || RETURN",
-                                  "displayLines": "MDF_DamageResistance",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_DamageResistance"
-                                  ]
+                                  "displayLines": "MDF_DamageResistance"
                                 },
                                 "MDF_CrackedEffect": {
-                                  "operator": "Variables[0] (MDF_CrackedEffect) || RETURN",
-                                  "displayLines": "MDF_CrackedEffect",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_CrackedEffect"
-                                  ]
+                                  "displayLines": "MDF_CrackedEffect"
                                 },
                                 "MDF_CrackedDamage": {
-                                  "operator": "Variables[0] (MDF_CrackedDamage) || RETURN",
-                                  "displayLines": "MDF_CrackedDamage",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_CrackedDamage"
-                                  ]
+                                  "displayLines": "MDF_CrackedDamage"
                                 }
                               },
                               "addStacksPerTrigger": {
-                                "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                "displayLines": "MDF_MaxLayer",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_MaxLayer"
-                                ]
+                                "displayLines": "MDF_MaxLayer"
                               }
                             }
                           ]
@@ -1307,12 +1236,7 @@ const compositeAbilityObject = {
                                 "value1": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                                 "compareType": "<",
                                 "value2": {
-                                  "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                  "displayLines": "MDF_MaxLayer",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_MaxLayer"
-                                  ]
+                                  "displayLines": "MDF_MaxLayer"
                                 },
                                 "valueType": "Layer"
                               }
@@ -1339,46 +1263,21 @@ const compositeAbilityObject = {
                                   },
                                   "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                                   "stackLimit": {
-                                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                    "displayLines": "MDF_MaxLayer",
-                                    "constants": [],
-                                    "variables": [
-                                      "MDF_MaxLayer"
-                                    ]
+                                    "displayLines": "MDF_MaxLayer"
                                   },
                                   "valuePerStack": {
                                     "MDF_DamageResistance": {
-                                      "operator": "Variables[0] (MDF_DamageResistance) || RETURN",
-                                      "displayLines": "MDF_DamageResistance",
-                                      "constants": [],
-                                      "variables": [
-                                        "MDF_DamageResistance"
-                                      ]
+                                      "displayLines": "MDF_DamageResistance"
                                     },
                                     "MDF_CrackedEffect": {
-                                      "operator": "Variables[0] (MDF_CrackedEffect) || RETURN",
-                                      "displayLines": "MDF_CrackedEffect",
-                                      "constants": [],
-                                      "variables": [
-                                        "MDF_CrackedEffect"
-                                      ]
+                                      "displayLines": "MDF_CrackedEffect"
                                     },
                                     "MDF_CrackedDamage": {
-                                      "operator": "Variables[0] (MDF_CrackedDamage) || RETURN",
-                                      "displayLines": "MDF_CrackedDamage",
-                                      "constants": [],
-                                      "variables": [
-                                        "MDF_CrackedDamage"
-                                      ]
+                                      "displayLines": "MDF_CrackedDamage"
                                     }
                                   },
                                   "addStacksPerTrigger": {
-                                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                    "displayLines": "MDF_MaxLayer",
-                                    "constants": [],
-                                    "variables": [
-                                      "MDF_MaxLayer"
-                                    ]
+                                    "displayLines": "MDF_MaxLayer"
                                   }
                                 }
                               ]
@@ -1443,46 +1342,21 @@ const compositeAbilityObject = {
                                       },
                                       "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                                       "stackLimit": {
-                                        "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                        "displayLines": "MDF_MaxLayer",
-                                        "constants": [],
-                                        "variables": [
-                                          "MDF_MaxLayer"
-                                        ]
+                                        "displayLines": "MDF_MaxLayer"
                                       },
                                       "valuePerStack": {
                                         "MDF_DamageResistance": {
-                                          "operator": "Variables[0] (MDF_DamageResistance) || RETURN",
-                                          "displayLines": "MDF_DamageResistance",
-                                          "constants": [],
-                                          "variables": [
-                                            "MDF_DamageResistance"
-                                          ]
+                                          "displayLines": "MDF_DamageResistance"
                                         },
                                         "MDF_CrackedEffect": {
-                                          "operator": "Variables[0] (MDF_CrackedEffect) || RETURN",
-                                          "displayLines": "MDF_CrackedEffect",
-                                          "constants": [],
-                                          "variables": [
-                                            "MDF_CrackedEffect"
-                                          ]
+                                          "displayLines": "MDF_CrackedEffect"
                                         },
                                         "MDF_CrackedDamage": {
-                                          "operator": "Variables[0] (MDF_CrackedDamage) || RETURN",
-                                          "displayLines": "MDF_CrackedDamage",
-                                          "constants": [],
-                                          "variables": [
-                                            "MDF_CrackedDamage"
-                                          ]
+                                          "displayLines": "MDF_CrackedDamage"
                                         }
                                       },
                                       "addStacksPerTrigger": {
-                                        "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                        "displayLines": "MDF_MaxLayer",
-                                        "constants": [],
-                                        "variables": [
-                                          "MDF_MaxLayer"
-                                        ]
+                                        "displayLines": "MDF_MaxLayer"
                                       }
                                     }
                                   ]
@@ -1508,46 +1382,21 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "valuePerStack": {
                     "MDF_DamageResistance": {
-                      "operator": "Variables[0] (MDF_DamageResistance) || RETURN",
-                      "displayLines": "MDF_DamageResistance",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageResistance"
-                      ]
+                      "displayLines": "MDF_DamageResistance"
                     },
                     "MDF_CrackedEffect": {
-                      "operator": "Variables[0] (MDF_CrackedEffect) || RETURN",
-                      "displayLines": "MDF_CrackedEffect",
-                      "constants": [],
-                      "variables": [
-                        "MDF_CrackedEffect"
-                      ]
+                      "displayLines": "MDF_CrackedEffect"
                     },
                     "MDF_CrackedDamage": {
-                      "operator": "Variables[0] (MDF_CrackedDamage) || RETURN",
-                      "displayLines": "MDF_CrackedDamage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_CrackedDamage"
-                      ]
+                      "displayLines": "MDF_CrackedDamage"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   }
                 },
                 {
@@ -1615,12 +1464,7 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "valuePercent": {
-                            "operator": "Variables[0] (MDF_ModifySP) || RETURN",
-                            "displayLines": "MDF_ModifySP",
-                            "constants": [],
-                            "variables": [
-                              "MDF_ModifySP"
-                            ]
+                            "displayLines": "MDF_ModifySP"
                           },
                           "isFixed": "* ERR"
                         },
@@ -1750,12 +1594,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] (MDF_CrackedDamage) || RETURN",
-                                  "displayLines": "MDF_CrackedDamage",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_CrackedDamage"
-                                  ]
+                                  "displayLines": "MDF_CrackedDamage"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -1777,12 +1616,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] (MDF_CrackedDamage) || RETURN",
-                                  "displayLines": "MDF_CrackedDamage",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_CrackedDamage"
-                                  ]
+                                  "displayLines": "MDF_CrackedDamage"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -1860,12 +1694,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] (MDF_CrackedDamageAfter) || RETURN",
-                                  "displayLines": "MDF_CrackedDamageAfter",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_CrackedDamageAfter"
-                                  ]
+                                  "displayLines": "MDF_CrackedDamageAfter"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -1887,12 +1716,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] (MDF_CrackedDamageAfter) || RETURN",
-                                  "displayLines": "MDF_CrackedDamageAfter",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_CrackedDamageAfter"
-                                  ]
+                                  "displayLines": "MDF_CrackedDamageAfter"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -1932,12 +1756,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_OriginalMaxLayer) || RETURN",
-                        "displayLines": "MDF_OriginalMaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_OriginalMaxLayer"
-                        ]
+                        "displayLines": "MDF_OriginalMaxLayer"
                       },
                       "variableName": "MDF_MaxLayer"
                     },
@@ -1990,14 +1809,7 @@ const compositeAbilityObject = {
                             "value1": "MDF_AddMaxLayer",
                             "compareType": "<",
                             "value2": {
-                              "operator": "Variables[0] (MDF_CurLayer) || Constants[0] (1) || SUB || RETURN",
-                              "displayLines": "(MDF_CurLayer - 1)",
-                              "constants": [
-                                1
-                              ],
-                              "variables": [
-                                "MDF_CurLayer"
-                              ]
+                              "displayLines": "(MDF_CurLayer - 1)"
                             }
                           },
                           "passed": [
@@ -2009,46 +1821,21 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                "displayLines": "MDF_MaxLayer",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_MaxLayer"
-                                ]
+                                "displayLines": "MDF_MaxLayer"
                               },
                               "valuePerStack": {
                                 "MDF_DamageResistance": {
-                                  "operator": "Variables[0] (MDF_DamageResistance) || RETURN",
-                                  "displayLines": "MDF_DamageResistance",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_DamageResistance"
-                                  ]
+                                  "displayLines": "MDF_DamageResistance"
                                 },
                                 "MDF_CrackedEffect": {
-                                  "operator": "Variables[0] (MDF_CrackedEffect) || RETURN",
-                                  "displayLines": "MDF_CrackedEffect",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_CrackedEffect"
-                                  ]
+                                  "displayLines": "MDF_CrackedEffect"
                                 },
                                 "MDF_CrackedDamage": {
-                                  "operator": "Variables[0] (MDF_CrackedDamage) || RETURN",
-                                  "displayLines": "MDF_CrackedDamage",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_CrackedDamage"
-                                  ]
+                                  "displayLines": "MDF_CrackedDamage"
                                 }
                               },
                               "addStacksPerTrigger": {
-                                "operator": "Variables[0] (MDF_AddMaxLayer) || INVERT || RETURN",
-                                "displayLines": "-MDF_AddMaxLayer",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_AddMaxLayer"
-                                ]
+                                "displayLines": "-MDF_AddMaxLayer"
                               }
                             }
                           ],
@@ -2061,48 +1848,21 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                "displayLines": "MDF_MaxLayer",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_MaxLayer"
-                                ]
+                                "displayLines": "MDF_MaxLayer"
                               },
                               "valuePerStack": {
                                 "MDF_DamageResistance": {
-                                  "operator": "Variables[0] (MDF_DamageResistance) || RETURN",
-                                  "displayLines": "MDF_DamageResistance",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_DamageResistance"
-                                  ]
+                                  "displayLines": "MDF_DamageResistance"
                                 },
                                 "MDF_CrackedEffect": {
-                                  "operator": "Variables[0] (MDF_CrackedEffect) || RETURN",
-                                  "displayLines": "MDF_CrackedEffect",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_CrackedEffect"
-                                  ]
+                                  "displayLines": "MDF_CrackedEffect"
                                 },
                                 "MDF_CrackedDamage": {
-                                  "operator": "Variables[0] (MDF_CrackedDamage) || RETURN",
-                                  "displayLines": "MDF_CrackedDamage",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_CrackedDamage"
-                                  ]
+                                  "displayLines": "MDF_CrackedDamage"
                                 }
                               },
                               "addStacksPerTrigger": {
-                                "operator": "Constants[0] (1) || Variables[0] (MDF_CurLayer) || SUB || RETURN",
-                                "displayLines": "(1 - MDF_CurLayer)",
-                                "constants": [
-                                  1
-                                ],
-                                "variables": [
-                                  "MDF_CurLayer"
-                                ]
+                                "displayLines": "(1 - MDF_CurLayer)"
                               }
                             }
                           ]
@@ -2137,12 +1897,7 @@ const compositeAbilityObject = {
                                 "target": "{{Modifier Holder}}"
                               },
                               "maximum": {
-                                "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                "displayLines": "MDF_MaxLayer",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_MaxLayer"
-                                ]
+                                "displayLines": "MDF_MaxLayer"
                               }
                             }
                           ]
@@ -2166,12 +1921,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                        "displayLines": "MDF_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxLayer"
-                        ]
+                        "displayLines": "MDF_MaxLayer"
                       },
                       "variableName": "MDF_OriginalMaxLayer"
                     },
@@ -2192,13 +1942,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_MaxLayer) || Variables[1] (MDF_AddMaxLayer) || ADD || RETURN",
-                        "displayLines": "(MDF_MaxLayer + MDF_AddMaxLayer)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxLayer",
-                          "MDF_AddMaxLayer"
-                        ]
+                        "displayLines": "(MDF_MaxLayer + MDF_AddMaxLayer)"
                       },
                       "variableName": "MDF_MaxLayer"
                     },
@@ -2237,46 +1981,21 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                            "displayLines": "MDF_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxLayer"
-                            ]
+                            "displayLines": "MDF_MaxLayer"
                           },
                           "valuePerStack": {
                             "MDF_DamageResistance": {
-                              "operator": "Variables[0] (MDF_DamageResistance) || RETURN",
-                              "displayLines": "MDF_DamageResistance",
-                              "constants": [],
-                              "variables": [
-                                "MDF_DamageResistance"
-                              ]
+                              "displayLines": "MDF_DamageResistance"
                             },
                             "MDF_CrackedEffect": {
-                              "operator": "Variables[0] (MDF_CrackedEffect) || RETURN",
-                              "displayLines": "MDF_CrackedEffect",
-                              "constants": [],
-                              "variables": [
-                                "MDF_CrackedEffect"
-                              ]
+                              "displayLines": "MDF_CrackedEffect"
                             },
                             "MDF_CrackedDamage": {
-                              "operator": "Variables[0] (MDF_CrackedDamage) || RETURN",
-                              "displayLines": "MDF_CrackedDamage",
-                              "constants": [],
-                              "variables": [
-                                "MDF_CrackedDamage"
-                              ]
+                              "displayLines": "MDF_CrackedDamage"
                             }
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (MDF_AddMaxLayer) || RETURN",
-                            "displayLines": "MDF_AddMaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_AddMaxLayer"
-                            ]
+                            "displayLines": "MDF_AddMaxLayer"
                           }
                         },
                         {
@@ -2297,12 +2016,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                            "displayLines": "MDF_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxLayer"
-                            ]
+                            "displayLines": "MDF_MaxLayer"
                           }
                         }
                       ]
@@ -2319,12 +2033,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                        "displayLines": "MDF_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxLayer"
-                        ]
+                        "displayLines": "MDF_MaxLayer"
                       },
                       "variableName": "MDF_OriginalMaxLayer"
                     },
@@ -2345,13 +2054,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_MaxLayer) || Variables[1] (MDF_AddMaxLayer) || ADD || RETURN",
-                        "displayLines": "(MDF_MaxLayer + MDF_AddMaxLayer)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxLayer",
-                          "MDF_AddMaxLayer"
-                        ]
+                        "displayLines": "(MDF_MaxLayer + MDF_AddMaxLayer)"
                       },
                       "variableName": "MDF_MaxLayer"
                     },
@@ -2390,46 +2093,21 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                            "displayLines": "MDF_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxLayer"
-                            ]
+                            "displayLines": "MDF_MaxLayer"
                           },
                           "valuePerStack": {
                             "MDF_DamageResistance": {
-                              "operator": "Variables[0] (MDF_DamageResistance) || RETURN",
-                              "displayLines": "MDF_DamageResistance",
-                              "constants": [],
-                              "variables": [
-                                "MDF_DamageResistance"
-                              ]
+                              "displayLines": "MDF_DamageResistance"
                             },
                             "MDF_CrackedEffect": {
-                              "operator": "Variables[0] (MDF_CrackedEffect) || RETURN",
-                              "displayLines": "MDF_CrackedEffect",
-                              "constants": [],
-                              "variables": [
-                                "MDF_CrackedEffect"
-                              ]
+                              "displayLines": "MDF_CrackedEffect"
                             },
                             "MDF_CrackedDamage": {
-                              "operator": "Variables[0] (MDF_CrackedDamage) || RETURN",
-                              "displayLines": "MDF_CrackedDamage",
-                              "constants": [],
-                              "variables": [
-                                "MDF_CrackedDamage"
-                              ]
+                              "displayLines": "MDF_CrackedDamage"
                             }
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (MDF_AddMaxLayer) || RETURN",
-                            "displayLines": "MDF_AddMaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_AddMaxLayer"
-                            ]
+                            "displayLines": "MDF_AddMaxLayer"
                           }
                         },
                         {
@@ -2462,12 +2140,7 @@ const compositeAbilityObject = {
                                 "target": "{{Modifier Holder}}"
                               },
                               "maximum": {
-                                "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                "displayLines": "MDF_MaxLayer",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_MaxLayer"
-                                ]
+                                "displayLines": "MDF_MaxLayer"
                               }
                             }
                           ]
@@ -2501,12 +2174,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageTakenUpRatio) || RETURN",
-                    "displayLines": "MDF_DamageTakenUpRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageTakenUpRatio"
-                    ]
+                    "displayLines": "MDF_DamageTakenUpRatio"
                   }
                 }
               ]
@@ -2997,12 +2665,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1011760406\">MModifier_Monster_W4_Claymore_Ability05_PowerUp</a>[<span class=\"descriptionNumberColor\">Permanent Enhancement</span>]",
           "valuePerStack": {
             "BonusRatio": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "{[Skill05[0]]}"
             }
           }
         },
@@ -3036,13 +2699,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (BonusRatio) || Variables[1] (_Layer) || MUL || RETURN",
-                    "displayLines": "(BonusRatio * _Layer)",
-                    "constants": [],
-                    "variables": [
-                      "BonusRatio",
-                      "_Layer"
-                    ]
+                    "displayLines": "(BonusRatio * _Layer)"
                   }
                 },
                 {
@@ -3130,12 +2787,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -3267,12 +2919,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -3289,12 +2936,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -3311,12 +2953,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -3402,12 +3039,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -3424,12 +3056,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -3446,12 +3073,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,

@@ -19,12 +19,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.08) || RETURN",
-            "displayLines": "0.08",
-            "constants": [],
-            "variables": [
-              0.08
-            ]
+            "displayLines": "0.08"
           },
           "variableName": "_RankSpeedDown"
         }
@@ -46,12 +41,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-2025698986\">DanHeng_Ability02_CheckCritical_Modifier</a>",
       "valuePerStack": {
         "MDF_Chance": {
-          "operator": "Variables[0] (1) || RETURN",
-          "displayLines": "1",
-          "constants": [],
-          "variables": [
-            1
-          ]
+          "displayLines": "1"
         }
       }
     },
@@ -64,21 +54,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] (2.6) || RETURN",
-          "displayLines": "2.6",
-          "constants": [],
-          "variables": [
-            2.6
-          ]
+          "displayLines": "2.6"
         },
         "HitSplit": 0.3,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -93,21 +73,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] (2.6) || RETURN",
-          "displayLines": "2.6",
-          "constants": [],
-          "variables": [
-            2.6
-          ]
+          "displayLines": "2.6"
         },
         "HitSplit": 0.15,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -122,21 +92,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] (2.6) || RETURN",
-          "displayLines": "2.6",
-          "constants": [],
-          "variables": [
-            2.6
-          ]
+          "displayLines": "2.6"
         },
         "HitSplit": 0.15,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -152,21 +112,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] (2.6) || RETURN",
-          "displayLines": "2.6",
-          "constants": [],
-          "variables": [
-            2.6
-          ]
+          "displayLines": "2.6"
         },
         "HitSplit": 0.4,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -207,14 +157,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           ]
@@ -243,30 +186,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1147035290\">DanHeng_BPAbility_SpeedDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (MDF_Chance) || RETURN",
-                    "displayLines": "MDF_Chance",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Chance"
-                    ]
+                    "displayLines": "MDF_Chance"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.12) || Variables[1] (_RankSpeedDown) || ADD || RETURN",
-                      "displayLines": "(0.12 + _RankSpeedDown)",
-                      "constants": [],
-                      "variables": [
-                        0.12,
-                        "_RankSpeedDown"
-                      ]
+                      "displayLines": "(0.12 + _RankSpeedDown)"
                     }
                   }
                 }

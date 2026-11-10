@@ -57,12 +57,7 @@ const configAbility = {
                 {
                   "name": "Skill Points Modification",
                   "adjustmentValue": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "adjustmentType": "+"
                 },
@@ -73,12 +68,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (12) || RETURN",
-                    "displayLines": "12",
-                    "constants": [],
-                    "variables": [
-                      12
-                    ]
+                    "displayLines": "12"
                   },
                   "isFixed": "* ERR"
                 },

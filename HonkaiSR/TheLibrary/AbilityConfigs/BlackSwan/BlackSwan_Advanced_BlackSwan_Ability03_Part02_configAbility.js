@@ -16,33 +16,14 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"803699563\">Advanced_BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]",
       "duration": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       },
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] (0.25) || Variables[1] (Have_Rank04) || Variables[2] (0.2) || Constants[0] (0) || CHECK || ADD || RETURN",
-          "displayLines": "(0.25 + check(value:Have_Rank04, then:0.2, else:0))",
-          "constants": [
-            0
-          ],
-          "variables": [
-            0.25,
-            "Have_Rank04",
-            0.2
-          ]
+          "displayLines": "(0.25 + check(value:Have_Rank04, then:0.2, else:0))"
         },
         "MDF_Chance": {
-          "operator": "Variables[0] (0.5) || RETURN",
-          "displayLines": "0.5",
-          "constants": [],
-          "variables": [
-            0.5
-          ]
+          "displayLines": "0.5"
         }
       }
     },
@@ -56,20 +37,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] (1.2) || RETURN",
-          "displayLines": "1.2",
-          "constants": [],
-          "variables": [
-            1.2
-          ]
+          "displayLines": "1.2"
         },
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"

@@ -53,14 +53,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_StackCount) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(MDF_StackCount + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_StackCount"
-                ]
+                "displayLines": "(MDF_StackCount + 1)"
               },
               "variableName": "MDF_StackCount"
             }
@@ -245,12 +238,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (MDF_StackCount) || RETURN",
-            "displayLines": "MDF_StackCount",
-            "constants": [],
-            "variables": [
-              "MDF_StackCount"
-            ]
+            "displayLines": "MDF_StackCount"
           },
           "execute": [
             {
@@ -262,12 +250,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9476) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9476",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_9476"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_9476"
                 },
                 "Shield_InitValue": 0
               }
@@ -391,12 +374,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
           "valuePerStack": {
             "MDF_DamageUpRatio_PerLayer": {
-              "operator": "Variables[0] (UnusedUnderThisBase_9482) || RETURN",
-              "displayLines": "UnusedUnderThisBase_9482",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_9482"
-              ]
+              "displayLines": "UnusedUnderThisBase_9482"
             }
           }
         }
@@ -430,12 +408,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-          "displayLines": "{[Skill02[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[0]]}"
-          ]
+          "displayLines": "{[Skill02[0]]}"
         },
         "HitSplit": 0.2,
         "Toughness": null,
@@ -453,12 +426,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-          "displayLines": "{[Skill02[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[0]]}"
-          ]
+          "displayLines": "{[Skill02[0]]}"
         },
         "HitSplit": 0.3,
         "Toughness": null,
@@ -476,12 +444,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-          "displayLines": "{[Skill02[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[0]]}"
-          ]
+          "displayLines": "{[Skill02[0]]}"
         },
         "HitSplit": 0.5,
         "Toughness": null,
@@ -499,12 +462,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-          "displayLines": "{[Skill02[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[1]]}"
-          ]
+          "displayLines": "{[Skill02[1]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -557,23 +515,13 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-            "displayLines": "{[Skill01[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[2]]}"
-            ]
+            "displayLines": "{[Skill01[2]]}"
           },
           "baseChance": 1,
           "immediateEffect": true,
           "valuePerStack": {
             "Modifier_Electric_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
+              "displayLines": "{[Skill01[3]]}"
             }
           },
           "stackFlag": "CharacterSkill"

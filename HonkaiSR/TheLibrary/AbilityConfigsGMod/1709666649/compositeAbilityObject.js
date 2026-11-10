@@ -31,12 +31,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">StageFinalDMG</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_2) || RETURN",
-                    "displayLines": "MDF_2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_2"
-                    ]
+                    "displayLines": "MDF_2"
                   }
                 },
                 {
@@ -47,12 +42,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_3) || RETURN",
-                    "displayLines": "MDF_3",
-                    "constants": [],
-                    "variables": [
-                      "MDF_3"
-                    ]
+                    "displayLines": "MDF_3"
                   }
                 }
               ]
@@ -78,12 +68,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_1) || RETURN",
-                      "displayLines": "MDF_1",
-                      "constants": [],
-                      "variables": [
-                        "MDF_1"
-                      ]
+                      "displayLines": "MDF_1"
                     }
                   },
                   "passed": [
@@ -96,20 +81,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-262937871\">MLevel_WB_3002529_Sub</a>",
                       "valuePerStack": {
                         "MDF_2": {
-                          "operator": "Variables[0] (MDF_2) || RETURN",
-                          "displayLines": "MDF_2",
-                          "constants": [],
-                          "variables": [
-                            "MDF_2"
-                          ]
+                          "displayLines": "MDF_2"
                         },
                         "MDF_3": {
-                          "operator": "Variables[0] (MDF_3) || RETURN",
-                          "displayLines": "MDF_3",
-                          "constants": [],
-                          "variables": [
-                            "MDF_3"
-                          ]
+                          "displayLines": "MDF_3"
                         }
                       },
                       "casterAssign": "CasterSelf"
@@ -142,12 +117,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_1) || RETURN",
-                      "displayLines": "MDF_1",
-                      "constants": [],
-                      "variables": [
-                        "MDF_1"
-                      ]
+                      "displayLines": "MDF_1"
                     }
                   },
                   "passed": [
@@ -160,20 +130,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-262937871\">MLevel_WB_3002529_Sub</a>",
                       "valuePerStack": {
                         "MDF_2": {
-                          "operator": "Variables[0] (MDF_2) || RETURN",
-                          "displayLines": "MDF_2",
-                          "constants": [],
-                          "variables": [
-                            "MDF_2"
-                          ]
+                          "displayLines": "MDF_2"
                         },
                         "MDF_3": {
-                          "operator": "Variables[0] (MDF_3) || RETURN",
-                          "displayLines": "MDF_3",
-                          "constants": [],
-                          "variables": [
-                            "MDF_3"
-                          ]
+                          "displayLines": "MDF_3"
                         }
                       },
                       "casterAssign": "CasterSelf"
@@ -209,12 +169,7 @@ const compositeAbilityObject = {
                   "valueType": "Layer",
                   "variableName": "TempValue",
                   "multiplier": {
-                    "operator": "Variables[0] (MDF_1) || RETURN",
-                    "displayLines": "MDF_1",
-                    "constants": [],
-                    "variables": [
-                      "MDF_1"
-                    ]
+                    "displayLines": "MDF_1"
                   }
                 },
                 {
@@ -224,12 +179,7 @@ const compositeAbilityObject = {
                     "value1": "TempValue",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_2) || RETURN",
-                      "displayLines": "MDF_2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_2"
-                      ]
+                      "displayLines": "MDF_2"
                     }
                   },
                   "passed": [
@@ -241,12 +191,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (TempValue) || RETURN",
-                        "displayLines": "TempValue",
-                        "constants": [],
-                        "variables": [
-                          "TempValue"
-                        ]
+                        "displayLines": "TempValue"
                       }
                     }
                   ],
@@ -259,12 +204,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (MDF_2) || RETURN",
-                        "displayLines": "MDF_2",
-                        "constants": [],
-                        "variables": [
-                          "MDF_2"
-                        ]
+                        "displayLines": "MDF_2"
                       }
                     }
                   ]
@@ -290,20 +230,10 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-2079541158\">MLevel_WB_3002528_Sub</a>",
                   "valuePerStack": {
                     "MDF_1": {
-                      "operator": "Variables[0] (MDF_1) || RETURN",
-                      "displayLines": "MDF_1",
-                      "constants": [],
-                      "variables": [
-                        "MDF_1"
-                      ]
+                      "displayLines": "MDF_1"
                     },
                     "MDF_2": {
-                      "operator": "Variables[0] (MDF_2) || RETURN",
-                      "displayLines": "MDF_2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_2"
-                      ]
+                      "displayLines": "MDF_2"
                     }
                   }
                 }
@@ -330,13 +260,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (TempValue) || Variables[1] (MDF_2) || MUL || Variables[1] (MDF_2) || SUB || RETURN",
-                    "displayLines": "((TempValue * MDF_2) - MDF_2)",
-                    "constants": [],
-                    "variables": [
-                      "TempValue",
-                      "MDF_2"
-                    ]
+                    "displayLines": "((TempValue * MDF_2) - MDF_2)"
                   },
                   "variableName": "TempValue"
                 },
@@ -347,12 +271,7 @@ const compositeAbilityObject = {
                     "value1": "TempValue",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_1) || RETURN",
-                      "displayLines": "MDF_1",
-                      "constants": [],
-                      "variables": [
-                        "MDF_1"
-                      ]
+                      "displayLines": "MDF_1"
                     }
                   },
                   "passed": [
@@ -364,13 +283,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (MDF_1) || Variables[1] (TempValue) || SUB || RETURN",
-                        "displayLines": "(MDF_1 - TempValue)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_1",
-                          "TempValue"
-                        ]
+                        "displayLines": "(MDF_1 - TempValue)"
                       }
                     }
                   ],
@@ -407,20 +320,10 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-677194305\">MLevel_WB_3002527_Sub</a>",
                   "valuePerStack": {
                     "MDF_1": {
-                      "operator": "Variables[0] (MDF_1) || RETURN",
-                      "displayLines": "MDF_1",
-                      "constants": [],
-                      "variables": [
-                        "MDF_1"
-                      ]
+                      "displayLines": "MDF_1"
                     },
                     "MDF_2": {
-                      "operator": "Variables[0] (MDF_2) || RETURN",
-                      "displayLines": "MDF_2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_2"
-                      ]
+                      "displayLines": "MDF_2"
                     }
                   }
                 }
@@ -438,20 +341,10 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-677194305\">MLevel_WB_3002527_Sub</a>",
                   "valuePerStack": {
                     "MDF_1": {
-                      "operator": "Variables[0] (MDF_1) || RETURN",
-                      "displayLines": "MDF_1",
-                      "constants": [],
-                      "variables": [
-                        "MDF_1"
-                      ]
+                      "displayLines": "MDF_1"
                     },
                     "MDF_2": {
-                      "operator": "Variables[0] (MDF_2) || RETURN",
-                      "displayLines": "MDF_2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_2"
-                      ]
+                      "displayLines": "MDF_2"
                     }
                   }
                 }
@@ -506,12 +399,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-2000244981\">MLevel_WB_3002523_Sub</a>",
                   "valuePerStack": {
                     "MDF_1": {
-                      "operator": "Variables[0] (MDF_1) || RETURN",
-                      "displayLines": "MDF_1",
-                      "constants": [],
-                      "variables": [
-                        "MDF_1"
-                      ]
+                      "displayLines": "MDF_1"
                     }
                   },
                   "casterAssign": "CasterSelf"
@@ -539,14 +427,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_1) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_1)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_1"
-                    ]
+                    "displayLines": "(0 - MDF_1)"
                   }
                 }
               ]
@@ -577,12 +458,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-2000244981\">MLevel_WB_3002523_Sub</a>",
                       "valuePerStack": {
                         "MDF_1": {
-                          "operator": "Variables[0] (MDF_1) || RETURN",
-                          "displayLines": "MDF_1",
-                          "constants": [],
-                          "variables": [
-                            "MDF_1"
-                          ]
+                          "displayLines": "MDF_1"
                         }
                       },
                       "casterAssign": "CasterSelf"
@@ -618,12 +494,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_1) || RETURN",
-                    "displayLines": "MDF_1",
-                    "constants": [],
-                    "variables": [
-                      "MDF_1"
-                    ]
+                    "displayLines": "MDF_1"
                   }
                 }
               ]
@@ -645,12 +516,7 @@ const compositeAbilityObject = {
                   "valueType": "Layer",
                   "variableName": "MDF_1",
                   "multiplier": {
-                    "operator": "Variables[0] (MDF_2) || RETURN",
-                    "displayLines": "MDF_2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_2"
-                    ]
+                    "displayLines": "MDF_2"
                   }
                 },
                 {
@@ -661,12 +527,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">StageFinalDMG</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_1) || RETURN",
-                    "displayLines": "MDF_1",
-                    "constants": [],
-                    "variables": [
-                      "MDF_1"
-                    ]
+                    "displayLines": "MDF_1"
                   }
                 }
               ]
@@ -702,13 +563,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_Speed1) || Variables[1] (MDF_Speed2) || SUB || RETURN",
-                    "displayLines": "(MDF_Speed1 - MDF_Speed2)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Speed1",
-                      "MDF_Speed2"
-                    ]
+                    "displayLines": "(MDF_Speed1 - MDF_Speed2)"
                   },
                   "variableName": "MDF_DMGUpValue"
                 },
@@ -724,13 +579,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_DMGUpValue) || Variables[1] (MDF_1) || MUL || RETURN",
-                        "displayLines": "(MDF_DMGUpValue * MDF_1)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DMGUpValue",
-                          "MDF_1"
-                        ]
+                        "displayLines": "(MDF_DMGUpValue * MDF_1)"
                       },
                       "variableName": "MDF_DMGUpValue"
                     },
@@ -741,12 +590,7 @@ const compositeAbilityObject = {
                         "value1": "MDF_DMGUpValue",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (MDF_2) || RETURN",
-                          "displayLines": "MDF_2",
-                          "constants": [],
-                          "variables": [
-                            "MDF_2"
-                          ]
+                          "displayLines": "MDF_2"
                         }
                       },
                       "passed": [
@@ -795,12 +639,7 @@ const compositeAbilityObject = {
                   "valueType": "Layer",
                   "variableName": "MDF_1",
                   "multiplier": {
-                    "operator": "Variables[0] (MDF_2) || RETURN",
-                    "displayLines": "MDF_2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_2"
-                    ]
+                    "displayLines": "MDF_2"
                   }
                 },
                 {
@@ -811,12 +650,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">StageFinalDMG</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_1) || RETURN",
-                    "displayLines": "MDF_1",
-                    "constants": [],
-                    "variables": [
-                      "MDF_1"
-                    ]
+                    "displayLines": "MDF_1"
                   }
                 }
               ]
@@ -834,14 +668,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (TempValue) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(TempValue + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "TempValue"
-                    ]
+                    "displayLines": "(TempValue + 1)"
                   },
                   "variableName": "TempValue"
                 },
@@ -852,12 +679,7 @@ const compositeAbilityObject = {
                     "value1": "TempValue",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_1) || RETURN",
-                      "displayLines": "MDF_1",
-                      "constants": [],
-                      "variables": [
-                        "MDF_1"
-                      ]
+                      "displayLines": "MDF_1"
                     }
                   },
                   "passed": [
@@ -875,12 +697,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"77193482\">MLevel_WB_3002502_Sub</a>",
                       "valuePerStack": {
                         "MDF_2": {
-                          "operator": "Variables[0] (MDF_2) || RETURN",
-                          "displayLines": "MDF_2",
-                          "constants": [],
-                          "variables": [
-                            "MDF_2"
-                          ]
+                          "displayLines": "MDF_2"
                         }
                       },
                       "casterAssign": "CasterSelf"
@@ -908,12 +725,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "Damage": {
-                      "operator": "Variables[0] (MDF_Value) || RETURN",
-                      "displayLines": "MDF_Value",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Value"
-                      ]
+                      "displayLines": "MDF_Value"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -938,12 +750,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Random Chance",
                     "chance": {
-                      "operator": "Variables[0] (MDF_1) || RETURN",
-                      "displayLines": "MDF_1",
-                      "constants": [],
-                      "variables": [
-                        "MDF_1"
-                      ]
+                      "displayLines": "MDF_1"
                     }
                   },
                   "passed": [
@@ -956,12 +763,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1242915997\">MLevel_WB_3002501_Sub</a>",
                       "valuePerStack": {
                         "MDF_Value": {
-                          "operator": "Variables[0] (MDF_2) || RETURN",
-                          "displayLines": "MDF_2",
-                          "constants": [],
-                          "variables": [
-                            "MDF_2"
-                          ]
+                          "displayLines": "MDF_2"
                         }
                       },
                       "casterAssign": "CasterSelf"
@@ -1009,21 +811,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-360289157\">Standard_LevelAllDamageAddedRatio</a>",
                   "duration": {
-                    "operator": "Variables[0] (MDF_2) || RETURN",
-                    "displayLines": "MDF_2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_2"
-                    ]
+                    "displayLines": "MDF_2"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_1) || RETURN",
-                      "displayLines": "MDF_1",
-                      "constants": [],
-                      "variables": [
-                        "MDF_1"
-                      ]
+                      "displayLines": "MDF_1"
                     }
                   },
                   "casterAssign": "CasterSelf"
@@ -1061,14 +853,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRate</span>&nbsp;",
                       "value": {
-                        "operator": "Constants[0] (0) || Variables[0] (MDF_1) || SUB || RETURN",
-                        "displayLines": "(0 - MDF_1)",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "MDF_1"
-                        ]
+                        "displayLines": "(0 - MDF_1)"
                       }
                     }
                   ],
@@ -1081,12 +866,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRate</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (MDF_2) || RETURN",
-                        "displayLines": "MDF_2",
-                        "constants": [],
-                        "variables": [
-                          "MDF_2"
-                        ]
+                        "displayLines": "MDF_2"
                       }
                     }
                   ]
@@ -1111,14 +891,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingIncoming</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_1) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_1)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_1"
-                    ]
+                    "displayLines": "(0 - MDF_1)"
                   }
                 },
                 {
@@ -1129,12 +902,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_2) || RETURN",
-                    "displayLines": "MDF_2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_2"
-                    ]
+                    "displayLines": "MDF_2"
                   }
                 }
               ]
@@ -1154,12 +922,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Random Chance",
                     "chance": {
-                      "operator": "Variables[0] (MDF_1) || RETURN",
-                      "displayLines": "MDF_1",
-                      "constants": [],
-                      "variables": [
-                        "MDF_1"
-                      ]
+                      "displayLines": "MDF_1"
                     }
                   },
                   "passed": [
@@ -1180,22 +943,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1147160586\">Standard_DOT_Bleed</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_3) || RETURN",
-                        "displayLines": "MDF_3",
-                        "constants": [],
-                        "variables": [
-                          "MDF_3"
-                        ]
+                        "displayLines": "MDF_3"
                       },
                       "valuePerStack": {
                         "Modifier_Bleed_DamageValue": {
-                          "operator": "Variables[0] (TempValue) || Variables[1] (MDF_2) || MUL || RETURN",
-                          "displayLines": "(TempValue * MDF_2)",
-                          "constants": [],
-                          "variables": [
-                            "TempValue",
-                            "MDF_2"
-                          ]
+                          "displayLines": "(TempValue * MDF_2)"
                         }
                       },
                       "casterAssign": "CasterSelf"
@@ -1222,14 +974,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_1) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_1)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_1"
-                    ]
+                    "displayLines": "(0 - MDF_1)"
                   }
                 },
                 {
@@ -1240,12 +985,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_2) || RETURN",
-                    "displayLines": "MDF_2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_2"
-                    ]
+                    "displayLines": "MDF_2"
                   }
                 }
               ]
@@ -1291,13 +1031,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (MDF_1) || Variables[1] (MDF_2) || ADD || RETURN",
-                        "displayLines": "(MDF_1 + MDF_2)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_1",
-                          "MDF_2"
-                        ]
+                        "displayLines": "(MDF_1 + MDF_2)"
                       }
                     }
                   ],
@@ -1310,12 +1044,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (MDF_1) || RETURN",
-                        "displayLines": "MDF_1",
-                        "constants": [],
-                        "variables": [
-                          "MDF_1"
-                        ]
+                        "displayLines": "MDF_1"
                       }
                     }
                   ]
@@ -1363,13 +1092,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">StageFinalDMG</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (MDF_1) || Variables[1] (MDF_2) || ADD || RETURN",
-                        "displayLines": "(MDF_1 + MDF_2)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_1",
-                          "MDF_2"
-                        ]
+                        "displayLines": "(MDF_1 + MDF_2)"
                       }
                     }
                   ],
@@ -1382,12 +1105,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">StageFinalDMG</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (MDF_1) || RETURN",
-                        "displayLines": "MDF_1",
-                        "constants": [],
-                        "variables": [
-                          "MDF_1"
-                        ]
+                        "displayLines": "MDF_1"
                       }
                     }
                   ]
@@ -1435,13 +1153,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (MDF_1) || Variables[1] (MDF_2) || ADD || RETURN",
-                        "displayLines": "(MDF_1 + MDF_2)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_1",
-                          "MDF_2"
-                        ]
+                        "displayLines": "(MDF_1 + MDF_2)"
                       }
                     }
                   ],
@@ -1454,12 +1166,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (MDF_1) || RETURN",
-                        "displayLines": "MDF_1",
-                        "constants": [],
-                        "variables": [
-                          "MDF_1"
-                        ]
+                        "displayLines": "MDF_1"
                       }
                     }
                   ]
@@ -1509,12 +1216,7 @@ const compositeAbilityObject = {
                       {
                         "name": "Random Chance",
                         "chance": {
-                          "operator": "Variables[0] (MDF_1) || RETURN",
-                          "displayLines": "MDF_1",
-                          "constants": [],
-                          "variables": [
-                            "MDF_1"
-                          ]
+                          "displayLines": "MDF_1"
                         }
                       }
                     ]
@@ -1551,12 +1253,7 @@ const compositeAbilityObject = {
                   "valueType": "Layer",
                   "variableName": "MDF_1",
                   "multiplier": {
-                    "operator": "Variables[0] (MDF_2) || RETURN",
-                    "displayLines": "MDF_2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_2"
-                    ]
+                    "displayLines": "MDF_2"
                   }
                 },
                 {
@@ -1567,12 +1264,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">StageFinalDMG</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_1) || RETURN",
-                    "displayLines": "MDF_1",
-                    "constants": [],
-                    "variables": [
-                      "MDF_1"
-                    ]
+                    "displayLines": "MDF_1"
                   }
                 }
               ]
@@ -1633,26 +1325,14 @@ const compositeAbilityObject = {
                     "value1": "MDF_CurrentHPRatio",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_LastHPRatio) || RETURN",
-                      "displayLines": "MDF_LastHPRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_LastHPRatio"
-                      ]
+                      "displayLines": "MDF_LastHPRatio"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_AccumulateDMGRatio) || Variables[1] (MDF_LastHPRatio) || ADD || Variables[2] (MDF_CurrentHPRatio) || SUB || RETURN",
-                        "displayLines": "((MDF_AccumulateDMGRatio + MDF_LastHPRatio) - MDF_CurrentHPRatio)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_AccumulateDMGRatio",
-                          "MDF_LastHPRatio",
-                          "MDF_CurrentHPRatio"
-                        ]
+                        "displayLines": "((MDF_AccumulateDMGRatio + MDF_LastHPRatio) - MDF_CurrentHPRatio)"
                       },
                       "variableName": "MDF_AccumulateDMGRatio"
                     },
@@ -1663,25 +1343,14 @@ const compositeAbilityObject = {
                         "value1": "MDF_AccumulateDMGRatio",
                         "compareType": ">",
                         "value2": {
-                          "operator": "Variables[0] (MDF_1) || RETURN",
-                          "displayLines": "MDF_1",
-                          "constants": [],
-                          "variables": [
-                            "MDF_1"
-                          ]
+                          "displayLines": "MDF_1"
                         }
                       },
                       "passed": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (MDF_AccumulateDMGRatio) || Variables[1] (MDF_1) || SUB || RETURN",
-                            "displayLines": "(MDF_AccumulateDMGRatio - MDF_1)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_AccumulateDMGRatio",
-                              "MDF_1"
-                            ]
+                            "displayLines": "(MDF_AccumulateDMGRatio - MDF_1)"
                           },
                           "variableName": "MDF_AccumulateDMGRatio"
                         },
@@ -1694,12 +1363,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-768810398\">MLevel_WB_3002403_Sub</a>",
                           "valuePerStack": {
                             "MDF_2": {
-                              "operator": "Variables[0] (MDF_2) || RETURN",
-                              "displayLines": "MDF_2",
-                              "constants": [],
-                              "variables": [
-                                "MDF_2"
-                              ]
+                              "displayLines": "MDF_2"
                             }
                           },
                           "casterAssign": "CasterSelf"
@@ -1711,12 +1375,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentHPRatio) || RETURN",
-                    "displayLines": "MDF_CurrentHPRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentHPRatio"
-                    ]
+                    "displayLines": "MDF_CurrentHPRatio"
                   },
                   "variableName": "MDF_LastHPRatio"
                 }
@@ -1782,12 +1441,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1788719875\">Standard_Protect_AbilityRetarget</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_1) || RETURN",
-                        "displayLines": "MDF_1",
-                        "constants": [],
-                        "variables": [
-                          "MDF_1"
-                        ]
+                        "displayLines": "MDF_1"
                       },
                       "casterAssign": "CasterSelf"
                     }
@@ -1858,12 +1512,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_1) || RETURN",
-                      "displayLines": "MDF_1",
-                      "constants": [],
-                      "variables": [
-                        "MDF_1"
-                      ]
+                      "displayLines": "MDF_1"
                     }
                   },
                   "passed": [
@@ -1875,12 +1524,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1364052196\">MLevel_WB_3002401_Sub</a>",
                       "duration": {
-                        "operator": "Variables[0] (MDF_2) || RETURN",
-                        "displayLines": "MDF_2",
-                        "constants": [],
-                        "variables": [
-                          "MDF_2"
-                        ]
+                        "displayLines": "MDF_2"
                       },
                       "casterAssign": "CasterSelf"
                     },
@@ -1907,12 +1551,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_1) || RETURN",
-                      "displayLines": "MDF_1",
-                      "constants": [],
-                      "variables": [
-                        "MDF_1"
-                      ]
+                      "displayLines": "MDF_1"
                     }
                   },
                   "passed": [
@@ -1924,12 +1563,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1364052196\">MLevel_WB_3002401_Sub</a>",
                       "duration": {
-                        "operator": "Variables[0] (MDF_2) || RETURN",
-                        "displayLines": "MDF_2",
-                        "constants": [],
-                        "variables": [
-                          "MDF_2"
-                        ]
+                        "displayLines": "MDF_2"
                       },
                       "casterAssign": "CasterSelf"
                     },
@@ -1993,13 +1627,7 @@ const compositeAbilityObject = {
                       "duration": 1,
                       "valuePerStack": {
                         "MDF_ShowValue": {
-                          "operator": "Variables[0] (MDF_1) || Variables[1] (TempValue) || MUL || RETURN",
-                          "displayLines": "(MDF_1 * TempValue)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_1",
-                            "TempValue"
-                          ]
+                          "displayLines": "(MDF_1 * TempValue)"
                         }
                       },
                       "casterAssign": "CasterSelf"
@@ -2025,12 +1653,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_1) || RETURN",
-                    "displayLines": "MDF_1",
-                    "constants": [],
-                    "variables": [
-                      "MDF_1"
-                    ]
+                    "displayLines": "MDF_1"
                   },
                   "isFixed": "* ERR"
                 }
@@ -2087,12 +1710,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRate</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_2) || RETURN",
-                    "displayLines": "MDF_2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_2"
-                    ]
+                    "displayLines": "MDF_2"
                   }
                 }
               ]
@@ -2142,12 +1760,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-618173059\">MLevel_WB_3002226_Sub</a>",
                   "valuePerStack": {
                     "MDF_2": {
-                      "operator": "Variables[0] (MDF_2) || RETURN",
-                      "displayLines": "MDF_2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_2"
-                      ]
+                      "displayLines": "MDF_2"
                     }
                   },
                   "casterAssign": "CasterSelf"
@@ -2184,12 +1797,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_1) || RETURN",
-                    "displayLines": "MDF_1",
-                    "constants": [],
-                    "variables": [
-                      "MDF_1"
-                    ]
+                    "displayLines": "MDF_1"
                   },
                   "isFixed": "* ERR"
                 }
@@ -2279,12 +1887,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRate</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_1) || RETURN",
-                    "displayLines": "MDF_1",
-                    "constants": [],
-                    "variables": [
-                      "MDF_1"
-                    ]
+                    "displayLines": "MDF_1"
                   }
                 }
               ]
@@ -2328,12 +1931,7 @@ const compositeAbilityObject = {
                         "target": "{{All Team Members}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (MDF_1) || RETURN",
-                        "displayLines": "MDF_1",
-                        "constants": [],
-                        "variables": [
-                          "MDF_1"
-                        ]
+                        "displayLines": "MDF_1"
                       },
                       "isFixed": "* ERR"
                     }
@@ -2380,12 +1978,7 @@ const compositeAbilityObject = {
                         "target": "{{All Team Members}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (MDF_1) || RETURN",
-                        "displayLines": "MDF_1",
-                        "constants": [],
-                        "variables": [
-                          "MDF_1"
-                        ]
+                        "displayLines": "MDF_1"
                       },
                       "isFixed": "* ERR"
                     }
@@ -2509,15 +2102,7 @@ const compositeAbilityObject = {
                       "on": "Healer",
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoingSUM</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (MDF_1) || Variables[1] (TempValue) || Constants[0] (1) || SUB || MUL || RETURN",
-                        "displayLines": "(MDF_1 * (TempValue - 1))",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_1",
-                          "TempValue"
-                        ]
+                        "displayLines": "(MDF_1 * (TempValue - 1))"
                       }
                     }
                   ]
@@ -2612,12 +2197,7 @@ const compositeAbilityObject = {
                       "duration": 1,
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_1) || RETURN",
-                          "displayLines": "MDF_1",
-                          "constants": [],
-                          "variables": [
-                            "MDF_1"
-                          ]
+                          "displayLines": "MDF_1"
                         }
                       },
                       "casterAssign": "CasterSelf"
@@ -2639,12 +2219,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Skill Points Modification",
                   "adjustmentValue": {
-                    "operator": "Variables[0] (MDF_1) || RETURN",
-                    "displayLines": "MDF_1",
-                    "constants": [],
-                    "variables": [
-                      "MDF_1"
-                    ]
+                    "displayLines": "MDF_1"
                   },
                   "adjustmentType": "+"
                 }
@@ -2700,12 +2275,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRate</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_1) || RETURN",
-                    "displayLines": "MDF_1",
-                    "constants": [],
-                    "variables": [
-                      "MDF_1"
-                    ]
+                    "displayLines": "MDF_1"
                   }
                 }
               ]
@@ -2736,12 +2306,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"861848812\">MLevel_WB_3002126_Sub</a>",
                       "valuePerStack": {
                         "MDF_1": {
-                          "operator": "Variables[0] (MDF_1) || RETURN",
-                          "displayLines": "MDF_1",
-                          "constants": [],
-                          "variables": [
-                            "MDF_1"
-                          ]
+                          "displayLines": "MDF_1"
                         }
                       },
                       "casterAssign": "CasterSelf"
@@ -2811,12 +2376,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Random Chance",
                     "chance": {
-                      "operator": "Variables[0] (MDF_1) || RETURN",
-                      "displayLines": "MDF_1",
-                      "constants": [],
-                      "variables": [
-                        "MDF_1"
-                      ]
+                      "displayLines": "MDF_1"
                     }
                   },
                   "passed": [
@@ -2861,12 +2421,7 @@ const compositeAbilityObject = {
                       {
                         "name": "Random Chance",
                         "chance": {
-                          "operator": "Variables[0] (MDF_1) || RETURN",
-                          "displayLines": "MDF_1",
-                          "constants": [],
-                          "variables": [
-                            "MDF_1"
-                          ]
+                          "displayLines": "MDF_1"
                         }
                       }
                     ]
@@ -2902,14 +2457,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRate</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_1) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_1)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_1"
-                    ]
+                    "displayLines": "(0 - MDF_1)"
                   }
                 }
               ]
@@ -2958,12 +2506,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Skill Points Modification",
                   "adjustmentValue": {
-                    "operator": "Variables[0] (MDF_1) || RETURN",
-                    "displayLines": "MDF_1",
-                    "constants": [],
-                    "variables": [
-                      "MDF_1"
-                    ]
+                    "displayLines": "MDF_1"
                   },
                   "adjustmentType": "+"
                 }
@@ -3001,12 +2544,7 @@ const compositeAbilityObject = {
                       {
                         "name": "Random Chance",
                         "chance": {
-                          "operator": "Variables[0] (MDF_1) || RETURN",
-                          "displayLines": "MDF_1",
-                          "constants": [],
-                          "variables": [
-                            "MDF_1"
-                          ]
+                          "displayLines": "MDF_1"
                         }
                       }
                     ]
@@ -3120,12 +2658,7 @@ const compositeAbilityObject = {
                       {
                         "name": "Random Chance",
                         "chance": {
-                          "operator": "Variables[0] (MDF_1) || RETURN",
-                          "displayLines": "MDF_1",
-                          "constants": [],
-                          "variables": [
-                            "MDF_1"
-                          ]
+                          "displayLines": "MDF_1"
                         }
                       }
                     ]
@@ -3162,12 +2695,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">StageFinalDMG</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_1) || RETURN",
-                    "displayLines": "MDF_1",
-                    "constants": [],
-                    "variables": [
-                      "MDF_1"
-                    ]
+                    "displayLines": "MDF_1"
                   }
                 }
               ]
@@ -3189,12 +2717,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">StageFinalDMG</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_2) || RETURN",
-                    "displayLines": "MDF_2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_2"
-                    ]
+                    "displayLines": "MDF_2"
                   }
                 }
               ]
@@ -3220,12 +2743,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_1) || RETURN",
-                      "displayLines": "MDF_1",
-                      "constants": [],
-                      "variables": [
-                        "MDF_1"
-                      ]
+                      "displayLines": "MDF_1"
                     }
                   },
                   "passed": [
@@ -3238,12 +2756,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-646295095\">MLevel_WB_3002028_Sub</a>",
                       "valuePerStack": {
                         "MDF_2": {
-                          "operator": "Variables[0] (MDF_2) || RETURN",
-                          "displayLines": "MDF_2",
-                          "constants": [],
-                          "variables": [
-                            "MDF_2"
-                          ]
+                          "displayLines": "MDF_2"
                         }
                       },
                       "casterAssign": "CasterSelf"
@@ -3276,12 +2789,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_1) || RETURN",
-                      "displayLines": "MDF_1",
-                      "constants": [],
-                      "variables": [
-                        "MDF_1"
-                      ]
+                      "displayLines": "MDF_1"
                     }
                   },
                   "passed": [
@@ -3294,12 +2802,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-646295095\">MLevel_WB_3002028_Sub</a>",
                       "valuePerStack": {
                         "MDF_2": {
-                          "operator": "Variables[0] (MDF_2) || RETURN",
-                          "displayLines": "MDF_2",
-                          "constants": [],
-                          "variables": [
-                            "MDF_2"
-                          ]
+                          "displayLines": "MDF_2"
                         }
                       },
                       "casterAssign": "CasterSelf"
@@ -3343,12 +2846,7 @@ const compositeAbilityObject = {
                       {
                         "name": "Random Chance",
                         "chance": {
-                          "operator": "Variables[0] (MDF_1) || RETURN",
-                          "displayLines": "MDF_1",
-                          "constants": [],
-                          "variables": [
-                            "MDF_1"
-                          ]
+                          "displayLines": "MDF_1"
                         }
                       }
                     ]
@@ -3361,12 +2859,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (MDF_2) || RETURN",
-                        "displayLines": "MDF_2",
-                        "constants": [],
-                        "variables": [
-                          "MDF_2"
-                        ]
+                        "displayLines": "MDF_2"
                       },
                       "formula": "Heal from Target MaxHP"
                     },
@@ -3407,12 +2900,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingIncoming</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_1) || RETURN",
-                    "displayLines": "MDF_1",
-                    "constants": [],
-                    "variables": [
-                      "MDF_1"
-                    ]
+                    "displayLines": "MDF_1"
                   }
                 }
               ]
@@ -3434,12 +2922,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_2) || RETURN",
-                    "displayLines": "MDF_2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_2"
-                    ]
+                    "displayLines": "MDF_2"
                   }
                 }
               ]
@@ -3465,12 +2948,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_1) || RETURN",
-                      "displayLines": "MDF_1",
-                      "constants": [],
-                      "variables": [
-                        "MDF_1"
-                      ]
+                      "displayLines": "MDF_1"
                     }
                   },
                   "passed": [
@@ -3483,12 +2961,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-146098050\">MLevel_WB_3002025_Sub</a>",
                       "valuePerStack": {
                         "MDF_2": {
-                          "operator": "Variables[0] (MDF_2) || RETURN",
-                          "displayLines": "MDF_2",
-                          "constants": [],
-                          "variables": [
-                            "MDF_2"
-                          ]
+                          "displayLines": "MDF_2"
                         }
                       },
                       "casterAssign": "CasterSelf"
@@ -3521,12 +2994,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_1) || RETURN",
-                      "displayLines": "MDF_1",
-                      "constants": [],
-                      "variables": [
-                        "MDF_1"
-                      ]
+                      "displayLines": "MDF_1"
                     }
                   },
                   "passed": [
@@ -3539,12 +3007,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-146098050\">MLevel_WB_3002025_Sub</a>",
                       "valuePerStack": {
                         "MDF_2": {
-                          "operator": "Variables[0] (MDF_2) || RETURN",
-                          "displayLines": "MDF_2",
-                          "constants": [],
-                          "variables": [
-                            "MDF_2"
-                          ]
+                          "displayLines": "MDF_2"
                         }
                       },
                       "casterAssign": "CasterSelf"
@@ -3584,12 +3047,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (MDF_1) || RETURN",
-                      "displayLines": "MDF_1",
-                      "constants": [],
-                      "variables": [
-                        "MDF_1"
-                      ]
+                      "displayLines": "MDF_1"
                     }
                   },
                   "passed": [
@@ -3609,13 +3067,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "setValue": {
-                        "operator": "Variables[0] (MaxHP) || Variables[1] (MDF_1) || MUL || RETURN",
-                        "displayLines": "(MaxHP * MDF_1)",
-                        "constants": [],
-                        "variables": [
-                          "MaxHP",
-                          "MDF_1"
-                        ]
+                        "displayLines": "(MaxHP * MDF_1)"
                       }
                     }
                   ]
@@ -3639,12 +3091,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">StageFinalDMG</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_2) || RETURN",
-                    "displayLines": "MDF_2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_2"
-                    ]
+                    "displayLines": "MDF_2"
                   }
                 },
                 {
@@ -3655,12 +3102,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_3) || RETURN",
-                    "displayLines": "MDF_3",
-                    "constants": [],
-                    "variables": [
-                      "MDF_3"
-                    ]
+                    "displayLines": "MDF_3"
                   }
                 }
               ]
@@ -3686,12 +3128,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_1) || RETURN",
-                      "displayLines": "MDF_1",
-                      "constants": [],
-                      "variables": [
-                        "MDF_1"
-                      ]
+                      "displayLines": "MDF_1"
                     }
                   },
                   "passed": [
@@ -3704,20 +3141,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"122496948\">MLevel_WB_3002023_Sub</a>",
                       "valuePerStack": {
                         "MDF_2": {
-                          "operator": "Variables[0] (MDF_2) || RETURN",
-                          "displayLines": "MDF_2",
-                          "constants": [],
-                          "variables": [
-                            "MDF_2"
-                          ]
+                          "displayLines": "MDF_2"
                         },
                         "MDF_3": {
-                          "operator": "Variables[0] (MDF_3) || RETURN",
-                          "displayLines": "MDF_3",
-                          "constants": [],
-                          "variables": [
-                            "MDF_3"
-                          ]
+                          "displayLines": "MDF_3"
                         }
                       },
                       "casterAssign": "CasterSelf"
@@ -3750,12 +3177,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_1) || RETURN",
-                      "displayLines": "MDF_1",
-                      "constants": [],
-                      "variables": [
-                        "MDF_1"
-                      ]
+                      "displayLines": "MDF_1"
                     }
                   },
                   "passed": [
@@ -3768,20 +3190,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"122496948\">MLevel_WB_3002023_Sub</a>",
                       "valuePerStack": {
                         "MDF_2": {
-                          "operator": "Variables[0] (MDF_2) || RETURN",
-                          "displayLines": "MDF_2",
-                          "constants": [],
-                          "variables": [
-                            "MDF_2"
-                          ]
+                          "displayLines": "MDF_2"
                         },
                         "MDF_3": {
-                          "operator": "Variables[0] (MDF_3) || RETURN",
-                          "displayLines": "MDF_3",
-                          "constants": [],
-                          "variables": [
-                            "MDF_3"
-                          ]
+                          "displayLines": "MDF_3"
                         }
                       },
                       "casterAssign": "CasterSelf"
@@ -3817,12 +3229,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (MDF_1) || RETURN",
-                    "displayLines": "MDF_1",
-                    "constants": [],
-                    "variables": [
-                      "MDF_1"
-                    ]
+                    "displayLines": "MDF_1"
                   },
                   "formula": "Heal from Target MaxHP"
                 }
@@ -3846,12 +3253,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_1) || RETURN",
-                    "displayLines": "MDF_1",
-                    "constants": [],
-                    "variables": [
-                      "MDF_1"
-                    ]
+                    "displayLines": "MDF_1"
                   }
                 }
               ]
@@ -4082,13 +3484,7 @@ const compositeAbilityObject = {
                   "duration": 2,
                   "valuePerStack": {
                     "MDF_ShowValue": {
-                      "operator": "Variables[0] (MDF_2) || Variables[1] (TempValue) || MUL || RETURN",
-                      "displayLines": "(MDF_2 * TempValue)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_2",
-                        "TempValue"
-                      ]
+                      "displayLines": "(MDF_2 * TempValue)"
                     }
                   },
                   "casterAssign": "CasterSelf"
@@ -4106,14 +3502,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingIncoming</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_1) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_1)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_1"
-                    ]
+                    "displayLines": "(0 - MDF_1)"
                   }
                 }
               ]

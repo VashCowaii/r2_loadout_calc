@@ -11,14 +11,7 @@ const configAbility = {
         "value1": "_no_ssr_times",
         "compareType": ">=",
         "value2": {
-          "operator": "Variables[0] (UNKNOWN_PITY_OBJECT) || Constants[0] (1) || SUB || RETURN",
-          "displayLines": "(UNKNOWN_PITY_OBJECT - 1)",
-          "constants": [
-            1
-          ],
-          "variables": [
-            "UNKNOWN_PITY_OBJECT"
-          ]
+          "displayLines": "(UNKNOWN_PITY_OBJECT - 1)"
         },
         "contextScope": "ContextCaster"
       },
@@ -44,14 +37,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (UNKNOWN_ODDS_1) || Variables[1] (UNKNOWN_ODDS_2) || ADD || Variables[2] (UNKNOWN_ODDS_3) || ADD || RETURN",
-        "displayLines": "((UNKNOWN_ODDS_1 + UNKNOWN_ODDS_2) + UNKNOWN_ODDS_3)",
-        "constants": [],
-        "variables": [
-          "UNKNOWN_ODDS_1",
-          "UNKNOWN_ODDS_2",
-          "UNKNOWN_ODDS_3"
-        ]
+        "displayLines": "((UNKNOWN_ODDS_1 + UNKNOWN_ODDS_2) + UNKNOWN_ODDS_3)"
       },
       "variableName": "_sum_probability"
     },
@@ -62,15 +48,7 @@ const configAbility = {
         "value1": "_random",
         "compareType": "<",
         "value2": {
-          "operator": "Variables[0] (UNKNOWN_ODDS_1) || Variables[1] (_sum_probability) || DIV || Constants[0] (100) || MUL || RETURN",
-          "displayLines": "((UNKNOWN_ODDS_1 / _sum_probability) * 100)",
-          "constants": [
-            100
-          ],
-          "variables": [
-            "UNKNOWN_ODDS_1",
-            "_sum_probability"
-          ]
+          "displayLines": "((UNKNOWN_ODDS_1 / _sum_probability) * 100)"
         },
         "contextScope": "ContextAbility"
       },
@@ -89,15 +67,7 @@ const configAbility = {
             "value1": "_random",
             "compareType": ">=",
             "value2": {
-              "operator": "Constants[0] (100) || Variables[0] (UNKNOWN_ODDS_3) || Variables[1] (_sum_probability) || DIV || Constants[0] (100) || MUL || SUB || RETURN",
-              "displayLines": "(100 - ((UNKNOWN_ODDS_3 / _sum_probability) * 100))",
-              "constants": [
-                100
-              ],
-              "variables": [
-                "UNKNOWN_ODDS_3",
-                "_sum_probability"
-              ]
+              "displayLines": "(100 - ((UNKNOWN_ODDS_3 / _sum_probability) * 100))"
             },
             "contextScope": "ContextAbility"
           },
@@ -169,14 +139,7 @@ const configAbility = {
           "name": "Define Custom Variable",
           "scope": "ContextCaster",
           "value": {
-            "operator": "Variables[0] (_no_ssr_times) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(_no_ssr_times + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "_no_ssr_times"
-            ]
+            "displayLines": "(_no_ssr_times + 1)"
           },
           "variableName": "_no_ssr_times"
         }

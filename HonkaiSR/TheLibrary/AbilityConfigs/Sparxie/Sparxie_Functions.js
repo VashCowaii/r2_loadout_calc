@@ -22,21 +22,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "DamageElation": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             },
             "dmgFormula": "Elation Scaling",
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "attackType": "Elation DMG",
@@ -66,21 +56,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "DamageElation": {
-                  "operator": "Variables[0] (0.25) || RETURN",
-                  "displayLines": "0.25",
-                  "constants": [],
-                  "variables": [
-                    0.25
-                  ]
+                  "displayLines": "0.25"
                 },
                 "dmgFormula": "Elation Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Elation DMG"
@@ -109,28 +89,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Sparxie_Skill02_MinorPrizeChance) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(Sparxie_Skill02_MinorPrizeChance - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "Sparxie_Skill02_MinorPrizeChance"
-                ]
+                "displayLines": "(Sparxie_Skill02_MinorPrizeChance - 1)"
               },
               "variableName": "Sparxie_Skill02_MinorPrizeChance"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Sparxie_Skill02_MinorPrizeGetNum) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(Sparxie_Skill02_MinorPrizeGetNum + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "Sparxie_Skill02_MinorPrizeGetNum"
-                ]
+                "displayLines": "(Sparxie_Skill02_MinorPrizeGetNum + 1)"
               },
               "variableName": "Sparxie_Skill02_MinorPrizeGetNum"
             },
@@ -157,25 +123,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "variableName": "Sparxie_Skill02_GrandPrizeChance"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (28) || Variables[1] (Sparxie_Skill02_GrandPrizeChance) || SUB || RETURN",
-                    "displayLines": "(28 - Sparxie_Skill02_GrandPrizeChance)",
-                    "constants": [],
-                    "variables": [
-                      28,
-                      "Sparxie_Skill02_GrandPrizeChance"
-                    ]
+                    "displayLines": "(28 - Sparxie_Skill02_GrandPrizeChance)"
                   },
                   "variableName": "Sparxie_Skill02_MinorPrizeChance"
                 }
@@ -194,12 +149,7 @@ const configAbility = {
         {
           "name": "Adjust Team Punchline Value",
           "value": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "adjustment": "Add"
         }
@@ -233,14 +183,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Sparxie_Skill02_GrandPrizeChance) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(Sparxie_Skill02_GrandPrizeChance - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "Sparxie_Skill02_GrandPrizeChance"
-                ]
+                "displayLines": "(Sparxie_Skill02_GrandPrizeChance - 1)"
               },
               "variableName": "Sparxie_Skill02_GrandPrizeChance"
             },
@@ -272,25 +215,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "variableName": "Sparxie_Skill02_GrandPrizeChance"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (28) || Variables[1] (Sparxie_Skill02_GrandPrizeChance) || SUB || RETURN",
-                    "displayLines": "(28 - Sparxie_Skill02_GrandPrizeChance)",
-                    "constants": [],
-                    "variables": [
-                      28,
-                      "Sparxie_Skill02_GrandPrizeChance"
-                    ]
+                    "displayLines": "(28 - Sparxie_Skill02_GrandPrizeChance)"
                   },
                   "variableName": "Sparxie_Skill02_MinorPrizeChance"
                 }
@@ -309,24 +241,14 @@ const configAbility = {
         {
           "name": "Skill Points Modification",
           "adjustmentValue": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "adjustmentType": "+"
         },
         {
           "name": "Adjust Team Punchline Value",
           "value": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "adjustment": "Add"
         }

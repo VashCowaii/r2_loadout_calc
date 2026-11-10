@@ -77,12 +77,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_SpeedUpRatio) || RETURN",
-                    "displayLines": "MDF_SpeedUpRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedUpRatio"
-                    ]
+                    "displayLines": "MDF_SpeedUpRatio"
                   }
                 }
               ]
@@ -301,12 +296,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_SpeedUpRatio) || RETURN",
-                    "displayLines": "MDF_SpeedUpRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedUpRatio"
-                    ]
+                    "displayLines": "MDF_SpeedUpRatio"
                   }
                 }
               ]
@@ -342,21 +332,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"487625140\">MModifier_Monster_W4_Scholar_LocalLegend_BookKiller</a>[<span class=\"descriptionNumberColor\">Ignited Flame</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                        "displayLines": "MDF_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_LifeTime"
-                        ]
+                        "displayLines": "MDF_LifeTime"
                       },
                       "valuePerStack": {
                         "MDF_SpeedUpRatio": {
-                          "operator": "Variables[0] (MDF_SpeedUpRatio) || RETURN",
-                          "displayLines": "MDF_SpeedUpRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_SpeedUpRatio"
-                          ]
+                          "displayLines": "MDF_SpeedUpRatio"
                         }
                       }
                     }
@@ -446,12 +426,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_SpeedUpRatio) || RETURN",
-                    "displayLines": "MDF_SpeedUpRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedUpRatio"
-                    ]
+                    "displayLines": "MDF_SpeedUpRatio"
                   }
                 },
                 {
@@ -462,12 +437,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageUpRatio) || RETURN",
-                    "displayLines": "MDF_DamageUpRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageUpRatio"
-                    ]
+                    "displayLines": "MDF_DamageUpRatio"
                   }
                 }
               ]
@@ -503,29 +473,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1075754631\">MModifier_Monster_W4_Scholar_BookKiller</a>[<span class=\"descriptionNumberColor\">Ignited Flame</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                        "displayLines": "MDF_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_LifeTime"
-                        ]
+                        "displayLines": "MDF_LifeTime"
                       },
                       "valuePerStack": {
                         "MDF_SpeedUpRatio": {
-                          "operator": "Variables[0] (MDF_SpeedUpRatio) || RETURN",
-                          "displayLines": "MDF_SpeedUpRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_SpeedUpRatio"
-                          ]
+                          "displayLines": "MDF_SpeedUpRatio"
                         },
                         "MDF_DamageUpRatio": {
-                          "operator": "Variables[0] (MDF_DamageUpRatio) || RETURN",
-                          "displayLines": "MDF_DamageUpRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageUpRatio"
-                          ]
+                          "displayLines": "MDF_DamageUpRatio"
                         }
                       }
                     }
@@ -601,12 +556,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_SpeedUpRatio) || RETURN",
-                    "displayLines": "MDF_SpeedUpRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedUpRatio"
-                    ]
+                    "displayLines": "MDF_SpeedUpRatio"
                   }
                 },
                 {
@@ -617,12 +567,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageUpRatio) || RETURN",
-                    "displayLines": "MDF_DamageUpRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageUpRatio"
-                    ]
+                    "displayLines": "MDF_DamageUpRatio"
                   }
                 }
               ]
@@ -803,20 +748,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1076100196\">MModifier_Monster_W4_Scholar_LocalLegend_BookKillerListener</a>",
           "valuePerStack": {
             "MDF_SpeedUpRatio": {
-              "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill02[0]]}"
-              ]
+              "displayLines": "{[PassiveSkill02[0]]}"
             },
             "MDF_LifeTime": {
-              "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkill02[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill02[2]]}"
-              ]
+              "displayLines": "{[PassiveSkill02[2]]}"
             }
           }
         }
@@ -845,12 +780,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"2022021618\">MModifier_Monster_W4_Scholar_LocalLegend_BookTarget</a>[<span class=\"descriptionNumberColor\">Gleaned Instruction</span>]",
           "valuePerStack": {
             "MDF_SpeedUpRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             }
           },
           "casterAssign": "CasterSelf"
@@ -908,12 +838,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,

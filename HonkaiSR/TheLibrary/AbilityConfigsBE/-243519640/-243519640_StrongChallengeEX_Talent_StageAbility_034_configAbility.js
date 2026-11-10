@@ -31,12 +31,7 @@ const configAbility = {
               },
               "variables": {
                 "parameter[0]_NormalizedValue": {
-                  "operator": "Variables[0] (MDF_ActionDelayRatio) || RETURN",
-                  "displayLines": "MDF_ActionDelayRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_ActionDelayRatio"
-                  ]
+                  "displayLines": "MDF_ActionDelayRatio"
                 }
               }
             }
@@ -53,12 +48,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageQuantum</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_QuantumDamageAddedRatio) || RETURN",
-                "displayLines": "MDF_QuantumDamageAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_QuantumDamageAddedRatio"
-                ]
+                "displayLines": "MDF_QuantumDamageAddedRatio"
               }
             }
           ]
@@ -97,20 +87,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1074851259\">MStrongChallengeEX_Talent_StageAbility_PLY_034</a>",
                   "valuePerStack": {
                     "MDF_QuantumDamageAddedRatio": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     },
                     "MDF_ActionDelayRatio": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     }
                   }
                 }

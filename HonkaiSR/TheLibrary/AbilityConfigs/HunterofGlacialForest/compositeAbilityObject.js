@@ -42,12 +42,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.25) || RETURN",
-                    "displayLines": "0.25",
-                    "constants": [],
-                    "variables": [
-                      0.25
-                    ]
+                    "displayLines": "0.25"
                   }
                 }
               ]
@@ -76,12 +71,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1571582832\">Relic_104_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Hunter of Glacial Forest</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       }
                     }
                   ]

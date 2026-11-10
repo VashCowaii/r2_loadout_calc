@@ -11,12 +11,7 @@ const configAbility = {
         "target": "{{Ability Target(ST)}}"
       },
       "dispelCount": {
-        "operator": "Variables[0] (1) || RETURN",
-        "displayLines": "1",
-        "constants": [],
-        "variables": [
-          1
-        ]
+        "displayLines": "1"
       },
       "dispelOrder": "LastAdded"
     },
@@ -35,20 +30,10 @@ const configAbility = {
         "target": "{{Ability Target(ST)}}"
       },
       "healPercent": {
-        "operator": "Variables[0] (0.24) || RETURN",
-        "displayLines": "0.24",
-        "constants": [],
-        "variables": [
-          0.24
-        ]
+        "displayLines": "0.24"
       },
       "healFlat": {
-        "operator": "Variables[0] (640) || RETURN",
-        "displayLines": "640",
-        "constants": [],
-        "variables": [
-          640
-        ]
+        "displayLines": "640"
       },
       "formula": "Heal from Healer's MaxHP"
     },
@@ -59,20 +44,10 @@ const configAbility = {
         "target": "{{Ability Targets Adjacent(Blast)}}"
       },
       "healPercent": {
-        "operator": "Variables[0] (0.192) || RETURN",
-        "displayLines": "0.192",
-        "constants": [],
-        "variables": [
-          0.192
-        ]
+        "displayLines": "0.192"
       },
       "healFlat": {
-        "operator": "Variables[0] (512) || RETURN",
-        "displayLines": "512",
-        "constants": [],
-        "variables": [
-          512
-        ]
+        "displayLines": "512"
       },
       "formula": "Heal from Healer's MaxHP"
     },

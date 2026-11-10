@@ -23,24 +23,14 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "variableName": "EnergyBar_BasicUltraAttack"
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (10) || RETURN",
-        "displayLines": "10",
-        "constants": [],
-        "variables": [
-          10
-        ]
+        "displayLines": "10"
       },
       "variableName": "EnergyBar_MaxUltraAttack"
     },
@@ -57,43 +47,21 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"728153787\">Misha_EnergyCount</a>[<span class=\"descriptionNumberColor\">G—Gonna Be Late!</span>]",
       "counter": {
-        "operator": "Variables[0] (EnergyBar_ExtraUltraAttack) || Variables[1] (EnergyBar_BasicUltraAttack) || ADD || RETURN",
-        "displayLines": "(EnergyBar_ExtraUltraAttack + EnergyBar_BasicUltraAttack)",
-        "constants": [],
-        "variables": [
-          "EnergyBar_ExtraUltraAttack",
-          "EnergyBar_BasicUltraAttack"
-        ]
+        "displayLines": "(EnergyBar_ExtraUltraAttack + EnergyBar_BasicUltraAttack)"
       },
       "valuePerStack": {
         "BasicAttack": {
-          "operator": "Variables[0] (EnergyBar_BasicUltraAttack) || RETURN",
-          "displayLines": "EnergyBar_BasicUltraAttack",
-          "constants": [],
-          "variables": [
-            "EnergyBar_BasicUltraAttack"
-          ]
+          "displayLines": "EnergyBar_BasicUltraAttack"
         }
       }
     },
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (EnergyBar_ExtraUltraAttack) || Variables[1] (EnergyBar_BasicUltraAttack) || ADD || RETURN",
-        "displayLines": "(EnergyBar_ExtraUltraAttack + EnergyBar_BasicUltraAttack)",
-        "constants": [],
-        "variables": [
-          "EnergyBar_ExtraUltraAttack",
-          "EnergyBar_BasicUltraAttack"
-        ]
+        "displayLines": "(EnergyBar_ExtraUltraAttack + EnergyBar_BasicUltraAttack)"
       },
       "maximum": {
-        "operator": "Variables[0] (EnergyBar_MaxUltraAttack) || RETURN",
-        "displayLines": "EnergyBar_MaxUltraAttack",
-        "constants": [],
-        "variables": [
-          "EnergyBar_MaxUltraAttack"
-        ]
+        "displayLines": "EnergyBar_MaxUltraAttack"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -110,13 +78,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.6) || Variables[1] (0.06) || ADD || RETURN",
-            "displayLines": "(0.6 + 0.06)",
-            "constants": [],
-            "variables": [
-              0.6,
-              0.06
-            ]
+            "displayLines": "(0.6 + 0.06)"
           },
           "variableName": "Skill03_DamagePercentage"
         }
@@ -125,12 +87,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.6) || RETURN",
-            "displayLines": "0.6",
-            "constants": [],
-            "variables": [
-              0.6
-            ]
+            "displayLines": "0.6"
           },
           "variableName": "Skill03_DamagePercentage"
         }
@@ -161,12 +118,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"728153787\">Misha_EnergyCount</a>[<span class=\"descriptionNumberColor\">G—Gonna Be Late!</span>]",
               "counter": {
-                "operator": "Variables[0] (BasicAttack) || RETURN",
-                "displayLines": "BasicAttack",
-                "constants": [],
-                "variables": [
-                  "BasicAttack"
-                ]
+                "displayLines": "BasicAttack"
               }
             }
           ]
@@ -216,24 +168,14 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "scope": "ContextModifier",
                   "value": {
-                    "operator": "Variables[0] (_BPAddValue) || INVERT || RETURN",
-                    "displayLines": "-_BPAddValue",
-                    "constants": [],
-                    "variables": [
-                      "_BPAddValue"
-                    ]
+                    "displayLines": "-_BPAddValue"
                   },
                   "variableName": "_BPAddValue"
                 },
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (_BPAddValue) || RETURN",
-                    "displayLines": "_BPAddValue",
-                    "constants": [],
-                    "variables": [
-                      "_BPAddValue"
-                    ]
+                    "displayLines": "_BPAddValue"
                   },
                   "execute": [
                     {
@@ -243,12 +185,7 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "isFixed": "* ERR"
                     }
@@ -257,14 +194,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (EnergyBar_ExtraUltraAttack) || Variables[1] (_BPAddValue) || Variables[2] (1) || MUL || ADD || RETURN",
-                    "displayLines": "(EnergyBar_ExtraUltraAttack + (_BPAddValue * 1))",
-                    "constants": [],
-                    "variables": [
-                      "EnergyBar_ExtraUltraAttack",
-                      "_BPAddValue",
-                      1
-                    ]
+                    "displayLines": "(EnergyBar_ExtraUltraAttack + (_BPAddValue * 1))"
                   },
                   "variableName": "EnergyBar_ExtraUltraAttack"
                 }
@@ -283,12 +213,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": -1,
               "maxValue": {
-                "operator": "Variables[0] (EnergyBar_MaxUltraAttack) || RETURN",
-                "displayLines": "EnergyBar_MaxUltraAttack",
-                "constants": [],
-                "variables": [
-                  "EnergyBar_MaxUltraAttack"
-                ]
+                "displayLines": "EnergyBar_MaxUltraAttack"
               },
               "includeMaxValueInRange": true,
               "onChange": [
@@ -300,13 +225,7 @@ const configAbility = {
                   },
                   "modifierName": "<a class=\"gModGreen\" id=\"728153787\">Misha_EnergyCount</a>[<span class=\"descriptionNumberColor\">G—Gonna Be Late!</span>]",
                   "value": {
-                    "operator": "Variables[0] (EnergyBar_ExtraUltraAttack) || Variables[1] (EnergyBar_BasicUltraAttack) || ADD || RETURN",
-                    "displayLines": "(EnergyBar_ExtraUltraAttack + EnergyBar_BasicUltraAttack)",
-                    "constants": [],
-                    "variables": [
-                      "EnergyBar_ExtraUltraAttack",
-                      "EnergyBar_BasicUltraAttack"
-                    ]
+                    "displayLines": "(EnergyBar_ExtraUltraAttack + EnergyBar_BasicUltraAttack)"
                   }
                 },
                 {
@@ -316,13 +235,7 @@ const configAbility = {
                     "value1": "EnergyBar_MaxUltraAttack",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (EnergyBar_ExtraUltraAttack) || Variables[1] (EnergyBar_BasicUltraAttack) || ADD || RETURN",
-                      "displayLines": "(EnergyBar_ExtraUltraAttack + EnergyBar_BasicUltraAttack)",
-                      "constants": [],
-                      "variables": [
-                        "EnergyBar_ExtraUltraAttack",
-                        "EnergyBar_BasicUltraAttack"
-                      ]
+                      "displayLines": "(EnergyBar_ExtraUltraAttack + EnergyBar_BasicUltraAttack)"
                     },
                     "contextScope": "ContextCaster"
                   },
@@ -330,21 +243,10 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (EnergyBar_ExtraUltraAttack) || Variables[1] (EnergyBar_BasicUltraAttack) || ADD || RETURN",
-                        "displayLines": "(EnergyBar_ExtraUltraAttack + EnergyBar_BasicUltraAttack)",
-                        "constants": [],
-                        "variables": [
-                          "EnergyBar_ExtraUltraAttack",
-                          "EnergyBar_BasicUltraAttack"
-                        ]
+                        "displayLines": "(EnergyBar_ExtraUltraAttack + EnergyBar_BasicUltraAttack)"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (EnergyBar_MaxUltraAttack) || RETURN",
-                        "displayLines": "EnergyBar_MaxUltraAttack",
-                        "constants": [],
-                        "variables": [
-                          "EnergyBar_MaxUltraAttack"
-                        ]
+                        "displayLines": "EnergyBar_MaxUltraAttack"
                       },
                       "assignState": "True",
                       "priorState": "Active",
@@ -356,21 +258,10 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (EnergyBar_ExtraUltraAttack) || Variables[1] (EnergyBar_BasicUltraAttack) || ADD || RETURN",
-                        "displayLines": "(EnergyBar_ExtraUltraAttack + EnergyBar_BasicUltraAttack)",
-                        "constants": [],
-                        "variables": [
-                          "EnergyBar_ExtraUltraAttack",
-                          "EnergyBar_BasicUltraAttack"
-                        ]
+                        "displayLines": "(EnergyBar_ExtraUltraAttack + EnergyBar_BasicUltraAttack)"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (EnergyBar_MaxUltraAttack) || RETURN",
-                        "displayLines": "EnergyBar_MaxUltraAttack",
-                        "constants": [],
-                        "variables": [
-                          "EnergyBar_MaxUltraAttack"
-                        ]
+                        "displayLines": "EnergyBar_MaxUltraAttack"
                       },
                       "assignState": "True",
                       "priorState": "Normal",

@@ -46,52 +46,22 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1282910303\">Enemy_Heaven_StoneShieldController</a>",
       "valuePerStack": {
         "MDF_MaxLayer": {
-          "operator": "Variables[0] ({[PassiveSkillInitiate[0]]}) || RETURN",
-          "displayLines": "{[PassiveSkillInitiate[0]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkillInitiate[0]]}"
-          ]
+          "displayLines": "{[PassiveSkillInitiate[0]]}"
         },
         "MDF_CrackedEffect": {
-          "operator": "Variables[0] ({[PassiveSkillInitiate[1]]}) || RETURN",
-          "displayLines": "{[PassiveSkillInitiate[1]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkillInitiate[1]]}"
-          ]
+          "displayLines": "{[PassiveSkillInitiate[1]]}"
         },
         "MDF_CrackedDamage": {
-          "operator": "Variables[0] ({[PassiveSkillInitiate[5]]}) || RETURN",
-          "displayLines": "{[PassiveSkillInitiate[5]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkillInitiate[5]]}"
-          ]
+          "displayLines": "{[PassiveSkillInitiate[5]]}"
         },
         "MDF_DamageResistance": {
-          "operator": "Variables[0] ({[PassiveSkillInitiate[2]]}) || RETURN",
-          "displayLines": "{[PassiveSkillInitiate[2]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkillInitiate[2]]}"
-          ]
+          "displayLines": "{[PassiveSkillInitiate[2]]}"
         },
         "MDF_CrackedDamageAfter": {
-          "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
-          "displayLines": "{[PassiveSkillInitiate[3]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkillInitiate[3]]}"
-          ]
+          "displayLines": "{[PassiveSkillInitiate[3]]}"
         },
         "MDF_ModifySP": {
-          "operator": "Variables[0] ({[PassiveSkillInitiate[4]]}) || RETURN",
-          "displayLines": "{[PassiveSkillInitiate[4]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkillInitiate[4]]}"
-          ]
+          "displayLines": "{[PassiveSkillInitiate[4]]}"
         }
       }
     },
@@ -243,12 +213,7 @@ const configAbility = {
                     "value1": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                      "displayLines": "MDF_MaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MaxLayer"
-                      ]
+                      "displayLines": "MDF_MaxLayer"
                     },
                     "valueType": "Layer"
                   },

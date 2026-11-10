@@ -185,12 +185,7 @@ const configAbility = {
           ]
         },
         "toughnessForcedReductionPreview": {
-          "operator": "Variables[0] (#ADF_1) || RETURN",
-          "displayLines": "#ADF_1",
-          "constants": [],
-          "variables": [
-            "#ADF_1"
-          ]
+          "displayLines": "#ADF_1"
         }
       },
       "execute": [
@@ -495,12 +490,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1039275830\">MStrongChallengeEX_Talent_StageAbility_PLY_004</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }

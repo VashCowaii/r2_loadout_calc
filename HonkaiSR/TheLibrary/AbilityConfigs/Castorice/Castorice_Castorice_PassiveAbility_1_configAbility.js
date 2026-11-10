@@ -74,20 +74,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"115720497\">Memosprite_Castorice_PointB2_OnListen</a>",
           "valuePerStack": {
             "Castorice_PointB2_HPRatio": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             },
             "Castorice_PointB2_SpeedRatio": {
-              "operator": "Variables[0] (0.4) || RETURN",
-              "displayLines": "0.4",
-              "constants": [],
-              "variables": [
-                0.4
-              ]
+              "displayLines": "0.4"
             }
           }
         }
@@ -143,12 +133,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"332176292\">Castorice_Eidolon6_OnListen</a>",
           "valuePerStack": {
             "MDF_QuantumPenetrate": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         }
@@ -165,22 +150,12 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (Castorice_Passive_Count) || RETURN",
-        "displayLines": "Castorice_Passive_Count",
-        "constants": [],
-        "variables": [
-          "Castorice_Passive_Count"
-        ]
+        "displayLines": "Castorice_Passive_Count"
       },
       "displaySubType": "Percent",
       "displayShowIcon": "False",
       "maximum": {
-        "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
-        "displayLines": "Castorice_Passive_MaxCount",
-        "constants": [],
-        "variables": [
-          "Castorice_Passive_MaxCount"
-        ]
+        "displayLines": "Castorice_Passive_MaxCount"
       },
       "assignState": "True",
       "bar#": "Number"
@@ -208,12 +183,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (MDF_QuantumPenetrate) || RETURN",
-              "displayLines": "MDF_QuantumPenetrate",
-              "constants": [],
-              "variables": [
-                "MDF_QuantumPenetrate"
-              ]
+              "displayLines": "MDF_QuantumPenetrate"
             }
           }
         },
@@ -228,12 +198,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (MDF_QuantumPenetrate) || RETURN",
-              "displayLines": "MDF_QuantumPenetrate",
-              "constants": [],
-              "variables": [
-                "MDF_QuantumPenetrate"
-              ]
+              "displayLines": "MDF_QuantumPenetrate"
             }
           }
         }
@@ -257,12 +222,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         }
@@ -300,12 +260,7 @@ const configAbility = {
                         "value1": "<a class=\"gModGreen\" id=\"635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                          "displayLines": "MDF_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer"
-                          ]
+                          "displayLines": "MDF_MaxLayer"
                         },
                         "valueType": "Layer"
                       },
@@ -318,37 +273,17 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "duration": {
-                            "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                            "displayLines": "MDF_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_LifeTime"
-                            ]
+                            "displayLines": "MDF_LifeTime"
                           },
                           "stackLimit": {
-                            "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                            "displayLines": "MDF_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxLayer"
-                            ]
+                            "displayLines": "MDF_MaxLayer"
                           },
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                              "displayLines": "MDF_AllDamageTypeAddedRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_AllDamageTypeAddedRatio"
-                              ]
+                              "displayLines": "MDF_AllDamageTypeAddedRatio"
                             },
                             "MDF_MaxLayer": {
-                              "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                              "displayLines": "MDF_MaxLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxLayer"
-                              ]
+                              "displayLines": "MDF_MaxLayer"
                             }
                           },
                           "addStacksPerTrigger": 1
@@ -361,37 +296,17 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "duration": {
-                            "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                            "displayLines": "MDF_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_LifeTime"
-                            ]
+                            "displayLines": "MDF_LifeTime"
                           },
                           "stackLimit": {
-                            "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                            "displayLines": "MDF_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxLayer"
-                            ]
+                            "displayLines": "MDF_MaxLayer"
                           },
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                              "displayLines": "MDF_AllDamageTypeAddedRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_AllDamageTypeAddedRatio"
-                              ]
+                              "displayLines": "MDF_AllDamageTypeAddedRatio"
                             },
                             "MDF_MaxLayer": {
-                              "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                              "displayLines": "MDF_MaxLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxLayer"
-                              ]
+                              "displayLines": "MDF_MaxLayer"
                             }
                           },
                           "addStacksPerTrigger": 1
@@ -406,37 +321,17 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "duration": {
-                            "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                            "displayLines": "MDF_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_LifeTime"
-                            ]
+                            "displayLines": "MDF_LifeTime"
                           },
                           "stackLimit": {
-                            "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                            "displayLines": "MDF_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxLayer"
-                            ]
+                            "displayLines": "MDF_MaxLayer"
                           },
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                              "displayLines": "MDF_AllDamageTypeAddedRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_AllDamageTypeAddedRatio"
-                              ]
+                              "displayLines": "MDF_AllDamageTypeAddedRatio"
                             },
                             "MDF_MaxLayer": {
-                              "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                              "displayLines": "MDF_MaxLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxLayer"
-                              ]
+                              "displayLines": "MDF_MaxLayer"
                             }
                           },
                           "addStacksPerTrigger": 1
@@ -449,37 +344,17 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "duration": {
-                            "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                            "displayLines": "MDF_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_LifeTime"
-                            ]
+                            "displayLines": "MDF_LifeTime"
                           },
                           "stackLimit": {
-                            "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                            "displayLines": "MDF_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxLayer"
-                            ]
+                            "displayLines": "MDF_MaxLayer"
                           },
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                              "displayLines": "MDF_AllDamageTypeAddedRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_AllDamageTypeAddedRatio"
-                              ]
+                              "displayLines": "MDF_AllDamageTypeAddedRatio"
                             },
                             "MDF_MaxLayer": {
-                              "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                              "displayLines": "MDF_MaxLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxLayer"
-                              ]
+                              "displayLines": "MDF_MaxLayer"
                             }
                           },
                           "addStacksPerTrigger": 1
@@ -534,28 +409,13 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             },
             "MDF_LifeTime": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             },
             "MDF_MaxLayer": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             }
           }
         },
@@ -572,20 +432,10 @@ const configAbility = {
             "MDF_PreShowMaxHP": 0,
             "MDF_PreShowCurrentHP": 0,
             "MDF_LoseHPRatio01": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             },
             "MDF_LoseHPRatio02": {
-              "operator": "Variables[0] (0.4) || RETURN",
-              "displayLines": "0.4",
-              "constants": [],
-              "variables": [
-                0.4
-              ]
+              "displayLines": "0.4"
             }
           }
         }
@@ -692,12 +542,7 @@ const configAbility = {
                           "functionName": "<a class=\"gTempYellow\" id=\"-1401999190\">Castorice_AddSpecialSP</a>",
                           "variables": {
                             "_FixedAddValue": {
-                              "operator": "Variables[0] (Current_LostHP) || INVERT || RETURN",
-                              "displayLines": "-Current_LostHP",
-                              "constants": [],
-                              "variables": [
-                                "Current_LostHP"
-                              ]
+                              "displayLines": "-Current_LostHP"
                             }
                           }
                         }
@@ -732,14 +577,7 @@ const configAbility = {
                                 "target": "{{Caster's Memosprite}}"
                               },
                               "setValue": {
-                                "operator": "Variables[0] (Passive_CastoriceServant_CurrentHP) || Variables[1] (ABS) || Variables[2] (Current_LostHP) || PARAM_1 || FUNCTION || ADD || RETURN",
-                                "displayLines": "(Passive_CastoriceServant_CurrentHP + &nbsp;<span class=\"descriptionFunctionColor\">ABS</span>(Current_LostHP))",
-                                "constants": [],
-                                "variables": [
-                                  "Passive_CastoriceServant_CurrentHP",
-                                  "ABS",
-                                  "Current_LostHP"
-                                ]
+                                "displayLines": "(Passive_CastoriceServant_CurrentHP + &nbsp;<span class=\"descriptionFunctionColor\">ABS</span>(Current_LostHP))"
                               }
                             }
                           ]
@@ -786,13 +624,7 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"-1401999190\">Castorice_AddSpecialSP</a>",
                   "variables": {
                     "_FixedAddValue": {
-                      "operator": "Variables[0] (Castorice_Passive_MaxCount) || Variables[1] (0.3) || MUL || RETURN",
-                      "displayLines": "(Castorice_Passive_MaxCount * 0.3)",
-                      "constants": [],
-                      "variables": [
-                        "Castorice_Passive_MaxCount",
-                        0.3
-                      ]
+                      "displayLines": "(Castorice_Passive_MaxCount * 0.3)"
                     }
                   }
                 }
@@ -862,15 +694,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (FLOOR) || Variables[1] (Castorice_Level) || Variables[1] (Castorice_Level) || MUL || Constants[0] (5.3125) || MUL || PARAM_1 || FUNCTION || RETURN",
-                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(((Castorice_Level * Castorice_Level) * 5.3125))",
-                        "constants": [
-                          5.3125
-                        ],
-                        "variables": [
-                          "FLOOR",
-                          "Castorice_Level"
-                        ]
+                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(((Castorice_Level * Castorice_Level) * 5.3125))"
                       },
                       "variableName": "Castorice_Passive_MaxCount"
                     }
@@ -881,15 +705,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (FLOOR) || Constants[0] (80) || Constants[0] (80) || MUL || Constants[1] (5.3125) || MUL || PARAM_1 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(((80 * 80) * 5.3125))",
-                    "constants": [
-                      80,
-                      5.3125
-                    ],
-                    "variables": [
-                      "FLOOR"
-                    ]
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(((80 * 80) * 5.3125))"
                   },
                   "variableName": "Castorice_Passive_MaxCount"
                 }
@@ -914,33 +730,18 @@ const configAbility = {
             {
               "name": "Update Character Data Entry",
               "energyCost": {
-                "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
-                "displayLines": "Castorice_Passive_MaxCount",
-                "constants": [],
-                "variables": [
-                  "Castorice_Passive_MaxCount"
-                ]
+                "displayLines": "Castorice_Passive_MaxCount"
               },
               "skills": [
                 {
                   "name": "Skill Data Entry",
                   "skillTrigger": "Skill03",
                   "energyCost": {
-                    "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
-                    "displayLines": "Castorice_Passive_MaxCount",
-                    "constants": [],
-                    "variables": [
-                      "Castorice_Passive_MaxCount"
-                    ]
+                    "displayLines": "Castorice_Passive_MaxCount"
                   },
                   "parameters": {
                     "5": {
-                      "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
-                      "displayLines": "Castorice_Passive_MaxCount",
-                      "constants": [],
-                      "variables": [
-                        "Castorice_Passive_MaxCount"
-                      ]
+                      "displayLines": "Castorice_Passive_MaxCount"
                     }
                   }
                 }
@@ -957,12 +758,7 @@ const configAbility = {
                   "propertyName": "Energy Cost",
                   "propertyAction": "Remove",
                   "value": {
-                    "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
-                    "displayLines": "Castorice_Passive_MaxCount",
-                    "constants": [],
-                    "variables": [
-                      "Castorice_Passive_MaxCount"
-                    ]
+                    "displayLines": "Castorice_Passive_MaxCount"
                   }
                 }
               ]
@@ -975,12 +771,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">MaxSpecialEnergy</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
-                "displayLines": "Castorice_Passive_MaxCount",
-                "constants": [],
-                "variables": [
-                  "Castorice_Passive_MaxCount"
-                ]
+                "displayLines": "Castorice_Passive_MaxCount"
               },
               "isRefresh": true
             },
@@ -1005,13 +796,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Passive_CastoriceServant_CurrentSpecialSP) || Variables[1] (Passive_CastoriceServant_CurrentExtraSpecialSP) || ADD || RETURN",
-                "displayLines": "(Passive_CastoriceServant_CurrentSpecialSP + Passive_CastoriceServant_CurrentExtraSpecialSP)",
-                "constants": [],
-                "variables": [
-                  "Passive_CastoriceServant_CurrentSpecialSP",
-                  "Passive_CastoriceServant_CurrentExtraSpecialSP"
-                ]
+                "displayLines": "(Passive_CastoriceServant_CurrentSpecialSP + Passive_CastoriceServant_CurrentExtraSpecialSP)"
               },
               "variableName": "Castorice_Passive_Count"
             },
@@ -1031,12 +816,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "maximum": {
-                    "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
-                    "displayLines": "Castorice_Passive_MaxCount",
-                    "constants": [],
-                    "variables": [
-                      "Castorice_Passive_MaxCount"
-                    ]
+                    "displayLines": "Castorice_Passive_MaxCount"
                   }
                 }
               ]
@@ -1055,13 +835,7 @@ const configAbility = {
               "name": "Define Custom Variable",
               "skipWhenMindControlled": false,
               "value": {
-                "operator": "Variables[0] (Castorice_ChangeValue) || Variables[1] (Castorice_Passive_Count) || ADD || RETURN",
-                "displayLines": "(Castorice_ChangeValue + Castorice_Passive_Count)",
-                "constants": [],
-                "variables": [
-                  "Castorice_ChangeValue",
-                  "Castorice_Passive_Count"
-                ]
+                "displayLines": "(Castorice_ChangeValue + Castorice_Passive_Count)"
               },
               "variableName": "Castorice_Passive_Count"
             },
@@ -1105,22 +879,12 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (Castorice_Passive_Count) || RETURN",
-                        "displayLines": "Castorice_Passive_Count",
-                        "constants": [],
-                        "variables": [
-                          "Castorice_Passive_Count"
-                        ]
+                        "displayLines": "Castorice_Passive_Count"
                       },
                       "displaySubType": "Percent",
                       "displayShowIcon": "False",
                       "maximum": {
-                        "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
-                        "displayLines": "Castorice_Passive_MaxCount",
-                        "constants": [],
-                        "variables": [
-                          "Castorice_Passive_MaxCount"
-                        ]
+                        "displayLines": "Castorice_Passive_MaxCount"
                       },
                       "assignState": "True",
                       "bar#": "Number"

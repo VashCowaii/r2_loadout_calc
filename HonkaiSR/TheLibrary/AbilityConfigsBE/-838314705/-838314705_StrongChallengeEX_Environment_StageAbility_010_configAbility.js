@@ -113,12 +113,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-898596014\">MStrongChallengeEX_Environment_StageAbility_BOSS_010</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }

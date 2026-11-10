@@ -46,12 +46,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeTakenRatio) || RETURN",
-                "displayLines": "MDF_AllDamageTypeTakenRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeTakenRatio"
-                ]
+                "displayLines": "MDF_AllDamageTypeTakenRatio"
               }
             }
           ]
@@ -115,12 +110,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_StealthBreak_AllDamageTypeTakenRatio) || RETURN",
-                "displayLines": "MDF_StealthBreak_AllDamageTypeTakenRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_StealthBreak_AllDamageTypeTakenRatio"
-                ]
+                "displayLines": "MDF_StealthBreak_AllDamageTypeTakenRatio"
               }
             }
           ]
@@ -181,20 +171,10 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"264567512\">Enemy_W4_Scholar_01_StealthBreak</a>[<span class=\"descriptionNumberColor\">Flawed</span>]",
               "valuePerStack": {
                 "MDF_ActionDelayRatio": {
-                  "operator": "Variables[0] (MDF_StealthBreak_ActionDelayRatio) || RETURN",
-                  "displayLines": "MDF_StealthBreak_ActionDelayRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_StealthBreak_ActionDelayRatio"
-                  ]
+                  "displayLines": "MDF_StealthBreak_ActionDelayRatio"
                 },
                 "MDF_AllDamageTypeTakenRatio": {
-                  "operator": "Variables[0] (MDF_StealthBreak_AllDamageTypeTakenRatio) || RETURN",
-                  "displayLines": "MDF_StealthBreak_AllDamageTypeTakenRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_StealthBreak_AllDamageTypeTakenRatio"
-                  ]
+                  "displayLines": "MDF_StealthBreak_AllDamageTypeTakenRatio"
                 }
               }
             },

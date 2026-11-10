@@ -43,12 +43,7 @@ const configAbility = {
             "target": "{{Caster's Summoner}}"
           },
           "consumePercent": {
-            "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[0]]}"
-            ]
+            "displayLines": "{[PassiveSkill01[0]]}"
           },
           "consumeFloor": 1,
           "attackType": "Unknown",

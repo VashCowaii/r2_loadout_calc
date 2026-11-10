@@ -7,14 +7,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Constants[0] (1) || Variables[0] (10) || DIV || RETURN",
-        "displayLines": "(1 / 10)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          10
-        ]
+        "displayLines": "(1 / 10)"
       },
       "variableName": "_S03_Stance_Ratio"
     },
@@ -27,20 +20,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] (2.8) || RETURN",
-          "displayLines": "2.8",
-          "constants": [],
-          "variables": [
-            2.8
-          ]
+          "displayLines": "2.8"
         },
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": [
           "Ultimate (Saber)"
@@ -51,14 +34,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (10) || Constants[0] (1) || SUB || RETURN",
-        "displayLines": "(10 - 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          10
-        ]
+        "displayLines": "(10 - 1)"
       },
       "execute": [
         {
@@ -89,21 +65,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (1.1) || RETURN",
-                  "displayLines": "1.1",
-                  "constants": [],
-                  "variables": [
-                    1.1
-                  ]
+                  "displayLines": "1.1"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || Variables[1] (_S03_Stance_Ratio) || MUL || RETURN",
-                  "displayLines": "(ST Toughness Value * _S03_Stance_Ratio)",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value",
-                    "_S03_Stance_Ratio"
-                  ]
+                  "displayLines": "(ST Toughness Value * _S03_Stance_Ratio)"
                 },
                 "Tags": [
                   "Ultimate (Saber)"
@@ -131,21 +96,10 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] (1.1) || RETURN",
-                      "displayLines": "1.1",
-                      "constants": [],
-                      "variables": [
-                        1.1
-                      ]
+                      "displayLines": "1.1"
                     },
                     "Toughness": {
-                      "operator": "Variables[0] (ST Toughness Value) || Variables[1] (_S03_Stance_Ratio) || MUL || RETURN",
-                      "displayLines": "(ST Toughness Value * _S03_Stance_Ratio)",
-                      "constants": [],
-                      "variables": [
-                        "ST Toughness Value",
-                        "_S03_Stance_Ratio"
-                      ]
+                      "displayLines": "(ST Toughness Value * _S03_Stance_Ratio)"
                     },
                     "Tags": [
                       "Ultimate (Saber)"
@@ -187,21 +141,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (1.1) || RETURN",
-              "displayLines": "1.1",
-              "constants": [],
-              "variables": [
-                1.1
-              ]
+              "displayLines": "1.1"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || Variables[1] (_S03_Stance_Ratio) || MUL || RETURN",
-              "displayLines": "(ST Toughness Value * _S03_Stance_Ratio)",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value",
-                "_S03_Stance_Ratio"
-              ]
+              "displayLines": "(ST Toughness Value * _S03_Stance_Ratio)"
             },
             "Tags": [
               "Ultimate (Saber)"
@@ -230,21 +173,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (1.1) || RETURN",
-                  "displayLines": "1.1",
-                  "constants": [],
-                  "variables": [
-                    1.1
-                  ]
+                  "displayLines": "1.1"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || Variables[1] (_S03_Stance_Ratio) || MUL || RETURN",
-                  "displayLines": "(ST Toughness Value * _S03_Stance_Ratio)",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value",
-                    "_S03_Stance_Ratio"
-                  ]
+                  "displayLines": "(ST Toughness Value * _S03_Stance_Ratio)"
                 },
                 "Tags": [
                   "Ultimate (Saber)"

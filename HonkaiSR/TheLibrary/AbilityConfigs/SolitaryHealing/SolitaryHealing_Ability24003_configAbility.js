@@ -34,12 +34,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageDOT</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.24) || RETURN",
-                "displayLines": "0.24",
-                "constants": [],
-                "variables": [
-                  0.24
-                ]
+                "displayLines": "0.24"
               }
             }
           ]
@@ -106,12 +101,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (4) || RETURN",
-                    "displayLines": "4",
-                    "constants": [],
-                    "variables": [
-                      4
-                    ]
+                    "displayLines": "4"
                   },
                   "isFixed": "* ERR"
                 }
@@ -137,12 +127,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1464436876\">LC_24003_DotDamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DoT Boost</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   }
                 }
               ]

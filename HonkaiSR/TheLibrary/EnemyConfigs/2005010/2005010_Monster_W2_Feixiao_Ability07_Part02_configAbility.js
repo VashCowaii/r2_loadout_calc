@@ -295,16 +295,7 @@ const configAbility = {
             "target": "{{Parameter Target}}"
           },
           "set": {
-            "operator": "Constants[0] (1000) || Variables[0] (CurrentSpeed) || DIV || Variables[1] ({[Skill07[0]]}) || MUL || Variables[2] (CurrentDelay) || ADD || RETURN",
-            "displayLines": "(((1000 / CurrentSpeed) * {[Skill07[0]]}) + CurrentDelay)",
-            "constants": [
-              1000
-            ],
-            "variables": [
-              "CurrentSpeed",
-              "{[Skill07[0]]}",
-              "CurrentDelay"
-            ]
+            "displayLines": "(((1000 / CurrentSpeed) * {[Skill07[0]]}) + CurrentDelay)"
           }
         }
       ]
@@ -360,12 +351,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"881636857\">Monster_W2_Feixiao_UltraConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]",
           "valuePerStack": {
             "MDF_StanceBreakTakenRatio": {
-              "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-              "displayLines": "{[PassiveSkill03[5]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill03[5]]}"
-              ]
+              "displayLines": "{[PassiveSkill03[5]]}"
             }
           }
         }

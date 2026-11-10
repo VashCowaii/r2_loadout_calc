@@ -44,13 +44,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (MDF_Growth_Layer) || Variables[1] ({[Skill07[1]]}) || ADD || RETURN",
-        "displayLines": "(MDF_Growth_Layer + {[Skill07[1]]})",
-        "constants": [],
-        "variables": [
-          "MDF_Growth_Layer",
-          "{[Skill07[1]]}"
-        ]
+        "displayLines": "(MDF_Growth_Layer + {[Skill07[1]]})"
       },
       "variableName": "Monster_W3_Dinosaur_01_Skill07_HitCount"
     },
@@ -62,15 +56,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (Monster_W3_Dinosaur_01_Skill07_HitCount) || Variables[1] (Monster_W3_Dinosaur_01_Skill07_SumTime) || Constants[0] (1) || SUB || DIV || RETURN",
-        "displayLines": "(Monster_W3_Dinosaur_01_Skill07_HitCount / (Monster_W3_Dinosaur_01_Skill07_SumTime - 1))",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "Monster_W3_Dinosaur_01_Skill07_HitCount",
-          "Monster_W3_Dinosaur_01_Skill07_SumTime"
-        ]
+        "displayLines": "(Monster_W3_Dinosaur_01_Skill07_HitCount / (Monster_W3_Dinosaur_01_Skill07_SumTime - 1))"
       },
       "variableName": "Monster_W3_Dinosaur_01_Skill07_DeltaTime"
     },
@@ -85,12 +71,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (Monster_W3_Dinosaur_01_Skill07_SumTime) || RETURN",
-        "displayLines": "Monster_W3_Dinosaur_01_Skill07_SumTime",
-        "constants": [],
-        "variables": [
-          "Monster_W3_Dinosaur_01_Skill07_SumTime"
-        ]
+        "displayLines": "Monster_W3_Dinosaur_01_Skill07_SumTime"
       },
       "execute": [
         {
@@ -223,14 +204,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Monster_W3_Dinosaur_01_Skill07_CurrentHitCount_i) || Constants[0] (3) || MOD || RETURN",
-            "displayLines": "(Monster_W3_Dinosaur_01_Skill07_CurrentHitCount_i % 3)",
-            "constants": [
-              3
-            ],
-            "variables": [
-              "Monster_W3_Dinosaur_01_Skill07_CurrentHitCount_i"
-            ]
+            "displayLines": "(Monster_W3_Dinosaur_01_Skill07_CurrentHitCount_i % 3)"
           },
           "variableName": "Monster_W3_Dinosaur_01_Skill07_CurrentHitCount_i_Eff_Loop"
         },
@@ -331,12 +305,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                              "displayLines": "{[Skill07[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill07[0]]}"
-                              ]
+                              "displayLines": "{[Skill07[0]]}"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -353,12 +322,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                              "displayLines": "{[Skill07[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill07[0]]}"
-                              ]
+                              "displayLines": "{[Skill07[0]]}"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -377,12 +341,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                              "displayLines": "{[Skill07[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill07[0]]}"
-                              ]
+                              "displayLines": "{[Skill07[0]]}"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -475,12 +434,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                              "displayLines": "{[Skill07[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill07[0]]}"
-                              ]
+                              "displayLines": "{[Skill07[0]]}"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -497,12 +451,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                              "displayLines": "{[Skill07[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill07[0]]}"
-                              ]
+                              "displayLines": "{[Skill07[0]]}"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -521,12 +470,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                              "displayLines": "{[Skill07[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill07[0]]}"
-                              ]
+                              "displayLines": "{[Skill07[0]]}"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -630,12 +574,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Quantum",
                         "Damage": {
-                          "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                          "displayLines": "{[Skill07[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill07[0]]}"
-                          ]
+                          "displayLines": "{[Skill07[0]]}"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -652,12 +591,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Quantum",
                         "Damage": {
-                          "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                          "displayLines": "{[Skill07[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill07[0]]}"
-                          ]
+                          "displayLines": "{[Skill07[0]]}"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -676,12 +610,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Quantum",
                         "Damage": {
-                          "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                          "displayLines": "{[Skill07[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill07[0]]}"
-                          ]
+                          "displayLines": "{[Skill07[0]]}"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -783,12 +712,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Quantum",
                         "Damage": {
-                          "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                          "displayLines": "{[Skill07[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill07[0]]}"
-                          ]
+                          "displayLines": "{[Skill07[0]]}"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -805,12 +729,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Quantum",
                         "Damage": {
-                          "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                          "displayLines": "{[Skill07[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill07[0]]}"
-                          ]
+                          "displayLines": "{[Skill07[0]]}"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -829,12 +748,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Quantum",
                         "Damage": {
-                          "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                          "displayLines": "{[Skill07[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill07[0]]}"
-                          ]
+                          "displayLines": "{[Skill07[0]]}"
                         },
                         "Toughness": null,
                         "Tags": null,

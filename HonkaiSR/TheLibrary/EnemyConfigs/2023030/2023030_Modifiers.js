@@ -35,14 +35,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (1) || Variables[0] (MDF_DirtyHPRatio) || SUB || RETURN",
-                "displayLines": "(1 - MDF_DirtyHPRatio)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_DirtyHPRatio"
-                ]
+                "displayLines": "(1 - MDF_DirtyHPRatio)"
               }
             }
           ]
@@ -59,12 +52,7 @@ const configAbility = {
       "statusName": "Prana-Siphoned",
       "stackLimit": 3,
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-        "displayLines": "ModifierStackLayer",
-        "constants": [],
-        "variables": [
-          "ModifierStackLayer"
-        ]
+        "displayLines": "ModifierStackLayer"
       },
       "execute": [
         {
@@ -84,13 +72,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DirtyHPRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(MDF_DirtyHPRatio_PerLayer * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "MDF_DirtyHPRatio_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(MDF_DirtyHPRatio_PerLayer * ModifierLayers)"
               }
             }
           ]

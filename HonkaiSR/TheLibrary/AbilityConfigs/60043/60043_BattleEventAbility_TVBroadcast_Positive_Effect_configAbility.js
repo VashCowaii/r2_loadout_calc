@@ -7,12 +7,7 @@ const configAbility = {
     {
       "name": "Adjust Team Punchline Value",
       "value": {
-        "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-        "displayLines": "BattleEvent_P1_ADF",
-        "constants": [],
-        "variables": [
-          "BattleEvent_P1_ADF"
-        ]
+        "displayLines": "BattleEvent_P1_ADF"
       },
       "adjustment": "Add"
     },
@@ -35,12 +30,7 @@ const configAbility = {
       "duration": 1,
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] (BattleEvent_P4_ADF) || RETURN",
-          "displayLines": "BattleEvent_P4_ADF",
-          "constants": [],
-          "variables": [
-            "BattleEvent_P4_ADF"
-          ]
+          "displayLines": "BattleEvent_P4_ADF"
         }
       }
     },

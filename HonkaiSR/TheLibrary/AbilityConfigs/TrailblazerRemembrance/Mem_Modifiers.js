@@ -82,60 +82,25 @@ const configAbility = {
           "duration": -1,
           "valuePerStack": {
             "MDF_PropertyRatio": {
-              "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-              "displayLines": "MDF_PropertyRatio",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyRatio"
-              ]
+              "displayLines": "MDF_PropertyRatio"
             },
             "MDF_BasicDamagePercentage": {
-              "operator": "Variables[0] (MDF_BasicDamagePercentage) || RETURN",
-              "displayLines": "MDF_BasicDamagePercentage",
-              "constants": [],
-              "variables": [
-                "MDF_BasicDamagePercentage"
-              ]
+              "displayLines": "MDF_BasicDamagePercentage"
             },
             "MDF_PointB3_P1_Basic": {
-              "operator": "Variables[0] (MDF_PointB3_P1_Basic) || RETURN",
-              "displayLines": "MDF_PointB3_P1_Basic",
-              "constants": [],
-              "variables": [
-                "MDF_PointB3_P1_Basic"
-              ]
+              "displayLines": "MDF_PointB3_P1_Basic"
             },
             "MDF_PointB3_P2_Delta": {
-              "operator": "Variables[0] (MDF_PointB3_P2_Delta) || RETURN",
-              "displayLines": "MDF_PointB3_P2_Delta",
-              "constants": [],
-              "variables": [
-                "MDF_PointB3_P2_Delta"
-              ]
+              "displayLines": "MDF_PointB3_P2_Delta"
             },
             "MDF_PointB3_P3_Ratio": {
-              "operator": "Variables[0] (MDF_PointB3_P3_Ratio) || RETURN",
-              "displayLines": "MDF_PointB3_P3_Ratio",
-              "constants": [],
-              "variables": [
-                "MDF_PointB3_P3_Ratio"
-              ]
+              "displayLines": "MDF_PointB3_P3_Ratio"
             },
             "MDF_PointB3_P4_Max": {
-              "operator": "Variables[0] (MDF_PointB3_P4_Max) || RETURN",
-              "displayLines": "MDF_PointB3_P4_Max",
-              "constants": [],
-              "variables": [
-                "MDF_PointB3_P4_Max"
-              ]
+              "displayLines": "MDF_PointB3_P4_Max"
             },
             "MDF_Eidolon4_P2_ExtraDamagePercentage": {
-              "operator": "Variables[0] (MDF_Eidolon4_P2_ExtraDamagePercentage) || RETURN",
-              "displayLines": "MDF_Eidolon4_P2_ExtraDamagePercentage",
-              "constants": [],
-              "variables": [
-                "MDF_Eidolon4_P2_ExtraDamagePercentage"
-              ]
+              "displayLines": "MDF_Eidolon4_P2_ExtraDamagePercentage"
             },
             "Is_Copy": 1
           }
@@ -226,60 +191,25 @@ const configAbility = {
                   "referenceModifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                      "displayLines": "MDF_PropertyRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyRatio"
-                      ]
+                      "displayLines": "MDF_PropertyRatio"
                     },
                     "MDF_BasicDamagePercentage": {
-                      "operator": "Variables[0] (MDF_BasicDamagePercentage) || RETURN",
-                      "displayLines": "MDF_BasicDamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_BasicDamagePercentage"
-                      ]
+                      "displayLines": "MDF_BasicDamagePercentage"
                     },
                     "MDF_PointB3_P1_Basic": {
-                      "operator": "Variables[0] (MDF_PointB3_P1_Basic) || RETURN",
-                      "displayLines": "MDF_PointB3_P1_Basic",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PointB3_P1_Basic"
-                      ]
+                      "displayLines": "MDF_PointB3_P1_Basic"
                     },
                     "MDF_PointB3_P2_Delta": {
-                      "operator": "Variables[0] (MDF_PointB3_P2_Delta) || RETURN",
-                      "displayLines": "MDF_PointB3_P2_Delta",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PointB3_P2_Delta"
-                      ]
+                      "displayLines": "MDF_PointB3_P2_Delta"
                     },
                     "MDF_PointB3_P3_Ratio": {
-                      "operator": "Variables[0] (MDF_PointB3_P3_Ratio) || RETURN",
-                      "displayLines": "MDF_PointB3_P3_Ratio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PointB3_P3_Ratio"
-                      ]
+                      "displayLines": "MDF_PointB3_P3_Ratio"
                     },
                     "MDF_PointB3_P4_Max": {
-                      "operator": "Variables[0] (MDF_PointB3_P4_Max) || RETURN",
-                      "displayLines": "MDF_PointB3_P4_Max",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PointB3_P4_Max"
-                      ]
+                      "displayLines": "MDF_PointB3_P4_Max"
                     },
                     "MDF_Eidolon4_P2_ExtraDamagePercentage": {
-                      "operator": "Variables[0] (MDF_Eidolon4_P2_ExtraDamagePercentage) || RETURN",
-                      "displayLines": "MDF_Eidolon4_P2_ExtraDamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Eidolon4_P2_ExtraDamagePercentage"
-                      ]
+                      "displayLines": "MDF_Eidolon4_P2_ExtraDamagePercentage"
                     },
                     "Is_Copy": 1
                   }
@@ -332,13 +262,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Null Type",
                         "DamageFlat": {
-                          "operator": "Variables[0] (MDF_DamagePercentage) || Variables[1] (_originalDamage) || MUL || RETURN",
-                          "displayLines": "(MDF_DamagePercentage * _originalDamage)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamagePercentage",
-                            "_originalDamage"
-                          ]
+                          "displayLines": "(MDF_DamagePercentage * _originalDamage)"
                         },
                         "dmgFormulaFinal": "Converted DMG Base",
                         "Toughness": null,
@@ -423,12 +347,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                    "displayLines": "MDF_PropertyRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyRatio"
-                    ]
+                    "displayLines": "MDF_PropertyRatio"
                   }
                 }
               ]
@@ -519,14 +438,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_propertyBase) || Variables[1] (MDF_PropertyConvert) || MUL || Variables[2] (MDF_PropertyBase) || ADD || RETURN",
-                "displayLines": "((_propertyBase * MDF_PropertyConvert) + MDF_PropertyBase)",
-                "constants": [],
-                "variables": [
-                  "_propertyBase",
-                  "MDF_PropertyConvert",
-                  "MDF_PropertyBase"
-                ]
+                "displayLines": "((_propertyBase * MDF_PropertyConvert) + MDF_PropertyBase)"
               },
               "variableName": "MDF_PropertyRatio"
             },
@@ -538,12 +450,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             }
           ]

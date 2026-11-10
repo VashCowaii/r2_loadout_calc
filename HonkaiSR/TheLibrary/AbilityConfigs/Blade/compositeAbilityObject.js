@@ -77,13 +77,7 @@ const compositeAbilityObject = {
                       },
                       "previewType": null,
                       "previewValue": {
-                        "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (0.3) || MUL || RETURN",
-                        "displayLines": "(MDF_MaxHP * 0.3)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxHP",
-                          0.3
-                        ]
+                        "displayLines": "(MDF_MaxHP * 0.3)"
                       }
                     },
                     {
@@ -109,13 +103,7 @@ const compositeAbilityObject = {
                           },
                           "previewType": null,
                           "previewValue": {
-                            "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (0.1) || MUL || RETURN",
-                            "displayLines": "(MDF_MaxHP * 0.1)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxHP",
-                              0.1
-                            ]
+                            "displayLines": "(MDF_MaxHP * 0.1)"
                           }
                         }
                       ]
@@ -154,15 +142,7 @@ const compositeAbilityObject = {
                           },
                           "previewType": null,
                           "previewValue": {
-                            "operator": "Variables[0] (MDF_CurrentHP) || Variables[1] (MDF_MaxHP) || Constants[0] (0.5) || MUL || SUB || RETURN",
-                            "displayLines": "(MDF_CurrentHP - (MDF_MaxHP * 0.5))",
-                            "constants": [
-                              0.5
-                            ],
-                            "variables": [
-                              "MDF_CurrentHP",
-                              "MDF_MaxHP"
-                            ]
+                            "displayLines": "(MDF_CurrentHP - (MDF_MaxHP * 0.5))"
                           }
                         }
                       ]
@@ -188,12 +168,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (0.15) || RETURN",
-                    "displayLines": "0.15",
-                    "constants": [],
-                    "variables": [
-                      0.15
-                    ]
+                    "displayLines": "0.15"
                   },
                   "variableName": "MDF_CriticalIncrease"
                 },
@@ -205,12 +180,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_CriticalIncrease) || RETURN",
-                    "displayLines": "MDF_CriticalIncrease",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CriticalIncrease"
-                    ]
+                    "displayLines": "MDF_CriticalIncrease"
                   }
                 }
               ]
@@ -232,12 +202,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1963215461\">MWRen_Eidolon4</a>[<span class=\"descriptionNumberColor\">Heal All Bones</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   }
                 },
                 {
@@ -277,13 +242,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (0.2) || Variables[1] (MDF_Rank04_Layer) || MUL || RETURN",
-                    "displayLines": "(0.2 * MDF_Rank04_Layer)",
-                    "constants": [],
-                    "variables": [
-                      0.2,
-                      "MDF_Rank04_Layer"
-                    ]
+                    "displayLines": "(0.2 * MDF_Rank04_Layer)"
                   },
                   "variableName": "MDF_HPIncrease"
                 },
@@ -295,12 +254,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_HPIncrease) || RETURN",
-                    "displayLines": "MDF_HPIncrease",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HPIncrease"
-                    ]
+                    "displayLines": "MDF_HPIncrease"
                   }
                 }
               ]
@@ -387,20 +341,10 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (0.25) || RETURN",
-                        "displayLines": "0.25",
-                        "constants": [],
-                        "variables": [
-                          0.25
-                        ]
+                        "displayLines": "0.25"
                       },
                       "healFlat": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_14456) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_14456",
-                        "constants": [],
-                        "variables": [
-                          "UnusedUnderThisBase_14456"
-                        ]
+                        "displayLines": "UnusedUnderThisBase_14456"
                       },
                       "formula": "Heal from Target MaxHP"
                     }
@@ -431,12 +375,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingIncoming</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_HealEnhanceRatio) || RETURN",
-                    "displayLines": "MDF_HealEnhanceRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HealEnhanceRatio"
-                    ]
+                    "displayLines": "MDF_HealEnhanceRatio"
                   }
                 }
               ]
@@ -472,20 +411,10 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Constants[0] (0) || RETURN",
-                    "displayLines": "0",
-                    "constants": [
-                      0
-                    ],
-                    "variables": []
+                    "displayLines": "0"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
-                    "displayLines": "MWRen_Qi_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MWRen_Qi_MaxLayer"
-                    ]
+                    "displayLines": "MWRen_Qi_MaxLayer"
                   },
                   "assignState": "True",
                   "priorState": "Normal",
@@ -510,32 +439,17 @@ const compositeAbilityObject = {
                     "value1": "MWRen_Qi_Layer",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
-                      "displayLines": "MWRen_Qi_MaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "MWRen_Qi_MaxLayer"
-                      ]
+                      "displayLines": "MWRen_Qi_MaxLayer"
                     }
                   },
                   "passed": [
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MWRen_Qi_Layer) || RETURN",
-                        "displayLines": "MWRen_Qi_Layer",
-                        "constants": [],
-                        "variables": [
-                          "MWRen_Qi_Layer"
-                        ]
+                        "displayLines": "MWRen_Qi_Layer"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
-                        "displayLines": "MWRen_Qi_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MWRen_Qi_MaxLayer"
-                        ]
+                        "displayLines": "MWRen_Qi_MaxLayer"
                       },
                       "assignState": "True",
                       "priorState": "Active",
@@ -547,20 +461,10 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MWRen_Qi_Layer) || RETURN",
-                        "displayLines": "MWRen_Qi_Layer",
-                        "constants": [],
-                        "variables": [
-                          "MWRen_Qi_Layer"
-                        ]
+                        "displayLines": "MWRen_Qi_Layer"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
-                        "displayLines": "MWRen_Qi_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MWRen_Qi_MaxLayer"
-                        ]
+                        "displayLines": "MWRen_Qi_MaxLayer"
                       },
                       "assignState": "True",
                       "priorState": "Normal",
@@ -608,14 +512,7 @@ const compositeAbilityObject = {
                             "value1": "<a class=\"gModGreen\" id=\"1924146149\">MWRen_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                             "compareType": "<=",
                             "value2": {
-                              "operator": "Variables[0] (MWRen_Qi_MaxLayer) || Constants[0] (1) || SUB || RETURN",
-                              "displayLines": "(MWRen_Qi_MaxLayer - 1)",
-                              "constants": [
-                                1
-                              ],
-                              "variables": [
-                                "MWRen_Qi_MaxLayer"
-                              ]
+                              "displayLines": "(MWRen_Qi_MaxLayer - 1)"
                             },
                             "valueType": "Layer"
                           }
@@ -629,12 +526,7 @@ const compositeAbilityObject = {
                             "value1": "<a class=\"gModGreen\" id=\"1924146149\">MWRen_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                             "compareType": "=",
                             "value2": {
-                              "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
-                              "displayLines": "MWRen_Qi_MaxLayer",
-                              "constants": [],
-                              "variables": [
-                                "MWRen_Qi_MaxLayer"
-                              ]
+                              "displayLines": "MWRen_Qi_MaxLayer"
                             },
                             "valueType": "Layer"
                           }
@@ -668,12 +560,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -828,13 +715,7 @@ const compositeAbilityObject = {
                       },
                       "previewType": null,
                       "previewValue": {
-                        "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (0.3) || MUL || RETURN",
-                        "displayLines": "(MDF_MaxHP * 0.3)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxHP",
-                          0.3
-                        ]
+                        "displayLines": "(MDF_MaxHP * 0.3)"
                       }
                     },
                     {
@@ -860,13 +741,7 @@ const compositeAbilityObject = {
                           },
                           "previewType": null,
                           "previewValue": {
-                            "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (0.1) || MUL || RETURN",
-                            "displayLines": "(MDF_MaxHP * 0.1)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxHP",
-                              0.1
-                            ]
+                            "displayLines": "(MDF_MaxHP * 0.1)"
                           }
                         }
                       ]
@@ -905,15 +780,7 @@ const compositeAbilityObject = {
                           },
                           "previewType": null,
                           "previewValue": {
-                            "operator": "Variables[0] (MDF_CurrentHP) || Variables[1] (MDF_MaxHP) || Constants[0] (0.5) || MUL || SUB || RETURN",
-                            "displayLines": "(MDF_CurrentHP - (MDF_MaxHP * 0.5))",
-                            "constants": [
-                              0.5
-                            ],
-                            "variables": [
-                              "MDF_CurrentHP",
-                              "MDF_MaxHP"
-                            ]
+                            "displayLines": "(MDF_CurrentHP - (MDF_MaxHP * 0.5))"
                           }
                         }
                       ]
@@ -939,12 +806,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (0.15) || RETURN",
-                    "displayLines": "0.15",
-                    "constants": [],
-                    "variables": [
-                      0.15
-                    ]
+                    "displayLines": "0.15"
                   },
                   "variableName": "MDF_CriticalIncrease"
                 },
@@ -956,12 +818,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_CriticalIncrease) || RETURN",
-                    "displayLines": "MDF_CriticalIncrease",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CriticalIncrease"
-                    ]
+                    "displayLines": "MDF_CriticalIncrease"
                   }
                 }
               ]
@@ -983,12 +840,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1909621809\">Advanced_Ren_Eidolon4</a>[<span class=\"descriptionNumberColor\">Heal All Bones</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   }
                 },
                 {
@@ -1028,13 +880,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (0.2) || Variables[1] (MDF_Rank04_Layer) || MUL || RETURN",
-                    "displayLines": "(0.2 * MDF_Rank04_Layer)",
-                    "constants": [],
-                    "variables": [
-                      0.2,
-                      "MDF_Rank04_Layer"
-                    ]
+                    "displayLines": "(0.2 * MDF_Rank04_Layer)"
                   },
                   "variableName": "MDF_HPIncrease"
                 },
@@ -1046,12 +892,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_HPIncrease) || RETURN",
-                    "displayLines": "MDF_HPIncrease",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HPIncrease"
-                    ]
+                    "displayLines": "MDF_HPIncrease"
                   }
                 }
               ]
@@ -1114,14 +955,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CasterLostHP2) || Variables[1] (0.25) || MUL || Variables[2] (CasterLostHP) || ADD || RETURN",
-                    "displayLines": "((CasterLostHP2 * 0.25) + CasterLostHP)",
-                    "constants": [],
-                    "variables": [
-                      "CasterLostHP2",
-                      0.25,
-                      "CasterLostHP"
-                    ]
+                    "displayLines": "((CasterLostHP2 * 0.25) + CasterLostHP)"
                   },
                   "variableName": "CasterLostHP"
                 },
@@ -1142,12 +976,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingIncoming</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.2) || RETURN",
-                    "displayLines": "0.2",
-                    "constants": [],
-                    "variables": [
-                      0.2
-                    ]
+                    "displayLines": "0.2"
                   }
                 }
               ]
@@ -1183,20 +1012,10 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Constants[0] (0) || RETURN",
-                    "displayLines": "0",
-                    "constants": [
-                      0
-                    ],
-                    "variables": []
+                    "displayLines": "0"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
-                    "displayLines": "MWRen_Qi_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MWRen_Qi_MaxLayer"
-                    ]
+                    "displayLines": "MWRen_Qi_MaxLayer"
                   },
                   "assignState": "True",
                   "priorState": "Normal",
@@ -1221,32 +1040,17 @@ const compositeAbilityObject = {
                     "value1": "MWRen_Qi_Layer",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
-                      "displayLines": "MWRen_Qi_MaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "MWRen_Qi_MaxLayer"
-                      ]
+                      "displayLines": "MWRen_Qi_MaxLayer"
                     }
                   },
                   "passed": [
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MWRen_Qi_Layer) || RETURN",
-                        "displayLines": "MWRen_Qi_Layer",
-                        "constants": [],
-                        "variables": [
-                          "MWRen_Qi_Layer"
-                        ]
+                        "displayLines": "MWRen_Qi_Layer"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
-                        "displayLines": "MWRen_Qi_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MWRen_Qi_MaxLayer"
-                        ]
+                        "displayLines": "MWRen_Qi_MaxLayer"
                       },
                       "assignState": "True",
                       "priorState": "Active",
@@ -1258,20 +1062,10 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MWRen_Qi_Layer) || RETURN",
-                        "displayLines": "MWRen_Qi_Layer",
-                        "constants": [],
-                        "variables": [
-                          "MWRen_Qi_Layer"
-                        ]
+                        "displayLines": "MWRen_Qi_Layer"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
-                        "displayLines": "MWRen_Qi_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MWRen_Qi_MaxLayer"
-                        ]
+                        "displayLines": "MWRen_Qi_MaxLayer"
                       },
                       "assignState": "True",
                       "priorState": "Normal",
@@ -1319,14 +1113,7 @@ const compositeAbilityObject = {
                             "value1": "<a class=\"gModGreen\" id=\"2146687777\">Advanced_Ren_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                             "compareType": "<=",
                             "value2": {
-                              "operator": "Variables[0] (MWRen_Qi_MaxLayer) || Constants[0] (1) || SUB || RETURN",
-                              "displayLines": "(MWRen_Qi_MaxLayer - 1)",
-                              "constants": [
-                                1
-                              ],
-                              "variables": [
-                                "MWRen_Qi_MaxLayer"
-                              ]
+                              "displayLines": "(MWRen_Qi_MaxLayer - 1)"
                             },
                             "valueType": "Layer"
                           }
@@ -1340,12 +1127,7 @@ const compositeAbilityObject = {
                             "value1": "<a class=\"gModGreen\" id=\"2146687777\">Advanced_Ren_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                             "compareType": "=",
                             "value2": {
-                              "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
-                              "displayLines": "MWRen_Qi_MaxLayer",
-                              "constants": [],
-                              "variables": [
-                                "MWRen_Qi_MaxLayer"
-                              ]
+                              "displayLines": "MWRen_Qi_MaxLayer"
                             },
                             "valueType": "Layer"
                           }
@@ -1379,12 +1161,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 },
                 {
@@ -1395,12 +1172,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                    "displayLines": "MDF_PropertyValue2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue2"
-                    ]
+                    "displayLines": "MDF_PropertyValue2"
                   }
                 }
               ]
@@ -1907,12 +1679,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "consumePercent": {
-                        "operator": "Variables[0] (0.2) || RETURN",
-                        "displayLines": "0.2",
-                        "constants": [],
-                        "variables": [
-                          0.2
-                        ]
+                        "displayLines": "0.2"
                       },
                       "consumeFloor": 1,
                       "attackType": "Maze"
@@ -1927,12 +1694,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Wind",
                         "Damage": {
-                          "operator": "Variables[0] (0.4) || RETURN",
-                          "displayLines": "0.4",
-                          "constants": [],
-                          "variables": [
-                            0.4
-                          ]
+                          "displayLines": "0.4"
                         },
                         "dmgFormula": "Max HP Scaling",
                         "Toughness": null,
@@ -1994,13 +1756,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (1.3) || Variables[1] (0.5) || ADD || RETURN",
-                "displayLines": "(1.3 + 0.5)",
-                "constants": [],
-                "variables": [
-                  1.3,
-                  0.5
-                ]
+                "displayLines": "(1.3 + 0.5)"
               },
               "variableName": "CasterHPPercentage"
             }
@@ -2009,12 +1765,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (1.3) || RETURN",
-                "displayLines": "1.3",
-                "constants": [],
-                "variables": [
-                  1.3
-                ]
+                "displayLines": "1.3"
               },
               "variableName": "CasterHPPercentage"
             }
@@ -2033,22 +1784,12 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (CasterHPPercentage) || RETURN",
-                  "displayLines": "CasterHPPercentage",
-                  "constants": [],
-                  "variables": [
-                    "CasterHPPercentage"
-                  ]
+                  "displayLines": "CasterHPPercentage"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "HitSplit": 0.33,
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Follow-up",
@@ -2066,22 +1807,12 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (CasterHPPercentage) || RETURN",
-              "displayLines": "CasterHPPercentage",
-              "constants": [],
-              "variables": [
-                "CasterHPPercentage"
-              ]
+              "displayLines": "CasterHPPercentage"
             },
             "dmgFormula": "Max HP Scaling",
             "HitSplit": 0.34,
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "attackType": "Follow-up",
@@ -2096,12 +1827,7 @@ const compositeAbilityObject = {
             "target": "{{Caster}}"
           },
           "healPercent": {
-            "operator": "Variables[0] (0.25) || RETURN",
-            "displayLines": "0.25",
-            "constants": [],
-            "variables": [
-              0.25
-            ]
+            "displayLines": "0.25"
           },
           "formula": "Heal from Target MaxHP"
         },
@@ -2119,12 +1845,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (15) || RETURN",
-                "displayLines": "15",
-                "constants": [],
-                "variables": [
-                  15
-                ]
+                "displayLines": "15"
               },
               "isFixed": "* ERR"
             }
@@ -2142,12 +1863,7 @@ const compositeAbilityObject = {
           "name": "Update Displayed Energy Bar",
           "value": 0,
           "maximum": {
-            "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
-            "displayLines": "MWRen_Qi_MaxLayer",
-            "constants": [],
-            "variables": [
-              "MWRen_Qi_MaxLayer"
-            ]
+            "displayLines": "MWRen_Qi_MaxLayer"
           },
           "assignState": "True",
           "priorState": "Normal",
@@ -2323,12 +2039,7 @@ const compositeAbilityObject = {
           "name": "Update Displayed Energy Bar",
           "value": 0,
           "maximum": {
-            "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
-            "displayLines": "MWRen_Qi_MaxLayer",
-            "constants": [],
-            "variables": [
-              "MWRen_Qi_MaxLayer"
-            ]
+            "displayLines": "MWRen_Qi_MaxLayer"
           },
           "assignState": "True",
           "priorState": "Normal",
@@ -2557,13 +2268,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (CasterLostHP2) || INVERT || Variables[1] (CasterLostHP) || ADD || RETURN",
-                        "displayLines": "(-CasterLostHP2 + CasterLostHP)",
-                        "constants": [],
-                        "variables": [
-                          "CasterLostHP2",
-                          "CasterLostHP"
-                        ]
+                        "displayLines": "(-CasterLostHP2 + CasterLostHP)"
                       },
                       "variableName": "CasterLostHP"
                     },
@@ -2593,12 +2298,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"2146687777\">Advanced_Ren_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
-                            "displayLines": "MWRen_Qi_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "MWRen_Qi_MaxLayer"
-                            ]
+                            "displayLines": "MWRen_Qi_MaxLayer"
                           }
                         },
                         {
@@ -2611,12 +2311,7 @@ const compositeAbilityObject = {
                                 "value1": "<a class=\"gModGreen\" id=\"2146687777\">Advanced_Ren_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
-                                  "displayLines": "MWRen_Qi_MaxLayer",
-                                  "constants": [],
-                                  "variables": [
-                                    "MWRen_Qi_MaxLayer"
-                                  ]
+                                  "displayLines": "MWRen_Qi_MaxLayer"
                                 },
                                 "valueType": "Layer"
                               },
@@ -2813,12 +2508,7 @@ const compositeAbilityObject = {
                         "value1": "<a class=\"gModGreen\" id=\"2146687777\">Advanced_Ren_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
-                          "displayLines": "MWRen_Qi_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MWRen_Qi_MaxLayer"
-                          ]
+                          "displayLines": "MWRen_Qi_MaxLayer"
                         },
                         "valueType": "Layer"
                       },
@@ -2885,12 +2575,7 @@ const compositeAbilityObject = {
                         "value1": "<a class=\"gModGreen\" id=\"2146687777\">Advanced_Ren_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
-                          "displayLines": "MWRen_Qi_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MWRen_Qi_MaxLayer"
-                          ]
+                          "displayLines": "MWRen_Qi_MaxLayer"
                         },
                         "valueType": "Layer"
                       },
@@ -2982,12 +2667,7 @@ const compositeAbilityObject = {
                         "value1": "<a class=\"gModGreen\" id=\"2146687777\">Advanced_Ren_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
-                          "displayLines": "MWRen_Qi_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MWRen_Qi_MaxLayer"
-                          ]
+                          "displayLines": "MWRen_Qi_MaxLayer"
                         },
                         "valueType": "Layer"
                       },
@@ -3076,12 +2756,7 @@ const compositeAbilityObject = {
                         "value1": "CasterCurrentHP2",
                         "compareType": "<=",
                         "value2": {
-                          "operator": "Variables[0] (CasterCurrentHP) || RETURN",
-                          "displayLines": "CasterCurrentHP",
-                          "constants": [],
-                          "variables": [
-                            "CasterCurrentHP"
-                          ]
+                          "displayLines": "CasterCurrentHP"
                         }
                       },
                       "passed": [
@@ -3179,14 +2854,7 @@ const compositeAbilityObject = {
           },
           "clearNegativeHP": true,
           "setValue": {
-            "operator": "Variables[0] (CasterMaxHP) || Constants[0] (0.5) || MUL || RETURN",
-            "displayLines": "(CasterMaxHP * 0.5)",
-            "constants": [
-              0.5
-            ],
-            "variables": [
-              "CasterMaxHP"
-            ]
+            "displayLines": "(CasterMaxHP * 0.5)"
           }
         },
         {
@@ -3196,12 +2864,7 @@ const compositeAbilityObject = {
             "value1": "CasterLostHPPercentage",
             "compareType": ">=",
             "value2": {
-              "operator": "Variables[0] (0.9) || RETURN",
-              "displayLines": "0.9",
-              "constants": [],
-              "variables": [
-                0.9
-              ]
+              "displayLines": "0.9"
             },
             "contextScope": "TargetEntity"
           },
@@ -3209,13 +2872,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (CasterMaxHP) || Variables[1] (0.9) || MUL || RETURN",
-                "displayLines": "(CasterMaxHP * 0.9)",
-                "constants": [],
-                "variables": [
-                  "CasterMaxHP",
-                  0.9
-                ]
+                "displayLines": "(CasterMaxHP * 0.9)"
               },
               "variableName": "CasterFinalLostHP"
             }
@@ -3224,12 +2881,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (CasterLostHP) || RETURN",
-                "displayLines": "CasterLostHP",
-                "constants": [],
-                "variables": [
-                  "CasterLostHP"
-                ]
+                "displayLines": "CasterLostHP"
               },
               "variableName": "CasterFinalLostHP"
             }
@@ -3252,31 +2904,14 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (1.5) || RETURN",
-                  "displayLines": "1.5",
-                  "constants": [],
-                  "variables": [
-                    1.5
-                  ]
+                  "displayLines": "1.5"
                 },
                 "DamageFlat": {
-                  "operator": "Variables[0] (CasterFinalLostHP) || Variables[1] (1.2) || MUL || Variables[0] (CasterFinalLostHP) || Variables[2] (1.5) || MUL || ADD || RETURN",
-                  "displayLines": "((CasterFinalLostHP * 1.2) + (CasterFinalLostHP * 1.5))",
-                  "constants": [],
-                  "variables": [
-                    "CasterFinalLostHP",
-                    1.2,
-                    1.5
-                  ]
+                  "displayLines": "((CasterFinalLostHP * 1.2) + (CasterFinalLostHP * 1.5))"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -3294,30 +2929,14 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (1.5) || RETURN",
-                  "displayLines": "1.5",
-                  "constants": [],
-                  "variables": [
-                    1.5
-                  ]
+                  "displayLines": "1.5"
                 },
                 "DamageFlat": {
-                  "operator": "Variables[0] (CasterFinalLostHP) || Variables[1] (1.2) || MUL || RETURN",
-                  "displayLines": "(CasterFinalLostHP * 1.2)",
-                  "constants": [],
-                  "variables": [
-                    "CasterFinalLostHP",
-                    1.2
-                  ]
+                  "displayLines": "(CasterFinalLostHP * 1.2)"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -3334,30 +2953,14 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (0.6) || RETURN",
-              "displayLines": "0.6",
-              "constants": [],
-              "variables": [
-                0.6
-              ]
+              "displayLines": "0.6"
             },
             "DamageFlat": {
-              "operator": "Variables[0] (CasterFinalLostHP) || Variables[1] (0.6) || MUL || RETURN",
-              "displayLines": "(CasterFinalLostHP * 0.6)",
-              "constants": [],
-              "variables": [
-                "CasterFinalLostHP",
-                0.6
-              ]
+              "displayLines": "(CasterFinalLostHP * 0.6)"
             },
             "dmgFormula": "Max HP Scaling",
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null
           }
@@ -3381,30 +2984,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CasterFinalLostHP) || Constants[0] (1) || Variables[1] (0.5) || SUB || MUL || RETURN",
-                    "displayLines": "(CasterFinalLostHP * (1 - 0.5))",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "CasterFinalLostHP",
-                      0.5
-                    ]
+                    "displayLines": "(CasterFinalLostHP * (1 - 0.5))"
                   },
                   "variableName": "CasterLostHP"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CasterFinalLostHP) || Constants[0] (1) || Variables[1] (0.5) || SUB || MUL || RETURN",
-                    "displayLines": "(CasterFinalLostHP * (1 - 0.5))",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "CasterFinalLostHP",
-                      0.5
-                    ]
+                    "displayLines": "(CasterFinalLostHP * (1 - 0.5))"
                   },
                   "variableName": "CasterFinalLostHP"
                 }
@@ -3423,12 +3010,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-936894999\">Advanced_Ren_Ability03_Listen</a>[<span class=\"descriptionNumberColor\">Death Sentence</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (CasterFinalLostHP) || RETURN",
-                  "displayLines": "CasterFinalLostHP",
-                  "constants": [],
-                  "variables": [
-                    "CasterFinalLostHP"
-                  ]
+                  "displayLines": "CasterFinalLostHP"
                 }
               }
             }
@@ -3551,12 +3133,7 @@ const compositeAbilityObject = {
             "target": "{{Caster}}"
           },
           "consumePercent": {
-            "operator": "Variables[0] (0.3) || RETURN",
-            "displayLines": "0.3",
-            "constants": [],
-            "variables": [
-              0.3
-            ]
+            "displayLines": "0.3"
           },
           "consumeFloor": 1,
           "attackType": "BPSkill"
@@ -3569,12 +3146,7 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-405491517\">Advanced_Ren_Attack_Transfer</a>[<span class=\"descriptionNumberColor\">Hellscape</span>]",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           }
         },
         {
@@ -3586,20 +3158,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1791240191\">Advanced_Ren_Attack</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.4) || RETURN",
-              "displayLines": "0.4",
-              "constants": [],
-              "variables": [
-                0.4
-              ]
+              "displayLines": "0.4"
             },
             "MDF_PropertyValue2": {
-              "operator": "Variables[0] (10) || RETURN",
-              "displayLines": "10",
-              "constants": [],
-              "variables": [
-                10
-              ]
+              "displayLines": "10"
             }
           }
         },
@@ -3677,12 +3239,7 @@ const compositeAbilityObject = {
             "target": "{{Caster}}"
           },
           "consumePercent": {
-            "operator": "Variables[0] (0.1) || RETURN",
-            "displayLines": "0.1",
-            "constants": [],
-            "variables": [
-              0.1
-            ]
+            "displayLines": "0.1"
           },
           "consumeFloor": 1,
           "attackType": "BPSkill"
@@ -3694,12 +3251,7 @@ const compositeAbilityObject = {
             "value1": "CasterLostHPPercentage",
             "compareType": ">=",
             "value2": {
-              "operator": "Variables[0] (0.9) || RETURN",
-              "displayLines": "0.9",
-              "constants": [],
-              "variables": [
-                0.9
-              ]
+              "displayLines": "0.9"
             },
             "contextScope": "TargetEntity"
           },
@@ -3707,13 +3259,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (CasterMaxHP) || Variables[1] (0.9) || MUL || RETURN",
-                "displayLines": "(CasterMaxHP * 0.9)",
-                "constants": [],
-                "variables": [
-                  "CasterMaxHP",
-                  0.9
-                ]
+                "displayLines": "(CasterMaxHP * 0.9)"
               },
               "variableName": "CasterFinalLostHP"
             }
@@ -3722,12 +3268,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (CasterLostHP) || RETURN",
-                "displayLines": "CasterLostHP",
-                "constants": [],
-                "variables": [
-                  "CasterLostHP"
-                ]
+                "displayLines": "CasterLostHP"
               },
               "variableName": "CasterFinalLostHP"
             }
@@ -3749,33 +3290,15 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (1.3) || RETURN",
-                  "displayLines": "1.3",
-                  "constants": [],
-                  "variables": [
-                    1.3
-                  ]
+                  "displayLines": "1.3"
                 },
                 "DamageFlat": {
-                  "operator": "Variables[0] (CasterFinalLostHP) || Variables[1] (1.5) || MUL || Constants[0] (0.5) || MUL || RETURN",
-                  "displayLines": "((CasterFinalLostHP * 1.5) * 0.5)",
-                  "constants": [
-                    0.5
-                  ],
-                  "variables": [
-                    "CasterFinalLostHP",
-                    1.5
-                  ]
+                  "displayLines": "((CasterFinalLostHP * 1.5) * 0.5)"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "HitSplit": 0.5,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -3792,22 +3315,12 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (1.3) || RETURN",
-                  "displayLines": "1.3",
-                  "constants": [],
-                  "variables": [
-                    1.3
-                  ]
+                  "displayLines": "1.3"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "HitSplit": 0.5,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -3822,12 +3335,7 @@ const compositeAbilityObject = {
             "value1": "CasterLostHPPercentage",
             "compareType": ">=",
             "value2": {
-              "operator": "Variables[0] (0.9) || RETURN",
-              "displayLines": "0.9",
-              "constants": [],
-              "variables": [
-                0.9
-              ]
+              "displayLines": "0.9"
             },
             "contextScope": "TargetEntity"
           },
@@ -3835,13 +3343,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (CasterMaxHP) || Variables[1] (0.9) || MUL || RETURN",
-                "displayLines": "(CasterMaxHP * 0.9)",
-                "constants": [],
-                "variables": [
-                  "CasterMaxHP",
-                  0.9
-                ]
+                "displayLines": "(CasterMaxHP * 0.9)"
               },
               "variableName": "CasterFinalLostHP"
             }
@@ -3850,12 +3352,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (CasterLostHP) || RETURN",
-                "displayLines": "CasterLostHP",
-                "constants": [],
-                "variables": [
-                  "CasterLostHP"
-                ]
+                "displayLines": "CasterLostHP"
               },
               "variableName": "CasterFinalLostHP"
             }
@@ -3877,33 +3374,15 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (1.3) || RETURN",
-                  "displayLines": "1.3",
-                  "constants": [],
-                  "variables": [
-                    1.3
-                  ]
+                  "displayLines": "1.3"
                 },
                 "DamageFlat": {
-                  "operator": "Variables[0] (CasterFinalLostHP) || Variables[1] (1.5) || MUL || Constants[0] (0.5) || MUL || RETURN",
-                  "displayLines": "((CasterFinalLostHP * 1.5) * 0.5)",
-                  "constants": [
-                    0.5
-                  ],
-                  "variables": [
-                    "CasterFinalLostHP",
-                    1.5
-                  ]
+                  "displayLines": "((CasterFinalLostHP * 1.5) * 0.5)"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "HitSplit": 0.5,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -3918,21 +3397,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (0.52) || RETURN",
-                  "displayLines": "0.52",
-                  "constants": [],
-                  "variables": [
-                    0.52
-                  ]
+                  "displayLines": "0.52"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "Tags": null
               }
@@ -3948,22 +3417,12 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (1.3) || RETURN",
-                  "displayLines": "1.3",
-                  "constants": [],
-                  "variables": [
-                    1.3
-                  ]
+                  "displayLines": "1.3"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "HitSplit": 0.5,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -3978,21 +3437,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (0.52) || RETURN",
-                  "displayLines": "0.52",
-                  "constants": [],
-                  "variables": [
-                    0.52
-                  ]
+                  "displayLines": "0.52"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "Tags": null
               }
@@ -4060,22 +3509,12 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             },
             "dmgFormula": "Max HP Scaling",
             "HitSplit": 0.5,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -4091,22 +3530,12 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             },
             "dmgFormula": "Max HP Scaling",
             "HitSplit": 0.5,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -4183,13 +3612,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CasterLostHP) || Variables[1] (CasterMaxHP) || DIV || RETURN",
-                    "displayLines": "(CasterLostHP / CasterMaxHP)",
-                    "constants": [],
-                    "variables": [
-                      "CasterLostHP",
-                      "CasterMaxHP"
-                    ]
+                    "displayLines": "(CasterLostHP / CasterMaxHP)"
                   },
                   "variableName": "CasterLostHPPercentage"
                 }
@@ -4202,12 +3625,7 @@ const compositeAbilityObject = {
                 "value1": "CasterLostHPPercentage",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (0.9) || RETURN",
-                  "displayLines": "0.9",
-                  "constants": [],
-                  "variables": [
-                    0.9
-                  ]
+                  "displayLines": "0.9"
                 },
                 "contextScope": "TargetEntity"
               },
@@ -4215,13 +3633,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CasterMaxHP) || Variables[1] (0.9) || MUL || RETURN",
-                    "displayLines": "(CasterMaxHP * 0.9)",
-                    "constants": [],
-                    "variables": [
-                      "CasterMaxHP",
-                      0.9
-                    ]
+                    "displayLines": "(CasterMaxHP * 0.9)"
                   },
                   "variableName": "CasterFinalLostHP"
                 }
@@ -4230,12 +3642,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CasterLostHP) || RETURN",
-                    "displayLines": "CasterLostHP",
-                    "constants": [],
-                    "variables": [
-                      "CasterLostHP"
-                    ]
+                    "displayLines": "CasterLostHP"
                   },
                   "variableName": "CasterFinalLostHP"
                 }
@@ -4250,12 +3657,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-936894999\">Advanced_Ren_Ability03_Listen</a>[<span class=\"descriptionNumberColor\">Death Sentence</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (CasterFinalLostHP) || RETURN",
-                  "displayLines": "CasterFinalLostHP",
-                  "constants": [],
-                  "variables": [
-                    "CasterFinalLostHP"
-                  ]
+                  "displayLines": "CasterFinalLostHP"
                 }
               }
             }

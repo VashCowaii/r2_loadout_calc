@@ -251,13 +251,7 @@ const configAbility = {
                       "modifierName": "<a class=\"gModGreen\" id=\"1177581439\">Enemy_AML_Minion02_01_LocalLegend_NegativeBlood_Avatar</a>[<span class=\"descriptionNumberColor\">HP Overload</span>]",
                       "variableName": "MDF_NegativeBlood",
                       "value": {
-                        "operator": "Variables[0] (CEIL) || Variables[1] (MDF_NegativeHP) || PARAM_1 || FUNCTION || RETURN",
-                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeHP)",
-                        "constants": [],
-                        "variables": [
-                          "CEIL",
-                          "MDF_NegativeHP"
-                        ]
+                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeHP)"
                       }
                     }
                   ],
@@ -271,13 +265,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1177581439\">Enemy_AML_Minion02_01_LocalLegend_NegativeBlood_Avatar</a>[<span class=\"descriptionNumberColor\">HP Overload</span>]",
                       "valuePerStack": {
                         "MDF_NegativeBlood": {
-                          "operator": "Variables[0] (CEIL) || Variables[1] (MDF_NegativeHP) || PARAM_1 || FUNCTION || RETURN",
-                          "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeHP)",
-                          "constants": [],
-                          "variables": [
-                            "CEIL",
-                            "MDF_NegativeHP"
-                          ]
+                          "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeHP)"
                         }
                       }
                     }
@@ -309,12 +297,7 @@ const configAbility = {
                     "value1": "MDF_NegativeHP",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (_BattleTarget_S3_2_Param) || RETURN",
-                      "displayLines": "_BattleTarget_S3_2_Param",
-                      "constants": [],
-                      "variables": [
-                        "_BattleTarget_S3_2_Param"
-                      ]
+                      "displayLines": "_BattleTarget_S3_2_Param"
                     }
                   },
                   {
@@ -364,12 +347,7 @@ const configAbility = {
                     "value1": "MDF_NegativeHP",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (_BattleTarget_S3_3_Param) || RETURN",
-                      "displayLines": "_BattleTarget_S3_3_Param",
-                      "constants": [],
-                      "variables": [
-                        "_BattleTarget_S3_3_Param"
-                      ]
+                      "displayLines": "_BattleTarget_S3_3_Param"
                     }
                   },
                   {
@@ -414,12 +392,7 @@ const configAbility = {
                     "value1": "MDF_NegativeHP",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (_BattleTarget_S3_2_Param) || RETURN",
-                      "displayLines": "_BattleTarget_S3_2_Param",
-                      "constants": [],
-                      "variables": [
-                        "_BattleTarget_S3_2_Param"
-                      ]
+                      "displayLines": "_BattleTarget_S3_2_Param"
                     }
                   },
                   {
@@ -464,12 +437,7 @@ const configAbility = {
                     "value1": "MDF_NegativeHP",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (_BattleTarget_S3_3_Param) || RETURN",
-                      "displayLines": "_BattleTarget_S3_3_Param",
-                      "constants": [],
-                      "variables": [
-                        "_BattleTarget_S3_3_Param"
-                      ]
+                      "displayLines": "_BattleTarget_S3_3_Param"
                     }
                   },
                   {
@@ -551,12 +519,7 @@ const configAbility = {
                     "value1": "MDF_NegativeHP",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (_BattleTarget_LocalLegend_S3_7_Check) || RETURN",
-                      "displayLines": "_BattleTarget_LocalLegend_S3_7_Check",
-                      "constants": [],
-                      "variables": [
-                        "_BattleTarget_LocalLegend_S3_7_Check"
-                      ]
+                      "displayLines": "_BattleTarget_LocalLegend_S3_7_Check"
                     }
                   },
                   {
@@ -596,13 +559,7 @@ const configAbility = {
                       },
                       "scope": "TargetEntity",
                       "value": {
-                        "operator": "Variables[0] (CEIL) || Variables[1] (MDF_NegativeHP) || PARAM_1 || FUNCTION || RETURN",
-                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeHP)",
-                        "constants": [],
-                        "variables": [
-                          "CEIL",
-                          "MDF_NegativeHP"
-                        ]
+                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeHP)"
                       },
                       "variableName": "_BattleTarget_LocalLegend_S3_1_ProgressInfo"
                     }
@@ -624,13 +581,7 @@ const configAbility = {
                       },
                       "scope": "TargetEntity",
                       "value": {
-                        "operator": "Variables[0] (CEIL) || Variables[1] (MDF_NegativeHP) || PARAM_1 || FUNCTION || RETURN",
-                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeHP)",
-                        "constants": [],
-                        "variables": [
-                          "CEIL",
-                          "MDF_NegativeHP"
-                        ]
+                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeHP)"
                       },
                       "variableName": "_BattleTarget_LocalLegend_S3_5_ProgressInfo"
                     }
@@ -644,12 +595,7 @@ const configAbility = {
                   },
                   "scope": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (MDF_NegativeHP) || RETURN",
-                    "displayLines": "MDF_NegativeHP",
-                    "constants": [],
-                    "variables": [
-                      "MDF_NegativeHP"
-                    ]
+                    "displayLines": "MDF_NegativeHP"
                   },
                   "variableName": "_MonsterChangeCnt"
                 }
@@ -898,12 +844,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (_SpeedAddedRatio) || RETURN",
-                "displayLines": "_SpeedAddedRatio",
-                "constants": [],
-                "variables": [
-                  "_SpeedAddedRatio"
-                ]
+                "displayLines": "_SpeedAddedRatio"
               }
             }
           ]
@@ -1030,14 +971,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1526505902\">Modifier_XP_Elite01_02_LocalLegend_Ability03BattleEvent_SpeedAddedRatio</a>",
                   "valuePerStack": {
                     "_SpeedAddedRatio": {
-                      "operator": "Variables[0] (_OriginCharacterCount) || Variables[1] (_CharacterCount) || SUB || Variables[2] ({[Skill03[1]]}) || MUL || RETURN",
-                      "displayLines": "((_OriginCharacterCount - _CharacterCount) * {[Skill03[1]]})",
-                      "constants": [],
-                      "variables": [
-                        "_OriginCharacterCount",
-                        "_CharacterCount",
-                        "{[Skill03[1]]}"
-                      ]
+                      "displayLines": "((_OriginCharacterCount - _CharacterCount) * {[Skill03[1]]})"
                     }
                   }
                 }

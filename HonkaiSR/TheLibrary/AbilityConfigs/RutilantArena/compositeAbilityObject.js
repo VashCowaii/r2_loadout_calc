@@ -73,12 +73,7 @@ const compositeAbilityObject = {
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (0.7) || RETURN",
-                      "displayLines": "0.7",
-                      "constants": [],
-                      "variables": [
-                        0.7
-                      ]
+                      "displayLines": "0.7"
                     }
                   },
                   "passed": [
@@ -104,12 +99,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": -1,
                   "maxValue": {
-                    "operator": "Variables[0] (0.7) || RETURN",
-                    "displayLines": "0.7",
-                    "constants": [],
-                    "variables": [
-                      0.7
-                    ]
+                    "displayLines": "0.7"
                   },
                   "enteringRange": [
                     {

@@ -13,12 +13,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1494385561\">Yanqing_Eidolon1</a>",
       "valuePerStack": {
         "MDF_DamageRatio": {
-          "operator": "Variables[0] (0.6) || RETURN",
-          "displayLines": "0.6",
-          "constants": [],
-          "variables": [
-            0.6
-          ]
+          "displayLines": "0.6"
         }
       }
     }
@@ -59,12 +54,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (MDF_DamageRatio) || RETURN",
-                      "displayLines": "MDF_DamageRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageRatio"
-                      ]
+                      "displayLines": "MDF_DamageRatio"
                     },
                     "Toughness": null,
                     "Tags": null,

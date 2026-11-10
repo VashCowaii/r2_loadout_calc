@@ -30,12 +30,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ChallengePeakBattle_0027_ADF_1) || INVERT || RETURN",
-                "displayLines": "-ChallengePeakBattle_0027_ADF_1",
-                "constants": [],
-                "variables": [
-                  "ChallengePeakBattle_0027_ADF_1"
-                ]
+                "displayLines": "-ChallengePeakBattle_0027_ADF_1"
               }
             }
           ]
@@ -82,12 +77,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-355525160\">Modifier_ChallengePeakBattle_BaseAbility_0027_02</a>",
                   "valuePerStack": {
                     "ChallengePeakBattle_0027_ADF_1": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }

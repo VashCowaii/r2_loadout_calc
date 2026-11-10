@@ -31,21 +31,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-314126453\">Aventurine_Maze_Defence</a>[<span class=\"descriptionNumberColor\">The Red or the Black</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.36) || RETURN",
-                  "displayLines": "0.36",
-                  "constants": [],
-                  "variables": [
-                    0.36
-                  ]
+                  "displayLines": "0.36"
                 }
               }
             },

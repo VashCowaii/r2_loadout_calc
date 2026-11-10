@@ -19,21 +19,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1079912443\">Cerydra_PointB3</a>[<span class=\"descriptionNumberColor\">Vici</span>]",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (20) || RETURN",
-              "displayLines": "20",
-              "constants": [],
-              "variables": [
-                20
-              ]
+              "displayLines": "20"
             }
           }
         }
@@ -53,12 +43,7 @@ const configAbility = {
             "target": "{{Ability Target(ST)}}"
           },
           "value": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "isFixed": "(Fixed)",
           "tag": "ActiveSkillAdd"
@@ -97,12 +82,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1716749059\">Cerydra_Ability02_Target</a>",
           "valuePerStack": {
             "DV_PointAdded_Get": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             }
           }
         },
@@ -111,12 +91,7 @@ const configAbility = {
           "functionName": "<a class=\"gTempYellow\" id=\"1612575312\">Cerydra_Template_MaxPointHandle</a>",
           "variables": {
             "DV_AddPoint": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             }
           }
         }
@@ -140,13 +115,7 @@ const configAbility = {
                 "value1": "DV_CurrentPoint",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (6) || Variables[1] (1) || SUB || RETURN",
-                  "displayLines": "(6 - 1)",
-                  "constants": [],
-                  "variables": [
-                    6,
-                    1
-                  ]
+                  "displayLines": "(6 - 1)"
                 }
               }
             ]
@@ -162,12 +131,7 @@ const configAbility = {
               "functionName": "<a class=\"gTempYellow\" id=\"1612575312\">Cerydra_Template_MaxPointHandle</a>",
               "variables": {
                 "DV_AddPoint": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 }
               }
             },
@@ -182,12 +146,7 @@ const configAbility = {
               "functionName": "<a class=\"gTempYellow\" id=\"1612575312\">Cerydra_Template_MaxPointHandle</a>",
               "variables": {
                 "DV_AddPoint": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 }
               }
             }

@@ -23,12 +23,7 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"1795719445\">Lingsha_BPAbility_BattleEvent</a>",
       "counter": {
-        "operator": "Variables[0] (BattleEvent_Lingsha_PointB3) || RETURN",
-        "displayLines": "BattleEvent_Lingsha_PointB3",
-        "constants": [],
-        "variables": [
-          "BattleEvent_Lingsha_PointB3"
-        ]
+        "displayLines": "BattleEvent_Lingsha_PointB3"
       }
     },
     {
@@ -39,21 +34,11 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"1876847773\">Lingsha_BPAbility_BattleEvent_LifeTime</a>",
       "counter": {
-        "operator": "Variables[0] (BattleEvent_Lingsha_AttackTime) || RETURN",
-        "displayLines": "BattleEvent_Lingsha_AttackTime",
-        "constants": [],
-        "variables": [
-          "BattleEvent_Lingsha_AttackTime"
-        ]
+        "displayLines": "BattleEvent_Lingsha_AttackTime"
       },
       "valuePerStack": {
         "_AttackTime": {
-          "operator": "Variables[0] (BattleEvent_Lingsha_AttackTime) || RETURN",
-          "displayLines": "BattleEvent_Lingsha_AttackTime",
-          "constants": [],
-          "variables": [
-            "BattleEvent_Lingsha_AttackTime"
-          ]
+          "displayLines": "BattleEvent_Lingsha_AttackTime"
         }
       }
     }
@@ -117,12 +102,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (BattleEvent_Lingsha_BaseSpeed) || RETURN",
-                "displayLines": "BattleEvent_Lingsha_BaseSpeed",
-                "constants": [],
-                "variables": [
-                  "BattleEvent_Lingsha_BaseSpeed"
-                ]
+                "displayLines": "BattleEvent_Lingsha_BaseSpeed"
               }
             }
           ]

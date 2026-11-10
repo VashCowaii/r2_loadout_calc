@@ -371,52 +371,22 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"72353298\">Standard_StrongChallengeEX_SuperArmorController_MultiNew</a>",
       "valuePerStack": {
         "MDF_IF_BOSS_BreakDelay_01": {
-          "operator": "Variables[0] ({[SkillEX06[0]]}) || RETURN",
-          "displayLines": "{[SkillEX06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillEX06[0]]}"
-          ]
+          "displayLines": "{[SkillEX06[0]]}"
         },
         "MDF_IF_BOSS_BreakDelay_02": {
-          "operator": "Variables[0] ({[SkillEX06[1]]}) || RETURN",
-          "displayLines": "{[SkillEX06[1]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillEX06[1]]}"
-          ]
+          "displayLines": "{[SkillEX06[1]]}"
         },
         "MDF_IF_BOSS_BreakDelay_03": {
-          "operator": "Variables[0] ({[SkillEX06[2]]}) || RETURN",
-          "displayLines": "{[SkillEX06[2]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillEX06[2]]}"
-          ]
+          "displayLines": "{[SkillEX06[2]]}"
         },
         "MDF_IF_BOSS_BreakDelay_04": {
-          "operator": "Variables[0] ({[SkillEX06[3]]}) || RETURN",
-          "displayLines": "{[SkillEX06[3]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillEX06[3]]}"
-          ]
+          "displayLines": "{[SkillEX06[3]]}"
         },
         "MDF_IF_BOSS_WeaknessDMGUpRatio": {
-          "operator": "Variables[0] ({[SkillEX01[1]]}) || RETURN",
-          "displayLines": "{[SkillEX01[1]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillEX01[1]]}"
-          ]
+          "displayLines": "{[SkillEX01[1]]}"
         },
         "MDF_IF_BOSS_Standard_Defence": {
-          "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
-          "displayLines": "{[SkillEX01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillEX01[0]]}"
-          ]
+          "displayLines": "{[SkillEX01[0]]}"
         }
       },
       "casterAssign": "TargetSelf"

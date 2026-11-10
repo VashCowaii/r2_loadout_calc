@@ -26,12 +26,7 @@ const configAbility = {
           "eventID": 30500,
           "variables": {
             "DV_BE_BaseSpeed": {
-              "operator": "Variables[0] (DV_FeverBESpeed) || RETURN",
-              "displayLines": "DV_FeverBESpeed",
-              "constants": [],
-              "variables": [
-                "DV_FeverBESpeed"
-              ]
+              "displayLines": "DV_FeverBESpeed"
             }
           },
           "whenCreated": [
@@ -56,12 +51,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_BirdAttackCount) || RETURN",
-        "displayLines": "DV_FantasticStory_BaseAbility_BirdAttackCount",
-        "constants": [],
-        "variables": [
-          "DV_FantasticStory_BaseAbility_BirdAttackCount"
-        ]
+        "displayLines": "DV_FantasticStory_BaseAbility_BirdAttackCount"
       },
       "execute": [
         {
@@ -83,13 +73,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageFlat": {
-                  "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (DV_BirdAtkDmgRatio) || MUL || RETURN",
-                  "displayLines": "(BattleEvent_BaseHP * DV_BirdAtkDmgRatio)",
-                  "constants": [],
-                  "variables": [
-                    "BattleEvent_BaseHP",
-                    "DV_BirdAtkDmgRatio"
-                  ]
+                  "displayLines": "(BattleEvent_BaseHP * DV_BirdAtkDmgRatio)"
                 },
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
@@ -163,13 +147,7 @@ const configAbility = {
                 "target": "{{Far Left Player Entity(no Memosprite)}}"
               },
               "value": {
-                "operator": "Variables[0] (_MaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                "displayLines": "(_MaxSP - _CurrentSP)",
-                "constants": [],
-                "variables": [
-                  "_MaxSP",
-                  "_CurrentSP"
-                ]
+                "displayLines": "(_MaxSP - _CurrentSP)"
               },
               "isFixed": "(Fixed)",
               "ignoreBlock": true,
@@ -202,13 +180,7 @@ const configAbility = {
                 "target": "{{Far Left Player Entity(no Memosprite)}}"
               },
               "value": {
-                "operator": "Variables[0] (_MaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                "displayLines": "(_MaxSP - _CurrentSP)",
-                "constants": [],
-                "variables": [
-                  "_MaxSP",
-                  "_CurrentSP"
-                ]
+                "displayLines": "(_MaxSP - _CurrentSP)"
               },
               "isFixed": "(Fixed)"
             }
@@ -227,24 +199,14 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Constants[0] (0) || RETURN",
-        "displayLines": "0",
-        "constants": [
-          0
-        ],
-        "variables": []
+        "displayLines": "0"
       },
       "variableName": "DV_FantasticStory_BaseAbility_CountSum"
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Constants[0] (0) || RETURN",
-        "displayLines": "0",
-        "constants": [
-          0
-        ],
-        "variables": []
+        "displayLines": "0"
       },
       "variableName": "DV_FantasticStory_BaseAbility_BirdAttackCount"
     },
@@ -307,12 +269,7 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"906922784\">Modifier_FantasticStory_BaseAbility_2060_plus4_sub</a>[<span class=\"descriptionNumberColor\">Divine Score</span>]",
           "duration": {
-            "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2064_ADF_2) || RETURN",
-            "displayLines": "DV_FantasticStory_PlusAbility_2064_ADF_2",
-            "constants": [],
-            "variables": [
-              "DV_FantasticStory_PlusAbility_2064_ADF_2"
-            ]
+            "displayLines": "DV_FantasticStory_PlusAbility_2064_ADF_2"
           }
         }
       ]

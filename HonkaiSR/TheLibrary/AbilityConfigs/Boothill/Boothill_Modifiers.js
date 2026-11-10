@@ -44,22 +44,12 @@ const configAbility = {
                   "modifier": null,
                   "ID": "131502(Avatar_Boothill_00_SkillMazeInLevel_GainEnhance)",
                   "buffLevel": {
-                    "operator": "Variables[0] (CurCount) || RETURN",
-                    "displayLines": "CurCount",
-                    "constants": [],
-                    "variables": [
-                      "CurCount"
-                    ]
+                    "displayLines": "CurCount"
                   },
                   "counter": 2,
                   "valuePerStack": {
                     "#ADF_1": {
-                      "operator": "Variables[0] (CurCount) || RETURN",
-                      "displayLines": "CurCount",
-                      "constants": [],
-                      "variables": [
-                        "CurCount"
-                      ]
+                      "displayLines": "CurCount"
                     }
                   }
                 }
@@ -144,12 +134,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             }
           ]
@@ -220,12 +205,7 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (10) || RETURN",
-                        "displayLines": "10",
-                        "constants": [],
-                        "variables": [
-                          10
-                        ]
+                        "displayLines": "10"
                       },
                       "isFixed": "* ERR"
                     }
@@ -263,12 +243,7 @@ const configAbility = {
                     {
                       "name": "Skill Points Modification",
                       "adjustmentValue": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "adjustmentType": "+"
                     },
@@ -280,21 +255,11 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"455996650\">Boothill_Eidolon2_Enhance</a>[<span class=\"descriptionNumberColor\">Milestonemonger</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
-                          "operator": "Variables[0] (0.3) || RETURN",
-                          "displayLines": "0.3",
-                          "constants": [],
-                          "variables": [
-                            0.3
-                          ]
+                          "displayLines": "0.3"
                         }
                       }
                     }
@@ -310,12 +275,7 @@ const configAbility = {
               },
               "scope": "ContextOwner",
               "value": {
-                "operator": "Variables[0] (_layer) || RETURN",
-                "displayLines": "_layer",
-                "constants": [],
-                "variables": [
-                  "_layer"
-                ]
+                "displayLines": "_layer"
               },
               "variableName": "CurEnhance"
             },
@@ -489,29 +449,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1894494257\">Boothill_SelfModification</a>[<span class=\"descriptionNumberColor\">Pocket Trickshot</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "valuePerStack": {
                         "MDF_MaxLayer": {
-                          "operator": "Variables[0] (3) || RETURN",
-                          "displayLines": "3",
-                          "constants": [],
-                          "variables": [
-                            3
-                          ]
+                          "displayLines": "3"
                         },
                         "MDF_StanceAdded": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         },
                         "MDF_GainFromPassive": 1
                       },
@@ -773,12 +718,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (_break_count) || RETURN",
-                "displayLines": "_break_count",
-                "constants": [],
-                "variables": [
-                  "_break_count"
-                ]
+                "displayLines": "_break_count"
               },
               "execute": [
                 {

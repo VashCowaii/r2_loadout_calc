@@ -153,12 +153,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                "displayLines": "{[Skill01[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[0]]}"
-                ]
+                "displayLines": "{[Skill01[0]]}"
               },
               "variableName": "TV_01_EliteChance"
             }
@@ -167,14 +162,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (TV_01_EliteChance) || Constants[0] (100) || DIV || RETURN",
-                "displayLines": "(TV_01_EliteChance / 100)",
-                "constants": [
-                  100
-                ],
-                "variables": [
-                  "TV_01_EliteChance"
-                ]
+                "displayLines": "(TV_01_EliteChance / 100)"
               },
               "variableName": "TV_01_EliteChance"
             }
@@ -915,12 +903,7 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "scope": "TargetEntity",
                       "value": {
-                        "operator": "Variables[0] (SummonID01) || RETURN",
-                        "displayLines": "SummonID01",
-                        "constants": [],
-                        "variables": [
-                          "SummonID01"
-                        ]
+                        "displayLines": "SummonID01"
                       },
                       "variableName": "Summon_MonsterIDKey"
                     },
@@ -928,12 +911,7 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "scope": "TargetEntity",
                       "value": {
-                        "operator": "Variables[0] (SummonID02) || RETURN",
-                        "displayLines": "SummonID02",
-                        "constants": [],
-                        "variables": [
-                          "SummonID02"
-                        ]
+                        "displayLines": "SummonID02"
                       },
                       "variableName": "Summon_MonsterIDKey"
                     }
@@ -969,12 +947,7 @@ const compositeAbilityObject = {
                           "name": "Define Custom Variable",
                           "scope": "TargetEntity",
                           "value": {
-                            "operator": "Variables[0] (SummonID01) || RETURN",
-                            "displayLines": "SummonID01",
-                            "constants": [],
-                            "variables": [
-                              "SummonID01"
-                            ]
+                            "displayLines": "SummonID01"
                           },
                           "variableName": "Summon_MonsterIDKey"
                         }
@@ -992,12 +965,7 @@ const compositeAbilityObject = {
                           "name": "Define Custom Variable",
                           "scope": "TargetEntity",
                           "value": {
-                            "operator": "Variables[0] (SummonID02) || RETURN",
-                            "displayLines": "SummonID02",
-                            "constants": [],
-                            "variables": [
-                              "SummonID02"
-                            ]
+                            "displayLines": "SummonID02"
                           },
                           "variableName": "Summon_MonsterIDKey"
                         }
@@ -1018,12 +986,7 @@ const compositeAbilityObject = {
               "functionName": "<a class=\"gTempYellow\" id=\"1206781785\">Random_MonsterIDKey</a>",
               "variables": {
                 "TP_SummonLocation": {
-                  "operator": "Variables[0] (TP_SummonLocation) || RETURN",
-                  "displayLines": "TP_SummonLocation",
-                  "constants": [],
-                  "variables": [
-                    "TP_SummonLocation"
-                  ]
+                  "displayLines": "TP_SummonLocation"
                 }
               }
             },
@@ -1046,23 +1009,13 @@ const compositeAbilityObject = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] (TP_DelayRatio) || RETURN",
-                    "displayLines": "TP_DelayRatio",
-                    "constants": [],
-                    "variables": [
-                      "TP_DelayRatio"
-                    ]
+                    "displayLines": "TP_DelayRatio"
                   },
                   "enemyList": [
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (Summon_MonsterIDKey) || RETURN",
-                        "displayLines": "Summon_MonsterIDKey",
-                        "constants": [],
-                        "variables": [
-                          "Summon_MonsterIDKey"
-                        ]
+                        "displayLines": "Summon_MonsterIDKey"
                       },
                       "locationType": "FormationRecord"
                     }
@@ -1082,24 +1035,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] (TP_DelayRatio) || RETURN",
-                    "displayLines": "TP_DelayRatio",
-                    "constants": [],
-                    "variables": [
-                      "TP_DelayRatio"
-                    ]
+                    "displayLines": "TP_DelayRatio"
                   },
                   "refreshPositions": false,
                   "enemyList": [
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (Summon_MonsterIDKey) || RETURN",
-                        "displayLines": "Summon_MonsterIDKey",
-                        "constants": [],
-                        "variables": [
-                          "Summon_MonsterIDKey"
-                        ]
+                        "displayLines": "Summon_MonsterIDKey"
                       },
                       "locationType": "First"
                     }
@@ -1119,24 +1062,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] (TP_DelayRatio) || RETURN",
-                    "displayLines": "TP_DelayRatio",
-                    "constants": [],
-                    "variables": [
-                      "TP_DelayRatio"
-                    ]
+                    "displayLines": "TP_DelayRatio"
                   },
                   "refreshPositions": false,
                   "enemyList": [
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (Summon_MonsterIDKey) || RETURN",
-                        "displayLines": "Summon_MonsterIDKey",
-                        "constants": [],
-                        "variables": [
-                          "Summon_MonsterIDKey"
-                        ]
+                        "displayLines": "Summon_MonsterIDKey"
                       },
                       "locationType": "Last"
                     }
@@ -1178,14 +1111,7 @@ const compositeAbilityObject = {
                 "target": "{{Recently Summoned Enemies}}"
               },
               "setValue": {
-                "operator": "Variables[0] (_SummonMaxHP) || Variables[1] (_CasterCurrHP) || Variables[2] (_CasterMaxHP) || DIV || MUL || RETURN",
-                "displayLines": "(_SummonMaxHP * (_CasterCurrHP / _CasterMaxHP))",
-                "constants": [],
-                "variables": [
-                  "_SummonMaxHP",
-                  "_CasterCurrHP",
-                  "_CasterMaxHP"
-                ]
+                "displayLines": "(_SummonMaxHP * (_CasterCurrHP / _CasterMaxHP))"
               }
             },
             {
@@ -1229,15 +1155,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Deal Toughness DMG",
                   "valuePercentReduce": {
-                    "operator": "Constants[0] (1) || Variables[0] (_CasterCurrStance) || Variables[1] (_CasterMaxStance) || DIV || SUB || RETURN",
-                    "displayLines": "(1 - (_CasterCurrStance / _CasterMaxStance))",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_CasterCurrStance",
-                      "_CasterMaxStance"
-                    ]
+                    "displayLines": "(1 - (_CasterCurrStance / _CasterMaxStance))"
                   },
                   "target": {
                     "name": "Target Name",

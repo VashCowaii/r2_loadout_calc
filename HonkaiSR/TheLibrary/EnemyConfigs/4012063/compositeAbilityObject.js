@@ -35,14 +35,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] ({[Skill01[4]]}) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "({[Skill01[4]]} - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "{[Skill01[4]]}"
-                    ]
+                    "displayLines": "({[Skill01[4]]} - 1)"
                   }
                 }
               ]
@@ -291,12 +284,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DirtyHPRatio) || RETURN",
-                    "displayLines": "MDF_DirtyHPRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DirtyHPRatio"
-                    ]
+                    "displayLines": "MDF_DirtyHPRatio"
                   }
                 }
               ]
@@ -322,12 +310,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DirtyHPRatio) || RETURN",
-                    "displayLines": "MDF_DirtyHPRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DirtyHPRatio"
-                    ]
+                    "displayLines": "MDF_DirtyHPRatio"
                   }
                 }
               ]
@@ -906,12 +889,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1470468731\">Monster_W4_Hearse_AlreadyAdd</a>",
                       "valuePerStack": {
                         "MDF_DamageTakenUpRatio": {
-                          "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                          "displayLines": "{[Skill01[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill01[0]]}"
-                          ]
+                          "displayLines": "{[Skill01[0]]}"
                         }
                       },
                       "casterAssign": "CasterSelf"
@@ -977,13 +955,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"1382334396\">Monster_W4_HearsePart_BlackBlood</a>[<span class=\"descriptionNumberColor\">Conquered</span>]",
                           "valuePerStack": {
                             "MDF_DirtyHPRatio": {
-                              "operator": "Variables[0] (MDF_HPRatio) || Variables[1] (SoulHPRatio) || MUL || RETURN",
-                              "displayLines": "(MDF_HPRatio * SoulHPRatio)",
-                              "constants": [],
-                              "variables": [
-                                "MDF_HPRatio",
-                                "SoulHPRatio"
-                              ]
+                              "displayLines": "(MDF_HPRatio * SoulHPRatio)"
                             }
                           }
                         }
@@ -1141,12 +1113,7 @@ const compositeAbilityObject = {
                                 "target": "{{Nikador - The Giver: Self}}"
                               },
                               "consumePercent": {
-                                "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                                "displayLines": "{[Skill01[2]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[Skill01[2]]}"
-                                ]
+                                "displayLines": "{[Skill01[2]]}"
                               }
                             }
                           ],
@@ -1159,12 +1126,7 @@ const compositeAbilityObject = {
                                 "target": "{{Nikador - The Giver: Self}}"
                               },
                               "consumePercent": {
-                                "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                                "displayLines": "{[Skill01[3]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[Skill01[3]]}"
-                                ]
+                                "displayLines": "{[Skill01[3]]}"
                               }
                             }
                           ]
@@ -1192,12 +1154,7 @@ const compositeAbilityObject = {
                                 "target": "{{Nikador - The Giver: Self}}"
                               },
                               "consumePercent": {
-                                "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                                "displayLines": "{[Skill01[2]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[Skill01[2]]}"
-                                ]
+                                "displayLines": "{[Skill01[2]]}"
                               }
                             }
                           ],
@@ -1210,12 +1167,7 @@ const compositeAbilityObject = {
                                 "target": "{{Nikador - The Giver: Self}}"
                               },
                               "consumePercent": {
-                                "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                                "displayLines": "{[Skill01[3]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[Skill01[3]]}"
-                                ]
+                                "displayLines": "{[Skill01[3]]}"
                               }
                             }
                           ]

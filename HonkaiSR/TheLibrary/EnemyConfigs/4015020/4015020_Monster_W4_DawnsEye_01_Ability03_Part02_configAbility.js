@@ -52,12 +52,7 @@ const configAbility = {
       "conditions": {
         "name": "Enemy ID",
         "ID": {
-          "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
-          "displayLines": "PartEntity1_MonsterID",
-          "constants": [],
-          "variables": [
-            "PartEntity1_MonsterID"
-          ]
+          "displayLines": "PartEntity1_MonsterID"
         },
         "target": {
           "name": "Target Name",
@@ -120,12 +115,7 @@ const configAbility = {
       "conditions": {
         "name": "Enemy ID",
         "ID": {
-          "operator": "Variables[0] (PartEntity3_MonsterID) || RETURN",
-          "displayLines": "PartEntity3_MonsterID",
-          "constants": [],
-          "variables": [
-            "PartEntity3_MonsterID"
-          ]
+          "displayLines": "PartEntity3_MonsterID"
         },
         "target": {
           "name": "Target Name",
@@ -189,12 +179,7 @@ const configAbility = {
     {
       "name": "Assign Advance/Delay to Current Ability Use",
       "adjustmentValue": {
-        "operator": "Variables[0] ({[Skill03P3[0]]}) || RETURN",
-        "displayLines": "{[Skill03P3[0]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill03P3[0]]}"
-        ]
+        "displayLines": "{[Skill03P3[0]]}"
       },
       "adjustmentType": "Advance"
     },

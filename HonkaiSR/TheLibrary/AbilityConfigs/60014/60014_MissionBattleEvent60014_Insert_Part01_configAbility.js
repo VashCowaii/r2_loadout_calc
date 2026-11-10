@@ -23,12 +23,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "DamageExtra": {
-          "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-          "displayLines": "{[SkillP01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[0]]}"
-          ]
+          "displayLines": "{[SkillP01[0]]}"
         },
         "dmgFormulaExtra": "Max HP Scaling",
         "Toughness": {
@@ -52,12 +47,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "DamageExtra": {
-          "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-          "displayLines": "{[SkillP01[1]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[1]]}"
-          ]
+          "displayLines": "{[SkillP01[1]]}"
         },
         "dmgFormulaExtra": "Max HP Scaling",
         "Toughness": {
@@ -104,12 +94,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageExtra": {
-                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                  "displayLines": "{[SkillP01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[2]]}"
-                  ]
+                  "displayLines": "{[SkillP01[2]]}"
                 },
                 "dmgFormulaExtra": "Max HP Scaling",
                 "Toughness": null,

@@ -37,12 +37,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.08) || INVERT || RETURN",
-                "displayLines": "-0.08",
-                "constants": [],
-                "variables": [
-                  0.08
-                ]
+                "displayLines": "-0.08"
               }
             }
           ]
@@ -72,12 +67,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.16) || INVERT || RETURN",
-                "displayLines": "-0.16",
-                "constants": [],
-                "variables": [
-                  0.16
-                ]
+                "displayLines": "-0.16"
               }
             }
           ]
@@ -99,20 +89,10 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-254264378\">LC_23043_Sub</a>[<span class=\"descriptionNumberColor\">Bamboozle</span>]",
               "duration": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "baseChance": {
-                "operator": "Variables[0] (1.2) || RETURN",
-                "displayLines": "1.2",
-                "constants": [],
-                "variables": [
-                  1.2
-                ]
+                "displayLines": "1.2"
               }
             },
             {
@@ -131,12 +111,7 @@ const configAbility = {
                 "value1": "_TMP_SPEED",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (170) || RETURN",
-                  "displayLines": "170",
-                  "constants": [],
-                  "variables": [
-                    170
-                  ]
+                  "displayLines": "170"
                 }
               },
               "passed": [
@@ -148,20 +123,10 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"409362716\">LC_23043_Sub2</a>[<span class=\"descriptionNumberColor\">Theft</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (1.2) || RETURN",
-                    "displayLines": "1.2",
-                    "constants": [],
-                    "variables": [
-                      1.2
-                    ]
+                    "displayLines": "1.2"
                   }
                 }
               ]

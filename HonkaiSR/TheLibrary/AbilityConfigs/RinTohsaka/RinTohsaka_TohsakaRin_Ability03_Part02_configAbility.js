@@ -7,12 +7,7 @@ const configAbility = {
     {
       "name": "Skill Points Modification",
       "adjustmentValue": {
-        "operator": "Variables[0] (1) || RETURN",
-        "displayLines": "1",
-        "constants": [],
-        "variables": [
-          1
-        ]
+        "displayLines": "1"
       },
       "adjustmentType": "+"
     },
@@ -32,12 +27,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (12) || RETURN",
-            "displayLines": "12",
-            "constants": [],
-            "variables": [
-              12
-            ]
+            "displayLines": "12"
           }
         },
         {
@@ -52,12 +42,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (EnergyBar_GemNum_Shadow) || RETURN",
-                "displayLines": "EnergyBar_GemNum_Shadow",
-                "constants": [],
-                "variables": [
-                  "EnergyBar_GemNum_Shadow"
-                ]
+                "displayLines": "EnergyBar_GemNum_Shadow"
               },
               "priorState": "Normal"
             }
@@ -66,12 +51,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                "displayLines": "EnergyBar_GemNum",
-                "constants": [],
-                "variables": [
-                  "EnergyBar_GemNum"
-                ]
+                "displayLines": "EnergyBar_GemNum"
               },
               "priorState": "Normal"
             }
@@ -95,12 +75,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (24) || RETURN",
-            "displayLines": "24",
-            "constants": [],
-            "variables": [
-              24
-            ]
+            "displayLines": "24"
           }
         },
         {
@@ -115,12 +90,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (EnergyBar_GemNum_Shadow) || RETURN",
-                "displayLines": "EnergyBar_GemNum_Shadow",
-                "constants": [],
-                "variables": [
-                  "EnergyBar_GemNum_Shadow"
-                ]
+                "displayLines": "EnergyBar_GemNum_Shadow"
               },
               "priorState": "Normal"
             }
@@ -129,12 +99,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                "displayLines": "EnergyBar_GemNum",
-                "constants": [],
-                "variables": [
-                  "EnergyBar_GemNum"
-                ]
+                "displayLines": "EnergyBar_GemNum"
               },
               "priorState": "Normal"
             }
@@ -186,21 +151,11 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-1113422465\">TohsakaRin_Ability03_Debuff</a>[<span class=\"descriptionNumberColor\">An Gal Ta Ki Gal Šè</span>]",
       "duration": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] (0.2) || RETURN",
-          "displayLines": "0.2",
-          "constants": [],
-          "variables": [
-            0.2
-          ]
+          "displayLines": "0.2"
         }
       }
     },
@@ -214,20 +169,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (6) || RETURN",
-          "displayLines": "6",
-          "constants": [],
-          "variables": [
-            6
-          ]
+          "displayLines": "6"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -243,20 +188,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (2) || RETURN",
-          "displayLines": "2",
-          "constants": [],
-          "variables": [
-            2
-          ]
+          "displayLines": "2"
         },
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null
       }

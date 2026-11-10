@@ -865,12 +865,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_AddValue) || RETURN",
-                    "displayLines": "MDF_AddValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AddValue"
-                    ]
+                    "displayLines": "MDF_AddValue"
                   },
                   "isFixed": "* ERR"
                 }

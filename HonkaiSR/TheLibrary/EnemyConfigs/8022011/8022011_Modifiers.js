@@ -109,12 +109,7 @@ const configAbility = {
                     "value1": "CurrentSummonCount",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (SummonCount) || RETURN",
-                      "displayLines": "SummonCount",
-                      "constants": [],
-                      "variables": [
-                        "SummonCount"
-                      ]
+                      "displayLines": "SummonCount"
                     }
                   },
                   "passed": [
@@ -127,12 +122,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-103304753\">Enemy_SW_Boss_01_IF_MinionsEnhancement</a>[<span class=\"descriptionNumberColor\">Growth Hormones</span>]",
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13865) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13865",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_13865"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_13865"
                         }
                       }
                     },
@@ -153,12 +143,7 @@ const configAbility = {
                       "context": "TargetEntity",
                       "value": 1,
                       "max": {
-                        "operator": "Variables[0] (SummonCount) || RETURN",
-                        "displayLines": "SummonCount",
-                        "constants": [],
-                        "variables": [
-                          "SummonCount"
-                        ]
+                        "displayLines": "SummonCount"
                       }
                     }
                   ]
@@ -1041,12 +1026,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_EnhancementLevel) || RETURN",
-                    "displayLines": "MDF_EnhancementLevel",
-                    "constants": [],
-                    "variables": [
-                      "MDF_EnhancementLevel"
-                    ]
+                    "displayLines": "MDF_EnhancementLevel"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -1062,12 +1042,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_EnhancementLevel) || RETURN",
-                    "displayLines": "MDF_EnhancementLevel",
-                    "constants": [],
-                    "variables": [
-                      "MDF_EnhancementLevel"
-                    ]
+                    "displayLines": "MDF_EnhancementLevel"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -1088,13 +1063,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AttackAddedRatio) || Variables[1] (MDF_EnhancementLevel) || MUL || RETURN",
-                "displayLines": "(MDF_AttackAddedRatio * MDF_EnhancementLevel)",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackAddedRatio",
-                  "MDF_EnhancementLevel"
-                ]
+                "displayLines": "(MDF_AttackAddedRatio * MDF_EnhancementLevel)"
               }
             },
             {
@@ -1105,12 +1074,7 @@ const configAbility = {
               },
               "scope": "TargetEntity",
               "value": {
-                "operator": "Variables[0] (MDF_EnhancementLevel) || RETURN",
-                "displayLines": "MDF_EnhancementLevel",
-                "constants": [],
-                "variables": [
-                  "MDF_EnhancementLevel"
-                ]
+                "displayLines": "MDF_EnhancementLevel"
               },
               "variableName": "SW_Minion01_EnhancementLevel"
             },
@@ -1195,12 +1159,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_CurrentCount) || RETURN",
-                    "displayLines": "_CurrentCount",
-                    "constants": [],
-                    "variables": [
-                      "_CurrentCount"
-                    ]
+                    "displayLines": "_CurrentCount"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -1269,21 +1228,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-2022523841\">Enemy_SW_Boss_01_IF_SwarmArmor</a>[<span class=\"descriptionNumberColor\">Insect Egg</span>]",
                   "counter": {
-                    "operator": "Variables[0] (MDF_Armor_CountNormal) || RETURN",
-                    "displayLines": "MDF_Armor_CountNormal",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Armor_CountNormal"
-                    ]
+                    "displayLines": "MDF_Armor_CountNormal"
                   },
                   "valuePerStack": {
                     "MDF_DamageReduce": {
-                      "operator": "Variables[0] (MDF_Armor_DamageReduce) || RETURN",
-                      "displayLines": "MDF_Armor_DamageReduce",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Armor_DamageReduce"
-                      ]
+                      "displayLines": "MDF_Armor_DamageReduce"
                     }
                   }
                 }
@@ -1314,12 +1263,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_CurrentMaxCount) || RETURN",
-                    "displayLines": "_CurrentMaxCount",
-                    "constants": [],
-                    "variables": [
-                      "_CurrentMaxCount"
-                    ]
+                    "displayLines": "_CurrentMaxCount"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -1327,12 +1271,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (_CurrentMaxCount) || RETURN",
-                    "displayLines": "_CurrentMaxCount",
-                    "constants": [],
-                    "variables": [
-                      "_CurrentMaxCount"
-                    ]
+                    "displayLines": "_CurrentMaxCount"
                   },
                   "assignState": "True",
                   "state": "Normal"
@@ -1360,12 +1299,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (_CurrentMaxCount) || RETURN",
-                    "displayLines": "_CurrentMaxCount",
-                    "constants": [],
-                    "variables": [
-                      "_CurrentMaxCount"
-                    ]
+                    "displayLines": "_CurrentMaxCount"
                   },
                   "assignState": "True",
                   "state": "Disable"
@@ -1431,12 +1365,7 @@ const configAbility = {
                 {
                   "name": "Deal Toughness DMG",
                   "value": {
-                    "operator": "Variables[0] (MDF_ExplodeStanceDamage) || RETURN",
-                    "displayLines": "MDF_ExplodeStanceDamage",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ExplodeStanceDamage"
-                    ]
+                    "displayLines": "MDF_ExplodeStanceDamage"
                   },
                   "attacker": {
                     "name": "Target Name",
@@ -2025,14 +1954,7 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "scope": "ContextModifier",
                   "value": {
-                    "operator": "Variables[0] (Modifier_TurnCount) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(Modifier_TurnCount - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Modifier_TurnCount"
-                    ]
+                    "displayLines": "(Modifier_TurnCount - 1)"
                   },
                   "variableName": "Modifier_TurnCount"
                 }

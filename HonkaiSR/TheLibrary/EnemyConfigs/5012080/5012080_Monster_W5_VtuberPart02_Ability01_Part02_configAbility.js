@@ -29,12 +29,7 @@ const configAbility = {
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (MDF_InsertTrigger) || RETURN",
-            "displayLines": "MDF_InsertTrigger",
-            "constants": [],
-            "variables": [
-              "MDF_InsertTrigger"
-            ]
+            "displayLines": "MDF_InsertTrigger"
           },
           "caseEvents": [
             {

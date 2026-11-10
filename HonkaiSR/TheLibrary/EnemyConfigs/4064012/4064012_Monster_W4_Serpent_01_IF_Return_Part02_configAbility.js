@@ -20,12 +20,7 @@ const configAbility = {
       "conditions": {
         "name": "Enemy ID",
         "ID": {
-          "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-          "displayLines": "SummonList_ADF_2",
-          "constants": [],
-          "variables": [
-            "SummonList_ADF_2"
-          ]
+          "displayLines": "SummonList_ADF_2"
         },
         "target": {
           "name": "Target Name",
@@ -43,12 +38,7 @@ const configAbility = {
       "conditions": {
         "name": "Enemy ID",
         "ID": {
-          "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
-          "displayLines": "SummonList_ADF_3",
-          "constants": [],
-          "variables": [
-            "SummonList_ADF_3"
-          ]
+          "displayLines": "SummonList_ADF_3"
         },
         "target": {
           "name": "Target Name",
@@ -171,14 +161,7 @@ const configAbility = {
     {
       "name": "Deal Toughness DMG",
       "value": {
-        "operator": "Variables[0] ({[SkillP03[6]]}) || Variables[1] (AFD_ActualBonusPoint) || MUL || Variables[2] ({[SkillP03[5]]}) || DIV || RETURN",
-        "displayLines": "(({[SkillP03[6]]} * AFD_ActualBonusPoint) / {[SkillP03[5]]})",
-        "constants": [],
-        "variables": [
-          "{[SkillP03[6]]}",
-          "AFD_ActualBonusPoint",
-          "{[SkillP03[5]]}"
-        ]
+        "displayLines": "(({[SkillP03[6]]} * AFD_ActualBonusPoint) / {[SkillP03[5]]})"
       },
       "defender": {
         "name": "Target Name",

@@ -25,13 +25,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (MDF_Skill03_Speed) || Variables[1] (MDF_Skill03_Speed_Convert) || SUB || RETURN",
-        "displayLines": "(MDF_Skill03_Speed - MDF_Skill03_Speed_Convert)",
-        "constants": [],
-        "variables": [
-          "MDF_Skill03_Speed",
-          "MDF_Skill03_Speed_Convert"
-        ]
+        "displayLines": "(MDF_Skill03_Speed - MDF_Skill03_Speed_Convert)"
       },
       "variableName": "MDF_Skill03_Speed"
     },
@@ -45,13 +39,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-            "displayLines": "(2 + 1)",
-            "constants": [],
-            "variables": [
-              2,
-              1
-            ]
+            "displayLines": "(2 + 1)"
           },
           "variableName": "MDF_Skill03_LifeTime"
         }
@@ -60,12 +48,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "variableName": "MDF_Skill03_LifeTime"
         }
@@ -79,37 +62,17 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"1743228292\">WHanya_Ability03Bonus</a>[<span class=\"descriptionNumberColor\">Edict</span>]",
       "duration": {
-        "operator": "Variables[0] (MDF_Skill03_LifeTime) || RETURN",
-        "displayLines": "MDF_Skill03_LifeTime",
-        "constants": [],
-        "variables": [
-          "MDF_Skill03_LifeTime"
-        ]
+        "displayLines": "MDF_Skill03_LifeTime"
       },
       "valuePerStack": {
         "Ability03_P1_ATKRatio": {
-          "operator": "Variables[0] (0.6) || RETURN",
-          "displayLines": "0.6",
-          "constants": [],
-          "variables": [
-            0.6
-          ]
+          "displayLines": "0.6"
         },
         "Ability03_P3_Speed": {
-          "operator": "Variables[0] (0.2) || RETURN",
-          "displayLines": "0.2",
-          "constants": [],
-          "variables": [
-            0.2
-          ]
+          "displayLines": "0.2"
         },
         "MDF_Ability03_Speed": {
-          "operator": "Variables[0] (MDF_Skill03_Speed) || RETURN",
-          "displayLines": "MDF_Skill03_Speed",
-          "constants": [],
-          "variables": [
-            "MDF_Skill03_Speed"
-          ]
+          "displayLines": "MDF_Skill03_Speed"
         }
       }
     },
@@ -128,12 +91,7 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1742049492\">Hanya_Eidolon1_Other</a>",
           "duration": {
-            "operator": "Variables[0] (MDF_Skill03_LifeTime) || RETURN",
-            "displayLines": "MDF_Skill03_LifeTime",
-            "constants": [],
-            "variables": [
-              "MDF_Skill03_LifeTime"
-            ]
+            "displayLines": "MDF_Skill03_LifeTime"
           }
         }
       ]

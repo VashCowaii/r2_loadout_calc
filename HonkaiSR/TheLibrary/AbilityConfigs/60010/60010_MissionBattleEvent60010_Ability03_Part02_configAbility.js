@@ -14,21 +14,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-          "displayLines": "{[Skill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "{[Skill03[0]]}"
         },
         "dmgFormula": "Max HP Scaling",
         "Toughness": {
-          "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-          "displayLines": "{[Skill03[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[1]]}"
-          ]
+          "displayLines": "{[Skill03[1]]}"
         },
         "ToughnessDMGType": {
           "DamageType": "Wind"
@@ -48,28 +38,13 @@ const configAbility = {
       "stackLimit": 50,
       "valuePerStack": {
         "Basic_DamagePercentage": {
-          "operator": "Variables[0] ({[Skill03[4]]}) || RETURN",
-          "displayLines": "{[Skill03[4]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[4]]}"
-          ]
+          "displayLines": "{[Skill03[4]]}"
         },
         "ExtraLayer_DamagePercentage": {
-          "operator": "Variables[0] ({[Skill03[5]]}) || RETURN",
-          "displayLines": "{[Skill03[5]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[5]]}"
-          ]
+          "displayLines": "{[Skill03[5]]}"
         },
         "Spread_DamagePercentage": {
-          "operator": "Variables[0] ({[Skill03[6]]}) || RETURN",
-          "displayLines": "{[Skill03[6]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[6]]}"
-          ]
+          "displayLines": "{[Skill03[6]]}"
         },
         "Cast_By_Level": 1
       },

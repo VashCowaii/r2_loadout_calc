@@ -100,13 +100,7 @@ const configAbility = {
                     "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]"
                   ],
                   "value": {
-                    "operator": "Variables[0] ({[SkillP01[0]]}) || Variables[1] (_MaxHP) || MUL || RETURN",
-                    "displayLines": "({[SkillP01[0]]} * _MaxHP)",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillP01[0]]}",
-                      "_MaxHP"
-                    ]
+                    "displayLines": "({[SkillP01[0]]} * _MaxHP)"
                   }
                 }
               ],
@@ -121,13 +115,7 @@ const configAbility = {
                   "duration": 2,
                   "valuePerStack": {
                     "MDF_ShowValue": {
-                      "operator": "Variables[0] ({[SkillP01[0]]}) || Variables[1] (_MaxHP) || MUL || RETURN",
-                      "displayLines": "({[SkillP01[0]]} * _MaxHP)",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[0]]}",
-                        "_MaxHP"
-                      ]
+                      "displayLines": "({[SkillP01[0]]} * _MaxHP)"
                     }
                   },
                   "casterAssign": "TargetSelf"
@@ -175,13 +163,7 @@ const configAbility = {
                   "duration": 2,
                   "valuePerStack": {
                     "MDF_ShowValue": {
-                      "operator": "Variables[0] ({[SkillP01[0]]}) || Variables[1] (_MaxHP) || MUL || RETURN",
-                      "displayLines": "({[SkillP01[0]]} * _MaxHP)",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[0]]}",
-                        "_MaxHP"
-                      ]
+                      "displayLines": "({[SkillP01[0]]} * _MaxHP)"
                     }
                   },
                   "casterAssign": "TargetSelf"
@@ -196,13 +178,7 @@ const configAbility = {
                     "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]"
                   ],
                   "value": {
-                    "operator": "Variables[0] ({[SkillP01[0]]}) || Variables[1] (_MaxHP) || MUL || RETURN",
-                    "displayLines": "({[SkillP01[0]]} * _MaxHP)",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillP01[0]]}",
-                      "_MaxHP"
-                    ]
+                    "displayLines": "({[SkillP01[0]]} * _MaxHP)"
                   }
                 },
                 {
@@ -215,13 +191,7 @@ const configAbility = {
                     "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]"
                   ],
                   "value": {
-                    "operator": "Variables[0] ({[SkillP01[0]]}) || Variables[1] (_MaxHP) || MUL || RETURN",
-                    "displayLines": "({[SkillP01[0]]} * _MaxHP)",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillP01[0]]}",
-                      "_MaxHP"
-                    ]
+                    "displayLines": "({[SkillP01[0]]} * _MaxHP)"
                   }
                 }
               ],
@@ -236,13 +206,7 @@ const configAbility = {
                   "duration": 2,
                   "valuePerStack": {
                     "MDF_ShowValue": {
-                      "operator": "Variables[0] ({[SkillP01[0]]}) || Variables[1] (_MaxHP) || MUL || RETURN",
-                      "displayLines": "({[SkillP01[0]]} * _MaxHP)",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[0]]}",
-                        "_MaxHP"
-                      ]
+                      "displayLines": "({[SkillP01[0]]} * _MaxHP)"
                     }
                   },
                   "casterAssign": "TargetSelf"

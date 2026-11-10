@@ -13,14 +13,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2260_BaseAddOn_P1_Ratio",
       "resetValue": {
-        "operator": "Variables[0] (ADF_1_Get) || Constants[0] (100) || DIV || RETURN",
-        "displayLines": "(ADF_1_Get / 100)",
-        "constants": [
-          100
-        ],
-        "variables": [
-          "ADF_1_Get"
-        ]
+        "displayLines": "(ADF_1_Get / 100)"
       },
       "scope": "ContextCaster"
     },
@@ -32,12 +25,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2260_BaseAddOn_P2_MaxTrigger",
       "resetValue": {
-        "operator": "Variables[0] (ADF_2_Get) || RETURN",
-        "displayLines": "ADF_2_Get",
-        "constants": [],
-        "variables": [
-          "ADF_2_Get"
-        ]
+        "displayLines": "ADF_2_Get"
       },
       "scope": "ContextCaster"
     },
@@ -66,22 +54,10 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "DV_Ratio": {
-              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2260_BaseAddOn_P1_Ratio) || Constants[0] (100) || MUL || RETURN",
-              "displayLines": "(DV_FantasticStory_BaseAbility_2260_BaseAddOn_P1_Ratio * 100)",
-              "constants": [
-                100
-              ],
-              "variables": [
-                "DV_FantasticStory_BaseAbility_2260_BaseAddOn_P1_Ratio"
-              ]
+              "displayLines": "(DV_FantasticStory_BaseAbility_2260_BaseAddOn_P1_Ratio * 100)"
             },
             "DV_MaxTrigger": {
-              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2260_BaseAddOn_P2_MaxTrigger) || RETURN",
-              "displayLines": "DV_FantasticStory_BaseAbility_2260_BaseAddOn_P2_MaxTrigger",
-              "constants": [],
-              "variables": [
-                "DV_FantasticStory_BaseAbility_2260_BaseAddOn_P2_MaxTrigger"
-              ]
+              "displayLines": "DV_FantasticStory_BaseAbility_2260_BaseAddOn_P2_MaxTrigger"
             }
           }
         },

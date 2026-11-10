@@ -13,12 +13,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1558938344\">M_Gepard_AttackConvert</a>",
       "valuePerStack": {
         "MDF_ConvertRatio": {
-          "operator": "Variables[0] (0.35) || RETURN",
-          "displayLines": "0.35",
-          "constants": [],
-          "variables": [
-            0.35
-          ]
+          "displayLines": "0.35"
         }
       }
     }
@@ -61,14 +56,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"567771648\">Gepard_Passive02_AttackDeltaUp</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (Avatar_Gepard_DefenceValue) || Variables[1] (Avatar_Gepard_DefenceConvert) || SUB || Variables[2] (MDF_ConvertRatio) || MUL || RETURN",
-                  "displayLines": "((Avatar_Gepard_DefenceValue - Avatar_Gepard_DefenceConvert) * MDF_ConvertRatio)",
-                  "constants": [],
-                  "variables": [
-                    "Avatar_Gepard_DefenceValue",
-                    "Avatar_Gepard_DefenceConvert",
-                    "MDF_ConvertRatio"
-                  ]
+                  "displayLines": "((Avatar_Gepard_DefenceValue - Avatar_Gepard_DefenceConvert) * MDF_ConvertRatio)"
                 }
               }
             }
@@ -104,14 +92,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"567771648\">Gepard_Passive02_AttackDeltaUp</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (Avatar_Gepard_DefenceValue) || Variables[1] (Avatar_Gepard_DefenceConvert) || SUB || Variables[2] (MDF_ConvertRatio) || MUL || RETURN",
-                  "displayLines": "((Avatar_Gepard_DefenceValue - Avatar_Gepard_DefenceConvert) * MDF_ConvertRatio)",
-                  "constants": [],
-                  "variables": [
-                    "Avatar_Gepard_DefenceValue",
-                    "Avatar_Gepard_DefenceConvert",
-                    "MDF_ConvertRatio"
-                  ]
+                  "displayLines": "((Avatar_Gepard_DefenceValue - Avatar_Gepard_DefenceConvert) * MDF_ConvertRatio)"
                 }
               }
             }

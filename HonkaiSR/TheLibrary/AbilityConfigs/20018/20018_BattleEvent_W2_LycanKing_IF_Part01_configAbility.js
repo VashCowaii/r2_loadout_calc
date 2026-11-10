@@ -55,12 +55,7 @@ const configAbility = {
     {
       "name": "Skill Points Modification",
       "adjustmentValue": {
-        "operator": "Variables[0] (Ability03_BPRecover) || RETURN",
-        "displayLines": "Ability03_BPRecover",
-        "constants": [],
-        "variables": [
-          "Ability03_BPRecover"
-        ]
+        "displayLines": "Ability03_BPRecover"
       },
       "adjustmentType": "+"
     },

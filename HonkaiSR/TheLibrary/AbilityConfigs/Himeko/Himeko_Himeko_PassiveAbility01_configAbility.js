@@ -31,32 +31,17 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"2144334509\">Himeko_Passive_Pursuit</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
       "stackLimit": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "addStacksPerTrigger": 1
     },
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (MDF_Pursuit_Layer) || RETURN",
-        "displayLines": "MDF_Pursuit_Layer",
-        "constants": [],
-        "variables": [
-          "MDF_Pursuit_Layer"
-        ]
+        "displayLines": "MDF_Pursuit_Layer"
       },
       "maximum": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -95,20 +80,10 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_Pursuit_Layer) || RETURN",
-                "displayLines": "MDF_Pursuit_Layer",
-                "constants": [],
-                "variables": [
-                  "MDF_Pursuit_Layer"
-                ]
+                "displayLines": "MDF_Pursuit_Layer"
               },
               "maximum": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "assignState": "True",
               "priorState": "Normal",
@@ -141,32 +116,17 @@ const configAbility = {
                 "value1": "MDF_Pursuit_Layer",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Variables[0] (3) || RETURN",
-                  "displayLines": "3",
-                  "constants": [],
-                  "variables": [
-                    3
-                  ]
+                  "displayLines": "3"
                 }
               },
               "passed": [
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Pursuit_Layer) || RETURN",
-                    "displayLines": "MDF_Pursuit_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Pursuit_Layer"
-                    ]
+                    "displayLines": "MDF_Pursuit_Layer"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "assignState": "True",
                   "priorState": "Active",
@@ -178,20 +138,10 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Pursuit_Layer) || RETURN",
-                    "displayLines": "MDF_Pursuit_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Pursuit_Layer"
-                    ]
+                    "displayLines": "MDF_Pursuit_Layer"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "assignState": "True",
                   "priorState": "Normal",
@@ -269,12 +219,7 @@ const configAbility = {
                     "value1": "MDF_Pursuit_Layer",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (3) || RETURN",
-                      "displayLines": "3",
-                      "constants": [],
-                      "variables": [
-                        3
-                      ]
+                      "displayLines": "3"
                     }
                   },
                   "passed": [
@@ -437,12 +382,7 @@ const configAbility = {
                     "value1": "MDF_Pursuit_Layer",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (3) || RETURN",
-                      "displayLines": "3",
-                      "constants": [],
-                      "variables": [
-                        3
-                      ]
+                      "displayLines": "3"
                     }
                   },
                   "passed": [
@@ -509,12 +449,7 @@ const configAbility = {
                     "value1": "MDF_Pursuit_Layer",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (3) || RETURN",
-                      "displayLines": "3",
-                      "constants": [],
-                      "variables": [
-                        3
-                      ]
+                      "displayLines": "3"
                     }
                   },
                   "passed": [
@@ -615,20 +550,10 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"2144334509\">Himeko_Passive_Pursuit</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   }
                 }
               ],
@@ -664,22 +589,10 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"2144334509\">Himeko_Passive_Pursuit</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Constants[0] (1) || Variables[0] (1) || ADD || RETURN",
-                        "displayLines": "(1 + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "(1 + 1)"
                       }
                     }
                   ],
@@ -692,12 +605,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"2144334509\">Himeko_Passive_Pursuit</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "addStacksPerTrigger": 1
                     }
@@ -767,12 +675,7 @@ const configAbility = {
                     "value1": "MDF_Pursuit_Layer",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (3) || RETURN",
-                      "displayLines": "3",
-                      "constants": [],
-                      "variables": [
-                        3
-                      ]
+                      "displayLines": "3"
                     }
                   },
                   "passed": [
@@ -844,12 +747,7 @@ const configAbility = {
                     "value1": "MDF_Pursuit_Layer",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (3) || RETURN",
-                      "displayLines": "3",
-                      "constants": [],
-                      "variables": [
-                        3
-                      ]
+                      "displayLines": "3"
                     }
                   },
                   "passed": [

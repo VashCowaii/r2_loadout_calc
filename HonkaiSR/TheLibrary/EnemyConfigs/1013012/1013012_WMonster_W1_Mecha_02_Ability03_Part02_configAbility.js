@@ -14,14 +14,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.7) || MUL || RETURN",
-          "displayLines": "({[Skill03[0]]} * 0.7)",
-          "constants": [
-            0.7
-          ],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "({[Skill03[0]]} * 0.7)"
         },
         "Toughness": null,
         "Tags": null,
@@ -37,14 +30,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.3) || MUL || RETURN",
-          "displayLines": "({[Skill03[0]]} * 0.3)",
-          "constants": [
-            0.3
-          ],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "({[Skill03[0]]} * 0.3)"
         },
         "Toughness": null,
         "Tags": null,

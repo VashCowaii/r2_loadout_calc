@@ -229,12 +229,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill07[1]]}) || RETURN",
-              "displayLines": "{[Skill07[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill07[1]]}"
-              ]
+              "displayLines": "{[Skill07[1]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -284,12 +279,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-              "displayLines": "{[Skill07[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill07[0]]}"
-              ]
+              "displayLines": "{[Skill07[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -337,13 +327,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1128925615\">Enemy_W2_Beast01_04_AbilityP02_GoldBlood_DOT</a>[<span class=\"descriptionNumberColor\">Hemotort Corruption</span>]",
               "valuePerStack": {
                 "MDF_DamageValue": {
-                  "operator": "Variables[0] (TargetTotalDamage) || Variables[1] ({[Skill07[2]]}) || MUL || RETURN",
-                  "displayLines": "(TargetTotalDamage * {[Skill07[2]]})",
-                  "constants": [],
-                  "variables": [
-                    "TargetTotalDamage",
-                    "{[Skill07[2]]}"
-                  ]
+                  "displayLines": "(TargetTotalDamage * {[Skill07[2]]})"
                 }
               }
             },

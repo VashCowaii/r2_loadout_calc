@@ -95,37 +95,17 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1771820857\">Monster_AML_Minion02_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
               "duration": {
-                "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[1]]}"
-                ]
+                "displayLines": "{[PassiveSkill01[1]]}"
               },
               "stackLimit": {
-                "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[2]]}"
-                ]
+                "displayLines": "{[PassiveSkill01[2]]}"
               },
               "valuePerStack": {
                 "MDF_SpeedAddedRatio_PerLayer": {
-                  "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill01[0]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill01[0]]}"
                 },
                 "MDF_MaxLayer": {
-                  "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill01[2]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill01[2]]}"
                 }
               }
             }

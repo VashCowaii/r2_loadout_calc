@@ -77,43 +77,21 @@ const compositeAbilityObject = {
                     "value1": "MDF_MaxSP",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (120) || RETURN",
-                      "displayLines": "120",
-                      "constants": [],
-                      "variables": [
-                        120
-                      ]
+                      "displayLines": "120"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_MaxSP) || Variables[1] (120) || SUB || RETURN",
-                        "displayLines": "(MDF_MaxSP - 120)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxSP",
-                          120
-                        ]
+                        "displayLines": "(MDF_MaxSP - 120)"
                       },
                       "variableName": "MDF_SP"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (FLOOR) || Variables[1] (MIN) || Variables[2] (MDF_SP) || Variables[3] (360) || PARAM_2 || FUNCTION || Constants[0] (10) || DIV || PARAM_1 || FUNCTION || Variables[4] (0.0029999998) || MUL || RETURN",
-                        "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(MDF_SP, 360) / 10)) * 0.0029999998)",
-                        "constants": [
-                          10
-                        ],
-                        "variables": [
-                          "FLOOR",
-                          "MIN",
-                          "MDF_SP",
-                          360,
-                          0.0029999998
-                        ]
+                        "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(MDF_SP, 360) / 10)) * 0.0029999998)"
                       },
                       "variableName": "MDF_SPRatio"
                     }
@@ -129,13 +107,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_SPRatio) || Variables[1] (0.1) || ADD || RETURN",
-                    "displayLines": "(MDF_SPRatio + 0.1)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SPRatio",
-                      0.1
-                    ]
+                    "displayLines": "(MDF_SPRatio + 0.1)"
                   },
                   "variableName": "MDF_PropertyValue"
                 },
@@ -147,12 +119,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRate</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -196,12 +163,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -243,21 +205,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1098160172\">LC_23058_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.15) || RETURN",
-                          "displayLines": "0.15",
-                          "constants": [],
-                          "variables": [
-                            0.15
-                          ]
+                          "displayLines": "0.15"
                         }
                       }
                     }

@@ -103,14 +103,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (FLOOR) || Variables[1] (_Partner_Count_Show) || Variables[2] (AbilityRank_Eidolon6_P1_Ratio) || MUL || PARAM_1 || FUNCTION || RETURN",
-            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_Partner_Count_Show * AbilityRank_Eidolon6_P1_Ratio))",
-            "constants": [],
-            "variables": [
-              "FLOOR",
-              "_Partner_Count_Show",
-              "AbilityRank_Eidolon6_P1_Ratio"
-            ]
+            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_Partner_Count_Show * AbilityRank_Eidolon6_P1_Ratio))"
           },
           "variableName": "_Rank06_Refund_Count"
         }
@@ -130,22 +123,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] (0.06) || Variables[1] (_Partner_Count_Show) || MUL || RETURN",
-          "displayLines": "(0.06 * _Partner_Count_Show)",
-          "constants": [],
-          "variables": [
-            0.06,
-            "_Partner_Count_Show"
-          ]
+          "displayLines": "(0.06 * _Partner_Count_Show)"
         },
         "dmgFormula": "Max HP Scaling",
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "ToughnessDMGType": {
           "DamageType": "Ice"
@@ -163,22 +145,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] (_Partner_Count_Show) || Variables[1] (0.12) || MUL || RETURN",
-          "displayLines": "(_Partner_Count_Show * 0.12)",
-          "constants": [],
-          "variables": [
-            "_Partner_Count_Show",
-            0.12
-          ]
+          "displayLines": "(_Partner_Count_Show * 0.12)"
         },
         "dmgFormula": "Max HP Scaling",
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "ToughnessDMGType": {
           "DamageType": "Ice"
@@ -204,12 +175,7 @@ const configAbility = {
         "value1": "_Partner_Count",
         "compareType": ">",
         "value2": {
-          "operator": "Variables[0] (40) || RETURN",
-          "displayLines": "40",
-          "constants": [],
-          "variables": [
-            40
-          ]
+          "displayLines": "40"
         }
       },
       "passed": [
@@ -220,12 +186,7 @@ const configAbility = {
             "target": "{{Caster's Summoner}}"
           },
           "value": {
-            "operator": "Variables[0] (40) || RETURN",
-            "displayLines": "40",
-            "constants": [],
-            "variables": [
-              40
-            ]
+            "displayLines": "40"
           },
           "variableName": "_Evernight_00_DeathRattle_Layer"
         }
@@ -238,12 +199,7 @@ const configAbility = {
             "target": "{{Caster's Summoner}}"
           },
           "value": {
-            "operator": "Variables[0] (_Partner_Count_Show) || RETURN",
-            "displayLines": "_Partner_Count_Show",
-            "constants": [],
-            "variables": [
-              "_Partner_Count_Show"
-            ]
+            "displayLines": "_Partner_Count_Show"
           },
           "variableName": "_Evernight_00_DeathRattle_Layer"
         }
@@ -273,13 +229,7 @@ const configAbility = {
           },
           "variableName": "_Partner_Count",
           "value": {
-            "operator": "Variables[0] (_Rank06_Refund_Count) || Variables[1] (_Evernight_00_Extra_Energy) || ADD || RETURN",
-            "displayLines": "(_Rank06_Refund_Count + _Evernight_00_Extra_Energy)",
-            "constants": [],
-            "variables": [
-              "_Rank06_Refund_Count",
-              "_Evernight_00_Extra_Energy"
-            ]
+            "displayLines": "(_Rank06_Refund_Count + _Evernight_00_Extra_Energy)"
           }
         }
       ]

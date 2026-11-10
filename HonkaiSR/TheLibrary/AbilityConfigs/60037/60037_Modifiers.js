@@ -177,12 +177,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_HPDelta) || RETURN",
-                "displayLines": "MDF_HPDelta",
-                "constants": [],
-                "variables": [
-                  "MDF_HPDelta"
-                ]
+                "displayLines": "MDF_HPDelta"
               }
             },
             {
@@ -193,12 +188,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingIncoming</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_HealAddRatio) || RETURN",
-                "displayLines": "MDF_HealAddRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_HealAddRatio"
-                ]
+                "displayLines": "MDF_HealAddRatio"
               }
             }
           ]
@@ -223,12 +213,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (MDF_Layer) || RETURN",
-                "displayLines": "MDF_Layer",
-                "constants": [],
-                "variables": [
-                  "MDF_Layer"
-                ]
+                "displayLines": "MDF_Layer"
               },
               "execute": [
                 {
@@ -240,20 +225,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-2075083378\">Modifier_Monster_W4_DawnsEye_01_MaxHPAddSub_PeakBattle</a>",
                   "valuePerStack": {
                     "MDF_HPDelta": {
-                      "operator": "Variables[0] (MDF_HPDeltaPerLayer) || RETURN",
-                      "displayLines": "MDF_HPDeltaPerLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_HPDeltaPerLayer"
-                      ]
+                      "displayLines": "MDF_HPDeltaPerLayer"
                     },
                     "MDF_HealAddRatio": {
-                      "operator": "Variables[0] (MDF_HealAddRatio) || RETURN",
-                      "displayLines": "MDF_HealAddRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_HealAddRatio"
-                      ]
+                      "displayLines": "MDF_HealAddRatio"
                     }
                   }
                 }
@@ -267,13 +242,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_HPDeltaPerLayer) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_HPDeltaPerLayer * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_HPDeltaPerLayer",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_HPDeltaPerLayer * MDF_Layer)"
               },
               "variableName": "MDF_HPDelta"
             },
@@ -299,20 +268,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-2075083378\">Modifier_Monster_W4_DawnsEye_01_MaxHPAddSub_PeakBattle</a>",
                   "valuePerStack": {
                     "MDF_HPDelta": {
-                      "operator": "Variables[0] (MDF_HPDeltaPerLayer) || RETURN",
-                      "displayLines": "MDF_HPDeltaPerLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_HPDeltaPerLayer"
-                      ]
+                      "displayLines": "MDF_HPDeltaPerLayer"
                     },
                     "MDF_HealAddRatio": {
-                      "operator": "Variables[0] (MDF_HealAddRatio) || RETURN",
-                      "displayLines": "MDF_HealAddRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_HealAddRatio"
-                      ]
+                      "displayLines": "MDF_HealAddRatio"
                     }
                   }
                 }
@@ -366,31 +325,13 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_HPDeltaPerLayer": {
-              "operator": "Variables[0] (MDF_HPDelta) || Constants[0] (1) || Variables[1] (ENEMIES_OBJECT_UNUSED__295) || ADD || MUL || RETURN",
-              "displayLines": "(MDF_HPDelta * (1 + ENEMIES_OBJECT_UNUSED__295))",
-              "constants": [
-                1
-              ],
-              "variables": [
-                "MDF_HPDelta",
-                "ENEMIES_OBJECT_UNUSED__295"
-              ]
+              "displayLines": "(MDF_HPDelta * (1 + ENEMIES_OBJECT_UNUSED__295))"
             },
             "MDF_HealAddRatio": {
-              "operator": "Variables[0] (MDF_HealAddRatio) || RETURN",
-              "displayLines": "MDF_HealAddRatio",
-              "constants": [],
-              "variables": [
-                "MDF_HealAddRatio"
-              ]
+              "displayLines": "MDF_HealAddRatio"
             },
             "MDF_Layer": {
-              "operator": "Variables[0] (BattleEventHeal_HPDeltaLayer) || RETURN",
-              "displayLines": "BattleEventHeal_HPDeltaLayer",
-              "constants": [],
-              "variables": [
-                "BattleEventHeal_HPDeltaLayer"
-              ]
+              "displayLines": "BattleEventHeal_HPDeltaLayer"
             }
           }
         }

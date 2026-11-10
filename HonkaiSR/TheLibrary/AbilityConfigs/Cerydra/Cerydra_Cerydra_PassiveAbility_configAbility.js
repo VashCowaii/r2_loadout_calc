@@ -15,20 +15,10 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (DV_CurrentPoint) || RETURN",
-        "displayLines": "DV_CurrentPoint",
-        "constants": [],
-        "variables": [
-          "DV_CurrentPoint"
-        ]
+        "displayLines": "DV_CurrentPoint"
       },
       "maximum": {
-        "operator": "Variables[0] (6) || RETURN",
-        "displayLines": "6",
-        "constants": [],
-        "variables": [
-          6
-        ]
+        "displayLines": "6"
       },
       "assignState": "True",
       "priorState": "Disable",
@@ -75,12 +65,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"35466247\">Cerydra_PointB2_Self</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             }
           }
         }
@@ -147,13 +132,7 @@ const configAbility = {
                     "value1": "DV_CurrentPoint",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (6) || Variables[1] (1) || SUB || RETURN",
-                      "displayLines": "(6 - 1)",
-                      "constants": [],
-                      "variables": [
-                        6,
-                        1
-                      ]
+                      "displayLines": "(6 - 1)"
                     }
                   },
                   {
@@ -256,13 +235,7 @@ const configAbility = {
                         "value1": "DV_CurrentPoint",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (6) || Variables[1] (1) || SUB || RETURN",
-                          "displayLines": "(6 - 1)",
-                          "constants": [],
-                          "variables": [
-                            6,
-                            1
-                          ]
+                          "displayLines": "(6 - 1)"
                         }
                       },
                       "failed": [
@@ -273,13 +246,7 @@ const configAbility = {
                             "value1": "DV_CurrentPoint",
                             "compareType": "<",
                             "value2": {
-                              "operator": "Variables[0] (6) || Variables[1] (1) || SUB || RETURN",
-                              "displayLines": "(6 - 1)",
-                              "constants": [],
-                              "variables": [
-                                6,
-                                1
-                              ]
+                              "displayLines": "(6 - 1)"
                             }
                           }
                         }
@@ -294,13 +261,7 @@ const configAbility = {
                         "value1": "DV_CurrentPoint",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (6) || Variables[1] (1) || SUB || RETURN",
-                          "displayLines": "(6 - 1)",
-                          "constants": [],
-                          "variables": [
-                            6,
-                            1
-                          ]
+                          "displayLines": "(6 - 1)"
                         }
                       },
                       "failed": [
@@ -311,13 +272,7 @@ const configAbility = {
                             "value1": "DV_CurrentPoint",
                             "compareType": "<",
                             "value2": {
-                              "operator": "Variables[0] (6) || Variables[1] (1) || SUB || RETURN",
-                              "displayLines": "(6 - 1)",
-                              "constants": [],
-                              "variables": [
-                                6,
-                                1
-                              ]
+                              "displayLines": "(6 - 1)"
                             }
                           }
                         }
@@ -380,13 +335,7 @@ const configAbility = {
                         "value1": "DV_CurrentPoint",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (6) || Variables[1] (1) || SUB || RETURN",
-                          "displayLines": "(6 - 1)",
-                          "constants": [],
-                          "variables": [
-                            6,
-                            1
-                          ]
+                          "displayLines": "(6 - 1)"
                         }
                       }
                     }
@@ -429,14 +378,7 @@ const configAbility = {
                             "value1": "DV_CurrentPoint",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (6) || Variables[1] (1) || SUB || Variables[2] (2) || SUB || RETURN",
-                              "displayLines": "((6 - 1) - 2)",
-                              "constants": [],
-                              "variables": [
-                                6,
-                                1,
-                                2
-                              ]
+                              "displayLines": "((6 - 1) - 2)"
                             }
                           }
                         }
@@ -449,13 +391,7 @@ const configAbility = {
                             "value1": "DV_CurrentPoint",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (6) || Variables[1] (2) || SUB || RETURN",
-                              "displayLines": "(6 - 2)",
-                              "constants": [],
-                              "variables": [
-                                6,
-                                2
-                              ]
+                              "displayLines": "(6 - 2)"
                             }
                           }
                         }
@@ -583,13 +519,7 @@ const configAbility = {
                             "value1": "DV_CurrentPoint",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (6) || Variables[1] (1) || SUB || RETURN",
-                              "displayLines": "(6 - 1)",
-                              "constants": [],
-                              "variables": [
-                                6,
-                                1
-                              ]
+                              "displayLines": "(6 - 1)"
                             }
                           }
                         }
@@ -602,14 +532,7 @@ const configAbility = {
                             "value1": "DV_CurrentPoint",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (6) || Variables[1] (1) || SUB || Variables[2] (1) || SUB || RETURN",
-                              "displayLines": "((6 - 1) - 1)",
-                              "constants": [],
-                              "variables": [
-                                6,
-                                1,
-                                1
-                              ]
+                              "displayLines": "((6 - 1) - 1)"
                             }
                           }
                         }
@@ -816,15 +739,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (#CL_Cerydra_Eff_chess_Ready_loop_Isgolden) || Constants[0] (10) || MUL || Variables[1] (#CL_Cerydra_Eff_chess_Ready_loop_needtochange) || ADD || RETURN",
-                "displayLines": "((#CL_Cerydra_Eff_chess_Ready_loop_Isgolden * 10) + #CL_Cerydra_Eff_chess_Ready_loop_needtochange)",
-                "constants": [
-                  10
-                ],
-                "variables": [
-                  "#CL_Cerydra_Eff_chess_Ready_loop_Isgolden",
-                  "#CL_Cerydra_Eff_chess_Ready_loop_needtochange"
-                ]
+                "displayLines": "((#CL_Cerydra_Eff_chess_Ready_loop_Isgolden * 10) + #CL_Cerydra_Eff_chess_Ready_loop_needtochange)"
               },
               "variableName": "#CL_Cerydra_Eff_chess_Ready_loop"
             }
@@ -912,20 +827,10 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (DV_CurrentPoint) || RETURN",
-                    "displayLines": "DV_CurrentPoint",
-                    "constants": [],
-                    "variables": [
-                      "DV_CurrentPoint"
-                    ]
+                    "displayLines": "DV_CurrentPoint"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (6) || RETURN",
-                    "displayLines": "6",
-                    "constants": [],
-                    "variables": [
-                      6
-                    ]
+                    "displayLines": "6"
                   },
                   "assignState": "True",
                   "priorState": "Disable",
@@ -981,32 +886,17 @@ const configAbility = {
                         "value1": "DV_CurrentPoint",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (6) || RETURN",
-                          "displayLines": "6",
-                          "constants": [],
-                          "variables": [
-                            6
-                          ]
+                          "displayLines": "6"
                         }
                       },
                       "passed": [
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (DV_CurrentPoint) || RETURN",
-                            "displayLines": "DV_CurrentPoint",
-                            "constants": [],
-                            "variables": [
-                              "DV_CurrentPoint"
-                            ]
+                            "displayLines": "DV_CurrentPoint"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (6) || RETURN",
-                            "displayLines": "6",
-                            "constants": [],
-                            "variables": [
-                              6
-                            ]
+                            "displayLines": "6"
                           },
                           "assignState": "True",
                           "priorState": "Active",
@@ -1051,12 +941,7 @@ const configAbility = {
                                     "value1": "DV_CurrentPoint",
                                     "compareType": ">=",
                                     "value2": {
-                                      "operator": "Variables[0] (6) || RETURN",
-                                      "displayLines": "6",
-                                      "constants": [],
-                                      "variables": [
-                                        6
-                                      ]
+                                      "displayLines": "6"
                                     }
                                   },
                                   {
@@ -1090,20 +975,10 @@ const configAbility = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (DV_CurrentPoint) || RETURN",
-                            "displayLines": "DV_CurrentPoint",
-                            "constants": [],
-                            "variables": [
-                              "DV_CurrentPoint"
-                            ]
+                            "displayLines": "DV_CurrentPoint"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (6) || RETURN",
-                            "displayLines": "6",
-                            "constants": [],
-                            "variables": [
-                              6
-                            ]
+                            "displayLines": "6"
                           },
                           "assignState": "True",
                           "priorState": "Normal",
@@ -1116,20 +991,10 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (DV_CurrentPoint) || RETURN",
-                        "displayLines": "DV_CurrentPoint",
-                        "constants": [],
-                        "variables": [
-                          "DV_CurrentPoint"
-                        ]
+                        "displayLines": "DV_CurrentPoint"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (6) || RETURN",
-                        "displayLines": "6",
-                        "constants": [],
-                        "variables": [
-                          6
-                        ]
+                        "displayLines": "6"
                       },
                       "assignState": "True",
                       "priorState": "Disable",

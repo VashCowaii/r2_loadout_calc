@@ -11,20 +11,10 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "healPercent": {
-        "operator": "Variables[0] (0.3) || RETURN",
-        "displayLines": "0.3",
-        "constants": [],
-        "variables": [
-          0.3
-        ]
+        "displayLines": "0.3"
       },
       "healFlat": {
-        "operator": "Variables[0] (200) || RETURN",
-        "displayLines": "200",
-        "constants": [],
-        "variables": [
-          200
-        ]
+        "displayLines": "200"
       }
     },
     {
@@ -40,20 +30,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (1.2) || RETURN",
-              "displayLines": "1.2",
-              "constants": [],
-              "variables": [
-                1.2
-              ]
+              "displayLines": "1.2"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "ToughnessDMGType": {
               "DamageType": "Physical"
@@ -72,20 +52,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (0.6) || RETURN",
-              "displayLines": "0.6",
-              "constants": [],
-              "variables": [
-                0.6
-              ]
+              "displayLines": "0.6"
             },
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "ToughnessDMGType": {
               "DamageType": "Physical"

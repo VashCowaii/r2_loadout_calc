@@ -127,12 +127,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "multiBase": {
-            "operator": "Variables[0] (MDF_W2_Feixiao_BattleEvent_ActionDelay) || RETURN",
-            "displayLines": "MDF_W2_Feixiao_BattleEvent_ActionDelay",
-            "constants": [],
-            "variables": [
-              "MDF_W2_Feixiao_BattleEvent_ActionDelay"
-            ]
+            "displayLines": "MDF_W2_Feixiao_BattleEvent_ActionDelay"
           }
         }
       ],
@@ -158,12 +153,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "set": {
-                "operator": "Variables[0] (MDF_W2_Feixiao_BattleEvent_ActionDelay) || RETURN",
-                "displayLines": "MDF_W2_Feixiao_BattleEvent_ActionDelay",
-                "constants": [],
-                "variables": [
-                  "MDF_W2_Feixiao_BattleEvent_ActionDelay"
-                ]
+                "displayLines": "MDF_W2_Feixiao_BattleEvent_ActionDelay"
               }
             }
           ]
@@ -258,12 +248,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1482768789\">Monster_W2_Feixiao_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]",
           "valuePerStack": {
             "MDF_StanceBreakTakenRatio": {
-              "operator": "Variables[0] (MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio) || RETURN",
-              "displayLines": "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio",
-              "constants": [],
-              "variables": [
-                "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio"
-              ]
+              "displayLines": "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio"
             }
           }
         },
@@ -325,12 +310,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1482768789\">Monster_W2_Feixiao_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]",
           "valuePerStack": {
             "MDF_StanceBreakTakenRatio": {
-              "operator": "Variables[0] (MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio) || RETURN",
-              "displayLines": "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio",
-              "constants": [],
-              "variables": [
-                "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio"
-              ]
+              "displayLines": "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio"
             }
           }
         }
@@ -406,12 +386,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1482768789\">Monster_W2_Feixiao_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]",
               "valuePerStack": {
                 "MDF_StanceBreakTakenRatio": {
-                  "operator": "Variables[0] (MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio) || RETURN",
-                  "displayLines": "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio"
-                  ]
+                  "displayLines": "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio"
                 }
               }
             },
@@ -512,12 +487,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1482768789\">Monster_W2_Feixiao_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]",
               "valuePerStack": {
                 "MDF_StanceBreakTakenRatio": {
-                  "operator": "Variables[0] (MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio) || RETURN",
-                  "displayLines": "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio"
-                  ]
+                  "displayLines": "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio"
                 }
               }
             },
@@ -587,12 +557,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_W2_Feixiao_BattleEvent_BaseSpeed) || RETURN",
-                "displayLines": "MDF_W2_Feixiao_BattleEvent_BaseSpeed",
-                "constants": [],
-                "variables": [
-                  "MDF_W2_Feixiao_BattleEvent_BaseSpeed"
-                ]
+                "displayLines": "MDF_W2_Feixiao_BattleEvent_BaseSpeed"
               }
             }
           ]

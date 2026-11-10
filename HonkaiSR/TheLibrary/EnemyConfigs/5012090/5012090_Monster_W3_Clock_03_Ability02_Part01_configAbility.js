@@ -70,12 +70,7 @@ const configAbility = {
           {
             "name": "Random Chance",
             "chance": {
-              "operator": "Variables[0] (TraitorChace) || RETURN",
-              "displayLines": "TraitorChace",
-              "constants": [],
-              "variables": [
-                "TraitorChace"
-              ]
+              "displayLines": "TraitorChace"
             }
           }
         ]

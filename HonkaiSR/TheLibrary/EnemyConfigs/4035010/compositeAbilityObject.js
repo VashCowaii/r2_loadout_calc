@@ -885,48 +885,28 @@ const compositeAbilityObject = {
                       "name": "Assign Value to Stat",
                       "variableName": "30231_TargetCharacterID01",
                       "value": {
-                        "operator": "Variables[0] (CharacterID_30231_Flag01) || RETURN",
-                        "displayLines": "CharacterID_30231_Flag01",
-                        "constants": [],
-                        "variables": [
-                          "CharacterID_30231_Flag01"
-                        ]
+                        "displayLines": "CharacterID_30231_Flag01"
                       }
                     },
                     {
                       "name": "Assign Value to Stat",
                       "variableName": "30231_TargetCharacterID02",
                       "value": {
-                        "operator": "Variables[0] (CharacterID_30231_Flag02) || RETURN",
-                        "displayLines": "CharacterID_30231_Flag02",
-                        "constants": [],
-                        "variables": [
-                          "CharacterID_30231_Flag02"
-                        ]
+                        "displayLines": "CharacterID_30231_Flag02"
                       }
                     },
                     {
                       "name": "Assign Value to Stat",
                       "variableName": "30231_TargetCharacterID03",
                       "value": {
-                        "operator": "Variables[0] (CharacterID_30231_Flag03) || RETURN",
-                        "displayLines": "CharacterID_30231_Flag03",
-                        "constants": [],
-                        "variables": [
-                          "CharacterID_30231_Flag03"
-                        ]
+                        "displayLines": "CharacterID_30231_Flag03"
                       }
                     },
                     {
                       "name": "Assign Value to Stat",
                       "variableName": "30231_TargetCharacterID04",
                       "value": {
-                        "operator": "Variables[0] (CharacterID_30231_Flag04) || RETURN",
-                        "displayLines": "CharacterID_30231_Flag04",
-                        "constants": [],
-                        "variables": [
-                          "CharacterID_30231_Flag04"
-                        ]
+                        "displayLines": "CharacterID_30231_Flag04"
                       }
                     }
                   ]
@@ -992,14 +972,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">BaseDMGMultiplier</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (1) || Variables[0] (MDF_1) || ADD || RETURN",
-                    "displayLines": "(1 + MDF_1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_1"
-                    ]
+                    "displayLines": "(1 + MDF_1)"
                   }
                 }
               ]
@@ -1022,12 +995,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1626881642\">Enemy_W4_IronTombCore_Main_P3_AvatarDamageAdded</a>[<span class=\"descriptionNumberColor\">Chronicled \"Love\"</span>]",
                   "valuePerStack": {
                     "MDF_1": {
-                      "operator": "Variables[0] ({[PassiveSkill03[1]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill03[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill03[1]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill03[1]]}"
                     }
                   },
                   "casterAssign": "TargetSelf"
@@ -1057,12 +1025,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1626881642\">Enemy_W4_IronTombCore_Main_P3_AvatarDamageAdded</a>[<span class=\"descriptionNumberColor\">Chronicled \"Love\"</span>]",
                       "valuePerStack": {
                         "MDF_1": {
-                          "operator": "Variables[0] ({[PassiveSkill03[1]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill03[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill03[1]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill03[1]]}"
                         }
                       },
                       "casterAssign": "TargetSelf"
@@ -1088,12 +1051,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill03[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill03[0]]}"
-                    ]
+                    "displayLines": "{[PassiveSkill03[0]]}"
                   }
                 },
                 {
@@ -1123,12 +1081,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DirtyHPRatio) || RETURN",
-                    "displayLines": "MDF_DirtyHPRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DirtyHPRatio"
-                    ]
+                    "displayLines": "MDF_DirtyHPRatio"
                   }
                 }
               ]
@@ -1320,16 +1273,7 @@ const compositeAbilityObject = {
                       "variableName": "MDF_Layers",
                       "context": "ContextModifier",
                       "value": {
-                        "operator": "Variables[0] (_SPDelta) || INVERT || Variables[1] (_SPMax) || DIV || Constants[0] (100) || MUL || Variables[2] (MDF_SPConvert) || MUL || RETURN",
-                        "displayLines": "(((-_SPDelta / _SPMax) * 100) * MDF_SPConvert)",
-                        "constants": [
-                          100
-                        ],
-                        "variables": [
-                          "_SPDelta",
-                          "_SPMax",
-                          "MDF_SPConvert"
-                        ]
+                        "displayLines": "(((-_SPDelta / _SPMax) * 100) * MDF_SPConvert)"
                       },
                       "max": 100
                     }
@@ -1422,12 +1366,7 @@ const compositeAbilityObject = {
                             "value1": "_ActionDelayBefore",
                             "compareType": ">",
                             "value2": {
-                              "operator": "Variables[0] (_ActionDelayAfter) || RETURN",
-                              "displayLines": "_ActionDelayAfter",
-                              "constants": [],
-                              "variables": [
-                                "_ActionDelayAfter"
-                              ]
+                              "displayLines": "_ActionDelayAfter"
                             }
                           },
                           {
@@ -1452,17 +1391,7 @@ const compositeAbilityObject = {
                           "variableName": "MDF_Layers",
                           "context": "ContextModifier",
                           "value": {
-                            "operator": "Variables[0] (_ActionDelayBefore) || Variables[1] (_ActionDelayAfter) || SUB || INVERT || Variables[2] (_ActionDelayBase) || DIV || Constants[0] (100) || MUL || Variables[3] (MDF_ActionDelayConvert) || MUL || RETURN",
-                            "displayLines": "(((-(_ActionDelayBefore - _ActionDelayAfter) / _ActionDelayBase) * 100) * MDF_ActionDelayConvert)",
-                            "constants": [
-                              100
-                            ],
-                            "variables": [
-                              "_ActionDelayBefore",
-                              "_ActionDelayAfter",
-                              "_ActionDelayBase",
-                              "MDF_ActionDelayConvert"
-                            ]
+                            "displayLines": "(((-(_ActionDelayBefore - _ActionDelayAfter) / _ActionDelayBase) * 100) * MDF_ActionDelayConvert)"
                           },
                           "max": 100
                         }
@@ -1633,12 +1562,7 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_DirtyHPRatio": {
-                  "operator": "Variables[0] (MDF_DirtyHPRatio_PerLayer) || RETURN",
-                  "displayLines": "MDF_DirtyHPRatio_PerLayer",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DirtyHPRatio_PerLayer"
-                  ]
+                  "displayLines": "MDF_DirtyHPRatio_PerLayer"
                 }
               }
             }
@@ -1679,12 +1603,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Stack Skill Point Lock-Out",
                   "blockedCount": {
-                    "operator": "Variables[0] (FREEVAR) || RETURN",
-                    "displayLines": "FREEVAR",
-                    "constants": [],
-                    "variables": [
-                      "FREEVAR"
-                    ]
+                    "displayLines": "FREEVAR"
                   }
                 },
                 {
@@ -2338,32 +2257,13 @@ const compositeAbilityObject = {
                 {
                   "name": "Set IronTomb Progress",
                   "display": {
-                    "operator": "Variables[0] (_WorldErosion02) || RETURN",
-                    "displayLines": "_WorldErosion02",
-                    "constants": [],
-                    "variables": [
-                      "_WorldErosion02"
-                    ]
+                    "displayLines": "_WorldErosion02"
                   },
                   "warningTheshold": {
-                    "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Constants[0] (100) || MUL || RETURN",
-                    "displayLines": "({[PassiveSkill01[0]]} * 100)",
-                    "constants": [
-                      100
-                    ],
-                    "variables": [
-                      "{[PassiveSkill01[0]]}"
-                    ]
+                    "displayLines": "({[PassiveSkill01[0]]} * 100)"
                   },
                   "errorThreshold": {
-                    "operator": "Variables[0] ({[PassiveSkill01[1]]}) || Constants[0] (100) || MUL || RETURN",
-                    "displayLines": "({[PassiveSkill01[1]]} * 100)",
-                    "constants": [
-                      100
-                    ],
-                    "variables": [
-                      "{[PassiveSkill01[1]]}"
-                    ]
+                    "displayLines": "({[PassiveSkill01[1]]} * 100)"
                   }
                 },
                 {
@@ -2428,12 +2328,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Set IronTomb Progress",
                       "display": {
-                        "operator": "Variables[0] (_WorldErosion02) || RETURN",
-                        "displayLines": "_WorldErosion02",
-                        "constants": [],
-                        "variables": [
-                          "_WorldErosion02"
-                        ]
+                        "displayLines": "_WorldErosion02"
                       }
                     },
                     {
@@ -2446,14 +2341,7 @@ const compositeAbilityObject = {
                             "value1": "_WorldErosion",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || Constants[0] (100) || MUL || RETURN",
-                              "displayLines": "({[PassiveSkill01[2]]} * 100)",
-                              "constants": [
-                                100
-                              ],
-                              "variables": [
-                                "{[PassiveSkill01[2]]}"
-                              ]
+                              "displayLines": "({[PassiveSkill01[2]]} * 100)"
                             }
                           },
                           {
@@ -2508,14 +2396,7 @@ const compositeAbilityObject = {
                               "valuePerStack": {
                                 "MDF_BPMaxCost": 4,
                                 "MDF_DirtyHPRatio_PerLayer": {
-                                  "operator": "Constants[0] (4) || Variables[0] ({[PassiveSkill01[4]]}) || MUL || RETURN",
-                                  "displayLines": "(4 * {[PassiveSkill01[4]]})",
-                                  "constants": [
-                                    4
-                                  ],
-                                  "variables": [
-                                    "{[PassiveSkill01[4]]}"
-                                  ]
+                                  "displayLines": "(4 * {[PassiveSkill01[4]]})"
                                 }
                               }
                             }
@@ -2543,14 +2424,7 @@ const compositeAbilityObject = {
                                 "value1": "_WorldErosion",
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] ({[PassiveSkill01[1]]}) || Constants[0] (100) || MUL || RETURN",
-                                  "displayLines": "({[PassiveSkill01[1]]} * 100)",
-                                  "constants": [
-                                    100
-                                  ],
-                                  "variables": [
-                                    "{[PassiveSkill01[1]]}"
-                                  ]
+                                  "displayLines": "({[PassiveSkill01[1]]} * 100)"
                                 }
                               },
                               {
@@ -2605,14 +2479,7 @@ const compositeAbilityObject = {
                                   "valuePerStack": {
                                     "MDF_BPMaxCost": 2,
                                     "MDF_DirtyHPRatio_PerLayer": {
-                                      "operator": "Constants[0] (2) || Variables[0] ({[PassiveSkill01[4]]}) || MUL || RETURN",
-                                      "displayLines": "(2 * {[PassiveSkill01[4]]})",
-                                      "constants": [
-                                        2
-                                      ],
-                                      "variables": [
-                                        "{[PassiveSkill01[4]]}"
-                                      ]
+                                      "displayLines": "(2 * {[PassiveSkill01[4]]})"
                                     }
                                   }
                                 }
@@ -2640,14 +2507,7 @@ const compositeAbilityObject = {
                                     "value1": "_WorldErosion",
                                     "compareType": ">=",
                                     "value2": {
-                                      "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Constants[0] (100) || MUL || RETURN",
-                                      "displayLines": "({[PassiveSkill01[0]]} * 100)",
-                                      "constants": [
-                                        100
-                                      ],
-                                      "variables": [
-                                        "{[PassiveSkill01[0]]}"
-                                      ]
+                                      "displayLines": "({[PassiveSkill01[0]]} * 100)"
                                     }
                                   },
                                   {
@@ -2736,12 +2596,7 @@ const compositeAbilityObject = {
                                       "valuePerStack": {
                                         "MDF_BPMaxCost": 1,
                                         "MDF_DirtyHPRatio_PerLayer": {
-                                          "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-                                          "displayLines": "{[PassiveSkill01[4]]}",
-                                          "constants": [],
-                                          "variables": [
-                                            "{[PassiveSkill01[4]]}"
-                                          ]
+                                          "displayLines": "{[PassiveSkill01[4]]}"
                                         }
                                       }
                                     }
@@ -2999,12 +2854,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] ({[Skill08[0]]}) || RETURN",
-                        "displayLines": "{[Skill08[0]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill08[0]]}"
-                        ]
+                        "displayLines": "{[Skill08[0]]}"
                       },
                       "variableName": "_Skill08_DamagePercentage"
                     }
@@ -3013,12 +2863,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_12299) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_12299",
-                        "constants": [],
-                        "variables": [
-                          "UnusedUnderThisBase_12299"
-                        ]
+                        "displayLines": "UnusedUnderThisBase_12299"
                       },
                       "variableName": "_Skill08_DamagePercentage"
                     }
@@ -3388,12 +3233,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill02[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill02[0]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill02[0]]}"
                         }
                       }
                     }
@@ -3422,12 +3262,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill02[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill02[1]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill02[1]]}"
                         }
                       }
                     }
@@ -3528,12 +3363,7 @@ const compositeAbilityObject = {
                     "target": "{{Parameter Target}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (_CurrentBPSP) || RETURN",
-                    "displayLines": "_CurrentBPSP",
-                    "constants": [],
-                    "variables": [
-                      "_CurrentBPSP"
-                    ]
+                    "displayLines": "_CurrentBPSP"
                   },
                   "isFixed": "* ERR",
                   "isSetToValue": true
@@ -3595,12 +3425,7 @@ const compositeAbilityObject = {
                     "target": "{{Parameter Target}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (_CurrentBPSP) || RETURN",
-                    "displayLines": "_CurrentBPSP",
-                    "constants": [],
-                    "variables": [
-                      "_CurrentBPSP"
-                    ]
+                    "displayLines": "_CurrentBPSP"
                   },
                   "isFixed": "* ERR",
                   "isSetToValue": true
@@ -3653,14 +3478,7 @@ const compositeAbilityObject = {
             "value1": "_WorldErosion",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Constants[0] (100) || MUL || RETURN",
-              "displayLines": "({[PassiveSkill01[0]]} * 100)",
-              "constants": [
-                100
-              ],
-              "variables": [
-                "{[PassiveSkill01[0]]}"
-              ]
+              "displayLines": "({[PassiveSkill01[0]]} * 100)"
             }
           },
           "passed": [
@@ -3677,28 +3495,14 @@ const compositeAbilityObject = {
             {
               "name": "Set IronTomb Progress",
               "display": {
-                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Constants[0] (100) || MUL || RETURN",
-                "displayLines": "({[PassiveSkill01[0]]} * 100)",
-                "constants": [
-                  100
-                ],
-                "variables": [
-                  "{[PassiveSkill01[0]]}"
-                ]
+                "displayLines": "({[PassiveSkill01[0]]} * 100)"
               },
               "duration": 3
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Constants[0] (100) || MUL || RETURN",
-                "displayLines": "({[PassiveSkill01[0]]} * 100)",
-                "constants": [
-                  100
-                ],
-                "variables": [
-                  "{[PassiveSkill01[0]]}"
-                ]
+                "displayLines": "({[PassiveSkill01[0]]} * 100)"
               },
               "variableName": "_WorldErosion"
             }
@@ -3976,12 +3780,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "set": {
-                    "operator": "Variables[0] ({[Skill07[1]]}) || RETURN",
-                    "displayLines": "{[Skill07[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill07[1]]}"
-                    ]
+                    "displayLines": "{[Skill07[1]]}"
                   }
                 }
               ],
@@ -3994,12 +3793,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "set": {
-                    "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                    "displayLines": "{[Skill07[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill07[0]]}"
-                    ]
+                    "displayLines": "{[Skill07[0]]}"
                   }
                 }
               ]
@@ -4091,12 +3885,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "set": {
-                        "operator": "Variables[0] ({[Skill07[1]]}) || RETURN",
-                        "displayLines": "{[Skill07[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill07[1]]}"
-                        ]
+                        "displayLines": "{[Skill07[1]]}"
                       }
                     }
                   ],
@@ -4109,12 +3898,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "set": {
-                        "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                        "displayLines": "{[Skill07[0]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill07[0]]}"
-                        ]
+                        "displayLines": "{[Skill07[0]]}"
                       }
                     }
                   ]
@@ -4203,14 +3987,7 @@ const compositeAbilityObject = {
                 "value1": "_WorldErosion",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] ({[PassiveSkill01[2]]}) || Constants[0] (100) || MUL || RETURN",
-                  "displayLines": "({[PassiveSkill01[2]]} * 100)",
-                  "constants": [
-                    100
-                  ],
-                  "variables": [
-                    "{[PassiveSkill01[2]]}"
-                  ]
+                  "displayLines": "({[PassiveSkill01[2]]} * 100)"
                 }
               },
               {
@@ -4232,14 +4009,7 @@ const compositeAbilityObject = {
               "valuePerStack": {
                 "MDF_BPMaxCost": 4,
                 "MDF_DirtyHPRatio_PerLayer": {
-                  "operator": "Constants[0] (4) || Variables[0] ({[PassiveSkill01[4]]}) || MUL || RETURN",
-                  "displayLines": "(4 * {[PassiveSkill01[4]]})",
-                  "constants": [
-                    4
-                  ],
-                  "variables": [
-                    "{[PassiveSkill01[4]]}"
-                  ]
+                  "displayLines": "(4 * {[PassiveSkill01[4]]})"
                 }
               }
             }
@@ -4255,14 +4025,7 @@ const compositeAbilityObject = {
                     "value1": "_WorldErosion",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] ({[PassiveSkill01[1]]}) || Constants[0] (100) || MUL || RETURN",
-                      "displayLines": "({[PassiveSkill01[1]]} * 100)",
-                      "constants": [
-                        100
-                      ],
-                      "variables": [
-                        "{[PassiveSkill01[1]]}"
-                      ]
+                      "displayLines": "({[PassiveSkill01[1]]} * 100)"
                     }
                   },
                   {
@@ -4284,14 +4047,7 @@ const compositeAbilityObject = {
                   "valuePerStack": {
                     "MDF_BPMaxCost": 2,
                     "MDF_DirtyHPRatio_PerLayer": {
-                      "operator": "Constants[0] (2) || Variables[0] ({[PassiveSkill01[4]]}) || MUL || RETURN",
-                      "displayLines": "(2 * {[PassiveSkill01[4]]})",
-                      "constants": [
-                        2
-                      ],
-                      "variables": [
-                        "{[PassiveSkill01[4]]}"
-                      ]
+                      "displayLines": "(2 * {[PassiveSkill01[4]]})"
                     }
                   }
                 }
@@ -4307,14 +4063,7 @@ const compositeAbilityObject = {
                         "value1": "_WorldErosion",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Constants[0] (100) || MUL || RETURN",
-                          "displayLines": "({[PassiveSkill01[0]]} * 100)",
-                          "constants": [
-                            100
-                          ],
-                          "variables": [
-                            "{[PassiveSkill01[0]]}"
-                          ]
+                          "displayLines": "({[PassiveSkill01[0]]} * 100)"
                         }
                       },
                       {
@@ -4336,12 +4085,7 @@ const compositeAbilityObject = {
                       "valuePerStack": {
                         "MDF_BPMaxCost": 1,
                         "MDF_DirtyHPRatio_PerLayer": {
-                          "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill01[4]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill01[4]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill01[4]]}"
                         }
                       }
                     }
@@ -4563,12 +4307,7 @@ const compositeAbilityObject = {
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID01) || RETURN",
-                "displayLines": "SummonID01",
-                "constants": [],
-                "variables": [
-                  "SummonID01"
-                ]
+                "displayLines": "SummonID01"
               },
               "locationType": "BeforeCaster"
             }
@@ -4578,12 +4317,7 @@ const compositeAbilityObject = {
           "name": "Create Enemy as Body Part",
           "partName": "TimePart",
           "value": {
-            "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
-            "displayLines": "PartEntity1_MonsterID",
-            "constants": [],
-            "variables": [
-              "PartEntity1_MonsterID"
-            ]
+            "displayLines": "PartEntity1_MonsterID"
           },
           "offset": -1
         },
@@ -4591,12 +4325,7 @@ const compositeAbilityObject = {
           "name": "Create Enemy as Body Part",
           "partName": "EnergyPart",
           "value": {
-            "operator": "Variables[0] (PartEntity2_MonsterID) || RETURN",
-            "displayLines": "PartEntity2_MonsterID",
-            "constants": [],
-            "variables": [
-              "PartEntity2_MonsterID"
-            ]
+            "displayLines": "PartEntity2_MonsterID"
           },
           "offset": 1,
           "type": 2
@@ -4705,42 +4434,21 @@ const compositeAbilityObject = {
             "value1": "_WorldErosion",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Constants[0] (100) || MUL || RETURN",
-              "displayLines": "({[PassiveSkill01[0]]} * 100)",
-              "constants": [
-                100
-              ],
-              "variables": [
-                "{[PassiveSkill01[0]]}"
-              ]
+              "displayLines": "({[PassiveSkill01[0]]} * 100)"
             }
           },
           "passed": [
             {
               "name": "Set IronTomb Progress",
               "display": {
-                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Constants[0] (100) || MUL || RETURN",
-                "displayLines": "({[PassiveSkill01[0]]} * 100)",
-                "constants": [
-                  100
-                ],
-                "variables": [
-                  "{[PassiveSkill01[0]]}"
-                ]
+                "displayLines": "({[PassiveSkill01[0]]} * 100)"
               },
               "duration": 3
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Constants[0] (100) || MUL || RETURN",
-                "displayLines": "({[PassiveSkill01[0]]} * 100)",
-                "constants": [
-                  100
-                ],
-                "variables": [
-                  "{[PassiveSkill01[0]]}"
-                ]
+                "displayLines": "({[PassiveSkill01[0]]} * 100)"
               },
               "variableName": "_WorldErosion"
             }
@@ -5204,12 +4912,7 @@ const compositeAbilityObject = {
         {
           "name": "Deal Toughness DMG",
           "value": {
-            "operator": "Variables[0] (_CurrentStance) || RETURN",
-            "displayLines": "_CurrentStance",
-            "constants": [],
-            "variables": [
-              "_CurrentStance"
-            ]
+            "displayLines": "_CurrentStance"
           },
           "defender": {
             "name": "Target Name",
@@ -5456,12 +5159,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (_Skill08_DamagePercentage) || RETURN",
-              "displayLines": "_Skill08_DamagePercentage",
-              "constants": [],
-              "variables": [
-                "_Skill08_DamagePercentage"
-              ]
+              "displayLines": "_Skill08_DamagePercentage"
             },
             "HitSplit": 0.125,
             "Toughness": null,
@@ -5479,12 +5177,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (_Skill08_DamagePercentage) || RETURN",
-              "displayLines": "_Skill08_DamagePercentage",
-              "constants": [],
-              "variables": [
-                "_Skill08_DamagePercentage"
-              ]
+              "displayLines": "_Skill08_DamagePercentage"
             },
             "HitSplit": 0.125,
             "Toughness": null,
@@ -5502,12 +5195,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (_Skill08_DamagePercentage) || RETURN",
-              "displayLines": "_Skill08_DamagePercentage",
-              "constants": [],
-              "variables": [
-                "_Skill08_DamagePercentage"
-              ]
+              "displayLines": "_Skill08_DamagePercentage"
             },
             "HitSplit": 0.125,
             "Toughness": null,
@@ -5525,12 +5213,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (_Skill08_DamagePercentage) || RETURN",
-              "displayLines": "_Skill08_DamagePercentage",
-              "constants": [],
-              "variables": [
-                "_Skill08_DamagePercentage"
-              ]
+              "displayLines": "_Skill08_DamagePercentage"
             },
             "HitSplit": 0.125,
             "Toughness": null,
@@ -5548,12 +5231,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (_Skill08_DamagePercentage) || RETURN",
-              "displayLines": "_Skill08_DamagePercentage",
-              "constants": [],
-              "variables": [
-                "_Skill08_DamagePercentage"
-              ]
+              "displayLines": "_Skill08_DamagePercentage"
             },
             "HitSplit": 0.125,
             "Toughness": null,
@@ -5571,12 +5249,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (_Skill08_DamagePercentage) || RETURN",
-              "displayLines": "_Skill08_DamagePercentage",
-              "constants": [],
-              "variables": [
-                "_Skill08_DamagePercentage"
-              ]
+              "displayLines": "_Skill08_DamagePercentage"
             },
             "HitSplit": 0.125,
             "Toughness": null,
@@ -5594,12 +5267,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (_Skill08_DamagePercentage) || RETURN",
-              "displayLines": "_Skill08_DamagePercentage",
-              "constants": [],
-              "variables": [
-                "_Skill08_DamagePercentage"
-              ]
+              "displayLines": "_Skill08_DamagePercentage"
             },
             "HitSplit": 0.125,
             "Toughness": null,
@@ -5617,12 +5285,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (_Skill08_DamagePercentage) || RETURN",
-              "displayLines": "_Skill08_DamagePercentage",
-              "constants": [],
-              "variables": [
-                "_Skill08_DamagePercentage"
-              ]
+              "displayLines": "_Skill08_DamagePercentage"
             },
             "HitSplit": 0.125,
             "Toughness": null,
@@ -5692,12 +5355,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "DamageFlat": {
-                      "operator": "Variables[0] (_TargetMaxHP) || RETURN",
-                      "displayLines": "_TargetMaxHP",
-                      "constants": [],
-                      "variables": [
-                        "_TargetMaxHP"
-                      ]
+                      "displayLines": "_TargetMaxHP"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -5764,12 +5422,7 @@ const compositeAbilityObject = {
               "functionName": "<a class=\"gTempYellow\" id=\"1699523791\">W4_IronTombCore_CalWorldErosion</a>",
               "variables": {
                 "_ErosionParam": {
-                  "operator": "Variables[0] ({[Skill08[1]]}) || RETURN",
-                  "displayLines": "{[Skill08[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill08[1]]}"
-                  ]
+                  "displayLines": "{[Skill08[1]]}"
                 }
               }
             },
@@ -5816,20 +5469,10 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1372521903\">MModifier_W4_IronTombCore_TimeLock</a>[<span class=\"descriptionNumberColor\">Action Lock</span>]",
                           "valuePerStack": {
                             "MDF_SPConvert": {
-                              "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-                              "displayLines": "{[Skill04[2]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill04[2]]}"
-                              ]
+                              "displayLines": "{[Skill04[2]]}"
                             },
                             "MDF_ActionDelayConvert": {
-                              "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-                              "displayLines": "{[Skill04[3]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill04[3]]}"
-                              ]
+                              "displayLines": "{[Skill04[3]]}"
                             }
                           }
                         }
@@ -5872,13 +5515,7 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "value": {
-                            "operator": "Variables[0] ({[Skill08[2]]}) || INVERT || Variables[1] (_TargetMaxSP) || MUL || RETURN",
-                            "displayLines": "(-{[Skill08[2]]} * _TargetMaxSP)",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill08[2]]}",
-                              "_TargetMaxSP"
-                            ]
+                            "displayLines": "(-{[Skill08[2]]} * _TargetMaxSP)"
                           },
                           "isFixed": "(Fixed)"
                         }
@@ -6164,12 +5801,7 @@ const compositeAbilityObject = {
                 "target": "{{Parameter Target}}"
               },
               "setValue": {
-                "operator": "Variables[0] (_MaxHP) || RETURN",
-                "displayLines": "_MaxHP",
-                "constants": [],
-                "variables": [
-                  "_MaxHP"
-                ]
+                "displayLines": "_MaxHP"
               }
             }
           ]
@@ -6702,14 +6334,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_CharacterCount) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(_CharacterCount - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_CharacterCount"
-                    ]
+                    "displayLines": "(_CharacterCount - 1)"
                   },
                   "variableName": "_CharacterCount"
                 }
@@ -6829,12 +6454,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "HitSplit": 0.1,
             "Toughness": null,
@@ -6852,12 +6472,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "HitSplit": 0.1,
             "Toughness": null,
@@ -6875,12 +6490,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "HitSplit": 0.1,
             "Toughness": null,
@@ -6894,12 +6504,7 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"1699523791\">W4_IronTombCore_CalWorldErosion</a>",
           "variables": {
             "_ErosionParam": {
-              "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-              "displayLines": "{[Skill06[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[1]]}"
-              ]
+              "displayLines": "{[Skill06[1]]}"
             }
           }
         },
@@ -6912,12 +6517,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "HitSplit": 0.1,
             "Toughness": null,
@@ -6935,12 +6535,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "HitSplit": 0.1,
             "Toughness": null,
@@ -6958,12 +6553,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "HitSplit": 0.5,
             "Toughness": null,
@@ -6982,20 +6572,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1372521903\">MModifier_W4_IronTombCore_TimeLock</a>[<span class=\"descriptionNumberColor\">Action Lock</span>]",
           "valuePerStack": {
             "MDF_SPConvert": {
-              "operator": "Variables[0] ({[Skill06[2]]}) || RETURN",
-              "displayLines": "{[Skill06[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[2]]}"
-              ]
+              "displayLines": "{[Skill06[2]]}"
             },
             "MDF_ActionDelayConvert": {
-              "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-              "displayLines": "{[Skill06[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[3]]}"
-              ]
+              "displayLines": "{[Skill06[3]]}"
             }
           }
         },
@@ -7268,12 +6848,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "{[Skill05[0]]}"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -7291,12 +6866,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "{[Skill05[0]]}"
             },
             "HitSplit": 0.1,
             "Toughness": null,
@@ -7314,12 +6884,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "{[Skill05[0]]}"
             },
             "HitSplit": 0.1,
             "Toughness": null,
@@ -7337,12 +6902,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "{[Skill05[0]]}"
             },
             "HitSplit": 0.1,
             "Toughness": null,
@@ -7356,12 +6916,7 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"1699523791\">W4_IronTombCore_CalWorldErosion</a>",
           "variables": {
             "_ErosionParam": {
-              "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-              "displayLines": "{[Skill05[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[2]]}"
-              ]
+              "displayLines": "{[Skill05[2]]}"
             }
           }
         },
@@ -7374,12 +6929,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "{[Skill05[0]]}"
             },
             "HitSplit": 0.1,
             "Toughness": null,
@@ -7397,12 +6947,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "{[Skill05[0]]}"
             },
             "HitSplit": 0.1,
             "Toughness": null,
@@ -7420,12 +6965,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "{[Skill05[0]]}"
             },
             "HitSplit": 0.1,
             "Toughness": null,
@@ -7443,12 +6983,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "{[Skill05[0]]}"
             },
             "HitSplit": 0.1,
             "Toughness": null,
@@ -7466,12 +7001,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "{[Skill05[0]]}"
             },
             "HitSplit": 0.1,
             "Toughness": null,
@@ -7489,12 +7019,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "{[Skill05[0]]}"
             },
             "HitSplit": 0.1,
             "Toughness": null,
@@ -7512,12 +7037,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "{[Skill05[0]]}"
             },
             "HitSplit": 0.3,
             "Toughness": null,
@@ -7550,13 +7070,7 @@ const compositeAbilityObject = {
                 "target": "{{Parameter Target}}"
               },
               "value": {
-                "operator": "Variables[0] ({[Skill05[1]]}) || INVERT || Variables[1] (_TargetMaxSP) || MUL || RETURN",
-                "displayLines": "(-{[Skill05[1]]} * _TargetMaxSP)",
-                "constants": [],
-                "variables": [
-                  "{[Skill05[1]]}",
-                  "_TargetMaxSP"
-                ]
+                "displayLines": "(-{[Skill05[1]]} * _TargetMaxSP)"
               },
               "isFixed": "(Fixed)"
             }
@@ -7694,12 +7208,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -7713,12 +7222,7 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"1699523791\">W4_IronTombCore_CalWorldErosion</a>",
           "variables": {
             "_ErosionParam": {
-              "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-              "displayLines": "{[Skill04[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[1]]}"
-              ]
+              "displayLines": "{[Skill04[1]]}"
             }
           }
         },
@@ -7731,20 +7235,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1372521903\">MModifier_W4_IronTombCore_TimeLock</a>[<span class=\"descriptionNumberColor\">Action Lock</span>]",
           "valuePerStack": {
             "MDF_SPConvert": {
-              "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-              "displayLines": "{[Skill04[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[2]]}"
-              ]
+              "displayLines": "{[Skill04[2]]}"
             },
             "MDF_ActionDelayConvert": {
-              "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-              "displayLines": "{[Skill04[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[3]]}"
-              ]
+              "displayLines": "{[Skill04[3]]}"
             }
           }
         },
@@ -7823,12 +7317,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -7853,13 +7342,7 @@ const compositeAbilityObject = {
             "target": "{{Ability Target(ST)}}"
           },
           "value": {
-            "operator": "Variables[0] ({[Skill03[1]]}) || INVERT || Variables[1] (_TargetMaxSP) || MUL || RETURN",
-            "displayLines": "(-{[Skill03[1]]} * _TargetMaxSP)",
-            "constants": [],
-            "variables": [
-              "{[Skill03[1]]}",
-              "_TargetMaxSP"
-            ]
+            "displayLines": "(-{[Skill03[1]]} * _TargetMaxSP)"
           },
           "isFixed": "(Fixed)"
         },
@@ -7868,12 +7351,7 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"1699523791\">W4_IronTombCore_CalWorldErosion</a>",
           "variables": {
             "_ErosionParam": {
-              "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-              "displayLines": "{[Skill03[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[2]]}"
-              ]
+              "displayLines": "{[Skill03[2]]}"
             }
           }
         },
@@ -7944,12 +7422,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -7967,12 +7440,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "HitSplit": 0.3,
             "Toughness": null,
@@ -7990,12 +7458,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "HitSplit": 0.5,
             "Toughness": null,
@@ -8010,12 +7473,7 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"1699523791\">W4_IronTombCore_CalWorldErosion</a>",
           "variables": {
             "_ErosionParam": {
-              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-              "displayLines": "{[Skill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[1]]}"
-              ]
+              "displayLines": "{[Skill02[1]]}"
             }
           }
         },
@@ -8073,12 +7531,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -8092,12 +7545,7 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"1699523791\">W4_IronTombCore_CalWorldErosion</a>",
           "variables": {
             "_ErosionParam": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
+              "displayLines": "{[Skill01[1]]}"
             }
           }
         },
@@ -8274,15 +7722,7 @@ const compositeAbilityObject = {
               },
               "variableName": "_WorldErosion",
               "value": {
-                "operator": "Variables[0] (_ErosionParam) || Variables[1] (_WorldErosion) || MUL || Constants[0] (100) || MUL || RETURN",
-                "displayLines": "((_ErosionParam * _WorldErosion) * 100)",
-                "constants": [
-                  100
-                ],
-                "variables": [
-                  "_ErosionParam",
-                  "_WorldErosion"
-                ]
+                "displayLines": "((_ErosionParam * _WorldErosion) * 100)"
               },
               "max": 100
             },
@@ -8294,14 +7734,7 @@ const compositeAbilityObject = {
               },
               "variableName": "_WorldErosion02",
               "value": {
-                "operator": "Variables[0] (_ErosionParam) || Constants[0] (80) || MUL || RETURN",
-                "displayLines": "(_ErosionParam * 80)",
-                "constants": [
-                  80
-                ],
-                "variables": [
-                  "_ErosionParam"
-                ]
+                "displayLines": "(_ErosionParam * 80)"
               },
               "min": 1,
               "max": 99
@@ -8385,12 +7818,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] ({[Skill09[2]]}) || RETURN",
-                            "displayLines": "{[Skill09[2]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill09[2]]}"
-                            ]
+                            "displayLines": "{[Skill09[2]]}"
                           },
                           "variableName": "_WorldErosionCtl"
                         },
@@ -8401,12 +7829,7 @@ const compositeAbilityObject = {
                             "target": "{{Irontomb: Part 1}} + {{Irontomb: Part 2}}"
                           },
                           "value": {
-                            "operator": "Variables[0] ({[Skill09[2]]}) || RETURN",
-                            "displayLines": "{[Skill09[2]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill09[2]]}"
-                            ]
+                            "displayLines": "{[Skill09[2]]}"
                           },
                           "variableName": "_WorldErosionCtl"
                         }
@@ -8424,12 +7847,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] ({[Skill09[1]]}) || RETURN",
-                                "displayLines": "{[Skill09[1]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[Skill09[1]]}"
-                                ]
+                                "displayLines": "{[Skill09[1]]}"
                               },
                               "variableName": "_WorldErosionCtl"
                             },
@@ -8440,12 +7858,7 @@ const compositeAbilityObject = {
                                 "target": "{{Irontomb: Part 1}} + {{Irontomb: Part 2}}"
                               },
                               "value": {
-                                "operator": "Variables[0] ({[Skill09[1]]}) || RETURN",
-                                "displayLines": "{[Skill09[1]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[Skill09[1]]}"
-                                ]
+                                "displayLines": "{[Skill09[1]]}"
                               },
                               "variableName": "_WorldErosionCtl"
                             }
@@ -8454,12 +7867,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] ({[Skill09[0]]}) || RETURN",
-                                "displayLines": "{[Skill09[0]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[Skill09[0]]}"
-                                ]
+                                "displayLines": "{[Skill09[0]]}"
                               },
                               "variableName": "_WorldErosionCtl"
                             },
@@ -8470,12 +7878,7 @@ const compositeAbilityObject = {
                                 "target": "{{Irontomb: Part 1}} + {{Irontomb: Part 2}}"
                               },
                               "value": {
-                                "operator": "Variables[0] ({[Skill09[0]]}) || RETURN",
-                                "displayLines": "{[Skill09[0]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[Skill09[0]]}"
-                                ]
+                                "displayLines": "{[Skill09[0]]}"
                               },
                               "variableName": "_WorldErosionCtl"
                             }

@@ -850,48 +850,28 @@ const configAbility = {
                   "name": "Assign Value to Stat",
                   "variableName": "30231_TargetCharacterID01",
                   "value": {
-                    "operator": "Variables[0] (CharacterID_30231_Flag01) || RETURN",
-                    "displayLines": "CharacterID_30231_Flag01",
-                    "constants": [],
-                    "variables": [
-                      "CharacterID_30231_Flag01"
-                    ]
+                    "displayLines": "CharacterID_30231_Flag01"
                   }
                 },
                 {
                   "name": "Assign Value to Stat",
                   "variableName": "30231_TargetCharacterID02",
                   "value": {
-                    "operator": "Variables[0] (CharacterID_30231_Flag02) || RETURN",
-                    "displayLines": "CharacterID_30231_Flag02",
-                    "constants": [],
-                    "variables": [
-                      "CharacterID_30231_Flag02"
-                    ]
+                    "displayLines": "CharacterID_30231_Flag02"
                   }
                 },
                 {
                   "name": "Assign Value to Stat",
                   "variableName": "30231_TargetCharacterID03",
                   "value": {
-                    "operator": "Variables[0] (CharacterID_30231_Flag03) || RETURN",
-                    "displayLines": "CharacterID_30231_Flag03",
-                    "constants": [],
-                    "variables": [
-                      "CharacterID_30231_Flag03"
-                    ]
+                    "displayLines": "CharacterID_30231_Flag03"
                   }
                 },
                 {
                   "name": "Assign Value to Stat",
                   "variableName": "30231_TargetCharacterID04",
                   "value": {
-                    "operator": "Variables[0] (CharacterID_30231_Flag04) || RETURN",
-                    "displayLines": "CharacterID_30231_Flag04",
-                    "constants": [],
-                    "variables": [
-                      "CharacterID_30231_Flag04"
-                    ]
+                    "displayLines": "CharacterID_30231_Flag04"
                   }
                 }
               ]
@@ -957,14 +937,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">BaseDMGMultiplier</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (1) || Variables[0] (MDF_1) || ADD || RETURN",
-                "displayLines": "(1 + MDF_1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_1"
-                ]
+                "displayLines": "(1 + MDF_1)"
               }
             }
           ]
@@ -987,12 +960,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1626881642\">Enemy_W4_IronTombCore_Main_P3_AvatarDamageAdded</a>[<span class=\"descriptionNumberColor\">Chronicled \"Love\"</span>]",
               "valuePerStack": {
                 "MDF_1": {
-                  "operator": "Variables[0] ({[PassiveSkill03[1]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill03[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill03[1]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill03[1]]}"
                 }
               },
               "casterAssign": "TargetSelf"
@@ -1022,12 +990,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1626881642\">Enemy_W4_IronTombCore_Main_P3_AvatarDamageAdded</a>[<span class=\"descriptionNumberColor\">Chronicled \"Love\"</span>]",
                   "valuePerStack": {
                     "MDF_1": {
-                      "operator": "Variables[0] ({[PassiveSkill03[1]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill03[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill03[1]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill03[1]]}"
                     }
                   },
                   "casterAssign": "TargetSelf"
@@ -1053,12 +1016,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[0]]}"
-                ]
+                "displayLines": "{[PassiveSkill03[0]]}"
               }
             },
             {
@@ -1088,12 +1046,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DirtyHPRatio) || RETURN",
-                "displayLines": "MDF_DirtyHPRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_DirtyHPRatio"
-                ]
+                "displayLines": "MDF_DirtyHPRatio"
               }
             }
           ]
@@ -1285,16 +1238,7 @@ const configAbility = {
                   "variableName": "MDF_Layers",
                   "context": "ContextModifier",
                   "value": {
-                    "operator": "Variables[0] (_SPDelta) || INVERT || Variables[1] (_SPMax) || DIV || Constants[0] (100) || MUL || Variables[2] (MDF_SPConvert) || MUL || RETURN",
-                    "displayLines": "(((-_SPDelta / _SPMax) * 100) * MDF_SPConvert)",
-                    "constants": [
-                      100
-                    ],
-                    "variables": [
-                      "_SPDelta",
-                      "_SPMax",
-                      "MDF_SPConvert"
-                    ]
+                    "displayLines": "(((-_SPDelta / _SPMax) * 100) * MDF_SPConvert)"
                   },
                   "max": 100
                 }
@@ -1387,12 +1331,7 @@ const configAbility = {
                         "value1": "_ActionDelayBefore",
                         "compareType": ">",
                         "value2": {
-                          "operator": "Variables[0] (_ActionDelayAfter) || RETURN",
-                          "displayLines": "_ActionDelayAfter",
-                          "constants": [],
-                          "variables": [
-                            "_ActionDelayAfter"
-                          ]
+                          "displayLines": "_ActionDelayAfter"
                         }
                       },
                       {
@@ -1417,17 +1356,7 @@ const configAbility = {
                       "variableName": "MDF_Layers",
                       "context": "ContextModifier",
                       "value": {
-                        "operator": "Variables[0] (_ActionDelayBefore) || Variables[1] (_ActionDelayAfter) || SUB || INVERT || Variables[2] (_ActionDelayBase) || DIV || Constants[0] (100) || MUL || Variables[3] (MDF_ActionDelayConvert) || MUL || RETURN",
-                        "displayLines": "(((-(_ActionDelayBefore - _ActionDelayAfter) / _ActionDelayBase) * 100) * MDF_ActionDelayConvert)",
-                        "constants": [
-                          100
-                        ],
-                        "variables": [
-                          "_ActionDelayBefore",
-                          "_ActionDelayAfter",
-                          "_ActionDelayBase",
-                          "MDF_ActionDelayConvert"
-                        ]
+                        "displayLines": "(((-(_ActionDelayBefore - _ActionDelayAfter) / _ActionDelayBase) * 100) * MDF_ActionDelayConvert)"
                       },
                       "max": 100
                     }
@@ -1598,12 +1527,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_DirtyHPRatio": {
-              "operator": "Variables[0] (MDF_DirtyHPRatio_PerLayer) || RETURN",
-              "displayLines": "MDF_DirtyHPRatio_PerLayer",
-              "constants": [],
-              "variables": [
-                "MDF_DirtyHPRatio_PerLayer"
-              ]
+              "displayLines": "MDF_DirtyHPRatio_PerLayer"
             }
           }
         }
@@ -1644,12 +1568,7 @@ const configAbility = {
             {
               "name": "Stack Skill Point Lock-Out",
               "blockedCount": {
-                "operator": "Variables[0] (FREEVAR) || RETURN",
-                "displayLines": "FREEVAR",
-                "constants": [],
-                "variables": [
-                  "FREEVAR"
-                ]
+                "displayLines": "FREEVAR"
               }
             },
             {
@@ -2303,32 +2222,13 @@ const configAbility = {
             {
               "name": "Set IronTomb Progress",
               "display": {
-                "operator": "Variables[0] (_WorldErosion02) || RETURN",
-                "displayLines": "_WorldErosion02",
-                "constants": [],
-                "variables": [
-                  "_WorldErosion02"
-                ]
+                "displayLines": "_WorldErosion02"
               },
               "warningTheshold": {
-                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Constants[0] (100) || MUL || RETURN",
-                "displayLines": "({[PassiveSkill01[0]]} * 100)",
-                "constants": [
-                  100
-                ],
-                "variables": [
-                  "{[PassiveSkill01[0]]}"
-                ]
+                "displayLines": "({[PassiveSkill01[0]]} * 100)"
               },
               "errorThreshold": {
-                "operator": "Variables[0] ({[PassiveSkill01[1]]}) || Constants[0] (100) || MUL || RETURN",
-                "displayLines": "({[PassiveSkill01[1]]} * 100)",
-                "constants": [
-                  100
-                ],
-                "variables": [
-                  "{[PassiveSkill01[1]]}"
-                ]
+                "displayLines": "({[PassiveSkill01[1]]} * 100)"
               }
             },
             {
@@ -2393,12 +2293,7 @@ const configAbility = {
                 {
                   "name": "Set IronTomb Progress",
                   "display": {
-                    "operator": "Variables[0] (_WorldErosion02) || RETURN",
-                    "displayLines": "_WorldErosion02",
-                    "constants": [],
-                    "variables": [
-                      "_WorldErosion02"
-                    ]
+                    "displayLines": "_WorldErosion02"
                   }
                 },
                 {
@@ -2411,14 +2306,7 @@ const configAbility = {
                         "value1": "_WorldErosion",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] ({[PassiveSkill01[2]]}) || Constants[0] (100) || MUL || RETURN",
-                          "displayLines": "({[PassiveSkill01[2]]} * 100)",
-                          "constants": [
-                            100
-                          ],
-                          "variables": [
-                            "{[PassiveSkill01[2]]}"
-                          ]
+                          "displayLines": "({[PassiveSkill01[2]]} * 100)"
                         }
                       },
                       {
@@ -2473,14 +2361,7 @@ const configAbility = {
                           "valuePerStack": {
                             "MDF_BPMaxCost": 4,
                             "MDF_DirtyHPRatio_PerLayer": {
-                              "operator": "Constants[0] (4) || Variables[0] ({[PassiveSkill01[4]]}) || MUL || RETURN",
-                              "displayLines": "(4 * {[PassiveSkill01[4]]})",
-                              "constants": [
-                                4
-                              ],
-                              "variables": [
-                                "{[PassiveSkill01[4]]}"
-                              ]
+                              "displayLines": "(4 * {[PassiveSkill01[4]]})"
                             }
                           }
                         }
@@ -2508,14 +2389,7 @@ const configAbility = {
                             "value1": "_WorldErosion",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || Constants[0] (100) || MUL || RETURN",
-                              "displayLines": "({[PassiveSkill01[1]]} * 100)",
-                              "constants": [
-                                100
-                              ],
-                              "variables": [
-                                "{[PassiveSkill01[1]]}"
-                              ]
+                              "displayLines": "({[PassiveSkill01[1]]} * 100)"
                             }
                           },
                           {
@@ -2570,14 +2444,7 @@ const configAbility = {
                               "valuePerStack": {
                                 "MDF_BPMaxCost": 2,
                                 "MDF_DirtyHPRatio_PerLayer": {
-                                  "operator": "Constants[0] (2) || Variables[0] ({[PassiveSkill01[4]]}) || MUL || RETURN",
-                                  "displayLines": "(2 * {[PassiveSkill01[4]]})",
-                                  "constants": [
-                                    2
-                                  ],
-                                  "variables": [
-                                    "{[PassiveSkill01[4]]}"
-                                  ]
+                                  "displayLines": "(2 * {[PassiveSkill01[4]]})"
                                 }
                               }
                             }
@@ -2605,14 +2472,7 @@ const configAbility = {
                                 "value1": "_WorldErosion",
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Constants[0] (100) || MUL || RETURN",
-                                  "displayLines": "({[PassiveSkill01[0]]} * 100)",
-                                  "constants": [
-                                    100
-                                  ],
-                                  "variables": [
-                                    "{[PassiveSkill01[0]]}"
-                                  ]
+                                  "displayLines": "({[PassiveSkill01[0]]} * 100)"
                                 }
                               },
                               {
@@ -2701,12 +2561,7 @@ const configAbility = {
                                   "valuePerStack": {
                                     "MDF_BPMaxCost": 1,
                                     "MDF_DirtyHPRatio_PerLayer": {
-                                      "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-                                      "displayLines": "{[PassiveSkill01[4]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[PassiveSkill01[4]]}"
-                                      ]
+                                      "displayLines": "{[PassiveSkill01[4]]}"
                                     }
                                   }
                                 }
@@ -2964,12 +2819,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] ({[Skill08[0]]}) || RETURN",
-                    "displayLines": "{[Skill08[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill08[0]]}"
-                    ]
+                    "displayLines": "{[Skill08[0]]}"
                   },
                   "variableName": "_Skill08_DamagePercentage"
                 }
@@ -2978,12 +2828,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_12299) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_12299",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_12299"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_12299"
                   },
                   "variableName": "_Skill08_DamagePercentage"
                 }
@@ -3353,12 +3198,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[0]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[0]]}"
                     }
                   }
                 }
@@ -3387,12 +3227,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[1]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[1]]}"
                     }
                   }
                 }

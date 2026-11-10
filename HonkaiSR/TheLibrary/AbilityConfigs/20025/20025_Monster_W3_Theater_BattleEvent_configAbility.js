@@ -216,12 +216,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SpeedOverride</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (BE_P1_BESpeed) || RETURN",
-                "displayLines": "BE_P1_BESpeed",
-                "constants": [],
-                "variables": [
-                  "BE_P1_BESpeed"
-                ]
+                "displayLines": "BE_P1_BESpeed"
               }
             },
             {
@@ -232,12 +227,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "multiBase": {
-                "operator": "Variables[0] (BE_P3_InitDelay) || RETURN",
-                "displayLines": "BE_P3_InitDelay",
-                "constants": [],
-                "variables": [
-                  "BE_P3_InitDelay"
-                ]
+                "displayLines": "BE_P3_InitDelay"
               }
             }
           ]

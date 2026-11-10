@@ -1122,14 +1122,7 @@ const configAbility = {
                 {
                   "name": "Deal Toughness DMG",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_9217) || Constants[0] (3) || MUL || RETURN",
-                    "displayLines": "(UnusedUnderThisBase_9217 * 3)",
-                    "constants": [
-                      3
-                    ],
-                    "variables": [
-                      "UnusedUnderThisBase_9217"
-                    ]
+                    "displayLines": "(UnusedUnderThisBase_9217 * 3)"
                   },
                   "attacker": {
                     "name": "Target Name",
@@ -1218,14 +1211,7 @@ const configAbility = {
                     "target": "{{Level Entity}}"
                   },
                   "baseToughnessDMG": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_9217) || Constants[0] (3) || MUL || RETURN",
-                    "displayLines": "(UnusedUnderThisBase_9217 * 3)",
-                    "constants": [
-                      3
-                    ],
-                    "variables": [
-                      "UnusedUnderThisBase_9217"
-                    ]
+                    "displayLines": "(UnusedUnderThisBase_9217 * 3)"
                   },
                   "toughnessForcedReductionPreview": 1,
                   "isForcedReduction": true,

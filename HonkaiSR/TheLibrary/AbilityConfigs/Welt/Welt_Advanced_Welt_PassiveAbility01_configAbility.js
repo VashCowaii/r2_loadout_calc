@@ -21,12 +21,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1725603697\">Welt_Passive01Modifier</a>",
       "valuePerStack": {
         "MDF_LifeTime": {
-          "operator": "Variables[0] (2) || RETURN",
-          "displayLines": "2",
-          "constants": [],
-          "variables": [
-            2
-          ]
+          "displayLines": "2"
         }
       }
     },
@@ -143,13 +138,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Imaginary",
                     "Damage": {
-                      "operator": "Variables[0] (1.5) || Variables[1] (0.4) || MUL || RETURN",
-                      "displayLines": "(1.5 * 0.4)",
-                      "constants": [],
-                      "variables": [
-                        1.5,
-                        0.4
-                      ]
+                      "displayLines": "(1.5 * 0.4)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -179,12 +168,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Imaginary",
                     "Damage": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -205,12 +189,7 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "isFixed": "* ERR"
                     }
@@ -238,53 +217,23 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-37395626\">Advanced_Welt_Weightless</a>[<span class=\"descriptionNumberColor\">Weightless</span>]",
                   "duration": {
-                    "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                    "displayLines": "MDF_LifeTime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_LifeTime"
-                    ]
+                    "displayLines": "MDF_LifeTime"
                   },
                   "valuePerStack": {
                     "MDF_WeightlessTriggerCount": {
-                      "operator": "Variables[0] (8) || RETURN",
-                      "displayLines": "8",
-                      "constants": [],
-                      "variables": [
-                        8
-                      ]
+                      "displayLines": "8"
                     },
                     "MDF_ActionDelayRatio": {
-                      "operator": "Variables[0] (0.04) || RETURN",
-                      "displayLines": "0.04",
-                      "constants": [],
-                      "variables": [
-                        0.04
-                      ]
+                      "displayLines": "0.04"
                     },
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.4) || RETURN",
-                      "displayLines": "0.4",
-                      "constants": [],
-                      "variables": [
-                        0.4
-                      ]
+                      "displayLines": "0.4"
                     },
                     "MDF_AllResDownValue": {
-                      "operator": "Variables[0] (0.3) || RETURN",
-                      "displayLines": "0.3",
-                      "constants": [],
-                      "variables": [
-                        0.3
-                      ]
+                      "displayLines": "0.3"
                     },
                     "MDF_SpeedDownRatio": {
-                      "operator": "Variables[0] (0.05) || RETURN",
-                      "displayLines": "0.05",
-                      "constants": [],
-                      "variables": [
-                        0.05
-                      ]
+                      "displayLines": "0.05"
                     }
                   }
                 }
@@ -370,12 +319,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Variables[0] (0.12) || RETURN",
-            "displayLines": "0.12",
-            "constants": [],
-            "variables": [
-              0.12
-            ]
+            "displayLines": "0.12"
           }
         }
       }
@@ -419,12 +363,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Variables[0] (0.12) || RETURN",
-            "displayLines": "0.12",
-            "constants": [],
-            "variables": [
-              0.12
-            ]
+            "displayLines": "0.12"
           }
         }
       }

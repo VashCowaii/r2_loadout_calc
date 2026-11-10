@@ -74,14 +74,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_PersistLoseHP) || Variables[1] (MDF_MaxHP) || Variables[2] (MDF_LoseHPRatio) || MUL || ADD || RETURN",
-                    "displayLines": "(MDF_PersistLoseHP + (MDF_MaxHP * MDF_LoseHPRatio))",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PersistLoseHP",
-                      "MDF_MaxHP",
-                      "MDF_LoseHPRatio"
-                    ]
+                    "displayLines": "(MDF_PersistLoseHP + (MDF_MaxHP * MDF_LoseHPRatio))"
                   },
                   "variableName": "MDF_PersistLoseHP"
                 },
@@ -94,12 +87,7 @@ const configAbility = {
                   "modifierName": "<a class=\"gModGreen\" id=\"429916549\">Enemy_W4_FireProwler_PersistLoseHPPreShow</a>",
                   "variableName": "MDF_PersistLoseHP",
                   "value": {
-                    "operator": "Variables[0] (MDF_PersistLoseHP) || RETURN",
-                    "displayLines": "MDF_PersistLoseHP",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PersistLoseHP"
-                    ]
+                    "displayLines": "MDF_PersistLoseHP"
                   }
                 },
                 {
@@ -111,12 +99,7 @@ const configAbility = {
                   },
                   "previewType": "Persisting HP Loss",
                   "previewValue": {
-                    "operator": "Variables[0] (MDF_PersistLoseHP) || INVERT || RETURN",
-                    "displayLines": "-MDF_PersistLoseHP",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PersistLoseHP"
-                    ]
+                    "displayLines": "-MDF_PersistLoseHP"
                   }
                 },
                 {
@@ -128,12 +111,7 @@ const configAbility = {
                   },
                   "previewType": "Persisting HP Loss",
                   "previewValue": {
-                    "operator": "Variables[0] (MDF_PersistLoseHP) || INVERT || RETURN",
-                    "displayLines": "-MDF_PersistLoseHP",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PersistLoseHP"
-                    ]
+                    "displayLines": "-MDF_PersistLoseHP"
                   }
                 },
                 {
@@ -144,12 +122,7 @@ const configAbility = {
                     "target": "{{Caster's Summoner}}"
                   },
                   "consumePercent": {
-                    "operator": "Variables[0] (MDF_LoseHPRatio) || RETURN",
-                    "displayLines": "MDF_LoseHPRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_LoseHPRatio"
-                    ]
+                    "displayLines": "MDF_LoseHPRatio"
                   },
                   "attackType": "Unknown",
                   "DamageType": "Physical"
@@ -456,12 +429,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_Speed) || RETURN",
-                "displayLines": "MDF_Speed",
-                "constants": [],
-                "variables": [
-                  "MDF_Speed"
-                ]
+                "displayLines": "MDF_Speed"
               }
             },
             {
@@ -798,12 +766,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeResistance) || RETURN",
-                "displayLines": "MDF_AllDamageTypeResistance",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeResistance"
-                ]
+                "displayLines": "MDF_AllDamageTypeResistance"
               }
             }
           ]
@@ -855,12 +818,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_Speed) || RETURN",
-                "displayLines": "MDF_Speed",
-                "constants": [],
-                "variables": [
-                  "MDF_Speed"
-                ]
+                "displayLines": "MDF_Speed"
               }
             },
             {
@@ -1007,13 +965,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyValue * _Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "_Layer"
-                ]
+                "displayLines": "(MDF_PropertyValue * _Layer)"
               }
             }
           ]
@@ -1164,12 +1116,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1209794480\">Enemy_W4_FireProwler_01_IF_Bonus_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12030) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_12030",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_12030"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_12030"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -1214,14 +1161,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (UnusedUnderThisBase_12037) || SUB || RETURN",
-                "displayLines": "(0 - UnusedUnderThisBase_12037)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "UnusedUnderThisBase_12037"
-                ]
+                "displayLines": "(0 - UnusedUnderThisBase_12037)"
               }
             },
             {
@@ -1232,12 +1172,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "multiBase": {
-                "operator": "Variables[0] (UnusedUnderThisBase_12036) || RETURN",
-                "displayLines": "UnusedUnderThisBase_12036",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_12036"
-                ]
+                "displayLines": "UnusedUnderThisBase_12036"
               }
             }
           ]
@@ -1294,12 +1229,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "consumePercent": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_12040) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_12040",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_12040"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_12040"
                   },
                   "consumeFloor": 1,
                   "attackType": "Unknown",
@@ -1376,14 +1306,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_SummonCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(MDF_SummonCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_SummonCount"
-                    ]
+                    "displayLines": "(MDF_SummonCount + 1)"
                   },
                   "variableName": "MDF_SummonCount"
                 },
@@ -1460,12 +1383,7 @@ const configAbility = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (MDF_Count) || RETURN",
-                        "displayLines": "MDF_Count",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Count"
-                        ]
+                        "displayLines": "MDF_Count"
                       },
                       "caseEvents": [
                         {
@@ -1475,12 +1393,7 @@ const configAbility = {
                             {
                               "name": "Update Displayed Energy Bar",
                               "value": {
-                                "operator": "Variables[0] (MDF_Count) || RETURN",
-                                "displayLines": "MDF_Count",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_Count"
-                                ]
+                                "displayLines": "MDF_Count"
                               },
                               "entityClass": "Enemy",
                               "target": {
@@ -1488,12 +1401,7 @@ const configAbility = {
                                 "target": "{{Modifier Holder}}"
                               },
                               "maximum": {
-                                "operator": "Variables[0] (MDF_Count) || RETURN",
-                                "displayLines": "MDF_Count",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_Count"
-                                ]
+                                "displayLines": "MDF_Count"
                               },
                               "assignState": "True",
                               "barType": "FireProwler",
@@ -1508,12 +1416,7 @@ const configAbility = {
                             {
                               "name": "Update Displayed Energy Bar",
                               "value": {
-                                "operator": "Variables[0] (MDF_Count) || RETURN",
-                                "displayLines": "MDF_Count",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_Count"
-                                ]
+                                "displayLines": "MDF_Count"
                               },
                               "entityClass": "Enemy",
                               "target": {
@@ -1521,12 +1424,7 @@ const configAbility = {
                                 "target": "{{Modifier Holder}}"
                               },
                               "maximum": {
-                                "operator": "Variables[0] (MDF_Count) || RETURN",
-                                "displayLines": "MDF_Count",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_Count"
-                                ]
+                                "displayLines": "MDF_Count"
                               },
                               "assignState": "True",
                               "barType": "FireProwler",
@@ -1541,12 +1439,7 @@ const configAbility = {
                             {
                               "name": "Update Displayed Energy Bar",
                               "value": {
-                                "operator": "Variables[0] (MDF_Count) || RETURN",
-                                "displayLines": "MDF_Count",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_Count"
-                                ]
+                                "displayLines": "MDF_Count"
                               },
                               "entityClass": "Enemy",
                               "target": {
@@ -1554,12 +1447,7 @@ const configAbility = {
                                 "target": "{{Modifier Holder}}"
                               },
                               "maximum": {
-                                "operator": "Variables[0] (MDF_Count) || RETURN",
-                                "displayLines": "MDF_Count",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_Count"
-                                ]
+                                "displayLines": "MDF_Count"
                               },
                               "assignState": "True",
                               "barType": "FireProwler",
@@ -1574,12 +1462,7 @@ const configAbility = {
                             {
                               "name": "Update Displayed Energy Bar",
                               "value": {
-                                "operator": "Variables[0] (MDF_Count) || RETURN",
-                                "displayLines": "MDF_Count",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_Count"
-                                ]
+                                "displayLines": "MDF_Count"
                               },
                               "entityClass": "Enemy",
                               "target": {
@@ -1587,12 +1470,7 @@ const configAbility = {
                                 "target": "{{Modifier Holder}}"
                               },
                               "maximum": {
-                                "operator": "Variables[0] (MDF_Count) || RETURN",
-                                "displayLines": "MDF_Count",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_Count"
-                                ]
+                                "displayLines": "MDF_Count"
                               },
                               "assignState": "True",
                               "barType": "FireProwler",
@@ -1607,12 +1485,7 @@ const configAbility = {
                             {
                               "name": "Update Displayed Energy Bar",
                               "value": {
-                                "operator": "Variables[0] (MDF_Count) || RETURN",
-                                "displayLines": "MDF_Count",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_Count"
-                                ]
+                                "displayLines": "MDF_Count"
                               },
                               "entityClass": "Enemy",
                               "target": {
@@ -1620,12 +1493,7 @@ const configAbility = {
                                 "target": "{{Modifier Holder}}"
                               },
                               "maximum": {
-                                "operator": "Variables[0] (MDF_Count) || RETURN",
-                                "displayLines": "MDF_Count",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_Count"
-                                ]
+                                "displayLines": "MDF_Count"
                               },
                               "assignState": "True",
                               "barType": "FireProwler",
@@ -1638,12 +1506,7 @@ const configAbility = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (MDF_Count) || RETURN",
-                            "displayLines": "MDF_Count",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Count"
-                            ]
+                            "displayLines": "MDF_Count"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -1651,12 +1514,7 @@ const configAbility = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (MDF_Count) || RETURN",
-                            "displayLines": "MDF_Count",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Count"
-                            ]
+                            "displayLines": "MDF_Count"
                           },
                           "assignState": "True",
                           "barType": "FireProwler",
@@ -1695,12 +1553,7 @@ const configAbility = {
                             {
                               "name": "Update Displayed Energy Bar",
                               "value": {
-                                "operator": "Variables[0] (MDF_Count) || RETURN",
-                                "displayLines": "MDF_Count",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_Count"
-                                ]
+                                "displayLines": "MDF_Count"
                               },
                               "entityClass": "Enemy",
                               "target": {
@@ -1708,12 +1561,7 @@ const configAbility = {
                                 "target": "{{Modifier Holder}}"
                               },
                               "maximum": {
-                                "operator": "Variables[0] (MDF_Count) || RETURN",
-                                "displayLines": "MDF_Count",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_Count"
-                                ]
+                                "displayLines": "MDF_Count"
                               },
                               "assignState": "True",
                               "barType": "FireProwler",
@@ -1737,12 +1585,7 @@ const configAbility = {
                                 {
                                   "name": "Update Displayed Energy Bar",
                                   "value": {
-                                    "operator": "Variables[0] (MDF_Count) || RETURN",
-                                    "displayLines": "MDF_Count",
-                                    "constants": [],
-                                    "variables": [
-                                      "MDF_Count"
-                                    ]
+                                    "displayLines": "MDF_Count"
                                   },
                                   "entityClass": "Enemy",
                                   "target": {
@@ -1750,12 +1593,7 @@ const configAbility = {
                                     "target": "{{Modifier Holder}}"
                                   },
                                   "maximum": {
-                                    "operator": "Variables[0] (MDF_Count) || RETURN",
-                                    "displayLines": "MDF_Count",
-                                    "constants": [],
-                                    "variables": [
-                                      "MDF_Count"
-                                    ]
+                                    "displayLines": "MDF_Count"
                                   },
                                   "assignState": "True",
                                   "barType": "FireProwler",
@@ -1766,12 +1604,7 @@ const configAbility = {
                                 {
                                   "name": "Update Displayed Energy Bar",
                                   "value": {
-                                    "operator": "Variables[0] (MDF_Count) || RETURN",
-                                    "displayLines": "MDF_Count",
-                                    "constants": [],
-                                    "variables": [
-                                      "MDF_Count"
-                                    ]
+                                    "displayLines": "MDF_Count"
                                   },
                                   "entityClass": "Enemy",
                                   "target": {
@@ -1779,12 +1612,7 @@ const configAbility = {
                                     "target": "{{Modifier Holder}}"
                                   },
                                   "maximum": {
-                                    "operator": "Variables[0] (MDF_Count) || RETURN",
-                                    "displayLines": "MDF_Count",
-                                    "constants": [],
-                                    "variables": [
-                                      "MDF_Count"
-                                    ]
+                                    "displayLines": "MDF_Count"
                                   },
                                   "assignState": "True",
                                   "barType": "FireProwler",
@@ -1890,12 +1718,7 @@ const configAbility = {
                 {
                   "name": "Deal Toughness DMG",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentStance) || RETURN",
-                    "displayLines": "MDF_CurrentStance",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentStance"
-                    ]
+                    "displayLines": "MDF_CurrentStance"
                   },
                   "attacker": {
                     "name": "Target Name",
@@ -1926,12 +1749,7 @@ const configAbility = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (SummonIndex) || RETURN",
-                "displayLines": "SummonIndex",
-                "constants": [],
-                "variables": [
-                  "SummonIndex"
-                ]
+                "displayLines": "SummonIndex"
               },
               "caseEvents": [
                 {
@@ -2785,16 +2603,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (_CurrentStance) || Variables[1] (_MaxStance) || Variables[2] (_StanceCount) || Constants[0] (1) || SUB || MUL || ADD || RETURN",
-                "displayLines": "(_CurrentStance + (_MaxStance * (_StanceCount - 1)))",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_CurrentStance",
-                  "_MaxStance",
-                  "_StanceCount"
-                ]
+                "displayLines": "(_CurrentStance + (_MaxStance * (_StanceCount - 1)))"
               },
               "variableName": "LMMaxValue"
             },
@@ -2805,16 +2614,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (_CurrentStance) || Variables[1] (_MaxStance) || Variables[2] (_StanceCount) || Constants[0] (1) || SUB || MUL || ADD || RETURN",
-                "displayLines": "(_CurrentStance + (_MaxStance * (_StanceCount - 1)))",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_CurrentStance",
-                  "_MaxStance",
-                  "_StanceCount"
-                ]
+                "displayLines": "(_CurrentStance + (_MaxStance * (_StanceCount - 1)))"
               },
               "variableName": "LMCurrentValue"
             },
@@ -2853,12 +2653,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1049811080\">Enemy_W4_FireProwler_IF_TimePowerListener</a>",
               "valuePerStack": {
                 "MDF_MaxCount": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_12009) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_12009",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_12009"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_12009"
                 }
               }
             }
@@ -2929,12 +2724,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                "displayLines": "MDF_SpeedAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedAddedRatio"
-                ]
+                "displayLines": "MDF_SpeedAddedRatio"
               }
             },
             {
@@ -2945,12 +2735,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
-                "displayLines": "MDF_AttackAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackAddedRatio"
-                ]
+                "displayLines": "MDF_AttackAddedRatio"
               }
             }
           ]
@@ -3013,12 +2798,7 @@ const configAbility = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (MDF_LM_DamageStanceValue) || RETURN",
-                        "displayLines": "MDF_LM_DamageStanceValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_LM_DamageStanceValue"
-                        ]
+                        "displayLines": "MDF_LM_DamageStanceValue"
                       },
                       "attacker": {
                         "name": "Target Name",
@@ -3102,16 +2882,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (_CurrentStance) || Variables[1] (_MaxStance) || Variables[2] (_StanceCount) || Constants[0] (1) || SUB || MUL || ADD || RETURN",
-                "displayLines": "(_CurrentStance + (_MaxStance * (_StanceCount - 1)))",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_CurrentStance",
-                  "_MaxStance",
-                  "_StanceCount"
-                ]
+                "displayLines": "(_CurrentStance + (_MaxStance * (_StanceCount - 1)))"
               },
               "variableName": "LMCurrentValue"
             },
@@ -3123,13 +2894,7 @@ const configAbility = {
               },
               "scope": "TargetEntity",
               "value": {
-                "operator": "Variables[0] (LMCurrentValue) || Variables[1] (LMMaxValue) || DIV || RETURN",
-                "displayLines": "(LMCurrentValue / LMMaxValue)",
-                "constants": [],
-                "variables": [
-                  "LMCurrentValue",
-                  "LMMaxValue"
-                ]
+                "displayLines": "(LMCurrentValue / LMMaxValue)"
               },
               "variableName": "LMRatio"
             }

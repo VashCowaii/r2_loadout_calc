@@ -113,14 +113,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (DeathCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(DeathCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "DeathCount"
-                        ]
+                        "displayLines": "(DeathCount + 1)"
                       },
                       "variableName": "DeathCount"
                     },
@@ -136,15 +129,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Constants[0] (1) || Variables[0] (MonsterCount) || DIV || Constants[1] (0.0009999999) || ADD || RETURN",
-                        "displayLines": "((1 / MonsterCount) + 0.0009999999)",
-                        "constants": [
-                          1,
-                          0.0009999999
-                        ],
-                        "variables": [
-                          "MonsterCount"
-                        ]
+                        "displayLines": "((1 / MonsterCount) + 0.0009999999)"
                       },
                       "variableName": "ADF_HPDamageRatioValue"
                     },
@@ -164,14 +149,7 @@ const compositeAbilityObject = {
                         "value1": "ADF_CurrentHPValue",
                         "compareType": "<=",
                         "value2": {
-                          "operator": "Variables[0] (ADF_MaxHPValue) || Variables[1] (ADF_HPDamageRatioValue) || MUL || Variables[2] (DeathCount) || MUL || RETURN",
-                          "displayLines": "((ADF_MaxHPValue * ADF_HPDamageRatioValue) * DeathCount)",
-                          "constants": [],
-                          "variables": [
-                            "ADF_MaxHPValue",
-                            "ADF_HPDamageRatioValue",
-                            "DeathCount"
-                          ]
+                          "displayLines": "((ADF_MaxHPValue * ADF_HPDamageRatioValue) * DeathCount)"
                         }
                       },
                       "passed": [
@@ -237,14 +215,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (AchievementCount) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(AchievementCount + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "AchievementCount"
-                            ]
+                            "displayLines": "(AchievementCount + 1)"
                           },
                           "variableName": "AchievementCount"
                         }
@@ -769,13 +740,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_Speed) || Variables[1] (MDF_CurrentSpeed) || SUB || RETURN",
-                    "displayLines": "(MDF_Speed - MDF_CurrentSpeed)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Speed",
-                      "MDF_CurrentSpeed"
-                    ]
+                    "displayLines": "(MDF_Speed - MDF_CurrentSpeed)"
                   }
                 }
               ]
@@ -1318,12 +1283,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageTakenUpRatio) || RETURN",
-                    "displayLines": "MDF_DamageTakenUpRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageTakenUpRatio"
-                    ]
+                    "displayLines": "MDF_DamageTakenUpRatio"
                   }
                 }
               ]
@@ -1340,22 +1300,12 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
                   "duration": 1,
                   "baseChance": {
-                    "operator": "Variables[0] (MDF_ConfineChance) || RETURN",
-                    "displayLines": "MDF_ConfineChance",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ConfineChance"
-                    ]
+                    "displayLines": "MDF_ConfineChance"
                   },
                   "immediateEffect": true,
                   "valuePerStack": {
                     "MDF_ActionDelayRatio": {
-                      "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-                      "displayLines": "{[Skill03[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill03[2]]}"
-                      ]
+                      "displayLines": "{[Skill03[2]]}"
                     }
                   }
                 }
@@ -1388,12 +1338,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageTakenUpRatio) || RETURN",
-                    "displayLines": "MDF_DamageTakenUpRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageTakenUpRatio"
-                    ]
+                    "displayLines": "MDF_DamageTakenUpRatio"
                   }
                 }
               ]
@@ -1807,14 +1752,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1169900751\">Monster_W4_Hearse_SetSpeed</a>",
                       "valuePerStack": {
                         "MDF_Speed": {
-                          "operator": "Variables[0] (MDF_Speed) || Constants[0] (0) || MUL || RETURN",
-                          "displayLines": "(MDF_Speed * 0)",
-                          "constants": [
-                            0
-                          ],
-                          "variables": [
-                            "MDF_Speed"
-                          ]
+                          "displayLines": "(MDF_Speed * 0)"
                         }
                       }
                     },
@@ -2120,12 +2058,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1774231954\">Monster_W4_HearsePart_Soul</a>[<span class=\"descriptionNumberColor\">Conquer</span>]",
                       "valuePerStack": {
                         "MDF_DamageTakenUpRatio": {
-                          "operator": "Variables[0] (MDF_DamageTakenUpRatio) || RETURN",
-                          "displayLines": "MDF_DamageTakenUpRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageTakenUpRatio"
-                          ]
+                          "displayLines": "MDF_DamageTakenUpRatio"
                         }
                       },
                       "casterAssign": "CasterSelf"
@@ -2141,12 +2074,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"323182003\">Monster_W4_HearsePart_Soul_B</a>[<span class=\"descriptionNumberColor\">Conquer</span>]",
                       "valuePerStack": {
                         "MDF_DamageTakenUpRatio": {
-                          "operator": "Variables[0] (MDF_DamageTakenUpRatio) || RETURN",
-                          "displayLines": "MDF_DamageTakenUpRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageTakenUpRatio"
-                          ]
+                          "displayLines": "MDF_DamageTakenUpRatio"
                         }
                       },
                       "casterAssign": "CasterSelf"
@@ -2268,27 +2196,14 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Constants[0] (1) || Variables[0] (MonsterCount) || DIV || Constants[1] (0.000010000076) || ADD || RETURN",
-            "displayLines": "((1 / MonsterCount) + 0.000010000076)",
-            "constants": [
-              1,
-              0.000010000076
-            ],
-            "variables": [
-              "MonsterCount"
-            ]
+            "displayLines": "((1 / MonsterCount) + 0.000010000076)"
           },
           "variableName": "ADF_HPDamageRatioValue"
         },
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (DeathCount) || RETURN",
-            "displayLines": "DeathCount",
-            "constants": [],
-            "variables": [
-              "DeathCount"
-            ]
+            "displayLines": "DeathCount"
           },
           "execute": [
             {
@@ -2307,13 +2222,7 @@ const compositeAbilityObject = {
                 "value1": "ADF_CurrentHPValue",
                 "compareType": "<=",
                 "value2": {
-                  "operator": "Variables[0] (ADF_MaxHPValue) || Variables[1] (ADF_HPDamageRatioValue) || MUL || RETURN",
-                  "displayLines": "(ADF_MaxHPValue * ADF_HPDamageRatioValue)",
-                  "constants": [],
-                  "variables": [
-                    "ADF_MaxHPValue",
-                    "ADF_HPDamageRatioValue"
-                  ]
+                  "displayLines": "(ADF_MaxHPValue * ADF_HPDamageRatioValue)"
                 }
               },
               "passed": [
@@ -2334,12 +2243,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "consumePercent": {
-                    "operator": "Variables[0] (ADF_HPDamageRatioValue) || RETURN",
-                    "displayLines": "ADF_HPDamageRatioValue",
-                    "constants": [],
-                    "variables": [
-                      "ADF_HPDamageRatioValue"
-                    ]
+                    "displayLines": "ADF_HPDamageRatioValue"
                   }
                 },
                 {
@@ -2641,14 +2545,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"1169900751\">Monster_W4_Hearse_SetSpeed</a>",
               "valuePerStack": {
                 "MDF_Speed": {
-                  "operator": "Variables[0] (Nikadory_Speed) || Constants[0] (0) || MUL || RETURN",
-                  "displayLines": "(Nikadory_Speed * 0)",
-                  "constants": [
-                    0
-                  ],
-                  "variables": [
-                    "Nikadory_Speed"
-                  ]
+                  "displayLines": "(Nikadory_Speed * 0)"
                 }
               }
             },
@@ -3410,12 +3307,7 @@ const compositeAbilityObject = {
                     "value1": "MDF_WaveIndex",
                     "compareType": "NOT=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_WaveIndex2) || RETURN",
-                      "displayLines": "MDF_WaveIndex2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_WaveIndex2"
-                      ]
+                      "displayLines": "MDF_WaveIndex2"
                     }
                   },
                   "passed": [
@@ -3915,14 +3807,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Skill04Count) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(Skill04Count + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "Skill04Count"
-                ]
+                "displayLines": "(Skill04Count + 1)"
               },
               "variableName": "Skill04Count"
             },
@@ -3955,12 +3840,7 @@ const compositeAbilityObject = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (Skill04Count) || RETURN",
-                "displayLines": "Skill04Count",
-                "constants": [],
-                "variables": [
-                  "Skill04Count"
-                ]
+                "displayLines": "Skill04Count"
               },
               "execute": [
                 {
@@ -4320,17 +4200,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] ({[Skill03[0]]}) || Variables[1] ({[Skill03[3]]}) || Constants[0] (4) || Variables[2] (Skill03Count) || SUB || MUL || SUB || Variables[3] ({[Skill03[4]]}) || ADD || RETURN",
-                "displayLines": "(({[Skill03[0]]} - ({[Skill03[3]]} * (4 - Skill03Count))) + {[Skill03[4]]})",
-                "constants": [
-                  4
-                ],
-                "variables": [
-                  "{[Skill03[0]]}",
-                  "{[Skill03[3]]}",
-                  "Skill03Count",
-                  "{[Skill03[4]]}"
-                ]
+                "displayLines": "(({[Skill03[0]]} - ({[Skill03[3]]} * (4 - Skill03Count))) + {[Skill03[4]]})"
               },
               "variableName": "Skill03Damage"
             }
@@ -4339,16 +4209,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] ({[Skill03[0]]}) || Variables[1] ({[Skill03[3]]}) || Constants[0] (4) || Variables[2] (Skill03Count) || SUB || MUL || SUB || RETURN",
-                "displayLines": "({[Skill03[0]]} - ({[Skill03[3]]} * (4 - Skill03Count)))",
-                "constants": [
-                  4
-                ],
-                "variables": [
-                  "{[Skill03[0]]}",
-                  "{[Skill03[3]]}",
-                  "Skill03Count"
-                ]
+                "displayLines": "({[Skill03[0]]} - ({[Skill03[3]]} * (4 - Skill03Count)))"
               },
               "variableName": "Skill03Damage"
             }
@@ -4379,15 +4240,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "DamageFlat": {
-                  "operator": "Constants[0] (0.1) || Variables[0] (MaxHPValue) || MUL || Variables[1] (Skill03Damage) || MUL || RETURN",
-                  "displayLines": "((0.1 * MaxHPValue) * Skill03Damage)",
-                  "constants": [
-                    0.1
-                  ],
-                  "variables": [
-                    "MaxHPValue",
-                    "Skill03Damage"
-                  ]
+                  "displayLines": "((0.1 * MaxHPValue) * Skill03Damage)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -4422,15 +4275,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "DamageFlat": {
-                  "operator": "Constants[0] (0.1) || Variables[0] (MaxHPValue) || MUL || Variables[1] (Skill03Damage) || MUL || RETURN",
-                  "displayLines": "((0.1 * MaxHPValue) * Skill03Damage)",
-                  "constants": [
-                    0.1
-                  ],
-                  "variables": [
-                    "MaxHPValue",
-                    "Skill03Damage"
-                  ]
+                  "displayLines": "((0.1 * MaxHPValue) * Skill03Damage)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -4465,15 +4310,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "DamageFlat": {
-                  "operator": "Constants[0] (0.1) || Variables[0] (MaxHPValue) || MUL || Variables[1] (Skill03Damage) || MUL || RETURN",
-                  "displayLines": "((0.1 * MaxHPValue) * Skill03Damage)",
-                  "constants": [
-                    0.1
-                  ],
-                  "variables": [
-                    "MaxHPValue",
-                    "Skill03Damage"
-                  ]
+                  "displayLines": "((0.1 * MaxHPValue) * Skill03Damage)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -4508,15 +4345,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "DamageFlat": {
-                  "operator": "Constants[0] (0.7) || Variables[0] (MaxHPValue) || MUL || Variables[1] (Skill03Damage) || MUL || RETURN",
-                  "displayLines": "((0.7 * MaxHPValue) * Skill03Damage)",
-                  "constants": [
-                    0.7
-                  ],
-                  "variables": [
-                    "MaxHPValue",
-                    "Skill03Damage"
-                  ]
+                  "displayLines": "((0.7 * MaxHPValue) * Skill03Damage)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -4536,22 +4365,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
           "duration": 1,
           "baseChance": {
-            "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-            "displayLines": "{[Skill03[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[1]]}"
-            ]
+            "displayLines": "{[Skill03[1]]}"
           },
           "immediateEffect": true,
           "valuePerStack": {
             "MDF_ActionDelayRatio": {
-              "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-              "displayLines": "{[Skill03[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[2]]}"
-              ]
+              "displayLines": "{[Skill03[2]]}"
             }
           }
         },
@@ -4717,15 +4536,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CurrentBlackBloodValue) || Variables[1] (CurrentRemainBlackBloodValue) || SUB || Variables[2] ({[Skill01[2]]}) || MUL || Variables[1] (CurrentRemainBlackBloodValue) || ADD || Variables[3] (CurrentEnhanceBlackBloodValue) || SUB || RETURN",
-                    "displayLines": "((((CurrentBlackBloodValue - CurrentRemainBlackBloodValue) * {[Skill01[2]]}) + CurrentRemainBlackBloodValue) - CurrentEnhanceBlackBloodValue)",
-                    "constants": [],
-                    "variables": [
-                      "CurrentBlackBloodValue",
-                      "CurrentRemainBlackBloodValue",
-                      "{[Skill01[2]]}",
-                      "CurrentEnhanceBlackBloodValue"
-                    ]
+                    "displayLines": "((((CurrentBlackBloodValue - CurrentRemainBlackBloodValue) * {[Skill01[2]]}) + CurrentRemainBlackBloodValue) - CurrentEnhanceBlackBloodValue)"
                   },
                   "variableName": "CurrentBlackBloodValue"
                 },
@@ -4736,24 +4547,14 @@ const compositeAbilityObject = {
                     "value1": "CurrentBlackBloodValue",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                      "displayLines": "{[Skill01[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[1]]}"
-                      ]
+                      "displayLines": "{[Skill01[1]]}"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                        "displayLines": "{[Skill01[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill01[1]]}"
-                        ]
+                        "displayLines": "{[Skill01[1]]}"
                       },
                       "variableName": "CurrentBlackBloodValue"
                     }
@@ -4768,12 +4569,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"241895029\">Monster_W4_HearsePart_BlackBlood_Enhance</a>[<span class=\"descriptionNumberColor\">Conquered Eon</span>]",
                   "valuePerStack": {
                     "MDF_DirtyHPRatio": {
-                      "operator": "Variables[0] (CurrentBlackBloodValue) || RETURN",
-                      "displayLines": "CurrentBlackBloodValue",
-                      "constants": [],
-                      "variables": [
-                        "CurrentBlackBloodValue"
-                      ]
+                      "displayLines": "CurrentBlackBloodValue"
                     }
                   }
                 }
@@ -4919,20 +4715,10 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"1871536192\">Monster_W4_Hearse_Sign_Enhance</a>[<span class=\"descriptionNumberColor\">Drowning in Terror</span>]",
               "valuePerStack": {
                 "MDF_DamageTakenUpRatio": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
+                  "displayLines": "{[Skill02[0]]}"
                 },
                 "MDF_ConfineChance": {
-                  "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                  "displayLines": "{[Skill02[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[1]]}"
-                  ]
+                  "displayLines": "{[Skill02[1]]}"
                 }
               }
             }
@@ -4947,12 +4733,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"770051597\">Monster_W4_Hearse_Sign</a>[<span class=\"descriptionNumberColor\">Strife-Granted Fear</span>]",
               "valuePerStack": {
                 "MDF_DamageTakenUpRatio": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
+                  "displayLines": "{[Skill02[0]]}"
                 }
               }
             }
@@ -5170,15 +4951,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CurrentBlackBloodValue) || Variables[1] (CurrentRemainBlackBloodValue) || SUB || Variables[2] ({[Skill01[2]]}) || MUL || Variables[1] (CurrentRemainBlackBloodValue) || ADD || Variables[3] (CurrentEnhanceBlackBloodValue) || SUB || RETURN",
-                    "displayLines": "((((CurrentBlackBloodValue - CurrentRemainBlackBloodValue) * {[Skill01[2]]}) + CurrentRemainBlackBloodValue) - CurrentEnhanceBlackBloodValue)",
-                    "constants": [],
-                    "variables": [
-                      "CurrentBlackBloodValue",
-                      "CurrentRemainBlackBloodValue",
-                      "{[Skill01[2]]}",
-                      "CurrentEnhanceBlackBloodValue"
-                    ]
+                    "displayLines": "((((CurrentBlackBloodValue - CurrentRemainBlackBloodValue) * {[Skill01[2]]}) + CurrentRemainBlackBloodValue) - CurrentEnhanceBlackBloodValue)"
                   },
                   "variableName": "CurrentBlackBloodValue"
                 },
@@ -5189,24 +4962,14 @@ const compositeAbilityObject = {
                     "value1": "CurrentBlackBloodValue",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                      "displayLines": "{[Skill01[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[1]]}"
-                      ]
+                      "displayLines": "{[Skill01[1]]}"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                        "displayLines": "{[Skill01[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill01[1]]}"
-                        ]
+                        "displayLines": "{[Skill01[1]]}"
                       },
                       "variableName": "CurrentBlackBloodValue"
                     }
@@ -5221,12 +4984,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"241895029\">Monster_W4_HearsePart_BlackBlood_Enhance</a>[<span class=\"descriptionNumberColor\">Conquered Eon</span>]",
                   "valuePerStack": {
                     "MDF_DirtyHPRatio": {
-                      "operator": "Variables[0] (CurrentBlackBloodValue) || RETURN",
-                      "displayLines": "CurrentBlackBloodValue",
-                      "constants": [],
-                      "variables": [
-                        "CurrentBlackBloodValue"
-                      ]
+                      "displayLines": "CurrentBlackBloodValue"
                     }
                   }
                 }
@@ -5713,12 +5471,7 @@ const compositeAbilityObject = {
                 "target": "{{Parameter Target}}"
               },
               "value": {
-                "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                "displayLines": "{[Skill01[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[0]]}"
-                ]
+                "displayLines": "{[Skill01[0]]}"
               },
               "variableName": "SoulHPRatio"
             },
@@ -5816,12 +5569,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1382334396\">Monster_W4_HearsePart_BlackBlood</a>[<span class=\"descriptionNumberColor\">Conquered</span>]",
           "valuePerStack": {
             "MDF_DirtyHPRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             }
           }
         },

@@ -102,12 +102,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (HPScore) || RETURN",
-                    "displayLines": "HPScore",
-                    "constants": [],
-                    "variables": [
-                      "HPScore"
-                    ]
+                    "displayLines": "HPScore"
                   },
                   "variableName": "RemainingScore"
                 },
@@ -150,12 +145,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (HPScore) || RETURN",
-                        "displayLines": "HPScore",
-                        "constants": [],
-                        "variables": [
-                          "HPScore"
-                        ]
+                        "displayLines": "HPScore"
                       },
                       "variableName": "RemainingScore"
                     },
@@ -186,14 +176,7 @@ const configAbility = {
               "variableName": "ScoreModifyValue",
               "eventType": "BattleScoreChange",
               "value": {
-                "operator": "Variables[0] (WHOLE) || Variables[1] (KillScore) || Variables[2] (StageConst) || MUL || PARAM_1 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((KillScore * StageConst))",
-                "constants": [],
-                "variables": [
-                  "WHOLE",
-                  "KillScore",
-                  "StageConst"
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((KillScore * StageConst))"
               }
             }
           ]
@@ -221,15 +204,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CEIL) || Variables[1] (CurrentHPPercentage) || Constants[0] (400) || MUL || PARAM_1 || FUNCTION || Constants[0] (400) || DIV || RETURN",
-                    "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>((CurrentHPPercentage * 400)) / 400)",
-                    "constants": [
-                      400
-                    ],
-                    "variables": [
-                      "CEIL",
-                      "CurrentHPPercentage"
-                    ]
+                    "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>((CurrentHPPercentage * 400)) / 400)"
                   },
                   "variableName": "CurrentHPPercentage"
                 },
@@ -260,13 +235,7 @@ const configAbility = {
                     "value1": "RemainingScore",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (CurrentHPPercentage) || Variables[1] (HPScore) || MUL || RETURN",
-                      "displayLines": "(CurrentHPPercentage * HPScore)",
-                      "constants": [],
-                      "variables": [
-                        "CurrentHPPercentage",
-                        "HPScore"
-                      ]
+                      "displayLines": "(CurrentHPPercentage * HPScore)"
                     }
                   },
                   "passed": [
@@ -279,16 +248,7 @@ const configAbility = {
                       "variableName": "ScoreModifyValue",
                       "eventType": "BattleScoreChange",
                       "value": {
-                        "operator": "Variables[0] (WHOLE) || Variables[1] (ScoreModifyValue) || Variables[2] (CurrentHPPercentage) || Variables[3] (HPScore) || MUL || SUB || Variables[4] (StageConst) || MUL || PARAM_1 || FUNCTION || RETURN",
-                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(((ScoreModifyValue - (CurrentHPPercentage * HPScore)) * StageConst))",
-                        "constants": [],
-                        "variables": [
-                          "WHOLE",
-                          "ScoreModifyValue",
-                          "CurrentHPPercentage",
-                          "HPScore",
-                          "StageConst"
-                        ]
+                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(((ScoreModifyValue - (CurrentHPPercentage * HPScore)) * StageConst))"
                       }
                     },
                     {
@@ -298,13 +258,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (CurrentHPPercentage) || Variables[1] (HPScore) || MUL || RETURN",
-                        "displayLines": "(CurrentHPPercentage * HPScore)",
-                        "constants": [],
-                        "variables": [
-                          "CurrentHPPercentage",
-                          "HPScore"
-                        ]
+                        "displayLines": "(CurrentHPPercentage * HPScore)"
                       },
                       "variableName": "RemainingScore"
                     }

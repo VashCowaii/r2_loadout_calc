@@ -66,12 +66,7 @@ const configAbility = {
             "target": "{{Parameter Target}}"
           },
           "setValue": {
-            "operator": "Constants[0] (0.01) || RETURN",
-            "displayLines": "0.01",
-            "constants": [
-              0.01
-            ],
-            "variables": []
+            "displayLines": "0.01"
           }
         },
         {
@@ -83,20 +78,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"787482349\">Death_Control_Modifier_MainLine</a>",
           "valuePerStack": {
             "MDF_HealHPPercentage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "{[Skill05[0]]}"
             },
             "MDF_AddSPValue": {
-              "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-              "displayLines": "{[Skill05[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[1]]}"
-              ]
+              "displayLines": "{[Skill05[1]]}"
             }
           }
         },
@@ -159,24 +144,14 @@ const configAbility = {
           "name": "Assign Value to Stat",
           "variableName": "MainLine_Character_1",
           "value": {
-            "operator": "Variables[0] (MainLine_Character_1) || RETURN",
-            "displayLines": "MainLine_Character_1",
-            "constants": [],
-            "variables": [
-              "MainLine_Character_1"
-            ]
+            "displayLines": "MainLine_Character_1"
           }
         },
         {
           "name": "Assign Value to Stat",
           "variableName": "MainLine_Character_2",
           "value": {
-            "operator": "Variables[0] (MainLine_Character_2) || RETURN",
-            "displayLines": "MainLine_Character_2",
-            "constants": [],
-            "variables": [
-              "MainLine_Character_2"
-            ]
+            "displayLines": "MainLine_Character_2"
           }
         }
       ]

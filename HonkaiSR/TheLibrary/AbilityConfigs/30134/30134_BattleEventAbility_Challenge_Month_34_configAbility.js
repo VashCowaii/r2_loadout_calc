@@ -14,12 +14,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"851386528\">Modifier_BattleEventAbility_Challenge_Month_34</a>",
       "valuePerStack": {
         "BattleEvent_P1_ADF": {
-          "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-          "displayLines": "#BattleEvent_P1_ADF",
-          "constants": [],
-          "variables": [
-            "#BattleEvent_P1_ADF"
-          ]
+          "displayLines": "#BattleEvent_P1_ADF"
         }
       }
     },
@@ -109,14 +104,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (EntityCurrentSP) || Variables[1] (EntityMaxSP) || Variables[2] (BattleEvent_P1_ADF_Get) || MUL || ADD || RETURN",
-                    "displayLines": "(EntityCurrentSP + (EntityMaxSP * BattleEvent_P1_ADF_Get))",
-                    "constants": [],
-                    "variables": [
-                      "EntityCurrentSP",
-                      "EntityMaxSP",
-                      "BattleEvent_P1_ADF_Get"
-                    ]
+                    "displayLines": "(EntityCurrentSP + (EntityMaxSP * BattleEvent_P1_ADF_Get))"
                   },
                   "variableName": "EntityCurrentSP"
                 },
@@ -131,12 +119,7 @@ const configAbility = {
                     "value1": "EntityCurrentSP",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (EntityMaxSP) || RETURN",
-                      "displayLines": "EntityMaxSP",
-                      "constants": [],
-                      "variables": [
-                        "EntityMaxSP"
-                      ]
+                      "displayLines": "EntityMaxSP"
                     }
                   },
                   "passed": [
@@ -147,13 +130,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (EntityMaxSP) || Variables[1] (BattleEvent_P1_ADF_Get) || MUL || RETURN",
-                        "displayLines": "(EntityMaxSP * BattleEvent_P1_ADF_Get)",
-                        "constants": [],
-                        "variables": [
-                          "EntityMaxSP",
-                          "BattleEvent_P1_ADF_Get"
-                        ]
+                        "displayLines": "(EntityMaxSP * BattleEvent_P1_ADF_Get)"
                       },
                       "isFixed": "(Fixed)"
                     }
@@ -175,14 +152,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (EntityStockSP) || Variables[1] (EntityCurrentSP) || ADD || Variables[2] (EntityMaxSP) || SUB || RETURN",
-                        "displayLines": "((EntityStockSP + EntityCurrentSP) - EntityMaxSP)",
-                        "constants": [],
-                        "variables": [
-                          "EntityStockSP",
-                          "EntityCurrentSP",
-                          "EntityMaxSP"
-                        ]
+                        "displayLines": "((EntityStockSP + EntityCurrentSP) - EntityMaxSP)"
                       },
                       "variableName": "EntityStockSP"
                     },
@@ -195,12 +165,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-14605930\">Modifier_BattleEventAbility_Challenge_Month_34_ExceedSP</a>[<span class=\"descriptionNumberColor\">Energy Overflow</span>]",
                       "valuePerStack": {
                         "EntityStockSPForShow": {
-                          "operator": "Variables[0] (EntityStockSP) || RETURN",
-                          "displayLines": "EntityStockSP",
-                          "constants": [],
-                          "variables": [
-                            "EntityStockSP"
-                          ]
+                          "displayLines": "EntityStockSP"
                         }
                       }
                     }
@@ -248,13 +213,7 @@ const configAbility = {
                     "value1": "EntityStockSP",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (EntityMaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                      "displayLines": "(EntityMaxSP - _CurrentSP)",
-                      "constants": [],
-                      "variables": [
-                        "EntityMaxSP",
-                        "_CurrentSP"
-                      ]
+                      "displayLines": "(EntityMaxSP - _CurrentSP)"
                     }
                   },
                   "passed": [
@@ -265,12 +224,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (EntityStockSP) || RETURN",
-                        "displayLines": "EntityStockSP",
-                        "constants": [],
-                        "variables": [
-                          "EntityStockSP"
-                        ]
+                        "displayLines": "EntityStockSP"
                       },
                       "isFixed": "(Fixed)"
                     },
@@ -297,27 +251,14 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (EntityMaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                        "displayLines": "(EntityMaxSP - _CurrentSP)",
-                        "constants": [],
-                        "variables": [
-                          "EntityMaxSP",
-                          "_CurrentSP"
-                        ]
+                        "displayLines": "(EntityMaxSP - _CurrentSP)"
                       },
                       "isFixed": "(Fixed)"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (EntityStockSP) || Variables[1] (EntityMaxSP) || SUB || Variables[2] (_CurrentSP) || ADD || RETURN",
-                        "displayLines": "((EntityStockSP - EntityMaxSP) + _CurrentSP)",
-                        "constants": [],
-                        "variables": [
-                          "EntityStockSP",
-                          "EntityMaxSP",
-                          "_CurrentSP"
-                        ]
+                        "displayLines": "((EntityStockSP - EntityMaxSP) + _CurrentSP)"
                       },
                       "variableName": "EntityStockSP"
                     },
@@ -330,12 +271,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-14605930\">Modifier_BattleEventAbility_Challenge_Month_34_ExceedSP</a>[<span class=\"descriptionNumberColor\">Energy Overflow</span>]",
                       "valuePerStack": {
                         "EntityStockSPForShow": {
-                          "operator": "Variables[0] (EntityStockSP) || RETURN",
-                          "displayLines": "EntityStockSP",
-                          "constants": [],
-                          "variables": [
-                            "EntityStockSP"
-                          ]
+                          "displayLines": "EntityStockSP"
                         }
                       }
                     }
@@ -408,12 +344,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"224250663\">Modifier_BattleEventAbility_Challenge_Month_34_AddSP</a>",
               "valuePerStack": {
                 "BattleEvent_P1_ADF_Get": {
-                  "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-                  "displayLines": "BattleEvent_P1_ADF",
-                  "constants": [],
-                  "variables": [
-                    "BattleEvent_P1_ADF"
-                  ]
+                  "displayLines": "BattleEvent_P1_ADF"
                 }
               },
               "casterAssign": "TargetSelf"

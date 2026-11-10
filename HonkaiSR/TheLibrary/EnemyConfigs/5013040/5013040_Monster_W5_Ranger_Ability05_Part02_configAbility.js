@@ -28,29 +28,14 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-258343603\">Enemy_W5_Ranger_Debuff</a>",
       "duration": {
-        "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-        "displayLines": "{[Skill05[2]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill05[2]]}"
-        ]
+        "displayLines": "{[Skill05[2]]}"
       },
       "valuePerStack": {
         "MDF_AllDamageTypeTakenRatio": {
-          "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-          "displayLines": "{[Skill05[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill05[0]]}"
-          ]
+          "displayLines": "{[Skill05[0]]}"
         },
         "MDF_ResistanceDelta": {
-          "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-          "displayLines": "{[Skill05[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill05[1]]}"
-          ]
+          "displayLines": "{[Skill05[1]]}"
         }
       }
     },

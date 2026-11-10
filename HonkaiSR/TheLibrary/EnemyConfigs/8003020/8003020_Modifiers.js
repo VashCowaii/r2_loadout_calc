@@ -23,12 +23,7 @@ const configAbility = {
       "effectName": "Enkindle",
       "statusName": "Enkindle",
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-        "displayLines": "ModifierStackLayer",
-        "constants": [],
-        "variables": [
-          "ModifierStackLayer"
-        ]
+        "displayLines": "ModifierStackLayer"
       },
       "execute": [
         {
@@ -71,13 +66,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] (MDF_DamagePercentage_Layer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                  "displayLines": "(MDF_DamagePercentage_Layer * ModifierLayers)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamagePercentage_Layer",
-                    "ModifierLayers"
-                  ]
+                  "displayLines": "(MDF_DamagePercentage_Layer * ModifierLayers)"
                 },
                 "Toughness": null,
                 "Tags": [
@@ -105,12 +94,7 @@ const configAbility = {
               },
               "variableName": "Burn_Layer",
               "resetValue": {
-                "operator": "Variables[0] (ModifierLayers) || RETURN",
-                "displayLines": "ModifierLayers",
-                "constants": [],
-                "variables": [
-                  "ModifierLayers"
-                ]
+                "displayLines": "ModifierLayers"
               },
               "scope": "TargetEntity"
             }
@@ -128,13 +112,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] (MDF_DamagePercentage_Layer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                  "displayLines": "(MDF_DamagePercentage_Layer * ModifierLayers)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamagePercentage_Layer",
-                    "ModifierLayers"
-                  ]
+                  "displayLines": "(MDF_DamagePercentage_Layer * ModifierLayers)"
                 },
                 "Toughness": null,
                 "Tags": [
@@ -179,13 +157,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (Modifier_AttackAddedRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(Modifier_AttackAddedRatio * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "Modifier_AttackAddedRatio",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(Modifier_AttackAddedRatio * MDF_Layer)"
               }
             }
           ]
@@ -306,13 +278,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (Skill07_Added_AttackRatio[?]) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                    "displayLines": "(Skill07_Added_AttackRatio[?] * ModifierLayers)",
-                    "constants": [],
-                    "variables": [
-                      "Skill07_Added_AttackRatio[?]",
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "(Skill07_Added_AttackRatio[?] * ModifierLayers)"
                   }
                 },
                 {
@@ -323,13 +289,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (Modifier_SpeedDelta) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                    "displayLines": "(Modifier_SpeedDelta * ModifierLayers)",
-                    "constants": [],
-                    "variables": [
-                      "Modifier_SpeedDelta",
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "(Modifier_SpeedDelta * ModifierLayers)"
                   }
                 },
                 "Modifier Deletes Itself"
@@ -343,13 +303,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (Skill07_Added_AttackRatio[?]) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                    "displayLines": "(Skill07_Added_AttackRatio[?] * ModifierLayers)",
-                    "constants": [],
-                    "variables": [
-                      "Skill07_Added_AttackRatio[?]",
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "(Skill07_Added_AttackRatio[?] * ModifierLayers)"
                   }
                 },
                 {
@@ -360,13 +314,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (Modifier_SpeedDelta) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                    "displayLines": "(Modifier_SpeedDelta * ModifierLayers)",
-                    "constants": [],
-                    "variables": [
-                      "Modifier_SpeedDelta",
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "(Modifier_SpeedDelta * ModifierLayers)"
                   }
                 }
               ]

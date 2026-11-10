@@ -18,12 +18,7 @@ const configAbility = {
             "target": "{{Ability Target(ST)}}"
           },
           "dispelCount": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "dispelOrder": "LastAdded"
         },
@@ -35,21 +30,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1872837497\">MWGallagher_Ability02_StatusResModifier</a>[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             }
           }
         }
@@ -62,12 +47,7 @@ const configAbility = {
         "target": "{{Ability Target(ST)}}"
       },
       "healFlat": {
-        "operator": "Variables[0] (1600) || RETURN",
-        "displayLines": "1600",
-        "constants": [],
-        "variables": [
-          1600
-        ]
+        "displayLines": "1600"
       },
       "EnergyGainPercent": "100%"
     },

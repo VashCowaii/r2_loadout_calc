@@ -22,20 +22,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (2.3) || RETURN",
-          "displayLines": "2.3",
-          "constants": [],
-          "variables": [
-            2.3
-          ]
+          "displayLines": "2.3"
         },
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -71,13 +61,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "Damage": {
-                      "operator": "Variables[0] (2.3) || Variables[1] (0.4) || MUL || RETURN",
-                      "displayLines": "(2.3 * 0.4)",
-                      "constants": [],
-                      "variables": [
-                        2.3,
-                        0.4
-                      ]
+                      "displayLines": "(2.3 * 0.4)"
                     },
                     "Toughness": null,
                     "Tags": null
@@ -117,12 +101,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (5) || RETURN",
-                "displayLines": "5",
-                "constants": [],
-                "variables": [
-                  5
-                ]
+                "displayLines": "5"
               },
               "isFixed": "* ERR"
             }
@@ -138,12 +117,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (5) || RETURN",
-                "displayLines": "5",
-                "constants": [],
-                "variables": [
-                  5
-                ]
+                "displayLines": "5"
               },
               "isFixed": "* ERR"
             }

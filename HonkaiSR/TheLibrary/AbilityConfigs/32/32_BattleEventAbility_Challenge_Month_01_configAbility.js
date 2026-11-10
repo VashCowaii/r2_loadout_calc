@@ -35,12 +35,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ADF_1) || RETURN",
-                "displayLines": "ADF_1",
-                "constants": [],
-                "variables": [
-                  "ADF_1"
-                ]
+                "displayLines": "ADF_1"
               }
             }
           ]
@@ -105,12 +100,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1687247438\">MLevel_BattleEventAbility_Challenge_Month_01</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                   "valuePerStack": {
                     "ADF_1": {
-                      "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P1_ADF"
                     }
                   }
                 }
@@ -144,12 +134,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P2_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P2_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P2_ADF"
                   },
                   "formula": "Heal from Target MaxHP"
                 }

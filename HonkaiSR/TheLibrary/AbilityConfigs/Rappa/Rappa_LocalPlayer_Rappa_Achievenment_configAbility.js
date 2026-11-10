@@ -12,14 +12,7 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"1581434995\">ADV_StageAbility_Maze_Achievenment</a>",
       "duration": {
-        "operator": "Variables[0] (20) || Constants[0] (0.1) || SUB || RETURN",
-        "displayLines": "(20 - 0.1)",
-        "constants": [
-          0.1
-        ],
-        "variables": [
-          20
-        ]
+        "displayLines": "(20 - 0.1)"
       }
     },
     {

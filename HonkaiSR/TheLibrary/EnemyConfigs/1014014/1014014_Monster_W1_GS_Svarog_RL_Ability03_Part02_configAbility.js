@@ -49,12 +49,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1666707889\">Monster_W1_Svarog_RL_Part_ListenHP_Modifier</a>",
       "valuePerStack": {
         "PassiveAbility02_P2_HPRatio": {
-          "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-          "displayLines": "{[PassiveSkill02[0]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill02[0]]}"
-          ]
+          "displayLines": "{[PassiveSkill02[0]]}"
         }
       }
     },
@@ -75,12 +70,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1762407654\">Monster_W1_Svarog_RL_Control_OnPart_Modifier</a>",
       "valuePerStack": {
         "Modifier_DamagePercentage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-          "displayLines": "{[Skill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "{[Skill03[0]]}"
         }
       }
     },

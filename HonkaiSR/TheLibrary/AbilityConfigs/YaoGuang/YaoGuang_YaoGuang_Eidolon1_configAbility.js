@@ -15,13 +15,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (40) || Variables[1] (20) || SUB || RETURN",
-        "displayLines": "(40 - 20)",
-        "constants": [],
-        "variables": [
-          40,
-          20
-        ]
+        "displayLines": "(40 - 20)"
       },
       "variableName": "G_Rank01_AddedElationPoint"
     }
@@ -42,12 +36,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         }

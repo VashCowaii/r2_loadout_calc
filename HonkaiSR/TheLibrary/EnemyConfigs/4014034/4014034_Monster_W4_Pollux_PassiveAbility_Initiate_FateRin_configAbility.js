@@ -11,12 +11,7 @@ const configAbility = {
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonID0) || RETURN",
-            "displayLines": "SummonID0",
-            "constants": [],
-            "variables": [
-              "SummonID0"
-            ]
+            "displayLines": "SummonID0"
           },
           "locationType": "BeforeCaster",
           "locationOffset": -1,
@@ -42,12 +37,7 @@ const configAbility = {
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonID1) || RETURN",
-            "displayLines": "SummonID1",
-            "constants": [],
-            "variables": [
-              "SummonID1"
-            ]
+            "displayLines": "SummonID1"
           },
           "locationType": "AfterCaster",
           "locationOffset": 1,
@@ -83,12 +73,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[0]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[0]]}"
         }
       }
     },
@@ -163,14 +148,7 @@ const configAbility = {
                 "target": "{{Player Team All}}"
               },
               "healPercent": {
-                "operator": "Variables[0] ({[PassiveSkill01[1]]}) || Constants[0] (2) || DIV || RETURN",
-                "displayLines": "({[PassiveSkill01[1]]} / 2)",
-                "constants": [
-                  2
-                ],
-                "variables": [
-                  "{[PassiveSkill01[1]]}"
-                ]
+                "displayLines": "({[PassiveSkill01[1]]} / 2)"
               },
               "formula": "Heal from Target MaxHP"
             }

@@ -84,27 +84,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (All_ChangeValue) || Variables[1] (Temp_ChangeValue) || ADD || RETURN",
-                    "displayLines": "(All_ChangeValue + Temp_ChangeValue)",
-                    "constants": [],
-                    "variables": [
-                      "All_ChangeValue",
-                      "Temp_ChangeValue"
-                    ]
+                    "displayLines": "(All_ChangeValue + Temp_ChangeValue)"
                   },
                   "variableName": "All_ChangeValue"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (FLOOR) || Variables[1] (All_ChangeValue) || Variables[2] (5) || DIV || PARAM_1 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((All_ChangeValue / 5))",
-                    "constants": [],
-                    "variables": [
-                      "FLOOR",
-                      "All_ChangeValue",
-                      5
-                    ]
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((All_ChangeValue / 5))"
                   },
                   "variableName": "Add_Layer"
                 }
@@ -117,24 +104,14 @@ const configAbility = {
                 "value1": "Add_Layer",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (10) || RETURN",
-                  "displayLines": "10",
-                  "constants": [],
-                  "variables": [
-                    10
-                  ]
+                  "displayLines": "10"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (10) || RETURN",
-                    "displayLines": "10",
-                    "constants": [],
-                    "variables": [
-                      10
-                    ]
+                    "displayLines": "10"
                   },
                   "variableName": "Add_Layer"
                 },
@@ -148,14 +125,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.1) || Variables[1] (0.01) || Variables[2] (Add_Layer) || MUL || ADD || RETURN",
-                "displayLines": "(0.1 + (0.01 * Add_Layer))",
-                "constants": [],
-                "variables": [
-                  0.1,
-                  0.01,
-                  "Add_Layer"
-                ]
+                "displayLines": "(0.1 + (0.01 * Add_Layer))"
               },
               "variableName": "_DefenceAddRatio"
             }
@@ -191,27 +161,14 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (All_ChangeValue) || Variables[1] (Temp_ChangeValue) || ADD || RETURN",
-                        "displayLines": "(All_ChangeValue + Temp_ChangeValue)",
-                        "constants": [],
-                        "variables": [
-                          "All_ChangeValue",
-                          "Temp_ChangeValue"
-                        ]
+                        "displayLines": "(All_ChangeValue + Temp_ChangeValue)"
                       },
                       "variableName": "All_ChangeValue"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (FLOOR) || Variables[1] (All_ChangeValue) || Variables[2] (5) || DIV || PARAM_1 || FUNCTION || RETURN",
-                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((All_ChangeValue / 5))",
-                        "constants": [],
-                        "variables": [
-                          "FLOOR",
-                          "All_ChangeValue",
-                          5
-                        ]
+                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((All_ChangeValue / 5))"
                       },
                       "variableName": "Add_Layer"
                     }
@@ -224,24 +181,14 @@ const configAbility = {
                     "value1": "Add_Layer",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (10) || RETURN",
-                      "displayLines": "10",
-                      "constants": [],
-                      "variables": [
-                        10
-                      ]
+                      "displayLines": "10"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (10) || RETURN",
-                        "displayLines": "10",
-                        "constants": [],
-                        "variables": [
-                          10
-                        ]
+                        "displayLines": "10"
                       },
                       "variableName": "Add_Layer"
                     },
@@ -255,14 +202,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (0.1) || Variables[1] (0.01) || Variables[2] (Add_Layer) || MUL || ADD || RETURN",
-                    "displayLines": "(0.1 + (0.01 * Add_Layer))",
-                    "constants": [],
-                    "variables": [
-                      0.1,
-                      0.01,
-                      "Add_Layer"
-                    ]
+                    "displayLines": "(0.1 + (0.01 * Add_Layer))"
                   },
                   "variableName": "_DefenceAddRatio"
                 }

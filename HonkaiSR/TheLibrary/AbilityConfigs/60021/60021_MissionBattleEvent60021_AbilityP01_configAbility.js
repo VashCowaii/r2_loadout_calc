@@ -47,12 +47,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "value": {
-        "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-        "displayLines": "{[SkillP01[0]]}",
-        "constants": [],
-        "variables": [
-          "{[SkillP01[0]]}"
-        ]
+        "displayLines": "{[SkillP01[0]]}"
       },
       "isFixed": "(Fixed)"
     }
@@ -85,12 +80,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -145,12 +135,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -205,12 +190,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -265,12 +245,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -435,12 +410,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                        "displayLines": "{[SkillP01[2]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillP01[2]]}"
-                        ]
+                        "displayLines": "{[SkillP01[2]]}"
                       },
                       "isFixed": "(Fixed)"
                     }
@@ -453,12 +423,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                        "displayLines": "{[SkillP01[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillP01[1]]}"
-                        ]
+                        "displayLines": "{[SkillP01[1]]}"
                       },
                       "isFixed": "(Fixed)"
                     }
@@ -594,12 +559,7 @@ const configAbility = {
                       "duration": 3,
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__231) || RETURN",
-                          "displayLines": "ENEMIES_OBJECT_UNUSED__231",
-                          "constants": [],
-                          "variables": [
-                            "ENEMIES_OBJECT_UNUSED__231"
-                          ]
+                          "displayLines": "ENEMIES_OBJECT_UNUSED__231"
                         }
                       }
                     },
@@ -655,12 +615,7 @@ const configAbility = {
                       "duration": 3,
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__231) || RETURN",
-                          "displayLines": "ENEMIES_OBJECT_UNUSED__231",
-                          "constants": [],
-                          "variables": [
-                            "ENEMIES_OBJECT_UNUSED__231"
-                          ]
+                          "displayLines": "ENEMIES_OBJECT_UNUSED__231"
                         }
                       }
                     },
@@ -703,12 +658,7 @@ const configAbility = {
                       "duration": 3,
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__231) || RETURN",
-                          "displayLines": "ENEMIES_OBJECT_UNUSED__231",
-                          "constants": [],
-                          "variables": [
-                            "ENEMIES_OBJECT_UNUSED__231"
-                          ]
+                          "displayLines": "ENEMIES_OBJECT_UNUSED__231"
                         }
                       }
                     },
@@ -751,12 +701,7 @@ const configAbility = {
                       "duration": 3,
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__231) || RETURN",
-                          "displayLines": "ENEMIES_OBJECT_UNUSED__231",
-                          "constants": [],
-                          "variables": [
-                            "ENEMIES_OBJECT_UNUSED__231"
-                          ]
+                          "displayLines": "ENEMIES_OBJECT_UNUSED__231"
                         }
                       }
                     },

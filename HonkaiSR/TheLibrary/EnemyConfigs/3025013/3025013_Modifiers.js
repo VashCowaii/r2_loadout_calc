@@ -60,14 +60,7 @@ const configAbility = {
                     {
                       "element": "Physical",
                       "value": {
-                        "operator": "Constants[0] (1) || INVERT || Variables[0] ({[SkillEX03[0]]}) || MUL || RETURN",
-                        "displayLines": "(-1 * {[SkillEX03[0]]})",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "{[SkillEX03[0]]}"
-                        ]
+                        "displayLines": "(-1 * {[SkillEX03[0]]})"
                       }
                     }
                   ]
@@ -114,14 +107,7 @@ const configAbility = {
                     {
                       "element": "Fire",
                       "value": {
-                        "operator": "Constants[0] (1) || INVERT || Variables[0] ({[SkillEX03[0]]}) || MUL || RETURN",
-                        "displayLines": "(-1 * {[SkillEX03[0]]})",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "{[SkillEX03[0]]}"
-                        ]
+                        "displayLines": "(-1 * {[SkillEX03[0]]})"
                       }
                     }
                   ]
@@ -168,14 +154,7 @@ const configAbility = {
                     {
                       "element": "Ice",
                       "value": {
-                        "operator": "Constants[0] (1) || INVERT || Variables[0] ({[SkillEX03[0]]}) || MUL || RETURN",
-                        "displayLines": "(-1 * {[SkillEX03[0]]})",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "{[SkillEX03[0]]}"
-                        ]
+                        "displayLines": "(-1 * {[SkillEX03[0]]})"
                       }
                     }
                   ]
@@ -222,14 +201,7 @@ const configAbility = {
                     {
                       "element": "Thunder",
                       "value": {
-                        "operator": "Constants[0] (1) || INVERT || Variables[0] ({[SkillEX03[0]]}) || MUL || RETURN",
-                        "displayLines": "(-1 * {[SkillEX03[0]]})",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "{[SkillEX03[0]]}"
-                        ]
+                        "displayLines": "(-1 * {[SkillEX03[0]]})"
                       }
                     }
                   ]
@@ -276,14 +248,7 @@ const configAbility = {
                     {
                       "element": "Wind",
                       "value": {
-                        "operator": "Constants[0] (1) || INVERT || Variables[0] ({[SkillEX03[0]]}) || MUL || RETURN",
-                        "displayLines": "(-1 * {[SkillEX03[0]]})",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "{[SkillEX03[0]]}"
-                        ]
+                        "displayLines": "(-1 * {[SkillEX03[0]]})"
                       }
                     }
                   ]
@@ -330,14 +295,7 @@ const configAbility = {
                     {
                       "element": "Quantum",
                       "value": {
-                        "operator": "Constants[0] (1) || INVERT || Variables[0] ({[SkillEX03[0]]}) || MUL || RETURN",
-                        "displayLines": "(-1 * {[SkillEX03[0]]})",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "{[SkillEX03[0]]}"
-                        ]
+                        "displayLines": "(-1 * {[SkillEX03[0]]})"
                       }
                     }
                   ]
@@ -384,14 +342,7 @@ const configAbility = {
                     {
                       "element": "Imaginary",
                       "value": {
-                        "operator": "Constants[0] (1) || INVERT || Variables[0] ({[SkillEX03[0]]}) || MUL || RETURN",
-                        "displayLines": "(-1 * {[SkillEX03[0]]})",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "{[SkillEX03[0]]}"
-                        ]
+                        "displayLines": "(-1 * {[SkillEX03[0]]})"
                       }
                     }
                   ]
@@ -466,12 +417,7 @@ const configAbility = {
                 {
                   "element": "Fire",
                   "value": {
-                    "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-                    "displayLines": "{[SkillEX03[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillEX03[0]]}"
-                    ]
+                    "displayLines": "{[SkillEX03[0]]}"
                   }
                 }
               ]
@@ -487,12 +433,7 @@ const configAbility = {
                 {
                   "element": "Thunder",
                   "value": {
-                    "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-                    "displayLines": "{[SkillEX03[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillEX03[0]]}"
-                    ]
+                    "displayLines": "{[SkillEX03[0]]}"
                   }
                 }
               ]
@@ -508,12 +449,7 @@ const configAbility = {
                 {
                   "element": "Quantum",
                   "value": {
-                    "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-                    "displayLines": "{[SkillEX03[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillEX03[0]]}"
-                    ]
+                    "displayLines": "{[SkillEX03[0]]}"
                   }
                 }
               ]
@@ -529,12 +465,7 @@ const configAbility = {
                 {
                   "element": "Imaginary",
                   "value": {
-                    "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-                    "displayLines": "{[SkillEX03[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillEX03[0]]}"
-                    ]
+                    "displayLines": "{[SkillEX03[0]]}"
                   }
                 }
               ]
@@ -874,14 +805,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_Skill10_TurnCount) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(MDF_Skill10_TurnCount + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_Skill10_TurnCount"
-                ]
+                "displayLines": "(MDF_Skill10_TurnCount + 1)"
               },
               "variableName": "MDF_Skill10_TurnCount"
             }
@@ -993,40 +917,21 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_ShieldPercentage_Add) || Variables[1] (CasterBaseAttack) || MUL || RETURN",
-                "displayLines": "(MDF_ShieldPercentage_Add * CasterBaseAttack)",
-                "constants": [],
-                "variables": [
-                  "MDF_ShieldPercentage_Add",
-                  "CasterBaseAttack"
-                ]
+                "displayLines": "(MDF_ShieldPercentage_Add * CasterBaseAttack)"
               },
               "variableName": "OriginShield"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_ShieldPercentage_Add_Value2) || Variables[0] (MDF_ShieldPercentage_Add_Value2) || MUL || Variables[0] (MDF_ShieldPercentage_Add_Value2) || Variables[1] (OriginShield) || Variables[2] (CurShield) || MUL || ADD || DIV || RETURN",
-                "displayLines": "((MDF_ShieldPercentage_Add_Value2 * MDF_ShieldPercentage_Add_Value2) / (MDF_ShieldPercentage_Add_Value2 + (OriginShield * CurShield)))",
-                "constants": [],
-                "variables": [
-                  "MDF_ShieldPercentage_Add_Value2",
-                  "OriginShield",
-                  "CurShield"
-                ]
+                "displayLines": "((MDF_ShieldPercentage_Add_Value2 * MDF_ShieldPercentage_Add_Value2) / (MDF_ShieldPercentage_Add_Value2 + (OriginShield * CurShield)))"
               },
               "variableName": "AddShield"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (CurShield) || Variables[1] (AddShield) || ADD || RETURN",
-                "displayLines": "(CurShield + AddShield)",
-                "constants": [],
-                "variables": [
-                  "CurShield",
-                  "AddShield"
-                ]
+                "displayLines": "(CurShield + AddShield)"
               },
               "variableName": "MaxShield"
             },
@@ -1040,12 +945,7 @@ const configAbility = {
                 "<a class=\"gModGreen\" id=\"897199579\">Enemy_W3_Sunday_LightTeam_Shield</a>"
               ],
               "value": {
-                "operator": "Variables[0] (MaxShield) || RETURN",
-                "displayLines": "MaxShield",
-                "constants": [],
-                "variables": [
-                  "MaxShield"
-                ]
+                "displayLines": "MaxShield"
               },
               "operation": "Set"
             },
@@ -1059,12 +959,7 @@ const configAbility = {
                 "<a class=\"gModGreen\" id=\"897199579\">Enemy_W3_Sunday_LightTeam_Shield</a>"
               ],
               "value": {
-                "operator": "Variables[0] (AddShield) || RETURN",
-                "displayLines": "AddShield",
-                "constants": [],
-                "variables": [
-                  "AddShield"
-                ]
+                "displayLines": "AddShield"
               }
             }
           ]
@@ -1231,12 +1126,7 @@ const configAbility = {
                 {
                   "name": "Deal Toughness DMG",
                   "value": {
-                    "operator": "Variables[0] (_MaxStance) || RETURN",
-                    "displayLines": "_MaxStance",
-                    "constants": [],
-                    "variables": [
-                      "_MaxStance"
-                    ]
+                    "displayLines": "_MaxStance"
                   },
                   "canDelay": true,
                   "ToughnessDMGType": "Null Type",
@@ -1306,12 +1196,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_CurrentShieldValue) || RETURN",
-                "displayLines": "MDF_CurrentShieldValue",
-                "constants": [],
-                "variables": [
-                  "MDF_CurrentShieldValue"
-                ]
+                "displayLines": "MDF_CurrentShieldValue"
               },
               "entityClass": "Enemy",
               "target": {
@@ -1319,13 +1204,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] ({[Skill07[0]]}) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
-                "displayLines": "({[Skill07[0]]} * MDF_MaxHP)",
-                "constants": [],
-                "variables": [
-                  "{[Skill07[0]]}",
-                  "MDF_MaxHP"
-                ]
+                "displayLines": "({[Skill07[0]]} * MDF_MaxHP)"
               },
               "assignState": "False"
             }
@@ -1372,13 +1251,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] ({[Skill07[0]]}) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
-                "displayLines": "({[Skill07[0]]} * MDF_MaxHP)",
-                "constants": [],
-                "variables": [
-                  "{[Skill07[0]]}",
-                  "MDF_MaxHP"
-                ]
+                "displayLines": "({[Skill07[0]]} * MDF_MaxHP)"
               }
             },
             {
@@ -1389,34 +1262,17 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_Skill07_P2_DamageRatio) || RETURN",
-                "displayLines": "MDF_Skill07_P2_DamageRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_Skill07_P2_DamageRatio"
-                ]
+                "displayLines": "MDF_Skill07_P2_DamageRatio"
               }
             },
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] ({[Skill07[0]]}) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
-                "displayLines": "({[Skill07[0]]} * MDF_MaxHP)",
-                "constants": [],
-                "variables": [
-                  "{[Skill07[0]]}",
-                  "MDF_MaxHP"
-                ]
+                "displayLines": "({[Skill07[0]]} * MDF_MaxHP)"
               },
               "entityClass": "Enemy",
               "maximum": {
-                "operator": "Variables[0] ({[Skill07[0]]}) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
-                "displayLines": "({[Skill07[0]]} * MDF_MaxHP)",
-                "constants": [],
-                "variables": [
-                  "{[Skill07[0]]}",
-                  "MDF_MaxHP"
-                ]
+                "displayLines": "({[Skill07[0]]} * MDF_MaxHP)"
               },
               "assignState": "True"
             }
@@ -1437,22 +1293,11 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_CurrentShieldValue) || RETURN",
-                "displayLines": "MDF_CurrentShieldValue",
-                "constants": [],
-                "variables": [
-                  "MDF_CurrentShieldValue"
-                ]
+                "displayLines": "MDF_CurrentShieldValue"
               },
               "entityClass": "Enemy",
               "maximum": {
-                "operator": "Variables[0] ({[Skill07[0]]}) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
-                "displayLines": "({[Skill07[0]]} * MDF_MaxHP)",
-                "constants": [],
-                "variables": [
-                  "{[Skill07[0]]}",
-                  "MDF_MaxHP"
-                ]
+                "displayLines": "({[Skill07[0]]} * MDF_MaxHP)"
               },
               "assignState": "True"
             },
@@ -1738,12 +1583,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-591522409\">Enemy_W3_Sunday_IF_SummonMinions_BreakExtraDelay</a>",
               "valuePerStack": {
                 "MDF_EnergyCharge": {
-                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                  "displayLines": "{[SkillP01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[2]]}"
-                  ]
+                  "displayLines": "{[SkillP01[2]]}"
                 }
               }
             },
@@ -1756,12 +1596,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1121563146\">Enemy_W3_SundayPart_AssistAbilityAttach</a>",
               "valuePerStack": {
                 "MDF_Assist_DamagePercentage": {
-                  "operator": "Variables[0] ({[Skill06[2]]}) || RETURN",
-                  "displayLines": "{[Skill06[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill06[2]]}"
-                  ]
+                  "displayLines": "{[Skill06[2]]}"
                 }
               }
             },
@@ -1773,12 +1608,7 @@ const configAbility = {
               },
               "variableName": "_WeakResistance",
               "resetValue": {
-                "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-                "displayLines": "{[SkillEX03[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillEX03[0]]}"
-                ]
+                "displayLines": "{[SkillEX03[0]]}"
               },
               "scope": "TargetEntity"
             }
@@ -2170,12 +2000,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "baseToughnessDMG": {
-                    "operator": "Variables[0] (PartBreak_StanceValue) || RETURN",
-                    "displayLines": "PartBreak_StanceValue",
-                    "constants": [],
-                    "variables": [
-                      "PartBreak_StanceValue"
-                    ]
+                    "displayLines": "PartBreak_StanceValue"
                   },
                   "toughnessForcedReductionPreview": 1,
                   "isForcedReduction": true,
@@ -2578,26 +2403,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_ShieldPercentage_Add) || Variables[1] (CasterBaseAttack) || MUL || RETURN",
-                "displayLines": "(MDF_ShieldPercentage_Add * CasterBaseAttack)",
-                "constants": [],
-                "variables": [
-                  "MDF_ShieldPercentage_Add",
-                  "CasterBaseAttack"
-                ]
+                "displayLines": "(MDF_ShieldPercentage_Add * CasterBaseAttack)"
               },
               "variableName": "AddShield"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (CurShield) || Variables[1] (AddShield) || ADD || RETURN",
-                "displayLines": "(CurShield + AddShield)",
-                "constants": [],
-                "variables": [
-                  "CurShield",
-                  "AddShield"
-                ]
+                "displayLines": "(CurShield + AddShield)"
               },
               "variableName": "MaxShield"
             },
@@ -2611,12 +2424,7 @@ const configAbility = {
                 "<a class=\"gModGreen\" id=\"897199579\">Enemy_W3_Sunday_LightTeam_Shield</a>"
               ],
               "value": {
-                "operator": "Variables[0] (MaxShield) || RETURN",
-                "displayLines": "MaxShield",
-                "constants": [],
-                "variables": [
-                  "MaxShield"
-                ]
+                "displayLines": "MaxShield"
               },
               "operation": "Set"
             },
@@ -2630,12 +2438,7 @@ const configAbility = {
                 "<a class=\"gModGreen\" id=\"897199579\">Enemy_W3_Sunday_LightTeam_Shield</a>"
               ],
               "value": {
-                "operator": "Variables[0] (AddShield) || RETURN",
-                "displayLines": "AddShield",
-                "constants": [],
-                "variables": [
-                  "AddShield"
-                ]
+                "displayLines": "AddShield"
               }
             }
           ]
@@ -2681,13 +2484,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_ShieldPercentage) || Variables[1] (CasterBaseAttack) || MUL || RETURN",
-                "displayLines": "(MDF_ShieldPercentage * CasterBaseAttack)",
-                "constants": [],
-                "variables": [
-                  "MDF_ShieldPercentage",
-                  "CasterBaseAttack"
-                ]
+                "displayLines": "(MDF_ShieldPercentage * CasterBaseAttack)"
               },
               "variableName": "AddShield"
             },
@@ -2698,12 +2495,7 @@ const configAbility = {
                 "target": "{{Player Team Entity}}"
               },
               "value": {
-                "operator": "Variables[0] (AddShield) || RETURN",
-                "displayLines": "AddShield",
-                "constants": [],
-                "variables": [
-                  "AddShield"
-                ]
+                "displayLines": "AddShield"
               }
             },
             {
@@ -3159,12 +2951,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (_ReadyToCharge) || RETURN",
-                    "displayLines": "_ReadyToCharge",
-                    "constants": [],
-                    "variables": [
-                      "_ReadyToCharge"
-                    ]
+                    "displayLines": "_ReadyToCharge"
                   },
                   "caseEvents": [
                     {
@@ -3379,12 +3166,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (_ReadyToCharge) || RETURN",
-                    "displayLines": "_ReadyToCharge",
-                    "constants": [],
-                    "variables": [
-                      "_ReadyToCharge"
-                    ]
+                    "displayLines": "_ReadyToCharge"
                   },
                   "caseEvents": [
                     {
@@ -4081,12 +3863,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (MDF_HealPercentage) || RETURN",
-                "displayLines": "MDF_HealPercentage",
-                "constants": [],
-                "variables": [
-                  "MDF_HealPercentage"
-                ]
+                "displayLines": "MDF_HealPercentage"
               },
               "formula": "Heal from Target MaxHP"
             },
@@ -4152,12 +3929,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-512141464\">Standard_CTRL_Sleep_AllDamageTakenUp</a>",
               "valuePerStack": {
                 "MDF_AllDamageAddedRatio": {
-                  "operator": "Variables[0] (MDF_AllDamageAddedRatio) || RETURN",
-                  "displayLines": "MDF_AllDamageAddedRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_AllDamageAddedRatio"
-                  ]
+                  "displayLines": "MDF_AllDamageAddedRatio"
                 }
               }
             }
@@ -4624,13 +4396,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (MDF_Layer) || Variables[1] (ENEMIES_OBJECT_UNUSED__130) || MUL || RETURN",
-                "displayLines": "(MDF_Layer * ENEMIES_OBJECT_UNUSED__130)",
-                "constants": [],
-                "variables": [
-                  "MDF_Layer",
-                  "ENEMIES_OBJECT_UNUSED__130"
-                ]
+                "displayLines": "(MDF_Layer * ENEMIES_OBJECT_UNUSED__130)"
               },
               "variableName": "MDF_AllDamageTypeAddedRatio"
             }
@@ -4664,12 +4430,7 @@ const configAbility = {
               },
               "variableName": "AssistSkill01_DamagePercentage",
               "resetValue": {
-                "operator": "Variables[0] (MDF_Assist_DamagePercentage) || RETURN",
-                "displayLines": "MDF_Assist_DamagePercentage",
-                "constants": [],
-                "variables": [
-                  "MDF_Assist_DamagePercentage"
-                ]
+                "displayLines": "MDF_Assist_DamagePercentage"
               },
               "scope": "TargetEntity"
             }
@@ -4706,12 +4467,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_CurrentShieldValue) || RETURN",
-                "displayLines": "MDF_CurrentShieldValue",
-                "constants": [],
-                "variables": [
-                  "MDF_CurrentShieldValue"
-                ]
+                "displayLines": "MDF_CurrentShieldValue"
               },
               "entityClass": "Enemy",
               "target": {
@@ -4719,13 +4475,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] ({[Skill07[0]]}) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
-                "displayLines": "({[Skill07[0]]} * MDF_MaxHP)",
-                "constants": [],
-                "variables": [
-                  "{[Skill07[0]]}",
-                  "MDF_MaxHP"
-                ]
+                "displayLines": "({[Skill07[0]]} * MDF_MaxHP)"
               },
               "assignState": "False"
             }
@@ -4772,13 +4522,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] ({[Skill07[0]]}) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
-                "displayLines": "({[Skill07[0]]} * MDF_MaxHP)",
-                "constants": [],
-                "variables": [
-                  "{[Skill07[0]]}",
-                  "MDF_MaxHP"
-                ]
+                "displayLines": "({[Skill07[0]]} * MDF_MaxHP)"
               }
             },
             {
@@ -4789,12 +4533,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_Skill07_P2_DamageRatio) || RETURN",
-                "displayLines": "MDF_Skill07_P2_DamageRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_Skill07_P2_DamageRatio"
-                ]
+                "displayLines": "MDF_Skill07_P2_DamageRatio"
               }
             },
             {
@@ -4805,12 +4544,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_10891) || RETURN",
-                "displayLines": "UnusedUnderThisBase_10891",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_10891"
-                ]
+                "displayLines": "UnusedUnderThisBase_10891"
               }
             },
             {
@@ -4833,23 +4567,11 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] ({[Skill07[0]]}) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
-                "displayLines": "({[Skill07[0]]} * MDF_MaxHP)",
-                "constants": [],
-                "variables": [
-                  "{[Skill07[0]]}",
-                  "MDF_MaxHP"
-                ]
+                "displayLines": "({[Skill07[0]]} * MDF_MaxHP)"
               },
               "entityClass": "Enemy",
               "maximum": {
-                "operator": "Variables[0] ({[Skill07[0]]}) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
-                "displayLines": "({[Skill07[0]]} * MDF_MaxHP)",
-                "constants": [],
-                "variables": [
-                  "{[Skill07[0]]}",
-                  "MDF_MaxHP"
-                ]
+                "displayLines": "({[Skill07[0]]} * MDF_MaxHP)"
               },
               "assignState": "True"
             }
@@ -4870,22 +4592,11 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_CurrentShieldValue) || RETURN",
-                "displayLines": "MDF_CurrentShieldValue",
-                "constants": [],
-                "variables": [
-                  "MDF_CurrentShieldValue"
-                ]
+                "displayLines": "MDF_CurrentShieldValue"
               },
               "entityClass": "Enemy",
               "maximum": {
-                "operator": "Variables[0] ({[Skill07[0]]}) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
-                "displayLines": "({[Skill07[0]]} * MDF_MaxHP)",
-                "constants": [],
-                "variables": [
-                  "{[Skill07[0]]}",
-                  "MDF_MaxHP"
-                ]
+                "displayLines": "({[Skill07[0]]} * MDF_MaxHP)"
               },
               "assignState": "True"
             },
@@ -4992,14 +4703,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_Skill10_TurnCount) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(MDF_Skill10_TurnCount + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_Skill10_TurnCount"
-                ]
+                "displayLines": "(MDF_Skill10_TurnCount + 1)"
               },
               "variableName": "MDF_Skill10_TurnCount"
             }
@@ -5818,12 +5522,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1121563146\">Enemy_W3_SundayPart_AssistAbilityAttach</a>",
               "valuePerStack": {
                 "MDF_Assist_DamagePercentage": {
-                  "operator": "Variables[0] ({[Skill06[2]]}) || RETURN",
-                  "displayLines": "{[Skill06[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill06[2]]}"
-                  ]
+                  "displayLines": "{[Skill06[2]]}"
                 }
               }
             },
@@ -6059,12 +5758,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_12007) || RETURN",
-                "displayLines": "UnusedUnderThisBase_12007",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_12007"
-                ]
+                "displayLines": "UnusedUnderThisBase_12007"
               }
             },
             {

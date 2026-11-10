@@ -21,15 +21,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (ADF_2_get) || Constants[0] (1) || Variables[1] (DV_FantasticStory_PlusAbility_0034_ADF_2) || ADD || MUL || RETURN",
-            "displayLines": "(ADF_2_get * (1 + DV_FantasticStory_PlusAbility_0034_ADF_2))",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "ADF_2_get",
-              "DV_FantasticStory_PlusAbility_0034_ADF_2"
-            ]
+            "displayLines": "(ADF_2_get * (1 + DV_FantasticStory_PlusAbility_0034_ADF_2))"
           },
           "variableName": "ADF_2_get"
         }
@@ -56,13 +48,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "DamageFlat": {
-              "operator": "Variables[0] (TempHP_get) || Variables[1] (ADF_2_get) || MUL || RETURN",
-              "displayLines": "(TempHP_get * ADF_2_get)",
-              "constants": [],
-              "variables": [
-                "TempHP_get",
-                "ADF_2_get"
-              ]
+              "displayLines": "(TempHP_get * ADF_2_get)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -90,12 +76,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1329142430\">Modifier_FantasticStory_BaseAbility_0030_plus5_AddSP</a>",
           "valuePerStack": {
             "_AddSP": {
-              "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0035_ADF_1) || RETURN",
-              "displayLines": "DV_FantasticStory_PlusAbility_0035_ADF_1",
-              "constants": [],
-              "variables": [
-                "DV_FantasticStory_PlusAbility_0035_ADF_1"
-              ]
+              "displayLines": "DV_FantasticStory_PlusAbility_0035_ADF_1"
             }
           },
           "casterAssign": "TargetSelf"
@@ -119,28 +100,14 @@ const configAbility = {
         "value1": "DV_FantasticStory_BaseAbility_0030_DamageSum",
         "compareType": ">=",
         "value2": {
-          "operator": "Variables[0] (DV_RangeGap_3) || Constants[0] (2) || MUL || RETURN",
-          "displayLines": "(DV_RangeGap_3 * 2)",
-          "constants": [
-            2
-          ],
-          "variables": [
-            "DV_RangeGap_3"
-          ]
+          "displayLines": "(DV_RangeGap_3 * 2)"
         }
       },
       "passed": [
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (DV_RangeGap_3) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(DV_RangeGap_3 - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "DV_RangeGap_3"
-            ]
+            "displayLines": "(DV_RangeGap_3 - 1)"
           },
           "variableName": "DV_FantasticStory_BaseAbility_0030_DamageSum"
         }
@@ -158,13 +125,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0030_DamageSum) || Variables[1] (DV_RangeGap_3) || SUB || RETURN",
-                "displayLines": "(DV_FantasticStory_BaseAbility_0030_DamageSum - DV_RangeGap_3)",
-                "constants": [],
-                "variables": [
-                  "DV_FantasticStory_BaseAbility_0030_DamageSum",
-                  "DV_RangeGap_3"
-                ]
+                "displayLines": "(DV_FantasticStory_BaseAbility_0030_DamageSum - DV_RangeGap_3)"
               },
               "variableName": "DV_FantasticStory_BaseAbility_0030_DamageSum"
             }

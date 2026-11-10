@@ -23,20 +23,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1397396521\">Enemy_W2_Argenti_IF_EX_EnemyCount</a>",
           "valuePerStack": {
             "MDF_ShowValue1": {
-              "operator": "Variables[0] ({[SkillEX04[0]]}) || RETURN",
-              "displayLines": "{[SkillEX04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX04[0]]}"
-              ]
+              "displayLines": "{[SkillEX04[0]]}"
             },
             "MDF_ShowValue2": {
-              "operator": "Variables[0] ({[SkillEX04[1]]}) || RETURN",
-              "displayLines": "{[SkillEX04[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX04[1]]}"
-              ]
+              "displayLines": "{[SkillEX04[1]]}"
             }
           }
         }

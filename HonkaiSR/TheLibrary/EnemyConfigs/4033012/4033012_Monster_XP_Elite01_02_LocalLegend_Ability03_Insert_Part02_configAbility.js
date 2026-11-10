@@ -87,13 +87,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Null Type",
             "DamageFlat": {
-              "operator": "Variables[0] (CEIL) || Variables[1] (_TargetNegativeHp) || PARAM_1 || FUNCTION || RETURN",
-              "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(_TargetNegativeHp)",
-              "constants": [],
-              "variables": [
-                "CEIL",
-                "_TargetNegativeHp"
-              ]
+              "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(_TargetNegativeHp)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -145,13 +139,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Null Type",
             "DamageFlat": {
-              "operator": "Variables[0] (CEIL) || Variables[1] (_TargetNegativeHp) || PARAM_1 || FUNCTION || RETURN",
-              "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(_TargetNegativeHp)",
-              "constants": [],
-              "variables": [
-                "CEIL",
-                "_TargetNegativeHp"
-              ]
+              "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(_TargetNegativeHp)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -274,12 +262,7 @@ const configAbility = {
           },
           "advanceType": "Set",
           "add": {
-            "operator": "Variables[0] (_BattleTarget_LocalLegend_S3_1_Check) || RETURN",
-            "displayLines": "_BattleTarget_LocalLegend_S3_1_Check",
-            "constants": [],
-            "variables": [
-              "_BattleTarget_LocalLegend_S3_1_Check"
-            ]
+            "displayLines": "_BattleTarget_LocalLegend_S3_1_Check"
           }
         }
       ]

@@ -45,13 +45,7 @@ const configAbility = {
               },
               "scope": "ContextModifier",
               "value": {
-                "operator": "Variables[0] (MDF_CriticalDamage) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_CriticalDamage * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_CriticalDamage",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_CriticalDamage * MDF_Layer)"
               },
               "variableName": "MDF_PropertyValue"
             },
@@ -63,13 +57,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_CriticalDamage) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_CriticalDamage * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_CriticalDamage",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_CriticalDamage * MDF_Layer)"
               }
             }
           ]
@@ -163,14 +151,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (TARGET_COUNT) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(TARGET_COUNT + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "TARGET_COUNT"
-                        ]
+                        "displayLines": "(TARGET_COUNT + 1)"
                       },
                       "variableName": "TARGET_COUNT"
                     }
@@ -195,37 +176,17 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-2044111722\">MStrongChallengeEX_Talent_StageAbility_TGT_044</a>[<span class=\"descriptionNumberColor\">Teach By Banaxample</span>]",
                   "duration": {
-                    "operator": "Variables[0] (MDF_TGT_Lifetime) || RETURN",
-                    "displayLines": "MDF_TGT_Lifetime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_TGT_Lifetime"
-                    ]
+                    "displayLines": "MDF_TGT_Lifetime"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] (MDF_TGT_MaxLayer) || RETURN",
-                    "displayLines": "MDF_TGT_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_TGT_MaxLayer"
-                    ]
+                    "displayLines": "MDF_TGT_MaxLayer"
                   },
                   "valuePerStack": {
                     "MDF_CriticalDamage": {
-                      "operator": "Variables[0] (MDF_TGT_CriticalDamage) || RETURN",
-                      "displayLines": "MDF_TGT_CriticalDamage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_TGT_CriticalDamage"
-                      ]
+                      "displayLines": "MDF_TGT_CriticalDamage"
                     },
                     "MDF_MaxLayer": {
-                      "operator": "Variables[0] (MDF_TGT_MaxLayer) || RETURN",
-                      "displayLines": "MDF_TGT_MaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_TGT_MaxLayer"
-                      ]
+                      "displayLines": "MDF_TGT_MaxLayer"
                     }
                   },
                   "casterAssign": "CasterSelf"
@@ -263,28 +224,13 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1107567854\">MStrongChallengeEX_Talent_StageAbility_PLY_044</a>",
                   "valuePerStack": {
                     "MDF_TGT_CriticalDamage": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     },
                     "MDF_TGT_Lifetime": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     },
                     "MDF_TGT_MaxLayer": {
-                      "operator": "Variables[0] (#ADF_3) || RETURN",
-                      "displayLines": "#ADF_3",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_3"
-                      ]
+                      "displayLines": "#ADF_3"
                     }
                   }
                 }

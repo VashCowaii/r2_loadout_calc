@@ -134,13 +134,7 @@ const compositeAbilityObject = {
             "target": "{{Summoner of Ability Target(ST)}}"
           },
           "setValue": {
-            "operator": "Variables[0] (_MaxHP) || Variables[1] (_HPRatio) || MUL || RETURN",
-            "displayLines": "(_MaxHP * _HPRatio)",
-            "constants": [],
-            "variables": [
-              "_MaxHP",
-              "_HPRatio"
-            ]
+            "displayLines": "(_MaxHP * _HPRatio)"
           }
         },
         {
@@ -199,12 +193,7 @@ const compositeAbilityObject = {
           },
           "isSet": true,
           "constantValue": {
-            "operator": "Variables[0] (_CurrentStance) || RETURN",
-            "displayLines": "_CurrentStance",
-            "constants": [],
-            "variables": [
-              "_CurrentStance"
-            ]
+            "displayLines": "_CurrentStance"
           }
         },
         {
@@ -329,12 +318,7 @@ const compositeAbilityObject = {
           },
           "searchRandom": true,
           "maxTargets": {
-            "operator": "Variables[0] (_ChangeCount) || RETURN",
-            "displayLines": "_ChangeCount",
-            "constants": [],
-            "variables": [
-              "_ChangeCount"
-            ]
+            "displayLines": "_ChangeCount"
           },
           "ifTargetFound": [
             {
@@ -385,12 +369,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1943056367\">Modifier_HeliobusActionAbilityFormChange_Enemy</a>[<span class=\"descriptionNumberColor\">Incarnate Morph</span>]",
                   "duration": {
-                    "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P3_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P3_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P3_ADF"
                   }
                 }
               ]
@@ -664,14 +643,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (LifeTimeCheck) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(LifeTimeCheck - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "LifeTimeCheck"
-                    ]
+                    "displayLines": "(LifeTimeCheck - 1)"
                   },
                   "variableName": "LifeTimeCheck"
                 },

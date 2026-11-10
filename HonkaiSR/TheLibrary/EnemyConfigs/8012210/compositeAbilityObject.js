@@ -619,13 +619,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageTakenUpRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                    "displayLines": "(MDF_DamageTakenUpRatio_PerLayer * ModifierLayers)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageTakenUpRatio_PerLayer",
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "(MDF_DamageTakenUpRatio_PerLayer * ModifierLayers)"
                   }
                 },
                 {
@@ -1731,12 +1725,7 @@ const compositeAbilityObject = {
                                   },
                                   "modifier": "<a class=\"gModGreen\" id=\"-1043458445\">Monster_W2_HuanlongPart_01_Dormancy</a>[<span class=\"descriptionNumberColor\">Repose</span>]",
                                   "duration": {
-                                    "operator": "Variables[0] (MDF_DormancyLifeTime) || RETURN",
-                                    "displayLines": "MDF_DormancyLifeTime",
-                                    "constants": [],
-                                    "variables": [
-                                      "MDF_DormancyLifeTime"
-                                    ]
+                                    "displayLines": "MDF_DormancyLifeTime"
                                   }
                                 }
                               ]
@@ -1791,12 +1780,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1043458445\">Monster_W2_HuanlongPart_01_Dormancy</a>[<span class=\"descriptionNumberColor\">Repose</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_DormancyLifeTime) || RETURN",
-                        "displayLines": "MDF_DormancyLifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DormancyLifeTime"
-                        ]
+                        "displayLines": "MDF_DormancyLifeTime"
                       }
                     }
                   ]
@@ -1959,12 +1943,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Enemy ID",
                     "ID": {
-                      "operator": "Variables[0] (SummonerID) || RETURN",
-                      "displayLines": "SummonerID",
-                      "constants": [],
-                      "variables": [
-                        "SummonerID"
-                      ]
+                      "displayLines": "SummonerID"
                     },
                     "target": {
                       "name": "Target Name",
@@ -1985,12 +1964,7 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Enemy ID",
                         "ID": {
-                          "operator": "Variables[0] (SummonID) || RETURN",
-                          "displayLines": "SummonID",
-                          "constants": [],
-                          "variables": [
-                            "SummonID"
-                          ]
+                          "displayLines": "SummonID"
                         },
                         "target": {
                           "name": "Target Name",
@@ -2053,12 +2027,7 @@ const compositeAbilityObject = {
                           "conditions": {
                             "name": "Enemy ID",
                             "ID": {
-                              "operator": "Variables[0] (SummonID) || RETURN",
-                              "displayLines": "SummonID",
-                              "constants": [],
-                              "variables": [
-                                "SummonID"
-                              ]
+                              "displayLines": "SummonID"
                             },
                             "target": {
                               "name": "Target Name",
@@ -2145,20 +2114,10 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"-616319653\">Monster_W2_HuanlongPart_01_Success</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                               "valuePerStack": {
                                 "MDF_ActionDelayRatio": {
-                                  "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                                  "displayLines": "{[PassiveSkill02[1]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[PassiveSkill02[1]]}"
-                                  ]
+                                  "displayLines": "{[PassiveSkill02[1]]}"
                                 },
                                 "MDF_DamageTakenUpRatio_PerLayer": {
-                                  "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                                  "displayLines": "{[PassiveSkill02[0]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[PassiveSkill02[0]]}"
-                                  ]
+                                  "displayLines": "{[PassiveSkill02[0]]}"
                                 }
                               },
                               "addStacksPerTrigger": 2
@@ -2174,20 +2133,10 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"-616319653\">Monster_W2_HuanlongPart_01_Success</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                               "valuePerStack": {
                                 "MDF_ActionDelayRatio": {
-                                  "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                                  "displayLines": "{[PassiveSkill02[1]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[PassiveSkill02[1]]}"
-                                  ]
+                                  "displayLines": "{[PassiveSkill02[1]]}"
                                 },
                                 "MDF_DamageTakenUpRatio_PerLayer": {
-                                  "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                                  "displayLines": "{[PassiveSkill02[0]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[PassiveSkill02[0]]}"
-                                  ]
+                                  "displayLines": "{[PassiveSkill02[0]]}"
                                 }
                               }
                             }
@@ -2203,12 +2152,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1043458445\">Monster_W2_HuanlongPart_01_Dormancy</a>[<span class=\"descriptionNumberColor\">Repose</span>]",
                       "duration": {
-                        "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                        "displayLines": "{[Skill02[0]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill02[0]]}"
-                        ]
+                        "displayLines": "{[Skill02[0]]}"
                       }
                     }
                   ]
@@ -2239,12 +2183,7 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Enemy ID",
                         "ID": {
-                          "operator": "Variables[0] (SummonerID) || RETURN",
-                          "displayLines": "SummonerID",
-                          "constants": [],
-                          "variables": [
-                            "SummonerID"
-                          ]
+                          "displayLines": "SummonerID"
                         },
                         "target": {
                           "name": "Target Name",
@@ -2265,12 +2204,7 @@ const compositeAbilityObject = {
                           "conditions": {
                             "name": "Enemy ID",
                             "ID": {
-                              "operator": "Variables[0] (SummonID) || RETURN",
-                              "displayLines": "SummonID",
-                              "constants": [],
-                              "variables": [
-                                "SummonID"
-                              ]
+                              "displayLines": "SummonID"
                             },
                             "target": {
                               "name": "Target Name",
@@ -2344,12 +2278,7 @@ const compositeAbilityObject = {
                               "conditions": {
                                 "name": "Enemy ID",
                                 "ID": {
-                                  "operator": "Variables[0] (SummonID) || RETURN",
-                                  "displayLines": "SummonID",
-                                  "constants": [],
-                                  "variables": [
-                                    "SummonID"
-                                  ]
+                                  "displayLines": "SummonID"
                                 },
                                 "target": {
                                   "name": "Target Name",
@@ -2436,20 +2365,10 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-616319653\">Monster_W2_HuanlongPart_01_Success</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                                   "valuePerStack": {
                                     "MDF_ActionDelayRatio": {
-                                      "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                                      "displayLines": "{[PassiveSkill02[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[PassiveSkill02[1]]}"
-                                      ]
+                                      "displayLines": "{[PassiveSkill02[1]]}"
                                     },
                                     "MDF_DamageTakenUpRatio_PerLayer": {
-                                      "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                                      "displayLines": "{[PassiveSkill02[0]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[PassiveSkill02[0]]}"
-                                      ]
+                                      "displayLines": "{[PassiveSkill02[0]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 2
@@ -2465,20 +2384,10 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-616319653\">Monster_W2_HuanlongPart_01_Success</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                                   "valuePerStack": {
                                     "MDF_ActionDelayRatio": {
-                                      "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                                      "displayLines": "{[PassiveSkill02[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[PassiveSkill02[1]]}"
-                                      ]
+                                      "displayLines": "{[PassiveSkill02[1]]}"
                                     },
                                     "MDF_DamageTakenUpRatio_PerLayer": {
-                                      "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                                      "displayLines": "{[PassiveSkill02[0]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[PassiveSkill02[0]]}"
-                                      ]
+                                      "displayLines": "{[PassiveSkill02[0]]}"
                                     }
                                   }
                                 }
@@ -2514,12 +2423,7 @@ const compositeAbilityObject = {
                           "conditions": {
                             "name": "Enemy ID",
                             "ID": {
-                              "operator": "Variables[0] (SummonerID) || RETURN",
-                              "displayLines": "SummonerID",
-                              "constants": [],
-                              "variables": [
-                                "SummonerID"
-                              ]
+                              "displayLines": "SummonerID"
                             },
                             "target": {
                               "name": "Target Name",
@@ -2540,12 +2444,7 @@ const compositeAbilityObject = {
                               "conditions": {
                                 "name": "Enemy ID",
                                 "ID": {
-                                  "operator": "Variables[0] (SummonID) || RETURN",
-                                  "displayLines": "SummonID",
-                                  "constants": [],
-                                  "variables": [
-                                    "SummonID"
-                                  ]
+                                  "displayLines": "SummonID"
                                 },
                                 "target": {
                                   "name": "Target Name",
@@ -2608,12 +2507,7 @@ const compositeAbilityObject = {
                                   "conditions": {
                                     "name": "Enemy ID",
                                     "ID": {
-                                      "operator": "Variables[0] (SummonID) || RETURN",
-                                      "displayLines": "SummonID",
-                                      "constants": [],
-                                      "variables": [
-                                        "SummonID"
-                                      ]
+                                      "displayLines": "SummonID"
                                     },
                                     "target": {
                                       "name": "Target Name",
@@ -2700,20 +2594,10 @@ const compositeAbilityObject = {
                                       "modifier": "<a class=\"gModGreen\" id=\"-616319653\">Monster_W2_HuanlongPart_01_Success</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                                       "valuePerStack": {
                                         "MDF_ActionDelayRatio": {
-                                          "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                                          "displayLines": "{[PassiveSkill02[1]]}",
-                                          "constants": [],
-                                          "variables": [
-                                            "{[PassiveSkill02[1]]}"
-                                          ]
+                                          "displayLines": "{[PassiveSkill02[1]]}"
                                         },
                                         "MDF_DamageTakenUpRatio_PerLayer": {
-                                          "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                                          "displayLines": "{[PassiveSkill02[0]]}",
-                                          "constants": [],
-                                          "variables": [
-                                            "{[PassiveSkill02[0]]}"
-                                          ]
+                                          "displayLines": "{[PassiveSkill02[0]]}"
                                         }
                                       },
                                       "addStacksPerTrigger": 2
@@ -2729,20 +2613,10 @@ const compositeAbilityObject = {
                                       "modifier": "<a class=\"gModGreen\" id=\"-616319653\">Monster_W2_HuanlongPart_01_Success</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                                       "valuePerStack": {
                                         "MDF_ActionDelayRatio": {
-                                          "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                                          "displayLines": "{[PassiveSkill02[1]]}",
-                                          "constants": [],
-                                          "variables": [
-                                            "{[PassiveSkill02[1]]}"
-                                          ]
+                                          "displayLines": "{[PassiveSkill02[1]]}"
                                         },
                                         "MDF_DamageTakenUpRatio_PerLayer": {
-                                          "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                                          "displayLines": "{[PassiveSkill02[0]]}",
-                                          "constants": [],
-                                          "variables": [
-                                            "{[PassiveSkill02[0]]}"
-                                          ]
+                                          "displayLines": "{[PassiveSkill02[0]]}"
                                         }
                                       }
                                     }
@@ -2826,12 +2700,7 @@ const compositeAbilityObject = {
               "conditions": {
                 "name": "Enemy ID",
                 "ID": {
-                  "operator": "Variables[0] (SummonerID) || RETURN",
-                  "displayLines": "SummonerID",
-                  "constants": [],
-                  "variables": [
-                    "SummonerID"
-                  ]
+                  "displayLines": "SummonerID"
                 },
                 "target": {
                   "name": "Target Name",
@@ -2849,20 +2718,10 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-616319653\">Monster_W2_HuanlongPart_01_Success</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                   "valuePerStack": {
                     "MDF_ActionDelayRatio": {
-                      "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[1]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[1]]}"
                     },
                     "MDF_DamageTakenUpRatio_PerLayer": {
-                      "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[0]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[0]]}"
                     }
                   }
                 }
@@ -2892,12 +2751,7 @@ const compositeAbilityObject = {
           "conditions": {
             "name": "Enemy ID",
             "ID": {
-              "operator": "Variables[0] (SummonerID) || RETURN",
-              "displayLines": "SummonerID",
-              "constants": [],
-              "variables": [
-                "SummonerID"
-              ]
+              "displayLines": "SummonerID"
             },
             "target": {
               "name": "Target Name",
@@ -2915,20 +2769,10 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-616319653\">Monster_W2_HuanlongPart_01_Success</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
               "valuePerStack": {
                 "MDF_ActionDelayRatio": {
-                  "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[1]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill02[1]]}"
                 },
                 "MDF_DamageTakenUpRatio_PerLayer": {
-                  "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[0]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill02[0]]}"
                 }
               }
             },
@@ -2940,12 +2784,7 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1043458445\">Monster_W2_HuanlongPart_01_Dormancy</a>[<span class=\"descriptionNumberColor\">Repose</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                "displayLines": "{[Skill02[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill02[0]]}"
-                ]
+                "displayLines": "{[Skill02[0]]}"
               }
             }
           ]
@@ -2986,12 +2825,7 @@ const compositeAbilityObject = {
               "conditions": {
                 "name": "Enemy ID",
                 "ID": {
-                  "operator": "Variables[0] (SummonerID) || RETURN",
-                  "displayLines": "SummonerID",
-                  "constants": [],
-                  "variables": [
-                    "SummonerID"
-                  ]
+                  "displayLines": "SummonerID"
                 },
                 "target": {
                   "name": "Target Name",
@@ -3009,20 +2843,10 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-616319653\">Monster_W2_HuanlongPart_01_Success</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                   "valuePerStack": {
                     "MDF_ActionDelayRatio": {
-                      "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[1]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[1]]}"
                     },
                     "MDF_DamageTakenUpRatio_PerLayer": {
-                      "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[0]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[0]]}"
                     }
                   }
                 }
@@ -3052,12 +2876,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1485253143\">Monster_W2_HuanlongPart_01_Revive</a>",
           "valuePerStack": {
             "MDF_DormancyLifeTime": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             }
           }
         },
@@ -3198,29 +3017,14 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-            "displayLines": "{[Skill03[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[1]]}"
-            ]
+            "displayLines": "{[Skill03[1]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-            "displayLines": "{[Skill03[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[2]]}"
-            ]
+            "displayLines": "{[Skill03[2]]}"
           },
           "valuePerStack": {
             "MDF_DirtyHPRatio": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             }
           },
           "success": []
@@ -3524,12 +3328,7 @@ const compositeAbilityObject = {
           "conditions": {
             "name": "Enemy ID",
             "ID": {
-              "operator": "Variables[0] (SummonID) || RETURN",
-              "displayLines": "SummonID",
-              "constants": [],
-              "variables": [
-                "SummonID"
-              ]
+              "displayLines": "SummonID"
             },
             "target": {
               "name": "Target Name",
@@ -3679,13 +3478,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Imaginary",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MaxHPValue) || Variables[1] ({[Skill04[0]]}) || MUL || RETURN",
-                      "displayLines": "(MaxHPValue * {[Skill04[0]]})",
-                      "constants": [],
-                      "variables": [
-                        "MaxHPValue",
-                        "{[Skill04[0]]}"
-                      ]
+                      "displayLines": "(MaxHPValue * {[Skill04[0]]})"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -3706,13 +3499,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "DamageFlat": {
-                  "operator": "Variables[0] (MaxHPValue) || Variables[1] ({[Skill04[0]]}) || MUL || RETURN",
-                  "displayLines": "(MaxHPValue * {[Skill04[0]]})",
-                  "constants": [],
-                  "variables": [
-                    "MaxHPValue",
-                    "{[Skill04[0]]}"
-                  ]
+                  "displayLines": "(MaxHPValue * {[Skill04[0]]})"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -3816,12 +3603,7 @@ const compositeAbilityObject = {
           "conditions": {
             "name": "Enemy ID",
             "ID": {
-              "operator": "Variables[0] (SummonID) || RETURN",
-              "displayLines": "SummonID",
-              "constants": [],
-              "variables": [
-                "SummonID"
-              ]
+              "displayLines": "SummonID"
             },
             "target": {
               "name": "Target Name",

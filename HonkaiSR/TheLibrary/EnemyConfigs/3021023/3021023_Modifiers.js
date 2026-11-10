@@ -23,12 +23,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_ShowValue1) || RETURN",
-                "displayLines": "MDF_ShowValue1",
-                "constants": [],
-                "variables": [
-                  "MDF_ShowValue1"
-                ]
+                "displayLines": "MDF_ShowValue1"
               }
             }
           ]
@@ -92,13 +87,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1086329449\">Enemy_Argenti_DamageUP_FateRin_Sub</a>",
               "valuePerStack": {
                 "MDF_ShowValue1": {
-                  "operator": "Variables[0] (MDF_ShowValue1) || Variables[1] (MDF_ShowValue2) || MUL || RETURN",
-                  "displayLines": "(MDF_ShowValue1 * MDF_ShowValue2)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_ShowValue1",
-                    "MDF_ShowValue2"
-                  ]
+                  "displayLines": "(MDF_ShowValue1 * MDF_ShowValue2)"
                 }
               },
               "asSubModifier": true
@@ -112,13 +101,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1086329449\">Enemy_Argenti_DamageUP_FateRin_Sub</a>",
               "valuePerStack": {
                 "MDF_ShowValue1": {
-                  "operator": "Variables[0] (MDF_ShowValue1) || Variables[1] (MDF_ShowValue2) || MUL || RETURN",
-                  "displayLines": "(MDF_ShowValue1 * MDF_ShowValue2)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_ShowValue1",
-                    "MDF_ShowValue2"
-                  ]
+                  "displayLines": "(MDF_ShowValue1 * MDF_ShowValue2)"
                 }
               },
               "asSubModifier": true
@@ -158,13 +141,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_ShowValue2) || Variables[1] (MDF_ShowValue1) || MUL || RETURN",
-                "displayLines": "(MDF_ShowValue2 * MDF_ShowValue1)",
-                "constants": [],
-                "variables": [
-                  "MDF_ShowValue2",
-                  "MDF_ShowValue1"
-                ]
+                "displayLines": "(MDF_ShowValue2 * MDF_ShowValue1)"
               }
             }
           ]

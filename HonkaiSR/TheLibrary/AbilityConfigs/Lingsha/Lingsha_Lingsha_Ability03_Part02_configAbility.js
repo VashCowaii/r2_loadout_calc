@@ -19,21 +19,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-962483629\">Lingsha_Eidolon2_BreakDamageAttackRatio</a>[<span class=\"descriptionNumberColor\">Leisure in Carmine Smokeveil</span>]",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.4) || RETURN",
-              "displayLines": "0.4",
-              "constants": [],
-              "variables": [
-                0.4
-              ]
+              "displayLines": "0.4"
             }
           }
         }
@@ -47,21 +37,11 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-637709984\">Lingsha_BreakDamageUp</a>[<span class=\"descriptionNumberColor\">Befog</span>]",
       "duration": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       },
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] (0.25) || RETURN",
-          "displayLines": "0.25",
-          "constants": [],
-          "variables": [
-            0.25
-          ]
+          "displayLines": "0.25"
         }
       }
     },
@@ -75,20 +55,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (1.5) || RETURN",
-          "displayLines": "1.5",
-          "constants": [],
-          "variables": [
-            1.5
-          ]
+          "displayLines": "1.5"
         },
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -102,20 +72,10 @@ const configAbility = {
         "target": "{{All Team Members}}"
       },
       "healPercent": {
-        "operator": "Variables[0] (0.12) || RETURN",
-        "displayLines": "0.12",
-        "constants": [],
-        "variables": [
-          0.12
-        ]
+        "displayLines": "0.12"
       },
       "healFlat": {
-        "operator": "Variables[0] (360) || RETURN",
-        "displayLines": "360",
-        "constants": [],
-        "variables": [
-          360
-        ]
+        "displayLines": "360"
       }
     },
     {

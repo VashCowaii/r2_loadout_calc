@@ -159,68 +159,28 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"724771238\">Enemy_W5_AsatPramad_Bomb</a>[<span class=\"descriptionNumberColor\">Meme'd</span>]",
                   "valuePerStack": {
                     "MDF_DamagePercentageLightTeam": {
-                      "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                      "displayLines": "{[Skill03[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill03[0]]}"
-                      ]
+                      "displayLines": "{[Skill03[0]]}"
                     },
                     "MDF_BaseAttack": {
-                      "operator": "Variables[0] (BaseAttack) || RETURN",
-                      "displayLines": "BaseAttack",
-                      "constants": [],
-                      "variables": [
-                        "BaseAttack"
-                      ]
+                      "displayLines": "BaseAttack"
                     },
                     "MDF_MaxHP": {
-                      "operator": "Variables[0] (MaxHP) || RETURN",
-                      "displayLines": "MaxHP",
-                      "constants": [],
-                      "variables": [
-                        "MaxHP"
-                      ]
+                      "displayLines": "MaxHP"
                     },
                     "MDF_DirtyBloodRatioPerLayer": {
-                      "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-                      "displayLines": "{[Skill03[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill03[1]]}"
-                      ]
+                      "displayLines": "{[Skill03[1]]}"
                     },
                     "MDF_DirtyBloodMaxLayer": {
-                      "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-                      "displayLines": "{[Skill03[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill03[2]]}"
-                      ]
+                      "displayLines": "{[Skill03[2]]}"
                     },
                     "MDF_Chance": {
-                      "operator": "Variables[0] ({[Skill03[3]]}) || RETURN",
-                      "displayLines": "{[Skill03[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill03[3]]}"
-                      ]
+                      "displayLines": "{[Skill03[3]]}"
                     },
                     "MDF_DamageTakenUpRatio": {
-                      "operator": "Variables[0] ({[Skill03[4]]}) || RETURN",
-                      "displayLines": "{[Skill03[4]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill03[4]]}"
-                      ]
+                      "displayLines": "{[Skill03[4]]}"
                     },
                     "MDF_DamageTakenMaxLayer": {
-                      "operator": "Variables[0] ({[Skill03[5]]}) || RETURN",
-                      "displayLines": "{[Skill03[5]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill03[5]]}"
-                      ]
+                      "displayLines": "{[Skill03[5]]}"
                     }
                   },
                   "casterAssign": "TargetSelf"
@@ -253,68 +213,28 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"724771238\">Enemy_W5_AsatPramad_Bomb</a>[<span class=\"descriptionNumberColor\">Meme'd</span>]",
                       "valuePerStack": {
                         "MDF_DamagePercentageLightTeam": {
-                          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                          "displayLines": "{[Skill03[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill03[0]]}"
-                          ]
+                          "displayLines": "{[Skill03[0]]}"
                         },
                         "MDF_BaseAttack": {
-                          "operator": "Variables[0] (BaseAttack) || RETURN",
-                          "displayLines": "BaseAttack",
-                          "constants": [],
-                          "variables": [
-                            "BaseAttack"
-                          ]
+                          "displayLines": "BaseAttack"
                         },
                         "MDF_MaxHP": {
-                          "operator": "Variables[0] (MaxHP) || RETURN",
-                          "displayLines": "MaxHP",
-                          "constants": [],
-                          "variables": [
-                            "MaxHP"
-                          ]
+                          "displayLines": "MaxHP"
                         },
                         "MDF_DirtyBloodRatioPerLayer": {
-                          "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-                          "displayLines": "{[Skill03[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill03[1]]}"
-                          ]
+                          "displayLines": "{[Skill03[1]]}"
                         },
                         "MDF_DirtyBloodMaxLayer": {
-                          "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-                          "displayLines": "{[Skill03[2]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill03[2]]}"
-                          ]
+                          "displayLines": "{[Skill03[2]]}"
                         },
                         "MDF_Chance": {
-                          "operator": "Variables[0] ({[Skill03[3]]}) || RETURN",
-                          "displayLines": "{[Skill03[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill03[3]]}"
-                          ]
+                          "displayLines": "{[Skill03[3]]}"
                         },
                         "MDF_DamageTakenUpRatio": {
-                          "operator": "Variables[0] ({[Skill03[4]]}) || RETURN",
-                          "displayLines": "{[Skill03[4]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill03[4]]}"
-                          ]
+                          "displayLines": "{[Skill03[4]]}"
                         },
                         "MDF_DamageTakenMaxLayer": {
-                          "operator": "Variables[0] ({[Skill03[5]]}) || RETURN",
-                          "displayLines": "{[Skill03[5]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill03[5]]}"
-                          ]
+                          "displayLines": "{[Skill03[5]]}"
                         }
                       },
                       "casterAssign": "TargetSelf"
@@ -731,12 +651,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (Skill04TargetCount) || RETURN",
-                    "displayLines": "Skill04TargetCount",
-                    "constants": [],
-                    "variables": [
-                      "Skill04TargetCount"
-                    ]
+                    "displayLines": "Skill04TargetCount"
                   },
                   "caseEvents": [
                     {
@@ -755,12 +670,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (Skill04TargetCount) || RETURN",
-                    "displayLines": "Skill04TargetCount",
-                    "constants": [],
-                    "variables": [
-                      "Skill04TargetCount"
-                    ]
+                    "displayLines": "Skill04TargetCount"
                   },
                   "caseEvents": [
                     {
@@ -869,12 +779,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (Skill04BombCount) || RETURN",
-                "displayLines": "Skill04BombCount",
-                "constants": [],
-                "variables": [
-                  "Skill04BombCount"
-                ]
+                "displayLines": "Skill04BombCount"
               },
               "execute": [
                 {
@@ -924,21 +829,11 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-78128030\">Enemy_W5_AsatPramad_DirtyBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphon</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-                        "displayLines": "{[Skill03[2]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill03[2]]}"
-                        ]
+                        "displayLines": "{[Skill03[2]]}"
                       },
                       "valuePerStack": {
                         "MDF_DirtyBloodRatioPerLayer": {
-                          "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-                          "displayLines": "{[Skill03[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill03[1]]}"
-                          ]
+                          "displayLines": "{[Skill03[1]]}"
                         }
                       }
                     }
@@ -977,12 +872,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (Skill04BombCount) || RETURN",
-                "displayLines": "Skill04BombCount",
-                "constants": [],
-                "variables": [
-                  "Skill04BombCount"
-                ]
+                "displayLines": "Skill04BombCount"
               },
               "execute": [
                 {
@@ -994,12 +884,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_14136) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_14136",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_14136"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_14136"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1181,12 +1066,7 @@ const configAbility = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (DebuffFirstTimeCount) || RETURN",
-                "displayLines": "DebuffFirstTimeCount",
-                "constants": [],
-                "variables": [
-                  "DebuffFirstTimeCount"
-                ]
+                "displayLines": "DebuffFirstTimeCount"
               },
               "caseEvents": [
                 {
@@ -1398,32 +1278,17 @@ const configAbility = {
                 "target": "{{Asat Pramad: Skill05 Target1}}"
               },
               "lightBuff": {
-                "operator": "Variables[0] (DebuffID01) || RETURN",
-                "displayLines": "DebuffID01",
-                "constants": [],
-                "variables": [
-                  "DebuffID01"
-                ]
+                "displayLines": "DebuffID01"
               },
               "darkTarget": {
                 "name": "Target Name",
                 "target": "{{Asat Pramad: Skill05 Target2}}"
               },
               "darkBuff": {
-                "operator": "Variables[0] (DebuffID02) || RETURN",
-                "displayLines": "DebuffID02",
-                "constants": [],
-                "variables": [
-                  "DebuffID02"
-                ]
+                "displayLines": "DebuffID02"
               },
               "weight": {
-                "operator": "Variables[0] (DebuffWeight01) || RETURN",
-                "displayLines": "DebuffWeight01",
-                "constants": [],
-                "variables": [
-                  "DebuffWeight01"
-                ]
+                "displayLines": "DebuffWeight01"
               }
             },
             {
@@ -1433,32 +1298,17 @@ const configAbility = {
                 "target": "{{Asat Pramad: Skill05 Target3}}"
               },
               "lightBuff": {
-                "operator": "Variables[0] (DebuffID03) || RETURN",
-                "displayLines": "DebuffID03",
-                "constants": [],
-                "variables": [
-                  "DebuffID03"
-                ]
+                "displayLines": "DebuffID03"
               },
               "darkTarget": {
                 "name": "Target Name",
                 "target": "{{Asat Pramad: Skill05 Target4}}"
               },
               "darkBuff": {
-                "operator": "Variables[0] (DebuffID04) || RETURN",
-                "displayLines": "DebuffID04",
-                "constants": [],
-                "variables": [
-                  "DebuffID04"
-                ]
+                "displayLines": "DebuffID04"
               },
               "weight": {
-                "operator": "Variables[0] (DebuffWeight02) || RETURN",
-                "displayLines": "DebuffWeight02",
-                "constants": [],
-                "variables": [
-                  "DebuffWeight02"
-                ]
+                "displayLines": "DebuffWeight02"
               }
             },
             {
@@ -1468,32 +1318,17 @@ const configAbility = {
                 "target": "{{Asat Pramad: Skill05 Target5}}"
               },
               "lightBuff": {
-                "operator": "Variables[0] (DebuffID05) || RETURN",
-                "displayLines": "DebuffID05",
-                "constants": [],
-                "variables": [
-                  "DebuffID05"
-                ]
+                "displayLines": "DebuffID05"
               },
               "darkTarget": {
                 "name": "Target Name",
                 "target": "{{Asat Pramad: Skill05 Target6}}"
               },
               "darkBuff": {
-                "operator": "Variables[0] (DebuffID06) || RETURN",
-                "displayLines": "DebuffID06",
-                "constants": [],
-                "variables": [
-                  "DebuffID06"
-                ]
+                "displayLines": "DebuffID06"
               },
               "weight": {
-                "operator": "Variables[0] (DebuffWeight03) || RETURN",
-                "displayLines": "DebuffWeight03",
-                "constants": [],
-                "variables": [
-                  "DebuffWeight03"
-                ]
+                "displayLines": "DebuffWeight03"
               }
             }
           ]
@@ -1884,12 +1719,7 @@ const configAbility = {
                     "value1": "DebuffID_Result",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (DebuffID01) || RETURN",
-                      "displayLines": "DebuffID01",
-                      "constants": [],
-                      "variables": [
-                        "DebuffID01"
-                      ]
+                      "displayLines": "DebuffID01"
                     }
                   },
                   {
@@ -1897,12 +1727,7 @@ const configAbility = {
                     "value1": "DebuffID_Result",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (DebuffID03) || RETURN",
-                      "displayLines": "DebuffID03",
-                      "constants": [],
-                      "variables": [
-                        "DebuffID03"
-                      ]
+                      "displayLines": "DebuffID03"
                     }
                   },
                   {
@@ -1910,12 +1735,7 @@ const configAbility = {
                     "value1": "DebuffID_Result",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (DebuffID05) || RETURN",
-                      "displayLines": "DebuffID05",
-                      "constants": [],
-                      "variables": [
-                        "DebuffID05"
-                      ]
+                      "displayLines": "DebuffID05"
                     }
                   }
                 ]
@@ -1938,12 +1758,7 @@ const configAbility = {
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (DebuffID_Result) || RETURN",
-            "displayLines": "DebuffID_Result",
-            "constants": [],
-            "variables": [
-              "DebuffID_Result"
-            ]
+            "displayLines": "DebuffID_Result"
           },
           "caseEvents": [
             {
@@ -1953,12 +1768,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (CardCount) || RETURN",
-                    "displayLines": "CardCount",
-                    "constants": [],
-                    "variables": [
-                      "CardCount"
-                    ]
+                    "displayLines": "CardCount"
                   },
                   "caseEvents": [
                     {
@@ -2084,12 +1894,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (CardCount) || RETURN",
-                    "displayLines": "CardCount",
-                    "constants": [],
-                    "variables": [
-                      "CardCount"
-                    ]
+                    "displayLines": "CardCount"
                   },
                   "caseEvents": [
                     {
@@ -2215,12 +2020,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (CardCount) || RETURN",
-                    "displayLines": "CardCount",
-                    "constants": [],
-                    "variables": [
-                      "CardCount"
-                    ]
+                    "displayLines": "CardCount"
                   },
                   "caseEvents": [
                     {
@@ -2346,12 +2146,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (CardCount) || RETURN",
-                    "displayLines": "CardCount",
-                    "constants": [],
-                    "variables": [
-                      "CardCount"
-                    ]
+                    "displayLines": "CardCount"
                   },
                   "caseEvents": [
                     {
@@ -2477,12 +2272,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (CardCount) || RETURN",
-                    "displayLines": "CardCount",
-                    "constants": [],
-                    "variables": [
-                      "CardCount"
-                    ]
+                    "displayLines": "CardCount"
                   },
                   "caseEvents": [
                     {
@@ -2665,12 +2455,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (CardCount) || RETURN",
-                    "displayLines": "CardCount",
-                    "constants": [],
-                    "variables": [
-                      "CardCount"
-                    ]
+                    "displayLines": "CardCount"
                   },
                   "caseEvents": [
                     {
@@ -2796,12 +2581,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (CardCount) || RETURN",
-                    "displayLines": "CardCount",
-                    "constants": [],
-                    "variables": [
-                      "CardCount"
-                    ]
+                    "displayLines": "CardCount"
                   },
                   "caseEvents": [
                     {
@@ -2927,12 +2707,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (CardCount) || RETURN",
-                    "displayLines": "CardCount",
-                    "constants": [],
-                    "variables": [
-                      "CardCount"
-                    ]
+                    "displayLines": "CardCount"
                   },
                   "caseEvents": [
                     {
@@ -3145,12 +2920,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (CardCount) || RETURN",
-                    "displayLines": "CardCount",
-                    "constants": [],
-                    "variables": [
-                      "CardCount"
-                    ]
+                    "displayLines": "CardCount"
                   },
                   "caseEvents": [
                     {
@@ -3276,12 +3046,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (CardCount) || RETURN",
-                    "displayLines": "CardCount",
-                    "constants": [],
-                    "variables": [
-                      "CardCount"
-                    ]
+                    "displayLines": "CardCount"
                   },
                   "caseEvents": [
                     {
@@ -3407,12 +3172,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (CardCount) || RETURN",
-                    "displayLines": "CardCount",
-                    "constants": [],
-                    "variables": [
-                      "CardCount"
-                    ]
+                    "displayLines": "CardCount"
                   },
                   "caseEvents": [
                     {

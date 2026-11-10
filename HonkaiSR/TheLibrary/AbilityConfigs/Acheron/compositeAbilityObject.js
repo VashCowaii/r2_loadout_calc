@@ -145,12 +145,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_UltraSkillSpareCount) || RETURN",
-                    "displayLines": "MDF_UltraSkillSpareCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_UltraSkillSpareCount"
-                    ]
+                    "displayLines": "MDF_UltraSkillSpareCount"
                   },
                   "isFixed": "(Fixed)",
                   "ignoreBlock": true,
@@ -243,12 +238,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "isFixed": "(Fixed)",
                   "ignoreBlock": true,
@@ -319,12 +309,7 @@ const compositeAbilityObject = {
             "show": "Hide",
             "skillType": "Ultimate",
             "toughnessForcedReductionPreview": {
-              "operator": "Variables[0] (ACHERON_OBJECT_UNUSED_1) || RETURN",
-              "displayLines": "ACHERON_OBJECT_UNUSED_1",
-              "constants": [],
-              "variables": [
-                "ACHERON_OBJECT_UNUSED_1"
-              ]
+              "displayLines": "ACHERON_OBJECT_UNUSED_1"
             },
             "showAsForcedReduction": true
           }
@@ -337,12 +322,7 @@ const compositeAbilityObject = {
             "show": "Hide",
             "skillType": "Skill",
             "toughnessForcedReductionPreview": {
-              "operator": "Variables[0] (ACHERON_OBJECT_UNUSED_1) || RETURN",
-              "displayLines": "ACHERON_OBJECT_UNUSED_1",
-              "constants": [],
-              "variables": [
-                "ACHERON_OBJECT_UNUSED_1"
-              ]
+              "displayLines": "ACHERON_OBJECT_UNUSED_1"
             },
             "showAsForcedReduction": true
           }
@@ -355,12 +335,7 @@ const compositeAbilityObject = {
             "show": "Hide",
             "skillType": "Basic ATK",
             "toughnessForcedReductionPreview": {
-              "operator": "Variables[0] (ACHERON_OBJECT_UNUSED_1) || RETURN",
-              "displayLines": "ACHERON_OBJECT_UNUSED_1",
-              "constants": [],
-              "variables": [
-                "ACHERON_OBJECT_UNUSED_1"
-              ]
+              "displayLines": "ACHERON_OBJECT_UNUSED_1"
             },
             "showAsForcedReduction": true
           }
@@ -383,12 +358,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (ACHERON_OBJECT_UNUSED_1) || RETURN",
-                    "displayLines": "ACHERON_OBJECT_UNUSED_1",
-                    "constants": [],
-                    "variables": [
-                      "ACHERON_OBJECT_UNUSED_1"
-                    ]
+                    "displayLines": "ACHERON_OBJECT_UNUSED_1"
                   }
                 }
               ]
@@ -530,14 +500,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "(0 - MDF_PropertyValue)"
                   }
                 }
               ]
@@ -806,12 +769,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (MDF_Count) || RETURN",
-                    "displayLines": "MDF_Count",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Count"
-                    ]
+                    "displayLines": "MDF_Count"
                   },
                   "execute": [
                     {
@@ -829,14 +787,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (Limbo_Count) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(Limbo_Count + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Limbo_Count"
-                            ]
+                            "displayLines": "(Limbo_Count + 1)"
                           },
                           "variableName": "Limbo_Count"
                         }
@@ -903,12 +854,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Looped Event",
                       "maxLoops": {
-                        "operator": "Variables[0] (MDF_Count) || RETURN",
-                        "displayLines": "MDF_Count",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Count"
-                        ]
+                        "displayLines": "MDF_Count"
                       },
                       "execute": [
                         {
@@ -926,14 +872,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (Limbo_Count) || Constants[0] (1) || ADD || RETURN",
-                                "displayLines": "(Limbo_Count + 1)",
-                                "constants": [
-                                  1
-                                ],
-                                "variables": [
-                                  "Limbo_Count"
-                                ]
+                                "displayLines": "(Limbo_Count + 1)"
                               },
                               "variableName": "Limbo_Count"
                             }
@@ -1139,12 +1078,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (ACHERON_OBJECT_UNUSED_1) || RETURN",
-                    "displayLines": "ACHERON_OBJECT_UNUSED_1",
-                    "constants": [],
-                    "variables": [
-                      "ACHERON_OBJECT_UNUSED_1"
-                    ]
+                    "displayLines": "ACHERON_OBJECT_UNUSED_1"
                   }
                 },
                 {
@@ -1200,13 +1134,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_PropertyValue * MDF_Layer)"
                   }
                 }
               ]
@@ -1229,20 +1157,10 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Passive_Count) || RETURN",
-                    "displayLines": "MDF_Passive_Count",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Passive_Count"
-                    ]
+                    "displayLines": "MDF_Passive_Count"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (9) || RETURN",
-                    "displayLines": "9",
-                    "constants": [],
-                    "variables": [
-                      9
-                    ]
+                    "displayLines": "9"
                   },
                   "assignState": "True",
                   "priorState": "Normal",
@@ -1266,20 +1184,10 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_PassiveLayer) || RETURN",
-                    "displayLines": "MDF_PassiveLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PassiveLayer"
-                    ]
+                    "displayLines": "MDF_PassiveLayer"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (9) || RETURN",
-                    "displayLines": "9",
-                    "constants": [],
-                    "variables": [
-                      9
-                    ]
+                    "displayLines": "9"
                   },
                   "assignState": "True",
                   "priorState": "Active",
@@ -1345,12 +1253,7 @@ const compositeAbilityObject = {
                         "value1": "MDF_Passive_Count",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (9) || RETURN",
-                          "displayLines": "9",
-                          "constants": [],
-                          "variables": [
-                            9
-                          ]
+                          "displayLines": "9"
                         }
                       },
                       "passed": [
@@ -1478,12 +1381,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (5) || RETURN",
-                        "displayLines": "5",
-                        "constants": [],
-                        "variables": [
-                          5
-                        ]
+                        "displayLines": "5"
                       },
                       "isFixed": "(Fixed)",
                       "ignoreBlock": true,
@@ -1590,14 +1488,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Scoring_KillCount_4083009) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(Scoring_KillCount_4083009 + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Scoring_KillCount_4083009"
-                    ]
+                    "displayLines": "(Scoring_KillCount_4083009 + 1)"
                   },
                   "variableName": "Scoring_KillCount_4083009"
                 },
@@ -1715,14 +1606,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Scoring_KillCount_4083009) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(Scoring_KillCount_4083009 + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Scoring_KillCount_4083009"
-                    ]
+                    "displayLines": "(Scoring_KillCount_4083009 + 1)"
                   },
                   "variableName": "Scoring_KillCount_4083009"
                 },
@@ -1863,14 +1747,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Scoring_KillCount_4083009) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(Scoring_KillCount_4083009 + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Scoring_KillCount_4083009"
-                    ]
+                    "displayLines": "(Scoring_KillCount_4083009 + 1)"
                   },
                   "variableName": "Scoring_KillCount_4083009"
                 },
@@ -1988,14 +1865,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Scoring_KillCount_4083009) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(Scoring_KillCount_4083009 + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Scoring_KillCount_4083009"
-                    ]
+                    "displayLines": "(Scoring_KillCount_4083009 + 1)"
                   },
                   "variableName": "Scoring_KillCount_4083009"
                 },
@@ -2345,14 +2215,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Scoring_KillCount_4083009) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(Scoring_KillCount_4083009 + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Scoring_KillCount_4083009"
-                    ]
+                    "displayLines": "(Scoring_KillCount_4083009 + 1)"
                   },
                   "variableName": "Scoring_KillCount_4083009"
                 },
@@ -2470,14 +2333,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Scoring_KillCount_4083009) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(Scoring_KillCount_4083009 + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Scoring_KillCount_4083009"
-                    ]
+                    "displayLines": "(Scoring_KillCount_4083009 + 1)"
                   },
                   "variableName": "Scoring_KillCount_4083009"
                 },
@@ -2658,12 +2514,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (ACHERON_OBJECT_UNUSED_1) || RETURN",
-                    "displayLines": "ACHERON_OBJECT_UNUSED_1",
-                    "constants": [],
-                    "variables": [
-                      "ACHERON_OBJECT_UNUSED_1"
-                    ]
+                    "displayLines": "ACHERON_OBJECT_UNUSED_1"
                   }
                 }
               ]
@@ -2717,12 +2568,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1886427249\">Acheron_UltraAbilitySpareCount</a>[<span class=\"descriptionNumberColor\">Quadrivalent Ascendance</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         }
                       }
                     }
@@ -2736,21 +2582,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"62451815\">Acheron_UltraAbilitySpareCount_PointB1</a>[<span class=\"descriptionNumberColor\">Quadrivalent Ascendance</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (3) || RETURN",
-                          "displayLines": "3",
-                          "constants": [],
-                          "variables": [
-                            3
-                          ]
+                          "displayLines": "3"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -2776,20 +2612,10 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Thunder",
                         "Damage": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         },
                         "Toughness": {
-                          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                          "displayLines": "ST Toughness Value",
-                          "constants": [],
-                          "variables": [
-                            "ST Toughness Value"
-                          ]
+                          "displayLines": "ST Toughness Value"
                         },
                         "Tags": null,
                         "attackType": "Technique",
@@ -2808,12 +2634,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Thunder",
                         "Damage": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -2895,12 +2716,7 @@ const compositeAbilityObject = {
           "name": "Update Displayed Energy Bar",
           "value": 0,
           "maximum": {
-            "operator": "Variables[0] (9) || RETURN",
-            "displayLines": "9",
-            "constants": [],
-            "variables": [
-              9
-            ]
+            "displayLines": "9"
           },
           "assignState": "True",
           "priorState": "Normal",
@@ -2964,12 +2780,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-84702346\">Acheron_Eidolon6_AddRegardAsAbilityType</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             }
@@ -3004,12 +2815,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1111481031\">Acheron_Eidolon4_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Ultimate DMG Vulnerability</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.08) || RETURN",
-                          "displayLines": "0.08",
-                          "constants": [],
-                          "variables": [
-                            0.08
-                          ]
+                          "displayLines": "0.08"
                         }
                       }
                     }
@@ -3040,12 +2846,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1111481031\">Acheron_Eidolon4_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Ultimate DMG Vulnerability</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.08) || RETURN",
-                      "displayLines": "0.08",
-                      "constants": [],
-                      "variables": [
-                        0.08
-                      ]
+                      "displayLines": "0.08"
                     }
                   }
                 },
@@ -3264,14 +3065,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (Acheron_BaseTypeCount) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(Acheron_BaseTypeCount - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Acheron_BaseTypeCount"
-                        ]
+                        "displayLines": "(Acheron_BaseTypeCount - 1)"
                       },
                       "variableName": "Acheron_PointB2_Count"
                     },
@@ -3294,14 +3088,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (Acheron_PointB2_Count) || Constants[0] (1) || ADD || RETURN",
-                                "displayLines": "(Acheron_PointB2_Count + 1)",
-                                "constants": [
-                                  1
-                                ],
-                                "variables": [
-                                  "Acheron_PointB2_Count"
-                                ]
+                                "displayLines": "(Acheron_PointB2_Count + 1)"
                               },
                               "variableName": "Acheron_PointB2_Count"
                             }
@@ -3321,12 +3108,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (1.6) || RETURN",
-                            "displayLines": "1.6",
-                            "constants": [],
-                            "variables": [
-                              1.6
-                            ]
+                            "displayLines": "1.6"
                           },
                           "variableName": "Acheron_PointB2_DamageRatio"
                         }
@@ -3344,12 +3126,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (1.15) || RETURN",
-                                "displayLines": "1.15",
-                                "constants": [],
-                                "variables": [
-                                  1.15
-                                ]
+                                "displayLines": "1.15"
                               },
                               "variableName": "Acheron_PointB2_DamageRatio"
                             }
@@ -3445,12 +3222,7 @@ const compositeAbilityObject = {
                         "value1": "MDF_Passive_Count",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (9) || RETURN",
-                          "displayLines": "9",
-                          "constants": [],
-                          "variables": [
-                            9
-                          ]
+                          "displayLines": "9"
                         }
                       },
                       "passed": [
@@ -3552,12 +3324,7 @@ const compositeAbilityObject = {
                         "value1": "MDF_Passive_Count",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (9) || RETURN",
-                          "displayLines": "9",
-                          "constants": [],
-                          "variables": [
-                            9
-                          ]
+                          "displayLines": "9"
                         }
                       },
                       {
@@ -4023,13 +3790,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (Acheron_FlowerCountBySp) || Variables[1] (Acheron_ChangeValue) || ADD || RETURN",
-                        "displayLines": "(Acheron_FlowerCountBySp + Acheron_ChangeValue)",
-                        "constants": [],
-                        "variables": [
-                          "Acheron_FlowerCountBySp",
-                          "Acheron_ChangeValue"
-                        ]
+                        "displayLines": "(Acheron_FlowerCountBySp + Acheron_ChangeValue)"
                       },
                       "variableName": "Acheron_FlowerCountBySp"
                     },
@@ -4040,24 +3801,14 @@ const compositeAbilityObject = {
                         "value1": "Acheron_FlowerCountBySp",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (9) || RETURN",
-                          "displayLines": "9",
-                          "constants": [],
-                          "variables": [
-                            9
-                          ]
+                          "displayLines": "9"
                         }
                       },
                       "passed": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (9) || RETURN",
-                            "displayLines": "9",
-                            "constants": [],
-                            "variables": [
-                              9
-                            ]
+                            "displayLines": "9"
                           },
                           "variableName": "Acheron_FlowerCountBySp"
                         }
@@ -4103,12 +3854,7 @@ const compositeAbilityObject = {
                                 "value1": "MDF_Passive_Count",
                                 "compareType": "<",
                                 "value2": {
-                                  "operator": "Variables[0] (9) || RETURN",
-                                  "displayLines": "9",
-                                  "constants": [],
-                                  "variables": [
-                                    9
-                                  ]
+                                  "displayLines": "9"
                                 }
                               },
                               {
@@ -4123,13 +3869,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (MDF_Passive_Count) || Variables[1] (Acheron_ChangeValue) || ADD || RETURN",
-                                "displayLines": "(MDF_Passive_Count + Acheron_ChangeValue)",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_Passive_Count",
-                                  "Acheron_ChangeValue"
-                                ]
+                                "displayLines": "(MDF_Passive_Count + Acheron_ChangeValue)"
                               },
                               "variableName": "MDF_Passive_Count"
                             },
@@ -4142,13 +3882,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (MDF_Passive_Count) || Variables[1] (Acheron_ChangeValue) || ADD || RETURN",
-                                "displayLines": "(MDF_Passive_Count + Acheron_ChangeValue)",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_Passive_Count",
-                                  "Acheron_ChangeValue"
-                                ]
+                                "displayLines": "(MDF_Passive_Count + Acheron_ChangeValue)"
                               },
                               "variableName": "MDF_Passive_Count"
                             },
@@ -4184,32 +3918,17 @@ const compositeAbilityObject = {
                         "value1": "MDF_Passive_Count",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (9) || RETURN",
-                          "displayLines": "9",
-                          "constants": [],
-                          "variables": [
-                            9
-                          ]
+                          "displayLines": "9"
                         }
                       },
                       "passed": [
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (MDF_Passive_Count) || RETURN",
-                            "displayLines": "MDF_Passive_Count",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Passive_Count"
-                            ]
+                            "displayLines": "MDF_Passive_Count"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (9) || RETURN",
-                            "displayLines": "9",
-                            "constants": [],
-                            "variables": [
-                              9
-                            ]
+                            "displayLines": "9"
                           },
                           "assignState": "True",
                           "priorState": "Active",
@@ -4220,20 +3939,10 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (MDF_Passive_Count) || RETURN",
-                            "displayLines": "MDF_Passive_Count",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Passive_Count"
-                            ]
+                            "displayLines": "MDF_Passive_Count"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (9) || RETURN",
-                            "displayLines": "9",
-                            "constants": [],
-                            "variables": [
-                              9
-                            ]
+                            "displayLines": "9"
                           },
                           "assignState": "True",
                           "priorState": "Normal",
@@ -4307,30 +4016,15 @@ const compositeAbilityObject = {
                                   },
                                   "modifier": "<a class=\"gModGreen\" id=\"62451815\">Acheron_UltraAbilitySpareCount_PointB1</a>[<span class=\"descriptionNumberColor\">Quadrivalent Ascendance</span>]",
                                   "stackLimit": {
-                                    "operator": "Variables[0] (3) || RETURN",
-                                    "displayLines": "3",
-                                    "constants": [],
-                                    "variables": [
-                                      3
-                                    ]
+                                    "displayLines": "3"
                                   },
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (3) || RETURN",
-                                      "displayLines": "3",
-                                      "constants": [],
-                                      "variables": [
-                                        3
-                                      ]
+                                      "displayLines": "3"
                                     }
                                   },
                                   "addStacksPerTrigger": {
-                                    "operator": "Variables[0] (Acheron_PointB1_ClampedAdd) || RETURN",
-                                    "displayLines": "Acheron_PointB1_ClampedAdd",
-                                    "constants": [],
-                                    "variables": [
-                                      "Acheron_PointB1_ClampedAdd"
-                                    ]
+                                    "displayLines": "Acheron_PointB1_ClampedAdd"
                                   }
                                 }
                               ]
@@ -4398,22 +4092,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (1.2) || Variables[1] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-                  "displayLines": "(1.2 * Acheron_PointB2_DamageRatio)",
-                  "constants": [],
-                  "variables": [
-                    1.2,
-                    "Acheron_PointB2_DamageRatio"
-                  ]
+                  "displayLines": "(1.2 * Acheron_PointB2_DamageRatio)"
                 },
                 "HitSplit": 0.1,
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Ultimate"
@@ -4431,21 +4114,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (1.2) || RETURN",
-                  "displayLines": "1.2",
-                  "constants": [],
-                  "variables": [
-                    1.2
-                  ]
+                  "displayLines": "1.2"
                 },
                 "HitSplit": 0.1,
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Ultimate"
@@ -4470,22 +4143,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (1.2) || Variables[1] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-                  "displayLines": "(1.2 * Acheron_PointB2_DamageRatio)",
-                  "constants": [],
-                  "variables": [
-                    1.2,
-                    "Acheron_PointB2_DamageRatio"
-                  ]
+                  "displayLines": "(1.2 * Acheron_PointB2_DamageRatio)"
                 },
                 "HitSplit": 0.9,
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Ultimate"
@@ -4503,21 +4165,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (1.2) || RETURN",
-                  "displayLines": "1.2",
-                  "constants": [],
-                  "variables": [
-                    1.2
-                  ]
+                  "displayLines": "1.2"
                 },
                 "HitSplit": 0.9,
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Ultimate"
@@ -4535,12 +4187,7 @@ const compositeAbilityObject = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (6) || RETURN",
-                "displayLines": "6",
-                "constants": [],
-                "variables": [
-                  6
-                ]
+                "displayLines": "6"
               },
               "execute": [
                 {
@@ -4568,13 +4215,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "operator": "Variables[0] (0.25) || Variables[1] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-                              "displayLines": "(0.25 * Acheron_PointB2_DamageRatio)",
-                              "constants": [],
-                              "variables": [
-                                0.25,
-                                "Acheron_PointB2_DamageRatio"
-                              ]
+                              "displayLines": "(0.25 * Acheron_PointB2_DamageRatio)"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -4593,12 +4234,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "operator": "Variables[0] (0.25) || RETURN",
-                              "displayLines": "0.25",
-                              "constants": [],
-                              "variables": [
-                                0.25
-                              ]
+                              "displayLines": "0.25"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -4771,21 +4407,10 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (0.24) || Variables[1] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-                  "displayLines": "(0.24 * Acheron_PointB2_DamageRatio)",
-                  "constants": [],
-                  "variables": [
-                    0.24,
-                    "Acheron_PointB2_DamageRatio"
-                  ]
+                  "displayLines": "(0.24 * Acheron_PointB2_DamageRatio)"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Ultimate"
@@ -4803,20 +4428,10 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (0.24) || RETURN",
-                  "displayLines": "0.24",
-                  "constants": [],
-                  "variables": [
-                    0.24
-                  ]
+                  "displayLines": "0.24"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Ultimate"
@@ -4952,22 +4567,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (0.24) || Variables[1] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-                  "displayLines": "(0.24 * Acheron_PointB2_DamageRatio)",
-                  "constants": [],
-                  "variables": [
-                    0.24,
-                    "Acheron_PointB2_DamageRatio"
-                  ]
+                  "displayLines": "(0.24 * Acheron_PointB2_DamageRatio)"
                 },
                 "HitSplit": 0.3,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Ultimate",
@@ -4986,21 +4590,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (0.24) || RETURN",
-                  "displayLines": "0.24",
-                  "constants": [],
-                  "variables": [
-                    0.24
-                  ]
+                  "displayLines": "0.24"
                 },
                 "HitSplit": 0.3,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Ultimate",
@@ -5026,22 +4620,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (0.24) || Variables[1] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-                  "displayLines": "(0.24 * Acheron_PointB2_DamageRatio)",
-                  "constants": [],
-                  "variables": [
-                    0.24,
-                    "Acheron_PointB2_DamageRatio"
-                  ]
+                  "displayLines": "(0.24 * Acheron_PointB2_DamageRatio)"
                 },
                 "HitSplit": 0.3,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Ultimate"
@@ -5059,21 +4642,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (0.24) || RETURN",
-                  "displayLines": "0.24",
-                  "constants": [],
-                  "variables": [
-                    0.24
-                  ]
+                  "displayLines": "0.24"
                 },
                 "HitSplit": 0.3,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Ultimate"
@@ -5098,22 +4671,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (0.24) || Variables[1] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-                  "displayLines": "(0.24 * Acheron_PointB2_DamageRatio)",
-                  "constants": [],
-                  "variables": [
-                    0.24,
-                    "Acheron_PointB2_DamageRatio"
-                  ]
+                  "displayLines": "(0.24 * Acheron_PointB2_DamageRatio)"
                 },
                 "HitSplit": 0.4,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Ultimate"
@@ -5131,21 +4693,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (0.24) || RETURN",
-                  "displayLines": "0.24",
-                  "constants": [],
-                  "variables": [
-                    0.24
-                  ]
+                  "displayLines": "0.24"
                 },
                 "HitSplit": 0.4,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Ultimate"
@@ -5347,22 +4899,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (0.24) || Variables[1] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-                  "displayLines": "(0.24 * Acheron_PointB2_DamageRatio)",
-                  "constants": [],
-                  "variables": [
-                    0.24,
-                    "Acheron_PointB2_DamageRatio"
-                  ]
+                  "displayLines": "(0.24 * Acheron_PointB2_DamageRatio)"
                 },
                 "HitSplit": 0.5,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Ultimate",
@@ -5381,21 +4922,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (0.24) || RETURN",
-                  "displayLines": "0.24",
-                  "constants": [],
-                  "variables": [
-                    0.24
-                  ]
+                  "displayLines": "0.24"
                 },
                 "HitSplit": 0.5,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Ultimate",
@@ -5421,22 +4952,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (0.24) || Variables[1] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-                  "displayLines": "(0.24 * Acheron_PointB2_DamageRatio)",
-                  "constants": [],
-                  "variables": [
-                    0.24,
-                    "Acheron_PointB2_DamageRatio"
-                  ]
+                  "displayLines": "(0.24 * Acheron_PointB2_DamageRatio)"
                 },
                 "HitSplit": 0.5,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Ultimate",
@@ -5455,21 +4975,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (0.24) || RETURN",
-                  "displayLines": "0.24",
-                  "constants": [],
-                  "variables": [
-                    0.24
-                  ]
+                  "displayLines": "0.24"
                 },
                 "HitSplit": 0.5,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Ultimate",
@@ -5659,12 +5169,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"447524573\">Acheron_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         },
@@ -5866,12 +5371,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "isFixed": "(Fixed)",
               "ignoreBlock": true,
@@ -5884,12 +5384,7 @@ const compositeAbilityObject = {
                 "value1": "MDF_Passive_Count",
                 "compareType": "<=",
                 "value2": {
-                  "operator": "Variables[0] (9) || RETURN",
-                  "displayLines": "9",
-                  "constants": [],
-                  "variables": [
-                    9
-                  ]
+                  "displayLines": "9"
                 }
               },
               "passed": [
@@ -5936,13 +5431,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (Skill02_FlowerTotalCount) || Variables[1] (MDF_CurrentCountFlag01) || ADD || RETURN",
-                            "displayLines": "(Skill02_FlowerTotalCount + MDF_CurrentCountFlag01)",
-                            "constants": [],
-                            "variables": [
-                              "Skill02_FlowerTotalCount",
-                              "MDF_CurrentCountFlag01"
-                            ]
+                            "displayLines": "(Skill02_FlowerTotalCount + MDF_CurrentCountFlag01)"
                           },
                           "variableName": "Skill02_FlowerTotalCount"
                         }
@@ -5955,12 +5444,7 @@ const compositeAbilityObject = {
                         "value1": "Skill02_FlowerTotalCount",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (9) || RETURN",
-                          "displayLines": "9",
-                          "constants": [],
-                          "variables": [
-                            9
-                          ]
+                          "displayLines": "9"
                         }
                       },
                       "passed": [
@@ -6003,22 +5487,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (1.6) || Variables[1] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-                  "displayLines": "(1.6 * Acheron_PointB2_DamageRatio)",
-                  "constants": [],
-                  "variables": [
-                    1.6,
-                    "Acheron_PointB2_DamageRatio"
-                  ]
+                  "displayLines": "(1.6 * Acheron_PointB2_DamageRatio)"
                 },
                 "HitSplit": 0.1,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Skill"
@@ -6034,22 +5507,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (0.6) || Variables[1] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-                  "displayLines": "(0.6 * Acheron_PointB2_DamageRatio)",
-                  "constants": [],
-                  "variables": [
-                    0.6,
-                    "Acheron_PointB2_DamageRatio"
-                  ]
+                  "displayLines": "(0.6 * Acheron_PointB2_DamageRatio)"
                 },
                 "HitSplit": 0.1,
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Skill"
@@ -6067,21 +5529,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (1.6) || RETURN",
-                  "displayLines": "1.6",
-                  "constants": [],
-                  "variables": [
-                    1.6
-                  ]
+                  "displayLines": "1.6"
                 },
                 "HitSplit": 0.1,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Skill"
@@ -6097,21 +5549,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (0.6) || RETURN",
-                  "displayLines": "0.6",
-                  "constants": [],
-                  "variables": [
-                    0.6
-                  ]
+                  "displayLines": "0.6"
                 },
                 "HitSplit": 0.1,
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Skill"
@@ -6136,22 +5578,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (1.6) || Variables[1] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-                  "displayLines": "(1.6 * Acheron_PointB2_DamageRatio)",
-                  "constants": [],
-                  "variables": [
-                    1.6,
-                    "Acheron_PointB2_DamageRatio"
-                  ]
+                  "displayLines": "(1.6 * Acheron_PointB2_DamageRatio)"
                 },
                 "HitSplit": 0.1,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Skill"
@@ -6167,22 +5598,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (0.6) || Variables[1] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-                  "displayLines": "(0.6 * Acheron_PointB2_DamageRatio)",
-                  "constants": [],
-                  "variables": [
-                    0.6,
-                    "Acheron_PointB2_DamageRatio"
-                  ]
+                  "displayLines": "(0.6 * Acheron_PointB2_DamageRatio)"
                 },
                 "HitSplit": 0.1,
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Skill"
@@ -6200,21 +5620,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (1.6) || RETURN",
-                  "displayLines": "1.6",
-                  "constants": [],
-                  "variables": [
-                    1.6
-                  ]
+                  "displayLines": "1.6"
                 },
                 "HitSplit": 0.1,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Skill"
@@ -6230,21 +5640,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (0.6) || RETURN",
-                  "displayLines": "0.6",
-                  "constants": [],
-                  "variables": [
-                    0.6
-                  ]
+                  "displayLines": "0.6"
                 },
                 "HitSplit": 0.1,
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Skill"
@@ -6269,22 +5669,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (1.6) || Variables[1] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-                  "displayLines": "(1.6 * Acheron_PointB2_DamageRatio)",
-                  "constants": [],
-                  "variables": [
-                    1.6,
-                    "Acheron_PointB2_DamageRatio"
-                  ]
+                  "displayLines": "(1.6 * Acheron_PointB2_DamageRatio)"
                 },
                 "HitSplit": 0.1,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Skill"
@@ -6300,22 +5689,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (0.6) || Variables[1] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-                  "displayLines": "(0.6 * Acheron_PointB2_DamageRatio)",
-                  "constants": [],
-                  "variables": [
-                    0.6,
-                    "Acheron_PointB2_DamageRatio"
-                  ]
+                  "displayLines": "(0.6 * Acheron_PointB2_DamageRatio)"
                 },
                 "HitSplit": 0.1,
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Skill"
@@ -6333,21 +5711,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (1.6) || RETURN",
-                  "displayLines": "1.6",
-                  "constants": [],
-                  "variables": [
-                    1.6
-                  ]
+                  "displayLines": "1.6"
                 },
                 "HitSplit": 0.1,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Skill"
@@ -6363,21 +5731,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (0.6) || RETURN",
-                  "displayLines": "0.6",
-                  "constants": [],
-                  "variables": [
-                    0.6
-                  ]
+                  "displayLines": "0.6"
                 },
                 "HitSplit": 0.1,
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Skill"
@@ -6402,22 +5760,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (1.6) || Variables[1] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-                  "displayLines": "(1.6 * Acheron_PointB2_DamageRatio)",
-                  "constants": [],
-                  "variables": [
-                    1.6,
-                    "Acheron_PointB2_DamageRatio"
-                  ]
+                  "displayLines": "(1.6 * Acheron_PointB2_DamageRatio)"
                 },
                 "HitSplit": 0.7,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Skill"
@@ -6433,22 +5780,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (0.6) || Variables[1] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-                  "displayLines": "(0.6 * Acheron_PointB2_DamageRatio)",
-                  "constants": [],
-                  "variables": [
-                    0.6,
-                    "Acheron_PointB2_DamageRatio"
-                  ]
+                  "displayLines": "(0.6 * Acheron_PointB2_DamageRatio)"
                 },
                 "HitSplit": 0.7,
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Skill"
@@ -6466,21 +5802,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (1.6) || RETURN",
-                  "displayLines": "1.6",
-                  "constants": [],
-                  "variables": [
-                    1.6
-                  ]
+                  "displayLines": "1.6"
                 },
                 "HitSplit": 0.7,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Skill"
@@ -6496,21 +5822,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (0.6) || RETURN",
-                  "displayLines": "0.6",
-                  "constants": [],
-                  "variables": [
-                    0.6
-                  ]
+                  "displayLines": "0.6"
                 },
                 "HitSplit": 0.7,
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Skill"
@@ -6621,21 +5937,10 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (1) || Variables[1] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-                  "displayLines": "(1 * Acheron_PointB2_DamageRatio)",
-                  "constants": [],
-                  "variables": [
-                    1,
-                    "Acheron_PointB2_DamageRatio"
-                  ]
+                  "displayLines": "(1 * Acheron_PointB2_DamageRatio)"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -6653,20 +5958,10 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -6769,12 +6064,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-98170223\">Acheron_Passive01Modifier</a>",
                   "counter": {
-                    "operator": "Variables[0] (MDF_Passive_Count) || RETURN",
-                    "displayLines": "MDF_Passive_Count",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Passive_Count"
-                    ]
+                    "displayLines": "MDF_Passive_Count"
                   }
                 }
               ]
@@ -6795,32 +6085,17 @@ const compositeAbilityObject = {
                     "value1": "MDF_Passive_Count",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (9) || RETURN",
-                      "displayLines": "9",
-                      "constants": [],
-                      "variables": [
-                        9
-                      ]
+                      "displayLines": "9"
                     }
                   },
                   "passed": [
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MDF_Passive_Count) || RETURN",
-                        "displayLines": "MDF_Passive_Count",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Passive_Count"
-                        ]
+                        "displayLines": "MDF_Passive_Count"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (9) || RETURN",
-                        "displayLines": "9",
-                        "constants": [],
-                        "variables": [
-                          9
-                        ]
+                        "displayLines": "9"
                       },
                       "assignState": "True",
                       "priorState": "Active",
@@ -6831,20 +6106,10 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MDF_Passive_Count) || RETURN",
-                        "displayLines": "MDF_Passive_Count",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Passive_Count"
-                        ]
+                        "displayLines": "MDF_Passive_Count"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (9) || RETURN",
-                        "displayLines": "9",
-                        "constants": [],
-                        "variables": [
-                          9
-                        ]
+                        "displayLines": "9"
                       },
                       "assignState": "True",
                       "priorState": "Normal",
@@ -6857,20 +6122,10 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Passive_Count) || RETURN",
-                    "displayLines": "MDF_Passive_Count",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Passive_Count"
-                    ]
+                    "displayLines": "MDF_Passive_Count"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (9) || RETURN",
-                    "displayLines": "9",
-                    "constants": [],
-                    "variables": [
-                      9
-                    ]
+                    "displayLines": "9"
                   },
                   "assignState": "True",
                   "priorState": "Normal",
@@ -6887,12 +6142,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Acheron_FlowerCountBySp) || RETURN",
-                "displayLines": "Acheron_FlowerCountBySp",
-                "constants": [],
-                "variables": [
-                  "Acheron_FlowerCountBySp"
-                ]
+                "displayLines": "Acheron_FlowerCountBySp"
               },
               "variableName": "Acheron_FlowerCountBySp_Snapshot"
             },
@@ -6925,13 +6175,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentCountFlag01) || Variables[1] (Acheron_FlowerCountBySp) || ADD || RETURN",
-                    "displayLines": "(MDF_CurrentCountFlag01 + Acheron_FlowerCountBySp)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentCountFlag01",
-                      "Acheron_FlowerCountBySp"
-                    ]
+                    "displayLines": "(MDF_CurrentCountFlag01 + Acheron_FlowerCountBySp)"
                   },
                   "variableName": "MDF_CurrentCountFlag01"
                 },
@@ -6943,29 +6187,14 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
                   "counter": {
-                    "operator": "Variables[0] (MDF_CurrentCountFlag01) || RETURN",
-                    "displayLines": "MDF_CurrentCountFlag01",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentCountFlag01"
-                    ]
+                    "displayLines": "MDF_CurrentCountFlag01"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue01": {
-                      "operator": "Variables[0] (0.15) || RETURN",
-                      "displayLines": "0.15",
-                      "constants": [],
-                      "variables": [
-                        0.15
-                      ]
+                      "displayLines": "0.15"
                     },
                     "MDF_PropertyValue02": {
-                      "operator": "Variables[0] (0.6) || RETURN",
-                      "displayLines": "0.6",
-                      "constants": [],
-                      "variables": [
-                        0.6
-                      ]
+                      "displayLines": "0.6"
                     }
                   }
                 }
@@ -6979,29 +6208,14 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
                   "counter": {
-                    "operator": "Variables[0] (Acheron_FlowerCountBySp) || RETURN",
-                    "displayLines": "Acheron_FlowerCountBySp",
-                    "constants": [],
-                    "variables": [
-                      "Acheron_FlowerCountBySp"
-                    ]
+                    "displayLines": "Acheron_FlowerCountBySp"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue01": {
-                      "operator": "Variables[0] (0.15) || RETURN",
-                      "displayLines": "0.15",
-                      "constants": [],
-                      "variables": [
-                        0.15
-                      ]
+                      "displayLines": "0.15"
                     },
                     "MDF_PropertyValue02": {
-                      "operator": "Variables[0] (0.6) || RETURN",
-                      "displayLines": "0.6",
-                      "constants": [],
-                      "variables": [
-                        0.6
-                      ]
+                      "displayLines": "0.6"
                     }
                   }
                 }
@@ -7010,13 +6224,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Acheron_FlowerCountBySp) || Variables[1] (Acheron_FlowerCountBySp_Snapshot) || SUB || RETURN",
-                "displayLines": "(Acheron_FlowerCountBySp - Acheron_FlowerCountBySp_Snapshot)",
-                "constants": [],
-                "variables": [
-                  "Acheron_FlowerCountBySp",
-                  "Acheron_FlowerCountBySp_Snapshot"
-                ]
+                "displayLines": "(Acheron_FlowerCountBySp - Acheron_FlowerCountBySp_Snapshot)"
               },
               "variableName": "Acheron_FlowerCountBySp"
             }
@@ -7029,12 +6237,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Acheron_FlowerCountBySp) || RETURN",
-                "displayLines": "Acheron_FlowerCountBySp",
-                "constants": [],
-                "variables": [
-                  "Acheron_FlowerCountBySp"
-                ]
+                "displayLines": "Acheron_FlowerCountBySp"
               },
               "variableName": "Acheron_FlowerCountBySp_Snapshot"
             },
@@ -7067,13 +6270,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentCountFlag01) || Variables[1] (Acheron_FlowerCountBySp) || ADD || RETURN",
-                    "displayLines": "(MDF_CurrentCountFlag01 + Acheron_FlowerCountBySp)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentCountFlag01",
-                      "Acheron_FlowerCountBySp"
-                    ]
+                    "displayLines": "(MDF_CurrentCountFlag01 + Acheron_FlowerCountBySp)"
                   },
                   "variableName": "MDF_CurrentCountFlag01"
                 },
@@ -7085,42 +6282,21 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
                   "counter": {
-                    "operator": "Variables[0] (MDF_CurrentCountFlag01) || RETURN",
-                    "displayLines": "MDF_CurrentCountFlag01",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentCountFlag01"
-                    ]
+                    "displayLines": "MDF_CurrentCountFlag01"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue01": {
-                      "operator": "Variables[0] (0.15) || RETURN",
-                      "displayLines": "0.15",
-                      "constants": [],
-                      "variables": [
-                        0.15
-                      ]
+                      "displayLines": "0.15"
                     },
                     "MDF_PropertyValue02": {
-                      "operator": "Variables[0] (0.6) || RETURN",
-                      "displayLines": "0.6",
-                      "constants": [],
-                      "variables": [
-                        0.6
-                      ]
+                      "displayLines": "0.6"
                     }
                   }
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Acheron_FlowerCountBySp) || Variables[1] (Acheron_FlowerCountBySp_Snapshot) || SUB || RETURN",
-                    "displayLines": "(Acheron_FlowerCountBySp - Acheron_FlowerCountBySp_Snapshot)",
-                    "constants": [],
-                    "variables": [
-                      "Acheron_FlowerCountBySp",
-                      "Acheron_FlowerCountBySp_Snapshot"
-                    ]
+                    "displayLines": "(Acheron_FlowerCountBySp - Acheron_FlowerCountBySp_Snapshot)"
                   },
                   "variableName": "Acheron_FlowerCountBySp"
                 }
@@ -7134,42 +6310,21 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
                   "counter": {
-                    "operator": "Variables[0] (Acheron_FlowerCountBySp) || RETURN",
-                    "displayLines": "Acheron_FlowerCountBySp",
-                    "constants": [],
-                    "variables": [
-                      "Acheron_FlowerCountBySp"
-                    ]
+                    "displayLines": "Acheron_FlowerCountBySp"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue01": {
-                      "operator": "Variables[0] (0.15) || RETURN",
-                      "displayLines": "0.15",
-                      "constants": [],
-                      "variables": [
-                        0.15
-                      ]
+                      "displayLines": "0.15"
                     },
                     "MDF_PropertyValue02": {
-                      "operator": "Variables[0] (0.6) || RETURN",
-                      "displayLines": "0.6",
-                      "constants": [],
-                      "variables": [
-                        0.6
-                      ]
+                      "displayLines": "0.6"
                     }
                   }
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Acheron_FlowerCountBySp) || Variables[1] (Acheron_FlowerCountBySp_Snapshot) || SUB || RETURN",
-                    "displayLines": "(Acheron_FlowerCountBySp - Acheron_FlowerCountBySp_Snapshot)",
-                    "constants": [],
-                    "variables": [
-                      "Acheron_FlowerCountBySp",
-                      "Acheron_FlowerCountBySp_Snapshot"
-                    ]
+                    "displayLines": "(Acheron_FlowerCountBySp - Acheron_FlowerCountBySp_Snapshot)"
                   },
                   "variableName": "Acheron_FlowerCountBySp"
                 }
@@ -7207,13 +6362,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Limbo_Count) || Variables[1] (Acheron_FlowerCountBySp) || ADD || RETURN",
-                    "displayLines": "(Limbo_Count + Acheron_FlowerCountBySp)",
-                    "constants": [],
-                    "variables": [
-                      "Limbo_Count",
-                      "Acheron_FlowerCountBySp"
-                    ]
+                    "displayLines": "(Limbo_Count + Acheron_FlowerCountBySp)"
                   },
                   "variableName": "Limbo_Count"
                 },
@@ -7271,13 +6420,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (MDF_Acheron_FlagCount) || Variables[1] (Limbo_Count) || ADD || RETURN",
-                            "displayLines": "(MDF_Acheron_FlagCount + Limbo_Count)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Acheron_FlagCount",
-                              "Limbo_Count"
-                            ]
+                            "displayLines": "(MDF_Acheron_FlagCount + Limbo_Count)"
                           },
                           "variableName": "MDF_Acheron_FlagCount"
                         },
@@ -7289,29 +6432,14 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
                           "counter": {
-                            "operator": "Variables[0] (MDF_Acheron_FlagCount) || RETURN",
-                            "displayLines": "MDF_Acheron_FlagCount",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Acheron_FlagCount"
-                            ]
+                            "displayLines": "MDF_Acheron_FlagCount"
                           },
                           "valuePerStack": {
                             "MDF_PropertyValue01": {
-                              "operator": "Variables[0] (0.15) || RETURN",
-                              "displayLines": "0.15",
-                              "constants": [],
-                              "variables": [
-                                0.15
-                              ]
+                              "displayLines": "0.15"
                             },
                             "MDF_PropertyValue02": {
-                              "operator": "Variables[0] (0.6) || RETURN",
-                              "displayLines": "0.6",
-                              "constants": [],
-                              "variables": [
-                                0.6
-                              ]
+                              "displayLines": "0.6"
                             }
                           }
                         }
@@ -7325,29 +6453,14 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
                           "counter": {
-                            "operator": "Variables[0] (Limbo_Count) || RETURN",
-                            "displayLines": "Limbo_Count",
-                            "constants": [],
-                            "variables": [
-                              "Limbo_Count"
-                            ]
+                            "displayLines": "Limbo_Count"
                           },
                           "valuePerStack": {
                             "MDF_PropertyValue01": {
-                              "operator": "Variables[0] (0.15) || RETURN",
-                              "displayLines": "0.15",
-                              "constants": [],
-                              "variables": [
-                                0.15
-                              ]
+                              "displayLines": "0.15"
                             },
                             "MDF_PropertyValue02": {
-                              "operator": "Variables[0] (0.6) || RETURN",
-                              "displayLines": "0.6",
-                              "constants": [],
-                              "variables": [
-                                0.6
-                              ]
+                              "displayLines": "0.6"
                             }
                           }
                         }
@@ -7387,37 +6500,17 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-535608708\">Acheron_PointB3_DamageUp</a>[<span class=\"descriptionNumberColor\">Thunder Core</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.3) || RETURN",
-                      "displayLines": "0.3",
-                      "constants": [],
-                      "variables": [
-                        0.3
-                      ]
+                      "displayLines": "0.3"
                     },
                     "MDF_MaxLayer": {
-                      "operator": "Variables[0] (3) || RETURN",
-                      "displayLines": "3",
-                      "constants": [],
-                      "variables": [
-                        3
-                      ]
+                      "displayLines": "3"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -7452,26 +6545,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (TargetEntity_CurrentFlagCount) || RETURN",
-                    "displayLines": "TargetEntity_CurrentFlagCount",
-                    "constants": [],
-                    "variables": [
-                      "TargetEntity_CurrentFlagCount"
-                    ]
+                    "displayLines": "TargetEntity_CurrentFlagCount"
                   },
                   "variableName": "TargetEntity_UltraFlagCount"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (TargetEntity_UltraFlagCount) || Constants[0] (3) || SUB || RETURN",
-                    "displayLines": "(TargetEntity_UltraFlagCount - 3)",
-                    "constants": [
-                      3
-                    ],
-                    "variables": [
-                      "TargetEntity_UltraFlagCount"
-                    ]
+                    "displayLines": "(TargetEntity_UltraFlagCount - 3)"
                   },
                   "variableName": "TargetEntity_UltraFlagCount"
                 },
@@ -7492,14 +6573,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (TargetEntity_LoopFlagCount) || Constants[0] (3) || ADD || RETURN",
-                        "displayLines": "(TargetEntity_LoopFlagCount + 3)",
-                        "constants": [
-                          3
-                        ],
-                        "variables": [
-                          "TargetEntity_LoopFlagCount"
-                        ]
+                        "displayLines": "(TargetEntity_LoopFlagCount + 3)"
                       },
                       "variableName": "UltraFlagCount"
                     },
@@ -7521,14 +6595,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (TargetEntity_LoopFlagCount) || Constants[0] (3) || ADD || RETURN",
-                        "displayLines": "(TargetEntity_LoopFlagCount + 3)",
-                        "constants": [
-                          3
-                        ],
-                        "variables": [
-                          "TargetEntity_LoopFlagCount"
-                        ]
+                        "displayLines": "(TargetEntity_LoopFlagCount + 3)"
                       },
                       "variableName": "UltraFlagCount"
                     },
@@ -7540,29 +6607,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
                       "counter": {
-                        "operator": "Variables[0] (TargetEntity_UltraFlagCount) || RETURN",
-                        "displayLines": "TargetEntity_UltraFlagCount",
-                        "constants": [],
-                        "variables": [
-                          "TargetEntity_UltraFlagCount"
-                        ]
+                        "displayLines": "TargetEntity_UltraFlagCount"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue01": {
-                          "operator": "Variables[0] (0.15) || RETURN",
-                          "displayLines": "0.15",
-                          "constants": [],
-                          "variables": [
-                            0.15
-                          ]
+                          "displayLines": "0.15"
                         },
                         "MDF_PropertyValue02": {
-                          "operator": "Variables[0] (0.6) || RETURN",
-                          "displayLines": "0.6",
-                          "constants": [],
-                          "variables": [
-                            0.6
-                          ]
+                          "displayLines": "0.6"
                         }
                       }
                     }
@@ -7573,25 +6625,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (TargetEntity_CurrentFlagCount) || RETURN",
-                    "displayLines": "TargetEntity_CurrentFlagCount",
-                    "constants": [],
-                    "variables": [
-                      "TargetEntity_CurrentFlagCount"
-                    ]
+                    "displayLines": "TargetEntity_CurrentFlagCount"
                   },
                   "variableName": "TargetEntity_LoopFlagCount"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (TargetEntity_LoopFlagCount) || Variables[1] (TargetEntity_CurrentFlagCount) || ADD || RETURN",
-                    "displayLines": "(TargetEntity_LoopFlagCount + TargetEntity_CurrentFlagCount)",
-                    "constants": [],
-                    "variables": [
-                      "TargetEntity_LoopFlagCount",
-                      "TargetEntity_CurrentFlagCount"
-                    ]
+                    "displayLines": "(TargetEntity_LoopFlagCount + TargetEntity_CurrentFlagCount)"
                   },
                   "variableName": "UltraFlagCount"
                 },
@@ -7629,22 +6670,10 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (0.15) || Variables[0] (0.15) || Variables[1] (UltraFlagCount) || MUL || ADD || Variables[2] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-                      "displayLines": "((0.15 + (0.15 * UltraFlagCount)) * Acheron_PointB2_DamageRatio)",
-                      "constants": [],
-                      "variables": [
-                        0.15,
-                        "UltraFlagCount",
-                        "Acheron_PointB2_DamageRatio"
-                      ]
+                      "displayLines": "((0.15 + (0.15 * UltraFlagCount)) * Acheron_PointB2_DamageRatio)"
                     },
                     "Toughness": {
-                      "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                      "displayLines": "AOE Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "AOE Toughness Value"
-                      ]
+                      "displayLines": "AOE Toughness Value"
                     },
                     "Tags": null,
                     "attackType": "Ultimate",
@@ -7663,21 +6692,10 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (0.15) || Variables[0] (0.15) || Variables[1] (UltraFlagCount) || MUL || ADD || RETURN",
-                      "displayLines": "(0.15 + (0.15 * UltraFlagCount))",
-                      "constants": [],
-                      "variables": [
-                        0.15,
-                        "UltraFlagCount"
-                      ]
+                      "displayLines": "(0.15 + (0.15 * UltraFlagCount))"
                     },
                     "Toughness": {
-                      "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                      "displayLines": "AOE Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "AOE Toughness Value"
-                      ]
+                      "displayLines": "AOE Toughness Value"
                     },
                     "Tags": null,
                     "attackType": "Ultimate",
@@ -7731,13 +6749,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Limbo_FlowerTotalCount) || Variables[1] (Limbo_FlowerCurrentCount) || ADD || RETURN",
-                    "displayLines": "(Limbo_FlowerTotalCount + Limbo_FlowerCurrentCount)",
-                    "constants": [],
-                    "variables": [
-                      "Limbo_FlowerTotalCount",
-                      "Limbo_FlowerCurrentCount"
-                    ]
+                    "displayLines": "(Limbo_FlowerTotalCount + Limbo_FlowerCurrentCount)"
                   },
                   "variableName": "Limbo_FlowerTotalCount"
                 },
@@ -7800,12 +6812,7 @@ const compositeAbilityObject = {
                           "functionName": "<a class=\"gTempYellow\" id=\"-1895936261\">Acheron_AddFlower_Passiv02</a>",
                           "variables": {
                             "Limbo_FlowerCount": {
-                              "operator": "Variables[0] (Limbo_FlowerTotalCount) || RETURN",
-                              "displayLines": "Limbo_FlowerTotalCount",
-                              "constants": [],
-                              "variables": [
-                                "Limbo_FlowerTotalCount"
-                              ]
+                              "displayLines": "Limbo_FlowerTotalCount"
                             }
                           }
                         }
@@ -7828,12 +6835,7 @@ const compositeAbilityObject = {
                           "functionName": "<a class=\"gTempYellow\" id=\"-1895936261\">Acheron_AddFlower_Passiv02</a>",
                           "variables": {
                             "Limbo_FlowerCount": {
-                              "operator": "Variables[0] (Limbo_FlowerTotalCount) || RETURN",
-                              "displayLines": "Limbo_FlowerTotalCount",
-                              "constants": [],
-                              "variables": [
-                                "Limbo_FlowerTotalCount"
-                              ]
+                              "displayLines": "Limbo_FlowerTotalCount"
                             }
                           }
                         }
@@ -7885,13 +6887,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_Acheron_FlagCount) || Variables[1] (Limbo_FlowerCount) || ADD || RETURN",
-                    "displayLines": "(MDF_Acheron_FlagCount + Limbo_FlowerCount)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Acheron_FlagCount",
-                      "Limbo_FlowerCount"
-                    ]
+                    "displayLines": "(MDF_Acheron_FlagCount + Limbo_FlowerCount)"
                   },
                   "variableName": "MDF_Acheron_FlagCount"
                 },
@@ -7903,29 +6899,14 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
                   "counter": {
-                    "operator": "Variables[0] (MDF_Acheron_FlagCount) || RETURN",
-                    "displayLines": "MDF_Acheron_FlagCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Acheron_FlagCount"
-                    ]
+                    "displayLines": "MDF_Acheron_FlagCount"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue01": {
-                      "operator": "Variables[0] (0.15) || RETURN",
-                      "displayLines": "0.15",
-                      "constants": [],
-                      "variables": [
-                        0.15
-                      ]
+                      "displayLines": "0.15"
                     },
                     "MDF_PropertyValue02": {
-                      "operator": "Variables[0] (0.6) || RETURN",
-                      "displayLines": "0.6",
-                      "constants": [],
-                      "variables": [
-                        0.6
-                      ]
+                      "displayLines": "0.6"
                     }
                   }
                 }
@@ -7944,29 +6925,14 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
                   "counter": {
-                    "operator": "Variables[0] (Limbo_FlowerCount) || RETURN",
-                    "displayLines": "Limbo_FlowerCount",
-                    "constants": [],
-                    "variables": [
-                      "Limbo_FlowerCount"
-                    ]
+                    "displayLines": "Limbo_FlowerCount"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue01": {
-                      "operator": "Variables[0] (0.15) || RETURN",
-                      "displayLines": "0.15",
-                      "constants": [],
-                      "variables": [
-                        0.15
-                      ]
+                      "displayLines": "0.15"
                     },
                     "MDF_PropertyValue02": {
-                      "operator": "Variables[0] (0.6) || RETURN",
-                      "displayLines": "0.6",
-                      "constants": [],
-                      "variables": [
-                        0.6
-                      ]
+                      "displayLines": "0.6"
                     }
                   }
                 }

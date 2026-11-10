@@ -82,21 +82,10 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (Modifier_Electric_DamagePercentage) || Variables[1] (Modifier_Electric_PoisonLayer) || MUL || RETURN",
-                      "displayLines": "(Modifier_Electric_DamagePercentage * Modifier_Electric_PoisonLayer)",
-                      "constants": [],
-                      "variables": [
-                        "Modifier_Electric_DamagePercentage",
-                        "Modifier_Electric_PoisonLayer"
-                      ]
+                      "displayLines": "(Modifier_Electric_DamagePercentage * Modifier_Electric_PoisonLayer)"
                     },
                     "DamageFlat": {
-                      "operator": "Variables[0] (Modifier_Electric_DamageValue) || RETURN",
-                      "displayLines": "Modifier_Electric_DamageValue",
-                      "constants": [],
-                      "variables": [
-                        "Modifier_Electric_DamageValue"
-                      ]
+                      "displayLines": "Modifier_Electric_DamageValue"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -136,23 +125,10 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Electric_DamagePercentage) || MUL || Variables[2] (Modifier_Electric_PoisonLayer) || MUL || RETURN",
-                      "displayLines": "((DOT_TriggerRatio * Modifier_Electric_DamagePercentage) * Modifier_Electric_PoisonLayer)",
-                      "constants": [],
-                      "variables": [
-                        "DOT_TriggerRatio",
-                        "Modifier_Electric_DamagePercentage",
-                        "Modifier_Electric_PoisonLayer"
-                      ]
+                      "displayLines": "((DOT_TriggerRatio * Modifier_Electric_DamagePercentage) * Modifier_Electric_PoisonLayer)"
                     },
                     "DamageFlat": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Electric_DamageValue) || MUL || RETURN",
-                      "displayLines": "(DOT_TriggerRatio * Modifier_Electric_DamageValue)",
-                      "constants": [],
-                      "variables": [
-                        "DOT_TriggerRatio",
-                        "Modifier_Electric_DamageValue"
-                      ]
+                      "displayLines": "(DOT_TriggerRatio * Modifier_Electric_DamageValue)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -202,13 +178,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] (Modifier_Poison_DamagePercentage) || Variables[1] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
-                      "displayLines": "(Modifier_Poison_DamagePercentage * Modifier_Poison_PoisonLayer)",
-                      "constants": [],
-                      "variables": [
-                        "Modifier_Poison_DamagePercentage",
-                        "Modifier_Poison_PoisonLayer"
-                      ]
+                      "displayLines": "(Modifier_Poison_DamagePercentage * Modifier_Poison_PoisonLayer)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -242,14 +212,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Poison_DamagePercentage) || MUL || Variables[2] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
-                      "displayLines": "((DOT_TriggerRatio * Modifier_Poison_DamagePercentage) * Modifier_Poison_PoisonLayer)",
-                      "constants": [],
-                      "variables": [
-                        "DOT_TriggerRatio",
-                        "Modifier_Poison_DamagePercentage",
-                        "Modifier_Poison_PoisonLayer"
-                      ]
+                      "displayLines": "((DOT_TriggerRatio * Modifier_Poison_DamagePercentage) * Modifier_Poison_PoisonLayer)"
                     },
                     "Toughness": null,
                     "Tags": null,

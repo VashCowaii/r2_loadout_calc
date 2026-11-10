@@ -62,12 +62,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_SpeedDeltaAdd) || RETURN",
-                    "displayLines": "MDF_SpeedDeltaAdd",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedDeltaAdd"
-                    ]
+                    "displayLines": "MDF_SpeedDeltaAdd"
                   }
                 }
               ]
@@ -124,25 +119,13 @@ const compositeAbilityObject = {
                   "searchRandom": true,
                   "includeDyingTargets": true,
                   "maxTargets": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_EnemyCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_EnemyCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_EnemyCount"
-                        ]
+                        "displayLines": "(MDF_EnemyCount + 1)"
                       },
                       "variableName": "MDF_EnemyCount"
                     }
@@ -155,13 +138,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_EnemyCount) || Variables[1] (3) || MUL || RETURN",
-                    "displayLines": "(MDF_EnemyCount * 3)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_EnemyCount",
-                      3
-                    ]
+                    "displayLines": "(MDF_EnemyCount * 3)"
                   },
                   "isFixed": "* ERR"
                 },
@@ -192,12 +169,7 @@ const compositeAbilityObject = {
                       "duration": 1,
                       "valuePerStack": {
                         "MDF_SpeedDeltaAdd": {
-                          "operator": "Variables[0] (12) || RETURN",
-                          "displayLines": "12",
-                          "constants": [],
-                          "variables": [
-                            12
-                          ]
+                          "displayLines": "12"
                         }
                       }
                     }

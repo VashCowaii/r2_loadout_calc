@@ -45,12 +45,7 @@ const compositeAbilityObject = {
               "ID": "122501(SkillMaze)",
               "counter": 1,
               "duration": {
-                "operator": "Variables[0] (10) || RETURN",
-                "displayLines": "10",
-                "constants": [],
-                "variables": [
-                  10
-                ]
+                "displayLines": "10"
               },
               "conditions": {
                 "name": "Has Flag",
@@ -88,12 +83,7 @@ const compositeAbilityObject = {
                   },
                   "variables": {
                     "DamagePercentage": {
-                      "operator": "Variables[0] (MDF_SuperBreakDamagePercentage) || RETURN",
-                      "displayLines": "MDF_SuperBreakDamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_SuperBreakDamagePercentage"
-                      ]
+                      "displayLines": "MDF_SuperBreakDamagePercentage"
                     }
                   },
                   "damageSequence": [
@@ -122,12 +112,7 @@ const compositeAbilityObject = {
                           }
                         },
                         "DamageBreak": {
-                          "operator": "Variables[0] (value_0_DamagePercentage) || RETURN",
-                          "displayLines": "value_0_DamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "value_0_DamagePercentage"
-                          ]
+                          "displayLines": "value_0_DamagePercentage"
                         },
                         "dmgFormula": "Break DMG Scaling",
                         "dmgFormulaFinal": "Pure (No DMG%)",
@@ -166,12 +151,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-74108309\">Fugue_PassiveAbility_ElementDamage</a>",
                   "valuePerStack": {
                     "MDF_SuperBreakDamagePercentage": {
-                      "operator": "Variables[0] (MDF_PassiveDamage2) || RETURN",
-                      "displayLines": "MDF_PassiveDamage2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PassiveDamage2"
-                      ]
+                      "displayLines": "MDF_PassiveDamage2"
                     }
                   },
                   "casterAssign": "TargetSelf"
@@ -199,12 +179,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (FUGUE_OBJECT_UNUSED_1) || RETURN",
-                    "displayLines": "FUGUE_OBJECT_UNUSED_1",
-                    "constants": [],
-                    "variables": [
-                      "FUGUE_OBJECT_UNUSED_1"
-                    ]
+                    "displayLines": "FUGUE_OBJECT_UNUSED_1"
                   }
                 }
               ]
@@ -219,12 +194,7 @@ const compositeAbilityObject = {
             "show": "Hide",
             "skillType": "Ultimate",
             "toughnessForcedReductionPreview": {
-              "operator": "Variables[0] (FUGUE_OBJECT_UNUSED_1) || RETURN",
-              "displayLines": "FUGUE_OBJECT_UNUSED_1",
-              "constants": [],
-              "variables": [
-                "FUGUE_OBJECT_UNUSED_1"
-              ]
+              "displayLines": "FUGUE_OBJECT_UNUSED_1"
             },
             "showAsForcedReduction": true
           }
@@ -274,12 +244,7 @@ const compositeAbilityObject = {
             "delayAdvancePreview": {
               "name": "Delay/Advance Preview",
               "previewValue": {
-                "operator": "Variables[0] (0.24) || INVERT || RETURN",
-                "displayLines": "-0.24",
-                "constants": [],
-                "variables": [
-                  0.24
-                ]
+                "displayLines": "-0.24"
               }
             }
           }
@@ -299,60 +264,25 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_BreakDamageAdd": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 },
                 "MDF_StanceBreakAddRatio": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
+                  "displayLines": "0.5"
                 },
                 "MDF_Chance": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 },
                 "MDF_DefenceDownRatio": {
-                  "operator": "Variables[0] (0.18) || RETURN",
-                  "displayLines": "0.18",
-                  "constants": [],
-                  "variables": [
-                    0.18
-                  ]
+                  "displayLines": "0.18"
                 },
                 "MDF_BreakDamageAddedRatio": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 },
                 "MDF_LifeTime": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
+                  "displayLines": "2"
                 },
                 "MDF_PropertyRatio": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
+                  "displayLines": "0.5"
                 }
               }
             }
@@ -386,13 +316,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurMaxStance2) || Variables[1] (MDF_RedStanceRatio) || MUL || RETURN",
-                    "displayLines": "(MDF_CurMaxStance2 * MDF_RedStanceRatio)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurMaxStance2",
-                      "MDF_RedStanceRatio"
-                    ]
+                    "displayLines": "(MDF_CurMaxStance2 * MDF_RedStanceRatio)"
                   },
                   "variableName": "MDF_RedStance_First"
                 },
@@ -408,12 +332,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Stack Exo-Toughness",
                       "exoPercent": {
-                        "operator": "Variables[0] (MDF_RedStanceRatio) || RETURN",
-                        "displayLines": "MDF_RedStanceRatio",
-                        "constants": [],
-                        "variables": [
-                          "MDF_RedStanceRatio"
-                        ]
+                        "displayLines": "MDF_RedStanceRatio"
                       },
                       "exoFlat": 0
                     }
@@ -464,29 +383,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-375769760\">Fugue_DefenceDown</a>[<span class=\"descriptionNumberColor\">Virtue Beckons Bliss</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "valuePerStack": {
                         "MDF_DefenceDownRatio": {
-                          "operator": "Variables[0] (0.18) || RETURN",
-                          "displayLines": "0.18",
-                          "constants": [],
-                          "variables": [
-                            0.18
-                          ]
+                          "displayLines": "0.18"
                         }
                       }
                     }
@@ -728,12 +632,7 @@ const compositeAbilityObject = {
               "modifier": null,
               "ID": "122501(SkillMaze)",
               "duration": {
-                "operator": "Variables[0] (10) || RETURN",
-                "displayLines": "10",
-                "constants": [],
-                "variables": [
-                  10
-                ]
+                "displayLines": "10"
               }
             }
           ]
@@ -907,29 +806,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-375769760\">Fugue_DefenceDown</a>[<span class=\"descriptionNumberColor\">Virtue Beckons Bliss</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "valuePerStack": {
                         "MDF_DefenceDownRatio": {
-                          "operator": "Variables[0] (0.18) || RETURN",
-                          "displayLines": "0.18",
-                          "constants": [],
-                          "variables": [
-                            0.18
-                          ]
+                          "displayLines": "0.18"
                         }
                       }
                     }
@@ -1027,12 +911,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"1748420043\">Fugue_PointB2_Sub</a>[<span class=\"descriptionNumberColor\">Sylvan Enigma</span>]",
               "valuePerStack": {
                 "MDF_PropertyRatio_BreakDamageSelf": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 }
               }
             }
@@ -1105,12 +984,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1045772852\">Fugue_Eidolon6</a>[<span class=\"descriptionNumberColor\">Clairvoyance of Boom and Doom</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
+                  "displayLines": "0.5"
                 }
               }
             }
@@ -1140,12 +1014,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -1189,12 +1058,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "isFixed": "* ERR"
                 }
@@ -1223,12 +1087,7 @@ const compositeAbilityObject = {
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_Sub3_PointB3_BreakDamageValue) || RETURN",
-                      "displayLines": "MDF_Sub3_PointB3_BreakDamageValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Sub3_PointB3_BreakDamageValue"
-                      ]
+                      "displayLines": "MDF_Sub3_PointB3_BreakDamageValue"
                     }
                   },
                   "passed": [
@@ -1240,23 +1099,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"264764178\">Fugue_PointB3_Sub02</a>",
                       "stackLimit": {
-                        "operator": "Variables[0] (MDF_Sub3_MaxLayer) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_Sub3_MaxLayer + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_Sub3_MaxLayer"
-                        ]
+                        "displayLines": "(MDF_Sub3_MaxLayer + 1)"
                       },
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
-                          "operator": "Variables[0] (MDF_Sub3_MaxPropertyRatio) || RETURN",
-                          "displayLines": "MDF_Sub3_MaxPropertyRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Sub3_MaxPropertyRatio"
-                          ]
+                          "displayLines": "MDF_Sub3_MaxPropertyRatio"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -1269,29 +1116,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"490649964\">Fugue_PointB3_Sub</a>[<span class=\"descriptionNumberColor\">Phecda Primordia</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_Sub3_LifeTime) || RETURN",
-                        "displayLines": "MDF_Sub3_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Sub3_LifeTime"
-                        ]
+                        "displayLines": "MDF_Sub3_LifeTime"
                       },
                       "stackLimit": {
-                        "operator": "Variables[0] (MDF_Sub3_MaxLayer) || RETURN",
-                        "displayLines": "MDF_Sub3_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Sub3_MaxLayer"
-                        ]
+                        "displayLines": "MDF_Sub3_MaxLayer"
                       },
                       "valuePerStack": {
                         "MDF_BreakDamageAdd": {
-                          "operator": "Variables[0] (MDF_Sub3_MaxPropertyRatio) || RETURN",
-                          "displayLines": "MDF_Sub3_MaxPropertyRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Sub3_MaxPropertyRatio"
-                          ]
+                          "displayLines": "MDF_Sub3_MaxPropertyRatio"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -1306,23 +1138,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"264764178\">Fugue_PointB3_Sub02</a>",
                       "stackLimit": {
-                        "operator": "Variables[0] (MDF_Sub3_MaxLayer) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_Sub3_MaxLayer + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_Sub3_MaxLayer"
-                        ]
+                        "displayLines": "(MDF_Sub3_MaxLayer + 1)"
                       },
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
-                          "operator": "Variables[0] (MDF_Sub3_PropertyRatio) || RETURN",
-                          "displayLines": "MDF_Sub3_PropertyRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Sub3_PropertyRatio"
-                          ]
+                          "displayLines": "MDF_Sub3_PropertyRatio"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -1335,29 +1155,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"490649964\">Fugue_PointB3_Sub</a>[<span class=\"descriptionNumberColor\">Phecda Primordia</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_Sub3_LifeTime) || RETURN",
-                        "displayLines": "MDF_Sub3_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Sub3_LifeTime"
-                        ]
+                        "displayLines": "MDF_Sub3_LifeTime"
                       },
                       "stackLimit": {
-                        "operator": "Variables[0] (MDF_Sub3_MaxLayer) || RETURN",
-                        "displayLines": "MDF_Sub3_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Sub3_MaxLayer"
-                        ]
+                        "displayLines": "MDF_Sub3_MaxLayer"
                       },
                       "valuePerStack": {
                         "MDF_BreakDamageAdd": {
-                          "operator": "Variables[0] (MDF_Sub3_PropertyRatio) || RETURN",
-                          "displayLines": "MDF_Sub3_PropertyRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Sub3_PropertyRatio"
-                          ]
+                          "displayLines": "MDF_Sub3_PropertyRatio"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -1393,15 +1198,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyRatio) || Variables[1] (MDF_Layer) || Constants[0] (1) || SUB || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyRatio * (MDF_Layer - 1))",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_PropertyRatio",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_PropertyRatio * (MDF_Layer - 1))"
                   },
                   "variableName": "MDF_PropertyRatio"
                 },
@@ -1413,12 +1210,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                    "displayLines": "MDF_PropertyRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyRatio"
-                    ]
+                    "displayLines": "MDF_PropertyRatio"
                   }
                 }
               ]
@@ -1472,14 +1264,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"264764178\">Fugue_PointB3_Sub02</a>",
                           "addStacksPerTrigger": {
-                            "operator": "Constants[0] (1) || Variables[0] (Layer_Count) || SUB || RETURN",
-                            "displayLines": "(1 - Layer_Count)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Layer_Count"
-                            ]
+                            "displayLines": "(1 - Layer_Count)"
                           }
                         }
                       ]
@@ -1547,14 +1332,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"264764178\">Fugue_PointB3_Sub02</a>",
                       "stackLimit": {
-                        "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(2 + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "(2 + 1)"
                       },
                       "valuePerStack": {
                         "MDF_PropertyRatio": 0,
@@ -1584,45 +1362,19 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"281541797\">Fugue_PointB3_Sub03</a>",
                       "valuePerStack": {
                         "MDF_Sub3_MaxLayer": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         },
                         "MDF_Sub3_LifeTime": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         },
                         "MDF_Sub3_PropertyRatio": {
-                          "operator": "Variables[0] (0.06) || RETURN",
-                          "displayLines": "0.06",
-                          "constants": [],
-                          "variables": [
-                            0.06
-                          ]
+                          "displayLines": "0.06"
                         },
                         "MDF_Sub3_MaxPropertyRatio": {
-                          "operator": "Variables[0] (0.06) || Variables[1] (0.12) || ADD || RETURN",
-                          "displayLines": "(0.06 + 0.12)",
-                          "constants": [],
-                          "variables": [
-                            0.06,
-                            0.12
-                          ]
+                          "displayLines": "(0.06 + 0.12)"
                         },
                         "MDF_Sub3_PointB3_BreakDamageValue": {
-                          "operator": "Variables[0] (2.2) || RETURN",
-                          "displayLines": "2.2",
-                          "constants": [],
-                          "variables": [
-                            2.2
-                          ]
+                          "displayLines": "2.2"
                         }
                       }
                     }
@@ -1658,14 +1410,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"264764178\">Fugue_PointB3_Sub02</a>",
                       "stackLimit": {
-                        "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(2 + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "(2 + 1)"
                       },
                       "valuePerStack": {
                         "MDF_PropertyRatio": 0,
@@ -1684,45 +1429,19 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"281541797\">Fugue_PointB3_Sub03</a>",
                   "valuePerStack": {
                     "MDF_Sub3_MaxLayer": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     },
                     "MDF_Sub3_LifeTime": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     },
                     "MDF_Sub3_PropertyRatio": {
-                      "operator": "Variables[0] (0.06) || RETURN",
-                      "displayLines": "0.06",
-                      "constants": [],
-                      "variables": [
-                        0.06
-                      ]
+                      "displayLines": "0.06"
                     },
                     "MDF_Sub3_MaxPropertyRatio": {
-                      "operator": "Variables[0] (0.06) || Variables[1] (0.12) || ADD || RETURN",
-                      "displayLines": "(0.06 + 0.12)",
-                      "constants": [],
-                      "variables": [
-                        0.06,
-                        0.12
-                      ]
+                      "displayLines": "(0.06 + 0.12)"
                     },
                     "MDF_Sub3_PointB3_BreakDamageValue": {
-                      "operator": "Variables[0] (2.2) || RETURN",
-                      "displayLines": "2.2",
-                      "constants": [],
-                      "variables": [
-                        2.2
-                      ]
+                      "displayLines": "2.2"
                     }
                   }
                 }
@@ -1753,12 +1472,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyRatio_BreakDamageSelf) || RETURN",
-                    "displayLines": "MDF_PropertyRatio_BreakDamageSelf",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyRatio_BreakDamageSelf"
-                    ]
+                    "displayLines": "MDF_PropertyRatio_BreakDamageSelf"
                   }
                 }
               ]
@@ -1782,12 +1496,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Skill Points Modification",
                       "adjustmentValue": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "adjustmentType": "+"
                     },
@@ -1825,12 +1534,7 @@ const compositeAbilityObject = {
             "delayAdvancePreview": {
               "name": "Delay/Advance Preview",
               "previewValue": {
-                "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                "displayLines": "MDF_PropertyValue2",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue2"
-                ]
+                "displayLines": "MDF_PropertyValue2"
               }
             }
           }
@@ -1851,12 +1555,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1523669098\">Fugue_PointB1_Bonus_Preshow</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue2": {
-                      "operator": "Variables[0] (0.15) || RETURN",
-                      "displayLines": "0.15",
-                      "constants": [],
-                      "variables": [
-                        0.15
-                      ]
+                      "displayLines": "0.15"
                     }
                   }
                 }
@@ -1885,12 +1584,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1523669098\">Fugue_PointB1_Bonus_Preshow</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (0.15) || RETURN",
-                          "displayLines": "0.15",
-                          "constants": [],
-                          "variables": [
-                            0.15
-                          ]
+                          "displayLines": "0.15"
                         }
                       }
                     }
@@ -1942,12 +1636,7 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PassiveDamage2": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 }
               }
             },
@@ -1962,20 +1651,10 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PassiveDamage2": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 },
                 "MDF_RedStanceRatio": {
-                  "operator": "Variables[0] (0.4) || RETURN",
-                  "displayLines": "0.4",
-                  "constants": [],
-                  "variables": [
-                    0.4
-                  ]
+                  "displayLines": "0.4"
                 },
                 "MDF_MinStance": 30
               }
@@ -2026,21 +1705,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             },
             "HitSplit": 0.6,
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "attackType": "Ultimate",
@@ -2057,21 +1726,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             },
             "HitSplit": 0.1,
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "attackType": "Ultimate",
@@ -2088,21 +1747,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             },
             "HitSplit": 0.1,
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "attackType": "Ultimate",
@@ -2119,21 +1768,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             },
             "HitSplit": 0.1,
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "attackType": "Ultimate",
@@ -2150,21 +1789,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             },
             "HitSplit": 0.1,
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "attackType": "Ultimate",
@@ -2290,37 +1919,17 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-690913647\">Fugue_BPAbilityBonusListen</a>[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "valuePerStack": {
             "MDF_Chance": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "MDF_DefenceDownRatio": {
-              "operator": "Variables[0] (0.18) || RETURN",
-              "displayLines": "0.18",
-              "constants": [],
-              "variables": [
-                0.18
-              ]
+              "displayLines": "0.18"
             },
             "MDF_LifeTime": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             }
           }
         },
@@ -2357,60 +1966,25 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1216788746\">Fugue_BPAbility_Eidolon4</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
                   "valuePerStack": {
                     "MDF_BreakDamageAdd": {
-                      "operator": "Variables[0] (0.3) || RETURN",
-                      "displayLines": "0.3",
-                      "constants": [],
-                      "variables": [
-                        0.3
-                      ]
+                      "displayLines": "0.3"
                     },
                     "MDF_StanceBreakAddRatio": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     },
                     "MDF_Chance": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     },
                     "MDF_DefenceDownRatio": {
-                      "operator": "Variables[0] (0.18) || RETURN",
-                      "displayLines": "0.18",
-                      "constants": [],
-                      "variables": [
-                        0.18
-                      ]
+                      "displayLines": "0.18"
                     },
                     "MDF_BreakDamageAddedRatio": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     },
                     "MDF_LifeTime": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     },
                     "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   }
                 }
@@ -2432,52 +2006,22 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1132900651\">Fugue_BPAbility_Eidolon1</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
                       "valuePerStack": {
                         "MDF_BreakDamageAdd": {
-                          "operator": "Variables[0] (0.3) || RETURN",
-                          "displayLines": "0.3",
-                          "constants": [],
-                          "variables": [
-                            0.3
-                          ]
+                          "displayLines": "0.3"
                         },
                         "MDF_StanceBreakAddRatio": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         },
                         "MDF_Chance": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         },
                         "MDF_DefenceDownRatio": {
-                          "operator": "Variables[0] (0.18) || RETURN",
-                          "displayLines": "0.18",
-                          "constants": [],
-                          "variables": [
-                            0.18
-                          ]
+                          "displayLines": "0.18"
                         },
                         "MDF_LifeTime": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         },
                         "MDF_PropertyRatio": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         }
                       }
                     }
@@ -2492,44 +2036,19 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"647019371\">Fugue_BPAbility</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
                       "valuePerStack": {
                         "MDF_BreakDamageAdd": {
-                          "operator": "Variables[0] (0.3) || RETURN",
-                          "displayLines": "0.3",
-                          "constants": [],
-                          "variables": [
-                            0.3
-                          ]
+                          "displayLines": "0.3"
                         },
                         "MDF_Chance": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         },
                         "MDF_DefenceDownRatio": {
-                          "operator": "Variables[0] (0.18) || RETURN",
-                          "displayLines": "0.18",
-                          "constants": [],
-                          "variables": [
-                            0.18
-                          ]
+                          "displayLines": "0.18"
                         },
                         "MDF_LifeTime": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         },
                         "MDF_PropertyRatio": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         }
                       }
                     }
@@ -2640,12 +2159,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_StanceBreakAddRatio) || RETURN",
-                    "displayLines": "MDF_StanceBreakAddRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_StanceBreakAddRatio"
-                    ]
+                    "displayLines": "MDF_StanceBreakAddRatio"
                   }
                 },
                 {
@@ -2656,12 +2170,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_BreakDamageAdd) || RETURN",
-                    "displayLines": "MDF_BreakDamageAdd",
-                    "constants": [],
-                    "variables": [
-                      "MDF_BreakDamageAdd"
-                    ]
+                    "displayLines": "MDF_BreakDamageAdd"
                   }
                 },
                 {
@@ -2672,12 +2181,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                    "displayLines": "MDF_PropertyRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyRatio"
-                    ]
+                    "displayLines": "MDF_PropertyRatio"
                   }
                 }
               ]
@@ -2731,12 +2235,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_StanceBreakAddRatio) || RETURN",
-                    "displayLines": "MDF_StanceBreakAddRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_StanceBreakAddRatio"
-                    ]
+                    "displayLines": "MDF_StanceBreakAddRatio"
                   }
                 },
                 {
@@ -2747,12 +2246,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_BreakDamageAdd) || RETURN",
-                    "displayLines": "MDF_BreakDamageAdd",
-                    "constants": [],
-                    "variables": [
-                      "MDF_BreakDamageAdd"
-                    ]
+                    "displayLines": "MDF_BreakDamageAdd"
                   }
                 },
                 {
@@ -2763,12 +2257,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                    "displayLines": "MDF_PropertyRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyRatio"
-                    ]
+                    "displayLines": "MDF_PropertyRatio"
                   }
                 }
               ]
@@ -2821,12 +2310,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_BreakDamageAdd) || RETURN",
-                    "displayLines": "MDF_BreakDamageAdd",
-                    "constants": [],
-                    "variables": [
-                      "MDF_BreakDamageAdd"
-                    ]
+                    "displayLines": "MDF_BreakDamageAdd"
                   }
                 },
                 {
@@ -2837,12 +2321,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                    "displayLines": "MDF_PropertyRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyRatio"
-                    ]
+                    "displayLines": "MDF_PropertyRatio"
                   }
                 }
               ]
@@ -2944,12 +2423,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (Skill02_EnergyBarCount) || RETURN",
-                    "displayLines": "Skill02_EnergyBarCount",
-                    "constants": [],
-                    "variables": [
-                      "Skill02_EnergyBarCount"
-                    ]
+                    "displayLines": "Skill02_EnergyBarCount"
                   },
                   "maximum": 3,
                   "assignState": "True",
@@ -3053,20 +2527,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Basic ATK",
@@ -3082,20 +2546,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             },
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null,
             "attackType": "Basic ATK"
@@ -3165,20 +2619,10 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Basic ATK",

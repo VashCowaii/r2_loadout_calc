@@ -51,13 +51,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CEIL) || Variables[1] (MDF_NegativeBlood_Temp) || PARAM_1 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeBlood_Temp)",
-                    "constants": [],
-                    "variables": [
-                      "CEIL",
-                      "MDF_NegativeBlood_Temp"
-                    ]
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeBlood_Temp)"
                   },
                   "variableName": "MDF_NegativeBlood"
                 },
@@ -95,13 +89,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CEIL) || Variables[1] (MDF_NegativeBlood_Temp) || PARAM_1 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeBlood_Temp)",
-                    "constants": [],
-                    "variables": [
-                      "CEIL",
-                      "MDF_NegativeBlood_Temp"
-                    ]
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeBlood_Temp)"
                   },
                   "variableName": "MDF_NegativeBlood"
                 }
@@ -360,12 +348,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageTypeTakenRatio) || RETURN",
-                    "displayLines": "MDF_AllDamageTypeTakenRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageTypeTakenRatio"
-                    ]
+                    "displayLines": "MDF_AllDamageTypeTakenRatio"
                   }
                 }
               ]
@@ -429,12 +412,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_StealthBreak_AllDamageTypeTakenRatio) || RETURN",
-                    "displayLines": "MDF_StealthBreak_AllDamageTypeTakenRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_StealthBreak_AllDamageTypeTakenRatio"
-                    ]
+                    "displayLines": "MDF_StealthBreak_AllDamageTypeTakenRatio"
                   }
                 }
               ]
@@ -495,20 +473,10 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"264567512\">Enemy_W4_Scholar_01_StealthBreak</a>[<span class=\"descriptionNumberColor\">Flawed</span>]",
                   "valuePerStack": {
                     "MDF_ActionDelayRatio": {
-                      "operator": "Variables[0] (MDF_StealthBreak_ActionDelayRatio) || RETURN",
-                      "displayLines": "MDF_StealthBreak_ActionDelayRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_StealthBreak_ActionDelayRatio"
-                      ]
+                      "displayLines": "MDF_StealthBreak_ActionDelayRatio"
                     },
                     "MDF_AllDamageTypeTakenRatio": {
-                      "operator": "Variables[0] (MDF_StealthBreak_AllDamageTypeTakenRatio) || RETURN",
-                      "displayLines": "MDF_StealthBreak_AllDamageTypeTakenRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_StealthBreak_AllDamageTypeTakenRatio"
-                      ]
+                      "displayLines": "MDF_StealthBreak_AllDamageTypeTakenRatio"
                     }
                   }
                 },
@@ -995,12 +963,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "HitSplit": 0.25,
             "Toughness": null,
@@ -1018,12 +981,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "HitSplit": 0.25,
             "Toughness": null,
@@ -1041,12 +999,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "HitSplit": 0.5,
             "Toughness": null,
@@ -1234,12 +1187,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,

@@ -73,28 +73,13 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"155177783\">Monster_W1_CocoliaP2_IF_BOSS_PowerUp</a>",
               "valuePerStack": {
                 "MDF_Cocolia_IF_BOSS_AllDamageReduce": {
-                  "operator": "Variables[0] ({[Skill11[0]]}) || RETURN",
-                  "displayLines": "{[Skill11[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill11[0]]}"
-                  ]
+                  "displayLines": "{[Skill11[0]]}"
                 },
                 "MDF_Cocolia_IF_BOSS_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] ({[Skill11[1]]}) || RETURN",
-                  "displayLines": "{[Skill11[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill11[1]]}"
-                  ]
+                  "displayLines": "{[Skill11[1]]}"
                 },
                 "MDF_Cocolia_IF_BOSS_SpeedAddedRatio": {
-                  "operator": "Variables[0] ({[Skill11[2]]}) || RETURN",
-                  "displayLines": "{[Skill11[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill11[2]]}"
-                  ]
+                  "displayLines": "{[Skill11[2]]}"
                 }
               }
             },
@@ -150,12 +135,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedDelta) || RETURN",
-                "displayLines": "MDF_SpeedDelta",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedDelta"
-                ]
+                "displayLines": "MDF_SpeedDelta"
               }
             }
           ]

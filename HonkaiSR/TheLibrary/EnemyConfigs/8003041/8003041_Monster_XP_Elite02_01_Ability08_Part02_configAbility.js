@@ -30,12 +30,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                  "displayLines": "{[Skill07[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill07[0]]}"
-                  ]
+                  "displayLines": "{[Skill07[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -51,12 +46,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill07[1]]}) || RETURN",
-                  "displayLines": "{[Skill07[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill07[1]]}"
-                  ]
+                  "displayLines": "{[Skill07[1]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -87,22 +77,12 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
                   "duration": 1,
                   "baseChance": {
-                    "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill01[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill01[1]]}"
-                    ]
+                    "displayLines": "{[PassiveSkill01[1]]}"
                   },
                   "immediateEffect": true,
                   "valuePerStack": {
                     "MDF_ActionDelayRatio": {
-                      "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill01[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[2]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill01[2]]}"
                     }
                   }
                 }
@@ -138,22 +118,12 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
                   "duration": 1,
                   "baseChance": {
-                    "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill01[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill01[1]]}"
-                    ]
+                    "displayLines": "{[PassiveSkill01[1]]}"
                   },
                   "immediateEffect": true,
                   "valuePerStack": {
                     "MDF_ActionDelayRatio": {
-                      "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill01[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[2]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill01[2]]}"
                     }
                   }
                 }
@@ -171,14 +141,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(EnergyLayer - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "EnergyLayer"
-                    ]
+                    "displayLines": "(EnergyLayer - 1)"
                   },
                   "variableName": "EnergyLayer"
                 }

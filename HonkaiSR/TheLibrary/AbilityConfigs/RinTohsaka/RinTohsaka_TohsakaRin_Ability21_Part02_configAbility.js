@@ -46,12 +46,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (EnergyBar_GemNum_Shadow) || RETURN",
-            "displayLines": "EnergyBar_GemNum_Shadow",
-            "constants": [],
-            "variables": [
-              "EnergyBar_GemNum_Shadow"
-            ]
+            "displayLines": "EnergyBar_GemNum_Shadow"
           },
           "variableName": "TMP_Shadow_Gem_Num"
         },
@@ -73,21 +68,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] (0.9) || RETURN",
-                  "displayLines": "0.9",
-                  "constants": [],
-                  "variables": [
-                    0.9
-                  ]
+                  "displayLines": "0.9"
                 },
                 "HitSplit": 0.25,
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -104,21 +89,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (0.9) || RETURN",
-              "displayLines": "0.9",
-              "constants": [],
-              "variables": [
-                0.9
-              ]
+              "displayLines": "0.9"
             },
             "HitSplit": 0.25,
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -134,12 +109,7 @@ const configAbility = {
                 "value1": "TMP_Round",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] (33) || RETURN",
-                  "displayLines": "33",
-                  "constants": [],
-                  "variables": [
-                    33
-                  ]
+                  "displayLines": "33"
                 }
               },
               {
@@ -147,12 +117,7 @@ const configAbility = {
                 "value1": "TMP_Shadow_Gem_Num",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (EnergyBar_CostGemNum) || RETURN",
-                  "displayLines": "EnergyBar_CostGemNum",
-                  "constants": [],
-                  "variables": [
-                    "EnergyBar_CostGemNum"
-                  ]
+                  "displayLines": "EnergyBar_CostGemNum"
                 }
               }
             ]
@@ -170,14 +135,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (TMP_Flag) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(TMP_Flag + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "TMP_Flag"
-                    ]
+                    "displayLines": "(TMP_Flag + 1)"
                   },
                   "variableName": "TMP_Flag"
                 }
@@ -197,26 +155,14 @@ const configAbility = {
                 "value1": "TMP_Interval",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Constants[0] (0.021) || RETURN",
-                  "displayLines": "0.021",
-                  "constants": [
-                    0.021
-                  ],
-                  "variables": []
+                  "displayLines": "0.021"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (TMP_Interval) || Constants[0] (0.011) || SUB || RETURN",
-                    "displayLines": "(TMP_Interval - 0.011)",
-                    "constants": [
-                      0.011
-                    ],
-                    "variables": [
-                      "TMP_Interval"
-                    ]
+                    "displayLines": "(TMP_Interval - 0.011)"
                   },
                   "variableName": "TMP_Interval"
                 }
@@ -225,40 +171,21 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (TMP_Round) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(TMP_Round + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "TMP_Round"
-                ]
+                "displayLines": "(TMP_Round + 1)"
               },
               "variableName": "TMP_Round"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (TMP_Shadow_Gem_Num) || Variables[1] (EnergyBar_CostGemNum) || SUB || RETURN",
-                "displayLines": "(TMP_Shadow_Gem_Num - EnergyBar_CostGemNum)",
-                "constants": [],
-                "variables": [
-                  "TMP_Shadow_Gem_Num",
-                  "EnergyBar_CostGemNum"
-                ]
+                "displayLines": "(TMP_Shadow_Gem_Num - EnergyBar_CostGemNum)"
               },
               "variableName": "TMP_Shadow_Gem_Num"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (TMP_Shadow_Gem_Cost) || Variables[1] (EnergyBar_CostGemNum) || ADD || RETURN",
-                "displayLines": "(TMP_Shadow_Gem_Cost + EnergyBar_CostGemNum)",
-                "constants": [],
-                "variables": [
-                  "TMP_Shadow_Gem_Cost",
-                  "EnergyBar_CostGemNum"
-                ]
+                "displayLines": "(TMP_Shadow_Gem_Cost + EnergyBar_CostGemNum)"
               },
               "variableName": "TMP_Shadow_Gem_Cost"
             },
@@ -276,12 +203,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (TMP_Shadow_Gem_Num) || RETURN",
-                    "displayLines": "TMP_Shadow_Gem_Num",
-                    "constants": [],
-                    "variables": [
-                      "TMP_Shadow_Gem_Num"
-                    ]
+                    "displayLines": "TMP_Shadow_Gem_Num"
                   },
                   "priorState": "Normal"
                 }
@@ -308,20 +230,10 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Quantum",
                         "Damage": {
-                          "operator": "Variables[0] (0.9) || RETURN",
-                          "displayLines": "0.9",
-                          "constants": [],
-                          "variables": [
-                            0.9
-                          ]
+                          "displayLines": "0.9"
                         },
                         "Toughness": {
-                          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                          "displayLines": "ST Toughness Value",
-                          "constants": [],
-                          "variables": [
-                            "ST Toughness Value"
-                          ]
+                          "displayLines": "ST Toughness Value"
                         },
                         "Tags": null
                       }
@@ -355,12 +267,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (EnergyBar_GemNum_Shadow) || RETURN",
-                "displayLines": "EnergyBar_GemNum_Shadow",
-                "constants": [],
-                "variables": [
-                  "EnergyBar_GemNum_Shadow"
-                ]
+                "displayLines": "EnergyBar_GemNum_Shadow"
               },
               "priorState": "Normal"
             }
@@ -369,12 +276,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                "displayLines": "EnergyBar_GemNum",
-                "constants": [],
-                "variables": [
-                  "EnergyBar_GemNum"
-                ]
+                "displayLines": "EnergyBar_GemNum"
               },
               "priorState": "Normal"
             }
@@ -390,12 +292,7 @@ const configAbility = {
             "value1": "CurrentSkillPoints",
             "compareType": ">",
             "value2": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             }
           },
           "maxLoops": 333,
@@ -414,23 +311,13 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               }
             },
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                "displayLines": "EnergyBar_GemNum",
-                "constants": [],
-                "variables": [
-                  "EnergyBar_GemNum"
-                ]
+                "displayLines": "EnergyBar_GemNum"
               }
             }
           ]
@@ -438,12 +325,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-            "displayLines": "EnergyBar_GemNum",
-            "constants": [],
-            "variables": [
-              "EnergyBar_GemNum"
-            ]
+            "displayLines": "EnergyBar_GemNum"
           },
           "variableName": "TMP_Gem_Num"
         },
@@ -465,21 +347,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] (0.9) || RETURN",
-                  "displayLines": "0.9",
-                  "constants": [],
-                  "variables": [
-                    0.9
-                  ]
+                  "displayLines": "0.9"
                 },
                 "HitSplit": 0.25,
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -496,21 +368,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (0.9) || RETURN",
-              "displayLines": "0.9",
-              "constants": [],
-              "variables": [
-                0.9
-              ]
+              "displayLines": "0.9"
             },
             "HitSplit": 0.25,
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -526,12 +388,7 @@ const configAbility = {
                 "value1": "TMP_Round",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] (33) || RETURN",
-                  "displayLines": "33",
-                  "constants": [],
-                  "variables": [
-                    33
-                  ]
+                  "displayLines": "33"
                 }
               },
               {
@@ -539,12 +396,7 @@ const configAbility = {
                 "value1": "TMP_Gem_Num",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (EnergyBar_CostGemNum) || RETURN",
-                  "displayLines": "EnergyBar_CostGemNum",
-                  "constants": [],
-                  "variables": [
-                    "EnergyBar_CostGemNum"
-                  ]
+                  "displayLines": "EnergyBar_CostGemNum"
                 }
               },
               {
@@ -579,14 +431,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (TMP_Flag) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(TMP_Flag + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "TMP_Flag"
-                    ]
+                    "displayLines": "(TMP_Flag + 1)"
                   },
                   "variableName": "TMP_Flag"
                 }
@@ -606,26 +451,14 @@ const configAbility = {
                 "value1": "TMP_Interval",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Constants[0] (0.021) || RETURN",
-                  "displayLines": "0.021",
-                  "constants": [
-                    0.021
-                  ],
-                  "variables": []
+                  "displayLines": "0.021"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (TMP_Interval) || Constants[0] (0.011) || SUB || RETURN",
-                    "displayLines": "(TMP_Interval - 0.011)",
-                    "constants": [
-                      0.011
-                    ],
-                    "variables": [
-                      "TMP_Interval"
-                    ]
+                    "displayLines": "(TMP_Interval - 0.011)"
                   },
                   "variableName": "TMP_Interval"
                 }
@@ -634,40 +467,21 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (TMP_Round) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(TMP_Round + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "TMP_Round"
-                ]
+                "displayLines": "(TMP_Round + 1)"
               },
               "variableName": "TMP_Round"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (TMP_Gem_Num) || Variables[1] (EnergyBar_CostGemNum) || SUB || RETURN",
-                "displayLines": "(TMP_Gem_Num - EnergyBar_CostGemNum)",
-                "constants": [],
-                "variables": [
-                  "TMP_Gem_Num",
-                  "EnergyBar_CostGemNum"
-                ]
+                "displayLines": "(TMP_Gem_Num - EnergyBar_CostGemNum)"
               },
               "variableName": "TMP_Gem_Num"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (TMP_Gem_Cost) || Variables[1] (EnergyBar_CostGemNum) || ADD || RETURN",
-                "displayLines": "(TMP_Gem_Cost + EnergyBar_CostGemNum)",
-                "constants": [],
-                "variables": [
-                  "TMP_Gem_Cost",
-                  "EnergyBar_CostGemNum"
-                ]
+                "displayLines": "(TMP_Gem_Cost + EnergyBar_CostGemNum)"
               },
               "variableName": "TMP_Gem_Cost"
             },
@@ -685,25 +499,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (TohsakaRin_00_Achievement_Gemstone) || Variables[1] (EnergyBar_CostGemNum) || ADD || RETURN",
-                    "displayLines": "(TohsakaRin_00_Achievement_Gemstone + EnergyBar_CostGemNum)",
-                    "constants": [],
-                    "variables": [
-                      "TohsakaRin_00_Achievement_Gemstone",
-                      "EnergyBar_CostGemNum"
-                    ]
+                    "displayLines": "(TohsakaRin_00_Achievement_Gemstone + EnergyBar_CostGemNum)"
                   },
                   "variableName": "TohsakaRin_00_Achievement_Gemstone"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (TMP_Gem_Num) || RETURN",
-                    "displayLines": "TMP_Gem_Num",
-                    "constants": [],
-                    "variables": [
-                      "TMP_Gem_Num"
-                    ]
+                    "displayLines": "TMP_Gem_Num"
                   },
                   "priorState": "Normal"
                 }
@@ -730,20 +533,10 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Quantum",
                         "Damage": {
-                          "operator": "Variables[0] (0.9) || RETURN",
-                          "displayLines": "0.9",
-                          "constants": [],
-                          "variables": [
-                            0.9
-                          ]
+                          "displayLines": "0.9"
                         },
                         "Toughness": {
-                          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                          "displayLines": "ST Toughness Value",
-                          "constants": [],
-                          "variables": [
-                            "ST Toughness Value"
-                          ]
+                          "displayLines": "ST Toughness Value"
                         },
                         "Tags": null
                       }
@@ -764,14 +557,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Constants[0] (0) || Variables[0] (TMP_Gem_Cost) || SUB || RETURN",
-            "displayLines": "(0 - TMP_Gem_Cost)",
-            "constants": [
-              0
-            ],
-            "variables": [
-              "TMP_Gem_Cost"
-            ]
+            "displayLines": "(0 - TMP_Gem_Cost)"
           }
         },
         {
@@ -801,12 +587,7 @@ const configAbility = {
                 "value1": "TMP_Gem_Cost",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (30) || RETURN",
-                  "displayLines": "30",
-                  "constants": [],
-                  "variables": [
-                    30
-                  ]
+                  "displayLines": "30"
                 }
               }
             ]
@@ -821,12 +602,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (TMP_Gem_Cost) || RETURN",
-                "displayLines": "TMP_Gem_Cost",
-                "constants": [],
-                "variables": [
-                  "TMP_Gem_Cost"
-                ]
+                "displayLines": "TMP_Gem_Cost"
               }
             }
           ]
@@ -843,12 +619,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (EnergyBar_GemNum_Shadow) || RETURN",
-                "displayLines": "EnergyBar_GemNum_Shadow",
-                "constants": [],
-                "variables": [
-                  "EnergyBar_GemNum_Shadow"
-                ]
+                "displayLines": "EnergyBar_GemNum_Shadow"
               },
               "priorState": "Normal"
             }
@@ -857,12 +628,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                "displayLines": "EnergyBar_GemNum",
-                "constants": [],
-                "variables": [
-                  "EnergyBar_GemNum"
-                ]
+                "displayLines": "EnergyBar_GemNum"
               },
               "priorState": "Normal"
             }

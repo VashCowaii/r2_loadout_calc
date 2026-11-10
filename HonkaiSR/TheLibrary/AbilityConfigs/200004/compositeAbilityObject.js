@@ -212,13 +212,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyRatio * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyRatio",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_PropertyRatio * MDF_Layer)"
                   }
                 }
               ]
@@ -247,12 +241,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistancePhysicalPEN</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                    "displayLines": "MDF_PropertyRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyRatio"
-                    ]
+                    "displayLines": "MDF_PropertyRatio"
                   }
                 }
               ]
@@ -301,12 +290,7 @@ const compositeAbilityObject = {
                   "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
                   "variables": {
                     "parameter[0]_AddValue": {
-                      "operator": "Variables[0] (MDF_Count) || RETURN",
-                      "displayLines": "MDF_Count",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Count"
-                      ]
+                      "displayLines": "MDF_Count"
                     }
                   }
                 }
@@ -480,12 +464,7 @@ const compositeAbilityObject = {
                   "referenceModifier": "<a class=\"gModGreen\" id=\"1020254741\">MReference_SpeedRatioUp</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_6078) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_6078",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_6078"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_6078"
                     }
                   }
                 }
@@ -514,26 +493,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1889470699\">M_Phainon_Ultimate_ActionOrder</a>",
                       "counter": {
-                        "operator": "Variables[0] (MDF_ActionOrderIndex) || RETURN",
-                        "displayLines": "MDF_ActionOrderIndex",
-                        "constants": [],
-                        "variables": [
-                          "MDF_ActionOrderIndex"
-                        ]
+                        "displayLines": "MDF_ActionOrderIndex"
                       },
                       "referenceModifier": "<a class=\"gModGreen\" id=\"1832901043\">MReference_Empty</a>"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_ActionOrderIndex) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_ActionOrderIndex + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_ActionOrderIndex"
-                        ]
+                        "displayLines": "(MDF_ActionOrderIndex + 1)"
                       },
                       "variableName": "MDF_ActionOrderIndex"
                     }
@@ -814,29 +781,13 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (CurSpecialSP) || Variables[1] (CurOverflowSpecialSP) || ADD || RETURN",
-                    "displayLines": "(CurSpecialSP + CurOverflowSpecialSP)",
-                    "constants": [],
-                    "variables": [
-                      "CurSpecialSP",
-                      "CurOverflowSpecialSP"
-                    ]
+                    "displayLines": "(CurSpecialSP + CurOverflowSpecialSP)"
                   },
                   "activeCount": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_6109) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_6109",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_6109"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_6109"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_6109) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_6109",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_6109"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_6109"
                   },
                   "assignState": "True",
                   "priorState": "Normal",
@@ -849,12 +800,7 @@ const compositeAbilityObject = {
                     "value1": "CurSpecialSP",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_6109) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_6109",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_6109"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_6109"
                     }
                   },
                   "passed": [
@@ -901,14 +847,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Set Phainon Action Count",
                       "count": {
-                        "operator": "Variables[0] (#CL_MDF_BECount) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(#CL_MDF_BECount - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "#CL_MDF_BECount"
-                        ]
+                        "displayLines": "(#CL_MDF_BECount - 1)"
                       }
                     }
                   ]
@@ -961,12 +900,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Set Phainon Action Count",
                   "count": {
-                    "operator": "Variables[0] (#CL_MDF_BECount) || RETURN",
-                    "displayLines": "#CL_MDF_BECount",
-                    "constants": [],
-                    "variables": [
-                      "#CL_MDF_BECount"
-                    ]
+                    "displayLines": "#CL_MDF_BECount"
                   }
                 },
                 {
@@ -978,23 +912,13 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_6110) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_6110",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_6110"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_6110"
                   }
                 },
                 {
                   "name": "Set Phainon Charge Points",
                   "value": {
-                    "operator": "Variables[0] (Skill22_Energy) || RETURN",
-                    "displayLines": "Skill22_Energy",
-                    "constants": [],
-                    "variables": [
-                      "Skill22_Energy"
-                    ]
+                    "displayLines": "Skill22_Energy"
                   }
                 },
                 {
@@ -1018,14 +942,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Set Phainon Action Count",
                   "count": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_6080) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(UnusedUnderThisBase_6080 - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "UnusedUnderThisBase_6080"
-                    ]
+                    "displayLines": "(UnusedUnderThisBase_6080 - 1)"
                   }
                 },
                 {
@@ -1164,14 +1081,7 @@ const compositeAbilityObject = {
                         "value1": "_enemyIndex",
                         "compareType": "<=",
                         "value2": {
-                          "operator": "Variables[0] (_enemyCount) || Constants[0] (2) || DIV || RETURN",
-                          "displayLines": "(_enemyCount / 2)",
-                          "constants": [
-                            2
-                          ],
-                          "variables": [
-                            "_enemyCount"
-                          ]
+                          "displayLines": "(_enemyCount / 2)"
                         }
                       }
                     }
@@ -1229,12 +1139,7 @@ const compositeAbilityObject = {
                     "value1": "Skill22_Energy",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_6105) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_6105",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_6105"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_6105"
                     }
                   },
                   "passed": [
@@ -1297,14 +1202,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Set Phainon Action Count",
                       "count": {
-                        "operator": "Variables[0] (#CL_MDF_BECount) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(#CL_MDF_BECount - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "#CL_MDF_BECount"
-                        ]
+                        "displayLines": "(#CL_MDF_BECount - 1)"
                       }
                     }
                   ]
@@ -1396,12 +1294,7 @@ const compositeAbilityObject = {
               },
               "valuePerStack": {
                 "MDF_PropertyRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_6122) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_6122",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_6122"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_6122"
                 }
               }
             },
@@ -1475,12 +1368,7 @@ const compositeAbilityObject = {
                       "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
                       "variables": {
                         "parameter[0]_AddValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_6082) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_6082",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_6082"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_6082"
                         }
                       }
                     }
@@ -1501,21 +1389,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-982733816\">Phainon_Tree03_Property</a>[<span class=\"descriptionNumberColor\">Shine with Valor</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_6783) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_6783",
-                        "constants": [],
-                        "variables": [
-                          "UnusedUnderThisBase_6783"
-                        ]
+                        "displayLines": "UnusedUnderThisBase_6783"
                       },
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_6713) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_6713",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_6713"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_6713"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -1624,12 +1502,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                    "displayLines": "MDF_PropertyRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyRatio"
-                    ]
+                    "displayLines": "MDF_PropertyRatio"
                   }
                 },
                 {
@@ -1640,12 +1513,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyRatio2) || RETURN",
-                    "displayLines": "MDF_PropertyRatio2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyRatio2"
-                    ]
+                    "displayLines": "MDF_PropertyRatio2"
                   }
                 },
                 {
@@ -1726,12 +1594,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_6113) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_6113",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_6113"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_6113"
                   },
                   "formula": "Heal from Target MaxHP"
                 }
@@ -2053,12 +1916,7 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
           "variables": {
             "parameter[0]_AddValue": {
-              "operator": "Variables[0] (UnusedUnderThisBase_6091) || RETURN",
-              "displayLines": "UnusedUnderThisBase_6091",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_6091"
-              ]
+              "displayLines": "UnusedUnderThisBase_6091"
             }
           }
         },
@@ -2081,20 +1939,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_14414) || RETURN",
-              "displayLines": "UnusedUnderThisBase_14414",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_14414"
-              ]
+              "displayLines": "UnusedUnderThisBase_14414"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null
           }
@@ -2109,20 +1957,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_14353) || RETURN",
-              "displayLines": "UnusedUnderThisBase_14353",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_14353"
-              ]
+              "displayLines": "UnusedUnderThisBase_14353"
             },
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null
           }
@@ -2226,22 +2064,12 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1491786902\">Phainon_Passive_Property</a>[<span class=\"descriptionNumberColor\">Pyric Corpus</span>]",
                   "duration": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_6107) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_6107",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_6107"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_6107"
                   },
                   "referenceModifier": "<a class=\"gModGreen\" id=\"1042665863\">MReference_CriticalDamageUp</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_6074) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_6074",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_6074"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_6074"
                     }
                   }
                 }
@@ -2256,12 +2084,7 @@ const compositeAbilityObject = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (parameter[0]_AddValue) || RETURN",
-                "displayLines": "parameter[0]_AddValue",
-                "constants": [],
-                "variables": [
-                  "parameter[0]_AddValue"
-                ]
+                "displayLines": "parameter[0]_AddValue"
               },
               "execute": [
                 {

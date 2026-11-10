@@ -30,12 +30,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_ConvertPropertyRatio) || RETURN",
-                "displayLines": "MDF_ConvertPropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_ConvertPropertyRatio"
-                ]
+                "displayLines": "MDF_ConvertPropertyRatio"
               }
             }
           ]
@@ -58,12 +53,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateConverted</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_ConvertPropertyRatio) || RETURN",
-                "displayLines": "MDF_ConvertPropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_ConvertPropertyRatio"
-                ]
+                "displayLines": "MDF_ConvertPropertyRatio"
               }
             }
           ]
@@ -99,15 +89,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"2136671299\">M_Boothill_Trace01_Sub</a>",
               "valuePerStack": {
                 "MDF_ConvertPropertyRatio": {
-                  "operator": "Variables[0] (MIN) || Variables[1] (CasterBreakDamageAdded) || Variables[2] (0.1) || MUL || Variables[3] (0.3) || PARAM_2 || FUNCTION || RETURN",
-                  "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((CasterBreakDamageAdded * 0.1), 0.3)",
-                  "constants": [],
-                  "variables": [
-                    "MIN",
-                    "CasterBreakDamageAdded",
-                    0.1,
-                    0.3
-                  ]
+                  "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((CasterBreakDamageAdded * 0.1), 0.3)"
                 }
               }
             },
@@ -120,15 +102,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-314049053\">M_Boothill_Trace01_Sub2</a>",
               "valuePerStack": {
                 "MDF_ConvertPropertyRatio": {
-                  "operator": "Variables[0] (MIN) || Variables[1] (CasterBreakDamageAdded) || Variables[2] (0.5) || MUL || Variables[3] (1.5) || PARAM_2 || FUNCTION || RETURN",
-                  "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((CasterBreakDamageAdded * 0.5), 1.5)",
-                  "constants": [],
-                  "variables": [
-                    "MIN",
-                    "CasterBreakDamageAdded",
-                    0.5,
-                    1.5
-                  ]
+                  "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((CasterBreakDamageAdded * 0.5), 1.5)"
                 }
               }
             }
@@ -163,15 +137,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"2136671299\">M_Boothill_Trace01_Sub</a>",
                   "valuePerStack": {
                     "MDF_ConvertPropertyRatio": {
-                      "operator": "Variables[0] (MIN) || Variables[1] (CasterBreakDamageAdded) || Variables[2] (0.1) || MUL || Variables[3] (0.3) || PARAM_2 || FUNCTION || RETURN",
-                      "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((CasterBreakDamageAdded * 0.1), 0.3)",
-                      "constants": [],
-                      "variables": [
-                        "MIN",
-                        "CasterBreakDamageAdded",
-                        0.1,
-                        0.3
-                      ]
+                      "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((CasterBreakDamageAdded * 0.1), 0.3)"
                     }
                   }
                 },
@@ -184,15 +150,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-314049053\">M_Boothill_Trace01_Sub2</a>",
                   "valuePerStack": {
                     "MDF_ConvertPropertyRatio": {
-                      "operator": "Variables[0] (MIN) || Variables[1] (CasterBreakDamageAdded) || Variables[2] (0.5) || MUL || Variables[3] (1.5) || PARAM_2 || FUNCTION || RETURN",
-                      "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((CasterBreakDamageAdded * 0.5), 1.5)",
-                      "constants": [],
-                      "variables": [
-                        "MIN",
-                        "CasterBreakDamageAdded",
-                        0.5,
-                        1.5
-                      ]
+                      "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((CasterBreakDamageAdded * 0.5), 1.5)"
                     }
                   }
                 }

@@ -70,12 +70,7 @@ const configAbility = {
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-        "displayLines": "{[Skill02[0]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill02[0]]}"
-        ]
+        "displayLines": "{[Skill02[0]]}"
       },
       "refreshPositions": false,
       "enemyList": [
@@ -110,12 +105,7 @@ const configAbility = {
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-        "displayLines": "{[Skill02[1]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill02[1]]}"
-        ]
+        "displayLines": "{[Skill02[1]]}"
       },
       "refreshPositions": false,
       "enemyList": [
@@ -150,12 +140,7 @@ const configAbility = {
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-        "displayLines": "{[Skill02[0]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill02[0]]}"
-        ]
+        "displayLines": "{[Skill02[0]]}"
       },
       "refreshPositions": false,
       "enemyList": [
@@ -190,12 +175,7 @@ const configAbility = {
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-        "displayLines": "{[Skill02[1]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill02[1]]}"
-        ]
+        "displayLines": "{[Skill02[1]]}"
       },
       "refreshPositions": false,
       "enemyList": [

@@ -121,20 +121,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1730193233\">Enemy_SW_Boss_01_SummonMinion</a>",
                       "valuePerStack": {
                         "MDF_SummonID": {
-                          "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                          "displayLines": "SummonList_ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "SummonList_ADF_1"
-                          ]
+                          "displayLines": "SummonList_ADF_1"
                         },
                         "MDF_SummonDelay": {
-                          "operator": "Variables[0] (SummonDelayRatioPhase2) || RETURN",
-                          "displayLines": "SummonDelayRatioPhase2",
-                          "constants": [],
-                          "variables": [
-                            "SummonDelayRatioPhase2"
-                          ]
+                          "displayLines": "SummonDelayRatioPhase2"
                         }
                       }
                     }
@@ -153,20 +143,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1730193233\">Enemy_SW_Boss_01_SummonMinion</a>",
                       "valuePerStack": {
                         "MDF_SummonID": {
-                          "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                          "displayLines": "SummonList_ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "SummonList_ADF_1"
-                          ]
+                          "displayLines": "SummonList_ADF_1"
                         },
                         "MDF_SummonDelay": {
-                          "operator": "Variables[0] (SummonDelayRatioPhase2) || RETURN",
-                          "displayLines": "SummonDelayRatioPhase2",
-                          "constants": [],
-                          "variables": [
-                            "SummonDelayRatioPhase2"
-                          ]
+                          "displayLines": "SummonDelayRatioPhase2"
                         }
                       }
                     },
@@ -183,20 +163,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1730193233\">Enemy_SW_Boss_01_SummonMinion</a>",
                       "valuePerStack": {
                         "MDF_SummonID": {
-                          "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                          "displayLines": "SummonList_ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "SummonList_ADF_1"
-                          ]
+                          "displayLines": "SummonList_ADF_1"
                         },
                         "MDF_SummonDelay": {
-                          "operator": "Variables[0] (SummonDelayRatioPhase2) || RETURN",
-                          "displayLines": "SummonDelayRatioPhase2",
-                          "constants": [],
-                          "variables": [
-                            "SummonDelayRatioPhase2"
-                          ]
+                          "displayLines": "SummonDelayRatioPhase2"
                         }
                       }
                     }
@@ -259,21 +229,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-              "displayLines": "{[Skill05[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[1]]}"
-              ]
+              "displayLines": "{[Skill05[1]]}"
             },
             "dmgFormula": "Max HP Scaling",
             "Toughness": {
-              "operator": "Variables[0] (MaxStance) || RETURN",
-              "displayLines": "MaxStance",
-              "constants": [],
-              "variables": [
-                "MaxStance"
-              ]
+              "displayLines": "MaxStance"
             },
             "ToughnessDMGType": {},
             "Tags": null,
@@ -289,38 +249,18 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-658511969\">Monster_SW_Boss_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-            "displayLines": "{[Skill04[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill04[3]]}"
-            ]
+            "displayLines": "{[Skill04[3]]}"
           },
           "stackLimit": {
-            "operator": "Variables[0] ({[Skill04[4]]}) || RETURN",
-            "displayLines": "{[Skill04[4]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill04[4]]}"
-            ]
+            "displayLines": "{[Skill04[4]]}"
           },
           "valuePerStack": {
             "MDF_DamageTakenUpRatio_PerLayer": {
-              "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-              "displayLines": "{[Skill04[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[2]]}"
-              ]
+              "displayLines": "{[Skill04[2]]}"
             }
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-            "displayLines": "{[Skill04[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill04[1]]}"
-            ]
+            "displayLines": "{[Skill04[1]]}"
           }
         },
         {
@@ -360,12 +300,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (SummonDelayRatio1Random2) || RETURN",
-                "displayLines": "SummonDelayRatio1Random2",
-                "constants": [],
-                "variables": [
-                  "SummonDelayRatio1Random2"
-                ]
+                "displayLines": "SummonDelayRatio1Random2"
               },
               "variableName": "SummonDelayRatio1"
             }
@@ -381,12 +316,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (SummonDelayRatio1Random3) || RETURN",
-                    "displayLines": "SummonDelayRatio1Random3",
-                    "constants": [],
-                    "variables": [
-                      "SummonDelayRatio1Random3"
-                    ]
+                    "displayLines": "SummonDelayRatio1Random3"
                   },
                   "variableName": "SummonDelayRatio1"
                 }
@@ -395,12 +325,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (SummonDelayRatio1Random1) || RETURN",
-                    "displayLines": "SummonDelayRatio1Random1",
-                    "constants": [],
-                    "variables": [
-                      "SummonDelayRatio1Random1"
-                    ]
+                    "displayLines": "SummonDelayRatio1Random1"
                   },
                   "variableName": "SummonDelayRatio1"
                 }

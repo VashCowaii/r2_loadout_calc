@@ -22,12 +22,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-          "displayLines": "{[Skill05[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill05[0]]}"
-          ]
+          "displayLines": "{[Skill05[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -61,12 +56,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "consumePercent": {
-                "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                "displayLines": "{[Skill05[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill05[1]]}"
-                ]
+                "displayLines": "{[Skill05[1]]}"
               },
               "consumeFloor": 1
             }
@@ -89,36 +79,16 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
               "valuePerStack": {
                 "MDF_RallyTransferRatio": {
-                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                  "displayLines": "{[SkillP01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[1]]}"
-                  ]
+                  "displayLines": "{[SkillP01[1]]}"
                 },
                 "MDF_Rally_HealPercentage": {
-                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                  "displayLines": "{[SkillP01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[2]]}"
-                  ]
+                  "displayLines": "{[SkillP01[2]]}"
                 },
                 "MDF_Rally_HealUpRatio": {
-                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                  "displayLines": "{[SkillP01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[3]]}"
-                  ]
+                  "displayLines": "{[SkillP01[3]]}"
                 },
                 "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-                  "displayLines": "{[SkillP01[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[4]]}"
-                  ]
+                  "displayLines": "{[SkillP01[4]]}"
                 }
               }
             },
@@ -131,28 +101,13 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1799178922\">Enemy_AML_Minion02_01_RallyHP_V2</a>[<span class=\"descriptionNumberColor\">Corrosion</span>]",
               "valuePerStack": {
                 "MDF_RallyHP": {
-                  "operator": "Variables[0] (_CurrentHP) || RETURN",
-                  "displayLines": "_CurrentHP",
-                  "constants": [],
-                  "variables": [
-                    "_CurrentHP"
-                  ]
+                  "displayLines": "_CurrentHP"
                 },
                 "MDF_HealPercentage": {
-                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                  "displayLines": "{[SkillP01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[2]]}"
-                  ]
+                  "displayLines": "{[SkillP01[2]]}"
                 },
                 "MDF_HealUpRatio": {
-                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                  "displayLines": "{[SkillP01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[3]]}"
-                  ]
+                  "displayLines": "{[SkillP01[3]]}"
                 }
               }
             },
@@ -164,12 +119,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "consumePercent": {
-                "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                "displayLines": "{[Skill05[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill05[1]]}"
-                ]
+                "displayLines": "{[Skill05[1]]}"
               },
               "consumeFloor": 1
             }

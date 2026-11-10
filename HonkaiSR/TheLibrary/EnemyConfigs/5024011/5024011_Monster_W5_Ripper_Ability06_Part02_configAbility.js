@@ -166,12 +166,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "HitSplit": 0.07,
         "Toughness": null,
@@ -189,12 +184,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "HitSplit": 0.07,
         "Toughness": null,
@@ -212,12 +202,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "HitSplit": 0.07,
         "Toughness": null,
@@ -235,12 +220,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "HitSplit": 0.07,
         "Toughness": null,
@@ -258,12 +238,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "HitSplit": 0.07,
         "Toughness": null,
@@ -281,12 +256,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "HitSplit": 0.07,
         "Toughness": null,
@@ -304,12 +274,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "HitSplit": 0.07,
         "Toughness": null,
@@ -327,12 +292,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "HitSplit": 0.07,
         "Toughness": null,
@@ -350,12 +310,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "HitSplit": 0.07,
         "Toughness": null,
@@ -373,12 +328,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "HitSplit": 0.07,
         "Toughness": null,
@@ -396,12 +346,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "HitSplit": 0.07,
         "Toughness": null,
@@ -419,12 +364,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "HitSplit": 0.23,
         "Toughness": null,
@@ -472,85 +412,35 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-70072093\">Monster_W5_Ripper_Flesh</a>[<span class=\"descriptionNumberColor\">Happiness Puppet</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-                    "displayLines": "{[Skill06[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill06[1]]}"
-                    ]
+                    "displayLines": "{[Skill06[1]]}"
                   },
                   "valuePerStack": {
                     "MDF_FleshElationPoint": {
-                      "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-                      "displayLines": "{[Skill06[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill06[3]]}"
-                      ]
+                      "displayLines": "{[Skill06[3]]}"
                     },
                     "MDF_FleshExtraChance": {
-                      "operator": "Variables[0] ({[Skill06[4]]}) || RETURN",
-                      "displayLines": "{[Skill06[4]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill06[4]]}"
-                      ]
+                      "displayLines": "{[Skill06[4]]}"
                     },
                     "MDF_FleshExtraElationPoint": {
-                      "operator": "Variables[0] ({[Skill06[5]]}) || RETURN",
-                      "displayLines": "{[Skill06[5]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill06[5]]}"
-                      ]
+                      "displayLines": "{[Skill06[5]]}"
                     },
                     "MDF_AttackEnemyChance": {
-                      "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[0]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[0]]}"
                     },
                     "MDF_DamagePercentage": {
-                      "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[1]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[1]]}"
                     },
                     "MDF_MaxDamageRatio": {
-                      "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[2]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[2]]}"
                     },
                     "MDF_MinDamageRatio": {
-                      "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[3]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[3]]}"
                     },
                     "MDF_ExtraDamageMultiple": {
-                      "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[4]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[4]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[4]]}"
                     },
                     "MDF_EnemyExtraDamageMultiple": {
-                      "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[5]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[5]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[5]]}"
                     }
                   },
                   "success": [
@@ -563,76 +453,31 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"34096710\">Monster_W5_Ripper_FleshEffect</a>",
                       "valuePerStack": {
                         "MDF_FleshElationPoint": {
-                          "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-                          "displayLines": "{[Skill06[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill06[3]]}"
-                          ]
+                          "displayLines": "{[Skill06[3]]}"
                         },
                         "MDF_FleshExtraChance": {
-                          "operator": "Variables[0] ({[Skill06[4]]}) || RETURN",
-                          "displayLines": "{[Skill06[4]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill06[4]]}"
-                          ]
+                          "displayLines": "{[Skill06[4]]}"
                         },
                         "MDF_FleshExtraElationPoint": {
-                          "operator": "Variables[0] ({[Skill06[5]]}) || RETURN",
-                          "displayLines": "{[Skill06[5]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill06[5]]}"
-                          ]
+                          "displayLines": "{[Skill06[5]]}"
                         },
                         "MDF_AttackEnemyChance": {
-                          "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill02[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill02[0]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill02[0]]}"
                         },
                         "MDF_DamagePercentage": {
-                          "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill02[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill02[1]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill02[1]]}"
                         },
                         "MDF_MaxDamageRatio": {
-                          "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill02[2]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill02[2]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill02[2]]}"
                         },
                         "MDF_MinDamageRatio": {
-                          "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill02[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill02[3]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill02[3]]}"
                         },
                         "MDF_ExtraDamageMultiple": {
-                          "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill02[4]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill02[4]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill02[4]]}"
                         },
                         "MDF_EnemyExtraDamageMultiple": {
-                          "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill02[5]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill02[5]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill02[5]]}"
                         }
                       },
                       "casterAssign": "TargetSelf"
@@ -645,12 +490,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1788107220\">Monster_W5_Ripper_Ability06_SpecialFlesh</a>",
                       "duration": {
-                        "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-                        "displayLines": "{[Skill06[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill06[1]]}"
-                        ]
+                        "displayLines": "{[Skill06[1]]}"
                       }
                     }
                   ]

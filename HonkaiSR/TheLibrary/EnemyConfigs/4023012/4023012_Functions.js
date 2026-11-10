@@ -47,14 +47,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_SummonCheck) || Variables[1] (_Bonus2Init) || SUB || Variables[2] (_Bonus2Sums) || DIV || RETURN",
-                    "displayLines": "((_SummonCheck - _Bonus2Init) / _Bonus2Sums)",
-                    "constants": [],
-                    "variables": [
-                      "_SummonCheck",
-                      "_Bonus2Init",
-                      "_Bonus2Sums"
-                    ]
+                    "displayLines": "((_SummonCheck - _Bonus2Init) / _Bonus2Sums)"
                   },
                   "variableName": "_BonusCheck"
                 }
@@ -74,14 +67,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_SummonCheck) || Variables[1] (_BonusInit) || SUB || Variables[2] (_BonusSums) || DIV || RETURN",
-                "displayLines": "((_SummonCheck - _BonusInit) / _BonusSums)",
-                "constants": [],
-                "variables": [
-                  "_SummonCheck",
-                  "_BonusInit",
-                  "_BonusSums"
-                ]
+                "displayLines": "((_SummonCheck - _BonusInit) / _BonusSums)"
               },
               "variableName": "_BonusCheck"
             }
@@ -103,13 +89,7 @@ const configAbility = {
             "value1": "_BonusCheck",
             "compareType": "=",
             "value2": {
-              "operator": "Variables[0] (WHOLE) || Variables[1] (_BonusCheck) || PARAM_1 || FUNCTION || RETURN",
-              "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(_BonusCheck)",
-              "constants": [],
-              "variables": [
-                "WHOLE",
-                "_BonusCheck"
-              ]
+              "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(_BonusCheck)"
             }
           },
           "passed": [
@@ -168,12 +148,7 @@ const configAbility = {
                         "value1": "_BonusCheck02",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (_Bonus2Limit) || RETURN",
-                          "displayLines": "_Bonus2Limit",
-                          "constants": [],
-                          "variables": [
-                            "_Bonus2Limit"
-                          ]
+                          "displayLines": "_Bonus2Limit"
                         }
                       }
                     ]
@@ -192,13 +167,7 @@ const configAbility = {
                         "value1": "_BonusCheck02",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (_BonusLimit) || Variables[1] (_Bonus2Limit) || ADD || RETURN",
-                          "displayLines": "(_BonusLimit + _Bonus2Limit)",
-                          "constants": [],
-                          "variables": [
-                            "_BonusLimit",
-                            "_Bonus2Limit"
-                          ]
+                          "displayLines": "(_BonusLimit + _Bonus2Limit)"
                         }
                       }
                     ]
@@ -223,12 +192,7 @@ const configAbility = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonID03) || RETURN",
-                    "displayLines": "SummonID03",
-                    "constants": [],
-                    "variables": [
-                      "SummonID03"
-                    ]
+                    "displayLines": "SummonID03"
                   },
                   "locationType": "FormationRecord"
                 }
@@ -239,12 +203,7 @@ const configAbility = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (_DelayCase) || RETURN",
-                "displayLines": "_DelayCase",
-                "constants": [],
-                "variables": [
-                  "_DelayCase"
-                ]
+                "displayLines": "_DelayCase"
               },
               "caseEvents": [
                 {
@@ -254,12 +213,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                        "displayLines": "{[Skill02[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill02[1]]}"
-                        ]
+                        "displayLines": "{[Skill02[1]]}"
                       },
                       "variableName": "_DelayRatio"
                     }
@@ -272,12 +226,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                        "displayLines": "{[Skill02[2]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill02[2]]}"
-                        ]
+                        "displayLines": "{[Skill02[2]]}"
                       },
                       "variableName": "_DelayRatio"
                     }
@@ -290,12 +239,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                        "displayLines": "{[Skill02[3]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill02[3]]}"
-                        ]
+                        "displayLines": "{[Skill02[3]]}"
                       },
                       "variableName": "_DelayRatio"
                     }
@@ -308,12 +252,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
-                        "displayLines": "{[Skill02[4]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill02[4]]}"
-                        ]
+                        "displayLines": "{[Skill02[4]]}"
                       },
                       "variableName": "_DelayRatio"
                     }
@@ -353,23 +292,13 @@ const configAbility = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] (_DelayRatio) || RETURN",
-                "displayLines": "_DelayRatio",
-                "constants": [],
-                "variables": [
-                  "_DelayRatio"
-                ]
+                "displayLines": "_DelayRatio"
               },
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonID01) || RETURN",
-                    "displayLines": "SummonID01",
-                    "constants": [],
-                    "variables": [
-                      "SummonID01"
-                    ]
+                    "displayLines": "SummonID01"
                   },
                   "locationType": "FormationRecord"
                 }

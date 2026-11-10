@@ -71,15 +71,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Wind",
             "DamageFlat": {
-              "operator": "Variables[0] (_MaxAttack) || Variables[1] (DamagePercentage) || MUL || Constants[0] (8) || DIV || RETURN",
-              "displayLines": "((_MaxAttack * DamagePercentage) / 8)",
-              "constants": [
-                8
-              ],
-              "variables": [
-                "_MaxAttack",
-                "DamagePercentage"
-              ]
+              "displayLines": "((_MaxAttack * DamagePercentage) / 8)"
             },
             "Toughness": null,
             "Tags": null,
@@ -110,15 +102,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Wind",
             "DamageFlat": {
-              "operator": "Variables[0] (_MaxAttack) || Variables[1] (DamagePercentage) || MUL || Constants[0] (8) || DIV || RETURN",
-              "displayLines": "((_MaxAttack * DamagePercentage) / 8)",
-              "constants": [
-                8
-              ],
-              "variables": [
-                "_MaxAttack",
-                "DamagePercentage"
-              ]
+              "displayLines": "((_MaxAttack * DamagePercentage) / 8)"
             },
             "Toughness": null,
             "Tags": null,

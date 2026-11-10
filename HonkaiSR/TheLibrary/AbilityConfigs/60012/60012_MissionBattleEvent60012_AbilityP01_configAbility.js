@@ -51,12 +51,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "value": {
-        "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-        "displayLines": "{[SkillP01[1]]}",
-        "constants": [],
-        "variables": [
-          "{[SkillP01[1]]}"
-        ]
+        "displayLines": "{[SkillP01[1]]}"
       },
       "isFixed": "(Fixed)"
     },
@@ -141,12 +136,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_StanceBreakAddedRatio) || RETURN",
-                "displayLines": "MDF_StanceBreakAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_StanceBreakAddedRatio"
-                ]
+                "displayLines": "MDF_StanceBreakAddedRatio"
               }
             }
           ]
@@ -236,12 +226,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                    "displayLines": "{[SkillP01[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillP01[0]]}"
-                    ]
+                    "displayLines": "{[SkillP01[0]]}"
                   },
                   "isFixed": "(Fixed)"
                 }

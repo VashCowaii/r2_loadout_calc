@@ -50,12 +50,7 @@ const configAbility = {
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (Monster_SummonID3) || RETURN",
-            "displayLines": "Monster_SummonID3",
-            "constants": [],
-            "variables": [
-              "Monster_SummonID3"
-            ]
+            "displayLines": "Monster_SummonID3"
           },
           "locationType": "FormationRecord"
         }

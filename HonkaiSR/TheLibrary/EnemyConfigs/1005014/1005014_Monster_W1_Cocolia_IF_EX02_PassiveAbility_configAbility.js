@@ -106,12 +106,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1783900265\">Enemy_W2_Cocolia_IF_ExtraFrozenDamageRatio</a>",
               "valuePerStack": {
                 "MDF_ExtraFrozenDamageRatio": {
-                  "operator": "Variables[0] ({[SkillEX02[0]]}) || RETURN",
-                  "displayLines": "{[SkillEX02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX02[0]]}"
-                  ]
+                  "displayLines": "{[SkillEX02[0]]}"
                 }
               }
             },
@@ -124,20 +119,10 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"222390491\">Enemy_W2_Cocolia_IF_ExtraStance</a>",
               "valuePerStack": {
                 "MDF_ExtraStanceRatio": {
-                  "operator": "Variables[0] ({[SkillEX02[1]]}) || RETURN",
-                  "displayLines": "{[SkillEX02[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX02[1]]}"
-                  ]
+                  "displayLines": "{[SkillEX02[1]]}"
                 },
                 "MDF_StanceDMGPerTeamMate": {
-                  "operator": "Variables[0] ({[SkillEX02[2]]}) || RETURN",
-                  "displayLines": "{[SkillEX02[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX02[2]]}"
-                  ]
+                  "displayLines": "{[SkillEX02[2]]}"
                 }
               }
             }

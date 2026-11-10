@@ -171,12 +171,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageUp) || RETURN",
-                "displayLines": "MDF_DamageUp",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageUp"
-                ]
+                "displayLines": "MDF_DamageUp"
               }
             }
           ]
@@ -204,12 +199,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedUp) || RETURN",
-                "displayLines": "MDF_SpeedUp",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedUp"
-                ]
+                "displayLines": "MDF_SpeedUp"
               }
             }
           ]
@@ -445,12 +435,7 @@ const configAbility = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                    "displayLines": "SummonList_ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "SummonList_ADF_1"
-                    ]
+                    "displayLines": "SummonList_ADF_1"
                   },
                   "locationType": "BeforeCaster"
                 }
@@ -463,12 +448,7 @@ const configAbility = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
-                    "displayLines": "SummonList_ADF_3",
-                    "constants": [],
-                    "variables": [
-                      "SummonList_ADF_3"
-                    ]
+                    "displayLines": "SummonList_ADF_3"
                   },
                   "locationType": "BeforeCaster"
                 }

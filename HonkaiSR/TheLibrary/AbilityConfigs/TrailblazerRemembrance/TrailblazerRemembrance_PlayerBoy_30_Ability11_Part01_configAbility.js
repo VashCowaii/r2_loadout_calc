@@ -23,14 +23,7 @@ const configAbility = {
       },
       "scope": "TargetEntity",
       "value": {
-        "operator": "Variables[0] (AOE Toughness Value) || Constants[0] (2) || DIV || RETURN",
-        "displayLines": "(AOE Toughness Value / 2)",
-        "constants": [
-          2
-        ],
-        "variables": [
-          "AOE Toughness Value"
-        ]
+        "displayLines": "(AOE Toughness Value / 2)"
       },
       "variableName": "Skill11_Stance"
     },

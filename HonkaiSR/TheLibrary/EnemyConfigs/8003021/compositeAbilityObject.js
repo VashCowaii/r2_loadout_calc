@@ -45,12 +45,7 @@ const compositeAbilityObject = {
           "effectName": "Enkindle",
           "statusName": "Enkindle",
           "addStacksPerTrigger": {
-            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-            "displayLines": "ModifierStackLayer",
-            "constants": [],
-            "variables": [
-              "ModifierStackLayer"
-            ]
+            "displayLines": "ModifierStackLayer"
           },
           "execute": [
             {
@@ -93,13 +88,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "Damage": {
-                      "operator": "Variables[0] (MDF_DamagePercentage_Layer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                      "displayLines": "(MDF_DamagePercentage_Layer * ModifierLayers)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamagePercentage_Layer",
-                        "ModifierLayers"
-                      ]
+                      "displayLines": "(MDF_DamagePercentage_Layer * ModifierLayers)"
                     },
                     "Toughness": null,
                     "Tags": [
@@ -127,12 +116,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "Burn_Layer",
                   "resetValue": {
-                    "operator": "Variables[0] (ModifierLayers) || RETURN",
-                    "displayLines": "ModifierLayers",
-                    "constants": [],
-                    "variables": [
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "ModifierLayers"
                   },
                   "scope": "TargetEntity"
                 }
@@ -150,13 +134,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "Damage": {
-                      "operator": "Variables[0] (MDF_DamagePercentage_Layer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                      "displayLines": "(MDF_DamagePercentage_Layer * ModifierLayers)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamagePercentage_Layer",
-                        "ModifierLayers"
-                      ]
+                      "displayLines": "(MDF_DamagePercentage_Layer * ModifierLayers)"
                     },
                     "Toughness": null,
                     "Tags": [
@@ -201,13 +179,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (Modifier_AttackAddedRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(Modifier_AttackAddedRatio * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "Modifier_AttackAddedRatio",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(Modifier_AttackAddedRatio * MDF_Layer)"
                   }
                 }
               ]
@@ -328,13 +300,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (Skill07_Added_AttackRatio[?]) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                        "displayLines": "(Skill07_Added_AttackRatio[?] * ModifierLayers)",
-                        "constants": [],
-                        "variables": [
-                          "Skill07_Added_AttackRatio[?]",
-                          "ModifierLayers"
-                        ]
+                        "displayLines": "(Skill07_Added_AttackRatio[?] * ModifierLayers)"
                       }
                     },
                     {
@@ -345,13 +311,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (Modifier_SpeedDelta) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                        "displayLines": "(Modifier_SpeedDelta * ModifierLayers)",
-                        "constants": [],
-                        "variables": [
-                          "Modifier_SpeedDelta",
-                          "ModifierLayers"
-                        ]
+                        "displayLines": "(Modifier_SpeedDelta * ModifierLayers)"
                       }
                     },
                     "Modifier Deletes Itself"
@@ -365,13 +325,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (Skill07_Added_AttackRatio[?]) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                        "displayLines": "(Skill07_Added_AttackRatio[?] * ModifierLayers)",
-                        "constants": [],
-                        "variables": [
-                          "Skill07_Added_AttackRatio[?]",
-                          "ModifierLayers"
-                        ]
+                        "displayLines": "(Skill07_Added_AttackRatio[?] * ModifierLayers)"
                       }
                     },
                     {
@@ -382,13 +336,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (Modifier_SpeedDelta) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                        "displayLines": "(Modifier_SpeedDelta * ModifierLayers)",
-                        "constants": [],
-                        "variables": [
-                          "Modifier_SpeedDelta",
-                          "ModifierLayers"
-                        ]
+                        "displayLines": "(Modifier_SpeedDelta * ModifierLayers)"
                       }
                     }
                   ]
@@ -750,14 +698,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill09[0]]}) || Variables[1] ({[Skill09[1]]}) || Variables[2] (ENEMIES_OBJECT_UNUSED__253) || MUL || ADD || RETURN",
-                  "displayLines": "({[Skill09[0]]} + ({[Skill09[1]]} * ENEMIES_OBJECT_UNUSED__253))",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill09[0]]}",
-                    "{[Skill09[1]]}",
-                    "ENEMIES_OBJECT_UNUSED__253"
-                  ]
+                  "displayLines": "({[Skill09[0]]} + ({[Skill09[1]]} * ENEMIES_OBJECT_UNUSED__253))"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -773,22 +714,12 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-                "displayLines": "{[Skill05[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill05[2]]}"
-                ]
+                "displayLines": "{[Skill05[2]]}"
               },
               "baseChance": 1,
               "valuePerStack": {
                 "MDF_DamagePercentage_Layer": {
-                  "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-                  "displayLines": "{[Skill05[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[3]]}"
-                  ]
+                  "displayLines": "{[Skill05[3]]}"
                 }
               }
             }
@@ -866,14 +797,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (AvatarBurningCount) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(AvatarBurningCount + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "AvatarBurningCount"
-                ]
+                "displayLines": "(AvatarBurningCount + 1)"
               },
               "variableName": "AvatarBurningCount"
             }
@@ -1522,13 +1446,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__253) || Variables[1] (BurningLayer) || ADD || RETURN",
-                "displayLines": "(ENEMIES_OBJECT_UNUSED__253 + BurningLayer)",
-                "constants": [],
-                "variables": [
-                  "ENEMIES_OBJECT_UNUSED__253",
-                  "BurningLayer"
-                ]
+                "displayLines": "(ENEMIES_OBJECT_UNUSED__253 + BurningLayer)"
               },
               "variableName": "BurningCount"
             }
@@ -1613,12 +1531,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"1077360781\">XP_Elite_Fire_Ability07_AttackUp_Modifier</a>[<span class=\"descriptionNumberColor\">Molten</span>]",
               "valuePerStack": {
                 "Modifier_AttackAddedRatio": {
-                  "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                  "displayLines": "{[Skill07[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill07[0]]}"
-                  ]
+                  "displayLines": "{[Skill07[0]]}"
                 }
               }
             }
@@ -1633,12 +1546,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"1077360781\">XP_Elite_Fire_Ability07_AttackUp_Modifier</a>[<span class=\"descriptionNumberColor\">Molten</span>]",
               "valuePerStack": {
                 "Modifier_AttackAddedRatio": {
-                  "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                  "displayLines": "{[Skill07[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill07[0]]}"
-                  ]
+                  "displayLines": "{[Skill07[0]]}"
                 }
               }
             }
@@ -1737,12 +1645,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                              "displayLines": "{[Skill05[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill05[0]]}"
-                              ]
+                              "displayLines": "{[Skill05[0]]}"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -1757,29 +1660,14 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
                           "duration": {
-                            "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-                            "displayLines": "{[Skill05[2]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[2]]}"
-                            ]
+                            "displayLines": "{[Skill05[2]]}"
                           },
                           "baseChance": {
-                            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                            "displayLines": "{[Skill05[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[1]]}"
-                            ]
+                            "displayLines": "{[Skill05[1]]}"
                           },
                           "valuePerStack": {
                             "MDF_DamagePercentage_Layer": {
-                              "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-                              "displayLines": "{[Skill05[3]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill05[3]]}"
-                              ]
+                              "displayLines": "{[Skill05[3]]}"
                             }
                           }
                         }
@@ -1817,12 +1705,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                              "displayLines": "{[Skill05[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill05[0]]}"
-                              ]
+                              "displayLines": "{[Skill05[0]]}"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -1837,29 +1720,14 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
                           "duration": {
-                            "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-                            "displayLines": "{[Skill05[2]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[2]]}"
-                            ]
+                            "displayLines": "{[Skill05[2]]}"
                           },
                           "baseChance": {
-                            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                            "displayLines": "{[Skill05[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[1]]}"
-                            ]
+                            "displayLines": "{[Skill05[1]]}"
                           },
                           "valuePerStack": {
                             "MDF_DamagePercentage_Layer": {
-                              "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-                              "displayLines": "{[Skill05[3]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill05[3]]}"
-                              ]
+                              "displayLines": "{[Skill05[3]]}"
                             }
                           }
                         }
@@ -1897,12 +1765,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                              "displayLines": "{[Skill05[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill05[0]]}"
-                              ]
+                              "displayLines": "{[Skill05[0]]}"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -1917,29 +1780,14 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
                           "duration": {
-                            "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-                            "displayLines": "{[Skill05[2]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[2]]}"
-                            ]
+                            "displayLines": "{[Skill05[2]]}"
                           },
                           "baseChance": {
-                            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                            "displayLines": "{[Skill05[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[1]]}"
-                            ]
+                            "displayLines": "{[Skill05[1]]}"
                           },
                           "valuePerStack": {
                             "MDF_DamagePercentage_Layer": {
-                              "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-                              "displayLines": "{[Skill05[3]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill05[3]]}"
-                              ]
+                              "displayLines": "{[Skill05[3]]}"
                             }
                           }
                         }
@@ -1977,12 +1825,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                              "displayLines": "{[Skill05[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill05[0]]}"
-                              ]
+                              "displayLines": "{[Skill05[0]]}"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -1997,29 +1840,14 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
                           "duration": {
-                            "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-                            "displayLines": "{[Skill05[2]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[2]]}"
-                            ]
+                            "displayLines": "{[Skill05[2]]}"
                           },
                           "baseChance": {
-                            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                            "displayLines": "{[Skill05[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[1]]}"
-                            ]
+                            "displayLines": "{[Skill05[1]]}"
                           },
                           "valuePerStack": {
                             "MDF_DamagePercentage_Layer": {
-                              "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-                              "displayLines": "{[Skill05[3]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill05[3]]}"
-                              ]
+                              "displayLines": "{[Skill05[3]]}"
                             }
                           }
                         }
@@ -2057,12 +1885,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                              "displayLines": "{[Skill05[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill05[0]]}"
-                              ]
+                              "displayLines": "{[Skill05[0]]}"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -2077,29 +1900,14 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
                           "duration": {
-                            "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-                            "displayLines": "{[Skill05[2]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[2]]}"
-                            ]
+                            "displayLines": "{[Skill05[2]]}"
                           },
                           "baseChance": {
-                            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                            "displayLines": "{[Skill05[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[1]]}"
-                            ]
+                            "displayLines": "{[Skill05[1]]}"
                           },
                           "valuePerStack": {
                             "MDF_DamagePercentage_Layer": {
-                              "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-                              "displayLines": "{[Skill05[3]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill05[3]]}"
-                              ]
+                              "displayLines": "{[Skill05[3]]}"
                             }
                           }
                         }
@@ -2167,20 +1975,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1090456915\">XP_Fire_Elite_Burning_Modifier_2</a>[<span class=\"descriptionNumberColor\">Spontaneous Combustion</span>]",
           "valuePerStack": {
             "Modifier_StanceWeakAddedRatio": {
-              "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-              "displayLines": "{[Skill03[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[1]]}"
-              ]
+              "displayLines": "{[Skill03[1]]}"
             },
             "Modifier_Stance": {
-              "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-              "displayLines": "{[Skill03[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[2]]}"
-              ]
+              "displayLines": "{[Skill03[2]]}"
             }
           }
         },
@@ -2251,12 +2049,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -2274,29 +2067,14 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-            "displayLines": "{[Skill01[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[2]]}"
-            ]
+            "displayLines": "{[Skill01[2]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-            "displayLines": "{[Skill01[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[1]]}"
-            ]
+            "displayLines": "{[Skill01[1]]}"
           },
           "valuePerStack": {
             "MDF_DamagePercentage_Layer": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
+              "displayLines": "{[Skill01[3]]}"
             }
           }
         },

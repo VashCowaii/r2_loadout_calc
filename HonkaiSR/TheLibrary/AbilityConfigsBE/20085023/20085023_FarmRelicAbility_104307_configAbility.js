@@ -98,15 +98,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (TempAttack) || Constants[0] (93) || MUL || Variables[1] (Hardlevel_HP) || SUB || RETURN",
-                "displayLines": "((TempAttack * 93) - Hardlevel_HP)",
-                "constants": [
-                  93
-                ],
-                "variables": [
-                  "TempAttack",
-                  "Hardlevel_HP"
-                ]
+                "displayLines": "((TempAttack * 93) - Hardlevel_HP)"
               }
             }
           ]

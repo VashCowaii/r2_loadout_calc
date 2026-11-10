@@ -31,12 +31,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "consumePercent": {
-                "operator": "Variables[0] (MDF_DamageByRatio) || RETURN",
-                "displayLines": "MDF_DamageByRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageByRatio"
-                ]
+                "displayLines": "MDF_DamageByRatio"
               }
             }
           ]
@@ -52,12 +47,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                "displayLines": "MDF_AllDamageReduce",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageReduce"
-                ]
+                "displayLines": "MDF_AllDamageReduce"
               }
             }
           ]
@@ -83,12 +73,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                "displayLines": "MDF_AllDamageReduce",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageReduce"
-                ]
+                "displayLines": "MDF_AllDamageReduce"
               }
             },
             {
@@ -100,20 +85,10 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-299648287\">Standard_EliteField_Servant</a>[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]",
               "valuePerStack": {
                 "MDF_AllDamageReduce": {
-                  "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                  "displayLines": "MDF_AllDamageReduce",
-                  "constants": [],
-                  "variables": [
-                    "MDF_AllDamageReduce"
-                  ]
+                  "displayLines": "MDF_AllDamageReduce"
                 },
                 "MDF_DamageByRatio": {
-                  "operator": "Variables[0] (MDF_DamageByRatio) || RETURN",
-                  "displayLines": "MDF_DamageByRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamageByRatio"
-                  ]
+                  "displayLines": "MDF_DamageByRatio"
                 }
               }
             }
@@ -142,20 +117,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-299648287\">Standard_EliteField_Servant</a>[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageReduce": {
-                      "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                      "displayLines": "MDF_AllDamageReduce",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AllDamageReduce"
-                      ]
+                      "displayLines": "MDF_AllDamageReduce"
                     },
                     "MDF_DamageByRatio": {
-                      "operator": "Variables[0] (MDF_DamageByRatio) || RETURN",
-                      "displayLines": "MDF_DamageByRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageByRatio"
-                      ]
+                      "displayLines": "MDF_DamageByRatio"
                     }
                   }
                 }

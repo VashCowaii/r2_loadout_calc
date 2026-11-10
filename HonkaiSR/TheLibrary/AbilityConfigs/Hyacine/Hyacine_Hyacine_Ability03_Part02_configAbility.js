@@ -22,36 +22,16 @@ const configAbility = {
           "memoID": 11409,
           "valuePerStack": {
             "_SummonerHealValueTotal": {
-              "operator": "Variables[0] (_HealValueTotal) || RETURN",
-              "displayLines": "_HealValueTotal",
-              "constants": [],
-              "variables": [
-                "_HealValueTotal"
-              ]
+              "displayLines": "_HealValueTotal"
             },
             "AbilityP01_P3_DamageIncrease": {
-              "operator": "Variables[0] (0.8) || RETURN",
-              "displayLines": "0.8",
-              "constants": [],
-              "variables": [
-                0.8
-              ]
+              "displayLines": "0.8"
             },
             "AbilityP01_P4_LifeTime": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             },
             "AbilityP01_P5_Layer": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             }
           }
         }
@@ -71,12 +51,7 @@ const configAbility = {
             "target": "{{All Team Members}}"
           },
           "dispelCount": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "dispelOrder": "LastAdded"
         }
@@ -89,20 +64,10 @@ const configAbility = {
         "target": "{{All Team Members}} - {{Caster}}.[[getMemosprite]]"
       },
       "healPercent": {
-        "operator": "Variables[0] (0.1) || RETURN",
-        "displayLines": "0.1",
-        "constants": [],
-        "variables": [
-          0.1
-        ]
+        "displayLines": "0.1"
       },
       "healFlat": {
-        "operator": "Variables[0] (200) || RETURN",
-        "displayLines": "200",
-        "constants": [],
-        "variables": [
-          200
-        ]
+        "displayLines": "200"
       },
       "formula": "Heal from Healer's MaxHP"
     },
@@ -113,20 +78,10 @@ const configAbility = {
         "target": "{{Caster's Memosprite}}"
       },
       "healPercent": {
-        "operator": "Variables[0] (0.12) || RETURN",
-        "displayLines": "0.12",
-        "constants": [],
-        "variables": [
-          0.12
-        ]
+        "displayLines": "0.12"
       },
       "healFlat": {
-        "operator": "Variables[0] (240) || RETURN",
-        "displayLines": "240",
-        "constants": [],
-        "variables": [
-          240
-        ]
+        "displayLines": "240"
       },
       "formula": "Heal from Healer's MaxHP"
     },
@@ -151,13 +106,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (_CurrenMaxtHP) || Variables[1] (_CurrentHPConvert) || SUB || RETURN",
-        "displayLines": "(_CurrenMaxtHP - _CurrentHPConvert)",
-        "constants": [],
-        "variables": [
-          "_CurrenMaxtHP",
-          "_CurrentHPConvert"
-        ]
+        "displayLines": "(_CurrenMaxtHP - _CurrentHPConvert)"
       },
       "variableName": "_CurrenMaxtHP"
     },
@@ -169,45 +118,20 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-1902777328\">Memosprite_HyacineServant_MaxHpHalo</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
       "duration": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "valuePerStack": {
         "MDF_HaloCurrentHP": {
-          "operator": "Variables[0] (_CurrenMaxtHP) || RETURN",
-          "displayLines": "_CurrenMaxtHP",
-          "constants": [],
-          "variables": [
-            "_CurrenMaxtHP"
-          ]
+          "displayLines": "_CurrenMaxtHP"
         },
         "MDF_HaloMaxHPRatio": {
-          "operator": "Variables[0] (0.3) || RETURN",
-          "displayLines": "0.3",
-          "constants": [],
-          "variables": [
-            0.3
-          ]
+          "displayLines": "0.3"
         },
         "MDF_HaloMaxHPValue": {
-          "operator": "Variables[0] (600) || RETURN",
-          "displayLines": "600",
-          "constants": [],
-          "variables": [
-            600
-          ]
+          "displayLines": "600"
         },
         "MDF_ExtraMaxHPRatio": {
-          "operator": "Variables[0] (0.5) || RETURN",
-          "displayLines": "0.5",
-          "constants": [],
-          "variables": [
-            0.5
-          ]
+          "displayLines": "0.5"
         }
       }
     },
@@ -235,20 +159,10 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "maximum": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "assignState": "True",
       "bar#": "Dot"

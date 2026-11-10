@@ -29,12 +29,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (ChallengePeakBattle_Plugins_0029_ADF_1) || RETURN",
-                "displayLines": "ChallengePeakBattle_Plugins_0029_ADF_1",
-                "constants": [],
-                "variables": [
-                  "ChallengePeakBattle_Plugins_0029_ADF_1"
-                ]
+                "displayLines": "ChallengePeakBattle_Plugins_0029_ADF_1"
               },
               "variableName": "ChargeShieldRatioExtraRatio"
             }
@@ -82,12 +77,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-743162635\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0029_02</a>",
                   "valuePerStack": {
                     "ChallengePeakBattle_Plugins_0029_ADF_1": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   },
                   "casterAssign": "TargetSelf"

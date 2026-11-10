@@ -51,14 +51,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (ParasitismCount) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(ParasitismCount + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "ParasitismCount"
-            ]
+            "displayLines": "(ParasitismCount + 1)"
           },
           "variableName": "ParasitismCount"
         }
@@ -586,13 +579,7 @@ const configAbility = {
       },
       "variableName": "SplitRatio",
       "resetValue": {
-        "operator": "Constants[0] (1) || Constants[1] (7) || DIV || RETURN",
-        "displayLines": "(1 / 7)",
-        "constants": [
-          1,
-          7
-        ],
-        "variables": []
+        "displayLines": "(1 / 7)"
       }
     },
     {
@@ -628,14 +615,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "DamageFlat": {
-              "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill03[0]]}) || MUL || Variables[2] (SplitRatio) || MUL || RETURN",
-              "displayLines": "((_MaxHP * {[Skill03[0]]}) * SplitRatio)",
-              "constants": [],
-              "variables": [
-                "_MaxHP",
-                "{[Skill03[0]]}",
-                "SplitRatio"
-              ]
+              "displayLines": "((_MaxHP * {[Skill03[0]]}) * SplitRatio)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -679,14 +659,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "DamageFlat": {
-              "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill03[0]]}) || MUL || Variables[2] (SplitRatio) || MUL || RETURN",
-              "displayLines": "((_MaxHP * {[Skill03[0]]}) * SplitRatio)",
-              "constants": [],
-              "variables": [
-                "_MaxHP",
-                "{[Skill03[0]]}",
-                "SplitRatio"
-              ]
+              "displayLines": "((_MaxHP * {[Skill03[0]]}) * SplitRatio)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -730,14 +703,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "DamageFlat": {
-              "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill03[0]]}) || MUL || Variables[2] (SplitRatio) || MUL || RETURN",
-              "displayLines": "((_MaxHP * {[Skill03[0]]}) * SplitRatio)",
-              "constants": [],
-              "variables": [
-                "_MaxHP",
-                "{[Skill03[0]]}",
-                "SplitRatio"
-              ]
+              "displayLines": "((_MaxHP * {[Skill03[0]]}) * SplitRatio)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -781,14 +747,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "DamageFlat": {
-              "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill03[0]]}) || MUL || Variables[2] (SplitRatio) || MUL || RETURN",
-              "displayLines": "((_MaxHP * {[Skill03[0]]}) * SplitRatio)",
-              "constants": [],
-              "variables": [
-                "_MaxHP",
-                "{[Skill03[0]]}",
-                "SplitRatio"
-              ]
+              "displayLines": "((_MaxHP * {[Skill03[0]]}) * SplitRatio)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -832,14 +791,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "DamageFlat": {
-              "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill03[0]]}) || MUL || Variables[2] (SplitRatio) || MUL || RETURN",
-              "displayLines": "((_MaxHP * {[Skill03[0]]}) * SplitRatio)",
-              "constants": [],
-              "variables": [
-                "_MaxHP",
-                "{[Skill03[0]]}",
-                "SplitRatio"
-              ]
+              "displayLines": "((_MaxHP * {[Skill03[0]]}) * SplitRatio)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -883,14 +835,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "DamageFlat": {
-              "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill03[0]]}) || MUL || Variables[2] (SplitRatio) || MUL || RETURN",
-              "displayLines": "((_MaxHP * {[Skill03[0]]}) * SplitRatio)",
-              "constants": [],
-              "variables": [
-                "_MaxHP",
-                "{[Skill03[0]]}",
-                "SplitRatio"
-              ]
+              "displayLines": "((_MaxHP * {[Skill03[0]]}) * SplitRatio)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -934,14 +879,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "DamageFlat": {
-              "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill03[0]]}) || MUL || Variables[2] (SplitRatio) || MUL || RETURN",
-              "displayLines": "((_MaxHP * {[Skill03[0]]}) * SplitRatio)",
-              "constants": [],
-              "variables": [
-                "_MaxHP",
-                "{[Skill03[0]]}",
-                "SplitRatio"
-              ]
+              "displayLines": "((_MaxHP * {[Skill03[0]]}) * SplitRatio)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -960,13 +898,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "healPercent": {
-        "operator": "Variables[0] ({[Skill03[1]]}) || Variables[1] (ParasitismCount) || MUL || RETURN",
-        "displayLines": "({[Skill03[1]]} * ParasitismCount)",
-        "constants": [],
-        "variables": [
-          "{[Skill03[1]]}",
-          "ParasitismCount"
-        ]
+        "displayLines": "({[Skill03[1]]} * ParasitismCount)"
       },
       "formula": "Heal from Target MaxHP"
     },

@@ -22,12 +22,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-          "displayLines": "{[Skill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "{[Skill03[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -52,13 +47,7 @@ const configAbility = {
         "target": "{{Ability Target(ST)}}"
       },
       "value": {
-        "operator": "Variables[0] ({[Skill03[1]]}) || INVERT || Variables[1] (_TargetMaxSP) || MUL || RETURN",
-        "displayLines": "(-{[Skill03[1]]} * _TargetMaxSP)",
-        "constants": [],
-        "variables": [
-          "{[Skill03[1]]}",
-          "_TargetMaxSP"
-        ]
+        "displayLines": "(-{[Skill03[1]]} * _TargetMaxSP)"
       },
       "isFixed": "(Fixed)"
     },
@@ -67,12 +56,7 @@ const configAbility = {
       "functionName": "<a class=\"gTempYellow\" id=\"1699523791\">W4_IronTombCore_CalWorldErosion</a>",
       "variables": {
         "_ErosionParam": {
-          "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-          "displayLines": "{[Skill03[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[2]]}"
-          ]
+          "displayLines": "{[Skill03[2]]}"
         }
       }
     },

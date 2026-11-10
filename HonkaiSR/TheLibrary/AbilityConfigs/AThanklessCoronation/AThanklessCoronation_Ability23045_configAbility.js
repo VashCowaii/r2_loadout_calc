@@ -33,12 +33,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -65,12 +60,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -99,21 +89,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1662085723\">LC_23045_Bonus</a>[<span class=\"descriptionNumberColor\">King of Knights</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.4) || RETURN",
-                      "displayLines": "0.4",
-                      "constants": [],
-                      "variables": [
-                        0.4
-                      ]
+                      "displayLines": "0.4"
                     }
                   }
                 },
@@ -133,12 +113,7 @@ const configAbility = {
                     "value1": "_MSP",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (300) || RETURN",
-                      "displayLines": "300",
-                      "constants": [],
-                      "variables": [
-                        300
-                      ]
+                      "displayLines": "300"
                     }
                   },
                   "passed": [
@@ -149,12 +124,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "valuePercent": {
-                        "operator": "Variables[0] (0.1) || RETURN",
-                        "displayLines": "0.1",
-                        "constants": [],
-                        "variables": [
-                          0.1
-                        ]
+                        "displayLines": "0.1"
                       },
                       "isFixed": "(Fixed)"
                     },
@@ -166,21 +136,11 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1567261515\">LC_23045_Bonus2</a>[<span class=\"descriptionNumberColor\">King of Knights</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.4) || RETURN",
-                          "displayLines": "0.4",
-                          "constants": [],
-                          "variables": [
-                            0.4
-                          ]
+                          "displayLines": "0.4"
                         }
                       }
                     }

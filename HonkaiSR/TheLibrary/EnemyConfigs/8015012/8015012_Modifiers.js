@@ -122,14 +122,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_Part1_Alive) || Variables[1] (_Part2_Alive) || ADD || Variables[2] (_Part3_Alive) || ADD || RETURN",
-                    "displayLines": "((_Part1_Alive + _Part2_Alive) + _Part3_Alive)",
-                    "constants": [],
-                    "variables": [
-                      "_Part1_Alive",
-                      "_Part2_Alive",
-                      "_Part3_Alive"
-                    ]
+                    "displayLines": "((_Part1_Alive + _Part2_Alive) + _Part3_Alive)"
                   },
                   "variableName": "PartAliveNumber"
                 },
@@ -176,14 +169,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_Part1_Alive) || Variables[1] (_Part2_Alive) || ADD || Variables[2] (_Part3_Alive) || ADD || RETURN",
-                    "displayLines": "((_Part1_Alive + _Part2_Alive) + _Part3_Alive)",
-                    "constants": [],
-                    "variables": [
-                      "_Part1_Alive",
-                      "_Part2_Alive",
-                      "_Part3_Alive"
-                    ]
+                    "displayLines": "((_Part1_Alive + _Part2_Alive) + _Part3_Alive)"
                   },
                   "variableName": "PartAliveNumber"
                 },
@@ -272,14 +258,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_Part1_Alive) || Variables[1] (_Part2_Alive) || ADD || Variables[2] (_Part3_Alive) || ADD || RETURN",
-                    "displayLines": "((_Part1_Alive + _Part2_Alive) + _Part3_Alive)",
-                    "constants": [],
-                    "variables": [
-                      "_Part1_Alive",
-                      "_Part2_Alive",
-                      "_Part3_Alive"
-                    ]
+                    "displayLines": "((_Part1_Alive + _Part2_Alive) + _Part3_Alive)"
                   },
                   "variableName": "PartAliveNumber"
                 },
@@ -326,14 +305,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_Part1_Alive) || Variables[1] (_Part2_Alive) || ADD || Variables[2] (_Part3_Alive) || ADD || RETURN",
-                    "displayLines": "((_Part1_Alive + _Part2_Alive) + _Part3_Alive)",
-                    "constants": [],
-                    "variables": [
-                      "_Part1_Alive",
-                      "_Part2_Alive",
-                      "_Part3_Alive"
-                    ]
+                    "displayLines": "((_Part1_Alive + _Part2_Alive) + _Part3_Alive)"
                   },
                   "variableName": "PartAliveNumber"
                 },
@@ -422,14 +394,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_Part1_Alive) || Variables[1] (_Part2_Alive) || ADD || Variables[2] (_Part3_Alive) || ADD || RETURN",
-                    "displayLines": "((_Part1_Alive + _Part2_Alive) + _Part3_Alive)",
-                    "constants": [],
-                    "variables": [
-                      "_Part1_Alive",
-                      "_Part2_Alive",
-                      "_Part3_Alive"
-                    ]
+                    "displayLines": "((_Part1_Alive + _Part2_Alive) + _Part3_Alive)"
                   },
                   "variableName": "PartAliveNumber"
                 },
@@ -476,14 +441,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_Part1_Alive) || Variables[1] (_Part2_Alive) || ADD || Variables[2] (_Part3_Alive) || ADD || RETURN",
-                    "displayLines": "((_Part1_Alive + _Part2_Alive) + _Part3_Alive)",
-                    "constants": [],
-                    "variables": [
-                      "_Part1_Alive",
-                      "_Part2_Alive",
-                      "_Part3_Alive"
-                    ]
+                    "displayLines": "((_Part1_Alive + _Part2_Alive) + _Part3_Alive)"
                   },
                   "variableName": "PartAliveNumber"
                 },
@@ -621,23 +579,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Constants[0] (1) || Variables[0] (MDF_BeingHitDamageValue) || ADD || Variables[1] (Modifier_Entangle_DamagePercentage) || MUL || RETURN",
-                  "displayLines": "((1 + MDF_BeingHitDamageValue) * Modifier_Entangle_DamagePercentage)",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    "MDF_BeingHitDamageValue",
-                    "Modifier_Entangle_DamagePercentage"
-                  ]
+                  "displayLines": "((1 + MDF_BeingHitDamageValue) * Modifier_Entangle_DamagePercentage)"
                 },
                 "DamageFlat": {
-                  "operator": "Variables[0] (Modifier_Entangle_DamageValue) || RETURN",
-                  "displayLines": "Modifier_Entangle_DamageValue",
-                  "constants": [],
-                  "variables": [
-                    "Modifier_Entangle_DamageValue"
-                  ]
+                  "displayLines": "Modifier_Entangle_DamageValue"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -743,14 +688,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_SpeedDownRatio) || SUB || RETURN",
-                "displayLines": "(0 - MDF_SpeedDownRatio)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_SpeedDownRatio"
-                ]
+                "displayLines": "(0 - MDF_SpeedDownRatio)"
               }
             },
             {
@@ -766,14 +704,7 @@ const configAbility = {
               "name": "Define Modifier Variable",
               "modifierName": null,
               "value": {
-                "operator": "Variables[0] (MDF_BeingHitDamageValue) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(MDF_BeingHitDamageValue + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_BeingHitDamageValue"
-                ]
+                "displayLines": "(MDF_BeingHitDamageValue + 1)"
               }
             }
           ]
@@ -827,14 +758,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (MDF_BeingHitDamageValue) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_BeingHitDamageValue + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_BeingHitDamageValue"
-                        ]
+                        "displayLines": "(MDF_BeingHitDamageValue + 1)"
                       },
                       "variableName": "MDF_BeingHitDamageValue"
                     },
@@ -843,12 +767,7 @@ const configAbility = {
                       "modifierName": null,
                       "function": "Add",
                       "value": {
-                        "operator": "Constants[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [
-                          1
-                        ],
-                        "variables": []
+                        "displayLines": "1"
                       }
                     }
                   ]
@@ -917,14 +836,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_BeingHitDamageValue) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(MDF_BeingHitDamageValue + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_BeingHitDamageValue"
-                    ]
+                    "displayLines": "(MDF_BeingHitDamageValue + 1)"
                   },
                   "variableName": "MDF_BeingHitDamageValue"
                 },
@@ -933,12 +845,7 @@ const configAbility = {
                   "modifierName": null,
                   "function": "Add",
                   "value": {
-                    "operator": "Constants[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [
-                      1
-                    ],
-                    "variables": []
+                    "displayLines": "1"
                   }
                 }
               ]
@@ -1371,12 +1278,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_StanceBreakAddedRatio) || RETURN",
-                "displayLines": "MDF_StanceBreakAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_StanceBreakAddedRatio"
-                ]
+                "displayLines": "MDF_StanceBreakAddedRatio"
               }
             }
           ]
@@ -1576,12 +1478,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_StanceBreakAddedRatio) || RETURN",
-                "displayLines": "MDF_StanceBreakAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_StanceBreakAddedRatio"
-                ]
+                "displayLines": "MDF_StanceBreakAddedRatio"
               }
             }
           ]
@@ -2196,14 +2093,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "flatConsume": {
-                    "operator": "Constants[0] (0) || Variables[0] (PartLoseHpValue) || SUB || RETURN",
-                    "displayLines": "(0 - PartLoseHpValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "PartLoseHpValue"
-                    ]
+                    "displayLines": "(0 - PartLoseHpValue)"
                   }
                 }
               ]
@@ -2274,14 +2164,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "flatConsume": {
-                    "operator": "Constants[0] (0) || Variables[0] (PartLoseHpValue) || SUB || RETURN",
-                    "displayLines": "(0 - PartLoseHpValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "PartLoseHpValue"
-                    ]
+                    "displayLines": "(0 - PartLoseHpValue)"
                   }
                 }
               ]
@@ -2352,14 +2235,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "flatConsume": {
-                    "operator": "Constants[0] (0) || Variables[0] (PartLoseHpValue) || SUB || RETURN",
-                    "displayLines": "(0 - PartLoseHpValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "PartLoseHpValue"
-                    ]
+                    "displayLines": "(0 - PartLoseHpValue)"
                   }
                 }
               ]

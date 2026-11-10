@@ -37,15 +37,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (CEIL) || Variables[1] (HitCount) || Constants[0] (2) || DIV || PARAM_1 || FUNCTION || RETURN",
-            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>((HitCount / 2))",
-            "constants": [
-              2
-            ],
-            "variables": [
-              "CEIL",
-              "HitCount"
-            ]
+            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>((HitCount / 2))"
           },
           "variableName": "_runtime_hitcount"
         }
@@ -54,12 +46,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (HitCount) || RETURN",
-            "displayLines": "HitCount",
-            "constants": [],
-            "variables": [
-              "HitCount"
-            ]
+            "displayLines": "HitCount"
           },
           "variableName": "_runtime_hitcount"
         }
@@ -68,41 +55,20 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (_deltaFrame) || Variables[1] (_runtime_hitcount) || SUB || Variables[2] (ENEMIES_OBJECT_UNUSED__249) || Constants[0] (1) || SUB || DIV || RETURN",
-        "displayLines": "((_deltaFrame - _runtime_hitcount) / (ENEMIES_OBJECT_UNUSED__249 - 1))",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "_deltaFrame",
-          "_runtime_hitcount",
-          "ENEMIES_OBJECT_UNUSED__249"
-        ]
+        "displayLines": "((_deltaFrame - _runtime_hitcount) / (ENEMIES_OBJECT_UNUSED__249 - 1))"
       },
       "variableName": "_deltaFrame"
     },
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__249) || RETURN",
-        "displayLines": "ENEMIES_OBJECT_UNUSED__249",
-        "constants": [],
-        "variables": [
-          "ENEMIES_OBJECT_UNUSED__249"
-        ]
+        "displayLines": "ENEMIES_OBJECT_UNUSED__249"
       },
       "execute": [
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_index) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(_index + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "_index"
-            ]
+            "displayLines": "(_index + 1)"
           },
           "variableName": "_index"
         }

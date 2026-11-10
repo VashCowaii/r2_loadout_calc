@@ -23,21 +23,11 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (ModifierLayers) || RETURN",
-        "displayLines": "ModifierLayers",
-        "constants": [],
-        "variables": [
-          "ModifierLayers"
-        ]
+        "displayLines": "ModifierLayers"
       },
       "entityClass": "Enemy",
       "maximum": {
-        "operator": "Variables[0] (ModifierMaxLayers) || RETURN",
-        "displayLines": "ModifierMaxLayers",
-        "constants": [],
-        "variables": [
-          "ModifierMaxLayers"
-        ]
+        "displayLines": "ModifierMaxLayers"
       },
       "assignState": "True",
       "state": "Active",
@@ -46,12 +36,7 @@ const configAbility = {
     {
       "name": "Adjust Team Punchline Value",
       "value": {
-        "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-        "displayLines": "{[PassiveSkill01[1]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill01[1]]}"
-        ]
+        "displayLines": "{[PassiveSkill01[1]]}"
       },
       "adjustment": "Add"
     },

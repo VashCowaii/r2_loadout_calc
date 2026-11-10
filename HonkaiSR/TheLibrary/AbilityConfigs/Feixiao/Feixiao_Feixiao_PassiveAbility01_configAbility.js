@@ -48,21 +48,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-343822525\">Feixiao_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]",
           "counter": {
-            "operator": "Variables[0] (6) || RETURN",
-            "displayLines": "6",
-            "constants": [],
-            "variables": [
-              6
-            ]
+            "displayLines": "6"
           },
           "valuePerStack": {
             "MDF_Count": {
-              "operator": "Variables[0] (6) || RETURN",
-              "displayLines": "6",
-              "constants": [],
-              "variables": [
-                6
-              ]
+              "displayLines": "6"
             }
           }
         }
@@ -78,14 +68,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Constants[0] (1) || Variables[0] (1) || ADD || RETURN",
-            "displayLines": "(1 + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              1
-            ]
+            "displayLines": "(1 + 1)"
           },
           "variableName": "Insert_StanceRatio"
         }
@@ -106,12 +89,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       },
       "variableName": "Passive_NeedAttackCount"
     },
@@ -125,13 +103,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (1.1) || Variables[1] (1.4) || ADD || RETURN",
-            "displayLines": "(1.1 + 1.4)",
-            "constants": [],
-            "variables": [
-              1.1,
-              1.4
-            ]
+            "displayLines": "(1.1 + 1.4)"
           },
           "variableName": "Insert_DamagePercentage"
         }
@@ -140,12 +112,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (1.1) || RETURN",
-            "displayLines": "1.1",
-            "constants": [],
-            "variables": [
-              1.1
-            ]
+            "displayLines": "1.1"
           },
           "variableName": "Insert_DamagePercentage"
         }
@@ -154,28 +121,13 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (Passive_AttackCount) || RETURN",
-        "displayLines": "Passive_AttackCount",
-        "constants": [],
-        "variables": [
-          "Passive_AttackCount"
-        ]
+        "displayLines": "Passive_AttackCount"
       },
       "activeCount": {
-        "operator": "Variables[0] (ComboAttackCount) || RETURN",
-        "displayLines": "ComboAttackCount",
-        "constants": [],
-        "variables": [
-          "ComboAttackCount"
-        ]
+        "displayLines": "ComboAttackCount"
       },
       "maximum": {
-        "operator": "Variables[0] (Passive_NeedAttackCount) || RETURN",
-        "displayLines": "Passive_NeedAttackCount",
-        "constants": [],
-        "variables": [
-          "Passive_NeedAttackCount"
-        ]
+        "displayLines": "Passive_NeedAttackCount"
       },
       "assignState": "True",
       "priorState": "Normal"
@@ -302,21 +254,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-343822525\">Feixiao_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]",
                   "counter": {
-                    "operator": "Variables[0] (6) || RETURN",
-                    "displayLines": "6",
-                    "constants": [],
-                    "variables": [
-                      6
-                    ]
+                    "displayLines": "6"
                   },
                   "valuePerStack": {
                     "MDF_Count": {
-                      "operator": "Variables[0] (6) || RETURN",
-                      "displayLines": "6",
-                      "constants": [],
-                      "variables": [
-                        6
-                      ]
+                      "displayLines": "6"
                     }
                   }
                 }
@@ -697,24 +639,14 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": {
-                "operator": "Variables[0] (12) || RETURN",
-                "displayLines": "12",
-                "constants": [],
-                "variables": [
-                  12
-                ]
+                "displayLines": "12"
               },
               "includeMaxValueInRange": true,
               "onChange": [
                 {
                   "name": "Update Displayed Energy Bar",
                   "activeCount": {
-                    "operator": "Variables[0] (ComboAttackCount) || RETURN",
-                    "displayLines": "ComboAttackCount",
-                    "constants": [],
-                    "variables": [
-                      "ComboAttackCount"
-                    ]
+                    "displayLines": "ComboAttackCount"
                   }
                 }
               ]
@@ -742,12 +674,7 @@ const configAbility = {
                         "value1": "Passive_AttackCount",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (Passive_NeedAttackCount) || RETURN",
-                          "displayLines": "Passive_NeedAttackCount",
-                          "constants": [],
-                          "variables": [
-                            "Passive_NeedAttackCount"
-                          ]
+                          "displayLines": "Passive_NeedAttackCount"
                         }
                       },
                       {
@@ -755,12 +682,7 @@ const configAbility = {
                         "value1": "ComboAttackCount",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (12) || RETURN",
-                          "displayLines": "12",
-                          "constants": [],
-                          "variables": [
-                            12
-                          ]
+                          "displayLines": "12"
                         }
                       }
                     ]
@@ -769,12 +691,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (Passive_AttackCount) || RETURN",
-                        "displayLines": "Passive_AttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Passive_AttackCount"
-                        ]
+                        "displayLines": "Passive_AttackCount"
                       },
                       "priorState": "Active"
                     }
@@ -783,12 +700,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (Passive_AttackCount) || RETURN",
-                        "displayLines": "Passive_AttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Passive_AttackCount"
-                        ]
+                        "displayLines": "Passive_AttackCount"
                       },
                       "priorState": "Normal"
                     }
@@ -808,12 +720,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": {
-                "operator": "Variables[0] (12) || RETURN",
-                "displayLines": "12",
-                "constants": [],
-                "variables": [
-                  12
-                ]
+                "displayLines": "12"
               },
               "includeMaxValueInRange": true,
               "onChange": [

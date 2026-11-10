@@ -39,12 +39,7 @@ const configAbility = {
     {
       "name": "Adjust Team Punchline Value",
       "value": {
-        "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-        "displayLines": "{[Skill03[1]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill03[1]]}"
-        ]
+        "displayLines": "{[Skill03[1]]}"
       },
       "adjustment": "Add"
     },
@@ -56,21 +51,11 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-989097149\">MModifier_Monster_W4_Claymore_02_Ability03_AllDamageTypeTaken</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
       "duration": {
-        "operator": "Variables[0] ({[Skill03[3]]}) || RETURN",
-        "displayLines": "{[Skill03[3]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill03[3]]}"
-        ]
+        "displayLines": "{[Skill03[3]]}"
       },
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-          "displayLines": "{[Skill03[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[2]]}"
-          ]
+          "displayLines": "{[Skill03[2]]}"
         }
       }
     }

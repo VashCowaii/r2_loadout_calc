@@ -29,13 +29,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] ({[Skill03[0]]}) || Variables[1] (_Layer) || MUL || RETURN",
-                "displayLines": "({[Skill03[0]]} * _Layer)",
-                "constants": [],
-                "variables": [
-                  "{[Skill03[0]]}",
-                  "_Layer"
-                ]
+                "displayLines": "({[Skill03[0]]} * _Layer)"
               }
             }
           ]
@@ -416,12 +410,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_Layer) || RETURN",
-                "displayLines": "MDF_Layer",
-                "constants": [],
-                "variables": [
-                  "MDF_Layer"
-                ]
+                "displayLines": "MDF_Layer"
               },
               "entityClass": "Enemy",
               "target": {
@@ -429,12 +418,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                "displayLines": "MDF_MaxLayer",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxLayer"
-                ]
+                "displayLines": "MDF_MaxLayer"
               },
               "assignState": "True",
               "state": "Active"

@@ -153,12 +153,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -205,12 +200,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"340897413\">Memosprite_CyreneServant_PassiveAbility01_HPIncrease</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.24) || RETURN",
-              "displayLines": "0.24",
-              "constants": [],
-              "variables": [
-                0.24
-              ]
+              "displayLines": "0.24"
             }
           }
         }
@@ -379,21 +369,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-156616153\">Memosprite_CyreneServant_Eidolon4_Count</a>[<span class=\"descriptionNumberColor\">Please Write On, With a Smile</span>]",
                       "valuePerStack": {
                         "MDF_Count": {
-                          "operator": "Variables[0] (Skill01Count) || RETURN",
-                          "displayLines": "Skill01Count",
-                          "constants": [],
-                          "variables": [
-                            "Skill01Count"
-                          ]
+                          "displayLines": "Skill01Count"
                         },
                         "MDF_Damage": {
-                          "operator": "Variables[0] (Skill01Count) || Variables[1] (0.06) || MUL || RETURN",
-                          "displayLines": "(Skill01Count * 0.06)",
-                          "constants": [],
-                          "variables": [
-                            "Skill01Count",
-                            0.06
-                          ]
+                          "displayLines": "(Skill01Count * 0.06)"
                         }
                       }
                     }
@@ -430,12 +409,7 @@ const configAbility = {
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (CurAmazingCount) || RETURN",
-                      "displayLines": "CurAmazingCount",
-                      "constants": [],
-                      "variables": [
-                        "CurAmazingCount"
-                      ]
+                      "displayLines": "CurAmazingCount"
                     }
                   },
                   {
@@ -447,12 +421,7 @@ const configAbility = {
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (12) || RETURN",
-                      "displayLines": "12",
-                      "constants": [],
-                      "variables": [
-                        12
-                      ]
+                      "displayLines": "12"
                     }
                   }
                 ]

@@ -33,12 +33,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.1) || RETURN",
-                "displayLines": "0.1",
-                "constants": [],
-                "variables": [
-                  0.1
-                ]
+                "displayLines": "0.1"
               }
             }
           ]
@@ -80,12 +75,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_1) || RETURN",
-                "displayLines": "MDF_1",
-                "constants": [],
-                "variables": [
-                  "MDF_1"
-                ]
+                "displayLines": "MDF_1"
               }
             }
           ]
@@ -110,24 +100,14 @@ const configAbility = {
                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (160) || RETURN",
-                  "displayLines": "160",
-                  "constants": [],
-                  "variables": [
-                    160
-                  ]
+                  "displayLines": "160"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (0.18) || RETURN",
-                    "displayLines": "0.18",
-                    "constants": [],
-                    "variables": [
-                      0.18
-                    ]
+                    "displayLines": "0.18"
                   },
                   "variableName": "MDF_PropertyValue"
                 },
@@ -140,12 +120,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1373432449\">Relic_130_Sub</a>[<span class=\"descriptionNumberColor\">Diviner of Distant Reach</span>]",
                   "valuePerStack": {
                     "MDF_1": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -162,24 +137,14 @@ const configAbility = {
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (120) || RETURN",
-                      "displayLines": "120",
-                      "constants": [],
-                      "variables": [
-                        120
-                      ]
+                      "displayLines": "120"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (0.1) || RETURN",
-                        "displayLines": "0.1",
-                        "constants": [],
-                        "variables": [
-                          0.1
-                        ]
+                        "displayLines": "0.1"
                       },
                       "variableName": "MDF_PropertyValue"
                     },
@@ -192,12 +157,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1373432449\">Relic_130_Sub</a>[<span class=\"descriptionNumberColor\">Diviner of Distant Reach</span>]",
                       "valuePerStack": {
                         "MDF_1": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     }

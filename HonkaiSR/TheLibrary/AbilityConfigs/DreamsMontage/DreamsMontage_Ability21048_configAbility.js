@@ -71,12 +71,7 @@ const configAbility = {
                     "value1": "Flag_21048_SPAddCount",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     }
                   }
                 ]
@@ -89,12 +84,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "isFixed": "* ERR"
                 },
@@ -106,14 +96,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Flag_21048_SPAddCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(Flag_21048_SPAddCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Flag_21048_SPAddCount"
-                    ]
+                    "displayLines": "(Flag_21048_SPAddCount + 1)"
                   },
                   "variableName": "Flag_21048_SPAddCount"
                 }

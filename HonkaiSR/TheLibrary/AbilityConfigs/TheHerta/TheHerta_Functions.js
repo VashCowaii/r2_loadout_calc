@@ -21,20 +21,10 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
           "stackLimit": {
-            "operator": "Variables[0] (DV_MarkMaxLayer) || RETURN",
-            "displayLines": "DV_MarkMaxLayer",
-            "constants": [],
-            "variables": [
-              "DV_MarkMaxLayer"
-            ]
+            "displayLines": "DV_MarkMaxLayer"
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] (DV_MarkAddLayer) || RETURN",
-            "displayLines": "DV_MarkAddLayer",
-            "constants": [],
-            "variables": [
-              "DV_MarkAddLayer"
-            ]
+            "displayLines": "DV_MarkAddLayer"
           }
         },
         {
@@ -52,20 +42,10 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (_SkillTree03_MaxCount) || RETURN",
-                "displayLines": "_SkillTree03_MaxCount",
-                "constants": [],
-                "variables": [
-                  "_SkillTree03_MaxCount"
-                ]
+                "displayLines": "_SkillTree03_MaxCount"
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (DV_MarkAddLayer) || RETURN",
-                "displayLines": "DV_MarkAddLayer",
-                "constants": [],
-                "variables": [
-                  "DV_MarkAddLayer"
-                ]
+                "displayLines": "DV_MarkAddLayer"
               }
             }
           ]
@@ -87,12 +67,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (DV_DamageRatio1) || RETURN",
-              "displayLines": "DV_DamageRatio1",
-              "constants": [],
-              "variables": [
-                "DV_DamageRatio1"
-              ]
+              "displayLines": "DV_DamageRatio1"
             },
             "Toughness": {
               "displayLines": 15
@@ -209,12 +184,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (DV_DamageRatio1) || RETURN",
-                      "displayLines": "DV_DamageRatio1",
-                      "constants": [],
-                      "variables": [
-                        "DV_DamageRatio1"
-                      ]
+                      "displayLines": "DV_DamageRatio1"
                     },
                     "Toughness": {
                       "displayLines": 15
@@ -238,12 +208,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (DV_DamageRatio1) || RETURN",
-                      "displayLines": "DV_DamageRatio1",
-                      "constants": [],
-                      "variables": [
-                        "DV_DamageRatio1"
-                      ]
+                      "displayLines": "DV_DamageRatio1"
                     },
                     "Toughness": {
                       "displayLines": 15
@@ -353,24 +318,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (DV_DamageRatio1) || RETURN",
-                "displayLines": "DV_DamageRatio1",
-                "constants": [],
-                "variables": [
-                  "DV_DamageRatio1"
-                ]
+                "displayLines": "DV_DamageRatio1"
               },
               "variableName": "DV_MainTargetFinalDmgRatio"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (DV_DamageRatio1) || RETURN",
-                "displayLines": "DV_DamageRatio1",
-                "constants": [],
-                "variables": [
-                  "DV_DamageRatio1"
-                ]
+                "displayLines": "DV_DamageRatio1"
               },
               "variableName": "DV_OtherTargetFinalDmgRatio"
             },
@@ -407,12 +362,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (DV_MainTargetFinalDmgRatio) || RETURN",
-                      "displayLines": "DV_MainTargetFinalDmgRatio",
-                      "constants": [],
-                      "variables": [
-                        "DV_MainTargetFinalDmgRatio"
-                      ]
+                      "displayLines": "DV_MainTargetFinalDmgRatio"
                     },
                     "Toughness": {
                       "displayLines": 15
@@ -436,12 +386,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (DV_OtherTargetFinalDmgRatio) || RETURN",
-                      "displayLines": "DV_OtherTargetFinalDmgRatio",
-                      "constants": [],
-                      "variables": [
-                        "DV_OtherTargetFinalDmgRatio"
-                      ]
+                      "displayLines": "DV_OtherTargetFinalDmgRatio"
                     },
                     "Toughness": {
                       "displayLines": 15

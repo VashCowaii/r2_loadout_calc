@@ -14,12 +14,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1597331632\">Enemy_W4_Mascot_LocalLegend_ListenCorrectInteract</a>",
       "valuePerStack": {
         "MDF_SuccessDamageRatio": {
-          "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-          "displayLines": "{[SkillP01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[0]]}"
-          ]
+          "displayLines": "{[SkillP01[0]]}"
         }
       }
     },

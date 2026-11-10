@@ -61,12 +61,7 @@ const configAbility = {
     {
       "name": "Skill Points Modification",
       "adjustmentValue": {
-        "operator": "Variables[0] (MaxBP) || RETURN",
-        "displayLines": "MaxBP",
-        "constants": [],
-        "variables": [
-          "MaxBP"
-        ]
+        "displayLines": "MaxBP"
       },
       "adjustmentType": "+"
     },

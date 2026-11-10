@@ -15,12 +15,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (0.025) || RETURN",
-        "displayLines": "0.025",
-        "constants": [],
-        "variables": [
-          0.025
-        ]
+        "displayLines": "0.025"
       },
       "variableName": "MDF_CritChanceBase"
     },
@@ -68,25 +63,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (10) || Variables[1] (2) || ADD || RETURN",
-            "displayLines": "(10 + 2)",
-            "constants": [],
-            "variables": [
-              10,
-              2
-            ]
+            "displayLines": "(10 + 2)"
           },
           "variableName": "MDF_MaxCount"
         },
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "execute": [
             {
@@ -97,12 +81,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"68075206\">Argenti_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                "displayLines": "MDF_MaxCount",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxCount"
-                ]
+                "displayLines": "MDF_MaxCount"
               }
             }
           ]
@@ -112,12 +91,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (10) || RETURN",
-            "displayLines": "10",
-            "constants": [],
-            "variables": [
-              10
-            ]
+            "displayLines": "10"
           },
           "variableName": "MDF_MaxCount"
         }

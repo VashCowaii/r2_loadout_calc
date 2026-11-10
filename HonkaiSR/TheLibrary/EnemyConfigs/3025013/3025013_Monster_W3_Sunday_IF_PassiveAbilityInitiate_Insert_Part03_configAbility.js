@@ -25,20 +25,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-424634148\">Enemy_W3_Sunday_IF_LightTeam_Shield_Stack</a>",
           "valuePerStack": {
             "MDF_ShieldPercentage_Add": {
-              "operator": "Variables[0] ({[SkillP02[0]]}) || RETURN",
-              "displayLines": "{[SkillP02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP02[0]]}"
-              ]
+              "displayLines": "{[SkillP02[0]]}"
             },
             "MDF_ShieldPercentage_Add_Value2": {
-              "operator": "Variables[0] ({[SkillP02[1]]}) || RETURN",
-              "displayLines": "{[SkillP02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP02[1]]}"
-              ]
+              "displayLines": "{[SkillP02[1]]}"
             }
           }
         }
@@ -53,12 +43,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"897199579\">Enemy_W3_Sunday_LightTeam_Shield</a>",
           "valuePerStack": {
             "MDF_ShieldPercentage": {
-              "operator": "Variables[0] ({[SkillP02[0]]}) || RETURN",
-              "displayLines": "{[SkillP02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP02[0]]}"
-              ]
+              "displayLines": "{[SkillP02[0]]}"
             }
           }
         }
@@ -76,14 +61,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (W3_Sunday_00_StanceCountDown_Counter) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(W3_Sunday_00_StanceCountDown_Counter - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "W3_Sunday_00_StanceCountDown_Counter"
-            ]
+            "displayLines": "(W3_Sunday_00_StanceCountDown_Counter - 1)"
           },
           "execute": [
             {
@@ -95,20 +73,10 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-424634148\">Enemy_W3_Sunday_IF_LightTeam_Shield_Stack</a>",
               "valuePerStack": {
                 "MDF_ShieldPercentage_Add": {
-                  "operator": "Variables[0] ({[SkillP02[0]]}) || RETURN",
-                  "displayLines": "{[SkillP02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP02[0]]}"
-                  ]
+                  "displayLines": "{[SkillP02[0]]}"
                 },
                 "MDF_ShieldPercentage_Add_Value2": {
-                  "operator": "Variables[0] ({[SkillP02[1]]}) || RETURN",
-                  "displayLines": "{[SkillP02[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP02[1]]}"
-                  ]
+                  "displayLines": "{[SkillP02[1]]}"
                 }
               }
             }

@@ -42,12 +42,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.2) || RETURN",
-                    "displayLines": "0.2",
-                    "constants": [],
-                    "variables": [
-                      0.2
-                    ]
+                    "displayLines": "0.2"
                   }
                 }
               ]
@@ -86,13 +81,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.06) || Variables[1] (_Layer) || MUL || RETURN",
-                    "displayLines": "(0.06 * _Layer)",
-                    "constants": [],
-                    "variables": [
-                      0.06,
-                      "_Layer"
-                    ]
+                    "displayLines": "(0.06 * _Layer)"
                   }
                 }
               ]
@@ -134,20 +123,10 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-672411958\">LC_21041_Sub</a>[<span class=\"descriptionNumberColor\">Trick</span>]",
                       "duration": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "stackLimit": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       }
                     }
                   ]
@@ -164,12 +143,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "maxValue": {
-                    "operator": "Variables[0] (0.8) || RETURN",
-                    "displayLines": "0.8",
-                    "constants": [],
-                    "variables": [
-                      0.8
-                    ]
+                    "displayLines": "0.8"
                   },
                   "enteringRange": [
                     {
@@ -185,12 +159,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Variable Value Range Conditions",
                   "minValue": {
-                    "operator": "Variables[0] (0.8) || RETURN",
-                    "displayLines": "0.8",
-                    "constants": [],
-                    "variables": [
-                      0.8
-                    ]
+                    "displayLines": "0.8"
                   },
                   "enteringRange": [
                     {

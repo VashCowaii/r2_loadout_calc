@@ -23,12 +23,7 @@ const configAbility = {
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-            "displayLines": "Wolf_AttackCount",
-            "constants": [],
-            "variables": [
-              "Wolf_AttackCount"
-            ]
+            "displayLines": "Wolf_AttackCount"
           },
           "entityClass": "Enemy",
           "target": {
@@ -36,12 +31,7 @@ const configAbility = {
             "target": "{{Parameter Target}}"
           },
           "maximum": {
-            "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-            "displayLines": "{[Skill02[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[2]]}"
-            ]
+            "displayLines": "{[Skill02[2]]}"
           },
           "assignState": "False"
         },

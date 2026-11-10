@@ -42,13 +42,7 @@ const configAbility = {
         {
           "name": "Deal Toughness DMG",
           "value": {
-            "operator": "Variables[0] ({[Skill02[2]]}) || Variables[1] (Summon_Deathrattle) || MUL || RETURN",
-            "displayLines": "({[Skill02[2]]} * Summon_Deathrattle)",
-            "constants": [],
-            "variables": [
-              "{[Skill02[2]]}",
-              "Summon_Deathrattle"
-            ]
+            "displayLines": "({[Skill02[2]]} * Summon_Deathrattle)"
           },
           "defender": {
             "name": "Target Name",

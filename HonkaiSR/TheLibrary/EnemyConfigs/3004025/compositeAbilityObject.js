@@ -1188,12 +1188,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                    "displayLines": "{[Skill04[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill04[0]]}"
-                    ]
+                    "displayLines": "{[Skill04[0]]}"
                   },
                   "variableName": "MainStoryDamage"
                 }
@@ -1229,12 +1224,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-                    "displayLines": "{[Skill04[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill04[1]]}"
-                    ]
+                    "displayLines": "{[Skill04[1]]}"
                   },
                   "variableName": "MainStoryDamage"
                 }
@@ -1270,12 +1260,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-                    "displayLines": "{[Skill04[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill04[2]]}"
-                    ]
+                    "displayLines": "{[Skill04[2]]}"
                   },
                   "variableName": "MainStoryDamage"
                 }
@@ -1320,13 +1305,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target List}}"
                       },
                       "consumePercent": {
-                        "operator": "Variables[0] (MainStoryDamage) || Variables[1] (LoopCount) || DIV || RETURN",
-                        "displayLines": "(MainStoryDamage / LoopCount)",
-                        "constants": [],
-                        "variables": [
-                          "MainStoryDamage",
-                          "LoopCount"
-                        ]
+                        "displayLines": "(MainStoryDamage / LoopCount)"
                       },
                       "DamageType": "Imaginary"
                     }
@@ -1355,13 +1334,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target List}}"
                       },
                       "consumePercent": {
-                        "operator": "Variables[0] (MainStoryDamage) || Variables[1] (LoopCount) || DIV || RETURN",
-                        "displayLines": "(MainStoryDamage / LoopCount)",
-                        "constants": [],
-                        "variables": [
-                          "MainStoryDamage",
-                          "LoopCount"
-                        ]
+                        "displayLines": "(MainStoryDamage / LoopCount)"
                       },
                       "DamageType": "Imaginary"
                     }
@@ -1390,13 +1363,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target List}}"
                       },
                       "consumePercent": {
-                        "operator": "Variables[0] (MainStoryDamage) || Variables[1] (LoopCount) || DIV || RETURN",
-                        "displayLines": "(MainStoryDamage / LoopCount)",
-                        "constants": [],
-                        "variables": [
-                          "MainStoryDamage",
-                          "LoopCount"
-                        ]
+                        "displayLines": "(MainStoryDamage / LoopCount)"
                       },
                       "DamageType": "Imaginary"
                     }
@@ -1410,13 +1377,7 @@ const compositeAbilityObject = {
                     "target": "{{Parameter Target List}}"
                   },
                   "consumePercent": {
-                    "operator": "Variables[0] (MainStoryDamage) || Variables[1] (LoopCount) || DIV || RETURN",
-                    "displayLines": "(MainStoryDamage / LoopCount)",
-                    "constants": [],
-                    "variables": [
-                      "MainStoryDamage",
-                      "LoopCount"
-                    ]
+                    "displayLines": "(MainStoryDamage / LoopCount)"
                   },
                   "DamageType": "Imaginary"
                 }
@@ -1584,12 +1545,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "notAHit": true,
                 "dmgFormula": "Max HP Scaling",
@@ -1606,29 +1562,14 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                "displayLines": "{[Skill01[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[3]]}"
-                ]
+                "displayLines": "{[Skill01[3]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                "displayLines": "{[Skill01[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[2]]}"
-                ]
+                "displayLines": "{[Skill01[2]]}"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                  "displayLines": "{[Skill01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[1]]}"
-                  ]
+                  "displayLines": "{[Skill01[1]]}"
                 }
               }
             },
@@ -1680,12 +1621,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "notAHit": true,
                 "dmgFormula": "Max HP Scaling",
@@ -1702,29 +1638,14 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                "displayLines": "{[Skill01[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[3]]}"
-                ]
+                "displayLines": "{[Skill01[3]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                "displayLines": "{[Skill01[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[2]]}"
-                ]
+                "displayLines": "{[Skill01[2]]}"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                  "displayLines": "{[Skill01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[1]]}"
-                  ]
+                  "displayLines": "{[Skill01[1]]}"
                 }
               }
             },
@@ -1958,28 +1879,13 @@ const compositeAbilityObject = {
               "eventID": 20025,
               "variables": {
                 "BE_P1_BESpeed": {
-                  "operator": "Variables[0] (P1_BaseSpeed) || RETURN",
-                  "displayLines": "P1_BaseSpeed",
-                  "constants": [],
-                  "variables": [
-                    "P1_BaseSpeed"
-                  ]
+                  "displayLines": "P1_BaseSpeed"
                 },
                 "P2_BreakDelayRatioPerFigure": {
-                  "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                  "displayLines": "{[Skill02[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[1]]}"
-                  ]
+                  "displayLines": "{[Skill02[1]]}"
                 },
                 "BE_P3_InitDelay": {
-                  "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                  "displayLines": "{[Skill02[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[2]]}"
-                  ]
+                  "displayLines": "{[Skill02[2]]}"
                 }
               }
             }
@@ -1991,28 +1897,13 @@ const compositeAbilityObject = {
               "eventID": 20010,
               "variables": {
                 "BE_P1_BESpeed": {
-                  "operator": "Variables[0] (P1_BaseSpeed) || RETURN",
-                  "displayLines": "P1_BaseSpeed",
-                  "constants": [],
-                  "variables": [
-                    "P1_BaseSpeed"
-                  ]
+                  "displayLines": "P1_BaseSpeed"
                 },
                 "P2_BreakDelayRatioPerFigure": {
-                  "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                  "displayLines": "{[Skill02[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[1]]}"
-                  ]
+                  "displayLines": "{[Skill02[1]]}"
                 },
                 "BE_P3_InitDelay": {
-                  "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                  "displayLines": "{[Skill02[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[2]]}"
-                  ]
+                  "displayLines": "{[Skill02[2]]}"
                 }
               }
             }
@@ -2314,23 +2205,13 @@ const compositeAbilityObject = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[Skill08[0]]}) || RETURN",
-            "displayLines": "{[Skill08[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill08[0]]}"
-            ]
+            "displayLines": "{[Skill08[0]]}"
           },
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID03) || RETURN",
-                "displayLines": "SummonID03",
-                "constants": [],
-                "variables": [
-                  "SummonID03"
-                ]
+                "displayLines": "SummonID03"
               },
               "locationType": "First"
             }
@@ -2479,28 +2360,13 @@ const compositeAbilityObject = {
               "eventID": 20025,
               "variables": {
                 "BE_P1_BESpeed": {
-                  "operator": "Variables[0] (P1_BaseSpeed) || RETURN",
-                  "displayLines": "P1_BaseSpeed",
-                  "constants": [],
-                  "variables": [
-                    "P1_BaseSpeed"
-                  ]
+                  "displayLines": "P1_BaseSpeed"
                 },
                 "P2_BreakDelayRatioPerFigure": {
-                  "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                  "displayLines": "{[Skill02[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[1]]}"
-                  ]
+                  "displayLines": "{[Skill02[1]]}"
                 },
                 "BE_P3_InitDelay": {
-                  "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                  "displayLines": "{[Skill02[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[2]]}"
-                  ]
+                  "displayLines": "{[Skill02[2]]}"
                 }
               }
             },
@@ -2771,23 +2637,13 @@ const compositeAbilityObject = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] ({[Skill08[1]]}) || RETURN",
-                    "displayLines": "{[Skill08[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill08[1]]}"
-                    ]
+                    "displayLines": "{[Skill08[1]]}"
                   },
                   "enemyList": [
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonID02) || RETURN",
-                        "displayLines": "SummonID02",
-                        "constants": [],
-                        "variables": [
-                          "SummonID02"
-                        ]
+                        "displayLines": "SummonID02"
                       },
                       "locationType": "Last"
                     }
@@ -2796,23 +2652,13 @@ const compositeAbilityObject = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] ({[Skill08[4]]}) || RETURN",
-                    "displayLines": "{[Skill08[4]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill08[4]]}"
-                    ]
+                    "displayLines": "{[Skill08[4]]}"
                   },
                   "enemyList": [
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonID01) || RETURN",
-                        "displayLines": "SummonID01",
-                        "constants": [],
-                        "variables": [
-                          "SummonID01"
-                        ]
+                        "displayLines": "SummonID01"
                       },
                       "locationType": "Last"
                     }
@@ -2832,23 +2678,13 @@ const compositeAbilityObject = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] ({[Skill08[2]]}) || RETURN",
-                        "displayLines": "{[Skill08[2]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill08[2]]}"
-                        ]
+                        "displayLines": "{[Skill08[2]]}"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_5) || RETURN",
-                            "displayLines": "SummonList_ADF_5",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_5"
-                            ]
+                            "displayLines": "SummonList_ADF_5"
                           },
                           "locationType": "First"
                         }
@@ -2859,23 +2695,13 @@ const compositeAbilityObject = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] ({[Skill08[2]]}) || RETURN",
-                        "displayLines": "{[Skill08[2]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill08[2]]}"
-                        ]
+                        "displayLines": "{[Skill08[2]]}"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonID02) || RETURN",
-                            "displayLines": "SummonID02",
-                            "constants": [],
-                            "variables": [
-                              "SummonID02"
-                            ]
+                            "displayLines": "SummonID02"
                           },
                           "locationType": "First"
                         }
@@ -2886,23 +2712,13 @@ const compositeAbilityObject = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] ({[Skill08[3]]}) || RETURN",
-                    "displayLines": "{[Skill08[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill08[3]]}"
-                    ]
+                    "displayLines": "{[Skill08[3]]}"
                   },
                   "enemyList": [
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonID04) || RETURN",
-                        "displayLines": "SummonID04",
-                        "constants": [],
-                        "variables": [
-                          "SummonID04"
-                        ]
+                        "displayLines": "SummonID04"
                       },
                       "locationType": "First"
                     }

@@ -78,12 +78,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-            "displayLines": "{[Skill01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[0]]}"
-            ]
+            "displayLines": "{[Skill01[0]]}"
           },
           "variableName": "TV_01_EliteChance"
         }
@@ -92,14 +87,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (TV_01_EliteChance) || Constants[0] (100) || DIV || RETURN",
-            "displayLines": "(TV_01_EliteChance / 100)",
-            "constants": [
-              100
-            ],
-            "variables": [
-              "TV_01_EliteChance"
-            ]
+            "displayLines": "(TV_01_EliteChance / 100)"
           },
           "variableName": "TV_01_EliteChance"
         }

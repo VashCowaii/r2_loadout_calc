@@ -13,12 +13,7 @@ const configAbility = {
       },
       "variableName": "BattleEvent_P1_ADF",
       "resetValue": {
-        "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-        "displayLines": "#BattleEvent_P1_ADF",
-        "constants": [],
-        "variables": [
-          "#BattleEvent_P1_ADF"
-        ]
+        "displayLines": "#BattleEvent_P1_ADF"
       },
       "scope": "ContextCaster"
     },
@@ -60,12 +55,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-                "displayLines": "BattleEvent_P1_ADF",
-                "constants": [],
-                "variables": [
-                  "BattleEvent_P1_ADF"
-                ]
+                "displayLines": "BattleEvent_P1_ADF"
               },
               "execute": [
                 {
@@ -154,12 +144,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-                "displayLines": "BattleEvent_P1_ADF",
-                "constants": [],
-                "variables": [
-                  "BattleEvent_P1_ADF"
-                ]
+                "displayLines": "BattleEvent_P1_ADF"
               },
               "execute": [
                 {

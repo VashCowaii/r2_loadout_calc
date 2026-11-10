@@ -40,13 +40,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.12) || Variables[1] (1.2) || MUL || RETURN",
-            "displayLines": "(0.12 * 1.2)",
-            "constants": [],
-            "variables": [
-              0.12,
-              1.2
-            ]
+            "displayLines": "(0.12 * 1.2)"
           },
           "variableName": "MDF_PursuedDamage"
         }
@@ -55,12 +49,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.12) || RETURN",
-            "displayLines": "0.12",
-            "constants": [],
-            "variables": [
-              0.12
-            ]
+            "displayLines": "0.12"
           },
           "variableName": "MDF_PursuedDamage"
         }
@@ -82,12 +71,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"559634045\">Tribbie_Eidolon6_Bonus</a>[<span class=\"descriptionNumberColor\">Morrow of Star Shine</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (7.29) || RETURN",
-              "displayLines": "7.29",
-              "constants": [],
-              "variables": [
-                7.29
-              ]
+              "displayLines": "7.29"
             }
           }
         }
@@ -110,12 +94,7 @@ const configAbility = {
       "name": "Update Displayed Energy Bar",
       "value": 0,
       "maximum": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -173,12 +152,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (Skill02_EnergyBarCount) || RETURN",
-                    "displayLines": "Skill02_EnergyBarCount",
-                    "constants": [],
-                    "variables": [
-                      "Skill02_EnergyBarCount"
-                    ]
+                    "displayLines": "Skill02_EnergyBarCount"
                   },
                   "assignState": "True",
                   "priorState": "Active"
@@ -679,13 +653,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (MDF_AttackCount) || Variables[1] (MDF_PropertyValue) || MUL || RETURN",
-                "displayLines": "(MDF_AttackCount * MDF_PropertyValue)",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackCount",
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(MDF_AttackCount * MDF_PropertyValue)"
               },
               "isFixed": "* ERR"
             }
@@ -707,12 +675,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (1.5) || RETURN",
-              "displayLines": "1.5",
-              "constants": [],
-              "variables": [
-                1.5
-              ]
+              "displayLines": "1.5"
             }
           }
         }
@@ -738,12 +701,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (30) || RETURN",
-                    "displayLines": "30",
-                    "constants": [],
-                    "variables": [
-                      30
-                    ]
+                    "displayLines": "30"
                   },
                   "isFixed": "* ERR"
                 }

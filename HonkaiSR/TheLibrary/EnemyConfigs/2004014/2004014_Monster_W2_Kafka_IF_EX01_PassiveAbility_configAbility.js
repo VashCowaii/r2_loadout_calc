@@ -23,28 +23,13 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1587187705\">Enemy_W2_Cocolia_IF_SuperArmorController</a>",
           "valuePerStack": {
             "MDF_IF_BOSS_BreakDelay": {
-              "operator": "Variables[0] ({[SkillEX01[2]]}) || RETURN",
-              "displayLines": "{[SkillEX01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[2]]}"
-              ]
+              "displayLines": "{[SkillEX01[2]]}"
             },
             "MDF_IF_BOSS_WeaknessDMGUpRatio": {
-              "operator": "Variables[0] ({[SkillEX01[1]]}) || RETURN",
-              "displayLines": "{[SkillEX01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[1]]}"
-              ]
+              "displayLines": "{[SkillEX01[1]]}"
             },
             "MDF_IF_BOSS_Standard_Defence": {
-              "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
-              "displayLines": "{[SkillEX01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[0]]}"
-              ]
+              "displayLines": "{[SkillEX01[0]]}"
             }
           }
         },
@@ -70,28 +55,13 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-916114620\">Enemy_W2_Kafka_IF_AssistController</a>",
           "valuePerStack": {
             "MDF_DotMaxCount": {
-              "operator": "Variables[0] ({[SkillIF01[0]]}) || RETURN",
-              "displayLines": "{[SkillIF01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillIF01[0]]}"
-              ]
+              "displayLines": "{[SkillIF01[0]]}"
             },
             "MDF_DotConsume": {
-              "operator": "Variables[0] ({[SkillIF01[1]]}) || RETURN",
-              "displayLines": "{[SkillIF01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillIF01[1]]}"
-              ]
+              "displayLines": "{[SkillIF01[1]]}"
             },
             "MDF_DotCurCount": {
-              "operator": "Variables[0] ({[SkillIF01[3]]}) || RETURN",
-              "displayLines": "{[SkillIF01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillIF01[3]]}"
-              ]
+              "displayLines": "{[SkillIF01[3]]}"
             }
           }
         }
@@ -136,12 +106,7 @@ const configAbility = {
                   "variableName": "MDF_DotCurCount",
                   "value": 1,
                   "max": {
-                    "operator": "Variables[0] (MDF_DotMaxCount) || RETURN",
-                    "displayLines": "MDF_DotMaxCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DotMaxCount"
-                    ]
+                    "displayLines": "MDF_DotMaxCount"
                   }
                 }
               ]
@@ -176,12 +141,7 @@ const configAbility = {
                     "value1": "MDF_DotCurCount",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_DotConsume) || RETURN",
-                      "displayLines": "MDF_DotConsume",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DotConsume"
-                      ]
+                      "displayLines": "MDF_DotConsume"
                     }
                   },
                   {
@@ -193,12 +153,7 @@ const configAbility = {
                     "value1": "MDF_DotCurCount",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (MDF_DotMaxCount) || RETURN",
-                      "displayLines": "MDF_DotMaxCount",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DotMaxCount"
-                      ]
+                      "displayLines": "MDF_DotMaxCount"
                     }
                   },
                   {
@@ -330,20 +285,10 @@ const configAbility = {
                       },
                       "variableName": "MDF_DotCurCount",
                       "value": {
-                        "operator": "Variables[0] (MDF_DotConsume) || INVERT || RETURN",
-                        "displayLines": "-MDF_DotConsume",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DotConsume"
-                        ]
+                        "displayLines": "-MDF_DotConsume"
                       },
                       "max": {
-                        "operator": "Variables[0] (MDF_DotMaxCount) || RETURN",
-                        "displayLines": "MDF_DotMaxCount",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DotMaxCount"
-                        ]
+                        "displayLines": "MDF_DotMaxCount"
                       }
                     }
                   ]
@@ -380,12 +325,7 @@ const configAbility = {
                     "value1": "MDF_DotCurCount",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_DotConsume) || RETURN",
-                      "displayLines": "MDF_DotConsume",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DotConsume"
-                      ]
+                      "displayLines": "MDF_DotConsume"
                     }
                   },
                   {
@@ -397,12 +337,7 @@ const configAbility = {
                     "value1": "MDF_DotCurCount",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_DotMaxCount) || RETURN",
-                      "displayLines": "MDF_DotMaxCount",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DotMaxCount"
-                      ]
+                      "displayLines": "MDF_DotMaxCount"
                     }
                   },
                   {
@@ -498,20 +433,10 @@ const configAbility = {
                       },
                       "variableName": "MDF_DotCurCount",
                       "value": {
-                        "operator": "Variables[0] (MDF_DotConsume) || INVERT || RETURN",
-                        "displayLines": "-MDF_DotConsume",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DotConsume"
-                        ]
+                        "displayLines": "-MDF_DotConsume"
                       },
                       "max": {
-                        "operator": "Variables[0] (MDF_DotMaxCount) || RETURN",
-                        "displayLines": "MDF_DotMaxCount",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DotMaxCount"
-                        ]
+                        "displayLines": "MDF_DotMaxCount"
                       }
                     }
                   ]

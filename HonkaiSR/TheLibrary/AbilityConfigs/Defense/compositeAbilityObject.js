@@ -44,12 +44,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (0.18) || RETURN",
-                        "displayLines": "0.18",
-                        "constants": [],
-                        "variables": [
-                          0.18
-                        ]
+                        "displayLines": "0.18"
                       },
                       "formula": "Heal from Healer's MaxHP"
                     }

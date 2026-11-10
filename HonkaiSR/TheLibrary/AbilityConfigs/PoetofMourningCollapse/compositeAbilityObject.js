@@ -41,12 +41,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -90,12 +85,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-281803576\">Relic_124_Sub</a>[<span class=\"descriptionNumberColor\">Poet of Mourning Collapse</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     }
@@ -123,12 +113,7 @@ const compositeAbilityObject = {
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (95) || RETURN",
-                      "displayLines": "95",
-                      "constants": [],
-                      "variables": [
-                        95
-                      ]
+                      "displayLines": "95"
                     }
                   },
                   "passed": [
@@ -141,12 +126,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-281803576\">Relic_124_Sub</a>[<span class=\"descriptionNumberColor\">Poet of Mourning Collapse</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.32) || RETURN",
-                          "displayLines": "0.32",
-                          "constants": [],
-                          "variables": [
-                            0.32
-                          ]
+                          "displayLines": "0.32"
                         }
                       }
                     },
@@ -159,12 +139,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-281803576\">Relic_124_Sub</a>[<span class=\"descriptionNumberColor\">Poet of Mourning Collapse</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.32) || RETURN",
-                          "displayLines": "0.32",
-                          "constants": [],
-                          "variables": [
-                            0.32
-                          ]
+                          "displayLines": "0.32"
                         }
                       }
                     }
@@ -181,12 +156,7 @@ const compositeAbilityObject = {
                         "value1": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (110) || RETURN",
-                          "displayLines": "110",
-                          "constants": [],
-                          "variables": [
-                            110
-                          ]
+                          "displayLines": "110"
                         }
                       },
                       "passed": [
@@ -199,12 +169,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-281803576\">Relic_124_Sub</a>[<span class=\"descriptionNumberColor\">Poet of Mourning Collapse</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.2) || RETURN",
-                              "displayLines": "0.2",
-                              "constants": [],
-                              "variables": [
-                                0.2
-                              ]
+                              "displayLines": "0.2"
                             }
                           }
                         },
@@ -217,12 +182,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-281803576\">Relic_124_Sub</a>[<span class=\"descriptionNumberColor\">Poet of Mourning Collapse</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.2) || RETURN",
-                              "displayLines": "0.2",
-                              "constants": [],
-                              "variables": [
-                                0.2
-                              ]
+                              "displayLines": "0.2"
                             }
                           }
                         }

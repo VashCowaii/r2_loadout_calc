@@ -12,31 +12,16 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"461506636\">RuanMei_Ability02_Area</a>",
       "duration": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       }
     },
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "maximum": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "assignState": "True",
       "priorState": "Active",
@@ -121,24 +106,14 @@ const configAbility = {
                       },
                       "modifierName": "<a class=\"gModGreen\" id=\"461506636\">RuanMei_Ability02_Area</a>",
                       "value": {
-                        "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                        "displayLines": "MDF_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_LifeTime"
-                        ]
+                        "displayLines": "MDF_LifeTime"
                       },
                       "valueType": "Duration"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                        "displayLines": "MDF_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_LifeTime"
-                        ]
+                        "displayLines": "MDF_LifeTime"
                       }
                     }
                   ]
@@ -165,12 +140,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (Ability02_StanceBreakAddedRatio) || RETURN",
-                "displayLines": "Ability02_StanceBreakAddedRatio",
-                "constants": [],
-                "variables": [
-                  "Ability02_StanceBreakAddedRatio"
-                ]
+                "displayLines": "Ability02_StanceBreakAddedRatio"
               }
             }
           ]
@@ -248,12 +218,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1526325038\">RuanMei_Ability02_StanceBreakAdded</a>",
               "valuePerStack": {
                 "Ability02_StanceBreakAddedRatio": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
+                  "displayLines": "0.5"
                 }
               }
             },
@@ -265,12 +230,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1509368163\">RuanMei_Ability02_Area_Caster</a>[<span class=\"descriptionNumberColor\">Overtone</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               }
             },
             {
@@ -282,20 +242,10 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"104142449\">RuanMei_Ability02_Area_Friend</a>[<span class=\"descriptionNumberColor\">Overtone</span>]",
               "valuePerStack": {
                 "Ability02_P1_DamageAddedRatio_Friend": {
-                  "operator": "Variables[0] (Skill02_P1_DamageAddedRatioFinal) || RETURN",
-                  "displayLines": "Skill02_P1_DamageAddedRatioFinal",
-                  "constants": [],
-                  "variables": [
-                    "Skill02_P1_DamageAddedRatioFinal"
-                  ]
+                  "displayLines": "Skill02_P1_DamageAddedRatioFinal"
                 },
                 "Ability02_P2_StanceBreakAddedRatio_Friend": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
+                  "displayLines": "0.5"
                 }
               }
             }
@@ -335,12 +285,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1526325038\">RuanMei_Ability02_StanceBreakAdded</a>",
                   "valuePerStack": {
                     "Ability02_StanceBreakAddedRatio": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   }
                 },
@@ -353,20 +298,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"104142449\">RuanMei_Ability02_Area_Friend</a>[<span class=\"descriptionNumberColor\">Overtone</span>]",
                   "valuePerStack": {
                     "Ability02_P1_DamageAddedRatio_Friend": {
-                      "operator": "Variables[0] (Skill02_P1_DamageAddedRatioFinal) || RETURN",
-                      "displayLines": "Skill02_P1_DamageAddedRatioFinal",
-                      "constants": [],
-                      "variables": [
-                        "Skill02_P1_DamageAddedRatioFinal"
-                      ]
+                      "displayLines": "Skill02_P1_DamageAddedRatioFinal"
                     },
                     "Ability02_P2_StanceBreakAddedRatio_Friend": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   }
                 }

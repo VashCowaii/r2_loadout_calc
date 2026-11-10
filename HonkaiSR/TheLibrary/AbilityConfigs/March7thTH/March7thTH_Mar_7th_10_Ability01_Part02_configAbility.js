@@ -22,22 +22,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (1) || RETURN",
-          "displayLines": "1",
-          "constants": [],
-          "variables": [
-            1
-          ]
+          "displayLines": "1"
         },
         "HitSplit": 0.4,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Variables[1] (Normal_StanceRatio) || MUL || RETURN",
-          "displayLines": "(ST Toughness Value * Normal_StanceRatio)",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value",
-            "Normal_StanceRatio"
-          ]
+          "displayLines": "(ST Toughness Value * Normal_StanceRatio)"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -53,22 +42,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (1) || RETURN",
-          "displayLines": "1",
-          "constants": [],
-          "variables": [
-            1
-          ]
+          "displayLines": "1"
         },
         "HitSplit": 0.6,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Variables[1] (Normal_StanceRatio) || MUL || RETURN",
-          "displayLines": "(ST Toughness Value * Normal_StanceRatio)",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value",
-            "Normal_StanceRatio"
-          ]
+          "displayLines": "(ST Toughness Value * Normal_StanceRatio)"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -88,12 +66,7 @@ const configAbility = {
       "functionName": "<a class=\"gTempYellow\" id=\"-1762944127\">Mar_7th_10_GainEnergyWithCheck</a>",
       "variables": {
         "parameter[0]_AddValue": {
-          "operator": "Variables[0] (1) || RETURN",
-          "displayLines": "1",
-          "constants": [],
-          "variables": [
-            1
-          ]
+          "displayLines": "1"
         }
       }
     },
@@ -130,12 +103,7 @@ const configAbility = {
           "invertCondition": true
         },
         "multiplier": {
-          "operator": "Variables[0] (Normal_StanceRatio) || RETURN",
-          "displayLines": "Normal_StanceRatio",
-          "constants": [],
-          "variables": [
-            "Normal_StanceRatio"
-          ]
+          "displayLines": "Normal_StanceRatio"
         }
       }
     }

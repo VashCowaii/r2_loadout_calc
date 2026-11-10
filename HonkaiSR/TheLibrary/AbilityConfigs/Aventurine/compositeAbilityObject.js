@@ -91,12 +91,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 },
                 {
@@ -187,12 +182,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"462082235\">Aventurine_ResistCtrlCD</a>[<span class=\"descriptionNumberColor\">Shot Loaded Right</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       }
                     },
                     "Modifier Deletes Itself"
@@ -377,41 +367,17 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
                       "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "valuePerStack": {
                         "MDF_InitShieldValue": {
-                          "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.072) || MUL || Variables[2] (96) || ADD || RETURN",
-                          "displayLines": "((MDF_CurrentDefence2 * 0.072) + 96)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentDefence2",
-                            0.072,
-                            96
-                          ]
+                          "displayLines": "((MDF_CurrentDefence2 * 0.072) + 96)"
                         },
                         "MDF_MaxShieldRatio": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         },
                         "MDF_ForceShield": {
-                          "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.24) || MUL || Variables[2] (320) || ADD || RETURN",
-                          "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentDefence2",
-                            0.24,
-                            320
-                          ]
+                          "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)"
                         }
                       }
                     }
@@ -427,32 +393,13 @@ const compositeAbilityObject = {
                       "duration": 3,
                       "valuePerStack": {
                         "MDF_InitShieldValue": {
-                          "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.072) || MUL || Variables[2] (96) || ADD || RETURN",
-                          "displayLines": "((MDF_CurrentDefence2 * 0.072) + 96)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentDefence2",
-                            0.072,
-                            96
-                          ]
+                          "displayLines": "((MDF_CurrentDefence2 * 0.072) + 96)"
                         },
                         "MDF_MaxShieldRatio": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         },
                         "MDF_ForceShield": {
-                          "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.24) || MUL || Variables[2] (320) || ADD || RETURN",
-                          "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentDefence2",
-                            0.24,
-                            320
-                          ]
+                          "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)"
                         }
                       }
                     }
@@ -489,32 +436,13 @@ const compositeAbilityObject = {
                       "duration": 3,
                       "valuePerStack": {
                         "MDF_InitShieldValue": {
-                          "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.072) || MUL || Variables[2] (96) || ADD || RETURN",
-                          "displayLines": "((MDF_CurrentDefence2 * 0.072) + 96)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentDefence2",
-                            0.072,
-                            96
-                          ]
+                          "displayLines": "((MDF_CurrentDefence2 * 0.072) + 96)"
                         },
                         "MDF_MaxShieldRatio": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         },
                         "MDF_ForceShield": {
-                          "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.24) || MUL || Variables[2] (320) || ADD || RETURN",
-                          "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentDefence2",
-                            0.24,
-                            320
-                          ]
+                          "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)"
                         }
                       }
                     }
@@ -616,28 +544,13 @@ const compositeAbilityObject = {
                       "valuePerStack": {
                         "MDF_CanTriggerShieldEffect": 0,
                         "MDF_ResistanceRatio": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         },
                         "MDF_TeammateCount": {
-                          "operator": "Variables[0] (MDF_TeammateCount1) || RETURN",
-                          "displayLines": "MDF_TeammateCount1",
-                          "constants": [],
-                          "variables": [
-                            "MDF_TeammateCount1"
-                          ]
+                          "displayLines": "MDF_TeammateCount1"
                         },
                         "MDF_CritDmg1": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     }
@@ -749,21 +662,10 @@ const compositeAbilityObject = {
                 {
                   "name": "Stack Shield",
                   "stackValue": {
-                    "operator": "Variables[0] (MDF_InitShieldValue) || RETURN",
-                    "displayLines": "MDF_InitShieldValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_InitShieldValue"
-                    ]
+                    "displayLines": "MDF_InitShieldValue"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] (MDF_ForceShield) || Variables[1] (MDF_MaxShieldRatio) || MUL || RETURN",
-                    "displayLines": "(MDF_ForceShield * MDF_MaxShieldRatio)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ForceShield",
-                      "MDF_MaxShieldRatio"
-                    ]
+                    "displayLines": "(MDF_ForceShield * MDF_MaxShieldRatio)"
                   }
                 },
                 {
@@ -774,12 +676,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.5) || RETURN",
-                    "displayLines": "0.5",
-                    "constants": [],
-                    "variables": [
-                      0.5
-                    ]
+                    "displayLines": "0.5"
                   }
                 },
                 {
@@ -823,13 +720,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_InsertLeftValue) || Variables[1] (MDF_InsertAttackCount) || SUB || RETURN",
-                    "displayLines": "(MDF_InsertLeftValue - MDF_InsertAttackCount)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_InsertLeftValue",
-                      "MDF_InsertAttackCount"
-                    ]
+                    "displayLines": "(MDF_InsertLeftValue - MDF_InsertAttackCount)"
                   },
                   "variableName": "MDF_InsertLeftValue"
                 },
@@ -860,13 +751,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1024856711\">Aventurine_Trace03_Status</a>[<span class=\"descriptionNumberColor\">Bingo!</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_InsertLeftValue) || Variables[1] (MDF_InsertAttackCount) || SUB || RETURN",
-                          "displayLines": "(MDF_InsertLeftValue - MDF_InsertAttackCount)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_InsertLeftValue",
-                            "MDF_InsertAttackCount"
-                          ]
+                          "displayLines": "(MDF_InsertLeftValue - MDF_InsertAttackCount)"
                         }
                       }
                     }
@@ -944,12 +829,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackAddRatio) || RETURN",
-                    "displayLines": "MDF_AttackAddRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackAddRatio"
-                    ]
+                    "displayLines": "MDF_AttackAddRatio"
                   }
                 }
               ]
@@ -1014,14 +894,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (MDF_ShieldCount) || Constants[0] (1) || ADD || RETURN",
-                                "displayLines": "(MDF_ShieldCount + 1)",
-                                "constants": [
-                                  1
-                                ],
-                                "variables": [
-                                  "MDF_ShieldCount"
-                                ]
+                                "displayLines": "(MDF_ShieldCount + 1)"
                               },
                               "variableName": "MDF_ShieldCount"
                             }
@@ -1047,13 +920,7 @@ const compositeAbilityObject = {
                           },
                           "variableName": "_AttackAddedRatio",
                           "resetValue": {
-                            "operator": "Variables[0] (MDF_ShieldCount) || Variables[1] (0.5) || MUL || RETURN",
-                            "displayLines": "(MDF_ShieldCount * 0.5)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_ShieldCount",
-                              0.5
-                            ]
+                            "displayLines": "(MDF_ShieldCount * 0.5)"
                           }
                         },
                         {
@@ -1063,12 +930,7 @@ const compositeAbilityObject = {
                             "value1": "_AttackAddedRatio",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (1.5) || RETURN",
-                              "displayLines": "1.5",
-                              "constants": [],
-                              "variables": [
-                                1.5
-                              ]
+                              "displayLines": "1.5"
                             }
                           },
                           "passed": [
@@ -1081,12 +943,7 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"-1071693817\">Aventurine_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]",
                               "valuePerStack": {
                                 "MDF_AttackAddRatio": {
-                                  "operator": "Variables[0] (1.5) || RETURN",
-                                  "displayLines": "1.5",
-                                  "constants": [],
-                                  "variables": [
-                                    1.5
-                                  ]
+                                  "displayLines": "1.5"
                                 }
                               }
                             }
@@ -1101,13 +958,7 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"-1071693817\">Aventurine_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]",
                               "valuePerStack": {
                                 "MDF_AttackAddRatio": {
-                                  "operator": "Variables[0] (MDF_ShieldCount) || Variables[1] (0.5) || MUL || RETURN",
-                                  "displayLines": "(MDF_ShieldCount * 0.5)",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_ShieldCount",
-                                    0.5
-                                  ]
+                                  "displayLines": "(MDF_ShieldCount * 0.5)"
                                 }
                               }
                             }
@@ -1173,14 +1024,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (MDF_ShieldCount) || Constants[0] (1) || ADD || RETURN",
-                                "displayLines": "(MDF_ShieldCount + 1)",
-                                "constants": [
-                                  1
-                                ],
-                                "variables": [
-                                  "MDF_ShieldCount"
-                                ]
+                                "displayLines": "(MDF_ShieldCount + 1)"
                               },
                               "variableName": "MDF_ShieldCount"
                             }
@@ -1206,13 +1050,7 @@ const compositeAbilityObject = {
                           },
                           "variableName": "_AttackAddedRatio",
                           "resetValue": {
-                            "operator": "Variables[0] (MDF_ShieldCount) || Variables[1] (0.5) || MUL || RETURN",
-                            "displayLines": "(MDF_ShieldCount * 0.5)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_ShieldCount",
-                              0.5
-                            ]
+                            "displayLines": "(MDF_ShieldCount * 0.5)"
                           }
                         },
                         {
@@ -1222,12 +1060,7 @@ const compositeAbilityObject = {
                             "value1": "_AttackAddedRatio",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (1.5) || RETURN",
-                              "displayLines": "1.5",
-                              "constants": [],
-                              "variables": [
-                                1.5
-                              ]
+                              "displayLines": "1.5"
                             }
                           },
                           "passed": [
@@ -1240,12 +1073,7 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"-1071693817\">Aventurine_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]",
                               "valuePerStack": {
                                 "MDF_AttackAddRatio": {
-                                  "operator": "Variables[0] (1.5) || RETURN",
-                                  "displayLines": "1.5",
-                                  "constants": [],
-                                  "variables": [
-                                    1.5
-                                  ]
+                                  "displayLines": "1.5"
                                 }
                               }
                             }
@@ -1260,13 +1088,7 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"-1071693817\">Aventurine_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]",
                               "valuePerStack": {
                                 "MDF_AttackAddRatio": {
-                                  "operator": "Variables[0] (MDF_ShieldCount) || Variables[1] (0.5) || MUL || RETURN",
-                                  "displayLines": "(MDF_ShieldCount * 0.5)",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_ShieldCount",
-                                    0.5
-                                  ]
+                                  "displayLines": "(MDF_ShieldCount * 0.5)"
                                 }
                               }
                             }
@@ -1337,14 +1159,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "(0 - MDF_PropertyValue)"
                   }
                 }
               ]
@@ -1365,28 +1180,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (FLOOR) || Variables[1] (MDF_PropertyValue) || Constants[0] (0.01) || MUL || PARAM_1 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_PropertyValue * 0.01))",
-                    "constants": [
-                      0.01
-                    ],
-                    "variables": [
-                      "FLOOR",
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_PropertyValue * 0.01))"
                   },
                   "variableName": "MDF_Multipler"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_Multipler) || Variables[1] (0.02) || MUL || RETURN",
-                    "displayLines": "(MDF_Multipler * 0.02)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Multipler",
-                      0.02
-                    ]
+                    "displayLines": "(MDF_Multipler * 0.02)"
                   },
                   "variableName": "MDF_PropertyValue2"
                 },
@@ -1397,24 +1198,14 @@ const compositeAbilityObject = {
                     "value1": "MDF_PropertyValue2",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (0.48) || RETURN",
-                      "displayLines": "0.48",
-                      "constants": [],
-                      "variables": [
-                        0.48
-                      ]
+                      "displayLines": "0.48"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (0.48) || RETURN",
-                        "displayLines": "0.48",
-                        "constants": [],
-                        "variables": [
-                          0.48
-                        ]
+                        "displayLines": "0.48"
                       },
                       "variableName": "MDF_PropertyValue2"
                     }
@@ -1428,12 +1219,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateConverted</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                    "displayLines": "MDF_PropertyValue2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue2"
-                    ]
+                    "displayLines": "MDF_PropertyValue2"
                   }
                 }
               ]
@@ -1481,13 +1267,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentDefence) || Variables[1] (MDF_CurrentDefenceConvert) || SUB || RETURN",
-                    "displayLines": "(MDF_CurrentDefence - MDF_CurrentDefenceConvert)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentDefence",
-                      "MDF_CurrentDefenceConvert"
-                    ]
+                    "displayLines": "(MDF_CurrentDefence - MDF_CurrentDefenceConvert)"
                   },
                   "variableName": "MDF_CurrentDefence2"
                 },
@@ -1498,14 +1278,7 @@ const compositeAbilityObject = {
                     "value1": "MDF_CurrentDefence2",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (1600) || Constants[0] (100) || ADD || RETURN",
-                      "displayLines": "(1600 + 100)",
-                      "constants": [
-                        100
-                      ],
-                      "variables": [
-                        1600
-                      ]
+                      "displayLines": "(1600 + 100)"
                     }
                   },
                   "passed": [
@@ -1529,13 +1302,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-422728063\">Aventurine_Trace01_Sub</a>[<span class=\"descriptionNumberColor\">Leverage</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (1600) || SUB || RETURN",
-                              "displayLines": "(MDF_CurrentDefence2 - 1600)",
-                              "constants": [],
-                              "variables": [
-                                "MDF_CurrentDefence2",
-                                1600
-                              ]
+                              "displayLines": "(MDF_CurrentDefence2 - 1600)"
                             }
                           }
                         }
@@ -1550,13 +1317,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-422728063\">Aventurine_Trace01_Sub</a>[<span class=\"descriptionNumberColor\">Leverage</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (1600) || SUB || RETURN",
-                              "displayLines": "(MDF_CurrentDefence2 - 1600)",
-                              "constants": [],
-                              "variables": [
-                                "MDF_CurrentDefence2",
-                                1600
-                              ]
+                              "displayLines": "(MDF_CurrentDefence2 - 1600)"
                             }
                           }
                         }
@@ -1619,12 +1380,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (0.4) || RETURN",
-                    "displayLines": "0.4",
-                    "constants": [],
-                    "variables": [
-                      0.4
-                    ]
+                    "displayLines": "0.4"
                   },
                   "variableName": "MDF_DefencePercentage"
                 },
@@ -1636,12 +1392,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.4) || RETURN",
-                    "displayLines": "0.4",
-                    "constants": [],
-                    "variables": [
-                      0.4
-                    ]
+                    "displayLines": "0.4"
                   }
                 }
               ]
@@ -1703,14 +1454,7 @@ const compositeAbilityObject = {
                   "variableName": "MDF_Coin",
                   "min": 1,
                   "max": {
-                    "operator": "Variables[0] (7) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(7 + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      7
-                    ]
+                    "displayLines": "(7 + 1)"
                   }
                 },
                 {
@@ -1721,12 +1465,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-346814527\">Aventurine_Passive_ShieldEnergy</a>",
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_Coin) || RETURN",
-                    "displayLines": "MDF_Coin",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Coin"
-                    ]
+                    "displayLines": "MDF_Coin"
                   }
                 },
                 "Modifier Deletes Itself"
@@ -1836,12 +1575,7 @@ const compositeAbilityObject = {
                       "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
                       "variableName": "MDF_PropertyValue",
                       "value": {
-                        "operator": "Variables[0] (MDF_ResistanceRatio) || RETURN",
-                        "displayLines": "MDF_ResistanceRatio",
-                        "constants": [],
-                        "variables": [
-                          "MDF_ResistanceRatio"
-                        ]
+                        "displayLines": "MDF_ResistanceRatio"
                       }
                     },
                     {
@@ -1892,12 +1626,7 @@ const compositeAbilityObject = {
                           },
                           "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                           "value": {
-                            "operator": "Variables[0] (MDF_CritDmg1) || RETURN",
-                            "displayLines": "MDF_CritDmg1",
-                            "constants": [],
-                            "variables": [
-                              "MDF_CritDmg1"
-                            ]
+                            "displayLines": "MDF_CritDmg1"
                           }
                         },
                         {
@@ -1909,12 +1638,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-2007691702\">Aventurine_Eidolon1_Status</a>[<span class=\"descriptionNumberColor\">Prisoner's Dilemma</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (MDF_CritDmg1) || RETURN",
-                              "displayLines": "MDF_CritDmg1",
-                              "constants": [],
-                              "variables": [
-                                "MDF_CritDmg1"
-                              ]
+                              "displayLines": "MDF_CritDmg1"
                             }
                           }
                         }
@@ -1937,12 +1661,7 @@ const compositeAbilityObject = {
                           },
                           "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                           "value": {
-                            "operator": "Variables[0] (MDF_CritDmg1) || RETURN",
-                            "displayLines": "MDF_CritDmg1",
-                            "constants": [],
-                            "variables": [
-                              "MDF_CritDmg1"
-                            ]
+                            "displayLines": "MDF_CritDmg1"
                           }
                         },
                         {
@@ -1954,12 +1673,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-2007691702\">Aventurine_Eidolon1_Status</a>[<span class=\"descriptionNumberColor\">Prisoner's Dilemma</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (MDF_CritDmg1) || RETURN",
-                              "displayLines": "MDF_CritDmg1",
-                              "constants": [],
-                              "variables": [
-                                "MDF_CritDmg1"
-                              ]
+                              "displayLines": "MDF_CritDmg1"
                             }
                           }
                         }
@@ -1997,12 +1711,7 @@ const compositeAbilityObject = {
                           "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
                           "variableName": "MDF_PropertyValue",
                           "value": {
-                            "operator": "Variables[0] (MDF_ResistanceRatio) || RETURN",
-                            "displayLines": "MDF_ResistanceRatio",
-                            "constants": [],
-                            "variables": [
-                              "MDF_ResistanceRatio"
-                            ]
+                            "displayLines": "MDF_ResistanceRatio"
                           }
                         },
                         {
@@ -2072,12 +1781,7 @@ const compositeAbilityObject = {
                               "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
                               "variableName": "MDF_PropertyValue",
                               "value": {
-                                "operator": "Variables[0] (MDF_ResistanceRatio) || RETURN",
-                                "displayLines": "MDF_ResistanceRatio",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_ResistanceRatio"
-                                ]
+                                "displayLines": "MDF_ResistanceRatio"
                               }
                             },
                             {
@@ -2133,12 +1837,7 @@ const compositeAbilityObject = {
                               "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
                               "variableName": "MDF_PropertyValue",
                               "value": {
-                                "operator": "Variables[0] (MDF_ResistanceRatio) || RETURN",
-                                "displayLines": "MDF_ResistanceRatio",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_ResistanceRatio"
-                                ]
+                                "displayLines": "MDF_ResistanceRatio"
                               }
                             },
                             {
@@ -2199,12 +1898,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MDF_Layer) || RETURN",
-                        "displayLines": "MDF_Layer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Layer"
-                        ]
+                        "displayLines": "MDF_Layer"
                       },
                       "maximum": 7,
                       "assignState": "True",
@@ -2242,12 +1936,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MDF_Layer) || RETURN",
-                        "displayLines": "MDF_Layer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Layer"
-                        ]
+                        "displayLines": "MDF_Layer"
                       },
                       "maximum": 7,
                       "assignState": "True",
@@ -2521,12 +2210,7 @@ const compositeAbilityObject = {
                             "value1": "MDF_InsertAttackCount",
                             "compareType": "<",
                             "value2": {
-                              "operator": "Variables[0] (3) || RETURN",
-                              "displayLines": "3",
-                              "constants": [],
-                              "variables": [
-                                3
-                              ]
+                              "displayLines": "3"
                             }
                           }
                         ]
@@ -2600,14 +2284,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1431725730\">Aventurine_Passive_AddEnergyMark</a>",
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (MDF_BlackJackEnergy) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(MDF_BlackJackEnergy + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "MDF_BlackJackEnergy"
-                            ]
+                            "displayLines": "(MDF_BlackJackEnergy + 1)"
                           }
                         }
                       ],
@@ -2674,14 +2351,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_InsertAttackCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_InsertAttackCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_InsertAttackCount"
-                        ]
+                        "displayLines": "(MDF_InsertAttackCount + 1)"
                       },
                       "variableName": "MDF_InsertAttackCount"
                     },
@@ -2694,13 +2364,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1024856711\">Aventurine_Trace03_Status</a>[<span class=\"descriptionNumberColor\">Bingo!</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_InsertLeftValue) || Variables[1] (MDF_InsertAttackCount) || SUB || RETURN",
-                          "displayLines": "(MDF_InsertLeftValue - MDF_InsertAttackCount)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_InsertLeftValue",
-                            "MDF_InsertAttackCount"
-                          ]
+                          "displayLines": "(MDF_InsertLeftValue - MDF_InsertAttackCount)"
                         }
                       }
                     },
@@ -2725,12 +2389,7 @@ const compositeAbilityObject = {
                         "value1": "MDF_InsertAttackCount",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (3) || RETURN",
-                          "displayLines": "3",
-                          "constants": [],
-                          "variables": [
-                            3
-                          ]
+                          "displayLines": "3"
                         }
                       }
                     ]
@@ -2781,12 +2440,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-346814527\">Aventurine_Passive_ShieldEnergy</a>",
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (MDF_Layer2) || RETURN",
-                        "displayLines": "MDF_Layer2",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Layer2"
-                        ]
+                        "displayLines": "MDF_Layer2"
                       }
                     },
                     {
@@ -2831,13 +2485,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1024856711\">Aventurine_Trace03_Status</a>[<span class=\"descriptionNumberColor\">Bingo!</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_InsertLeftValue) || Variables[1] (MDF_InsertAttackCount) || SUB || RETURN",
-                          "displayLines": "(MDF_InsertLeftValue - MDF_InsertAttackCount)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_InsertLeftValue",
-                            "MDF_InsertAttackCount"
-                          ]
+                          "displayLines": "(MDF_InsertLeftValue - MDF_InsertAttackCount)"
                         }
                       }
                     }
@@ -2868,12 +2516,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "variableName": "MDF_InsertAttackLimit"
                 },
@@ -2886,12 +2529,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"890966085\">Aventurine_Passive_OnAfterBeingAttacked</a>",
                   "valuePerStack": {
                     "MDF_BlackJackEnergy": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     }
                   }
                 },
@@ -2937,12 +2575,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"890966085\">Aventurine_Passive_OnAfterBeingAttacked</a>",
                       "valuePerStack": {
                         "MDF_BlackJackEnergy": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         }
                       }
                     }
@@ -2993,42 +2626,17 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
                       "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "valuePerStack": {
                         "MDF_InitShieldValue": {
-                          "operator": "Variables[0] (1) || Variables[1] (MDF_CurrentDefence2) || Variables[2] (0.24) || MUL || Variables[3] (320) || ADD || MUL || RETURN",
-                          "displayLines": "(1 * ((MDF_CurrentDefence2 * 0.24) + 320))",
-                          "constants": [],
-                          "variables": [
-                            1,
-                            "MDF_CurrentDefence2",
-                            0.24,
-                            320
-                          ]
+                          "displayLines": "(1 * ((MDF_CurrentDefence2 * 0.24) + 320))"
                         },
                         "MDF_MaxShieldRatio": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         },
                         "MDF_ForceShield": {
-                          "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.24) || MUL || Variables[2] (320) || ADD || RETURN",
-                          "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentDefence2",
-                            0.24,
-                            320
-                          ]
+                          "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)"
                         }
                       }
                     },
@@ -3109,28 +2717,13 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"1566932811\">Aventurine_Ability02_ShieldEffect</a>",
                               "valuePerStack": {
                                 "MDF_ResistanceRatio": {
-                                  "operator": "Variables[0] (0.5) || RETURN",
-                                  "displayLines": "0.5",
-                                  "constants": [],
-                                  "variables": [
-                                    0.5
-                                  ]
+                                  "displayLines": "0.5"
                                 },
                                 "MDF_TeammateCount": {
-                                  "operator": "Variables[0] (MDF_TeammateCount1) || RETURN",
-                                  "displayLines": "MDF_TeammateCount1",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_TeammateCount1"
-                                  ]
+                                  "displayLines": "MDF_TeammateCount1"
                                 },
                                 "MDF_CritDmg1": {
-                                  "operator": "Variables[0] (0.2) || RETURN",
-                                  "displayLines": "0.2",
-                                  "constants": [],
-                                  "variables": [
-                                    0.2
-                                  ]
+                                  "displayLines": "0.2"
                                 }
                               }
                             }
@@ -3191,21 +2784,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-314126453\">Aventurine_Maze_Defence</a>[<span class=\"descriptionNumberColor\">The Red or the Black</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.36) || RETURN",
-                      "displayLines": "0.36",
-                      "constants": [],
-                      "variables": [
-                        0.36
-                      ]
+                      "displayLines": "0.36"
                     }
                   }
                 },
@@ -3252,21 +2835,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-314126453\">Aventurine_Maze_Defence</a>[<span class=\"descriptionNumberColor\">The Red or the Black</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.24) || RETURN",
-                      "displayLines": "0.24",
-                      "constants": [],
-                      "variables": [
-                        0.24
-                      ]
+                      "displayLines": "0.24"
                     }
                   }
                 },
@@ -3479,14 +3052,7 @@ const compositeAbilityObject = {
             "value1": "_no_ssr_times",
             "compareType": ">=",
             "value2": {
-              "operator": "Variables[0] (UNKNOWN_PITY_OBJECT) || Constants[0] (1) || SUB || RETURN",
-              "displayLines": "(UNKNOWN_PITY_OBJECT - 1)",
-              "constants": [
-                1
-              ],
-              "variables": [
-                "UNKNOWN_PITY_OBJECT"
-              ]
+              "displayLines": "(UNKNOWN_PITY_OBJECT - 1)"
             },
             "contextScope": "ContextCaster"
           },
@@ -3512,14 +3078,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (UNKNOWN_ODDS_1) || Variables[1] (UNKNOWN_ODDS_2) || ADD || Variables[2] (UNKNOWN_ODDS_3) || ADD || RETURN",
-            "displayLines": "((UNKNOWN_ODDS_1 + UNKNOWN_ODDS_2) + UNKNOWN_ODDS_3)",
-            "constants": [],
-            "variables": [
-              "UNKNOWN_ODDS_1",
-              "UNKNOWN_ODDS_2",
-              "UNKNOWN_ODDS_3"
-            ]
+            "displayLines": "((UNKNOWN_ODDS_1 + UNKNOWN_ODDS_2) + UNKNOWN_ODDS_3)"
           },
           "variableName": "_sum_probability"
         },
@@ -3530,15 +3089,7 @@ const compositeAbilityObject = {
             "value1": "_random",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] (UNKNOWN_ODDS_1) || Variables[1] (_sum_probability) || DIV || Constants[0] (100) || MUL || RETURN",
-              "displayLines": "((UNKNOWN_ODDS_1 / _sum_probability) * 100)",
-              "constants": [
-                100
-              ],
-              "variables": [
-                "UNKNOWN_ODDS_1",
-                "_sum_probability"
-              ]
+              "displayLines": "((UNKNOWN_ODDS_1 / _sum_probability) * 100)"
             },
             "contextScope": "ContextAbility"
           },
@@ -3557,15 +3108,7 @@ const compositeAbilityObject = {
                 "value1": "_random",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Constants[0] (100) || Variables[0] (UNKNOWN_ODDS_3) || Variables[1] (_sum_probability) || DIV || Constants[0] (100) || MUL || SUB || RETURN",
-                  "displayLines": "(100 - ((UNKNOWN_ODDS_3 / _sum_probability) * 100))",
-                  "constants": [
-                    100
-                  ],
-                  "variables": [
-                    "UNKNOWN_ODDS_3",
-                    "_sum_probability"
-                  ]
+                  "displayLines": "(100 - ((UNKNOWN_ODDS_3 / _sum_probability) * 100))"
                 },
                 "contextScope": "ContextAbility"
               },
@@ -3637,14 +3180,7 @@ const compositeAbilityObject = {
               "name": "Define Custom Variable",
               "scope": "ContextCaster",
               "value": {
-                "operator": "Variables[0] (_no_ssr_times) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(_no_ssr_times + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_no_ssr_times"
-                ]
+                "displayLines": "(_no_ssr_times + 1)"
               },
               "variableName": "_no_ssr_times"
             }
@@ -3918,23 +3454,13 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"674084232\">Aventurine_Passive_AddDefence</a>[<span class=\"descriptionNumberColor\">Unexpected Hanging Paradox</span>]",
               "duration": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               }
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "variableName": "MDF_AttackCount"
             }
@@ -3980,14 +3506,7 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-346814527\">Aventurine_Passive_ShieldEnergy</a>",
           "addStacksPerTrigger": {
-            "operator": "Variables[0] (MDF_Layer2) || Constants[0] (7) || SUB || RETURN",
-            "displayLines": "(MDF_Layer2 - 7)",
-            "constants": [
-              7
-            ],
-            "variables": [
-              "MDF_Layer2"
-            ]
+            "displayLines": "(MDF_Layer2 - 7)"
           }
         },
         {
@@ -3998,28 +3517,14 @@ const compositeAbilityObject = {
           },
           "variableName": "MDF_AttackGap",
           "resetValue": {
-            "operator": "Constants[0] (1) || Variables[0] (7) || Variables[1] (MDF_AttackCount) || ADD || DIV || RETURN",
-            "displayLines": "(1 / (7 + MDF_AttackCount))",
-            "constants": [
-              1
-            ],
-            "variables": [
-              7,
-              "MDF_AttackCount"
-            ]
+            "displayLines": "(1 / (7 + MDF_AttackCount))"
           },
           "scope": "ContextCaster"
         },
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (7) || Variables[1] (MDF_AttackCount) || ADD || RETURN",
-            "displayLines": "(7 + MDF_AttackCount)",
-            "constants": [],
-            "variables": [
-              7,
-              "MDF_AttackCount"
-            ]
+            "displayLines": "(7 + MDF_AttackCount)"
           },
           "execute": [
             {
@@ -4040,21 +3545,11 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Imaginary",
                     "Damage": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     },
                     "dmgFormula": "DEF Scaling",
                     "Toughness": {
-                      "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                      "displayLines": "ST Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "ST Toughness Value"
-                      ]
+                      "displayLines": "ST Toughness Value"
                     },
                     "Tags": null,
                     "attackType": "Follow-up",
@@ -4194,21 +3689,11 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-839248266\">Aventurine_Ability03_CritDmgIncrease</a>[<span class=\"descriptionNumberColor\">Unnerved</span>]",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.15) || RETURN",
-              "displayLines": "0.15",
-              "constants": [],
-              "variables": [
-                0.15
-              ]
+              "displayLines": "0.15"
             }
           }
         },
@@ -4221,21 +3706,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] (2.7) || RETURN",
-              "displayLines": "2.7",
-              "constants": [],
-              "variables": [
-                2.7
-              ]
+              "displayLines": "2.7"
             },
             "dmgFormula": "DEF Scaling",
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Ultimate",
@@ -4271,42 +3746,17 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "valuePerStack": {
                 "MDF_InitShieldValue": {
-                  "operator": "Variables[0] (1) || Variables[1] (MDF_CurrentDefence2) || Variables[2] (0.24) || MUL || Variables[3] (320) || ADD || MUL || RETURN",
-                  "displayLines": "(1 * ((MDF_CurrentDefence2 * 0.24) + 320))",
-                  "constants": [],
-                  "variables": [
-                    1,
-                    "MDF_CurrentDefence2",
-                    0.24,
-                    320
-                  ]
+                  "displayLines": "(1 * ((MDF_CurrentDefence2 * 0.24) + 320))"
                 },
                 "MDF_MaxShieldRatio": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
+                  "displayLines": "2"
                 },
                 "MDF_ForceShield": {
-                  "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.24) || MUL || Variables[2] (320) || ADD || RETURN",
-                  "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_CurrentDefence2",
-                    0.24,
-                    320
-                  ]
+                  "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)"
                 }
               }
             },
@@ -4387,28 +3837,13 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1566932811\">Aventurine_Ability02_ShieldEffect</a>",
                       "valuePerStack": {
                         "MDF_ResistanceRatio": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         },
                         "MDF_TeammateCount": {
-                          "operator": "Variables[0] (MDF_TeammateCount1) || RETURN",
-                          "displayLines": "MDF_TeammateCount1",
-                          "constants": [],
-                          "variables": [
-                            "MDF_TeammateCount1"
-                          ]
+                          "displayLines": "MDF_TeammateCount1"
                         },
                         "MDF_CritDmg1": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     }
@@ -4607,41 +4042,17 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "valuePerStack": {
             "MDF_InitShieldValue": {
-              "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.24) || MUL || Variables[2] (320) || ADD || RETURN",
-              "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)",
-              "constants": [],
-              "variables": [
-                "MDF_CurrentDefence2",
-                0.24,
-                320
-              ]
+              "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)"
             },
             "MDF_MaxShieldRatio": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             },
             "MDF_ForceShield": {
-              "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.24) || MUL || Variables[2] (320) || ADD || RETURN",
-              "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)",
-              "constants": [],
-              "variables": [
-                "MDF_CurrentDefence2",
-                0.24,
-                320
-              ]
+              "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)"
             }
           }
         },
@@ -4707,28 +4118,13 @@ const compositeAbilityObject = {
               "valuePerStack": {
                 "MDF_CanTriggerShieldEffect": 1,
                 "MDF_ResistanceRatio": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
+                  "displayLines": "0.5"
                 },
                 "MDF_TeammateCount": {
-                  "operator": "Variables[0] (MDF_TeammateCount1) || RETURN",
-                  "displayLines": "MDF_TeammateCount1",
-                  "constants": [],
-                  "variables": [
-                    "MDF_TeammateCount1"
-                  ]
+                  "displayLines": "MDF_TeammateCount1"
                 },
                 "MDF_CritDmg1": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             }
@@ -4747,12 +4143,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Constants[0] (0) || RETURN",
-            "displayLines": "0",
-            "constants": [
-              0
-            ],
-            "variables": []
+            "displayLines": "0"
           },
           "variableName": "MDF_TeammateCount1"
         },
@@ -4819,21 +4210,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1438365222\">Aventurine_Eidolon2_ResistanceDown</a>[<span class=\"descriptionNumberColor\">Bounded Rationality</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.12) || RETURN",
-                  "displayLines": "0.12",
-                  "constants": [],
-                  "variables": [
-                    0.12
-                  ]
+                  "displayLines": "0.12"
                 }
               }
             }
@@ -4849,21 +4230,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "dmgFormula": "DEF Scaling",
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -4945,21 +4316,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-314126453\">Aventurine_Maze_Defence</a>[<span class=\"descriptionNumberColor\">The Red or the Black</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.6) || RETURN",
-                      "displayLines": "0.6",
-                      "constants": [],
-                      "variables": [
-                        0.6
-                      ]
+                      "displayLines": "0.6"
                     }
                   }
                 },
@@ -5036,12 +4397,7 @@ const compositeAbilityObject = {
                       },
                       "variableName": "AventurineShieldValue",
                       "resetValue": {
-                        "operator": "Variables[0] (tmp_currentshield) || RETURN",
-                        "displayLines": "tmp_currentshield",
-                        "constants": [],
-                        "variables": [
-                          "tmp_currentshield"
-                        ]
+                        "displayLines": "tmp_currentshield"
                       },
                       "scope": "TargetEntity"
                     }
@@ -5055,12 +4411,7 @@ const compositeAbilityObject = {
                       },
                       "variableName": "AventurineShieldValue",
                       "resetValue": {
-                        "operator": "Constants[0] (0) || RETURN",
-                        "displayLines": "0",
-                        "constants": [
-                          0
-                        ],
-                        "variables": []
+                        "displayLines": "0"
                       },
                       "scope": "TargetEntity"
                     }

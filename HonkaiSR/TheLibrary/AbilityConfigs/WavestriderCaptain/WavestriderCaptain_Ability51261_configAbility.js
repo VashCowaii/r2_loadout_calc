@@ -34,12 +34,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AttackAddRatio) || RETURN",
-                "displayLines": "MDF_AttackAddRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackAddRatio"
-                ]
+                "displayLines": "MDF_AttackAddRatio"
               }
             }
           ]
@@ -83,12 +78,7 @@ const configAbility = {
                     "value1": "_Layer",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     }
                   }
                 ]
@@ -102,21 +92,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-922033468\">Relic_126_Sub2</a>[<span class=\"descriptionNumberColor\">Wavestrider Captain</span>]",
                   "duration": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "valuePerStack": {
                     "MDF_AttackAddRatio": {
-                      "operator": "Variables[0] (0.48) || RETURN",
-                      "displayLines": "0.48",
-                      "constants": [],
-                      "variables": [
-                        0.48
-                      ]
+                      "displayLines": "0.48"
                     }
                   }
                 },
@@ -196,29 +176,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1631804574\">Relic_126_Sub</a>[<span class=\"descriptionNumberColor\">Help</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "_MaxLayer": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     },
                     "MDF_AttackAddRatio": {
-                      "operator": "Variables[0] (0.48) || RETURN",
-                      "displayLines": "0.48",
-                      "constants": [],
-                      "variables": [
-                        0.48
-                      ]
+                      "displayLines": "0.48"
                     }
                   },
                   "addStacksPerTrigger": 1

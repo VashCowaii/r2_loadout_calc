@@ -92,14 +92,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(2 - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "(2 - 1)"
                       },
                       "immediateEffect": true
                     },
@@ -109,14 +102,7 @@ const configAbility = {
                       "priorState": "CoolDown",
                       "bar#": 1,
                       "cooldown": {
-                        "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(2 - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "(2 - 1)"
                       }
                     }
                   ],
@@ -129,12 +115,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "immediateEffect": true
                     },
@@ -144,12 +125,7 @@ const configAbility = {
                       "priorState": "CoolDown",
                       "bar#": 1,
                       "cooldown": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       }
                     }
                   ]
@@ -195,14 +171,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(2 - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "(2 - 1)"
                       }
                     },
                     {
@@ -211,14 +180,7 @@ const configAbility = {
                       "priorState": "CoolDown",
                       "bar#": 1,
                       "cooldown": {
-                        "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(2 - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "(2 - 1)"
                       }
                     }
                   ],
@@ -231,12 +193,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       }
                     },
                     {
@@ -245,12 +202,7 @@ const configAbility = {
                       "priorState": "CoolDown",
                       "bar#": 1,
                       "cooldown": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       }
                     }
                   ]
@@ -323,12 +275,7 @@ const configAbility = {
                   "priorState": "CoolDown",
                   "bar#": 1,
                   "cooldown": {
-                    "operator": "Variables[0] (DanHeng_00_Passive_BeginTargetEnhance_CD) || RETURN",
-                    "displayLines": "DanHeng_00_Passive_BeginTargetEnhance_CD",
-                    "constants": [],
-                    "variables": [
-                      "DanHeng_00_Passive_BeginTargetEnhance_CD"
-                    ]
+                    "displayLines": "DanHeng_00_Passive_BeginTargetEnhance_CD"
                   }
                 }
               ]

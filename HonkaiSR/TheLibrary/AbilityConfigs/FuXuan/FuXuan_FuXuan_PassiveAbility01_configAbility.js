@@ -50,12 +50,7 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (GDF_ExChangeHPCount) || RETURN",
-        "displayLines": "GDF_ExChangeHPCount",
-        "constants": [],
-        "variables": [
-          "GDF_ExChangeHPCount"
-        ]
+        "displayLines": "GDF_ExChangeHPCount"
       },
       "maximum": 2,
       "assignState": "True",
@@ -113,12 +108,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1537044450\">FuXuan_DamageReduce</a>[<span class=\"descriptionNumberColor\">Misfortune Avoidance</span>]",
               "valuePerStack": {
                 "MDF_DamageResistanceRatio": {
-                  "operator": "Variables[0] (0.18) || RETURN",
-                  "displayLines": "0.18",
-                  "constants": [],
-                  "variables": [
-                    0.18
-                  ]
+                  "displayLines": "0.18"
                 }
               }
             }
@@ -147,12 +137,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1537044450\">FuXuan_DamageReduce</a>[<span class=\"descriptionNumberColor\">Misfortune Avoidance</span>]",
                   "valuePerStack": {
                     "MDF_DamageResistanceRatio": {
-                      "operator": "Variables[0] (0.18) || RETURN",
-                      "displayLines": "0.18",
-                      "constants": [],
-                      "variables": [
-                        0.18
-                      ]
+                      "displayLines": "0.18"
                     }
                   }
                 }

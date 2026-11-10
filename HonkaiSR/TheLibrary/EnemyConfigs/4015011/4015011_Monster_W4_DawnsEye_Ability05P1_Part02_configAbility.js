@@ -46,13 +46,7 @@ const configAbility = {
       "name": "Define Custom Variable",
       "scope": "TargetEntity",
       "value": {
-        "operator": "Variables[0] ({[Skill05P1[0]]}) || Variables[1] (Skill04P1SunnyHeat) || MUL || RETURN",
-        "displayLines": "({[Skill05P1[0]]} * Skill04P1SunnyHeat)",
-        "constants": [],
-        "variables": [
-          "{[Skill05P1[0]]}",
-          "Skill04P1SunnyHeat"
-        ]
+        "displayLines": "({[Skill05P1[0]]} * Skill04P1SunnyHeat)"
       },
       "variableName": "Skill05P1TotalDamage"
     },
@@ -75,13 +69,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (Skill05P1TotalDamage) || Variables[1] (CurrentLightTeamCount) || DIV || RETURN",
-          "displayLines": "(Skill05P1TotalDamage / CurrentLightTeamCount)",
-          "constants": [],
-          "variables": [
-            "Skill05P1TotalDamage",
-            "CurrentLightTeamCount"
-          ]
+          "displayLines": "(Skill05P1TotalDamage / CurrentLightTeamCount)"
         },
         "HitSplit": 0.1,
         "Toughness": null,
@@ -99,13 +87,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (Skill05P1TotalDamage) || Variables[1] (CurrentLightTeamCount) || DIV || RETURN",
-          "displayLines": "(Skill05P1TotalDamage / CurrentLightTeamCount)",
-          "constants": [],
-          "variables": [
-            "Skill05P1TotalDamage",
-            "CurrentLightTeamCount"
-          ]
+          "displayLines": "(Skill05P1TotalDamage / CurrentLightTeamCount)"
         },
         "HitSplit": 0.1,
         "Toughness": null,
@@ -123,13 +105,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (Skill05P1TotalDamage) || Variables[1] (CurrentLightTeamCount) || DIV || RETURN",
-          "displayLines": "(Skill05P1TotalDamage / CurrentLightTeamCount)",
-          "constants": [],
-          "variables": [
-            "Skill05P1TotalDamage",
-            "CurrentLightTeamCount"
-          ]
+          "displayLines": "(Skill05P1TotalDamage / CurrentLightTeamCount)"
         },
         "HitSplit": 0.1,
         "Toughness": null,
@@ -147,13 +123,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (Skill05P1TotalDamage) || Variables[1] (CurrentLightTeamCount) || DIV || RETURN",
-          "displayLines": "(Skill05P1TotalDamage / CurrentLightTeamCount)",
-          "constants": [],
-          "variables": [
-            "Skill05P1TotalDamage",
-            "CurrentLightTeamCount"
-          ]
+          "displayLines": "(Skill05P1TotalDamage / CurrentLightTeamCount)"
         },
         "HitSplit": 0.1,
         "Toughness": null,
@@ -171,13 +141,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (Skill05P1TotalDamage) || Variables[1] (CurrentLightTeamCount) || DIV || RETURN",
-          "displayLines": "(Skill05P1TotalDamage / CurrentLightTeamCount)",
-          "constants": [],
-          "variables": [
-            "Skill05P1TotalDamage",
-            "CurrentLightTeamCount"
-          ]
+          "displayLines": "(Skill05P1TotalDamage / CurrentLightTeamCount)"
         },
         "HitSplit": 0.1,
         "Toughness": null,
@@ -195,13 +159,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (Skill05P1TotalDamage) || Variables[1] (CurrentLightTeamCount) || DIV || RETURN",
-          "displayLines": "(Skill05P1TotalDamage / CurrentLightTeamCount)",
-          "constants": [],
-          "variables": [
-            "Skill05P1TotalDamage",
-            "CurrentLightTeamCount"
-          ]
+          "displayLines": "(Skill05P1TotalDamage / CurrentLightTeamCount)"
         },
         "HitSplit": 0.1,
         "Toughness": null,
@@ -219,13 +177,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (Skill05P1TotalDamage) || Variables[1] (CurrentLightTeamCount) || DIV || RETURN",
-          "displayLines": "(Skill05P1TotalDamage / CurrentLightTeamCount)",
-          "constants": [],
-          "variables": [
-            "Skill05P1TotalDamage",
-            "CurrentLightTeamCount"
-          ]
+          "displayLines": "(Skill05P1TotalDamage / CurrentLightTeamCount)"
         },
         "HitSplit": 0.4,
         "Toughness": null,
@@ -242,12 +194,7 @@ const configAbility = {
       },
       "variableName": "Sunny_Temperature",
       "value": {
-        "operator": "Variables[0] (Skill04P1SunnyHeat) || RETURN",
-        "displayLines": "Skill04P1SunnyHeat",
-        "constants": [],
-        "variables": [
-          "Skill04P1SunnyHeat"
-        ]
+        "displayLines": "Skill04P1SunnyHeat"
       },
       "max": 999
     },
@@ -290,12 +237,7 @@ const configAbility = {
       "conditions": {
         "name": "Enemy ID",
         "ID": {
-          "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
-          "displayLines": "PartEntity1_MonsterID",
-          "constants": [],
-          "variables": [
-            "PartEntity1_MonsterID"
-          ]
+          "displayLines": "PartEntity1_MonsterID"
         },
         "target": {
           "name": "Target Name",
@@ -358,12 +300,7 @@ const configAbility = {
       "conditions": {
         "name": "Enemy ID",
         "ID": {
-          "operator": "Variables[0] (PartEntity3_MonsterID) || RETURN",
-          "displayLines": "PartEntity3_MonsterID",
-          "constants": [],
-          "variables": [
-            "PartEntity3_MonsterID"
-          ]
+          "displayLines": "PartEntity3_MonsterID"
         },
         "target": {
           "name": "Target Name",

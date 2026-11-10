@@ -86,12 +86,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                    "displayLines": "MDF_AllDamageTypeAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageTypeAddedRatio"
-                    ]
+                    "displayLines": "MDF_AllDamageTypeAddedRatio"
                   }
                 },
                 {
@@ -102,12 +97,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                    "displayLines": "MDF_AllDamageReduce",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageReduce"
-                    ]
+                    "displayLines": "MDF_AllDamageReduce"
                   }
                 }
               ]
@@ -409,12 +399,7 @@ const compositeAbilityObject = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": {
-                "operator": "Variables[0] (MDF_ThresholdValue) || RETURN",
-                "displayLines": "MDF_ThresholdValue",
-                "constants": [],
-                "variables": [
-                  "MDF_ThresholdValue"
-                ]
+                "displayLines": "MDF_ThresholdValue"
               },
               "leavingRange": [
                 {
@@ -475,12 +460,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": {
-                "operator": "Variables[0] (MDF_ThresholdValue) || RETURN",
-                "displayLines": "MDF_ThresholdValue",
-                "constants": [],
-                "variables": [
-                  "MDF_ThresholdValue"
-                ]
+                "displayLines": "MDF_ThresholdValue"
               },
               "maxValue": 9999,
               "onChange": [
@@ -571,12 +551,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"56977717\">Enemy_W5_JK_ElationPointListener</a>",
           "valuePerStack": {
             "MDF_ThresholdValue": {
-              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-              "displayLines": "{[SkillP01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[2]]}"
-              ]
+              "displayLines": "{[SkillP01[2]]}"
             }
           },
           "casterAssign": "TargetSelf"
@@ -590,28 +565,13 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"256670650\">Enemy_W5_JK_Power</a>[<span class=\"descriptionNumberColor\">Book-Smart</span>]",
           "valuePerStack": {
             "MDF_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
+              "displayLines": "{[SkillP01[0]]}"
             },
             "MDF_AllDamageReduce": {
-              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-              "displayLines": "{[SkillP01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[1]]}"
-              ]
+              "displayLines": "{[SkillP01[1]]}"
             },
             "MDF_ThresholdValue": {
-              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-              "displayLines": "{[SkillP01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[2]]}"
-              ]
+              "displayLines": "{[SkillP01[2]]}"
             }
           }
         }
@@ -663,12 +623,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -686,12 +641,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -773,12 +723,7 @@ const compositeAbilityObject = {
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (PowerOutTargetNumber) || RETURN",
-            "displayLines": "PowerOutTargetNumber",
-            "constants": [],
-            "variables": [
-              "PowerOutTargetNumber"
-            ]
+            "displayLines": "PowerOutTargetNumber"
           },
           "caseEvents": [
             {

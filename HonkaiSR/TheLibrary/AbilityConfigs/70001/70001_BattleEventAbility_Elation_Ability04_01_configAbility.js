@@ -31,12 +31,7 @@ const configAbility = {
         "ElationTime_CustomTag"
       ],
       "forcedPunchline": {
-        "operator": "Variables[0] (ElationTime_OverrideElationPoint) || RETURN",
-        "displayLines": "ElationTime_OverrideElationPoint",
-        "constants": [],
-        "variables": [
-          "ElationTime_OverrideElationPoint"
-        ]
+        "displayLines": "ElationTime_OverrideElationPoint"
       },
       "sourceOverride": "Add Target by Current Extra-Turn Source",
       "target": {
@@ -54,12 +49,7 @@ const configAbility = {
       "name": "Define Custom Variable",
       "scope": "ContextCaster",
       "value": {
-        "operator": "Variables[0] (ElationTime_OverrideElationPoint) || RETURN",
-        "displayLines": "ElationTime_OverrideElationPoint",
-        "constants": [],
-        "variables": [
-          "ElationTime_OverrideElationPoint"
-        ]
+        "displayLines": "ElationTime_OverrideElationPoint"
       },
       "variableName": "ElationTime_OverrideElationPointForEcho"
     },
@@ -79,12 +69,7 @@ const configAbility = {
       "name": "Define Custom Variable",
       "scope": "ContextCaster",
       "value": {
-        "operator": "Variables[0] (ElationTime_IsNoConsume) || RETURN",
-        "displayLines": "ElationTime_IsNoConsume",
-        "constants": [],
-        "variables": [
-          "ElationTime_IsNoConsume"
-        ]
+        "displayLines": "ElationTime_IsNoConsume"
       },
       "variableName": "ElationTime_IsNoConsume"
     },

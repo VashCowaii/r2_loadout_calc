@@ -25,12 +25,7 @@ const configAbility = {
       "functionName": "<a class=\"gTempYellow\" id=\"1497424763\">function_Evernight_TryCreateServant</a>",
       "variables": {
         "DV_Partner_Count": {
-          "operator": "Variables[0] (_Partner_Count) || RETURN",
-          "displayLines": "_Partner_Count",
-          "constants": [],
-          "variables": [
-            "_Partner_Count"
-          ]
+          "displayLines": "_Partner_Count"
         },
         "DV_Delay": -1,
         "DV_HP_Ratio": 0
@@ -54,20 +49,10 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] (0.6) || RETURN",
-          "displayLines": "0.6",
-          "constants": [],
-          "variables": [
-            0.6
-          ]
+          "displayLines": "0.6"
         },
         "MDF_PropertyValue_2": {
-          "operator": "Variables[0] (0.3) || RETURN",
-          "displayLines": "0.3",
-          "constants": [],
-          "variables": [
-            0.3
-          ]
+          "displayLines": "0.3"
         }
       }
     },
@@ -91,12 +76,7 @@ const configAbility = {
           "modifierName": "<a class=\"gModGreen\" id=\"339150756\">Evernight_UltraMode_Energy</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
           "function": "Add",
           "value": {
-            "operator": "Variables[0] (S03_Duration) || RETURN",
-            "displayLines": "S03_Duration",
-            "constants": [],
-            "variables": [
-              "S03_Duration"
-            ]
+            "displayLines": "S03_Duration"
           }
         }
       ],
@@ -109,12 +89,7 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"339150756\">Evernight_UltraMode_Energy</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
           "counter": {
-            "operator": "Variables[0] (S03_Duration) || RETURN",
-            "displayLines": "S03_Duration",
-            "constants": [],
-            "variables": [
-              "S03_Duration"
-            ]
+            "displayLines": "S03_Duration"
           }
         }
       ]
@@ -127,12 +102,7 @@ const configAbility = {
       },
       "scope": "TargetEntity",
       "value": {
-        "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-        "displayLines": "AOE Toughness Value",
-        "constants": [],
-        "variables": [
-          "AOE Toughness Value"
-        ]
+        "displayLines": "AOE Toughness Value"
       },
       "variableName": "_Skill03_Stance"
     },
@@ -144,12 +114,7 @@ const configAbility = {
       },
       "scope": "TargetEntity",
       "value": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       },
       "variableName": "_Skill03_P1_DamagePercentage"
     },

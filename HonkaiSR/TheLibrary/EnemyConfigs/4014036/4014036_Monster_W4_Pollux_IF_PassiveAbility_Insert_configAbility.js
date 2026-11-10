@@ -36,12 +36,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1112261788\">Enemy_W4_PolluxPart_IF_Reflex</a>[<span class=\"descriptionNumberColor\">Corrosive Retaliation</span>]",
       "valuePerStack": {
         "MDF_ReflexDamageValue": {
-          "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
-          "displayLines": "{[SkillP04[0]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP04[0]]}"
-          ]
+          "displayLines": "{[SkillP04[0]]}"
         }
       }
     },
@@ -122,12 +117,7 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (_EnergyValue) || RETURN",
-        "displayLines": "_EnergyValue",
-        "constants": [],
-        "variables": [
-          "_EnergyValue"
-        ]
+        "displayLines": "_EnergyValue"
       },
       "entityClass": "Enemy",
       "maximum": 1,
@@ -152,12 +142,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] ({[SkillP03[4]]}) || RETURN",
-          "displayLines": "{[SkillP03[4]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP03[4]]}"
-          ]
+          "displayLines": "{[SkillP03[4]]}"
         }
       }
     },

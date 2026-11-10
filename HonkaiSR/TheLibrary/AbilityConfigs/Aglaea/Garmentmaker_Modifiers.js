@@ -58,12 +58,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-394991116\">Memosprite_AglaeaServant_AddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (_MaxLayer2) || RETURN",
-                "displayLines": "_MaxLayer2",
-                "constants": [],
-                "variables": [
-                  "_MaxLayer2"
-                ]
+                "displayLines": "_MaxLayer2"
               },
               "addStacksPerTrigger": 1
             },
@@ -86,12 +81,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1374425540\">Memosprite_AglaeaServant_SummonerAddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (_MaxLayer2) || RETURN",
-                    "displayLines": "_MaxLayer2",
-                    "constants": [],
-                    "variables": [
-                      "_MaxLayer2"
-                    ]
+                    "displayLines": "_MaxLayer2"
                   },
                   "addStacksPerTrigger": 1,
                   "casterAssign": "TargetSelf"
@@ -183,12 +173,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (AGLAEA_OBJECT_UNUSED_7) || RETURN",
-                "displayLines": "AGLAEA_OBJECT_UNUSED_7",
-                "constants": [],
-                "variables": [
-                  "AGLAEA_OBJECT_UNUSED_7"
-                ]
+                "displayLines": "AGLAEA_OBJECT_UNUSED_7"
               },
               "variableName": "SkillTree_PointB1_P1_DamageTaken1"
             }
@@ -243,13 +228,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (BombDamagePercentage) || Variables[1] (_Layer) || MUL || RETURN",
-                      "displayLines": "(BombDamagePercentage * _Layer)",
-                      "constants": [],
-                      "variables": [
-                        "BombDamagePercentage",
-                        "_Layer"
-                      ]
+                      "displayLines": "(BombDamagePercentage * _Layer)"
                     },
                     "Toughness": null,
                     "instanceTag": "AglaeaBomb",
@@ -350,12 +329,7 @@ const configAbility = {
                 "target": "{{Caster's Summoner}}"
               },
               "maximum": {
-                "operator": "Variables[0] (_MaxLayer) || RETURN",
-                "displayLines": "_MaxLayer",
-                "constants": [],
-                "variables": [
-                  "_MaxLayer"
-                ]
+                "displayLines": "_MaxLayer"
               },
               "assignState": "False",
               "bar#": "Number"
@@ -388,12 +362,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (_Layer) || RETURN",
-                "displayLines": "_Layer",
-                "constants": [],
-                "variables": [
-                  "_Layer"
-                ]
+                "displayLines": "_Layer"
               },
               "displaySubType": "Fraction",
               "target": {
@@ -401,12 +370,7 @@ const configAbility = {
                 "target": "{{Caster's Summoner}}"
               },
               "maximum": {
-                "operator": "Variables[0] (_MaxLayer) || RETURN",
-                "displayLines": "_MaxLayer",
-                "constants": [],
-                "variables": [
-                  "_MaxLayer"
-                ]
+                "displayLines": "_MaxLayer"
               },
               "assignState": "True",
               "bar#": "Number"
@@ -414,13 +378,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_Layer) || Variables[1] (55) || MUL || RETURN",
-                "displayLines": "(_Layer * 55)",
-                "constants": [],
-                "variables": [
-                  "_Layer",
-                  55
-                ]
+                "displayLines": "(_Layer * 55)"
               },
               "variableName": "SpeedAddTotal"
             },
@@ -432,12 +390,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (SpeedAddTotal) || RETURN",
-                "displayLines": "SpeedAddTotal",
-                "constants": [],
-                "variables": [
-                  "SpeedAddTotal"
-                ]
+                "displayLines": "SpeedAddTotal"
               }
             }
           ]
@@ -476,22 +429,10 @@ const configAbility = {
                   },
                   "state": "Mask_AliveOrLimbo",
                   "selfSplit": {
-                    "operator": "Constants[0] (1) || Variables[0] (MDF_SplitPercentage) || SUB || RETURN",
-                    "displayLines": "(1 - MDF_SplitPercentage)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_SplitPercentage"
-                    ]
+                    "displayLines": "(1 - MDF_SplitPercentage)"
                   },
                   "targetSplit": {
-                    "operator": "Variables[0] (MDF_SplitPercentage) || RETURN",
-                    "displayLines": "MDF_SplitPercentage",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SplitPercentage"
-                    ]
+                    "displayLines": "MDF_SplitPercentage"
                   }
                 }
               ]

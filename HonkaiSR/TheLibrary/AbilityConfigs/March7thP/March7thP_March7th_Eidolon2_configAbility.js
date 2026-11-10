@@ -60,12 +60,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (MDF_ShieldValue) || RETURN",
-                "displayLines": "MDF_ShieldValue",
-                "constants": [],
-                "variables": [
-                  "MDF_ShieldValue"
-                ]
+                "displayLines": "MDF_ShieldValue"
               }
             }
           ]
@@ -127,23 +122,11 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"985818260\">March7th_Eidolon2_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                       "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "valuePerStack": {
                         "MDF_ShieldValue": {
-                          "operator": "Variables[0] (0.24) || Variables[1] (CasterDefence) || MUL || Variables[2] (320) || ADD || RETURN",
-                          "displayLines": "((0.24 * CasterDefence) + 320)",
-                          "constants": [],
-                          "variables": [
-                            0.24,
-                            "CasterDefence",
-                            320
-                          ]
+                          "displayLines": "((0.24 * CasterDefence) + 320)"
                         }
                       }
                     }

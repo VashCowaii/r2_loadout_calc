@@ -48,12 +48,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill12[1]]}) || RETURN",
-              "displayLines": "{[Skill12[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill12[1]]}"
-              ]
+              "displayLines": "{[Skill12[1]]}"
             },
             "HitSplit": 0.4,
             "Toughness": null,
@@ -73,12 +68,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill12[0]]}) || RETURN",
-              "displayLines": "{[Skill12[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill12[0]]}"
-              ]
+              "displayLines": "{[Skill12[0]]}"
             },
             "HitSplit": 0.4,
             "Toughness": null,
@@ -109,12 +99,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill12[1]]}) || RETURN",
-              "displayLines": "{[Skill12[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill12[1]]}"
-              ]
+              "displayLines": "{[Skill12[1]]}"
             },
             "HitSplit": 0.6,
             "Toughness": null,
@@ -134,12 +119,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill12[0]]}) || RETURN",
-              "displayLines": "{[Skill12[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill12[0]]}"
-              ]
+              "displayLines": "{[Skill12[0]]}"
             },
             "HitSplit": 0.6,
             "Toughness": null,
@@ -219,48 +199,21 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
           "stackLimit": {
-            "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-            "displayLines": "({[PassiveSkill01[0]]} + MDF_BraveLayer)",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[0]]}",
-              "MDF_BraveLayer"
-            ]
+            "displayLines": "({[PassiveSkill01[0]]} + MDF_BraveLayer)"
           },
           "valuePerStack": {
             "MDF_DamageResistance": {
-              "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[4]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[4]]}"
             },
             "MDF_CrackedEffect": {
-              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[1]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[1]]}"
             },
             "MDF_CrackedDamage": {
-              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[2]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[2]]}"
             }
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-            "displayLines": "({[PassiveSkill01[0]]} + MDF_BraveLayer)",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[0]]}",
-              "MDF_BraveLayer"
-            ]
+            "displayLines": "({[PassiveSkill01[0]]} + MDF_BraveLayer)"
           }
         }
       ]

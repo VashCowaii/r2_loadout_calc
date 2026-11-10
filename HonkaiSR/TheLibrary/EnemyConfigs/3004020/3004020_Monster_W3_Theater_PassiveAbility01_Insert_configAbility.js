@@ -135,28 +135,13 @@ const configAbility = {
           "eventID": 20025,
           "variables": {
             "BE_P1_BESpeed": {
-              "operator": "Variables[0] (P1_BaseSpeed) || RETURN",
-              "displayLines": "P1_BaseSpeed",
-              "constants": [],
-              "variables": [
-                "P1_BaseSpeed"
-              ]
+              "displayLines": "P1_BaseSpeed"
             },
             "P2_BreakDelayRatioPerFigure": {
-              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-              "displayLines": "{[Skill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[1]]}"
-              ]
+              "displayLines": "{[Skill02[1]]}"
             },
             "BE_P3_InitDelay": {
-              "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-              "displayLines": "{[Skill02[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[2]]}"
-              ]
+              "displayLines": "{[Skill02[2]]}"
             }
           }
         }
@@ -168,28 +153,13 @@ const configAbility = {
           "eventID": 20010,
           "variables": {
             "BE_P1_BESpeed": {
-              "operator": "Variables[0] (P1_BaseSpeed) || RETURN",
-              "displayLines": "P1_BaseSpeed",
-              "constants": [],
-              "variables": [
-                "P1_BaseSpeed"
-              ]
+              "displayLines": "P1_BaseSpeed"
             },
             "P2_BreakDelayRatioPerFigure": {
-              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-              "displayLines": "{[Skill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[1]]}"
-              ]
+              "displayLines": "{[Skill02[1]]}"
             },
             "BE_P3_InitDelay": {
-              "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-              "displayLines": "{[Skill02[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[2]]}"
-              ]
+              "displayLines": "{[Skill02[2]]}"
             }
           }
         }

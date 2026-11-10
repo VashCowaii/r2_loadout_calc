@@ -122,21 +122,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1255032527\">LC_23031_Sub</a>[<span class=\"descriptionNumberColor\">Luminflux</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "MDF_MaxLayer": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     }
                   }
                 }

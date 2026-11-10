@@ -103,12 +103,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] (Saber_1509_DMG) || RETURN",
-          "displayLines": "Saber_1509_DMG",
-          "constants": [],
-          "variables": [
-            "Saber_1509_DMG"
-          ]
+          "displayLines": "Saber_1509_DMG"
         },
         "Toughness": null,
         "Tags": [
@@ -125,12 +120,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "value": {
-        "operator": "Variables[0] (Saber_1509_AddSp) || RETURN",
-        "displayLines": "Saber_1509_AddSp",
-        "constants": [],
-        "variables": [
-          "Saber_1509_AddSp"
-        ]
+        "displayLines": "Saber_1509_AddSp"
       },
       "isFixed": "(Fixed)",
       "tag": "ActiveSkillAdd"
@@ -144,12 +134,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1274159292\">Gilgamesh_SaberUltraBonus</a>[<span class=\"descriptionNumberColor\">\"I Grant You Permission To Strike\"</span>]",
       "valuePerStack": {
         "MDF_DamagePercentage": {
-          "operator": "Variables[0] (Saber_1509_UltraPercentage) || RETURN",
-          "displayLines": "Saber_1509_UltraPercentage",
-          "constants": [],
-          "variables": [
-            "Saber_1509_UltraPercentage"
-          ]
+          "displayLines": "Saber_1509_UltraPercentage"
         }
       }
     }

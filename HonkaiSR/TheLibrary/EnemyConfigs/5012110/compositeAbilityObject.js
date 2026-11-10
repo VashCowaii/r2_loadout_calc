@@ -192,12 +192,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGConverted</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_ElationDamageAddedRatio) || RETURN",
-                    "displayLines": "MDF_ElationDamageAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ElationDamageAddedRatio"
-                    ]
+                    "displayLines": "MDF_ElationDamageAddedRatio"
                   }
                 }
               ]
@@ -338,13 +333,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_FinalDamage) || Variables[1] (_MaxHp) || DIV || RETURN",
-            "displayLines": "(_FinalDamage / _MaxHp)",
-            "constants": [],
-            "variables": [
-              "_FinalDamage",
-              "_MaxHp"
-            ]
+            "displayLines": "(_FinalDamage / _MaxHp)"
           },
           "variableName": "_RankRatio"
         },
@@ -355,12 +344,7 @@ const compositeAbilityObject = {
             "value1": "_RankRatio",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[1]]}"
-              ]
+              "displayLines": "{[PassiveSkillInitiate[1]]}"
             }
           },
           "failed": [
@@ -371,12 +355,7 @@ const compositeAbilityObject = {
                 "value1": "_RankRatio",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] ({[PassiveSkillInitiate[0]]}) || RETURN",
-                  "displayLines": "{[PassiveSkillInitiate[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkillInitiate[0]]}"
-                  ]
+                  "displayLines": "{[PassiveSkillInitiate[0]]}"
                 }
               }
             }
@@ -389,24 +368,14 @@ const compositeAbilityObject = {
             "value1": "_RankRatio",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[1]]}"
-              ]
+              "displayLines": "{[PassiveSkillInitiate[1]]}"
             }
           },
           "passed": [
             {
               "name": "Adjust Team Punchline Value",
               "value": {
-                "operator": "Variables[0] ({[PassiveSkillInitiate[4]]}) || RETURN",
-                "displayLines": "{[PassiveSkillInitiate[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkillInitiate[4]]}"
-                ]
+                "displayLines": "{[PassiveSkillInitiate[4]]}"
               },
               "adjustment": "Add"
             },
@@ -427,24 +396,14 @@ const compositeAbilityObject = {
                 "value1": "_RankRatio",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] ({[PassiveSkillInitiate[0]]}) || RETURN",
-                  "displayLines": "{[PassiveSkillInitiate[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkillInitiate[0]]}"
-                  ]
+                  "displayLines": "{[PassiveSkillInitiate[0]]}"
                 }
               },
               "passed": [
                 {
                   "name": "Adjust Team Punchline Value",
                   "value": {
-                    "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
-                    "displayLines": "{[PassiveSkillInitiate[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkillInitiate[3]]}"
-                    ]
+                    "displayLines": "{[PassiveSkillInitiate[3]]}"
                   },
                   "adjustment": "Add"
                 },
@@ -469,12 +428,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Adjust Team Punchline Value",
                   "value": {
-                    "operator": "Variables[0] ({[PassiveSkillInitiate[2]]}) || RETURN",
-                    "displayLines": "{[PassiveSkillInitiate[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkillInitiate[2]]}"
-                    ]
+                    "displayLines": "{[PassiveSkillInitiate[2]]}"
                   },
                   "adjustment": "Add"
                 },
@@ -509,21 +463,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1492528010\">Enemy_W5_Limao_ElationDamageUp</a>[<span class=\"descriptionNumberColor\">Make Headlines, Please!</span>]",
               "duration": {
-                "operator": "Variables[0] ({[PassiveSkillInitiate[8]]}) || RETURN",
-                "displayLines": "{[PassiveSkillInitiate[8]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkillInitiate[8]]}"
-                ]
+                "displayLines": "{[PassiveSkillInitiate[8]]}"
               },
               "valuePerStack": {
                 "MDF_ElationDamageAddedRatio": {
-                  "operator": "Variables[0] ({[PassiveSkillInitiate[5]]}) || RETURN",
-                  "displayLines": "{[PassiveSkillInitiate[5]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkillInitiate[5]]}"
-                  ]
+                  "displayLines": "{[PassiveSkillInitiate[5]]}"
                 }
               },
               "casterAssign": "TargetSelf"
@@ -549,21 +493,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1492528010\">Enemy_W5_Limao_ElationDamageUp</a>[<span class=\"descriptionNumberColor\">Make Headlines, Please!</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[PassiveSkillInitiate[8]]}) || RETURN",
-                    "displayLines": "{[PassiveSkillInitiate[8]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkillInitiate[8]]}"
-                    ]
+                    "displayLines": "{[PassiveSkillInitiate[8]]}"
                   },
                   "valuePerStack": {
                     "MDF_ElationDamageAddedRatio": {
-                      "operator": "Variables[0] ({[PassiveSkillInitiate[6]]}) || RETURN",
-                      "displayLines": "{[PassiveSkillInitiate[6]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkillInitiate[6]]}"
-                      ]
+                      "displayLines": "{[PassiveSkillInitiate[6]]}"
                     }
                   },
                   "casterAssign": "TargetSelf"
@@ -589,21 +523,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1492528010\">Enemy_W5_Limao_ElationDamageUp</a>[<span class=\"descriptionNumberColor\">Make Headlines, Please!</span>]",
                       "duration": {
-                        "operator": "Variables[0] ({[PassiveSkillInitiate[8]]}) || RETURN",
-                        "displayLines": "{[PassiveSkillInitiate[8]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[PassiveSkillInitiate[8]]}"
-                        ]
+                        "displayLines": "{[PassiveSkillInitiate[8]]}"
                       },
                       "valuePerStack": {
                         "MDF_ElationDamageAddedRatio": {
-                          "operator": "Variables[0] ({[PassiveSkillInitiate[7]]}) || RETURN",
-                          "displayLines": "{[PassiveSkillInitiate[7]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkillInitiate[7]]}"
-                          ]
+                          "displayLines": "{[PassiveSkillInitiate[7]]}"
                         }
                       },
                       "casterAssign": "TargetSelf"
@@ -1145,12 +1069,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (MDF_TotalDamage) || RETURN",
-                            "displayLines": "MDF_TotalDamage",
-                            "constants": [],
-                            "variables": [
-                              "MDF_TotalDamage"
-                            ]
+                            "displayLines": "MDF_TotalDamage"
                           },
                           "variableName": "_FinalDamage"
                         },
@@ -1232,13 +1151,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_TotalDamage) || Variables[1] (MDF_HitDamage) || ADD || RETURN",
-                    "displayLines": "(MDF_TotalDamage + MDF_HitDamage)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_TotalDamage",
-                      "MDF_HitDamage"
-                    ]
+                    "displayLines": "(MDF_TotalDamage + MDF_HitDamage)"
                   },
                   "variableName": "MDF_TotalDamage"
                 },
@@ -1590,12 +1503,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (MDF_TotalDamage) || RETURN",
-                            "displayLines": "MDF_TotalDamage",
-                            "constants": [],
-                            "variables": [
-                              "MDF_TotalDamage"
-                            ]
+                            "displayLines": "MDF_TotalDamage"
                           },
                           "variableName": "_FinalDamage"
                         },
@@ -2369,12 +2277,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,

@@ -605,12 +605,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] (_UnicornMark_DamagePercentage) || RETURN",
-                              "displayLines": "_UnicornMark_DamagePercentage",
-                              "constants": [],
-                              "variables": [
-                                "_UnicornMark_DamagePercentage"
-                              ]
+                              "displayLines": "_UnicornMark_DamagePercentage"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -625,37 +620,17 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"2065489118\">Standard_Entangle</a>[<span class=\"descriptionNumberColor\">Entanglement</span>]",
                           "duration": {
-                            "operator": "Variables[0] (_UnicornMark_LifeTime) || RETURN",
-                            "displayLines": "_UnicornMark_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "_UnicornMark_LifeTime"
-                            ]
+                            "displayLines": "_UnicornMark_LifeTime"
                           },
                           "baseChance": {
-                            "operator": "Variables[0] (_UnicornMark_Chance) || RETURN",
-                            "displayLines": "_UnicornMark_Chance",
-                            "constants": [],
-                            "variables": [
-                              "_UnicornMark_Chance"
-                            ]
+                            "displayLines": "_UnicornMark_Chance"
                           },
                           "valuePerStack": {
                             "MDF_ActionDelayRatio": {
-                              "operator": "Variables[0] (_UnicornMark_ActionDelayRatio) || RETURN",
-                              "displayLines": "_UnicornMark_ActionDelayRatio",
-                              "constants": [],
-                              "variables": [
-                                "_UnicornMark_ActionDelayRatio"
-                              ]
+                              "displayLines": "_UnicornMark_ActionDelayRatio"
                             },
                             "Modifier_Entangle_DamagePercentage": {
-                              "operator": "Variables[0] (_UnicornMark_DebuffDamagePercentage) || RETURN",
-                              "displayLines": "_UnicornMark_DebuffDamagePercentage",
-                              "constants": [],
-                              "variables": [
-                                "_UnicornMark_DebuffDamagePercentage"
-                              ]
+                              "displayLines": "_UnicornMark_DebuffDamagePercentage"
                             },
                             "Modifier_Entangle_DamageValue": 0
                           }
@@ -709,13 +684,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Null Type",
                             "DamageFlat": {
-                              "operator": "Variables[0] (_MaxHP) || Variables[1] (_MixedMark_LoseHpRatio) || MUL || RETURN",
-                              "displayLines": "(_MaxHP * _MixedMark_LoseHpRatio)",
-                              "constants": [],
-                              "variables": [
-                                "_MaxHP",
-                                "_MixedMark_LoseHpRatio"
-                              ]
+                              "displayLines": "(_MaxHP * _MixedMark_LoseHpRatio)"
                             },
                             "dmgFormulaFinal": "Converted DMG Base",
                             "Toughness": null,
@@ -730,14 +699,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "value": {
-                            "operator": "Constants[0] (1) || INVERT || Variables[0] (_GriffinMark_SPCost) || MUL || RETURN",
-                            "displayLines": "(-1 * _GriffinMark_SPCost)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "_GriffinMark_SPCost"
-                            ]
+                            "displayLines": "(-1 * _GriffinMark_SPCost)"
                           },
                           "isFixed": "(Fixed)"
                         },
@@ -749,37 +711,17 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"2065489118\">Standard_Entangle</a>[<span class=\"descriptionNumberColor\">Entanglement</span>]",
                           "duration": {
-                            "operator": "Variables[0] (_UnicornMark_LifeTime) || RETURN",
-                            "displayLines": "_UnicornMark_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "_UnicornMark_LifeTime"
-                            ]
+                            "displayLines": "_UnicornMark_LifeTime"
                           },
                           "baseChance": {
-                            "operator": "Variables[0] (_UnicornMark_Chance) || RETURN",
-                            "displayLines": "_UnicornMark_Chance",
-                            "constants": [],
-                            "variables": [
-                              "_UnicornMark_Chance"
-                            ]
+                            "displayLines": "_UnicornMark_Chance"
                           },
                           "valuePerStack": {
                             "MDF_ActionDelayRatio": {
-                              "operator": "Variables[0] (_UnicornMark_ActionDelayRatio) || RETURN",
-                              "displayLines": "_UnicornMark_ActionDelayRatio",
-                              "constants": [],
-                              "variables": [
-                                "_UnicornMark_ActionDelayRatio"
-                              ]
+                              "displayLines": "_UnicornMark_ActionDelayRatio"
                             },
                             "Modifier_Entangle_DamagePercentage": {
-                              "operator": "Variables[0] (_UnicornMark_DebuffDamagePercentage) || RETURN",
-                              "displayLines": "_UnicornMark_DebuffDamagePercentage",
-                              "constants": [],
-                              "variables": [
-                                "_UnicornMark_DebuffDamagePercentage"
-                              ]
+                              "displayLines": "_UnicornMark_DebuffDamagePercentage"
                             },
                             "Modifier_Entangle_DamageValue": 0
                           }
@@ -1118,22 +1060,10 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                      "displayLines": "{[Skill04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[0]]}"
-                      ]
+                      "displayLines": "{[Skill04[0]]}"
                     },
                     "HitSplit": {
-                      "operator": "Variables[0] (_TargetCount) || Constants[0] (6) || DIV || RETURN",
-                      "displayLines": "(_TargetCount / 6)",
-                      "constants": [
-                        6
-                      ],
-                      "variables": [
-                        "_TargetCount"
-                      ]
+                      "displayLines": "(_TargetCount / 6)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1152,21 +1082,10 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                      "displayLines": "{[Skill04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[0]]}"
-                      ]
+                      "displayLines": "{[Skill04[0]]}"
                     },
                     "HitSplit": {
-                      "operator": "Constants[0] (1) || Constants[1] (6) || DIV || RETURN",
-                      "displayLines": "(1 / 6)",
-                      "constants": [
-                        1,
-                        6
-                      ],
-                      "variables": []
+                      "displayLines": "(1 / 6)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1210,22 +1129,10 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                      "displayLines": "{[Skill04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[0]]}"
-                      ]
+                      "displayLines": "{[Skill04[0]]}"
                     },
                     "HitSplit": {
-                      "operator": "Variables[0] (_TargetCount) || Constants[0] (6) || DIV || RETURN",
-                      "displayLines": "(_TargetCount / 6)",
-                      "constants": [
-                        6
-                      ],
-                      "variables": [
-                        "_TargetCount"
-                      ]
+                      "displayLines": "(_TargetCount / 6)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1244,21 +1151,10 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                      "displayLines": "{[Skill04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[0]]}"
-                      ]
+                      "displayLines": "{[Skill04[0]]}"
                     },
                     "HitSplit": {
-                      "operator": "Constants[0] (1) || Constants[1] (6) || DIV || RETURN",
-                      "displayLines": "(1 / 6)",
-                      "constants": [
-                        1,
-                        6
-                      ],
-                      "variables": []
+                      "displayLines": "(1 / 6)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1282,14 +1178,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Constants[0] (2) || Variables[0] (_TargetCount) || DIV || RETURN",
-                    "displayLines": "(2 / _TargetCount)",
-                    "constants": [
-                      2
-                    ],
-                    "variables": [
-                      "_TargetCount"
-                    ]
+                    "displayLines": "(2 / _TargetCount)"
                   },
                   "execute": [
                     {
@@ -1307,22 +1196,10 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Quantum",
                         "Damage": {
-                          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                          "displayLines": "{[Skill04[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill04[0]]}"
-                          ]
+                          "displayLines": "{[Skill04[0]]}"
                         },
                         "HitSplit": {
-                          "operator": "Variables[0] (_TargetCount) || Constants[0] (6) || DIV || RETURN",
-                          "displayLines": "(_TargetCount / 6)",
-                          "constants": [
-                            6
-                          ],
-                          "variables": [
-                            "_TargetCount"
-                          ]
+                          "displayLines": "(_TargetCount / 6)"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -1347,21 +1224,10 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Quantum",
                         "Damage": {
-                          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                          "displayLines": "{[Skill04[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill04[0]]}"
-                          ]
+                          "displayLines": "{[Skill04[0]]}"
                         },
                         "HitSplit": {
-                          "operator": "Constants[0] (1) || Constants[1] (6) || DIV || RETURN",
-                          "displayLines": "(1 / 6)",
-                          "constants": [
-                            1,
-                            6
-                          ],
-                          "variables": []
+                          "displayLines": "(1 / 6)"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -1404,22 +1270,10 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                      "displayLines": "{[Skill04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[0]]}"
-                      ]
+                      "displayLines": "{[Skill04[0]]}"
                     },
                     "HitSplit": {
-                      "operator": "Variables[0] (_TargetCount) || Constants[0] (6) || DIV || RETURN",
-                      "displayLines": "(_TargetCount / 6)",
-                      "constants": [
-                        6
-                      ],
-                      "variables": [
-                        "_TargetCount"
-                      ]
+                      "displayLines": "(_TargetCount / 6)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1438,21 +1292,10 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                      "displayLines": "{[Skill04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[0]]}"
-                      ]
+                      "displayLines": "{[Skill04[0]]}"
                     },
                     "HitSplit": {
-                      "operator": "Constants[0] (1) || Constants[1] (6) || DIV || RETURN",
-                      "displayLines": "(1 / 6)",
-                      "constants": [
-                        1,
-                        6
-                      ],
-                      "variables": []
+                      "displayLines": "(1 / 6)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1496,22 +1339,10 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                      "displayLines": "{[Skill04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[0]]}"
-                      ]
+                      "displayLines": "{[Skill04[0]]}"
                     },
                     "HitSplit": {
-                      "operator": "Variables[0] (_TargetCount) || Constants[0] (6) || DIV || RETURN",
-                      "displayLines": "(_TargetCount / 6)",
-                      "constants": [
-                        6
-                      ],
-                      "variables": [
-                        "_TargetCount"
-                      ]
+                      "displayLines": "(_TargetCount / 6)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1530,21 +1361,10 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                      "displayLines": "{[Skill04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[0]]}"
-                      ]
+                      "displayLines": "{[Skill04[0]]}"
                     },
                     "HitSplit": {
-                      "operator": "Constants[0] (1) || Constants[1] (6) || DIV || RETURN",
-                      "displayLines": "(1 / 6)",
-                      "constants": [
-                        1,
-                        6
-                      ],
-                      "variables": []
+                      "displayLines": "(1 / 6)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1589,37 +1409,17 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"2065489118\">Standard_Entangle</a>[<span class=\"descriptionNumberColor\">Entanglement</span>]",
                       "duration": {
-                        "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                        "displayLines": "{[PassiveSkill01[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[PassiveSkill01[1]]}"
-                        ]
+                        "displayLines": "{[PassiveSkill01[1]]}"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                        "displayLines": "{[PassiveSkill01[0]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[PassiveSkill01[0]]}"
-                        ]
+                        "displayLines": "{[PassiveSkill01[0]]}"
                       },
                       "valuePerStack": {
                         "MDF_ActionDelayRatio": {
-                          "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill01[2]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill01[2]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill01[2]]}"
                         },
                         "Modifier_Entangle_DamagePercentage": {
-                          "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill01[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill01[3]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill01[3]]}"
                         },
                         "Modifier_Entangle_DamageValue": 0
                       }
@@ -1643,37 +1443,17 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"2065489118\">Standard_Entangle</a>[<span class=\"descriptionNumberColor\">Entanglement</span>]",
                       "duration": {
-                        "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                        "displayLines": "{[PassiveSkill01[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[PassiveSkill01[1]]}"
-                        ]
+                        "displayLines": "{[PassiveSkill01[1]]}"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                        "displayLines": "{[PassiveSkill01[0]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[PassiveSkill01[0]]}"
-                        ]
+                        "displayLines": "{[PassiveSkill01[0]]}"
                       },
                       "valuePerStack": {
                         "MDF_ActionDelayRatio": {
-                          "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill01[2]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill01[2]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill01[2]]}"
                         },
                         "Modifier_Entangle_DamagePercentage": {
-                          "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill01[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill01[3]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill01[3]]}"
                         },
                         "Modifier_Entangle_DamageValue": 0
                       }
@@ -1846,14 +1626,7 @@ const compositeAbilityObject = {
               },
               "searchRandom": true,
               "maxTargets": {
-                "operator": "Constants[0] (2) || Variables[0] (_TargetCount) || SUB || RETURN",
-                "displayLines": "(2 - _TargetCount)",
-                "constants": [
-                  2
-                ],
-                "variables": [
-                  "_TargetCount"
-                ]
+                "displayLines": "(2 - _TargetCount)"
               },
               "conditions": {
                 "name": "Has Modifier",
@@ -2046,12 +1819,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,

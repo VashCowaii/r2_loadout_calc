@@ -14,20 +14,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (1.4) || RETURN",
-          "displayLines": "1.4",
-          "constants": [],
-          "variables": [
-            1.4
-          ]
+          "displayLines": "1.4"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -43,20 +33,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (0.6) || RETURN",
-          "displayLines": "0.6",
-          "constants": [],
-          "variables": [
-            0.6
-          ]
+          "displayLines": "0.6"
         },
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-          "displayLines": "Blast Toughness Value",
-          "constants": [],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "Blast Toughness Value"
         },
         "Tags": null
       }
@@ -72,12 +52,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.2) || RETURN",
-            "displayLines": "0.2",
-            "constants": [],
-            "variables": [
-              0.2
-            ]
+            "displayLines": "0.2"
           },
           "variableName": "SkillTree01_ThunderChanceAdd"
         }
@@ -98,30 +73,14 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
       "duration": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       },
       "baseChance": {
-        "operator": "Variables[0] (0.8) || Variables[1] (SkillTree01_ThunderChanceAdd) || ADD || RETURN",
-        "displayLines": "(0.8 + SkillTree01_ThunderChanceAdd)",
-        "constants": [],
-        "variables": [
-          0.8,
-          "SkillTree01_ThunderChanceAdd"
-        ]
+        "displayLines": "(0.8 + SkillTree01_ThunderChanceAdd)"
       },
       "valuePerStack": {
         "Modifier_Electric_DamagePercentage": {
-          "operator": "Variables[0] (1.04) || RETURN",
-          "displayLines": "1.04",
-          "constants": [],
-          "variables": [
-            1.04
-          ]
+          "displayLines": "1.04"
         }
       },
       "stackFlag": "CharacterSkill"

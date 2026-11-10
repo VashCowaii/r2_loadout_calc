@@ -32,12 +32,7 @@ const configAbility = {
         "target": "{{Player Team(Exclude Memosprites)v2}}"
       },
       "value": {
-        "operator": "Variables[0] ({[Skill08[0]]}) || INVERT || RETURN",
-        "displayLines": "-{[Skill08[0]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill08[0]]}"
-        ]
+        "displayLines": "-{[Skill08[0]]}"
       },
       "isFixed": "(Fixed)"
     },

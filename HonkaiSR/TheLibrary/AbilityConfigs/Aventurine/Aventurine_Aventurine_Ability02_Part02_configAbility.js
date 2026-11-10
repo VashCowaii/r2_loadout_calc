@@ -33,41 +33,17 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
       "duration": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "valuePerStack": {
         "MDF_InitShieldValue": {
-          "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.24) || MUL || Variables[2] (320) || ADD || RETURN",
-          "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)",
-          "constants": [],
-          "variables": [
-            "MDF_CurrentDefence2",
-            0.24,
-            320
-          ]
+          "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)"
         },
         "MDF_MaxShieldRatio": {
-          "operator": "Variables[0] (2) || RETURN",
-          "displayLines": "2",
-          "constants": [],
-          "variables": [
-            2
-          ]
+          "displayLines": "2"
         },
         "MDF_ForceShield": {
-          "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.24) || MUL || Variables[2] (320) || ADD || RETURN",
-          "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)",
-          "constants": [],
-          "variables": [
-            "MDF_CurrentDefence2",
-            0.24,
-            320
-          ]
+          "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)"
         }
       }
     },
@@ -133,28 +109,13 @@ const configAbility = {
           "valuePerStack": {
             "MDF_CanTriggerShieldEffect": 1,
             "MDF_ResistanceRatio": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             },
             "MDF_TeammateCount": {
-              "operator": "Variables[0] (MDF_TeammateCount1) || RETURN",
-              "displayLines": "MDF_TeammateCount1",
-              "constants": [],
-              "variables": [
-                "MDF_TeammateCount1"
-              ]
+              "displayLines": "MDF_TeammateCount1"
             },
             "MDF_CritDmg1": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         }
@@ -173,12 +134,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Constants[0] (0) || RETURN",
-        "displayLines": "0",
-        "constants": [
-          0
-        ],
-        "variables": []
+        "displayLines": "0"
       },
       "variableName": "MDF_TeammateCount1"
     },

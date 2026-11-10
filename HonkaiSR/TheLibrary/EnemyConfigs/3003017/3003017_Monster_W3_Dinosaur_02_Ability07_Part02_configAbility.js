@@ -46,12 +46,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__116) || RETURN",
-        "displayLines": "ENEMIES_OBJECT_UNUSED__116",
-        "constants": [],
-        "variables": [
-          "ENEMIES_OBJECT_UNUSED__116"
-        ]
+        "displayLines": "ENEMIES_OBJECT_UNUSED__116"
       },
       "execute": [
         {
@@ -229,12 +224,7 @@ const configAbility = {
               "variableName": "CurrentLockCount",
               "value": 1,
               "max": {
-                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__116) || RETURN",
-                "displayLines": "ENEMIES_OBJECT_UNUSED__116",
-                "constants": [],
-                "variables": [
-                  "ENEMIES_OBJECT_UNUSED__116"
-                ]
+                "displayLines": "ENEMIES_OBJECT_UNUSED__116"
               }
             }
           ]
@@ -267,25 +257,14 @@ const configAbility = {
             "value1": "CurrentLockCount",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__116) || RETURN",
-              "displayLines": "ENEMIES_OBJECT_UNUSED__116",
-              "constants": [],
-              "variables": [
-                "ENEMIES_OBJECT_UNUSED__116"
-              ]
+              "displayLines": "ENEMIES_OBJECT_UNUSED__116"
             }
           },
           "passed": [
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__116) || Variables[1] (CurrentLockCount) || SUB || RETURN",
-                "displayLines": "(ENEMIES_OBJECT_UNUSED__116 - CurrentLockCount)",
-                "constants": [],
-                "variables": [
-                  "ENEMIES_OBJECT_UNUSED__116",
-                  "CurrentLockCount"
-                ]
+                "displayLines": "(ENEMIES_OBJECT_UNUSED__116 - CurrentLockCount)"
               },
               "execute": [
                 {
@@ -397,25 +376,14 @@ const configAbility = {
             "value1": "CurrentLockCount",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__116) || RETURN",
-              "displayLines": "ENEMIES_OBJECT_UNUSED__116",
-              "constants": [],
-              "variables": [
-                "ENEMIES_OBJECT_UNUSED__116"
-              ]
+              "displayLines": "ENEMIES_OBJECT_UNUSED__116"
             }
           },
           "passed": [
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__116) || Variables[1] (CurrentLockCount) || SUB || RETURN",
-                "displayLines": "(ENEMIES_OBJECT_UNUSED__116 - CurrentLockCount)",
-                "constants": [],
-                "variables": [
-                  "ENEMIES_OBJECT_UNUSED__116",
-                  "CurrentLockCount"
-                ]
+                "displayLines": "(ENEMIES_OBJECT_UNUSED__116 - CurrentLockCount)"
               },
               "execute": [
                 {

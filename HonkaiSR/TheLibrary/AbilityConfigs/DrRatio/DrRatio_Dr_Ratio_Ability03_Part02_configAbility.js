@@ -54,13 +54,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1000967262\">Dr_Ratio_Ability03_TheFool</a>[<span class=\"descriptionNumberColor\">Wiseman's Folly</span>]",
           "valuePerStack": {
             "MDF_Ability03_InsertMaxCount": {
-              "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-              "displayLines": "(2 + 1)",
-              "constants": [],
-              "variables": [
-                2,
-                1
-              ]
+              "displayLines": "(2 + 1)"
             }
           }
         }
@@ -75,12 +69,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1000967262\">Dr_Ratio_Ability03_TheFool</a>[<span class=\"descriptionNumberColor\">Wiseman's Folly</span>]",
           "valuePerStack": {
             "MDF_Ability03_InsertMaxCount": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             }
           }
         }
@@ -96,20 +85,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (2.4) || RETURN",
-          "displayLines": "2.4",
-          "constants": [],
-          "variables": [
-            2.4
-          ]
+          "displayLines": "2.4"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"

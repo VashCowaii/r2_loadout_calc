@@ -161,12 +161,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (Skill05DamagePercentage) || RETURN",
-              "displayLines": "Skill05DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill05DamagePercentage"
-              ]
+              "displayLines": "Skill05DamagePercentage"
             },
             "Toughness": null,
             "Tags": null,

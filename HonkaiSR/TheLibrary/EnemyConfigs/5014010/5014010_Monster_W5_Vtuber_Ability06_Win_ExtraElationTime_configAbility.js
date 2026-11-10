@@ -9,12 +9,7 @@ const configAbility = {
       "functionName": "<a class=\"gTempYellow\" id=\"101547145\">Elation_StartElationTime</a>",
       "variables": {
         "TryStartElationTime_OverrideElationPoint": {
-          "operator": "Variables[0] (TryStartElationTime_OverrideElationPoint) || RETURN",
-          "displayLines": "TryStartElationTime_OverrideElationPoint",
-          "constants": [],
-          "variables": [
-            "TryStartElationTime_OverrideElationPoint"
-          ]
+          "displayLines": "TryStartElationTime_OverrideElationPoint"
         },
         "TryStartElationTime_ElationTimeIsNoConsume": 1
       }

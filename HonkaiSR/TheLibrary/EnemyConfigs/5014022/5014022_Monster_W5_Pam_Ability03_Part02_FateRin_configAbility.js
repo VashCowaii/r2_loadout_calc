@@ -18,12 +18,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1556520356\">Modifier_Monster_W5_Pam_Rage</a>[<span class=\"descriptionNumberColor\">Steam Wash</span>]",
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-          "displayLines": "{[Skill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "{[Skill03[0]]}"
         }
       }
     },
@@ -44,30 +39,15 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>[<span class=\"descriptionNumberColor\">Lasting Antibac</span>]",
           "stackLimit": {
-            "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-            "displayLines": "{[Skill03[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[1]]}"
-            ]
+            "displayLines": "{[Skill03[1]]}"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-              "displayLines": "{[Skill03[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[2]]}"
-              ]
+              "displayLines": "{[Skill03[2]]}"
             }
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-            "displayLines": "{[Skill03[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[1]]}"
-            ]
+            "displayLines": "{[Skill03[1]]}"
           }
         }
       ],
@@ -80,30 +60,15 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>[<span class=\"descriptionNumberColor\">Lasting Antibac</span>]",
           "stackLimit": {
-            "operator": "Variables[0] ({[Skill03[4]]}) || RETURN",
-            "displayLines": "{[Skill03[4]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[4]]}"
-            ]
+            "displayLines": "{[Skill03[4]]}"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[Skill03[5]]}) || RETURN",
-              "displayLines": "{[Skill03[5]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[5]]}"
-              ]
+              "displayLines": "{[Skill03[5]]}"
             }
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] ({[Skill03[4]]}) || RETURN",
-            "displayLines": "{[Skill03[4]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[4]]}"
-            ]
+            "displayLines": "{[Skill03[4]]}"
           }
         }
       ]
@@ -600,12 +565,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -613,12 +573,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-                    "displayLines": "{[Skill03[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill03[1]]}"
-                    ]
+                    "displayLines": "{[Skill03[1]]}"
                   },
                   "assignState": "True",
                   "state": "Active"
@@ -628,12 +583,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -641,12 +591,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] ({[Skill03[4]]}) || RETURN",
-                    "displayLines": "{[Skill03[4]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill03[4]]}"
-                    ]
+                    "displayLines": "{[Skill03[4]]}"
                   },
                   "assignState": "True",
                   "state": "Active"
@@ -661,13 +606,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_Layer) || Variables[1] (MDF_PropertyValue) || MUL || RETURN",
-                "displayLines": "(MDF_Layer * MDF_PropertyValue)",
-                "constants": [],
-                "variables": [
-                  "MDF_Layer",
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(MDF_Layer * MDF_PropertyValue)"
               }
             },
             {
@@ -724,12 +663,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Null Type",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill03[3]]}) || RETURN",
-                      "displayLines": "{[Skill03[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill03[3]]}"
-                      ]
+                      "displayLines": "{[Skill03[3]]}"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "dmgFormulaFinal": "Converted DMG Base",

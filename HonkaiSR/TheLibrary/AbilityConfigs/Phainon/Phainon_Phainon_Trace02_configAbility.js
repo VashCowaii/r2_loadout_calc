@@ -102,12 +102,7 @@ const configAbility = {
                       "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
                       "variables": {
                         "parameter[0]_AddValue": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         }
                       }
                     }
@@ -171,22 +166,12 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1218793056\">Phainon_Trace02_Property</a>[<span class=\"descriptionNumberColor\">Bide in Flames</span>]",
                   "duration": {
-                    "operator": "Variables[0] (4) || RETURN",
-                    "displayLines": "4",
-                    "constants": [],
-                    "variables": [
-                      4
-                    ]
+                    "displayLines": "4"
                   },
                   "referenceModifier": "<a class=\"gModGreen\" id=\"1337385649\">MReference_AllDamageTypeAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.45) || RETURN",
-                      "displayLines": "0.45",
-                      "constants": [],
-                      "variables": [
-                        0.45
-                      ]
+                      "displayLines": "0.45"
                     }
                   }
                 }
@@ -296,22 +281,12 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1218793056\">Phainon_Trace02_Property</a>[<span class=\"descriptionNumberColor\">Bide in Flames</span>]",
                   "duration": {
-                    "operator": "Variables[0] (4) || RETURN",
-                    "displayLines": "4",
-                    "constants": [],
-                    "variables": [
-                      4
-                    ]
+                    "displayLines": "4"
                   },
                   "referenceModifier": "<a class=\"gModGreen\" id=\"1337385649\">MReference_AllDamageTypeAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.45) || RETURN",
-                      "displayLines": "0.45",
-                      "constants": [],
-                      "variables": [
-                        0.45
-                      ]
+                      "displayLines": "0.45"
                     }
                   }
                 }

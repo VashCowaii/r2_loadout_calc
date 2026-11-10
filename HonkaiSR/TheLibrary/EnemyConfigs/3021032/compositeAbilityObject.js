@@ -49,12 +49,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_ShowValue) || RETURN",
-                    "displayLines": "MDF_ShowValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ShowValue"
-                    ]
+                    "displayLines": "MDF_ShowValue"
                   }
                 }
               ]
@@ -1189,25 +1184,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] ({[SkillP01[2]]}) || Constants[0] (0.3) || MUL || RETURN",
-                  "displayLines": "({[SkillP01[2]]} * 0.3)",
-                  "constants": [
-                    0.3
-                  ],
-                  "variables": [
-                    "{[SkillP01[2]]}"
-                  ]
+                  "displayLines": "({[SkillP01[2]]} * 0.3)"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] ({[SkillP01[3]]}) || Constants[0] (0.3) || MUL || RETURN",
-                  "displayLines": "({[SkillP01[3]]} * 0.3)",
-                  "constants": [
-                    0.3
-                  ],
-                  "variables": [
-                    "{[SkillP01[3]]}"
-                  ]
+                  "displayLines": "({[SkillP01[3]]} * 0.3)"
                 },
                 "ToughnessDMGType": {
                   "DamageType": "Physical"
@@ -1225,25 +1206,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] ({[SkillP01[2]]}) || Constants[0] (0.7) || MUL || RETURN",
-                  "displayLines": "({[SkillP01[2]]} * 0.7)",
-                  "constants": [
-                    0.7
-                  ],
-                  "variables": [
-                    "{[SkillP01[2]]}"
-                  ]
+                  "displayLines": "({[SkillP01[2]]} * 0.7)"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] ({[SkillP01[3]]}) || Constants[0] (0.7) || MUL || RETURN",
-                  "displayLines": "({[SkillP01[3]]} * 0.7)",
-                  "constants": [
-                    0.7
-                  ],
-                  "variables": [
-                    "{[SkillP01[3]]}"
-                  ]
+                  "displayLines": "({[SkillP01[3]]} * 0.7)"
                 },
                 "ToughnessDMGType": {
                   "DamageType": "Physical"
@@ -1275,21 +1242,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                  "displayLines": "{[SkillP01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[0]]}"
-                  ]
+                  "displayLines": "{[SkillP01[0]]}"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                  "displayLines": "{[SkillP01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[1]]}"
-                  ]
+                  "displayLines": "{[SkillP01[1]]}"
                 },
                 "ToughnessDMGType": {
                   "DamageType": "Physical"
@@ -1453,12 +1410,7 @@ const compositeAbilityObject = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (_TargetNum) || RETURN",
-                "displayLines": "_TargetNum",
-                "constants": [],
-                "variables": [
-                  "_TargetNum"
-                ]
+                "displayLines": "_TargetNum"
               },
               "execute": [
                 {
@@ -1496,14 +1448,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Physical",
                         "Damage": {
-                          "operator": "Variables[0] ({[Skill01[1]]}) || Constants[0] (0.5) || MUL || RETURN",
-                          "displayLines": "({[Skill01[1]]} * 0.5)",
-                          "constants": [
-                            0.5
-                          ],
-                          "variables": [
-                            "{[Skill01[1]]}"
-                          ]
+                          "displayLines": "({[Skill01[1]]} * 0.5)"
                         },
                         "Toughness": null,
                         "ToughnessDMGType": {
@@ -1527,14 +1472,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[1]]}) || Constants[0] (0.5) || MUL || RETURN",
-                  "displayLines": "({[Skill01[1]]} * 0.5)",
-                  "constants": [
-                    0.5
-                  ],
-                  "variables": [
-                    "{[Skill01[1]]}"
-                  ]
+                  "displayLines": "({[Skill01[1]]} * 0.5)"
                 },
                 "Toughness": null,
                 "ToughnessDMGType": {
@@ -1550,12 +1488,7 @@ const compositeAbilityObject = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (_TargetNum) || RETURN",
-                "displayLines": "_TargetNum",
-                "constants": [],
-                "variables": [
-                  "_TargetNum"
-                ]
+                "displayLines": "_TargetNum"
               },
               "execute": [
                 {
@@ -1593,12 +1526,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Physical",
                         "Damage": {
-                          "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                          "displayLines": "{[Skill01[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill01[0]]}"
-                          ]
+                          "displayLines": "{[Skill01[0]]}"
                         },
                         "Toughness": null,
                         "ToughnessDMGType": {

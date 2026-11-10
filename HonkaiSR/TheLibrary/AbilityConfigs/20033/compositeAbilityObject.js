@@ -256,13 +256,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageAddedRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_DamageAddedRatio * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageAddedRatio",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_DamageAddedRatio * MDF_Layer)"
                   }
                 }
               ]
@@ -354,12 +348,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Null Type",
                         "Damage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13505) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13505",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_13505"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_13505"
                         },
                         "dmgFormula": "Max HP Scaling",
                         "dmgFormulaFinal": "Converted DMG Base",
@@ -508,12 +497,7 @@ const compositeAbilityObject = {
                             "value1": "CurrentHP%",
                             "compareType": "<=",
                             "value2": {
-                              "operator": "Variables[0] (MDF_Lock_Radio) || RETURN",
-                              "displayLines": "MDF_Lock_Radio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_Lock_Radio"
-                              ]
+                              "displayLines": "MDF_Lock_Radio"
                             }
                           }
                         ]
@@ -657,15 +641,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Null Type",
                         "DamageFlat": {
-                          "operator": "Variables[0] (Target_MaxHP) || Variables[1] (Skill07_P3_ToMonsterHpPercentage) || MUL || Constants[0] (0.3) || MUL || RETURN",
-                          "displayLines": "((Target_MaxHP * Skill07_P3_ToMonsterHpPercentage) * 0.3)",
-                          "constants": [
-                            0.3
-                          ],
-                          "variables": [
-                            "Target_MaxHP",
-                            "Skill07_P3_ToMonsterHpPercentage"
-                          ]
+                          "displayLines": "((Target_MaxHP * Skill07_P3_ToMonsterHpPercentage) * 0.3)"
                         },
                         "dmgFormulaFinal": "Converted DMG Base",
                         "Toughness": null,
@@ -688,15 +664,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Null Type",
                         "DamageFlat": {
-                          "operator": "Variables[0] (Target_MaxHP) || Variables[1] (Skill07_P3_ToMonsterHpPercentage) || MUL || Constants[0] (0.3) || MUL || RETURN",
-                          "displayLines": "((Target_MaxHP * Skill07_P3_ToMonsterHpPercentage) * 0.3)",
-                          "constants": [
-                            0.3
-                          ],
-                          "variables": [
-                            "Target_MaxHP",
-                            "Skill07_P3_ToMonsterHpPercentage"
-                          ]
+                          "displayLines": "((Target_MaxHP * Skill07_P3_ToMonsterHpPercentage) * 0.3)"
                         },
                         "dmgFormulaFinal": "Converted DMG Base",
                         "Toughness": null,
@@ -719,15 +687,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Null Type",
                         "DamageFlat": {
-                          "operator": "Variables[0] (Target_MaxHP) || Variables[1] (Skill07_P3_ToMonsterHpPercentage) || MUL || Constants[0] (0.4) || MUL || RETURN",
-                          "displayLines": "((Target_MaxHP * Skill07_P3_ToMonsterHpPercentage) * 0.4)",
-                          "constants": [
-                            0.4
-                          ],
-                          "variables": [
-                            "Target_MaxHP",
-                            "Skill07_P3_ToMonsterHpPercentage"
-                          ]
+                          "displayLines": "((Target_MaxHP * Skill07_P3_ToMonsterHpPercentage) * 0.4)"
                         },
                         "dmgFormulaFinal": "Converted DMG Base",
                         "Toughness": null,
@@ -752,13 +712,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Null Type",
                         "DamageFlat": {
-                          "operator": "Variables[0] (Target_MaxHP) || Variables[1] (Skill07_P3_ToMonsterHpPercentage) || MUL || RETURN",
-                          "displayLines": "(Target_MaxHP * Skill07_P3_ToMonsterHpPercentage)",
-                          "constants": [],
-                          "variables": [
-                            "Target_MaxHP",
-                            "Skill07_P3_ToMonsterHpPercentage"
-                          ]
+                          "displayLines": "(Target_MaxHP * Skill07_P3_ToMonsterHpPercentage)"
                         },
                         "dmgFormulaFinal": "Converted DMG Base",
                         "Toughness": null,
@@ -840,20 +794,10 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-958061965\">Standard_Pam_ElationControl_ToMonster_02</a>",
                           "valuePerStack": {
                             "Ability07_P3_ToMonsterHpPercentage": {
-                              "operator": "Variables[0] (Skill04_P3_ToMonsterHpPercentage) || RETURN",
-                              "displayLines": "Skill04_P3_ToMonsterHpPercentage",
-                              "constants": [],
-                              "variables": [
-                                "Skill04_P3_ToMonsterHpPercentage"
-                              ]
+                              "displayLines": "Skill04_P3_ToMonsterHpPercentage"
                             },
                             "Ability07_P4_ElationPoint": {
-                              "operator": "Variables[0] (Skill04_P4_ElationPoint) || RETURN",
-                              "displayLines": "Skill04_P4_ElationPoint",
-                              "constants": [],
-                              "variables": [
-                                "Skill04_P4_ElationPoint"
-                              ]
+                              "displayLines": "Skill04_P4_ElationPoint"
                             },
                             "_Is_BOSS": 1
                           }
@@ -869,20 +813,10 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-958061965\">Standard_Pam_ElationControl_ToMonster_02</a>",
                           "valuePerStack": {
                             "Ability07_P3_ToMonsterHpPercentage": {
-                              "operator": "Variables[0] (Skill04_P3_ToMonsterHpPercentage) || RETURN",
-                              "displayLines": "Skill04_P3_ToMonsterHpPercentage",
-                              "constants": [],
-                              "variables": [
-                                "Skill04_P3_ToMonsterHpPercentage"
-                              ]
+                              "displayLines": "Skill04_P3_ToMonsterHpPercentage"
                             },
                             "Ability07_P4_ElationPoint": {
-                              "operator": "Variables[0] (Skill04_P4_ElationPoint) || RETURN",
-                              "displayLines": "Skill04_P4_ElationPoint",
-                              "constants": [],
-                              "variables": [
-                                "Skill04_P4_ElationPoint"
-                              ]
+                              "displayLines": "Skill04_P4_ElationPoint"
                             },
                             "_Is_BOSS": 0
                           }
@@ -894,12 +828,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Adjust Team Punchline Value",
                   "value": {
-                    "operator": "Variables[0] (Skill04_P4_ElationPoint) || RETURN",
-                    "displayLines": "Skill04_P4_ElationPoint",
-                    "constants": [],
-                    "variables": [
-                      "Skill04_P4_ElationPoint"
-                    ]
+                    "displayLines": "Skill04_P4_ElationPoint"
                   },
                   "adjustment": "Add"
                 },
@@ -933,12 +862,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Skill Points Modification",
                   "adjustmentValue": {
-                    "operator": "Variables[0] (Skill04_P6_BPPoint) || RETURN",
-                    "displayLines": "Skill04_P6_BPPoint",
-                    "constants": [],
-                    "variables": [
-                      "Skill04_P6_BPPoint"
-                    ]
+                    "displayLines": "Skill04_P6_BPPoint"
                   },
                   "adjustmentType": "+"
                 },
@@ -1035,20 +959,10 @@ const compositeAbilityObject = {
                           "duration": 1,
                           "valuePerStack": {
                             "Ability04_P3_ToMonsterHpPercentage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13494) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13494",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13494"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13494"
                             },
                             "Ability04_P4_ElationPoint": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13475) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13475",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13475"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13475"
                             }
                           },
                           "casterAssign": "CasterSelf"
@@ -1077,12 +991,7 @@ const compositeAbilityObject = {
                               "duration": 1,
                               "valuePerStack": {
                                 "Ability04_P6_BPPoint": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13485) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13485",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_13485"
-                                  ]
+                                  "displayLines": "UnusedUnderThisBase_13485"
                                 }
                               }
                             },
@@ -1159,12 +1068,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -1195,14 +1099,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Weaken%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_Layer_2) || Constants[0] (0.25) || MUL || RETURN",
-                    "displayLines": "(MDF_Layer_2 * 0.25)",
-                    "constants": [
-                      0.25
-                    ],
-                    "variables": [
-                      "MDF_Layer_2"
-                    ]
+                    "displayLines": "(MDF_Layer_2 * 0.25)"
                   }
                 }
               ]
@@ -1477,12 +1374,7 @@ const compositeAbilityObject = {
                   },
                   "scope": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__205) || RETURN",
-                    "displayLines": "ENEMIES_OBJECT_UNUSED__205",
-                    "constants": [],
-                    "variables": [
-                      "ENEMIES_OBJECT_UNUSED__205"
-                    ]
+                    "displayLines": "ENEMIES_OBJECT_UNUSED__205"
                   },
                   "variableName": "CleanNum"
                 }
@@ -1628,12 +1520,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (DefenceUpNum) || RETURN",
-                            "displayLines": "DefenceUpNum",
-                            "constants": [],
-                            "variables": [
-                              "DefenceUpNum"
-                            ]
+                            "displayLines": "DefenceUpNum"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -1641,12 +1528,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_13504) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_13504",
-                            "constants": [],
-                            "variables": [
-                              "UnusedUnderThisBase_13504"
-                            ]
+                            "displayLines": "UnusedUnderThisBase_13504"
                           },
                           "assignState": "True",
                           "state": "Normal"
@@ -1656,12 +1538,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (DefenceUpNum) || RETURN",
-                            "displayLines": "DefenceUpNum",
-                            "constants": [],
-                            "variables": [
-                              "DefenceUpNum"
-                            ]
+                            "displayLines": "DefenceUpNum"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -1669,12 +1546,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_13500) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_13500",
-                            "constants": [],
-                            "variables": [
-                              "UnusedUnderThisBase_13500"
-                            ]
+                            "displayLines": "UnusedUnderThisBase_13500"
                           },
                           "assignState": "True",
                           "state": "Normal"
@@ -1699,12 +1571,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (DefenceUpNum) || RETURN",
-                            "displayLines": "DefenceUpNum",
-                            "constants": [],
-                            "variables": [
-                              "DefenceUpNum"
-                            ]
+                            "displayLines": "DefenceUpNum"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -1712,12 +1579,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_13504) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_13504",
-                            "constants": [],
-                            "variables": [
-                              "UnusedUnderThisBase_13504"
-                            ]
+                            "displayLines": "UnusedUnderThisBase_13504"
                           },
                           "assignState": "True",
                           "state": "Active"
@@ -1727,12 +1589,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (DefenceUpNum) || RETURN",
-                            "displayLines": "DefenceUpNum",
-                            "constants": [],
-                            "variables": [
-                              "DefenceUpNum"
-                            ]
+                            "displayLines": "DefenceUpNum"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -1740,12 +1597,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_13500) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_13500",
-                            "constants": [],
-                            "variables": [
-                              "UnusedUnderThisBase_13500"
-                            ]
+                            "displayLines": "UnusedUnderThisBase_13500"
                           },
                           "assignState": "True",
                           "state": "Active"
@@ -1823,12 +1675,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Update Displayed Energy Bar",
                               "value": {
-                                "operator": "Variables[0] (DefenceUpNum) || RETURN",
-                                "displayLines": "DefenceUpNum",
-                                "constants": [],
-                                "variables": [
-                                  "DefenceUpNum"
-                                ]
+                                "displayLines": "DefenceUpNum"
                               },
                               "entityClass": "Enemy",
                               "target": {
@@ -1836,12 +1683,7 @@ const compositeAbilityObject = {
                                 "target": "{{Modifier Holder}}"
                               },
                               "maximum": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_13504) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_13504",
-                                "constants": [],
-                                "variables": [
-                                  "UnusedUnderThisBase_13504"
-                                ]
+                                "displayLines": "UnusedUnderThisBase_13504"
                               },
                               "assignState": "True",
                               "state": "Normal"
@@ -1851,12 +1693,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Update Displayed Energy Bar",
                               "value": {
-                                "operator": "Variables[0] (DefenceUpNum) || RETURN",
-                                "displayLines": "DefenceUpNum",
-                                "constants": [],
-                                "variables": [
-                                  "DefenceUpNum"
-                                ]
+                                "displayLines": "DefenceUpNum"
                               },
                               "entityClass": "Enemy",
                               "target": {
@@ -1864,12 +1701,7 @@ const compositeAbilityObject = {
                                 "target": "{{Modifier Holder}}"
                               },
                               "maximum": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_13500) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_13500",
-                                "constants": [],
-                                "variables": [
-                                  "UnusedUnderThisBase_13500"
-                                ]
+                                "displayLines": "UnusedUnderThisBase_13500"
                               },
                               "assignState": "True",
                               "state": "Normal"
@@ -1894,12 +1726,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Update Displayed Energy Bar",
                               "value": {
-                                "operator": "Variables[0] (DefenceUpNum) || RETURN",
-                                "displayLines": "DefenceUpNum",
-                                "constants": [],
-                                "variables": [
-                                  "DefenceUpNum"
-                                ]
+                                "displayLines": "DefenceUpNum"
                               },
                               "entityClass": "Enemy",
                               "target": {
@@ -1907,12 +1734,7 @@ const compositeAbilityObject = {
                                 "target": "{{Modifier Holder}}"
                               },
                               "maximum": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_13504) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_13504",
-                                "constants": [],
-                                "variables": [
-                                  "UnusedUnderThisBase_13504"
-                                ]
+                                "displayLines": "UnusedUnderThisBase_13504"
                               },
                               "assignState": "True",
                               "state": "Active"
@@ -1922,12 +1744,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Update Displayed Energy Bar",
                               "value": {
-                                "operator": "Variables[0] (DefenceUpNum) || RETURN",
-                                "displayLines": "DefenceUpNum",
-                                "constants": [],
-                                "variables": [
-                                  "DefenceUpNum"
-                                ]
+                                "displayLines": "DefenceUpNum"
                               },
                               "entityClass": "Enemy",
                               "target": {
@@ -1935,12 +1752,7 @@ const compositeAbilityObject = {
                                 "target": "{{Modifier Holder}}"
                               },
                               "maximum": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_13500) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_13500",
-                                "constants": [],
-                                "variables": [
-                                  "UnusedUnderThisBase_13500"
-                                ]
+                                "displayLines": "UnusedUnderThisBase_13500"
                               },
                               "assignState": "True",
                               "state": "Active"
@@ -1980,12 +1792,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MDF_dirty_part_num) || RETURN",
-                        "displayLines": "MDF_dirty_part_num",
-                        "constants": [],
-                        "variables": [
-                          "MDF_dirty_part_num"
-                        ]
+                        "displayLines": "MDF_dirty_part_num"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -1993,12 +1800,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__209) || RETURN",
-                        "displayLines": "ENEMIES_OBJECT_UNUSED__209",
-                        "constants": [],
-                        "variables": [
-                          "ENEMIES_OBJECT_UNUSED__209"
-                        ]
+                        "displayLines": "ENEMIES_OBJECT_UNUSED__209"
                       },
                       "assignState": "True",
                       "state": "Normal"
@@ -2008,12 +1810,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MDF_dirty_part_num) || RETURN",
-                        "displayLines": "MDF_dirty_part_num",
-                        "constants": [],
-                        "variables": [
-                          "MDF_dirty_part_num"
-                        ]
+                        "displayLines": "MDF_dirty_part_num"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -2021,12 +1818,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__209) || RETURN",
-                        "displayLines": "ENEMIES_OBJECT_UNUSED__209",
-                        "constants": [],
-                        "variables": [
-                          "ENEMIES_OBJECT_UNUSED__209"
-                        ]
+                        "displayLines": "ENEMIES_OBJECT_UNUSED__209"
                       },
                       "assignState": "True",
                       "state": "Normal"
@@ -2064,12 +1856,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (MDF_dirty_part_num) || RETURN",
-                            "displayLines": "MDF_dirty_part_num",
-                            "constants": [],
-                            "variables": [
-                              "MDF_dirty_part_num"
-                            ]
+                            "displayLines": "MDF_dirty_part_num"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -2077,12 +1864,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__209) || RETURN",
-                            "displayLines": "ENEMIES_OBJECT_UNUSED__209",
-                            "constants": [],
-                            "variables": [
-                              "ENEMIES_OBJECT_UNUSED__209"
-                            ]
+                            "displayLines": "ENEMIES_OBJECT_UNUSED__209"
                           },
                           "assignState": "True",
                           "state": "Normal"
@@ -2092,12 +1874,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (MDF_dirty_part_num) || RETURN",
-                            "displayLines": "MDF_dirty_part_num",
-                            "constants": [],
-                            "variables": [
-                              "MDF_dirty_part_num"
-                            ]
+                            "displayLines": "MDF_dirty_part_num"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -2105,12 +1882,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__209) || RETURN",
-                            "displayLines": "ENEMIES_OBJECT_UNUSED__209",
-                            "constants": [],
-                            "variables": [
-                              "ENEMIES_OBJECT_UNUSED__209"
-                            ]
+                            "displayLines": "ENEMIES_OBJECT_UNUSED__209"
                           },
                           "assignState": "True",
                           "state": "Normal"
@@ -2491,13 +2263,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_Layer) || Variables[1] (MDF_PropertyValue) || MUL || RETURN",
-                    "displayLines": "(MDF_Layer * MDF_PropertyValue)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer",
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "(MDF_Layer * MDF_PropertyValue)"
                   }
                 },
                 {
@@ -2650,12 +2416,7 @@ const compositeAbilityObject = {
             "target": "{{Caster}}"
           },
           "multiBase": {
-            "operator": "Variables[0] (PassiveAbility01_P2_DelayPercentage) || RETURN",
-            "displayLines": "PassiveAbility01_P2_DelayPercentage",
-            "constants": [],
-            "variables": [
-              "PassiveAbility01_P2_DelayPercentage"
-            ]
+            "displayLines": "PassiveAbility01_P2_DelayPercentage"
           }
         },
         {
@@ -2738,13 +2499,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SpeedOverride</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (CurrentSpeed) || Variables[1] (PassiveSkill01_P6_SpeedRatio) || MUL || RETURN",
-                    "displayLines": "(CurrentSpeed * PassiveSkill01_P6_SpeedRatio)",
-                    "constants": [],
-                    "variables": [
-                      "CurrentSpeed",
-                      "PassiveSkill01_P6_SpeedRatio"
-                    ]
+                    "displayLines": "(CurrentSpeed * PassiveSkill01_P6_SpeedRatio)"
                   }
                 }
               ]
@@ -2962,12 +2717,7 @@ const compositeAbilityObject = {
                   },
                   "variables": {
                     "PassiveAbility01_P6_SpeedRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_13480) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_13480",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_13480"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_13480"
                     }
                   },
                   "whenCreated": [

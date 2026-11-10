@@ -618,12 +618,7 @@ const configAbility = {
         "target": "{{Caster's Minions}}"
       },
       "multiBase": {
-        "operator": "Variables[0] ({[Skill13[0]]}) || RETURN",
-        "displayLines": "{[Skill13[0]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill13[0]]}"
-        ]
+        "displayLines": "{[Skill13[0]]}"
       }
     },
     {

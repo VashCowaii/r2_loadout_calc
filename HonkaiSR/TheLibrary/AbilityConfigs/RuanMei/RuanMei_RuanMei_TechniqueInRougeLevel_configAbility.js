@@ -76,16 +76,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MaxStance) || Constants[0] (30) || DIV || Constants[1] (2) || ADD || Constants[2] (4) || DIV || RETURN",
-                    "displayLines": "(((MaxStance / 30) + 2) / 4)",
-                    "constants": [
-                      30,
-                      2,
-                      4
-                    ],
-                    "variables": [
-                      "MaxStance"
-                    ]
+                    "displayLines": "(((MaxStance / 30) + 2) / 4)"
                   },
                   "variableName": "BreakDamageRatio"
                 },
@@ -101,16 +92,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (BreakBaseDamage) || Variables[1] (BreakDamageRatio) || MUL || Constants[0] (1) || Variables[2] (BreakDamageAddedRatio) || ADD || MUL || RETURN",
-                    "displayLines": "((BreakBaseDamage * BreakDamageRatio) * (1 + BreakDamageAddedRatio))",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "BreakBaseDamage",
-                      "BreakDamageRatio",
-                      "BreakDamageAddedRatio"
-                    ]
+                    "displayLines": "((BreakBaseDamage * BreakDamageRatio) * (1 + BreakDamageAddedRatio))"
                   },
                   "variableName": "RuanMei_BreakDamage"
                 },
@@ -124,13 +106,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "DamageBreak": {
-                      "operator": "Variables[0] (BreakDamageRatio) || Variables[1] (RuanMei_BreakDamage) || MUL || RETURN",
-                      "displayLines": "(BreakDamageRatio * RuanMei_BreakDamage)",
-                      "constants": [],
-                      "variables": [
-                        "BreakDamageRatio",
-                        "RuanMei_BreakDamage"
-                      ]
+                      "displayLines": "(BreakDamageRatio * RuanMei_BreakDamage)"
                     },
                     "dmgFormula": "Break DMG Scaling",
                     "dmgFormulaFinal": "Pure (No DMG%)",
@@ -229,14 +205,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (FinishRoomNum) || Constants[0] (2) || MUL || RETURN",
-                        "displayLines": "(FinishRoomNum * 2)",
-                        "constants": [
-                          2
-                        ],
-                        "variables": [
-                          "FinishRoomNum"
-                        ]
+                        "displayLines": "(FinishRoomNum * 2)"
                       },
                       "variableName": "BuffNumber"
                     }
@@ -251,26 +220,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"319066734\">RuanMei_Maze_Modifier_StanceBreakAdd</a>",
                   "valuePerStack": {
                     "MDF_StanceBreakAdded": {
-                      "operator": "Variables[0] (1) || Variables[1] (MIN) || Variables[2] (20) || Variables[3] (BuffNumber) || PARAM_2 || FUNCTION || MUL || RETURN",
-                      "displayLines": "(1 * &nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(20, BuffNumber))",
-                      "constants": [],
-                      "variables": [
-                        1,
-                        "MIN",
-                        20,
-                        "BuffNumber"
-                      ]
+                      "displayLines": "(1 * &nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(20, BuffNumber))"
                     },
                     "MDF_BreakDamageUp": {
-                      "operator": "Variables[0] (1) || Variables[1] (MIN) || Variables[2] (20) || Variables[3] (BuffNumber) || PARAM_2 || FUNCTION || MUL || RETURN",
-                      "displayLines": "(1 * &nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(20, BuffNumber))",
-                      "constants": [],
-                      "variables": [
-                        1,
-                        "MIN",
-                        20,
-                        "BuffNumber"
-                      ]
+                      "displayLines": "(1 * &nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(20, BuffNumber))"
                     }
                   }
                 },
@@ -301,15 +254,7 @@ const configAbility = {
                       "adjustmentType": "+",
                       "variableName": "Stance_Added_Ratio",
                       "value": {
-                        "operator": "Variables[0] (1) || Variables[1] (MIN) || Variables[2] (20) || Variables[3] (BuffNumber) || PARAM_2 || FUNCTION || MUL || RETURN",
-                        "displayLines": "(1 * &nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(20, BuffNumber))",
-                        "constants": [],
-                        "variables": [
-                          1,
-                          "MIN",
-                          20,
-                          "BuffNumber"
-                        ]
+                        "displayLines": "(1 * &nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(20, BuffNumber))"
                       }
                     }
                   ]

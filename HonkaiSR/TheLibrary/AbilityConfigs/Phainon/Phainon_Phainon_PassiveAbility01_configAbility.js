@@ -46,29 +46,13 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (CurSpecialSP) || Variables[1] (CurOverflowSpecialSP) || ADD || RETURN",
-        "displayLines": "(CurSpecialSP + CurOverflowSpecialSP)",
-        "constants": [],
-        "variables": [
-          "CurSpecialSP",
-          "CurOverflowSpecialSP"
-        ]
+        "displayLines": "(CurSpecialSP + CurOverflowSpecialSP)"
       },
       "activeCount": {
-        "operator": "Variables[0] (12) || RETURN",
-        "displayLines": "12",
-        "constants": [],
-        "variables": [
-          12
-        ]
+        "displayLines": "12"
       },
       "maximum": {
-        "operator": "Variables[0] (12) || RETURN",
-        "displayLines": "12",
-        "constants": [],
-        "variables": [
-          12
-        ]
+        "displayLines": "12"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -298,13 +282,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (CurSpecialSP) || Variables[1] (CurOverflowSpecialSP) || ADD || RETURN",
-                        "displayLines": "(CurSpecialSP + CurOverflowSpecialSP)",
-                        "constants": [],
-                        "variables": [
-                          "CurSpecialSP",
-                          "CurOverflowSpecialSP"
-                        ]
+                        "displayLines": "(CurSpecialSP + CurOverflowSpecialSP)"
                       },
                       "priorState": "Normal"
                     },
@@ -315,12 +293,7 @@ const configAbility = {
                         "value1": "CurSpecialSP",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (12) || RETURN",
-                          "displayLines": "12",
-                          "constants": [],
-                          "variables": [
-                            12
-                          ]
+                          "displayLines": "12"
                         }
                       },
                       "passed": [
@@ -360,12 +333,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"151398776\">Phainon_SPOverflow</a>[<span class=\"descriptionNumberColor\">Coreflame</span>]",
                               "valuePerStack": {
                                 "MDF_Count": {
-                                  "operator": "Variables[0] (CurOverflowSpecialSP) || RETURN",
-                                  "displayLines": "CurOverflowSpecialSP",
-                                  "constants": [],
-                                  "variables": [
-                                    "CurOverflowSpecialSP"
-                                  ]
+                                  "displayLines": "CurOverflowSpecialSP"
                                 }
                               }
                             }
@@ -380,12 +348,7 @@ const configAbility = {
                               "modifierName": "<a class=\"gModGreen\" id=\"151398776\">Phainon_SPOverflow</a>[<span class=\"descriptionNumberColor\">Coreflame</span>]",
                               "variableName": "MDF_Count",
                               "value": {
-                                "operator": "Variables[0] (CurOverflowSpecialSP) || RETURN",
-                                "displayLines": "CurOverflowSpecialSP",
-                                "constants": [],
-                                "variables": [
-                                  "CurOverflowSpecialSP"
-                                ]
+                                "displayLines": "CurOverflowSpecialSP"
                               }
                             }
                           ]
@@ -431,13 +394,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (CurSpecialSP) || Variables[1] (CurOverflowSpecialSP) || ADD || RETURN",
-                        "displayLines": "(CurSpecialSP + CurOverflowSpecialSP)",
-                        "constants": [],
-                        "variables": [
-                          "CurSpecialSP",
-                          "CurOverflowSpecialSP"
-                        ]
+                        "displayLines": "(CurSpecialSP + CurOverflowSpecialSP)"
                       },
                       "priorState": "Normal"
                     },
@@ -448,12 +405,7 @@ const configAbility = {
                         "value1": "CurSpecialSP",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (12) || RETURN",
-                          "displayLines": "12",
-                          "constants": [],
-                          "variables": [
-                            12
-                          ]
+                          "displayLines": "12"
                         }
                       },
                       "passed": [
@@ -501,13 +453,7 @@ const configAbility = {
                       "modifierName": "<a class=\"gModGreen\" id=\"320399697\">Phainon_Ability03_BattleEvent_BaseSpeed</a>",
                       "variableName": "MDF_PropertyValue",
                       "value": {
-                        "operator": "Variables[0] (CDF_SpeedConvertRatio) || Variables[1] (Phainon_BaseSpeed) || MUL || RETURN",
-                        "displayLines": "(CDF_SpeedConvertRatio * Phainon_BaseSpeed)",
-                        "constants": [],
-                        "variables": [
-                          "CDF_SpeedConvertRatio",
-                          "Phainon_BaseSpeed"
-                        ]
+                        "displayLines": "(CDF_SpeedConvertRatio * Phainon_BaseSpeed)"
                       }
                     }
                   ]

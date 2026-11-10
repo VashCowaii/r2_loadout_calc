@@ -20,12 +20,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1701847025\">Jade_Eidolon1_InsertDamageRatio</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.32) || RETURN",
-              "displayLines": "0.32",
-              "constants": [],
-              "variables": [
-                0.32
-              ]
+              "displayLines": "0.32"
             }
           }
         }
@@ -34,25 +29,14 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (_RateLayer) || Variables[1] (_InsertTriggerCount) || SUB || RETURN",
-        "displayLines": "(_RateLayer - _InsertTriggerCount)",
-        "constants": [],
-        "variables": [
-          "_RateLayer",
-          "_InsertTriggerCount"
-        ]
+        "displayLines": "(_RateLayer - _InsertTriggerCount)"
       },
       "variableName": "_RateLayer"
     },
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (_RateLayer) || RETURN",
-        "displayLines": "_RateLayer",
-        "constants": [],
-        "variables": [
-          "_RateLayer"
-        ]
+        "displayLines": "_RateLayer"
       }
     },
     {
@@ -63,30 +47,15 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-2143808418\">Jade_Passive_Rate</a>[<span class=\"descriptionNumberColor\">Pawned Asset</span>]",
       "stackLimit": {
-        "operator": "Variables[0] (50) || RETURN",
-        "displayLines": "50",
-        "constants": [],
-        "variables": [
-          50
-        ]
+        "displayLines": "50"
       },
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] (0.024) || RETURN",
-          "displayLines": "0.024",
-          "constants": [],
-          "variables": [
-            0.024
-          ]
+          "displayLines": "0.024"
         }
       },
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (5) || RETURN",
-        "displayLines": "5",
-        "constants": [],
-        "variables": [
-          5
-        ]
+        "displayLines": "5"
       }
     },
     {
@@ -99,21 +68,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (1.2) || RETURN",
-          "displayLines": "1.2",
-          "constants": [],
-          "variables": [
-            1.2
-          ]
+          "displayLines": "1.2"
         },
         "HitSplit": 0.15,
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "attackType": "Follow-up",
@@ -130,21 +89,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (1.2) || RETURN",
-          "displayLines": "1.2",
-          "constants": [],
-          "variables": [
-            1.2
-          ]
+          "displayLines": "1.2"
         },
         "HitSplit": 0.15,
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "attackType": "Follow-up",
@@ -161,21 +110,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (1.2) || RETURN",
-          "displayLines": "1.2",
-          "constants": [],
-          "variables": [
-            1.2
-          ]
+          "displayLines": "1.2"
         },
         "HitSplit": 0.15,
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "attackType": "Follow-up",
@@ -192,21 +131,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (1.2) || RETURN",
-          "displayLines": "1.2",
-          "constants": [],
-          "variables": [
-            1.2
-          ]
+          "displayLines": "1.2"
         },
         "HitSplit": 0.15,
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "attackType": "Follow-up",
@@ -222,21 +151,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (1.2) || RETURN",
-          "displayLines": "1.2",
-          "constants": [],
-          "variables": [
-            1.2
-          ]
+          "displayLines": "1.2"
         },
         "HitSplit": 0.4,
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "attackType": "Follow-up",

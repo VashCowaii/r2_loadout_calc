@@ -8,12 +8,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-        "displayLines": "{[Skill02[3]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill02[3]]}"
-        ]
+        "displayLines": "{[Skill02[3]]}"
       },
       "variableName": "Wolf_MaxAttackCount"
     },
@@ -34,12 +29,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1905621078\">Enemy_W2_Lycan_RageControllerV2</a>",
       "valuePerStack": {
         "MaxAttackCount": {
-          "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-          "displayLines": "{[Skill02[3]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[3]]}"
-          ]
+          "displayLines": "{[Skill02[3]]}"
         }
       },
       "casterAssign": "TargetSelf"
@@ -209,12 +199,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedUpRatio) || RETURN",
-                "displayLines": "MDF_SpeedUpRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedUpRatio"
-                ]
+                "displayLines": "MDF_SpeedUpRatio"
               }
             }
           ]
@@ -337,12 +322,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1495768773\">Enemy_W2_Lycan_RageStatus</a>[<span class=\"descriptionNumberColor\">Moon Rage</span>]",
                       "valuePerStack": {
                         "MDF_SpeedUpRatio": {
-                          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                          "displayLines": "{[Skill02[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[0]]}"
-                          ]
+                          "displayLines": "{[Skill02[0]]}"
                         }
                       }
                     }

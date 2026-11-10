@@ -27,29 +27,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"671072840\">Anaxa_BPAbility_Bonus</a>[<span class=\"descriptionNumberColor\">Blaze, Plunged to Canyon</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "stackLimit": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             }
           },
           "addStacksPerTrigger": 1
@@ -65,13 +50,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (4) || Variables[1] (Skill02_ExtraHitCount) || ADD || RETURN",
-        "displayLines": "(4 + Skill02_ExtraHitCount)",
-        "constants": [],
-        "variables": [
-          4,
-          "Skill02_ExtraHitCount"
-        ]
+        "displayLines": "(4 + Skill02_ExtraHitCount)"
       },
       "variableName": "ADF_LoopCount"
     },
@@ -85,20 +64,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] (0.7) || RETURN",
-          "displayLines": "0.7",
-          "constants": [],
-          "variables": [
-            0.7
-          ]
+          "displayLines": "0.7"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "instanceTag": "Anaxa_00_BP",
         "Tags": null,
@@ -116,12 +85,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (ADF_LoopCount) || RETURN",
-        "displayLines": "ADF_LoopCount",
-        "constants": [],
-        "variables": [
-          "ADF_LoopCount"
-        ]
+        "displayLines": "ADF_LoopCount"
       },
       "execute": [
         {
@@ -203,13 +167,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_PropertyValue * MDF_Layer)"
               }
             }
           ]

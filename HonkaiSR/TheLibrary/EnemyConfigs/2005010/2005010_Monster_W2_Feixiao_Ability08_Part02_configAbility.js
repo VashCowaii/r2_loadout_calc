@@ -145,13 +145,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Skill08DamagePercentage) || Variables[1] ({[Skill08[2]]}) || ADD || RETURN",
-            "displayLines": "(Skill08DamagePercentage + {[Skill08[2]]})",
-            "constants": [],
-            "variables": [
-              "Skill08DamagePercentage",
-              "{[Skill08[2]]}"
-            ]
+            "displayLines": "(Skill08DamagePercentage + {[Skill08[2]]})"
           },
           "variableName": "Skill08DamagePercentage"
         }
@@ -169,13 +163,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Skill08DamagePercentage) || Variables[1] ({[Skill08[2]]}) || ADD || RETURN",
-            "displayLines": "(Skill08DamagePercentage + {[Skill08[2]]})",
-            "constants": [],
-            "variables": [
-              "Skill08DamagePercentage",
-              "{[Skill08[2]]}"
-            ]
+            "displayLines": "(Skill08DamagePercentage + {[Skill08[2]]})"
           },
           "variableName": "Skill08DamagePercentage"
         }
@@ -193,14 +181,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Skill08DamagePercentage) || Variables[1] ({[Skill08[1]]}) || ADD || Variables[2] ({[Skill08[0]]}) || ADD || RETURN",
-            "displayLines": "((Skill08DamagePercentage + {[Skill08[1]]}) + {[Skill08[0]]})",
-            "constants": [],
-            "variables": [
-              "Skill08DamagePercentage",
-              "{[Skill08[1]]}",
-              "{[Skill08[0]]}"
-            ]
+            "displayLines": "((Skill08DamagePercentage + {[Skill08[1]]}) + {[Skill08[0]]})"
           },
           "variableName": "Skill08DamagePercentage"
         }
@@ -209,13 +190,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Skill08DamagePercentage) || Variables[1] ({[Skill08[0]]}) || ADD || RETURN",
-            "displayLines": "(Skill08DamagePercentage + {[Skill08[0]]})",
-            "constants": [],
-            "variables": [
-              "Skill08DamagePercentage",
-              "{[Skill08[0]]}"
-            ]
+            "displayLines": "(Skill08DamagePercentage + {[Skill08[0]]})"
           },
           "variableName": "Skill08DamagePercentage"
         }
@@ -346,12 +321,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] (Skill08DamagePercentage) || RETURN",
-          "displayLines": "Skill08DamagePercentage",
-          "constants": [],
-          "variables": [
-            "Skill08DamagePercentage"
-          ]
+          "displayLines": "Skill08DamagePercentage"
         },
         "Toughness": null,
         "Tags": null,
@@ -377,12 +347,7 @@ const configAbility = {
           },
           "searchRandom": true,
           "maxTargets": {
-            "operator": "Variables[0] ({[PassiveSkill03[4]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[4]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[4]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[4]]}"
           },
           "ifTargetFound": [
             {
@@ -393,20 +358,10 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1794338335\">Standard_CTRL_Crazy</a>[<span class=\"descriptionNumberColor\">Outrage</span>]",
               "duration": {
-                "operator": "Variables[0] ({[PassiveSkill03[3]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[3]]}"
-                ]
+                "displayLines": "{[PassiveSkill03[3]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill03[5]]}) || RETURN",
-                "displayLines": "{[Skill03[5]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill03[5]]}"
-                ]
+                "displayLines": "{[Skill03[5]]}"
               }
             }
           ]
@@ -430,29 +385,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1887773470\">Standard_FatigueRatio</a>[<span class=\"descriptionNumberColor\">Weaken</span>]",
           "duration": {
-            "operator": "Variables[0] ({[PassiveSkill03[2]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[2]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[2]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[2]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-            "displayLines": "{[Skill02[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[2]]}"
-            ]
+            "displayLines": "{[Skill02[2]]}"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-              "displayLines": "{[Skill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[1]]}"
-              ]
+              "displayLines": "{[Skill02[1]]}"
             }
           }
         }

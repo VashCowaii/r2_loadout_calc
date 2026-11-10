@@ -63,26 +63,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[PassiveSkill03[3]]}) || Constants[0] (1) || Variables[1] (_DamageUpTemp) || ADD || MUL || RETURN",
-              "displayLines": "({[PassiveSkill03[3]]} * (1 + _DamageUpTemp))",
-              "constants": [
-                1
-              ],
-              "variables": [
-                "{[PassiveSkill03[3]]}",
-                "_DamageUpTemp"
-              ]
+              "displayLines": "({[PassiveSkill03[3]]} * (1 + _DamageUpTemp))"
             },
             "DamageFlat": {
-              "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill06[0]]}) || MUL || Constants[0] (4) || DIV || RETURN",
-              "displayLines": "((_MaxHP * {[Skill06[0]]}) / 4)",
-              "constants": [
-                4
-              ],
-              "variables": [
-                "_MaxHP",
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "((_MaxHP * {[Skill06[0]]}) / 4)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "HitSplit": 0.25,
@@ -120,26 +104,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[PassiveSkill03[3]]}) || Constants[0] (1) || Variables[1] (_DamageUpTemp) || ADD || MUL || RETURN",
-              "displayLines": "({[PassiveSkill03[3]]} * (1 + _DamageUpTemp))",
-              "constants": [
-                1
-              ],
-              "variables": [
-                "{[PassiveSkill03[3]]}",
-                "_DamageUpTemp"
-              ]
+              "displayLines": "({[PassiveSkill03[3]]} * (1 + _DamageUpTemp))"
             },
             "DamageFlat": {
-              "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill06[0]]}) || MUL || Constants[0] (4) || DIV || RETURN",
-              "displayLines": "((_MaxHP * {[Skill06[0]]}) / 4)",
-              "constants": [
-                4
-              ],
-              "variables": [
-                "_MaxHP",
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "((_MaxHP * {[Skill06[0]]}) / 4)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "HitSplit": 0.25,
@@ -177,26 +145,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[PassiveSkill03[3]]}) || Constants[0] (1) || Variables[1] (_DamageUpTemp) || ADD || MUL || RETURN",
-              "displayLines": "({[PassiveSkill03[3]]} * (1 + _DamageUpTemp))",
-              "constants": [
-                1
-              ],
-              "variables": [
-                "{[PassiveSkill03[3]]}",
-                "_DamageUpTemp"
-              ]
+              "displayLines": "({[PassiveSkill03[3]]} * (1 + _DamageUpTemp))"
             },
             "DamageFlat": {
-              "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill06[0]]}) || MUL || Constants[0] (4) || DIV || RETURN",
-              "displayLines": "((_MaxHP * {[Skill06[0]]}) / 4)",
-              "constants": [
-                4
-              ],
-              "variables": [
-                "_MaxHP",
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "((_MaxHP * {[Skill06[0]]}) / 4)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "HitSplit": 0.25,
@@ -245,16 +197,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill06[1]]}) || MUL || Variables[0] (_MaxHP) || Variables[2] ({[Skill06[0]]}) || MUL || Constants[0] (4) || DIV || ADD || RETURN",
-                  "displayLines": "((_MaxHP * {[Skill06[1]]}) + ((_MaxHP * {[Skill06[0]]}) / 4))",
-                  "constants": [
-                    4
-                  ],
-                  "variables": [
-                    "_MaxHP",
-                    "{[Skill06[1]]}",
-                    "{[Skill06[0]]}"
-                  ]
+                  "displayLines": "((_MaxHP * {[Skill06[1]]}) + ((_MaxHP * {[Skill06[0]]}) / 4))"
                 },
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
@@ -272,30 +215,15 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"2065489118\">Standard_Entangle</a>[<span class=\"descriptionNumberColor\">Entanglement</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-                "displayLines": "{[Skill06[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill06[3]]}"
-                ]
+                "displayLines": "{[Skill06[3]]}"
               },
               "baseChance": 1,
               "valuePerStack": {
                 "MDF_ActionDelayRatio": {
-                  "operator": "Variables[0] ({[Skill06[4]]}) || RETURN",
-                  "displayLines": "{[Skill06[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill06[4]]}"
-                  ]
+                  "displayLines": "{[Skill06[4]]}"
                 },
                 "Modifier_Entangle_DamagePercentage": {
-                  "operator": "Variables[0] ({[Skill06[5]]}) || RETURN",
-                  "displayLines": "{[Skill06[5]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill06[5]]}"
-                  ]
+                  "displayLines": "{[Skill06[5]]}"
                 },
                 "Modifier_Entangle_DamageValue": 0
               }
@@ -311,15 +239,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill06[0]]}) || MUL || Constants[0] (4) || DIV || RETURN",
-                  "displayLines": "((_MaxHP * {[Skill06[0]]}) / 4)",
-                  "constants": [
-                    4
-                  ],
-                  "variables": [
-                    "_MaxHP",
-                    "{[Skill06[0]]}"
-                  ]
+                  "displayLines": "((_MaxHP * {[Skill06[0]]}) / 4)"
                 },
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
@@ -359,20 +279,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-2024056044\">Monster_W4_Pollux_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
           "valuePerStack": {
             "MDF_DamagePercentage": {
-              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[1]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[1]]}"
             },
             "MDF_DamageHpAddedRatio": {
-              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[0]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[0]]}"
             }
           }
         }
@@ -381,12 +291,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (_TempAIFlag) || RETURN",
-        "displayLines": "_TempAIFlag",
-        "constants": [],
-        "variables": [
-          "_TempAIFlag"
-        ]
+        "displayLines": "_TempAIFlag"
       },
       "variableName": "AIFlag"
     },

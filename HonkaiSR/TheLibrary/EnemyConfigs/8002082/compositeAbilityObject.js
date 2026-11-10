@@ -620,13 +620,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_TotalDamage) || Variables[1] (_Damage) || ADD || RETURN",
-                        "displayLines": "(_TotalDamage + _Damage)",
-                        "constants": [],
-                        "variables": [
-                          "_TotalDamage",
-                          "_Damage"
-                        ]
+                        "displayLines": "(_TotalDamage + _Damage)"
                       },
                       "variableName": "_TotalDamage"
                     },
@@ -721,14 +715,7 @@ const compositeAbilityObject = {
                             "target": "{{Caster}}"
                           },
                           "consumePercent": {
-                            "operator": "Variables[0] (_TotalDamage) || Variables[1] (_CasterHP) || DIV || Variables[2] (_LoseRatio) || MUL || RETURN",
-                            "displayLines": "((_TotalDamage / _CasterHP) * _LoseRatio)",
-                            "constants": [],
-                            "variables": [
-                              "_TotalDamage",
-                              "_CasterHP",
-                              "_LoseRatio"
-                            ]
+                            "displayLines": "((_TotalDamage / _CasterHP) * _LoseRatio)"
                           },
                           "consumeFloor": 1
                         }
@@ -742,14 +729,7 @@ const compositeAbilityObject = {
                             "target": "{{Caster}}"
                           },
                           "consumePercent": {
-                            "operator": "Variables[0] (_TotalDamage) || Variables[1] (_CasterHP) || DIV || Variables[2] (_LoseRatio) || MUL || RETURN",
-                            "displayLines": "((_TotalDamage / _CasterHP) * _LoseRatio)",
-                            "constants": [],
-                            "variables": [
-                              "_TotalDamage",
-                              "_CasterHP",
-                              "_LoseRatio"
-                            ]
+                            "displayLines": "((_TotalDamage / _CasterHP) * _LoseRatio)"
                           },
                           "consumeFloor": 1
                         }
@@ -780,13 +760,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "healFlat": {
-                            "operator": "Variables[0] (_TotalDamage) || Variables[1] (_HealRatio) || MUL || RETURN",
-                            "displayLines": "(_TotalDamage * _HealRatio)",
-                            "constants": [],
-                            "variables": [
-                              "_TotalDamage",
-                              "_HealRatio"
-                            ]
+                            "displayLines": "(_TotalDamage * _HealRatio)"
                           },
                           "formula": "Heal from Target MaxHP"
                         },
@@ -804,13 +778,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "healFlat": {
-                            "operator": "Variables[0] (_TotalDamage) || Variables[1] (_HealRatio) || MUL || RETURN",
-                            "displayLines": "(_TotalDamage * _HealRatio)",
-                            "constants": [],
-                            "variables": [
-                              "_TotalDamage",
-                              "_HealRatio"
-                            ]
+                            "displayLines": "(_TotalDamage * _HealRatio)"
                           },
                           "formula": "Heal from Target MaxHP"
                         },
@@ -997,12 +965,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (MDF_Count) || RETURN",
-                            "displayLines": "MDF_Count",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Count"
-                            ]
+                            "displayLines": "MDF_Count"
                           },
                           "entityClass": "Enemy",
                           "maximum": 20,
@@ -1121,12 +1084,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                    "displayLines": "{[SkillP01[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillP01[0]]}"
-                    ]
+                    "displayLines": "{[SkillP01[0]]}"
                   },
                   "entityClass": "Enemy",
                   "maximum": 20,
@@ -1203,12 +1161,7 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
               "counter": {
-                "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                "displayLines": "{[SkillP01[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP01[0]]}"
-                ]
+                "displayLines": "{[SkillP01[0]]}"
               }
             }
           ],
@@ -1243,12 +1196,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
                       "counter": {
-                        "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                        "displayLines": "{[SkillP01[0]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillP01[0]]}"
-                        ]
+                        "displayLines": "{[SkillP01[0]]}"
                       }
                     }
                   ]
@@ -1355,12 +1303,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
                           "counter": {
-                            "operator": "Variables[0] (Cunhu_CurrentCount) || RETURN",
-                            "displayLines": "Cunhu_CurrentCount",
-                            "constants": [],
-                            "variables": [
-                              "Cunhu_CurrentCount"
-                            ]
+                            "displayLines": "Cunhu_CurrentCount"
                           }
                         }
                       ]

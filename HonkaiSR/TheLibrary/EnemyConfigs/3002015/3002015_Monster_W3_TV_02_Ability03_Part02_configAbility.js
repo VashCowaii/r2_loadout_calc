@@ -15,12 +15,7 @@ const configAbility = {
       "name": "Define Custom Variable",
       "scope": "TargetEntity",
       "value": {
-        "operator": "Variables[0] (FlopSide) || INVERT || RETURN",
-        "displayLines": "-FlopSide",
-        "constants": [],
-        "variables": [
-          "FlopSide"
-        ]
+        "displayLines": "-FlopSide"
       },
       "variableName": "FlopSide"
     },

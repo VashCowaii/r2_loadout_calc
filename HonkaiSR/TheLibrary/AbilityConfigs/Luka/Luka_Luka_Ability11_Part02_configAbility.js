@@ -32,22 +32,12 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-632542414\">Luka_Eidolon1_Sub</a>[<span class=\"descriptionNumberColor\">Fighting Endlessly</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "stackLimit": 1,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.15) || RETURN",
-              "displayLines": "0.15",
-              "constants": [],
-              "variables": [
-                0.15
-              ]
+              "displayLines": "0.15"
             }
           }
         }
@@ -62,12 +52,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "value": {
-        "operator": "Constants[0] (2) || INVERT || RETURN",
-        "displayLines": "-2",
-        "constants": [
-          2
-        ],
-        "variables": []
+        "displayLines": "-2"
       }
     },
     {
@@ -90,12 +75,7 @@ const configAbility = {
               {
                 "name": "Random Chance",
                 "chance": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
+                  "displayLines": "0.5"
                 }
               },
               {
@@ -117,14 +97,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (PunchCount) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(PunchCount - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "PunchCount"
-                ]
+                "displayLines": "(PunchCount - 1)"
               },
               "variableName": "PunchCount"
             }
@@ -135,14 +108,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (PunchCount) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(PunchCount - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "PunchCount"
-            ]
+            "displayLines": "(PunchCount - 1)"
           },
           "variableName": "PunchCount"
         }
@@ -151,20 +117,10 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (BulletCount) || RETURN",
-        "displayLines": "BulletCount",
-        "constants": [],
-        "variables": [
-          "BulletCount"
-        ]
+        "displayLines": "BulletCount"
       },
       "maximum": {
-        "operator": "Constants[0] (4) || RETURN",
-        "displayLines": "4",
-        "constants": [
-          4
-        ],
-        "variables": []
+        "displayLines": "4"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -180,23 +136,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (0.2) || RETURN",
-          "displayLines": "0.2",
-          "constants": [],
-          "variables": [
-            0.2
-          ]
+          "displayLines": "0.2"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.5) || MUL || Constants[1] (0.4) || MUL || RETURN",
-          "displayLines": "((ST Toughness Value * 0.5) * 0.4)",
-          "constants": [
-            0.5,
-            0.4
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "((ST Toughness Value * 0.5) * 0.4)"
         },
         "Tags": null
       }
@@ -235,12 +178,7 @@ const configAbility = {
                   {
                     "name": "Random Chance",
                     "chance": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   },
                   {
@@ -268,14 +206,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (PunchCount) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(PunchCount - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "PunchCount"
-                    ]
+                    "displayLines": "(PunchCount - 1)"
                   },
                   "variableName": "PunchCount"
                 },
@@ -291,14 +222,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (PunchCount) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(PunchCount - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "PunchCount"
-                ]
+                "displayLines": "(PunchCount - 1)"
               },
               "variableName": "PunchCount"
             }
@@ -307,20 +231,10 @@ const configAbility = {
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (BulletCount) || RETURN",
-            "displayLines": "BulletCount",
-            "constants": [],
-            "variables": [
-              "BulletCount"
-            ]
+            "displayLines": "BulletCount"
           },
           "maximum": {
-            "operator": "Constants[0] (4) || RETURN",
-            "displayLines": "4",
-            "constants": [
-              4
-            ],
-            "variables": []
+            "displayLines": "4"
           },
           "assignState": "True",
           "priorState": "Normal",
@@ -347,12 +261,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 },
                 "Toughness": null,
                 "Tags": null
@@ -383,12 +292,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "Damage": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     },
                     "Toughness": null,
                     "Tags": null
@@ -405,23 +309,10 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "Damage": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     },
                     "Toughness": {
-                      "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.5) || MUL || Constants[1] (0.3) || MUL || RETURN",
-                      "displayLines": "((ST Toughness Value * 0.5) * 0.3)",
-                      "constants": [
-                        0.5,
-                        0.3
-                      ],
-                      "variables": [
-                        "ST Toughness Value"
-                      ]
+                      "displayLines": "((ST Toughness Value * 0.5) * 0.3)"
                     },
                     "Tags": null
                   }
@@ -433,14 +324,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (HitCount) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(HitCount + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "HitCount"
-            ]
+            "displayLines": "(HitCount + 1)"
           },
           "variableName": "HitCount"
         }
@@ -451,20 +335,10 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (BulletCount) || RETURN",
-        "displayLines": "BulletCount",
-        "constants": [],
-        "variables": [
-          "BulletCount"
-        ]
+        "displayLines": "BulletCount"
       },
       "maximum": {
-        "operator": "Constants[0] (4) || RETURN",
-        "displayLines": "4",
-        "constants": [
-          4
-        ],
-        "variables": []
+        "displayLines": "4"
       },
       "assignState": "True",
       "bar#": 3,
@@ -480,22 +354,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (0.8) || RETURN",
-          "displayLines": "0.8",
-          "constants": [],
-          "variables": [
-            0.8
-          ]
+          "displayLines": "0.8"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.5) || MUL || RETURN",
-          "displayLines": "(ST Toughness Value * 0.5)",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(ST Toughness Value * 0.5)"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -521,12 +383,7 @@ const configAbility = {
           "variableName": "DOT_TriggerRatio",
           "eventType": "DOT_Bleed",
           "value": {
-            "operator": "Variables[0] (0.85) || RETURN",
-            "displayLines": "0.85",
-            "constants": [],
-            "variables": [
-              0.85
-            ]
+            "displayLines": "0.85"
           }
         },
         {
@@ -567,14 +424,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (HitCount) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(HitCount - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "HitCount"
-            ]
+            "displayLines": "(HitCount - 1)"
           },
           "execute": [
             {
@@ -586,12 +436,7 @@ const configAbility = {
               "variableName": "DOT_TriggerRatio",
               "eventType": "DOT_Bleed",
               "value": {
-                "operator": "Variables[0] (0.08) || RETURN",
-                "displayLines": "0.08",
-                "constants": [],
-                "variables": [
-                  0.08
-                ]
+                "displayLines": "0.08"
               }
             }
           ]
@@ -605,12 +450,7 @@ const configAbility = {
           "variableName": "DOT_TriggerRatio",
           "eventType": "DOT_Bleed",
           "value": {
-            "operator": "Variables[0] (0.08) || RETURN",
-            "displayLines": "0.08",
-            "constants": [],
-            "variables": [
-              0.08
-            ]
+            "displayLines": "0.08"
           }
         },
         "Trigger: Attack End"

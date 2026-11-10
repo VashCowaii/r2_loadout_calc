@@ -45,12 +45,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.12) || INVERT || RETURN",
-                    "displayLines": "-0.12",
-                    "constants": [],
-                    "variables": [
-                      0.12
-                    ]
+                    "displayLines": "-0.12"
                   }
                 }
               ]
@@ -87,20 +82,10 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1118663317\">LC_21015_Sub</a>[<span class=\"descriptionNumberColor\">Ensnarement</span>]",
                       "duration": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (0.6) || RETURN",
-                        "displayLines": "0.6",
-                        "constants": [],
-                        "variables": [
-                          0.6
-                        ]
+                        "displayLines": "0.6"
                       }
                     }
                   ]

@@ -59,12 +59,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -101,28 +96,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_StatusProbability) || Variables[1] (_StatusProbabilityConvert) || SUB || RETURN",
-                    "displayLines": "(_StatusProbability - _StatusProbabilityConvert)",
-                    "constants": [],
-                    "variables": [
-                      "_StatusProbability",
-                      "_StatusProbabilityConvert"
-                    ]
+                    "displayLines": "(_StatusProbability - _StatusProbabilityConvert)"
                   },
                   "variableName": "SkillTree_PointB3_StatusProbabilityValue"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (WHOLE) || Variables[1] (SkillTree_PointB3_StatusProbabilityValue) || Variables[2] (0.1) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.1) || MUL || RETURN",
-                    "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((SkillTree_PointB3_StatusProbabilityValue / 0.1)) * 0.1)",
-                    "constants": [],
-                    "variables": [
-                      "WHOLE",
-                      "SkillTree_PointB3_StatusProbabilityValue",
-                      0.1,
-                      0.1
-                    ]
+                    "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((SkillTree_PointB3_StatusProbabilityValue / 0.1)) * 0.1)"
                   },
                   "variableName": "SkillTree_PointB3_StatusProbabilityValue"
                 },
@@ -158,12 +139,7 @@ const compositeAbilityObject = {
                         "value1": "SkillTree_PointB3_StatusProbabilityValue",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         },
                         "contextScope": "ContextCaster"
                       },
@@ -171,12 +147,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (0.5) || RETURN",
-                            "displayLines": "0.5",
-                            "constants": [],
-                            "variables": [
-                              0.5
-                            ]
+                            "displayLines": "0.5"
                           },
                           "variableName": "SkillTree_PointB3_StatusProbabilityValue"
                         }
@@ -191,12 +162,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1388519324\">Advanced_Silwolf_Tree03_AttackUp</a>[<span class=\"descriptionNumberColor\">Side Note</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (SkillTree_PointB3_StatusProbabilityValue) || RETURN",
-                          "displayLines": "SkillTree_PointB3_StatusProbabilityValue",
-                          "constants": [],
-                          "variables": [
-                            "SkillTree_PointB3_StatusProbabilityValue"
-                          ]
+                          "displayLines": "SkillTree_PointB3_StatusProbabilityValue"
                         }
                       }
                     }
@@ -255,14 +221,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "(0 - MDF_PropertyValue)"
                   }
                 }
               ]
@@ -289,12 +248,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -322,14 +276,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "(0 - MDF_PropertyValue)"
                   }
                 }
               ]
@@ -359,14 +306,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "(0 - MDF_PropertyValue)"
                   }
                 }
               ]
@@ -396,14 +336,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "(0 - MDF_PropertyValue)"
                   }
                 }
               ]
@@ -433,14 +366,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "(0 - MDF_PropertyValue)"
                   }
                 }
               ]
@@ -533,14 +459,7 @@ const compositeAbilityObject = {
                   },
                   "element": null,
                   "resReduction": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "(0 - MDF_PropertyValue)"
                   },
                   "maxImplant": 1,
                   "returnWeaknessVar": [
@@ -580,12 +499,7 @@ const compositeAbilityObject = {
                       "functionName": "<a class=\"gTempYellow\" id=\"1273458995\">Advanced_Silwolf_PassiveAbility01_WeakTypeTransfer</a>",
                       "variables": {
                         "_WeakType": {
-                          "operator": "Variables[0] (_WeakType) || RETURN",
-                          "displayLines": "_WeakType",
-                          "constants": [],
-                          "variables": [
-                            "_WeakType"
-                          ]
+                          "displayLines": "_WeakType"
                         }
                       }
                     }
@@ -623,12 +537,7 @@ const compositeAbilityObject = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (_TheFirstAvatarWeakType) || RETURN",
-                        "displayLines": "_TheFirstAvatarWeakType",
-                        "constants": [],
-                        "variables": [
-                          "_TheFirstAvatarWeakType"
-                        ]
+                        "displayLines": "_TheFirstAvatarWeakType"
                       },
                       "caseEvents": [
                         {
@@ -643,14 +552,7 @@ const compositeAbilityObject = {
                               },
                               "element": null,
                               "resReduction": {
-                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                                "displayLines": "(0 - MDF_PropertyValue)",
-                                "constants": [
-                                  0
-                                ],
-                                "variables": [
-                                  "MDF_PropertyValue"
-                                ]
+                                "displayLines": "(0 - MDF_PropertyValue)"
                               },
                               "maxImplant": 1,
                               "prefWeakness": "Physical",
@@ -665,12 +567,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "constants": [],
-                                "variables": [
-                                  "Advanced_Silwolf_BPAbility_WeakType_01"
-                                ]
+                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                               },
                               "variableName": "_WeakType"
                             }
@@ -688,14 +585,7 @@ const compositeAbilityObject = {
                               },
                               "element": null,
                               "resReduction": {
-                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                                "displayLines": "(0 - MDF_PropertyValue)",
-                                "constants": [
-                                  0
-                                ],
-                                "variables": [
-                                  "MDF_PropertyValue"
-                                ]
+                                "displayLines": "(0 - MDF_PropertyValue)"
                               },
                               "maxImplant": 1,
                               "prefWeakness": "Fire",
@@ -710,12 +600,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "constants": [],
-                                "variables": [
-                                  "Advanced_Silwolf_BPAbility_WeakType_01"
-                                ]
+                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                               },
                               "variableName": "_WeakType"
                             }
@@ -733,14 +618,7 @@ const compositeAbilityObject = {
                               },
                               "element": null,
                               "resReduction": {
-                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                                "displayLines": "(0 - MDF_PropertyValue)",
-                                "constants": [
-                                  0
-                                ],
-                                "variables": [
-                                  "MDF_PropertyValue"
-                                ]
+                                "displayLines": "(0 - MDF_PropertyValue)"
                               },
                               "maxImplant": 1,
                               "prefWeakness": "Ice",
@@ -755,12 +633,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "constants": [],
-                                "variables": [
-                                  "Advanced_Silwolf_BPAbility_WeakType_01"
-                                ]
+                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                               },
                               "variableName": "_WeakType"
                             }
@@ -778,14 +651,7 @@ const compositeAbilityObject = {
                               },
                               "element": null,
                               "resReduction": {
-                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                                "displayLines": "(0 - MDF_PropertyValue)",
-                                "constants": [
-                                  0
-                                ],
-                                "variables": [
-                                  "MDF_PropertyValue"
-                                ]
+                                "displayLines": "(0 - MDF_PropertyValue)"
                               },
                               "maxImplant": 1,
                               "prefWeakness": "Lightning",
@@ -800,12 +666,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "constants": [],
-                                "variables": [
-                                  "Advanced_Silwolf_BPAbility_WeakType_01"
-                                ]
+                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                               },
                               "variableName": "_WeakType"
                             }
@@ -823,14 +684,7 @@ const compositeAbilityObject = {
                               },
                               "element": null,
                               "resReduction": {
-                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                                "displayLines": "(0 - MDF_PropertyValue)",
-                                "constants": [
-                                  0
-                                ],
-                                "variables": [
-                                  "MDF_PropertyValue"
-                                ]
+                                "displayLines": "(0 - MDF_PropertyValue)"
                               },
                               "maxImplant": 1,
                               "prefWeakness": "Wind",
@@ -845,12 +699,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "constants": [],
-                                "variables": [
-                                  "Advanced_Silwolf_BPAbility_WeakType_01"
-                                ]
+                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                               },
                               "variableName": "_WeakType"
                             }
@@ -868,14 +717,7 @@ const compositeAbilityObject = {
                               },
                               "element": null,
                               "resReduction": {
-                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                                "displayLines": "(0 - MDF_PropertyValue)",
-                                "constants": [
-                                  0
-                                ],
-                                "variables": [
-                                  "MDF_PropertyValue"
-                                ]
+                                "displayLines": "(0 - MDF_PropertyValue)"
                               },
                               "maxImplant": 1,
                               "prefWeakness": "Quantum",
@@ -890,12 +732,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "constants": [],
-                                "variables": [
-                                  "Advanced_Silwolf_BPAbility_WeakType_01"
-                                ]
+                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                               },
                               "variableName": "_WeakType"
                             }
@@ -913,14 +750,7 @@ const compositeAbilityObject = {
                               },
                               "element": null,
                               "resReduction": {
-                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                                "displayLines": "(0 - MDF_PropertyValue)",
-                                "constants": [
-                                  0
-                                ],
-                                "variables": [
-                                  "MDF_PropertyValue"
-                                ]
+                                "displayLines": "(0 - MDF_PropertyValue)"
                               },
                               "maxImplant": 1,
                               "prefWeakness": "Imaginary",
@@ -935,12 +765,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "constants": [],
-                                "variables": [
-                                  "Advanced_Silwolf_BPAbility_WeakType_01"
-                                ]
+                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                               },
                               "variableName": "_WeakType"
                             }
@@ -954,12 +779,7 @@ const compositeAbilityObject = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (_WeakType) || RETURN",
-                        "displayLines": "_WeakType",
-                        "constants": [],
-                        "variables": [
-                          "_WeakType"
-                        ]
+                        "displayLines": "_WeakType"
                       },
                       "caseEvents": [
                         {
@@ -974,14 +794,7 @@ const compositeAbilityObject = {
                               },
                               "element": null,
                               "resReduction": {
-                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                                "displayLines": "(0 - MDF_PropertyValue)",
-                                "constants": [
-                                  0
-                                ],
-                                "variables": [
-                                  "MDF_PropertyValue"
-                                ]
+                                "displayLines": "(0 - MDF_PropertyValue)"
                               },
                               "maxImplant": 1,
                               "prefWeakness": "Physical",
@@ -996,12 +809,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "constants": [],
-                                "variables": [
-                                  "Advanced_Silwolf_BPAbility_WeakType_01"
-                                ]
+                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                               },
                               "variableName": "_WeakType"
                             }
@@ -1019,14 +827,7 @@ const compositeAbilityObject = {
                               },
                               "element": null,
                               "resReduction": {
-                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                                "displayLines": "(0 - MDF_PropertyValue)",
-                                "constants": [
-                                  0
-                                ],
-                                "variables": [
-                                  "MDF_PropertyValue"
-                                ]
+                                "displayLines": "(0 - MDF_PropertyValue)"
                               },
                               "maxImplant": 1,
                               "prefWeakness": "Fire",
@@ -1041,12 +842,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "constants": [],
-                                "variables": [
-                                  "Advanced_Silwolf_BPAbility_WeakType_01"
-                                ]
+                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                               },
                               "variableName": "_WeakType"
                             }
@@ -1064,14 +860,7 @@ const compositeAbilityObject = {
                               },
                               "element": null,
                               "resReduction": {
-                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                                "displayLines": "(0 - MDF_PropertyValue)",
-                                "constants": [
-                                  0
-                                ],
-                                "variables": [
-                                  "MDF_PropertyValue"
-                                ]
+                                "displayLines": "(0 - MDF_PropertyValue)"
                               },
                               "maxImplant": 1,
                               "prefWeakness": "Ice",
@@ -1086,12 +875,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "constants": [],
-                                "variables": [
-                                  "Advanced_Silwolf_BPAbility_WeakType_01"
-                                ]
+                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                               },
                               "variableName": "_WeakType"
                             }
@@ -1109,14 +893,7 @@ const compositeAbilityObject = {
                               },
                               "element": null,
                               "resReduction": {
-                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                                "displayLines": "(0 - MDF_PropertyValue)",
-                                "constants": [
-                                  0
-                                ],
-                                "variables": [
-                                  "MDF_PropertyValue"
-                                ]
+                                "displayLines": "(0 - MDF_PropertyValue)"
                               },
                               "maxImplant": 1,
                               "prefWeakness": "Lightning",
@@ -1131,12 +908,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "constants": [],
-                                "variables": [
-                                  "Advanced_Silwolf_BPAbility_WeakType_01"
-                                ]
+                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                               },
                               "variableName": "_WeakType"
                             }
@@ -1154,14 +926,7 @@ const compositeAbilityObject = {
                               },
                               "element": null,
                               "resReduction": {
-                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                                "displayLines": "(0 - MDF_PropertyValue)",
-                                "constants": [
-                                  0
-                                ],
-                                "variables": [
-                                  "MDF_PropertyValue"
-                                ]
+                                "displayLines": "(0 - MDF_PropertyValue)"
                               },
                               "maxImplant": 1,
                               "prefWeakness": "Wind",
@@ -1176,12 +941,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "constants": [],
-                                "variables": [
-                                  "Advanced_Silwolf_BPAbility_WeakType_01"
-                                ]
+                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                               },
                               "variableName": "_WeakType"
                             }
@@ -1199,14 +959,7 @@ const compositeAbilityObject = {
                               },
                               "element": null,
                               "resReduction": {
-                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                                "displayLines": "(0 - MDF_PropertyValue)",
-                                "constants": [
-                                  0
-                                ],
-                                "variables": [
-                                  "MDF_PropertyValue"
-                                ]
+                                "displayLines": "(0 - MDF_PropertyValue)"
                               },
                               "maxImplant": 1,
                               "prefWeakness": "Quantum",
@@ -1221,12 +974,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "constants": [],
-                                "variables": [
-                                  "Advanced_Silwolf_BPAbility_WeakType_01"
-                                ]
+                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                               },
                               "variableName": "_WeakType"
                             }
@@ -1244,14 +992,7 @@ const compositeAbilityObject = {
                               },
                               "element": null,
                               "resReduction": {
-                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                                "displayLines": "(0 - MDF_PropertyValue)",
-                                "constants": [
-                                  0
-                                ],
-                                "variables": [
-                                  "MDF_PropertyValue"
-                                ]
+                                "displayLines": "(0 - MDF_PropertyValue)"
                               },
                               "maxImplant": 1,
                               "prefWeakness": "Imaginary",
@@ -1266,12 +1007,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "constants": [],
-                                "variables": [
-                                  "Advanced_Silwolf_BPAbility_WeakType_01"
-                                ]
+                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                               },
                               "variableName": "_WeakType"
                             }
@@ -1287,12 +1023,7 @@ const compositeAbilityObject = {
                   "functionName": "<a class=\"gTempYellow\" id=\"-509776970\">Advanced_Silwolf_Ability02_OverrideNameForStatus</a>",
                   "variables": {
                     "DF_WeakType": {
-                      "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                      "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                      "constants": [],
-                      "variables": [
-                        "Advanced_Silwolf_BPAbility_WeakType_01"
-                      ]
+                      "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                     }
                   }
                 }
@@ -1318,12 +1049,7 @@ const compositeAbilityObject = {
                       "functionName": "<a class=\"gTempYellow\" id=\"1273458995\">Advanced_Silwolf_PassiveAbility01_WeakTypeTransfer</a>",
                       "variables": {
                         "_WeakType": {
-                          "operator": "Variables[0] (_WeakType) || RETURN",
-                          "displayLines": "_WeakType",
-                          "constants": [],
-                          "variables": [
-                            "_WeakType"
-                          ]
+                          "displayLines": "_WeakType"
                         }
                       }
                     }
@@ -1343,12 +1069,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1084383828\">Advanced_Silwolf_Passive_Deathrattle_Sub</a>",
                   "valuePerStack": {
                     "_WeakType": {
-                      "operator": "Variables[0] (_WeakType) || RETURN",
-                      "displayLines": "_WeakType",
-                      "constants": [],
-                      "variables": [
-                        "_WeakType"
-                      ]
+                      "displayLines": "_WeakType"
                     }
                   }
                 }
@@ -1385,12 +1106,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "variableName": "MDF_Silwolf_00_AddModifier_Chance"
                 },
@@ -1449,13 +1165,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_DebuffCount) || Variables[1] (0.2) || MUL || RETURN",
-                    "displayLines": "(_DebuffCount * 0.2)",
-                    "constants": [],
-                    "variables": [
-                      "_DebuffCount",
-                      0.2
-                    ]
+                    "displayLines": "(_DebuffCount * 0.2)"
                   },
                   "variableName": "MDF_DamageAddedRatio"
                 },
@@ -1466,24 +1176,14 @@ const compositeAbilityObject = {
                     "value1": "MDF_DamageAddedRatio",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "variableName": "MDF_DamageAddedRatio"
                     }
@@ -1552,12 +1252,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "variableName": "MDF_Silwolf_00_AddModifier_Chance"
                     },
@@ -1606,12 +1301,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-860979758\">Advanced_Silwolf_Eidolon2_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     }
@@ -1649,12 +1339,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-860979758\">Advanced_Silwolf_Eidolon2_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 },
@@ -2108,12 +1793,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Quantum",
                         "Damage": {
-                          "operator": "Variables[0] (0.8) || RETURN",
-                          "displayLines": "0.8",
-                          "constants": [],
-                          "variables": [
-                            0.8
-                          ]
+                          "displayLines": "0.8"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -2168,13 +1848,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (3) || Variables[1] (1) || ADD || RETURN",
-                "displayLines": "(3 + 1)",
-                "constants": [],
-                "variables": [
-                  3,
-                  1
-                ]
+                "displayLines": "(3 + 1)"
               },
               "variableName": "MDF_Silwolf_00_AddModifier_LifeTime"
             }
@@ -2183,12 +1857,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "variableName": "MDF_Silwolf_00_AddModifier_LifeTime"
             }
@@ -2299,24 +1968,14 @@ const compositeAbilityObject = {
                             "value1": "_DebuffCountForRank04",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (5) || RETURN",
-                              "displayLines": "5",
-                              "constants": [],
-                              "variables": [
-                                5
-                              ]
+                              "displayLines": "5"
                             }
                           },
                           "passed": [
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (5) || RETURN",
-                                "displayLines": "5",
-                                "constants": [],
-                                "variables": [
-                                  5
-                                ]
+                                "displayLines": "5"
                               },
                               "variableName": "_DebuffCountForRank04"
                             }
@@ -2334,12 +1993,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Looped Event",
                               "maxLoops": {
-                                "operator": "Variables[0] (_DebuffCountForRank04) || RETURN",
-                                "displayLines": "_DebuffCountForRank04",
-                                "constants": [],
-                                "variables": [
-                                  "_DebuffCountForRank04"
-                                ]
+                                "displayLines": "_DebuffCountForRank04"
                               },
                               "execute": [
                                 {
@@ -2352,12 +2006,7 @@ const compositeAbilityObject = {
                                   "AttackScaling": {
                                     "DamageType": "Quantum",
                                     "Damage": {
-                                      "operator": "Variables[0] (0.2) || RETURN",
-                                      "displayLines": "0.2",
-                                      "constants": [],
-                                      "variables": [
-                                        0.2
-                                      ]
+                                      "displayLines": "0.2"
                                     },
                                     "Toughness": null,
                                     "Tags": null,
@@ -2410,13 +2059,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (_DebuffCountForRank01) || Variables[1] (_DebuffCountForRank01_sub) || ADD || RETURN",
-                            "displayLines": "(_DebuffCountForRank01 + _DebuffCountForRank01_sub)",
-                            "constants": [],
-                            "variables": [
-                              "_DebuffCountForRank01",
-                              "_DebuffCountForRank01_sub"
-                            ]
+                            "displayLines": "(_DebuffCountForRank01 + _DebuffCountForRank01_sub)"
                           },
                           "variableName": "_DebuffCountForRank01"
                         }
@@ -2429,24 +2072,14 @@ const compositeAbilityObject = {
                         "value1": "_DebuffCountForRank01",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (5) || RETURN",
-                          "displayLines": "5",
-                          "constants": [],
-                          "variables": [
-                            5
-                          ]
+                          "displayLines": "5"
                         }
                       },
                       "passed": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (5) || RETURN",
-                            "displayLines": "5",
-                            "constants": [],
-                            "variables": [
-                              5
-                            ]
+                            "displayLines": "5"
                           },
                           "variableName": "_DebuffCountForRank01"
                         }
@@ -2459,13 +2092,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (7) || Variables[1] (_DebuffCountForRank01) || MUL || RETURN",
-                        "displayLines": "(7 * _DebuffCountForRank01)",
-                        "constants": [],
-                        "variables": [
-                          7,
-                          "_DebuffCountForRank01"
-                        ]
+                        "displayLines": "(7 * _DebuffCountForRank01)"
                       },
                       "isFixed": "* ERR"
                     },
@@ -2502,12 +2129,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (5) || RETURN",
-                        "displayLines": "5",
-                        "constants": [],
-                        "variables": [
-                          5
-                        ]
+                        "displayLines": "5"
                       },
                       "isFixed": "* ERR"
                     }
@@ -2521,12 +2143,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "variableName": "MDF_Silwolf_00_AddModifier_Chance"
                 },
@@ -2583,12 +2200,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (20) || RETURN",
-                        "displayLines": "20",
-                        "constants": [],
-                        "variables": [
-                          20
-                        ]
+                        "displayLines": "20"
                       },
                       "isFixed": "* ERR"
                     }
@@ -2730,30 +2342,15 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-46466503\">Advanced_Silwolf_Ultimate_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "baseChance": {
-            "operator": "Variables[0] (1.2) || RETURN",
-            "displayLines": "1.2",
-            "constants": [],
-            "variables": [
-              1.2
-            ]
+            "displayLines": "1.2"
           },
           "immediateEffect": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.45) || RETURN",
-              "displayLines": "0.45",
-              "constants": [],
-              "variables": [
-                0.45
-              ]
+              "displayLines": "0.45"
             }
           }
         },
@@ -2767,20 +2364,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (3.8) || RETURN",
-              "displayLines": "3.8",
-              "constants": [],
-              "variables": [
-                3.8
-              ]
+              "displayLines": "3.8"
             },
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -2856,29 +2443,14 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1155855512\">Advanced_Silwolf_BPAbility_AllDamageTypeResistanceDown</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "baseChance": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.13) || RETURN",
-              "displayLines": "0.13",
-              "constants": [],
-              "variables": [
-                0.13
-              ]
+              "displayLines": "0.13"
             }
           }
         },
@@ -2890,38 +2462,18 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "baseChance": {
-            "operator": "Variables[0] (1.2) || RETURN",
-            "displayLines": "1.2",
-            "constants": [],
-            "variables": [
-              1.2
-            ]
+            "displayLines": "1.2"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             },
             "_WeakType": 0,
             "_TheFirstAvatarWeakType": {
-              "operator": "Variables[0] (_TheFirstAvatarWeakType) || RETURN",
-              "displayLines": "_TheFirstAvatarWeakType",
-              "constants": [],
-              "variables": [
-                "_TheFirstAvatarWeakType"
-              ]
+              "displayLines": "_TheFirstAvatarWeakType"
             }
           },
           "success": [
@@ -3040,20 +2592,10 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] (1.96) || RETURN",
-                  "displayLines": "1.96",
-                  "constants": [],
-                  "variables": [
-                    1.96
-                  ]
+                  "displayLines": "1.96"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Skill",
@@ -3380,20 +2922,10 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] (1.96) || RETURN",
-                  "displayLines": "1.96",
-                  "constants": [],
-                  "variables": [
-                    1.96
-                  ]
+                  "displayLines": "1.96"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -3501,29 +3033,14 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1672196814\">Advanced_Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
                           "duration": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_LifeTime"
-                            ]
+                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                           },
                           "baseChance": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_Chance"
-                            ]
+                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                           },
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.1) || RETURN",
-                              "displayLines": "0.1",
-                              "constants": [],
-                              "variables": [
-                                0.1
-                              ]
+                              "displayLines": "0.1"
                             }
                           }
                         },
@@ -3535,29 +3052,14 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1655419195\">Advanced_Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
                           "duration": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_LifeTime"
-                            ]
+                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                           },
                           "baseChance": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_Chance"
-                            ]
+                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                           },
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.12) || RETURN",
-                              "displayLines": "0.12",
-                              "constants": [],
-                              "variables": [
-                                0.12
-                              ]
+                              "displayLines": "0.12"
                             }
                           }
                         },
@@ -3569,29 +3071,14 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1638641576\">Advanced_Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
                           "duration": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_LifeTime"
-                            ]
+                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                           },
                           "baseChance": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_Chance"
-                            ]
+                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                           },
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.06) || RETURN",
-                              "displayLines": "0.06",
-                              "constants": [],
-                              "variables": [
-                                0.06
-                              ]
+                              "displayLines": "0.06"
                             }
                           }
                         }
@@ -3607,29 +3094,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1638641576\">Advanced_Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_LifeTime"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_Chance"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.06) || RETURN",
-                          "displayLines": "0.06",
-                          "constants": [],
-                          "variables": [
-                            0.06
-                          ]
+                          "displayLines": "0.06"
                         }
                       }
                     }
@@ -3656,29 +3128,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1655419195\">Advanced_Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_LifeTime"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_Chance"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.12) || RETURN",
-                          "displayLines": "0.12",
-                          "constants": [],
-                          "variables": [
-                            0.12
-                          ]
+                          "displayLines": "0.12"
                         }
                       }
                     }
@@ -3699,29 +3156,14 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1655419195\">Advanced_Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
                           "duration": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_LifeTime"
-                            ]
+                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                           },
                           "baseChance": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_Chance"
-                            ]
+                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                           },
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.12) || RETURN",
-                              "displayLines": "0.12",
-                              "constants": [],
-                              "variables": [
-                                0.12
-                              ]
+                              "displayLines": "0.12"
                             }
                           }
                         },
@@ -3733,29 +3175,14 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1638641576\">Advanced_Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
                           "duration": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_LifeTime"
-                            ]
+                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                           },
                           "baseChance": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_Chance"
-                            ]
+                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                           },
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.06) || RETURN",
-                              "displayLines": "0.06",
-                              "constants": [],
-                              "variables": [
-                                0.06
-                              ]
+                              "displayLines": "0.06"
                             }
                           }
                         }
@@ -3797,29 +3224,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1672196814\">Advanced_Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_LifeTime"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_Chance"
-                        ]
+                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.1) || RETURN",
-                          "displayLines": "0.1",
-                          "constants": [],
-                          "variables": [
-                            0.1
-                          ]
+                          "displayLines": "0.1"
                         }
                       }
                     }
@@ -3840,29 +3252,14 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1672196814\">Advanced_Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
                           "duration": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_LifeTime"
-                            ]
+                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                           },
                           "baseChance": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_Chance"
-                            ]
+                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                           },
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.1) || RETURN",
-                              "displayLines": "0.1",
-                              "constants": [],
-                              "variables": [
-                                0.1
-                              ]
+                              "displayLines": "0.1"
                             }
                           }
                         },
@@ -3874,29 +3271,14 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1638641576\">Advanced_Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
                           "duration": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_LifeTime"
-                            ]
+                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                           },
                           "baseChance": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_Chance"
-                            ]
+                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                           },
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.06) || RETURN",
-                              "displayLines": "0.06",
-                              "constants": [],
-                              "variables": [
-                                0.06
-                              ]
+                              "displayLines": "0.06"
                             }
                           }
                         }
@@ -3932,29 +3314,14 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1672196814\">Advanced_Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
                           "duration": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_LifeTime"
-                            ]
+                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                           },
                           "baseChance": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_Chance"
-                            ]
+                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                           },
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.1) || RETURN",
-                              "displayLines": "0.1",
-                              "constants": [],
-                              "variables": [
-                                0.1
-                              ]
+                              "displayLines": "0.1"
                             }
                           }
                         },
@@ -3966,29 +3333,14 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1655419195\">Advanced_Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
                           "duration": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_LifeTime"
-                            ]
+                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                           },
                           "baseChance": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_Chance"
-                            ]
+                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                           },
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.12) || RETURN",
-                              "displayLines": "0.12",
-                              "constants": [],
-                              "variables": [
-                                0.12
-                              ]
+                              "displayLines": "0.12"
                             }
                           }
                         }
@@ -4012,29 +3364,14 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1672196814\">Advanced_Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
                           "duration": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_LifeTime"
-                            ]
+                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                           },
                           "baseChance": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_Chance"
-                            ]
+                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                           },
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.1) || RETURN",
-                              "displayLines": "0.1",
-                              "constants": [],
-                              "variables": [
-                                0.1
-                              ]
+                              "displayLines": "0.1"
                             }
                           }
                         },
@@ -4046,29 +3383,14 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1655419195\">Advanced_Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
                           "duration": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_LifeTime"
-                            ]
+                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                           },
                           "baseChance": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_Chance"
-                            ]
+                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                           },
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.12) || RETURN",
-                              "displayLines": "0.12",
-                              "constants": [],
-                              "variables": [
-                                0.12
-                              ]
+                              "displayLines": "0.12"
                             }
                           }
                         },
@@ -4080,29 +3402,14 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1638641576\">Advanced_Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
                           "duration": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_LifeTime"
-                            ]
+                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime"
                           },
                           "baseChance": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_Chance"
-                            ]
+                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance"
                           },
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.06) || RETURN",
-                              "displayLines": "0.06",
-                              "constants": [],
-                              "variables": [
-                                0.06
-                              ]
+                              "displayLines": "0.06"
                             }
                           }
                         }
@@ -4135,21 +3442,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "HitSplit": 0.25,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Basic ATK",
@@ -4166,21 +3463,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "HitSplit": 0.25,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Basic ATK",
@@ -4197,21 +3484,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "HitSplit": 0.5,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Basic ATK",
@@ -4281,12 +3558,7 @@ const compositeAbilityObject = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (DF_WeakType) || RETURN",
-                "displayLines": "DF_WeakType",
-                "constants": [],
-                "variables": [
-                  "DF_WeakType"
-                ]
+                "displayLines": "DF_WeakType"
               },
               "caseEvents": [
                 {
@@ -4474,29 +3746,14 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     },
                     "_WeakType": {
-                      "operator": "Variables[0] (_WeakType) || RETURN",
-                      "displayLines": "_WeakType",
-                      "constants": [],
-                      "variables": [
-                        "_WeakType"
-                      ]
+                      "displayLines": "_WeakType"
                     }
                   }
                 }

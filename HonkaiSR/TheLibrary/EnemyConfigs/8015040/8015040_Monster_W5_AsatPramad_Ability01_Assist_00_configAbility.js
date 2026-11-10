@@ -14,21 +14,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13351) || RETURN",
-          "displayLines": "UnusedUnderThisBase_13351",
-          "constants": [],
-          "variables": [
-            "UnusedUnderThisBase_13351"
-          ]
+          "displayLines": "UnusedUnderThisBase_13351"
         },
         "HitSplit": {
-          "operator": "Constants[0] (1) || Constants[1] (6) || DIV || RETURN",
-          "displayLines": "(1 / 6)",
-          "constants": [
-            1,
-            6
-          ],
-          "variables": []
+          "displayLines": "(1 / 6)"
         },
         "Toughness": null,
         "Tags": null,
@@ -45,21 +34,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13351) || RETURN",
-          "displayLines": "UnusedUnderThisBase_13351",
-          "constants": [],
-          "variables": [
-            "UnusedUnderThisBase_13351"
-          ]
+          "displayLines": "UnusedUnderThisBase_13351"
         },
         "HitSplit": {
-          "operator": "Constants[0] (1) || Constants[1] (6) || DIV || RETURN",
-          "displayLines": "(1 / 6)",
-          "constants": [
-            1,
-            6
-          ],
-          "variables": []
+          "displayLines": "(1 / 6)"
         },
         "Toughness": null,
         "Tags": null,
@@ -76,21 +54,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13351) || RETURN",
-          "displayLines": "UnusedUnderThisBase_13351",
-          "constants": [],
-          "variables": [
-            "UnusedUnderThisBase_13351"
-          ]
+          "displayLines": "UnusedUnderThisBase_13351"
         },
         "HitSplit": {
-          "operator": "Constants[0] (1) || Constants[1] (6) || DIV || RETURN",
-          "displayLines": "(1 / 6)",
-          "constants": [
-            1,
-            6
-          ],
-          "variables": []
+          "displayLines": "(1 / 6)"
         },
         "Toughness": null,
         "Tags": null,
@@ -107,21 +74,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13351) || RETURN",
-          "displayLines": "UnusedUnderThisBase_13351",
-          "constants": [],
-          "variables": [
-            "UnusedUnderThisBase_13351"
-          ]
+          "displayLines": "UnusedUnderThisBase_13351"
         },
         "HitSplit": {
-          "operator": "Constants[0] (1) || Constants[1] (6) || DIV || RETURN",
-          "displayLines": "(1 / 6)",
-          "constants": [
-            1,
-            6
-          ],
-          "variables": []
+          "displayLines": "(1 / 6)"
         },
         "Toughness": null,
         "Tags": null,
@@ -138,21 +94,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13351) || RETURN",
-          "displayLines": "UnusedUnderThisBase_13351",
-          "constants": [],
-          "variables": [
-            "UnusedUnderThisBase_13351"
-          ]
+          "displayLines": "UnusedUnderThisBase_13351"
         },
         "HitSplit": {
-          "operator": "Constants[0] (1) || Constants[1] (6) || DIV || RETURN",
-          "displayLines": "(1 / 6)",
-          "constants": [
-            1,
-            6
-          ],
-          "variables": []
+          "displayLines": "(1 / 6)"
         },
         "Toughness": null,
         "Tags": null,
@@ -169,21 +114,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13351) || RETURN",
-          "displayLines": "UnusedUnderThisBase_13351",
-          "constants": [],
-          "variables": [
-            "UnusedUnderThisBase_13351"
-          ]
+          "displayLines": "UnusedUnderThisBase_13351"
         },
         "HitSplit": {
-          "operator": "Constants[0] (1) || Constants[1] (6) || DIV || RETURN",
-          "displayLines": "(1 / 6)",
-          "constants": [
-            1,
-            6
-          ],
-          "variables": []
+          "displayLines": "(1 / 6)"
         },
         "Toughness": null,
         "Tags": null,

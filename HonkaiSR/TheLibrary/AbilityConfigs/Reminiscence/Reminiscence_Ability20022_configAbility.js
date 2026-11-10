@@ -46,13 +46,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.08) || Variables[1] (_Layer) || MUL || RETURN",
-                "displayLines": "(0.08 * _Layer)",
-                "constants": [],
-                "variables": [
-                  0.08,
-                  "_Layer"
-                ]
+                "displayLines": "(0.08 * _Layer)"
               }
             }
           ]
@@ -74,12 +68,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"394065750\">LC_20022_Sub2</a>[<span class=\"descriptionNumberColor\">Commemoration</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (4) || RETURN",
-                "displayLines": "4",
-                "constants": [],
-                "variables": [
-                  4
-                ]
+                "displayLines": "4"
               }
             },
             {
@@ -90,12 +79,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"394065750\">LC_20022_Sub2</a>[<span class=\"descriptionNumberColor\">Commemoration</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (4) || RETURN",
-                "displayLines": "4",
-                "constants": [],
-                "variables": [
-                  4
-                ]
+                "displayLines": "4"
               }
             }
           ]

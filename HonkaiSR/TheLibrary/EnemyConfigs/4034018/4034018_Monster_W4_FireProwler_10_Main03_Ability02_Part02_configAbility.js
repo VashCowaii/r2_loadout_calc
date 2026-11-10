@@ -38,28 +38,13 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
           "valuePerStack": {
             "MDF_RallyTransferRatio": {
-              "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill02[0]]}"
-              ]
+              "displayLines": "{[PassiveSkill02[0]]}"
             },
             "MDF_Rally_HealPercentage": {
-              "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
-              "displayLines": "{[PassiveSkill02[4]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill02[4]]}"
-              ]
+              "displayLines": "{[PassiveSkill02[4]]}"
             },
             "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkill02[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill02[2]]}"
-              ]
+              "displayLines": "{[PassiveSkill02[2]]}"
             }
           }
         }
@@ -98,28 +83,13 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
           "valuePerStack": {
             "MDF_RallyTransferRatio": {
-              "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill02[1]]}"
-              ]
+              "displayLines": "{[PassiveSkill02[1]]}"
             },
             "MDF_Rally_HealPercentage": {
-              "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
-              "displayLines": "{[PassiveSkill02[4]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill02[4]]}"
-              ]
+              "displayLines": "{[PassiveSkill02[4]]}"
             },
             "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkill02[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill02[2]]}"
-              ]
+              "displayLines": "{[PassiveSkill02[2]]}"
             }
           }
         }
@@ -134,12 +104,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-          "displayLines": "{[Skill02[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[0]]}"
-          ]
+          "displayLines": "{[Skill02[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -185,12 +150,7 @@ const configAbility = {
           "conditions": {
             "name": "Enemy ID",
             "ID": {
-              "operator": "Variables[0] (SummonID_2) || RETURN",
-              "displayLines": "SummonID_2",
-              "constants": [],
-              "variables": [
-                "SummonID_2"
-              ]
+              "displayLines": "SummonID_2"
             },
             "target": {
               "name": "Target Name",
@@ -229,12 +189,7 @@ const configAbility = {
           "conditions": {
             "name": "Enemy ID",
             "ID": {
-              "operator": "Variables[0] (SummonID_2) || RETURN",
-              "displayLines": "SummonID_2",
-              "constants": [],
-              "variables": [
-                "SummonID_2"
-              ]
+              "displayLines": "SummonID_2"
             },
             "target": {
               "name": "Target Name",

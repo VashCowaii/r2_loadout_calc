@@ -68,12 +68,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (RatioPlus) || RETURN",
-                    "displayLines": "RatioPlus",
-                    "constants": [],
-                    "variables": [
-                      "RatioPlus"
-                    ]
+                    "displayLines": "RatioPlus"
                   }
                 }
               ]
@@ -100,12 +95,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.1) || RETURN",
-                    "displayLines": "0.1",
-                    "constants": [],
-                    "variables": [
-                      0.1
-                    ]
+                    "displayLines": "0.1"
                   }
                 }
               ]
@@ -168,20 +158,10 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1943682494\">LC_23029_Sub</a>[<span class=\"descriptionNumberColor\">Unarmored</span>]",
                           "duration": {
-                            "operator": "Variables[0] (2) || RETURN",
-                            "displayLines": "2",
-                            "constants": [],
-                            "variables": [
-                              2
-                            ]
+                            "displayLines": "2"
                           },
                           "baseChance": {
-                            "operator": "Variables[0] (0.6) || RETURN",
-                            "displayLines": "0.6",
-                            "constants": [],
-                            "variables": [
-                              0.6
-                            ]
+                            "displayLines": "0.6"
                           }
                         }
                       ]
@@ -250,30 +230,14 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-326179996\">LC_23029_Sub2</a>[<span class=\"descriptionNumberColor\">Cornered</span>]",
                           "duration": {
-                            "operator": "Variables[0] (2) || RETURN",
-                            "displayLines": "2",
-                            "constants": [],
-                            "variables": [
-                              2
-                            ]
+                            "displayLines": "2"
                           },
                           "baseChance": {
-                            "operator": "Variables[0] (0.6) || RETURN",
-                            "displayLines": "0.6",
-                            "constants": [],
-                            "variables": [
-                              0.6
-                            ]
+                            "displayLines": "0.6"
                           },
                           "valuePerStack": {
                             "RatioPlus": {
-                              "operator": "Variables[0] (0.1) || Variables[1] (0.14) || ADD || RETURN",
-                              "displayLines": "(0.1 + 0.14)",
-                              "constants": [],
-                              "variables": [
-                                0.1,
-                                0.14
-                              ]
+                              "displayLines": "(0.1 + 0.14)"
                             }
                           }
                         }

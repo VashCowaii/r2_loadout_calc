@@ -128,12 +128,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -181,12 +176,7 @@ const configAbility = {
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID2) || RETURN",
-                "displayLines": "SummonID2",
-                "constants": [],
-                "variables": [
-                  "SummonID2"
-                ]
+                "displayLines": "SummonID2"
               },
               "locationType": "BeforeCaster"
             }
@@ -199,12 +189,7 @@ const configAbility = {
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID2) || RETURN",
-                "displayLines": "SummonID2",
-                "constants": [],
-                "variables": [
-                  "SummonID2"
-                ]
+                "displayLines": "SummonID2"
               },
               "locationType": "AfterCaster"
             }

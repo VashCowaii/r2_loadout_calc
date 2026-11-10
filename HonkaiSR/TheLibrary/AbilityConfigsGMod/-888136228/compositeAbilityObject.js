@@ -240,14 +240,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Acc_Turn) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(Acc_Turn - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Acc_Turn"
-                    ]
+                    "displayLines": "(Acc_Turn - 1)"
                   },
                   "variableName": "Acc_Turn"
                 }
@@ -314,14 +307,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Acc_Turn) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(Acc_Turn - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Acc_Turn"
-                    ]
+                    "displayLines": "(Acc_Turn - 1)"
                   },
                   "variableName": "Acc_Turn"
                 }
@@ -392,14 +378,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Acc_Turn) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(Acc_Turn - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Acc_Turn"
-                    ]
+                    "displayLines": "(Acc_Turn - 1)"
                   },
                   "variableName": "Acc_Turn"
                 }

@@ -53,20 +53,10 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (10) || RETURN",
-                    "displayLines": "10",
-                    "constants": [],
-                    "variables": [
-                      10
-                    ]
+                    "displayLines": "10"
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   }
                 },
                 {
@@ -79,33 +69,17 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (EnergyBar_ATKCount) || Variables[1] (EnergyBar_UltraATKCount) || ADD || RETURN",
-                    "displayLines": "(EnergyBar_ATKCount + EnergyBar_UltraATKCount)",
-                    "constants": [],
-                    "variables": [
-                      "EnergyBar_ATKCount",
-                      "EnergyBar_UltraATKCount"
-                    ]
+                    "displayLines": "(EnergyBar_ATKCount + EnergyBar_UltraATKCount)"
                   },
                   "variableName": "EnergyBar_ATKCountSum"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (EnergyBar_ATKCountSum) || RETURN",
-                    "displayLines": "EnergyBar_ATKCountSum",
-                    "constants": [],
-                    "variables": [
-                      "EnergyBar_ATKCountSum"
-                    ]
+                    "displayLines": "EnergyBar_ATKCountSum"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (10) || RETURN",
-                    "displayLines": "10",
-                    "constants": [],
-                    "variables": [
-                      10
-                    ]
+                    "displayLines": "10"
                   },
                   "assignState": "True",
                   "priorState": "Normal",
@@ -119,20 +93,10 @@ const configAbility = {
                     "target": "{{Jing Yuan: Lightning Lord}}"
                   },
                   "attackCount": {
-                    "operator": "Variables[0] (EnergyBar_ATKCount) || RETURN",
-                    "displayLines": "EnergyBar_ATKCount",
-                    "constants": [],
-                    "variables": [
-                      "EnergyBar_ATKCount"
-                    ]
+                    "displayLines": "EnergyBar_ATKCount"
                   },
                   "attackCountEnhanced": {
-                    "operator": "Variables[0] (EnergyBar_UltraATKCount) || RETURN",
-                    "displayLines": "EnergyBar_UltraATKCount",
-                    "constants": [],
-                    "variables": [
-                      "EnergyBar_UltraATKCount"
-                    ]
+                    "displayLines": "EnergyBar_UltraATKCount"
                   },
                   "show": true
                 },
@@ -145,12 +109,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1141770667\">JingYuan_BattleEvent_ATKCountShowText</a>",
                   "valuePerStack": {
                     "ATKCount": {
-                      "operator": "Variables[0] (EnergyBar_ATKCount) || RETURN",
-                      "displayLines": "EnergyBar_ATKCount",
-                      "constants": [],
-                      "variables": [
-                        "EnergyBar_ATKCount"
-                      ]
+                      "displayLines": "EnergyBar_ATKCount"
                     }
                   }
                 },
@@ -162,31 +121,15 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1762822846\">JingYuan_BattleEvent_SpeedUp</a>",
                   "stackLimit": {
-                    "operator": "Variables[0] (10) || Variables[1] (3) || SUB || RETURN",
-                    "displayLines": "(10 - 3)",
-                    "constants": [],
-                    "variables": [
-                      10,
-                      3
-                    ]
+                    "displayLines": "(10 - 3)"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (10) || RETURN",
-                      "displayLines": "10",
-                      "constants": [],
-                      "variables": [
-                        10
-                      ]
+                      "displayLines": "10"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   }
                 }
               ]

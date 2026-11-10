@@ -68,48 +68,28 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (SummonID4) || RETURN",
-            "displayLines": "SummonID4",
-            "constants": [],
-            "variables": [
-              "SummonID4"
-            ]
+            "displayLines": "SummonID4"
           },
           "variableName": "SummonID_1"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (SummonID4) || RETURN",
-            "displayLines": "SummonID4",
-            "constants": [],
-            "variables": [
-              "SummonID4"
-            ]
+            "displayLines": "SummonID4"
           },
           "variableName": "SummonID_2"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (SummonID3) || RETURN",
-            "displayLines": "SummonID3",
-            "constants": [],
-            "variables": [
-              "SummonID3"
-            ]
+            "displayLines": "SummonID3"
           },
           "variableName": "SummonID_3"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (SummonID3) || RETURN",
-            "displayLines": "SummonID3",
-            "constants": [],
-            "variables": [
-              "SummonID3"
-            ]
+            "displayLines": "SummonID3"
           },
           "variableName": "SummonID_4"
         }
@@ -136,48 +116,28 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (SummonID3) || RETURN",
-                    "displayLines": "SummonID3",
-                    "constants": [],
-                    "variables": [
-                      "SummonID3"
-                    ]
+                    "displayLines": "SummonID3"
                   },
                   "variableName": "SummonID_1"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (SummonID3) || RETURN",
-                    "displayLines": "SummonID3",
-                    "constants": [],
-                    "variables": [
-                      "SummonID3"
-                    ]
+                    "displayLines": "SummonID3"
                   },
                   "variableName": "SummonID_2"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (SummonID3) || RETURN",
-                    "displayLines": "SummonID3",
-                    "constants": [],
-                    "variables": [
-                      "SummonID3"
-                    ]
+                    "displayLines": "SummonID3"
                   },
                   "variableName": "SummonID_3"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (SummonID3) || RETURN",
-                    "displayLines": "SummonID3",
-                    "constants": [],
-                    "variables": [
-                      "SummonID3"
-                    ]
+                    "displayLines": "SummonID3"
                   },
                   "variableName": "SummonID_4"
                 }
@@ -186,48 +146,28 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (SummonID4) || RETURN",
-                    "displayLines": "SummonID4",
-                    "constants": [],
-                    "variables": [
-                      "SummonID4"
-                    ]
+                    "displayLines": "SummonID4"
                   },
                   "variableName": "SummonID_1"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (SummonID4) || RETURN",
-                    "displayLines": "SummonID4",
-                    "constants": [],
-                    "variables": [
-                      "SummonID4"
-                    ]
+                    "displayLines": "SummonID4"
                   },
                   "variableName": "SummonID_2"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (SummonID4) || RETURN",
-                    "displayLines": "SummonID4",
-                    "constants": [],
-                    "variables": [
-                      "SummonID4"
-                    ]
+                    "displayLines": "SummonID4"
                   },
                   "variableName": "SummonID_3"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (SummonID4) || RETURN",
-                    "displayLines": "SummonID4",
-                    "constants": [],
-                    "variables": [
-                      "SummonID4"
-                    ]
+                    "displayLines": "SummonID4"
                   },
                   "variableName": "SummonID_4"
                 }
@@ -247,48 +187,28 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (SummonID3) || RETURN",
-                    "displayLines": "SummonID3",
-                    "constants": [],
-                    "variables": [
-                      "SummonID3"
-                    ]
+                    "displayLines": "SummonID3"
                   },
                   "variableName": "SummonID_1"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (SummonID3) || RETURN",
-                    "displayLines": "SummonID3",
-                    "constants": [],
-                    "variables": [
-                      "SummonID3"
-                    ]
+                    "displayLines": "SummonID3"
                   },
                   "variableName": "SummonID_2"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (SummonID3) || RETURN",
-                    "displayLines": "SummonID3",
-                    "constants": [],
-                    "variables": [
-                      "SummonID3"
-                    ]
+                    "displayLines": "SummonID3"
                   },
                   "variableName": "SummonID_3"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (SummonID3) || RETURN",
-                    "displayLines": "SummonID3",
-                    "constants": [],
-                    "variables": [
-                      "SummonID3"
-                    ]
+                    "displayLines": "SummonID3"
                   },
                   "variableName": "SummonID_4"
                 }
@@ -297,48 +217,28 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (SummonID4) || RETURN",
-                    "displayLines": "SummonID4",
-                    "constants": [],
-                    "variables": [
-                      "SummonID4"
-                    ]
+                    "displayLines": "SummonID4"
                   },
                   "variableName": "SummonID_1"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (SummonID4) || RETURN",
-                    "displayLines": "SummonID4",
-                    "constants": [],
-                    "variables": [
-                      "SummonID4"
-                    ]
+                    "displayLines": "SummonID4"
                   },
                   "variableName": "SummonID_2"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (SummonID4) || RETURN",
-                    "displayLines": "SummonID4",
-                    "constants": [],
-                    "variables": [
-                      "SummonID4"
-                    ]
+                    "displayLines": "SummonID4"
                   },
                   "variableName": "SummonID_3"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (SummonID4) || RETURN",
-                    "displayLines": "SummonID4",
-                    "constants": [],
-                    "variables": [
-                      "SummonID4"
-                    ]
+                    "displayLines": "SummonID4"
                   },
                   "variableName": "SummonID_4"
                 }
@@ -351,14 +251,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (SummonTimes) || Constants[0] (1) || ADD || RETURN",
-        "displayLines": "(SummonTimes + 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "SummonTimes"
-        ]
+        "displayLines": "(SummonTimes + 1)"
       },
       "variableName": "SummonTimes"
     },
@@ -381,24 +274,14 @@ const configAbility = {
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] ({[PassiveSkill05[0]]}) || RETURN",
-        "displayLines": "{[PassiveSkill05[0]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill05[0]]}"
-        ]
+        "displayLines": "{[PassiveSkill05[0]]}"
       },
       "refreshPositions": false,
       "enemyList": [
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonID_1) || RETURN",
-            "displayLines": "SummonID_1",
-            "constants": [],
-            "variables": [
-              "SummonID_1"
-            ]
+            "displayLines": "SummonID_1"
           },
           "locationType": "BeforeCaster"
         }
@@ -415,24 +298,14 @@ const configAbility = {
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] ({[PassiveSkill05[1]]}) || RETURN",
-        "displayLines": "{[PassiveSkill05[1]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill05[1]]}"
-        ]
+        "displayLines": "{[PassiveSkill05[1]]}"
       },
       "refreshPositions": false,
       "enemyList": [
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonID_2) || RETURN",
-            "displayLines": "SummonID_2",
-            "constants": [],
-            "variables": [
-              "SummonID_2"
-            ]
+            "displayLines": "SummonID_2"
           },
           "locationType": "First"
         }
@@ -449,24 +322,14 @@ const configAbility = {
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] ({[PassiveSkill05[2]]}) || RETURN",
-        "displayLines": "{[PassiveSkill05[2]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill05[2]]}"
-        ]
+        "displayLines": "{[PassiveSkill05[2]]}"
       },
       "refreshPositions": false,
       "enemyList": [
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonID_3) || RETURN",
-            "displayLines": "SummonID_3",
-            "constants": [],
-            "variables": [
-              "SummonID_3"
-            ]
+            "displayLines": "SummonID_3"
           },
           "locationType": "AfterCaster"
         }
@@ -483,24 +346,14 @@ const configAbility = {
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] ({[PassiveSkill05[3]]}) || RETURN",
-        "displayLines": "{[PassiveSkill05[3]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill05[3]]}"
-        ]
+        "displayLines": "{[PassiveSkill05[3]]}"
       },
       "refreshPositions": false,
       "enemyList": [
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonID_4) || RETURN",
-            "displayLines": "SummonID_4",
-            "constants": [],
-            "variables": [
-              "SummonID_4"
-            ]
+            "displayLines": "SummonID_4"
           },
           "locationType": "Last"
         }

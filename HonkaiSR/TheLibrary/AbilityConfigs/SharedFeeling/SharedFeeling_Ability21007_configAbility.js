@@ -35,12 +35,7 @@ const configAbility = {
                     "target": "{{Player Team(Exclude Memosprites)v2}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "isFixed": "* ERR"
                 }

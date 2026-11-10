@@ -234,12 +234,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -255,29 +250,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
           "duration": {
-            "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[1]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[1]]}"
-            ]
+            "displayLines": "{[PassiveSkill01[1]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[0]]}"
-            ]
+            "displayLines": "{[PassiveSkill01[0]]}"
           },
           "valuePerStack": {
             "Modifier_Burn_DamagePercentage": {
-              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[2]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[2]]}"
             }
           }
         }
@@ -296,12 +276,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -317,29 +292,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
           "duration": {
-            "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[1]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[1]]}"
-            ]
+            "displayLines": "{[PassiveSkill01[1]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[0]]}"
-            ]
+            "displayLines": "{[PassiveSkill01[0]]}"
           },
           "valuePerStack": {
             "Modifier_Burn_DamagePercentage": {
-              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[2]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[2]]}"
             }
           }
         }
@@ -358,12 +318,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -379,29 +334,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
           "duration": {
-            "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[1]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[1]]}"
-            ]
+            "displayLines": "{[PassiveSkill01[1]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[0]]}"
-            ]
+            "displayLines": "{[PassiveSkill01[0]]}"
           },
           "valuePerStack": {
             "Modifier_Burn_DamagePercentage": {
-              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[2]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[2]]}"
             }
           }
         }
@@ -420,12 +360,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (Unicorn_Skill02_DamagePercentage) || RETURN",
-              "displayLines": "Unicorn_Skill02_DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Unicorn_Skill02_DamagePercentage"
-              ]
+              "displayLines": "Unicorn_Skill02_DamagePercentage"
             },
             "Toughness": null,
             "Tags": null,
@@ -457,37 +392,17 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"2065489118\">Standard_Entangle</a>[<span class=\"descriptionNumberColor\">Entanglement</span>]",
               "duration": {
-                "operator": "Variables[0] (Unicorn_Debuff_LifeTime) || RETURN",
-                "displayLines": "Unicorn_Debuff_LifeTime",
-                "constants": [],
-                "variables": [
-                  "Unicorn_Debuff_LifeTime"
-                ]
+                "displayLines": "Unicorn_Debuff_LifeTime"
               },
               "baseChance": {
-                "operator": "Variables[0] (Unicorn_Debuff_Chance) || RETURN",
-                "displayLines": "Unicorn_Debuff_Chance",
-                "constants": [],
-                "variables": [
-                  "Unicorn_Debuff_Chance"
-                ]
+                "displayLines": "Unicorn_Debuff_Chance"
               },
               "valuePerStack": {
                 "MDF_ActionDelayRatio": {
-                  "operator": "Variables[0] (Unicorn_Debuff_ActionDelayRatio) || RETURN",
-                  "displayLines": "Unicorn_Debuff_ActionDelayRatio",
-                  "constants": [],
-                  "variables": [
-                    "Unicorn_Debuff_ActionDelayRatio"
-                  ]
+                  "displayLines": "Unicorn_Debuff_ActionDelayRatio"
                 },
                 "Modifier_Entangle_DamagePercentage": {
-                  "operator": "Variables[0] (Unicorn_Debuff_DamagePercentage) || RETURN",
-                  "displayLines": "Unicorn_Debuff_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "Unicorn_Debuff_DamagePercentage"
-                  ]
+                  "displayLines": "Unicorn_Debuff_DamagePercentage"
                 },
                 "Modifier_Entangle_DamageValue": 0
               }
@@ -509,12 +424,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (Unicorn_Skill02_DamagePercentage) || RETURN",
-              "displayLines": "Unicorn_Skill02_DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Unicorn_Skill02_DamagePercentage"
-              ]
+              "displayLines": "Unicorn_Skill02_DamagePercentage"
             },
             "Toughness": null,
             "Tags": null,
@@ -546,37 +456,17 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"2065489118\">Standard_Entangle</a>[<span class=\"descriptionNumberColor\">Entanglement</span>]",
               "duration": {
-                "operator": "Variables[0] (Unicorn_Debuff_LifeTime) || RETURN",
-                "displayLines": "Unicorn_Debuff_LifeTime",
-                "constants": [],
-                "variables": [
-                  "Unicorn_Debuff_LifeTime"
-                ]
+                "displayLines": "Unicorn_Debuff_LifeTime"
               },
               "baseChance": {
-                "operator": "Variables[0] (Unicorn_Debuff_Chance) || RETURN",
-                "displayLines": "Unicorn_Debuff_Chance",
-                "constants": [],
-                "variables": [
-                  "Unicorn_Debuff_Chance"
-                ]
+                "displayLines": "Unicorn_Debuff_Chance"
               },
               "valuePerStack": {
                 "MDF_ActionDelayRatio": {
-                  "operator": "Variables[0] (Unicorn_Debuff_ActionDelayRatio) || RETURN",
-                  "displayLines": "Unicorn_Debuff_ActionDelayRatio",
-                  "constants": [],
-                  "variables": [
-                    "Unicorn_Debuff_ActionDelayRatio"
-                  ]
+                  "displayLines": "Unicorn_Debuff_ActionDelayRatio"
                 },
                 "Modifier_Entangle_DamagePercentage": {
-                  "operator": "Variables[0] (Unicorn_Debuff_DamagePercentage) || RETURN",
-                  "displayLines": "Unicorn_Debuff_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "Unicorn_Debuff_DamagePercentage"
-                  ]
+                  "displayLines": "Unicorn_Debuff_DamagePercentage"
                 },
                 "Modifier_Entangle_DamageValue": 0
               }
@@ -598,12 +488,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (Unicorn_Skill02_DamagePercentage) || RETURN",
-              "displayLines": "Unicorn_Skill02_DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Unicorn_Skill02_DamagePercentage"
-              ]
+              "displayLines": "Unicorn_Skill02_DamagePercentage"
             },
             "Toughness": null,
             "Tags": null,
@@ -635,37 +520,17 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"2065489118\">Standard_Entangle</a>[<span class=\"descriptionNumberColor\">Entanglement</span>]",
               "duration": {
-                "operator": "Variables[0] (Unicorn_Debuff_LifeTime) || RETURN",
-                "displayLines": "Unicorn_Debuff_LifeTime",
-                "constants": [],
-                "variables": [
-                  "Unicorn_Debuff_LifeTime"
-                ]
+                "displayLines": "Unicorn_Debuff_LifeTime"
               },
               "baseChance": {
-                "operator": "Variables[0] (Unicorn_Debuff_Chance) || RETURN",
-                "displayLines": "Unicorn_Debuff_Chance",
-                "constants": [],
-                "variables": [
-                  "Unicorn_Debuff_Chance"
-                ]
+                "displayLines": "Unicorn_Debuff_Chance"
               },
               "valuePerStack": {
                 "MDF_ActionDelayRatio": {
-                  "operator": "Variables[0] (Unicorn_Debuff_ActionDelayRatio) || RETURN",
-                  "displayLines": "Unicorn_Debuff_ActionDelayRatio",
-                  "constants": [],
-                  "variables": [
-                    "Unicorn_Debuff_ActionDelayRatio"
-                  ]
+                  "displayLines": "Unicorn_Debuff_ActionDelayRatio"
                 },
                 "Modifier_Entangle_DamagePercentage": {
-                  "operator": "Variables[0] (Unicorn_Debuff_DamagePercentage) || RETURN",
-                  "displayLines": "Unicorn_Debuff_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "Unicorn_Debuff_DamagePercentage"
-                  ]
+                  "displayLines": "Unicorn_Debuff_DamagePercentage"
                 },
                 "Modifier_Entangle_DamageValue": 0
               }

@@ -22,28 +22,13 @@ const configAbility = {
           "memoID": 11402,
           "valuePerStack": {
             "_PointB3Layer": {
-              "operator": "Variables[0] (_EnergyReduce) || RETURN",
-              "displayLines": "_EnergyReduce",
-              "constants": [],
-              "variables": [
-                "_EnergyReduce"
-              ]
+              "displayLines": "_EnergyReduce"
             },
             "Ability11_DamagePercentage": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             },
             "Ability11_DamagePercentageAD": {
-              "operator": "Variables[0] (0.9) || RETURN",
-              "displayLines": "0.9",
-              "constants": [],
-              "variables": [
-                0.9
-              ]
+              "displayLines": "0.9"
             }
           }
         },
@@ -68,12 +53,7 @@ const configAbility = {
             "target": "{{Caster's Memosprite}}"
           },
           "value": {
-            "operator": "Variables[0] (_Energy) || RETURN",
-            "displayLines": "_Energy",
-            "constants": [],
-            "variables": [
-              "_Energy"
-            ]
+            "displayLines": "_Energy"
           },
           "variableName": "_CasterEnergy"
         },

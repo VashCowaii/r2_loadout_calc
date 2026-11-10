@@ -74,12 +74,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"214727884\">LC_23036_CriticalDamage</a>",
               "valuePerStack": {
                 "_CritDamageRatio": {
-                  "operator": "Variables[0] (_CritDamageRatioTotal) || RETURN",
-                  "displayLines": "_CritDamageRatioTotal",
-                  "constants": [],
-                  "variables": [
-                    "_CritDamageRatioTotal"
-                  ]
+                  "displayLines": "_CritDamageRatioTotal"
                 }
               }
             },
@@ -121,28 +116,13 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "_CritDamageRatioTotal": {
-              "operator": "Variables[0] (_CritDamageRatioTotal) || RETURN",
-              "displayLines": "_CritDamageRatioTotal",
-              "constants": [],
-              "variables": [
-                "_CritDamageRatioTotal"
-              ]
+              "displayLines": "_CritDamageRatioTotal"
             },
             "_NormalDamageRatioTotal": {
-              "operator": "Variables[0] (_NormalDamageRatioTotal) || RETURN",
-              "displayLines": "_NormalDamageRatioTotal",
-              "constants": [],
-              "variables": [
-                "_NormalDamageRatioTotal"
-              ]
+              "displayLines": "_NormalDamageRatioTotal"
             },
             "_MaxLayerSwitch2": {
-              "operator": "Variables[0] (_MaxLayerSwitch2) || RETURN",
-              "displayLines": "_MaxLayerSwitch2",
-              "constants": [],
-              "variables": [
-                "_MaxLayerSwitch2"
-              ]
+              "displayLines": "_MaxLayerSwitch2"
             }
           }
         }
@@ -213,13 +193,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_CritDamageRatio) || Variables[1] (_Layer) || MUL || RETURN",
-                "displayLines": "(_CritDamageRatio * _Layer)",
-                "constants": [],
-                "variables": [
-                  "_CritDamageRatio",
-                  "_Layer"
-                ]
+                "displayLines": "(_CritDamageRatio * _Layer)"
               },
               "variableName": "_CritDamageRatioTotal"
             },
@@ -232,12 +206,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"214727884\">LC_23036_CriticalDamage</a>",
               "valuePerStack": {
                 "_CritDamageRatio": {
-                  "operator": "Variables[0] (_CritDamageRatioTotal) || RETURN",
-                  "displayLines": "_CritDamageRatioTotal",
-                  "constants": [],
-                  "variables": [
-                    "_CritDamageRatioTotal"
-                  ]
+                  "displayLines": "_CritDamageRatioTotal"
                 }
               }
             },
@@ -252,12 +221,7 @@ const configAbility = {
                 "value1": "_Layer",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Variables[0] (_MaxLayer) || RETURN",
-                  "displayLines": "_MaxLayer",
-                  "constants": [],
-                  "variables": [
-                    "_MaxLayer"
-                  ]
+                  "displayLines": "_MaxLayer"
                 }
               },
               "passed": [
@@ -269,13 +233,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (__NormalDamageRatio) || Variables[1] (_Layer) || MUL || RETURN",
-                    "displayLines": "(__NormalDamageRatio * _Layer)",
-                    "constants": [],
-                    "variables": [
-                      "__NormalDamageRatio",
-                      "_Layer"
-                    ]
+                    "displayLines": "(__NormalDamageRatio * _Layer)"
                   },
                   "variableName": "_NormalDamageRatioTotal"
                 },
@@ -294,28 +252,13 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1248014501\">LC_23036_Effect_Servant</a>[<span class=\"descriptionNumberColor\">Brocade</span>]",
               "valuePerStack": {
                 "_CritDamageRatioTotal": {
-                  "operator": "Variables[0] (_CritDamageRatioTotal) || RETURN",
-                  "displayLines": "_CritDamageRatioTotal",
-                  "constants": [],
-                  "variables": [
-                    "_CritDamageRatioTotal"
-                  ]
+                  "displayLines": "_CritDamageRatioTotal"
                 },
                 "_NormalDamageRatioTotal": {
-                  "operator": "Variables[0] (_NormalDamageRatioTotal) || RETURN",
-                  "displayLines": "_NormalDamageRatioTotal",
-                  "constants": [],
-                  "variables": [
-                    "_NormalDamageRatioTotal"
-                  ]
+                  "displayLines": "_NormalDamageRatioTotal"
                 },
                 "_MaxLayerSwitch2": {
-                  "operator": "Variables[0] (_MaxLayerSwitch2) || RETURN",
-                  "displayLines": "_MaxLayerSwitch2",
-                  "constants": [],
-                  "variables": [
-                    "_MaxLayerSwitch2"
-                  ]
+                  "displayLines": "_MaxLayerSwitch2"
                 }
               }
             }
@@ -345,12 +288,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (_CritDamageRatio) || RETURN",
-                "displayLines": "_CritDamageRatio",
-                "constants": [],
-                "variables": [
-                  "_CritDamageRatio"
-                ]
+                "displayLines": "_CritDamageRatio"
               }
             }
           ]
@@ -410,12 +348,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"214727884\">LC_23036_CriticalDamage</a>",
                       "valuePerStack": {
                         "_CritDamageRatio": {
-                          "operator": "Variables[0] (AbilityEquip_P4_CritDamage) || RETURN",
-                          "displayLines": "AbilityEquip_P4_CritDamage",
-                          "constants": [],
-                          "variables": [
-                            "AbilityEquip_P4_CritDamage"
-                          ]
+                          "displayLines": "AbilityEquip_P4_CritDamage"
                         }
                       }
                     }
@@ -429,29 +362,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"2056335473\">LC_23036_Effect</a>[<span class=\"descriptionNumberColor\">Brocade</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (AbilityEquip_P2_MaxLayer) || RETURN",
-                    "displayLines": "AbilityEquip_P2_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "AbilityEquip_P2_MaxLayer"
-                    ]
+                    "displayLines": "AbilityEquip_P2_MaxLayer"
                   },
                   "valuePerStack": {
                     "_CritDamageRatio": {
-                      "operator": "Variables[0] (AbilityEquip_P4_CritDamage) || RETURN",
-                      "displayLines": "AbilityEquip_P4_CritDamage",
-                      "constants": [],
-                      "variables": [
-                        "AbilityEquip_P4_CritDamage"
-                      ]
+                      "displayLines": "AbilityEquip_P4_CritDamage"
                     },
                     "__NormalDamageRatio": {
-                      "operator": "Variables[0] (AbilityEquip_P3_NormalDamage) || RETURN",
-                      "displayLines": "AbilityEquip_P3_NormalDamage",
-                      "constants": [],
-                      "variables": [
-                        "AbilityEquip_P3_NormalDamage"
-                      ]
+                      "displayLines": "AbilityEquip_P3_NormalDamage"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -478,28 +396,13 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-768418277\">LC_23036_Listen</a>",
               "valuePerStack": {
                 "AbilityEquip_P2_MaxLayer": {
-                  "operator": "Variables[0] (6) || RETURN",
-                  "displayLines": "6",
-                  "constants": [],
-                  "variables": [
-                    6
-                  ]
+                  "displayLines": "6"
                 },
                 "AbilityEquip_P3_NormalDamage": {
-                  "operator": "Variables[0] (0.09) || RETURN",
-                  "displayLines": "0.09",
-                  "constants": [],
-                  "variables": [
-                    0.09
-                  ]
+                  "displayLines": "0.09"
                 },
                 "AbilityEquip_P4_CritDamage": {
-                  "operator": "Variables[0] (0.09) || RETURN",
-                  "displayLines": "0.09",
-                  "constants": [],
-                  "variables": [
-                    0.09
-                  ]
+                  "displayLines": "0.09"
                 }
               }
             }

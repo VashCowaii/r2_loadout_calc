@@ -12,12 +12,7 @@ const configAbility = {
         "target": "{{All Team Members}} - {{Caster's Memosprite}}"
       },
       "consumePercent": {
-        "operator": "Variables[0] (0.3) || RETURN",
-        "displayLines": "0.3",
-        "constants": [],
-        "variables": [
-          0.3
-        ]
+        "displayLines": "0.3"
       },
       "consumeFloor": 1,
       "attackType": "Unknown"
@@ -32,21 +27,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (0.5) || RETURN",
-          "displayLines": "0.5",
-          "constants": [],
-          "variables": [
-            0.5
-          ]
+          "displayLines": "0.5"
         },
         "dmgFormula": "Max HP Scaling",
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "ToughnessDMGType": {
           "DamageType": "Quantum"
@@ -65,21 +50,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (0.3) || RETURN",
-          "displayLines": "0.3",
-          "constants": [],
-          "variables": [
-            0.3
-          ]
+          "displayLines": "0.3"
         },
         "dmgFormula": "Max HP Scaling",
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-          "displayLines": "Blast Toughness Value",
-          "constants": [],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "Blast Toughness Value"
         },
         "ToughnessDMGType": {
           "DamageType": "Quantum"

@@ -9,12 +9,7 @@ const configAbility = {
       "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
       "variables": {
         "parameter[0]_AddValue": {
-          "operator": "Variables[0] (UnusedUnderThisBase_6091) || RETURN",
-          "displayLines": "UnusedUnderThisBase_6091",
-          "constants": [],
-          "variables": [
-            "UnusedUnderThisBase_6091"
-          ]
+          "displayLines": "UnusedUnderThisBase_6091"
         }
       }
     },
@@ -37,20 +32,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (UnusedUnderThisBase_14414) || RETURN",
-          "displayLines": "UnusedUnderThisBase_14414",
-          "constants": [],
-          "variables": [
-            "UnusedUnderThisBase_14414"
-          ]
+          "displayLines": "UnusedUnderThisBase_14414"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null
       }
@@ -65,20 +50,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (UnusedUnderThisBase_14353) || RETURN",
-          "displayLines": "UnusedUnderThisBase_14353",
-          "constants": [],
-          "variables": [
-            "UnusedUnderThisBase_14353"
-          ]
+          "displayLines": "UnusedUnderThisBase_14353"
         },
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-          "displayLines": "Blast Toughness Value",
-          "constants": [],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "Blast Toughness Value"
         },
         "Tags": null
       }

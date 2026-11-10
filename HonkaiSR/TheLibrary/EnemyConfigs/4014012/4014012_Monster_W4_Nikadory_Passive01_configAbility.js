@@ -230,12 +230,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-994497740\">Monster_W4_Nikadory_RLBoss_Passive</a>",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13832) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13832",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_13832"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_13832"
                         }
                       }
                     }
@@ -288,60 +283,25 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"965106610\">Monster_W4_Nikadory_Passive</a>",
       "valuePerStack": {
         "MDF_DamageResistance_PerLayer": {
-          "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[4]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[4]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[4]]}"
         },
         "MDF_ActionDelayRatio": {
-          "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[1]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[1]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[1]]}"
         },
         "MDF_CrackedDamage": {
-          "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[2]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[2]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[2]]}"
         },
         "MDF_CrackedDamageAfter": {
-          "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[5]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[5]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[5]]}"
         },
         "MDF_SPAddedRatio": {
-          "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[3]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[3]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[3]]}"
         },
         "MDF_EnhanceSPAddedRatio": {
-          "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-          "displayLines": "{[Skill05[3]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill05[3]]}"
-          ]
+          "displayLines": "{[Skill05[3]]}"
         },
         "MDF_MaxLayer": {
-          "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[0]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[0]]}"
         }
       }
     },
@@ -354,52 +314,22 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1282910303\">Enemy_Heaven_StoneShieldController</a>",
       "valuePerStack": {
         "MDF_MaxLayer": {
-          "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[0]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[0]]}"
         },
         "MDF_CrackedEffect": {
-          "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[1]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[1]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[1]]}"
         },
         "MDF_CrackedDamage": {
-          "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[2]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[2]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[2]]}"
         },
         "MDF_DamageResistance": {
-          "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[4]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[4]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[4]]}"
         },
         "MDF_CrackedDamageAfter": {
-          "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[5]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[5]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[5]]}"
         },
         "MDF_ModifySP": {
-          "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[3]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[3]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[3]]}"
         }
       }
     }

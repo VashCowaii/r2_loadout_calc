@@ -115,12 +115,7 @@ const configAbility = {
               "conditions": {
                 "name": "Enemy ID",
                 "ID": {
-                  "operator": "Variables[0] (Ice_Lance_ID) || RETURN",
-                  "displayLines": "Ice_Lance_ID",
-                  "constants": [],
-                  "variables": [
-                    "Ice_Lance_ID"
-                  ]
+                  "displayLines": "Ice_Lance_ID"
                 },
                 "target": {
                   "name": "Target Name",
@@ -132,14 +127,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Count) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(Count + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Count"
-                    ]
+                    "displayLines": "(Count + 1)"
                   },
                   "variableName": "Count"
                 }
@@ -150,12 +138,7 @@ const configAbility = {
               "conditions": {
                 "name": "Enemy ID",
                 "ID": {
-                  "operator": "Variables[0] (Ice_Lance_ID_2) || RETURN",
-                  "displayLines": "Ice_Lance_ID_2",
-                  "constants": [],
-                  "variables": [
-                    "Ice_Lance_ID_2"
-                  ]
+                  "displayLines": "Ice_Lance_ID_2"
                 },
                 "target": {
                   "name": "Target Name",
@@ -167,14 +150,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Count) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(Count + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Count"
-                    ]
+                    "displayLines": "(Count + 1)"
                   },
                   "variableName": "Count"
                 }
@@ -291,13 +267,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageUpRatio_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)"
               }
             }
           ]
@@ -310,12 +280,7 @@ const configAbility = {
       "stackType": "Replace",
       "stackLimit": 5,
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-        "displayLines": "ModifierStackLayer",
-        "constants": [],
-        "variables": [
-          "ModifierStackLayer"
-        ]
+        "displayLines": "ModifierStackLayer"
       },
       "execute": [
         {
@@ -335,15 +300,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_SpeedAddedRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || SUB || RETURN",
-                "displayLines": "(0 - (MDF_SpeedAddedRatio_PerLayer * ModifierLayers))",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_SpeedAddedRatio_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(0 - (MDF_SpeedAddedRatio_PerLayer * ModifierLayers))"
               }
             },
             {
@@ -352,12 +309,7 @@ const configAbility = {
                 "name": "Compare: Variable",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED_3) || RETURN",
-                  "displayLines": "ENEMIES_OBJECT_UNUSED_3",
-                  "constants": [],
-                  "variables": [
-                    "ENEMIES_OBJECT_UNUSED_3"
-                  ]
+                  "displayLines": "ENEMIES_OBJECT_UNUSED_3"
                 },
                 "valueType": "Layer"
               },
@@ -372,12 +324,7 @@ const configAbility = {
                   "duration": 1,
                   "valuePerStack": {
                     "Modifier_Frozen_DamagePercentage": {
-                      "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED_4) || RETURN",
-                      "displayLines": "ENEMIES_OBJECT_UNUSED_4",
-                      "constants": [],
-                      "variables": [
-                        "ENEMIES_OBJECT_UNUSED_4"
-                      ]
+                      "displayLines": "ENEMIES_OBJECT_UNUSED_4"
                     }
                   }
                 },
@@ -390,12 +337,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                      "displayLines": "MDF_DamageUpRatio_PerLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageUpRatio_PerLayer"
-                      ]
+                      "displayLines": "MDF_DamageUpRatio_PerLayer"
                     }
                   }
                 },
@@ -433,12 +375,7 @@ const configAbility = {
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (DamageUpFlag) || RETURN",
-                    "displayLines": "DamageUpFlag",
-                    "constants": [],
-                    "variables": [
-                      "DamageUpFlag"
-                    ]
+                    "displayLines": "DamageUpFlag"
                   },
                   "execute": [
                     {
@@ -450,12 +387,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                          "displayLines": "MDF_DamageUpRatio_PerLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageUpRatio_PerLayer"
-                          ]
+                          "displayLines": "MDF_DamageUpRatio_PerLayer"
                         }
                       }
                     }
@@ -494,12 +426,7 @@ const configAbility = {
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (DamageUpFlag) || RETURN",
-                    "displayLines": "DamageUpFlag",
-                    "constants": [],
-                    "variables": [
-                      "DamageUpFlag"
-                    ]
+                    "displayLines": "DamageUpFlag"
                   },
                   "execute": [
                     {
@@ -511,12 +438,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                          "displayLines": "MDF_DamageUpRatio_PerLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageUpRatio_PerLayer"
-                          ]
+                          "displayLines": "MDF_DamageUpRatio_PerLayer"
                         }
                       }
                     }
@@ -593,12 +515,7 @@ const configAbility = {
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (DamageUpFlag) || RETURN",
-                    "displayLines": "DamageUpFlag",
-                    "constants": [],
-                    "variables": [
-                      "DamageUpFlag"
-                    ]
+                    "displayLines": "DamageUpFlag"
                   },
                   "execute": [
                     {
@@ -610,12 +527,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                          "displayLines": "MDF_DamageUpRatio_PerLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageUpRatio_PerLayer"
-                          ]
+                          "displayLines": "MDF_DamageUpRatio_PerLayer"
                         }
                       }
                     }
@@ -654,12 +566,7 @@ const configAbility = {
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (DamageUpFlag) || RETURN",
-                    "displayLines": "DamageUpFlag",
-                    "constants": [],
-                    "variables": [
-                      "DamageUpFlag"
-                    ]
+                    "displayLines": "DamageUpFlag"
                   },
                   "execute": [
                     {
@@ -671,12 +578,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                          "displayLines": "MDF_DamageUpRatio_PerLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageUpRatio_PerLayer"
-                          ]
+                          "displayLines": "MDF_DamageUpRatio_PerLayer"
                         }
                       }
                     }
@@ -759,12 +661,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ModifierDamageUpValue) || RETURN",
-                "displayLines": "ModifierDamageUpValue",
-                "constants": [],
-                "variables": [
-                  "ModifierDamageUpValue"
-                ]
+                "displayLines": "ModifierDamageUpValue"
               }
             }
           ]

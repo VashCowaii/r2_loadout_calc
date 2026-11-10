@@ -22,12 +22,7 @@ const configAbility = {
           "ID": "800701(SkillMaze)",
           "counter": 1,
           "duration": {
-            "operator": "Variables[0] (10) || RETURN",
-            "displayLines": "10",
-            "constants": [],
-            "variables": [
-              10
-            ]
+            "displayLines": "10"
           },
           "conditions": {
             "name": "Has Flag",
@@ -384,12 +379,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (TeamAddSP) || RETURN",
-                        "displayLines": "TeamAddSP",
-                        "constants": [],
-                        "variables": [
-                          "TeamAddSP"
-                        ]
+                        "displayLines": "TeamAddSP"
                       },
                       "variableName": "_tmpTeamAddSP"
                     },
@@ -402,12 +392,7 @@ const configAbility = {
                       "variableName": "_tmpTeamAddSP",
                       "context": "ContextModifier",
                       "value": {
-                        "operator": "Variables[0] (_spDelta) || RETURN",
-                        "displayLines": "_spDelta",
-                        "constants": [],
-                        "variables": [
-                          "_spDelta"
-                        ]
+                        "displayLines": "_spDelta"
                       }
                     },
                     {
@@ -419,12 +404,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_tmpTeamAddSP) || RETURN",
-                        "displayLines": "_tmpTeamAddSP",
-                        "constants": [],
-                        "variables": [
-                          "_tmpTeamAddSP"
-                        ]
+                        "displayLines": "_tmpTeamAddSP"
                       },
                       "variableName": "TeamAddSP"
                     }

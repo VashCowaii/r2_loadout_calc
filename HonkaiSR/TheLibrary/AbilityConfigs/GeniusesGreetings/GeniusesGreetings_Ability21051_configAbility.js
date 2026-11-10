@@ -73,12 +73,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-833650413\">LC_21051_Sub</a>[<span class=\"descriptionNumberColor\">Basic ATK DMG Boost</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   }
                 },
                 {
@@ -89,12 +84,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-833650413\">LC_21051_Sub</a>[<span class=\"descriptionNumberColor\">Basic ATK DMG Boost</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   }
                 }
               ]

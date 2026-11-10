@@ -54,13 +54,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_DmgAddNum) || Variables[1] (0.04) || MUL || RETURN",
-                    "displayLines": "(MDF_DmgAddNum * 0.04)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DmgAddNum",
-                      0.04
-                    ]
+                    "displayLines": "(MDF_DmgAddNum * 0.04)"
                   },
                   "variableName": "MDF_DmgAddValue"
                 },
@@ -72,12 +66,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DmgAddValue) || RETURN",
-                    "displayLines": "MDF_DmgAddValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DmgAddValue"
-                    ]
+                    "displayLines": "MDF_DmgAddValue"
                   }
                 }
               ]
@@ -118,24 +107,14 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_DmgAddNum) || RETURN",
-                        "displayLines": "MDF_DmgAddNum",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DmgAddNum"
-                        ]
+                        "displayLines": "MDF_DmgAddNum"
                       },
                       "variableName": "MDF_PreDmgAddNum"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Constants[0] (0) || RETURN",
-                        "displayLines": "0",
-                        "constants": [
-                          0
-                        ],
-                        "variables": []
+                        "displayLines": "0"
                       },
                       "variableName": "MDF_DmgAddNum"
                     },
@@ -157,14 +136,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (MDF_DmgAddNum) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(MDF_DmgAddNum + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "MDF_DmgAddNum"
-                            ]
+                            "displayLines": "(MDF_DmgAddNum + 1)"
                           },
                           "variableName": "MDF_DmgAddNum"
                         }
@@ -196,12 +168,7 @@ const compositeAbilityObject = {
                             "value1": "MDF_DmgAddNum",
                             "compareType": "=",
                             "value2": {
-                              "operator": "Variables[0] (MDF_PreDmgAddNum) || RETURN",
-                              "displayLines": "MDF_PreDmgAddNum",
-                              "constants": [],
-                              "variables": [
-                                "MDF_PreDmgAddNum"
-                              ]
+                              "displayLines": "MDF_PreDmgAddNum"
                             }
                           },
                           "failed": [
@@ -214,20 +181,10 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"1373377156\">LC_21043_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                               "valuePerStack": {
                                 "MDF_DmgAddNum": {
-                                  "operator": "Variables[0] (MDF_DmgAddNum) || RETURN",
-                                  "displayLines": "MDF_DmgAddNum",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_DmgAddNum"
-                                  ]
+                                  "displayLines": "MDF_DmgAddNum"
                                 },
                                 "MDF_PreDmgAddNum": {
-                                  "operator": "Variables[0] (MDF_PreDmgAddNum) || RETURN",
-                                  "displayLines": "MDF_PreDmgAddNum",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_PreDmgAddNum"
-                                  ]
+                                  "displayLines": "MDF_PreDmgAddNum"
                                 }
                               }
                             }
@@ -269,24 +226,14 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_DmgAddNum) || RETURN",
-                        "displayLines": "MDF_DmgAddNum",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DmgAddNum"
-                        ]
+                        "displayLines": "MDF_DmgAddNum"
                       },
                       "variableName": "MDF_PreDmgAddNum"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Constants[0] (0) || RETURN",
-                        "displayLines": "0",
-                        "constants": [
-                          0
-                        ],
-                        "variables": []
+                        "displayLines": "0"
                       },
                       "variableName": "MDF_DmgAddNum"
                     },
@@ -308,14 +255,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (MDF_DmgAddNum) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(MDF_DmgAddNum + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "MDF_DmgAddNum"
-                            ]
+                            "displayLines": "(MDF_DmgAddNum + 1)"
                           },
                           "variableName": "MDF_DmgAddNum"
                         }
@@ -347,12 +287,7 @@ const compositeAbilityObject = {
                             "value1": "MDF_DmgAddNum",
                             "compareType": "=",
                             "value2": {
-                              "operator": "Variables[0] (MDF_PreDmgAddNum) || RETURN",
-                              "displayLines": "MDF_PreDmgAddNum",
-                              "constants": [],
-                              "variables": [
-                                "MDF_PreDmgAddNum"
-                              ]
+                              "displayLines": "MDF_PreDmgAddNum"
                             }
                           },
                           "failed": [
@@ -365,20 +300,10 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"1373377156\">LC_21043_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                               "valuePerStack": {
                                 "MDF_DmgAddNum": {
-                                  "operator": "Variables[0] (MDF_DmgAddNum) || RETURN",
-                                  "displayLines": "MDF_DmgAddNum",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_DmgAddNum"
-                                  ]
+                                  "displayLines": "MDF_DmgAddNum"
                                 },
                                 "MDF_PreDmgAddNum": {
-                                  "operator": "Variables[0] (MDF_PreDmgAddNum) || RETURN",
-                                  "displayLines": "MDF_PreDmgAddNum",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_PreDmgAddNum"
-                                  ]
+                                  "displayLines": "MDF_PreDmgAddNum"
                                 }
                               }
                             }

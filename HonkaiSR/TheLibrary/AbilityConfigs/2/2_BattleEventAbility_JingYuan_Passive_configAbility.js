@@ -86,12 +86,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (BattleEvent_JingYuan_00_BaseSpeed) || RETURN",
-                "displayLines": "BattleEvent_JingYuan_00_BaseSpeed",
-                "constants": [],
-                "variables": [
-                  "BattleEvent_JingYuan_00_BaseSpeed"
-                ]
+                "displayLines": "BattleEvent_JingYuan_00_BaseSpeed"
               }
             }
           ]

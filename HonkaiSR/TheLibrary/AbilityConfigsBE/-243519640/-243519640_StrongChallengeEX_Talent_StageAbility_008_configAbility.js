@@ -40,12 +40,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SpeedConverted</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -103,14 +98,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_DMG_Num) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_DMG_Num + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_DMG_Num"
-                        ]
+                        "displayLines": "(_DMG_Num + 1)"
                       },
                       "variableName": "_DMG_Num"
                     }
@@ -131,12 +119,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -206,22 +189,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-847062697\">MStrongChallengeEX_Talent_StageAbility_PLY_008_SpeedUp</a>[<span class=\"descriptionNumberColor\">Sundered Paradise</span>]",
                   "duration": {
-                    "operator": "Variables[0] (MDF_PropertyValue4) || RETURN",
-                    "displayLines": "MDF_PropertyValue4",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue4"
-                    ]
+                    "displayLines": "MDF_PropertyValue4"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (_CurrSpeed) || Variables[1] (MDF_PropertyValue2) || MUL || RETURN",
-                      "displayLines": "(_CurrSpeed * MDF_PropertyValue2)",
-                      "constants": [],
-                      "variables": [
-                        "_CurrSpeed",
-                        "MDF_PropertyValue2"
-                      ]
+                      "displayLines": "(_CurrSpeed * MDF_PropertyValue2)"
                     }
                   }
                 },
@@ -268,36 +240,16 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1240607258\">MStrongChallengeEX_Talent_StageAbility_PLY_008</a>[<span class=\"descriptionNumberColor\">Sundered Paradise</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     },
                     "MDF_PropertyValue2": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     },
                     "MDF_PropertyValue3": {
-                      "operator": "Variables[0] (#ADF_3) || RETURN",
-                      "displayLines": "#ADF_3",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_3"
-                      ]
+                      "displayLines": "#ADF_3"
                     },
                     "MDF_PropertyValue4": {
-                      "operator": "Variables[0] (#ADF_4) || RETURN",
-                      "displayLines": "#ADF_4",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_4"
-                      ]
+                      "displayLines": "#ADF_4"
                     }
                   }
                 }

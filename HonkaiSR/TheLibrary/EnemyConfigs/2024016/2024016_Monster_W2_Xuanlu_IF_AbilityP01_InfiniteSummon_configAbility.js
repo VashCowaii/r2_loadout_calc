@@ -76,14 +76,7 @@ const configAbility = {
               },
               "advanceType": "Set",
               "add": {
-                "operator": "Variables[0] (ADF_BossBreakCurrentDelay) || Constants[0] (0.01) || ADD || RETURN",
-                "displayLines": "(ADF_BossBreakCurrentDelay + 0.01)",
-                "constants": [
-                  0.01
-                ],
-                "variables": [
-                  "ADF_BossBreakCurrentDelay"
-                ]
+                "displayLines": "(ADF_BossBreakCurrentDelay + 0.01)"
               },
               "isStartingDelay": true
             },
@@ -130,12 +123,7 @@ const configAbility = {
               "name": "Define Custom Variable",
               "scope": "TargetEntity",
               "value": {
-                "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-                "displayLines": "{[SkillEX03[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillEX03[0]]}"
-                ]
+                "displayLines": "{[SkillEX03[0]]}"
               },
               "variableName": "SummmonMinionDelayRatio"
             }
@@ -145,12 +133,7 @@ const configAbility = {
               "name": "Define Custom Variable",
               "scope": "TargetEntity",
               "value": {
-                "operator": "Variables[0] ({[SkillP01[12]]}) || RETURN",
-                "displayLines": "{[SkillP01[12]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP01[12]]}"
-                ]
+                "displayLines": "{[SkillP01[12]]}"
               },
               "variableName": "SummmonMinionDelayRatio"
             }
@@ -177,12 +160,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (CurrentXuanluPartSummonIndex) || RETURN",
-                    "displayLines": "CurrentXuanluPartSummonIndex",
-                    "constants": [],
-                    "variables": [
-                      "CurrentXuanluPartSummonIndex"
-                    ]
+                    "displayLines": "CurrentXuanluPartSummonIndex"
                   },
                   "caseEvents": [
                     {
@@ -192,23 +170,13 @@ const configAbility = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] (SummmonMinionDelayRatio) || RETURN",
-                            "displayLines": "SummmonMinionDelayRatio",
-                            "constants": [],
-                            "variables": [
-                              "SummmonMinionDelayRatio"
-                            ]
+                            "displayLines": "SummmonMinionDelayRatio"
                           },
                           "enemyList": [
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-                                "displayLines": "SummonList_ADF_2",
-                                "constants": [],
-                                "variables": [
-                                  "SummonList_ADF_2"
-                                ]
+                                "displayLines": "SummonList_ADF_2"
                               },
                               "locationType": "LastDie"
                             }
@@ -229,23 +197,13 @@ const configAbility = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] (SummmonMinionDelayRatio) || RETURN",
-                            "displayLines": "SummmonMinionDelayRatio",
-                            "constants": [],
-                            "variables": [
-                              "SummmonMinionDelayRatio"
-                            ]
+                            "displayLines": "SummmonMinionDelayRatio"
                           },
                           "enemyList": [
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
-                                "displayLines": "SummonList_ADF_3",
-                                "constants": [],
-                                "variables": [
-                                  "SummonList_ADF_3"
-                                ]
+                                "displayLines": "SummonList_ADF_3"
                               },
                               "locationType": "LastDie"
                             }
@@ -266,23 +224,13 @@ const configAbility = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] (SummmonMinionDelayRatio) || RETURN",
-                            "displayLines": "SummmonMinionDelayRatio",
-                            "constants": [],
-                            "variables": [
-                              "SummmonMinionDelayRatio"
-                            ]
+                            "displayLines": "SummmonMinionDelayRatio"
                           },
                           "enemyList": [
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                                "displayLines": "SummonList_ADF_1",
-                                "constants": [],
-                                "variables": [
-                                  "SummonList_ADF_1"
-                                ]
+                                "displayLines": "SummonList_ADF_1"
                               },
                               "locationType": "LastDie"
                             }
@@ -310,12 +258,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (CurrentLV2MonsterSummonIndex) || RETURN",
-                    "displayLines": "CurrentLV2MonsterSummonIndex",
-                    "constants": [],
-                    "variables": [
-                      "CurrentLV2MonsterSummonIndex"
-                    ]
+                    "displayLines": "CurrentLV2MonsterSummonIndex"
                   },
                   "caseEvents": [
                     {
@@ -325,23 +268,13 @@ const configAbility = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] (SummmonMinionDelayRatio) || RETURN",
-                            "displayLines": "SummmonMinionDelayRatio",
-                            "constants": [],
-                            "variables": [
-                              "SummmonMinionDelayRatio"
-                            ]
+                            "displayLines": "SummmonMinionDelayRatio"
                           },
                           "enemyList": [
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Variables[0] (SummonList_ADF_6) || RETURN",
-                                "displayLines": "SummonList_ADF_6",
-                                "constants": [],
-                                "variables": [
-                                  "SummonList_ADF_6"
-                                ]
+                                "displayLines": "SummonList_ADF_6"
                               },
                               "locationType": "LastDie"
                             }
@@ -362,23 +295,13 @@ const configAbility = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] (SummmonMinionDelayRatio) || RETURN",
-                            "displayLines": "SummmonMinionDelayRatio",
-                            "constants": [],
-                            "variables": [
-                              "SummmonMinionDelayRatio"
-                            ]
+                            "displayLines": "SummmonMinionDelayRatio"
                           },
                           "enemyList": [
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Variables[0] (SummonList_ADF_5) || RETURN",
-                                "displayLines": "SummonList_ADF_5",
-                                "constants": [],
-                                "variables": [
-                                  "SummonList_ADF_5"
-                                ]
+                                "displayLines": "SummonList_ADF_5"
                               },
                               "locationType": "LastDie"
                             }
@@ -399,23 +322,13 @@ const configAbility = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] (SummmonMinionDelayRatio) || RETURN",
-                            "displayLines": "SummmonMinionDelayRatio",
-                            "constants": [],
-                            "variables": [
-                              "SummmonMinionDelayRatio"
-                            ]
+                            "displayLines": "SummmonMinionDelayRatio"
                           },
                           "enemyList": [
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Variables[0] (SummonList_ADF_6) || RETURN",
-                                "displayLines": "SummonList_ADF_6",
-                                "constants": [],
-                                "variables": [
-                                  "SummonList_ADF_6"
-                                ]
+                                "displayLines": "SummonList_ADF_6"
                               },
                               "locationType": "LastDie"
                             }
@@ -450,12 +363,7 @@ const configAbility = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (CurrentXuanluPartSummonIndex) || RETURN",
-                "displayLines": "CurrentXuanluPartSummonIndex",
-                "constants": [],
-                "variables": [
-                  "CurrentXuanluPartSummonIndex"
-                ]
+                "displayLines": "CurrentXuanluPartSummonIndex"
               },
               "caseEvents": [
                 {
@@ -465,23 +373,13 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (SummmonMinionDelayRatio) || RETURN",
-                        "displayLines": "SummmonMinionDelayRatio",
-                        "constants": [],
-                        "variables": [
-                          "SummmonMinionDelayRatio"
-                        ]
+                        "displayLines": "SummmonMinionDelayRatio"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-                            "displayLines": "SummonList_ADF_2",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_2"
-                            ]
+                            "displayLines": "SummonList_ADF_2"
                           },
                           "locationType": "LastDie"
                         }
@@ -502,23 +400,13 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (SummmonMinionDelayRatio) || RETURN",
-                        "displayLines": "SummmonMinionDelayRatio",
-                        "constants": [],
-                        "variables": [
-                          "SummmonMinionDelayRatio"
-                        ]
+                        "displayLines": "SummmonMinionDelayRatio"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
-                            "displayLines": "SummonList_ADF_3",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_3"
-                            ]
+                            "displayLines": "SummonList_ADF_3"
                           },
                           "locationType": "LastDie"
                         }
@@ -539,23 +427,13 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (SummmonMinionDelayRatio) || RETURN",
-                        "displayLines": "SummmonMinionDelayRatio",
-                        "constants": [],
-                        "variables": [
-                          "SummmonMinionDelayRatio"
-                        ]
+                        "displayLines": "SummmonMinionDelayRatio"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                            "displayLines": "SummonList_ADF_1",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_1"
-                            ]
+                            "displayLines": "SummonList_ADF_1"
                           },
                           "locationType": "LastDie"
                         }
@@ -576,23 +454,13 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (SummmonMinionDelayRatio) || RETURN",
-                        "displayLines": "SummmonMinionDelayRatio",
-                        "constants": [],
-                        "variables": [
-                          "SummmonMinionDelayRatio"
-                        ]
+                        "displayLines": "SummmonMinionDelayRatio"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_4) || RETURN",
-                            "displayLines": "SummonList_ADF_4",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_4"
-                            ]
+                            "displayLines": "SummonList_ADF_4"
                           },
                           "locationType": "LastDie"
                         }

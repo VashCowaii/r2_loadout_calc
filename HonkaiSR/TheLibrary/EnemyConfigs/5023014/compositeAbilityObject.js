@@ -168,27 +168,13 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "consumePercent": {
-                    "operator": "Constants[0] (1) || Variables[0] (MDF_InitHP_LV2) || SUB || RETURN",
-                    "displayLines": "(1 - MDF_InitHP_LV2)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_InitHP_LV2"
-                    ]
+                    "displayLines": "(1 - MDF_InitHP_LV2)"
                   }
                 },
                 {
                   "name": "Deal Toughness DMG",
                   "valuePercentReduce": {
-                    "operator": "Constants[0] (1) || Variables[0] (MDF_InitStance_LV2) || SUB || RETURN",
-                    "displayLines": "(1 - MDF_InitStance_LV2)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_InitStance_LV2"
-                    ]
+                    "displayLines": "(1 - MDF_InitStance_LV2)"
                   },
                   "target": {
                     "name": "Target Name",
@@ -224,27 +210,13 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "consumePercent": {
-                    "operator": "Constants[0] (1) || Variables[0] (MDF_InitHP_LV1) || SUB || RETURN",
-                    "displayLines": "(1 - MDF_InitHP_LV1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_InitHP_LV1"
-                    ]
+                    "displayLines": "(1 - MDF_InitHP_LV1)"
                   }
                 },
                 {
                   "name": "Deal Toughness DMG",
                   "valuePercentReduce": {
-                    "operator": "Constants[0] (1) || Variables[0] (MDF_InitStance_LV1) || SUB || RETURN",
-                    "displayLines": "(1 - MDF_InitStance_LV1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_InitStance_LV1"
-                    ]
+                    "displayLines": "(1 - MDF_InitStance_LV1)"
                   },
                   "target": {
                     "name": "Target Name",
@@ -448,12 +420,7 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Random Chance",
                         "chance": {
-                          "operator": "Variables[0] (Skill02_P4_BonusChance) || RETURN",
-                          "displayLines": "Skill02_P4_BonusChance",
-                          "constants": [],
-                          "variables": [
-                            "Skill02_P4_BonusChance"
-                          ]
+                          "displayLines": "Skill02_P4_BonusChance"
                         }
                       },
                       "passed": [
@@ -648,12 +615,7 @@ const compositeAbilityObject = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[4]]}"
-                ]
+                "displayLines": "{[PassiveSkill01[4]]}"
               },
               "refreshPositions": false,
               "enemyList": [
@@ -667,12 +629,7 @@ const compositeAbilityObject = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[5]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[5]]}"
-                ]
+                "displayLines": "{[PassiveSkill01[5]]}"
               },
               "refreshPositions": false,
               "enemyList": [
@@ -688,12 +645,7 @@ const compositeAbilityObject = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[4]]}"
-                ]
+                "displayLines": "{[PassiveSkill01[4]]}"
               },
               "refreshPositions": false,
               "enemyList": [
@@ -707,12 +659,7 @@ const compositeAbilityObject = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[5]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[5]]}"
-                ]
+                "displayLines": "{[PassiveSkill01[5]]}"
               },
               "refreshPositions": false,
               "enemyList": [
@@ -734,20 +681,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1061041544\">Monster_XP_Elite02_03_InitHP_LV2</a>",
           "valuePerStack": {
             "MDF_InitHP_LV2": {
-              "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[3]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[3]]}"
             },
             "MDF_InitStance_LV2": {
-              "operator": "Variables[0] ({[PassiveSkill01[8]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[8]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[8]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[8]]}"
             }
           }
         },
@@ -854,12 +791,7 @@ const compositeAbilityObject = {
         {
           "name": "Adjust Team Punchline Value",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill01[6]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[6]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[6]]}"
-            ]
+            "displayLines": "{[PassiveSkill01[6]]}"
           },
           "adjustment": "Add"
         }
@@ -962,12 +894,7 @@ const compositeAbilityObject = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[1]]}"
-                ]
+                "displayLines": "{[PassiveSkill01[1]]}"
               },
               "refreshPositions": false,
               "enemyList": [
@@ -981,12 +908,7 @@ const compositeAbilityObject = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[2]]}"
-                ]
+                "displayLines": "{[PassiveSkill01[2]]}"
               },
               "refreshPositions": false,
               "enemyList": [
@@ -1002,12 +924,7 @@ const compositeAbilityObject = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[1]]}"
-                ]
+                "displayLines": "{[PassiveSkill01[1]]}"
               },
               "refreshPositions": false,
               "enemyList": [
@@ -1021,12 +938,7 @@ const compositeAbilityObject = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[2]]}"
-                ]
+                "displayLines": "{[PassiveSkill01[2]]}"
               },
               "refreshPositions": false,
               "enemyList": [
@@ -1048,20 +960,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1111374401\">Monster_XP_Elite02_03_InitHP_LV1</a>",
           "valuePerStack": {
             "MDF_InitHP_LV1": {
-              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[0]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[0]]}"
             },
             "MDF_InitStance_LV1": {
-              "operator": "Variables[0] ({[PassiveSkill01[7]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[7]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[7]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[7]]}"
             }
           }
         },
@@ -1176,12 +1078,7 @@ const compositeAbilityObject = {
         {
           "name": "Adjust Team Punchline Value",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill01[6]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[6]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[6]]}"
-            ]
+            "displayLines": "{[PassiveSkill01[6]]}"
           },
           "adjustment": "Add"
         }
@@ -1395,12 +1292,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                      "displayLines": "{[Skill04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[0]]}"
-                      ]
+                      "displayLines": "{[Skill04[0]]}"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1411,14 +1303,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Skill Points Modification",
                   "adjustmentValue": {
-                    "operator": "Constants[0] (0) || Variables[0] ({[Skill04[2]]}) || SUB || RETURN",
-                    "displayLines": "(0 - {[Skill04[2]]})",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "{[Skill04[2]]}"
-                    ]
+                    "displayLines": "(0 - {[Skill04[2]]})"
                   },
                   "adjustmentType": "+"
                 },
@@ -1458,12 +1343,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                      "displayLines": "{[Skill04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[0]]}"
-                      ]
+                      "displayLines": "{[Skill04[0]]}"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1759,12 +1639,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
+                      "displayLines": "{[Skill02[0]]}"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1777,12 +1652,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Random Chance",
                     "chance": {
-                      "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                      "displayLines": "{[Skill02[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[1]]}"
-                      ]
+                      "displayLines": "{[Skill02[1]]}"
                     }
                   },
                   "passed": [
@@ -1795,12 +1665,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                       "valuePerStack": {
                         "Ability02_P4_BonusChance": {
-                          "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                          "displayLines": "{[Skill02[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[3]]}"
-                          ]
+                          "displayLines": "{[Skill02[3]]}"
                         }
                       }
                     }
@@ -1901,12 +1766,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
+                      "displayLines": "{[Skill02[0]]}"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1919,12 +1779,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Random Chance",
                     "chance": {
-                      "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                      "displayLines": "{[Skill02[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[1]]}"
-                      ]
+                      "displayLines": "{[Skill02[1]]}"
                     }
                   },
                   "passed": [
@@ -1937,12 +1792,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                       "valuePerStack": {
                         "Ability02_P4_BonusChance": {
-                          "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                          "displayLines": "{[Skill02[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[3]]}"
-                          ]
+                          "displayLines": "{[Skill02[3]]}"
                         }
                       }
                     }
@@ -2043,12 +1893,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
+                      "displayLines": "{[Skill02[0]]}"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -2061,12 +1906,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Random Chance",
                     "chance": {
-                      "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                      "displayLines": "{[Skill02[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[1]]}"
-                      ]
+                      "displayLines": "{[Skill02[1]]}"
                     }
                   },
                   "passed": [
@@ -2079,12 +1919,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                       "valuePerStack": {
                         "Ability02_P4_BonusChance": {
-                          "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                          "displayLines": "{[Skill02[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[3]]}"
-                          ]
+                          "displayLines": "{[Skill02[3]]}"
                         }
                       }
                     }
@@ -2202,12 +2037,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Wind",
                         "Damage": {
-                          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                          "displayLines": "{[Skill02[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[0]]}"
-                          ]
+                          "displayLines": "{[Skill02[0]]}"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -2220,12 +2050,7 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Random Chance",
                         "chance": {
-                          "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                          "displayLines": "{[Skill02[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[1]]}"
-                          ]
+                          "displayLines": "{[Skill02[1]]}"
                         }
                       },
                       "passed": [
@@ -2238,12 +2063,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                           "valuePerStack": {
                             "Ability02_P4_BonusChance": {
-                              "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                              "displayLines": "{[Skill02[3]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill02[3]]}"
-                              ]
+                              "displayLines": "{[Skill02[3]]}"
                             }
                           }
                         }
@@ -2338,12 +2158,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                              "displayLines": "{[Skill02[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill02[0]]}"
-                              ]
+                              "displayLines": "{[Skill02[0]]}"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -2356,12 +2171,7 @@ const compositeAbilityObject = {
                           "conditions": {
                             "name": "Random Chance",
                             "chance": {
-                              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                              "displayLines": "{[Skill02[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill02[1]]}"
-                              ]
+                              "displayLines": "{[Skill02[1]]}"
                             }
                           },
                           "passed": [
@@ -2374,12 +2184,7 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                               "valuePerStack": {
                                 "Ability02_P4_BonusChance": {
-                                  "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                                  "displayLines": "{[Skill02[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[Skill02[3]]}"
-                                  ]
+                                  "displayLines": "{[Skill02[3]]}"
                                 }
                               }
                             }
@@ -2515,12 +2320,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
+                      "displayLines": "{[Skill02[0]]}"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -2533,12 +2333,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Random Chance",
                     "chance": {
-                      "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                      "displayLines": "{[Skill02[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[1]]}"
-                      ]
+                      "displayLines": "{[Skill02[1]]}"
                     }
                   },
                   "passed": [
@@ -2551,12 +2346,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                       "valuePerStack": {
                         "Ability02_P4_BonusChance": {
-                          "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                          "displayLines": "{[Skill02[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[3]]}"
-                          ]
+                          "displayLines": "{[Skill02[3]]}"
                         }
                       }
                     }
@@ -2605,12 +2395,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Wind",
                         "Damage": {
-                          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                          "displayLines": "{[Skill02[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[0]]}"
-                          ]
+                          "displayLines": "{[Skill02[0]]}"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -2623,12 +2408,7 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Random Chance",
                         "chance": {
-                          "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                          "displayLines": "{[Skill02[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[1]]}"
-                          ]
+                          "displayLines": "{[Skill02[1]]}"
                         }
                       },
                       "passed": [
@@ -2641,12 +2421,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                           "valuePerStack": {
                             "Ability02_P4_BonusChance": {
-                              "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                              "displayLines": "{[Skill02[3]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill02[3]]}"
-                              ]
+                              "displayLines": "{[Skill02[3]]}"
                             }
                           }
                         }
@@ -2681,12 +2456,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                              "displayLines": "{[Skill02[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill02[0]]}"
-                              ]
+                              "displayLines": "{[Skill02[0]]}"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -2699,12 +2469,7 @@ const compositeAbilityObject = {
                           "conditions": {
                             "name": "Random Chance",
                             "chance": {
-                              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                              "displayLines": "{[Skill02[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill02[1]]}"
-                              ]
+                              "displayLines": "{[Skill02[1]]}"
                             }
                           },
                           "passed": [
@@ -2717,12 +2482,7 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                               "valuePerStack": {
                                 "Ability02_P4_BonusChance": {
-                                  "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                                  "displayLines": "{[Skill02[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[Skill02[3]]}"
-                                  ]
+                                  "displayLines": "{[Skill02[3]]}"
                                 }
                               }
                             }
@@ -2778,12 +2538,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Wind",
                         "Damage": {
-                          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                          "displayLines": "{[Skill02[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[0]]}"
-                          ]
+                          "displayLines": "{[Skill02[0]]}"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -2796,12 +2551,7 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Random Chance",
                         "chance": {
-                          "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                          "displayLines": "{[Skill02[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[1]]}"
-                          ]
+                          "displayLines": "{[Skill02[1]]}"
                         }
                       },
                       "passed": [
@@ -2814,12 +2564,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                           "valuePerStack": {
                             "Ability02_P4_BonusChance": {
-                              "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                              "displayLines": "{[Skill02[3]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill02[3]]}"
-                              ]
+                              "displayLines": "{[Skill02[3]]}"
                             }
                           }
                         }
@@ -2930,12 +2675,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Wind",
                         "Damage": {
-                          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                          "displayLines": "{[Skill02[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[0]]}"
-                          ]
+                          "displayLines": "{[Skill02[0]]}"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -2948,12 +2688,7 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Random Chance",
                         "chance": {
-                          "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                          "displayLines": "{[Skill02[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[1]]}"
-                          ]
+                          "displayLines": "{[Skill02[1]]}"
                         }
                       },
                       "passed": [
@@ -2966,12 +2701,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                           "valuePerStack": {
                             "Ability02_P4_BonusChance": {
-                              "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                              "displayLines": "{[Skill02[3]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill02[3]]}"
-                              ]
+                              "displayLines": "{[Skill02[3]]}"
                             }
                           }
                         }
@@ -3066,12 +2796,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                              "displayLines": "{[Skill02[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill02[0]]}"
-                              ]
+                              "displayLines": "{[Skill02[0]]}"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -3084,12 +2809,7 @@ const compositeAbilityObject = {
                           "conditions": {
                             "name": "Random Chance",
                             "chance": {
-                              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                              "displayLines": "{[Skill02[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill02[1]]}"
-                              ]
+                              "displayLines": "{[Skill02[1]]}"
                             }
                           },
                           "passed": [
@@ -3102,12 +2822,7 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                               "valuePerStack": {
                                 "Ability02_P4_BonusChance": {
-                                  "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                                  "displayLines": "{[Skill02[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[Skill02[3]]}"
-                                  ]
+                                  "displayLines": "{[Skill02[3]]}"
                                 }
                               }
                             }
@@ -3223,12 +2938,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Wind",
                         "Damage": {
-                          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                          "displayLines": "{[Skill02[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[0]]}"
-                          ]
+                          "displayLines": "{[Skill02[0]]}"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -3241,12 +2951,7 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Random Chance",
                         "chance": {
-                          "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                          "displayLines": "{[Skill02[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[1]]}"
-                          ]
+                          "displayLines": "{[Skill02[1]]}"
                         }
                       },
                       "passed": [
@@ -3259,12 +2964,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                           "valuePerStack": {
                             "Ability02_P4_BonusChance": {
-                              "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                              "displayLines": "{[Skill02[3]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill02[3]]}"
-                              ]
+                              "displayLines": "{[Skill02[3]]}"
                             }
                           }
                         }
@@ -3315,12 +3015,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Wind",
                         "Damage": {
-                          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                          "displayLines": "{[Skill02[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[0]]}"
-                          ]
+                          "displayLines": "{[Skill02[0]]}"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -3333,12 +3028,7 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Random Chance",
                         "chance": {
-                          "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                          "displayLines": "{[Skill02[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[1]]}"
-                          ]
+                          "displayLines": "{[Skill02[1]]}"
                         }
                       },
                       "passed": [
@@ -3351,12 +3041,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                           "valuePerStack": {
                             "Ability02_P4_BonusChance": {
-                              "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                              "displayLines": "{[Skill02[3]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill02[3]]}"
-                              ]
+                              "displayLines": "{[Skill02[3]]}"
                             }
                           }
                         }
@@ -3391,12 +3076,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                              "displayLines": "{[Skill02[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill02[0]]}"
-                              ]
+                              "displayLines": "{[Skill02[0]]}"
                             },
                             "Toughness": null,
                             "Tags": null,
@@ -3409,12 +3089,7 @@ const compositeAbilityObject = {
                           "conditions": {
                             "name": "Random Chance",
                             "chance": {
-                              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                              "displayLines": "{[Skill02[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill02[1]]}"
-                              ]
+                              "displayLines": "{[Skill02[1]]}"
                             }
                           },
                           "passed": [
@@ -3427,12 +3102,7 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                               "valuePerStack": {
                                 "Ability02_P4_BonusChance": {
-                                  "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                                  "displayLines": "{[Skill02[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[Skill02[3]]}"
-                                  ]
+                                  "displayLines": "{[Skill02[3]]}"
                                 }
                               }
                             }
@@ -3500,13 +3170,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || Variables[1] ({[Skill02[2]]}) || MUL || RETURN",
-                      "displayLines": "({[Skill02[0]]} * {[Skill02[2]]})",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}",
-                        "{[Skill02[2]]}"
-                      ]
+                      "displayLines": "({[Skill02[0]]} * {[Skill02[2]]})"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -3519,13 +3183,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Random Chance",
                     "chance": {
-                      "operator": "Variables[0] ({[Skill02[1]]}) || Variables[1] ({[Skill02[2]]}) || MUL || RETURN",
-                      "displayLines": "({[Skill02[1]]} * {[Skill02[2]]})",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[1]]}",
-                        "{[Skill02[2]]}"
-                      ]
+                      "displayLines": "({[Skill02[1]]} * {[Skill02[2]]})"
                     }
                   },
                   "passed": [
@@ -3538,12 +3196,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                       "valuePerStack": {
                         "Ability02_P4_BonusChance": {
-                          "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                          "displayLines": "{[Skill02[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[3]]}"
-                          ]
+                          "displayLines": "{[Skill02[3]]}"
                         }
                       }
                     }
@@ -3570,13 +3223,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Wind",
                         "Damage": {
-                          "operator": "Variables[0] ({[Skill02[0]]}) || Variables[1] ({[Skill02[2]]}) || MUL || RETURN",
-                          "displayLines": "({[Skill02[0]]} * {[Skill02[2]]})",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[0]]}",
-                            "{[Skill02[2]]}"
-                          ]
+                          "displayLines": "({[Skill02[0]]} * {[Skill02[2]]})"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -3589,13 +3236,7 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Random Chance",
                         "chance": {
-                          "operator": "Variables[0] ({[Skill02[1]]}) || Variables[1] ({[Skill02[2]]}) || MUL || RETURN",
-                          "displayLines": "({[Skill02[1]]} * {[Skill02[2]]})",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[1]]}",
-                            "{[Skill02[2]]}"
-                          ]
+                          "displayLines": "({[Skill02[1]]} * {[Skill02[2]]})"
                         }
                       },
                       "passed": [
@@ -3608,12 +3249,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
                           "valuePerStack": {
                             "Ability02_P4_BonusChance": {
-                              "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                              "displayLines": "{[Skill02[3]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill02[3]]}"
-                              ]
+                              "displayLines": "{[Skill02[3]]}"
                             }
                           }
                         }
@@ -4446,12 +4082,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,

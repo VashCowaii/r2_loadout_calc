@@ -7,12 +7,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (FlowerPower) || RETURN",
-        "displayLines": "FlowerPower",
-        "constants": [],
-        "variables": [
-          "FlowerPower"
-        ]
+        "displayLines": "FlowerPower"
       },
       "execute": [
         {

@@ -13,12 +13,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill02[5]]}) || RETURN",
-          "displayLines": "{[Skill02[5]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[5]]}"
-          ]
+          "displayLines": "{[Skill02[5]]}"
         },
         "dmgFormula": "Max HP Scaling",
         "Toughness": {
@@ -40,12 +35,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill02[5]]}) || RETURN",
-          "displayLines": "{[Skill02[5]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[5]]}"
-          ]
+          "displayLines": "{[Skill02[5]]}"
         },
         "dmgFormula": "Max HP Scaling",
         "Toughness": {
@@ -67,21 +57,11 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"1551178382\">Monster_Standard_SpeedAddedRatio</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
       "duration": {
-        "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-        "displayLines": "{[Skill02[0]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill02[0]]}"
-        ]
+        "displayLines": "{[Skill02[0]]}"
       },
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-          "displayLines": "{[Skill02[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[1]]}"
-          ]
+          "displayLines": "{[Skill02[1]]}"
         }
       }
     },
@@ -100,46 +80,21 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-1066196333\">Monster_W2_Beast01_03_Bleed</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
       "duration": {
-        "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-        "displayLines": "{[Skill02[2]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill02[2]]}"
-        ]
+        "displayLines": "{[Skill02[2]]}"
       },
       "valuePerStack": {
         "MDF_MaxLayer": {
-          "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-          "displayLines": "{[SkillP01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[0]]}"
-          ]
+          "displayLines": "{[SkillP01[0]]}"
         },
         "Modifier_Bleed_DamagePercentage": {
-          "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-          "displayLines": "{[Skill02[3]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[3]]}"
-          ]
+          "displayLines": "{[Skill02[3]]}"
         },
         "Modifier_Bleed_MaxDamagePercentage": {
-          "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
-          "displayLines": "{[Skill02[4]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[4]]}"
-          ]
+          "displayLines": "{[Skill02[4]]}"
         }
       },
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (Current_Layer) || RETURN",
-        "displayLines": "Current_Layer",
-        "constants": [],
-        "variables": [
-          "Current_Layer"
-        ]
+        "displayLines": "Current_Layer"
       }
     }
   ],

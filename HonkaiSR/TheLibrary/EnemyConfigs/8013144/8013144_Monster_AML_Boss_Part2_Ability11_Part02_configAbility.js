@@ -32,12 +32,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"596990185\">Enemy_W0_Boss_Part2_Ability11_Modifier</a>",
       "valuePerStack": {
         "MDF_AttackAddedRatio": {
-          "operator": "Variables[0] ({[Skill11[0]]}) || RETURN",
-          "displayLines": "{[Skill11[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill11[0]]}"
-          ]
+          "displayLines": "{[Skill11[0]]}"
         }
       }
     },

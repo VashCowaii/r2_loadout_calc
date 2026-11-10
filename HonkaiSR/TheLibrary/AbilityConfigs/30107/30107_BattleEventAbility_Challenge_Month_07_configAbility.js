@@ -50,13 +50,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Weaken%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_Layer) || Variables[1] (ADF_1) || MUL || RETURN",
-                "displayLines": "(MDF_Layer * ADF_1)",
-                "constants": [],
-                "variables": [
-                  "MDF_Layer",
-                  "ADF_1"
-                ]
+                "displayLines": "(MDF_Layer * ADF_1)"
               }
             }
           ]
@@ -129,40 +123,18 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1720802676\">MLevel_BattleEventAbility_Challenge_Month_07</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P2_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P2_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P2_ADF"
                   },
                   "valuePerStack": {
                     "ADF_1": {
-                      "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P1_ADF"
                     },
                     "ADF_2": {
-                      "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P2_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P2_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P2_ADF"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (_DebuffNumber) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(_DebuffNumber + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_DebuffNumber"
-                    ]
+                    "displayLines": "(_DebuffNumber + 1)"
                   }
                 }
               ]

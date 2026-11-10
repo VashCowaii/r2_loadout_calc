@@ -27,14 +27,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (count) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(count + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "count"
-                    ]
+                    "displayLines": "(count + 1)"
                   },
                   "variableName": "count"
                 },
@@ -186,13 +179,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1797420881\">Standard_Protect_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                       "valuePerStack": {
                         "MDF_ShowValue": {
-                          "operator": "Variables[0] (EntityMaxHP) || Variables[1] (#BattleEvent_P1_ADF) || MUL || RETURN",
-                          "displayLines": "(EntityMaxHP * #BattleEvent_P1_ADF)",
-                          "constants": [],
-                          "variables": [
-                            "EntityMaxHP",
-                            "#BattleEvent_P1_ADF"
-                          ]
+                          "displayLines": "(EntityMaxHP * #BattleEvent_P1_ADF)"
                         }
                       }
                     }

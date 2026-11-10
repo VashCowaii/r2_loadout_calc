@@ -27,14 +27,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (count) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(count + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "count"
-                    ]
+                    "displayLines": "(count + 1)"
                   },
                   "variableName": "count"
                 },
@@ -161,12 +154,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P1_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P1_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P1_ADF"
                   }
                 },
                 {
@@ -177,12 +165,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P3_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P3_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P3_ADF"
                   }
                 }
               ]
@@ -253,12 +236,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-668032397\">Modifier_BattleEventAbility_Challenge_Xianzhou_03_Sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
                       "duration": {
-                        "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P2_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P2_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P2_ADF"
                       }
                     },
                     {
@@ -269,12 +247,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-668032397\">Modifier_BattleEventAbility_Challenge_Xianzhou_03_Sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
                       "duration": {
-                        "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P2_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P2_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P2_ADF"
                       }
                     }
                   ]

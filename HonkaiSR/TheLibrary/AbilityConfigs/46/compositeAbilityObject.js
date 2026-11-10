@@ -29,14 +29,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (count) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(count + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "count"
-                    ]
+                    "displayLines": "(count + 1)"
                   },
                   "variableName": "count"
                 },
@@ -200,12 +193,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__47) || RETURN",
-                        "displayLines": "ENEMIES_OBJECT_UNUSED__47",
-                        "constants": [],
-                        "variables": [
-                          "ENEMIES_OBJECT_UNUSED__47"
-                        ]
+                        "displayLines": "ENEMIES_OBJECT_UNUSED__47"
                       },
                       "formula": "Heal from Target MaxHP"
                     }

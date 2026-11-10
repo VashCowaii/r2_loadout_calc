@@ -47,28 +47,13 @@ const configAbility = {
           "memoID": 11402,
           "valuePerStack": {
             "_PointB3Layer": {
-              "operator": "Variables[0] (_EnergyReduce) || RETURN",
-              "displayLines": "_EnergyReduce",
-              "constants": [],
-              "variables": [
-                "_EnergyReduce"
-              ]
+              "displayLines": "_EnergyReduce"
             },
             "Ability11_DamagePercentage": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             },
             "Ability11_DamagePercentageAD": {
-              "operator": "Variables[0] (0.9) || RETURN",
-              "displayLines": "0.9",
-              "constants": [],
-              "variables": [
-                0.9
-              ]
+              "displayLines": "0.9"
             }
           }
         },
@@ -127,13 +112,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (ServantMaxHP) || Variables[1] (ServantCurrentHP) || SUB || RETURN",
-            "displayLines": "(ServantMaxHP - ServantCurrentHP)",
-            "constants": [],
-            "variables": [
-              "ServantMaxHP",
-              "ServantCurrentHP"
-            ]
+            "displayLines": "(ServantMaxHP - ServantCurrentHP)"
           },
           "variableName": "ServantHealValue"
         },
@@ -144,12 +123,7 @@ const configAbility = {
             "target": "{{Caster's Memosprite}}"
           },
           "healFlat": {
-            "operator": "Variables[0] (ServantHealValue) || RETURN",
-            "displayLines": "ServantHealValue",
-            "constants": [],
-            "variables": [
-              "ServantHealValue"
-            ]
+            "displayLines": "ServantHealValue"
           },
           "formula": "Heal from Base Value"
         }
@@ -169,12 +143,7 @@ const configAbility = {
       "eventID": 11402,
       "variables": {
         "BattleEvent_Aglaea_BaseSpeed": {
-          "operator": "Variables[0] (100) || RETURN",
-          "displayLines": "100",
-          "constants": [],
-          "variables": [
-            100
-          ]
+          "displayLines": "100"
         }
       }
     },
@@ -202,12 +171,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         }

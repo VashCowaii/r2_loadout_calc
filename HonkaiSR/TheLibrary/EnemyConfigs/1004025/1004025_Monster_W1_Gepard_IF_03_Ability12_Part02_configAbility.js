@@ -127,12 +127,7 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-2038076408\">Monster_Gepard_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Aggravate</span>]",
       "duration": {
-        "operator": "Variables[0] ({[Skill12[0]]}) || RETURN",
-        "displayLines": "{[Skill12[0]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill12[0]]}"
-        ]
+        "displayLines": "{[Skill12[0]]}"
       }
     },
     "Trigger: Ability End"

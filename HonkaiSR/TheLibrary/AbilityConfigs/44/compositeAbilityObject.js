@@ -50,15 +50,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (1) || INVERT || Variables[0] (MDF_1) || MUL || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "((-1 * MDF_1) * MDF_Layer)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_1",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "((-1 * MDF_1) * MDF_Layer)"
                   }
                 },
                 {
@@ -69,15 +61,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceIceBonus</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (1) || INVERT || Variables[0] (MDF_2) || MUL || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "((-1 * MDF_2) * MDF_Layer)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_2",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "((-1 * MDF_2) * MDF_Layer)"
                   }
                 }
               ]
@@ -116,12 +100,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (ADF_1) || RETURN",
-                      "displayLines": "ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "ADF_1"
-                      ]
+                      "displayLines": "ADF_1"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "Toughness": null,
@@ -138,13 +117,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
                   "duration": 1,
                   "baseChance": {
-                    "operator": "Variables[0] (ADF_2) || Variables[1] (Skill_PercentageMuti_620301) || ADD || RETURN",
-                    "displayLines": "(ADF_2 + Skill_PercentageMuti_620301)",
-                    "constants": [],
-                    "variables": [
-                      "ADF_2",
-                      "Skill_PercentageMuti_620301"
-                    ]
+                    "displayLines": "(ADF_2 + Skill_PercentageMuti_620301)"
                   }
                 },
                 {
@@ -165,46 +138,20 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1826522727\">MLevel_StageAbility_620301_Modifier_Sub2</a>",
                       "duration": 3,
                       "baseChance": {
-                        "operator": "Variables[0] (ADF_3) || RETURN",
-                        "displayLines": "ADF_3",
-                        "constants": [],
-                        "variables": [
-                          "ADF_3"
-                        ]
+                        "displayLines": "ADF_3"
                       },
                       "stackLimit": {
-                        "operator": "Variables[0] (UNKNOWN_BE_44) || RETURN",
-                        "displayLines": "UNKNOWN_BE_44",
-                        "constants": [],
-                        "variables": [
-                          "UNKNOWN_BE_44"
-                        ]
+                        "displayLines": "UNKNOWN_BE_44"
                       },
                       "valuePerStack": {
                         "MDF_1": {
-                          "operator": "Variables[0] (ADF_4) || RETURN",
-                          "displayLines": "ADF_4",
-                          "constants": [],
-                          "variables": [
-                            "ADF_4"
-                          ]
+                          "displayLines": "ADF_4"
                         },
                         "MDF_2": {
-                          "operator": "Variables[0] (ADF_5) || Variables[1] (IceResistanceAdd_620301) || ADD || RETURN",
-                          "displayLines": "(ADF_5 + IceResistanceAdd_620301)",
-                          "constants": [],
-                          "variables": [
-                            "ADF_5",
-                            "IceResistanceAdd_620301"
-                          ]
+                          "displayLines": "(ADF_5 + IceResistanceAdd_620301)"
                         },
                         "MDF_MaxLayer": {
-                          "operator": "Variables[0] (UNKNOWN_BE_44) || RETURN",
-                          "displayLines": "UNKNOWN_BE_44",
-                          "constants": [],
-                          "variables": [
-                            "UNKNOWN_BE_44"
-                          ]
+                          "displayLines": "UNKNOWN_BE_44"
                         }
                       }
                     }
@@ -219,31 +166,15 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1826522727\">MLevel_StageAbility_620301_Modifier_Sub2</a>",
                       "duration": 3,
                       "baseChance": {
-                        "operator": "Variables[0] (ADF_3) || RETURN",
-                        "displayLines": "ADF_3",
-                        "constants": [],
-                        "variables": [
-                          "ADF_3"
-                        ]
+                        "displayLines": "ADF_3"
                       },
                       "stackLimit": 1,
                       "valuePerStack": {
                         "MDF_1": {
-                          "operator": "Variables[0] (ADF_4) || RETURN",
-                          "displayLines": "ADF_4",
-                          "constants": [],
-                          "variables": [
-                            "ADF_4"
-                          ]
+                          "displayLines": "ADF_4"
                         },
                         "MDF_2": {
-                          "operator": "Variables[0] (ADF_5) || Variables[1] (IceResistanceAdd_620301) || ADD || RETURN",
-                          "displayLines": "(ADF_5 + IceResistanceAdd_620301)",
-                          "constants": [],
-                          "variables": [
-                            "ADF_5",
-                            "IceResistanceAdd_620301"
-                          ]
+                          "displayLines": "(ADF_5 + IceResistanceAdd_620301)"
                         },
                         "MDF_MaxLayer": 1
                       }
@@ -272,12 +203,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (ADF_6) || RETURN",
-                        "displayLines": "ADF_6",
-                        "constants": [],
-                        "variables": [
-                          "ADF_6"
-                        ]
+                        "displayLines": "ADF_6"
                       }
                     }
                   ]
@@ -294,12 +220,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (ADF_7) || RETURN",
-                        "displayLines": "ADF_7",
-                        "constants": [],
-                        "variables": [
-                          "ADF_7"
-                        ]
+                        "displayLines": "ADF_7"
                       },
                       "variableName": "Skill_PercentageMuti_620301"
                     }
@@ -317,12 +238,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (ADF_8) || RETURN",
-                        "displayLines": "ADF_8",
-                        "constants": [],
-                        "variables": [
-                          "ADF_8"
-                        ]
+                        "displayLines": "ADF_8"
                       },
                       "variableName": "IceResistanceAdd_620301"
                     }

@@ -28,12 +28,7 @@ const configAbility = {
       "eventID": 20022,
       "variables": {
         "MDF_W4_Unicorn_01_BattleEvent_Ultimate_BaseSpeed": {
-          "operator": "Variables[0] (BaseSpeed) || RETURN",
-          "displayLines": "BaseSpeed",
-          "constants": [],
-          "variables": [
-            "BaseSpeed"
-          ]
+          "displayLines": "BaseSpeed"
         }
       },
       "whenCreated": [
@@ -58,12 +53,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] ({[Skill03[3]]}) || RETURN",
-        "displayLines": "{[Skill03[3]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill03[3]]}"
-        ]
+        "displayLines": "{[Skill03[3]]}"
       },
       "variableName": "SummonCount"
     },
@@ -76,12 +66,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-565541120\">Enemy_W4_Unicorn_01_MuteSpeed</a>[<span class=\"descriptionNumberColor\">Breeding Frenzy</span>]",
       "valuePerStack": {
         "MDF_AllDamageTypeResistance": {
-          "operator": "Variables[0] ({[Skill03[5]]}) || RETURN",
-          "displayLines": "{[Skill03[5]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[5]]}"
-          ]
+          "displayLines": "{[Skill03[5]]}"
         }
       }
     },

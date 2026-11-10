@@ -152,13 +152,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (Layer) || Variables[1] (MDF_PropertyValue) || MUL || RETURN",
-                    "displayLines": "(Layer * MDF_PropertyValue)",
-                    "constants": [],
-                    "variables": [
-                      "Layer",
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "(Layer * MDF_PropertyValue)"
                   }
                 }
               ]
@@ -181,29 +175,14 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"142979484\">MStrongChallengeEX_Talent_StageAbility_BOSS_007_Debuff</a>",
                   "duration": {
-                    "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                    "displayLines": "MDF_LifeTime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_LifeTime"
-                    ]
+                    "displayLines": "MDF_LifeTime"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   },
                   "casterAssign": "TargetSelf"
@@ -275,12 +254,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -323,12 +297,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"1007147615\">MStrongChallengeEX_Talent_StageAbility_PLY_094</a>[<span class=\"descriptionNumberColor\">Magic Time</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (#ADF_4) || RETURN",
-                              "displayLines": "#ADF_4",
-                              "constants": [],
-                              "variables": [
-                                "#ADF_4"
-                              ]
+                              "displayLines": "#ADF_4"
                             }
                           }
                         }
@@ -352,12 +321,7 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"1007147615\">MStrongChallengeEX_Talent_StageAbility_PLY_094</a>[<span class=\"descriptionNumberColor\">Magic Time</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (#ADF_3) || RETURN",
-                                  "displayLines": "#ADF_3",
-                                  "constants": [],
-                                  "variables": [
-                                    "#ADF_3"
-                                  ]
+                                  "displayLines": "#ADF_3"
                                 }
                               }
                             }
@@ -381,12 +345,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"1007147615\">MStrongChallengeEX_Talent_StageAbility_PLY_094</a>[<span class=\"descriptionNumberColor\">Magic Time</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                                      "displayLines": "#ADF_2",
-                                      "constants": [],
-                                      "variables": [
-                                        "#ADF_2"
-                                      ]
+                                      "displayLines": "#ADF_2"
                                     }
                                   }
                                 }
@@ -410,12 +369,7 @@ const compositeAbilityObject = {
                                       "modifier": "<a class=\"gModGreen\" id=\"1007147615\">MStrongChallengeEX_Talent_StageAbility_PLY_094</a>[<span class=\"descriptionNumberColor\">Magic Time</span>]",
                                       "valuePerStack": {
                                         "MDF_PropertyValue": {
-                                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                                          "displayLines": "#ADF_1",
-                                          "constants": [],
-                                          "variables": [
-                                            "#ADF_1"
-                                          ]
+                                          "displayLines": "#ADF_1"
                                         }
                                       }
                                     }
@@ -463,12 +417,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1007147615\">MStrongChallengeEX_Talent_StageAbility_PLY_094</a>[<span class=\"descriptionNumberColor\">Magic Time</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_4) || RETURN",
-                          "displayLines": "#ADF_4",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_4"
-                          ]
+                          "displayLines": "#ADF_4"
                         }
                       }
                     }
@@ -492,12 +441,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"1007147615\">MStrongChallengeEX_Talent_StageAbility_PLY_094</a>[<span class=\"descriptionNumberColor\">Magic Time</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (#ADF_3) || RETURN",
-                              "displayLines": "#ADF_3",
-                              "constants": [],
-                              "variables": [
-                                "#ADF_3"
-                              ]
+                              "displayLines": "#ADF_3"
                             }
                           }
                         }
@@ -521,12 +465,7 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"1007147615\">MStrongChallengeEX_Talent_StageAbility_PLY_094</a>[<span class=\"descriptionNumberColor\">Magic Time</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (#ADF_2) || RETURN",
-                                  "displayLines": "#ADF_2",
-                                  "constants": [],
-                                  "variables": [
-                                    "#ADF_2"
-                                  ]
+                                  "displayLines": "#ADF_2"
                                 }
                               }
                             }
@@ -550,12 +489,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"1007147615\">MStrongChallengeEX_Talent_StageAbility_PLY_094</a>[<span class=\"descriptionNumberColor\">Magic Time</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                                      "displayLines": "#ADF_1",
-                                      "constants": [],
-                                      "variables": [
-                                        "#ADF_1"
-                                      ]
+                                      "displayLines": "#ADF_1"
                                     }
                                   }
                                 }
@@ -605,14 +539,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindBonus</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_WindResistanceDelta) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_WindResistanceDelta)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_WindResistanceDelta"
-                    ]
+                    "displayLines": "(0 - MDF_WindResistanceDelta)"
                   }
                 },
                 {
@@ -623,14 +550,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceLightningBonus</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_ThunderResistanceDelta) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_ThunderResistanceDelta)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_ThunderResistanceDelta"
-                    ]
+                    "displayLines": "(0 - MDF_ThunderResistanceDelta)"
                   }
                 }
               ]
@@ -669,20 +589,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"863687676\">MStrongChallengeEX_Talent_StageAbility_EMY_093</a>",
                       "valuePerStack": {
                         "MDF_WindResistanceDelta": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_ThunderResistanceDelta": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -809,12 +719,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"973592377\">MStrongChallengeEX_Talent_StageAbility_PLY_092</a>",
                       "valuePerStack": {
                         "MDF_BP_Ultimate_DamageAddedRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -834,12 +739,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1783089808\">MStrongChallengeEX_Talent_StageAbility_NO1_092</a>",
                   "valuePerStack": {
                     "MDF_BP_Ultimate_DamageAddedRatio_Extra": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     }
                   }
                 }
@@ -885,12 +785,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_CritDamageAddedRatio) || RETURN",
-                    "displayLines": "MDF_CritDamageAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CritDamageAddedRatio"
-                    ]
+                    "displayLines": "MDF_CritDamageAddedRatio"
                   }
                 }
               ]
@@ -935,21 +830,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1149561969\">MStrongChallengeEX_Talent_StageAbility_PLY_091_Self</a>[<span class=\"descriptionNumberColor\">Exploit Opening</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_PLY091_LifeTime) || RETURN",
-                        "displayLines": "MDF_PLY091_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PLY091_LifeTime"
-                        ]
+                        "displayLines": "MDF_PLY091_LifeTime"
                       },
                       "valuePerStack": {
                         "MDF_CritDamageAddedRatio": {
-                          "operator": "Variables[0] (MDF_PLY091_CritDamageAddedRatio) || RETURN",
-                          "displayLines": "MDF_PLY091_CritDamageAddedRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PLY091_CritDamageAddedRatio"
-                          ]
+                          "displayLines": "MDF_PLY091_CritDamageAddedRatio"
                         }
                       }
                     }
@@ -991,20 +876,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"923259520\">MStrongChallengeEX_Talent_StageAbility_PLY_091</a>",
                       "valuePerStack": {
                         "MDF_PLY091_CritDamageAddedRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_PLY091_LifeTime": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -1056,12 +931,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageTypeTakenRatio) || RETURN",
-                    "displayLines": "MDF_AllDamageTypeTakenRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageTypeTakenRatio"
-                    ]
+                    "displayLines": "MDF_AllDamageTypeTakenRatio"
                   }
                 }
               ]
@@ -1124,21 +994,11 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"914020533\">MStrongChallengeEX_Talent_StageAbility_EMY_090</a>[<span class=\"descriptionNumberColor\">Comic Relief</span>]",
                           "duration": {
-                            "operator": "Variables[0] (MDF_EMY090_LifeTime) || RETURN",
-                            "displayLines": "MDF_EMY090_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_EMY090_LifeTime"
-                            ]
+                            "displayLines": "MDF_EMY090_LifeTime"
                           },
                           "valuePerStack": {
                             "MDF_AllDamageTypeTakenRatio": {
-                              "operator": "Variables[0] (MDF_EMY090_AllDamageTypeTakenRatio) || RETURN",
-                              "displayLines": "MDF_EMY090_AllDamageTypeTakenRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_EMY090_AllDamageTypeTakenRatio"
-                              ]
+                              "displayLines": "MDF_EMY090_AllDamageTypeTakenRatio"
                             }
                           },
                           "casterAssign": "CasterSelf"
@@ -1229,20 +1089,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"940037139\">MStrongChallengeEX_Talent_StageAbility_PLY_090</a>",
                       "valuePerStack": {
                         "MDF_EMY090_AllDamageTypeTakenRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_EMY090_LifeTime": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -1286,12 +1136,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_StanceBreakAddedRatio) || RETURN",
-                    "displayLines": "MDF_StanceBreakAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_StanceBreakAddedRatio"
-                    ]
+                    "displayLines": "MDF_StanceBreakAddedRatio"
                   }
                 }
               ]
@@ -1366,12 +1211,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"964206295\">MStrongChallengeEX_Talent_StageAbility_EMY_089</a>",
                       "valuePerStack": {
                         "MDF_Elation_DamageTakenRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     },
@@ -1384,12 +1224,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"964206295\">MStrongChallengeEX_Talent_StageAbility_EMY_089</a>",
                       "valuePerStack": {
                         "MDF_Elation_DamageTakenRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -1438,12 +1273,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"1258664805\">MStrongChallengeEX_Talent_StageAbility_PLY_089</a>",
                           "valuePerStack": {
                             "MDF_StanceBreakAddedRatio": {
-                              "operator": "Variables[0] (#ADF_2) || RETURN",
-                              "displayLines": "#ADF_2",
-                              "constants": [],
-                              "variables": [
-                                "#ADF_2"
-                              ]
+                              "displayLines": "#ADF_2"
                             }
                           }
                         }
@@ -1555,12 +1385,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"947428676\">MStrongChallengeEX_Talent_StageAbility_EMY_088</a>",
                       "valuePerStack": {
                         "MDF_DOT_DamageTakenRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -1605,12 +1430,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"136363146\">MStrongChallengeEX_Talent_StageAbility_PLY_087_2</a>",
                   "valuePerStack": {
                     "MDF_CritDamageAddedRatio": {
-                      "operator": "Variables[0] (MDF_CritDamageAddedRatio_Extra) || RETURN",
-                      "displayLines": "MDF_CritDamageAddedRatio_Extra",
-                      "constants": [],
-                      "variables": [
-                        "MDF_CritDamageAddedRatio_Extra"
-                      ]
+                      "displayLines": "MDF_CritDamageAddedRatio_Extra"
                     }
                   }
                 },
@@ -1623,12 +1443,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"136363146\">MStrongChallengeEX_Talent_StageAbility_PLY_087_2</a>",
                   "valuePerStack": {
                     "MDF_CritDamageAddedRatio": {
-                      "operator": "Variables[0] (MDF_CritDamageAddedRatio_Extra) || RETURN",
-                      "displayLines": "MDF_CritDamageAddedRatio_Extra",
-                      "constants": [],
-                      "variables": [
-                        "MDF_CritDamageAddedRatio_Extra"
-                      ]
+                      "displayLines": "MDF_CritDamageAddedRatio_Extra"
                     }
                   }
                 }
@@ -1660,12 +1475,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"136363146\">MStrongChallengeEX_Talent_StageAbility_PLY_087_2</a>",
                       "valuePerStack": {
                         "MDF_CritDamageAddedRatio": {
-                          "operator": "Variables[0] (MDF_CritDamageAddedRatio_Extra) || RETURN",
-                          "displayLines": "MDF_CritDamageAddedRatio_Extra",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CritDamageAddedRatio_Extra"
-                          ]
+                          "displayLines": "MDF_CritDamageAddedRatio_Extra"
                         }
                       }
                     }
@@ -1693,12 +1503,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_CritDamageAddedRatio) || RETURN",
-                    "displayLines": "MDF_CritDamageAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CritDamageAddedRatio"
-                    ]
+                    "displayLines": "MDF_CritDamageAddedRatio"
                   }
                 }
               ]
@@ -1720,12 +1525,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_CritDamageAddedRatio) || RETURN",
-                    "displayLines": "MDF_CritDamageAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CritDamageAddedRatio"
-                    ]
+                    "displayLines": "MDF_CritDamageAddedRatio"
                   }
                 }
               ]
@@ -1764,12 +1564,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1292220043\">MStrongChallengeEX_Talent_StageAbility_PLY_087</a>",
                       "valuePerStack": {
                         "MDF_CritDamageAddedRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -1789,12 +1584,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1699054618\">MStrongChallengeEX_Talent_StageAbility_NO1_087</a>",
                   "valuePerStack": {
                     "MDF_CritDamageAddedRatio_Extra": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     }
                   }
                 }
@@ -1840,12 +1630,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                    "displayLines": "MDF_SpeedAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedAddedRatio"
-                    ]
+                    "displayLines": "MDF_SpeedAddedRatio"
                   }
                 }
               ]
@@ -1867,21 +1652,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1807253580\">MStrongChallengeEX_Talent_StageAbility_TGT_086</a>[<span class=\"descriptionNumberColor\">Collapse on Sight</span>]",
                   "duration": {
-                    "operator": "Variables[0] (MDF_TGT_LifeTime) || RETURN",
-                    "displayLines": "MDF_TGT_LifeTime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_TGT_LifeTime"
-                    ]
+                    "displayLines": "MDF_TGT_LifeTime"
                   },
                   "valuePerStack": {
                     "MDF_SpeedAddedRatio": {
-                      "operator": "Variables[0] (MDF_TGT_SpeedAddedRatio) || RETURN",
-                      "displayLines": "MDF_TGT_SpeedAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_TGT_SpeedAddedRatio"
-                      ]
+                      "displayLines": "MDF_TGT_SpeedAddedRatio"
                     }
                   }
                 }
@@ -1957,12 +1732,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"779652486\">MStrongChallengeEX_Talent_StageAbility_EMY_086</a>",
                       "valuePerStack": {
                         "MDF_Element_DamageTakenRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     },
@@ -1975,12 +1745,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"779652486\">MStrongChallengeEX_Talent_StageAbility_EMY_086</a>",
                       "valuePerStack": {
                         "MDF_Element_DamageTakenRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -2011,20 +1776,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1275442424\">MStrongChallengeEX_Talent_StageAbility_PLY_086</a>",
                       "valuePerStack": {
                         "MDF_TGT_SpeedAddedRatio": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         },
                         "MDF_TGT_LifeTime": {
-                          "operator": "Variables[0] (#ADF_3) || RETURN",
-                          "displayLines": "#ADF_3",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_3"
-                          ]
+                          "displayLines": "#ADF_3"
                         }
                       }
                     }
@@ -2225,21 +1980,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1773698342\">MStrongChallengeEX_Talent_StageAbility_TGT_084</a>[<span class=\"descriptionNumberColor\">Montane Gush</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_BPCrit_Lifetime) || RETURN",
-                        "displayLines": "MDF_BPCrit_Lifetime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_BPCrit_Lifetime"
-                        ]
+                        "displayLines": "MDF_BPCrit_Lifetime"
                       },
                       "valuePerStack": {
                         "MDF_BPCrit_DamageAddedRatio": {
-                          "operator": "Variables[0] (MDF_BPCrit_DamageAddedRatio) || RETURN",
-                          "displayLines": "MDF_BPCrit_DamageAddedRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_BPCrit_DamageAddedRatio"
-                          ]
+                          "displayLines": "MDF_BPCrit_DamageAddedRatio"
                         }
                       }
                     }
@@ -2281,20 +2026,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1308997662\">MStrongChallengeEX_Talent_StageAbility_PLY_084</a>",
                       "valuePerStack": {
                         "MDF_BPCrit_DamageAddedRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_BPCrit_Lifetime": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -2388,12 +2123,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1359330519\">MStrongChallengeEX_Talent_StageAbility_PLY_083</a>",
                       "valuePerStack": {
                         "MDF_ElationDamage_AllDamageTypePenetrate": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -2475,12 +2205,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Adjust Team Punchline Value",
                       "value": {
-                        "operator": "Variables[0] (#ADF_2) || RETURN",
-                        "displayLines": "#ADF_2",
-                        "constants": [],
-                        "variables": [
-                          "#ADF_2"
-                        ]
+                        "displayLines": "#ADF_2"
                       },
                       "adjustment": "Add"
                     }
@@ -2524,12 +2249,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (#ADF_1) || RETURN",
-                    "displayLines": "#ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_1"
-                    ]
+                    "displayLines": "#ADF_1"
                   }
                 }
               ]
@@ -2631,12 +2351,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                    "displayLines": "MDF_PropertyValue2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue2"
-                    ]
+                    "displayLines": "MDF_PropertyValue2"
                   }
                 }
               ]
@@ -2690,12 +2405,7 @@ const compositeAbilityObject = {
                             "value1": "_DotNumber",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                              "displayLines": "MDF_PropertyValue",
-                              "constants": [],
-                              "variables": [
-                                "MDF_PropertyValue"
-                              ]
+                              "displayLines": "MDF_PropertyValue"
                             }
                           }
                         ]
@@ -2736,21 +2446,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1435721852\">MStrongChallengeEX_Talent_StageAbility_PLY_081_Extra</a>[<span class=\"descriptionNumberColor\">Whirlwind Turn</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_PropertyValue3) || RETURN",
-                        "displayLines": "MDF_PropertyValue3",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue3"
-                        ]
+                        "displayLines": "MDF_PropertyValue3"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                          "displayLines": "MDF_PropertyValue2",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue2"
-                          ]
+                          "displayLines": "MDF_PropertyValue2"
                         }
                       }
                     },
@@ -2797,28 +2497,13 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1392885757\">MStrongChallengeEX_Talent_StageAbility_PLY_081</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         },
                         "MDF_PropertyValue3": {
-                          "operator": "Variables[0] (#ADF_3) || RETURN",
-                          "displayLines": "#ADF_3",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_3"
-                          ]
+                          "displayLines": "#ADF_3"
                         }
                       }
                     }
@@ -2865,12 +2550,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -3075,12 +2755,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1376108138\">MStrongChallengeEX_Talent_StageAbility_PLY_080</a>[<span class=\"descriptionNumberColor\">Past Life: Shadowed Reverie</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -3145,13 +2820,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_PropertyValue * MDF_Layer)"
                   }
                 }
               ]
@@ -3198,29 +2867,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-675587525\">MStrongChallengeEX_Talent_StageAbility_PLY_079_Extra</a>[<span class=\"descriptionNumberColor\">Unto Apotheosis</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                        "displayLines": "MDF_PropertyValue2",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue2"
-                        ]
+                        "displayLines": "MDF_PropertyValue2"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                          "displayLines": "MDF_PropertyValue2",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue2"
-                          ]
+                          "displayLines": "MDF_PropertyValue2"
                         }
                       }
                     }
@@ -3262,20 +2916,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1257826162\">MStrongChallengeEX_Talent_StageAbility_PLY_079</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -3354,12 +2998,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1274603781\">MStrongChallengeEX_Talent_StageAbility_PLY_078</a>",
                   "valuePerStack": {
                     "MDF_IgnoreDEF": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }
@@ -3425,14 +3064,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_PropertyValue2) || Variables[2] (MDF_PropertyValue4) || MUL || ADD || RETURN",
-                    "displayLines": "(MDF_PropertyValue + (MDF_PropertyValue2 * MDF_PropertyValue4))",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_PropertyValue2",
-                      "MDF_PropertyValue4"
-                    ]
+                    "displayLines": "(MDF_PropertyValue + (MDF_PropertyValue2 * MDF_PropertyValue4))"
                   },
                   "variableName": "MDF_PropertyValue5"
                 }
@@ -3467,25 +3099,13 @@ const compositeAbilityObject = {
                       "context": "ContextModifier",
                       "value": 1,
                       "max": {
-                        "operator": "Variables[0] (MDF_PropertyValue3) || RETURN",
-                        "displayLines": "MDF_PropertyValue3",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue3"
-                        ]
+                        "displayLines": "MDF_PropertyValue3"
                       }
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_PropertyValue2) || Variables[2] (MDF_PropertyValue4) || MUL || ADD || RETURN",
-                        "displayLines": "(MDF_PropertyValue + (MDF_PropertyValue2 * MDF_PropertyValue4))",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue",
-                          "MDF_PropertyValue2",
-                          "MDF_PropertyValue4"
-                        ]
+                        "displayLines": "(MDF_PropertyValue + (MDF_PropertyValue2 * MDF_PropertyValue4))"
                       },
                       "variableName": "MDF_PropertyValue5"
                     }
@@ -3509,36 +3129,16 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (#ADF_1) || RETURN",
-                  "displayLines": "#ADF_1",
-                  "constants": [],
-                  "variables": [
-                    "#ADF_1"
-                  ]
+                  "displayLines": "#ADF_1"
                 },
                 "MDF_PropertyValue2": {
-                  "operator": "Variables[0] (#ADF_2) || RETURN",
-                  "displayLines": "#ADF_2",
-                  "constants": [],
-                  "variables": [
-                    "#ADF_2"
-                  ]
+                  "displayLines": "#ADF_2"
                 },
                 "MDF_PropertyValue3": {
-                  "operator": "Variables[0] (#ADF_3) || RETURN",
-                  "displayLines": "#ADF_3",
-                  "constants": [],
-                  "variables": [
-                    "#ADF_3"
-                  ]
+                  "displayLines": "#ADF_3"
                 },
                 "MDF_PropertyValue4": {
-                  "operator": "Variables[0] (MDF_BreakCount) || RETURN",
-                  "displayLines": "MDF_BreakCount",
-                  "constants": [],
-                  "variables": [
-                    "MDF_BreakCount"
-                  ]
+                  "displayLines": "MDF_BreakCount"
                 }
               }
             }
@@ -3572,12 +3172,7 @@ const compositeAbilityObject = {
                       "variableName": "MDF_BreakCount",
                       "value": 1,
                       "max": {
-                        "operator": "Variables[0] (#ADF_3) || RETURN",
-                        "displayLines": "#ADF_3",
-                        "constants": [],
-                        "variables": [
-                          "#ADF_3"
-                        ]
+                        "displayLines": "#ADF_3"
                       }
                     }
                   ]
@@ -3696,20 +3291,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1308159019\">MStrongChallengeEX_Talent_StageAbility_PLY_076</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -3822,20 +3407,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1911727255\">MStrongChallengeEX_Talent_StageAbility_MST_075</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -3855,20 +3430,10 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1911727255\">MStrongChallengeEX_Talent_StageAbility_MST_075</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     },
                     "MDF_PropertyValue2": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     }
                   }
                 }
@@ -3972,24 +3537,14 @@ const compositeAbilityObject = {
                   "value1": "StageAbility_MST_074_DotCount",
                   "compareType": ">=",
                   "value2": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   },
                   "contextScope": "ContextCaster"
                 }
               ]
             },
             "toughnessReductionPreview": {
-              "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-              "displayLines": "MDF_PropertyValue2",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyValue2"
-              ]
+              "displayLines": "MDF_PropertyValue2"
             }
           },
           "execute": [
@@ -4017,12 +3572,7 @@ const compositeAbilityObject = {
                     "value1": "MDF_DotCount",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     },
                     "contextScope": "ContextModifier"
                   },
@@ -4075,20 +3625,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1341714257\">MStrongChallengeEX_Talent_StageAbility_PLY_074</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -4163,12 +3703,7 @@ const compositeAbilityObject = {
               }
             },
             "toughnessReductionPreview": {
-              "operator": "Variables[0] (MDF_DefaultStanceBreakRatio) || RETURN",
-              "displayLines": "MDF_DefaultStanceBreakRatio",
-              "constants": [],
-              "variables": [
-                "MDF_DefaultStanceBreakRatio"
-              ]
+              "displayLines": "MDF_DefaultStanceBreakRatio"
             }
           },
           "execute": [
@@ -4198,12 +3733,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_CriticalDamage) || RETURN",
-                    "displayLines": "MDF_CriticalDamage",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CriticalDamage"
-                    ]
+                    "displayLines": "MDF_CriticalDamage"
                   }
                 }
               ]
@@ -4232,29 +3762,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-2128146912\">MStrongChallengeEX_Talent_StageAbility_TGT_073</a>",
                       "duration": {
-                        "operator": "Variables[0] (MDF_PropertyValue3) || RETURN",
-                        "displayLines": "MDF_PropertyValue3",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue3"
-                        ]
+                        "displayLines": "MDF_PropertyValue3"
                       },
                       "valuePerStack": {
                         "MDF_DefaultStanceBreakRatio": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         },
                         "MDF_CriticalDamage": {
-                          "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                          "displayLines": "MDF_PropertyValue2",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue2"
-                          ]
+                          "displayLines": "MDF_PropertyValue2"
                         }
                       },
                       "casterAssign": "CasterSelf"
@@ -4281,28 +3796,13 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1358491876\">MStrongChallengeEX_Talent_StageAbility_PLY_073</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     },
                     "MDF_PropertyValue2": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     },
                     "MDF_PropertyValue3": {
-                      "operator": "Variables[0] (#ADF_3) || RETURN",
-                      "displayLines": "#ADF_3",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_3"
-                      ]
+                      "displayLines": "#ADF_3"
                     }
                   }
                 }
@@ -4344,12 +3844,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageIce</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 },
                 {
@@ -4360,12 +3855,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                    "displayLines": "MDF_PropertyValue2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue2"
-                    ]
+                    "displayLines": "MDF_PropertyValue2"
                   }
                 }
               ]
@@ -4404,20 +3894,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1375269495\">MStrongChallengeEX_Talent_StageAbility_PLY_072</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -4461,12 +3941,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -4509,12 +3984,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1844616779\">MStrongChallengeEX_Talent_StageAbility_MST_071</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (#ADF_3) || RETURN",
-                              "displayLines": "#ADF_3",
-                              "constants": [],
-                              "variables": [
-                                "#ADF_3"
-                              ]
+                              "displayLines": "#ADF_3"
                             }
                           }
                         }
@@ -4538,12 +4008,7 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"-1844616779\">MStrongChallengeEX_Talent_StageAbility_MST_071</a>",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (#ADF_2) || RETURN",
-                                  "displayLines": "#ADF_2",
-                                  "constants": [],
-                                  "variables": [
-                                    "#ADF_2"
-                                  ]
+                                  "displayLines": "#ADF_2"
                                 }
                               }
                             }
@@ -4567,12 +4032,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-1844616779\">MStrongChallengeEX_Talent_StageAbility_MST_071</a>",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                                      "displayLines": "#ADF_1",
-                                      "constants": [],
-                                      "variables": [
-                                        "#ADF_1"
-                                      ]
+                                      "displayLines": "#ADF_1"
                                     }
                                   }
                                 }
@@ -4618,12 +4078,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1844616779\">MStrongChallengeEX_Talent_StageAbility_MST_071</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_3) || RETURN",
-                          "displayLines": "#ADF_3",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_3"
-                          ]
+                          "displayLines": "#ADF_3"
                         }
                       }
                     }
@@ -4647,12 +4102,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1844616779\">MStrongChallengeEX_Talent_StageAbility_MST_071</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (#ADF_2) || RETURN",
-                              "displayLines": "#ADF_2",
-                              "constants": [],
-                              "variables": [
-                                "#ADF_2"
-                              ]
+                              "displayLines": "#ADF_2"
                             }
                           }
                         }
@@ -4676,12 +4126,7 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"-1844616779\">MStrongChallengeEX_Talent_StageAbility_MST_071</a>",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (#ADF_1) || RETURN",
-                                  "displayLines": "#ADF_1",
-                                  "constants": [],
-                                  "variables": [
-                                    "#ADF_1"
-                                  ]
+                                  "displayLines": "#ADF_1"
                                 }
                               }
                             }
@@ -4730,12 +4175,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                    "displayLines": "MDF_SpeedAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedAddedRatio"
-                    ]
+                    "displayLines": "MDF_SpeedAddedRatio"
                   }
                 }
               ]
@@ -4757,21 +4197,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-2077814055\">MStrongChallengeEX_Talent_StageAbility_TGT_070</a>",
                   "duration": {
-                    "operator": "Variables[0] (MDF_TGT_LifeTime) || RETURN",
-                    "displayLines": "MDF_TGT_LifeTime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_TGT_LifeTime"
-                    ]
+                    "displayLines": "MDF_TGT_LifeTime"
                   },
                   "valuePerStack": {
                     "MDF_SpeedAddedRatio": {
-                      "operator": "Variables[0] (MDF_TGT_SpeedAddedRatio) || RETURN",
-                      "displayLines": "MDF_TGT_SpeedAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_TGT_SpeedAddedRatio"
-                      ]
+                      "displayLines": "MDF_TGT_SpeedAddedRatio"
                     }
                   }
                 }
@@ -4847,12 +4277,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1167978341\">MStrongChallengeEX_Talent_StageAbility_EMY_070</a>",
                       "valuePerStack": {
                         "MDF_Element_DamageTakenRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -4883,20 +4308,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1408824733\">MStrongChallengeEX_Talent_StageAbility_PLY_070</a>",
                       "valuePerStack": {
                         "MDF_TGT_SpeedAddedRatio": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         },
                         "MDF_TGT_LifeTime": {
-                          "operator": "Variables[0] (#ADF_3) || RETURN",
-                          "displayLines": "#ADF_3",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_3"
-                          ]
+                          "displayLines": "#ADF_3"
                         }
                       }
                     }
@@ -4972,12 +4387,7 @@ const compositeAbilityObject = {
                           "variableName": "DOT_TriggerRatio",
                           "eventType": "DOT",
                           "value": {
-                            "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                            "displayLines": "MDF_PropertyValue",
-                            "constants": [],
-                            "variables": [
-                              "MDF_PropertyValue"
-                            ]
+                            "displayLines": "MDF_PropertyValue"
                           }
                         }
                       ]
@@ -5020,12 +4430,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1190568591\">MStrongChallengeEX_Talent_StageAbility_PLY_069</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -5069,14 +4474,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistancePhysicalBonus</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PhysicalResistanceDelta) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PhysicalResistanceDelta)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PhysicalResistanceDelta"
-                    ]
+                    "displayLines": "(0 - MDF_PhysicalResistanceDelta)"
                   }
                 }
               ]
@@ -5098,12 +4496,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamagePhysical</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PhysicalAddedRatio) || RETURN",
-                    "displayLines": "MDF_PhysicalAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PhysicalAddedRatio"
-                    ]
+                    "displayLines": "MDF_PhysicalAddedRatio"
                   }
                 }
               ]
@@ -5142,12 +4535,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1173790972\">MStrongChallengeEX_Talent_StageAbility_PLY_068</a>",
                       "valuePerStack": {
                         "MDF_PhysicalAddedRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -5178,12 +4566,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1134570198\">MStrongChallengeEX_Talent_StageAbility_EMY_068</a>",
                       "valuePerStack": {
                         "MDF_PhysicalResistanceDelta": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -5231,12 +4614,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_CriticalDamage) || RETURN",
-                    "displayLines": "MDF_CriticalDamage",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CriticalDamage"
-                    ]
+                    "displayLines": "MDF_CriticalDamage"
                   }
                 },
                 {
@@ -5247,12 +4625,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DefaultStanceBreakRatio) || RETURN",
-                    "displayLines": "MDF_DefaultStanceBreakRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DefaultStanceBreakRatio"
-                    ]
+                    "displayLines": "MDF_DefaultStanceBreakRatio"
                   }
                 }
               ]
@@ -5292,12 +4665,7 @@ const compositeAbilityObject = {
               ]
             },
             "toughnessReductionPreview": {
-              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-              "displayLines": "MDF_PropertyValue",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyValue"
-              ]
+              "displayLines": "MDF_PropertyValue"
             }
           },
           "execute": [
@@ -5319,29 +4687,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-2061183531\">MStrongChallengeEX_Talent_StageAbility_TGT_067</a>[<span class=\"descriptionNumberColor\">Unstoppable Momentum</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_PropertyValue3) || RETURN",
-                        "displayLines": "MDF_PropertyValue3",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue3"
-                        ]
+                        "displayLines": "MDF_PropertyValue3"
                       },
                       "valuePerStack": {
                         "MDF_DefaultStanceBreakRatio": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         },
                         "MDF_CriticalDamage": {
-                          "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                          "displayLines": "MDF_PropertyValue2",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue2"
-                          ]
+                          "displayLines": "MDF_PropertyValue2"
                         }
                       },
                       "casterAssign": "CasterSelf"
@@ -5384,28 +4737,13 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1291234305\">MStrongChallengeEX_Talent_StageAbility_PLY_067</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         },
                         "MDF_PropertyValue3": {
-                          "operator": "Variables[0] (#ADF_3) || RETURN",
-                          "displayLines": "#ADF_3",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_3"
-                          ]
+                          "displayLines": "#ADF_3"
                         }
                       }
                     }
@@ -5462,13 +4800,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_CurrentHP) || Variables[1] (_MaxHP) || DIV || RETURN",
-                    "displayLines": "(_CurrentHP / _MaxHP)",
-                    "constants": [],
-                    "variables": [
-                      "_CurrentHP",
-                      "_MaxHP"
-                    ]
+                    "displayLines": "(_CurrentHP / _MaxHP)"
                   },
                   "variableName": "_CurrentHPRatio"
                 },
@@ -5483,12 +4815,7 @@ const compositeAbilityObject = {
                     "value1": "_CurrentHPRatio",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     }
                   },
                   "passed": [
@@ -5499,12 +4826,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (#ADF_3) || RETURN",
-                        "displayLines": "#ADF_3",
-                        "constants": [],
-                        "variables": [
-                          "#ADF_3"
-                        ]
+                        "displayLines": "#ADF_3"
                       },
                       "formula": "Heal from Target MaxHP"
                     }
@@ -5657,12 +4979,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1074029153\">MStrongChallengeEX_Talent_StageAbility_SVT_065</a>",
                       "valuePerStack": {
                         "MDF_IgnoreDefenceRatioTotal": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -5710,12 +5027,7 @@ const compositeAbilityObject = {
               }
             },
             "toughnessReductionPreview": {
-              "operator": "Variables[0] (MDF_DefaultStanceBreakRatio) || RETURN",
-              "displayLines": "MDF_DefaultStanceBreakRatio",
-              "constants": [],
-              "variables": [
-                "MDF_DefaultStanceBreakRatio"
-              ]
+              "displayLines": "MDF_DefaultStanceBreakRatio"
             }
           },
           "execute": [
@@ -5745,12 +5057,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_CriticalDamage) || RETURN",
-                    "displayLines": "MDF_CriticalDamage",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CriticalDamage"
-                    ]
+                    "displayLines": "MDF_CriticalDamage"
                   }
                 }
               ]
@@ -5779,29 +5086,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-2111516388\">MStrongChallengeEX_Talent_StageAbility_TGT_064</a>",
                       "duration": {
-                        "operator": "Variables[0] (MDF_PropertyValue3) || RETURN",
-                        "displayLines": "MDF_PropertyValue3",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue3"
-                        ]
+                        "displayLines": "MDF_PropertyValue3"
                       },
                       "valuePerStack": {
                         "MDF_DefaultStanceBreakRatio": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         },
                         "MDF_CriticalDamage": {
-                          "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                          "displayLines": "MDF_PropertyValue2",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue2"
-                          ]
+                          "displayLines": "MDF_PropertyValue2"
                         }
                       },
                       "casterAssign": "CasterSelf"
@@ -5828,28 +5120,13 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1240901448\">MStrongChallengeEX_Talent_StageAbility_PLY_064</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     },
                     "MDF_PropertyValue2": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     },
                     "MDF_PropertyValue3": {
-                      "operator": "Variables[0] (#ADF_3) || RETURN",
-                      "displayLines": "#ADF_3",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_3"
-                      ]
+                      "displayLines": "#ADF_3"
                     }
                   }
                 }
@@ -5938,12 +5215,7 @@ const compositeAbilityObject = {
                   "variableName": "_Layer",
                   "value": 1,
                   "max": {
-                    "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                    "displayLines": "MDF_PropertyValue2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue2"
-                    ]
+                    "displayLines": "MDF_PropertyValue2"
                   }
                 }
               ]
@@ -5982,12 +5254,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1358344781\">MStrongChallengeEX_Talent_StageAbility_PLY_063</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -6018,13 +5285,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1285568769\">MStrongChallengeEX_Talent_StageAbility_EMY_063</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || Variables[1] (_Layer) || MUL || RETURN",
-                          "displayLines": "(#ADF_1 * _Layer)",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1",
-                            "_Layer"
-                          ]
+                          "displayLines": "(#ADF_1 * _Layer)"
                         }
                       }
                     },
@@ -6037,13 +5298,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1285568769\">MStrongChallengeEX_Talent_StageAbility_EMY_063</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || Variables[1] (_Layer) || MUL || RETURN",
-                          "displayLines": "(#ADF_1 * _Layer)",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1",
-                            "_Layer"
-                          ]
+                          "displayLines": "(#ADF_1 * _Layer)"
                         }
                       }
                     }
@@ -6062,12 +5317,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "maxValue": {
-                    "operator": "Variables[0] (#ADF_2) || RETURN",
-                    "displayLines": "#ADF_2",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_2"
-                    ]
+                    "displayLines": "#ADF_2"
                   },
                   "includeMaxValueInRange": true,
                   "onChange": [
@@ -6080,13 +5330,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1285568769\">MStrongChallengeEX_Talent_StageAbility_EMY_063</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || Variables[1] (_Layer) || MUL || RETURN",
-                          "displayLines": "(#ADF_1 * _Layer)",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1",
-                            "_Layer"
-                          ]
+                          "displayLines": "(#ADF_1 * _Layer)"
                         }
                       }
                     }
@@ -6142,13 +5386,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_PropertyValue * MDF_Layer)"
                   }
                 }
               ]
@@ -6196,30 +5434,15 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1341567162\">MStrongChallengeEX_Talent_StageAbility_PLY_062</a>",
                       "stackLimit": {
-                        "operator": "Variables[0] (#ADF_2) || RETURN",
-                        "displayLines": "#ADF_2",
-                        "constants": [],
-                        "variables": [
-                          "#ADF_2"
-                        ]
+                        "displayLines": "#ADF_2"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (MDF_BPCost) || INVERT || RETURN",
-                        "displayLines": "-MDF_BPCost",
-                        "constants": [],
-                        "variables": [
-                          "MDF_BPCost"
-                        ]
+                        "displayLines": "-MDF_BPCost"
                       }
                     }
                   ]
@@ -6263,12 +5486,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_CriticalDamage) || RETURN",
-                    "displayLines": "MDF_CriticalDamage",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CriticalDamage"
-                    ]
+                    "displayLines": "MDF_CriticalDamage"
                   }
                 }
               ]
@@ -6323,21 +5541,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"2133118051\">MStrongChallengeEX_Talent_StageAbility_TGT_061</a>",
                       "duration": {
-                        "operator": "Variables[0] (#ADF_2) || RETURN",
-                        "displayLines": "#ADF_2",
-                        "constants": [],
-                        "variables": [
-                          "#ADF_2"
-                        ]
+                        "displayLines": "#ADF_2"
                       },
                       "valuePerStack": {
                         "MDF_CriticalDamage": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -6450,12 +5658,7 @@ const compositeAbilityObject = {
                           "variableName": "DOT_TriggerRatio",
                           "eventType": "DOT",
                           "value": {
-                            "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                            "displayLines": "MDF_PropertyValue",
-                            "constants": [],
-                            "variables": [
-                              "MDF_PropertyValue"
-                            ]
+                            "displayLines": "MDF_PropertyValue"
                           }
                         }
                       ]
@@ -6498,12 +5701,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1308011924\">MStrongChallengeEX_Talent_StageAbility_PLY_060</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -6622,20 +5820,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-956422188\">MStrongChallengeEX_Talent_StageAbility_PLY_059</a>",
                       "valuePerStack": {
                         "MDF_Ultimate_DamageAddedRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_Ultimate_DamageAddedRatio_Extra": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -6717,12 +5905,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (#ADF_1) || RETURN",
-                        "displayLines": "#ADF_1",
-                        "constants": [],
-                        "variables": [
-                          "#ADF_1"
-                        ]
+                        "displayLines": "#ADF_1"
                       },
                       "isFixed": "(Fixed)"
                     }
@@ -6836,21 +6019,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1777684731\">Standard_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "duration": {
-                        "operator": "Variables[0] (#ADF_2) || RETURN",
-                        "displayLines": "#ADF_2",
-                        "constants": [],
-                        "variables": [
-                          "#ADF_2"
-                        ]
+                        "displayLines": "#ADF_2"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -6934,12 +6107,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                    "displayLines": "MDF_AllDamageTypeAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageTypeAddedRatio"
-                    ]
+                    "displayLines": "MDF_AllDamageTypeAddedRatio"
                   }
                 }
               ]
@@ -6984,14 +6152,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (ABS) || Variables[1] (_bpChange) || PARAM_1 || FUNCTION || Variables[2] (_bpChangeTotal) || ADD || RETURN",
-                        "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">ABS</span>(_bpChange) + _bpChangeTotal)",
-                        "constants": [],
-                        "variables": [
-                          "ABS",
-                          "_bpChange",
-                          "_bpChangeTotal"
-                        ]
+                        "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">ABS</span>(_bpChange) + _bpChangeTotal)"
                       },
                       "variableName": "_bpChangeTotal"
                     },
@@ -7006,12 +6167,7 @@ const compositeAbilityObject = {
                         "value1": "_bpChangeTotal",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       },
                       "passed": [
@@ -7022,26 +6178,14 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (WHOLE) || Variables[1] (_bpChangeTotal) || Variables[2] (#ADF_2) || DIV || PARAM_1 || FUNCTION || RETURN",
-                            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((_bpChangeTotal / #ADF_2))",
-                            "constants": [],
-                            "variables": [
-                              "WHOLE",
-                              "_bpChangeTotal",
-                              "#ADF_2"
-                            ]
+                            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((_bpChangeTotal / #ADF_2))"
                           },
                           "variableName": "BPRecoverValue"
                         },
                         {
                           "name": "Skill Points Modification",
                           "adjustmentValue": {
-                            "operator": "Variables[0] (BPRecoverValue) || RETURN",
-                            "displayLines": "BPRecoverValue",
-                            "constants": [],
-                            "variables": [
-                              "BPRecoverValue"
-                            ]
+                            "displayLines": "BPRecoverValue"
                           },
                           "adjustmentType": "+"
                         },
@@ -7052,13 +6196,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (_bpChangeTotal) || Variables[1] (#ADF_2) || MOD || RETURN",
-                            "displayLines": "(_bpChangeTotal % #ADF_2)",
-                            "constants": [],
-                            "variables": [
-                              "_bpChangeTotal",
-                              "#ADF_2"
-                            ]
+                            "displayLines": "(_bpChangeTotal % #ADF_2)"
                           },
                           "variableName": "_bpChangeTotal"
                         }
@@ -7080,12 +6218,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1107420759\">MStrongChallengeEX_Talent_StageAbility_PLY_056</a>[<span class=\"descriptionNumberColor\">Bold Leader</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeAddedRatio": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }
@@ -7127,12 +6260,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamagePhysical</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PhysicalAddedRatio) || RETURN",
-                    "displayLines": "MDF_PhysicalAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PhysicalAddedRatio"
-                    ]
+                    "displayLines": "MDF_PhysicalAddedRatio"
                   }
                 }
               ]
@@ -7154,12 +6282,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (MDF_HealPercentage) || RETURN",
-                        "displayLines": "MDF_HealPercentage",
-                        "constants": [],
-                        "variables": [
-                          "MDF_HealPercentage"
-                        ]
+                        "displayLines": "MDF_HealPercentage"
                       },
                       "formula": "Heal from Target MaxHP"
                     }
@@ -7201,20 +6324,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1157753616\">MStrongChallengeEX_Talent_StageAbility_PLY_055</a>",
                       "valuePerStack": {
                         "MDF_PhysicalAddedRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_HealPercentage": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -7259,14 +6372,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceQuantumBonus</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_QuantumResistanceDelta) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_QuantumResistanceDelta)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_QuantumResistanceDelta"
-                    ]
+                    "displayLines": "(0 - MDF_QuantumResistanceDelta)"
                   }
                 }
               ]
@@ -7305,13 +6411,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1995909540\">MStrongChallengeEX_Talent_StageAbility_MST_054</a>",
                       "valuePerStack": {
                         "MDF_QuantumResistanceDelta": {
-                          "operator": "Variables[0] (#ADF_1) || Variables[1] (_CharacterCount) || MUL || RETURN",
-                          "displayLines": "(#ADF_1 * _CharacterCount)",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1",
-                            "_CharacterCount"
-                          ]
+                          "displayLines": "(#ADF_1 * _CharacterCount)"
                         }
                       }
                     }
@@ -7348,13 +6448,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1995909540\">MStrongChallengeEX_Talent_StageAbility_MST_054</a>",
                   "valuePerStack": {
                     "MDF_QuantumResistanceDelta": {
-                      "operator": "Variables[0] (#ADF_1) || Variables[1] (_CharacterCount) || MUL || RETURN",
-                      "displayLines": "(#ADF_1 * _CharacterCount)",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1",
-                        "_CharacterCount"
-                      ]
+                      "displayLines": "(#ADF_1 * _CharacterCount)"
                     }
                   }
                 }
@@ -7399,12 +6493,7 @@ const compositeAbilityObject = {
               }
             },
             "toughnessReductionPreview": {
-              "operator": "Variables[0] (MDF_DefaultStanceBreakRatio) || RETURN",
-              "displayLines": "MDF_DefaultStanceBreakRatio",
-              "constants": [],
-              "variables": [
-                "MDF_DefaultStanceBreakRatio"
-              ]
+              "displayLines": "MDF_DefaultStanceBreakRatio"
             }
           },
           "execute": [
@@ -7470,20 +6559,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1308834030\">MStrongChallengeEX_Talent_StageAbility_SVT_053</a>",
                       "valuePerStack": {
                         "MDF_DefaultStanceBreakRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_IgnoreDefenceRatioTotal": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -7673,15 +6752,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (#ADF_1) || Variables[1] (MDF_HealedHP) || MUL || Constants[0] (1) || INVERT || MUL || RETURN",
-                            "displayLines": "((#ADF_1 * MDF_HealedHP) * -1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "#ADF_1",
-                              "MDF_HealedHP"
-                            ]
+                            "displayLines": "((#ADF_1 * MDF_HealedHP) * -1)"
                           },
                           "variableName": "MDF_ChangeValue"
                         },
@@ -7705,28 +6776,14 @@ const compositeAbilityObject = {
                             "value1": "MDF_ChangeValue",
                             "compareType": "<",
                             "value2": {
-                              "operator": "Variables[0] (#ADF_2) || Variables[1] (MDF_MaxHP) || MUL || Variables[2] (MDF_ChangeValue) || SUB || RETURN",
-                              "displayLines": "((#ADF_2 * MDF_MaxHP) - MDF_ChangeValue)",
-                              "constants": [],
-                              "variables": [
-                                "#ADF_2",
-                                "MDF_MaxHP",
-                                "MDF_ChangeValue"
-                              ]
+                              "displayLines": "((#ADF_2 * MDF_MaxHP) - MDF_ChangeValue)"
                             }
                           },
                           "failed": [
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (#ADF_2) || Variables[1] (MDF_MaxHP) || MUL || Variables[2] (MDF_ChangeValue) || SUB || RETURN",
-                                "displayLines": "((#ADF_2 * MDF_MaxHP) - MDF_ChangeValue)",
-                                "constants": [],
-                                "variables": [
-                                  "#ADF_2",
-                                  "MDF_MaxHP",
-                                  "MDF_ChangeValue"
-                                ]
+                                "displayLines": "((#ADF_2 * MDF_MaxHP) - MDF_ChangeValue)"
                               },
                               "variableName": "MDF_ChangeValue"
                             }
@@ -7739,12 +6796,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "healFlat": {
-                            "operator": "Variables[0] (MDF_HealedHP) || RETURN",
-                            "displayLines": "MDF_HealedHP",
-                            "constants": [],
-                            "variables": [
-                              "MDF_HealedHP"
-                            ]
+                            "displayLines": "MDF_HealedHP"
                           },
                           "formula": "Heal from Base Value"
                         },
@@ -7756,21 +6808,10 @@ const compositeAbilityObject = {
                           },
                           "variableName": "MDF_HealedHP",
                           "value": {
-                            "operator": "Variables[0] (MDF_HealedHP) || RETURN",
-                            "displayLines": "MDF_HealedHP",
-                            "constants": [],
-                            "variables": [
-                              "MDF_HealedHP"
-                            ]
+                            "displayLines": "MDF_HealedHP"
                           },
                           "max": {
-                            "operator": "Variables[0] (#ADF_2) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
-                            "displayLines": "(#ADF_2 * MDF_MaxHP)",
-                            "constants": [],
-                            "variables": [
-                              "#ADF_2",
-                              "MDF_MaxHP"
-                            ]
+                            "displayLines": "(#ADF_2 * MDF_MaxHP)"
                           }
                         }
                       ]
@@ -7852,21 +6893,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1551178382\">Monster_Standard_SpeedAddedRatio</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                   "duration": {
-                    "operator": "Variables[0] (#ADF_2) || RETURN",
-                    "displayLines": "#ADF_2",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_2"
-                    ]
+                    "displayLines": "#ADF_2"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }
@@ -7978,21 +7009,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1777684731\">Standard_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "duration": {
-                        "operator": "Variables[0] (#ADF_2) || RETURN",
-                        "displayLines": "#ADF_2",
-                        "constants": [],
-                        "variables": [
-                          "#ADF_2"
-                        ]
+                        "displayLines": "#ADF_2"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -8099,12 +7120,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (#ADF_2) || RETURN",
-                    "displayLines": "#ADF_2",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_2"
-                    ]
+                    "displayLines": "#ADF_2"
                   }
                 }
               ]
@@ -8182,12 +7198,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (#ADF_1) || RETURN",
-                    "displayLines": "#ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_1"
-                    ]
+                    "displayLines": "#ADF_1"
                   }
                 }
               ]
@@ -8375,12 +7386,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                    "displayLines": "MDF_SpeedAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedAddedRatio"
-                    ]
+                    "displayLines": "MDF_SpeedAddedRatio"
                   }
                 }
               ]
@@ -8402,21 +7408,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-2027334103\">MStrongChallengeEX_Talent_StageAbility_TGT_045</a>",
                   "duration": {
-                    "operator": "Variables[0] (MDF_TGT_LifeTime) || RETURN",
-                    "displayLines": "MDF_TGT_LifeTime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_TGT_LifeTime"
-                    ]
+                    "displayLines": "MDF_TGT_LifeTime"
                   },
                   "valuePerStack": {
                     "MDF_SpeedAddedRatio": {
-                      "operator": "Variables[0] (MDF_TGT_SpeedAddedRatio) || RETURN",
-                      "displayLines": "MDF_TGT_SpeedAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_TGT_SpeedAddedRatio"
-                      ]
+                      "displayLines": "MDF_TGT_SpeedAddedRatio"
                     }
                   }
                 }
@@ -8492,12 +7488,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"760903391\">MStrongChallengeEX_Talent_StageAbility_EMY_045</a>",
                       "valuePerStack": {
                         "MDF_Element_DamageTakenRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     },
@@ -8510,12 +7501,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"760903391\">MStrongChallengeEX_Talent_StageAbility_EMY_045</a>",
                       "valuePerStack": {
                         "MDF_Element_DamageTakenRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -8546,20 +7532,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1090790235\">MStrongChallengeEX_Talent_StageAbility_PLY_045</a>",
                       "valuePerStack": {
                         "MDF_TGT_SpeedAddedRatio": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         },
                         "MDF_TGT_LifeTime": {
-                          "operator": "Variables[0] (#ADF_3) || RETURN",
-                          "displayLines": "#ADF_3",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_3"
-                          ]
+                          "displayLines": "#ADF_3"
                         }
                       }
                     }
@@ -8618,13 +7594,7 @@ const compositeAbilityObject = {
                   },
                   "scope": "ContextModifier",
                   "value": {
-                    "operator": "Variables[0] (MDF_CriticalDamage) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_CriticalDamage * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CriticalDamage",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_CriticalDamage * MDF_Layer)"
                   },
                   "variableName": "MDF_PropertyValue"
                 },
@@ -8636,13 +7606,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_CriticalDamage) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_CriticalDamage * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CriticalDamage",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_CriticalDamage * MDF_Layer)"
                   }
                 }
               ]
@@ -8736,14 +7700,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (TARGET_COUNT) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(TARGET_COUNT + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "TARGET_COUNT"
-                            ]
+                            "displayLines": "(TARGET_COUNT + 1)"
                           },
                           "variableName": "TARGET_COUNT"
                         }
@@ -8768,37 +7725,17 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-2044111722\">MStrongChallengeEX_Talent_StageAbility_TGT_044</a>[<span class=\"descriptionNumberColor\">Teach By Banaxample</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_TGT_Lifetime) || RETURN",
-                        "displayLines": "MDF_TGT_Lifetime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_TGT_Lifetime"
-                        ]
+                        "displayLines": "MDF_TGT_Lifetime"
                       },
                       "stackLimit": {
-                        "operator": "Variables[0] (MDF_TGT_MaxLayer) || RETURN",
-                        "displayLines": "MDF_TGT_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_TGT_MaxLayer"
-                        ]
+                        "displayLines": "MDF_TGT_MaxLayer"
                       },
                       "valuePerStack": {
                         "MDF_CriticalDamage": {
-                          "operator": "Variables[0] (MDF_TGT_CriticalDamage) || RETURN",
-                          "displayLines": "MDF_TGT_CriticalDamage",
-                          "constants": [],
-                          "variables": [
-                            "MDF_TGT_CriticalDamage"
-                          ]
+                          "displayLines": "MDF_TGT_CriticalDamage"
                         },
                         "MDF_MaxLayer": {
-                          "operator": "Variables[0] (MDF_TGT_MaxLayer) || RETURN",
-                          "displayLines": "MDF_TGT_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_TGT_MaxLayer"
-                          ]
+                          "displayLines": "MDF_TGT_MaxLayer"
                         }
                       },
                       "casterAssign": "CasterSelf"
@@ -8836,28 +7773,13 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1107567854\">MStrongChallengeEX_Talent_StageAbility_PLY_044</a>",
                       "valuePerStack": {
                         "MDF_TGT_CriticalDamage": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_TGT_Lifetime": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         },
                         "MDF_TGT_MaxLayer": {
-                          "operator": "Variables[0] (#ADF_3) || RETURN",
-                          "displayLines": "#ADF_3",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_3"
-                          ]
+                          "displayLines": "#ADF_3"
                         }
                       }
                     }
@@ -8964,20 +7886,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1191455949\">MStrongChallengeEX_Talent_StageAbility_PLY_043</a>",
                       "valuePerStack": {
                         "MDF_Insert_AllDamageTypePenetrate": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_Insert_DefaultStanceBreakRatio": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -9021,12 +7933,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (#ADF_1) || RETURN",
-                    "displayLines": "#ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_1"
-                    ]
+                    "displayLines": "#ADF_1"
                   }
                 },
                 {
@@ -9037,12 +7944,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (#ADF_2) || RETURN",
-                    "displayLines": "#ADF_2",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_2"
-                    ]
+                    "displayLines": "#ADF_2"
                   }
                 }
               ]
@@ -9147,12 +8049,7 @@ const compositeAbilityObject = {
                   },
                   "variables": {
                     "parameter[0]_NormalizedValue": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     }
                   }
                 }
@@ -9307,20 +8204,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1174678330\">MStrongChallengeEX_Talent_StageAbility_PLY_040</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -9411,12 +8298,7 @@ const compositeAbilityObject = {
                   "variableName": "_Layer",
                   "value": 1,
                   "max": {
-                    "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                    "displayLines": "MDF_PropertyValue2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue2"
-                    ]
+                    "displayLines": "MDF_PropertyValue2"
                   }
                 }
               ]
@@ -9455,12 +8337,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1024518402\">MStrongChallengeEX_Talent_StageAbility_PLY_039</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -9491,13 +8368,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"963367652\">MStrongChallengeEX_Talent_StageAbility_EMY_039</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || Variables[1] (_Layer) || MUL || RETURN",
-                          "displayLines": "(#ADF_1 * _Layer)",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1",
-                            "_Layer"
-                          ]
+                          "displayLines": "(#ADF_1 * _Layer)"
                         }
                       }
                     },
@@ -9510,13 +8381,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"963367652\">MStrongChallengeEX_Talent_StageAbility_EMY_039</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || Variables[1] (_Layer) || MUL || RETURN",
-                          "displayLines": "(#ADF_1 * _Layer)",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1",
-                            "_Layer"
-                          ]
+                          "displayLines": "(#ADF_1 * _Layer)"
                         }
                       }
                     }
@@ -9535,12 +8400,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "maxValue": {
-                    "operator": "Variables[0] (#ADF_2) || RETURN",
-                    "displayLines": "#ADF_2",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_2"
-                    ]
+                    "displayLines": "#ADF_2"
                   },
                   "includeMaxValueInRange": true,
                   "onChange": [
@@ -9553,13 +8413,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"963367652\">MStrongChallengeEX_Talent_StageAbility_EMY_039</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || Variables[1] (_Layer) || MUL || RETURN",
-                          "displayLines": "(#ADF_1 * _Layer)",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1",
-                            "_Layer"
-                          ]
+                          "displayLines": "(#ADF_1 * _Layer)"
                         }
                       }
                     }
@@ -9616,12 +8470,7 @@ const compositeAbilityObject = {
                     "value1": "_CheckTimes",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                      "displayLines": "MDF_PropertyValue2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue2"
-                      ]
+                      "displayLines": "MDF_PropertyValue2"
                     }
                   },
                   "passed": [
@@ -9649,12 +8498,7 @@ const compositeAbilityObject = {
                           "variableName": "DOT_TriggerRatio",
                           "eventType": "DOT",
                           "value": {
-                            "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                            "displayLines": "MDF_PropertyValue",
-                            "constants": [],
-                            "variables": [
-                              "MDF_PropertyValue"
-                            ]
+                            "displayLines": "MDF_PropertyValue"
                           }
                         }
                       ]
@@ -9662,14 +8506,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_CheckTimes) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_CheckTimes + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_CheckTimes"
-                        ]
+                        "displayLines": "(_CheckTimes + 1)"
                       },
                       "variableName": "_CheckTimes"
                     }
@@ -9711,20 +8548,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1007740783\">MStrongChallengeEX_Talent_StageAbility_PLY_038</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -9769,12 +8596,7 @@ const compositeAbilityObject = {
                   },
                   "variables": {
                     "parameter[0]_NormalizedValue": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }
@@ -9853,12 +8675,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamagePhysical</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PhysicalDamageAddedRatio) || RETURN",
-                    "displayLines": "MDF_PhysicalDamageAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PhysicalDamageAddedRatio"
-                    ]
+                    "displayLines": "MDF_PhysicalDamageAddedRatio"
                   }
                 },
                 {
@@ -9869,12 +8686,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_StatusResistance) || RETURN",
-                    "displayLines": "MDF_StatusResistance",
-                    "constants": [],
-                    "variables": [
-                      "MDF_StatusResistance"
-                    ]
+                    "displayLines": "MDF_StatusResistance"
                   }
                 }
               ]
@@ -9913,20 +8725,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1108406497\">MStrongChallengeEX_Talent_StageAbility_PLY_036</a>",
                       "valuePerStack": {
                         "MDF_PhysicalDamageAddedRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_StatusResistance": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -9970,12 +8772,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
-                    "displayLines": "MDF_AttackAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackAddedRatio"
-                    ]
+                    "displayLines": "MDF_AttackAddedRatio"
                   }
                 }
               ]
@@ -10030,12 +8827,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1091628878\">MStrongChallengeEX_Talent_StageAbility_PLY_035</a>",
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -10080,12 +8872,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1091628878\">MStrongChallengeEX_Talent_StageAbility_PLY_035</a>",
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -10145,12 +8932,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1091628878\">MStrongChallengeEX_Talent_StageAbility_PLY_035</a>",
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -10195,12 +8977,7 @@ const compositeAbilityObject = {
                   },
                   "variables": {
                     "parameter[0]_NormalizedValue": {
-                      "operator": "Variables[0] (MDF_ActionDelayRatio) || RETURN",
-                      "displayLines": "MDF_ActionDelayRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_ActionDelayRatio"
-                      ]
+                      "displayLines": "MDF_ActionDelayRatio"
                     }
                   }
                 }
@@ -10217,12 +8994,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageQuantum</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_QuantumDamageAddedRatio) || RETURN",
-                    "displayLines": "MDF_QuantumDamageAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_QuantumDamageAddedRatio"
-                    ]
+                    "displayLines": "MDF_QuantumDamageAddedRatio"
                   }
                 }
               ]
@@ -10261,20 +9033,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1074851259\">MStrongChallengeEX_Talent_StageAbility_PLY_034</a>",
                       "valuePerStack": {
                         "MDF_QuantumDamageAddedRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_ActionDelayRatio": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -10334,13 +9096,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (Damage_Total) || Variables[1] (Damage_Hit) || ADD || RETURN",
-                        "displayLines": "(Damage_Total + Damage_Hit)",
-                        "constants": [],
-                        "variables": [
-                          "Damage_Total",
-                          "Damage_Hit"
-                        ]
+                        "displayLines": "(Damage_Total + Damage_Hit)"
                       },
                       "variableName": "Damage_Total"
                     },
@@ -10353,12 +9109,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1195474502\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (Damage_Total) || RETURN",
-                          "displayLines": "Damage_Total",
-                          "constants": [],
-                          "variables": [
-                            "Damage_Total"
-                          ]
+                          "displayLines": "Damage_Total"
                         }
                       }
                     }
@@ -10505,15 +9256,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Physical",
                         "DamageFlat": {
-                          "operator": "Variables[0] (Damage_Total) || Variables[1] (#ADF_1) || MUL || Constants[0] (3) || DIV || RETURN",
-                          "displayLines": "((Damage_Total * #ADF_1) / 3)",
-                          "constants": [
-                            3
-                          ],
-                          "variables": [
-                            "Damage_Total",
-                            "#ADF_1"
-                          ]
+                          "displayLines": "((Damage_Total * #ADF_1) / 3)"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -10669,12 +9412,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1175516973\">MStrongChallengeEX_Talent_StageAbility_PLY_032</a>",
                       "valuePerStack": {
                         "MDF_AllDamageAddedRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -10808,12 +9546,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                    "displayLines": "MDF_SpeedAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedAddedRatio"
-                    ]
+                    "displayLines": "MDF_SpeedAddedRatio"
                   }
                 }
               ]
@@ -10835,21 +9568,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"472972413\">MStrongChallengeEX_Talent_StageAbility_TGT_030</a>",
                   "duration": {
-                    "operator": "Variables[0] (MDF_TGT_LifeTime) || RETURN",
-                    "displayLines": "MDF_TGT_LifeTime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_TGT_LifeTime"
-                    ]
+                    "displayLines": "MDF_TGT_LifeTime"
                   },
                   "valuePerStack": {
                     "MDF_SpeedAddedRatio": {
-                      "operator": "Variables[0] (MDF_TGT_SpeedAddedRatio) || RETURN",
-                      "displayLines": "MDF_TGT_SpeedAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_TGT_SpeedAddedRatio"
-                      ]
+                      "displayLines": "MDF_TGT_SpeedAddedRatio"
                     }
                   }
                 }
@@ -10925,12 +9648,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"845924319\">MStrongChallengeEX_Talent_StageAbility_EMY_030</a>",
                       "valuePerStack": {
                         "MDF_Element_DamageTakenRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     },
@@ -10943,12 +9661,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"845924319\">MStrongChallengeEX_Talent_StageAbility_EMY_030</a>",
                       "valuePerStack": {
                         "MDF_Element_DamageTakenRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -10979,20 +9692,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1141961735\">MStrongChallengeEX_Talent_StageAbility_PLY_030</a>",
                       "valuePerStack": {
                         "MDF_TGT_SpeedAddedRatio": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         },
                         "MDF_TGT_LifeTime": {
-                          "operator": "Variables[0] (#ADF_3) || RETURN",
-                          "displayLines": "#ADF_3",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_3"
-                          ]
+                          "displayLines": "#ADF_3"
                         }
                       }
                     }
@@ -11051,13 +9754,7 @@ const compositeAbilityObject = {
                   },
                   "scope": "ContextModifier",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackAddedRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_AttackAddedRatio * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackAddedRatio",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_AttackAddedRatio * MDF_Layer)"
                   },
                   "variableName": "MDF_PropertyValue"
                 },
@@ -11069,13 +9766,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackAddedRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_AttackAddedRatio * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackAddedRatio",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_AttackAddedRatio * MDF_Layer)"
                   }
                 }
               ]
@@ -11169,14 +9860,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (TARGET_COUNT) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(TARGET_COUNT + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "TARGET_COUNT"
-                            ]
+                            "displayLines": "(TARGET_COUNT + 1)"
                           },
                           "variableName": "TARGET_COUNT"
                         }
@@ -11201,37 +9885,17 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"254716271\">MStrongChallengeEX_Talent_StageAbility_TGT_029</a>[<span class=\"descriptionNumberColor\">Cheat Sheet</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_TGT_Lifetime) || RETURN",
-                        "displayLines": "MDF_TGT_Lifetime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_TGT_Lifetime"
-                        ]
+                        "displayLines": "MDF_TGT_Lifetime"
                       },
                       "stackLimit": {
-                        "operator": "Variables[0] (MDF_TGT_MaxLayer) || RETURN",
-                        "displayLines": "MDF_TGT_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_TGT_MaxLayer"
-                        ]
+                        "displayLines": "MDF_TGT_MaxLayer"
                       },
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
-                          "operator": "Variables[0] (MDF_TGT_AttackAddedRatio) || RETURN",
-                          "displayLines": "MDF_TGT_AttackAddedRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_TGT_AttackAddedRatio"
-                          ]
+                          "displayLines": "MDF_TGT_AttackAddedRatio"
                         },
                         "MDF_MaxLayer": {
-                          "operator": "Variables[0] (MDF_TGT_MaxLayer) || RETURN",
-                          "displayLines": "MDF_TGT_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_TGT_MaxLayer"
-                          ]
+                          "displayLines": "MDF_TGT_MaxLayer"
                         }
                       },
                       "casterAssign": "CasterSelf"
@@ -11269,28 +9933,13 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1091775973\">MStrongChallengeEX_Talent_StageAbility_PLY_029</a>",
                       "valuePerStack": {
                         "MDF_TGT_AttackAddedRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_TGT_Lifetime": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         },
                         "MDF_TGT_MaxLayer": {
-                          "operator": "Variables[0] (#ADF_3) || RETURN",
-                          "displayLines": "#ADF_3",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_3"
-                          ]
+                          "displayLines": "#ADF_3"
                         }
                       }
                     }
@@ -11423,12 +10072,7 @@ const compositeAbilityObject = {
                   },
                   "variables": {
                     "parameter[0]_NormalizedValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -11468,12 +10112,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1125331211\">MStrongChallengeEX_Talent_StageAbility_PLY_027</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -11517,12 +10156,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -11537,12 +10171,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_FixedAddValue) || RETURN",
-                    "displayLines": "MDF_FixedAddValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_FixedAddValue"
-                    ]
+                    "displayLines": "MDF_FixedAddValue"
                   },
                   "isFixed": "(Fixed)"
                 }
@@ -11582,20 +10211,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1142108830\">MStrongChallengeEX_Talent_StageAbility_PLY_026</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_FixedAddValue": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -11644,12 +10263,7 @@ const compositeAbilityObject = {
               }
             },
             "toughnessReductionPreview": {
-              "operator": "Variables[0] (MDF_Ultra_DefaultStanceBreakRatio) || RETURN",
-              "displayLines": "MDF_Ultra_DefaultStanceBreakRatio",
-              "constants": [],
-              "variables": [
-                "MDF_Ultra_DefaultStanceBreakRatio"
-              ]
+              "displayLines": "MDF_Ultra_DefaultStanceBreakRatio"
             }
           },
           "execute": [
@@ -11708,12 +10322,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1158886449\">MStrongChallengeEX_Talent_StageAbility_PLY_025</a>",
                       "valuePerStack": {
                         "MDF_Ultimate_DefaultStanceBreakRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -11791,12 +10400,7 @@ const compositeAbilityObject = {
                         "value1": "_CheckTimes",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MDF_Times) || RETURN",
-                          "displayLines": "MDF_Times",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Times"
-                          ]
+                          "displayLines": "MDF_Times"
                         }
                       }
                     ]
@@ -11847,26 +10451,14 @@ const compositeAbilityObject = {
                       },
                       "variables": {
                         "parameter[0]_NormalizedValue": {
-                          "operator": "Variables[0] (MDF_ActioDelayModifyValue) || RETURN",
-                          "displayLines": "MDF_ActioDelayModifyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_ActioDelayModifyValue"
-                          ]
+                          "displayLines": "MDF_ActioDelayModifyValue"
                         }
                       }
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_CheckTimes) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_CheckTimes + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_CheckTimes"
-                        ]
+                        "displayLines": "(_CheckTimes + 1)"
                       },
                       "variableName": "_CheckTimes"
                     }
@@ -11903,20 +10495,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1175664068\">MStrongChallengeEX_Talent_StageAbility_PLY_024</a>",
                       "valuePerStack": {
                         "MDF_ActioDelayModifyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_Times": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -11976,12 +10558,7 @@ const compositeAbilityObject = {
                         "value1": "_CheckTimes",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MDF_Times) || RETURN",
-                          "displayLines": "MDF_Times",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Times"
-                          ]
+                          "displayLines": "MDF_Times"
                         }
                       }
                     ]
@@ -11996,26 +10573,14 @@ const compositeAbilityObject = {
                       },
                       "variables": {
                         "parameter[0]_NormalizedValue": {
-                          "operator": "Variables[0] (MDF_ActioDelayModifyValue) || RETURN",
-                          "displayLines": "MDF_ActioDelayModifyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_ActioDelayModifyValue"
-                          ]
+                          "displayLines": "MDF_ActioDelayModifyValue"
                         }
                       }
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_CheckTimes) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_CheckTimes + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_CheckTimes"
-                        ]
+                        "displayLines": "(_CheckTimes + 1)"
                       },
                       "variableName": "_CheckTimes"
                     }
@@ -12057,20 +10622,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1192441687\">MStrongChallengeEX_Talent_StageAbility_PLY_023</a>",
                       "valuePerStack": {
                         "MDF_ActioDelayModifyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_Times": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -12176,12 +10731,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageIce</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (#ADF_1) || RETURN",
-                    "displayLines": "#ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_1"
-                    ]
+                    "displayLines": "#ADF_1"
                   }
                 }
               ]
@@ -12571,20 +11121,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1225996925\">MStrongChallengeEX_Talent_StageAbility_PLY_021</a>",
                       "valuePerStack": {
                         "MDF_Insert_AllDamageTypePenetrate": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_Insert_DefaultStanceBreakRatio": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -12703,20 +11243,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1242774544\">MStrongChallengeEX_Talent_StageAbility_PLY_020</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -12807,12 +11337,7 @@ const compositeAbilityObject = {
                   "variableName": "_Layer",
                   "value": 1,
                   "max": {
-                    "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                    "displayLines": "MDF_PropertyValue2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue2"
-                    ]
+                    "displayLines": "MDF_PropertyValue2"
                   }
                 }
               ]
@@ -12851,12 +11376,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1056200544\">MStrongChallengeEX_Talent_StageAbility_PLY_019</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -12887,13 +11407,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1030183938\">MStrongChallengeEX_Talent_StageAbility_EMY_019</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || Variables[1] (_Layer) || MUL || RETURN",
-                          "displayLines": "(#ADF_1 * _Layer)",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1",
-                            "_Layer"
-                          ]
+                          "displayLines": "(#ADF_1 * _Layer)"
                         }
                       }
                     },
@@ -12906,13 +11420,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1030183938\">MStrongChallengeEX_Talent_StageAbility_EMY_019</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || Variables[1] (_Layer) || MUL || RETURN",
-                          "displayLines": "(#ADF_1 * _Layer)",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1",
-                            "_Layer"
-                          ]
+                          "displayLines": "(#ADF_1 * _Layer)"
                         }
                       }
                     }
@@ -12931,12 +11439,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "maxValue": {
-                    "operator": "Variables[0] (#ADF_2) || RETURN",
-                    "displayLines": "#ADF_2",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_2"
-                    ]
+                    "displayLines": "#ADF_2"
                   },
                   "includeMaxValueInRange": true,
                   "onChange": [
@@ -12949,13 +11452,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1030183938\">MStrongChallengeEX_Talent_StageAbility_EMY_019</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || Variables[1] (_Layer) || MUL || RETURN",
-                          "displayLines": "(#ADF_1 * _Layer)",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1",
-                            "_Layer"
-                          ]
+                          "displayLines": "(#ADF_1 * _Layer)"
                         }
                       }
                     }
@@ -13012,12 +11509,7 @@ const compositeAbilityObject = {
                     "value1": "_CheckTimes",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                      "displayLines": "MDF_PropertyValue2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue2"
-                      ]
+                      "displayLines": "MDF_PropertyValue2"
                     }
                   },
                   "passed": [
@@ -13045,12 +11537,7 @@ const compositeAbilityObject = {
                           "variableName": "DOT_TriggerRatio",
                           "eventType": "DOT",
                           "value": {
-                            "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                            "displayLines": "MDF_PropertyValue",
-                            "constants": [],
-                            "variables": [
-                              "MDF_PropertyValue"
-                            ]
+                            "displayLines": "MDF_PropertyValue"
                           }
                         }
                       ]
@@ -13058,14 +11545,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_CheckTimes) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_CheckTimes + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_CheckTimes"
-                        ]
+                        "displayLines": "(_CheckTimes + 1)"
                       },
                       "variableName": "_CheckTimes"
                     }
@@ -13107,20 +11587,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1072978163\">MStrongChallengeEX_Talent_StageAbility_PLY_018</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -13239,20 +11709,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1291087210\">MStrongChallengeEX_Talent_StageAbility_PLY_017</a>",
                       "valuePerStack": {
                         "MDF_BPCrit_DamageAddedRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_BPCrit_DamageAddedRatio_Extra": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -13349,12 +11809,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1080516795\">MStrongChallengeEX_Talent_StageAbility_EMY_016</a>",
                       "valuePerStack": {
                         "MDF_Element_DamageTakenRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     },
@@ -13367,12 +11822,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1080516795\">MStrongChallengeEX_Talent_StageAbility_EMY_016</a>",
                       "valuePerStack": {
                         "MDF_Element_DamageTakenRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -14011,20 +12461,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1257531972\">MStrongChallengeEX_Talent_StageAbility_PLY_015</a>",
                       "valuePerStack": {
                         "MDF_Insert_DefaultStanceBreakRatio": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_CounterAttack_DefaultStanceBreakRatio": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -14069,12 +12509,7 @@ const compositeAbilityObject = {
                   },
                   "variables": {
                     "parameter[0]_NormalizedValue": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }
@@ -14282,13 +12717,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (Damage_Total) || Variables[1] (Damage_Hit) || ADD || RETURN",
-                        "displayLines": "(Damage_Total + Damage_Hit)",
-                        "constants": [],
-                        "variables": [
-                          "Damage_Total",
-                          "Damage_Hit"
-                        ]
+                        "displayLines": "(Damage_Total + Damage_Hit)"
                       },
                       "variableName": "Damage_Total"
                     },
@@ -14301,12 +12730,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1195474502\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (Damage_Total) || RETURN",
-                          "displayLines": "Damage_Total",
-                          "constants": [],
-                          "variables": [
-                            "Damage_Total"
-                          ]
+                          "displayLines": "Damage_Total"
                         }
                       }
                     }
@@ -14453,15 +12877,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Physical",
                         "DamageFlat": {
-                          "operator": "Variables[0] (Damage_Total) || Variables[1] (#ADF_1) || MUL || Constants[0] (3) || DIV || RETURN",
-                          "displayLines": "((Damage_Total * #ADF_1) / 3)",
-                          "constants": [
-                            3
-                          ],
-                          "variables": [
-                            "Damage_Total",
-                            "#ADF_1"
-                          ]
+                          "displayLines": "((Damage_Total * #ADF_1) / 3)"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -14570,13 +12986,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (Damage_Total) || Variables[1] (Damage_Hit) || ADD || RETURN",
-                        "displayLines": "(Damage_Total + Damage_Hit)",
-                        "constants": [],
-                        "variables": [
-                          "Damage_Total",
-                          "Damage_Hit"
-                        ]
+                        "displayLines": "(Damage_Total + Damage_Hit)"
                       },
                       "variableName": "Damage_Total"
                     },
@@ -14589,12 +12999,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1195474502\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (Damage_Total) || RETURN",
-                          "displayLines": "Damage_Total",
-                          "constants": [],
-                          "variables": [
-                            "Damage_Total"
-                          ]
+                          "displayLines": "Damage_Total"
                         }
                       }
                     }
@@ -14741,15 +13146,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Physical",
                         "DamageFlat": {
-                          "operator": "Variables[0] (Damage_Total) || Variables[1] (#ADF_1) || MUL || Constants[0] (3) || DIV || RETURN",
-                          "displayLines": "((Damage_Total * #ADF_1) / 3)",
-                          "constants": [
-                            3
-                          ],
-                          "variables": [
-                            "Damage_Total",
-                            "#ADF_1"
-                          ]
+                          "displayLines": "((Damage_Total * #ADF_1) / 3)"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -14873,12 +13270,7 @@ const compositeAbilityObject = {
                   },
                   "variables": {
                     "parameter[0]_NormalizedValue": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     }
                   }
                 }
@@ -14998,12 +13390,7 @@ const compositeAbilityObject = {
                   },
                   "variables": {
                     "parameter[0]_NormalizedValue": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     }
                   }
                 }
@@ -15095,12 +13482,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SpeedConverted</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -15158,14 +13540,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (_DMG_Num) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(_DMG_Num + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "_DMG_Num"
-                            ]
+                            "displayLines": "(_DMG_Num + 1)"
                           },
                           "variableName": "_DMG_Num"
                         }
@@ -15186,12 +13561,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -15261,22 +13631,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-847062697\">MStrongChallengeEX_Talent_StageAbility_PLY_008_SpeedUp</a>[<span class=\"descriptionNumberColor\">Sundered Paradise</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_PropertyValue4) || RETURN",
-                        "displayLines": "MDF_PropertyValue4",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue4"
-                        ]
+                        "displayLines": "MDF_PropertyValue4"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (_CurrSpeed) || Variables[1] (MDF_PropertyValue2) || MUL || RETURN",
-                          "displayLines": "(_CurrSpeed * MDF_PropertyValue2)",
-                          "constants": [],
-                          "variables": [
-                            "_CurrSpeed",
-                            "MDF_PropertyValue2"
-                          ]
+                          "displayLines": "(_CurrSpeed * MDF_PropertyValue2)"
                         }
                       }
                     },
@@ -15323,36 +13682,16 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1240607258\">MStrongChallengeEX_Talent_StageAbility_PLY_008</a>[<span class=\"descriptionNumberColor\">Sundered Paradise</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         },
                         "MDF_PropertyValue3": {
-                          "operator": "Variables[0] (#ADF_3) || RETURN",
-                          "displayLines": "#ADF_3",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_3"
-                          ]
+                          "displayLines": "#ADF_3"
                         },
                         "MDF_PropertyValue4": {
-                          "operator": "Variables[0] (#ADF_4) || RETURN",
-                          "displayLines": "#ADF_4",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_4"
-                          ]
+                          "displayLines": "#ADF_4"
                         }
                       }
                     }
@@ -15477,12 +13816,7 @@ const compositeAbilityObject = {
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Constants[0] (800206100) || RETURN",
-                "displayLines": "800206100",
-                "constants": [
-                  800206100
-                ],
-                "variables": []
+                "displayLines": "800206100"
               },
               "locationType": "Last"
             }
@@ -15527,28 +13861,13 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"1349202594\">MStrongChallengeEX_Talent_StageAbility_BOSS_007_Trigger</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (PropertyValue) || RETURN",
-                  "displayLines": "PropertyValue",
-                  "constants": [],
-                  "variables": [
-                    "PropertyValue"
-                  ]
+                  "displayLines": "PropertyValue"
                 },
                 "MDF_LifeTime": {
-                  "operator": "Variables[0] (LifeTime) || RETURN",
-                  "displayLines": "LifeTime",
-                  "constants": [],
-                  "variables": [
-                    "LifeTime"
-                  ]
+                  "displayLines": "LifeTime"
                 },
                 "MDF_MaxLayer": {
-                  "operator": "Variables[0] (MaxLayer) || RETURN",
-                  "displayLines": "MaxLayer",
-                  "constants": [],
-                  "variables": [
-                    "MaxLayer"
-                  ]
+                  "displayLines": "MaxLayer"
                 }
               }
             }
@@ -15604,28 +13923,13 @@ const compositeAbilityObject = {
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     },
                     "LifeTime": {
-                      "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                      "displayLines": "MDF_LifeTime",
-                      "constants": [],
-                      "variables": [
-                        "MDF_LifeTime"
-                      ]
+                      "displayLines": "MDF_LifeTime"
                     },
                     "MaxLayer": {
-                      "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                      "displayLines": "MDF_MaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MaxLayer"
-                      ]
+                      "displayLines": "MDF_MaxLayer"
                     }
                   },
                   "allowAbilityTriggers": false
@@ -15670,28 +13974,13 @@ const compositeAbilityObject = {
                       "canHitNonTargets": true,
                       "valuePerStack": {
                         "PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         },
                         "LifeTime": {
-                          "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                          "displayLines": "MDF_LifeTime",
-                          "constants": [],
-                          "variables": [
-                            "MDF_LifeTime"
-                          ]
+                          "displayLines": "MDF_LifeTime"
                         },
                         "MaxLayer": {
-                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                          "displayLines": "MDF_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer"
-                          ]
+                          "displayLines": "MDF_MaxLayer"
                         }
                       },
                       "allowAbilityTriggers": false
@@ -15806,28 +14095,13 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1732992681\">MStrongChallengeEX_Talent_StageAbility_BOSS_007</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_LifeTime": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         },
                         "MDF_MaxLayer": {
-                          "operator": "Variables[0] (#ADF_3) || RETURN",
-                          "displayLines": "#ADF_3",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_3"
-                          ]
+                          "displayLines": "#ADF_3"
                         }
                       }
                     }
@@ -15872,12 +14146,7 @@ const compositeAbilityObject = {
                   },
                   "variables": {
                     "parameter[0]_NormalizedValue": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }
@@ -15982,12 +14251,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1638600472\">Standard_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (#ADF_2) || RETURN",
-                              "displayLines": "#ADF_2",
-                              "constants": [],
-                              "variables": [
-                                "#ADF_2"
-                              ]
+                              "displayLines": "#ADF_2"
                             }
                           }
                         },
@@ -16000,12 +14264,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1990889700\">Standard_StatusResistanceUp</a>[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (#ADF_1) || RETURN",
-                              "displayLines": "#ADF_1",
-                              "constants": [],
-                              "variables": [
-                                "#ADF_1"
-                              ]
+                              "displayLines": "#ADF_1"
                             }
                           }
                         },
@@ -16211,12 +14470,7 @@ const compositeAbilityObject = {
               ]
             },
             "toughnessForcedReductionPreview": {
-              "operator": "Variables[0] (#ADF_1) || RETURN",
-              "displayLines": "#ADF_1",
-              "constants": [],
-              "variables": [
-                "#ADF_1"
-              ]
+              "displayLines": "#ADF_1"
             }
           },
           "execute": [
@@ -16521,12 +14775,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1039275830\">MStrongChallengeEX_Talent_StageAbility_PLY_004</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -16571,12 +14820,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -16639,12 +14883,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1800103157\">MStrongChallengeEX_Talent_StageAbility_BOSS_003</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -16714,12 +14953,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -16758,12 +14992,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1072831068\">MStrongChallengeEX_Talent_StageAbility_PLY_002</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -16845,13 +15074,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (Layer) || Variables[1] (MDF_PropertyValue) || MUL || RETURN",
-                    "displayLines": "(Layer * MDF_PropertyValue)",
-                    "constants": [],
-                    "variables": [
-                      "Layer",
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "(Layer * MDF_PropertyValue)"
                   }
                 }
               ]
@@ -16874,12 +15097,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -16918,12 +15136,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1123163925\">MStrongChallengeEX_Talent_StageAbility_PLY_001</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -16958,21 +15171,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1766547919\">MStrongChallengeEX_Talent_StageAbility_BOSS_001</a>",
                       "stackLimit": {
-                        "operator": "Variables[0] (#ADF_3) || RETURN",
-                        "displayLines": "#ADF_3",
-                        "constants": [],
-                        "variables": [
-                          "#ADF_3"
-                        ]
+                        "displayLines": "#ADF_3"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }

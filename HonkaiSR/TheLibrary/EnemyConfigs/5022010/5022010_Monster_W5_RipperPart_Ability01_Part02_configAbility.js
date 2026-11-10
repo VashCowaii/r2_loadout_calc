@@ -13,21 +13,11 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"1271467699\">Monster_W5_RipperPart_Bonus</a>[<span class=\"descriptionNumberColor\">Wicked Grin</span>]",
       "stackLimit": {
-        "operator": "Variables[0] (Buff_MaxLayer) || RETURN",
-        "displayLines": "Buff_MaxLayer",
-        "constants": [],
-        "variables": [
-          "Buff_MaxLayer"
-        ]
+        "displayLines": "Buff_MaxLayer"
       },
       "valuePerStack": {
         "MDF_DamageUpRatio_PerLayer": {
-          "operator": "Variables[0] (Buff_DamageUpRatio) || RETURN",
-          "displayLines": "Buff_DamageUpRatio",
-          "constants": [],
-          "variables": [
-            "Buff_DamageUpRatio"
-          ]
+          "displayLines": "Buff_DamageUpRatio"
         }
       }
     },

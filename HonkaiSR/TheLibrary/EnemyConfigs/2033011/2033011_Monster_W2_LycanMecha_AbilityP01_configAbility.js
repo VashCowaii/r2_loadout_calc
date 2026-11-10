@@ -53,12 +53,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-        "displayLines": "{[SkillP01[0]]}",
-        "constants": [],
-        "variables": [
-          "{[SkillP01[0]]}"
-        ]
+        "displayLines": "{[SkillP01[0]]}"
       },
       "variableName": "Wolf_MaxAttackCount"
     },
@@ -79,12 +74,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1905621078\">Enemy_W2_Lycan_RageControllerV2</a>",
       "valuePerStack": {
         "MaxAttackCount": {
-          "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-          "displayLines": "Wolf_MaxAttackCount",
-          "constants": [],
-          "variables": [
-            "Wolf_MaxAttackCount"
-          ]
+          "displayLines": "Wolf_MaxAttackCount"
         }
       },
       "casterAssign": "TargetSelf"
@@ -190,12 +180,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedUpRatio) || RETURN",
-                "displayLines": "MDF_SpeedUpRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedUpRatio"
-                ]
+                "displayLines": "MDF_SpeedUpRatio"
               }
             },
             {
@@ -325,12 +310,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"443800495\">Enemy_W2_LycanMecha_RageStatus</a>[<span class=\"descriptionNumberColor\">Moon Rage</span>]",
                   "valuePerStack": {
                     "MDF_SpeedUpRatio": {
-                      "operator": "Variables[0] ({[SkillRage[0]]}) || RETURN",
-                      "displayLines": "{[SkillRage[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillRage[0]]}"
-                      ]
+                      "displayLines": "{[SkillRage[0]]}"
                     }
                   }
                 }

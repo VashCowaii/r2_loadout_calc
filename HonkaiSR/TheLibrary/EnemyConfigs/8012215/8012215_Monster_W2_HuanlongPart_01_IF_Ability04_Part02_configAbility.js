@@ -427,12 +427,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_13263) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_13263",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_13263"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_13263"
                   },
                   "variableName": "SkillUltra_DamagePercentage"
                 }
@@ -454,12 +449,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_9408) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_9408",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_9408"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_9408"
                   },
                   "variableName": "SkillUltra_DamagePercentage"
                 }
@@ -481,12 +471,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_9386) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_9386",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_9386"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_9386"
                   },
                   "variableName": "SkillUltra_DamagePercentage"
                 }
@@ -508,12 +493,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_9387) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_9387",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_9387"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_9387"
                   },
                   "variableName": "SkillUltra_DamagePercentage"
                 }
@@ -571,12 +551,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Imaginary",
                         "Damage": {
-                          "operator": "Variables[0] (SkillUltra_DamagePercentage) || RETURN",
-                          "displayLines": "SkillUltra_DamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "SkillUltra_DamagePercentage"
-                          ]
+                          "displayLines": "SkillUltra_DamagePercentage"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -649,12 +624,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Imaginary",
                         "Damage": {
-                          "operator": "Variables[0] (SkillUltra_DamagePercentage) || RETURN",
-                          "displayLines": "SkillUltra_DamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "SkillUltra_DamagePercentage"
-                          ]
+                          "displayLines": "SkillUltra_DamagePercentage"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -727,12 +697,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Imaginary",
                         "Damage": {
-                          "operator": "Variables[0] (SkillUltra_DamagePercentage) || RETURN",
-                          "displayLines": "SkillUltra_DamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "SkillUltra_DamagePercentage"
-                          ]
+                          "displayLines": "SkillUltra_DamagePercentage"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -805,12 +770,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Imaginary",
                         "Damage": {
-                          "operator": "Variables[0] (SkillUltra_DamagePercentage) || RETURN",
-                          "displayLines": "SkillUltra_DamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "SkillUltra_DamagePercentage"
-                          ]
+                          "displayLines": "SkillUltra_DamagePercentage"
                         },
                         "Toughness": null,
                         "Tags": null,

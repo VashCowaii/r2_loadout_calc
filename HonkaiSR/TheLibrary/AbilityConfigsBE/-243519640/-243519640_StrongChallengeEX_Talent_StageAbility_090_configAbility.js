@@ -38,12 +38,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeTakenRatio) || RETURN",
-                "displayLines": "MDF_AllDamageTypeTakenRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeTakenRatio"
-                ]
+                "displayLines": "MDF_AllDamageTypeTakenRatio"
               }
             }
           ]
@@ -106,21 +101,11 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"914020533\">MStrongChallengeEX_Talent_StageAbility_EMY_090</a>[<span class=\"descriptionNumberColor\">Comic Relief</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_EMY090_LifeTime) || RETURN",
-                        "displayLines": "MDF_EMY090_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_EMY090_LifeTime"
-                        ]
+                        "displayLines": "MDF_EMY090_LifeTime"
                       },
                       "valuePerStack": {
                         "MDF_AllDamageTypeTakenRatio": {
-                          "operator": "Variables[0] (MDF_EMY090_AllDamageTypeTakenRatio) || RETURN",
-                          "displayLines": "MDF_EMY090_AllDamageTypeTakenRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_EMY090_AllDamageTypeTakenRatio"
-                          ]
+                          "displayLines": "MDF_EMY090_AllDamageTypeTakenRatio"
                         }
                       },
                       "casterAssign": "CasterSelf"
@@ -211,20 +196,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"940037139\">MStrongChallengeEX_Talent_StageAbility_PLY_090</a>",
                   "valuePerStack": {
                     "MDF_EMY090_AllDamageTypeTakenRatio": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     },
                     "MDF_EMY090_LifeTime": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     }
                   }
                 }

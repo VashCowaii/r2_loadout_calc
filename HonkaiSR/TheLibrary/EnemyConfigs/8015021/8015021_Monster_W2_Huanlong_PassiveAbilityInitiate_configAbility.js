@@ -201,12 +201,7 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonID1) || RETURN",
-                        "displayLines": "SummonID1",
-                        "constants": [],
-                        "variables": [
-                          "SummonID1"
-                        ]
+                        "displayLines": "SummonID1"
                       },
                       "locationType": "First"
                     }
@@ -220,12 +215,7 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonID1) || RETURN",
-                        "displayLines": "SummonID1",
-                        "constants": [],
-                        "variables": [
-                          "SummonID1"
-                        ]
+                        "displayLines": "SummonID1"
                       },
                       "locationType": "Last"
                     }

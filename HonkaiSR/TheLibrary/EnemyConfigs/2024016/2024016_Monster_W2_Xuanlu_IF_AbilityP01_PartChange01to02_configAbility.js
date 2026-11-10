@@ -64,23 +64,13 @@ const configAbility = {
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-        "displayLines": "{[SkillP01[4]]}",
-        "constants": [],
-        "variables": [
-          "{[SkillP01[4]]}"
-        ]
+        "displayLines": "{[SkillP01[4]]}"
       },
       "enemyList": [
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonList_ADF_7) || RETURN",
-            "displayLines": "SummonList_ADF_7",
-            "constants": [],
-            "variables": [
-              "SummonList_ADF_7"
-            ]
+            "displayLines": "SummonList_ADF_7"
           },
           "locationType": "BeforeCaster"
         }
@@ -89,23 +79,13 @@ const configAbility = {
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] ({[SkillP01[5]]}) || RETURN",
-        "displayLines": "{[SkillP01[5]]}",
-        "constants": [],
-        "variables": [
-          "{[SkillP01[5]]}"
-        ]
+        "displayLines": "{[SkillP01[5]]}"
       },
       "enemyList": [
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonList_ADF_8) || RETURN",
-            "displayLines": "SummonList_ADF_8",
-            "constants": [],
-            "variables": [
-              "SummonList_ADF_8"
-            ]
+            "displayLines": "SummonList_ADF_8"
           },
           "locationType": "AfterCaster"
         }
@@ -114,24 +94,14 @@ const configAbility = {
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] ({[SkillP01[6]]}) || RETURN",
-        "displayLines": "{[SkillP01[6]]}",
-        "constants": [],
-        "variables": [
-          "{[SkillP01[6]]}"
-        ]
+        "displayLines": "{[SkillP01[6]]}"
       },
       "refreshPositions": false,
       "enemyList": [
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonList_ADF_4) || RETURN",
-            "displayLines": "SummonList_ADF_4",
-            "constants": [],
-            "variables": [
-              "SummonList_ADF_4"
-            ]
+            "displayLines": "SummonList_ADF_4"
           },
           "locationType": "First"
         }
@@ -140,24 +110,14 @@ const configAbility = {
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] ({[SkillP01[7]]}) || RETURN",
-        "displayLines": "{[SkillP01[7]]}",
-        "constants": [],
-        "variables": [
-          "{[SkillP01[7]]}"
-        ]
+        "displayLines": "{[SkillP01[7]]}"
       },
       "refreshPositions": false,
       "enemyList": [
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonList_ADF_4) || RETURN",
-            "displayLines": "SummonList_ADF_4",
-            "constants": [],
-            "variables": [
-              "SummonList_ADF_4"
-            ]
+            "displayLines": "SummonList_ADF_4"
           },
           "locationType": "Last"
         }
@@ -173,12 +133,7 @@ const configAbility = {
       "conditions": {
         "name": "Enemy ID",
         "ID": {
-          "operator": "Variables[0] (SummonList_ADF_7) || RETURN",
-          "displayLines": "SummonList_ADF_7",
-          "constants": [],
-          "variables": [
-            "SummonList_ADF_7"
-          ]
+          "displayLines": "SummonList_ADF_7"
         },
         "target": {
           "name": "Target Name",
@@ -207,12 +162,7 @@ const configAbility = {
       "conditions": {
         "name": "Enemy ID",
         "ID": {
-          "operator": "Variables[0] (SummonList_ADF_8) || RETURN",
-          "displayLines": "SummonList_ADF_8",
-          "constants": [],
-          "variables": [
-            "SummonList_ADF_8"
-          ]
+          "displayLines": "SummonList_ADF_8"
         },
         "target": {
           "name": "Target Name",
@@ -264,12 +214,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"225051539\">Enemy_W2_Xuanlu_IF_Ability08Controller</a>",
       "valuePerStack": {
         "MDF_MaxChargeCount": {
-          "operator": "Variables[0] ({[Skill08[2]]}) || RETURN",
-          "displayLines": "{[Skill08[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill08[2]]}"
-          ]
+          "displayLines": "{[Skill08[2]]}"
         }
       }
     },

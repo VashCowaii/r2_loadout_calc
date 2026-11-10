@@ -47,12 +47,7 @@ const configAbility = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_LowHPRatio) || RETURN",
-                      "displayLines": "MDF_LowHPRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_LowHPRatio"
-                      ]
+                      "displayLines": "MDF_LowHPRatio"
                     }
                   },
                   {
@@ -532,13 +527,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageUpRatio_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)"
               }
             }
           ]
@@ -576,12 +565,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-2053914629\">Monster_W2_Kafka_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                      "displayLines": "MDF_DamageUpRatio_PerLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageUpRatio_PerLayer"
-                      ]
+                      "displayLines": "MDF_DamageUpRatio_PerLayer"
                     }
                   }
                 },
@@ -679,12 +663,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-2053914629\">Monster_W2_Kafka_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                          "displayLines": "MDF_DamageUpRatio_PerLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageUpRatio_PerLayer"
-                          ]
+                          "displayLines": "MDF_DamageUpRatio_PerLayer"
                         }
                       }
                     }
@@ -712,12 +691,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1459324201\">Monster_W2_Kafka_RL_ListenElectric</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                  "displayLines": "MDF_DamageUpRatio_PerLayer",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamageUpRatio_PerLayer"
-                  ]
+                  "displayLines": "MDF_DamageUpRatio_PerLayer"
                 }
               }
             }
@@ -782,12 +756,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1459324201\">Monster_W2_Kafka_RL_ListenElectric</a>",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                      "displayLines": "MDF_DamageUpRatio_PerLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageUpRatio_PerLayer"
-                      ]
+                      "displayLines": "MDF_DamageUpRatio_PerLayer"
                     }
                   }
                 }
@@ -1170,12 +1139,7 @@ const configAbility = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_LowHPRatio) || RETURN",
-                      "displayLines": "MDF_LowHPRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_LowHPRatio"
-                      ]
+                      "displayLines": "MDF_LowHPRatio"
                     }
                   },
                   {
@@ -1628,13 +1592,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageUpRatio_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)"
               }
             }
           ]
@@ -1672,12 +1630,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-2053914629\">Monster_W2_Kafka_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                      "displayLines": "MDF_DamageUpRatio_PerLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageUpRatio_PerLayer"
-                      ]
+                      "displayLines": "MDF_DamageUpRatio_PerLayer"
                     }
                   }
                 },
@@ -1775,12 +1728,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-2053914629\">Monster_W2_Kafka_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                          "displayLines": "MDF_DamageUpRatio_PerLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageUpRatio_PerLayer"
-                          ]
+                          "displayLines": "MDF_DamageUpRatio_PerLayer"
                         }
                       }
                     }
@@ -1808,12 +1756,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1975598300\">Monster_W2_Kafka_IF_ListenElectric</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                  "displayLines": "MDF_DamageUpRatio_PerLayer",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamageUpRatio_PerLayer"
-                  ]
+                  "displayLines": "MDF_DamageUpRatio_PerLayer"
                 }
               }
             }
@@ -1848,12 +1791,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1975598300\">Monster_W2_Kafka_IF_ListenElectric</a>",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                      "displayLines": "MDF_DamageUpRatio_PerLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageUpRatio_PerLayer"
-                      ]
+                      "displayLines": "MDF_DamageUpRatio_PerLayer"
                     }
                   }
                 }
@@ -2297,12 +2235,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_CurrentCount) || RETURN",
-                "displayLines": "MDF_CurrentCount",
-                "constants": [],
-                "variables": [
-                  "MDF_CurrentCount"
-                ]
+                "displayLines": "MDF_CurrentCount"
               },
               "entityClass": "Enemy",
               "maximum": 6,
@@ -2359,26 +2292,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentCount) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(MDF_CurrentCount - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_CurrentCount"
-                    ]
+                    "displayLines": "(MDF_CurrentCount - 1)"
                   },
                   "variableName": "MDF_CurrentCount"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentCount) || RETURN",
-                    "displayLines": "MDF_CurrentCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentCount"
-                    ]
+                    "displayLines": "MDF_CurrentCount"
                   },
                   "entityClass": "Enemy",
                   "maximum": 6
@@ -2481,12 +2402,7 @@ const configAbility = {
                       {
                         "name": "Enemy ID",
                         "ID": {
-                          "operator": "Variables[0] (SummonID_1) || RETURN",
-                          "displayLines": "SummonID_1",
-                          "constants": [],
-                          "variables": [
-                            "SummonID_1"
-                          ]
+                          "displayLines": "SummonID_1"
                         },
                         "target": {
                           "name": "Target Name",
@@ -2497,12 +2413,7 @@ const configAbility = {
                       {
                         "name": "Enemy ID",
                         "ID": {
-                          "operator": "Variables[0] (SummonID_2) || RETURN",
-                          "displayLines": "SummonID_2",
-                          "constants": [],
-                          "variables": [
-                            "SummonID_2"
-                          ]
+                          "displayLines": "SummonID_2"
                         },
                         "target": {
                           "name": "Target Name",
@@ -2624,14 +2535,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MaxMinions) || Variables[1] (MDF_PosL) || SUB || Variables[2] (MDF_PosR ) || SUB || RETURN",
-                "displayLines": "((MaxMinions - MDF_PosL) - MDF_PosR )",
-                "constants": [],
-                "variables": [
-                  "MaxMinions",
-                  "MDF_PosL",
-                  "MDF_PosR "
-                ]
+                "displayLines": "((MaxMinions - MDF_PosL) - MDF_PosR )"
               },
               "variableName": "MDF_LoopCount"
             },
@@ -2648,12 +2552,7 @@ const configAbility = {
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (MDF_LoopCount) || RETURN",
-                    "displayLines": "MDF_LoopCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_LoopCount"
-                    ]
+                    "displayLines": "MDF_LoopCount"
                   },
                   "execute": [
                     {
@@ -2663,12 +2562,7 @@ const configAbility = {
                         "value1": "MDF_PosL",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MaxMinions_Left) || RETURN",
-                          "displayLines": "MaxMinions_Left",
-                          "constants": [],
-                          "variables": [
-                            "MaxMinions_Left"
-                          ]
+                          "displayLines": "MaxMinions_Left"
                         }
                       },
                       "passed": [
@@ -2679,12 +2573,7 @@ const configAbility = {
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Variables[0] (SummonID_1) || RETURN",
-                                "displayLines": "SummonID_1",
-                                "constants": [],
-                                "variables": [
-                                  "SummonID_1"
-                                ]
+                                "displayLines": "SummonID_1"
                               },
                               "locationType": "First"
                             }
@@ -2693,14 +2582,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (MDF_PosL) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(MDF_PosL + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "MDF_PosL"
-                            ]
+                            "displayLines": "(MDF_PosL + 1)"
                           },
                           "variableName": "MDF_PosL"
                         },
@@ -2721,12 +2603,7 @@ const configAbility = {
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Variables[0] (SummonID_2) || RETURN",
-                                "displayLines": "SummonID_2",
-                                "constants": [],
-                                "variables": [
-                                  "SummonID_2"
-                                ]
+                                "displayLines": "SummonID_2"
                               },
                               "locationType": "Last"
                             }
@@ -2735,14 +2612,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (MDF_PosR ) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(MDF_PosR  + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "MDF_PosR "
-                            ]
+                            "displayLines": "(MDF_PosR  + 1)"
                           },
                           "variableName": "MDF_PosR"
                         },
@@ -2797,14 +2667,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_PosL) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(MDF_PosL - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_PosL"
-                    ]
+                    "displayLines": "(MDF_PosL - 1)"
                   },
                   "variableName": "MDF_PosL"
                 }
@@ -2813,14 +2676,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_PosR ) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(MDF_PosR  - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_PosR "
-                    ]
+                    "displayLines": "(MDF_PosR  - 1)"
                   },
                   "variableName": "MDF_PosR"
                 }
@@ -2836,12 +2692,7 @@ const configAbility = {
               "conditions": {
                 "name": "Enemy ID",
                 "ID": {
-                  "operator": "Variables[0] (MDF_PosR) || RETURN",
-                  "displayLines": "MDF_PosR",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PosR"
-                  ]
+                  "displayLines": "MDF_PosR"
                 },
                 "target": {
                   "name": "Target Name",
@@ -3095,13 +2946,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__252) || Variables[1] (SkillMaxHit) || DIV || RETURN",
-                  "displayLines": "(ENEMIES_OBJECT_UNUSED__252 / SkillMaxHit)",
-                  "constants": [],
-                  "variables": [
-                    "ENEMIES_OBJECT_UNUSED__252",
-                    "SkillMaxHit"
-                  ]
+                  "displayLines": "(ENEMIES_OBJECT_UNUSED__252 / SkillMaxHit)"
                 },
                 "Toughness": null,
                 "keepDMGType": true,
@@ -3241,12 +3086,7 @@ const configAbility = {
               },
               "variableName": "PursuitCount",
               "resetValue": {
-                "operator": "Variables[0] (MDF_Count) || RETURN",
-                "displayLines": "MDF_Count",
-                "constants": [],
-                "variables": [
-                  "MDF_Count"
-                ]
+                "displayLines": "MDF_Count"
               },
               "scope": "TargetEntity"
             }
@@ -3346,12 +3186,7 @@ const configAbility = {
               },
               "variableName": "PursuitCount",
               "resetValue": {
-                "operator": "Variables[0] (MDF_Count) || RETURN",
-                "displayLines": "MDF_Count",
-                "constants": [],
-                "variables": [
-                  "MDF_Count"
-                ]
+                "displayLines": "MDF_Count"
               },
               "scope": "TargetEntity"
             }

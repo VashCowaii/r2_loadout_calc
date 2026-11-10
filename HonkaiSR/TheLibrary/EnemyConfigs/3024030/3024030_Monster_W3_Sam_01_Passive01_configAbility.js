@@ -30,28 +30,13 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-16655209\">Enemy_W3_Sam_01_Shield</a>[<span class=\"descriptionNumberColor\">Whirling Carapace</span>]",
       "valuePerStack": {
         "MDF_ShieldThreshold": {
-          "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[0]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[0]]}"
         },
         "MDF_HealPercentage": {
-          "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[1]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[1]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[1]]}"
         },
         "MDF_MaxRallyHPRatio": {
-          "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[2]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[2]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[2]]}"
         }
       }
     },
@@ -67,12 +52,7 @@ const configAbility = {
       "eventID": 20029,
       "variables": {
         "Ability03_BreakDamageAddedRatioBase": {
-          "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-          "displayLines": "{[Skill04[3]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[3]]}"
-          ]
+          "displayLines": "{[Skill04[3]]}"
         }
       },
       "whenCreated": [

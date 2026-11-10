@@ -116,52 +116,22 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1013818127\">MModifier_Monster_W3_Theater_IF_HourglassCharge</a>[<span class=\"descriptionNumberColor\">Regular Examination</span>]",
       "valuePerStack": {
         "MDF_DamageStanceValue_Dinosaur": {
-          "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-          "displayLines": "{[SkillP01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[0]]}"
-          ]
+          "displayLines": "{[SkillP01[0]]}"
         },
         "MDF_DamageStanceValue_TV": {
-          "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-          "displayLines": "{[SkillP01[1]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[1]]}"
-          ]
+          "displayLines": "{[SkillP01[1]]}"
         },
         "MDF_DamageStanceValue_Mecha": {
-          "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-          "displayLines": "{[SkillP01[2]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[2]]}"
-          ]
+          "displayLines": "{[SkillP01[2]]}"
         },
         "MDF_DamageStanceValue_Clock": {
-          "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-          "displayLines": "{[SkillP01[3]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[3]]}"
-          ]
+          "displayLines": "{[SkillP01[3]]}"
         },
         "MDF_DamageStanceValue_2": {
-          "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-          "displayLines": "{[SkillP01[4]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[4]]}"
-          ]
+          "displayLines": "{[SkillP01[4]]}"
         },
         "MDF_DamageStanceValue_All": {
-          "operator": "Variables[0] ({[SkillP01[5]]}) || RETURN",
-          "displayLines": "{[SkillP01[5]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[5]]}"
-          ]
+          "displayLines": "{[SkillP01[5]]}"
         }
       }
     },
@@ -185,28 +155,13 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1623952916\">Standard_StrongChallengeEX_SuperArmorController_Multi</a>",
           "valuePerStack": {
             "MDF_IF_BOSS_BreakDelay": {
-              "operator": "Variables[0] ({[SkillEX01[2]]}) || RETURN",
-              "displayLines": "{[SkillEX01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[2]]}"
-              ]
+              "displayLines": "{[SkillEX01[2]]}"
             },
             "MDF_IF_BOSS_WeaknessDMGUpRatio": {
-              "operator": "Variables[0] ({[SkillEX01[1]]}) || RETURN",
-              "displayLines": "{[SkillEX01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[1]]}"
-              ]
+              "displayLines": "{[SkillEX01[1]]}"
             },
             "MDF_IF_BOSS_Standard_Defence": {
-              "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
-              "displayLines": "{[SkillEX01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[0]]}"
-              ]
+              "displayLines": "{[SkillEX01[0]]}"
             }
           }
         },
@@ -219,36 +174,16 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1246789467\">Enemy_W2_Cocolia_IF_SoftFrenzyController</a>",
           "valuePerStack": {
             "MDF_FrenzyStartDelay": {
-              "operator": "Variables[0] ({[SkillEX05[0]]}) || RETURN",
-              "displayLines": "{[SkillEX05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX05[0]]}"
-              ]
+              "displayLines": "{[SkillEX05[0]]}"
             },
             "MDF_FrenzyIntervalDelay": {
-              "operator": "Variables[0] ({[SkillEX05[1]]}) || RETURN",
-              "displayLines": "{[SkillEX05[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX05[1]]}"
-              ]
+              "displayLines": "{[SkillEX05[1]]}"
             },
             "MDF_MaxFrenzyLayer": {
-              "operator": "Variables[0] ({[SkillEX05[2]]}) || RETURN",
-              "displayLines": "{[SkillEX05[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX05[2]]}"
-              ]
+              "displayLines": "{[SkillEX05[2]]}"
             },
             "MDF_TokenDMGAddRatioPerLayer": {
-              "operator": "Variables[0] ({[SkillEX05[3]]}) || RETURN",
-              "displayLines": "{[SkillEX05[3]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX05[3]]}"
-              ]
+              "displayLines": "{[SkillEX05[3]]}"
             }
           }
         }
@@ -520,23 +455,13 @@ const configAbility = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] ({[Skill08[1]]}) || RETURN",
-                "displayLines": "{[Skill08[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill08[1]]}"
-                ]
+                "displayLines": "{[Skill08[1]]}"
               },
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonID02) || RETURN",
-                    "displayLines": "SummonID02",
-                    "constants": [],
-                    "variables": [
-                      "SummonID02"
-                    ]
+                    "displayLines": "SummonID02"
                   },
                   "locationType": "First"
                 }
@@ -545,23 +470,13 @@ const configAbility = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] ({[Skill08[4]]}) || RETURN",
-                "displayLines": "{[Skill08[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill08[4]]}"
-                ]
+                "displayLines": "{[Skill08[4]]}"
               },
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonID01) || RETURN",
-                    "displayLines": "SummonID01",
-                    "constants": [],
-                    "variables": [
-                      "SummonID01"
-                    ]
+                    "displayLines": "SummonID01"
                   },
                   "locationType": "First"
                 }
@@ -570,23 +485,13 @@ const configAbility = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] ({[Skill08[0]]}) || RETURN",
-                "displayLines": "{[Skill08[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill08[0]]}"
-                ]
+                "displayLines": "{[Skill08[0]]}"
               },
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonID03) || RETURN",
-                    "displayLines": "SummonID03",
-                    "constants": [],
-                    "variables": [
-                      "SummonID03"
-                    ]
+                    "displayLines": "SummonID03"
                   },
                   "locationType": "First"
                 }
@@ -595,23 +500,13 @@ const configAbility = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] ({[Skill08[2]]}) || RETURN",
-                "displayLines": "{[Skill08[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill08[2]]}"
-                ]
+                "displayLines": "{[Skill08[2]]}"
               },
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonID04) || RETURN",
-                    "displayLines": "SummonID04",
-                    "constants": [],
-                    "variables": [
-                      "SummonID04"
-                    ]
+                    "displayLines": "SummonID04"
                   },
                   "locationType": "First"
                 }
@@ -620,23 +515,13 @@ const configAbility = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] ({[Skill08[3]]}) || RETURN",
-                "displayLines": "{[Skill08[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill08[3]]}"
-                ]
+                "displayLines": "{[Skill08[3]]}"
               },
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__115) || RETURN",
-                    "displayLines": "ENEMIES_OBJECT_UNUSED__115",
-                    "constants": [],
-                    "variables": [
-                      "ENEMIES_OBJECT_UNUSED__115"
-                    ]
+                    "displayLines": "ENEMIES_OBJECT_UNUSED__115"
                   },
                   "locationType": "First"
                 }

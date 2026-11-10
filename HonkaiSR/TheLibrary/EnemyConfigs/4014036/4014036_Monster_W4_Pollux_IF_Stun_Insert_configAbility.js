@@ -13,12 +13,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "consumePercent": {
-        "operator": "Variables[0] ({[SkillP03[3]]}) || RETURN",
-        "displayLines": "{[SkillP03[3]]}",
-        "constants": [],
-        "variables": [
-          "{[SkillP03[3]]}"
-        ]
+        "displayLines": "{[SkillP03[3]]}"
       }
     },
     {

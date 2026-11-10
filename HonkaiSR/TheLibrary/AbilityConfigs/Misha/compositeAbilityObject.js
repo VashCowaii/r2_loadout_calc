@@ -160,12 +160,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Skill Points Modification",
                       "adjustmentValue": {
-                        "operator": "Variables[0] (MDF_Value) || RETURN",
-                        "displayLines": "MDF_Value",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Value"
-                        ]
+                        "displayLines": "MDF_Value"
                       },
                       "adjustmentType": "+"
                     },
@@ -203,12 +198,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                    "displayLines": "MDF_PropertyRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyRatio"
-                    ]
+                    "displayLines": "MDF_PropertyRatio"
                   }
                 }
               ]
@@ -239,12 +229,7 @@ const compositeAbilityObject = {
                       "duration": 1,
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
-                          "operator": "Variables[0] (0.3) || RETURN",
-                          "displayLines": "0.3",
-                          "constants": [],
-                          "variables": [
-                            0.3
-                          ]
+                          "displayLines": "0.3"
                         }
                       }
                     },
@@ -257,12 +242,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1472142053\">Misha_Eidolon6_RecoverBP</a>[<span class=\"descriptionNumberColor\">Estrangement of Dream</span>]",
                       "valuePerStack": {
                         "MDF_Value": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         }
                       }
                     }
@@ -677,13 +657,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (EnergyBar_ExtraUltraAttack) || Variables[1] (2) || ADD || RETURN",
-                        "displayLines": "(EnergyBar_ExtraUltraAttack + 2)",
-                        "constants": [],
-                        "variables": [
-                          "EnergyBar_ExtraUltraAttack",
-                          2
-                        ]
+                        "displayLines": "(EnergyBar_ExtraUltraAttack + 2)"
                       },
                       "variableName": "EnergyBar_ExtraUltraAttack"
                     }
@@ -726,24 +700,14 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "variableName": "EnergyBar_BasicUltraAttack"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (10) || RETURN",
-            "displayLines": "10",
-            "constants": [],
-            "variables": [
-              10
-            ]
+            "displayLines": "10"
           },
           "variableName": "EnergyBar_MaxUltraAttack"
         },
@@ -760,43 +724,21 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"728153787\">Misha_EnergyCount</a>[<span class=\"descriptionNumberColor\">G—Gonna Be Late!</span>]",
           "counter": {
-            "operator": "Variables[0] (EnergyBar_ExtraUltraAttack) || Variables[1] (EnergyBar_BasicUltraAttack) || ADD || RETURN",
-            "displayLines": "(EnergyBar_ExtraUltraAttack + EnergyBar_BasicUltraAttack)",
-            "constants": [],
-            "variables": [
-              "EnergyBar_ExtraUltraAttack",
-              "EnergyBar_BasicUltraAttack"
-            ]
+            "displayLines": "(EnergyBar_ExtraUltraAttack + EnergyBar_BasicUltraAttack)"
           },
           "valuePerStack": {
             "BasicAttack": {
-              "operator": "Variables[0] (EnergyBar_BasicUltraAttack) || RETURN",
-              "displayLines": "EnergyBar_BasicUltraAttack",
-              "constants": [],
-              "variables": [
-                "EnergyBar_BasicUltraAttack"
-              ]
+              "displayLines": "EnergyBar_BasicUltraAttack"
             }
           }
         },
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (EnergyBar_ExtraUltraAttack) || Variables[1] (EnergyBar_BasicUltraAttack) || ADD || RETURN",
-            "displayLines": "(EnergyBar_ExtraUltraAttack + EnergyBar_BasicUltraAttack)",
-            "constants": [],
-            "variables": [
-              "EnergyBar_ExtraUltraAttack",
-              "EnergyBar_BasicUltraAttack"
-            ]
+            "displayLines": "(EnergyBar_ExtraUltraAttack + EnergyBar_BasicUltraAttack)"
           },
           "maximum": {
-            "operator": "Variables[0] (EnergyBar_MaxUltraAttack) || RETURN",
-            "displayLines": "EnergyBar_MaxUltraAttack",
-            "constants": [],
-            "variables": [
-              "EnergyBar_MaxUltraAttack"
-            ]
+            "displayLines": "EnergyBar_MaxUltraAttack"
           },
           "assignState": "True",
           "priorState": "Normal",
@@ -813,13 +755,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.6) || Variables[1] (0.06) || ADD || RETURN",
-                "displayLines": "(0.6 + 0.06)",
-                "constants": [],
-                "variables": [
-                  0.6,
-                  0.06
-                ]
+                "displayLines": "(0.6 + 0.06)"
               },
               "variableName": "Skill03_DamagePercentage"
             }
@@ -828,12 +764,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.6) || RETURN",
-                "displayLines": "0.6",
-                "constants": [],
-                "variables": [
-                  0.6
-                ]
+                "displayLines": "0.6"
               },
               "variableName": "Skill03_DamagePercentage"
             }
@@ -864,12 +795,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"728153787\">Misha_EnergyCount</a>[<span class=\"descriptionNumberColor\">G—Gonna Be Late!</span>]",
                   "counter": {
-                    "operator": "Variables[0] (BasicAttack) || RETURN",
-                    "displayLines": "BasicAttack",
-                    "constants": [],
-                    "variables": [
-                      "BasicAttack"
-                    ]
+                    "displayLines": "BasicAttack"
                   }
                 }
               ]
@@ -919,24 +845,14 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "scope": "ContextModifier",
                       "value": {
-                        "operator": "Variables[0] (_BPAddValue) || INVERT || RETURN",
-                        "displayLines": "-_BPAddValue",
-                        "constants": [],
-                        "variables": [
-                          "_BPAddValue"
-                        ]
+                        "displayLines": "-_BPAddValue"
                       },
                       "variableName": "_BPAddValue"
                     },
                     {
                       "name": "Looped Event",
                       "maxLoops": {
-                        "operator": "Variables[0] (_BPAddValue) || RETURN",
-                        "displayLines": "_BPAddValue",
-                        "constants": [],
-                        "variables": [
-                          "_BPAddValue"
-                        ]
+                        "displayLines": "_BPAddValue"
                       },
                       "execute": [
                         {
@@ -946,12 +862,7 @@ const compositeAbilityObject = {
                             "target": "{{Caster}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (2) || RETURN",
-                            "displayLines": "2",
-                            "constants": [],
-                            "variables": [
-                              2
-                            ]
+                            "displayLines": "2"
                           },
                           "isFixed": "* ERR"
                         }
@@ -960,14 +871,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (EnergyBar_ExtraUltraAttack) || Variables[1] (_BPAddValue) || Variables[2] (1) || MUL || ADD || RETURN",
-                        "displayLines": "(EnergyBar_ExtraUltraAttack + (_BPAddValue * 1))",
-                        "constants": [],
-                        "variables": [
-                          "EnergyBar_ExtraUltraAttack",
-                          "_BPAddValue",
-                          1
-                        ]
+                        "displayLines": "(EnergyBar_ExtraUltraAttack + (_BPAddValue * 1))"
                       },
                       "variableName": "EnergyBar_ExtraUltraAttack"
                     }
@@ -986,12 +890,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": -1,
                   "maxValue": {
-                    "operator": "Variables[0] (EnergyBar_MaxUltraAttack) || RETURN",
-                    "displayLines": "EnergyBar_MaxUltraAttack",
-                    "constants": [],
-                    "variables": [
-                      "EnergyBar_MaxUltraAttack"
-                    ]
+                    "displayLines": "EnergyBar_MaxUltraAttack"
                   },
                   "includeMaxValueInRange": true,
                   "onChange": [
@@ -1003,13 +902,7 @@ const compositeAbilityObject = {
                       },
                       "modifierName": "<a class=\"gModGreen\" id=\"728153787\">Misha_EnergyCount</a>[<span class=\"descriptionNumberColor\">G—Gonna Be Late!</span>]",
                       "value": {
-                        "operator": "Variables[0] (EnergyBar_ExtraUltraAttack) || Variables[1] (EnergyBar_BasicUltraAttack) || ADD || RETURN",
-                        "displayLines": "(EnergyBar_ExtraUltraAttack + EnergyBar_BasicUltraAttack)",
-                        "constants": [],
-                        "variables": [
-                          "EnergyBar_ExtraUltraAttack",
-                          "EnergyBar_BasicUltraAttack"
-                        ]
+                        "displayLines": "(EnergyBar_ExtraUltraAttack + EnergyBar_BasicUltraAttack)"
                       }
                     },
                     {
@@ -1019,13 +912,7 @@ const compositeAbilityObject = {
                         "value1": "EnergyBar_MaxUltraAttack",
                         "compareType": "<=",
                         "value2": {
-                          "operator": "Variables[0] (EnergyBar_ExtraUltraAttack) || Variables[1] (EnergyBar_BasicUltraAttack) || ADD || RETURN",
-                          "displayLines": "(EnergyBar_ExtraUltraAttack + EnergyBar_BasicUltraAttack)",
-                          "constants": [],
-                          "variables": [
-                            "EnergyBar_ExtraUltraAttack",
-                            "EnergyBar_BasicUltraAttack"
-                          ]
+                          "displayLines": "(EnergyBar_ExtraUltraAttack + EnergyBar_BasicUltraAttack)"
                         },
                         "contextScope": "ContextCaster"
                       },
@@ -1033,21 +920,10 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (EnergyBar_ExtraUltraAttack) || Variables[1] (EnergyBar_BasicUltraAttack) || ADD || RETURN",
-                            "displayLines": "(EnergyBar_ExtraUltraAttack + EnergyBar_BasicUltraAttack)",
-                            "constants": [],
-                            "variables": [
-                              "EnergyBar_ExtraUltraAttack",
-                              "EnergyBar_BasicUltraAttack"
-                            ]
+                            "displayLines": "(EnergyBar_ExtraUltraAttack + EnergyBar_BasicUltraAttack)"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (EnergyBar_MaxUltraAttack) || RETURN",
-                            "displayLines": "EnergyBar_MaxUltraAttack",
-                            "constants": [],
-                            "variables": [
-                              "EnergyBar_MaxUltraAttack"
-                            ]
+                            "displayLines": "EnergyBar_MaxUltraAttack"
                           },
                           "assignState": "True",
                           "priorState": "Active",
@@ -1059,21 +935,10 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (EnergyBar_ExtraUltraAttack) || Variables[1] (EnergyBar_BasicUltraAttack) || ADD || RETURN",
-                            "displayLines": "(EnergyBar_ExtraUltraAttack + EnergyBar_BasicUltraAttack)",
-                            "constants": [],
-                            "variables": [
-                              "EnergyBar_ExtraUltraAttack",
-                              "EnergyBar_BasicUltraAttack"
-                            ]
+                            "displayLines": "(EnergyBar_ExtraUltraAttack + EnergyBar_BasicUltraAttack)"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (EnergyBar_MaxUltraAttack) || RETURN",
-                            "displayLines": "EnergyBar_MaxUltraAttack",
-                            "constants": [],
-                            "variables": [
-                              "EnergyBar_MaxUltraAttack"
-                            ]
+                            "displayLines": "EnergyBar_MaxUltraAttack"
                           },
                           "assignState": "True",
                           "priorState": "Normal",
@@ -1118,12 +983,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-874080613\">Misha_Ability03_StatusProbabilityUp</a>[<span class=\"descriptionNumberColor\">Interlock</span>]",
               "valuePerStack": {
                 "MDF_PropertyRatio": {
-                  "operator": "Variables[0] (0.6) || RETURN",
-                  "displayLines": "0.6",
-                  "constants": [],
-                  "variables": [
-                    0.6
-                  ]
+                  "displayLines": "0.6"
                 }
               }
             }
@@ -1154,15 +1014,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MIN) || Variables[1] (1) || Variables[2] (Skill03_Hit_Count) || MUL || Variables[3] (5) || PARAM_2 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((1 * Skill03_Hit_Count), 5)",
-                "constants": [],
-                "variables": [
-                  "MIN",
-                  1,
-                  "Skill03_Hit_Count",
-                  5
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((1 * Skill03_Hit_Count), 5)"
               },
               "variableName": "Skill03_Hit_Count"
             }
@@ -1178,32 +1030,14 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Skill03_Hit_Count) || Variables[1] (EnergyBar_BasicUltraAttack) || ADD || Variables[2] (EnergyBar_ExtraUltraAttack) || ADD || RETURN",
-            "displayLines": "((Skill03_Hit_Count + EnergyBar_BasicUltraAttack) + EnergyBar_ExtraUltraAttack)",
-            "constants": [],
-            "variables": [
-              "Skill03_Hit_Count",
-              "EnergyBar_BasicUltraAttack",
-              "EnergyBar_ExtraUltraAttack"
-            ]
+            "displayLines": "((Skill03_Hit_Count + EnergyBar_BasicUltraAttack) + EnergyBar_ExtraUltraAttack)"
           },
           "variableName": "Skill03_Hit_Count"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (MISHA_OBJECT_UNUSED_2) || Variables[1] (MISHA_OBJECT_UNUSED_1) || SUB || Variables[2] (MAX) || Constants[0] (1) || Variables[3] (Skill03_Hit_Count) || Constants[1] (2) || SUB || PARAM_2 || FUNCTION || DIV || RETURN",
-            "displayLines": "((MISHA_OBJECT_UNUSED_2 - MISHA_OBJECT_UNUSED_1) / &nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(1, (Skill03_Hit_Count - 2)))",
-            "constants": [
-              1,
-              2
-            ],
-            "variables": [
-              "MISHA_OBJECT_UNUSED_2",
-              "MISHA_OBJECT_UNUSED_1",
-              "MAX",
-              "Skill03_Hit_Count"
-            ]
+            "displayLines": "((MISHA_OBJECT_UNUSED_2 - MISHA_OBJECT_UNUSED_1) / &nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(1, (Skill03_Hit_Count - 2)))"
           },
           "variableName": "_delta_ntime"
         },
@@ -1229,13 +1063,7 @@ const compositeAbilityObject = {
                   "variables": {
                     "parameter[01]_StanceRatio": 1,
                     "parameter[02]_Frozen_Chance": {
-                      "operator": "Variables[0] (0.2) || Variables[1] (0.8) || ADD || RETURN",
-                      "displayLines": "(0.2 + 0.8)",
-                      "constants": [],
-                      "variables": [
-                        0.2,
-                        0.8
-                      ]
+                      "displayLines": "(0.2 + 0.8)"
                     }
                   }
                 }
@@ -1258,12 +1086,7 @@ const compositeAbilityObject = {
                   "variables": {
                     "parameter[01]_StanceRatio": 1,
                     "parameter[02]_Frozen_Chance": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 }
@@ -1274,29 +1097,13 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (MAX) || Constants[0] (0) || Variables[1] (Skill03_Hit_Count) || Constants[1] (2) || SUB || PARAM_2 || FUNCTION || RETURN",
-            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(0, (Skill03_Hit_Count - 2))",
-            "constants": [
-              0,
-              2
-            ],
-            "variables": [
-              "MAX",
-              "Skill03_Hit_Count"
-            ]
+            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(0, (Skill03_Hit_Count - 2))"
           },
           "execute": [
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_current_hit_count) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(_current_hit_count + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_current_hit_count"
-                ]
+                "displayLines": "(_current_hit_count + 1)"
               },
               "variableName": "_current_hit_count"
             },
@@ -1314,12 +1121,7 @@ const compositeAbilityObject = {
                   "variables": {
                     "parameter[01]_StanceRatio": 0.5,
                     "parameter[02]_Frozen_Chance": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 }
@@ -1330,14 +1132,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_current_hit_count) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(_current_hit_count + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "_current_hit_count"
-            ]
+            "displayLines": "(_current_hit_count + 1)"
           },
           "variableName": "_current_hit_count"
         },
@@ -1355,12 +1150,7 @@ const compositeAbilityObject = {
               "variables": {
                 "parameter[01]_StanceRatio": 0.5,
                 "parameter[02]_Frozen_Chance": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             }
@@ -1412,29 +1202,14 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1428052703\">Misha_Eidolon2_DefenceDown</a>[<span class=\"descriptionNumberColor\">Yearning of Youth</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (0.24) || RETURN",
-                    "displayLines": "0.24",
-                    "constants": [],
-                    "variables": [
-                      0.24
-                    ]
+                    "displayLines": "0.24"
                   },
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (0.16) || RETURN",
-                      "displayLines": "0.16",
-                      "constants": [],
-                      "variables": [
-                        0.16
-                      ]
+                      "displayLines": "0.16"
                     }
                   }
                 }
@@ -1449,21 +1224,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
               "duration": 1,
               "baseChance": {
-                "operator": "Variables[0] (parameter[02]_Frozen_Chance) || RETURN",
-                "displayLines": "parameter[02]_Frozen_Chance",
-                "constants": [],
-                "variables": [
-                  "parameter[02]_Frozen_Chance"
-                ]
+                "displayLines": "parameter[02]_Frozen_Chance"
               },
               "valuePerStack": {
                 "Modifier_Frozen_DamagePercentage": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 }
               }
             },
@@ -1477,21 +1242,10 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (Skill03_DamagePercentage) || RETURN",
-                  "displayLines": "Skill03_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "Skill03_DamagePercentage"
-                  ]
+                  "displayLines": "Skill03_DamagePercentage"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || Variables[1] (parameter[01]_StanceRatio) || MUL || RETURN",
-                  "displayLines": "(ST Toughness Value * parameter[01]_StanceRatio)",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value",
-                    "parameter[01]_StanceRatio"
-                  ]
+                  "displayLines": "(ST Toughness Value * parameter[01]_StanceRatio)"
                 },
                 "Tags": null
               }
@@ -1529,14 +1283,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyRatio) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyRatio)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyRatio"
-                    ]
+                    "displayLines": "(0 - MDF_PropertyRatio)"
                   }
                 }
               ]
@@ -1566,12 +1313,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRate</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                    "displayLines": "MDF_PropertyRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyRatio"
-                    ]
+                    "displayLines": "MDF_PropertyRatio"
                   }
                 }
               ]
@@ -1646,13 +1388,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (EnergyBar_ExtraUltraAttack) || Variables[1] (1) || ADD || RETURN",
-            "displayLines": "(EnergyBar_ExtraUltraAttack + 1)",
-            "constants": [],
-            "variables": [
-              "EnergyBar_ExtraUltraAttack",
-              1
-            ]
+            "displayLines": "(EnergyBar_ExtraUltraAttack + 1)"
           },
           "variableName": "EnergyBar_ExtraUltraAttack"
         },
@@ -1666,20 +1402,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -1694,20 +1420,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (0.8) || RETURN",
-              "displayLines": "0.8",
-              "constants": [],
-              "variables": [
-                0.8
-              ]
+              "displayLines": "0.8"
             },
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null
           }
@@ -1772,20 +1488,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"

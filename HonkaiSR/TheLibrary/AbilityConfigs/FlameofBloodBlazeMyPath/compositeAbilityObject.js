@@ -98,14 +98,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Constants[0] (0) || Variables[0] (_HPChangeValue) || SUB || RETURN",
-                        "displayLines": "(0 - _HPChangeValue)",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "_HPChangeValue"
-                        ]
+                        "displayLines": "(0 - _HPChangeValue)"
                       },
                       "variableName": "_HPChangeValue"
                     },
@@ -120,25 +113,14 @@ const compositeAbilityObject = {
                         "value1": "_HPChangeValue",
                         "compareType": ">",
                         "value2": {
-                          "operator": "Variables[0] (500) || RETURN",
-                          "displayLines": "500",
-                          "constants": [],
-                          "variables": [
-                            500
-                          ]
+                          "displayLines": "500"
                         }
                       },
                       "passed": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (0.3) || Variables[1] (0.3) || ADD || RETURN",
-                            "displayLines": "(0.3 + 0.3)",
-                            "constants": [],
-                            "variables": [
-                              0.3,
-                              0.3
-                            ]
+                            "displayLines": "(0.3 + 0.3)"
                           },
                           "variableName": "_DmgAddedRatio"
                         }
@@ -147,12 +129,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (0.3) || RETURN",
-                            "displayLines": "0.3",
-                            "constants": [],
-                            "variables": [
-                              0.3
-                            ]
+                            "displayLines": "0.3"
                           },
                           "variableName": "_DmgAddedRatio"
                         }
@@ -189,12 +166,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "consumePercent": {
-                        "operator": "Variables[0] (0.06) || RETURN",
-                        "displayLines": "0.06",
-                        "constants": [],
-                        "variables": [
-                          0.06
-                        ]
+                        "displayLines": "0.06"
                       },
                       "consumeFloor": 1
                     },
@@ -224,12 +196,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (0.3) || RETURN",
-                    "displayLines": "0.3",
-                    "constants": [],
-                    "variables": [
-                      0.3
-                    ]
+                    "displayLines": "0.3"
                   },
                   "variableName": "_DmgAddedRatio"
                 }
@@ -274,13 +241,7 @@ const compositeAbilityObject = {
                       },
                       "previewType": null,
                       "previewValue": {
-                        "operator": "Variables[0] (_MaxHP) || Variables[1] (0.06) || MUL || RETURN",
-                        "displayLines": "(_MaxHP * 0.06)",
-                        "constants": [],
-                        "variables": [
-                          "_MaxHP",
-                          0.06
-                        ]
+                        "displayLines": "(_MaxHP * 0.06)"
                       }
                     }
                   ]

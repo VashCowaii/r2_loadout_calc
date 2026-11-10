@@ -83,13 +83,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
-                "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
-                "constants": [],
-                "variables": [
-                  "MDF_TargetMaxHP",
-                  "Modifier_Tear_DamageRatio"
-                ]
+                "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)"
               },
               "variableName": "MDF_DamageValue"
             }
@@ -110,13 +104,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
-                "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
-                "constants": [],
-                "variables": [
-                  "MDF_TargetMaxHP",
-                  "Modifier_Tear_DamageRatio"
-                ]
+                "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)"
               },
               "variableName": "MDF_DamageValue"
             },
@@ -129,13 +117,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageFlat": {
-                  "operator": "Variables[0] (MDF_DamageValue) || Variables[1] (_Layer) || MUL || RETURN",
-                  "displayLines": "(MDF_DamageValue * _Layer)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamageValue",
-                    "_Layer"
-                  ]
+                  "displayLines": "(MDF_DamageValue * _Layer)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -174,13 +156,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
-                "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
-                "constants": [],
-                "variables": [
-                  "MDF_TargetMaxHP",
-                  "Modifier_Tear_DamageRatio"
-                ]
+                "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)"
               },
               "variableName": "MDF_DamageValue"
             },
@@ -193,14 +169,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageFlat": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (MDF_DamageValue) || MUL || Variables[2] (_Layer) || MUL || RETURN",
-                  "displayLines": "((DOT_TriggerRatio * MDF_DamageValue) * _Layer)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "MDF_DamageValue",
-                    "_Layer"
-                  ]
+                  "displayLines": "((DOT_TriggerRatio * MDF_DamageValue) * _Layer)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -323,13 +292,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (MDF_ShieldTransferRatio) || MUL || RETURN",
-                "displayLines": "(MDF_MaxHP * MDF_ShieldTransferRatio)",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxHP",
-                  "MDF_ShieldTransferRatio"
-                ]
+                "displayLines": "(MDF_MaxHP * MDF_ShieldTransferRatio)"
               }
             }
           ]
@@ -482,12 +445,7 @@ const configAbility = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                            "displayLines": "SummonList_ADF_1",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_1"
-                            ]
+                            "displayLines": "SummonList_ADF_1"
                           },
                           "locationType": "BeforeCaster"
                         }
@@ -501,12 +459,7 @@ const configAbility = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                            "displayLines": "SummonList_ADF_1",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_1"
-                            ]
+                            "displayLines": "SummonList_ADF_1"
                           },
                           "locationType": "AfterCaster"
                         }
@@ -687,13 +640,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_Layer) || Variables[1] (MDF_DirtyBloodRatioPerLayer) || MUL || RETURN",
-                "displayLines": "(MDF_Layer * MDF_DirtyBloodRatioPerLayer)",
-                "constants": [],
-                "variables": [
-                  "MDF_Layer",
-                  "MDF_DirtyBloodRatioPerLayer"
-                ]
+                "displayLines": "(MDF_Layer * MDF_DirtyBloodRatioPerLayer)"
               }
             }
           ]
@@ -808,12 +755,7 @@ const configAbility = {
               },
               "variableName": "AsatPramad_Skill3_DamagePercentageLight",
               "resetValue": {
-                "operator": "Variables[0] (MDF_DamagePercentageLightTeam) || RETURN",
-                "displayLines": "MDF_DamagePercentageLightTeam",
-                "constants": [],
-                "variables": [
-                  "MDF_DamagePercentageLightTeam"
-                ]
+                "displayLines": "MDF_DamagePercentageLightTeam"
               },
               "scope": "TargetEntity"
             },
@@ -825,12 +767,7 @@ const configAbility = {
               },
               "variableName": "AsatPramad_Skill3_DamagePercentageDark",
               "resetValue": {
-                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__316) || RETURN",
-                "displayLines": "ENEMIES_OBJECT_UNUSED__316",
-                "constants": [],
-                "variables": [
-                  "ENEMIES_OBJECT_UNUSED__316"
-                ]
+                "displayLines": "ENEMIES_OBJECT_UNUSED__316"
               },
               "scope": "TargetEntity"
             },
@@ -842,12 +779,7 @@ const configAbility = {
               },
               "variableName": "AsatPramad_Skill3_BaseAttack",
               "resetValue": {
-                "operator": "Variables[0] (MDF_BaseAttack) || RETURN",
-                "displayLines": "MDF_BaseAttack",
-                "constants": [],
-                "variables": [
-                  "MDF_BaseAttack"
-                ]
+                "displayLines": "MDF_BaseAttack"
               },
               "scope": "TargetEntity"
             },
@@ -859,12 +791,7 @@ const configAbility = {
               },
               "variableName": "AsatPramad_Skill3_MaxHP",
               "resetValue": {
-                "operator": "Variables[0] (MDF_MaxHP) || RETURN",
-                "displayLines": "MDF_MaxHP",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxHP"
-                ]
+                "displayLines": "MDF_MaxHP"
               },
               "scope": "TargetEntity"
             },
@@ -876,12 +803,7 @@ const configAbility = {
               },
               "variableName": "AsatPramad_Skill3_DamageTakenUpRatio",
               "resetValue": {
-                "operator": "Variables[0] (MDF_DamageTakenUpRatio) || RETURN",
-                "displayLines": "MDF_DamageTakenUpRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageTakenUpRatio"
-                ]
+                "displayLines": "MDF_DamageTakenUpRatio"
               },
               "scope": "TargetEntity"
             },
@@ -893,12 +815,7 @@ const configAbility = {
               },
               "variableName": "AsatPramad_Skill3_DamageTakenMaxLayer",
               "resetValue": {
-                "operator": "Variables[0] (MDF_DamageTakenMaxLayer) || RETURN",
-                "displayLines": "MDF_DamageTakenMaxLayer",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageTakenMaxLayer"
-                ]
+                "displayLines": "MDF_DamageTakenMaxLayer"
               },
               "scope": "TargetEntity"
             },
@@ -910,12 +827,7 @@ const configAbility = {
               },
               "variableName": "AsatPramad_Skill3_DirtyBloodRatioPerLayer",
               "resetValue": {
-                "operator": "Variables[0] (MDF_DirtyBloodRatioPerLayer) || RETURN",
-                "displayLines": "MDF_DirtyBloodRatioPerLayer",
-                "constants": [],
-                "variables": [
-                  "MDF_DirtyBloodRatioPerLayer"
-                ]
+                "displayLines": "MDF_DirtyBloodRatioPerLayer"
               },
               "scope": "TargetEntity"
             },
@@ -927,12 +839,7 @@ const configAbility = {
               },
               "variableName": "AsatPramad_Skill3_DirtyBloodMaxLayer",
               "resetValue": {
-                "operator": "Variables[0] (MDF_DirtyBloodMaxLayer) || RETURN",
-                "displayLines": "MDF_DirtyBloodMaxLayer",
-                "constants": [],
-                "variables": [
-                  "MDF_DirtyBloodMaxLayer"
-                ]
+                "displayLines": "MDF_DirtyBloodMaxLayer"
               },
               "scope": "TargetEntity"
             },
@@ -944,12 +851,7 @@ const configAbility = {
               },
               "variableName": "AsatPramad_Skill3_Chance",
               "resetValue": {
-                "operator": "Variables[0] (MDF_Chance) || RETURN",
-                "displayLines": "MDF_Chance",
-                "constants": [],
-                "variables": [
-                  "MDF_Chance"
-                ]
+                "displayLines": "MDF_Chance"
               },
               "scope": "TargetEntity"
             },
@@ -1065,12 +967,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"295693692\">Enemy_W5_AsatPramad_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
                   "duration": 1,
                   "baseChance": {
-                    "operator": "Variables[0] (MDF_Chance) || RETURN",
-                    "displayLines": "MDF_Chance",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Chance"
-                    ]
+                    "displayLines": "MDF_Chance"
                   },
                   "valuePerStack": {
                     "MDF_ActionDelayRatio": 0
@@ -1146,12 +1043,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -1187,12 +1079,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                "displayLines": "MDF_SpeedAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedAddedRatio"
-                ]
+                "displayLines": "MDF_SpeedAddedRatio"
               }
             }
           ]
@@ -1215,12 +1102,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SpeedOverride</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_Speed) || RETURN",
-                "displayLines": "MDF_Speed",
-                "constants": [],
-                "variables": [
-                  "MDF_Speed"
-                ]
+                "displayLines": "MDF_Speed"
               }
             }
           ]
@@ -1303,12 +1185,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_Part03SpeedAddRatio) || RETURN",
-                "displayLines": "MDF_Part03SpeedAddRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_Part03SpeedAddRatio"
-                ]
+                "displayLines": "MDF_Part03SpeedAddRatio"
               }
             },
             {
@@ -1338,12 +1215,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                "displayLines": "MDF_SpeedAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedAddedRatio"
-                ]
+                "displayLines": "MDF_SpeedAddedRatio"
               }
             }
           ]

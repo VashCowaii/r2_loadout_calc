@@ -16,12 +16,7 @@ const configAbility = {
       },
       "scope": "TargetEntity",
       "value": {
-        "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-        "displayLines": "AOE Toughness Value",
-        "constants": [],
-        "variables": [
-          "AOE Toughness Value"
-        ]
+        "displayLines": "AOE Toughness Value"
       },
       "variableName": "Ultra_Stance"
     },

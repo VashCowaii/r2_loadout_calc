@@ -56,24 +56,12 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-176429589\">Gepard_Ultimate_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "immediateEffect": true,
                   "valuePerStack": {
                     "MDF_ShowValue": {
-                      "operator": "Variables[0] (Avatar_Gepard_BaseDefenceValue) || Variables[1] (0.24) || MUL || Variables[2] (150) || ADD || RETURN",
-                      "displayLines": "((Avatar_Gepard_BaseDefenceValue * 0.24) + 150)",
-                      "constants": [],
-                      "variables": [
-                        "Avatar_Gepard_BaseDefenceValue",
-                        0.24,
-                        150
-                      ]
+                      "displayLines": "((Avatar_Gepard_BaseDefenceValue * 0.24) + 150)"
                     }
                   }
                 }

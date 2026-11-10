@@ -211,12 +211,7 @@ const configAbility = {
                     "value1": "W2_Huanlong_00_BattleSore1_Flag",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Constants[0] (5) || RETURN",
-                      "displayLines": "5",
-                      "constants": [
-                        5
-                      ],
-                      "variables": []
+                      "displayLines": "5"
                     },
                     "contextScope": "TargetEntity"
                   },
@@ -705,12 +700,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">StageFinalDMG</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageUpRatio) || RETURN",
-                "displayLines": "MDF_DamageUpRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageUpRatio"
-                ]
+                "displayLines": "MDF_DamageUpRatio"
               }
             }
           ]
@@ -1029,12 +1019,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"117676328\">Monster_W2_Huanlong_JingYuan_DamageUp</a>",
                           "valuePerStack": {
                             "MDF_DamageUpRatio": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_9375) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_9375",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_9375"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_9375"
                             }
                           }
                         },
@@ -2231,12 +2216,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DirtyHPRatio_PerLayer) || RETURN",
-                "displayLines": "MDF_DirtyHPRatio_PerLayer",
-                "constants": [],
-                "variables": [
-                  "MDF_DirtyHPRatio_PerLayer"
-                ]
+                "displayLines": "MDF_DirtyHPRatio_PerLayer"
               }
             }
           ]

@@ -48,12 +48,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_13505) || RETURN",
-              "displayLines": "UnusedUnderThisBase_13505",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_13505"
-              ]
+              "displayLines": "UnusedUnderThisBase_13505"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -70,12 +65,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_13505) || RETURN",
-              "displayLines": "UnusedUnderThisBase_13505",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_13505"
-              ]
+              "displayLines": "UnusedUnderThisBase_13505"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -92,12 +82,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_13505) || RETURN",
-              "displayLines": "UnusedUnderThisBase_13505",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_13505"
-              ]
+              "displayLines": "UnusedUnderThisBase_13505"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -114,12 +99,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_13505) || RETURN",
-              "displayLines": "UnusedUnderThisBase_13505",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_13505"
-              ]
+              "displayLines": "UnusedUnderThisBase_13505"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -136,12 +116,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_13505) || RETURN",
-              "displayLines": "UnusedUnderThisBase_13505",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_13505"
-              ]
+              "displayLines": "UnusedUnderThisBase_13505"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -160,12 +135,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-              "displayLines": "{[Skill03[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[1]]}"
-              ]
+              "displayLines": "{[Skill03[1]]}"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -182,12 +152,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-              "displayLines": "{[Skill03[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[1]]}"
-              ]
+              "displayLines": "{[Skill03[1]]}"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -204,12 +169,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-              "displayLines": "{[Skill03[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[1]]}"
-              ]
+              "displayLines": "{[Skill03[1]]}"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -226,12 +186,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-              "displayLines": "{[Skill03[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[1]]}"
-              ]
+              "displayLines": "{[Skill03[1]]}"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -248,12 +203,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-              "displayLines": "{[Skill03[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[1]]}"
-              ]
+              "displayLines": "{[Skill03[1]]}"
             },
             "HitSplit": 0.2,
             "Toughness": null,

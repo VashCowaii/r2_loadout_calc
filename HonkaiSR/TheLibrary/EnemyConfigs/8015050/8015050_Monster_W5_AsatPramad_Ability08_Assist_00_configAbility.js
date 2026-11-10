@@ -256,12 +256,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill08[0]]}) || RETURN",
-          "displayLines": "{[Skill08[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill08[0]]}"
-          ]
+          "displayLines": "{[Skill08[0]]}"
         },
         "Toughness": null,
         "instanceTag": "W5_AsatPramad_Ultra",

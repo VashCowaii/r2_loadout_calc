@@ -26,12 +26,7 @@ const configAbility = {
                 },
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (3) || RETURN",
-                  "displayLines": "3",
-                  "constants": [],
-                  "variables": [
-                    3
-                  ]
+                  "displayLines": "3"
                 },
                 "valueType": "Layer"
               },
@@ -174,26 +169,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CasterSummonerNegativeHP) || Variables[1] (CasterSummonerMaxHP) || DIV || RETURN",
-                    "displayLines": "(CasterSummonerNegativeHP / CasterSummonerMaxHP)",
-                    "constants": [],
-                    "variables": [
-                      "CasterSummonerNegativeHP",
-                      "CasterSummonerMaxHP"
-                    ]
+                    "displayLines": "(CasterSummonerNegativeHP / CasterSummonerMaxHP)"
                   },
                   "variableName": "CasterSummonerNegativeHPRatio"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CasterSummonerNegativeHPRatio) || Variables[1] (CasterHP) || MUL || RETURN",
-                    "displayLines": "(CasterSummonerNegativeHPRatio * CasterHP)",
-                    "constants": [],
-                    "variables": [
-                      "CasterSummonerNegativeHPRatio",
-                      "CasterHP"
-                    ]
+                    "displayLines": "(CasterSummonerNegativeHPRatio * CasterHP)"
                   },
                   "variableName": "CasterNegativeHP"
                 },
@@ -206,12 +189,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"133953622\">Memosprite_CyreneServant_NegativeHP</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (CasterNegativeHP) || RETURN",
-                      "displayLines": "CasterNegativeHP",
-                      "constants": [],
-                      "variables": [
-                        "CasterNegativeHP"
-                      ]
+                      "displayLines": "CasterNegativeHP"
                     }
                   }
                 }
@@ -263,13 +241,7 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "setValue": {
-                        "operator": "Variables[0] (CasterSummonerHPRatio) || Variables[1] (CasterHP) || MUL || RETURN",
-                        "displayLines": "(CasterSummonerHPRatio * CasterHP)",
-                        "constants": [],
-                        "variables": [
-                          "CasterSummonerHPRatio",
-                          "CasterHP"
-                        ]
+                        "displayLines": "(CasterSummonerHPRatio * CasterHP)"
                       }
                     }
                   ]
@@ -321,13 +293,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "setValue": {
-                    "operator": "Variables[0] (CasterSummonerHPRatio) || Variables[1] (CasterHP) || MUL || RETURN",
-                    "displayLines": "(CasterSummonerHPRatio * CasterHP)",
-                    "constants": [],
-                    "variables": [
-                      "CasterSummonerHPRatio",
-                      "CasterHP"
-                    ]
+                    "displayLines": "(CasterSummonerHPRatio * CasterHP)"
                   }
                 }
               ]
@@ -351,12 +317,7 @@ const configAbility = {
             "value1": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
             "compareType": ">=",
             "value2": {
-              "operator": "Variables[0] (CurAmazingCount) || RETURN",
-              "displayLines": "CurAmazingCount",
-              "constants": [],
-              "variables": [
-                "CurAmazingCount"
-              ]
+              "displayLines": "CurAmazingCount"
             }
           },
           "passed": [
@@ -391,12 +352,7 @@ const configAbility = {
             "value1": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
             "compareType": ">=",
             "value2": {
-              "operator": "Variables[0] (12) || RETURN",
-              "displayLines": "12",
-              "constants": [],
-              "variables": [
-                12
-              ]
+              "displayLines": "12"
             }
           },
           "passed": [
@@ -434,12 +390,7 @@ const configAbility = {
                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (CurAmazingCount) || RETURN",
-                  "displayLines": "CurAmazingCount",
-                  "constants": [],
-                  "variables": [
-                    "CurAmazingCount"
-                  ]
+                  "displayLines": "CurAmazingCount"
                 }
               },
               {
@@ -451,12 +402,7 @@ const configAbility = {
                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (12) || RETURN",
-                  "displayLines": "12",
-                  "constants": [],
-                  "variables": [
-                    12
-                  ]
+                  "displayLines": "12"
                 }
               }
             ]
@@ -596,12 +542,7 @@ const configAbility = {
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (Index) || RETURN",
-            "displayLines": "Index",
-            "constants": [],
-            "variables": [
-              "Index"
-            ]
+            "displayLines": "Index"
           },
           "caseEvents": [
             {
@@ -641,12 +582,7 @@ const configAbility = {
                       },
                       "variables": {
                         "Index": {
-                          "operator": "Variables[0] (LightTeamCount) || RETURN",
-                          "displayLines": "LightTeamCount",
-                          "constants": [],
-                          "variables": [
-                            "LightTeamCount"
-                          ]
+                          "displayLines": "LightTeamCount"
                         }
                       }
                     }
@@ -680,12 +616,7 @@ const configAbility = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (LightTeamCount) || RETURN",
-                        "displayLines": "LightTeamCount",
-                        "constants": [],
-                        "variables": [
-                          "LightTeamCount"
-                        ]
+                        "displayLines": "LightTeamCount"
                       },
                       "caseEvents": [
                         {
@@ -711,12 +642,7 @@ const configAbility = {
                               },
                               "variables": {
                                 "Index": {
-                                  "operator": "Variables[0] (LightTeamCount) || RETURN",
-                                  "displayLines": "LightTeamCount",
-                                  "constants": [],
-                                  "variables": [
-                                    "LightTeamCount"
-                                  ]
+                                  "displayLines": "LightTeamCount"
                                 }
                               }
                             }
@@ -782,12 +708,7 @@ const configAbility = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (LightTeamCount) || RETURN",
-                        "displayLines": "LightTeamCount",
-                        "constants": [],
-                        "variables": [
-                          "LightTeamCount"
-                        ]
+                        "displayLines": "LightTeamCount"
                       },
                       "caseEvents": [
                         {
@@ -813,12 +734,7 @@ const configAbility = {
                               },
                               "variables": {
                                 "Index": {
-                                  "operator": "Variables[0] (LightTeamCount) || RETURN",
-                                  "displayLines": "LightTeamCount",
-                                  "constants": [],
-                                  "variables": [
-                                    "LightTeamCount"
-                                  ]
+                                  "displayLines": "LightTeamCount"
                                 }
                               }
                             }
@@ -847,12 +763,7 @@ const configAbility = {
                               },
                               "variables": {
                                 "Index": {
-                                  "operator": "Variables[0] (LightTeamCount) || RETURN",
-                                  "displayLines": "LightTeamCount",
-                                  "constants": [],
-                                  "variables": [
-                                    "LightTeamCount"
-                                  ]
+                                  "displayLines": "LightTeamCount"
                                 }
                               }
                             }
@@ -881,12 +792,7 @@ const configAbility = {
                               },
                               "variables": {
                                 "Index": {
-                                  "operator": "Variables[0] (LightTeamCount) || RETURN",
-                                  "displayLines": "LightTeamCount",
-                                  "constants": [],
-                                  "variables": [
-                                    "LightTeamCount"
-                                  ]
+                                  "displayLines": "LightTeamCount"
                                 }
                               }
                             }
@@ -956,17 +862,7 @@ const configAbility = {
           "name": "Define Custom Variable",
           "scope": "ContextTaskTemplate",
           "value": {
-            "operator": "Variables[0] (MAX) || Variables[1] (_CurSpecialSP) || Variables[2] (parameter[0]_AddValue) || ADD || Variables[3] (_MaxSpecialSP) || SUB || Constants[0] (0) || PARAM_2 || FUNCTION || RETURN",
-            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(((_CurSpecialSP + parameter[0]_AddValue) - _MaxSpecialSP), 0)",
-            "constants": [
-              0
-            ],
-            "variables": [
-              "MAX",
-              "_CurSpecialSP",
-              "parameter[0]_AddValue",
-              "_MaxSpecialSP"
-            ]
+            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(((_CurSpecialSP + parameter[0]_AddValue) - _MaxSpecialSP), 0)"
           },
           "variableName": "_ExtraSpecialSP"
         },
@@ -988,12 +884,7 @@ const configAbility = {
               },
               "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecialOverflow</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (_ExtraSpecialSP) || RETURN",
-                "displayLines": "_ExtraSpecialSP",
-                "constants": [],
-                "variables": [
-                  "_ExtraSpecialSP"
-                ]
+                "displayLines": "_ExtraSpecialSP"
               }
             }
           ]
@@ -1005,12 +896,7 @@ const configAbility = {
             "target": "{{Caster's Summoner}}"
           },
           "value": {
-            "operator": "Variables[0] (parameter[0]_AddValue) || RETURN",
-            "displayLines": "parameter[0]_AddValue",
-            "constants": [],
-            "variables": [
-              "parameter[0]_AddValue"
-            ]
+            "displayLines": "parameter[0]_AddValue"
           },
           "isFixed": "(Fixed)",
           "ignoreBlock": true,
@@ -1049,12 +935,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1795139027\">Memosprite_CyreneServant_Eidolon6</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             }
@@ -1069,12 +950,7 @@ const configAbility = {
               },
               "variables": {
                 "parameter[0]_NormalizedValue": {
-                  "operator": "Variables[0] (0.24) || RETURN",
-                  "displayLines": "0.24",
-                  "constants": [],
-                  "variables": [
-                    0.24
-                  ]
+                  "displayLines": "0.24"
                 }
               }
             }

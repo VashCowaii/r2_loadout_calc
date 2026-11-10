@@ -85,12 +85,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[2]]}) || RETURN",
-              "displayLines": "{[Skill06[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[2]]}"
-              ]
+              "displayLines": "{[Skill06[2]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -106,29 +101,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"2065489118\">Standard_Entangle</a>[<span class=\"descriptionNumberColor\">Entanglement</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-            "displayLines": "{[Skill06[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill06[3]]}"
-            ]
+            "displayLines": "{[Skill06[3]]}"
           },
           "valuePerStack": {
             "MDF_ActionDelayRatio": {
-              "operator": "Variables[0] ({[Skill06[6]]}) || RETURN",
-              "displayLines": "{[Skill06[6]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[6]]}"
-              ]
+              "displayLines": "{[Skill06[6]]}"
             },
             "Modifier_Entangle_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill06[7]]}) || RETURN",
-              "displayLines": "{[Skill06[7]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[7]]}"
-              ]
+              "displayLines": "{[Skill06[7]]}"
             },
             "Modifier_Entangle_DamageValue": 0
           }

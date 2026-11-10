@@ -16,12 +16,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (MDF_BasicDamagePercentage) || RETURN",
-            "displayLines": "MDF_BasicDamagePercentage",
-            "constants": [],
-            "variables": [
-              "MDF_BasicDamagePercentage"
-            ]
+            "displayLines": "MDF_BasicDamagePercentage"
           },
           "variableName": "MDF_DamagePercentage"
         },
@@ -44,18 +39,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MAX) || Constants[0] (0) || Variables[1] (FLOOR) || Variables[2] (_maxSP) || Variables[3] (MDF_PointB3_P1_Basic) || SUB || Variables[4] (MDF_PointB3_P2_Delta) || DIV || PARAM_1 || FUNCTION || PARAM_2 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(0, &nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(((_maxSP - MDF_PointB3_P1_Basic) / MDF_PointB3_P2_Delta)))",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MAX",
-                  "FLOOR",
-                  "_maxSP",
-                  "MDF_PointB3_P1_Basic",
-                  "MDF_PointB3_P2_Delta"
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(0, &nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(((_maxSP - MDF_PointB3_P1_Basic) / MDF_PointB3_P2_Delta)))"
               },
               "variableName": "_maxSP"
             },
@@ -68,15 +52,7 @@ const configAbility = {
               "variableName": "MDF_DamagePercentage",
               "context": "ContextModifier",
               "value": {
-                "operator": "Variables[0] (MIN) || Variables[1] (_maxSP) || Variables[2] (MDF_PointB3_P3_Ratio) || MUL || Variables[3] (MDF_PointB3_P4_Max) || PARAM_2 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((_maxSP * MDF_PointB3_P3_Ratio), MDF_PointB3_P4_Max)",
-                "constants": [],
-                "variables": [
-                  "MIN",
-                  "_maxSP",
-                  "MDF_PointB3_P3_Ratio",
-                  "MDF_PointB3_P4_Max"
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((_maxSP * MDF_PointB3_P3_Ratio), MDF_PointB3_P4_Max)"
               }
             }
           ]
@@ -110,12 +86,7 @@ const configAbility = {
                   "variableName": "MDF_DamagePercentage",
                   "context": "ContextModifier",
                   "value": {
-                    "operator": "Variables[0] (MDF_Eidolon4_P2_ExtraDamagePercentage) || RETURN",
-                    "displayLines": "MDF_Eidolon4_P2_ExtraDamagePercentage",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Eidolon4_P2_ExtraDamagePercentage"
-                    ]
+                    "displayLines": "MDF_Eidolon4_P2_ExtraDamagePercentage"
                   }
                 }
               ]

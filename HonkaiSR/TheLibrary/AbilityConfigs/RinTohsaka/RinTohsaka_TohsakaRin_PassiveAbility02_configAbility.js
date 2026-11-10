@@ -170,12 +170,7 @@ const configAbility = {
                         "value1": "CurrentSkillPoints",
                         "compareType": "<=",
                         "value2": {
-                          "operator": "Variables[0] (3) || RETURN",
-                          "displayLines": "3",
-                          "constants": [],
-                          "variables": [
-                            3
-                          ]
+                          "displayLines": "3"
                         }
                       },
                       {

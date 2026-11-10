@@ -68,14 +68,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (1) || Variables[0] (MDF_Property) || SUB || RETURN",
-                "displayLines": "(1 - MDF_Property)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_Property"
-                ]
+                "displayLines": "(1 - MDF_Property)"
               }
             }
           ]
@@ -101,12 +94,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_CritDmg) || RETURN",
-                "displayLines": "MDF_CritDmg",
-                "constants": [],
-                "variables": [
-                  "MDF_CritDmg"
-                ]
+                "displayLines": "MDF_CritDmg"
               }
             }
           ]
@@ -223,13 +211,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (6) || Variables[1] (1) || ADD || RETURN",
-                    "displayLines": "(6 + 1)",
-                    "constants": [],
-                    "variables": [
-                      6,
-                      1
-                    ]
+                    "displayLines": "(6 + 1)"
                   },
                   "variableName": "_MaxLayer"
                 }
@@ -238,12 +220,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (6) || RETURN",
-                    "displayLines": "6",
-                    "constants": [],
-                    "variables": [
-                      6
-                    ]
+                    "displayLines": "6"
                   },
                   "variableName": "_MaxLayer"
                 }
@@ -258,12 +235,7 @@ const configAbility = {
                 "target": "{{Caster's Summoner}}"
               },
               "maximum": {
-                "operator": "Variables[0] (_MaxLayer) || RETURN",
-                "displayLines": "_MaxLayer",
-                "constants": [],
-                "variables": [
-                  "_MaxLayer"
-                ]
+                "displayLines": "_MaxLayer"
               },
               "assignState": "True",
               "bar#": "Number"
@@ -316,12 +288,7 @@ const configAbility = {
                         "value1": "_KeepSpeedLayer",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         }
                       },
                       "passed": [
@@ -333,20 +300,10 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-394991116\">Memosprite_AglaeaServant_AddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (_MaxLayer) || RETURN",
-                            "displayLines": "_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "_MaxLayer"
-                            ]
+                            "displayLines": "_MaxLayer"
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (1) || RETURN",
-                            "displayLines": "1",
-                            "constants": [],
-                            "variables": [
-                              1
-                            ]
+                            "displayLines": "1"
                           }
                         }
                       ],
@@ -359,20 +316,10 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-394991116\">Memosprite_AglaeaServant_AddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (_MaxLayer) || RETURN",
-                            "displayLines": "_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "_MaxLayer"
-                            ]
+                            "displayLines": "_MaxLayer"
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (_KeepSpeedLayer) || RETURN",
-                            "displayLines": "_KeepSpeedLayer",
-                            "constants": [],
-                            "variables": [
-                              "_KeepSpeedLayer"
-                            ]
+                            "displayLines": "_KeepSpeedLayer"
                           }
                         }
                       ]
@@ -439,12 +386,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"783183170\">Memosprite_AglaeaServant_SummonerKeepSpeed</a>",
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (_AddSpeedLayer) || RETURN",
-                        "displayLines": "_AddSpeedLayer",
-                        "constants": [],
-                        "variables": [
-                          "_AddSpeedLayer"
-                        ]
+                        "displayLines": "_AddSpeedLayer"
                       }
                     }
                   ]
@@ -540,12 +482,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-394991116\">Memosprite_AglaeaServant_AddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (_MaxLayer) || RETURN",
-                    "displayLines": "_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "_MaxLayer"
-                    ]
+                    "displayLines": "_MaxLayer"
                   },
                   "addStacksPerTrigger": 1
                 },
@@ -568,12 +505,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1374425540\">Memosprite_AglaeaServant_SummonerAddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (_MaxLayer) || RETURN",
-                        "displayLines": "_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "_MaxLayer"
-                        ]
+                        "displayLines": "_MaxLayer"
                       },
                       "addStacksPerTrigger": 1,
                       "casterAssign": "TargetSelf"

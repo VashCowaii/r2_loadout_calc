@@ -14,12 +14,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "variableName": "Rank04_AddLifeTime"
         }
@@ -40,22 +35,11 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-606062756\">MWGallagher_Ability03_DeBonusModifier</a>[<span class=\"descriptionNumberColor\">Besotted</span>]",
       "duration": {
-        "operator": "Variables[0] (2) || Variables[1] (Rank04_AddLifeTime) || ADD || RETURN",
-        "displayLines": "(2 + Rank04_AddLifeTime)",
-        "constants": [],
-        "variables": [
-          2,
-          "Rank04_AddLifeTime"
-        ]
+        "displayLines": "(2 + Rank04_AddLifeTime)"
       },
       "valuePerStack": {
         "PointB3_Active": {
-          "operator": "Variables[0] (PointB3_Active) || RETURN",
-          "displayLines": "PointB3_Active",
-          "constants": [],
-          "variables": [
-            "PointB3_Active"
-          ]
+          "displayLines": "PointB3_Active"
         }
       }
     },
@@ -69,20 +53,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (1.5) || RETURN",
-          "displayLines": "1.5",
-          "constants": [],
-          "variables": [
-            1.5
-          ]
+          "displayLines": "1.5"
         },
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"

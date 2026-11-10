@@ -39,39 +39,19 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
       "stackLimit": {
-        "operator": "Variables[0] (10) || RETURN",
-        "displayLines": "10",
-        "constants": [],
-        "variables": [
-          10
-        ]
+        "displayLines": "10"
       },
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       }
     },
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "maximum": {
-        "operator": "Variables[0] (10) || RETURN",
-        "displayLines": "10",
-        "constants": [],
-        "variables": [
-          10
-        ]
+        "displayLines": "10"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -88,12 +68,7 @@ const configAbility = {
       },
       "variables": {
         "BattleEvent_JingYuan_BaseSpeed": {
-          "operator": "Variables[0] (60) || RETURN",
-          "displayLines": "60",
-          "constants": [],
-          "variables": [
-            60
-          ]
+          "displayLines": "60"
         }
       }
     },
@@ -104,20 +79,10 @@ const configAbility = {
         "target": "{{Jing Yuan: Lightning Lord}}"
       },
       "attackCount": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "attackCountEnhanced": {
-        "operator": "Variables[0] (EnergyBar_UltraATKCount) || RETURN",
-        "displayLines": "EnergyBar_UltraATKCount",
-        "constants": [],
-        "variables": [
-          "EnergyBar_UltraATKCount"
-        ]
+        "displayLines": "EnergyBar_UltraATKCount"
       },
       "show": true
     },
@@ -130,12 +95,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1141770667\">JingYuan_BattleEvent_ATKCountShowText</a>",
       "valuePerStack": {
         "ATKCount": {
-          "operator": "Variables[0] (3) || RETURN",
-          "displayLines": "3",
-          "constants": [],
-          "variables": [
-            3
-          ]
+          "displayLines": "3"
         }
       }
     },
@@ -193,26 +153,14 @@ const configAbility = {
                 "value1": "#Skill03_P2_AddATKCount",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (10) || Variables[1] (EnergyBar_ATKCount) || SUB || RETURN",
-                  "displayLines": "(10 - EnergyBar_ATKCount)",
-                  "constants": [],
-                  "variables": [
-                    10,
-                    "EnergyBar_ATKCount"
-                  ]
+                  "displayLines": "(10 - EnergyBar_ATKCount)"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (10) || Variables[1] (EnergyBar_ATKCount) || SUB || RETURN",
-                    "displayLines": "(10 - EnergyBar_ATKCount)",
-                    "constants": [],
-                    "variables": [
-                      10,
-                      "EnergyBar_ATKCount"
-                    ]
+                    "displayLines": "(10 - EnergyBar_ATKCount)"
                   },
                   "variableName": "_AddLayer"
                 }
@@ -221,12 +169,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "variableName": "_AddLayer"
                 }
@@ -251,26 +194,14 @@ const configAbility = {
                     "value1": "#Skill03_P2_AddATKCount",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (10) || Variables[1] (EnergyBar_ATKCount) || SUB || RETURN",
-                      "displayLines": "(10 - EnergyBar_ATKCount)",
-                      "constants": [],
-                      "variables": [
-                        10,
-                        "EnergyBar_ATKCount"
-                      ]
+                      "displayLines": "(10 - EnergyBar_ATKCount)"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (10) || Variables[1] (EnergyBar_ATKCount) || SUB || RETURN",
-                        "displayLines": "(10 - EnergyBar_ATKCount)",
-                        "constants": [],
-                        "variables": [
-                          10,
-                          "EnergyBar_ATKCount"
-                        ]
+                        "displayLines": "(10 - EnergyBar_ATKCount)"
                       },
                       "variableName": "_AddLayer"
                     }
@@ -279,12 +210,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "variableName": "_AddLayer"
                     }
@@ -332,26 +258,14 @@ const configAbility = {
                 "value1": "#Skill02_P2_AddATKCount",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (10) || Variables[1] (EnergyBar_ATKCount) || SUB || RETURN",
-                  "displayLines": "(10 - EnergyBar_ATKCount)",
-                  "constants": [],
-                  "variables": [
-                    10,
-                    "EnergyBar_ATKCount"
-                  ]
+                  "displayLines": "(10 - EnergyBar_ATKCount)"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (10) || Variables[1] (EnergyBar_ATKCount) || SUB || RETURN",
-                    "displayLines": "(10 - EnergyBar_ATKCount)",
-                    "constants": [],
-                    "variables": [
-                      10,
-                      "EnergyBar_ATKCount"
-                    ]
+                    "displayLines": "(10 - EnergyBar_ATKCount)"
                   },
                   "variableName": "_AddLayer"
                 }
@@ -360,12 +274,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "variableName": "_AddLayer"
                 }
@@ -390,26 +299,14 @@ const configAbility = {
                     "value1": "#Skill02_P2_AddATKCount",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (10) || Variables[1] (EnergyBar_ATKCount) || SUB || RETURN",
-                      "displayLines": "(10 - EnergyBar_ATKCount)",
-                      "constants": [],
-                      "variables": [
-                        10,
-                        "EnergyBar_ATKCount"
-                      ]
+                      "displayLines": "(10 - EnergyBar_ATKCount)"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (10) || Variables[1] (EnergyBar_ATKCount) || SUB || RETURN",
-                        "displayLines": "(10 - EnergyBar_ATKCount)",
-                        "constants": [],
-                        "variables": [
-                          10,
-                          "EnergyBar_ATKCount"
-                        ]
+                        "displayLines": "(10 - EnergyBar_ATKCount)"
                       },
                       "variableName": "_AddLayer"
                     }
@@ -418,12 +315,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "variableName": "_AddLayer"
                     }
@@ -468,12 +360,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (15) || RETURN",
-                    "displayLines": "15",
-                    "constants": [],
-                    "variables": [
-                      15
-                    ]
+                    "displayLines": "15"
                   },
                   "isFixed": "* ERR"
                 }

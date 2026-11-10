@@ -1022,12 +1022,7 @@ const configAbility = {
                 "value1": "HP_Bars_Remaining",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Variables[0] (W2_Yanqing_00_MaxPhaseNum) || RETURN",
-                  "displayLines": "W2_Yanqing_00_MaxPhaseNum",
-                  "constants": [],
-                  "variables": [
-                    "W2_Yanqing_00_MaxPhaseNum"
-                  ]
+                  "displayLines": "W2_Yanqing_00_MaxPhaseNum"
                 }
               }
             }
@@ -1059,12 +1054,7 @@ const configAbility = {
                 "value1": "HP_Bars_Remaining",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Variables[0] (W2_Yanqing_00_MaxPhaseNum) || RETURN",
-                  "displayLines": "W2_Yanqing_00_MaxPhaseNum",
-                  "constants": [],
-                  "variables": [
-                    "W2_Yanqing_00_MaxPhaseNum"
-                  ]
+                  "displayLines": "W2_Yanqing_00_MaxPhaseNum"
                 }
               }
             }
@@ -1096,12 +1086,7 @@ const configAbility = {
                 "value1": "HP_Bars_Remaining",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Variables[0] (W2_Yanqing_00_MaxPhaseNum) || RETURN",
-                  "displayLines": "W2_Yanqing_00_MaxPhaseNum",
-                  "constants": [],
-                  "variables": [
-                    "W2_Yanqing_00_MaxPhaseNum"
-                  ]
+                  "displayLines": "W2_Yanqing_00_MaxPhaseNum"
                 }
               }
             }
@@ -2215,14 +2200,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (W2_Yanqing_00_Skill02_AccumulateRevealed) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(W2_Yanqing_00_Skill02_AccumulateRevealed + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "W2_Yanqing_00_Skill02_AccumulateRevealed"
-                        ]
+                        "displayLines": "(W2_Yanqing_00_Skill02_AccumulateRevealed + 1)"
                       },
                       "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed"
                     }
@@ -2328,12 +2306,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedDelta) || RETURN",
-                "displayLines": "MDF_SpeedDelta",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedDelta"
-                ]
+                "displayLines": "MDF_SpeedDelta"
               }
             }
           ]
@@ -2380,26 +2353,14 @@ const configAbility = {
                     "value1": "W2_Yanqing_00_Skill02_AccumulateRevealed",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (W2_Yanqing_00_Skill02_SummonNumber) || RETURN",
-                      "displayLines": "W2_Yanqing_00_Skill02_SummonNumber",
-                      "constants": [],
-                      "variables": [
-                        "W2_Yanqing_00_Skill02_SummonNumber"
-                      ]
+                      "displayLines": "W2_Yanqing_00_Skill02_SummonNumber"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (W2_Yanqing_00_Skill02_AccumulateRevealed) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(W2_Yanqing_00_Skill02_AccumulateRevealed + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "W2_Yanqing_00_Skill02_AccumulateRevealed"
-                        ]
+                        "displayLines": "(W2_Yanqing_00_Skill02_AccumulateRevealed + 1)"
                       },
                       "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed"
                     }
@@ -2432,12 +2393,7 @@ const configAbility = {
                     "value1": "W2_Yanqing_00_Skill02_AccumulateRevealed",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (W2_Yanqing_00_Skill02_SummonNumber) || RETURN",
-                      "displayLines": "W2_Yanqing_00_Skill02_SummonNumber",
-                      "constants": [],
-                      "variables": [
-                        "W2_Yanqing_00_Skill02_SummonNumber"
-                      ]
+                      "displayLines": "W2_Yanqing_00_Skill02_SummonNumber"
                     }
                   }
                 ]
@@ -2725,12 +2681,7 @@ const configAbility = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_LowHPRatio) || RETURN",
-                      "displayLines": "MDF_LowHPRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_LowHPRatio"
-                      ]
+                      "displayLines": "MDF_LowHPRatio"
                     }
                   },
                   {
@@ -2850,12 +2801,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedDelta) || RETURN",
-                "displayLines": "MDF_SpeedDelta",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedDelta"
-                ]
+                "displayLines": "MDF_SpeedDelta"
               }
             }
           ]
@@ -2895,20 +2841,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__138) || RETURN",
-                  "displayLines": "ENEMIES_OBJECT_UNUSED__138",
-                  "constants": [],
-                  "variables": [
-                    "ENEMIES_OBJECT_UNUSED__138"
-                  ]
+                  "displayLines": "ENEMIES_OBJECT_UNUSED__138"
                 },
                 "DamageFlat": {
-                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__140) || RETURN",
-                  "displayLines": "ENEMIES_OBJECT_UNUSED__140",
-                  "constants": [],
-                  "variables": [
-                    "ENEMIES_OBJECT_UNUSED__140"
-                  ]
+                  "displayLines": "ENEMIES_OBJECT_UNUSED__140"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -2929,22 +2865,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (ENEMIES_OBJECT_UNUSED__138) || MUL || RETURN",
-                  "displayLines": "(DOT_TriggerRatio * ENEMIES_OBJECT_UNUSED__138)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "ENEMIES_OBJECT_UNUSED__138"
-                  ]
+                  "displayLines": "(DOT_TriggerRatio * ENEMIES_OBJECT_UNUSED__138)"
                 },
                 "DamageFlat": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (ENEMIES_OBJECT_UNUSED__140) || MUL || RETURN",
-                  "displayLines": "(DOT_TriggerRatio * ENEMIES_OBJECT_UNUSED__140)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "ENEMIES_OBJECT_UNUSED__140"
-                  ]
+                  "displayLines": "(DOT_TriggerRatio * ENEMIES_OBJECT_UNUSED__140)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -3434,12 +3358,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedDelta) || RETURN",
-                "displayLines": "MDF_SpeedDelta",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedDelta"
-                ]
+                "displayLines": "MDF_SpeedDelta"
               }
             }
           ]
@@ -3491,14 +3410,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (W2_Yanqing_00_Skill02_AccumulateRevealed) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(W2_Yanqing_00_Skill02_AccumulateRevealed + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "W2_Yanqing_00_Skill02_AccumulateRevealed"
-                        ]
+                        "displayLines": "(W2_Yanqing_00_Skill02_AccumulateRevealed + 1)"
                       },
                       "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed"
                     }
@@ -3594,13 +3506,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (IceTakenRatioPerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(IceTakenRatioPerLayer * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "IceTakenRatioPerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(IceTakenRatioPerLayer * ModifierLayers)"
               },
               "variableName": "MDF_IceTakenRatio"
             },
@@ -3612,12 +3518,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">IceVulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_IceTakenRatio) || RETURN",
-                "displayLines": "MDF_IceTakenRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_IceTakenRatio"
-                ]
+                "displayLines": "MDF_IceTakenRatio"
               }
             }
           ]
@@ -3646,13 +3547,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (AllDamageTypeAddedRatioPerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(AllDamageTypeAddedRatioPerLayer * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "AllDamageTypeAddedRatioPerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(AllDamageTypeAddedRatioPerLayer * ModifierLayers)"
               },
               "variableName": "MDF_AllDamageTypeAddedRatio"
             },
@@ -3664,12 +3559,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                "displayLines": "MDF_AllDamageTypeAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeAddedRatio"
-                ]
+                "displayLines": "MDF_AllDamageTypeAddedRatio"
               }
             }
           ]

@@ -62,12 +62,7 @@ const compositeAbilityObject = {
                   },
                   "function": "Set",
                   "value": {
-                    "operator": "Variables[0] (BPExChange) || RETURN",
-                    "displayLines": "BPExChange",
-                    "constants": [],
-                    "variables": [
-                      "BPExChange"
-                    ]
+                    "displayLines": "BPExChange"
                   },
                   "silentChange": true
                 },
@@ -332,14 +327,7 @@ const compositeAbilityObject = {
             "target": "{{Caster}}"
           },
           "setValue": {
-            "operator": "Variables[0] (MDF_LukaMaxHP) || Constants[0] (0.5) || MUL || RETURN",
-            "displayLines": "(MDF_LukaMaxHP * 0.5)",
-            "constants": [
-              0.5
-            ],
-            "variables": [
-              "MDF_LukaMaxHP"
-            ]
+            "displayLines": "(MDF_LukaMaxHP * 0.5)"
           }
         },
         {
@@ -462,12 +450,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">StageFinalDMG</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackRatio) || RETURN",
-                    "displayLines": "MDF_AttackRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackRatio"
-                    ]
+                    "displayLines": "MDF_AttackRatio"
                   }
                 },
                 {
@@ -509,14 +492,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "setValue": {
-                    "operator": "Variables[0] (MDF_TargetMaxHP2) || Constants[0] (0.3) || MUL || RETURN",
-                    "displayLines": "(MDF_TargetMaxHP2 * 0.3)",
-                    "constants": [
-                      0.3
-                    ],
-                    "variables": [
-                      "MDF_TargetMaxHP2"
-                    ]
+                    "displayLines": "(MDF_TargetMaxHP2 * 0.3)"
                   }
                 }
               ]
@@ -550,14 +526,7 @@ const compositeAbilityObject = {
             "target": "{{Caster}}"
           },
           "setValue": {
-            "operator": "Variables[0] (MDF_LukaMaxHP) || Constants[0] (0.7) || MUL || RETURN",
-            "displayLines": "(MDF_LukaMaxHP * 0.7)",
-            "constants": [
-              0.7
-            ],
-            "variables": [
-              "MDF_LukaMaxHP"
-            ]
+            "displayLines": "(MDF_LukaMaxHP * 0.7)"
           }
         },
         {
@@ -591,12 +560,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">StageFinalDMG</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackRatio) || RETURN",
-                    "displayLines": "MDF_AttackRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackRatio"
-                    ]
+                    "displayLines": "MDF_AttackRatio"
                   }
                 },
                 {
@@ -701,14 +665,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "setValue": {
-                        "operator": "Variables[0] (MDF_TargetMaxHP) || Constants[0] (0.3) || MUL || RETURN",
-                        "displayLines": "(MDF_TargetMaxHP * 0.3)",
-                        "constants": [
-                          0.3
-                        ],
-                        "variables": [
-                          "MDF_TargetMaxHP"
-                        ]
+                        "displayLines": "(MDF_TargetMaxHP * 0.3)"
                       }
                     },
                     {
@@ -749,14 +706,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_LimboCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(MDF_LimboCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_LimboCount"
-                    ]
+                    "displayLines": "(MDF_LimboCount + 1)"
                   },
                   "variableName": "MDF_LimboCount"
                 },
@@ -1144,12 +1094,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_5679) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_5679",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_5679"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_5679"
                   },
                   "addStacksPerTrigger": 7
                 },
@@ -1164,20 +1109,10 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Constants[0] (10) || RETURN",
-                    "displayLines": "10",
-                    "constants": [
-                      10
-                    ],
-                    "variables": []
+                    "displayLines": "10"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_5679) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_5679",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_5679"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_5679"
                   },
                   "assignState": "True",
                   "priorState": "Normal",
@@ -1475,12 +1410,7 @@ const compositeAbilityObject = {
                     "value1": "MDF_OneMoreTime",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Constants[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [
-                        1
-                      ],
-                      "variables": []
+                      "displayLines": "1"
                     },
                     "contextScope": "ContextModifier"
                   },
@@ -1524,12 +1454,7 @@ const compositeAbilityObject = {
                     "value1": "MDF_ActionTime",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Constants[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [
-                        1
-                      ],
-                      "variables": []
+                      "displayLines": "1"
                     },
                     "contextScope": "ContextModifier"
                   },
@@ -1545,12 +1470,7 @@ const compositeAbilityObject = {
                         "value1": "MDF_ActionTime",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Constants[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [
-                            1
-                          ],
-                          "variables": []
+                          "displayLines": "1"
                         },
                         "contextScope": "ContextModifier"
                       },
@@ -1563,14 +1483,7 @@ const compositeAbilityObject = {
                           },
                           "scope": "ContextModifier",
                           "value": {
-                            "operator": "Variables[0] (MDF_ActionTime) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(MDF_ActionTime + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "MDF_ActionTime"
-                            ]
+                            "displayLines": "(MDF_ActionTime + 1)"
                           },
                           "variableName": "MDF_ActionTime"
                         }
@@ -1587,12 +1500,7 @@ const compositeAbilityObject = {
                             "value1": "MDF_ActionTime",
                             "compareType": "=",
                             "value2": {
-                              "operator": "Constants[0] (2) || RETURN",
-                              "displayLines": "2",
-                              "constants": [
-                                2
-                              ],
-                              "variables": []
+                              "displayLines": "2"
                             },
                             "contextScope": "ContextModifier"
                           },
@@ -1605,14 +1513,7 @@ const compositeAbilityObject = {
                               },
                               "scope": "ContextModifier",
                               "value": {
-                                "operator": "Variables[0] (MDF_ActionTime) || Constants[0] (1) || ADD || RETURN",
-                                "displayLines": "(MDF_ActionTime + 1)",
-                                "constants": [
-                                  1
-                                ],
-                                "variables": [
-                                  "MDF_ActionTime"
-                                ]
+                                "displayLines": "(MDF_ActionTime + 1)"
                               },
                               "variableName": "MDF_ActionTime"
                             }
@@ -1629,12 +1530,7 @@ const compositeAbilityObject = {
                                 "value1": "MDF_ActionTime",
                                 "compareType": "=",
                                 "value2": {
-                                  "operator": "Constants[0] (3) || RETURN",
-                                  "displayLines": "3",
-                                  "constants": [
-                                    3
-                                  ],
-                                  "variables": []
+                                  "displayLines": "3"
                                 },
                                 "contextScope": "ContextModifier"
                               },
@@ -1647,14 +1543,7 @@ const compositeAbilityObject = {
                                   },
                                   "scope": "ContextModifier",
                                   "value": {
-                                    "operator": "Variables[0] (MDF_ActionTime) || Constants[0] (1) || ADD || RETURN",
-                                    "displayLines": "(MDF_ActionTime + 1)",
-                                    "constants": [
-                                      1
-                                    ],
-                                    "variables": [
-                                      "MDF_ActionTime"
-                                    ]
+                                    "displayLines": "(MDF_ActionTime + 1)"
                                   },
                                   "variableName": "MDF_ActionTime"
                                 }
@@ -1677,12 +1566,7 @@ const compositeAbilityObject = {
                         "value1": "MDF_ActionTime",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Constants[0] (0) || RETURN",
-                          "displayLines": "0",
-                          "constants": [
-                            0
-                          ],
-                          "variables": []
+                          "displayLines": "0"
                         },
                         "contextScope": "ContextModifier"
                       }
@@ -1705,14 +1589,7 @@ const compositeAbilityObject = {
                       },
                       "scope": "ContextModifier",
                       "value": {
-                        "operator": "Variables[0] (MDF_ActionTime) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_ActionTime + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_ActionTime"
-                        ]
+                        "displayLines": "(MDF_ActionTime + 1)"
                       },
                       "variableName": "MDF_ActionTime"
                     }
@@ -1771,12 +1648,7 @@ const compositeAbilityObject = {
                   },
                   "scope": "ContextModifier",
                   "value": {
-                    "operator": "Constants[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [
-                      1
-                    ],
-                    "variables": []
+                    "displayLines": "1"
                   },
                   "variableName": "MDF_KillTalk"
                 }
@@ -1823,14 +1695,7 @@ const compositeAbilityObject = {
                       },
                       "scope": "ContextModifier",
                       "value": {
-                        "operator": "Variables[0] (MDF_KillTalk) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_KillTalk + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_KillTalk"
-                        ]
+                        "displayLines": "(MDF_KillTalk + 1)"
                       },
                       "variableName": "MDF_KillTalk"
                     }
@@ -1852,12 +1717,7 @@ const compositeAbilityObject = {
                     "value1": "MDF_ActionTime",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Constants[0] (0) || RETURN",
-                      "displayLines": "0",
-                      "constants": [
-                        0
-                      ],
-                      "variables": []
+                      "displayLines": "0"
                     },
                     "contextScope": "ContextModifier"
                   },
@@ -1873,12 +1733,7 @@ const compositeAbilityObject = {
                         "value1": "MDF_ActionTime",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Constants[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [
-                            1
-                          ],
-                          "variables": []
+                          "displayLines": "1"
                         },
                         "contextScope": "ContextModifier"
                       }
@@ -1893,14 +1748,7 @@ const compositeAbilityObject = {
                   },
                   "scope": "ContextModifier",
                   "value": {
-                    "operator": "Variables[0] (MDF_ActionTime) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(MDF_ActionTime + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_ActionTime"
-                    ]
+                    "displayLines": "(MDF_ActionTime + 1)"
                   },
                   "variableName": "MDF_ActionTime"
                 }
@@ -2112,14 +1960,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (BeHitTime) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(BeHitTime + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "BeHitTime"
-                            ]
+                            "displayLines": "(BeHitTime + 1)"
                           },
                           "variableName": "isBeHit"
                         },

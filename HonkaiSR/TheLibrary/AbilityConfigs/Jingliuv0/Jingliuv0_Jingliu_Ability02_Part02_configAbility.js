@@ -13,31 +13,16 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "value": {
-        "operator": "Variables[0] (1) || RETURN",
-        "displayLines": "1",
-        "constants": [],
-        "variables": [
-          1
-        ]
+        "displayLines": "1"
       }
     },
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (Jingliu_MoonFlag) || RETURN",
-        "displayLines": "Jingliu_MoonFlag",
-        "constants": [],
-        "variables": [
-          "Jingliu_MoonFlag"
-        ]
+        "displayLines": "Jingliu_MoonFlag"
       },
       "maximum": {
-        "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-        "displayLines": "Jingliu_MoonFlagMax",
-        "constants": [],
-        "variables": [
-          "Jingliu_MoonFlagMax"
-        ]
+        "displayLines": "Jingliu_MoonFlagMax"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -57,20 +42,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -126,12 +101,7 @@ const configAbility = {
             {
               "name": "Assign Advance/Delay to Current Ability Use",
               "adjustmentValue": {
-                "operator": "Variables[0] (0.1) || INVERT || RETURN",
-                "displayLines": "-0.1",
-                "constants": [],
-                "variables": [
-                  0.1
-                ]
+                "displayLines": "-0.1"
               },
               "adjustmentType": "Advance"
             }

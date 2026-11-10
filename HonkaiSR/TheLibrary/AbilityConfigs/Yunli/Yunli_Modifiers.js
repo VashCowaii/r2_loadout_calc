@@ -57,12 +57,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (Yunli_DamageResistance_Value01) || RETURN",
-                "displayLines": "Yunli_DamageResistance_Value01",
-                "constants": [],
-                "variables": [
-                  "Yunli_DamageResistance_Value01"
-                ]
+                "displayLines": "Yunli_DamageResistance_Value01"
               }
             }
           ]
@@ -462,12 +457,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-77031042\">Yunli_Trace02_ControlResist</a>[<span class=\"descriptionNumberColor\">Demon Quell</span>]",
                   "valuePerStack": {
                     "Yunli_DamageResistance_Value01": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 }
@@ -889,12 +879,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -965,12 +950,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_ProbabilityValue) || RETURN",
-                "displayLines": "MDF_ProbabilityValue",
-                "constants": [],
-                "variables": [
-                  "MDF_ProbabilityValue"
-                ]
+                "displayLines": "MDF_ProbabilityValue"
               }
             }
           ]
@@ -1062,12 +1042,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -1161,12 +1136,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "variableName": "MDF_CriticalDamage"
             }
@@ -1197,12 +1167,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_ProbabilityValue) || RETURN",
-                "displayLines": "MDF_ProbabilityValue",
-                "constants": [],
-                "variables": [
-                  "MDF_ProbabilityValue"
-                ]
+                "displayLines": "MDF_ProbabilityValue"
               }
             }
           ]
@@ -1236,12 +1201,7 @@ const configAbility = {
                   "duration": 1,
                   "valuePerStack": {
                     "MDF_ProbabilityValue": {
-                      "operator": "Variables[0] (MDF_ProbabilityValue2) || RETURN",
-                      "displayLines": "MDF_ProbabilityValue2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_ProbabilityValue2"
-                      ]
+                      "displayLines": "MDF_ProbabilityValue2"
                     }
                   }
                 }
@@ -1336,13 +1296,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (1.2) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(1.2 * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  1.2,
-                  "MDF_Layer"
-                ]
+                "displayLines": "(1.2 * MDF_Layer)"
               },
               "variableName": "MDF_PropertyRatio"
             },
@@ -1354,12 +1308,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             }
           ]

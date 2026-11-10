@@ -19,23 +19,13 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"674084232\">Aventurine_Passive_AddDefence</a>[<span class=\"descriptionNumberColor\">Unexpected Hanging Paradox</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           }
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "variableName": "MDF_AttackCount"
         }
@@ -81,14 +71,7 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-346814527\">Aventurine_Passive_ShieldEnergy</a>",
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (MDF_Layer2) || Constants[0] (7) || SUB || RETURN",
-        "displayLines": "(MDF_Layer2 - 7)",
-        "constants": [
-          7
-        ],
-        "variables": [
-          "MDF_Layer2"
-        ]
+        "displayLines": "(MDF_Layer2 - 7)"
       }
     },
     {
@@ -99,28 +82,14 @@ const configAbility = {
       },
       "variableName": "MDF_AttackGap",
       "resetValue": {
-        "operator": "Constants[0] (1) || Variables[0] (7) || Variables[1] (MDF_AttackCount) || ADD || DIV || RETURN",
-        "displayLines": "(1 / (7 + MDF_AttackCount))",
-        "constants": [
-          1
-        ],
-        "variables": [
-          7,
-          "MDF_AttackCount"
-        ]
+        "displayLines": "(1 / (7 + MDF_AttackCount))"
       },
       "scope": "ContextCaster"
     },
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (7) || Variables[1] (MDF_AttackCount) || ADD || RETURN",
-        "displayLines": "(7 + MDF_AttackCount)",
-        "constants": [],
-        "variables": [
-          7,
-          "MDF_AttackCount"
-        ]
+        "displayLines": "(7 + MDF_AttackCount)"
       },
       "execute": [
         {
@@ -141,21 +110,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (0.25) || RETURN",
-                  "displayLines": "0.25",
-                  "constants": [],
-                  "variables": [
-                    0.25
-                  ]
+                  "displayLines": "0.25"
                 },
                 "dmgFormula": "DEF Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Follow-up",

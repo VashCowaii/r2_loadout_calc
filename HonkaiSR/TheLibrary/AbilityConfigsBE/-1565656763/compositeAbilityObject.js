@@ -60,13 +60,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageUpRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_DamageUpRatio * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageUpRatio",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_DamageUpRatio * MDF_Layer)"
                   }
                 }
               ]
@@ -106,13 +100,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_CritDamageUpRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_CritDamageUpRatio * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CritDamageUpRatio",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_CritDamageUpRatio * MDF_Layer)"
                   }
                 }
               ]
@@ -152,13 +140,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_CritChanceUpRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_CritChanceUpRatio * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CritChanceUpRatio",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_CritChanceUpRatio * MDF_Layer)"
                   }
                 }
               ]
@@ -230,41 +212,21 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MaxHP) || Constants[0] (0.3) || MUL || RETURN",
-                        "displayLines": "(MaxHP * 0.3)",
-                        "constants": [
-                          0.3
-                        ],
-                        "variables": [
-                          "MaxHP"
-                        ]
+                        "displayLines": "(MaxHP * 0.3)"
                       },
                       "variableName": "CostHP"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MaxHP) || Constants[0] (0.5) || MUL || RETURN",
-                        "displayLines": "(MaxHP * 0.5)",
-                        "constants": [
-                          0.5
-                        ],
-                        "variables": [
-                          "MaxHP"
-                        ]
+                        "displayLines": "(MaxHP * 0.5)"
                       },
                       "variableName": "HPFloor"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (CurrentHP) || Variables[1] (CostHP) || SUB || RETURN",
-                        "displayLines": "(CurrentHP - CostHP)",
-                        "constants": [],
-                        "variables": [
-                          "CurrentHP",
-                          "CostHP"
-                        ]
+                        "displayLines": "(CurrentHP - CostHP)"
                       },
                       "variableName": "TargetHP"
                     },
@@ -279,12 +241,7 @@ const compositeAbilityObject = {
                         "value1": "CurrentHP",
                         "compareType": ">",
                         "value2": {
-                          "operator": "Variables[0] (HPFloor) || RETURN",
-                          "displayLines": "HPFloor",
-                          "constants": [],
-                          "variables": [
-                            "HPFloor"
-                          ]
+                          "displayLines": "HPFloor"
                         }
                       },
                       "passed": [
@@ -568,12 +525,7 @@ const compositeAbilityObject = {
                       "variableName": "DOT_TriggerRatio",
                       "eventType": "DOT",
                       "value": {
-                        "operator": "Constants[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [
-                          1
-                        ],
-                        "variables": []
+                        "displayLines": "1"
                       }
                     }
                   ]
@@ -623,38 +575,13 @@ const compositeAbilityObject = {
                       "baseChance": 1.5,
                       "valuePerStack": {
                         "MDF_EliteRatio": {
-                          "operator": "Constants[0] (0.07) || Variables[0] (DamageRatio) || MUL || RETURN",
-                          "displayLines": "(0.07 * DamageRatio)",
-                          "constants": [
-                            0.07
-                          ],
-                          "variables": [
-                            "DamageRatio"
-                          ]
+                          "displayLines": "(0.07 * DamageRatio)"
                         },
                         "MDF_StandardRatio": {
-                          "operator": "Constants[0] (0.16) || Variables[0] (DamageRatio) || MUL || RETURN",
-                          "displayLines": "(0.16 * DamageRatio)",
-                          "constants": [
-                            0.16
-                          ],
-                          "variables": [
-                            "DamageRatio"
-                          ]
+                          "displayLines": "(0.16 * DamageRatio)"
                         },
                         "MDF_DamageMax": {
-                          "operator": "Variables[0] (CasterBreakBaseDamage) || Constants[0] (2) || MUL || Constants[0] (2) || Variables[1] (TargetStance) || Variables[2] (StanceUnit) || DIV || ADD || MUL || Constants[1] (4) || DIV || Variables[3] (DamageRatio) || MUL || RETURN",
-                          "displayLines": "((((CasterBreakBaseDamage * 2) * (2 + (TargetStance / StanceUnit))) / 4) * DamageRatio)",
-                          "constants": [
-                            2,
-                            4
-                          ],
-                          "variables": [
-                            "CasterBreakBaseDamage",
-                            "TargetStance",
-                            "StanceUnit",
-                            "DamageRatio"
-                          ]
+                          "displayLines": "((((CasterBreakBaseDamage * 2) * (2 + (TargetStance / StanceUnit))) / 4) * DamageRatio)"
                         }
                       }
                     },
@@ -668,17 +595,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Physical",
                         "DamageBreak": {
-                          "operator": "Constants[0] (2) || Constants[0] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[1] (4) || DIV || Variables[2] (DamageRatio) || MUL || RETURN",
-                          "displayLines": "(((2 * (2 + (TargetStance / StanceUnit))) / 4) * DamageRatio)",
-                          "constants": [
-                            2,
-                            4
-                          ],
-                          "variables": [
-                            "TargetStance",
-                            "StanceUnit",
-                            "DamageRatio"
-                          ]
+                          "displayLines": "(((2 * (2 + (TargetStance / StanceUnit))) / 4) * DamageRatio)"
                         },
                         "dmgFormula": "Break DMG Scaling",
                         "dmgFormulaFinal": "Pure (No DMG%)",
@@ -711,12 +628,7 @@ const compositeAbilityObject = {
                       "baseChance": 1.5,
                       "valuePerStack": {
                         "MDF_DamagePercentage": {
-                          "operator": "Variables[0] (DamageRatio) || RETURN",
-                          "displayLines": "DamageRatio",
-                          "constants": [],
-                          "variables": [
-                            "DamageRatio"
-                          ]
+                          "displayLines": "DamageRatio"
                         }
                       }
                     },
@@ -730,18 +642,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Ice",
                         "DamageBreak": {
-                          "operator": "Constants[0] (1) || Constants[1] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[2] (4) || DIV || Variables[2] (DamageRatio) || MUL || RETURN",
-                          "displayLines": "(((1 * (2 + (TargetStance / StanceUnit))) / 4) * DamageRatio)",
-                          "constants": [
-                            1,
-                            2,
-                            4
-                          ],
-                          "variables": [
-                            "TargetStance",
-                            "StanceUnit",
-                            "DamageRatio"
-                          ]
+                          "displayLines": "(((1 * (2 + (TargetStance / StanceUnit))) / 4) * DamageRatio)"
                         },
                         "dmgFormula": "Break DMG Scaling",
                         "dmgFormulaFinal": "Pure (No DMG%)",
@@ -774,12 +675,7 @@ const compositeAbilityObject = {
                       "baseChance": 1.5,
                       "valuePerStack": {
                         "MDF_DamagePercentage": {
-                          "operator": "Variables[0] (DamageRatio) || RETURN",
-                          "displayLines": "DamageRatio",
-                          "constants": [],
-                          "variables": [
-                            "DamageRatio"
-                          ]
+                          "displayLines": "DamageRatio"
                         }
                       }
                     },
@@ -793,17 +689,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Fire",
                         "DamageBreak": {
-                          "operator": "Constants[0] (2) || Constants[0] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[1] (4) || DIV || Variables[2] (DamageRatio) || MUL || RETURN",
-                          "displayLines": "(((2 * (2 + (TargetStance / StanceUnit))) / 4) * DamageRatio)",
-                          "constants": [
-                            2,
-                            4
-                          ],
-                          "variables": [
-                            "TargetStance",
-                            "StanceUnit",
-                            "DamageRatio"
-                          ]
+                          "displayLines": "(((2 * (2 + (TargetStance / StanceUnit))) / 4) * DamageRatio)"
                         },
                         "dmgFormula": "Break DMG Scaling",
                         "dmgFormulaFinal": "Pure (No DMG%)",
@@ -848,12 +734,7 @@ const compositeAbilityObject = {
                           "baseChance": 1.5,
                           "valuePerStack": {
                             "MDF_DamagePercentage": {
-                              "operator": "Variables[0] (DamageRatio) || RETURN",
-                              "displayLines": "DamageRatio",
-                              "constants": [],
-                              "variables": [
-                                "DamageRatio"
-                              ]
+                              "displayLines": "DamageRatio"
                             }
                           },
                           "addStacksPerTrigger": 3
@@ -871,12 +752,7 @@ const compositeAbilityObject = {
                           "baseChance": 1.5,
                           "valuePerStack": {
                             "MDF_DamagePercentage": {
-                              "operator": "Variables[0] (DamageRatio) || RETURN",
-                              "displayLines": "DamageRatio",
-                              "constants": [],
-                              "variables": [
-                                "DamageRatio"
-                              ]
+                              "displayLines": "DamageRatio"
                             }
                           }
                         }
@@ -892,18 +768,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Wind",
                         "DamageBreak": {
-                          "operator": "Constants[0] (1.5) || Constants[1] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[2] (4) || DIV || Variables[2] (DamageRatio) || MUL || RETURN",
-                          "displayLines": "(((1.5 * (2 + (TargetStance / StanceUnit))) / 4) * DamageRatio)",
-                          "constants": [
-                            1.5,
-                            2,
-                            4
-                          ],
-                          "variables": [
-                            "TargetStance",
-                            "StanceUnit",
-                            "DamageRatio"
-                          ]
+                          "displayLines": "(((1.5 * (2 + (TargetStance / StanceUnit))) / 4) * DamageRatio)"
                         },
                         "dmgFormula": "Break DMG Scaling",
                         "dmgFormulaFinal": "Pure (No DMG%)",
@@ -936,14 +801,7 @@ const compositeAbilityObject = {
                       "baseChance": 1.5,
                       "valuePerStack": {
                         "MDF_DamagePercentage": {
-                          "operator": "Constants[0] (2) || Variables[0] (DamageRatio) || MUL || RETURN",
-                          "displayLines": "(2 * DamageRatio)",
-                          "constants": [
-                            2
-                          ],
-                          "variables": [
-                            "DamageRatio"
-                          ]
+                          "displayLines": "(2 * DamageRatio)"
                         }
                       }
                     },
@@ -957,18 +815,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Thunder",
                         "DamageBreak": {
-                          "operator": "Constants[0] (1) || Constants[1] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[2] (4) || DIV || Variables[2] (DamageRatio) || MUL || RETURN",
-                          "displayLines": "(((1 * (2 + (TargetStance / StanceUnit))) / 4) * DamageRatio)",
-                          "constants": [
-                            1,
-                            2,
-                            4
-                          ],
-                          "variables": [
-                            "TargetStance",
-                            "StanceUnit",
-                            "DamageRatio"
-                          ]
+                          "displayLines": "(((1 * (2 + (TargetStance / StanceUnit))) / 4) * DamageRatio)"
                         },
                         "dmgFormula": "Break DMG Scaling",
                         "dmgFormulaFinal": "Pure (No DMG%)",
@@ -1014,18 +861,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Imaginary",
                         "DamageBreak": {
-                          "operator": "Constants[0] (0.5) || Constants[1] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[2] (4) || DIV || Variables[2] (DamageRatio) || MUL || RETURN",
-                          "displayLines": "(((0.5 * (2 + (TargetStance / StanceUnit))) / 4) * DamageRatio)",
-                          "constants": [
-                            0.5,
-                            2,
-                            4
-                          ],
-                          "variables": [
-                            "TargetStance",
-                            "StanceUnit",
-                            "DamageRatio"
-                          ]
+                          "displayLines": "(((0.5 * (2 + (TargetStance / StanceUnit))) / 4) * DamageRatio)"
                         },
                         "dmgFormula": "Break DMG Scaling",
                         "dmgFormulaFinal": "Pure (No DMG%)",
@@ -1059,18 +895,7 @@ const compositeAbilityObject = {
                       "valuePerStack": {
                         "MDF_ActionDelayRatio": 0.2,
                         "MDF_DamagePercentage": {
-                          "operator": "Constants[0] (0.75) || Constants[1] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[2] (4) || DIV || Variables[2] (DamageRatio) || MUL || RETURN",
-                          "displayLines": "(((0.75 * (2 + (TargetStance / StanceUnit))) / 4) * DamageRatio)",
-                          "constants": [
-                            0.75,
-                            2,
-                            4
-                          ],
-                          "variables": [
-                            "TargetStance",
-                            "StanceUnit",
-                            "DamageRatio"
-                          ]
+                          "displayLines": "(((0.75 * (2 + (TargetStance / StanceUnit))) / 4) * DamageRatio)"
                         }
                       }
                     },
@@ -1084,18 +909,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Quantum",
                         "DamageBreak": {
-                          "operator": "Constants[0] (0.5) || Constants[1] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[2] (4) || DIV || Variables[2] (DamageRatio) || MUL || RETURN",
-                          "displayLines": "(((0.5 * (2 + (TargetStance / StanceUnit))) / 4) * DamageRatio)",
-                          "constants": [
-                            0.5,
-                            2,
-                            4
-                          ],
-                          "variables": [
-                            "TargetStance",
-                            "StanceUnit",
-                            "DamageRatio"
-                          ]
+                          "displayLines": "(((0.5 * (2 + (TargetStance / StanceUnit))) / 4) * DamageRatio)"
                         },
                         "dmgFormula": "Break DMG Scaling",
                         "dmgFormulaFinal": "Pure (No DMG%)",
@@ -1160,12 +974,7 @@ const compositeAbilityObject = {
                           "variableName": "DOT_TriggerRatio",
                           "eventType": "DOT",
                           "value": {
-                            "operator": "Constants[0] (0.8) || RETURN",
-                            "displayLines": "0.8",
-                            "constants": [
-                              0.8
-                            ],
-                            "variables": []
+                            "displayLines": "0.8"
                           }
                         },
                         {
@@ -1223,13 +1032,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_CritDamage) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_CritDamage * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CritDamage",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_CritDamage * MDF_Layer)"
                   }
                 }
               ]
@@ -1268,13 +1071,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_CritChance) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_CritChance * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CritChance",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_CritChance * MDF_Layer)"
                   }
                 }
               ]
@@ -1342,13 +1139,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (DamageTakenUpValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(DamageTakenUpValue * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "DamageTakenUpValue",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(DamageTakenUpValue * MDF_Layer)"
                   }
                 }
               ]
@@ -1423,14 +1214,7 @@ const compositeAbilityObject = {
                       }
                     },
                     "DamageBreak": {
-                      "operator": "Constants[0] (0.5) || Variables[0] (BuffCount) || MUL || RETURN",
-                      "displayLines": "(0.5 * BuffCount)",
-                      "constants": [
-                        0.5
-                      ],
-                      "variables": [
-                        "BuffCount"
-                      ]
+                      "displayLines": "(0.5 * BuffCount)"
                     },
                     "dmgFormula": "Break DMG Scaling",
                     "dmgFormulaFinal": "Pure (No DMG%)",
@@ -1657,13 +1441,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnemyVulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (DamageTakenUpValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(DamageTakenUpValue * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "DamageTakenUpValue",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(DamageTakenUpValue * MDF_Layer)"
                   }
                 }
               ]
@@ -1814,17 +1592,7 @@ const compositeAbilityObject = {
                         "MDF_EliteRatio": 0.07,
                         "MDF_StandardRatio": 0.16,
                         "MDF_DamageMax": {
-                          "operator": "Variables[0] (CasterBreakBaseDamage) || Constants[0] (2) || MUL || Constants[0] (2) || Variables[1] (TargetStance) || Variables[2] (StanceUnit) || DIV || ADD || MUL || Constants[1] (4) || DIV || RETURN",
-                          "displayLines": "(((CasterBreakBaseDamage * 2) * (2 + (TargetStance / StanceUnit))) / 4)",
-                          "constants": [
-                            2,
-                            4
-                          ],
-                          "variables": [
-                            "CasterBreakBaseDamage",
-                            "TargetStance",
-                            "StanceUnit"
-                          ]
+                          "displayLines": "(((CasterBreakBaseDamage * 2) * (2 + (TargetStance / StanceUnit))) / 4)"
                         }
                       }
                     },
@@ -1860,16 +1628,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Physical",
                         "DamageBreak": {
-                          "operator": "Constants[0] (2) || Constants[0] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[1] (4) || DIV || RETURN",
-                          "displayLines": "((2 * (2 + (TargetStance / StanceUnit))) / 4)",
-                          "constants": [
-                            2,
-                            4
-                          ],
-                          "variables": [
-                            "TargetStance",
-                            "StanceUnit"
-                          ]
+                          "displayLines": "((2 * (2 + (TargetStance / StanceUnit))) / 4)"
                         },
                         "dmgFormula": "Break DMG Scaling",
                         "dmgFormulaFinal": "Pure (No DMG%)",
@@ -1960,16 +1719,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Fire",
                         "DamageBreak": {
-                          "operator": "Constants[0] (2) || Constants[0] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[1] (4) || DIV || RETURN",
-                          "displayLines": "((2 * (2 + (TargetStance / StanceUnit))) / 4)",
-                          "constants": [
-                            2,
-                            4
-                          ],
-                          "variables": [
-                            "TargetStance",
-                            "StanceUnit"
-                          ]
+                          "displayLines": "((2 * (2 + (TargetStance / StanceUnit))) / 4)"
                         },
                         "dmgFormula": "Break DMG Scaling",
                         "dmgFormulaFinal": "Pure (No DMG%)",
@@ -2134,17 +1884,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Wind",
                         "DamageBreak": {
-                          "operator": "Constants[0] (1.5) || Constants[1] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[2] (4) || DIV || RETURN",
-                          "displayLines": "((1.5 * (2 + (TargetStance / StanceUnit))) / 4)",
-                          "constants": [
-                            1.5,
-                            2,
-                            4
-                          ],
-                          "variables": [
-                            "TargetStance",
-                            "StanceUnit"
-                          ]
+                          "displayLines": "((1.5 * (2 + (TargetStance / StanceUnit))) / 4)"
                         },
                         "dmgFormula": "Break DMG Scaling",
                         "dmgFormulaFinal": "Pure (No DMG%)",
@@ -2235,17 +1975,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Thunder",
                         "DamageBreak": {
-                          "operator": "Constants[0] (1) || Constants[1] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[2] (4) || DIV || RETURN",
-                          "displayLines": "((1 * (2 + (TargetStance / StanceUnit))) / 4)",
-                          "constants": [
-                            1,
-                            2,
-                            4
-                          ],
-                          "variables": [
-                            "TargetStance",
-                            "StanceUnit"
-                          ]
+                          "displayLines": "((1 * (2 + (TargetStance / StanceUnit))) / 4)"
                         },
                         "dmgFormula": "Break DMG Scaling",
                         "dmgFormulaFinal": "Pure (No DMG%)",
@@ -2337,17 +2067,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Imaginary",
                         "DamageBreak": {
-                          "operator": "Constants[0] (0.5) || Constants[1] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[2] (4) || DIV || RETURN",
-                          "displayLines": "((0.5 * (2 + (TargetStance / StanceUnit))) / 4)",
-                          "constants": [
-                            0.5,
-                            2,
-                            4
-                          ],
-                          "variables": [
-                            "TargetStance",
-                            "StanceUnit"
-                          ]
+                          "displayLines": "((0.5 * (2 + (TargetStance / StanceUnit))) / 4)"
                         },
                         "dmgFormula": "Break DMG Scaling",
                         "dmgFormulaFinal": "Pure (No DMG%)",
@@ -2405,17 +2125,7 @@ const compositeAbilityObject = {
                       "valuePerStack": {
                         "MDF_ActionDelayRatio": 0.2,
                         "MDF_DamagePercentage": {
-                          "operator": "Constants[0] (0.75) || Constants[1] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[2] (4) || DIV || RETURN",
-                          "displayLines": "((0.75 * (2 + (TargetStance / StanceUnit))) / 4)",
-                          "constants": [
-                            0.75,
-                            2,
-                            4
-                          ],
-                          "variables": [
-                            "TargetStance",
-                            "StanceUnit"
-                          ]
+                          "displayLines": "((0.75 * (2 + (TargetStance / StanceUnit))) / 4)"
                         }
                       }
                     },
@@ -2451,17 +2161,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Quantum",
                         "DamageBreak": {
-                          "operator": "Constants[0] (0.5) || Constants[1] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[2] (4) || DIV || RETURN",
-                          "displayLines": "((0.5 * (2 + (TargetStance / StanceUnit))) / 4)",
-                          "constants": [
-                            0.5,
-                            2,
-                            4
-                          ],
-                          "variables": [
-                            "TargetStance",
-                            "StanceUnit"
-                          ]
+                          "displayLines": "((0.5 * (2 + (TargetStance / StanceUnit))) / 4)"
                         },
                         "dmgFormula": "Break DMG Scaling",
                         "dmgFormulaFinal": "Pure (No DMG%)",
@@ -2552,17 +2252,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Ice",
                         "DamageBreak": {
-                          "operator": "Constants[0] (1) || Constants[1] (2) || Variables[0] (TargetStance) || Variables[1] (StanceUnit) || DIV || ADD || MUL || Constants[2] (4) || DIV || RETURN",
-                          "displayLines": "((1 * (2 + (TargetStance / StanceUnit))) / 4)",
-                          "constants": [
-                            1,
-                            2,
-                            4
-                          ],
-                          "variables": [
-                            "TargetStance",
-                            "StanceUnit"
-                          ]
+                          "displayLines": "((1 * (2 + (TargetStance / StanceUnit))) / 4)"
                         },
                         "dmgFormula": "Break DMG Scaling",
                         "dmgFormulaFinal": "Pure (No DMG%)",

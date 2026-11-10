@@ -29,25 +29,14 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (Thunder_CountLight) || Variables[1] (Thunder_CountDark) || ADD || RETURN",
-        "displayLines": "(Thunder_CountLight + Thunder_CountDark)",
-        "constants": [],
-        "variables": [
-          "Thunder_CountLight",
-          "Thunder_CountDark"
-        ]
+        "displayLines": "(Thunder_CountLight + Thunder_CountDark)"
       },
       "variableName": "Thunder_CountDark"
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (Thunder_CountDark) || RETURN",
-        "displayLines": "Thunder_CountDark",
-        "constants": [],
-        "variables": [
-          "Thunder_CountDark"
-        ]
+        "displayLines": "Thunder_CountDark"
       },
       "variableName": "Thunder_TempCount"
     },
@@ -80,15 +69,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[SkillP02[1]]}) || Variables[1] (Thunder_TempCount) || Constants[0] (6) || DIV || MUL || RETURN",
-              "displayLines": "({[SkillP02[1]]} * (Thunder_TempCount / 6))",
-              "constants": [
-                6
-              ],
-              "variables": [
-                "{[SkillP02[1]]}",
-                "Thunder_TempCount"
-              ]
+              "displayLines": "({[SkillP02[1]]} * (Thunder_TempCount / 6))"
             },
             "dmgFormula": "Max HP Scaling",
             "dmgFormulaFinal": "Converted DMG Base",
@@ -112,15 +93,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[SkillP02[1]]}) || Variables[1] (Thunder_TempCount) || Constants[0] (6) || DIV || MUL || RETURN",
-              "displayLines": "({[SkillP02[1]]} * (Thunder_TempCount / 6))",
-              "constants": [
-                6
-              ],
-              "variables": [
-                "{[SkillP02[1]]}",
-                "Thunder_TempCount"
-              ]
+              "displayLines": "({[SkillP02[1]]} * (Thunder_TempCount / 6))"
             },
             "dmgFormula": "Max HP Scaling",
             "dmgFormulaFinal": "Converted DMG Base",

@@ -39,20 +39,10 @@ const compositeAbilityObject = {
           "valuePerStack": {
             "_DebuffCount": 0,
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.08) || RETURN",
-              "displayLines": "0.08",
-              "constants": [],
-              "variables": [
-                0.08
-              ]
+              "displayLines": "0.08"
             },
             "MDF_MaxCount": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             }
           }
         }
@@ -104,12 +94,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue1) || RETURN",
-                    "displayLines": "MDF_PropertyValue1",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue1"
-                    ]
+                    "displayLines": "MDF_PropertyValue1"
                   }
                 }
               ]
@@ -146,24 +131,14 @@ const compositeAbilityObject = {
                     "value1": "_DebuffCount",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                      "displayLines": "MDF_MaxCount",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MaxCount"
-                      ]
+                      "displayLines": "MDF_MaxCount"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                        "displayLines": "MDF_MaxCount",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxCount"
-                        ]
+                        "displayLines": "MDF_MaxCount"
                       },
                       "variableName": "_DebuffCount"
                     }
@@ -223,29 +198,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"837190525\">LC_23020_Sub</a>[<span class=\"descriptionNumberColor\">Disputation</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue1": {
-                          "operator": "Variables[0] (0.36) || RETURN",
-                          "displayLines": "0.36",
-                          "constants": [],
-                          "variables": [
-                            0.36
-                          ]
+                          "displayLines": "0.36"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (0.24) || RETURN",
-                          "displayLines": "0.24",
-                          "constants": [],
-                          "variables": [
-                            0.24
-                          ]
+                          "displayLines": "0.24"
                         }
                       }
                     }

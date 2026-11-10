@@ -107,12 +107,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-              "displayLines": "{[Skill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[4]]}"
-              ]
+              "displayLines": "{[Skill01[4]]}"
             },
             "dmgFormula": "Max HP Scaling",
             "dmgFormulaFinal": "Converted DMG Base",

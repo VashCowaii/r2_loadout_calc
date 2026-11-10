@@ -110,12 +110,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (BE_AetherDivide_W2_Mecha03_00_BaseSpeed) || RETURN",
-                "displayLines": "BE_AetherDivide_W2_Mecha03_00_BaseSpeed",
-                "constants": [],
-                "variables": [
-                  "BE_AetherDivide_W2_Mecha03_00_BaseSpeed"
-                ]
+                "displayLines": "BE_AetherDivide_W2_Mecha03_00_BaseSpeed"
               }
             }
           ]

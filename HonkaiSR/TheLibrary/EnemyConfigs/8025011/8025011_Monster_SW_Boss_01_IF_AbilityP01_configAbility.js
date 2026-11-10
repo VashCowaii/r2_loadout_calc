@@ -33,68 +33,38 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"654310441\">Enemy_SW_Boss_01_IF_StanceDamageController</a>",
       "valuePerStack": {
         "MDF_ExplodeDamageTakenRatio": {
-          "operator": "Variables[0] ({[SkillP02[4]]}) || RETURN",
-          "displayLines": "{[SkillP02[4]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP02[4]]}"
-          ]
+          "displayLines": "{[SkillP02[4]]}"
         },
         "MDF_ExplodeStanceDamage": {
-          "operator": "Variables[0] ({[SkillP02[5]]}) || RETURN",
-          "displayLines": "{[SkillP02[5]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP02[5]]}"
-          ]
+          "displayLines": "{[SkillP02[5]]}"
         }
       }
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-        "displayLines": "{[SkillP01[0]]}",
-        "constants": [],
-        "variables": [
-          "{[SkillP01[0]]}"
-        ]
+        "displayLines": "{[SkillP01[0]]}"
       },
       "variableName": "SummonDelayRatio1Random1"
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-        "displayLines": "{[SkillP01[1]]}",
-        "constants": [],
-        "variables": [
-          "{[SkillP01[1]]}"
-        ]
+        "displayLines": "{[SkillP01[1]]}"
       },
       "variableName": "SummonDelayRatio1Random2"
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-        "displayLines": "{[SkillP01[2]]}",
-        "constants": [],
-        "variables": [
-          "{[SkillP01[2]]}"
-        ]
+        "displayLines": "{[SkillP01[2]]}"
       },
       "variableName": "SummonDelayRatio1Random3"
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-        "displayLines": "{[SkillP01[3]]}",
-        "constants": [],
-        "variables": [
-          "{[SkillP01[3]]}"
-        ]
+        "displayLines": "{[SkillP01[3]]}"
       },
       "variableName": "SummonDelayRatio2"
     },
@@ -118,28 +88,13 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1587187705\">Enemy_W2_Cocolia_IF_SuperArmorController</a>",
           "valuePerStack": {
             "MDF_IF_BOSS_BreakDelay": {
-              "operator": "Variables[0] ({[SkillEX01[2]]}) || RETURN",
-              "displayLines": "{[SkillEX01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[2]]}"
-              ]
+              "displayLines": "{[SkillEX01[2]]}"
             },
             "MDF_IF_BOSS_WeaknessDMGUpRatio": {
-              "operator": "Variables[0] ({[SkillEX01[1]]}) || RETURN",
-              "displayLines": "{[SkillEX01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[1]]}"
-              ]
+              "displayLines": "{[SkillEX01[1]]}"
             },
             "MDF_IF_BOSS_Standard_Defence": {
-              "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
-              "displayLines": "{[SkillEX01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[0]]}"
-              ]
+              "displayLines": "{[SkillEX01[0]]}"
             }
           }
         },
@@ -152,36 +107,16 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1246789467\">Enemy_W2_Cocolia_IF_SoftFrenzyController</a>",
           "valuePerStack": {
             "MDF_FrenzyStartDelay": {
-              "operator": "Variables[0] ({[SkillEX05[0]]}) || RETURN",
-              "displayLines": "{[SkillEX05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX05[0]]}"
-              ]
+              "displayLines": "{[SkillEX05[0]]}"
             },
             "MDF_FrenzyIntervalDelay": {
-              "operator": "Variables[0] ({[SkillEX05[1]]}) || RETURN",
-              "displayLines": "{[SkillEX05[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX05[1]]}"
-              ]
+              "displayLines": "{[SkillEX05[1]]}"
             },
             "MDF_MaxFrenzyLayer": {
-              "operator": "Variables[0] ({[SkillEX05[2]]}) || RETURN",
-              "displayLines": "{[SkillEX05[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX05[2]]}"
-              ]
+              "displayLines": "{[SkillEX05[2]]}"
             },
             "MDF_TokenDMGAddRatioPerLayer": {
-              "operator": "Variables[0] ({[SkillEX05[3]]}) || RETURN",
-              "displayLines": "{[SkillEX05[3]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX05[3]]}"
-              ]
+              "displayLines": "{[SkillEX05[3]]}"
             }
           }
         }
@@ -201,12 +136,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-            "displayLines": "{[SkillEX03[0]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillEX03[0]]}"
-            ]
+            "displayLines": "{[SkillEX03[0]]}"
           },
           "variableName": "SummonCount"
         },
@@ -240,21 +170,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-77514845\">Enemy_SW_Boss_01_IF_SwarmArmorController</a>",
           "valuePerStack": {
             "MDF_Armor_DamageReduce": {
-              "operator": "Variables[0] ({[SkillP02[1]]}) || RETURN",
-              "displayLines": "{[SkillP02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP02[1]]}"
-              ]
+              "displayLines": "{[SkillP02[1]]}"
             },
             "MDF_Armor_CountNormal": {
-              "operator": "Variables[0] ({[SkillP02[0]]}) || Variables[1] ({[SkillEX04[0]]}) || ADD || RETURN",
-              "displayLines": "({[SkillP02[0]]} + {[SkillEX04[0]]})",
-              "constants": [],
-              "variables": [
-                "{[SkillP02[0]]}",
-                "{[SkillEX04[0]]}"
-              ]
+              "displayLines": "({[SkillP02[0]]} + {[SkillEX04[0]]})"
             }
           }
         }
@@ -269,20 +188,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-77514845\">Enemy_SW_Boss_01_IF_SwarmArmorController</a>",
           "valuePerStack": {
             "MDF_Armor_DamageReduce": {
-              "operator": "Variables[0] ({[SkillP02[1]]}) || RETURN",
-              "displayLines": "{[SkillP02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP02[1]]}"
-              ]
+              "displayLines": "{[SkillP02[1]]}"
             },
             "MDF_Armor_CountNormal": {
-              "operator": "Variables[0] ({[SkillP02[0]]}) || RETURN",
-              "displayLines": "{[SkillP02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP02[0]]}"
-              ]
+              "displayLines": "{[SkillP02[0]]}"
             }
           }
         }

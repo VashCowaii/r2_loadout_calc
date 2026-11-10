@@ -8,12 +8,7 @@ const configAbility = {
     {
       "name": "SWITCH",
       "switchValue": {
-        "operator": "Variables[0] (SummonCount) || RETURN",
-        "displayLines": "SummonCount",
-        "constants": [],
-        "variables": [
-          "SummonCount"
-        ]
+        "displayLines": "SummonCount"
       },
       "caseEvents": [
         {
@@ -175,12 +170,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1827853653\">Monster_W1_CocoliaP1_RL_IcePower_Summon</a>",
           "valuePerStack": {
             "MDF_DamageUpRatio_PerLayer": {
-              "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[3]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[3]]}"
             }
           },
           "casterAssign": "TargetSelf"

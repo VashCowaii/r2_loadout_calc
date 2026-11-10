@@ -140,27 +140,13 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "consumePercent": {
-                "operator": "Constants[0] (1) || Variables[0] (MDF_InitHP_LV2) || SUB || RETURN",
-                "displayLines": "(1 - MDF_InitHP_LV2)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_InitHP_LV2"
-                ]
+                "displayLines": "(1 - MDF_InitHP_LV2)"
               }
             },
             {
               "name": "Deal Toughness DMG",
               "valuePercentReduce": {
-                "operator": "Constants[0] (1) || Variables[0] (MDF_InitStance_LV2) || SUB || RETURN",
-                "displayLines": "(1 - MDF_InitStance_LV2)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_InitStance_LV2"
-                ]
+                "displayLines": "(1 - MDF_InitStance_LV2)"
               },
               "target": {
                 "name": "Target Name",
@@ -196,27 +182,13 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "consumePercent": {
-                "operator": "Constants[0] (1) || Variables[0] (MDF_InitHP_LV1) || SUB || RETURN",
-                "displayLines": "(1 - MDF_InitHP_LV1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_InitHP_LV1"
-                ]
+                "displayLines": "(1 - MDF_InitHP_LV1)"
               }
             },
             {
               "name": "Deal Toughness DMG",
               "valuePercentReduce": {
-                "operator": "Constants[0] (1) || Variables[0] (MDF_InitStance_LV1) || SUB || RETURN",
-                "displayLines": "(1 - MDF_InitStance_LV1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_InitStance_LV1"
-                ]
+                "displayLines": "(1 - MDF_InitStance_LV1)"
               },
               "target": {
                 "name": "Target Name",
@@ -420,12 +392,7 @@ const configAbility = {
                   "conditions": {
                     "name": "Random Chance",
                     "chance": {
-                      "operator": "Variables[0] (Skill02_P4_BonusChance) || RETURN",
-                      "displayLines": "Skill02_P4_BonusChance",
-                      "constants": [],
-                      "variables": [
-                        "Skill02_P4_BonusChance"
-                      ]
+                      "displayLines": "Skill02_P4_BonusChance"
                     }
                   },
                   "passed": [

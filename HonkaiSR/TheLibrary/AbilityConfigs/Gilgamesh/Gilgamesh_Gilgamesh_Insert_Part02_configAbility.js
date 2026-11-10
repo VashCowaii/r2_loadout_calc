@@ -29,21 +29,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (4) || RETURN",
-          "displayLines": "4",
-          "constants": [],
-          "variables": [
-            4
-          ]
+          "displayLines": "4"
         },
         "HitSplit": 0.2,
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": [
           "Joint-Attack"
@@ -61,21 +51,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (4) || RETURN",
-          "displayLines": "4",
-          "constants": [],
-          "variables": [
-            4
-          ]
+          "displayLines": "4"
         },
         "HitSplit": 0.2,
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": [
           "Joint-Attack"
@@ -93,21 +73,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (4) || RETURN",
-          "displayLines": "4",
-          "constants": [],
-          "variables": [
-            4
-          ]
+          "displayLines": "4"
         },
         "HitSplit": 0.2,
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": [
           "Joint-Attack"
@@ -125,21 +95,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (4) || RETURN",
-          "displayLines": "4",
-          "constants": [],
-          "variables": [
-            4
-          ]
+          "displayLines": "4"
         },
         "HitSplit": 0.4,
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": [
           "Joint-Attack"
@@ -162,24 +122,14 @@ const configAbility = {
       "functionName": "<a class=\"gTempYellow\" id=\"-1526947844\">function_Gilgamesh_KingCount</a>",
       "variables": {
         "KingCountAdd": {
-          "operator": "Variables[0] (3) || RETURN",
-          "displayLines": "3",
-          "constants": [],
-          "variables": [
-            3
-          ]
+          "displayLines": "3"
         }
       }
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Constants[0] (0) || RETURN",
-        "displayLines": "0",
-        "constants": [
-          0
-        ],
-        "variables": []
+        "displayLines": "0"
       },
       "variableName": "Saber_Chain"
     }

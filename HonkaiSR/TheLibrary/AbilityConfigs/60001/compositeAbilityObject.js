@@ -52,12 +52,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                    "displayLines": "{[SkillP01[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillP01[2]]}"
-                    ]
+                    "displayLines": "{[SkillP01[2]]}"
                   },
                   "isFixed": "(Fixed)"
                 }
@@ -149,12 +144,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                        "displayLines": "{[SkillP01[2]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillP01[2]]}"
-                        ]
+                        "displayLines": "{[SkillP01[2]]}"
                       },
                       "isFixed": "(Fixed)"
                     },
@@ -185,12 +175,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1478170495\">Colossus_EnterBattlePowerUp</a>",
           "valuePerStack": {
             "MDF_AllDamageReduce": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
+              "displayLines": "{[SkillP01[0]]}"
             }
           }
         },
@@ -246,12 +231,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">StageFinalDMG</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageAddedRatio) || RETURN",
-                    "displayLines": "MDF_AllDamageAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageAddedRatio"
-                    ]
+                    "displayLines": "MDF_AllDamageAddedRatio"
                   }
                 }
               ]
@@ -279,12 +259,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                    "displayLines": "MDF_AllDamageReduce",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageReduce"
-                    ]
+                    "displayLines": "MDF_AllDamageReduce"
                   }
                 }
               ]
@@ -463,12 +438,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                        "displayLines": "{[SkillP01[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillP01[1]]}"
-                        ]
+                        "displayLines": "{[SkillP01[1]]}"
                       },
                       "isFixed": "(Fixed)"
                     }
@@ -609,21 +579,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "DamageFlat": {
-              "operator": "Variables[0] (Colossus_EnemyBoss_MaxHP) || Variables[1] ({[Skill03[0]]}) || MUL || RETURN",
-              "displayLines": "(Colossus_EnemyBoss_MaxHP * {[Skill03[0]]})",
-              "constants": [],
-              "variables": [
-                "Colossus_EnemyBoss_MaxHP",
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "(Colossus_EnemyBoss_MaxHP * {[Skill03[0]]})"
             },
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "ToughnessDMGType": {
               "DamageType": "Fire"

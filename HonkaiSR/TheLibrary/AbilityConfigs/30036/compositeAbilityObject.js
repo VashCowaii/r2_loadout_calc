@@ -27,14 +27,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (count) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(count + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "count"
-                    ]
+                    "displayLines": "(count + 1)"
                   },
                   "variableName": "count"
                 },
@@ -207,12 +200,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"775144590\">Modifier_BattleEventAbility_Challenge_Xianzhou_06_Sub2</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (PropertyValue) || RETURN",
-                          "displayLines": "PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "PropertyValue"
-                          ]
+                          "displayLines": "PropertyValue"
                         }
                       }
                     }
@@ -280,24 +268,10 @@ const compositeAbilityObject = {
                         "target": "{{Enemy Team All}}"
                       },
                       "selfSplit": {
-                        "operator": "Constants[0] (1) || Variables[0] (DarkTeamCount) || DIV || RETURN",
-                        "displayLines": "(1 / DarkTeamCount)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "DarkTeamCount"
-                        ]
+                        "displayLines": "(1 / DarkTeamCount)"
                       },
                       "targetSplit": {
-                        "operator": "Constants[0] (1) || Variables[0] (DarkTeamCount) || DIV || RETURN",
-                        "displayLines": "(1 / DarkTeamCount)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "DarkTeamCount"
-                        ]
+                        "displayLines": "(1 / DarkTeamCount)"
                       }
                     }
                   ]
@@ -322,12 +296,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"758366971\">Modifier_BattleEventAbility_Challenge_Xianzhou_06_Sub1</a>",
                   "valuePerStack": {
                     "PropertyValue": {
-                      "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P1_ADF"
                     }
                   }
                 }
@@ -377,12 +346,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"758366971\">Modifier_BattleEventAbility_Challenge_Xianzhou_06_Sub1</a>",
                       "valuePerStack": {
                         "PropertyValue": {
-                          "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                          "displayLines": "#BattleEvent_P1_ADF",
-                          "constants": [],
-                          "variables": [
-                            "#BattleEvent_P1_ADF"
-                          ]
+                          "displayLines": "#BattleEvent_P1_ADF"
                         }
                       }
                     }

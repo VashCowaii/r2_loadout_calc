@@ -49,12 +49,7 @@ const configAbility = {
       "name": "Update Displayed Energy Bar",
       "value": 0,
       "maximum": {
-        "operator": "Variables[0] (9) || RETURN",
-        "displayLines": "9",
-        "constants": [],
-        "variables": [
-          9
-        ]
+        "displayLines": "9"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -118,12 +113,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-84702346\">Acheron_Eidolon6_AddRegardAsAbilityType</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         }
@@ -158,12 +148,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1111481031\">Acheron_Eidolon4_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Ultimate DMG Vulnerability</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.08) || RETURN",
-                      "displayLines": "0.08",
-                      "constants": [],
-                      "variables": [
-                        0.08
-                      ]
+                      "displayLines": "0.08"
                     }
                   }
                 }
@@ -194,12 +179,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1111481031\">Acheron_Eidolon4_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Ultimate DMG Vulnerability</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.08) || RETURN",
-                  "displayLines": "0.08",
-                  "constants": [],
-                  "variables": [
-                    0.08
-                  ]
+                  "displayLines": "0.08"
                 }
               }
             },
@@ -418,14 +398,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Acheron_BaseTypeCount) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(Acheron_BaseTypeCount - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Acheron_BaseTypeCount"
-                    ]
+                    "displayLines": "(Acheron_BaseTypeCount - 1)"
                   },
                   "variableName": "Acheron_PointB2_Count"
                 },
@@ -448,14 +421,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (Acheron_PointB2_Count) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(Acheron_PointB2_Count + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Acheron_PointB2_Count"
-                            ]
+                            "displayLines": "(Acheron_PointB2_Count + 1)"
                           },
                           "variableName": "Acheron_PointB2_Count"
                         }
@@ -475,12 +441,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (1.6) || RETURN",
-                        "displayLines": "1.6",
-                        "constants": [],
-                        "variables": [
-                          1.6
-                        ]
+                        "displayLines": "1.6"
                       },
                       "variableName": "Acheron_PointB2_DamageRatio"
                     }
@@ -498,12 +459,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (1.15) || RETURN",
-                            "displayLines": "1.15",
-                            "constants": [],
-                            "variables": [
-                              1.15
-                            ]
+                            "displayLines": "1.15"
                           },
                           "variableName": "Acheron_PointB2_DamageRatio"
                         }
@@ -599,12 +555,7 @@ const configAbility = {
                     "value1": "MDF_Passive_Count",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (9) || RETURN",
-                      "displayLines": "9",
-                      "constants": [],
-                      "variables": [
-                        9
-                      ]
+                      "displayLines": "9"
                     }
                   },
                   "passed": [
@@ -706,12 +657,7 @@ const configAbility = {
                     "value1": "MDF_Passive_Count",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (9) || RETURN",
-                      "displayLines": "9",
-                      "constants": [],
-                      "variables": [
-                        9
-                      ]
+                      "displayLines": "9"
                     }
                   },
                   {
@@ -1177,13 +1123,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Acheron_FlowerCountBySp) || Variables[1] (Acheron_ChangeValue) || ADD || RETURN",
-                    "displayLines": "(Acheron_FlowerCountBySp + Acheron_ChangeValue)",
-                    "constants": [],
-                    "variables": [
-                      "Acheron_FlowerCountBySp",
-                      "Acheron_ChangeValue"
-                    ]
+                    "displayLines": "(Acheron_FlowerCountBySp + Acheron_ChangeValue)"
                   },
                   "variableName": "Acheron_FlowerCountBySp"
                 },
@@ -1194,24 +1134,14 @@ const configAbility = {
                     "value1": "Acheron_FlowerCountBySp",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (9) || RETURN",
-                      "displayLines": "9",
-                      "constants": [],
-                      "variables": [
-                        9
-                      ]
+                      "displayLines": "9"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (9) || RETURN",
-                        "displayLines": "9",
-                        "constants": [],
-                        "variables": [
-                          9
-                        ]
+                        "displayLines": "9"
                       },
                       "variableName": "Acheron_FlowerCountBySp"
                     }
@@ -1257,12 +1187,7 @@ const configAbility = {
                             "value1": "MDF_Passive_Count",
                             "compareType": "<",
                             "value2": {
-                              "operator": "Variables[0] (9) || RETURN",
-                              "displayLines": "9",
-                              "constants": [],
-                              "variables": [
-                                9
-                              ]
+                              "displayLines": "9"
                             }
                           },
                           {
@@ -1277,13 +1202,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (MDF_Passive_Count) || Variables[1] (Acheron_ChangeValue) || ADD || RETURN",
-                            "displayLines": "(MDF_Passive_Count + Acheron_ChangeValue)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Passive_Count",
-                              "Acheron_ChangeValue"
-                            ]
+                            "displayLines": "(MDF_Passive_Count + Acheron_ChangeValue)"
                           },
                           "variableName": "MDF_Passive_Count"
                         },
@@ -1296,13 +1215,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (MDF_Passive_Count) || Variables[1] (Acheron_ChangeValue) || ADD || RETURN",
-                            "displayLines": "(MDF_Passive_Count + Acheron_ChangeValue)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Passive_Count",
-                              "Acheron_ChangeValue"
-                            ]
+                            "displayLines": "(MDF_Passive_Count + Acheron_ChangeValue)"
                           },
                           "variableName": "MDF_Passive_Count"
                         },
@@ -1338,32 +1251,17 @@ const configAbility = {
                     "value1": "MDF_Passive_Count",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (9) || RETURN",
-                      "displayLines": "9",
-                      "constants": [],
-                      "variables": [
-                        9
-                      ]
+                      "displayLines": "9"
                     }
                   },
                   "passed": [
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MDF_Passive_Count) || RETURN",
-                        "displayLines": "MDF_Passive_Count",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Passive_Count"
-                        ]
+                        "displayLines": "MDF_Passive_Count"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (9) || RETURN",
-                        "displayLines": "9",
-                        "constants": [],
-                        "variables": [
-                          9
-                        ]
+                        "displayLines": "9"
                       },
                       "assignState": "True",
                       "priorState": "Active",
@@ -1374,20 +1272,10 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MDF_Passive_Count) || RETURN",
-                        "displayLines": "MDF_Passive_Count",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Passive_Count"
-                        ]
+                        "displayLines": "MDF_Passive_Count"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (9) || RETURN",
-                        "displayLines": "9",
-                        "constants": [],
-                        "variables": [
-                          9
-                        ]
+                        "displayLines": "9"
                       },
                       "assignState": "True",
                       "priorState": "Normal",
@@ -1461,30 +1349,15 @@ const configAbility = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"62451815\">Acheron_UltraAbilitySpareCount_PointB1</a>[<span class=\"descriptionNumberColor\">Quadrivalent Ascendance</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] (3) || RETURN",
-                                "displayLines": "3",
-                                "constants": [],
-                                "variables": [
-                                  3
-                                ]
+                                "displayLines": "3"
                               },
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (3) || RETURN",
-                                  "displayLines": "3",
-                                  "constants": [],
-                                  "variables": [
-                                    3
-                                  ]
+                                  "displayLines": "3"
                                 }
                               },
                               "addStacksPerTrigger": {
-                                "operator": "Variables[0] (Acheron_PointB1_ClampedAdd) || RETURN",
-                                "displayLines": "Acheron_PointB1_ClampedAdd",
-                                "constants": [],
-                                "variables": [
-                                  "Acheron_PointB1_ClampedAdd"
-                                ]
+                                "displayLines": "Acheron_PointB1_ClampedAdd"
                               }
                             }
                           ]

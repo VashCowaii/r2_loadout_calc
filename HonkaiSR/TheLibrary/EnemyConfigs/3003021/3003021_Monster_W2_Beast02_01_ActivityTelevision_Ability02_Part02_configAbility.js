@@ -151,12 +151,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
+                  "displayLines": "{[Skill02[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -176,12 +171,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
+                  "displayLines": "{[Skill02[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -459,12 +449,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
+                  "displayLines": "{[Skill02[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -484,12 +469,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
+                  "displayLines": "{[Skill02[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -767,12 +747,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
+                  "displayLines": "{[Skill02[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -792,12 +767,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
+                  "displayLines": "{[Skill02[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1041,12 +1011,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
+                  "displayLines": "{[Skill02[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1066,12 +1031,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
+                  "displayLines": "{[Skill02[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1351,12 +1311,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                      "displayLines": "{[Skill02[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[1]]}"
-                      ]
+                      "displayLines": "{[Skill02[1]]}"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "dmgFormulaFinal": "Converted DMG Base",
@@ -1372,29 +1327,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
-                    "displayLines": "{[Skill02[4]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[4]]}"
-                    ]
+                    "displayLines": "{[Skill02[4]]}"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                    "displayLines": "{[Skill02[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[2]]}"
-                    ]
+                    "displayLines": "{[Skill02[2]]}"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                      "displayLines": "{[Skill02[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[3]]}"
-                      ]
+                      "displayLines": "{[Skill02[3]]}"
                     }
                   }
                 }
@@ -1410,12 +1350,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill02[5]]}) || RETURN",
-                      "displayLines": "{[Skill02[5]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[5]]}"
-                      ]
+                      "displayLines": "{[Skill02[5]]}"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "dmgFormulaFinal": "Converted DMG Base",
@@ -1431,29 +1366,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
-                    "displayLines": "{[Skill02[4]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[4]]}"
-                    ]
+                    "displayLines": "{[Skill02[4]]}"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                    "displayLines": "{[Skill02[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[2]]}"
-                    ]
+                    "displayLines": "{[Skill02[2]]}"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                      "displayLines": "{[Skill02[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[3]]}"
-                      ]
+                      "displayLines": "{[Skill02[3]]}"
                     }
                   }
                 }
@@ -1502,12 +1422,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                      "displayLines": "{[Skill02[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[1]]}"
-                      ]
+                      "displayLines": "{[Skill02[1]]}"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "dmgFormulaFinal": "Converted DMG Base",
@@ -1523,29 +1438,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
-                    "displayLines": "{[Skill02[4]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[4]]}"
-                    ]
+                    "displayLines": "{[Skill02[4]]}"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                    "displayLines": "{[Skill02[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[2]]}"
-                    ]
+                    "displayLines": "{[Skill02[2]]}"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                      "displayLines": "{[Skill02[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[3]]}"
-                      ]
+                      "displayLines": "{[Skill02[3]]}"
                     }
                   }
                 }
@@ -1561,12 +1461,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill02[5]]}) || RETURN",
-                      "displayLines": "{[Skill02[5]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[5]]}"
-                      ]
+                      "displayLines": "{[Skill02[5]]}"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "dmgFormulaFinal": "Converted DMG Base",
@@ -1582,29 +1477,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
-                    "displayLines": "{[Skill02[4]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[4]]}"
-                    ]
+                    "displayLines": "{[Skill02[4]]}"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                    "displayLines": "{[Skill02[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[2]]}"
-                    ]
+                    "displayLines": "{[Skill02[2]]}"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                      "displayLines": "{[Skill02[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[3]]}"
-                      ]
+                      "displayLines": "{[Skill02[3]]}"
                     }
                   }
                 }
@@ -1653,12 +1533,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                      "displayLines": "{[Skill02[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[1]]}"
-                      ]
+                      "displayLines": "{[Skill02[1]]}"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "dmgFormulaFinal": "Converted DMG Base",
@@ -1674,29 +1549,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
-                    "displayLines": "{[Skill02[4]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[4]]}"
-                    ]
+                    "displayLines": "{[Skill02[4]]}"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                    "displayLines": "{[Skill02[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[2]]}"
-                    ]
+                    "displayLines": "{[Skill02[2]]}"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                      "displayLines": "{[Skill02[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[3]]}"
-                      ]
+                      "displayLines": "{[Skill02[3]]}"
                     }
                   }
                 }
@@ -1712,12 +1572,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill02[5]]}) || RETURN",
-                      "displayLines": "{[Skill02[5]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[5]]}"
-                      ]
+                      "displayLines": "{[Skill02[5]]}"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "dmgFormulaFinal": "Converted DMG Base",
@@ -1733,29 +1588,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
-                    "displayLines": "{[Skill02[4]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[4]]}"
-                    ]
+                    "displayLines": "{[Skill02[4]]}"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                    "displayLines": "{[Skill02[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[2]]}"
-                    ]
+                    "displayLines": "{[Skill02[2]]}"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                      "displayLines": "{[Skill02[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[3]]}"
-                      ]
+                      "displayLines": "{[Skill02[3]]}"
                     }
                   }
                 }
@@ -1804,12 +1644,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                      "displayLines": "{[Skill02[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[1]]}"
-                      ]
+                      "displayLines": "{[Skill02[1]]}"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "dmgFormulaFinal": "Converted DMG Base",
@@ -1825,29 +1660,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
-                    "displayLines": "{[Skill02[4]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[4]]}"
-                    ]
+                    "displayLines": "{[Skill02[4]]}"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                    "displayLines": "{[Skill02[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[2]]}"
-                    ]
+                    "displayLines": "{[Skill02[2]]}"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                      "displayLines": "{[Skill02[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[3]]}"
-                      ]
+                      "displayLines": "{[Skill02[3]]}"
                     }
                   }
                 }
@@ -1863,12 +1683,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill02[5]]}) || RETURN",
-                      "displayLines": "{[Skill02[5]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[5]]}"
-                      ]
+                      "displayLines": "{[Skill02[5]]}"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "dmgFormulaFinal": "Converted DMG Base",
@@ -1884,29 +1699,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
-                    "displayLines": "{[Skill02[4]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[4]]}"
-                    ]
+                    "displayLines": "{[Skill02[4]]}"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                    "displayLines": "{[Skill02[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[2]]}"
-                    ]
+                    "displayLines": "{[Skill02[2]]}"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                      "displayLines": "{[Skill02[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[3]]}"
-                      ]
+                      "displayLines": "{[Skill02[3]]}"
                     }
                   }
                 }
@@ -1941,12 +1741,7 @@ const configAbility = {
         ]
       },
       "set": {
-        "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-        "displayLines": "{[Skill04[1]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill04[1]]}"
-        ]
+        "displayLines": "{[Skill04[1]]}"
       }
     },
     {

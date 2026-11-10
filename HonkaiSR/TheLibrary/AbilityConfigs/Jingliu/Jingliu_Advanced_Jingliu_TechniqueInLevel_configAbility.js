@@ -89,20 +89,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (Modifier_Frozen_DamagePercentage) || RETURN",
-                  "displayLines": "Modifier_Frozen_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "Modifier_Frozen_DamagePercentage"
-                  ]
+                  "displayLines": "Modifier_Frozen_DamagePercentage"
                 },
                 "DamageFlat": {
-                  "operator": "Variables[0] (Modifier_Frozen_DamageValue) || RETURN",
-                  "displayLines": "Modifier_Frozen_DamageValue",
-                  "constants": [],
-                  "variables": [
-                    "Modifier_Frozen_DamageValue"
-                  ]
+                  "displayLines": "Modifier_Frozen_DamageValue"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "Toughness": null,
@@ -136,12 +126,7 @@ const configAbility = {
             {
               "name": "Assign Advance/Delay to Current Ability Use",
               "adjustmentValue": {
-                "operator": "Variables[0] (STANDARDSPECIFIC_OBJECT_UNUSED_8[Freeze Delay, unassigned]) || RETURN",
-                "displayLines": "STANDARDSPECIFIC_OBJECT_UNUSED_8[Freeze Delay, unassigned]",
-                "constants": [],
-                "variables": [
-                  "STANDARDSPECIFIC_OBJECT_UNUSED_8[Freeze Delay, unassigned]"
-                ]
+                "displayLines": "STANDARDSPECIFIC_OBJECT_UNUSED_8[Freeze Delay, unassigned]"
               },
               "adjustmentType": "="
             }
@@ -182,31 +167,16 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (MDF_MazeMoonFlag) || RETURN",
-                "displayLines": "MDF_MazeMoonFlag",
-                "constants": [],
-                "variables": [
-                  "MDF_MazeMoonFlag"
-                ]
+                "displayLines": "MDF_MazeMoonFlag"
               }
             },
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (Jingliu_MoonFlag) || RETURN",
-                "displayLines": "Jingliu_MoonFlag",
-                "constants": [],
-                "variables": [
-                  "Jingliu_MoonFlag"
-                ]
+                "displayLines": "Jingliu_MoonFlag"
               },
               "maximum": {
-                "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-                "displayLines": "Jingliu_MoonFlagMax",
-                "constants": [],
-                "variables": [
-                  "Jingliu_MoonFlagMax"
-                ]
+                "displayLines": "Jingliu_MoonFlagMax"
               },
               "assignState": "True",
               "priorState": "Normal",
@@ -237,29 +207,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1060785735\">Technique_Jingliu_Modifier_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
                   "duration": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "valuePerStack": {
                     "Modifier_Frozen_DamagePercentage": {
-                      "operator": "Variables[0] (0.8) || RETURN",
-                      "displayLines": "0.8",
-                      "constants": [],
-                      "variables": [
-                        0.8
-                      ]
+                      "displayLines": "0.8"
                     }
                   }
                 }
@@ -281,12 +236,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (15) || RETURN",
-                    "displayLines": "15",
-                    "constants": [],
-                    "variables": [
-                      15
-                    ]
+                    "displayLines": "15"
                   },
                   "isFixed": "* ERR"
                 },
@@ -299,12 +249,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1042369095\">Advanced_Jingliu_TechniqueUsage</a>",
                   "valuePerStack": {
                     "MDF_MazeMoonFlag": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     }
                   }
                 }

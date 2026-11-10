@@ -137,22 +137,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
+                  "displayLines": "{[Skill04[0]]}"
                 },
                 "HitSplit": {
-                  "operator": "Variables[0] (_TargetCount) || Constants[0] (6) || DIV || RETURN",
-                  "displayLines": "(_TargetCount / 6)",
-                  "constants": [
-                    6
-                  ],
-                  "variables": [
-                    "_TargetCount"
-                  ]
+                  "displayLines": "(_TargetCount / 6)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -171,21 +159,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
+                  "displayLines": "{[Skill04[0]]}"
                 },
                 "HitSplit": {
-                  "operator": "Constants[0] (1) || Constants[1] (6) || DIV || RETURN",
-                  "displayLines": "(1 / 6)",
-                  "constants": [
-                    1,
-                    6
-                  ],
-                  "variables": []
+                  "displayLines": "(1 / 6)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -229,22 +206,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
+                  "displayLines": "{[Skill04[0]]}"
                 },
                 "HitSplit": {
-                  "operator": "Variables[0] (_TargetCount) || Constants[0] (6) || DIV || RETURN",
-                  "displayLines": "(_TargetCount / 6)",
-                  "constants": [
-                    6
-                  ],
-                  "variables": [
-                    "_TargetCount"
-                  ]
+                  "displayLines": "(_TargetCount / 6)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -263,21 +228,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
+                  "displayLines": "{[Skill04[0]]}"
                 },
                 "HitSplit": {
-                  "operator": "Constants[0] (1) || Constants[1] (6) || DIV || RETURN",
-                  "displayLines": "(1 / 6)",
-                  "constants": [
-                    1,
-                    6
-                  ],
-                  "variables": []
+                  "displayLines": "(1 / 6)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -301,14 +255,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Constants[0] (2) || Variables[0] (_TargetCount) || DIV || RETURN",
-                "displayLines": "(2 / _TargetCount)",
-                "constants": [
-                  2
-                ],
-                "variables": [
-                  "_TargetCount"
-                ]
+                "displayLines": "(2 / _TargetCount)"
               },
               "execute": [
                 {
@@ -326,22 +273,10 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                      "displayLines": "{[Skill04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[0]]}"
-                      ]
+                      "displayLines": "{[Skill04[0]]}"
                     },
                     "HitSplit": {
-                      "operator": "Variables[0] (_TargetCount) || Constants[0] (6) || DIV || RETURN",
-                      "displayLines": "(_TargetCount / 6)",
-                      "constants": [
-                        6
-                      ],
-                      "variables": [
-                        "_TargetCount"
-                      ]
+                      "displayLines": "(_TargetCount / 6)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -366,21 +301,10 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                      "displayLines": "{[Skill04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[0]]}"
-                      ]
+                      "displayLines": "{[Skill04[0]]}"
                     },
                     "HitSplit": {
-                      "operator": "Constants[0] (1) || Constants[1] (6) || DIV || RETURN",
-                      "displayLines": "(1 / 6)",
-                      "constants": [
-                        1,
-                        6
-                      ],
-                      "variables": []
+                      "displayLines": "(1 / 6)"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -423,22 +347,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
+                  "displayLines": "{[Skill04[0]]}"
                 },
                 "HitSplit": {
-                  "operator": "Variables[0] (_TargetCount) || Constants[0] (6) || DIV || RETURN",
-                  "displayLines": "(_TargetCount / 6)",
-                  "constants": [
-                    6
-                  ],
-                  "variables": [
-                    "_TargetCount"
-                  ]
+                  "displayLines": "(_TargetCount / 6)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -457,21 +369,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
+                  "displayLines": "{[Skill04[0]]}"
                 },
                 "HitSplit": {
-                  "operator": "Constants[0] (1) || Constants[1] (6) || DIV || RETURN",
-                  "displayLines": "(1 / 6)",
-                  "constants": [
-                    1,
-                    6
-                  ],
-                  "variables": []
+                  "displayLines": "(1 / 6)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -515,22 +416,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
+                  "displayLines": "{[Skill04[0]]}"
                 },
                 "HitSplit": {
-                  "operator": "Variables[0] (_TargetCount) || Constants[0] (6) || DIV || RETURN",
-                  "displayLines": "(_TargetCount / 6)",
-                  "constants": [
-                    6
-                  ],
-                  "variables": [
-                    "_TargetCount"
-                  ]
+                  "displayLines": "(_TargetCount / 6)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -549,21 +438,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
+                  "displayLines": "{[Skill04[0]]}"
                 },
                 "HitSplit": {
-                  "operator": "Constants[0] (1) || Constants[1] (6) || DIV || RETURN",
-                  "displayLines": "(1 / 6)",
-                  "constants": [
-                    1,
-                    6
-                  ],
-                  "variables": []
+                  "displayLines": "(1 / 6)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -600,68 +478,28 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1656896295\">Enemy_W4_Unicorn_Debuff_Mark</a>[<span class=\"descriptionNumberColor\">Oronyx's Mark</span>]",
                   "valuePerStack": {
                     "_GriffinMark_SPCost": {
-                      "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[0]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill01[0]]}"
                     },
                     "_GriffinMark_DamagePercentage": {
-                      "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill01[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[1]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill01[1]]}"
                     },
                     "_MixedMark_LoseHpRatio": {
-                      "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill01[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[2]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill01[2]]}"
                     },
                     "_UnicornMark_Chance": {
-                      "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[0]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[0]]}"
                     },
                     "_UnicornMark_LifeTime": {
-                      "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[1]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[1]]}"
                     },
                     "_UnicornMark_ActionDelayRatio": {
-                      "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[2]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[2]]}"
                     },
                     "_UnicornMark_DebuffDamagePercentage": {
-                      "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[3]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[3]]}"
                     },
                     "_UnicornMark_DamagePercentage": {
-                      "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[4]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[4]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[4]]}"
                     }
                   }
                 }
@@ -685,68 +523,28 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1656896295\">Enemy_W4_Unicorn_Debuff_Mark</a>[<span class=\"descriptionNumberColor\">Oronyx's Mark</span>]",
                   "valuePerStack": {
                     "_GriffinMark_SPCost": {
-                      "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[0]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill01[0]]}"
                     },
                     "_GriffinMark_DamagePercentage": {
-                      "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill01[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[1]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill01[1]]}"
                     },
                     "_MixedMark_LoseHpRatio": {
-                      "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill01[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[2]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill01[2]]}"
                     },
                     "_UnicornMark_Chance": {
-                      "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[0]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[0]]}"
                     },
                     "_UnicornMark_LifeTime": {
-                      "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[1]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[1]]}"
                     },
                     "_UnicornMark_ActionDelayRatio": {
-                      "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[2]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[2]]}"
                     },
                     "_UnicornMark_DebuffDamagePercentage": {
-                      "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[3]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[3]]}"
                     },
                     "_UnicornMark_DamagePercentage": {
-                      "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[4]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[4]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[4]]}"
                     }
                   }
                 }

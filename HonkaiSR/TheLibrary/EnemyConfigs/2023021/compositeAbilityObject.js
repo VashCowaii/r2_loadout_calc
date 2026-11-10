@@ -204,12 +204,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (Bullet_Count) || RETURN",
-                    "displayLines": "Bullet_Count",
-                    "constants": [],
-                    "variables": [
-                      "Bullet_Count"
-                    ]
+                    "displayLines": "Bullet_Count"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -544,12 +539,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (Bullet_Count) || RETURN",
-                        "displayLines": "Bullet_Count",
-                        "constants": [],
-                        "variables": [
-                          "Bullet_Count"
-                        ]
+                        "displayLines": "Bullet_Count"
                       },
                       "entityClass": "Enemy",
                       "maximum": 3,
@@ -671,12 +661,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "{[Skill05[0]]}"
             },
             "HitSplit": 0.6,
             "Toughness": null,
@@ -694,12 +679,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "{[Skill05[0]]}"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -717,12 +697,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "{[Skill05[0]]}"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -867,12 +842,7 @@ const compositeAbilityObject = {
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (Bullet_Count) || RETURN",
-            "displayLines": "Bullet_Count",
-            "constants": [],
-            "variables": [
-              "Bullet_Count"
-            ]
+            "displayLines": "Bullet_Count"
           },
           "entityClass": "Enemy",
           "maximum": 3,
@@ -987,14 +957,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || Variables[1] ({[Skill01[1]]}) || Variables[2] (Bullet_Count) || MUL || ADD || RETURN",
-              "displayLines": "({[Skill01[0]]} + ({[Skill01[1]]} * Bullet_Count))",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}",
-                "{[Skill01[1]]}",
-                "Bullet_Count"
-              ]
+              "displayLines": "({[Skill01[0]]} + ({[Skill01[1]]} * Bullet_Count))"
             },
             "Toughness": null,
             "Tags": null,
@@ -1031,12 +994,7 @@ const compositeAbilityObject = {
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (Bullet_Count) || RETURN",
-            "displayLines": "Bullet_Count",
-            "constants": [],
-            "variables": [
-              "Bullet_Count"
-            ]
+            "displayLines": "Bullet_Count"
           },
           "entityClass": "Enemy",
           "maximum": 3,

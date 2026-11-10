@@ -39,12 +39,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "healPercent": {
-        "operator": "Variables[0] (_HealHPRatio) || RETURN",
-        "displayLines": "_HealHPRatio",
-        "constants": [],
-        "variables": [
-          "_HealHPRatio"
-        ]
+        "displayLines": "_HealHPRatio"
       },
       "formula": "Heal from Target MaxHP"
     },

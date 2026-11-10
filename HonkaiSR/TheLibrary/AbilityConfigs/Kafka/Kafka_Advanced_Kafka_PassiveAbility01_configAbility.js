@@ -30,32 +30,17 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       },
       "variableName": "_InsertCount"
     },
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (_InsertCount) || RETURN",
-        "displayLines": "_InsertCount",
-        "constants": [],
-        "variables": [
-          "_InsertCount"
-        ]
+        "displayLines": "_InsertCount"
       },
       "maximum": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       },
       "assignState": "True",
       "priorState": "Active",
@@ -131,20 +116,10 @@ const configAbility = {
               },
               "variableName": "_InsertCount",
               "value": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "max": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               }
             },
             {
@@ -155,20 +130,10 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (_InsertCount) || RETURN",
-                "displayLines": "_InsertCount",
-                "constants": [],
-                "variables": [
-                  "_InsertCount"
-                ]
+                "displayLines": "_InsertCount"
               },
               "maximum": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "assignState": "True",
               "priorState": "Active",

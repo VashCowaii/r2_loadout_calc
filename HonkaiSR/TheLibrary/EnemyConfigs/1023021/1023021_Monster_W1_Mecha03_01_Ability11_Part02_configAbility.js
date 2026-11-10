@@ -56,12 +56,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] ({[Skill11[0]]}) || RETURN",
-          "displayLines": "{[Skill11[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill11[0]]}"
-          ]
+          "displayLines": "{[Skill11[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -87,12 +82,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] ({[Skill11[1]]}) || RETURN",
-              "displayLines": "{[Skill11[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill11[1]]}"
-              ]
+              "displayLines": "{[Skill11[1]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -120,12 +110,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] ({[Skill11[2]]}) || RETURN",
-              "displayLines": "{[Skill11[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill11[2]]}"
-              ]
+              "displayLines": "{[Skill11[2]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -153,12 +138,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] ({[Skill11[3]]}) || RETURN",
-              "displayLines": "{[Skill11[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill11[3]]}"
-              ]
+              "displayLines": "{[Skill11[3]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -178,37 +158,17 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1137901449\">Monster_W1_Mecha03_01_Frozen</a>[<span class=\"descriptionNumberColor\">Deep Freeze</span>]",
       "baseChance": 1,
       "stackLimit": {
-        "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-        "displayLines": "{[Skill06[3]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill06[3]]}"
-        ]
+        "displayLines": "{[Skill06[3]]}"
       },
       "valuePerStack": {
         "MDF_IceResistanceRatio_PerLayer": {
-          "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-          "displayLines": "{[Skill06[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[1]]}"
-          ]
+          "displayLines": "{[Skill06[1]]}"
         },
         "MDF_SpeedAddedDelta_PerLayer": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "MDF_MaxLayer": {
-          "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-          "displayLines": "{[Skill06[3]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[3]]}"
-          ]
+          "displayLines": "{[Skill06[3]]}"
         }
       }
     },

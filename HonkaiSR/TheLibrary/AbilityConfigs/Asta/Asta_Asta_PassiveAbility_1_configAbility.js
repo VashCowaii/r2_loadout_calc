@@ -21,20 +21,10 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-89645956\">M_Asta_Passive</a>",
       "valuePerStack": {
         "MDF_CostLayer": {
-          "operator": "Variables[0] (3) || RETURN",
-          "displayLines": "3",
-          "constants": [],
-          "variables": [
-            3
-          ]
+          "displayLines": "3"
         },
         "MDF_MaxCount": {
-          "operator": "Variables[0] (5) || RETURN",
-          "displayLines": "5",
-          "constants": [],
-          "variables": [
-            5
-          ]
+          "displayLines": "5"
         }
       }
     },
@@ -42,12 +32,7 @@ const configAbility = {
       "name": "Update Displayed Energy Bar",
       "value": 0,
       "maximum": {
-        "operator": "Variables[0] (5) || RETURN",
-        "displayLines": "5",
-        "constants": [],
-        "variables": [
-          5
-        ]
+        "displayLines": "5"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -147,14 +132,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_Count) || Variables[1] (MDF_CostLayer) || Variables[2] (1) || SUB || SUB || RETURN",
-                        "displayLines": "(MDF_Count - (MDF_CostLayer - 1))",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Count",
-                          "MDF_CostLayer",
-                          1
-                        ]
+                        "displayLines": "(MDF_Count - (MDF_CostLayer - 1))"
                       },
                       "variableName": "MDF_Count"
                     }
@@ -163,13 +141,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_Count) || Variables[1] (MDF_CostLayer) || SUB || RETURN",
-                        "displayLines": "(MDF_Count - MDF_CostLayer)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Count",
-                          "MDF_CostLayer"
-                        ]
+                        "displayLines": "(MDF_Count - MDF_CostLayer)"
                       },
                       "variableName": "MDF_Count"
                     }
@@ -191,12 +163,7 @@ const configAbility = {
                         "value1": "MDF_Count",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         }
                       },
                       "passed": [
@@ -219,44 +186,19 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1734289579\">Asta_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
-                          "operator": "Variables[0] (0.14) || RETURN",
-                          "displayLines": "0.14",
-                          "constants": [],
-                          "variables": [
-                            0.14
-                          ]
+                          "displayLines": "0.14"
                         },
                         "MDF_DefenceAddedRatio": {
-                          "operator": "Variables[0] (0.06) || RETURN",
-                          "displayLines": "0.06",
-                          "constants": [],
-                          "variables": [
-                            0.06
-                          ]
+                          "displayLines": "0.06"
                         },
                         "MDF_BonusLayer": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         },
                         "MDF_SPRatio": {
-                          "operator": "Variables[0] (0.15) || RETURN",
-                          "displayLines": "0.15",
-                          "constants": [],
-                          "variables": [
-                            0.15
-                          ]
+                          "displayLines": "0.15"
                         },
                         "MDF_CostLayer": {
-                          "operator": "Variables[0] (3) || RETURN",
-                          "displayLines": "3",
-                          "constants": [],
-                          "variables": [
-                            3
-                          ]
+                          "displayLines": "3"
                         }
                       }
                     }
@@ -275,12 +217,7 @@ const configAbility = {
                       "name": "Update Displayed Energy Bar",
                       "value": 0,
                       "maximum": {
-                        "operator": "Variables[0] (5) || RETURN",
-                        "displayLines": "5",
-                        "constants": [],
-                        "variables": [
-                          5
-                        ]
+                        "displayLines": "5"
                       },
                       "assignState": "True",
                       "priorState": "Normal",
@@ -327,14 +264,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_Count) || Constants[0] (2) || ADD || RETURN",
-                        "displayLines": "(MDF_Count + 2)",
-                        "constants": [
-                          2
-                        ],
-                        "variables": [
-                          "MDF_Count"
-                        ]
+                        "displayLines": "(MDF_Count + 2)"
                       },
                       "variableName": "MDF_Count"
                     },
@@ -345,24 +275,14 @@ const configAbility = {
                         "value1": "MDF_Count",
                         "compareType": ">",
                         "value2": {
-                          "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                          "displayLines": "MDF_MaxCount",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxCount"
-                          ]
+                          "displayLines": "MDF_MaxCount"
                         }
                       },
                       "passed": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                            "displayLines": "MDF_MaxCount",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxCount"
-                            ]
+                            "displayLines": "MDF_MaxCount"
                           },
                           "variableName": "MDF_Count"
                         }
@@ -377,44 +297,19 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1734289579\">Asta_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
-                          "operator": "Variables[0] (0.14) || RETURN",
-                          "displayLines": "0.14",
-                          "constants": [],
-                          "variables": [
-                            0.14
-                          ]
+                          "displayLines": "0.14"
                         },
                         "MDF_DefenceAddedRatio": {
-                          "operator": "Variables[0] (0.06) || RETURN",
-                          "displayLines": "0.06",
-                          "constants": [],
-                          "variables": [
-                            0.06
-                          ]
+                          "displayLines": "0.06"
                         },
                         "MDF_BonusLayer": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         },
                         "MDF_SPRatio": {
-                          "operator": "Variables[0] (0.15) || RETURN",
-                          "displayLines": "0.15",
-                          "constants": [],
-                          "variables": [
-                            0.15
-                          ]
+                          "displayLines": "0.15"
                         },
                         "MDF_CostLayer": {
-                          "operator": "Variables[0] (3) || RETURN",
-                          "displayLines": "3",
-                          "constants": [],
-                          "variables": [
-                            3
-                          ]
+                          "displayLines": "3"
                         }
                       }
                     }
@@ -423,14 +318,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_Count) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_Count + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_Count"
-                        ]
+                        "displayLines": "(MDF_Count + 1)"
                       },
                       "variableName": "MDF_Count"
                     },
@@ -441,24 +329,14 @@ const configAbility = {
                         "value1": "MDF_Count",
                         "compareType": ">",
                         "value2": {
-                          "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                          "displayLines": "MDF_MaxCount",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxCount"
-                          ]
+                          "displayLines": "MDF_MaxCount"
                         }
                       },
                       "passed": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                            "displayLines": "MDF_MaxCount",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxCount"
-                            ]
+                            "displayLines": "MDF_MaxCount"
                           },
                           "variableName": "MDF_Count"
                         }
@@ -473,44 +351,19 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1734289579\">Asta_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
-                          "operator": "Variables[0] (0.14) || RETURN",
-                          "displayLines": "0.14",
-                          "constants": [],
-                          "variables": [
-                            0.14
-                          ]
+                          "displayLines": "0.14"
                         },
                         "MDF_DefenceAddedRatio": {
-                          "operator": "Variables[0] (0.06) || RETURN",
-                          "displayLines": "0.06",
-                          "constants": [],
-                          "variables": [
-                            0.06
-                          ]
+                          "displayLines": "0.06"
                         },
                         "MDF_BonusLayer": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         },
                         "MDF_SPRatio": {
-                          "operator": "Variables[0] (0.15) || RETURN",
-                          "displayLines": "0.15",
-                          "constants": [],
-                          "variables": [
-                            0.15
-                          ]
+                          "displayLines": "0.15"
                         },
                         "MDF_CostLayer": {
-                          "operator": "Variables[0] (3) || RETURN",
-                          "displayLines": "3",
-                          "constants": [],
-                          "variables": [
-                            3
-                          ]
+                          "displayLines": "3"
                         }
                       }
                     }

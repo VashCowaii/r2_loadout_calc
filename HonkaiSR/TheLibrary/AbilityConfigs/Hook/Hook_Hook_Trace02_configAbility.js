@@ -12,12 +12,7 @@ const configAbility = {
       },
       "statName": "STAT_CTRL",
       "value": {
-        "operator": "Variables[0] (0.35) || RETURN",
-        "displayLines": "0.35",
-        "constants": [],
-        "variables": [
-          0.35
-        ]
+        "displayLines": "0.35"
       }
     }
   ],

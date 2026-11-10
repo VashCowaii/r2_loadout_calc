@@ -278,14 +278,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_HPAddedRatio) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(MDF_HPAddedRatio - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_HPAddedRatio"
-                    ]
+                    "displayLines": "(MDF_HPAddedRatio - 1)"
                   }
                 }
               ]
@@ -889,12 +882,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Fire",
                         "Damage": {
-                          "operator": "Variables[0] (MDF_DamageRatio) || RETURN",
-                          "displayLines": "MDF_DamageRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageRatio"
-                          ]
+                          "displayLines": "MDF_DamageRatio"
                         },
                         "dmgFormula": "Max HP Scaling",
                         "dmgFormulaFinal": "Converted DMG Base",
@@ -913,12 +901,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Skill Points Modification",
                   "adjustmentValue": {
-                    "operator": "Variables[0] (MDF_BonusBPValue) || RETURN",
-                    "displayLines": "MDF_BonusBPValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_BonusBPValue"
-                    ]
+                    "displayLines": "MDF_BonusBPValue"
                   },
                   "adjustmentType": "+"
                 }
@@ -941,13 +924,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_MaxHPAddedRAtio) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                    "displayLines": "(MDF_MaxHPAddedRAtio * ModifierLayers)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxHPAddedRAtio",
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "(MDF_MaxHPAddedRAtio * ModifierLayers)"
                   }
                 },
                 {
@@ -958,13 +935,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                    "displayLines": "(MDF_AllDamageTypeAddedRatio * ModifierLayers)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageTypeAddedRatio",
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "(MDF_AllDamageTypeAddedRatio * ModifierLayers)"
                   }
                 },
                 {
@@ -1435,12 +1406,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageTypeResistance) || RETURN",
-                    "displayLines": "MDF_AllDamageTypeResistance",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageTypeResistance"
-                    ]
+                    "displayLines": "MDF_AllDamageTypeResistance"
                   }
                 }
               ]
@@ -1519,12 +1485,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "Inferno_Skill01_DamagePercentage",
                   "resetValue": {
-                    "operator": "Variables[0] (Inferno_Skill01_DamagePercentage) || RETURN",
-                    "displayLines": "Inferno_Skill01_DamagePercentage",
-                    "constants": [],
-                    "variables": [
-                      "Inferno_Skill01_DamagePercentage"
-                    ]
+                    "displayLines": "Inferno_Skill01_DamagePercentage"
                   },
                   "scope": "TargetEntity"
                 },
@@ -1536,12 +1497,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "Inferno_Skill02_DamagePercentage",
                   "resetValue": {
-                    "operator": "Variables[0] (Inferno_Skill02_DamagePercentage) || RETURN",
-                    "displayLines": "Inferno_Skill02_DamagePercentage",
-                    "constants": [],
-                    "variables": [
-                      "Inferno_Skill02_DamagePercentage"
-                    ]
+                    "displayLines": "Inferno_Skill02_DamagePercentage"
                   },
                   "scope": "TargetEntity"
                 },
@@ -1553,12 +1509,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "Inferno_Skill02_SuccessChance",
                   "resetValue": {
-                    "operator": "Variables[0] (Inferno_Skill02_SuccessChance) || RETURN",
-                    "displayLines": "Inferno_Skill02_SuccessChance",
-                    "constants": [],
-                    "variables": [
-                      "Inferno_Skill02_SuccessChance"
-                    ]
+                    "displayLines": "Inferno_Skill02_SuccessChance"
                   },
                   "scope": "TargetEntity"
                 },
@@ -1570,12 +1521,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "Inferno_Skill02_Bonus_SPRatio",
                   "resetValue": {
-                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__311) || RETURN",
-                    "displayLines": "ENEMIES_OBJECT_UNUSED__311",
-                    "constants": [],
-                    "variables": [
-                      "ENEMIES_OBJECT_UNUSED__311"
-                    ]
+                    "displayLines": "ENEMIES_OBJECT_UNUSED__311"
                   },
                   "scope": "TargetEntity"
                 },
@@ -1587,12 +1533,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "Inferno_Skill02_Bonus_HPRatio",
                   "resetValue": {
-                    "operator": "Variables[0] (Inferno_Skill02_Bonus_HPRatio) || RETURN",
-                    "displayLines": "Inferno_Skill02_Bonus_HPRatio",
-                    "constants": [],
-                    "variables": [
-                      "Inferno_Skill02_Bonus_HPRatio"
-                    ]
+                    "displayLines": "Inferno_Skill02_Bonus_HPRatio"
                   },
                   "scope": "TargetEntity"
                 },
@@ -1613,12 +1554,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "Inferno_Final_SuccessChance",
                   "resetValue": {
-                    "operator": "Variables[0] (Inferno_Skill02_SuccessChance) || RETURN",
-                    "displayLines": "Inferno_Skill02_SuccessChance",
-                    "constants": [],
-                    "variables": [
-                      "Inferno_Skill02_SuccessChance"
-                    ]
+                    "displayLines": "Inferno_Skill02_SuccessChance"
                   },
                   "scope": "TargetEntity"
                 },
@@ -1630,12 +1566,7 @@ const compositeAbilityObject = {
                   },
                   "scope": "ContextModifier",
                   "value": {
-                    "operator": "Variables[0] (Inferno_Skill02_SuccessChance) || RETURN",
-                    "displayLines": "Inferno_Skill02_SuccessChance",
-                    "constants": [],
-                    "variables": [
-                      "Inferno_Skill02_SuccessChance"
-                    ]
+                    "displayLines": "Inferno_Skill02_SuccessChance"
                   },
                   "variableName": "MDF_SuccessChance"
                 },
@@ -1656,13 +1587,7 @@ const compositeAbilityObject = {
                   },
                   "scope": "ContextModifier",
                   "value": {
-                    "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (Inferno_Skill02_DamagePercentage) || MUL || RETURN",
-                    "displayLines": "(MDF_MaxHP * Inferno_Skill02_DamagePercentage)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxHP",
-                      "Inferno_Skill02_DamagePercentage"
-                    ]
+                    "displayLines": "(MDF_MaxHP * Inferno_Skill02_DamagePercentage)"
                   },
                   "variableName": "MDF_LoseHPPreshow"
                 }
@@ -1716,12 +1641,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "Damage": {
-                      "operator": "Variables[0] (MDF_Inferno_Part1_DamagePercentage) || RETURN",
-                      "displayLines": "MDF_Inferno_Part1_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Inferno_Part1_DamagePercentage"
-                      ]
+                      "displayLines": "MDF_Inferno_Part1_DamagePercentage"
                     },
                     "Toughness": null,
                     "Tags": [
@@ -1969,12 +1889,7 @@ const compositeAbilityObject = {
                         "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
                         "compareType": "<=",
                         "value2": {
-                          "operator": "Variables[0] (TutorialFlag) || RETURN",
-                          "displayLines": "TutorialFlag",
-                          "constants": [],
-                          "variables": [
-                            "TutorialFlag"
-                          ]
+                          "displayLines": "TutorialFlag"
                         }
                       }
                     },
@@ -1990,12 +1905,7 @@ const compositeAbilityObject = {
                       },
                       "previewType": null,
                       "previewValue": {
-                        "operator": "Variables[0] (TutorialFlag) || RETURN",
-                        "displayLines": "TutorialFlag",
-                        "constants": [],
-                        "variables": [
-                          "TutorialFlag"
-                        ]
+                        "displayLines": "TutorialFlag"
                       }
                     }
                   ]
@@ -2127,12 +2037,7 @@ const compositeAbilityObject = {
                     "value1": "MDF_WaveIndex",
                     "compareType": "NOT=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_WaveIndex2) || RETURN",
-                      "displayLines": "MDF_WaveIndex2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_WaveIndex2"
-                      ]
+                      "displayLines": "MDF_WaveIndex2"
                     }
                   },
                   "passed": [
@@ -2651,12 +2556,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -2680,69 +2580,29 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"596149428\">Enemy_W5_Painter_Inferno</a>[<span class=\"descriptionNumberColor\">Grudge Ablaze</span>]",
           "maxTargetCount": {
-            "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-            "displayLines": "{[Skill06[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill06[3]]}"
-            ]
+            "displayLines": "{[Skill06[3]]}"
           },
           "duration": {
-            "operator": "Variables[0] ({[Skill06[2]]}) || RETURN",
-            "displayLines": "{[Skill06[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill06[2]]}"
-            ]
+            "displayLines": "{[Skill06[2]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-            "displayLines": "{[Skill06[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill06[1]]}"
-            ]
+            "displayLines": "{[Skill06[1]]}"
           },
           "valuePerStack": {
             "MDF_Inferno_Ability01_DamagePercentage": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
+              "displayLines": "{[SkillP01[0]]}"
             },
             "MDF_Inferno_Ability02_DamagePercentage": {
-              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-              "displayLines": "{[SkillP01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[1]]}"
-              ]
+              "displayLines": "{[SkillP01[1]]}"
             },
             "MDF_Inferno_Ability02_SuccessChance": {
-              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-              "displayLines": "{[SkillP01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[2]]}"
-              ]
+              "displayLines": "{[SkillP01[2]]}"
             },
             "MDF_Inferno_Part1_DamagePercentage": {
-              "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-              "displayLines": "{[SkillP01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[3]]}"
-              ]
+              "displayLines": "{[SkillP01[3]]}"
             },
             "MDF_Inferno_Ability02_Bonus_HPRatio": {
-              "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-              "displayLines": "{[SkillP01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[4]]}"
-              ]
+              "displayLines": "{[SkillP01[4]]}"
             }
           }
         },
@@ -2870,48 +2730,28 @@ const compositeAbilityObject = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                    "displayLines": "SummonList_ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "SummonList_ADF_1"
-                    ]
+                    "displayLines": "SummonList_ADF_1"
                   },
                   "locationType": "BeforeCaster"
                 },
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                    "displayLines": "SummonList_ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "SummonList_ADF_1"
-                    ]
+                    "displayLines": "SummonList_ADF_1"
                   },
                   "locationType": "BeforeCaster"
                 },
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                    "displayLines": "SummonList_ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "SummonList_ADF_1"
-                    ]
+                    "displayLines": "SummonList_ADF_1"
                   },
                   "locationType": "AfterCaster"
                 },
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                    "displayLines": "SummonList_ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "SummonList_ADF_1"
-                    ]
+                    "displayLines": "SummonList_ADF_1"
                   },
                   "locationType": "AfterCaster"
                 }
@@ -2926,12 +2766,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-389172724\">Enemy_W5_Painter_Main_SpecialAbility06Summon</a>",
               "valuePerStack": {
                 "MDF_HPAddedRatio": {
-                  "operator": "Variables[0] ({[Skill06[4]]}) || RETURN",
-                  "displayLines": "{[Skill06[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill06[4]]}"
-                  ]
+                  "displayLines": "{[Skill06[4]]}"
                 }
               }
             }
@@ -2975,23 +2810,13 @@ const compositeAbilityObject = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                        "displayLines": "{[Skill05[0]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill05[0]]}"
-                        ]
+                        "displayLines": "{[Skill05[0]]}"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                            "displayLines": "SummonList_ADF_1",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_1"
-                            ]
+                            "displayLines": "SummonList_ADF_1"
                           },
                           "locationType": "AroundCasterOnEdge"
                         }
@@ -3000,23 +2825,13 @@ const compositeAbilityObject = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                        "displayLines": "{[Skill05[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill05[1]]}"
-                        ]
+                        "displayLines": "{[Skill05[1]]}"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                            "displayLines": "SummonList_ADF_1",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_1"
-                            ]
+                            "displayLines": "SummonList_ADF_1"
                           },
                           "locationType": "AroundCasterOnEdge"
                         }
@@ -3042,12 +2857,7 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Enemy ID",
                         "ID": {
-                          "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                          "displayLines": "SummonList_ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "SummonList_ADF_1"
-                          ]
+                          "displayLines": "SummonList_ADF_1"
                         },
                         "target": {
                           "name": "Target Name",
@@ -3059,23 +2869,13 @@ const compositeAbilityObject = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                            "displayLines": "{[Skill05[0]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[0]]}"
-                            ]
+                            "displayLines": "{[Skill05[0]]}"
                           },
                           "enemyList": [
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                                "displayLines": "SummonList_ADF_1",
-                                "constants": [],
-                                "variables": [
-                                  "SummonList_ADF_1"
-                                ]
+                                "displayLines": "SummonList_ADF_1"
                               },
                               "locationType": "BeforeCaster"
                             }
@@ -3088,12 +2888,7 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Enemy ID",
                         "ID": {
-                          "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                          "displayLines": "SummonList_ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "SummonList_ADF_1"
-                          ]
+                          "displayLines": "SummonList_ADF_1"
                         },
                         "target": {
                           "name": "Target Name",
@@ -3105,23 +2900,13 @@ const compositeAbilityObject = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                            "displayLines": "{[Skill05[0]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[0]]}"
-                            ]
+                            "displayLines": "{[Skill05[0]]}"
                           },
                           "enemyList": [
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                                "displayLines": "SummonList_ADF_1",
-                                "constants": [],
-                                "variables": [
-                                  "SummonList_ADF_1"
-                                ]
+                                "displayLines": "SummonList_ADF_1"
                               },
                               "locationType": "AfterCaster"
                             }
@@ -3159,23 +2944,13 @@ const compositeAbilityObject = {
                             {
                               "name": "Create Enemies",
                               "delayPercent": {
-                                "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                                "displayLines": "{[Skill05[0]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[Skill05[0]]}"
-                                ]
+                                "displayLines": "{[Skill05[0]]}"
                               },
                               "enemyList": [
                                 {
                                   "name": "Enemy Entry",
                                   "enemyID": {
-                                    "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                                    "displayLines": "SummonList_ADF_1",
-                                    "constants": [],
-                                    "variables": [
-                                      "SummonList_ADF_1"
-                                    ]
+                                    "displayLines": "SummonList_ADF_1"
                                   },
                                   "locationType": "AfterCaster"
                                 }
@@ -3198,23 +2973,13 @@ const compositeAbilityObject = {
                                 {
                                   "name": "Create Enemies",
                                   "delayPercent": {
-                                    "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                                    "displayLines": "{[Skill05[1]]}",
-                                    "constants": [],
-                                    "variables": [
-                                      "{[Skill05[1]]}"
-                                    ]
+                                    "displayLines": "{[Skill05[1]]}"
                                   },
                                   "enemyList": [
                                     {
                                       "name": "Enemy Entry",
                                       "enemyID": {
-                                        "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                                        "displayLines": "SummonList_ADF_1",
-                                        "constants": [],
-                                        "variables": [
-                                          "SummonList_ADF_1"
-                                        ]
+                                        "displayLines": "SummonList_ADF_1"
                                       },
                                       "locationType": "BeforeCaster"
                                     }
@@ -3239,23 +3004,13 @@ const compositeAbilityObject = {
                             {
                               "name": "Create Enemies",
                               "delayPercent": {
-                                "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                                "displayLines": "{[Skill05[1]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[Skill05[1]]}"
-                                ]
+                                "displayLines": "{[Skill05[1]]}"
                               },
                               "enemyList": [
                                 {
                                   "name": "Enemy Entry",
                                   "enemyID": {
-                                    "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                                    "displayLines": "SummonList_ADF_1",
-                                    "constants": [],
-                                    "variables": [
-                                      "SummonList_ADF_1"
-                                    ]
+                                    "displayLines": "SummonList_ADF_1"
                                   },
                                   "locationType": "BeforeCaster"
                                 }
@@ -3278,23 +3033,13 @@ const compositeAbilityObject = {
                                 {
                                   "name": "Create Enemies",
                                   "delayPercent": {
-                                    "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                                    "displayLines": "{[Skill05[0]]}",
-                                    "constants": [],
-                                    "variables": [
-                                      "{[Skill05[0]]}"
-                                    ]
+                                    "displayLines": "{[Skill05[0]]}"
                                   },
                                   "enemyList": [
                                     {
                                       "name": "Enemy Entry",
                                       "enemyID": {
-                                        "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                                        "displayLines": "SummonList_ADF_1",
-                                        "constants": [],
-                                        "variables": [
-                                          "SummonList_ADF_1"
-                                        ]
+                                        "displayLines": "SummonList_ADF_1"
                                       },
                                       "locationType": "AfterCaster"
                                     }
@@ -3380,20 +3125,10 @@ const compositeAbilityObject = {
                 "MDF_MaxHPAddedRAtio": 0,
                 "MDF_AllDamageTypeAddedRatio": 0,
                 "MDF_DamageRatio": {
-                  "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-                  "displayLines": "{[Skill05[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[2]]}"
-                  ]
+                  "displayLines": "{[Skill05[2]]}"
                 },
                 "MDF_BonusBPValue": {
-                  "operator": "Variables[0] ({[Skill05[4]]}) || RETURN",
-                  "displayLines": "{[Skill05[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[4]]}"
-                  ]
+                  "displayLines": "{[Skill05[4]]}"
                 }
               }
             }
@@ -3408,36 +3143,16 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"600664801\">Enemy_W5_Painter_SummonerEnhance</a>[<span class=\"descriptionNumberColor\">Beyond-Human Realm</span>]",
               "valuePerStack": {
                 "MDF_MaxHPAddedRAtio": {
-                  "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-                  "displayLines": "{[Skill05[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[3]]}"
-                  ]
+                  "displayLines": "{[Skill05[3]]}"
                 },
                 "MDF_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] ({[Skill05[5]]}) || RETURN",
-                  "displayLines": "{[Skill05[5]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[5]]}"
-                  ]
+                  "displayLines": "{[Skill05[5]]}"
                 },
                 "MDF_DamageRatio": {
-                  "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-                  "displayLines": "{[Skill05[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[2]]}"
-                  ]
+                  "displayLines": "{[Skill05[2]]}"
                 },
                 "MDF_BonusBPValue": {
-                  "operator": "Variables[0] ({[Skill05[4]]}) || RETURN",
-                  "displayLines": "{[Skill05[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[4]]}"
-                  ]
+                  "displayLines": "{[Skill05[4]]}"
                 }
               }
             }
@@ -3568,12 +3283,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "HitSplit": 0.14,
             "Toughness": null,
@@ -3591,12 +3301,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "HitSplit": 0.14,
             "Toughness": null,
@@ -3614,12 +3319,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "HitSplit": 0.14,
             "Toughness": null,
@@ -3637,12 +3337,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "HitSplit": 0.14,
             "Toughness": null,
@@ -3660,12 +3355,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "HitSplit": 0.14,
             "Toughness": null,
@@ -3683,12 +3373,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "HitSplit": 0.14,
             "Toughness": null,
@@ -3706,12 +3391,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "HitSplit": 0.16,
             "Toughness": null,
@@ -3729,61 +3409,26 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"596149428\">Enemy_W5_Painter_Inferno</a>[<span class=\"descriptionNumberColor\">Grudge Ablaze</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-            "displayLines": "{[Skill03[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[2]]}"
-            ]
+            "displayLines": "{[Skill03[2]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-            "displayLines": "{[Skill03[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[1]]}"
-            ]
+            "displayLines": "{[Skill03[1]]}"
           },
           "valuePerStack": {
             "MDF_Inferno_Ability01_DamagePercentage": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
+              "displayLines": "{[SkillP01[0]]}"
             },
             "MDF_Inferno_Ability02_DamagePercentage": {
-              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-              "displayLines": "{[SkillP01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[1]]}"
-              ]
+              "displayLines": "{[SkillP01[1]]}"
             },
             "MDF_Inferno_Ability02_SuccessChance": {
-              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-              "displayLines": "{[SkillP01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[2]]}"
-              ]
+              "displayLines": "{[SkillP01[2]]}"
             },
             "MDF_Inferno_Part1_DamagePercentage": {
-              "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-              "displayLines": "{[SkillP01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[3]]}"
-              ]
+              "displayLines": "{[SkillP01[3]]}"
             },
             "MDF_Inferno_Ability02_Bonus_HPRatio": {
-              "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-              "displayLines": "{[SkillP01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[4]]}"
-              ]
+              "displayLines": "{[SkillP01[4]]}"
             }
           }
         },
@@ -3883,12 +3528,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -3934,54 +3574,24 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"596149428\">Enemy_W5_Painter_Inferno</a>[<span class=\"descriptionNumberColor\">Grudge Ablaze</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                "displayLines": "{[Skill02[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill02[2]]}"
-                ]
+                "displayLines": "{[Skill02[2]]}"
               },
               "baseChance": 100,
               "valuePerStack": {
                 "MDF_Inferno_Ability01_DamagePercentage": {
-                  "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                  "displayLines": "{[SkillP01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[0]]}"
-                  ]
+                  "displayLines": "{[SkillP01[0]]}"
                 },
                 "MDF_Inferno_Ability02_DamagePercentage": {
-                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                  "displayLines": "{[SkillP01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[1]]}"
-                  ]
+                  "displayLines": "{[SkillP01[1]]}"
                 },
                 "MDF_Inferno_Ability02_SuccessChance": {
-                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                  "displayLines": "{[SkillP01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[2]]}"
-                  ]
+                  "displayLines": "{[SkillP01[2]]}"
                 },
                 "MDF_Inferno_Part1_DamagePercentage": {
-                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                  "displayLines": "{[SkillP01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[3]]}"
-                  ]
+                  "displayLines": "{[SkillP01[3]]}"
                 },
                 "MDF_Inferno_Ability02_Bonus_HPRatio": {
-                  "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-                  "displayLines": "{[SkillP01[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[4]]}"
-                  ]
+                  "displayLines": "{[SkillP01[4]]}"
                 }
               }
             }
@@ -3995,61 +3605,26 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"596149428\">Enemy_W5_Painter_Inferno</a>[<span class=\"descriptionNumberColor\">Grudge Ablaze</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                "displayLines": "{[Skill02[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill02[2]]}"
-                ]
+                "displayLines": "{[Skill02[2]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                "displayLines": "{[Skill02[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill02[1]]}"
-                ]
+                "displayLines": "{[Skill02[1]]}"
               },
               "valuePerStack": {
                 "MDF_Inferno_Ability01_DamagePercentage": {
-                  "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                  "displayLines": "{[SkillP01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[0]]}"
-                  ]
+                  "displayLines": "{[SkillP01[0]]}"
                 },
                 "MDF_Inferno_Ability02_DamagePercentage": {
-                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                  "displayLines": "{[SkillP01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[1]]}"
-                  ]
+                  "displayLines": "{[SkillP01[1]]}"
                 },
                 "MDF_Inferno_Ability02_SuccessChance": {
-                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                  "displayLines": "{[SkillP01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[2]]}"
-                  ]
+                  "displayLines": "{[SkillP01[2]]}"
                 },
                 "MDF_Inferno_Part1_DamagePercentage": {
-                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                  "displayLines": "{[SkillP01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[3]]}"
-                  ]
+                  "displayLines": "{[SkillP01[3]]}"
                 },
                 "MDF_Inferno_Ability02_Bonus_HPRatio": {
-                  "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-                  "displayLines": "{[SkillP01[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[4]]}"
-                  ]
+                  "displayLines": "{[SkillP01[4]]}"
                 }
               }
             }
@@ -4118,12 +3693,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,

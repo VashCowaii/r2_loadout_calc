@@ -80,13 +80,7 @@ const configAbility = {
             "target": "{{Parameter Target}}"
           },
           "value": {
-            "operator": "Variables[0] ({[SkillP01[1]]}) || Variables[1] (_TargetMaxSP) || MUL || RETURN",
-            "displayLines": "({[SkillP01[1]]} * _TargetMaxSP)",
-            "constants": [],
-            "variables": [
-              "{[SkillP01[1]]}",
-              "_TargetMaxSP"
-            ]
+            "displayLines": "({[SkillP01[1]]} * _TargetMaxSP)"
           },
           "isFixed": "(Fixed)"
         }

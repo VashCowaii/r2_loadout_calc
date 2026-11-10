@@ -36,25 +36,14 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"275203206\">Yunli_Eidolon1</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (6) || Variables[1] (3) || ADD || RETURN",
-            "displayLines": "(6 + 3)",
-            "constants": [],
-            "variables": [
-              6,
-              3
-            ]
+            "displayLines": "(6 + 3)"
           },
           "variableName": "MDF_LoopCount"
         }
@@ -63,12 +52,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (6) || RETURN",
-            "displayLines": "6",
-            "constants": [],
-            "variables": [
-              6
-            ]
+            "displayLines": "6"
           },
           "variableName": "MDF_LoopCount"
         }

@@ -34,12 +34,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRate</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.06) || RETURN",
-                "displayLines": "0.06",
-                "constants": [],
-                "variables": [
-                  0.06
-                ]
+                "displayLines": "0.06"
               }
             }
           ]
@@ -66,12 +61,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.12) || RETURN",
-                "displayLines": "0.12",
-                "constants": [],
-                "variables": [
-                  0.12
-                ]
+                "displayLines": "0.12"
               }
             }
           ]
@@ -98,12 +88,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.1) || RETURN",
-                "displayLines": "0.1",
-                "constants": [],
-                "variables": [
-                  0.1
-                ]
+                "displayLines": "0.1"
               }
             }
           ]

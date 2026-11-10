@@ -60,21 +60,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-78128030\">Enemy_W5_AsatPramad_DirtyBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphon</span>]",
           "stackLimit": {
-            "operator": "Variables[0] (AsatPramad_Skill3_DirtyBloodMaxLayer) || RETURN",
-            "displayLines": "AsatPramad_Skill3_DirtyBloodMaxLayer",
-            "constants": [],
-            "variables": [
-              "AsatPramad_Skill3_DirtyBloodMaxLayer"
-            ]
+            "displayLines": "AsatPramad_Skill3_DirtyBloodMaxLayer"
           },
           "valuePerStack": {
             "MDF_DirtyBloodRatioPerLayer": {
-              "operator": "Variables[0] (AsatPramad_Skill3_DirtyBloodRatioPerLayer) || RETURN",
-              "displayLines": "AsatPramad_Skill3_DirtyBloodRatioPerLayer",
-              "constants": [],
-              "variables": [
-                "AsatPramad_Skill3_DirtyBloodRatioPerLayer"
-              ]
+              "displayLines": "AsatPramad_Skill3_DirtyBloodRatioPerLayer"
             }
           }
         }
@@ -89,13 +79,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "DamageFlat": {
-          "operator": "Variables[0] (AsatPramad_Skill3_DamagePercentageLight) || Variables[1] (AsatPramad_Skill3_BaseAttack) || MUL || RETURN",
-          "displayLines": "(AsatPramad_Skill3_DamagePercentageLight * AsatPramad_Skill3_BaseAttack)",
-          "constants": [],
-          "variables": [
-            "AsatPramad_Skill3_DamagePercentageLight",
-            "AsatPramad_Skill3_BaseAttack"
-          ]
+          "displayLines": "(AsatPramad_Skill3_DamagePercentageLight * AsatPramad_Skill3_BaseAttack)"
         },
         "Toughness": null,
         "instanceTag": "W5_AsatPramad_Bomb",
@@ -117,12 +101,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-659133671\">Enemy_W5_AsatPramad_AddShake</a>",
       "valuePerStack": {
         "MDF_Chance": {
-          "operator": "Variables[0] (AsatPramad_Skill3_Chance) || RETURN",
-          "displayLines": "AsatPramad_Skill3_Chance",
-          "constants": [],
-          "variables": [
-            "AsatPramad_Skill3_Chance"
-          ]
+          "displayLines": "AsatPramad_Skill3_Chance"
         }
       }
     },

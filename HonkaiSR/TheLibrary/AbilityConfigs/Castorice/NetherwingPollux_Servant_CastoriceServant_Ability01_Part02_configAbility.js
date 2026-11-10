@@ -54,22 +54,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] (0.4) || Variables[1] (Castorice_Rank01_DamageRatio) || MUL || RETURN",
-                  "displayLines": "(0.4 * Castorice_Rank01_DamageRatio)",
-                  "constants": [],
-                  "variables": [
-                    0.4,
-                    "Castorice_Rank01_DamageRatio"
-                  ]
+                  "displayLines": "(0.4 * Castorice_Rank01_DamageRatio)"
                 },
                 "dmgFormula": "[SUMMONER] Max HP Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Memosprite",
@@ -90,21 +79,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (0.4) || RETURN",
-              "displayLines": "0.4",
-              "constants": [],
-              "variables": [
-                0.4
-              ]
+              "displayLines": "0.4"
             },
             "dmgFormula": "[SUMMONER] Max HP Scaling",
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "attackType": "Memosprite",
@@ -135,14 +114,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (CastoriceServant_BattleViewModeLevel) || Constants[0] (1) || ADD || RETURN",
-        "displayLines": "(CastoriceServant_BattleViewModeLevel + 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "CastoriceServant_BattleViewModeLevel"
-        ]
+        "displayLines": "(CastoriceServant_BattleViewModeLevel + 1)"
       },
       "variableName": "CastoriceServant_ReadyFlag"
     },

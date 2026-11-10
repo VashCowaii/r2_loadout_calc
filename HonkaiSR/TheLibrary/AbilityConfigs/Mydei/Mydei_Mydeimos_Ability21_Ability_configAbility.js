@@ -23,12 +23,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "consumePercent": {
-        "operator": "Variables[0] (0.35) || RETURN",
-        "displayLines": "0.35",
-        "constants": [],
-        "variables": [
-          0.35
-        ]
+        "displayLines": "0.35"
       },
       "consumeFloor": 1
     },
@@ -42,21 +37,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (1.1) || RETURN",
-          "displayLines": "1.1",
-          "constants": [],
-          "variables": [
-            1.1
-          ]
+          "displayLines": "1.1"
         },
         "dmgFormula": "Max HP Scaling",
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -72,21 +57,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (0.66) || RETURN",
-          "displayLines": "0.66",
-          "constants": [],
-          "variables": [
-            0.66
-          ]
+          "displayLines": "0.66"
         },
         "dmgFormula": "Max HP Scaling",
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-          "displayLines": "Blast Toughness Value",
-          "constants": [],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "Blast Toughness Value"
         },
         "Tags": null
       }

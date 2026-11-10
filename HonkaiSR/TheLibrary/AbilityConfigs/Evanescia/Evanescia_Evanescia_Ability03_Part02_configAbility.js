@@ -43,14 +43,7 @@ const configAbility = {
               "name": "Define Custom Variable",
               "scope": "ContextAbility",
               "value": {
-                "operator": "Constants[0] (5) || Variables[0] (1) || ADD || RETURN",
-                "displayLines": "(5 + 1)",
-                "constants": [
-                  5
-                ],
-                "variables": [
-                  1
-                ]
+                "displayLines": "(5 + 1)"
               },
               "variableName": "LoopCount"
             }
@@ -69,14 +62,7 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "scope": "ContextAbility",
                   "value": {
-                    "operator": "Constants[0] (5) || Variables[0] (2) || ADD || RETURN",
-                    "displayLines": "(5 + 2)",
-                    "constants": [
-                      5
-                    ],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "(5 + 2)"
                   },
                   "variableName": "LoopCount"
                 }
@@ -86,14 +72,7 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "scope": "ContextAbility",
                   "value": {
-                    "operator": "Constants[0] (5) || Variables[0] (4) || ADD || RETURN",
-                    "displayLines": "(5 + 4)",
-                    "constants": [
-                      5
-                    ],
-                    "variables": [
-                      4
-                    ]
+                    "displayLines": "(5 + 4)"
                   },
                   "variableName": "LoopCount"
                 }
@@ -120,20 +99,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (1.6) || RETURN",
-          "displayLines": "1.6",
-          "constants": [],
-          "variables": [
-            1.6
-          ]
+          "displayLines": "1.6"
         },
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "attackType": "Ultimate",
@@ -161,12 +130,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "DamageElation": {
-              "operator": "Variables[0] (0.24) || RETURN",
-              "displayLines": "0.24",
-              "constants": [],
-              "variables": [
-                0.24
-              ]
+              "displayLines": "0.24"
             },
             "dmgFormula": "Elation Scaling",
             "Toughness": null,
@@ -180,12 +144,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (LoopCount) || RETURN",
-        "displayLines": "LoopCount",
-        "constants": [],
-        "variables": [
-          "LoopCount"
-        ]
+        "displayLines": "LoopCount"
       },
       "execute": [
         {
@@ -206,20 +165,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] (1.2) || RETURN",
-                  "displayLines": "1.2",
-                  "constants": [],
-                  "variables": [
-                    1.2
-                  ]
+                  "displayLines": "1.2"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Ultimate"
@@ -246,12 +195,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "DamageElation": {
-                      "operator": "Variables[0] (0.28) || RETURN",
-                      "displayLines": "0.28",
-                      "constants": [],
-                      "variables": [
-                        0.28
-                      ]
+                      "displayLines": "0.28"
                     },
                     "dmgFormula": "Elation Scaling",
                     "Toughness": null,

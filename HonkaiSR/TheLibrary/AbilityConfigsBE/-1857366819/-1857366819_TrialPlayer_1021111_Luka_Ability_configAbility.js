@@ -51,14 +51,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "setValue": {
-                    "operator": "Variables[0] (MDF_TargetMaxHP) || Constants[0] (0.3) || MUL || RETURN",
-                    "displayLines": "(MDF_TargetMaxHP * 0.3)",
-                    "constants": [
-                      0.3
-                    ],
-                    "variables": [
-                      "MDF_TargetMaxHP"
-                    ]
+                    "displayLines": "(MDF_TargetMaxHP * 0.3)"
                   }
                 },
                 {
@@ -99,14 +92,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_LimboCount) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(MDF_LimboCount + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_LimboCount"
-                ]
+                "displayLines": "(MDF_LimboCount + 1)"
               },
               "variableName": "MDF_LimboCount"
             },

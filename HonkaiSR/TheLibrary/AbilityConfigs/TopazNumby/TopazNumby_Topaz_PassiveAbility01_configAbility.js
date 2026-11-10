@@ -82,13 +82,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-            "displayLines": "(2 + 1)",
-            "constants": [],
-            "variables": [
-              2,
-              1
-            ]
+            "displayLines": "(2 + 1)"
           },
           "variableName": "MaxEnhance"
         }
@@ -97,12 +91,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "variableName": "MaxEnhance"
         }
@@ -160,12 +149,7 @@ const configAbility = {
       "name": "Update Displayed Energy Bar",
       "value": 0,
       "maximum": {
-        "operator": "Variables[0] (MaxEnhance) || RETURN",
-        "displayLines": "MaxEnhance",
-        "constants": [],
-        "variables": [
-          "MaxEnhance"
-        ]
+        "displayLines": "MaxEnhance"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -492,29 +476,14 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue1_DamageAdd": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         },
                         "MDF_PropertyValue3_InsertCriticalDamageAddRatio": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
+                          "displayLines": "0.25"
                         },
                         "MDF_PropertyValue4_InsertCriticalDamageAddLayer": 0,
                         "MDF_PropertyValue5_InsertCriticalDamageAddMaxLayer": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         },
                         "ShowSpecialMarkOnCreate": 0
                       }
@@ -556,29 +525,14 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue1_DamageAdd": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         },
                         "MDF_PropertyValue3_InsertCriticalDamageAddRatio": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
+                          "displayLines": "0.25"
                         },
                         "MDF_PropertyValue4_InsertCriticalDamageAddLayer": 0,
                         "MDF_PropertyValue5_InsertCriticalDamageAddMaxLayer": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         },
                         "ShowSpecialMarkOnCreate": 1
                       }
@@ -754,12 +708,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (80) || RETURN",
-                "displayLines": "80",
-                "constants": [],
-                "variables": [
-                  80
-                ]
+                "displayLines": "80"
               }
             }
           ]
@@ -823,12 +772,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Variables[0] (0.5) || INVERT || RETURN",
-            "displayLines": "-0.5",
-            "constants": [],
-            "variables": [
-              0.5
-            ]
+            "displayLines": "-0.5"
           }
         }
       }
@@ -870,12 +814,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Variables[0] (0.5) || INVERT || RETURN",
-            "displayLines": "-0.5",
-            "constants": [],
-            "variables": [
-              0.5
-            ]
+            "displayLines": "-0.5"
           }
         }
       }
@@ -925,12 +864,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Variables[0] (0.5) || INVERT || RETURN",
-            "displayLines": "-0.5",
-            "constants": [],
-            "variables": [
-              0.5
-            ]
+            "displayLines": "-0.5"
           }
         }
       }
@@ -959,12 +893,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Variables[0] (0.5) || INVERT || RETURN",
-            "displayLines": "-0.5",
-            "constants": [],
-            "variables": [
-              0.5
-            ]
+            "displayLines": "-0.5"
           }
         }
       }
@@ -1006,12 +935,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Variables[0] (0.5) || INVERT || RETURN",
-            "displayLines": "-0.5",
-            "constants": [],
-            "variables": [
-              0.5
-            ]
+            "displayLines": "-0.5"
           }
         }
       }

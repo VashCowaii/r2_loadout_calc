@@ -72,12 +72,7 @@ const compositeAbilityObject = {
                               }
                             },
                             "Damage": {
-                              "operator": "Variables[0] (0.6) || RETURN",
-                              "displayLines": "0.6",
-                              "constants": [],
-                              "variables": [
-                                0.6
-                              ]
+                              "displayLines": "0.6"
                             },
                             "indirectDMG": true,
                             "Toughness": null,

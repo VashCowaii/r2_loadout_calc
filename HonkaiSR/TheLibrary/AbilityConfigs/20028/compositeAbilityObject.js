@@ -62,14 +62,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_13245) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(UnusedUnderThisBase_13245 - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "UnusedUnderThisBase_13245"
-                    ]
+                    "displayLines": "(UnusedUnderThisBase_13245 - 1)"
                   }
                 }
               ]
@@ -104,13 +97,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageTakenUpRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                    "displayLines": "(MDF_DamageTakenUpRatio_PerLayer * ModifierLayers)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageTakenUpRatio_PerLayer",
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "(MDF_DamageTakenUpRatio_PerLayer * ModifierLayers)"
                   }
                 }
               ]
@@ -324,14 +311,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_Count) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(MDF_Count + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_Count"
-                    ]
+                    "displayLines": "(MDF_Count + 1)"
                   },
                   "variableName": "MDF_Count"
                 }
@@ -568,13 +548,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_PropertyValue * MDF_Layer)"
                   }
                 }
               ]
@@ -638,13 +612,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_MaxEntityCount) || Variables[1] (MDF_EntityCount) || SUB || RETURN",
-                    "displayLines": "(MDF_MaxEntityCount - MDF_EntityCount)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxEntityCount",
-                      "MDF_EntityCount"
-                    ]
+                    "displayLines": "(MDF_MaxEntityCount - MDF_EntityCount)"
                   },
                   "variableName": "MDF_EntityCountRemain"
                 },
@@ -657,12 +625,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_MaxEntityCount) || RETURN",
-                    "displayLines": "MDF_MaxEntityCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxEntityCount"
-                    ]
+                    "displayLines": "MDF_MaxEntityCount"
                   },
                   "assignState": "True",
                   "state": "Active",
@@ -698,14 +661,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_EntityCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(MDF_EntityCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_EntityCount"
-                    ]
+                    "displayLines": "(MDF_EntityCount + 1)"
                   },
                   "variableName": "MDF_EntityCount"
                 },
@@ -716,24 +672,14 @@ const compositeAbilityObject = {
                     "value1": "MDF_EntityCount",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (MDF_MaxEntityCount) || RETURN",
-                      "displayLines": "MDF_MaxEntityCount",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MaxEntityCount"
-                      ]
+                      "displayLines": "MDF_MaxEntityCount"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_MaxEntityCount) || RETURN",
-                        "displayLines": "MDF_MaxEntityCount",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxEntityCount"
-                        ]
+                        "displayLines": "MDF_MaxEntityCount"
                       },
                       "variableName": "MDF_EntityCount"
                     }
@@ -742,25 +688,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_MaxEntityCount) || Variables[1] (MDF_EntityCount) || SUB || RETURN",
-                    "displayLines": "(MDF_MaxEntityCount - MDF_EntityCount)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxEntityCount",
-                      "MDF_EntityCount"
-                    ]
+                    "displayLines": "(MDF_MaxEntityCount - MDF_EntityCount)"
                   },
                   "variableName": "MDF_EntityCountRemain"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_EntityCount) || RETURN",
-                    "displayLines": "MDF_EntityCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_EntityCount"
-                    ]
+                    "displayLines": "MDF_EntityCount"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -768,12 +703,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_MaxEntityCount) || RETURN",
-                    "displayLines": "MDF_MaxEntityCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxEntityCount"
-                    ]
+                    "displayLines": "MDF_MaxEntityCount"
                   },
                   "assignState": "True",
                   "state": "Active",
@@ -803,12 +733,7 @@ const compositeAbilityObject = {
                         "value1": "MDF_EntityCount",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] (MDF_MaxEntityCount) || RETURN",
-                          "displayLines": "MDF_MaxEntityCount",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxEntityCount"
-                          ]
+                          "displayLines": "MDF_MaxEntityCount"
                         }
                       },
                       {
@@ -838,12 +763,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_EntityCountRemain) || RETURN",
-                    "displayLines": "MDF_EntityCountRemain",
-                    "constants": [],
-                    "variables": [
-                      "MDF_EntityCountRemain"
-                    ]
+                    "displayLines": "MDF_EntityCountRemain"
                   },
                   "variableName": "EntityCountRemain"
                 }
@@ -885,12 +805,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"688363638\">Monster_W4_Theoroi_Destruction</a>[<span class=\"descriptionNumberColor\">Retribution of \"Law\"</span>]",
                       "valuePerStack": {
                         "MDF_LoseHPRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13248) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13248",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_13248"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_13248"
                         }
                       }
                     }
@@ -939,12 +854,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "consumePercent": {
-                    "operator": "Variables[0] (MDF_LoseHPRatio) || RETURN",
-                    "displayLines": "MDF_LoseHPRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_LoseHPRatio"
-                    ]
+                    "displayLines": "MDF_LoseHPRatio"
                   },
                   "consumeFloor": 1
                 }
@@ -1015,13 +925,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (MDF_MaxSpecialSP) || Variables[1] (MDF_CurrentSpecialSP) || SUB || RETURN",
-                        "displayLines": "(MDF_MaxSpecialSP - MDF_CurrentSpecialSP)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxSpecialSP",
-                          "MDF_CurrentSpecialSP"
-                        ]
+                        "displayLines": "(MDF_MaxSpecialSP - MDF_CurrentSpecialSP)"
                       },
                       "isFixed": "(Fixed)",
                       "ignoreBlock": true,
@@ -1054,13 +958,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (MDF_MaxSP) || Variables[1] (MDF_CurrentSpecialSP) || SUB || RETURN",
-                        "displayLines": "(MDF_MaxSP - MDF_CurrentSpecialSP)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxSP",
-                          "MDF_CurrentSpecialSP"
-                        ]
+                        "displayLines": "(MDF_MaxSP - MDF_CurrentSpecialSP)"
                       },
                       "isFixed": "(Fixed)",
                       "ignoreBlock": true
@@ -1088,12 +986,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (MDF_CurrentSpecialSP) || RETURN",
-                        "displayLines": "MDF_CurrentSpecialSP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_CurrentSpecialSP"
-                        ]
+                        "displayLines": "MDF_CurrentSpecialSP"
                       },
                       "isFixed": "* ERR",
                       "isSetToValue": true,
@@ -1153,12 +1046,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "consumePercent": {
-                        "operator": "Variables[0] (MDF_CostHPRatio) || RETURN",
-                        "displayLines": "MDF_CostHPRatio",
-                        "constants": [],
-                        "variables": [
-                          "MDF_CostHPRatio"
-                        ]
+                        "displayLines": "MDF_CostHPRatio"
                       },
                       "consumeFloor": 1,
                       "eatShield": true
@@ -1232,14 +1120,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable (VFX)",
                       "value": {
-                        "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (MDF_CostHPRatio) || MUL || Variables[2] (MDF_Shield) || SUB || RETURN",
-                        "displayLines": "((MDF_MaxHP * MDF_CostHPRatio) - MDF_Shield)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxHP",
-                          "MDF_CostHPRatio",
-                          "MDF_Shield"
-                        ]
+                        "displayLines": "((MDF_MaxHP * MDF_CostHPRatio) - MDF_Shield)"
                       },
                       "variableName": "MDF_PreShowHP"
                     },
@@ -1261,12 +1142,7 @@ const compositeAbilityObject = {
                           },
                           "previewType": null,
                           "previewValue": {
-                            "operator": "Variables[0] (MDF_PreShowHP) || RETURN",
-                            "displayLines": "MDF_PreShowHP",
-                            "constants": [],
-                            "variables": [
-                              "MDF_PreShowHP"
-                            ]
+                            "displayLines": "MDF_PreShowHP"
                           }
                         }
                       ]
@@ -1301,12 +1177,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (MDF_HPHealRatio) || RETURN",
-                    "displayLines": "MDF_HPHealRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HPHealRatio"
-                    ]
+                    "displayLines": "MDF_HPHealRatio"
                   },
                   "formula": "Heal from Target MaxHP"
                 }
@@ -1323,12 +1194,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageUpRatio) || RETURN",
-                    "displayLines": "MDF_DamageUpRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageUpRatio"
-                    ]
+                    "displayLines": "MDF_DamageUpRatio"
                   }
                 }
               ]
@@ -1518,23 +1384,13 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "consumePercent": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_13254) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_13254",
-                        "constants": [],
-                        "variables": [
-                          "UnusedUnderThisBase_13254"
-                        ]
+                        "displayLines": "UnusedUnderThisBase_13254"
                       }
                     },
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_13247) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_13247",
-                        "constants": [],
-                        "variables": [
-                          "UnusedUnderThisBase_13247"
-                        ]
+                        "displayLines": "UnusedUnderThisBase_13247"
                       },
                       "forceReduction": true,
                       "ToughnessDMGType": "Null Type"
@@ -1571,25 +1427,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_13267) || Variables[1] (MDF_CurrentCount) || SUB || RETURN",
-                    "displayLines": "(UnusedUnderThisBase_13267 - MDF_CurrentCount)",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_13267",
-                      "MDF_CurrentCount"
-                    ]
+                    "displayLines": "(UnusedUnderThisBase_13267 - MDF_CurrentCount)"
                   },
                   "variableName": "MDF_CurrentCountRemain"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentCount) || RETURN",
-                    "displayLines": "MDF_CurrentCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentCount"
-                    ]
+                    "displayLines": "MDF_CurrentCount"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -1597,12 +1442,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_13267) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_13267",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_13267"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_13267"
                   },
                   "assignState": "True",
                   "state": "Active",
@@ -1738,14 +1578,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_CurrentCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_CurrentCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_CurrentCount"
-                        ]
+                        "displayLines": "(MDF_CurrentCount + 1)"
                       },
                       "variableName": "MDF_CurrentCount"
                     },
@@ -1756,24 +1589,14 @@ const compositeAbilityObject = {
                         "value1": "MDF_CurrentCount",
                         "compareType": ">",
                         "value2": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13267) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13267",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_13267"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_13267"
                         }
                       },
                       "passed": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_13267) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_13267",
-                            "constants": [],
-                            "variables": [
-                              "UnusedUnderThisBase_13267"
-                            ]
+                            "displayLines": "UnusedUnderThisBase_13267"
                           },
                           "variableName": "MDF_CurrentCount"
                         }
@@ -1782,25 +1605,14 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_13267) || Variables[1] (MDF_CurrentCount) || SUB || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_13267 - MDF_CurrentCount)",
-                        "constants": [],
-                        "variables": [
-                          "UnusedUnderThisBase_13267",
-                          "MDF_CurrentCount"
-                        ]
+                        "displayLines": "(UnusedUnderThisBase_13267 - MDF_CurrentCount)"
                       },
                       "variableName": "MDF_CurrentCountRemain"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MDF_CurrentCount) || RETURN",
-                        "displayLines": "MDF_CurrentCount",
-                        "constants": [],
-                        "variables": [
-                          "MDF_CurrentCount"
-                        ]
+                        "displayLines": "MDF_CurrentCount"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -1808,12 +1620,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_13267) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_13267",
-                        "constants": [],
-                        "variables": [
-                          "UnusedUnderThisBase_13267"
-                        ]
+                        "displayLines": "UnusedUnderThisBase_13267"
                       },
                       "assignState": "True",
                       "state": "Active",
@@ -1839,12 +1646,7 @@ const compositeAbilityObject = {
                             "value1": "MDF_CurrentCount",
                             "compareType": "=",
                             "value2": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13267) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13267",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13267"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13267"
                             }
                           },
                           {

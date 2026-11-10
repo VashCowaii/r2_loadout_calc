@@ -71,13 +71,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * _Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "_Layer"
-                    ]
+                    "displayLines": "(MDF_PropertyValue * _Layer)"
                   }
                 }
               ]
@@ -110,37 +104,17 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1946026397\">LC_23017_Sub</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "stackLimit": {
-                        "operator": "Variables[0] (5) || RETURN",
-                        "displayLines": "5",
-                        "constants": [],
-                        "variables": [
-                          5
-                        ]
+                        "displayLines": "5"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.024) || RETURN",
-                          "displayLines": "0.024",
-                          "constants": [],
-                          "variables": [
-                            0.024
-                          ]
+                          "displayLines": "0.024"
                         },
                         "MDF_MaxLayer": {
-                          "operator": "Variables[0] (5) || RETURN",
-                          "displayLines": "5",
-                          "constants": [],
-                          "variables": [
-                            5
-                          ]
+                          "displayLines": "5"
                         }
                       }
                     }
@@ -200,12 +174,7 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "healPercent": {
-                            "operator": "Variables[0] (0.1) || RETURN",
-                            "displayLines": "0.1",
-                            "constants": [],
-                            "variables": [
-                              0.1
-                            ]
+                            "displayLines": "0.1"
                           },
                           "formula": "Heal from Target MaxHP"
                         }

@@ -33,12 +33,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1018498779\">MissionBattleEvent60006_Charge</a>",
       "valuePerStack": {
         "MDF_SPValue": {
-          "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
-          "displayLines": "#BattleEvent_P4_ADF",
-          "constants": [],
-          "variables": [
-            "#BattleEvent_P4_ADF"
-          ]
+          "displayLines": "#BattleEvent_P4_ADF"
         }
       }
     },
@@ -57,12 +52,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "value": {
-        "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-        "displayLines": "#BattleEvent_P3_ADF",
-        "constants": [],
-        "variables": [
-          "#BattleEvent_P3_ADF"
-        ]
+        "displayLines": "#BattleEvent_P3_ADF"
       },
       "isFixed": "(Fixed)"
     }
@@ -130,12 +120,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_SPValue) || RETURN",
-                    "displayLines": "MDF_SPValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SPValue"
-                    ]
+                    "displayLines": "MDF_SPValue"
                   },
                   "isFixed": "(Fixed)"
                 }

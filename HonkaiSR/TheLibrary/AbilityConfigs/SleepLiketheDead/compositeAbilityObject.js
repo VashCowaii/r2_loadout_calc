@@ -63,12 +63,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.36) || RETURN",
-                    "displayLines": "0.36",
-                    "constants": [],
-                    "variables": [
-                      0.36
-                    ]
+                    "displayLines": "0.36"
                   }
                 }
               ]
@@ -120,12 +115,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1089873720\">LC_23012_Sub</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
                       "duration": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       }
                     },
                     {
@@ -136,14 +126,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"107824413\">LC_23012_CD</a>",
                       "duration": {
-                        "operator": "Variables[0] (3) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(3 - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "(3 - 1)"
                       }
                     }
                   ]

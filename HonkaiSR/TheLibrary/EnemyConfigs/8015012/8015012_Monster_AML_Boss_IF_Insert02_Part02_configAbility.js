@@ -90,12 +90,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "multiBase": {
-        "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-        "displayLines": "{[SkillP01[1]]}",
-        "constants": [],
-        "variables": [
-          "{[SkillP01[1]]}"
-        ]
+        "displayLines": "{[SkillP01[1]]}"
       }
     },
     {
@@ -119,12 +114,7 @@ const configAbility = {
     {
       "name": "Deal Toughness DMG",
       "value": {
-        "operator": "Variables[0] (AML_Boss_00_IF_MaxStance) || RETURN",
-        "displayLines": "AML_Boss_00_IF_MaxStance",
-        "constants": [],
-        "variables": [
-          "AML_Boss_00_IF_MaxStance"
-        ]
+        "displayLines": "AML_Boss_00_IF_MaxStance"
       },
       "defender": {
         "name": "Target Name",
@@ -149,12 +139,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"739623542\">Enemy_AML_Boss_IF_DamageTakenUp</a>",
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-          "displayLines": "{[SkillP01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[0]]}"
-          ]
+          "displayLines": "{[SkillP01[0]]}"
         }
       }
     },

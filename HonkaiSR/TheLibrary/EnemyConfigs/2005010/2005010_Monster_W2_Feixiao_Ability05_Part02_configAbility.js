@@ -118,12 +118,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-664793449\">Monster_W2_Feixiao_AlreadyConnectRemove</a>",
           "valuePerStack": {
             "MDF_StanceBreakTakenRatio": {
-              "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-              "displayLines": "{[PassiveSkill03[5]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill03[5]]}"
-              ]
+              "displayLines": "{[PassiveSkill03[5]]}"
             }
           }
         }
@@ -217,12 +212,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (Skill05DamagePercentage) || RETURN",
-              "displayLines": "Skill05DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill05DamagePercentage"
-              ]
+              "displayLines": "Skill05DamagePercentage"
             },
             "Toughness": null,
             "Tags": null,

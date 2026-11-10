@@ -157,12 +157,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_HPTriggerCompareRatio) || RETURN",
-                      "displayLines": "MDF_HPTriggerCompareRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_HPTriggerCompareRatio"
-                      ]
+                      "displayLines": "MDF_HPTriggerCompareRatio"
                     }
                   },
                   "passed": [
@@ -228,12 +223,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_HPTriggerCompareRatio) || RETURN",
-                      "displayLines": "MDF_HPTriggerCompareRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_HPTriggerCompareRatio"
-                      ]
+                      "displayLines": "MDF_HPTriggerCompareRatio"
                     }
                   },
                   "passed": [
@@ -772,36 +762,16 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"766895631\">Standard_Monster_Floating_DamageReduceController</a>",
                       "valuePerStack": {
                         "MDF_LockHpActionDecreaseRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13685) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13685",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_13685"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_13685"
                         },
                         "MDF_LockHpUpLimitRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13653) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13653",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_13653"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_13653"
                         },
                         "MDF_DamageReduceRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13656) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13656",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_13656"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_13656"
                         },
                         "MDF_LastLockHpRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13652) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13652",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_13652"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_13652"
                         }
                       }
                     },
@@ -1169,13 +1139,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageTakenUpRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                    "displayLines": "(MDF_DamageTakenUpRatio_PerLayer * ModifierLayers)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageTakenUpRatio_PerLayer",
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "(MDF_DamageTakenUpRatio_PerLayer * ModifierLayers)"
                   }
                 }
               ]
@@ -1302,76 +1266,31 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1648139352\">Monster_W5_Ripper_MindControl</a>",
                   "valuePerStack": {
                     "MDF_FleshElationPoint": {
-                      "operator": "Variables[0] (MDF_FleshElationPoint) || RETURN",
-                      "displayLines": "MDF_FleshElationPoint",
-                      "constants": [],
-                      "variables": [
-                        "MDF_FleshElationPoint"
-                      ]
+                      "displayLines": "MDF_FleshElationPoint"
                     },
                     "MDF_FleshExtraChance": {
-                      "operator": "Variables[0] (MDF_FleshExtraChance) || RETURN",
-                      "displayLines": "MDF_FleshExtraChance",
-                      "constants": [],
-                      "variables": [
-                        "MDF_FleshExtraChance"
-                      ]
+                      "displayLines": "MDF_FleshExtraChance"
                     },
                     "MDF_FleshExtraElationPoint": {
-                      "operator": "Variables[0] (MDF_FleshExtraElationPoint) || RETURN",
-                      "displayLines": "MDF_FleshExtraElationPoint",
-                      "constants": [],
-                      "variables": [
-                        "MDF_FleshExtraElationPoint"
-                      ]
+                      "displayLines": "MDF_FleshExtraElationPoint"
                     },
                     "MDF_AttackEnemyChance": {
-                      "operator": "Variables[0] (MDF_AttackEnemyChance) || RETURN",
-                      "displayLines": "MDF_AttackEnemyChance",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AttackEnemyChance"
-                      ]
+                      "displayLines": "MDF_AttackEnemyChance"
                     },
                     "MDF_DamagePercentage": {
-                      "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                      "displayLines": "MDF_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamagePercentage"
-                      ]
+                      "displayLines": "MDF_DamagePercentage"
                     },
                     "MDF_MaxDamageRatio": {
-                      "operator": "Variables[0] (MDF_MaxDamageRatio) || RETURN",
-                      "displayLines": "MDF_MaxDamageRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MaxDamageRatio"
-                      ]
+                      "displayLines": "MDF_MaxDamageRatio"
                     },
                     "MDF_MinDamageRatio": {
-                      "operator": "Variables[0] (MDF_MinDamageRatio) || RETURN",
-                      "displayLines": "MDF_MinDamageRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MinDamageRatio"
-                      ]
+                      "displayLines": "MDF_MinDamageRatio"
                     },
                     "MDF_ExtraDamageMultiple": {
-                      "operator": "Variables[0] (MDF_ExtraDamageMultiple) || RETURN",
-                      "displayLines": "MDF_ExtraDamageMultiple",
-                      "constants": [],
-                      "variables": [
-                        "MDF_ExtraDamageMultiple"
-                      ]
+                      "displayLines": "MDF_ExtraDamageMultiple"
                     },
                     "MDF_EnemyExtraDamageMultiple": {
-                      "operator": "Variables[0] (MDF_EnemyExtraDamageMultiple) || RETURN",
-                      "displayLines": "MDF_EnemyExtraDamageMultiple",
-                      "constants": [],
-                      "variables": [
-                        "MDF_EnemyExtraDamageMultiple"
-                      ]
+                      "displayLines": "MDF_EnemyExtraDamageMultiple"
                     }
                   }
                 }
@@ -1394,85 +1313,35 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-70072093\">Monster_W5_Ripper_Flesh</a>[<span class=\"descriptionNumberColor\">Happiness Puppet</span>]",
                   "duration": {
-                    "operator": "Variables[0] (FleshLifeTime) || RETURN",
-                    "displayLines": "FleshLifeTime",
-                    "constants": [],
-                    "variables": [
-                      "FleshLifeTime"
-                    ]
+                    "displayLines": "FleshLifeTime"
                   },
                   "valuePerStack": {
                     "MDF_FleshElationPoint": {
-                      "operator": "Variables[0] (MDF_FleshElationPoint) || RETURN",
-                      "displayLines": "MDF_FleshElationPoint",
-                      "constants": [],
-                      "variables": [
-                        "MDF_FleshElationPoint"
-                      ]
+                      "displayLines": "MDF_FleshElationPoint"
                     },
                     "MDF_FleshExtraChance": {
-                      "operator": "Variables[0] (MDF_FleshExtraChance) || RETURN",
-                      "displayLines": "MDF_FleshExtraChance",
-                      "constants": [],
-                      "variables": [
-                        "MDF_FleshExtraChance"
-                      ]
+                      "displayLines": "MDF_FleshExtraChance"
                     },
                     "MDF_FleshExtraElationPoint": {
-                      "operator": "Variables[0] (MDF_FleshExtraElationPoint) || RETURN",
-                      "displayLines": "MDF_FleshExtraElationPoint",
-                      "constants": [],
-                      "variables": [
-                        "MDF_FleshExtraElationPoint"
-                      ]
+                      "displayLines": "MDF_FleshExtraElationPoint"
                     },
                     "MDF_AttackEnemyChance": {
-                      "operator": "Variables[0] (MDF_AttackEnemyChance) || RETURN",
-                      "displayLines": "MDF_AttackEnemyChance",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AttackEnemyChance"
-                      ]
+                      "displayLines": "MDF_AttackEnemyChance"
                     },
                     "MDF_DamagePercentage": {
-                      "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                      "displayLines": "MDF_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamagePercentage"
-                      ]
+                      "displayLines": "MDF_DamagePercentage"
                     },
                     "MDF_MaxDamageRatio": {
-                      "operator": "Variables[0] (MDF_MaxDamageRatio) || RETURN",
-                      "displayLines": "MDF_MaxDamageRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MaxDamageRatio"
-                      ]
+                      "displayLines": "MDF_MaxDamageRatio"
                     },
                     "MDF_MinDamageRatio": {
-                      "operator": "Variables[0] (MDF_MinDamageRatio) || RETURN",
-                      "displayLines": "MDF_MinDamageRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MinDamageRatio"
-                      ]
+                      "displayLines": "MDF_MinDamageRatio"
                     },
                     "MDF_ExtraDamageMultiple": {
-                      "operator": "Variables[0] (MDF_ExtraDamageMultiple) || RETURN",
-                      "displayLines": "MDF_ExtraDamageMultiple",
-                      "constants": [],
-                      "variables": [
-                        "MDF_ExtraDamageMultiple"
-                      ]
+                      "displayLines": "MDF_ExtraDamageMultiple"
                     },
                     "MDF_EnemyExtraDamageMultiple": {
-                      "operator": "Variables[0] (MDF_EnemyExtraDamageMultiple) || RETURN",
-                      "displayLines": "MDF_EnemyExtraDamageMultiple",
-                      "constants": [],
-                      "variables": [
-                        "MDF_EnemyExtraDamageMultiple"
-                      ]
+                      "displayLines": "MDF_EnemyExtraDamageMultiple"
                     }
                   },
                   "casterAssign": "CasterSelf",
@@ -1545,76 +1414,31 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"34096710\">Monster_W5_Ripper_FleshEffect</a>",
                       "valuePerStack": {
                         "MDF_FleshElationPoint": {
-                          "operator": "Variables[0] (MDF_FleshElationPoint) || RETURN",
-                          "displayLines": "MDF_FleshElationPoint",
-                          "constants": [],
-                          "variables": [
-                            "MDF_FleshElationPoint"
-                          ]
+                          "displayLines": "MDF_FleshElationPoint"
                         },
                         "MDF_FleshExtraChance": {
-                          "operator": "Variables[0] (MDF_FleshExtraChance) || RETURN",
-                          "displayLines": "MDF_FleshExtraChance",
-                          "constants": [],
-                          "variables": [
-                            "MDF_FleshExtraChance"
-                          ]
+                          "displayLines": "MDF_FleshExtraChance"
                         },
                         "MDF_FleshExtraElationPoint": {
-                          "operator": "Variables[0] (MDF_FleshExtraElationPoint) || RETURN",
-                          "displayLines": "MDF_FleshExtraElationPoint",
-                          "constants": [],
-                          "variables": [
-                            "MDF_FleshExtraElationPoint"
-                          ]
+                          "displayLines": "MDF_FleshExtraElationPoint"
                         },
                         "MDF_AttackEnemyChance": {
-                          "operator": "Variables[0] (MDF_AttackEnemyChance) || RETURN",
-                          "displayLines": "MDF_AttackEnemyChance",
-                          "constants": [],
-                          "variables": [
-                            "MDF_AttackEnemyChance"
-                          ]
+                          "displayLines": "MDF_AttackEnemyChance"
                         },
                         "MDF_DamagePercentage": {
-                          "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                          "displayLines": "MDF_DamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamagePercentage"
-                          ]
+                          "displayLines": "MDF_DamagePercentage"
                         },
                         "MDF_MaxDamageRatio": {
-                          "operator": "Variables[0] (MDF_MaxDamageRatio) || RETURN",
-                          "displayLines": "MDF_MaxDamageRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxDamageRatio"
-                          ]
+                          "displayLines": "MDF_MaxDamageRatio"
                         },
                         "MDF_MinDamageRatio": {
-                          "operator": "Variables[0] (MDF_MinDamageRatio) || RETURN",
-                          "displayLines": "MDF_MinDamageRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MinDamageRatio"
-                          ]
+                          "displayLines": "MDF_MinDamageRatio"
                         },
                         "MDF_ExtraDamageMultiple": {
-                          "operator": "Variables[0] (MDF_ExtraDamageMultiple) || RETURN",
-                          "displayLines": "MDF_ExtraDamageMultiple",
-                          "constants": [],
-                          "variables": [
-                            "MDF_ExtraDamageMultiple"
-                          ]
+                          "displayLines": "MDF_ExtraDamageMultiple"
                         },
                         "MDF_EnemyExtraDamageMultiple": {
-                          "operator": "Variables[0] (MDF_EnemyExtraDamageMultiple) || RETURN",
-                          "displayLines": "MDF_EnemyExtraDamageMultiple",
-                          "constants": [],
-                          "variables": [
-                            "MDF_EnemyExtraDamageMultiple"
-                          ]
+                          "displayLines": "MDF_EnemyExtraDamageMultiple"
                         }
                       },
                       "casterAssign": "TargetSelf"
@@ -1733,12 +1557,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (ModifierLayers) || RETURN",
-                    "displayLines": "ModifierLayers",
-                    "constants": [],
-                    "variables": [
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "ModifierLayers"
                   },
                   "variableName": "LastModifierLayers"
                 },
@@ -1755,24 +1574,14 @@ const compositeAbilityObject = {
                     "value1": "ModifierLayers",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (LastModifierLayers) || RETURN",
-                      "displayLines": "LastModifierLayers",
-                      "constants": [],
-                      "variables": [
-                        "LastModifierLayers"
-                      ]
+                      "displayLines": "LastModifierLayers"
                     }
                   },
                   "passed": [
                     {
                       "name": "Looped Event",
                       "maxLoops": {
-                        "operator": "Variables[0] (ModifierLayers) || RETURN",
-                        "displayLines": "ModifierLayers",
-                        "constants": [],
-                        "variables": [
-                          "ModifierLayers"
-                        ]
+                        "displayLines": "ModifierLayers"
                       },
                       "execute": [
                         {
@@ -1805,12 +1614,7 @@ const compositeAbilityObject = {
                                 {
                                   "name": "Define Custom Variable",
                                   "value": {
-                                    "operator": "Variables[0] ({[Skill04[5]]}) || RETURN",
-                                    "displayLines": "{[Skill04[5]]}",
-                                    "constants": [],
-                                    "variables": [
-                                      "{[Skill04[5]]}"
-                                    ]
+                                    "displayLines": "{[Skill04[5]]}"
                                   },
                                   "variableName": "MDF_DelayRatio"
                                 }
@@ -1819,12 +1623,7 @@ const compositeAbilityObject = {
                                 {
                                   "name": "Define Custom Variable",
                                   "value": {
-                                    "operator": "Variables[0] ({[Skill04[6]]}) || RETURN",
-                                    "displayLines": "{[Skill04[6]]}",
-                                    "constants": [],
-                                    "variables": [
-                                      "{[Skill04[6]]}"
-                                    ]
+                                    "displayLines": "{[Skill04[6]]}"
                                   },
                                   "variableName": "MDF_DelayRatio"
                                 }
@@ -1833,23 +1632,13 @@ const compositeAbilityObject = {
                             {
                               "name": "Create Enemies",
                               "delayPercent": {
-                                "operator": "Variables[0] (MDF_DelayRatio) || RETURN",
-                                "displayLines": "MDF_DelayRatio",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_DelayRatio"
-                                ]
+                                "displayLines": "MDF_DelayRatio"
                               },
                               "enemyList": [
                                 {
                                   "name": "Enemy Entry",
                                   "enemyID": {
-                                    "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                                    "displayLines": "SummonList_ADF_1",
-                                    "constants": [],
-                                    "variables": [
-                                      "SummonList_ADF_1"
-                                    ]
+                                    "displayLines": "SummonList_ADF_1"
                                   },
                                   "locationType": "KeepOnEdge"
                                 }
@@ -1867,12 +1656,7 @@ const compositeAbilityObject = {
                                 "target": "{{Recently Summoned Enemies}}"
                               },
                               "value": {
-                                "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-                                "displayLines": "{[PassiveSkill01[3]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[PassiveSkill01[3]]}"
-                                ]
+                                "displayLines": "{[PassiveSkill01[3]]}"
                               },
                               "variableName": "Buff_DamageUpRatio"
                             },
@@ -1883,12 +1667,7 @@ const compositeAbilityObject = {
                                 "target": "{{Recently Summoned Enemies}}"
                               },
                               "value": {
-                                "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-                                "displayLines": "{[PassiveSkill01[4]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[PassiveSkill01[4]]}"
-                                ]
+                                "displayLines": "{[PassiveSkill01[4]]}"
                               },
                               "variableName": "Buff_MaxLayer"
                             },
@@ -1999,12 +1778,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_CriticalDamageUpRatio) || RETURN",
-                    "displayLines": "MDF_CriticalDamageUpRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CriticalDamageUpRatio"
-                    ]
+                    "displayLines": "MDF_CriticalDamageUpRatio"
                   }
                 }
               ]
@@ -2039,12 +1813,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "FleshLifeTime",
                   "resetValue": {
-                    "operator": "Variables[0] ({[Skill06[2]]}) || RETURN",
-                    "displayLines": "{[Skill06[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill06[2]]}"
-                    ]
+                    "displayLines": "{[Skill06[2]]}"
                   },
                   "scope": "TargetEntity"
                 },
@@ -2056,12 +1825,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "Buff_DamageUpRatio",
                   "resetValue": {
-                    "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill01[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill01[3]]}"
-                    ]
+                    "displayLines": "{[PassiveSkill01[3]]}"
                   },
                   "scope": "TargetEntity"
                 },
@@ -2073,12 +1837,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "Buff_MaxLayer",
                   "resetValue": {
-                    "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill01[4]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill01[4]]}"
-                    ]
+                    "displayLines": "{[PassiveSkill01[4]]}"
                   },
                   "scope": "TargetEntity"
                 },
@@ -2090,12 +1849,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "MDF_FleshElationPoint",
                   "resetValue": {
-                    "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-                    "displayLines": "{[Skill06[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill06[3]]}"
-                    ]
+                    "displayLines": "{[Skill06[3]]}"
                   },
                   "scope": "TargetEntity"
                 },
@@ -2107,12 +1861,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "MDF_FleshExtraChance",
                   "resetValue": {
-                    "operator": "Variables[0] ({[Skill06[4]]}) || RETURN",
-                    "displayLines": "{[Skill06[4]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill06[4]]}"
-                    ]
+                    "displayLines": "{[Skill06[4]]}"
                   },
                   "scope": "TargetEntity"
                 },
@@ -2124,12 +1873,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "MDF_FleshExtraElationPoint",
                   "resetValue": {
-                    "operator": "Variables[0] ({[Skill06[5]]}) || RETURN",
-                    "displayLines": "{[Skill06[5]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill06[5]]}"
-                    ]
+                    "displayLines": "{[Skill06[5]]}"
                   },
                   "scope": "TargetEntity"
                 },
@@ -2141,12 +1885,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "MDF_AttackEnemyChance",
                   "resetValue": {
-                    "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill02[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill02[0]]}"
-                    ]
+                    "displayLines": "{[PassiveSkill02[0]]}"
                   },
                   "scope": "TargetEntity"
                 },
@@ -2158,12 +1897,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "MDF_DamagePercentage",
                   "resetValue": {
-                    "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill02[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill02[1]]}"
-                    ]
+                    "displayLines": "{[PassiveSkill02[1]]}"
                   },
                   "scope": "TargetEntity"
                 },
@@ -2175,12 +1909,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "MDF_MaxDamageRatio",
                   "resetValue": {
-                    "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill02[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill02[2]]}"
-                    ]
+                    "displayLines": "{[PassiveSkill02[2]]}"
                   },
                   "scope": "TargetEntity"
                 },
@@ -2192,12 +1921,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "MDF_MinDamageRatio",
                   "resetValue": {
-                    "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill02[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill02[3]]}"
-                    ]
+                    "displayLines": "{[PassiveSkill02[3]]}"
                   },
                   "scope": "TargetEntity"
                 },
@@ -2209,12 +1933,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "MDF_ExtraDamageMultiple",
                   "resetValue": {
-                    "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill02[4]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill02[4]]}"
-                    ]
+                    "displayLines": "{[PassiveSkill02[4]]}"
                   },
                   "scope": "TargetEntity"
                 },
@@ -2226,12 +1945,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "MDF_EnemyExtraDamageMultiple",
                   "resetValue": {
-                    "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill02[5]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill02[5]]}"
-                    ]
+                    "displayLines": "{[PassiveSkill02[5]]}"
                   },
                   "scope": "TargetEntity"
                 }
@@ -2283,14 +1997,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (MDF_AddLayer) || Constants[0] (1) || SUB || RETURN",
-                            "displayLines": "(MDF_AddLayer - 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "MDF_AddLayer"
-                            ]
+                            "displayLines": "(MDF_AddLayer - 1)"
                           }
                         },
                         {
@@ -2308,12 +2015,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (MDF_AddLayer) || RETURN",
-                            "displayLines": "MDF_AddLayer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_AddLayer"
-                            ]
+                            "displayLines": "MDF_AddLayer"
                           }
                         }
                       ]
@@ -2357,12 +2059,7 @@ const compositeAbilityObject = {
                     "value1": "ModifierLayers",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                      "displayLines": "MDF_MaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MaxLayer"
-                      ]
+                      "displayLines": "MDF_MaxLayer"
                     }
                   },
                   "passed": [
@@ -2398,12 +2095,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (ModifierLayers) || RETURN",
-                    "displayLines": "ModifierLayers",
-                    "constants": [],
-                    "variables": [
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "ModifierLayers"
                   },
                   "variableName": "LastModifierLayers"
                 },
@@ -2423,12 +2115,7 @@ const compositeAbilityObject = {
                         "value1": "ModifierLayers",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                          "displayLines": "MDF_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer"
-                          ]
+                          "displayLines": "MDF_MaxLayer"
                         }
                       },
                       {
@@ -2436,12 +2123,7 @@ const compositeAbilityObject = {
                         "value1": "LastModifierLayers",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                          "displayLines": "MDF_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer"
-                          ]
+                          "displayLines": "MDF_MaxLayer"
                         }
                       }
                     ]
@@ -2457,12 +2139,7 @@ const compositeAbilityObject = {
                         "value1": "ModifierLayers",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                          "displayLines": "MDF_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer"
-                          ]
+                          "displayLines": "MDF_MaxLayer"
                         }
                       },
                       {
@@ -2470,12 +2147,7 @@ const compositeAbilityObject = {
                         "value1": "LastModifierLayers",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                          "displayLines": "MDF_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer"
-                          ]
+                          "displayLines": "MDF_MaxLayer"
                         }
                       }
                     ]
@@ -2525,21 +2197,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-2109211182\">Monster_W5_Ripper_Bonus</a>[<span class=\"descriptionNumberColor\">Inverted Severance</span>]",
                       "duration": {
-                        "operator": "Variables[0] ({[Skill04[8]]}) || RETURN",
-                        "displayLines": "{[Skill04[8]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill04[8]]}"
-                        ]
+                        "displayLines": "{[Skill04[8]]}"
                       },
                       "valuePerStack": {
                         "MDF_CriticalDamageUpRatio": {
-                          "operator": "Variables[0] ({[Skill04[7]]}) || RETURN",
-                          "displayLines": "{[Skill04[7]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill04[7]]}"
-                          ]
+                          "displayLines": "{[Skill04[7]]}"
                         }
                       }
                     },
@@ -2674,12 +2336,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "FleshLifeTime",
                   "resetValue": {
-                    "operator": "Variables[0] ({[Skill06[2]]}) || RETURN",
-                    "displayLines": "{[Skill06[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill06[2]]}"
-                    ]
+                    "displayLines": "{[Skill06[2]]}"
                   },
                   "scope": "TargetEntity"
                 },
@@ -2691,12 +2348,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "Buff_DamageUpRatio",
                   "resetValue": {
-                    "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill01[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill01[3]]}"
-                    ]
+                    "displayLines": "{[PassiveSkill01[3]]}"
                   },
                   "scope": "TargetEntity"
                 },
@@ -2708,12 +2360,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "Buff_MaxLayer",
                   "resetValue": {
-                    "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill01[4]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill01[4]]}"
-                    ]
+                    "displayLines": "{[PassiveSkill01[4]]}"
                   },
                   "scope": "TargetEntity"
                 },
@@ -2725,12 +2372,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "MDF_FleshElationPoint",
                   "resetValue": {
-                    "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-                    "displayLines": "{[Skill06[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill06[3]]}"
-                    ]
+                    "displayLines": "{[Skill06[3]]}"
                   },
                   "scope": "TargetEntity"
                 },
@@ -2742,12 +2384,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "MDF_FleshExtraChance",
                   "resetValue": {
-                    "operator": "Variables[0] ({[Skill06[4]]}) || RETURN",
-                    "displayLines": "{[Skill06[4]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill06[4]]}"
-                    ]
+                    "displayLines": "{[Skill06[4]]}"
                   },
                   "scope": "TargetEntity"
                 },
@@ -2759,12 +2396,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "MDF_FleshExtraElationPoint",
                   "resetValue": {
-                    "operator": "Variables[0] ({[Skill06[5]]}) || RETURN",
-                    "displayLines": "{[Skill06[5]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill06[5]]}"
-                    ]
+                    "displayLines": "{[Skill06[5]]}"
                   },
                   "scope": "TargetEntity"
                 },
@@ -2776,12 +2408,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "MDF_AttackEnemyChance",
                   "resetValue": {
-                    "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill02[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill02[0]]}"
-                    ]
+                    "displayLines": "{[PassiveSkill02[0]]}"
                   },
                   "scope": "TargetEntity"
                 },
@@ -2793,12 +2420,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "MDF_DamagePercentage",
                   "resetValue": {
-                    "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill02[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill02[1]]}"
-                    ]
+                    "displayLines": "{[PassiveSkill02[1]]}"
                   },
                   "scope": "TargetEntity"
                 },
@@ -2810,12 +2432,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "MDF_MaxDamageRatio",
                   "resetValue": {
-                    "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill02[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill02[2]]}"
-                    ]
+                    "displayLines": "{[PassiveSkill02[2]]}"
                   },
                   "scope": "TargetEntity"
                 },
@@ -2827,12 +2444,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "MDF_MinDamageRatio",
                   "resetValue": {
-                    "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill02[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill02[3]]}"
-                    ]
+                    "displayLines": "{[PassiveSkill02[3]]}"
                   },
                   "scope": "TargetEntity"
                 },
@@ -2844,12 +2456,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "MDF_ExtraDamageMultiple",
                   "resetValue": {
-                    "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill02[4]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill02[4]]}"
-                    ]
+                    "displayLines": "{[PassiveSkill02[4]]}"
                   },
                   "scope": "TargetEntity"
                 },
@@ -2861,12 +2468,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "MDF_EnemyExtraDamageMultiple",
                   "resetValue": {
-                    "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill02[5]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill02[5]]}"
-                    ]
+                    "displayLines": "{[PassiveSkill02[5]]}"
                   },
                   "scope": "TargetEntity"
                 }
@@ -2918,14 +2520,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (MDF_AddLayer) || Constants[0] (1) || SUB || RETURN",
-                            "displayLines": "(MDF_AddLayer - 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "MDF_AddLayer"
-                            ]
+                            "displayLines": "(MDF_AddLayer - 1)"
                           }
                         },
                         {
@@ -2943,12 +2538,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (MDF_AddLayer) || RETURN",
-                            "displayLines": "MDF_AddLayer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_AddLayer"
-                            ]
+                            "displayLines": "MDF_AddLayer"
                           }
                         }
                       ]
@@ -2988,12 +2578,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-2110673178\">Monster_W5_Ripper_SummonMonster</a>",
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_SummonCount) || RETURN",
-                    "displayLines": "MDF_SummonCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SummonCount"
-                    ]
+                    "displayLines": "MDF_SummonCount"
                   }
                 },
                 {
@@ -3013,12 +2598,7 @@ const compositeAbilityObject = {
                     "value1": "ModifierLayers",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                      "displayLines": "MDF_MaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MaxLayer"
-                      ]
+                      "displayLines": "MDF_MaxLayer"
                     }
                   },
                   "passed": [
@@ -3054,12 +2634,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (ModifierLayers) || RETURN",
-                    "displayLines": "ModifierLayers",
-                    "constants": [],
-                    "variables": [
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "ModifierLayers"
                   },
                   "variableName": "LastModifierLayers"
                 },
@@ -3079,12 +2654,7 @@ const compositeAbilityObject = {
                         "value1": "ModifierLayers",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                          "displayLines": "MDF_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer"
-                          ]
+                          "displayLines": "MDF_MaxLayer"
                         }
                       },
                       {
@@ -3092,12 +2662,7 @@ const compositeAbilityObject = {
                         "value1": "LastModifierLayers",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                          "displayLines": "MDF_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer"
-                          ]
+                          "displayLines": "MDF_MaxLayer"
                         }
                       }
                     ]
@@ -3113,12 +2678,7 @@ const compositeAbilityObject = {
                         "value1": "ModifierLayers",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                          "displayLines": "MDF_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer"
-                          ]
+                          "displayLines": "MDF_MaxLayer"
                         }
                       },
                       {
@@ -3126,12 +2686,7 @@ const compositeAbilityObject = {
                         "value1": "LastModifierLayers",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                          "displayLines": "MDF_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer"
-                          ]
+                          "displayLines": "MDF_MaxLayer"
                         }
                       }
                     ]
@@ -3181,21 +2736,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-2109211182\">Monster_W5_Ripper_Bonus</a>[<span class=\"descriptionNumberColor\">Inverted Severance</span>]",
                       "duration": {
-                        "operator": "Variables[0] ({[Skill04[8]]}) || RETURN",
-                        "displayLines": "{[Skill04[8]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill04[8]]}"
-                        ]
+                        "displayLines": "{[Skill04[8]]}"
                       },
                       "valuePerStack": {
                         "MDF_CriticalDamageUpRatio": {
-                          "operator": "Variables[0] ({[Skill04[7]]}) || RETURN",
-                          "displayLines": "{[Skill04[7]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill04[7]]}"
-                          ]
+                          "displayLines": "{[Skill04[7]]}"
                         }
                       }
                     },
@@ -3518,12 +3063,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Adjust Team Punchline Value",
                   "value": {
-                    "operator": "Variables[0] (MDF_FleshElationPoint) || RETURN",
-                    "displayLines": "MDF_FleshElationPoint",
-                    "constants": [],
-                    "variables": [
-                      "MDF_FleshElationPoint"
-                    ]
+                    "displayLines": "MDF_FleshElationPoint"
                   },
                   "adjustment": "Add"
                 },
@@ -3573,12 +3113,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Adjust Team Punchline Value",
                   "value": {
-                    "operator": "Variables[0] (MDF_FleshExtraElationPoint) || RETURN",
-                    "displayLines": "MDF_FleshExtraElationPoint",
-                    "constants": [],
-                    "variables": [
-                      "MDF_FleshExtraElationPoint"
-                    ]
+                    "displayLines": "MDF_FleshExtraElationPoint"
                   },
                   "adjustment": "Add"
                 },
@@ -3597,12 +3132,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Adjust Team Punchline Value",
                   "value": {
-                    "operator": "Variables[0] (MDF_FleshElationPoint) || RETURN",
-                    "displayLines": "MDF_FleshElationPoint",
-                    "constants": [],
-                    "variables": [
-                      "MDF_FleshElationPoint"
-                    ]
+                    "displayLines": "MDF_FleshElationPoint"
                   },
                   "adjustment": "Add"
                 },
@@ -3626,12 +3156,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_EnemyExtraDamageMultiple) || RETURN",
-                    "displayLines": "MDF_EnemyExtraDamageMultiple",
-                    "constants": [],
-                    "variables": [
-                      "MDF_EnemyExtraDamageMultiple"
-                    ]
+                    "displayLines": "MDF_EnemyExtraDamageMultiple"
                   }
                 }
               ]
@@ -3684,12 +3209,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1374122123\">Monster_W5_Ripper_Crazy_CriticalAttackEffect</a>",
                   "valuePerStack": {
                     "MDF_EnemyExtraDamageMultiple": {
-                      "operator": "Variables[0] (MDF_EnemyExtraDamageMultiple) || RETURN",
-                      "displayLines": "MDF_EnemyExtraDamageMultiple",
-                      "constants": [],
-                      "variables": [
-                        "MDF_EnemyExtraDamageMultiple"
-                      ]
+                      "displayLines": "MDF_EnemyExtraDamageMultiple"
                     }
                   }
                 }
@@ -3713,12 +3233,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Adjust Team Punchline Value",
                       "value": {
-                        "operator": "Variables[0] (MDF_FleshElationPoint) || RETURN",
-                        "displayLines": "MDF_FleshElationPoint",
-                        "constants": [],
-                        "variables": [
-                          "MDF_FleshElationPoint"
-                        ]
+                        "displayLines": "MDF_FleshElationPoint"
                       },
                       "adjustment": "Add"
                     }
@@ -3727,12 +3242,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Adjust Team Punchline Value",
                       "value": {
-                        "operator": "Variables[0] (MDF_FleshExtraElationPoint) || RETURN",
-                        "displayLines": "MDF_FleshExtraElationPoint",
-                        "constants": [],
-                        "variables": [
-                          "MDF_FleshExtraElationPoint"
-                        ]
+                        "displayLines": "MDF_FleshExtraElationPoint"
                       },
                       "adjustment": "Add"
                     }
@@ -3794,12 +3304,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Random Chance",
                     "chance": {
-                      "operator": "Variables[0] (MDF_AttackEnemyChance) || RETURN",
-                      "displayLines": "MDF_AttackEnemyChance",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AttackEnemyChance"
-                      ]
+                      "displayLines": "MDF_AttackEnemyChance"
                     }
                   },
                   "passed": [
@@ -3808,12 +3313,7 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Random Chance",
                         "chance": {
-                          "operator": "Variables[0] (MDF_FleshExtraChance) || RETURN",
-                          "displayLines": "MDF_FleshExtraChance",
-                          "constants": [],
-                          "variables": [
-                            "MDF_FleshExtraChance"
-                          ]
+                          "displayLines": "MDF_FleshExtraChance"
                         }
                       },
                       "passed": [
@@ -3835,28 +3335,13 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"-656989940\">Monster_W5_Ripper_Crazy_CriticalAttack</a>",
                               "valuePerStack": {
                                 "MDF_FleshElationPoint": {
-                                  "operator": "Variables[0] (MDF_FleshElationPoint) || RETURN",
-                                  "displayLines": "MDF_FleshElationPoint",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_FleshElationPoint"
-                                  ]
+                                  "displayLines": "MDF_FleshElationPoint"
                                 },
                                 "MDF_FleshExtraElationPoint": {
-                                  "operator": "Variables[0] (MDF_FleshExtraElationPoint) || RETURN",
-                                  "displayLines": "MDF_FleshExtraElationPoint",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_FleshExtraElationPoint"
-                                  ]
+                                  "displayLines": "MDF_FleshExtraElationPoint"
                                 },
                                 "MDF_EnemyExtraDamageMultiple": {
-                                  "operator": "Variables[0] (MDF_EnemyExtraDamageMultiple) || RETURN",
-                                  "displayLines": "MDF_EnemyExtraDamageMultiple",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_EnemyExtraDamageMultiple"
-                                  ]
+                                  "displayLines": "MDF_EnemyExtraDamageMultiple"
                                 }
                               }
                             }
@@ -3892,28 +3377,13 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"1866931109\">Monster_W5_Ripper_Crazy_Attack</a>",
                               "valuePerStack": {
                                 "MDF_FleshElationPoint": {
-                                  "operator": "Variables[0] (MDF_FleshElationPoint) || RETURN",
-                                  "displayLines": "MDF_FleshElationPoint",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_FleshElationPoint"
-                                  ]
+                                  "displayLines": "MDF_FleshElationPoint"
                                 },
                                 "MDF_FleshExtraElationPoint": {
-                                  "operator": "Variables[0] (MDF_FleshExtraElationPoint) || RETURN",
-                                  "displayLines": "MDF_FleshExtraElationPoint",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_FleshExtraElationPoint"
-                                  ]
+                                  "displayLines": "MDF_FleshExtraElationPoint"
                                 },
                                 "MDF_EnemyExtraDamageMultiple": {
-                                  "operator": "Variables[0] (MDF_EnemyExtraDamageMultiple) || RETURN",
-                                  "displayLines": "MDF_EnemyExtraDamageMultiple",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_EnemyExtraDamageMultiple"
-                                  ]
+                                  "displayLines": "MDF_EnemyExtraDamageMultiple"
                                 }
                               }
                             }
@@ -3938,12 +3408,7 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Random Chance",
                         "chance": {
-                          "operator": "Variables[0] (MDF_FleshExtraChance) || RETURN",
-                          "displayLines": "MDF_FleshExtraChance",
-                          "constants": [],
-                          "variables": [
-                            "MDF_FleshExtraChance"
-                          ]
+                          "displayLines": "MDF_FleshExtraChance"
                         }
                       },
                       "passed": [
@@ -3957,29 +3422,13 @@ const compositeAbilityObject = {
                           "duration": 1,
                           "valuePerStack": {
                             "MDF_MindControlDamagePercentage": {
-                              "operator": "Variables[0] (MDF_ExtraDamageMultiple) || Variables[1] (MDF_DamagePercentage) || MUL || RETURN",
-                              "displayLines": "(MDF_ExtraDamageMultiple * MDF_DamagePercentage)",
-                              "constants": [],
-                              "variables": [
-                                "MDF_ExtraDamageMultiple",
-                                "MDF_DamagePercentage"
-                              ]
+                              "displayLines": "(MDF_ExtraDamageMultiple * MDF_DamagePercentage)"
                             },
                             "MDF_MaxDamageRatio": {
-                              "operator": "Variables[0] (MDF_MaxDamageRatio) || RETURN",
-                              "displayLines": "MDF_MaxDamageRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxDamageRatio"
-                              ]
+                              "displayLines": "MDF_MaxDamageRatio"
                             },
                             "MDF_MinDamageRatio": {
-                              "operator": "Variables[0] (MDF_MinDamageRatio) || RETURN",
-                              "displayLines": "MDF_MinDamageRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MinDamageRatio"
-                              ]
+                              "displayLines": "MDF_MinDamageRatio"
                             }
                           },
                           "casterAssign": "CasterSelf",
@@ -3993,12 +3442,7 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"662835406\">Monster_W5_Ripper_Charm_CriticalAttack</a>",
                               "valuePerStack": {
                                 "MDF_FleshExtraElationPoint": {
-                                  "operator": "Variables[0] (MDF_FleshExtraElationPoint) || RETURN",
-                                  "displayLines": "MDF_FleshExtraElationPoint",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_FleshExtraElationPoint"
-                                  ]
+                                  "displayLines": "MDF_FleshExtraElationPoint"
                                 }
                               }
                             }
@@ -4026,28 +3470,13 @@ const compositeAbilityObject = {
                           "duration": 1,
                           "valuePerStack": {
                             "MDF_MindControlDamagePercentage": {
-                              "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                              "displayLines": "MDF_DamagePercentage",
-                              "constants": [],
-                              "variables": [
-                                "MDF_DamagePercentage"
-                              ]
+                              "displayLines": "MDF_DamagePercentage"
                             },
                             "MDF_MaxDamageRatio": {
-                              "operator": "Variables[0] (MDF_MaxDamageRatio) || RETURN",
-                              "displayLines": "MDF_MaxDamageRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxDamageRatio"
-                              ]
+                              "displayLines": "MDF_MaxDamageRatio"
                             },
                             "MDF_MinDamageRatio": {
-                              "operator": "Variables[0] (MDF_MinDamageRatio) || RETURN",
-                              "displayLines": "MDF_MinDamageRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MinDamageRatio"
-                              ]
+                              "displayLines": "MDF_MinDamageRatio"
                             }
                           },
                           "casterAssign": "CasterSelf",
@@ -4061,12 +3490,7 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"-2048207253\">Monster_W5_Ripper_Charm_Attack</a>",
                               "valuePerStack": {
                                 "MDF_FleshElationPoint": {
-                                  "operator": "Variables[0] (MDF_FleshElationPoint) || RETURN",
-                                  "displayLines": "MDF_FleshElationPoint",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_FleshElationPoint"
-                                  ]
+                                  "displayLines": "MDF_FleshElationPoint"
                                 }
                               }
                             }
@@ -4179,26 +3603,14 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_CurrentCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_CurrentCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_CurrentCount"
-                        ]
+                        "displayLines": "(MDF_CurrentCount + 1)"
                       },
                       "variableName": "MDF_CurrentCount"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MDF_CurrentCount) || RETURN",
-                        "displayLines": "MDF_CurrentCount",
-                        "constants": [],
-                        "variables": [
-                          "MDF_CurrentCount"
-                        ]
+                        "displayLines": "MDF_CurrentCount"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -4206,12 +3618,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_TriggerSummonCount) || RETURN",
-                        "displayLines": "MDF_TriggerSummonCount",
-                        "constants": [],
-                        "variables": [
-                          "MDF_TriggerSummonCount"
-                        ]
+                        "displayLines": "MDF_TriggerSummonCount"
                       },
                       "assignState": "True",
                       "state": "Normal"
@@ -4225,13 +3632,7 @@ const compositeAbilityObject = {
                       "modifierName": "<a class=\"gModGreen\" id=\"-359828555\">Monster_W5_Ripper_Pollen</a>[<span class=\"descriptionNumberColor\">Laughter's End</span>]",
                       "variableName": "MDF_Count",
                       "value": {
-                        "operator": "Variables[0] (MDF_TriggerSummonCount) || Variables[1] (MDF_CurrentCount) || SUB || RETURN",
-                        "displayLines": "(MDF_TriggerSummonCount - MDF_CurrentCount)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_TriggerSummonCount",
-                          "MDF_CurrentCount"
-                        ]
+                        "displayLines": "(MDF_TriggerSummonCount - MDF_CurrentCount)"
                       }
                     }
                   ]
@@ -4246,12 +3647,7 @@ const compositeAbilityObject = {
                         "value1": "MDF_CurrentCount",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] (MDF_TriggerSummonCount) || RETURN",
-                          "displayLines": "MDF_TriggerSummonCount",
-                          "constants": [],
-                          "variables": [
-                            "MDF_TriggerSummonCount"
-                          ]
+                          "displayLines": "MDF_TriggerSummonCount"
                         }
                       },
                       {
@@ -4288,12 +3684,7 @@ const compositeAbilityObject = {
                       "modifierName": "<a class=\"gModGreen\" id=\"-359828555\">Monster_W5_Ripper_Pollen</a>[<span class=\"descriptionNumberColor\">Laughter's End</span>]",
                       "variableName": "MDF_Count",
                       "value": {
-                        "operator": "Variables[0] (MDF_TriggerSummonCount) || RETURN",
-                        "displayLines": "MDF_TriggerSummonCount",
-                        "constants": [],
-                        "variables": [
-                          "MDF_TriggerSummonCount"
-                        ]
+                        "displayLines": "MDF_TriggerSummonCount"
                       }
                     }
                   ]
@@ -4368,12 +3759,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_TriggerSummonCount) || RETURN",
-                        "displayLines": "MDF_TriggerSummonCount",
-                        "constants": [],
-                        "variables": [
-                          "MDF_TriggerSummonCount"
-                        ]
+                        "displayLines": "MDF_TriggerSummonCount"
                       },
                       "assignState": "True",
                       "state": "Normal"
@@ -4387,12 +3773,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-359828555\">Monster_W5_Ripper_Pollen</a>[<span class=\"descriptionNumberColor\">Laughter's End</span>]",
                       "valuePerStack": {
                         "MDF_Count": {
-                          "operator": "Variables[0] (MDF_TriggerSummonCount) || RETURN",
-                          "displayLines": "MDF_TriggerSummonCount",
-                          "constants": [],
-                          "variables": [
-                            "MDF_TriggerSummonCount"
-                          ]
+                          "displayLines": "MDF_TriggerSummonCount"
                         }
                       }
                     }
@@ -4483,12 +3864,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Enemy ID",
                     "ID": {
-                      "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                      "displayLines": "SummonList_ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "SummonList_ADF_1"
-                      ]
+                      "displayLines": "SummonList_ADF_1"
                     },
                     "target": {
                       "name": "Target Name",
@@ -4504,12 +3880,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "value": {
-                        "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-                        "displayLines": "{[PassiveSkill01[3]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[PassiveSkill01[3]]}"
-                        ]
+                        "displayLines": "{[PassiveSkill01[3]]}"
                       },
                       "variableName": "Buff_DamageUpRatio"
                     },
@@ -4520,12 +3891,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "value": {
-                        "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-                        "displayLines": "{[PassiveSkill01[4]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[PassiveSkill01[4]]}"
-                        ]
+                        "displayLines": "{[PassiveSkill01[4]]}"
                       },
                       "variableName": "Buff_MaxLayer"
                     }
@@ -4552,12 +3918,7 @@ const compositeAbilityObject = {
                       {
                         "name": "Enemy ID",
                         "ID": {
-                          "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                          "displayLines": "SummonList_ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "SummonList_ADF_1"
-                          ]
+                          "displayLines": "SummonList_ADF_1"
                         },
                         "target": {
                           "name": "Target Name",
@@ -4575,12 +3936,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "value": {
-                        "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-                        "displayLines": "{[PassiveSkill01[3]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[PassiveSkill01[3]]}"
-                        ]
+                        "displayLines": "{[PassiveSkill01[3]]}"
                       },
                       "variableName": "Buff_DamageUpRatio"
                     },
@@ -4591,12 +3947,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "value": {
-                        "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-                        "displayLines": "{[PassiveSkill01[4]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[PassiveSkill01[4]]}"
-                        ]
+                        "displayLines": "{[PassiveSkill01[4]]}"
                       },
                       "variableName": "Buff_MaxLayer"
                     }
@@ -4816,12 +4167,7 @@ const compositeAbilityObject = {
             "target": "{{Modifier Holder}}"
           },
           "maximum": {
-            "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[0]]}"
-            ]
+            "displayLines": "{[PassiveSkill01[0]]}"
           },
           "assignState": "True",
           "state": "Normal",
@@ -4835,29 +4181,14 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-98226572\">Monster_W5_Ripper_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Teasing</span>]",
           "duration": {
-            "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[5]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[5]]}"
-            ]
+            "displayLines": "{[PassiveSkill01[5]]}"
           },
           "stackLimit": {
-            "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[2]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[2]]}"
-            ]
+            "displayLines": "{[PassiveSkill01[2]]}"
           },
           "valuePerStack": {
             "MDF_DamageTakenUpRatio_PerLayer": {
-              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[1]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[1]]}"
             }
           },
           "addStacksPerTrigger": 1
@@ -4956,12 +4287,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1728959136\">Monster_W5_Ripper_Passive</a>",
           "valuePerStack": {
             "MDF_TriggerSummonCount": {
-              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[0]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[0]]}"
             }
           }
         },
@@ -5005,36 +4331,16 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"766895631\">Standard_Monster_Floating_DamageReduceController</a>",
                   "valuePerStack": {
                     "MDF_LockHpActionDecreaseRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_13685) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_13685",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_13685"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_13685"
                     },
                     "MDF_LockHpUpLimitRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_13653) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_13653",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_13653"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_13653"
                     },
                     "MDF_DamageReduceRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_13656) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_13656",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_13656"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_13656"
                     },
                     "MDF_LastLockHpRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_13652) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_13652",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_13652"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_13652"
                     }
                   }
                 },
@@ -5370,12 +4676,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "HitSplit": 0.07,
             "Toughness": null,
@@ -5393,12 +4694,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "HitSplit": 0.07,
             "Toughness": null,
@@ -5416,12 +4712,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "HitSplit": 0.07,
             "Toughness": null,
@@ -5439,12 +4730,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "HitSplit": 0.07,
             "Toughness": null,
@@ -5462,12 +4748,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "HitSplit": 0.07,
             "Toughness": null,
@@ -5485,12 +4766,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "HitSplit": 0.07,
             "Toughness": null,
@@ -5508,12 +4784,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "HitSplit": 0.07,
             "Toughness": null,
@@ -5531,12 +4802,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "HitSplit": 0.07,
             "Toughness": null,
@@ -5554,12 +4820,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "HitSplit": 0.07,
             "Toughness": null,
@@ -5577,12 +4838,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "HitSplit": 0.07,
             "Toughness": null,
@@ -5600,12 +4856,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "HitSplit": 0.07,
             "Toughness": null,
@@ -5623,12 +4874,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
+              "displayLines": "{[Skill06[0]]}"
             },
             "HitSplit": 0.23,
             "Toughness": null,
@@ -5676,85 +4922,35 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-70072093\">Monster_W5_Ripper_Flesh</a>[<span class=\"descriptionNumberColor\">Happiness Puppet</span>]",
                       "duration": {
-                        "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-                        "displayLines": "{[Skill06[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill06[1]]}"
-                        ]
+                        "displayLines": "{[Skill06[1]]}"
                       },
                       "valuePerStack": {
                         "MDF_FleshElationPoint": {
-                          "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-                          "displayLines": "{[Skill06[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill06[3]]}"
-                          ]
+                          "displayLines": "{[Skill06[3]]}"
                         },
                         "MDF_FleshExtraChance": {
-                          "operator": "Variables[0] ({[Skill06[4]]}) || RETURN",
-                          "displayLines": "{[Skill06[4]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill06[4]]}"
-                          ]
+                          "displayLines": "{[Skill06[4]]}"
                         },
                         "MDF_FleshExtraElationPoint": {
-                          "operator": "Variables[0] ({[Skill06[5]]}) || RETURN",
-                          "displayLines": "{[Skill06[5]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill06[5]]}"
-                          ]
+                          "displayLines": "{[Skill06[5]]}"
                         },
                         "MDF_AttackEnemyChance": {
-                          "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill02[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill02[0]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill02[0]]}"
                         },
                         "MDF_DamagePercentage": {
-                          "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill02[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill02[1]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill02[1]]}"
                         },
                         "MDF_MaxDamageRatio": {
-                          "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill02[2]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill02[2]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill02[2]]}"
                         },
                         "MDF_MinDamageRatio": {
-                          "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill02[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill02[3]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill02[3]]}"
                         },
                         "MDF_ExtraDamageMultiple": {
-                          "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill02[4]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill02[4]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill02[4]]}"
                         },
                         "MDF_EnemyExtraDamageMultiple": {
-                          "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill02[5]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill02[5]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill02[5]]}"
                         }
                       },
                       "success": [
@@ -5767,76 +4963,31 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"34096710\">Monster_W5_Ripper_FleshEffect</a>",
                           "valuePerStack": {
                             "MDF_FleshElationPoint": {
-                              "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-                              "displayLines": "{[Skill06[3]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill06[3]]}"
-                              ]
+                              "displayLines": "{[Skill06[3]]}"
                             },
                             "MDF_FleshExtraChance": {
-                              "operator": "Variables[0] ({[Skill06[4]]}) || RETURN",
-                              "displayLines": "{[Skill06[4]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill06[4]]}"
-                              ]
+                              "displayLines": "{[Skill06[4]]}"
                             },
                             "MDF_FleshExtraElationPoint": {
-                              "operator": "Variables[0] ({[Skill06[5]]}) || RETURN",
-                              "displayLines": "{[Skill06[5]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill06[5]]}"
-                              ]
+                              "displayLines": "{[Skill06[5]]}"
                             },
                             "MDF_AttackEnemyChance": {
-                              "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                              "displayLines": "{[PassiveSkill02[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[PassiveSkill02[0]]}"
-                              ]
+                              "displayLines": "{[PassiveSkill02[0]]}"
                             },
                             "MDF_DamagePercentage": {
-                              "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                              "displayLines": "{[PassiveSkill02[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[PassiveSkill02[1]]}"
-                              ]
+                              "displayLines": "{[PassiveSkill02[1]]}"
                             },
                             "MDF_MaxDamageRatio": {
-                              "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-                              "displayLines": "{[PassiveSkill02[2]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[PassiveSkill02[2]]}"
-                              ]
+                              "displayLines": "{[PassiveSkill02[2]]}"
                             },
                             "MDF_MinDamageRatio": {
-                              "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
-                              "displayLines": "{[PassiveSkill02[3]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[PassiveSkill02[3]]}"
-                              ]
+                              "displayLines": "{[PassiveSkill02[3]]}"
                             },
                             "MDF_ExtraDamageMultiple": {
-                              "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
-                              "displayLines": "{[PassiveSkill02[4]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[PassiveSkill02[4]]}"
-                              ]
+                              "displayLines": "{[PassiveSkill02[4]]}"
                             },
                             "MDF_EnemyExtraDamageMultiple": {
-                              "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
-                              "displayLines": "{[PassiveSkill02[5]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[PassiveSkill02[5]]}"
-                              ]
+                              "displayLines": "{[PassiveSkill02[5]]}"
                             }
                           },
                           "casterAssign": "TargetSelf"
@@ -5849,12 +5000,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-1788107220\">Monster_W5_Ripper_Ability06_SpecialFlesh</a>",
                           "duration": {
-                            "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-                            "displayLines": "{[Skill06[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill06[1]]}"
-                            ]
+                            "displayLines": "{[Skill06[1]]}"
                           }
                         }
                       ]
@@ -6620,12 +5766,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -6698,55 +5839,24 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-                    "displayLines": "{[Skill04[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill04[2]]}"
-                    ]
+                    "displayLines": "{[Skill04[2]]}"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] ({[Skill04[1]]}) || Variables[1] ({[Skill04[3]]}) || ADD || RETURN",
-                    "displayLines": "({[Skill04[1]]} + {[Skill04[3]]})",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill04[1]]}",
-                      "{[Skill04[3]]}"
-                    ]
+                    "displayLines": "({[Skill04[1]]} + {[Skill04[3]]})"
                   },
                   "valuePerStack": {
                     "MDF_MaxLayer": {
-                      "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-                      "displayLines": "{[Skill04[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[1]]}"
-                      ]
+                      "displayLines": "{[Skill04[1]]}"
                     },
                     "MDF_AddLayer": {
-                      "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-                      "displayLines": "{[Skill04[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[3]]}"
-                      ]
+                      "displayLines": "{[Skill04[3]]}"
                     },
                     "MDF_SummonCount": {
-                      "operator": "Variables[0] ({[Skill04[4]]}) || RETURN",
-                      "displayLines": "{[Skill04[4]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[4]]}"
-                      ]
+                      "displayLines": "{[Skill04[4]]}"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] ({[Skill04[9]]}) || RETURN",
-                    "displayLines": "{[Skill04[9]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill04[9]]}"
-                    ]
+                    "displayLines": "{[Skill04[9]]}"
                   }
                 }
               ],
@@ -6759,55 +5869,24 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-                    "displayLines": "{[Skill04[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill04[2]]}"
-                    ]
+                    "displayLines": "{[Skill04[2]]}"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] ({[Skill04[1]]}) || Variables[1] ({[Skill04[3]]}) || ADD || RETURN",
-                    "displayLines": "({[Skill04[1]]} + {[Skill04[3]]})",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill04[1]]}",
-                      "{[Skill04[3]]}"
-                    ]
+                    "displayLines": "({[Skill04[1]]} + {[Skill04[3]]})"
                   },
                   "valuePerStack": {
                     "MDF_MaxLayer": {
-                      "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-                      "displayLines": "{[Skill04[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[1]]}"
-                      ]
+                      "displayLines": "{[Skill04[1]]}"
                     },
                     "MDF_AddLayer": {
-                      "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-                      "displayLines": "{[Skill04[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[3]]}"
-                      ]
+                      "displayLines": "{[Skill04[3]]}"
                     },
                     "MDF_SummonCount": {
-                      "operator": "Variables[0] ({[Skill04[4]]}) || RETURN",
-                      "displayLines": "{[Skill04[4]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[4]]}"
-                      ]
+                      "displayLines": "{[Skill04[4]]}"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] ({[Skill04[9]]}) || RETURN",
-                    "displayLines": "{[Skill04[9]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill04[9]]}"
-                    ]
+                    "displayLines": "{[Skill04[9]]}"
                   },
                   "success": [
                     {
@@ -6830,12 +5909,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "valuePerStack": {
                             "MDF_DamageUpRatio_PerLayer": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13688) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13688",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_13688"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_13688"
                             }
                           }
                         }
@@ -7049,14 +6123,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (ParasitismCount) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(ParasitismCount + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "ParasitismCount"
-                ]
+                "displayLines": "(ParasitismCount + 1)"
               },
               "variableName": "ParasitismCount"
             }
@@ -7584,13 +6651,7 @@ const compositeAbilityObject = {
           },
           "variableName": "SplitRatio",
           "resetValue": {
-            "operator": "Constants[0] (1) || Constants[1] (7) || DIV || RETURN",
-            "displayLines": "(1 / 7)",
-            "constants": [
-              1,
-              7
-            ],
-            "variables": []
+            "displayLines": "(1 / 7)"
           }
         },
         {
@@ -7626,14 +6687,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill03[0]]}) || MUL || Variables[2] (SplitRatio) || MUL || RETURN",
-                  "displayLines": "((_MaxHP * {[Skill03[0]]}) * SplitRatio)",
-                  "constants": [],
-                  "variables": [
-                    "_MaxHP",
-                    "{[Skill03[0]]}",
-                    "SplitRatio"
-                  ]
+                  "displayLines": "((_MaxHP * {[Skill03[0]]}) * SplitRatio)"
                 },
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
@@ -7677,14 +6731,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill03[0]]}) || MUL || Variables[2] (SplitRatio) || MUL || RETURN",
-                  "displayLines": "((_MaxHP * {[Skill03[0]]}) * SplitRatio)",
-                  "constants": [],
-                  "variables": [
-                    "_MaxHP",
-                    "{[Skill03[0]]}",
-                    "SplitRatio"
-                  ]
+                  "displayLines": "((_MaxHP * {[Skill03[0]]}) * SplitRatio)"
                 },
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
@@ -7728,14 +6775,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill03[0]]}) || MUL || Variables[2] (SplitRatio) || MUL || RETURN",
-                  "displayLines": "((_MaxHP * {[Skill03[0]]}) * SplitRatio)",
-                  "constants": [],
-                  "variables": [
-                    "_MaxHP",
-                    "{[Skill03[0]]}",
-                    "SplitRatio"
-                  ]
+                  "displayLines": "((_MaxHP * {[Skill03[0]]}) * SplitRatio)"
                 },
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
@@ -7779,14 +6819,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill03[0]]}) || MUL || Variables[2] (SplitRatio) || MUL || RETURN",
-                  "displayLines": "((_MaxHP * {[Skill03[0]]}) * SplitRatio)",
-                  "constants": [],
-                  "variables": [
-                    "_MaxHP",
-                    "{[Skill03[0]]}",
-                    "SplitRatio"
-                  ]
+                  "displayLines": "((_MaxHP * {[Skill03[0]]}) * SplitRatio)"
                 },
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
@@ -7830,14 +6863,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill03[0]]}) || MUL || Variables[2] (SplitRatio) || MUL || RETURN",
-                  "displayLines": "((_MaxHP * {[Skill03[0]]}) * SplitRatio)",
-                  "constants": [],
-                  "variables": [
-                    "_MaxHP",
-                    "{[Skill03[0]]}",
-                    "SplitRatio"
-                  ]
+                  "displayLines": "((_MaxHP * {[Skill03[0]]}) * SplitRatio)"
                 },
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
@@ -7881,14 +6907,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill03[0]]}) || MUL || Variables[2] (SplitRatio) || MUL || RETURN",
-                  "displayLines": "((_MaxHP * {[Skill03[0]]}) * SplitRatio)",
-                  "constants": [],
-                  "variables": [
-                    "_MaxHP",
-                    "{[Skill03[0]]}",
-                    "SplitRatio"
-                  ]
+                  "displayLines": "((_MaxHP * {[Skill03[0]]}) * SplitRatio)"
                 },
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
@@ -7932,14 +6951,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill03[0]]}) || MUL || Variables[2] (SplitRatio) || MUL || RETURN",
-                  "displayLines": "((_MaxHP * {[Skill03[0]]}) * SplitRatio)",
-                  "constants": [],
-                  "variables": [
-                    "_MaxHP",
-                    "{[Skill03[0]]}",
-                    "SplitRatio"
-                  ]
+                  "displayLines": "((_MaxHP * {[Skill03[0]]}) * SplitRatio)"
                 },
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
@@ -7958,13 +6970,7 @@ const compositeAbilityObject = {
             "target": "{{Caster}}"
           },
           "healPercent": {
-            "operator": "Variables[0] ({[Skill03[1]]}) || Variables[1] (ParasitismCount) || MUL || RETURN",
-            "displayLines": "({[Skill03[1]]} * ParasitismCount)",
-            "constants": [],
-            "variables": [
-              "{[Skill03[1]]}",
-              "ParasitismCount"
-            ]
+            "displayLines": "({[Skill03[1]]} * ParasitismCount)"
           },
           "formula": "Heal from Target MaxHP"
         },
@@ -8034,12 +7040,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -8178,12 +7179,7 @@ const compositeAbilityObject = {
                     "value1": "MDF_WaveIndex",
                     "compareType": "NOT=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_WaveIndex2) || RETURN",
-                      "displayLines": "MDF_WaveIndex2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_WaveIndex2"
-                      ]
+                      "displayLines": "MDF_WaveIndex2"
                     }
                   },
                   "passed": [

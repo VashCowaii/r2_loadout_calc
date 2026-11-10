@@ -36,14 +36,7 @@ const configAbility = {
         "value1": "_Partner_Count",
         "compareType": "<",
         "value2": {
-          "operator": "Variables[0] (_Partner_CountThresHold) || Constants[0] (4) || MUL || RETURN",
-          "displayLines": "(_Partner_CountThresHold * 4)",
-          "constants": [
-            4
-          ],
-          "variables": [
-            "_Partner_CountThresHold"
-          ]
+          "displayLines": "(_Partner_CountThresHold * 4)"
         }
       }
     },
@@ -54,14 +47,7 @@ const configAbility = {
         "value1": "_Partner_Count",
         "compareType": "<",
         "value2": {
-          "operator": "Variables[0] (_Partner_CountThresHold) || Constants[0] (3) || MUL || RETURN",
-          "displayLines": "(_Partner_CountThresHold * 3)",
-          "constants": [
-            3
-          ],
-          "variables": [
-            "_Partner_CountThresHold"
-          ]
+          "displayLines": "(_Partner_CountThresHold * 3)"
         }
       }
     },
@@ -72,14 +58,7 @@ const configAbility = {
         "value1": "_Partner_Count",
         "compareType": "<",
         "value2": {
-          "operator": "Variables[0] (_Partner_CountThresHold) || Constants[0] (2) || MUL || RETURN",
-          "displayLines": "(_Partner_CountThresHold * 2)",
-          "constants": [
-            2
-          ],
-          "variables": [
-            "_Partner_CountThresHold"
-          ]
+          "displayLines": "(_Partner_CountThresHold * 2)"
         }
       }
     },
@@ -90,14 +69,7 @@ const configAbility = {
         "value1": "_Partner_Count",
         "compareType": "<",
         "value2": {
-          "operator": "Variables[0] (_Partner_CountThresHold) || Constants[0] (1) || MUL || RETURN",
-          "displayLines": "(_Partner_CountThresHold * 1)",
-          "constants": [
-            1
-          ],
-          "variables": [
-            "_Partner_CountThresHold"
-          ]
+          "displayLines": "(_Partner_CountThresHold * 1)"
         }
       }
     }

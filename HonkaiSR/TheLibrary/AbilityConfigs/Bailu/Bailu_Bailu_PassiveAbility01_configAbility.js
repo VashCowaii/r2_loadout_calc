@@ -23,14 +23,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (1) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(1 + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              1
-            ]
+            "displayLines": "(1 + 1)"
           },
           "variableName": "MDF_ReviveTime"
         }
@@ -46,12 +39,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (MDF_ReviveTime) || RETURN",
-        "displayLines": "MDF_ReviveTime",
-        "constants": [],
-        "variables": [
-          "MDF_ReviveTime"
-        ]
+        "displayLines": "MDF_ReviveTime"
       },
       "variableName": "MDF_ReviveTime2"
     },
@@ -71,12 +59,7 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>",
       "counter": {
-        "operator": "Variables[0] (MDF_ReviveTime) || RETURN",
-        "displayLines": "MDF_ReviveTime",
-        "constants": [],
-        "variables": [
-          "MDF_ReviveTime"
-        ]
+        "displayLines": "MDF_ReviveTime"
       }
     }
   ],
@@ -103,20 +86,10 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_ReviveTime2) || RETURN",
-                "displayLines": "MDF_ReviveTime2",
-                "constants": [],
-                "variables": [
-                  "MDF_ReviveTime2"
-                ]
+                "displayLines": "MDF_ReviveTime2"
               },
               "maximum": {
-                "operator": "Variables[0] (MDF_ReviveTime) || RETURN",
-                "displayLines": "MDF_ReviveTime",
-                "constants": [],
-                "variables": [
-                  "MDF_ReviveTime"
-                ]
+                "displayLines": "MDF_ReviveTime"
               },
               "assignState": "True",
               "priorState": "Active",

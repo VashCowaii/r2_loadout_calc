@@ -44,12 +44,7 @@ const configAbility = {
                     "target": "{{All Team Members}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (0.02) || RETURN",
-                    "displayLines": "0.02",
-                    "constants": [],
-                    "variables": [
-                      0.02
-                    ]
+                    "displayLines": "0.02"
                   },
                   "formula": "Heal from Target MaxHP"
                 }

@@ -30,12 +30,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (MDF_1) || RETURN",
-                "displayLines": "MDF_1",
-                "constants": [],
-                "variables": [
-                  "MDF_1"
-                ]
+                "displayLines": "MDF_1"
               },
               "formula": "Heal from Target MaxHP"
             },
@@ -68,12 +63,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_1) || RETURN",
-                "displayLines": "MDF_1",
-                "constants": [],
-                "variables": [
-                  "MDF_1"
-                ]
+                "displayLines": "MDF_1"
               }
             }
           ]
@@ -111,13 +101,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_1) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_1 * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_1",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_1 * MDF_Layer)"
               }
             },
             {
@@ -128,13 +112,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_2) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_2 * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_2",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_2 * MDF_Layer)"
               }
             }
           ]
@@ -172,13 +150,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_1) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_1 * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_1",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_1 * MDF_Layer)"
               }
             }
           ]
@@ -235,17 +207,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_DamageAddRatio) || Variables[1] (MDF_OverHeal) || Variables[2] (_MaxHP) || DIV || Constants[0] (100) || MUL || Variables[3] (MDF_OverflowHealToDamageAddRatio) || MUL || ADD || RETURN",
-                "displayLines": "(MDF_DamageAddRatio + (((MDF_OverHeal / _MaxHP) * 100) * MDF_OverflowHealToDamageAddRatio))",
-                "constants": [
-                  100
-                ],
-                "variables": [
-                  "MDF_DamageAddRatio",
-                  "MDF_OverHeal",
-                  "_MaxHP",
-                  "MDF_OverflowHealToDamageAddRatio"
-                ]
+                "displayLines": "(MDF_DamageAddRatio + (((MDF_OverHeal / _MaxHP) * 100) * MDF_OverflowHealToDamageAddRatio))"
               },
               "variableName": "MDF_DamageAddRatio"
             },
@@ -256,24 +218,14 @@ const configAbility = {
                 "value1": "MDF_DamageAddRatio",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (MDF_MaxDamageAddRatio) || RETURN",
-                  "displayLines": "MDF_MaxDamageAddRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_MaxDamageAddRatio"
-                  ]
+                  "displayLines": "MDF_MaxDamageAddRatio"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_MaxDamageAddRatio) || RETURN",
-                    "displayLines": "MDF_MaxDamageAddRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxDamageAddRatio"
-                    ]
+                    "displayLines": "MDF_MaxDamageAddRatio"
                   },
                   "variableName": "MDF_DamageAddRatio"
                 }
@@ -306,13 +258,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_HealCount) || Variables[1] (MDF_OverHeal) || ADD || RETURN",
-                "displayLines": "(MDF_HealCount + MDF_OverHeal)",
-                "constants": [],
-                "variables": [
-                  "MDF_HealCount",
-                  "MDF_OverHeal"
-                ]
+                "displayLines": "(MDF_HealCount + MDF_OverHeal)"
               },
               "variableName": "MDF_HealCount"
             },
@@ -323,26 +269,14 @@ const configAbility = {
                 "value1": "MDF_HealCount",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (MDF_HealHPRatio) || Variables[1] (_MaxHP) || MUL || RETURN",
-                  "displayLines": "(MDF_HealHPRatio * _MaxHP)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_HealHPRatio",
-                    "_MaxHP"
-                  ]
+                  "displayLines": "(MDF_HealHPRatio * _MaxHP)"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_HealHPRatio) || Variables[1] (_MaxHP) || MUL || RETURN",
-                    "displayLines": "(MDF_HealHPRatio * _MaxHP)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HealHPRatio",
-                      "_MaxHP"
-                    ]
+                    "displayLines": "(MDF_HealHPRatio * _MaxHP)"
                   },
                   "variableName": "MDF_HealCount"
                 }
@@ -367,12 +301,7 @@ const configAbility = {
                     "value1": "CurrentHP%",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (MDF_MaxHealAmount) || RETURN",
-                      "displayLines": "MDF_MaxHealAmount",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MaxHealAmount"
-                      ]
+                      "displayLines": "MDF_MaxHealAmount"
                     }
                   },
                   {
@@ -395,12 +324,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "healFlat": {
-                    "operator": "Variables[0] (MDF_HealCount) || RETURN",
-                    "displayLines": "MDF_HealCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HealCount"
-                    ]
+                    "displayLines": "MDF_HealCount"
                   },
                   "formula": "Heal from Base Value"
                 },
@@ -604,13 +528,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyRatio * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_PropertyRatio * MDF_Layer)"
               }
             }
           ]
@@ -639,12 +557,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistancePhysicalPEN</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             }
           ]
@@ -693,12 +606,7 @@ const configAbility = {
               "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
               "variables": {
                 "parameter[0]_AddValue": {
-                  "operator": "Variables[0] (MDF_Count) || RETURN",
-                  "displayLines": "MDF_Count",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Count"
-                  ]
+                  "displayLines": "MDF_Count"
                 }
               }
             }
@@ -872,12 +780,7 @@ const configAbility = {
               "referenceModifier": "<a class=\"gModGreen\" id=\"1020254741\">MReference_SpeedRatioUp</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_6078) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_6078",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_6078"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_6078"
                 }
               }
             }
@@ -906,26 +809,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1889470699\">M_Phainon_Ultimate_ActionOrder</a>",
                   "counter": {
-                    "operator": "Variables[0] (MDF_ActionOrderIndex) || RETURN",
-                    "displayLines": "MDF_ActionOrderIndex",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ActionOrderIndex"
-                    ]
+                    "displayLines": "MDF_ActionOrderIndex"
                   },
                   "referenceModifier": "<a class=\"gModGreen\" id=\"1832901043\">MReference_Empty</a>"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_ActionOrderIndex) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(MDF_ActionOrderIndex + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_ActionOrderIndex"
-                    ]
+                    "displayLines": "(MDF_ActionOrderIndex + 1)"
                   },
                   "variableName": "MDF_ActionOrderIndex"
                 }
@@ -1206,29 +1097,13 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (CurSpecialSP) || Variables[1] (CurOverflowSpecialSP) || ADD || RETURN",
-                "displayLines": "(CurSpecialSP + CurOverflowSpecialSP)",
-                "constants": [],
-                "variables": [
-                  "CurSpecialSP",
-                  "CurOverflowSpecialSP"
-                ]
+                "displayLines": "(CurSpecialSP + CurOverflowSpecialSP)"
               },
               "activeCount": {
-                "operator": "Variables[0] (UnusedUnderThisBase_6109) || RETURN",
-                "displayLines": "UnusedUnderThisBase_6109",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_6109"
-                ]
+                "displayLines": "UnusedUnderThisBase_6109"
               },
               "maximum": {
-                "operator": "Variables[0] (UnusedUnderThisBase_6109) || RETURN",
-                "displayLines": "UnusedUnderThisBase_6109",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_6109"
-                ]
+                "displayLines": "UnusedUnderThisBase_6109"
               },
               "assignState": "True",
               "priorState": "Normal",
@@ -1241,12 +1116,7 @@ const configAbility = {
                 "value1": "CurSpecialSP",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_6109) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_6109",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_6109"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_6109"
                 }
               },
               "passed": [
@@ -1293,14 +1163,7 @@ const configAbility = {
                 {
                   "name": "Set Phainon Action Count",
                   "count": {
-                    "operator": "Variables[0] (#CL_MDF_BECount) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(#CL_MDF_BECount - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "#CL_MDF_BECount"
-                    ]
+                    "displayLines": "(#CL_MDF_BECount - 1)"
                   }
                 }
               ]
@@ -1353,12 +1216,7 @@ const configAbility = {
             {
               "name": "Set Phainon Action Count",
               "count": {
-                "operator": "Variables[0] (#CL_MDF_BECount) || RETURN",
-                "displayLines": "#CL_MDF_BECount",
-                "constants": [],
-                "variables": [
-                  "#CL_MDF_BECount"
-                ]
+                "displayLines": "#CL_MDF_BECount"
               }
             },
             {
@@ -1370,23 +1228,13 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_6110) || RETURN",
-                "displayLines": "UnusedUnderThisBase_6110",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_6110"
-                ]
+                "displayLines": "UnusedUnderThisBase_6110"
               }
             },
             {
               "name": "Set Phainon Charge Points",
               "value": {
-                "operator": "Variables[0] (Skill22_Energy) || RETURN",
-                "displayLines": "Skill22_Energy",
-                "constants": [],
-                "variables": [
-                  "Skill22_Energy"
-                ]
+                "displayLines": "Skill22_Energy"
               }
             },
             {
@@ -1410,14 +1258,7 @@ const configAbility = {
             {
               "name": "Set Phainon Action Count",
               "count": {
-                "operator": "Variables[0] (UnusedUnderThisBase_6080) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(UnusedUnderThisBase_6080 - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "UnusedUnderThisBase_6080"
-                ]
+                "displayLines": "(UnusedUnderThisBase_6080 - 1)"
               }
             },
             {
@@ -1556,14 +1397,7 @@ const configAbility = {
                     "value1": "_enemyIndex",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (_enemyCount) || Constants[0] (2) || DIV || RETURN",
-                      "displayLines": "(_enemyCount / 2)",
-                      "constants": [
-                        2
-                      ],
-                      "variables": [
-                        "_enemyCount"
-                      ]
+                      "displayLines": "(_enemyCount / 2)"
                     }
                   }
                 }
@@ -1621,12 +1455,7 @@ const configAbility = {
                 "value1": "Skill22_Energy",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_6105) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_6105",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_6105"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_6105"
                 }
               },
               "passed": [
@@ -1689,14 +1518,7 @@ const configAbility = {
                 {
                   "name": "Set Phainon Action Count",
                   "count": {
-                    "operator": "Variables[0] (#CL_MDF_BECount) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(#CL_MDF_BECount - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "#CL_MDF_BECount"
-                    ]
+                    "displayLines": "(#CL_MDF_BECount - 1)"
                   }
                 }
               ]
@@ -1788,12 +1610,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_6122) || RETURN",
-              "displayLines": "UnusedUnderThisBase_6122",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_6122"
-              ]
+              "displayLines": "UnusedUnderThisBase_6122"
             }
           }
         },
@@ -1867,12 +1684,7 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
                   "variables": {
                     "parameter[0]_AddValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_6082) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_6082",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_6082"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_6082"
                     }
                   }
                 }
@@ -1893,21 +1705,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-982733816\">Phainon_Tree03_Property</a>[<span class=\"descriptionNumberColor\">Shine with Valor</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_6783) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_6783",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_6783"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_6783"
                   },
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_6713) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_6713",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_6713"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_6713"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -2016,12 +1818,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             },
             {
@@ -2032,12 +1829,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio2) || RETURN",
-                "displayLines": "MDF_PropertyRatio2",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio2"
-                ]
+                "displayLines": "MDF_PropertyRatio2"
               }
             },
             {
@@ -2118,12 +1910,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (UnusedUnderThisBase_6113) || RETURN",
-                "displayLines": "UnusedUnderThisBase_6113",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_6113"
-                ]
+                "displayLines": "UnusedUnderThisBase_6113"
               },
               "formula": "Heal from Target MaxHP"
             }

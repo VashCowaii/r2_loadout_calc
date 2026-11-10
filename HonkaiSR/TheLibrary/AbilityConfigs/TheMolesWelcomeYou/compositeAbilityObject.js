@@ -75,13 +75,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * _Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "_Layer"
-                    ]
+                    "displayLines": "(MDF_PropertyValue * _Layer)"
                   }
                 }
               ]
@@ -155,14 +149,7 @@ const compositeAbilityObject = {
                         "value1": "_Layer",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (_Normal) || Variables[1] (_Skill) || ADD || Variables[2] (_Ultra) || ADD || RETURN",
-                          "displayLines": "((_Normal + _Skill) + _Ultra)",
-                          "constants": [],
-                          "variables": [
-                            "_Normal",
-                            "_Skill",
-                            "_Ultra"
-                          ]
+                          "displayLines": "((_Normal + _Skill) + _Ultra)"
                         }
                       },
                       "passed": [
@@ -175,12 +162,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-59377763\">LC_21005_AttackAddedRatio</a>[<span class=\"descriptionNumberColor\">Mischievous</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.12) || RETURN",
-                              "displayLines": "0.12",
-                              "constants": [],
-                              "variables": [
-                                0.12
-                              ]
+                              "displayLines": "0.12"
                             }
                           }
                         }
@@ -223,12 +205,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-59377763\">LC_21005_AttackAddedRatio</a>[<span class=\"descriptionNumberColor\">Mischievous</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.12) || RETURN",
-                              "displayLines": "0.12",
-                              "constants": [],
-                              "variables": [
-                                0.12
-                              ]
+                              "displayLines": "0.12"
                             }
                           }
                         }

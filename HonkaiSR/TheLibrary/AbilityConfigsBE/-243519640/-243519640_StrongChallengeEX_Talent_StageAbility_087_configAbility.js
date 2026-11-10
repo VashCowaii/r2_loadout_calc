@@ -31,12 +31,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"136363146\">MStrongChallengeEX_Talent_StageAbility_PLY_087_2</a>",
               "valuePerStack": {
                 "MDF_CritDamageAddedRatio": {
-                  "operator": "Variables[0] (MDF_CritDamageAddedRatio_Extra) || RETURN",
-                  "displayLines": "MDF_CritDamageAddedRatio_Extra",
-                  "constants": [],
-                  "variables": [
-                    "MDF_CritDamageAddedRatio_Extra"
-                  ]
+                  "displayLines": "MDF_CritDamageAddedRatio_Extra"
                 }
               }
             },
@@ -49,12 +44,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"136363146\">MStrongChallengeEX_Talent_StageAbility_PLY_087_2</a>",
               "valuePerStack": {
                 "MDF_CritDamageAddedRatio": {
-                  "operator": "Variables[0] (MDF_CritDamageAddedRatio_Extra) || RETURN",
-                  "displayLines": "MDF_CritDamageAddedRatio_Extra",
-                  "constants": [],
-                  "variables": [
-                    "MDF_CritDamageAddedRatio_Extra"
-                  ]
+                  "displayLines": "MDF_CritDamageAddedRatio_Extra"
                 }
               }
             }
@@ -86,12 +76,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"136363146\">MStrongChallengeEX_Talent_StageAbility_PLY_087_2</a>",
                   "valuePerStack": {
                     "MDF_CritDamageAddedRatio": {
-                      "operator": "Variables[0] (MDF_CritDamageAddedRatio_Extra) || RETURN",
-                      "displayLines": "MDF_CritDamageAddedRatio_Extra",
-                      "constants": [],
-                      "variables": [
-                        "MDF_CritDamageAddedRatio_Extra"
-                      ]
+                      "displayLines": "MDF_CritDamageAddedRatio_Extra"
                     }
                   }
                 }
@@ -119,12 +104,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_CritDamageAddedRatio) || RETURN",
-                "displayLines": "MDF_CritDamageAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_CritDamageAddedRatio"
-                ]
+                "displayLines": "MDF_CritDamageAddedRatio"
               }
             }
           ]
@@ -146,12 +126,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_CritDamageAddedRatio) || RETURN",
-                "displayLines": "MDF_CritDamageAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_CritDamageAddedRatio"
-                ]
+                "displayLines": "MDF_CritDamageAddedRatio"
               }
             }
           ]
@@ -190,12 +165,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1292220043\">MStrongChallengeEX_Talent_StageAbility_PLY_087</a>",
                   "valuePerStack": {
                     "MDF_CritDamageAddedRatio": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }
@@ -215,12 +185,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1699054618\">MStrongChallengeEX_Talent_StageAbility_NO1_087</a>",
               "valuePerStack": {
                 "MDF_CritDamageAddedRatio_Extra": {
-                  "operator": "Variables[0] (#ADF_2) || RETURN",
-                  "displayLines": "#ADF_2",
-                  "constants": [],
-                  "variables": [
-                    "#ADF_2"
-                  ]
+                  "displayLines": "#ADF_2"
                 }
               }
             }

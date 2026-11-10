@@ -83,20 +83,10 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_SkillP01_CurrentCount) || RETURN",
-                "displayLines": "MDF_SkillP01_CurrentCount",
-                "constants": [],
-                "variables": [
-                  "MDF_SkillP01_CurrentCount"
-                ]
+                "displayLines": "MDF_SkillP01_CurrentCount"
               },
               "maximum": {
-                "operator": "Variables[0] (MDF_MaxEnergy) || RETURN",
-                "displayLines": "MDF_MaxEnergy",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxEnergy"
-                ]
+                "displayLines": "MDF_MaxEnergy"
               },
               "assignState": "True",
               "priorState": "Disable",
@@ -122,12 +112,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_MaxEnergy) || RETURN",
-                "displayLines": "MDF_MaxEnergy",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxEnergy"
-                ]
+                "displayLines": "MDF_MaxEnergy"
               },
               "variableName": "MDF_SkillP01_CurrentCount"
             },
@@ -139,20 +124,10 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_SkillP01_CurrentCount) || RETURN",
-                "displayLines": "MDF_SkillP01_CurrentCount",
-                "constants": [],
-                "variables": [
-                  "MDF_SkillP01_CurrentCount"
-                ]
+                "displayLines": "MDF_SkillP01_CurrentCount"
               },
               "maximum": {
-                "operator": "Variables[0] (MDF_MaxEnergy) || RETURN",
-                "displayLines": "MDF_MaxEnergy",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxEnergy"
-                ]
+                "displayLines": "MDF_MaxEnergy"
               },
               "assignState": "True",
               "priorState": "Normal",
@@ -348,12 +323,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (0.4) || RETURN",
-                    "displayLines": "0.4",
-                    "constants": [],
-                    "variables": [
-                      0.4
-                    ]
+                    "displayLines": "0.4"
                   },
                   "variableName": "MDF_TotalDamage"
                 }
@@ -375,12 +345,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"707417159\">Moze_Eidolon1_DeBonus</a>[<span class=\"descriptionNumberColor\">Vengewise</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     }
                   }
                 }
@@ -420,12 +385,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (0.3) || RETURN",
-                      "displayLines": "0.3",
-                      "constants": [],
-                      "variables": [
-                        0.3
-                      ]
+                      "displayLines": "0.3"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -446,12 +406,7 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "isFixed": "* ERR"
                     }
@@ -472,28 +427,14 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_SkillP01_CurrentCount) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(MDF_SkillP01_CurrentCount - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_SkillP01_CurrentCount"
-                        ]
+                        "displayLines": "(MDF_SkillP01_CurrentCount - 1)"
                       },
                       "variableName": "MDF_SkillP01_CurrentCount"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_EnergyCost) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_EnergyCost + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_EnergyCost"
-                        ]
+                        "displayLines": "(MDF_EnergyCost + 1)"
                       },
                       "variableName": "MDF_EnergyCost"
                     },
@@ -523,14 +464,7 @@ const configAbility = {
                             "value1": "MDF_EnergyCost",
                             "compareType": "=",
                             "value2": {
-                              "operator": "Variables[0] (3) || Constants[0] (1) || SUB || RETURN",
-                              "displayLines": "(3 - 1)",
-                              "constants": [
-                                1
-                              ],
-                              "variables": [
-                                3
-                              ]
+                              "displayLines": "(3 - 1)"
                             }
                           },
                           {
@@ -538,14 +472,7 @@ const configAbility = {
                             "value1": "MDF_EnergyCost",
                             "compareType": "=",
                             "value2": {
-                              "operator": "Variables[0] (3) || Constants[0] (2) || ADD || RETURN",
-                              "displayLines": "(3 + 2)",
-                              "constants": [
-                                2
-                              ],
-                              "variables": [
-                                3
-                              ]
+                              "displayLines": "(3 + 2)"
                             }
                           },
                           {
@@ -553,14 +480,7 @@ const configAbility = {
                             "value1": "MDF_EnergyCost",
                             "compareType": "=",
                             "value2": {
-                              "operator": "Variables[0] (3) || Constants[0] (5) || ADD || RETURN",
-                              "displayLines": "(3 + 5)",
-                              "constants": [
-                                5
-                              ],
-                              "variables": [
-                                3
-                              ]
+                              "displayLines": "(3 + 5)"
                             }
                           }
                         ]
@@ -569,20 +489,10 @@ const configAbility = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (MDF_SkillP01_CurrentCount) || RETURN",
-                            "displayLines": "MDF_SkillP01_CurrentCount",
-                            "constants": [],
-                            "variables": [
-                              "MDF_SkillP01_CurrentCount"
-                            ]
+                            "displayLines": "MDF_SkillP01_CurrentCount"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (MDF_MaxEnergy) || RETURN",
-                            "displayLines": "MDF_MaxEnergy",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxEnergy"
-                            ]
+                            "displayLines": "MDF_MaxEnergy"
                           },
                           "assignState": "True",
                           "priorState": "Active",
@@ -602,20 +512,10 @@ const configAbility = {
                             {
                               "name": "Update Displayed Energy Bar",
                               "value": {
-                                "operator": "Variables[0] (MDF_SkillP01_CurrentCount) || RETURN",
-                                "displayLines": "MDF_SkillP01_CurrentCount",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_SkillP01_CurrentCount"
-                                ]
+                                "displayLines": "MDF_SkillP01_CurrentCount"
                               },
                               "maximum": {
-                                "operator": "Variables[0] (MDF_MaxEnergy) || RETURN",
-                                "displayLines": "MDF_MaxEnergy",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_MaxEnergy"
-                                ]
+                                "displayLines": "MDF_MaxEnergy"
                               },
                               "assignState": "True",
                               "priorState": "Normal",
@@ -626,20 +526,10 @@ const configAbility = {
                             {
                               "name": "Update Displayed Energy Bar",
                               "value": {
-                                "operator": "Variables[0] (MDF_SkillP01_CurrentCount) || RETURN",
-                                "displayLines": "MDF_SkillP01_CurrentCount",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_SkillP01_CurrentCount"
-                                ]
+                                "displayLines": "MDF_SkillP01_CurrentCount"
                               },
                               "maximum": {
-                                "operator": "Variables[0] (MDF_MaxEnergy) || RETURN",
-                                "displayLines": "MDF_MaxEnergy",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_MaxEnergy"
-                                ]
+                                "displayLines": "MDF_MaxEnergy"
                               },
                               "assignState": "True",
                               "priorState": "Disable",
@@ -656,12 +546,7 @@ const configAbility = {
                         "value1": "MDF_EnergyCost",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (3) || RETURN",
-                          "displayLines": "3",
-                          "constants": [],
-                          "variables": [
-                            3
-                          ]
+                          "displayLines": "3"
                         }
                       },
                       "passed": [
@@ -812,12 +697,7 @@ const configAbility = {
                 "value1": "MDF_EnergyCost",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (3) || RETURN",
-                  "displayLines": "3",
-                  "constants": [],
-                  "variables": [
-                    3
-                  ]
+                  "displayLines": "3"
                 }
               },
               "passed": [

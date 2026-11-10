@@ -194,14 +194,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           ]
@@ -571,12 +564,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__117) || RETURN",
-                "displayLines": "ENEMIES_OBJECT_UNUSED__117",
-                "constants": [],
-                "variables": [
-                  "ENEMIES_OBJECT_UNUSED__117"
-                ]
+                "displayLines": "ENEMIES_OBJECT_UNUSED__117"
               }
             }
           ]

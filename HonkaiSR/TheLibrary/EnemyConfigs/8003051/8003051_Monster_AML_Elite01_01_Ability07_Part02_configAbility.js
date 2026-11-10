@@ -33,28 +33,13 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"60428755\">Monster_AML_Elite01_01_PoisonCount</a>",
           "valuePerStack": {
             "MDF_MaxLayer": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[5]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[5]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[5]]}"
-              ]
+              "displayLines": "{[PassiveSkillInitiate[5]]}"
             },
             "MDF_LifeTime": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[4]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[4]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[4]]}"
-              ]
+              "displayLines": "{[PassiveSkillInitiate[4]]}"
             },
             "MDF_DamagePercentage": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[3]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[3]]}"
-              ]
+              "displayLines": "{[PassiveSkillInitiate[3]]}"
             }
           }
         }

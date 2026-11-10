@@ -14,12 +14,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -36,22 +31,12 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
       "duration": {
-        "operator": "Variables[0] ({[Skill06[2]]}) || RETURN",
-        "displayLines": "{[Skill06[2]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill06[2]]}"
-        ]
+        "displayLines": "{[Skill06[2]]}"
       },
       "baseChance": 1,
       "valuePerStack": {
         "Modifier_Burn_DamagePercentage": {
-          "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-          "displayLines": "{[Skill06[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[1]]}"
-          ]
+          "displayLines": "{[Skill06[1]]}"
         }
       },
       "stackFlag": "CharacterSkill"

@@ -96,12 +96,7 @@ const configAbility = {
       "name": "Update Displayed Energy Bar",
       "value": 0,
       "maximum": {
-        "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
-        "displayLines": "MWRen_Qi_MaxLayer",
-        "constants": [],
-        "variables": [
-          "MWRen_Qi_MaxLayer"
-        ]
+        "displayLines": "MWRen_Qi_MaxLayer"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -330,13 +325,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CasterLostHP2) || INVERT || Variables[1] (CasterLostHP) || ADD || RETURN",
-                    "displayLines": "(-CasterLostHP2 + CasterLostHP)",
-                    "constants": [],
-                    "variables": [
-                      "CasterLostHP2",
-                      "CasterLostHP"
-                    ]
+                    "displayLines": "(-CasterLostHP2 + CasterLostHP)"
                   },
                   "variableName": "CasterLostHP"
                 },
@@ -366,12 +355,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"2146687777\">Advanced_Ren_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
-                        "displayLines": "MWRen_Qi_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MWRen_Qi_MaxLayer"
-                        ]
+                        "displayLines": "MWRen_Qi_MaxLayer"
                       }
                     },
                     {
@@ -384,12 +368,7 @@ const configAbility = {
                             "value1": "<a class=\"gModGreen\" id=\"2146687777\">Advanced_Ren_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
-                              "displayLines": "MWRen_Qi_MaxLayer",
-                              "constants": [],
-                              "variables": [
-                                "MWRen_Qi_MaxLayer"
-                              ]
+                              "displayLines": "MWRen_Qi_MaxLayer"
                             },
                             "valueType": "Layer"
                           },
@@ -586,12 +565,7 @@ const configAbility = {
                     "value1": "<a class=\"gModGreen\" id=\"2146687777\">Advanced_Ren_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
-                      "displayLines": "MWRen_Qi_MaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "MWRen_Qi_MaxLayer"
-                      ]
+                      "displayLines": "MWRen_Qi_MaxLayer"
                     },
                     "valueType": "Layer"
                   },
@@ -658,12 +632,7 @@ const configAbility = {
                     "value1": "<a class=\"gModGreen\" id=\"2146687777\">Advanced_Ren_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
-                      "displayLines": "MWRen_Qi_MaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "MWRen_Qi_MaxLayer"
-                      ]
+                      "displayLines": "MWRen_Qi_MaxLayer"
                     },
                     "valueType": "Layer"
                   },
@@ -755,12 +724,7 @@ const configAbility = {
                     "value1": "<a class=\"gModGreen\" id=\"2146687777\">Advanced_Ren_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
-                      "displayLines": "MWRen_Qi_MaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "MWRen_Qi_MaxLayer"
-                      ]
+                      "displayLines": "MWRen_Qi_MaxLayer"
                     },
                     "valueType": "Layer"
                   },
@@ -849,12 +813,7 @@ const configAbility = {
                     "value1": "CasterCurrentHP2",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (CasterCurrentHP) || RETURN",
-                      "displayLines": "CasterCurrentHP",
-                      "constants": [],
-                      "variables": [
-                        "CasterCurrentHP"
-                      ]
+                      "displayLines": "CasterCurrentHP"
                     }
                   },
                   "passed": [

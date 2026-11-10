@@ -59,12 +59,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DefenceAddedRatio) || RETURN",
-                    "displayLines": "MDF_DefenceAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DefenceAddedRatio"
-                    ]
+                    "displayLines": "MDF_DefenceAddedRatio"
                   }
                 }
               ]
@@ -87,12 +82,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                    "displayLines": "MDF_AllDamageTypeAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageTypeAddedRatio"
-                    ]
+                    "displayLines": "MDF_AllDamageTypeAddedRatio"
                   }
                 }
               ]
@@ -122,12 +112,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (Bronya_SpeedUP_Ratio) || RETURN",
-                    "displayLines": "Bronya_SpeedUP_Ratio",
-                    "constants": [],
-                    "variables": [
-                      "Bronya_SpeedUP_Ratio"
-                    ]
+                    "displayLines": "Bronya_SpeedUP_Ratio"
                   }
                 }
               ]
@@ -154,12 +139,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageAddedRatio) || RETURN",
-                    "displayLines": "MDF_DamageAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageAddedRatio"
-                    ]
+                    "displayLines": "MDF_DamageAddedRatio"
                   }
                 }
               ]
@@ -187,12 +167,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
-                    "displayLines": "MDF_AttackAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackAddedRatio"
-                    ]
+                    "displayLines": "MDF_AttackAddedRatio"
                   }
                 },
                 {
@@ -203,12 +178,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (Bronya_CriticalDamage) || RETURN",
-                    "displayLines": "Bronya_CriticalDamage",
-                    "constants": [],
-                    "variables": [
-                      "Bronya_CriticalDamage"
-                    ]
+                    "displayLines": "Bronya_CriticalDamage"
                   }
                 }
               ]
@@ -263,12 +233,7 @@ const compositeAbilityObject = {
                   "duration": 1,
                   "valuePerStack": {
                     "Bronya_SpeedUP_Ratio": {
-                      "operator": "Variables[0] (Bronya_SpeedUP_Ratio_01) || RETURN",
-                      "displayLines": "Bronya_SpeedUP_Ratio_01",
-                      "constants": [],
-                      "variables": [
-                        "Bronya_SpeedUP_Ratio_01"
-                      ]
+                      "displayLines": "Bronya_SpeedUP_Ratio_01"
                     }
                   }
                 },
@@ -335,12 +300,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-196204909\">Bronya_Tree03_DamageUp</a>",
                   "valuePerStack": {
                     "MDF_AllDamageTypeAddedRatio": {
-                      "operator": "Variables[0] (0.1) || RETURN",
-                      "displayLines": "0.1",
-                      "constants": [],
-                      "variables": [
-                        0.1
-                      ]
+                      "displayLines": "0.1"
                     }
                   }
                 }
@@ -368,12 +328,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-196204909\">Bronya_Tree03_DamageUp</a>",
                       "valuePerStack": {
                         "MDF_AllDamageTypeAddedRatio": {
-                          "operator": "Variables[0] (0.1) || RETURN",
-                          "displayLines": "0.1",
-                          "constants": [],
-                          "variables": [
-                            0.1
-                          ]
+                          "displayLines": "0.1"
                         }
                       }
                     }
@@ -419,21 +374,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-2015057793\">Bronya_Tree02_DefenceUp</a>[<span class=\"descriptionNumberColor\">Battlefield</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "MDF_DefenceAddedRatio": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 }
@@ -460,21 +405,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-2015057793\">Bronya_Tree02_DefenceUp</a>[<span class=\"descriptionNumberColor\">Battlefield</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "valuePerStack": {
                         "MDF_DefenceAddedRatio": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     }
@@ -1071,12 +1006,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -1108,21 +1038,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1915866740\">Bronya_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.15) || RETURN",
-                          "displayLines": "0.15",
-                          "constants": [],
-                          "variables": [
-                            0.15
-                          ]
+                          "displayLines": "0.15"
                         }
                       }
                     }
@@ -1181,21 +1101,10 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (1) || Variables[1] (0.8) || MUL || RETURN",
-                  "displayLines": "(1 * 0.8)",
-                  "constants": [],
-                  "variables": [
-                    1,
-                    0.8
-                  ]
+                  "displayLines": "(1 * 0.8)"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Follow-up",
@@ -1310,12 +1219,7 @@ const compositeAbilityObject = {
             "delayAdvancePreview": {
               "name": "Delay/Advance Preview",
               "previewValue": {
-                "operator": "Variables[0] (0.3) || INVERT || RETURN",
-                "displayLines": "-0.3",
-                "constants": [],
-                "variables": [
-                  0.3
-                ]
+                "displayLines": "-0.3"
               }
             }
           }
@@ -1346,38 +1250,21 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (MDF_CriticalDamageBase) || RETURN",
-            "displayLines": "MDF_CriticalDamageBase",
-            "constants": [],
-            "variables": [
-              "MDF_CriticalDamageBase"
-            ]
+            "displayLines": "MDF_CriticalDamageBase"
           },
           "variableName": "MDF_CriticalDamageBase_change"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (MDF_CriticalDamageBase_change) || Variables[1] (0.16) || MUL || RETURN",
-            "displayLines": "(MDF_CriticalDamageBase_change * 0.16)",
-            "constants": [],
-            "variables": [
-              "MDF_CriticalDamageBase_change",
-              0.16
-            ]
+            "displayLines": "(MDF_CriticalDamageBase_change * 0.16)"
           },
           "variableName": "MDF_CriticalDamageBase_change"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (MDF_CriticalDamageBase_change) || Variables[1] (0.2) || ADD || RETURN",
-            "displayLines": "(MDF_CriticalDamageBase_change + 0.2)",
-            "constants": [],
-            "variables": [
-              "MDF_CriticalDamageBase_change",
-              0.2
-            ]
+            "displayLines": "(MDF_CriticalDamageBase_change + 0.2)"
           },
           "variableName": "MDF_CriticalDamageBase_Total"
         },
@@ -1389,30 +1276,15 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-379855100\">Bronya_Ultimate_PowerUp</a>[<span class=\"descriptionNumberColor\">The Belobog March</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "immediateEffect": true,
           "valuePerStack": {
             "MDF_AttackAddedRatio": {
-              "operator": "Variables[0] (0.55) || RETURN",
-              "displayLines": "0.55",
-              "constants": [],
-              "variables": [
-                0.55
-              ]
+              "displayLines": "0.55"
             },
             "Bronya_CriticalDamage": {
-              "operator": "Variables[0] (MDF_CriticalDamageBase_Total) || RETURN",
-              "displayLines": "MDF_CriticalDamageBase_Total",
-              "constants": [],
-              "variables": [
-                "MDF_CriticalDamageBase_Total"
-              ]
+              "displayLines": "MDF_CriticalDamageBase_Total"
             }
           }
         },
@@ -1513,12 +1385,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Random Chance",
                     "chance": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   },
                   "passed": [
@@ -1561,12 +1428,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.3) || RETURN",
-                "displayLines": "0.3",
-                "constants": [],
-                "variables": [
-                  0.3
-                ]
+                "displayLines": "0.3"
               },
               "variableName": "Bronya_SpeedUP_Ratio_01"
             },
@@ -1579,12 +1441,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-308500305\">Bronya_BPAbility_Eidolon2_Listen</a>",
               "valuePerStack": {
                 "Bronya_SpeedUP_Ratio_01": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 }
               }
             }
@@ -1605,22 +1462,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"133730263\">Bronya_BPAbility_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "duration": {
-                "operator": "Variables[0] (1) || Variables[1] (1) || ADD || RETURN",
-                "displayLines": "(1 + 1)",
-                "constants": [],
-                "variables": [
-                  1,
-                  1
-                ]
+                "displayLines": "(1 + 1)"
               },
               "valuePerStack": {
                 "MDF_DamageAddedRatio": {
-                  "operator": "Variables[0] (0.66) || RETURN",
-                  "displayLines": "0.66",
-                  "constants": [],
-                  "variables": [
-                    0.66
-                  ]
+                  "displayLines": "0.66"
                 }
               }
             }
@@ -1634,21 +1480,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"133730263\">Bronya_BPAbility_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "duration": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "valuePerStack": {
                 "MDF_DamageAddedRatio": {
-                  "operator": "Variables[0] (0.66) || RETURN",
-                  "displayLines": "0.66",
-                  "constants": [],
-                  "variables": [
-                    0.66
-                  ]
+                  "displayLines": "0.66"
                 }
               }
             }
@@ -1705,12 +1541,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Random Chance",
                     "chance": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   },
                   "passed": [
@@ -1753,12 +1584,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.3) || RETURN",
-                "displayLines": "0.3",
-                "constants": [],
-                "variables": [
-                  0.3
-                ]
+                "displayLines": "0.3"
               },
               "variableName": "Bronya_SpeedUP_Ratio_01"
             },
@@ -1771,12 +1597,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-308500305\">Bronya_BPAbility_Eidolon2_Listen</a>",
               "valuePerStack": {
                 "Bronya_SpeedUP_Ratio_01": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 }
               }
             }
@@ -1797,22 +1618,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"133730263\">Bronya_BPAbility_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "duration": {
-                "operator": "Variables[0] (1) || Variables[1] (1) || ADD || RETURN",
-                "displayLines": "(1 + 1)",
-                "constants": [],
-                "variables": [
-                  1,
-                  1
-                ]
+                "displayLines": "(1 + 1)"
               },
               "valuePerStack": {
                 "MDF_DamageAddedRatio": {
-                  "operator": "Variables[0] (0.66) || RETURN",
-                  "displayLines": "0.66",
-                  "constants": [],
-                  "variables": [
-                    0.66
-                  ]
+                  "displayLines": "0.66"
                 }
               }
             }
@@ -1826,21 +1636,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"133730263\">Bronya_BPAbility_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "duration": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "valuePerStack": {
                 "MDF_DamageAddedRatio": {
-                  "operator": "Variables[0] (0.66) || RETURN",
-                  "displayLines": "0.66",
-                  "constants": [],
-                  "variables": [
-                    0.66
-                  ]
+                  "displayLines": "0.66"
                 }
               }
             }
@@ -1969,20 +1769,10 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -2017,12 +1807,7 @@ const compositeAbilityObject = {
           },
           "variables": {
             "parameter[0]_NormalizedValue": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             }
           }
         },

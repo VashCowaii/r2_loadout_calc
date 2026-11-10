@@ -20,29 +20,14 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-1792784435\">Enemy_W3_Dinosaur_02_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "duration": {
-        "operator": "Variables[0] ({[Skill09[2]]}) || RETURN",
-        "displayLines": "{[Skill09[2]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill09[2]]}"
-        ]
+        "displayLines": "{[Skill09[2]]}"
       },
       "stackLimit": {
-        "operator": "Variables[0] ({[Skill09[0]]}) || RETURN",
-        "displayLines": "{[Skill09[0]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill09[0]]}"
-        ]
+        "displayLines": "{[Skill09[0]]}"
       },
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] ({[Skill09[1]]}) || RETURN",
-          "displayLines": "{[Skill09[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill09[1]]}"
-          ]
+          "displayLines": "{[Skill09[1]]}"
         }
       }
     },

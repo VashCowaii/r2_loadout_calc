@@ -415,25 +415,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_MaxStance) || Variables[1] (MDF_CurrentStance) || SUB || RETURN",
-                    "displayLines": "(MDF_MaxStance - MDF_CurrentStance)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxStance",
-                      "MDF_CurrentStance"
-                    ]
+                    "displayLines": "(MDF_MaxStance - MDF_CurrentStance)"
                   },
                   "variableName": "MDF_StanceDMGCount"
                 },
                 {
                   "name": "Deal Toughness DMG",
                   "value": {
-                    "operator": "Variables[0] (MDF_StanceDMGCount) || RETURN",
-                    "displayLines": "MDF_StanceDMGCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_StanceDMGCount"
-                    ]
+                    "displayLines": "MDF_StanceDMGCount"
                   },
                   "attacker": {
                     "name": "Target Name",
@@ -449,12 +438,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Deal Toughness DMG",
                   "value": {
-                    "operator": "Variables[0] (MDF_StanceDMGCount) || RETURN",
-                    "displayLines": "MDF_StanceDMGCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_StanceDMGCount"
-                    ]
+                    "displayLines": "MDF_StanceDMGCount"
                   },
                   "attacker": {
                     "name": "Target Name",
@@ -474,12 +458,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "constantValue": {
-                    "operator": "Variables[0] (MDF_MaxStance) || RETURN",
-                    "displayLines": "MDF_MaxStance",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxStance"
-                    ]
+                    "displayLines": "MDF_MaxStance"
                   }
                 }
               ]
@@ -2793,13 +2772,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                    "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageUpRatio_PerLayer",
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)"
                   }
                 }
               ]
@@ -2812,12 +2785,7 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "stackLimit": 5,
           "addStacksPerTrigger": {
-            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-            "displayLines": "ModifierStackLayer",
-            "constants": [],
-            "variables": [
-              "ModifierStackLayer"
-            ]
+            "displayLines": "ModifierStackLayer"
           },
           "execute": [
             {
@@ -2837,15 +2805,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_SpeedAddedRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || SUB || RETURN",
-                    "displayLines": "(0 - (MDF_SpeedAddedRatio_PerLayer * ModifierLayers))",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_SpeedAddedRatio_PerLayer",
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "(0 - (MDF_SpeedAddedRatio_PerLayer * ModifierLayers))"
                   }
                 },
                 {
@@ -2854,12 +2814,7 @@ const compositeAbilityObject = {
                     "name": "Compare: Variable",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED_3) || RETURN",
-                      "displayLines": "ENEMIES_OBJECT_UNUSED_3",
-                      "constants": [],
-                      "variables": [
-                        "ENEMIES_OBJECT_UNUSED_3"
-                      ]
+                      "displayLines": "ENEMIES_OBJECT_UNUSED_3"
                     },
                     "valueType": "Layer"
                   },
@@ -2874,12 +2829,7 @@ const compositeAbilityObject = {
                       "duration": 1,
                       "valuePerStack": {
                         "Modifier_Frozen_DamagePercentage": {
-                          "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED_4) || RETURN",
-                          "displayLines": "ENEMIES_OBJECT_UNUSED_4",
-                          "constants": [],
-                          "variables": [
-                            "ENEMIES_OBJECT_UNUSED_4"
-                          ]
+                          "displayLines": "ENEMIES_OBJECT_UNUSED_4"
                         }
                       }
                     },
@@ -2892,12 +2842,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                          "displayLines": "MDF_DamageUpRatio_PerLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageUpRatio_PerLayer"
-                          ]
+                          "displayLines": "MDF_DamageUpRatio_PerLayer"
                         }
                       }
                     },
@@ -2935,12 +2880,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Looped Event",
                       "maxLoops": {
-                        "operator": "Variables[0] (DamageUpFlag) || RETURN",
-                        "displayLines": "DamageUpFlag",
-                        "constants": [],
-                        "variables": [
-                          "DamageUpFlag"
-                        ]
+                        "displayLines": "DamageUpFlag"
                       },
                       "execute": [
                         {
@@ -2952,12 +2892,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "valuePerStack": {
                             "MDF_DamageUpRatio_PerLayer": {
-                              "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                              "displayLines": "MDF_DamageUpRatio_PerLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_DamageUpRatio_PerLayer"
-                              ]
+                              "displayLines": "MDF_DamageUpRatio_PerLayer"
                             }
                           }
                         }
@@ -2996,12 +2931,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Looped Event",
                       "maxLoops": {
-                        "operator": "Variables[0] (DamageUpFlag) || RETURN",
-                        "displayLines": "DamageUpFlag",
-                        "constants": [],
-                        "variables": [
-                          "DamageUpFlag"
-                        ]
+                        "displayLines": "DamageUpFlag"
                       },
                       "execute": [
                         {
@@ -3013,12 +2943,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "valuePerStack": {
                             "MDF_DamageUpRatio_PerLayer": {
-                              "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                              "displayLines": "MDF_DamageUpRatio_PerLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_DamageUpRatio_PerLayer"
-                              ]
+                              "displayLines": "MDF_DamageUpRatio_PerLayer"
                             }
                           }
                         }
@@ -3095,12 +3020,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Looped Event",
                       "maxLoops": {
-                        "operator": "Variables[0] (DamageUpFlag) || RETURN",
-                        "displayLines": "DamageUpFlag",
-                        "constants": [],
-                        "variables": [
-                          "DamageUpFlag"
-                        ]
+                        "displayLines": "DamageUpFlag"
                       },
                       "execute": [
                         {
@@ -3112,12 +3032,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "valuePerStack": {
                             "MDF_DamageUpRatio_PerLayer": {
-                              "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                              "displayLines": "MDF_DamageUpRatio_PerLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_DamageUpRatio_PerLayer"
-                              ]
+                              "displayLines": "MDF_DamageUpRatio_PerLayer"
                             }
                           }
                         }
@@ -3156,12 +3071,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Looped Event",
                       "maxLoops": {
-                        "operator": "Variables[0] (DamageUpFlag) || RETURN",
-                        "displayLines": "DamageUpFlag",
-                        "constants": [],
-                        "variables": [
-                          "DamageUpFlag"
-                        ]
+                        "displayLines": "DamageUpFlag"
                       },
                       "execute": [
                         {
@@ -3173,12 +3083,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "valuePerStack": {
                             "MDF_DamageUpRatio_PerLayer": {
-                              "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                              "displayLines": "MDF_DamageUpRatio_PerLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_DamageUpRatio_PerLayer"
-                              ]
+                              "displayLines": "MDF_DamageUpRatio_PerLayer"
                             }
                           }
                         }
@@ -3261,12 +3166,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (ModifierDamageUpValue) || RETURN",
-                    "displayLines": "ModifierDamageUpValue",
-                    "constants": [],
-                    "variables": [
-                      "ModifierDamageUpValue"
-                    ]
+                    "displayLines": "ModifierDamageUpValue"
                   }
                 }
               ]
@@ -3748,14 +3648,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (1) || Variables[0] (MDF_TokenDamageAddRatio) || MUL || RETURN",
-                    "displayLines": "(1 * MDF_TokenDamageAddRatio)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_TokenDamageAddRatio"
-                    ]
+                    "displayLines": "(1 * MDF_TokenDamageAddRatio)"
                   }
                 }
               ]
@@ -3780,12 +3673,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_TokenDamageReduceRatio) || RETURN",
-                    "displayLines": "MDF_TokenDamageReduceRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_TokenDamageReduceRatio"
-                    ]
+                    "displayLines": "MDF_TokenDamageReduceRatio"
                   }
                 }
               ]
@@ -3851,14 +3739,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_WeaknessCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_WeaknessCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_WeaknessCount"
-                        ]
+                        "displayLines": "(_WeaknessCount + 1)"
                       },
                       "variableName": "_WeaknessCount"
                     }
@@ -3878,14 +3759,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_WeaknessCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_WeaknessCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_WeaknessCount"
-                        ]
+                        "displayLines": "(_WeaknessCount + 1)"
                       },
                       "variableName": "_WeaknessCount"
                     }
@@ -3905,14 +3779,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_WeaknessCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_WeaknessCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_WeaknessCount"
-                        ]
+                        "displayLines": "(_WeaknessCount + 1)"
                       },
                       "variableName": "_WeaknessCount"
                     }
@@ -3932,14 +3799,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_WeaknessCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_WeaknessCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_WeaknessCount"
-                        ]
+                        "displayLines": "(_WeaknessCount + 1)"
                       },
                       "variableName": "_WeaknessCount"
                     }
@@ -3959,14 +3819,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_WeaknessCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_WeaknessCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_WeaknessCount"
-                        ]
+                        "displayLines": "(_WeaknessCount + 1)"
                       },
                       "variableName": "_WeaknessCount"
                     }
@@ -3986,14 +3839,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_WeaknessCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_WeaknessCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_WeaknessCount"
-                        ]
+                        "displayLines": "(_WeaknessCount + 1)"
                       },
                       "variableName": "_WeaknessCount"
                     }
@@ -4013,14 +3859,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_WeaknessCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_WeaknessCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_WeaknessCount"
-                        ]
+                        "displayLines": "(_WeaknessCount + 1)"
                       },
                       "variableName": "_WeaknessCount"
                     }
@@ -4029,14 +3868,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_TokenDamageReduceRatio) || Variables[1] (MDF_TokenDamageAddRatioPerlayer) || Variables[2] (_WeaknessCount) || MUL || SUB || RETURN",
-                    "displayLines": "(MDF_TokenDamageReduceRatio - (MDF_TokenDamageAddRatioPerlayer * _WeaknessCount))",
-                    "constants": [],
-                    "variables": [
-                      "MDF_TokenDamageReduceRatio",
-                      "MDF_TokenDamageAddRatioPerlayer",
-                      "_WeaknessCount"
-                    ]
+                    "displayLines": "(MDF_TokenDamageReduceRatio - (MDF_TokenDamageAddRatioPerlayer * _WeaknessCount))"
                   },
                   "variableName": "_TotalRatioCount"
                 },
@@ -4047,12 +3879,7 @@ const compositeAbilityObject = {
                     "value1": "_TotalRatioCount",
                     "compareType": "NOT=",
                     "value2": {
-                      "operator": "Variables[0] (_PreTotalRatioCount) || RETURN",
-                      "displayLines": "_PreTotalRatioCount",
-                      "constants": [],
-                      "variables": [
-                        "_PreTotalRatioCount"
-                      ]
+                      "displayLines": "_PreTotalRatioCount"
                     }
                   },
                   "passed": [
@@ -4075,12 +3902,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_TotalRatioCount) || RETURN",
-                        "displayLines": "_TotalRatioCount",
-                        "constants": [],
-                        "variables": [
-                          "_TotalRatioCount"
-                        ]
+                        "displayLines": "_TotalRatioCount"
                       },
                       "variableName": "_PreTotalRatioCount"
                     },
@@ -4102,12 +3924,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-641521707\">Enemy_W2_Cocolia_IF_WeaknessCount_Sub01</a>[<span class=\"descriptionNumberColor\">Tenacious Resolve</span>]",
                           "valuePerStack": {
                             "MDF_TokenDamageReduceRatio": {
-                              "operator": "Variables[0] (_TotalRatioCount) || RETURN",
-                              "displayLines": "_TotalRatioCount",
-                              "constants": [],
-                              "variables": [
-                                "_TotalRatioCount"
-                              ]
+                              "displayLines": "_TotalRatioCount"
                             }
                           }
                         }
@@ -4131,14 +3948,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-691854564\">Enemy_W2_Cocolia_IF_WeaknessCount_Sub02</a>[<span class=\"descriptionNumberColor\">Tenacious Resolve</span>]",
                           "valuePerStack": {
                             "MDF_TokenDamageAddRatio": {
-                              "operator": "Constants[0] (1) || INVERT || Variables[0] (_TotalRatioCount) || MUL || RETURN",
-                              "displayLines": "(-1 * _TotalRatioCount)",
-                              "constants": [
-                                1
-                              ],
-                              "variables": [
-                                "_TotalRatioCount"
-                              ]
+                              "displayLines": "(-1 * _TotalRatioCount)"
                             }
                           }
                         }
@@ -4243,12 +4053,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Enemy ID",
                     "ID": {
-                      "operator": "Variables[0] (Ice_Lance_ID) || RETURN",
-                      "displayLines": "Ice_Lance_ID",
-                      "constants": [],
-                      "variables": [
-                        "Ice_Lance_ID"
-                      ]
+                      "displayLines": "Ice_Lance_ID"
                     },
                     "target": {
                       "name": "Target Name",
@@ -4288,12 +4093,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Enemy ID",
                     "ID": {
-                      "operator": "Variables[0] (Ice_Lance_ID_2) || RETURN",
-                      "displayLines": "Ice_Lance_ID_2",
-                      "constants": [],
-                      "variables": [
-                        "Ice_Lance_ID_2"
-                      ]
+                      "displayLines": "Ice_Lance_ID_2"
                     },
                     "target": {
                       "name": "Target Name",
@@ -4333,12 +4133,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Enemy ID",
                     "ID": {
-                      "operator": "Variables[0] (Ice_Lance_ID_3) || RETURN",
-                      "displayLines": "Ice_Lance_ID_3",
-                      "constants": [],
-                      "variables": [
-                        "Ice_Lance_ID_3"
-                      ]
+                      "displayLines": "Ice_Lance_ID_3"
                     },
                     "target": {
                       "name": "Target Name",
@@ -4378,12 +4173,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Enemy ID",
                     "ID": {
-                      "operator": "Variables[0] (Ice_Lance_ID_4) || RETURN",
-                      "displayLines": "Ice_Lance_ID_4",
-                      "constants": [],
-                      "variables": [
-                        "Ice_Lance_ID_4"
-                      ]
+                      "displayLines": "Ice_Lance_ID_4"
                     },
                     "target": {
                       "name": "Target Name",
@@ -4515,12 +4305,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Enemy ID",
                     "ID": {
-                      "operator": "Variables[0] (Ice_Lance_ID_2) || RETURN",
-                      "displayLines": "Ice_Lance_ID_2",
-                      "constants": [],
-                      "variables": [
-                        "Ice_Lance_ID_2"
-                      ]
+                      "displayLines": "Ice_Lance_ID_2"
                     },
                     "target": {
                       "name": "Target Name",
@@ -4576,12 +4361,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Enemy ID",
                     "ID": {
-                      "operator": "Variables[0] (Ice_Lance_ID) || RETURN",
-                      "displayLines": "Ice_Lance_ID",
-                      "constants": [],
-                      "variables": [
-                        "Ice_Lance_ID"
-                      ]
+                      "displayLines": "Ice_Lance_ID"
                     },
                     "target": {
                       "name": "Target Name",
@@ -4876,14 +4656,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingIncoming</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (1) || INVERT || Variables[0] (MDF_HPHealReduceRatio) || MUL || RETURN",
-                    "displayLines": "(-1 * MDF_HPHealReduceRatio)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_HPHealReduceRatio"
-                    ]
+                    "displayLines": "(-1 * MDF_HPHealReduceRatio)"
                   }
                 }
               ]
@@ -4905,21 +4678,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"515238365\">Enemy_W2_Cocolia_IF_ReduceHealTakenRatio_PLY</a>",
                   "stackLimit": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "valuePerStack": {
                     "MDF_HPHealReduceRatio": {
-                      "operator": "Variables[0] (MDF_HPHealReduceRatio) || RETURN",
-                      "displayLines": "MDF_HPHealReduceRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_HPHealReduceRatio"
-                      ]
+                      "displayLines": "MDF_HPHealReduceRatio"
                     }
                   }
                 }
@@ -4952,13 +4715,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (_MaxStance) || Variables[1] (MDF_ExtraStanceRatio) || MUL || RETURN",
-                    "displayLines": "(_MaxStance * MDF_ExtraStanceRatio)",
-                    "constants": [],
-                    "variables": [
-                      "_MaxStance",
-                      "MDF_ExtraStanceRatio"
-                    ]
+                    "displayLines": "(_MaxStance * MDF_ExtraStanceRatio)"
                   }
                 },
                 {
@@ -4968,13 +4725,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "addFlat": {
-                    "operator": "Variables[0] (_MaxStance) || Variables[1] (MDF_ExtraStanceRatio) || MUL || RETURN",
-                    "displayLines": "(_MaxStance * MDF_ExtraStanceRatio)",
-                    "constants": [],
-                    "variables": [
-                      "_MaxStance",
-                      "MDF_ExtraStanceRatio"
-                    ]
+                    "displayLines": "(_MaxStance * MDF_ExtraStanceRatio)"
                   }
                 }
               ]
@@ -4992,12 +4743,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (MDF_StanceDMGPerTeamMate) || RETURN",
-                        "displayLines": "MDF_StanceDMGPerTeamMate",
-                        "constants": [],
-                        "variables": [
-                          "MDF_StanceDMGPerTeamMate"
-                        ]
+                        "displayLines": "MDF_StanceDMGPerTeamMate"
                       },
                       "defender": {
                         "name": "Target Name",
@@ -5055,24 +4801,14 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_ExtraFrozenDamageRatio) || RETURN",
-                        "displayLines": "MDF_ExtraFrozenDamageRatio",
-                        "constants": [],
-                        "variables": [
-                          "MDF_ExtraFrozenDamageRatio"
-                        ]
+                        "displayLines": "MDF_ExtraFrozenDamageRatio"
                       },
                       "variableName": "#Skill04_P4_FrozenDamagePerTurn"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_ExtraFrozenDamageRatio) || RETURN",
-                        "displayLines": "MDF_ExtraFrozenDamageRatio",
-                        "constants": [],
-                        "variables": [
-                          "MDF_ExtraFrozenDamageRatio"
-                        ]
+                        "displayLines": "MDF_ExtraFrozenDamageRatio"
                       },
                       "variableName": "#Skill07_P1_DamagePercentage"
                     }
@@ -5092,12 +4828,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_ExtraFrozenDamageRatio) || RETURN",
-                        "displayLines": "MDF_ExtraFrozenDamageRatio",
-                        "constants": [],
-                        "variables": [
-                          "MDF_ExtraFrozenDamageRatio"
-                        ]
+                        "displayLines": "MDF_ExtraFrozenDamageRatio"
                       },
                       "variableName": "#SkillP02_P2_Frozen_DamagePercentage"
                     }
@@ -5527,20 +5258,10 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-146543153\">Enemy_W2_Cocolia_IF_WeaknessCount</a>",
                   "valuePerStack": {
                     "MDF_TokenDamageReduceRatio": {
-                      "operator": "Variables[0] ({[SkillEX04[0]]}) || RETURN",
-                      "displayLines": "{[SkillEX04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillEX04[0]]}"
-                      ]
+                      "displayLines": "{[SkillEX04[0]]}"
                     },
                     "MDF_TokenDamageAddRatioPerlayer": {
-                      "operator": "Variables[0] ({[SkillEX04[1]]}) || RETURN",
-                      "displayLines": "{[SkillEX04[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillEX04[1]]}"
-                      ]
+                      "displayLines": "{[SkillEX04[1]]}"
                     }
                   }
                 }
@@ -5569,20 +5290,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-146543153\">Enemy_W2_Cocolia_IF_WeaknessCount</a>",
                       "valuePerStack": {
                         "MDF_TokenDamageReduceRatio": {
-                          "operator": "Variables[0] ({[SkillEX04[0]]}) || RETURN",
-                          "displayLines": "{[SkillEX04[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillEX04[0]]}"
-                          ]
+                          "displayLines": "{[SkillEX04[0]]}"
                         },
                         "MDF_TokenDamageAddRatioPerlayer": {
-                          "operator": "Variables[0] ({[SkillEX04[1]]}) || RETURN",
-                          "displayLines": "{[SkillEX04[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillEX04[1]]}"
-                          ]
+                          "displayLines": "{[SkillEX04[1]]}"
                         }
                       }
                     }
@@ -5761,12 +5472,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1783900265\">Enemy_W2_Cocolia_IF_ExtraFrozenDamageRatio</a>",
                   "valuePerStack": {
                     "MDF_ExtraFrozenDamageRatio": {
-                      "operator": "Variables[0] ({[SkillEX02[0]]}) || RETURN",
-                      "displayLines": "{[SkillEX02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillEX02[0]]}"
-                      ]
+                      "displayLines": "{[SkillEX02[0]]}"
                     }
                   }
                 },
@@ -5779,20 +5485,10 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"222390491\">Enemy_W2_Cocolia_IF_ExtraStance</a>",
                   "valuePerStack": {
                     "MDF_ExtraStanceRatio": {
-                      "operator": "Variables[0] ({[SkillEX02[1]]}) || RETURN",
-                      "displayLines": "{[SkillEX02[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillEX02[1]]}"
-                      ]
+                      "displayLines": "{[SkillEX02[1]]}"
                     },
                     "MDF_StanceDMGPerTeamMate": {
-                      "operator": "Variables[0] ({[SkillEX02[2]]}) || RETURN",
-                      "displayLines": "{[SkillEX02[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillEX02[2]]}"
-                      ]
+                      "displayLines": "{[SkillEX02[2]]}"
                     }
                   }
                 }
@@ -5827,28 +5523,13 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"1587187705\">Enemy_W2_Cocolia_IF_SuperArmorController</a>",
               "valuePerStack": {
                 "MDF_IF_BOSS_BreakDelay": {
-                  "operator": "Variables[0] ({[SkillEX01[2]]}) || RETURN",
-                  "displayLines": "{[SkillEX01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX01[2]]}"
-                  ]
+                  "displayLines": "{[SkillEX01[2]]}"
                 },
                 "MDF_IF_BOSS_WeaknessDMGUpRatio": {
-                  "operator": "Variables[0] ({[SkillEX01[1]]}) || RETURN",
-                  "displayLines": "{[SkillEX01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX01[1]]}"
-                  ]
+                  "displayLines": "{[SkillEX01[1]]}"
                 },
                 "MDF_IF_BOSS_Standard_Defence": {
-                  "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
-                  "displayLines": "{[SkillEX01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX01[0]]}"
-                  ]
+                  "displayLines": "{[SkillEX01[0]]}"
                 }
               }
             },
@@ -5861,36 +5542,16 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1246789467\">Enemy_W2_Cocolia_IF_SoftFrenzyController</a>",
               "valuePerStack": {
                 "MDF_FrenzyStartDelay": {
-                  "operator": "Variables[0] ({[SkillEX05[0]]}) || RETURN",
-                  "displayLines": "{[SkillEX05[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX05[0]]}"
-                  ]
+                  "displayLines": "{[SkillEX05[0]]}"
                 },
                 "MDF_FrenzyIntervalDelay": {
-                  "operator": "Variables[0] ({[SkillEX05[1]]}) || RETURN",
-                  "displayLines": "{[SkillEX05[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX05[1]]}"
-                  ]
+                  "displayLines": "{[SkillEX05[1]]}"
                 },
                 "MDF_MaxFrenzyLayer": {
-                  "operator": "Variables[0] ({[SkillEX05[2]]}) || RETURN",
-                  "displayLines": "{[SkillEX05[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX05[2]]}"
-                  ]
+                  "displayLines": "{[SkillEX05[2]]}"
                 },
                 "MDF_TokenDMGAddRatioPerLayer": {
-                  "operator": "Variables[0] ({[SkillEX05[3]]}) || RETURN",
-                  "displayLines": "{[SkillEX05[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX05[3]]}"
-                  ]
+                  "displayLines": "{[SkillEX05[3]]}"
                 }
               }
             },
@@ -5961,28 +5622,13 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"1587187705\">Enemy_W2_Cocolia_IF_SuperArmorController</a>",
                           "valuePerStack": {
                             "MDF_IF_BOSS_BreakDelay": {
-                              "operator": "Variables[0] ({[SkillEX01[2]]}) || RETURN",
-                              "displayLines": "{[SkillEX01[2]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillEX01[2]]}"
-                              ]
+                              "displayLines": "{[SkillEX01[2]]}"
                             },
                             "MDF_IF_BOSS_WeaknessDMGUpRatio": {
-                              "operator": "Variables[0] ({[SkillEX01[1]]}) || RETURN",
-                              "displayLines": "{[SkillEX01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillEX01[1]]}"
-                              ]
+                              "displayLines": "{[SkillEX01[1]]}"
                             },
                             "MDF_IF_BOSS_Standard_Defence": {
-                              "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
-                              "displayLines": "{[SkillEX01[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillEX01[0]]}"
-                              ]
+                              "displayLines": "{[SkillEX01[0]]}"
                             }
                           }
                         }
@@ -6029,28 +5675,13 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1587187705\">Enemy_W2_Cocolia_IF_SuperArmorController</a>",
                       "valuePerStack": {
                         "MDF_IF_BOSS_BreakDelay": {
-                          "operator": "Variables[0] ({[SkillEX01[2]]}) || RETURN",
-                          "displayLines": "{[SkillEX01[2]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillEX01[2]]}"
-                          ]
+                          "displayLines": "{[SkillEX01[2]]}"
                         },
                         "MDF_IF_BOSS_WeaknessDMGUpRatio": {
-                          "operator": "Variables[0] ({[SkillEX01[1]]}) || RETURN",
-                          "displayLines": "{[SkillEX01[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillEX01[1]]}"
-                          ]
+                          "displayLines": "{[SkillEX01[1]]}"
                         },
                         "MDF_IF_BOSS_Standard_Defence": {
-                          "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
-                          "displayLines": "{[SkillEX01[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillEX01[0]]}"
-                          ]
+                          "displayLines": "{[SkillEX01[0]]}"
                         }
                       }
                     }
@@ -6072,26 +5703,14 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Ice_Lance_ID) || Variables[1] (HardLevel) || ADD || RETURN",
-            "displayLines": "(Ice_Lance_ID + HardLevel)",
-            "constants": [],
-            "variables": [
-              "Ice_Lance_ID",
-              "HardLevel"
-            ]
+            "displayLines": "(Ice_Lance_ID + HardLevel)"
           },
           "variableName": "Ice_Lance_ID"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Ice_Lance_ID_2) || Variables[1] (HardLevel) || ADD || RETURN",
-            "displayLines": "(Ice_Lance_ID_2 + HardLevel)",
-            "constants": [],
-            "variables": [
-              "Ice_Lance_ID_2",
-              "HardLevel"
-            ]
+            "displayLines": "(Ice_Lance_ID_2 + HardLevel)"
           },
           "variableName": "Ice_Lance_ID_2"
         },
@@ -6336,12 +5955,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1827853653\">Monster_W1_CocoliaP1_RL_IcePower_Summon</a>",
           "valuePerStack": {
             "MDF_DamageUpRatio_PerLayer": {
-              "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[3]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[3]]}"
             }
           },
           "casterAssign": "TargetSelf"
@@ -6601,12 +6215,7 @@ const compositeAbilityObject = {
                   "name": "Assign Value to Stat",
                   "variableName": "FrozenScoreCheck",
                   "value": {
-                    "operator": "Variables[0] (FrozenScore) || RETURN",
-                    "displayLines": "FrozenScore",
-                    "constants": [],
-                    "variables": [
-                      "FrozenScore"
-                    ]
+                    "displayLines": "FrozenScore"
                   }
                 }
               ]
@@ -6830,12 +6439,7 @@ const compositeAbilityObject = {
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (Monster_SummonID3) || RETURN",
-                "displayLines": "Monster_SummonID3",
-                "constants": [],
-                "variables": [
-                  "Monster_SummonID3"
-                ]
+                "displayLines": "Monster_SummonID3"
               },
               "locationType": "FormationRecord"
             }
@@ -6929,12 +6533,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                      "displayLines": "{[Skill07[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill07[0]]}"
-                      ]
+                      "displayLines": "{[Skill07[0]]}"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -6959,12 +6558,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill07[1]]}) || RETURN",
-                      "displayLines": "{[Skill07[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill07[1]]}"
-                      ]
+                      "displayLines": "{[Skill07[1]]}"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -7056,12 +6650,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-              "displayLines": "{[Skill07[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill07[0]]}"
-              ]
+              "displayLines": "{[Skill07[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -7086,12 +6675,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] ({[Skill07[1]]}) || RETURN",
-              "displayLines": "{[Skill07[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill07[1]]}"
-              ]
+              "displayLines": "{[Skill07[1]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -7224,12 +6808,7 @@ const compositeAbilityObject = {
           "duration": 1,
           "valuePerStack": {
             "ModifierDamageUpValue": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "{[Skill05[0]]}"
             }
           }
         },
@@ -7324,29 +6903,14 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-                "displayLines": "{[Skill04[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[2]]}"
-                ]
+                "displayLines": "{[Skill04[2]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-                "displayLines": "{[Skill04[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[1]]}"
-                ]
+                "displayLines": "{[Skill04[1]]}"
               },
               "valuePerStack": {
                 "Modifier_Frozen_DamagePercentage": {
-                  "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-                  "displayLines": "{[Skill04[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[3]]}"
-                  ]
+                  "displayLines": "{[Skill04[3]]}"
                 }
               },
               "success": [
@@ -7370,12 +6934,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
+                  "displayLines": "{[Skill04[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -7454,29 +7013,14 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-                "displayLines": "{[Skill04[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[2]]}"
-                ]
+                "displayLines": "{[Skill04[2]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-                "displayLines": "{[Skill04[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[1]]}"
-                ]
+                "displayLines": "{[Skill04[1]]}"
               },
               "valuePerStack": {
                 "Modifier_Frozen_DamagePercentage": {
-                  "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-                  "displayLines": "{[Skill04[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[3]]}"
-                  ]
+                  "displayLines": "{[Skill04[3]]}"
                 }
               },
               "success": [
@@ -7500,12 +7044,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
+                  "displayLines": "{[Skill04[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -7732,14 +7271,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.33) || MUL || RETURN",
-              "displayLines": "({[Skill03[0]]} * 0.33)",
-              "constants": [
-                0.33
-              ],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "({[Skill03[0]]} * 0.33)"
             },
             "Toughness": null,
             "Tags": null,
@@ -7756,14 +7288,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.33) || MUL || RETURN",
-              "displayLines": "({[Skill03[0]]} * 0.33)",
-              "constants": [
-                0.33
-              ],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "({[Skill03[0]]} * 0.33)"
             },
             "Toughness": null,
             "Tags": null,
@@ -7780,14 +7305,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.34) || MUL || RETURN",
-              "displayLines": "({[Skill03[0]]} * 0.34)",
-              "constants": [
-                0.34
-              ],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "({[Skill03[0]]} * 0.34)"
             },
             "Toughness": null,
             "Tags": null,
@@ -7926,12 +7444,7 @@ const compositeAbilityObject = {
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (SummonCount) || RETURN",
-            "displayLines": "SummonCount",
-            "constants": [],
-            "variables": [
-              "SummonCount"
-            ]
+            "displayLines": "SummonCount"
           },
           "caseEvents": [
             {
@@ -8268,14 +7781,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.2) || MUL || RETURN",
-              "displayLines": "({[Skill01[0]]} * 0.2)",
-              "constants": [
-                0.2
-              ],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "({[Skill01[0]]} * 0.2)"
             },
             "Toughness": null,
             "Tags": null,
@@ -8292,14 +7798,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.3) || MUL || RETURN",
-              "displayLines": "({[Skill01[0]]} * 0.3)",
-              "constants": [
-                0.3
-              ],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "({[Skill01[0]]} * 0.3)"
             },
             "Toughness": null,
             "Tags": null,
@@ -8319,14 +7818,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.1) || MUL || RETURN",
-                  "displayLines": "({[Skill01[0]]} * 0.1)",
-                  "constants": [
-                    0.1
-                  ],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "({[Skill01[0]]} * 0.1)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -8385,14 +7877,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.2) || MUL || RETURN",
-              "displayLines": "({[Skill01[0]]} * 0.2)",
-              "constants": [
-                0.2
-              ],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "({[Skill01[0]]} * 0.2)"
             },
             "Toughness": null,
             "Tags": null,
@@ -8409,14 +7894,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.3) || MUL || RETURN",
-              "displayLines": "({[Skill01[0]]} * 0.3)",
-              "constants": [
-                0.3
-              ],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "({[Skill01[0]]} * 0.3)"
             },
             "Toughness": null,
             "Tags": null,
@@ -8436,14 +7914,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.1) || MUL || RETURN",
-                  "displayLines": "({[Skill01[0]]} * 0.1)",
-                  "constants": [
-                    0.1
-                  ],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "({[Skill01[0]]} * 0.1)"
                 },
                 "Toughness": null,
                 "Tags": null,

@@ -57,12 +57,7 @@ const configAbility = {
           "valuePerStack": {
             "CurrentWeakPoint": 1,
             "MDF_SwordDelayP2": {
-              "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-              "displayLines": "{[Skill02[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[2]]}"
-              ]
+              "displayLines": "{[Skill02[2]]}"
             }
           }
         },
@@ -96,12 +91,7 @@ const configAbility = {
           "valuePerStack": {
             "CurrentWeakPoint": 2,
             "MDF_SwordDelayP2": {
-              "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-              "displayLines": "{[Skill02[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[2]]}"
-              ]
+              "displayLines": "{[Skill02[2]]}"
             }
           }
         },
@@ -133,12 +123,7 @@ const configAbility = {
           "valuePerStack": {
             "CurrentWeakPoint": 0,
             "MDF_SwordDelayP2": {
-              "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-              "displayLines": "{[Skill02[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[2]]}"
-              ]
+              "displayLines": "{[Skill02[2]]}"
             }
           }
         },
@@ -170,12 +155,7 @@ const configAbility = {
           "valuePerStack": {
             "CurrentWeakPoint": 3,
             "MDF_SwordDelayP2": {
-              "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-              "displayLines": "{[Skill02[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[2]]}"
-              ]
+              "displayLines": "{[Skill02[2]]}"
             }
           }
         }
@@ -252,12 +232,7 @@ const configAbility = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (SwordNumber) || RETURN",
-                "displayLines": "SwordNumber",
-                "constants": [],
-                "variables": [
-                  "SwordNumber"
-                ]
+                "displayLines": "SwordNumber"
               },
               "caseEvents": [
                 {
@@ -342,12 +317,7 @@ const configAbility = {
           "valuePerStack": {
             "CurrentWeakPoint": 3,
             "MDF_SwordDelayP2": {
-              "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-              "displayLines": "{[Skill02[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[2]]}"
-              ]
+              "displayLines": "{[Skill02[2]]}"
             }
           }
         }
@@ -391,20 +361,10 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"480566743\">Enemy_W2_Yanqing_IF_Ability02_WeakPointProtect_Core</a>",
       "valuePerStack": {
         "MDF_SpeedDelta": {
-          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-          "displayLines": "{[Skill02[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[0]]}"
-          ]
+          "displayLines": "{[Skill02[0]]}"
         },
         "MDF_StanceDamage": {
-          "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-          "displayLines": "{[Skill02[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[1]]}"
-          ]
+          "displayLines": "{[Skill02[1]]}"
         }
       }
     },

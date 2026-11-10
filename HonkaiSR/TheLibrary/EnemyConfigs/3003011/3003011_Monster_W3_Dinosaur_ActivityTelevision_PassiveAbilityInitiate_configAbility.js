@@ -14,12 +14,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-2072820088\">MModifier_Monster_W3_Dinosaur_AllDamageTypeResistance</a>",
       "valuePerStack": {
         "MDF_DamageTypeResistance": {
-          "operator": "Variables[0] ({[PassiveSkillInitiate[4]]}) || RETURN",
-          "displayLines": "{[PassiveSkillInitiate[4]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkillInitiate[4]]}"
-          ]
+          "displayLines": "{[PassiveSkillInitiate[4]]}"
         }
       }
     },
@@ -84,12 +79,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageTypeResistance) || RETURN",
-                "displayLines": "MDF_DamageTypeResistance",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageTypeResistance"
-                ]
+                "displayLines": "MDF_DamageTypeResistance"
               }
             }
           ]
@@ -119,12 +109,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-2072820088\">MModifier_Monster_W3_Dinosaur_AllDamageTypeResistance</a>",
                   "valuePerStack": {
                     "MDF_DamageTypeResistance": {
-                      "operator": "Variables[0] ({[PassiveSkillInitiate[4]]}) || RETURN",
-                      "displayLines": "{[PassiveSkillInitiate[4]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkillInitiate[4]]}"
-                      ]
+                      "displayLines": "{[PassiveSkillInitiate[4]]}"
                     }
                   }
                 }

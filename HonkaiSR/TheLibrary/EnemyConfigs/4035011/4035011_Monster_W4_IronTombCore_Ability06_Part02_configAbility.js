@@ -384,14 +384,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_CharacterCount) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(_CharacterCount - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_CharacterCount"
-                ]
+                "displayLines": "(_CharacterCount - 1)"
               },
               "variableName": "_CharacterCount"
             }
@@ -511,12 +504,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "HitSplit": 0.1,
         "Toughness": null,
@@ -534,12 +522,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "HitSplit": 0.1,
         "Toughness": null,
@@ -557,12 +540,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "HitSplit": 0.1,
         "Toughness": null,
@@ -576,12 +554,7 @@ const configAbility = {
       "functionName": "<a class=\"gTempYellow\" id=\"1699523791\">W4_IronTombCore_CalWorldErosion</a>",
       "variables": {
         "_ErosionParam": {
-          "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-          "displayLines": "{[Skill06[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[1]]}"
-          ]
+          "displayLines": "{[Skill06[1]]}"
         }
       }
     },
@@ -594,12 +567,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "HitSplit": 0.1,
         "Toughness": null,
@@ -617,12 +585,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "HitSplit": 0.1,
         "Toughness": null,
@@ -640,12 +603,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         },
         "HitSplit": 0.5,
         "Toughness": null,
@@ -664,20 +622,10 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1372521903\">MModifier_W4_IronTombCore_TimeLock</a>[<span class=\"descriptionNumberColor\">Action Lock</span>]",
       "valuePerStack": {
         "MDF_SPConvert": {
-          "operator": "Variables[0] ({[Skill06[2]]}) || RETURN",
-          "displayLines": "{[Skill06[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[2]]}"
-          ]
+          "displayLines": "{[Skill06[2]]}"
         },
         "MDF_ActionDelayConvert": {
-          "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-          "displayLines": "{[Skill06[3]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[3]]}"
-          ]
+          "displayLines": "{[Skill06[3]]}"
         }
       }
     },

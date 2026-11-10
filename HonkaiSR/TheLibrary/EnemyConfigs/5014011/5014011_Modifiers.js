@@ -67,12 +67,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeTakenRatio) || RETURN",
-                "displayLines": "MDF_AllDamageTypeTakenRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeTakenRatio"
-                ]
+                "displayLines": "MDF_AllDamageTypeTakenRatio"
               }
             }
           ]
@@ -1829,12 +1824,7 @@ const configAbility = {
                     "value1": "<a class=\"gModGreen\" id=\"1006247126\">Enemy_W5_VtuberPart01_Charge</a>[<span class=\"descriptionNumberColor\">Ally Popularity</span>]",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_13800) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_13800",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_13800"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_13800"
                     },
                     "valueType": "Layer"
                   }
@@ -1852,12 +1842,7 @@ const configAbility = {
                 "value1": "<a class=\"gModGreen\" id=\"-869771857\">Enemy_W5_VtuberPart02_Charge</a>[<span class=\"descriptionNumberColor\">Enemy Popularity</span>]",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13800) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13800",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_13800"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_13800"
                 },
                 "valueType": "Layer"
               },
@@ -2044,12 +2029,7 @@ const configAbility = {
                   "variableName": "TotalHP",
                   "context": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentHP_DownScale) || RETURN",
-                    "displayLines": "MDF_CurrentHP_DownScale",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentHP_DownScale"
-                    ]
+                    "displayLines": "MDF_CurrentHP_DownScale"
                   }
                 },
                 {
@@ -2061,12 +2041,7 @@ const configAbility = {
                   "variableName": "RemainHP",
                   "context": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentHP_DownScale) || RETURN",
-                    "displayLines": "MDF_CurrentHP_DownScale",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentHP_DownScale"
-                    ]
+                    "displayLines": "MDF_CurrentHP_DownScale"
                   }
                 },
                 {
@@ -2078,12 +2053,7 @@ const configAbility = {
                   "variableName": "TotalHP_DownScale",
                   "context": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentHP_DownScale) || RETURN",
-                    "displayLines": "MDF_CurrentHP_DownScale",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentHP_DownScale"
-                    ]
+                    "displayLines": "MDF_CurrentHP_DownScale"
                   }
                 },
                 {
@@ -2095,12 +2065,7 @@ const configAbility = {
                   "variableName": "RemainHP_DownScale",
                   "context": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentHP_DownScale) || RETURN",
-                    "displayLines": "MDF_CurrentHP_DownScale",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentHP_DownScale"
-                    ]
+                    "displayLines": "MDF_CurrentHP_DownScale"
                   }
                 },
                 {
@@ -2447,12 +2412,7 @@ const configAbility = {
                     "value1": "<a class=\"gModGreen\" id=\"-869771857\">Enemy_W5_VtuberPart02_Charge</a>[<span class=\"descriptionNumberColor\">Enemy Popularity</span>]",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_13800) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_13800",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_13800"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_13800"
                     },
                     "valueType": "Layer"
                   },
@@ -2519,12 +2479,7 @@ const configAbility = {
                         "value1": "<a class=\"gModGreen\" id=\"-869771857\">Enemy_W5_VtuberPart02_Charge</a>[<span class=\"descriptionNumberColor\">Enemy Popularity</span>]",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13800) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13800",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_13800"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_13800"
                         },
                         "valueType": "Layer"
                       },
@@ -2648,12 +2603,7 @@ const configAbility = {
                         "value1": "<a class=\"gModGreen\" id=\"1006247126\">Enemy_W5_VtuberPart01_Charge</a>[<span class=\"descriptionNumberColor\">Ally Popularity</span>]",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13800) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13800",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_13800"
-                          ]
+                          "displayLines": "UnusedUnderThisBase_13800"
                         },
                         "valueType": "Layer"
                       }
@@ -2772,12 +2722,7 @@ const configAbility = {
                       },
                       "variableName": "RemainHP",
                       "value": {
-                        "operator": "Variables[0] (MDF_HPRatio) || RETURN",
-                        "displayLines": "MDF_HPRatio",
-                        "constants": [],
-                        "variables": [
-                          "MDF_HPRatio"
-                        ]
+                        "displayLines": "MDF_HPRatio"
                       }
                     }
                   ]
@@ -2785,25 +2730,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (RemainHP) || Variables[1] (TotalHP) || DIV || RETURN",
-                    "displayLines": "(RemainHP / TotalHP)",
-                    "constants": [],
-                    "variables": [
-                      "RemainHP",
-                      "TotalHP"
-                    ]
+                    "displayLines": "(RemainHP / TotalHP)"
                   },
                   "variableName": "MDF_Ratio"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Ratio) || RETURN",
-                    "displayLines": "MDF_Ratio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Ratio"
-                    ]
+                    "displayLines": "MDF_Ratio"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -2923,12 +2857,7 @@ const configAbility = {
                       },
                       "variableName": "RemainHP",
                       "value": {
-                        "operator": "Variables[0] (MDF_HPRatio) || RETURN",
-                        "displayLines": "MDF_HPRatio",
-                        "constants": [],
-                        "variables": [
-                          "MDF_HPRatio"
-                        ]
+                        "displayLines": "MDF_HPRatio"
                       }
                     }
                   ]
@@ -2936,25 +2865,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (RemainHP) || Variables[1] (TotalHP) || DIV || RETURN",
-                    "displayLines": "(RemainHP / TotalHP)",
-                    "constants": [],
-                    "variables": [
-                      "RemainHP",
-                      "TotalHP"
-                    ]
+                    "displayLines": "(RemainHP / TotalHP)"
                   },
                   "variableName": "MDF_Ratio"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Ratio) || RETURN",
-                    "displayLines": "MDF_Ratio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Ratio"
-                    ]
+                    "displayLines": "MDF_Ratio"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -3001,13 +2919,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageReduce) || Variables[1] (MDF_Ratio) || MUL || RETURN",
-                "displayLines": "(MDF_AllDamageReduce * MDF_Ratio)",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageReduce",
-                  "MDF_Ratio"
-                ]
+                "displayLines": "(MDF_AllDamageReduce * MDF_Ratio)"
               },
               "variableName": "MDF_AllDamageReduce"
             },
@@ -3019,12 +2931,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                "displayLines": "MDF_AllDamageReduce",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageReduce"
-                ]
+                "displayLines": "MDF_AllDamageReduce"
               }
             }
           ]
@@ -3072,12 +2979,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                "displayLines": "MDF_AllDamageReduce",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageReduce"
-                ]
+                "displayLines": "MDF_AllDamageReduce"
               }
             }
           ]
@@ -3136,12 +3038,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"888915891\">Enemy_W5_Vtuber_Charge_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">Privacy Protection</span>]",
               "valuePerStack": {
                 "MDF_AllDamageReduce": {
-                  "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                  "displayLines": "MDF_AllDamageReduce",
-                  "constants": [],
-                  "variables": [
-                    "MDF_AllDamageReduce"
-                  ]
+                  "displayLines": "MDF_AllDamageReduce"
                 }
               }
             },
@@ -3229,21 +3126,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"404660666\">Enemy_W5_Vtuber_ChargeEnd_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">Privacy Protection</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageReduce": {
-                      "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                      "displayLines": "MDF_AllDamageReduce",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AllDamageReduce"
-                      ]
+                      "displayLines": "MDF_AllDamageReduce"
                     },
                     "MDF_Ratio": {
-                      "operator": "Variables[0] (RemainHP) || Variables[1] (TotalHP) || DIV || RETURN",
-                      "displayLines": "(RemainHP / TotalHP)",
-                      "constants": [],
-                      "variables": [
-                        "RemainHP",
-                        "TotalHP"
-                      ]
+                      "displayLines": "(RemainHP / TotalHP)"
                     }
                   }
                 }
@@ -3464,12 +3350,7 @@ const configAbility = {
                 "value1": "CurrentHP%",
                 "compareType": "<=",
                 "value2": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13831) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13831",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_13831"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_13831"
                 }
               },
               "passed": [

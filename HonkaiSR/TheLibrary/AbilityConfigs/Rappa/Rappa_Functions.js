@@ -20,27 +20,14 @@ const configAbility = {
             "value1": "_PassiveBreakCount",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] (_PassiveBreakCountMax) || Variables[1] (_PassiveBreakCountBase) || SUB || RETURN",
-              "displayLines": "(_PassiveBreakCountMax - _PassiveBreakCountBase)",
-              "constants": [],
-              "variables": [
-                "_PassiveBreakCountMax",
-                "_PassiveBreakCountBase"
-              ]
+              "displayLines": "(_PassiveBreakCountMax - _PassiveBreakCountBase)"
             }
           },
           "passed": [
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_PassiveBreakCount) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(_PassiveBreakCount + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_PassiveBreakCount"
-                ]
+                "displayLines": "(_PassiveBreakCount + 1)"
               },
               "variableName": "_PassiveBreakCount"
             },
@@ -52,12 +39,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1458859803\">Rappa_Break_Modifier_ForShow</a>[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (_PassiveBreakCountMax) || RETURN",
-                "displayLines": "_PassiveBreakCountMax",
-                "constants": [],
-                "variables": [
-                  "_PassiveBreakCountMax"
-                ]
+                "displayLines": "_PassiveBreakCountMax"
               },
               "addStacksPerTrigger": 1
             }
@@ -80,14 +62,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (DV_Rappa_BreakCount) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(DV_Rappa_BreakCount + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "DV_Rappa_BreakCount"
-                ]
+                "displayLines": "(DV_Rappa_BreakCount + 1)"
               },
               "variableName": "DV_Rappa_BreakCount"
             }
@@ -120,13 +95,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_PassiveBreakCount) || Variables[1] (1) || ADD || RETURN",
-                    "displayLines": "(_PassiveBreakCount + 1)",
-                    "constants": [],
-                    "variables": [
-                      "_PassiveBreakCount",
-                      1
-                    ]
+                    "displayLines": "(_PassiveBreakCount + 1)"
                   },
                   "variableName": "DV_StockTempCount"
                 },
@@ -137,13 +106,7 @@ const configAbility = {
                     "value1": "DV_StockTempCount",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (_PassiveBreakCountMax) || Variables[1] (_PassiveBreakCountBase) || SUB || RETURN",
-                      "displayLines": "(_PassiveBreakCountMax - _PassiveBreakCountBase)",
-                      "constants": [],
-                      "variables": [
-                        "_PassiveBreakCountMax",
-                        "_PassiveBreakCountBase"
-                      ]
+                      "displayLines": "(_PassiveBreakCountMax - _PassiveBreakCountBase)"
                     }
                   },
                   "passed": [
@@ -155,34 +118,16 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1458859803\">Rappa_Break_Modifier_ForShow</a>[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (_PassiveBreakCountMax) || RETURN",
-                        "displayLines": "_PassiveBreakCountMax",
-                        "constants": [],
-                        "variables": [
-                          "_PassiveBreakCountMax"
-                        ]
+                        "displayLines": "_PassiveBreakCountMax"
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (_PassiveBreakCountMax) || Variables[1] (_PassiveBreakCountBase) || SUB || Variables[2] (_PassiveBreakCount) || SUB || RETURN",
-                        "displayLines": "((_PassiveBreakCountMax - _PassiveBreakCountBase) - _PassiveBreakCount)",
-                        "constants": [],
-                        "variables": [
-                          "_PassiveBreakCountMax",
-                          "_PassiveBreakCountBase",
-                          "_PassiveBreakCount"
-                        ]
+                        "displayLines": "((_PassiveBreakCountMax - _PassiveBreakCountBase) - _PassiveBreakCount)"
                       }
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_PassiveBreakCountMax) || Variables[1] (_PassiveBreakCountBase) || SUB || RETURN",
-                        "displayLines": "(_PassiveBreakCountMax - _PassiveBreakCountBase)",
-                        "constants": [],
-                        "variables": [
-                          "_PassiveBreakCountMax",
-                          "_PassiveBreakCountBase"
-                        ]
+                        "displayLines": "(_PassiveBreakCountMax - _PassiveBreakCountBase)"
                       },
                       "variableName": "_PassiveBreakCount"
                     }
@@ -196,32 +141,16 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1458859803\">Rappa_Break_Modifier_ForShow</a>[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (_PassiveBreakCountMax) || RETURN",
-                        "displayLines": "_PassiveBreakCountMax",
-                        "constants": [],
-                        "variables": [
-                          "_PassiveBreakCountMax"
-                        ]
+                        "displayLines": "_PassiveBreakCountMax"
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       }
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_PassiveBreakCount) || Variables[1] (1) || ADD || RETURN",
-                        "displayLines": "(_PassiveBreakCount + 1)",
-                        "constants": [],
-                        "variables": [
-                          "_PassiveBreakCount",
-                          1
-                        ]
+                        "displayLines": "(_PassiveBreakCount + 1)"
                       },
                       "variableName": "_PassiveBreakCount"
                     }
@@ -234,12 +163,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (10) || RETURN",
-                    "displayLines": "10",
-                    "constants": [],
-                    "variables": [
-                      10
-                    ]
+                    "displayLines": "10"
                   },
                   "isFixed": "* ERR"
                 }

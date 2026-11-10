@@ -34,20 +34,10 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (MDF_PropertyValue3) || RETURN",
-              "displayLines": "MDF_PropertyValue3",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyValue3"
-              ]
+              "displayLines": "MDF_PropertyValue3"
             },
             "MDF_PropertyValue2": {
-              "operator": "Variables[0] (MDF_PropertyValue4) || RETURN",
-              "displayLines": "MDF_PropertyValue4",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyValue4"
-              ]
+              "displayLines": "MDF_PropertyValue4"
             }
           }
         }
@@ -74,12 +64,7 @@ const configAbility = {
                 },
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (4) || RETURN",
-                  "displayLines": "4",
-                  "constants": [],
-                  "variables": [
-                    4
-                  ]
+                  "displayLines": "4"
                 },
                 "valueType": "Layer"
               },
@@ -92,29 +77,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1355560609\">LC_23021_Sub3</a>[<span class=\"descriptionNumberColor\">Mask</span>]",
                   "duration": {
-                    "operator": "Variables[0] (4) || RETURN",
-                    "displayLines": "4",
-                    "constants": [],
-                    "variables": [
-                      4
-                    ]
+                    "displayLines": "4"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue3": {
-                      "operator": "Variables[0] (0.1) || RETURN",
-                      "displayLines": "0.1",
-                      "constants": [],
-                      "variables": [
-                        0.1
-                      ]
+                      "displayLines": "0.1"
                     },
                     "MDF_PropertyValue4": {
-                      "operator": "Variables[0] (0.28) || RETURN",
-                      "displayLines": "0.28",
-                      "constants": [],
-                      "variables": [
-                        0.28
-                      ]
+                      "displayLines": "0.28"
                     }
                   }
                 },
@@ -152,12 +122,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             },
             {
@@ -168,12 +133,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                "displayLines": "MDF_PropertyValue2",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue2"
-                ]
+                "displayLines": "MDF_PropertyValue2"
               }
             }
           ]
@@ -225,30 +185,15 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1372338228\">LC_23021_Sub2</a>[<span class=\"descriptionNumberColor\">Radiant Flame</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (4) || RETURN",
-                    "displayLines": "4",
-                    "constants": [],
-                    "variables": [
-                      4
-                    ]
+                    "displayLines": "4"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (4) || RETURN",
-                      "displayLines": "4",
-                      "constants": [],
-                      "variables": [
-                        4
-                      ]
+                      "displayLines": "4"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_BPValue) || RETURN",
-                    "displayLines": "MDF_BPValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_BPValue"
-                    ]
+                    "displayLines": "MDF_BPValue"
                   }
                 }
               ]
@@ -276,29 +221,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1355560609\">LC_23021_Sub3</a>[<span class=\"descriptionNumberColor\">Mask</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue3": {
-                      "operator": "Variables[0] (0.1) || RETURN",
-                      "displayLines": "0.1",
-                      "constants": [],
-                      "variables": [
-                        0.1
-                      ]
+                      "displayLines": "0.1"
                     },
                     "MDF_PropertyValue4": {
-                      "operator": "Variables[0] (0.28) || RETURN",
-                      "displayLines": "0.28",
-                      "constants": [],
-                      "variables": [
-                        0.28
-                      ]
+                      "displayLines": "0.28"
                     }
                   }
                 }

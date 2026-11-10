@@ -222,13 +222,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (STANDARDSPECIFIC_OBJECT_UNUSED_16) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(STANDARDSPECIFIC_OBJECT_UNUSED_16 * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "STANDARDSPECIFIC_OBJECT_UNUSED_16",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(STANDARDSPECIFIC_OBJECT_UNUSED_16 * MDF_Layer)"
                   }
                 }
               ]
@@ -270,13 +264,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (STANDARDSPECIFIC_OBJECT_UNUSED_15) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(STANDARDSPECIFIC_OBJECT_UNUSED_15 * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "STANDARDSPECIFIC_OBJECT_UNUSED_15",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(STANDARDSPECIFIC_OBJECT_UNUSED_15 * MDF_Layer)"
                   }
                 }
               ]
@@ -564,13 +552,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                        "displayLines": "(MDF_DamageUpRatio_PerLayer * MDF_Layer)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DamageUpRatio_PerLayer",
-                          "MDF_Layer"
-                        ]
+                        "displayLines": "(MDF_DamageUpRatio_PerLayer * MDF_Layer)"
                       }
                     },
                     {
@@ -581,13 +563,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (STANDARDSPECIFIC_OBJECT_UNUSED_12) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                        "displayLines": "(STANDARDSPECIFIC_OBJECT_UNUSED_12 * MDF_Layer)",
-                        "constants": [],
-                        "variables": [
-                          "STANDARDSPECIFIC_OBJECT_UNUSED_12",
-                          "MDF_Layer"
-                        ]
+                        "displayLines": "(STANDARDSPECIFIC_OBJECT_UNUSED_12 * MDF_Layer)"
                       }
                     }
                   ],
@@ -600,13 +576,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (STANDARDSPECIFIC_OBJECT_UNUSED_13) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                        "displayLines": "(STANDARDSPECIFIC_OBJECT_UNUSED_13 * MDF_Layer)",
-                        "constants": [],
-                        "variables": [
-                          "STANDARDSPECIFIC_OBJECT_UNUSED_13",
-                          "MDF_Layer"
-                        ]
+                        "displayLines": "(STANDARDSPECIFIC_OBJECT_UNUSED_13 * MDF_Layer)"
                       }
                     },
                     {
@@ -617,13 +587,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (STANDARDSPECIFIC_OBJECT_UNUSED_14) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                        "displayLines": "(STANDARDSPECIFIC_OBJECT_UNUSED_14 * MDF_Layer)",
-                        "constants": [],
-                        "variables": [
-                          "STANDARDSPECIFIC_OBJECT_UNUSED_14",
-                          "MDF_Layer"
-                        ]
+                        "displayLines": "(STANDARDSPECIFIC_OBJECT_UNUSED_14 * MDF_Layer)"
                       }
                     }
                   ]
@@ -834,12 +798,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageTypeResistance) || RETURN",
-                    "displayLines": "MDF_AllDamageTypeResistance",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageTypeResistance"
-                    ]
+                    "displayLines": "MDF_AllDamageTypeResistance"
                   }
                 }
               ]
@@ -873,12 +832,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_Resistance) || RETURN",
-                    "displayLines": "MDF_Resistance",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Resistance"
-                    ]
+                    "displayLines": "MDF_Resistance"
                   }
                 }
               ]
@@ -900,12 +854,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (ModifierDamageUpValue) || RETURN",
-                    "displayLines": "ModifierDamageUpValue",
-                    "constants": [],
-                    "variables": [
-                      "ModifierDamageUpValue"
-                    ]
+                    "displayLines": "ModifierDamageUpValue"
                   }
                 }
               ]
@@ -927,12 +876,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (Shield_HP) || RETURN",
-                    "displayLines": "Shield_HP",
-                    "constants": [],
-                    "variables": [
-                      "Shield_HP"
-                    ]
+                    "displayLines": "Shield_HP"
                   },
                   "isGlobalShield": true
                 }
@@ -986,12 +930,7 @@ const compositeAbilityObject = {
                       "duration": 1,
                       "valuePerStack": {
                         "Modifier_Frozen_DamagePercentage": {
-                          "operator": "Variables[0] (MDF_IceCounter_Frozen_DamagePercentage) || RETURN",
-                          "displayLines": "MDF_IceCounter_Frozen_DamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "MDF_IceCounter_Frozen_DamagePercentage"
-                          ]
+                          "displayLines": "MDF_IceCounter_Frozen_DamagePercentage"
                         }
                       }
                     },

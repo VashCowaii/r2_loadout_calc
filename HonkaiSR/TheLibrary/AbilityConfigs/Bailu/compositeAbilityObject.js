@@ -94,12 +94,7 @@ const compositeAbilityObject = {
                         "name": "Insert Ability Condition",
                         "type": "AbilityOwnerInsertUnusedCount",
                         "typeValue": {
-                          "operator": "Variables[0] (MDF_ReviveTime2) || RETURN",
-                          "displayLines": "MDF_ReviveTime2",
-                          "constants": [],
-                          "variables": [
-                            "MDF_ReviveTime2"
-                          ]
+                          "displayLines": "MDF_ReviveTime2"
                         }
                       },
                       "abilityName": "Bailu_InsertAbility_Revive",
@@ -155,13 +150,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackUpRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_AttackUpRatio * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackUpRatio",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_AttackUpRatio * MDF_Layer)"
                   },
                   "variableName": "MDF_AttackUpRatio"
                 },
@@ -173,12 +162,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackUpRatio) || RETURN",
-                    "displayLines": "MDF_AttackUpRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackUpRatio"
-                    ]
+                    "displayLines": "MDF_AttackUpRatio"
                   }
                 }
               ]
@@ -200,29 +184,14 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-2145916157\">Bailu_Eidolon4_AttackUp</a>[<span class=\"descriptionNumberColor\">Evil Excision</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_AttackUpRatio": {
-                      "operator": "Variables[0] (0.1) || RETURN",
-                      "displayLines": "0.1",
-                      "constants": [],
-                      "variables": [
-                        0.1
-                      ]
+                      "displayLines": "0.1"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -251,12 +220,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoing</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -282,12 +246,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageResistance) || RETURN",
-                    "displayLines": "MDF_DamageResistance",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageResistance"
-                    ]
+                    "displayLines": "MDF_DamageResistance"
                   }
                 }
               ]
@@ -314,12 +273,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_HPIncrease) || RETURN",
-                    "displayLines": "MDF_HPIncrease",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HPIncrease"
-                    ]
+                    "displayLines": "MDF_HPIncrease"
                   }
                 }
               ]
@@ -359,21 +313,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-469925889\">Bailu_PointB1_HPIncrease</a>[<span class=\"descriptionNumberColor\">Qihuang Analects</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                        "displayLines": "MDF_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_LifeTime"
-                        ]
+                        "displayLines": "MDF_LifeTime"
                       },
                       "valuePerStack": {
                         "MDF_HPIncrease": {
-                          "operator": "Variables[0] (MDF_HPIncrease2) || RETURN",
-                          "displayLines": "MDF_HPIncrease2",
-                          "constants": [],
-                          "variables": [
-                            "MDF_HPIncrease2"
-                          ]
+                          "displayLines": "MDF_HPIncrease2"
                         }
                       }
                     }
@@ -419,21 +363,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-469925889\">Bailu_PointB1_HPIncrease</a>[<span class=\"descriptionNumberColor\">Qihuang Analects</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "valuePerStack": {
                         "MDF_HPIncrease": {
-                          "operator": "Variables[0] (0.1) || RETURN",
-                          "displayLines": "0.1",
-                          "constants": [],
-                          "variables": [
-                            0.1
-                          ]
+                          "displayLines": "0.1"
                         }
                       }
                     }
@@ -453,20 +387,10 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"996331331\">Bailu_PointB1_Sub</a>",
                   "valuePerStack": {
                     "MDF_LifeTime": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     },
                     "MDF_HPIncrease2": {
-                      "operator": "Variables[0] (0.1) || RETURN",
-                      "displayLines": "0.1",
-                      "constants": [],
-                      "variables": [
-                        0.1
-                      ]
+                      "displayLines": "0.1"
                     }
                   },
                   "casterAssign": "TargetSelf"
@@ -525,12 +449,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (MDF_AddSP) || RETURN",
-                        "displayLines": "MDF_AddSP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_AddSP"
-                        ]
+                        "displayLines": "MDF_AddSP"
                       },
                       "isFixed": "(Fixed)"
                     }
@@ -553,13 +472,7 @@ const compositeAbilityObject = {
                   "name": "Define Modifier Variable",
                   "modifierName": "<a class=\"gModGreen\" id=\"36808524\">Bailu_Heal_Mark</a>[<span class=\"descriptionNumberColor\">Invigoration</span>]",
                   "value": {
-                    "operator": "Variables[0] (MDF_HealCount) || Variables[1] (MDF_HealCountExtra) || ADD || RETURN",
-                    "displayLines": "(MDF_HealCount + MDF_HealCountExtra)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HealCount",
-                      "MDF_HealCountExtra"
-                    ]
+                    "displayLines": "(MDF_HealCount + MDF_HealCountExtra)"
                   }
                 }
               ]
@@ -587,20 +500,10 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (MDF__HealPercentage2) || RETURN",
-                        "displayLines": "MDF__HealPercentage2",
-                        "constants": [],
-                        "variables": [
-                          "MDF__HealPercentage2"
-                        ]
+                        "displayLines": "MDF__HealPercentage2"
                       },
                       "healFlat": {
-                        "operator": "Variables[0] (MDF__HealValue2) || RETURN",
-                        "displayLines": "MDF__HealValue2",
-                        "constants": [],
-                        "variables": [
-                          "MDF__HealValue2"
-                        ]
+                        "displayLines": "MDF__HealValue2"
                       },
                       "formula": "Heal from Healer's MaxHP"
                     },
@@ -1091,20 +994,10 @@ const compositeAbilityObject = {
                 "target": "{{Ability Target(ST)}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (0.18) || RETURN",
-                "displayLines": "0.18",
-                "constants": [],
-                "variables": [
-                  0.18
-                ]
+                "displayLines": "0.18"
               },
               "healFlat": {
-                "operator": "Variables[0] (480) || RETURN",
-                "displayLines": "480",
-                "constants": [],
-                "variables": [
-                  480
-                ]
+                "displayLines": "480"
               },
               "formula": "Heal from Healer's MaxHP"
             },
@@ -1124,31 +1017,16 @@ const compositeAbilityObject = {
                   "variableName": "MDF_ReviveTime2",
                   "modifierName": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>",
                   "multiplier": {
-                    "operator": "Constants[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [
-                      1
-                    ],
-                    "variables": []
+                    "displayLines": "1"
                   }
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_ReviveTime2) || RETURN",
-                    "displayLines": "MDF_ReviveTime2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ReviveTime2"
-                    ]
+                    "displayLines": "MDF_ReviveTime2"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_ReviveTime) || RETURN",
-                    "displayLines": "MDF_ReviveTime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ReviveTime"
-                    ]
+                    "displayLines": "MDF_ReviveTime"
                   },
                   "assignState": "True",
                   "priorState": "Active",
@@ -1159,32 +1037,17 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Constants[0] (0) || RETURN",
-                    "displayLines": "0",
-                    "constants": [
-                      0
-                    ],
-                    "variables": []
+                    "displayLines": "0"
                   },
                   "variableName": "MDF_ReviveTime2"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_ReviveTime2) || RETURN",
-                    "displayLines": "MDF_ReviveTime2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ReviveTime2"
-                    ]
+                    "displayLines": "MDF_ReviveTime2"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_ReviveTime) || RETURN",
-                    "displayLines": "MDF_ReviveTime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ReviveTime"
-                    ]
+                    "displayLines": "MDF_ReviveTime"
                   },
                   "assignState": "True",
                   "priorState": "Disable",
@@ -1259,12 +1122,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (1) || RETURN",
-                            "displayLines": "1",
-                            "constants": [],
-                            "variables": [
-                              1
-                            ]
+                            "displayLines": "1"
                           },
                           "variableName": "MDF_SkillTree02_HealCountExtra"
                         }
@@ -1287,12 +1145,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (0.1) || RETURN",
-                            "displayLines": "0.1",
-                            "constants": [],
-                            "variables": [
-                              0.1
-                            ]
+                            "displayLines": "0.1"
                           },
                           "variableName": "MDF_SkillTree03_DamageResistance"
                         }
@@ -1315,12 +1168,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (8) || RETURN",
-                            "displayLines": "8",
-                            "constants": [],
-                            "variables": [
-                              8
-                            ]
+                            "displayLines": "8"
                           },
                           "variableName": "MDF_Rank01_AddSP"
                         }
@@ -1341,53 +1189,23 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"36808524\">Bailu_Heal_Mark</a>[<span class=\"descriptionNumberColor\">Invigoration</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "valuePerStack": {
                         "MDF__HealPercentage2": {
-                          "operator": "Variables[0] (0.054) || RETURN",
-                          "displayLines": "0.054",
-                          "constants": [],
-                          "variables": [
-                            0.054
-                          ]
+                          "displayLines": "0.054"
                         },
                         "MDF__HealValue2": {
-                          "operator": "Variables[0] (144) || RETURN",
-                          "displayLines": "144",
-                          "constants": [],
-                          "variables": [
-                            144
-                          ]
+                          "displayLines": "144"
                         },
                         "MDF_AddSP": {
-                          "operator": "Variables[0] (MDF_Rank01_AddSP) || RETURN",
-                          "displayLines": "MDF_Rank01_AddSP",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Rank01_AddSP"
-                          ]
+                          "displayLines": "MDF_Rank01_AddSP"
                         },
                         "MDF_HealCount": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         },
                         "MDF_HealCountExtra": {
-                          "operator": "Variables[0] (MDF_SkillTree02_HealCountExtra) || RETURN",
-                          "displayLines": "MDF_SkillTree02_HealCountExtra",
-                          "constants": [],
-                          "variables": [
-                            "MDF_SkillTree02_HealCountExtra"
-                          ]
+                          "displayLines": "MDF_SkillTree02_HealCountExtra"
                         }
                       },
                       "success": [
@@ -1407,12 +1225,7 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"249464740\">Bailu_PointB3</a>[<span class=\"descriptionNumberColor\">Aquatic Benediction</span>]",
                               "valuePerStack": {
                                 "MDF_DamageResistance": {
-                                  "operator": "Variables[0] (MDF_SkillTree03_DamageResistance) || RETURN",
-                                  "displayLines": "MDF_SkillTree03_DamageResistance",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_SkillTree03_DamageResistance"
-                                  ]
+                                  "displayLines": "MDF_SkillTree03_DamageResistance"
                                 }
                               }
                             }
@@ -1459,14 +1272,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (1) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(1 + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  1
-                ]
+                "displayLines": "(1 + 1)"
               },
               "variableName": "MDF_ReviveTime"
             }
@@ -1482,12 +1288,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (MDF_ReviveTime) || RETURN",
-            "displayLines": "MDF_ReviveTime",
-            "constants": [],
-            "variables": [
-              "MDF_ReviveTime"
-            ]
+            "displayLines": "MDF_ReviveTime"
           },
           "variableName": "MDF_ReviveTime2"
         },
@@ -1507,12 +1308,7 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>",
           "counter": {
-            "operator": "Variables[0] (MDF_ReviveTime) || RETURN",
-            "displayLines": "MDF_ReviveTime",
-            "constants": [],
-            "variables": [
-              "MDF_ReviveTime"
-            ]
+            "displayLines": "MDF_ReviveTime"
           }
         }
       ],
@@ -1539,20 +1335,10 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_ReviveTime2) || RETURN",
-                    "displayLines": "MDF_ReviveTime2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ReviveTime2"
-                    ]
+                    "displayLines": "MDF_ReviveTime2"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_ReviveTime) || RETURN",
-                    "displayLines": "MDF_ReviveTime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ReviveTime"
-                    ]
+                    "displayLines": "MDF_ReviveTime"
                   },
                   "assignState": "True",
                   "priorState": "Active",
@@ -1684,20 +1470,10 @@ const compositeAbilityObject = {
             "target": "{{All Team Members}}"
           },
           "healPercent": {
-            "operator": "Variables[0] (0.135) || RETURN",
-            "displayLines": "0.135",
-            "constants": [],
-            "variables": [
-              0.135
-            ]
+            "displayLines": "0.135"
           },
           "healFlat": {
-            "operator": "Variables[0] (360) || RETURN",
-            "displayLines": "360",
-            "constants": [],
-            "variables": [
-              360
-            ]
+            "displayLines": "360"
           },
           "formula": "Heal from Healer's MaxHP"
         },
@@ -1743,12 +1519,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "variableName": "MDF_SkillTree02_HealCountExtra"
                     }
@@ -1771,12 +1542,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (0.1) || RETURN",
-                        "displayLines": "0.1",
-                        "constants": [],
-                        "variables": [
-                          0.1
-                        ]
+                        "displayLines": "0.1"
                       },
                       "variableName": "MDF_SkillTree03_DamageResistance"
                     }
@@ -1799,12 +1565,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (8) || RETURN",
-                        "displayLines": "8",
-                        "constants": [],
-                        "variables": [
-                          8
-                        ]
+                        "displayLines": "8"
                       },
                       "variableName": "MDF_Rank01_AddSP"
                     }
@@ -1825,54 +1586,24 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"36808524\">Bailu_Heal_Mark</a>[<span class=\"descriptionNumberColor\">Invigoration</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "immediateEffect": true,
                   "valuePerStack": {
                     "MDF__HealPercentage2": {
-                      "operator": "Variables[0] (0.054) || RETURN",
-                      "displayLines": "0.054",
-                      "constants": [],
-                      "variables": [
-                        0.054
-                      ]
+                      "displayLines": "0.054"
                     },
                     "MDF__HealValue2": {
-                      "operator": "Variables[0] (144) || RETURN",
-                      "displayLines": "144",
-                      "constants": [],
-                      "variables": [
-                        144
-                      ]
+                      "displayLines": "144"
                     },
                     "MDF_AddSP": {
-                      "operator": "Variables[0] (MDF_Rank01_AddSP) || RETURN",
-                      "displayLines": "MDF_Rank01_AddSP",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Rank01_AddSP"
-                      ]
+                      "displayLines": "MDF_Rank01_AddSP"
                     },
                     "MDF_HealCount": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     },
                     "MDF_HealCountExtra": {
-                      "operator": "Variables[0] (MDF_SkillTree02_HealCountExtra) || RETURN",
-                      "displayLines": "MDF_SkillTree02_HealCountExtra",
-                      "constants": [],
-                      "variables": [
-                        "MDF_SkillTree02_HealCountExtra"
-                      ]
+                      "displayLines": "MDF_SkillTree02_HealCountExtra"
                     }
                   },
                   "success": [
@@ -1892,12 +1623,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"249464740\">Bailu_PointB3</a>[<span class=\"descriptionNumberColor\">Aquatic Benediction</span>]",
                           "valuePerStack": {
                             "MDF_DamageResistance": {
-                              "operator": "Variables[0] (MDF_SkillTree03_DamageResistance) || RETURN",
-                              "displayLines": "MDF_SkillTree03_DamageResistance",
-                              "constants": [],
-                              "variables": [
-                                "MDF_SkillTree03_DamageResistance"
-                              ]
+                              "displayLines": "MDF_SkillTree03_DamageResistance"
                             }
                           }
                         }
@@ -1924,21 +1650,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1195469105\">Bailu_Eidolon2</a>[<span class=\"descriptionNumberColor\">Sylphic Slumber</span>]",
               "duration": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.15) || RETURN",
-                  "displayLines": "0.15",
-                  "constants": [],
-                  "variables": [
-                    0.15
-                  ]
+                  "displayLines": "0.15"
                 }
               }
             }
@@ -2063,20 +1779,10 @@ const compositeAbilityObject = {
                 "target": "{{Ability Target(ST)}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (0.117) || RETURN",
-                "displayLines": "0.117",
-                "constants": [],
-                "variables": [
-                  0.117
-                ]
+                "displayLines": "0.117"
               },
               "healFlat": {
-                "operator": "Variables[0] (312) || RETURN",
-                "displayLines": "312",
-                "constants": [],
-                "variables": [
-                  312
-                ]
+                "displayLines": "312"
               },
               "formula": "Heal from Healer's MaxHP"
             },
@@ -2093,24 +1799,14 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.117) || RETURN",
-            "displayLines": "0.117",
-            "constants": [],
-            "variables": [
-              0.117
-            ]
+            "displayLines": "0.117"
           },
           "variableName": "MDF_HealPercentage"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (312) || RETURN",
-            "displayLines": "312",
-            "constants": [],
-            "variables": [
-              312
-            ]
+            "displayLines": "312"
           },
           "variableName": "MDF_HealValue"
         },
@@ -2126,30 +1822,14 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_HealPercentage) || Constants[0] (1) || Variables[1] (0.15) || SUB || MUL || RETURN",
-                "displayLines": "(MDF_HealPercentage * (1 - 0.15))",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_HealPercentage",
-                  0.15
-                ]
+                "displayLines": "(MDF_HealPercentage * (1 - 0.15))"
               },
               "variableName": "MDF_HealPercentage"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_HealValue) || Constants[0] (1) || Variables[1] (0.15) || SUB || MUL || RETURN",
-                "displayLines": "(MDF_HealValue * (1 - 0.15))",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_HealValue",
-                  0.15
-                ]
+                "displayLines": "(MDF_HealValue * (1 - 0.15))"
               },
               "variableName": "MDF_HealValue"
             },
@@ -2164,20 +1844,10 @@ const compositeAbilityObject = {
                     "target": "{{Projectile's Target}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (MDF_HealPercentage) || RETURN",
-                    "displayLines": "MDF_HealPercentage",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HealPercentage"
-                    ]
+                    "displayLines": "MDF_HealPercentage"
                   },
                   "healFlat": {
-                    "operator": "Variables[0] (MDF_HealValue) || RETURN",
-                    "displayLines": "MDF_HealValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HealValue"
-                    ]
+                    "displayLines": "MDF_HealValue"
                   },
                   "formula": "Heal from Healer's MaxHP"
                 },
@@ -2196,14 +1866,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(2 - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              2
-            ]
+            "displayLines": "(2 - 1)"
           },
           "execute": [
             {
@@ -2218,30 +1881,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_HealPercentage) || Constants[0] (1) || Variables[1] (0.15) || SUB || MUL || RETURN",
-                    "displayLines": "(MDF_HealPercentage * (1 - 0.15))",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_HealPercentage",
-                      0.15
-                    ]
+                    "displayLines": "(MDF_HealPercentage * (1 - 0.15))"
                   },
                   "variableName": "MDF_HealPercentage"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_HealValue) || Constants[0] (1) || Variables[1] (0.15) || SUB || MUL || RETURN",
-                    "displayLines": "(MDF_HealValue * (1 - 0.15))",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_HealValue",
-                      0.15
-                    ]
+                    "displayLines": "(MDF_HealValue * (1 - 0.15))"
                   },
                   "variableName": "MDF_HealValue"
                 },
@@ -2256,20 +1903,10 @@ const compositeAbilityObject = {
                         "target": "{{Projectile's Target}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (MDF_HealPercentage) || RETURN",
-                        "displayLines": "MDF_HealPercentage",
-                        "constants": [],
-                        "variables": [
-                          "MDF_HealPercentage"
-                        ]
+                        "displayLines": "MDF_HealPercentage"
                       },
                       "healFlat": {
-                        "operator": "Variables[0] (MDF_HealValue) || RETURN",
-                        "displayLines": "MDF_HealValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_HealValue"
-                        ]
+                        "displayLines": "MDF_HealValue"
                       },
                       "formula": "Heal from Healer's MaxHP"
                     },
@@ -2396,20 +2033,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"

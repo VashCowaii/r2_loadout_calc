@@ -76,13 +76,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Imaginary",
                         "Damage": {
-                          "operator": "Variables[0] (1) || Variables[1] (0.8) || MUL || RETURN",
-                          "displayLines": "(1 * 0.8)",
-                          "constants": [],
-                          "variables": [
-                            1,
-                            0.8
-                          ]
+                          "displayLines": "(1 * 0.8)"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -108,13 +102,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Imaginary",
                         "Damage": {
-                          "operator": "Variables[0] (0.72) || Variables[1] (1.2) || MUL || RETURN",
-                          "displayLines": "(0.72 * 1.2)",
-                          "constants": [],
-                          "variables": [
-                            0.72,
-                            1.2
-                          ]
+                          "displayLines": "(0.72 * 1.2)"
                         },
                         "Toughness": null,
                         "Tags": null,

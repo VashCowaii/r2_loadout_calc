@@ -141,12 +141,7 @@ const configAbility = {
                             "value1": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;",
                             "compareType": ">",
                             "value2": {
-                              "operator": "Variables[0] (W2_Valkyrie02_00_Skill04_CurrentActionDelay) || RETURN",
-                              "displayLines": "W2_Valkyrie02_00_Skill04_CurrentActionDelay",
-                              "constants": [],
-                              "variables": [
-                                "W2_Valkyrie02_00_Skill04_CurrentActionDelay"
-                              ]
+                              "displayLines": "W2_Valkyrie02_00_Skill04_CurrentActionDelay"
                             }
                           },
                           {
@@ -484,12 +479,7 @@ const configAbility = {
                             "value1": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;",
                             "compareType": ">",
                             "value2": {
-                              "operator": "Variables[0] (W2_Valkyrie02_00_Skill04_CurrentActionDelay) || RETURN",
-                              "displayLines": "W2_Valkyrie02_00_Skill04_CurrentActionDelay",
-                              "constants": [],
-                              "variables": [
-                                "W2_Valkyrie02_00_Skill04_CurrentActionDelay"
-                              ]
+                              "displayLines": "W2_Valkyrie02_00_Skill04_CurrentActionDelay"
                             }
                           },
                           {

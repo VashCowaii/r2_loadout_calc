@@ -11,20 +11,10 @@ const configAbility = {
         "target": "{{Ability Target(ST)}}"
       },
       "healPercent": {
-        "operator": "Variables[0] (0.15) || RETURN",
-        "displayLines": "0.15",
-        "constants": [],
-        "variables": [
-          0.15
-        ]
+        "displayLines": "0.15"
       },
       "healFlat": {
-        "operator": "Variables[0] (400) || RETURN",
-        "displayLines": "400",
-        "constants": [],
-        "variables": [
-          400
-        ]
+        "displayLines": "400"
       },
       "formula": "Heal from Healer's MaxHP"
     },

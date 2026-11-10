@@ -77,12 +77,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionRES</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_StanceBreakTakenRatio) || RETURN",
-                    "displayLines": "MDF_StanceBreakTakenRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_StanceBreakTakenRatio"
-                    ]
+                    "displayLines": "MDF_StanceBreakTakenRatio"
                   }
                 }
               ]
@@ -255,13 +250,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackAddedRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                    "displayLines": "(MDF_AttackAddedRatio_PerLayer * ModifierLayers)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackAddedRatio_PerLayer",
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "(MDF_AttackAddedRatio_PerLayer * ModifierLayers)"
                   }
                 }
               ]
@@ -285,21 +274,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1091695268\">MLevel_RougeSpecialStage05_1_Attack</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "valuePerStack": {
                     "MDF_AttackAddedRatio_PerLayer": {
-                      "operator": "Variables[0] (MDF_AttackAddedRatio_PerLayer) || RETURN",
-                      "displayLines": "MDF_AttackAddedRatio_PerLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AttackAddedRatio_PerLayer"
-                      ]
+                      "displayLines": "MDF_AttackAddedRatio_PerLayer"
                     }
                   }
                 }
@@ -325,12 +304,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
-                    "displayLines": "MDF_AttackAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackAddedRatio"
-                    ]
+                    "displayLines": "MDF_AttackAddedRatio"
                   }
                 }
               ]
@@ -360,14 +334,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_TurnCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_TurnCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_TurnCount"
-                        ]
+                        "displayLines": "(MDF_TurnCount + 1)"
                       },
                       "variableName": "MDF_TurnCount"
                     }
@@ -380,12 +347,7 @@ const compositeAbilityObject = {
                     "value1": "MDF_TurnCount",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_Turn) || RETURN",
-                      "displayLines": "MDF_Turn",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Turn"
-                      ]
+                      "displayLines": "MDF_Turn"
                     }
                   },
                   "passed": [
@@ -403,12 +365,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1273587047\">MLevel_RougeSpecialStage04_1_Attack</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
-                          "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
-                          "displayLines": "MDF_AttackAddedRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_AttackAddedRatio"
-                          ]
+                          "displayLines": "MDF_AttackAddedRatio"
                         }
                       }
                     }
@@ -445,13 +402,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_SpeedAddedRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                    "displayLines": "(MDF_SpeedAddedRatio_PerLayer * ModifierLayers)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedAddedRatio_PerLayer",
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "(MDF_SpeedAddedRatio_PerLayer * ModifierLayers)"
                   }
                 }
               ]
@@ -492,21 +443,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1642131353\">MLevel_RougeSpecialStage03_1_Speed</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                        "displayLines": "MDF_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxLayer"
-                        ]
+                        "displayLines": "MDF_MaxLayer"
                       },
                       "valuePerStack": {
                         "MDF_SpeedAddedRatio_PerLayer": {
-                          "operator": "Variables[0] (MDF_SpeedAddedRatio_PerLayer) || RETURN",
-                          "displayLines": "MDF_SpeedAddedRatio_PerLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_SpeedAddedRatio_PerLayer"
-                          ]
+                          "displayLines": "MDF_SpeedAddedRatio_PerLayer"
                         }
                       }
                     }
@@ -533,12 +474,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
-                    "displayLines": "MDF_AttackAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackAddedRatio"
-                    ]
+                    "displayLines": "MDF_AttackAddedRatio"
                   }
                 }
               ]
@@ -565,12 +501,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_HPRatio) || RETURN",
-                      "displayLines": "MDF_HPRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_HPRatio"
-                      ]
+                      "displayLines": "MDF_HPRatio"
                     }
                   },
                   "passed": [
@@ -583,12 +514,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1293097583\">MLevel_RougeSpecialStage02_1_Attack</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
-                          "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
-                          "displayLines": "MDF_AttackAddedRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_AttackAddedRatio"
-                          ]
+                          "displayLines": "MDF_AttackAddedRatio"
                         }
                       }
                     },
@@ -685,12 +611,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
-                    "displayLines": "MDF_AttackAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackAddedRatio"
-                    ]
+                    "displayLines": "MDF_AttackAddedRatio"
                   }
                 },
                 {
@@ -701,12 +622,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DefenceAddedRatio) || RETURN",
-                    "displayLines": "MDF_DefenceAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DefenceAddedRatio"
-                    ]
+                    "displayLines": "MDF_DefenceAddedRatio"
                   }
                 }
               ]
@@ -773,12 +689,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]

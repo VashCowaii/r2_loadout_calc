@@ -92,12 +92,7 @@ const configAbility = {
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (SummonType) || RETURN",
-            "displayLines": "SummonType",
-            "constants": [],
-            "variables": [
-              "SummonType"
-            ]
+            "displayLines": "SummonType"
           },
           "caseEvents": [
             {
@@ -177,17 +172,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || Constants[0] (1) || Variables[1] (_TargetCurrentHp) || Variables[2] (_TargetMaxHp) || DIV || Variables[3] ({[Skill02[1]]}) || MUL || ADD || MUL || RETURN",
-                  "displayLines": "({[Skill02[0]]} * (1 + ((_TargetCurrentHp / _TargetMaxHp) * {[Skill02[1]]})))",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    "{[Skill02[0]]}",
-                    "_TargetCurrentHp",
-                    "_TargetMaxHp",
-                    "{[Skill02[1]]}"
-                  ]
+                  "displayLines": "({[Skill02[0]]} * (1 + ((_TargetCurrentHp / _TargetMaxHp) * {[Skill02[1]]})))"
                 },
                 "Toughness": null,
                 "Tags": null,

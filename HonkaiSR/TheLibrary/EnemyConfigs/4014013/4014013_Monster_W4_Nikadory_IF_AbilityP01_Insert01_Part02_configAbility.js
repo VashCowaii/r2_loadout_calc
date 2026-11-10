@@ -13,12 +13,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-          "displayLines": "{[Skill05[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill05[0]]}"
-          ]
+          "displayLines": "{[Skill05[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -35,12 +30,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
       "valuePerStack": {
         "MDF_DamageUpRatio_PerLayer": {
-          "operator": "Variables[0] ({[SkillP03[0]]}) || RETURN",
-          "displayLines": "{[SkillP03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP03[0]]}"
-          ]
+          "displayLines": "{[SkillP03[0]]}"
         }
       },
       "casterAssign": "TargetSelf"
@@ -73,12 +63,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] ({[SkillP03[0]]}) || RETURN",
-                  "displayLines": "{[SkillP03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP03[0]]}"
-                  ]
+                  "displayLines": "{[SkillP03[0]]}"
                 }
               },
               "casterAssign": "TargetSelf"

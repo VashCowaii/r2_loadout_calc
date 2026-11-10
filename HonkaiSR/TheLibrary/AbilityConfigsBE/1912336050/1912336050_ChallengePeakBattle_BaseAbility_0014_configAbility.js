@@ -41,13 +41,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Weaken%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ChallengePeakBattle_0014_ADF_2) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(ChallengePeakBattle_0014_ADF_2 * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "ChallengePeakBattle_0014_ADF_2",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(ChallengePeakBattle_0014_ADF_2 * MDF_Layer)"
               }
             },
             {
@@ -113,29 +107,14 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1350070322\">Modifier_ChallengePeakBattle_BaseAbility_0014_02</a>[<span class=\"descriptionNumberColor\">Confinement</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_0014_ADF_1": {
-                      "operator": "Variables[0] (ChallengePeakBattle_0014_ADF_1) || RETURN",
-                      "displayLines": "ChallengePeakBattle_0014_ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "ChallengePeakBattle_0014_ADF_1"
-                      ]
+                      "displayLines": "ChallengePeakBattle_0014_ADF_1"
                     },
                     "ChallengePeakBattle_0014_ADF_2": {
-                      "operator": "Variables[0] (ChallengePeakBattle_0014_ADF_2) || RETURN",
-                      "displayLines": "ChallengePeakBattle_0014_ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "ChallengePeakBattle_0014_ADF_2"
-                      ]
+                      "displayLines": "ChallengePeakBattle_0014_ADF_2"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   }
                 }
               ]
@@ -176,20 +155,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1350070322\">Modifier_ChallengePeakBattle_BaseAbility_0014_02</a>[<span class=\"descriptionNumberColor\">Confinement</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_0014_ADF_1": {
-                      "operator": "Variables[0] (ChallengePeakBattle_0014_ADF_1) || RETURN",
-                      "displayLines": "ChallengePeakBattle_0014_ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "ChallengePeakBattle_0014_ADF_1"
-                      ]
+                      "displayLines": "ChallengePeakBattle_0014_ADF_1"
                     },
                     "ChallengePeakBattle_0014_ADF_2": {
-                      "operator": "Variables[0] (ChallengePeakBattle_0014_ADF_2) || RETURN",
-                      "displayLines": "ChallengePeakBattle_0014_ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "ChallengePeakBattle_0014_ADF_2"
-                      ]
+                      "displayLines": "ChallengePeakBattle_0014_ADF_2"
                     }
                   }
                 },
@@ -202,20 +171,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1350070322\">Modifier_ChallengePeakBattle_BaseAbility_0014_02</a>[<span class=\"descriptionNumberColor\">Confinement</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_0014_ADF_1": {
-                      "operator": "Variables[0] (ChallengePeakBattle_0014_ADF_1) || RETURN",
-                      "displayLines": "ChallengePeakBattle_0014_ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "ChallengePeakBattle_0014_ADF_1"
-                      ]
+                      "displayLines": "ChallengePeakBattle_0014_ADF_1"
                     },
                     "ChallengePeakBattle_0014_ADF_2": {
-                      "operator": "Variables[0] (ChallengePeakBattle_0014_ADF_2) || RETURN",
-                      "displayLines": "ChallengePeakBattle_0014_ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "ChallengePeakBattle_0014_ADF_2"
-                      ]
+                      "displayLines": "ChallengePeakBattle_0014_ADF_2"
                     }
                   }
                 }
@@ -265,29 +224,14 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1350070322\">Modifier_ChallengePeakBattle_BaseAbility_0014_02</a>[<span class=\"descriptionNumberColor\">Confinement</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_0014_ADF_1": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     },
                     "ChallengePeakBattle_0014_ADF_2": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (#ADF_1) || RETURN",
-                    "displayLines": "#ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_1"
-                    ]
+                    "displayLines": "#ADF_1"
                   }
                 }
               ]

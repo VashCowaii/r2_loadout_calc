@@ -75,15 +75,7 @@ const configAbility = {
                   "name": "Set Battle Track Progress",
                   "progress": 0,
                   "count": {
-                    "operator": "Variables[0] (WHOLE) || Variables[1] (_CurrentHPRatio) || Constants[0] (100) || MUL || PARAM_1 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((_CurrentHPRatio * 100))",
-                    "constants": [
-                      100
-                    ],
-                    "variables": [
-                      "WHOLE",
-                      "_CurrentHPRatio"
-                    ]
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((_CurrentHPRatio * 100))"
                   },
                   "ID": "#1%"
                 }
@@ -231,14 +223,7 @@ const configAbility = {
         "value1": "_CheckPickNum",
         "compareType": "<",
         "value2": {
-          "operator": "Variables[0] (_CheckAvatarNum) || Constants[0] (2) || DIV || RETURN",
-          "displayLines": "(_CheckAvatarNum / 2)",
-          "constants": [
-            2
-          ],
-          "variables": [
-            "_CheckAvatarNum"
-          ]
+          "displayLines": "(_CheckAvatarNum / 2)"
         }
       },
       "passed": [
@@ -250,16 +235,7 @@ const configAbility = {
           },
           "searchRandom": true,
           "maxTargets": {
-            "operator": "Variables[0] (CEIL) || Variables[1] (_CheckAvatarNum) || Constants[0] (2) || DIV || PARAM_1 || FUNCTION || Variables[2] (_CheckPickNum) || SUB || RETURN",
-            "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>((_CheckAvatarNum / 2)) - _CheckPickNum)",
-            "constants": [
-              2
-            ],
-            "variables": [
-              "CEIL",
-              "_CheckAvatarNum",
-              "_CheckPickNum"
-            ]
+            "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>((_CheckAvatarNum / 2)) - _CheckPickNum)"
           },
           "conditions": {
             "name": "Has Modifier",
@@ -395,36 +371,16 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
       "valuePerStack": {
         "MDF_RallyTransferRatio": {
-          "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[0]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[0]]}"
         },
         "MDF_Rally_HealPercentage": {
-          "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[1]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[1]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[1]]}"
         },
         "MDF_Rally_HealUpRatio": {
-          "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[2]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[2]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[2]]}"
         },
         "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-          "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[3]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[3]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[3]]}"
         }
       }
     },
@@ -437,12 +393,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-          "displayLines": "{[Skill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[0]]}"
-          ]
+          "displayLines": "{[Skill01[0]]}"
         },
         "Toughness": null,
         "Tags": null,

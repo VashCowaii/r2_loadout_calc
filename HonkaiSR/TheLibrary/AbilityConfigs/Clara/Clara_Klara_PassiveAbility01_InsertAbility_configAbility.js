@@ -45,26 +45,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (EnergyBar_ATKCount) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(EnergyBar_ATKCount - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "EnergyBar_ATKCount"
-            ]
+            "displayLines": "(EnergyBar_ATKCount - 1)"
           },
           "variableName": "EnergyBar_ATKCount"
         },
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (EnergyBar_ATKCount) || RETURN",
-            "displayLines": "EnergyBar_ATKCount",
-            "constants": [],
-            "variables": [
-              "EnergyBar_ATKCount"
-            ]
+            "displayLines": "EnergyBar_ATKCount"
           },
           "assignState": "True",
           "priorState": "Active"
@@ -87,12 +75,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1077895558\">Klara_Trace03</a>",
           "valuePerStack": {
             "MDF_AllDamageTypeAddRatio": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             }
           }
         }
@@ -118,21 +101,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (1.6) || Variables[1] (1.6) || ADD || RETURN",
-              "displayLines": "(1.6 + 1.6)",
-              "constants": [],
-              "variables": [
-                1.6,
-                1.6
-              ]
+              "displayLines": "(1.6 + 1.6)"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "ToughnessDMGType": {
               "DamageType": "Physical"
@@ -162,23 +134,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] (1.6) || Variables[1] (1.6) || ADD || Constants[0] (2) || DIV || RETURN",
-                  "displayLines": "((1.6 + 1.6) / 2)",
-                  "constants": [
-                    2
-                  ],
-                  "variables": [
-                    1.6,
-                    1.6
-                  ]
+                  "displayLines": "((1.6 + 1.6) / 2)"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "ToughnessDMGType": {
                   "DamageType": "Physical"
@@ -208,20 +167,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (1.6) || RETURN",
-              "displayLines": "1.6",
-              "constants": [],
-              "variables": [
-                1.6
-              ]
+              "displayLines": "1.6"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "ToughnessDMGType": {
               "DamageType": "Physical"

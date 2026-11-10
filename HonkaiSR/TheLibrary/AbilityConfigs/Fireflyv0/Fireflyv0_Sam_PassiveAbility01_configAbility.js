@@ -252,12 +252,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Variables[0] (0.25) || INVERT || RETURN",
-            "displayLines": "-0.25",
-            "constants": [],
-            "variables": [
-              0.25
-            ]
+            "displayLines": "-0.25"
           }
         }
       },
@@ -281,12 +276,7 @@ const configAbility = {
                   },
                   "variables": {
                     "parameter[0]_NormalizedValue": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     }
                   }
                 }
@@ -329,13 +319,7 @@ const configAbility = {
           ]
         },
         "toughnessReductionPreview": {
-          "operator": "Variables[0] (0.5) || Variables[1] (Rank06_StanceBreakAddedRatio) || ADD || RETURN",
-          "displayLines": "(0.5 + Rank06_StanceBreakAddedRatio)",
-          "constants": [],
-          "variables": [
-            0.5,
-            "Rank06_StanceBreakAddedRatio"
-          ]
+          "displayLines": "(0.5 + Rank06_StanceBreakAddedRatio)"
         },
         "addedDisplayWeakness": {
           "DamageType": "Fire"
@@ -387,21 +371,10 @@ const configAbility = {
           ]
         },
         "toughnessReductionPreview": {
-          "operator": "Variables[0] (0.5) || Variables[1] (Rank06_StanceBreakAddedRatio) || ADD || RETURN",
-          "displayLines": "(0.5 + Rank06_StanceBreakAddedRatio)",
-          "constants": [],
-          "variables": [
-            0.5,
-            "Rank06_StanceBreakAddedRatio"
-          ]
+          "displayLines": "(0.5 + Rank06_StanceBreakAddedRatio)"
         },
         "toughnessForcedReductionPreview": {
-          "operator": "Variables[0] (0.55) || RETURN",
-          "displayLines": "0.55",
-          "constants": [],
-          "variables": [
-            0.55
-          ]
+          "displayLines": "0.55"
         },
         "showAsForcedReduction": true
       }
@@ -450,13 +423,7 @@ const configAbility = {
           ]
         },
         "toughnessReductionPreview": {
-          "operator": "Variables[0] (0.5) || Variables[1] (Rank06_StanceBreakAddedRatio) || ADD || RETURN",
-          "displayLines": "(0.5 + Rank06_StanceBreakAddedRatio)",
-          "constants": [],
-          "variables": [
-            0.5,
-            "Rank06_StanceBreakAddedRatio"
-          ]
+          "displayLines": "(0.5 + Rank06_StanceBreakAddedRatio)"
         }
       }
     },
@@ -494,21 +461,10 @@ const configAbility = {
           ]
         },
         "toughnessReductionPreview": {
-          "operator": "Variables[0] (0.5) || Variables[1] (Rank06_StanceBreakAddedRatio) || ADD || RETURN",
-          "displayLines": "(0.5 + Rank06_StanceBreakAddedRatio)",
-          "constants": [],
-          "variables": [
-            0.5,
-            "Rank06_StanceBreakAddedRatio"
-          ]
+          "displayLines": "(0.5 + Rank06_StanceBreakAddedRatio)"
         },
         "toughnessForcedReductionPreview": {
-          "operator": "Variables[0] (0.55) || RETURN",
-          "displayLines": "0.55",
-          "constants": [],
-          "variables": [
-            0.55
-          ]
+          "displayLines": "0.55"
         },
         "showAsForcedReduction": true
       }
@@ -546,13 +502,7 @@ const configAbility = {
           ]
         },
         "toughnessReductionPreview": {
-          "operator": "Variables[0] (0.5) || Variables[1] (Rank06_StanceBreakAddedRatio) || ADD || RETURN",
-          "displayLines": "(0.5 + Rank06_StanceBreakAddedRatio)",
-          "constants": [],
-          "variables": [
-            0.5,
-            "Rank06_StanceBreakAddedRatio"
-          ]
+          "displayLines": "(0.5 + Rank06_StanceBreakAddedRatio)"
         }
       }
     },
@@ -613,13 +563,7 @@ const configAbility = {
                   },
                   "previewType": null,
                   "previewValue": {
-                    "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (0.4) || MUL || RETURN",
-                    "displayLines": "(MDF_MaxHP * 0.4)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxHP",
-                      0.4
-                    ]
+                    "displayLines": "(MDF_MaxHP * 0.4)"
                   }
                 }
               ]
@@ -645,12 +589,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Constants[0] (1) || INVERT || RETURN",
-            "displayLines": "-1",
-            "constants": [
-              1
-            ],
-            "variables": []
+            "displayLines": "-1"
           }
         }
       }
@@ -704,16 +643,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Constants[0] (1) || Variables[0] (_HPRatioCurrent) || SUB || Constants[0] (1) || Variables[1] (0.2) || SUB || DIV || Variables[2] (_RedModeResRatio) || ADD || RETURN",
-                "displayLines": "(((1 - _HPRatioCurrent) / (1 - 0.2)) + _RedModeResRatio)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_HPRatioCurrent",
-                  0.2,
-                  "_RedModeResRatio"
-                ]
+                "displayLines": "(((1 - _HPRatioCurrent) / (1 - 0.2)) + _RedModeResRatio)"
               },
               "variableName": "_PassiveResRatio"
             },
@@ -735,13 +665,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1021523829\">Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.4) || Variables[1] (_PassiveResRatio) || MUL || RETURN",
-                      "displayLines": "(0.4 * _PassiveResRatio)",
-                      "constants": [],
-                      "variables": [
-                        0.4,
-                        "_PassiveResRatio"
-                      ]
+                      "displayLines": "(0.4 * _PassiveResRatio)"
                     }
                   }
                 }
@@ -763,24 +687,14 @@ const configAbility = {
                 "value1": "_BreakDamageAddedRatio",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (3.6) || RETURN",
-                  "displayLines": "3.6",
-                  "constants": [],
-                  "variables": [
-                    3.6
-                  ]
+                  "displayLines": "3.6"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (3.6) || RETURN",
-                    "displayLines": "3.6",
-                    "constants": [],
-                    "variables": [
-                      3.6
-                    ]
+                    "displayLines": "3.6"
                   },
                   "variableName": "_BreakDamageAddedRatio"
                 }
@@ -789,28 +703,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (2) || Variables[1] (0.2) || Variables[2] (_BreakDamageAddedRatio) || MUL || ADD || RETURN",
-                "displayLines": "(2 + (0.2 * _BreakDamageAddedRatio))",
-                "constants": [],
-                "variables": [
-                  2,
-                  0.2,
-                  "_BreakDamageAddedRatio"
-                ]
+                "displayLines": "(2 + (0.2 * _BreakDamageAddedRatio))"
               },
               "variableName": "Skill21_DamagePercentage"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (1) || Variables[1] (0.1) || Variables[2] (_BreakDamageAddedRatio) || MUL || ADD || RETURN",
-                "displayLines": "(1 + (0.1 * _BreakDamageAddedRatio))",
-                "constants": [],
-                "variables": [
-                  1,
-                  0.1,
-                  "_BreakDamageAddedRatio"
-                ]
+                "displayLines": "(1 + (0.1 * _BreakDamageAddedRatio))"
               },
               "variableName": "Skill21_DamagePercentageAD"
             }
@@ -867,16 +767,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Constants[0] (1) || Variables[0] (_HPRatioCurrent) || SUB || Constants[0] (1) || Variables[1] (0.2) || SUB || DIV || Variables[2] (_RedModeResRatio) || ADD || RETURN",
-                    "displayLines": "(((1 - _HPRatioCurrent) / (1 - 0.2)) + _RedModeResRatio)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_HPRatioCurrent",
-                      0.2,
-                      "_RedModeResRatio"
-                    ]
+                    "displayLines": "(((1 - _HPRatioCurrent) / (1 - 0.2)) + _RedModeResRatio)"
                   },
                   "variableName": "_PassiveResRatio"
                 },
@@ -898,13 +789,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1021523829\">Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.4) || Variables[1] (_PassiveResRatio) || MUL || RETURN",
-                          "displayLines": "(0.4 * _PassiveResRatio)",
-                          "constants": [],
-                          "variables": [
-                            0.4,
-                            "_PassiveResRatio"
-                          ]
+                          "displayLines": "(0.4 * _PassiveResRatio)"
                         }
                       }
                     }
@@ -929,12 +814,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_HPChange) || INVERT || RETURN",
-                "displayLines": "-_HPChange",
-                "constants": [],
-                "variables": [
-                  "_HPChange"
-                ]
+                "displayLines": "-_HPChange"
               },
               "variableName": "_HPChange"
             }
@@ -984,14 +864,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (_MaxSP) || Constants[0] (0.5) || MUL || RETURN",
-                    "displayLines": "(_MaxSP * 0.5)",
-                    "constants": [
-                      0.5
-                    ],
-                    "variables": [
-                      "_MaxSP"
-                    ]
+                    "displayLines": "(_MaxSP * 0.5)"
                   },
                   "adjustment": "Set"
                 }
@@ -1066,24 +939,14 @@ const configAbility = {
                     "value1": "_BreakDamageAddedRatio",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (3.6) || RETURN",
-                      "displayLines": "3.6",
-                      "constants": [],
-                      "variables": [
-                        3.6
-                      ]
+                      "displayLines": "3.6"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (3.6) || RETURN",
-                        "displayLines": "3.6",
-                        "constants": [],
-                        "variables": [
-                          3.6
-                        ]
+                        "displayLines": "3.6"
                       },
                       "variableName": "_BreakDamageAddedRatio"
                     }
@@ -1092,28 +955,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (2) || Variables[1] (0.2) || Variables[2] (_BreakDamageAddedRatio) || MUL || ADD || RETURN",
-                    "displayLines": "(2 + (0.2 * _BreakDamageAddedRatio))",
-                    "constants": [],
-                    "variables": [
-                      2,
-                      0.2,
-                      "_BreakDamageAddedRatio"
-                    ]
+                    "displayLines": "(2 + (0.2 * _BreakDamageAddedRatio))"
                   },
                   "variableName": "Skill21_DamagePercentage"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (1) || Variables[1] (0.1) || Variables[2] (_BreakDamageAddedRatio) || MUL || ADD || RETURN",
-                    "displayLines": "(1 + (0.1 * _BreakDamageAddedRatio))",
-                    "constants": [],
-                    "variables": [
-                      1,
-                      0.1,
-                      "_BreakDamageAddedRatio"
-                    ]
+                    "displayLines": "(1 + (0.1 * _BreakDamageAddedRatio))"
                   },
                   "variableName": "Skill21_DamagePercentageAD"
                 }

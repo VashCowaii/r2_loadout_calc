@@ -42,12 +42,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-            "displayLines": "{[Skill02[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[2]]}"
-            ]
+            "displayLines": "{[Skill02[2]]}"
           },
           "variableName": "Wolf_MaxAttackCount"
         },
@@ -60,12 +55,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1905621078\">Enemy_W2_Lycan_RageControllerV2</a>",
           "valuePerStack": {
             "MaxAttackCount": {
-              "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-              "displayLines": "{[Skill02[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[2]]}"
-              ]
+              "displayLines": "{[Skill02[2]]}"
             }
           },
           "casterAssign": "TargetSelf"
@@ -123,12 +113,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (MDF_HealRatio) || RETURN",
-                    "displayLines": "MDF_HealRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HealRatio"
-                    ]
+                    "displayLines": "MDF_HealRatio"
                   },
                   "formula": "Heal from Target MaxHP"
                 }
@@ -240,12 +225,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_SpeedUpRatio) || RETURN",
-                    "displayLines": "MDF_SpeedUpRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedUpRatio"
-                    ]
+                    "displayLines": "MDF_SpeedUpRatio"
                   }
                 }
               ]
@@ -260,12 +240,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (MDF_HealRatio) || RETURN",
-                    "displayLines": "MDF_HealRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HealRatio"
-                    ]
+                    "displayLines": "MDF_HealRatio"
                   },
                   "formula": "Heal from Target MaxHP"
                 }
@@ -391,12 +366,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1949316860\">Enemy_W2_Lycan_01_RageStatusEnhance</a>[<span class=\"descriptionNumberColor\">Moon Rage</span>]",
                           "valuePerStack": {
                             "MDF_HealRatio": {
-                              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                              "displayLines": "{[Skill02[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill02[1]]}"
-                              ]
+                              "displayLines": "{[Skill02[1]]}"
                             }
                           }
                         }
@@ -411,20 +381,10 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1326641454\">Enemy_W2_Lycan_01_RageStatus</a>[<span class=\"descriptionNumberColor\">Moon Rage</span>]",
                           "valuePerStack": {
                             "MDF_SpeedUpRatio": {
-                              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                              "displayLines": "{[Skill02[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill02[0]]}"
-                              ]
+                              "displayLines": "{[Skill02[0]]}"
                             },
                             "MDF_HealRatio": {
-                              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                              "displayLines": "{[Skill02[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill02[1]]}"
-                              ]
+                              "displayLines": "{[Skill02[1]]}"
                             }
                           }
                         }
@@ -463,12 +423,7 @@ const compositeAbilityObject = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                "displayLines": "Wolf_AttackCount",
-                "constants": [],
-                "variables": [
-                  "Wolf_AttackCount"
-                ]
+                "displayLines": "Wolf_AttackCount"
               },
               "entityClass": "Enemy",
               "target": {
@@ -476,12 +431,7 @@ const compositeAbilityObject = {
                 "target": "{{Parameter Target}}"
               },
               "maximum": {
-                "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                "displayLines": "{[Skill02[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill02[2]]}"
-                ]
+                "displayLines": "{[Skill02[2]]}"
               },
               "assignState": "False"
             },
@@ -552,12 +502,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,

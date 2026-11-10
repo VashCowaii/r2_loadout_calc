@@ -24,14 +24,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "setValue": {
-        "operator": "Variables[0] (Gepard_MaxHPValue) || Variables[1] (0.5) || Variables[2] (0.5) || ADD || MUL || RETURN",
-        "displayLines": "(Gepard_MaxHPValue * (0.5 + 0.5))",
-        "constants": [],
-        "variables": [
-          "Gepard_MaxHPValue",
-          0.5,
-          0.5
-        ]
+        "displayLines": "(Gepard_MaxHPValue * (0.5 + 0.5))"
       }
     },
     {
@@ -99,12 +92,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (MDF_MaxSP) || RETURN",
-            "displayLines": "MDF_MaxSP",
-            "constants": [],
-            "variables": [
-              "MDF_MaxSP"
-            ]
+            "displayLines": "MDF_MaxSP"
           },
           "isFixed": "* ERR"
         }

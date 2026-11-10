@@ -39,12 +39,7 @@ const configAbility = {
                 {
                   "name": "Assign Advance/Delay to Current Ability Use",
                   "adjustmentValue": {
-                    "operator": "Variables[0] (MDF_ActionDelayRatio) || RETURN",
-                    "displayLines": "MDF_ActionDelayRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ActionDelayRatio"
-                    ]
+                    "displayLines": "MDF_ActionDelayRatio"
                   },
                   "adjustmentType": "Advance"
                 },

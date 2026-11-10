@@ -34,12 +34,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -73,23 +68,10 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": {
-                "operator": "Variables[0] (Serval_Ran06_Judge_MaxSP) || Variables[1] (SERVAL_OBJECT_UNUSED_1) || MUL || RETURN",
-                "displayLines": "(Serval_Ran06_Judge_MaxSP * SERVAL_OBJECT_UNUSED_1)",
-                "constants": [],
-                "variables": [
-                  "Serval_Ran06_Judge_MaxSP",
-                  "SERVAL_OBJECT_UNUSED_1"
-                ]
+                "displayLines": "(Serval_Ran06_Judge_MaxSP * SERVAL_OBJECT_UNUSED_1)"
               },
               "maxValue": {
-                "operator": "Variables[0] (Serval_Ran06_Judge_MaxSP) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(Serval_Ran06_Judge_MaxSP + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "Serval_Ran06_Judge_MaxSP"
-                ]
+                "displayLines": "(Serval_Ran06_Judge_MaxSP + 1)"
               },
               "enteringRange": [
                 {
@@ -144,12 +126,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (SERVAL_OBJECT_UNUSED_2) || RETURN",
-                    "displayLines": "SERVAL_OBJECT_UNUSED_2",
-                    "constants": [],
-                    "variables": [
-                      "SERVAL_OBJECT_UNUSED_2"
-                    ]
+                    "displayLines": "SERVAL_OBJECT_UNUSED_2"
                   },
                   "variableName": "MAvatar_Serval_00_Rank06_ShowRatio"
                 },
@@ -173,12 +150,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (SERVAL_OBJECT_UNUSED_2) || RETURN",
-                "displayLines": "SERVAL_OBJECT_UNUSED_2",
-                "constants": [],
-                "variables": [
-                  "SERVAL_OBJECT_UNUSED_2"
-                ]
+                "displayLines": "SERVAL_OBJECT_UNUSED_2"
               },
               "variableName": "MAvatar_Serval_00_Rank06_ShowRatio"
             }

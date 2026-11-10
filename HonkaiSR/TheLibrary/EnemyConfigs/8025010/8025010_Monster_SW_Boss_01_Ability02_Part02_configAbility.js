@@ -25,12 +25,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "HitSplit": 0.05,
             "Toughness": null,
@@ -55,12 +50,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "HitSplit": 0.05,
             "Toughness": null,
@@ -81,12 +71,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-          "displayLines": "{[Skill02[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[0]]}"
-          ]
+          "displayLines": "{[Skill02[0]]}"
         },
         "HitSplit": 0.6,
         "Toughness": null,
@@ -105,29 +90,14 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"2065489118\">Standard_Entangle</a>[<span class=\"descriptionNumberColor\">Entanglement</span>]",
       "duration": 1,
       "baseChance": {
-        "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-        "displayLines": "{[Skill02[3]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill02[3]]}"
-        ]
+        "displayLines": "{[Skill02[3]]}"
       },
       "valuePerStack": {
         "MDF_ActionDelayRatio": {
-          "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-          "displayLines": "{[Skill02[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[1]]}"
-          ]
+          "displayLines": "{[Skill02[1]]}"
         },
         "Modifier_Entangle_DamagePercentage": {
-          "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-          "displayLines": "{[Skill02[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[2]]}"
-          ]
+          "displayLines": "{[Skill02[2]]}"
         },
         "Modifier_Entangle_DamageValue": 0
       }
@@ -141,20 +111,10 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1730193233\">Enemy_SW_Boss_01_SummonMinion</a>",
       "valuePerStack": {
         "MDF_SummonID": {
-          "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-          "displayLines": "SummonList_ADF_1",
-          "constants": [],
-          "variables": [
-            "SummonList_ADF_1"
-          ]
+          "displayLines": "SummonList_ADF_1"
         },
         "MDF_SummonDelay": {
-          "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
-          "displayLines": "{[Skill02[4]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[4]]}"
-          ]
+          "displayLines": "{[Skill02[4]]}"
         }
       }
     },

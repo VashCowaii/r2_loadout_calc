@@ -82,12 +82,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Variables[0] ({[SkillP02[2]]}) || RETURN",
-            "displayLines": "{[SkillP02[2]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP02[2]]}"
-            ]
+            "displayLines": "{[SkillP02[2]]}"
           }
         }
       }
@@ -135,12 +130,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Variables[0] ({[SkillP02[4]]}) || RETURN",
-            "displayLines": "{[SkillP02[4]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP02[4]]}"
-            ]
+            "displayLines": "{[SkillP02[4]]}"
           }
         }
       }
@@ -189,12 +179,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Variables[0] ({[SkillP02[0]]}) || RETURN",
-            "displayLines": "{[SkillP02[0]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP02[0]]}"
-            ]
+            "displayLines": "{[SkillP02[0]]}"
           }
         }
       }

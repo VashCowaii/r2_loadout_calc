@@ -47,13 +47,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ADF_1) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(ADF_1 * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "ADF_1",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(ADF_1 * MDF_Layer)"
               }
             },
             {
@@ -64,13 +58,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ADF_2) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(ADF_2 * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "ADF_2",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(ADF_2 * MDF_Layer)"
               }
             }
           ]
@@ -122,37 +110,17 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1670469819\">MLevel_BattleEventAbility_Challenge_Month_02</a>[<span class=\"descriptionNumberColor\">CRIT Rate, CRIT DMG Boost</span>]",
                   "duration": {
-                    "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P3_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P3_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P3_ADF"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P4_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P4_ADF"
-                    ]
+                    "displayLines": "#BattleEvent_P4_ADF"
                   },
                   "valuePerStack": {
                     "ADF_1": {
-                      "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P2_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P2_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P2_ADF"
                     },
                     "ADF_2": {
-                      "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P1_ADF"
                     }
                   }
                 }

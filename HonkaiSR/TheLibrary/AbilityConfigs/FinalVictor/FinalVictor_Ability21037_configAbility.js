@@ -46,13 +46,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.08) || Variables[1] (_Layer) || MUL || RETURN",
-                "displayLines": "(0.08 * _Layer)",
-                "constants": [],
-                "variables": [
-                  0.08,
-                  "_Layer"
-                ]
+                "displayLines": "(0.08 * _Layer)"
               }
             }
           ]
@@ -103,12 +97,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1915494643\">LC_21037_Sub</a>[<span class=\"descriptionNumberColor\">Good Fortune</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (4) || RETURN",
-                    "displayLines": "4",
-                    "constants": [],
-                    "variables": [
-                      4
-                    ]
+                    "displayLines": "4"
                   }
                 }
               ]

@@ -30,13 +30,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio_PerLayer) || Variables[1] (_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_AllDamageTypeAddedRatio_PerLayer * _Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeAddedRatio_PerLayer",
-                  "_Layer"
-                ]
+                "displayLines": "(MDF_AllDamageTypeAddedRatio_PerLayer * _Layer)"
               },
               "variableName": "MDF_AllDamageReduce"
             },
@@ -48,12 +42,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                "displayLines": "MDF_AllDamageReduce",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageReduce"
-                ]
+                "displayLines": "MDF_AllDamageReduce"
               }
             }
           ]
@@ -180,21 +169,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"768104180\">Enemy_W5_Vtuber_IF_AbilityEX04_TGT</a>[<span class=\"descriptionNumberColor\">Basking in Popularity</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageReduce_PerLayer": {
-                      "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                      "displayLines": "MDF_AllDamageReduce",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AllDamageReduce"
-                      ]
+                      "displayLines": "MDF_AllDamageReduce"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (_CharacterNumber) || RETURN",
-                    "displayLines": "_CharacterNumber",
-                    "constants": [],
-                    "variables": [
-                      "_CharacterNumber"
-                    ]
+                    "displayLines": "_CharacterNumber"
                   }
                 }
               ]
@@ -265,12 +244,7 @@ const configAbility = {
                 {
                   "name": "Deal Toughness DMG",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentStance) || RETURN",
-                    "displayLines": "MDF_CurrentStance",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentStance"
-                    ]
+                    "displayLines": "MDF_CurrentStance"
                   },
                   "attacker": {
                     "name": "Target Name",
@@ -309,12 +283,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeTakenRatio) || RETURN",
-                "displayLines": "MDF_AllDamageTypeTakenRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeTakenRatio"
-                ]
+                "displayLines": "MDF_AllDamageTypeTakenRatio"
               }
             }
           ]
@@ -568,12 +537,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                "displayLines": "MDF_AllDamageReduce",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageReduce"
-                ]
+                "displayLines": "MDF_AllDamageReduce"
               }
             }
           ]
@@ -599,12 +563,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1854745396\">Enemy_W5_VtuberPart_IF_MinionsSuperArmor</a>[<span class=\"descriptionNumberColor\">Sparxheads Forever</span>]",
               "valuePerStack": {
                 "MDF_AllDamageReduce": {
-                  "operator": "Variables[0] (MDF_MinionsSuperArmor_AllDamageReduce) || RETURN",
-                  "displayLines": "MDF_MinionsSuperArmor_AllDamageReduce",
-                  "constants": [],
-                  "variables": [
-                    "MDF_MinionsSuperArmor_AllDamageReduce"
-                  ]
+                  "displayLines": "MDF_MinionsSuperArmor_AllDamageReduce"
                 }
               }
             }
@@ -637,12 +596,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1854745396\">Enemy_W5_VtuberPart_IF_MinionsSuperArmor</a>[<span class=\"descriptionNumberColor\">Sparxheads Forever</span>]",
               "valuePerStack": {
                 "MDF_AllDamageReduce": {
-                  "operator": "Variables[0] (MDF_MinionsSuperArmor_AllDamageReduce) || RETURN",
-                  "displayLines": "MDF_MinionsSuperArmor_AllDamageReduce",
-                  "constants": [],
-                  "variables": [
-                    "MDF_MinionsSuperArmor_AllDamageReduce"
-                  ]
+                  "displayLines": "MDF_MinionsSuperArmor_AllDamageReduce"
                 }
               }
             },
@@ -686,12 +640,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1715161997\">Enemy_W5_VtuberPart_IF_MinionsSuperArmorBreak</a>[<span class=\"descriptionNumberColor\">Quitting in Progress</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeTakenRatio": {
-                      "operator": "Variables[0] (MDF_MinionsSuperArmor_AllDamageTypeTakenRatio) || RETURN",
-                      "displayLines": "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio"
-                      ]
+                      "displayLines": "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio"
                     }
                   }
                 }
@@ -748,12 +697,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1854745396\">Enemy_W5_VtuberPart_IF_MinionsSuperArmor</a>[<span class=\"descriptionNumberColor\">Sparxheads Forever</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageReduce": {
-                          "operator": "Variables[0] (MDF_MinionsSuperArmor_AllDamageReduce) || RETURN",
-                          "displayLines": "MDF_MinionsSuperArmor_AllDamageReduce",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MinionsSuperArmor_AllDamageReduce"
-                          ]
+                          "displayLines": "MDF_MinionsSuperArmor_AllDamageReduce"
                         }
                       }
                     }
@@ -814,38 +758,18 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-869771857\">Enemy_W5_VtuberPart02_Charge</a>[<span class=\"descriptionNumberColor\">Enemy Popularity</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-                        "displayLines": "{[SkillEX03[0]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillEX03[0]]}"
-                        ]
+                        "displayLines": "{[SkillEX03[0]]}"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill01[2]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill01[2]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill01[2]]}"
                         },
                         "MDF_MaxLayer": {
-                          "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-                          "displayLines": "{[SkillEX03[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillEX03[0]]}"
-                          ]
+                          "displayLines": "{[SkillEX03[0]]}"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-                        "displayLines": "{[SkillEX03[0]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillEX03[0]]}"
-                        ]
+                        "displayLines": "{[SkillEX03[0]]}"
                       }
                     }
                   ]
@@ -871,38 +795,18 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-869771857\">Enemy_W5_VtuberPart02_Charge</a>[<span class=\"descriptionNumberColor\">Enemy Popularity</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
-                        "displayLines": "{[SkillEX03[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillEX03[1]]}"
-                        ]
+                        "displayLines": "{[SkillEX03[1]]}"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill01[2]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill01[2]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill01[2]]}"
                         },
                         "MDF_MaxLayer": {
-                          "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
-                          "displayLines": "{[SkillEX03[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillEX03[1]]}"
-                          ]
+                          "displayLines": "{[SkillEX03[1]]}"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
-                        "displayLines": "{[SkillEX03[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillEX03[1]]}"
-                        ]
+                        "displayLines": "{[SkillEX03[1]]}"
                       }
                     }
                   ],
@@ -915,38 +819,18 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-869771857\">Enemy_W5_VtuberPart02_Charge</a>[<span class=\"descriptionNumberColor\">Enemy Popularity</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-                        "displayLines": "{[PassiveSkill01[3]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[PassiveSkill01[3]]}"
-                        ]
+                        "displayLines": "{[PassiveSkill01[3]]}"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill01[2]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill01[2]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill01[2]]}"
                         },
                         "MDF_MaxLayer": {
-                          "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill01[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill01[3]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill01[3]]}"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-                        "displayLines": "{[PassiveSkill01[3]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[PassiveSkill01[3]]}"
-                        ]
+                        "displayLines": "{[PassiveSkill01[3]]}"
                       }
                     }
                   ]
@@ -1012,12 +896,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-869771857\">Enemy_W5_VtuberPart02_Charge</a>[<span class=\"descriptionNumberColor\">Enemy Popularity</span>]",
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (_MaxLayer) || RETURN",
-                    "displayLines": "_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "_MaxLayer"
-                    ]
+                    "displayLines": "_MaxLayer"
                   }
                 },
                 {
@@ -1071,46 +950,21 @@ const configAbility = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"1702970664\">Enemy_W5_Vtuber_DamageAdd</a>[<span class=\"descriptionNumberColor\">Enemy Gratuity</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-                                "displayLines": "{[SkillEX03[0]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[SkillEX03[0]]}"
-                                ]
+                                "displayLines": "{[SkillEX03[0]]}"
                               },
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                                  "displayLines": "{[PassiveSkill01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[PassiveSkill01[2]]}"
-                                  ]
+                                  "displayLines": "{[PassiveSkill01[2]]}"
                                 },
                                 "MDF_Layer": {
-                                  "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-                                  "displayLines": "{[SkillEX03[0]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillEX03[0]]}"
-                                  ]
+                                  "displayLines": "{[SkillEX03[0]]}"
                                 },
                                 "MDF_MaxLayer": {
-                                  "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-                                  "displayLines": "{[SkillEX03[0]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillEX03[0]]}"
-                                  ]
+                                  "displayLines": "{[SkillEX03[0]]}"
                                 }
                               },
                               "addStacksPerTrigger": {
-                                "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-                                "displayLines": "{[SkillEX03[0]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[SkillEX03[0]]}"
-                                ]
+                                "displayLines": "{[SkillEX03[0]]}"
                               },
                               "casterAssign": "TargetSelf"
                             }
@@ -1149,46 +1003,21 @@ const configAbility = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"1702970664\">Enemy_W5_Vtuber_DamageAdd</a>[<span class=\"descriptionNumberColor\">Enemy Gratuity</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                                "displayLines": "{[PassiveSkill01[0]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[PassiveSkill01[0]]}"
-                                ]
+                                "displayLines": "{[PassiveSkill01[0]]}"
                               },
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                                  "displayLines": "{[PassiveSkill01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[PassiveSkill01[2]]}"
-                                  ]
+                                  "displayLines": "{[PassiveSkill01[2]]}"
                                 },
                                 "MDF_Layer": {
-                                  "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                                  "displayLines": "{[PassiveSkill01[0]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[PassiveSkill01[0]]}"
-                                  ]
+                                  "displayLines": "{[PassiveSkill01[0]]}"
                                 },
                                 "MDF_MaxLayer": {
-                                  "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                                  "displayLines": "{[PassiveSkill01[0]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[PassiveSkill01[0]]}"
-                                  ]
+                                  "displayLines": "{[PassiveSkill01[0]]}"
                                 }
                               },
                               "addStacksPerTrigger": {
-                                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                                "displayLines": "{[PassiveSkill01[0]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[PassiveSkill01[0]]}"
-                                ]
+                                "displayLines": "{[PassiveSkill01[0]]}"
                               },
                               "casterAssign": "TargetSelf"
                             }
@@ -1240,46 +1069,21 @@ const configAbility = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"1702970664\">Enemy_W5_Vtuber_DamageAdd</a>[<span class=\"descriptionNumberColor\">Enemy Gratuity</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
-                                "displayLines": "{[SkillEX03[1]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[SkillEX03[1]]}"
-                                ]
+                                "displayLines": "{[SkillEX03[1]]}"
                               },
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                                  "displayLines": "{[PassiveSkill01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[PassiveSkill01[2]]}"
-                                  ]
+                                  "displayLines": "{[PassiveSkill01[2]]}"
                                 },
                                 "MDF_Layer": {
-                                  "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
-                                  "displayLines": "{[SkillEX03[1]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillEX03[1]]}"
-                                  ]
+                                  "displayLines": "{[SkillEX03[1]]}"
                                 },
                                 "MDF_MaxLayer": {
-                                  "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
-                                  "displayLines": "{[SkillEX03[1]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillEX03[1]]}"
-                                  ]
+                                  "displayLines": "{[SkillEX03[1]]}"
                                 }
                               },
                               "addStacksPerTrigger": {
-                                "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
-                                "displayLines": "{[SkillEX03[1]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[SkillEX03[1]]}"
-                                ]
+                                "displayLines": "{[SkillEX03[1]]}"
                               },
                               "casterAssign": "TargetSelf"
                             }
@@ -1318,46 +1122,21 @@ const configAbility = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"1702970664\">Enemy_W5_Vtuber_DamageAdd</a>[<span class=\"descriptionNumberColor\">Enemy Gratuity</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-                                "displayLines": "{[PassiveSkill01[3]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[PassiveSkill01[3]]}"
-                                ]
+                                "displayLines": "{[PassiveSkill01[3]]}"
                               },
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                                  "displayLines": "{[PassiveSkill01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[PassiveSkill01[2]]}"
-                                  ]
+                                  "displayLines": "{[PassiveSkill01[2]]}"
                                 },
                                 "MDF_Layer": {
-                                  "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-                                  "displayLines": "{[PassiveSkill01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[PassiveSkill01[3]]}"
-                                  ]
+                                  "displayLines": "{[PassiveSkill01[3]]}"
                                 },
                                 "MDF_MaxLayer": {
-                                  "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-                                  "displayLines": "{[PassiveSkill01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[PassiveSkill01[3]]}"
-                                  ]
+                                  "displayLines": "{[PassiveSkill01[3]]}"
                                 }
                               },
                               "addStacksPerTrigger": {
-                                "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-                                "displayLines": "{[PassiveSkill01[3]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[PassiveSkill01[3]]}"
-                                ]
+                                "displayLines": "{[PassiveSkill01[3]]}"
                               },
                               "casterAssign": "TargetSelf"
                             }
@@ -1449,46 +1228,21 @@ const configAbility = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"1702970664\">Enemy_W5_Vtuber_DamageAdd</a>[<span class=\"descriptionNumberColor\">Enemy Gratuity</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
-                                "displayLines": "{[SkillEX03[1]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[SkillEX03[1]]}"
-                                ]
+                                "displayLines": "{[SkillEX03[1]]}"
                               },
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                                  "displayLines": "{[PassiveSkill01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[PassiveSkill01[2]]}"
-                                  ]
+                                  "displayLines": "{[PassiveSkill01[2]]}"
                                 },
                                 "MDF_Layer": {
-                                  "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
-                                  "displayLines": "{[SkillEX03[1]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillEX03[1]]}"
-                                  ]
+                                  "displayLines": "{[SkillEX03[1]]}"
                                 },
                                 "MDF_MaxLayer": {
-                                  "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
-                                  "displayLines": "{[SkillEX03[1]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillEX03[1]]}"
-                                  ]
+                                  "displayLines": "{[SkillEX03[1]]}"
                                 }
                               },
                               "addStacksPerTrigger": {
-                                "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
-                                "displayLines": "{[SkillEX03[1]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[SkillEX03[1]]}"
-                                ]
+                                "displayLines": "{[SkillEX03[1]]}"
                               },
                               "casterAssign": "TargetSelf"
                             }
@@ -1527,46 +1281,21 @@ const configAbility = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"1702970664\">Enemy_W5_Vtuber_DamageAdd</a>[<span class=\"descriptionNumberColor\">Enemy Gratuity</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-                                "displayLines": "{[PassiveSkill01[3]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[PassiveSkill01[3]]}"
-                                ]
+                                "displayLines": "{[PassiveSkill01[3]]}"
                               },
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                                  "displayLines": "{[PassiveSkill01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[PassiveSkill01[2]]}"
-                                  ]
+                                  "displayLines": "{[PassiveSkill01[2]]}"
                                 },
                                 "MDF_Layer": {
-                                  "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-                                  "displayLines": "{[PassiveSkill01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[PassiveSkill01[3]]}"
-                                  ]
+                                  "displayLines": "{[PassiveSkill01[3]]}"
                                 },
                                 "MDF_MaxLayer": {
-                                  "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-                                  "displayLines": "{[PassiveSkill01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[PassiveSkill01[3]]}"
-                                  ]
+                                  "displayLines": "{[PassiveSkill01[3]]}"
                                 }
                               },
                               "addStacksPerTrigger": {
-                                "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-                                "displayLines": "{[PassiveSkill01[3]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[PassiveSkill01[3]]}"
-                                ]
+                                "displayLines": "{[PassiveSkill01[3]]}"
                               },
                               "casterAssign": "TargetSelf"
                             }
@@ -1618,46 +1347,21 @@ const configAbility = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"1702970664\">Enemy_W5_Vtuber_DamageAdd</a>[<span class=\"descriptionNumberColor\">Enemy Gratuity</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-                                "displayLines": "{[SkillEX03[0]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[SkillEX03[0]]}"
-                                ]
+                                "displayLines": "{[SkillEX03[0]]}"
                               },
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                                  "displayLines": "{[PassiveSkill01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[PassiveSkill01[2]]}"
-                                  ]
+                                  "displayLines": "{[PassiveSkill01[2]]}"
                                 },
                                 "MDF_Layer": {
-                                  "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-                                  "displayLines": "{[SkillEX03[0]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillEX03[0]]}"
-                                  ]
+                                  "displayLines": "{[SkillEX03[0]]}"
                                 },
                                 "MDF_MaxLayer": {
-                                  "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-                                  "displayLines": "{[SkillEX03[0]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillEX03[0]]}"
-                                  ]
+                                  "displayLines": "{[SkillEX03[0]]}"
                                 }
                               },
                               "addStacksPerTrigger": {
-                                "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-                                "displayLines": "{[SkillEX03[0]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[SkillEX03[0]]}"
-                                ]
+                                "displayLines": "{[SkillEX03[0]]}"
                               },
                               "casterAssign": "TargetSelf"
                             }
@@ -1814,29 +1518,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1006247126\">Enemy_W5_VtuberPart01_Charge</a>[<span class=\"descriptionNumberColor\">Ally Popularity</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-                        "displayLines": "{[SkillEX03[0]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillEX03[0]]}"
-                        ]
+                        "displayLines": "{[SkillEX03[0]]}"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill01[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill01[1]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill01[1]]}"
                         },
                         "MDF_MaxLayer": {
-                          "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-                          "displayLines": "{[SkillEX03[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillEX03[0]]}"
-                          ]
+                          "displayLines": "{[SkillEX03[0]]}"
                         }
                       },
                       "addStacksPerTrigger": 0
@@ -1864,29 +1553,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1006247126\">Enemy_W5_VtuberPart01_Charge</a>[<span class=\"descriptionNumberColor\">Ally Popularity</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
-                        "displayLines": "{[SkillEX03[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillEX03[1]]}"
-                        ]
+                        "displayLines": "{[SkillEX03[1]]}"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill01[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill01[1]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill01[1]]}"
                         },
                         "MDF_MaxLayer": {
-                          "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
-                          "displayLines": "{[SkillEX03[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillEX03[1]]}"
-                          ]
+                          "displayLines": "{[SkillEX03[1]]}"
                         }
                       },
                       "addStacksPerTrigger": 0
@@ -1901,29 +1575,14 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1006247126\">Enemy_W5_VtuberPart01_Charge</a>[<span class=\"descriptionNumberColor\">Ally Popularity</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-                        "displayLines": "{[PassiveSkill01[3]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[PassiveSkill01[3]]}"
-                        ]
+                        "displayLines": "{[PassiveSkill01[3]]}"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill01[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill01[1]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill01[1]]}"
                         },
                         "MDF_MaxLayer": {
-                          "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill01[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill01[3]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill01[3]]}"
                         }
                       },
                       "addStacksPerTrigger": 0
@@ -1991,14 +1650,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1006247126\">Enemy_W5_VtuberPart01_Charge</a>[<span class=\"descriptionNumberColor\">Ally Popularity</span>]",
                   "addStacksPerTrigger": {
-                    "operator": "Constants[0] (0) || Variables[0] (_CurrentLayer) || SUB || RETURN",
-                    "displayLines": "(0 - _CurrentLayer)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "_CurrentLayer"
-                    ]
+                    "displayLines": "(0 - _CurrentLayer)"
                   }
                 },
                 {
@@ -2091,12 +1743,7 @@ const configAbility = {
                     "value1": "<a class=\"gModGreen\" id=\"1006247126\">Enemy_W5_VtuberPart01_Charge</a>[<span class=\"descriptionNumberColor\">Ally Popularity</span>]",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (_MaxLayer) || RETURN",
-                      "displayLines": "_MaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "_MaxLayer"
-                      ]
+                      "displayLines": "_MaxLayer"
                     },
                     "valueType": "Layer"
                   },
@@ -2838,12 +2485,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeTakenRatio) || RETURN",
-                "displayLines": "MDF_AllDamageTypeTakenRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeTakenRatio"
-                ]
+                "displayLines": "MDF_AllDamageTypeTakenRatio"
               }
             }
           ]
@@ -4600,12 +4242,7 @@ const configAbility = {
                     "value1": "<a class=\"gModGreen\" id=\"1006247126\">Enemy_W5_VtuberPart01_Charge</a>[<span class=\"descriptionNumberColor\">Ally Popularity</span>]",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[0]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill01[0]]}"
                     },
                     "valueType": "Layer"
                   }
@@ -4623,12 +4260,7 @@ const configAbility = {
                 "value1": "<a class=\"gModGreen\" id=\"-869771857\">Enemy_W5_VtuberPart02_Charge</a>[<span class=\"descriptionNumberColor\">Enemy Popularity</span>]",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill01[0]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill01[0]]}"
                 },
                 "valueType": "Layer"
               },
@@ -4815,12 +4447,7 @@ const configAbility = {
                   "variableName": "TotalHP",
                   "context": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentHP_DownScale) || RETURN",
-                    "displayLines": "MDF_CurrentHP_DownScale",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentHP_DownScale"
-                    ]
+                    "displayLines": "MDF_CurrentHP_DownScale"
                   }
                 },
                 {
@@ -4832,12 +4459,7 @@ const configAbility = {
                   "variableName": "RemainHP",
                   "context": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentHP_DownScale) || RETURN",
-                    "displayLines": "MDF_CurrentHP_DownScale",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentHP_DownScale"
-                    ]
+                    "displayLines": "MDF_CurrentHP_DownScale"
                   }
                 },
                 {
@@ -4849,12 +4471,7 @@ const configAbility = {
                   "variableName": "TotalHP_DownScale",
                   "context": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentHP_DownScale) || RETURN",
-                    "displayLines": "MDF_CurrentHP_DownScale",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentHP_DownScale"
-                    ]
+                    "displayLines": "MDF_CurrentHP_DownScale"
                   }
                 },
                 {
@@ -4866,12 +4483,7 @@ const configAbility = {
                   "variableName": "RemainHP_DownScale",
                   "context": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentHP_DownScale) || RETURN",
-                    "displayLines": "MDF_CurrentHP_DownScale",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentHP_DownScale"
-                    ]
+                    "displayLines": "MDF_CurrentHP_DownScale"
                   }
                 },
                 {
@@ -5218,12 +4830,7 @@ const configAbility = {
                     "value1": "<a class=\"gModGreen\" id=\"-869771857\">Enemy_W5_VtuberPart02_Charge</a>[<span class=\"descriptionNumberColor\">Enemy Popularity</span>]",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[0]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill01[0]]}"
                     },
                     "valueType": "Layer"
                   },
@@ -5290,12 +4897,7 @@ const configAbility = {
                         "value1": "<a class=\"gModGreen\" id=\"-869771857\">Enemy_W5_VtuberPart02_Charge</a>[<span class=\"descriptionNumberColor\">Enemy Popularity</span>]",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill01[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill01[0]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill01[0]]}"
                         },
                         "valueType": "Layer"
                       },
@@ -5419,12 +5021,7 @@ const configAbility = {
                         "value1": "<a class=\"gModGreen\" id=\"1006247126\">Enemy_W5_VtuberPart01_Charge</a>[<span class=\"descriptionNumberColor\">Ally Popularity</span>]",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill01[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill01[0]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill01[0]]}"
                         },
                         "valueType": "Layer"
                       }
@@ -5543,12 +5140,7 @@ const configAbility = {
                       },
                       "variableName": "RemainHP",
                       "value": {
-                        "operator": "Variables[0] (MDF_HPRatio) || RETURN",
-                        "displayLines": "MDF_HPRatio",
-                        "constants": [],
-                        "variables": [
-                          "MDF_HPRatio"
-                        ]
+                        "displayLines": "MDF_HPRatio"
                       }
                     }
                   ]
@@ -5556,25 +5148,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (RemainHP) || Variables[1] (TotalHP) || DIV || RETURN",
-                    "displayLines": "(RemainHP / TotalHP)",
-                    "constants": [],
-                    "variables": [
-                      "RemainHP",
-                      "TotalHP"
-                    ]
+                    "displayLines": "(RemainHP / TotalHP)"
                   },
                   "variableName": "MDF_Ratio"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Ratio) || RETURN",
-                    "displayLines": "MDF_Ratio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Ratio"
-                    ]
+                    "displayLines": "MDF_Ratio"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -5694,12 +5275,7 @@ const configAbility = {
                       },
                       "variableName": "RemainHP",
                       "value": {
-                        "operator": "Variables[0] (MDF_HPRatio) || RETURN",
-                        "displayLines": "MDF_HPRatio",
-                        "constants": [],
-                        "variables": [
-                          "MDF_HPRatio"
-                        ]
+                        "displayLines": "MDF_HPRatio"
                       }
                     }
                   ]
@@ -5707,25 +5283,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (RemainHP) || Variables[1] (TotalHP) || DIV || RETURN",
-                    "displayLines": "(RemainHP / TotalHP)",
-                    "constants": [],
-                    "variables": [
-                      "RemainHP",
-                      "TotalHP"
-                    ]
+                    "displayLines": "(RemainHP / TotalHP)"
                   },
                   "variableName": "MDF_Ratio"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Ratio) || RETURN",
-                    "displayLines": "MDF_Ratio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Ratio"
-                    ]
+                    "displayLines": "MDF_Ratio"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -5772,13 +5337,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageReduce) || Variables[1] (MDF_Ratio) || MUL || RETURN",
-                "displayLines": "(MDF_AllDamageReduce * MDF_Ratio)",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageReduce",
-                  "MDF_Ratio"
-                ]
+                "displayLines": "(MDF_AllDamageReduce * MDF_Ratio)"
               },
               "variableName": "MDF_AllDamageReduce"
             },
@@ -5790,12 +5349,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                "displayLines": "MDF_AllDamageReduce",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageReduce"
-                ]
+                "displayLines": "MDF_AllDamageReduce"
               }
             }
           ]
@@ -5843,12 +5397,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                "displayLines": "MDF_AllDamageReduce",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageReduce"
-                ]
+                "displayLines": "MDF_AllDamageReduce"
               }
             }
           ]
@@ -5907,12 +5456,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"888915891\">Enemy_W5_Vtuber_Charge_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">Privacy Protection</span>]",
               "valuePerStack": {
                 "MDF_AllDamageReduce": {
-                  "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                  "displayLines": "MDF_AllDamageReduce",
-                  "constants": [],
-                  "variables": [
-                    "MDF_AllDamageReduce"
-                  ]
+                  "displayLines": "MDF_AllDamageReduce"
                 }
               }
             },
@@ -6000,21 +5544,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"404660666\">Enemy_W5_Vtuber_ChargeEnd_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">Privacy Protection</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageReduce": {
-                      "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                      "displayLines": "MDF_AllDamageReduce",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AllDamageReduce"
-                      ]
+                      "displayLines": "MDF_AllDamageReduce"
                     },
                     "MDF_Ratio": {
-                      "operator": "Variables[0] (RemainHP) || Variables[1] (TotalHP) || DIV || RETURN",
-                      "displayLines": "(RemainHP / TotalHP)",
-                      "constants": [],
-                      "variables": [
-                        "RemainHP",
-                        "TotalHP"
-                      ]
+                      "displayLines": "(RemainHP / TotalHP)"
                     }
                   }
                 }
@@ -6235,12 +5768,7 @@ const configAbility = {
                 "value1": "CurrentHP%",
                 "compareType": "<=",
                 "value2": {
-                  "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[0]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill02[0]]}"
                 }
               },
               "passed": [

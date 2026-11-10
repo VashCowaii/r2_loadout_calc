@@ -59,27 +59,14 @@ const configAbility = {
                 "value1": "MDF_TargetMaxHP",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || Variables[2] (Modifier_Tear_DamageRatio) || DIV || RETURN",
-                  "displayLines": "((MDF_CasterAttack * Modifier_Tear_MaxPercentage) / Modifier_Tear_DamageRatio)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_CasterAttack",
-                    "Modifier_Tear_MaxPercentage",
-                    "Modifier_Tear_DamageRatio"
-                  ]
+                  "displayLines": "((MDF_CasterAttack * Modifier_Tear_MaxPercentage) / Modifier_Tear_DamageRatio)"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
-                    "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CasterAttack",
-                      "Modifier_Tear_MaxPercentage"
-                    ]
+                    "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)"
                   },
                   "variableName": "MDF_DamageValue"
                 }
@@ -88,13 +75,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
-                    "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_TargetMaxHP",
-                      "Modifier_Tear_DamageRatio"
-                    ]
+                    "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)"
                   },
                   "variableName": "MDF_DamageValue"
                 }
@@ -130,27 +111,14 @@ const configAbility = {
                 "value1": "MDF_TargetMaxHP",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || Variables[2] (Modifier_Tear_DamageRatio) || DIV || RETURN",
-                  "displayLines": "((MDF_CasterAttack * Modifier_Tear_MaxPercentage) / Modifier_Tear_DamageRatio)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_CasterAttack",
-                    "Modifier_Tear_MaxPercentage",
-                    "Modifier_Tear_DamageRatio"
-                  ]
+                  "displayLines": "((MDF_CasterAttack * Modifier_Tear_MaxPercentage) / Modifier_Tear_DamageRatio)"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
-                    "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CasterAttack",
-                      "Modifier_Tear_MaxPercentage"
-                    ]
+                    "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)"
                   },
                   "variableName": "MDF_DamageValue"
                 }
@@ -159,13 +127,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
-                    "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_TargetMaxHP",
-                      "Modifier_Tear_DamageRatio"
-                    ]
+                    "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)"
                   },
                   "variableName": "MDF_DamageValue"
                 }
@@ -180,12 +142,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageFlat": {
-                  "operator": "Variables[0] (MDF_DamageValue) || RETURN",
-                  "displayLines": "MDF_DamageValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamageValue"
-                  ]
+                  "displayLines": "MDF_DamageValue"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -222,27 +179,14 @@ const configAbility = {
                 "value1": "MDF_TargetMaxHP",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || Variables[2] (Modifier_Tear_DamageRatio) || DIV || RETURN",
-                  "displayLines": "((MDF_CasterAttack * Modifier_Tear_MaxPercentage) / Modifier_Tear_DamageRatio)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_CasterAttack",
-                    "Modifier_Tear_MaxPercentage",
-                    "Modifier_Tear_DamageRatio"
-                  ]
+                  "displayLines": "((MDF_CasterAttack * Modifier_Tear_MaxPercentage) / Modifier_Tear_DamageRatio)"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
-                    "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CasterAttack",
-                      "Modifier_Tear_MaxPercentage"
-                    ]
+                    "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)"
                   },
                   "variableName": "MDF_DamageValue"
                 }
@@ -251,13 +195,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
-                    "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_TargetMaxHP",
-                      "Modifier_Tear_DamageRatio"
-                    ]
+                    "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)"
                   },
                   "variableName": "MDF_DamageValue"
                 }
@@ -272,13 +210,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageFlat": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (MDF_DamageValue) || MUL || RETURN",
-                  "displayLines": "(DOT_TriggerRatio * MDF_DamageValue)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "MDF_DamageValue"
-                  ]
+                  "displayLines": "(DOT_TriggerRatio * MDF_DamageValue)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -309,20 +241,10 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (BulletCount) || RETURN",
-                "displayLines": "BulletCount",
-                "constants": [],
-                "variables": [
-                  "BulletCount"
-                ]
+                "displayLines": "BulletCount"
               },
               "maximum": {
-                "operator": "Constants[0] (4) || RETURN",
-                "displayLines": "4",
-                "constants": [
-                  4
-                ],
-                "variables": []
+                "displayLines": "4"
               },
               "assignState": "True",
               "priorState": "Normal",
@@ -359,13 +281,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.05) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(0.05 * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  0.05,
-                  "MDF_Layer"
-                ]
+                "displayLines": "(0.05 * MDF_Layer)"
               },
               "variableName": "MDF_AttackAdded"
             },
@@ -377,12 +293,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AttackAdded) || RETURN",
-                "displayLines": "MDF_AttackAdded",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackAdded"
-                ]
+                "displayLines": "MDF_AttackAdded"
               }
             }
           ]
@@ -425,12 +336,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1275149529\">Luka_ReloadBullet</a>",
                   "valuePerStack": {
                     "MDF_AddValue": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     }
                   }
                 }
@@ -460,12 +366,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -494,14 +395,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Constants[0] (4) || Variables[0] (BulletCount) || SUB || RETURN",
-                    "displayLines": "(4 - BulletCount)",
-                    "constants": [
-                      4
-                    ],
-                    "variables": [
-                      "BulletCount"
-                    ]
+                    "displayLines": "(4 - BulletCount)"
                   },
                   "variableName": "MDF_AddValue"
                 }
@@ -510,12 +404,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (MDF_AddValue) || RETURN",
-                "displayLines": "MDF_AddValue",
-                "constants": [],
-                "variables": [
-                  "MDF_AddValue"
-                ]
+                "displayLines": "MDF_AddValue"
               },
               "execute": [
                 {
@@ -543,21 +432,11 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-811741616\">Luka_Eidolon4</a>[<span class=\"descriptionNumberColor\">Never Turning Back</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (4) || RETURN",
-                        "displayLines": "4",
-                        "constants": [],
-                        "variables": [
-                          4
-                        ]
+                        "displayLines": "4"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (0.05) || RETURN",
-                          "displayLines": "0.05",
-                          "constants": [],
-                          "variables": [
-                            0.05
-                          ]
+                          "displayLines": "0.05"
                         }
                       }
                     }
@@ -579,13 +458,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (3) || Variables[1] (MDF_AddValue) || MUL || RETURN",
-                    "displayLines": "(3 * MDF_AddValue)",
-                    "constants": [],
-                    "variables": [
-                      3,
-                      "MDF_AddValue"
-                    ]
+                    "displayLines": "(3 * MDF_AddValue)"
                   },
                   "isFixed": "* ERR"
                 }
@@ -594,20 +467,10 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (BulletCount) || RETURN",
-                "displayLines": "BulletCount",
-                "constants": [],
-                "variables": [
-                  "BulletCount"
-                ]
+                "displayLines": "BulletCount"
               },
               "maximum": {
-                "operator": "Constants[0] (4) || RETURN",
-                "displayLines": "4",
-                "constants": [
-                  4
-                ],
-                "variables": []
+                "displayLines": "4"
               },
               "assignState": "True",
               "priorState": "Normal",
@@ -634,20 +497,10 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (BulletCount) || RETURN",
-                    "displayLines": "BulletCount",
-                    "constants": [],
-                    "variables": [
-                      "BulletCount"
-                    ]
+                    "displayLines": "BulletCount"
                   },
                   "maximum": {
-                    "operator": "Constants[0] (4) || RETURN",
-                    "displayLines": "4",
-                    "constants": [
-                      4
-                    ],
-                    "variables": []
+                    "displayLines": "4"
                   },
                   "assignState": "True",
                   "priorState": "Active",
@@ -681,12 +534,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -773,20 +621,10 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (BulletCount) || RETURN",
-                    "displayLines": "BulletCount",
-                    "constants": [],
-                    "variables": [
-                      "BulletCount"
-                    ]
+                    "displayLines": "BulletCount"
                   },
                   "maximum": {
-                    "operator": "Constants[0] (4) || RETURN",
-                    "displayLines": "4",
-                    "constants": [
-                      4
-                    ],
-                    "variables": []
+                    "displayLines": "4"
                   },
                   "assignState": "True",
                   "priorState": "Active",

@@ -29,12 +29,7 @@ const configAbility = {
                     "value1": "TotalDamageRatio",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_11764) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_11764",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_11764"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_11764"
                     }
                   }
                 ]
@@ -205,14 +200,7 @@ const configAbility = {
                       },
                       "variableName": "MDF_TemperatureChangeTotal",
                       "value": {
-                        "operator": "Constants[0] (0) || Variables[0] (MDF_TemperatureChangeDelta) || SUB || RETURN",
-                        "displayLines": "(0 - MDF_TemperatureChangeDelta)",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "MDF_TemperatureChangeDelta"
-                        ]
+                        "displayLines": "(0 - MDF_TemperatureChangeDelta)"
                       },
                       "max": 999
                     },
@@ -496,26 +484,14 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (Sunny_Temperature) || RETURN",
-                        "displayLines": "Sunny_Temperature",
-                        "constants": [],
-                        "variables": [
-                          "Sunny_Temperature"
-                        ]
+                        "displayLines": "Sunny_Temperature"
                       },
                       "variableName": "MDF_SunnyBreakColdFinal"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (FLOOR) || Variables[1] (MDF_SunnyBreakColdFinal) || Variables[2] (MDF_SunnyBreakColdRatio) || MUL || PARAM_1 || FUNCTION || RETURN",
-                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_SunnyBreakColdFinal * MDF_SunnyBreakColdRatio))",
-                        "constants": [],
-                        "variables": [
-                          "FLOOR",
-                          "MDF_SunnyBreakColdFinal",
-                          "MDF_SunnyBreakColdRatio"
-                        ]
+                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_SunnyBreakColdFinal * MDF_SunnyBreakColdRatio))"
                       },
                       "variableName": "MDF_SunnyBreakColdFinal"
                     },
@@ -526,12 +502,7 @@ const configAbility = {
                         "value1": "MDF_SunnyBreakColdFinal",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (MDF_SunnyBreakCold) || RETURN",
-                          "displayLines": "MDF_SunnyBreakCold",
-                          "constants": [],
-                          "variables": [
-                            "MDF_SunnyBreakCold"
-                          ]
+                          "displayLines": "MDF_SunnyBreakCold"
                         }
                       },
                       "passed": [
@@ -544,14 +515,7 @@ const configAbility = {
                           "variableName": "Sunny_Temperature",
                           "context": "TargetEntity",
                           "value": {
-                            "operator": "Constants[0] (0) || Variables[0] (MDF_SunnyBreakColdFinal) || SUB || RETURN",
-                            "displayLines": "(0 - MDF_SunnyBreakColdFinal)",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "MDF_SunnyBreakColdFinal"
-                            ]
+                            "displayLines": "(0 - MDF_SunnyBreakColdFinal)"
                           },
                           "max": 999
                         }
@@ -566,14 +530,7 @@ const configAbility = {
                           "variableName": "Sunny_Temperature",
                           "context": "TargetEntity",
                           "value": {
-                            "operator": "Constants[0] (0) || Variables[0] (MDF_SunnyBreakCold) || SUB || RETURN",
-                            "displayLines": "(0 - MDF_SunnyBreakCold)",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "MDF_SunnyBreakCold"
-                            ]
+                            "displayLines": "(0 - MDF_SunnyBreakCold)"
                           },
                           "max": 999
                         }
@@ -609,13 +566,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (Thunder_CountLight) || Variables[1] (Thunder_CountDark) || ADD || RETURN",
-                            "displayLines": "(Thunder_CountLight + Thunder_CountDark)",
-                            "constants": [],
-                            "variables": [
-                              "Thunder_CountLight",
-                              "Thunder_CountDark"
-                            ]
+                            "displayLines": "(Thunder_CountLight + Thunder_CountDark)"
                           },
                           "variableName": "MDF_CountTotal"
                         },
@@ -639,20 +590,10 @@ const configAbility = {
                               "variableName": "Thunder_CountLight",
                               "context": "TargetEntity",
                               "value": {
-                                "operator": "Variables[0] ({[SkillP02[4]]}) || RETURN",
-                                "displayLines": "{[SkillP02[4]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[SkillP02[4]]}"
-                                ]
+                                "displayLines": "{[SkillP02[4]]}"
                               },
                               "max": {
-                                "operator": "Variables[0] (MDF_CountTotal) || RETURN",
-                                "displayLines": "MDF_CountTotal",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_CountTotal"
-                                ]
+                                "displayLines": "MDF_CountTotal"
                               }
                             },
                             {
@@ -664,22 +605,10 @@ const configAbility = {
                               "variableName": "Thunder_CountDark",
                               "context": "TargetEntity",
                               "value": {
-                                "operator": "Constants[0] (0) || Variables[0] ({[SkillP02[4]]}) || SUB || RETURN",
-                                "displayLines": "(0 - {[SkillP02[4]]})",
-                                "constants": [
-                                  0
-                                ],
-                                "variables": [
-                                  "{[SkillP02[4]]}"
-                                ]
+                                "displayLines": "(0 - {[SkillP02[4]]})"
                               },
                               "max": {
-                                "operator": "Variables[0] (MDF_CountTotal) || RETURN",
-                                "displayLines": "MDF_CountTotal",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_CountTotal"
-                                ]
+                                "displayLines": "MDF_CountTotal"
                               }
                             },
                             {
@@ -779,14 +708,7 @@ const configAbility = {
                                 {
                                   "name": "Define Custom Variable",
                                   "value": {
-                                    "operator": "Variables[0] (ThunderKillCount) || Constants[0] (1) || ADD || RETURN",
-                                    "displayLines": "(ThunderKillCount + 1)",
-                                    "constants": [
-                                      1
-                                    ],
-                                    "variables": [
-                                      "ThunderKillCount"
-                                    ]
+                                    "displayLines": "(ThunderKillCount + 1)"
                                   },
                                   "variableName": "ThunderKillCount"
                                 },
@@ -908,14 +830,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "flatConsume": {
-                    "operator": "Constants[0] (0) || Variables[0] (PartLoseHpValue) || SUB || RETURN",
-                    "displayLines": "(0 - PartLoseHpValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "PartLoseHpValue"
-                    ]
+                    "displayLines": "(0 - PartLoseHpValue)"
                   }
                 }
               ]
@@ -961,14 +876,7 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "flatConsume": {
-                        "operator": "Constants[0] (0) || Variables[0] (PartHPOverflow) || SUB || RETURN",
-                        "displayLines": "(0 - PartHPOverflow)",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "PartHPOverflow"
-                        ]
+                        "displayLines": "(0 - PartHPOverflow)"
                       }
                     }
                   ]
@@ -1027,26 +935,14 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (Sunny_Temperature) || RETURN",
-                        "displayLines": "Sunny_Temperature",
-                        "constants": [],
-                        "variables": [
-                          "Sunny_Temperature"
-                        ]
+                        "displayLines": "Sunny_Temperature"
                       },
                       "variableName": "MDF_SunnyBreakColdFinal"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (FLOOR) || Variables[1] (MDF_SunnyBreakColdFinal) || Variables[2] (MDF_SunnyBreakColdRatio) || MUL || PARAM_1 || FUNCTION || RETURN",
-                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_SunnyBreakColdFinal * MDF_SunnyBreakColdRatio))",
-                        "constants": [],
-                        "variables": [
-                          "FLOOR",
-                          "MDF_SunnyBreakColdFinal",
-                          "MDF_SunnyBreakColdRatio"
-                        ]
+                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_SunnyBreakColdFinal * MDF_SunnyBreakColdRatio))"
                       },
                       "variableName": "MDF_SunnyBreakColdFinal"
                     },
@@ -1057,12 +953,7 @@ const configAbility = {
                         "value1": "MDF_SunnyBreakColdFinal",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (MDF_SunnyBreakCold) || RETURN",
-                          "displayLines": "MDF_SunnyBreakCold",
-                          "constants": [],
-                          "variables": [
-                            "MDF_SunnyBreakCold"
-                          ]
+                          "displayLines": "MDF_SunnyBreakCold"
                         }
                       },
                       "passed": [
@@ -1075,14 +966,7 @@ const configAbility = {
                           "variableName": "Sunny_Temperature",
                           "context": "TargetEntity",
                           "value": {
-                            "operator": "Constants[0] (0) || Variables[0] (MDF_SunnyBreakColdFinal) || SUB || RETURN",
-                            "displayLines": "(0 - MDF_SunnyBreakColdFinal)",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "MDF_SunnyBreakColdFinal"
-                            ]
+                            "displayLines": "(0 - MDF_SunnyBreakColdFinal)"
                           },
                           "max": 999
                         }
@@ -1097,14 +981,7 @@ const configAbility = {
                           "variableName": "Sunny_Temperature",
                           "context": "TargetEntity",
                           "value": {
-                            "operator": "Constants[0] (0) || Variables[0] (MDF_SunnyBreakCold) || SUB || RETURN",
-                            "displayLines": "(0 - MDF_SunnyBreakCold)",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "MDF_SunnyBreakCold"
-                            ]
+                            "displayLines": "(0 - MDF_SunnyBreakCold)"
                           },
                           "max": 999
                         }
@@ -1148,13 +1025,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (Thunder_CountLight) || Variables[1] (Thunder_CountDark) || ADD || RETURN",
-                            "displayLines": "(Thunder_CountLight + Thunder_CountDark)",
-                            "constants": [],
-                            "variables": [
-                              "Thunder_CountLight",
-                              "Thunder_CountDark"
-                            ]
+                            "displayLines": "(Thunder_CountLight + Thunder_CountDark)"
                           },
                           "variableName": "MDF_CountTotal"
                         },
@@ -1167,20 +1038,10 @@ const configAbility = {
                           "variableName": "Thunder_CountLight",
                           "context": "TargetEntity",
                           "value": {
-                            "operator": "Variables[0] ({[SkillP02[4]]}) || RETURN",
-                            "displayLines": "{[SkillP02[4]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[SkillP02[4]]}"
-                            ]
+                            "displayLines": "{[SkillP02[4]]}"
                           },
                           "max": {
-                            "operator": "Variables[0] (MDF_CountTotal) || RETURN",
-                            "displayLines": "MDF_CountTotal",
-                            "constants": [],
-                            "variables": [
-                              "MDF_CountTotal"
-                            ]
+                            "displayLines": "MDF_CountTotal"
                           }
                         },
                         {
@@ -1192,22 +1053,10 @@ const configAbility = {
                           "variableName": "Thunder_CountDark",
                           "context": "TargetEntity",
                           "value": {
-                            "operator": "Constants[0] (0) || Variables[0] ({[SkillP02[4]]}) || SUB || RETURN",
-                            "displayLines": "(0 - {[SkillP02[4]]})",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "{[SkillP02[4]]}"
-                            ]
+                            "displayLines": "(0 - {[SkillP02[4]]})"
                           },
                           "max": {
-                            "operator": "Variables[0] (MDF_CountTotal) || RETURN",
-                            "displayLines": "MDF_CountTotal",
-                            "constants": [],
-                            "variables": [
-                              "MDF_CountTotal"
-                            ]
+                            "displayLines": "MDF_CountTotal"
                           }
                         },
                         {
@@ -1630,13 +1479,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Thunder_CountLight) || Variables[1] (Thunder_CountDark) || ADD || RETURN",
-                    "displayLines": "(Thunder_CountLight + Thunder_CountDark)",
-                    "constants": [],
-                    "variables": [
-                      "Thunder_CountLight",
-                      "Thunder_CountDark"
-                    ]
+                    "displayLines": "(Thunder_CountLight + Thunder_CountDark)"
                   },
                   "variableName": "MDF_CountTotal"
                 },
@@ -1649,20 +1492,10 @@ const configAbility = {
                   "variableName": "Thunder_CountLight",
                   "context": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (MDF_Count) || RETURN",
-                    "displayLines": "MDF_Count",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Count"
-                    ]
+                    "displayLines": "MDF_Count"
                   },
                   "max": {
-                    "operator": "Variables[0] (MDF_CountTotal) || RETURN",
-                    "displayLines": "MDF_CountTotal",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CountTotal"
-                    ]
+                    "displayLines": "MDF_CountTotal"
                   }
                 },
                 {
@@ -1674,22 +1507,10 @@ const configAbility = {
                   "variableName": "Thunder_CountDark",
                   "context": "TargetEntity",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_Count) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_Count)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_Count"
-                    ]
+                    "displayLines": "(0 - MDF_Count)"
                   },
                   "max": {
-                    "operator": "Variables[0] (MDF_CountTotal) || RETURN",
-                    "displayLines": "MDF_CountTotal",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CountTotal"
-                    ]
+                    "displayLines": "MDF_CountTotal"
                   }
                 },
                 {
@@ -1915,12 +1736,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1414068042\">Modifier_Monster_W4_DawnsEye_WheaterMarkAbility04</a>[<span class=\"descriptionNumberColor\">Ionization</span>]",
                   "valuePerStack": {
                     "MDF_ThunderDark": {
-                      "operator": "Variables[0] (Thunder_CountDark) || RETURN",
-                      "displayLines": "Thunder_CountDark",
-                      "constants": [],
-                      "variables": [
-                        "Thunder_CountDark"
-                      ]
+                      "displayLines": "Thunder_CountDark"
                     }
                   }
                 }
@@ -2083,31 +1899,13 @@ const configAbility = {
                   "variableName": "Skill04P1SunnyHeat",
                   "context": "TargetEntity",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_Count) || Variables[1] (MDF_Skill04SunnyHeatColdDown) || MUL || SUB || RETURN",
-                    "displayLines": "(0 - (MDF_Count * MDF_Skill04SunnyHeatColdDown))",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_Count",
-                      "MDF_Skill04SunnyHeatColdDown"
-                    ]
+                    "displayLines": "(0 - (MDF_Count * MDF_Skill04SunnyHeatColdDown))"
                   },
                   "min": {
-                    "operator": "Variables[0] ({[Skill04P1[3]]}) || RETURN",
-                    "displayLines": "{[Skill04P1[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill04P1[3]]}"
-                    ]
+                    "displayLines": "{[Skill04P1[3]]}"
                   },
                   "max": {
-                    "operator": "Variables[0] ({[Skill04P1[0]]}) || RETURN",
-                    "displayLines": "{[Skill04P1[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill04P1[0]]}"
-                    ]
+                    "displayLines": "{[Skill04P1[0]]}"
                   }
                 },
                 {
@@ -2119,12 +1917,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1737251406\">Enemy_W4_DawnsEye_Ability04_SunnyChargeHeat</a>[<span class=\"descriptionNumberColor\">Helium Flash</span>]",
                   "valuePerStack": {
                     "MDF_Ability04P1SunnyHeat": {
-                      "operator": "Variables[0] (Skill04P1SunnyHeat) || RETURN",
-                      "displayLines": "Skill04P1SunnyHeat",
-                      "constants": [],
-                      "variables": [
-                        "Skill04P1SunnyHeat"
-                      ]
+                      "displayLines": "Skill04P1SunnyHeat"
                     }
                   }
                 },
@@ -2143,12 +1936,7 @@ const configAbility = {
                     "value1": "Skill04P1SunnyHeat",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] ({[Skill04P1[3]]}) || RETURN",
-                      "displayLines": "{[Skill04P1[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04P1[3]]}"
-                      ]
+                      "displayLines": "{[Skill04P1[3]]}"
                     }
                   }
                 },
@@ -2243,12 +2031,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-39064349\">Modifier_Monster_W4_DawnsEye_WheaterSunny</a>",
               "valuePerStack": {
                 "Weather_SunnyChange": {
-                  "operator": "Variables[0] (Weather_SunnyChange) || RETURN",
-                  "displayLines": "Weather_SunnyChange",
-                  "constants": [],
-                  "variables": [
-                    "Weather_SunnyChange"
-                  ]
+                  "displayLines": "Weather_SunnyChange"
                 }
               },
               "casterAssign": "CasterSelf"
@@ -2274,12 +2057,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -2324,28 +2102,14 @@ const configAbility = {
                 "value1": "Weather_SunnyHeat",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (Weather_SunnyHeatInitial) || RETURN",
-                  "displayLines": "Weather_SunnyHeatInitial",
-                  "constants": [],
-                  "variables": [
-                    "Weather_SunnyHeatInitial"
-                  ]
+                  "displayLines": "Weather_SunnyHeatInitial"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || Variables[1] (Weather_SunnyHeat) || Variables[2] (Weather_SunnyHeatInitial) || SUB || Constants[0] (10) || ADD || MUL || RETURN",
-                    "displayLines": "(MDF_AllDamageTypeAddedRatio * ((Weather_SunnyHeat - Weather_SunnyHeatInitial) + 10))",
-                    "constants": [
-                      10
-                    ],
-                    "variables": [
-                      "MDF_AllDamageTypeAddedRatio",
-                      "Weather_SunnyHeat",
-                      "Weather_SunnyHeatInitial"
-                    ]
+                    "displayLines": "(MDF_AllDamageTypeAddedRatio * ((Weather_SunnyHeat - Weather_SunnyHeatInitial) + 10))"
                   },
                   "variableName": "MDF_AllDamageTypeAddedRatioCurrent"
                 }
@@ -2354,14 +2118,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || Constants[0] (10) || MUL || RETURN",
-                    "displayLines": "(MDF_AllDamageTypeAddedRatio * 10)",
-                    "constants": [
-                      10
-                    ],
-                    "variables": [
-                      "MDF_AllDamageTypeAddedRatio"
-                    ]
+                    "displayLines": "(MDF_AllDamageTypeAddedRatio * 10)"
                   },
                   "variableName": "MDF_AllDamageTypeAddedRatioCurrent"
                 }
@@ -2376,12 +2133,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"55187290\">Enemy_Monster_W4_DawnsEye_WheaterSunnyAllDamageTypeAddedRatioSub</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_AllDamageTypeAddedRatioCurrent) || RETURN",
-                  "displayLines": "MDF_AllDamageTypeAddedRatioCurrent",
-                  "constants": [],
-                  "variables": [
-                    "MDF_AllDamageTypeAddedRatioCurrent"
-                  ]
+                  "displayLines": "MDF_AllDamageTypeAddedRatioCurrent"
                 }
               }
             }
@@ -2421,28 +2173,14 @@ const configAbility = {
                     "value1": "Weather_SunnyHeat",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (Weather_SunnyHeatInitial) || RETURN",
-                      "displayLines": "Weather_SunnyHeatInitial",
-                      "constants": [],
-                      "variables": [
-                        "Weather_SunnyHeatInitial"
-                      ]
+                      "displayLines": "Weather_SunnyHeatInitial"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || Variables[1] (Weather_SunnyHeat) || Variables[2] (Weather_SunnyHeatInitial) || SUB || Constants[0] (10) || ADD || MUL || RETURN",
-                        "displayLines": "(MDF_AllDamageTypeAddedRatio * ((Weather_SunnyHeat - Weather_SunnyHeatInitial) + 10))",
-                        "constants": [
-                          10
-                        ],
-                        "variables": [
-                          "MDF_AllDamageTypeAddedRatio",
-                          "Weather_SunnyHeat",
-                          "Weather_SunnyHeatInitial"
-                        ]
+                        "displayLines": "(MDF_AllDamageTypeAddedRatio * ((Weather_SunnyHeat - Weather_SunnyHeatInitial) + 10))"
                       },
                       "variableName": "MDF_AllDamageTypeAddedRatioCurrent"
                     }
@@ -2451,14 +2189,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || Constants[0] (10) || MUL || RETURN",
-                        "displayLines": "(MDF_AllDamageTypeAddedRatio * 10)",
-                        "constants": [
-                          10
-                        ],
-                        "variables": [
-                          "MDF_AllDamageTypeAddedRatio"
-                        ]
+                        "displayLines": "(MDF_AllDamageTypeAddedRatio * 10)"
                       },
                       "variableName": "MDF_AllDamageTypeAddedRatioCurrent"
                     }
@@ -2473,12 +2204,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"55187290\">Enemy_Monster_W4_DawnsEye_WheaterSunnyAllDamageTypeAddedRatioSub</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_AllDamageTypeAddedRatioCurrent) || RETURN",
-                      "displayLines": "MDF_AllDamageTypeAddedRatioCurrent",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AllDamageTypeAddedRatioCurrent"
-                      ]
+                      "displayLines": "MDF_AllDamageTypeAddedRatioCurrent"
                     }
                   }
                 }
@@ -2566,12 +2292,7 @@ const configAbility = {
                 "value1": "Weather_SunnyHeat",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (Weather_SunnyHeatInitial) || RETURN",
-                  "displayLines": "Weather_SunnyHeatInitial",
-                  "constants": [],
-                  "variables": [
-                    "Weather_SunnyHeatInitial"
-                  ]
+                  "displayLines": "Weather_SunnyHeatInitial"
                 }
               },
               "passed": [
@@ -2584,17 +2305,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "DamageFlat": {
-                      "operator": "Variables[0] (Modifier_Burn_DamagePercentage) || Variables[1] (Weather_SunnyHeat) || Variables[2] (Weather_SunnyHeatInitial) || SUB || Constants[0] (10) || ADD || MUL || Variables[3] (MDF_BaseAttack) || MUL || RETURN",
-                      "displayLines": "((Modifier_Burn_DamagePercentage * ((Weather_SunnyHeat - Weather_SunnyHeatInitial) + 10)) * MDF_BaseAttack)",
-                      "constants": [
-                        10
-                      ],
-                      "variables": [
-                        "Modifier_Burn_DamagePercentage",
-                        "Weather_SunnyHeat",
-                        "Weather_SunnyHeatInitial",
-                        "MDF_BaseAttack"
-                      ]
+                      "displayLines": "((Modifier_Burn_DamagePercentage * ((Weather_SunnyHeat - Weather_SunnyHeatInitial) + 10)) * MDF_BaseAttack)"
                     },
                     "cantKill": true,
                     "Toughness": null,
@@ -2615,15 +2326,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "DamageFlat": {
-                      "operator": "Variables[0] (Modifier_Burn_DamagePercentage) || Constants[0] (10) || MUL || Variables[1] (MDF_BaseAttack) || MUL || RETURN",
-                      "displayLines": "((Modifier_Burn_DamagePercentage * 10) * MDF_BaseAttack)",
-                      "constants": [
-                        10
-                      ],
-                      "variables": [
-                        "Modifier_Burn_DamagePercentage",
-                        "MDF_BaseAttack"
-                      ]
+                      "displayLines": "((Modifier_Burn_DamagePercentage * 10) * MDF_BaseAttack)"
                     },
                     "cantKill": true,
                     "Toughness": null,
@@ -2713,12 +2416,7 @@ const configAbility = {
                 "value1": "Weather_SunnyHeat",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (Weather_SunnyHeatInitial) || RETURN",
-                  "displayLines": "Weather_SunnyHeatInitial",
-                  "constants": [],
-                  "variables": [
-                    "Weather_SunnyHeatInitial"
-                  ]
+                  "displayLines": "Weather_SunnyHeatInitial"
                 }
               },
               "passed": [
@@ -2731,17 +2429,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "DamageFlat": {
-                      "operator": "Variables[0] (Modifier_Burn_DamagePercentage) || Variables[1] (Weather_SunnyHeat) || Variables[2] (Weather_SunnyHeatInitial) || SUB || Constants[0] (10) || ADD || MUL || Variables[3] (MDF_BaseAttack) || MUL || RETURN",
-                      "displayLines": "((Modifier_Burn_DamagePercentage * ((Weather_SunnyHeat - Weather_SunnyHeatInitial) + 10)) * MDF_BaseAttack)",
-                      "constants": [
-                        10
-                      ],
-                      "variables": [
-                        "Modifier_Burn_DamagePercentage",
-                        "Weather_SunnyHeat",
-                        "Weather_SunnyHeatInitial",
-                        "MDF_BaseAttack"
-                      ]
+                      "displayLines": "((Modifier_Burn_DamagePercentage * ((Weather_SunnyHeat - Weather_SunnyHeatInitial) + 10)) * MDF_BaseAttack)"
                     },
                     "cantKill": true,
                     "Toughness": null,
@@ -2762,15 +2450,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "DamageFlat": {
-                      "operator": "Variables[0] (Modifier_Burn_DamagePercentage) || Constants[0] (10) || MUL || Variables[1] (MDF_BaseAttack) || MUL || RETURN",
-                      "displayLines": "((Modifier_Burn_DamagePercentage * 10) * MDF_BaseAttack)",
-                      "constants": [
-                        10
-                      ],
-                      "variables": [
-                        "Modifier_Burn_DamagePercentage",
-                        "MDF_BaseAttack"
-                      ]
+                      "displayLines": "((Modifier_Burn_DamagePercentage * 10) * MDF_BaseAttack)"
                     },
                     "cantKill": true,
                     "Toughness": null,
@@ -2860,12 +2540,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (Skill04P1SunnyHeat) || RETURN",
-                    "displayLines": "Skill04P1SunnyHeat",
-                    "constants": [],
-                    "variables": [
-                      "Skill04P1SunnyHeat"
-                    ]
+                    "displayLines": "Skill04P1SunnyHeat"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -2873,12 +2548,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] ({[Skill04P1[0]]}) || RETURN",
-                    "displayLines": "{[Skill04P1[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill04P1[0]]}"
-                    ]
+                    "displayLines": "{[Skill04P1[0]]}"
                   },
                   "assignState": "True"
                 }
@@ -2917,14 +2587,7 @@ const configAbility = {
                         "value1": "Sunny_Temperature",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (Weather_SunnyHeatInitial) || Constants[0] (20) || ADD || RETURN",
-                          "displayLines": "(Weather_SunnyHeatInitial + 20)",
-                          "constants": [
-                            20
-                          ],
-                          "variables": [
-                            "Weather_SunnyHeatInitial"
-                          ]
+                          "displayLines": "(Weather_SunnyHeatInitial + 20)"
                         }
                       }
                     }
@@ -2961,25 +2624,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Weather_SunnyHeat) || Variables[1] (Weather_HeatAddPerAction) || ADD || RETURN",
-                "displayLines": "(Weather_SunnyHeat + Weather_HeatAddPerAction)",
-                "constants": [],
-                "variables": [
-                  "Weather_SunnyHeat",
-                  "Weather_HeatAddPerAction"
-                ]
+                "displayLines": "(Weather_SunnyHeat + Weather_HeatAddPerAction)"
               },
               "variableName": "Weather_SunnyHeat"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Weather_SunnyHeat) || RETURN",
-                "displayLines": "Weather_SunnyHeat",
-                "constants": [],
-                "variables": [
-                  "Weather_SunnyHeat"
-                ]
+                "displayLines": "Weather_SunnyHeat"
               },
               "variableName": "Sunny_Temperature"
             },
@@ -3010,44 +2662,19 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "Modifier_Burn_DamagePercentage": {
-              "operator": "Variables[0] (Weather_HeatDamage) || RETURN",
-              "displayLines": "Weather_HeatDamage",
-              "constants": [],
-              "variables": [
-                "Weather_HeatDamage"
-              ]
+              "displayLines": "Weather_HeatDamage"
             },
             "Weather_SunnyHeat": {
-              "operator": "Variables[0] (Sunny_Temperature) || RETURN",
-              "displayLines": "Sunny_Temperature",
-              "constants": [],
-              "variables": [
-                "Sunny_Temperature"
-              ]
+              "displayLines": "Sunny_Temperature"
             },
             "Weather_SunnyHeatInitial": {
-              "operator": "Variables[0] (Weather_SunnyHeatInitial) || RETURN",
-              "displayLines": "Weather_SunnyHeatInitial",
-              "constants": [],
-              "variables": [
-                "Weather_SunnyHeatInitial"
-              ]
+              "displayLines": "Weather_SunnyHeatInitial"
             },
             "MDF_BaseAttack": {
-              "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__163) || RETURN",
-              "displayLines": "ENEMIES_OBJECT_UNUSED__163",
-              "constants": [],
-              "variables": [
-                "ENEMIES_OBJECT_UNUSED__163"
-              ]
+              "displayLines": "ENEMIES_OBJECT_UNUSED__163"
             },
             "MDF_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] (Weather_AllDamageTypeAddedRatio) || RETURN",
-              "displayLines": "Weather_AllDamageTypeAddedRatio",
-              "constants": [],
-              "variables": [
-                "Weather_AllDamageTypeAddedRatio"
-              ]
+              "displayLines": "Weather_AllDamageTypeAddedRatio"
             }
           }
         },
@@ -3061,28 +2688,13 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "Weather_SunnyHeat": {
-              "operator": "Variables[0] (Sunny_Temperature) || RETURN",
-              "displayLines": "Sunny_Temperature",
-              "constants": [],
-              "variables": [
-                "Sunny_Temperature"
-              ]
+              "displayLines": "Sunny_Temperature"
             },
             "Weather_SunnyHeatInitial": {
-              "operator": "Variables[0] (Weather_SunnyHeatInitial) || RETURN",
-              "displayLines": "Weather_SunnyHeatInitial",
-              "constants": [],
-              "variables": [
-                "Weather_SunnyHeatInitial"
-              ]
+              "displayLines": "Weather_SunnyHeatInitial"
             },
             "MDF_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] (Weather_AllDamageTypeAddedRatio) || RETURN",
-              "displayLines": "Weather_AllDamageTypeAddedRatio",
-              "constants": [],
-              "variables": [
-                "Weather_AllDamageTypeAddedRatio"
-              ]
+              "displayLines": "Weather_AllDamageTypeAddedRatio"
             }
           }
         },
@@ -3121,12 +2733,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "Weather_HeatAddPerAction": {
-              "operator": "Variables[0] (Weather_HeatAddPerAction) || RETURN",
-              "displayLines": "Weather_HeatAddPerAction",
-              "constants": [],
-              "variables": [
-                "Weather_HeatAddPerAction"
-              ]
+              "displayLines": "Weather_HeatAddPerAction"
             }
           }
         }
@@ -3163,12 +2770,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Weather_SunnyHeatInitial) || RETURN",
-                "displayLines": "Weather_SunnyHeatInitial",
-                "constants": [],
-                "variables": [
-                  "Weather_SunnyHeatInitial"
-                ]
+                "displayLines": "Weather_SunnyHeatInitial"
               },
               "variableName": "Sunny_Temperature"
             },
@@ -3181,12 +2783,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"735847061\">Modifier_Monster_W4_DawnsEye_WheaterSunnyUIController</a>",
               "valuePerStack": {
                 "Weather_SunnyHeatInitial": {
-                  "operator": "Variables[0] (Weather_SunnyHeatInitial) || RETURN",
-                  "displayLines": "Weather_SunnyHeatInitial",
-                  "constants": [],
-                  "variables": [
-                    "Weather_SunnyHeatInitial"
-                  ]
+                  "displayLines": "Weather_SunnyHeatInitial"
                 }
               }
             }
@@ -3259,14 +2856,7 @@ const configAbility = {
                   },
                   "variableName": "Sunny_Temperature",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (Weather_HeatCountDown) || SUB || RETURN",
-                    "displayLines": "(0 - Weather_HeatCountDown)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "Weather_HeatCountDown"
-                    ]
+                    "displayLines": "(0 - Weather_HeatCountDown)"
                   },
                   "max": 999
                 },
@@ -3311,36 +2901,16 @@ const configAbility = {
           },
           "valuePerStack": {
             "Modifier_Burn_DamagePercentage": {
-              "operator": "Variables[0] (Weather_HeatDamage) || RETURN",
-              "displayLines": "Weather_HeatDamage",
-              "constants": [],
-              "variables": [
-                "Weather_HeatDamage"
-              ]
+              "displayLines": "Weather_HeatDamage"
             },
             "Weather_SunnyHeat": {
-              "operator": "Variables[0] (Sunny_Temperature) || RETURN",
-              "displayLines": "Sunny_Temperature",
-              "constants": [],
-              "variables": [
-                "Sunny_Temperature"
-              ]
+              "displayLines": "Sunny_Temperature"
             },
             "Weather_SunnyHeatInitial": {
-              "operator": "Variables[0] (Weather_SunnyHeatInitial) || RETURN",
-              "displayLines": "Weather_SunnyHeatInitial",
-              "constants": [],
-              "variables": [
-                "Weather_SunnyHeatInitial"
-              ]
+              "displayLines": "Weather_SunnyHeatInitial"
             },
             "MDF_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] (Weather_AllDamageTypeAddedRatio) || RETURN",
-              "displayLines": "Weather_AllDamageTypeAddedRatio",
-              "constants": [],
-              "variables": [
-                "Weather_AllDamageTypeAddedRatio"
-              ]
+              "displayLines": "Weather_AllDamageTypeAddedRatio"
             }
           }
         },
@@ -3354,28 +2924,13 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "Weather_SunnyHeat": {
-              "operator": "Variables[0] (Sunny_Temperature) || RETURN",
-              "displayLines": "Sunny_Temperature",
-              "constants": [],
-              "variables": [
-                "Sunny_Temperature"
-              ]
+              "displayLines": "Sunny_Temperature"
             },
             "Weather_SunnyHeatInitial": {
-              "operator": "Variables[0] (Weather_SunnyHeatInitial) || RETURN",
-              "displayLines": "Weather_SunnyHeatInitial",
-              "constants": [],
-              "variables": [
-                "Weather_SunnyHeatInitial"
-              ]
+              "displayLines": "Weather_SunnyHeatInitial"
             },
             "MDF_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] (Weather_AllDamageTypeAddedRatio) || RETURN",
-              "displayLines": "Weather_AllDamageTypeAddedRatio",
-              "constants": [],
-              "variables": [
-                "Weather_AllDamageTypeAddedRatio"
-              ]
+              "displayLines": "Weather_AllDamageTypeAddedRatio"
             }
           }
         },
@@ -3414,12 +2969,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "Weather_HeatAddPerAction": {
-              "operator": "Variables[0] (Weather_HeatAddPerAction) || RETURN",
-              "displayLines": "Weather_HeatAddPerAction",
-              "constants": [],
-              "variables": [
-                "Weather_HeatAddPerAction"
-              ]
+              "displayLines": "Weather_HeatAddPerAction"
             }
           }
         },
@@ -3433,12 +2983,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_Ability04SunnyHeatColdDown": {
-              "operator": "Variables[0] (MDF_Skill04SunnyHeatColdDown) || RETURN",
-              "displayLines": "MDF_Skill04SunnyHeatColdDown",
-              "constants": [],
-              "variables": [
-                "MDF_Skill04SunnyHeatColdDown"
-              ]
+              "displayLines": "MDF_Skill04SunnyHeatColdDown"
             }
           }
         }
@@ -3450,12 +2995,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Weather_SunnyHeatInitial) || RETURN",
-                "displayLines": "Weather_SunnyHeatInitial",
-                "constants": [],
-                "variables": [
-                  "Weather_SunnyHeatInitial"
-                ]
+                "displayLines": "Weather_SunnyHeatInitial"
               },
               "variableName": "Sunny_Temperature"
             },
@@ -3468,12 +3008,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"735847061\">Modifier_Monster_W4_DawnsEye_WheaterSunnyUIController</a>",
               "valuePerStack": {
                 "Weather_SunnyHeatInitial": {
-                  "operator": "Variables[0] (Weather_SunnyHeatInitial) || RETURN",
-                  "displayLines": "Weather_SunnyHeatInitial",
-                  "constants": [],
-                  "variables": [
-                    "Weather_SunnyHeatInitial"
-                  ]
+                  "displayLines": "Weather_SunnyHeatInitial"
                 }
               }
             }
@@ -3695,12 +3230,7 @@ const configAbility = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (StanceDamage) || RETURN",
-                        "displayLines": "StanceDamage",
-                        "constants": [],
-                        "variables": [
-                          "StanceDamage"
-                        ]
+                        "displayLines": "StanceDamage"
                       },
                       "defender": {
                         "name": "Target Name",
@@ -3723,12 +3253,7 @@ const configAbility = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (StanceDamage) || RETURN",
-                        "displayLines": "StanceDamage",
-                        "constants": [],
-                        "variables": [
-                          "StanceDamage"
-                        ]
+                        "displayLines": "StanceDamage"
                       },
                       "defender": {
                         "name": "Target Name",
@@ -4025,12 +3550,7 @@ const configAbility = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (StanceDamage) || RETURN",
-                        "displayLines": "StanceDamage",
-                        "constants": [],
-                        "variables": [
-                          "StanceDamage"
-                        ]
+                        "displayLines": "StanceDamage"
                       },
                       "defender": {
                         "name": "Target Name",
@@ -4053,12 +3573,7 @@ const configAbility = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (StanceDamage) || RETURN",
-                        "displayLines": "StanceDamage",
-                        "constants": [],
-                        "variables": [
-                          "StanceDamage"
-                        ]
+                        "displayLines": "StanceDamage"
                       },
                       "defender": {
                         "name": "Target Name",
@@ -4127,12 +3642,7 @@ const configAbility = {
                             {
                               "name": "Enemy ID",
                               "ID": {
-                                "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
-                                "displayLines": "PartEntity1_MonsterID",
-                                "constants": [],
-                                "variables": [
-                                  "PartEntity1_MonsterID"
-                                ]
+                                "displayLines": "PartEntity1_MonsterID"
                               },
                               "target": {
                                 "name": "Target Name",
@@ -4143,12 +3653,7 @@ const configAbility = {
                             {
                               "name": "Enemy ID",
                               "ID": {
-                                "operator": "Variables[0] (PartEntity3_MonsterID) || RETURN",
-                                "displayLines": "PartEntity3_MonsterID",
-                                "constants": [],
-                                "variables": [
-                                  "PartEntity3_MonsterID"
-                                ]
+                                "displayLines": "PartEntity3_MonsterID"
                               },
                               "target": {
                                 "name": "Target Name",
@@ -4173,12 +3678,7 @@ const configAbility = {
                         "conditions": {
                           "name": "Enemy ID",
                           "ID": {
-                            "operator": "Variables[0] (SummonedMonsterID) || RETURN",
-                            "displayLines": "SummonedMonsterID",
-                            "constants": [],
-                            "variables": [
-                              "SummonedMonsterID"
-                            ]
+                            "displayLines": "SummonedMonsterID"
                           },
                           "target": {
                             "name": "Target Name",

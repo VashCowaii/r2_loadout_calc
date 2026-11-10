@@ -581,12 +581,7 @@ const configAbility = {
                 {
                   "name": "Adjust Team Punchline Value",
                   "value": {
-                    "operator": "Variables[0] (MDF_ElationPoint) || RETURN",
-                    "displayLines": "MDF_ElationPoint",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ElationPoint"
-                    ]
+                    "displayLines": "MDF_ElationPoint"
                   },
                   "adjustment": "Add"
                 },

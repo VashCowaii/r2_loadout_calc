@@ -145,21 +145,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-799988230\">Castorice_PointB3_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Where the West Wind Dwells</span>]",
           "stackLimit": {
-            "operator": "Variables[0] (CastoriceServant_PointB3_MaxLayer) || RETURN",
-            "displayLines": "CastoriceServant_PointB3_MaxLayer",
-            "constants": [],
-            "variables": [
-              "CastoriceServant_PointB3_MaxLayer"
-            ]
+            "displayLines": "CastoriceServant_PointB3_MaxLayer"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (CastoriceServant_PointB3_AllDamageTypeAddedRatio) || RETURN",
-              "displayLines": "CastoriceServant_PointB3_AllDamageTypeAddedRatio",
-              "constants": [],
-              "variables": [
-                "CastoriceServant_PointB3_AllDamageTypeAddedRatio"
-              ]
+              "displayLines": "CastoriceServant_PointB3_AllDamageTypeAddedRatio"
             }
           },
           "addStacksPerTrigger": 1
@@ -199,14 +189,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (CastoriceServant_Rank02_Count) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(CastoriceServant_Rank02_Count - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "CastoriceServant_Rank02_Count"
-                ]
+                "displayLines": "(CastoriceServant_Rank02_Count - 1)"
               },
               "variableName": "CastoriceServant_Rank02_Count"
             },
@@ -218,24 +201,14 @@ const configAbility = {
               },
               "scope": "TargetEntity",
               "value": {
-                "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
-                "displayLines": "CastoriceServant_Rank02_Count",
-                "constants": [],
-                "variables": [
-                  "CastoriceServant_Rank02_Count"
-                ]
+                "displayLines": "CastoriceServant_Rank02_Count"
               },
               "variableName": "Castorice_Rank02_Count"
             },
             {
               "name": "Set Netherwing's Ardent Will Stacks",
               "displayNum": {
-                "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
-                "displayLines": "CastoriceServant_Rank02_Count",
-                "constants": [],
-                "variables": [
-                  "CastoriceServant_Rank02_Count"
-                ]
+                "displayLines": "CastoriceServant_Rank02_Count"
               },
               "previewNum": 0
             }
@@ -248,13 +221,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "flatConsume": {
-                "operator": "Variables[0] (CastoriceServant_SkillMaxHP) || Variables[1] (0.25) || MUL || RETURN",
-                "displayLines": "(CastoriceServant_SkillMaxHP * 0.25)",
-                "constants": [],
-                "variables": [
-                  "CastoriceServant_SkillMaxHP",
-                  0.25
-                ]
+                "displayLines": "(CastoriceServant_SkillMaxHP * 0.25)"
               },
               "consumeFloor": 1,
               "attackType": "Unknown"
@@ -270,13 +237,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "flatConsume": {
-            "operator": "Variables[0] (CastoriceServant_SkillMaxHP) || Variables[1] (0.25) || MUL || RETURN",
-            "displayLines": "(CastoriceServant_SkillMaxHP * 0.25)",
-            "constants": [],
-            "variables": [
-              "CastoriceServant_SkillMaxHP",
-              0.25
-            ]
+            "displayLines": "(CastoriceServant_SkillMaxHP * 0.25)"
           },
           "consumeFloor": 1,
           "attackType": "Unknown"
@@ -291,25 +252,13 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (CastoriceBPLoopMax) || RETURN",
-        "displayLines": "CastoriceBPLoopMax",
-        "constants": [],
-        "variables": [
-          "CastoriceBPLoopMax"
-        ]
+        "displayLines": "CastoriceBPLoopMax"
       },
       "execute": [
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (CastoriceBPLoop) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(CastoriceBPLoop + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "CastoriceBPLoop"
-            ]
+            "displayLines": "(CastoriceBPLoop + 1)"
           },
           "variableName": "CastoriceBPLoop"
         },
@@ -342,32 +291,14 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] (0.34) || Variables[1] (Castorice_Rank01_DamageRatio) || MUL || RETURN",
-                      "displayLines": "(0.34 * Castorice_Rank01_DamageRatio)",
-                      "constants": [],
-                      "variables": [
-                        0.34,
-                        "Castorice_Rank01_DamageRatio"
-                      ]
+                      "displayLines": "(0.34 * Castorice_Rank01_DamageRatio)"
                     },
                     "dmgFormula": "[SUMMONER] Max HP Scaling",
                     "HitSplit": {
-                      "operator": "Constants[0] (1) || Constants[0] (1) || Variables[0] (CastoriceBPLoopMax) || DIV || MUL || RETURN",
-                      "displayLines": "(1 * (1 / CastoriceBPLoopMax))",
-                      "constants": [
-                        1
-                      ],
-                      "variables": [
-                        "CastoriceBPLoopMax"
-                      ]
+                      "displayLines": "(1 * (1 / CastoriceBPLoopMax))"
                     },
                     "Toughness": {
-                      "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                      "displayLines": "AOE Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "AOE Toughness Value"
-                      ]
+                      "displayLines": "AOE Toughness Value"
                     },
                     "Tags": null,
                     "attackType": "Memosprite",
@@ -388,31 +319,14 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] (0.34) || RETURN",
-                  "displayLines": "0.34",
-                  "constants": [],
-                  "variables": [
-                    0.34
-                  ]
+                  "displayLines": "0.34"
                 },
                 "dmgFormula": "[SUMMONER] Max HP Scaling",
                 "HitSplit": {
-                  "operator": "Constants[0] (1) || Constants[0] (1) || Variables[0] (CastoriceBPLoopMax) || DIV || MUL || RETURN",
-                  "displayLines": "(1 * (1 / CastoriceBPLoopMax))",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    "CastoriceBPLoopMax"
-                  ]
+                  "displayLines": "(1 * (1 / CastoriceBPLoopMax))"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Memosprite",
@@ -426,14 +340,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (CastoriceBPLoop) || Constants[0] (1) || ADD || RETURN",
-        "displayLines": "(CastoriceBPLoop + 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "CastoriceBPLoop"
-        ]
+        "displayLines": "(CastoriceBPLoop + 1)"
       },
       "variableName": "CastoriceBPLoop"
     },
@@ -445,12 +352,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (CastoriceServant_BattleViewModeLevel) || RETURN",
-        "displayLines": "CastoriceServant_BattleViewModeLevel",
-        "constants": [],
-        "variables": [
-          "CastoriceServant_BattleViewModeLevel"
-        ]
+        "displayLines": "CastoriceServant_BattleViewModeLevel"
       },
       "variableName": "CastoriceServant_ReadyFlag"
     },

@@ -827,13 +827,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_PropertyValue * MDF_Layer)"
                   },
                   "variableName": "MDF_ResistanceDown"
                 },
@@ -845,15 +839,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindBonus</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || SUB || RETURN",
-                    "displayLines": "(0 - (MDF_PropertyValue * MDF_Layer))",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(0 - (MDF_PropertyValue * MDF_Layer))"
                   }
                 }
               ]
@@ -893,13 +879,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_PropertyValue * MDF_Layer)"
                   },
                   "variableName": "MDF_ResistanceDown"
                 },
@@ -911,15 +891,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceLightningBonus</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || SUB || RETURN",
-                    "displayLines": "(0 - (MDF_PropertyValue * MDF_Layer))",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(0 - (MDF_PropertyValue * MDF_Layer))"
                   }
                 }
               ]
@@ -959,13 +931,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_PropertyValue * MDF_Layer)"
                   },
                   "variableName": "MDF_ResistanceDown"
                 },
@@ -977,15 +943,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceQuantumBonus</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || SUB || RETURN",
-                    "displayLines": "(0 - (MDF_PropertyValue * MDF_Layer))",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(0 - (MDF_PropertyValue * MDF_Layer))"
                   }
                 }
               ]
@@ -1025,13 +983,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_PropertyValue * MDF_Layer)"
                   },
                   "variableName": "MDF_ResistanceDown"
                 },
@@ -1043,15 +995,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistancePhysicalBonus</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || SUB || RETURN",
-                    "displayLines": "(0 - (MDF_PropertyValue * MDF_Layer))",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(0 - (MDF_PropertyValue * MDF_Layer))"
                   }
                 }
               ]
@@ -1091,13 +1035,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_PropertyValue * MDF_Layer)"
                   },
                   "variableName": "MDF_ResistanceDown"
                 },
@@ -1109,15 +1047,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceImaginaryBonus</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || SUB || RETURN",
-                    "displayLines": "(0 - (MDF_PropertyValue * MDF_Layer))",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(0 - (MDF_PropertyValue * MDF_Layer))"
                   }
                 }
               ]
@@ -1157,13 +1087,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_PropertyValue * MDF_Layer)"
                   },
                   "variableName": "MDF_ResistanceDown"
                 },
@@ -1175,15 +1099,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceIceBonus</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || SUB || RETURN",
-                    "displayLines": "(0 - (MDF_PropertyValue * MDF_Layer))",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(0 - (MDF_PropertyValue * MDF_Layer))"
                   }
                 }
               ]
@@ -1223,13 +1139,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_PropertyValue * MDF_Layer)"
                   },
                   "variableName": "MDF_ResistanceDown"
                 },
@@ -1241,15 +1151,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFireBonus</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || SUB || RETURN",
-                    "displayLines": "(0 - (MDF_PropertyValue * MDF_Layer))",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(0 - (MDF_PropertyValue * MDF_Layer))"
                   }
                 }
               ]
@@ -1275,12 +1177,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -1522,12 +1419,7 @@ const compositeAbilityObject = {
                   },
                   "scope": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (CurrentMaxColorType) || RETURN",
-                    "displayLines": "CurrentMaxColorType",
-                    "constants": [],
-                    "variables": [
-                      "CurrentMaxColorType"
-                    ]
+                    "displayLines": "CurrentMaxColorType"
                   },
                   "variableName": "CurrentMaxColorScore"
                 },
@@ -1542,12 +1434,7 @@ const compositeAbilityObject = {
                     "value1": "IceScore",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (CurrentMaxColorScore) || RETURN",
-                      "displayLines": "CurrentMaxColorScore",
-                      "constants": [],
-                      "variables": [
-                        "CurrentMaxColorScore"
-                      ]
+                      "displayLines": "CurrentMaxColorScore"
                     }
                   },
                   "passed": [
@@ -1569,12 +1456,7 @@ const compositeAbilityObject = {
                       },
                       "scope": "TargetEntity",
                       "value": {
-                        "operator": "Variables[0] (IceScore) || RETURN",
-                        "displayLines": "IceScore",
-                        "constants": [],
-                        "variables": [
-                          "IceScore"
-                        ]
+                        "displayLines": "IceScore"
                       },
                       "variableName": "CurrentMaxColorScore"
                     }
@@ -1591,12 +1473,7 @@ const compositeAbilityObject = {
                     "value1": "ImaginaryScore",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (CurrentMaxColorScore) || RETURN",
-                      "displayLines": "CurrentMaxColorScore",
-                      "constants": [],
-                      "variables": [
-                        "CurrentMaxColorScore"
-                      ]
+                      "displayLines": "CurrentMaxColorScore"
                     }
                   },
                   "passed": [
@@ -1618,12 +1495,7 @@ const compositeAbilityObject = {
                       },
                       "scope": "TargetEntity",
                       "value": {
-                        "operator": "Variables[0] (ImaginaryScore) || RETURN",
-                        "displayLines": "ImaginaryScore",
-                        "constants": [],
-                        "variables": [
-                          "ImaginaryScore"
-                        ]
+                        "displayLines": "ImaginaryScore"
                       },
                       "variableName": "CurrentMaxColorScore"
                     }
@@ -1640,12 +1512,7 @@ const compositeAbilityObject = {
                     "value1": "PhysicalScore",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (CurrentMaxColorScore) || RETURN",
-                      "displayLines": "CurrentMaxColorScore",
-                      "constants": [],
-                      "variables": [
-                        "CurrentMaxColorScore"
-                      ]
+                      "displayLines": "CurrentMaxColorScore"
                     }
                   },
                   "passed": [
@@ -1667,12 +1534,7 @@ const compositeAbilityObject = {
                       },
                       "scope": "TargetEntity",
                       "value": {
-                        "operator": "Variables[0] (PhysicalScore) || RETURN",
-                        "displayLines": "PhysicalScore",
-                        "constants": [],
-                        "variables": [
-                          "PhysicalScore"
-                        ]
+                        "displayLines": "PhysicalScore"
                       },
                       "variableName": "CurrentMaxColorScore"
                     }
@@ -1689,12 +1551,7 @@ const compositeAbilityObject = {
                     "value1": "QuantumScore",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (CurrentMaxColorScore) || RETURN",
-                      "displayLines": "CurrentMaxColorScore",
-                      "constants": [],
-                      "variables": [
-                        "CurrentMaxColorScore"
-                      ]
+                      "displayLines": "CurrentMaxColorScore"
                     }
                   },
                   "passed": [
@@ -1716,12 +1573,7 @@ const compositeAbilityObject = {
                       },
                       "scope": "TargetEntity",
                       "value": {
-                        "operator": "Variables[0] (QuantumScore) || RETURN",
-                        "displayLines": "QuantumScore",
-                        "constants": [],
-                        "variables": [
-                          "QuantumScore"
-                        ]
+                        "displayLines": "QuantumScore"
                       },
                       "variableName": "CurrentMaxColorScore"
                     }
@@ -1738,12 +1590,7 @@ const compositeAbilityObject = {
                     "value1": "ThunderScore",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (CurrentMaxColorScore) || RETURN",
-                      "displayLines": "CurrentMaxColorScore",
-                      "constants": [],
-                      "variables": [
-                        "CurrentMaxColorScore"
-                      ]
+                      "displayLines": "CurrentMaxColorScore"
                     }
                   },
                   "passed": [
@@ -1765,12 +1612,7 @@ const compositeAbilityObject = {
                       },
                       "scope": "TargetEntity",
                       "value": {
-                        "operator": "Variables[0] (ThunderScore) || RETURN",
-                        "displayLines": "ThunderScore",
-                        "constants": [],
-                        "variables": [
-                          "ThunderScore"
-                        ]
+                        "displayLines": "ThunderScore"
                       },
                       "variableName": "CurrentMaxColorScore"
                     }
@@ -1787,12 +1629,7 @@ const compositeAbilityObject = {
                     "value1": "WindScore",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (CurrentMaxColorScore) || RETURN",
-                      "displayLines": "CurrentMaxColorScore",
-                      "constants": [],
-                      "variables": [
-                        "CurrentMaxColorScore"
-                      ]
+                      "displayLines": "CurrentMaxColorScore"
                     }
                   },
                   "passed": [
@@ -1814,12 +1651,7 @@ const compositeAbilityObject = {
                       },
                       "scope": "TargetEntity",
                       "value": {
-                        "operator": "Variables[0] (WindScore) || RETURN",
-                        "displayLines": "WindScore",
-                        "constants": [],
-                        "variables": [
-                          "WindScore"
-                        ]
+                        "displayLines": "WindScore"
                       },
                       "variableName": "CurrentMaxColorScore"
                     }
@@ -1828,14 +1660,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Adjust Team Punchline Value",
                   "value": {
-                    "operator": "Variables[0] ({[SkillP01[7]]}) || Variables[1] (WHOLE) || Variables[2] (CurrentMaxColorScore) || PARAM_1 || FUNCTION || MUL || RETURN",
-                    "displayLines": "({[SkillP01[7]]} * &nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(CurrentMaxColorScore))",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillP01[7]]}",
-                      "WHOLE",
-                      "CurrentMaxColorScore"
-                    ]
+                    "displayLines": "({[SkillP01[7]]} * &nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(CurrentMaxColorScore))"
                   },
                   "adjustment": "Add"
                 },
@@ -2489,12 +2314,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-                        "displayLines": "CurrentColorSlotIndex",
-                        "constants": [],
-                        "variables": [
-                          "CurrentColorSlotIndex"
-                        ]
+                        "displayLines": "CurrentColorSlotIndex"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -2869,12 +2689,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Looped Event",
                           "maxLoops": {
-                            "operator": "Variables[0] (MDF_ElationDamageExtraColorCount) || RETURN",
-                            "displayLines": "MDF_ElationDamageExtraColorCount",
-                            "constants": [],
-                            "variables": [
-                              "MDF_ElationDamageExtraColorCount"
-                            ]
+                            "displayLines": "MDF_ElationDamageExtraColorCount"
                           },
                           "execute": [
                             {
@@ -2924,12 +2739,7 @@ const compositeAbilityObject = {
                         {
                           "name": "SWITCH",
                           "switchValue": {
-                            "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-                            "displayLines": "CurrentColorSlotIndex",
-                            "constants": [],
-                            "variables": [
-                              "CurrentColorSlotIndex"
-                            ]
+                            "displayLines": "CurrentColorSlotIndex"
                           },
                           "caseEvents": [
                             {
@@ -3052,12 +2862,7 @@ const compositeAbilityObject = {
                         {
                           "name": "SWITCH",
                           "switchValue": {
-                            "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-                            "displayLines": "CurrentColorSlotIndex",
-                            "constants": [],
-                            "variables": [
-                              "CurrentColorSlotIndex"
-                            ]
+                            "displayLines": "CurrentColorSlotIndex"
                           },
                           "caseEvents": [
                             {
@@ -3180,12 +2985,7 @@ const compositeAbilityObject = {
                         {
                           "name": "SWITCH",
                           "switchValue": {
-                            "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-                            "displayLines": "CurrentColorSlotIndex",
-                            "constants": [],
-                            "variables": [
-                              "CurrentColorSlotIndex"
-                            ]
+                            "displayLines": "CurrentColorSlotIndex"
                           },
                           "caseEvents": [
                             {
@@ -3308,12 +3108,7 @@ const compositeAbilityObject = {
                         {
                           "name": "SWITCH",
                           "switchValue": {
-                            "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-                            "displayLines": "CurrentColorSlotIndex",
-                            "constants": [],
-                            "variables": [
-                              "CurrentColorSlotIndex"
-                            ]
+                            "displayLines": "CurrentColorSlotIndex"
                           },
                           "caseEvents": [
                             {
@@ -3436,12 +3231,7 @@ const compositeAbilityObject = {
                         {
                           "name": "SWITCH",
                           "switchValue": {
-                            "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-                            "displayLines": "CurrentColorSlotIndex",
-                            "constants": [],
-                            "variables": [
-                              "CurrentColorSlotIndex"
-                            ]
+                            "displayLines": "CurrentColorSlotIndex"
                           },
                           "caseEvents": [
                             {
@@ -3564,12 +3354,7 @@ const compositeAbilityObject = {
                         {
                           "name": "SWITCH",
                           "switchValue": {
-                            "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-                            "displayLines": "CurrentColorSlotIndex",
-                            "constants": [],
-                            "variables": [
-                              "CurrentColorSlotIndex"
-                            ]
+                            "displayLines": "CurrentColorSlotIndex"
                           },
                           "caseEvents": [
                             {
@@ -3692,12 +3477,7 @@ const compositeAbilityObject = {
                         {
                           "name": "SWITCH",
                           "switchValue": {
-                            "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-                            "displayLines": "CurrentColorSlotIndex",
-                            "constants": [],
-                            "variables": [
-                              "CurrentColorSlotIndex"
-                            ]
+                            "displayLines": "CurrentColorSlotIndex"
                           },
                           "caseEvents": [
                             {
@@ -3834,14 +3614,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (CurrentColorSlotIndex) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(CurrentColorSlotIndex - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "CurrentColorSlotIndex"
-                        ]
+                        "displayLines": "(CurrentColorSlotIndex - 1)"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -3874,12 +3647,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1506777447\">Enemy_W5_Peacock_AbilityP01_Colorless</a>[<span class=\"descriptionNumberColor\">Colorless</span>]",
                   "valuePerStack": {
                     "MDF_ElationDamageExtraColorCount": {
-                      "operator": "Variables[0] ({[SkillP01[6]]}) || RETURN",
-                      "displayLines": "{[SkillP01[6]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[6]]}"
-                      ]
+                      "displayLines": "{[SkillP01[6]]}"
                     }
                   }
                 },
@@ -3892,12 +3660,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1921694254\">Enemy_W5_Peacock_AbilityP01_ElementResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Boost</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                      "displayLines": "{[SkillP01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[0]]}"
-                      ]
+                      "displayLines": "{[SkillP01[0]]}"
                     }
                   }
                 }
@@ -4116,12 +3879,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1921694254\">Enemy_W5_Peacock_AbilityP01_ElementResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Boost</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                      "displayLines": "{[SkillP01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[0]]}"
-                      ]
+                      "displayLines": "{[SkillP01[0]]}"
                     }
                   }
                 },
@@ -4153,12 +3911,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1506777447\">Enemy_W5_Peacock_AbilityP01_Colorless</a>[<span class=\"descriptionNumberColor\">Colorless</span>]",
                       "valuePerStack": {
                         "MDF_ElationDamageExtraColorCount": {
-                          "operator": "Variables[0] ({[SkillP01[6]]}) || RETURN",
-                          "displayLines": "{[SkillP01[6]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillP01[6]]}"
-                          ]
+                          "displayLines": "{[SkillP01[6]]}"
                         }
                       }
                     }
@@ -4410,12 +4163,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1506777447\">Enemy_W5_Peacock_AbilityP01_Colorless</a>[<span class=\"descriptionNumberColor\">Colorless</span>]",
           "valuePerStack": {
             "MDF_ElationDamageExtraColorCount": {
-              "operator": "Variables[0] ({[SkillP01[6]]}) || RETURN",
-              "displayLines": "{[SkillP01[6]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[6]]}"
-              ]
+              "displayLines": "{[SkillP01[6]]}"
             }
           }
         },
@@ -4506,12 +4254,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"973037691\">Enemy_W5_Peacock_AbilityP01_Colorful</a>[<span class=\"descriptionNumberColor\">Color</span>]",
           "valuePerStack": {
             "MDF_ColorDiffDamageAddedRatio": {
-              "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-              "displayLines": "{[SkillP01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[4]]}"
-              ]
+              "displayLines": "{[SkillP01[4]]}"
             }
           }
         },
@@ -4759,12 +4502,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "{[Skill05[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -4783,12 +4521,7 @@ const compositeAbilityObject = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-                "displayLines": "CurrentColorSlotIndex",
-                "constants": [],
-                "variables": [
-                  "CurrentColorSlotIndex"
-                ]
+                "displayLines": "CurrentColorSlotIndex"
               },
               "caseEvents": [
                 {
@@ -4910,12 +4643,7 @@ const compositeAbilityObject = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-                "displayLines": "CurrentColorSlotIndex",
-                "constants": [],
-                "variables": [
-                  "CurrentColorSlotIndex"
-                ]
+                "displayLines": "CurrentColorSlotIndex"
               },
               "caseEvents": [
                 {
@@ -5037,12 +4765,7 @@ const compositeAbilityObject = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-                "displayLines": "CurrentColorSlotIndex",
-                "constants": [],
-                "variables": [
-                  "CurrentColorSlotIndex"
-                ]
+                "displayLines": "CurrentColorSlotIndex"
               },
               "caseEvents": [
                 {
@@ -5164,12 +4887,7 @@ const compositeAbilityObject = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-                "displayLines": "CurrentColorSlotIndex",
-                "constants": [],
-                "variables": [
-                  "CurrentColorSlotIndex"
-                ]
+                "displayLines": "CurrentColorSlotIndex"
               },
               "caseEvents": [
                 {
@@ -5291,12 +5009,7 @@ const compositeAbilityObject = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-                "displayLines": "CurrentColorSlotIndex",
-                "constants": [],
-                "variables": [
-                  "CurrentColorSlotIndex"
-                ]
+                "displayLines": "CurrentColorSlotIndex"
               },
               "caseEvents": [
                 {
@@ -5418,12 +5131,7 @@ const compositeAbilityObject = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-                "displayLines": "CurrentColorSlotIndex",
-                "constants": [],
-                "variables": [
-                  "CurrentColorSlotIndex"
-                ]
+                "displayLines": "CurrentColorSlotIndex"
               },
               "caseEvents": [
                 {
@@ -5590,12 +5298,7 @@ const compositeAbilityObject = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-                "displayLines": "CurrentColorSlotIndex",
-                "constants": [],
-                "variables": [
-                  "CurrentColorSlotIndex"
-                ]
+                "displayLines": "CurrentColorSlotIndex"
               },
               "caseEvents": [
                 {
@@ -5692,12 +5395,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -5717,12 +5415,7 @@ const compositeAbilityObject = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-                "displayLines": "CurrentColorSlotIndex",
-                "constants": [],
-                "variables": [
-                  "CurrentColorSlotIndex"
-                ]
+                "displayLines": "CurrentColorSlotIndex"
               },
               "caseEvents": [
                 {
@@ -5889,12 +5582,7 @@ const compositeAbilityObject = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-                "displayLines": "CurrentColorSlotIndex",
-                "constants": [],
-                "variables": [
-                  "CurrentColorSlotIndex"
-                ]
+                "displayLines": "CurrentColorSlotIndex"
               },
               "caseEvents": [
                 {
@@ -5989,12 +5677,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -6014,12 +5697,7 @@ const compositeAbilityObject = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-                "displayLines": "CurrentColorSlotIndex",
-                "constants": [],
-                "variables": [
-                  "CurrentColorSlotIndex"
-                ]
+                "displayLines": "CurrentColorSlotIndex"
               },
               "caseEvents": [
                 {
@@ -6185,12 +5863,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -6256,12 +5929,7 @@ const compositeAbilityObject = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (CurrentColorSlotIndex) || RETURN",
-                "displayLines": "CurrentColorSlotIndex",
-                "constants": [],
-                "variables": [
-                  "CurrentColorSlotIndex"
-                ]
+                "displayLines": "CurrentColorSlotIndex"
               },
               "caseEvents": [
                 {
@@ -6271,12 +5939,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
-                        "displayLines": "TaskListDF_ColorValue",
-                        "constants": [],
-                        "variables": [
-                          "TaskListDF_ColorValue"
-                        ]
+                        "displayLines": "TaskListDF_ColorValue"
                       },
                       "variableName": "ColorSlot1"
                     },
@@ -6286,12 +5949,7 @@ const compositeAbilityObject = {
                       "variables": {
                         "TaskListDF_ColorScoreValue": 1.16,
                         "TaskListDF_ColorValue": {
-                          "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
-                          "displayLines": "TaskListDF_ColorValue",
-                          "constants": [],
-                          "variables": [
-                            "TaskListDF_ColorValue"
-                          ]
+                          "displayLines": "TaskListDF_ColorValue"
                         }
                       }
                     },
@@ -6309,12 +5967,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
-                        "displayLines": "TaskListDF_ColorValue",
-                        "constants": [],
-                        "variables": [
-                          "TaskListDF_ColorValue"
-                        ]
+                        "displayLines": "TaskListDF_ColorValue"
                       },
                       "variableName": "ColorSlot2"
                     },
@@ -6324,12 +5977,7 @@ const compositeAbilityObject = {
                       "variables": {
                         "TaskListDF_ColorScoreValue": 1.08,
                         "TaskListDF_ColorValue": {
-                          "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
-                          "displayLines": "TaskListDF_ColorValue",
-                          "constants": [],
-                          "variables": [
-                            "TaskListDF_ColorValue"
-                          ]
+                          "displayLines": "TaskListDF_ColorValue"
                         }
                       }
                     },
@@ -6347,12 +5995,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
-                        "displayLines": "TaskListDF_ColorValue",
-                        "constants": [],
-                        "variables": [
-                          "TaskListDF_ColorValue"
-                        ]
+                        "displayLines": "TaskListDF_ColorValue"
                       },
                       "variableName": "ColorSlot3"
                     },
@@ -6362,12 +6005,7 @@ const compositeAbilityObject = {
                       "variables": {
                         "TaskListDF_ColorScoreValue": 1.04,
                         "TaskListDF_ColorValue": {
-                          "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
-                          "displayLines": "TaskListDF_ColorValue",
-                          "constants": [],
-                          "variables": [
-                            "TaskListDF_ColorValue"
-                          ]
+                          "displayLines": "TaskListDF_ColorValue"
                         }
                       }
                     },
@@ -6385,12 +6023,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
-                        "displayLines": "TaskListDF_ColorValue",
-                        "constants": [],
-                        "variables": [
-                          "TaskListDF_ColorValue"
-                        ]
+                        "displayLines": "TaskListDF_ColorValue"
                       },
                       "variableName": "ColorSlot4"
                     },
@@ -6400,12 +6033,7 @@ const compositeAbilityObject = {
                       "variables": {
                         "TaskListDF_ColorScoreValue": 1.02,
                         "TaskListDF_ColorValue": {
-                          "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
-                          "displayLines": "TaskListDF_ColorValue",
-                          "constants": [],
-                          "variables": [
-                            "TaskListDF_ColorValue"
-                          ]
+                          "displayLines": "TaskListDF_ColorValue"
                         }
                       }
                     },
@@ -6423,12 +6051,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
-                        "displayLines": "TaskListDF_ColorValue",
-                        "constants": [],
-                        "variables": [
-                          "TaskListDF_ColorValue"
-                        ]
+                        "displayLines": "TaskListDF_ColorValue"
                       },
                       "variableName": "ColorSlot5"
                     },
@@ -6438,12 +6061,7 @@ const compositeAbilityObject = {
                       "variables": {
                         "TaskListDF_ColorScoreValue": 1.01,
                         "TaskListDF_ColorValue": {
-                          "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
-                          "displayLines": "TaskListDF_ColorValue",
-                          "constants": [],
-                          "variables": [
-                            "TaskListDF_ColorValue"
-                          ]
+                          "displayLines": "TaskListDF_ColorValue"
                         }
                       }
                     },
@@ -6461,12 +6079,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
-                        "displayLines": "TaskListDF_ColorValue",
-                        "constants": [],
-                        "variables": [
-                          "TaskListDF_ColorValue"
-                        ]
+                        "displayLines": "TaskListDF_ColorValue"
                       },
                       "variableName": "ColorSlot6"
                     },
@@ -6476,12 +6089,7 @@ const compositeAbilityObject = {
                       "variables": {
                         "TaskListDF_ColorScoreValue": 1,
                         "TaskListDF_ColorValue": {
-                          "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
-                          "displayLines": "TaskListDF_ColorValue",
-                          "constants": [],
-                          "variables": [
-                            "TaskListDF_ColorValue"
-                          ]
+                          "displayLines": "TaskListDF_ColorValue"
                         }
                       }
                     },
@@ -6581,12 +6189,7 @@ const compositeAbilityObject = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
-                "displayLines": "TaskListDF_ColorValue",
-                "constants": [],
-                "variables": [
-                  "TaskListDF_ColorValue"
-                ]
+                "displayLines": "TaskListDF_ColorValue"
               },
               "caseEvents": [
                 {
@@ -6602,12 +6205,7 @@ const compositeAbilityObject = {
                       "variableName": "FireScore",
                       "context": "TargetEntity",
                       "value": {
-                        "operator": "Variables[0] (TaskListDF_ColorScoreValue) || RETURN",
-                        "displayLines": "TaskListDF_ColorScoreValue",
-                        "constants": [],
-                        "variables": [
-                          "TaskListDF_ColorScoreValue"
-                        ]
+                        "displayLines": "TaskListDF_ColorScoreValue"
                       },
                       "max": 100
                     }
@@ -6626,12 +6224,7 @@ const compositeAbilityObject = {
                       "variableName": "IceScore",
                       "context": "TargetEntity",
                       "value": {
-                        "operator": "Variables[0] (TaskListDF_ColorScoreValue) || RETURN",
-                        "displayLines": "TaskListDF_ColorScoreValue",
-                        "constants": [],
-                        "variables": [
-                          "TaskListDF_ColorScoreValue"
-                        ]
+                        "displayLines": "TaskListDF_ColorScoreValue"
                       },
                       "max": 100
                     }
@@ -6650,12 +6243,7 @@ const compositeAbilityObject = {
                       "variableName": "ImaginaryScore",
                       "context": "TargetEntity",
                       "value": {
-                        "operator": "Variables[0] (TaskListDF_ColorScoreValue) || RETURN",
-                        "displayLines": "TaskListDF_ColorScoreValue",
-                        "constants": [],
-                        "variables": [
-                          "TaskListDF_ColorScoreValue"
-                        ]
+                        "displayLines": "TaskListDF_ColorScoreValue"
                       },
                       "max": 100
                     }
@@ -6674,12 +6262,7 @@ const compositeAbilityObject = {
                       "variableName": "PhysicalScore",
                       "context": "TargetEntity",
                       "value": {
-                        "operator": "Variables[0] (TaskListDF_ColorScoreValue) || RETURN",
-                        "displayLines": "TaskListDF_ColorScoreValue",
-                        "constants": [],
-                        "variables": [
-                          "TaskListDF_ColorScoreValue"
-                        ]
+                        "displayLines": "TaskListDF_ColorScoreValue"
                       },
                       "max": 100
                     }
@@ -6698,12 +6281,7 @@ const compositeAbilityObject = {
                       "variableName": "QuantumScore",
                       "context": "TargetEntity",
                       "value": {
-                        "operator": "Variables[0] (TaskListDF_ColorScoreValue) || RETURN",
-                        "displayLines": "TaskListDF_ColorScoreValue",
-                        "constants": [],
-                        "variables": [
-                          "TaskListDF_ColorScoreValue"
-                        ]
+                        "displayLines": "TaskListDF_ColorScoreValue"
                       },
                       "max": 100
                     }
@@ -6722,12 +6300,7 @@ const compositeAbilityObject = {
                       "variableName": "ThunderScore",
                       "context": "TargetEntity",
                       "value": {
-                        "operator": "Variables[0] (TaskListDF_ColorScoreValue) || RETURN",
-                        "displayLines": "TaskListDF_ColorScoreValue",
-                        "constants": [],
-                        "variables": [
-                          "TaskListDF_ColorScoreValue"
-                        ]
+                        "displayLines": "TaskListDF_ColorScoreValue"
                       },
                       "max": 100
                     }
@@ -6746,12 +6319,7 @@ const compositeAbilityObject = {
                       "variableName": "WindScore",
                       "context": "TargetEntity",
                       "value": {
-                        "operator": "Variables[0] (TaskListDF_ColorScoreValue) || RETURN",
-                        "displayLines": "TaskListDF_ColorScoreValue",
-                        "constants": [],
-                        "variables": [
-                          "TaskListDF_ColorScoreValue"
-                        ]
+                        "displayLines": "TaskListDF_ColorScoreValue"
                       },
                       "max": 100
                     }
@@ -6769,12 +6337,7 @@ const compositeAbilityObject = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (DynamicString_ColorSlotX) || RETURN",
-                "displayLines": "DynamicString_ColorSlotX",
-                "constants": [],
-                "variables": [
-                  "DynamicString_ColorSlotX"
-                ]
+                "displayLines": "DynamicString_ColorSlotX"
               },
               "caseEvents": [
                 {
@@ -6784,12 +6347,7 @@ const compositeAbilityObject = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (ColorSlot1) || RETURN",
-                        "displayLines": "ColorSlot1",
-                        "constants": [],
-                        "variables": [
-                          "ColorSlot1"
-                        ]
+                        "displayLines": "ColorSlot1"
                       },
                       "caseEvents": [
                         {
@@ -6805,12 +6363,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -6833,12 +6386,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -6861,12 +6409,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -6889,12 +6432,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -6917,12 +6455,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -6945,12 +6478,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -6973,12 +6501,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7005,12 +6528,7 @@ const compositeAbilityObject = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (ColorSlot2) || RETURN",
-                        "displayLines": "ColorSlot2",
-                        "constants": [],
-                        "variables": [
-                          "ColorSlot2"
-                        ]
+                        "displayLines": "ColorSlot2"
                       },
                       "caseEvents": [
                         {
@@ -7026,12 +6544,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7054,12 +6567,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7082,12 +6590,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7110,12 +6613,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7138,12 +6636,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7166,12 +6659,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7194,12 +6682,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7226,12 +6709,7 @@ const compositeAbilityObject = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (ColorSlot3) || RETURN",
-                        "displayLines": "ColorSlot3",
-                        "constants": [],
-                        "variables": [
-                          "ColorSlot3"
-                        ]
+                        "displayLines": "ColorSlot3"
                       },
                       "caseEvents": [
                         {
@@ -7247,12 +6725,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7275,12 +6748,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7303,12 +6771,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7331,12 +6794,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7359,12 +6817,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7387,12 +6840,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7415,12 +6863,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7447,12 +6890,7 @@ const compositeAbilityObject = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (ColorSlot4) || RETURN",
-                        "displayLines": "ColorSlot4",
-                        "constants": [],
-                        "variables": [
-                          "ColorSlot4"
-                        ]
+                        "displayLines": "ColorSlot4"
                       },
                       "caseEvents": [
                         {
@@ -7468,12 +6906,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7496,12 +6929,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7524,12 +6952,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7552,12 +6975,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7580,12 +6998,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7608,12 +7021,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7636,12 +7044,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7668,12 +7071,7 @@ const compositeAbilityObject = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (ColorSlot5) || RETURN",
-                        "displayLines": "ColorSlot5",
-                        "constants": [],
-                        "variables": [
-                          "ColorSlot5"
-                        ]
+                        "displayLines": "ColorSlot5"
                       },
                       "caseEvents": [
                         {
@@ -7689,12 +7087,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7717,12 +7110,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7745,12 +7133,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7773,12 +7156,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7801,12 +7179,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7829,12 +7202,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7857,12 +7225,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7889,12 +7252,7 @@ const compositeAbilityObject = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (ColorSlot6) || RETURN",
-                        "displayLines": "ColorSlot6",
-                        "constants": [],
-                        "variables": [
-                          "ColorSlot6"
-                        ]
+                        "displayLines": "ColorSlot6"
                       },
                       "caseEvents": [
                         {
@@ -7910,12 +7268,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7938,12 +7291,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7966,12 +7314,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -7994,12 +7337,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8022,12 +7360,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8050,12 +7383,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8078,12 +7406,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8125,12 +7448,7 @@ const compositeAbilityObject = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (DynamicString_ColorSlotX) || RETURN",
-                "displayLines": "DynamicString_ColorSlotX",
-                "constants": [],
-                "variables": [
-                  "DynamicString_ColorSlotX"
-                ]
+                "displayLines": "DynamicString_ColorSlotX"
               },
               "caseEvents": [
                 {
@@ -8140,12 +7458,7 @@ const compositeAbilityObject = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (ColorSlot1) || RETURN",
-                        "displayLines": "ColorSlot1",
-                        "constants": [],
-                        "variables": [
-                          "ColorSlot1"
-                        ]
+                        "displayLines": "ColorSlot1"
                       },
                       "caseEvents": [
                         {
@@ -8161,12 +7474,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8189,12 +7497,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8217,12 +7520,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8245,12 +7543,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8273,12 +7566,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8301,12 +7589,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8329,12 +7612,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8361,12 +7639,7 @@ const compositeAbilityObject = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (ColorSlot2) || RETURN",
-                        "displayLines": "ColorSlot2",
-                        "constants": [],
-                        "variables": [
-                          "ColorSlot2"
-                        ]
+                        "displayLines": "ColorSlot2"
                       },
                       "caseEvents": [
                         {
@@ -8382,12 +7655,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8410,12 +7678,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8438,12 +7701,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8466,12 +7724,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8494,12 +7747,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8522,12 +7770,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8550,12 +7793,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8582,12 +7820,7 @@ const compositeAbilityObject = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (ColorSlot3) || RETURN",
-                        "displayLines": "ColorSlot3",
-                        "constants": [],
-                        "variables": [
-                          "ColorSlot3"
-                        ]
+                        "displayLines": "ColorSlot3"
                       },
                       "caseEvents": [
                         {
@@ -8603,12 +7836,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8631,12 +7859,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8659,12 +7882,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8687,12 +7905,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8715,12 +7928,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8743,12 +7951,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8771,12 +7974,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8803,12 +8001,7 @@ const compositeAbilityObject = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (ColorSlot4) || RETURN",
-                        "displayLines": "ColorSlot4",
-                        "constants": [],
-                        "variables": [
-                          "ColorSlot4"
-                        ]
+                        "displayLines": "ColorSlot4"
                       },
                       "caseEvents": [
                         {
@@ -8824,12 +8017,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8852,12 +8040,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8880,12 +8063,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8908,12 +8086,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8936,12 +8109,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8964,12 +8132,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -8992,12 +8155,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -9024,12 +8182,7 @@ const compositeAbilityObject = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (ColorSlot5) || RETURN",
-                        "displayLines": "ColorSlot5",
-                        "constants": [],
-                        "variables": [
-                          "ColorSlot5"
-                        ]
+                        "displayLines": "ColorSlot5"
                       },
                       "caseEvents": [
                         {
@@ -9045,12 +8198,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -9073,12 +8221,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -9101,12 +8244,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -9129,12 +8267,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -9157,12 +8290,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -9185,12 +8313,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -9213,12 +8336,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -9245,12 +8363,7 @@ const compositeAbilityObject = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (ColorSlot6) || RETURN",
-                        "displayLines": "ColorSlot6",
-                        "constants": [],
-                        "variables": [
-                          "ColorSlot6"
-                        ]
+                        "displayLines": "ColorSlot6"
                       },
                       "caseEvents": [
                         {
@@ -9266,12 +8379,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -9294,12 +8402,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -9322,12 +8425,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -9350,12 +8448,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -9378,12 +8471,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -9406,12 +8494,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -9434,12 +8517,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[2]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[2]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[2]]}"
                                 },
                                 "Toughness": null,
                                 "instanceTag": "Peacock_UseColor",
@@ -9481,12 +8559,7 @@ const compositeAbilityObject = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (DynamicString_ColorSlotX) || RETURN",
-                "displayLines": "DynamicString_ColorSlotX",
-                "constants": [],
-                "variables": [
-                  "DynamicString_ColorSlotX"
-                ]
+                "displayLines": "DynamicString_ColorSlotX"
               },
               "caseEvents": [
                 {
@@ -9585,12 +8658,7 @@ const compositeAbilityObject = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (DynamicString_ColorSlotX) || RETURN",
-                "displayLines": "DynamicString_ColorSlotX",
-                "constants": [],
-                "variables": [
-                  "DynamicString_ColorSlotX"
-                ]
+                "displayLines": "DynamicString_ColorSlotX"
               },
               "caseEvents": [
                 {
@@ -9600,12 +8668,7 @@ const compositeAbilityObject = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (ColorSlot1) || RETURN",
-                        "displayLines": "ColorSlot1",
-                        "constants": [],
-                        "variables": [
-                          "ColorSlot1"
-                        ]
+                        "displayLines": "ColorSlot1"
                       },
                       "caseEvents": [
                         {
@@ -9633,12 +8696,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -9654,12 +8712,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -9693,12 +8746,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -9714,12 +8762,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -9753,12 +8796,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -9774,12 +8812,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -9813,12 +8846,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -9834,12 +8862,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -9873,12 +8896,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -9894,12 +8912,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -9933,12 +8946,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -9954,12 +8962,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -9993,12 +8996,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10014,12 +9012,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10040,12 +9033,7 @@ const compositeAbilityObject = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (ColorSlot2) || RETURN",
-                        "displayLines": "ColorSlot2",
-                        "constants": [],
-                        "variables": [
-                          "ColorSlot2"
-                        ]
+                        "displayLines": "ColorSlot2"
                       },
                       "caseEvents": [
                         {
@@ -10073,12 +9061,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10094,12 +9077,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10133,12 +9111,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10154,12 +9127,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10193,12 +9161,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10214,12 +9177,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10253,12 +9211,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10274,12 +9227,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10313,12 +9261,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10334,12 +9277,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10373,12 +9311,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10394,12 +9327,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10433,12 +9361,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10454,12 +9377,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10480,12 +9398,7 @@ const compositeAbilityObject = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (ColorSlot3) || RETURN",
-                        "displayLines": "ColorSlot3",
-                        "constants": [],
-                        "variables": [
-                          "ColorSlot3"
-                        ]
+                        "displayLines": "ColorSlot3"
                       },
                       "caseEvents": [
                         {
@@ -10513,12 +9426,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10534,12 +9442,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10573,12 +9476,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10594,12 +9492,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10633,12 +9526,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10654,12 +9542,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10693,12 +9576,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10714,12 +9592,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10753,12 +9626,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10774,12 +9642,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10813,12 +9676,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10834,12 +9692,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10873,12 +9726,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10894,12 +9742,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10920,12 +9763,7 @@ const compositeAbilityObject = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (ColorSlot4) || RETURN",
-                        "displayLines": "ColorSlot4",
-                        "constants": [],
-                        "variables": [
-                          "ColorSlot4"
-                        ]
+                        "displayLines": "ColorSlot4"
                       },
                       "caseEvents": [
                         {
@@ -10953,12 +9791,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -10974,12 +9807,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11013,12 +9841,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11034,12 +9857,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11073,12 +9891,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11094,12 +9907,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11133,12 +9941,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11154,12 +9957,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11193,12 +9991,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11214,12 +10007,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11253,12 +10041,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11274,12 +10057,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11313,12 +10091,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11334,12 +10107,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11360,12 +10128,7 @@ const compositeAbilityObject = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (ColorSlot5) || RETURN",
-                        "displayLines": "ColorSlot5",
-                        "constants": [],
-                        "variables": [
-                          "ColorSlot5"
-                        ]
+                        "displayLines": "ColorSlot5"
                       },
                       "caseEvents": [
                         {
@@ -11393,12 +10156,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11414,12 +10172,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11453,12 +10206,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11474,12 +10222,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11513,12 +10256,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11534,12 +10272,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11573,12 +10306,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11594,12 +10322,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11633,12 +10356,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11654,12 +10372,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11693,12 +10406,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11714,12 +10422,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11753,12 +10456,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11774,12 +10472,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11800,12 +10493,7 @@ const compositeAbilityObject = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (ColorSlot6) || RETURN",
-                        "displayLines": "ColorSlot6",
-                        "constants": [],
-                        "variables": [
-                          "ColorSlot6"
-                        ]
+                        "displayLines": "ColorSlot6"
                       },
                       "caseEvents": [
                         {
@@ -11833,12 +10521,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11854,12 +10537,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11893,12 +10571,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11914,12 +10587,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11953,12 +10621,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -11974,12 +10637,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -12013,12 +10671,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -12034,12 +10687,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -12073,12 +10721,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -12094,12 +10737,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -12133,12 +10771,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -12154,12 +10787,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -12193,12 +10821,7 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -12214,12 +10837,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                      "displayLines": "{[SkillP01[1]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[SkillP01[1]]}"
-                                      ]
+                                      "displayLines": "{[SkillP01[1]]}"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -12245,12 +10863,7 @@ const compositeAbilityObject = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (ColorInInsertFlag) || RETURN",
-                "displayLines": "ColorInInsertFlag",
-                "constants": [],
-                "variables": [
-                  "ColorInInsertFlag"
-                ]
+                "displayLines": "ColorInInsertFlag"
               },
               "caseEvents": [
                 {
@@ -12278,12 +10891,7 @@ const compositeAbilityObject = {
                           "stackLimit": 10,
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                              "displayLines": "{[SkillP01[1]]}"
                             }
                           },
                           "addStacksPerTrigger": 1
@@ -12299,12 +10907,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                              "displayLines": "{[SkillP01[1]]}"
                             }
                           },
                           "addStacksPerTrigger": 1
@@ -12338,12 +10941,7 @@ const compositeAbilityObject = {
                           "stackLimit": 10,
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                              "displayLines": "{[SkillP01[1]]}"
                             }
                           },
                           "addStacksPerTrigger": 1
@@ -12359,12 +10957,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                              "displayLines": "{[SkillP01[1]]}"
                             }
                           },
                           "addStacksPerTrigger": 1
@@ -12398,12 +10991,7 @@ const compositeAbilityObject = {
                           "stackLimit": 10,
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                              "displayLines": "{[SkillP01[1]]}"
                             }
                           },
                           "addStacksPerTrigger": 1
@@ -12419,12 +11007,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                              "displayLines": "{[SkillP01[1]]}"
                             }
                           },
                           "addStacksPerTrigger": 1
@@ -12458,12 +11041,7 @@ const compositeAbilityObject = {
                           "stackLimit": 10,
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                              "displayLines": "{[SkillP01[1]]}"
                             }
                           },
                           "addStacksPerTrigger": 1
@@ -12479,12 +11057,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                              "displayLines": "{[SkillP01[1]]}"
                             }
                           },
                           "addStacksPerTrigger": 1
@@ -12518,12 +11091,7 @@ const compositeAbilityObject = {
                           "stackLimit": 10,
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                              "displayLines": "{[SkillP01[1]]}"
                             }
                           },
                           "addStacksPerTrigger": 1
@@ -12539,12 +11107,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                              "displayLines": "{[SkillP01[1]]}"
                             }
                           },
                           "addStacksPerTrigger": 1
@@ -12578,12 +11141,7 @@ const compositeAbilityObject = {
                           "stackLimit": 10,
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                              "displayLines": "{[SkillP01[1]]}"
                             }
                           },
                           "addStacksPerTrigger": 1
@@ -12599,12 +11157,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                              "displayLines": "{[SkillP01[1]]}"
                             }
                           },
                           "addStacksPerTrigger": 1
@@ -12638,12 +11191,7 @@ const compositeAbilityObject = {
                           "stackLimit": 10,
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                              "displayLines": "{[SkillP01[1]]}"
                             }
                           },
                           "addStacksPerTrigger": 1
@@ -12659,12 +11207,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                              "displayLines": "{[SkillP01[1]]}"
                             }
                           },
                           "addStacksPerTrigger": 1
@@ -12685,12 +11228,7 @@ const compositeAbilityObject = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (DynamicString_ColorSlotX) || RETURN",
-                "displayLines": "DynamicString_ColorSlotX",
-                "constants": [],
-                "variables": [
-                  "DynamicString_ColorSlotX"
-                ]
+                "displayLines": "DynamicString_ColorSlotX"
               },
               "caseEvents": [
                 {
@@ -12700,12 +11238,7 @@ const compositeAbilityObject = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (ColorSlot1) || RETURN",
-                        "displayLines": "ColorSlot1",
-                        "constants": [],
-                        "variables": [
-                          "ColorSlot1"
-                        ]
+                        "displayLines": "ColorSlot1"
                       },
                       "caseEvents": [
                         {
@@ -12725,12 +11258,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -12754,12 +11282,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -12783,12 +11306,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -12812,12 +11330,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -12841,12 +11354,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -12870,12 +11378,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -12899,12 +11402,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -12927,12 +11425,7 @@ const compositeAbilityObject = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (ColorSlot2) || RETURN",
-                        "displayLines": "ColorSlot2",
-                        "constants": [],
-                        "variables": [
-                          "ColorSlot2"
-                        ]
+                        "displayLines": "ColorSlot2"
                       },
                       "caseEvents": [
                         {
@@ -12952,12 +11445,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -12981,12 +11469,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13010,12 +11493,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13039,12 +11517,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13068,12 +11541,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13097,12 +11565,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13126,12 +11589,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13154,12 +11612,7 @@ const compositeAbilityObject = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (ColorSlot3) || RETURN",
-                        "displayLines": "ColorSlot3",
-                        "constants": [],
-                        "variables": [
-                          "ColorSlot3"
-                        ]
+                        "displayLines": "ColorSlot3"
                       },
                       "caseEvents": [
                         {
@@ -13179,12 +11632,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13208,12 +11656,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13237,12 +11680,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13266,12 +11704,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13295,12 +11728,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13324,12 +11752,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13353,12 +11776,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13381,12 +11799,7 @@ const compositeAbilityObject = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (ColorSlot4) || RETURN",
-                        "displayLines": "ColorSlot4",
-                        "constants": [],
-                        "variables": [
-                          "ColorSlot4"
-                        ]
+                        "displayLines": "ColorSlot4"
                       },
                       "caseEvents": [
                         {
@@ -13406,12 +11819,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13435,12 +11843,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13464,12 +11867,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13493,12 +11891,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13522,12 +11915,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13551,12 +11939,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13580,12 +11963,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13608,12 +11986,7 @@ const compositeAbilityObject = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (ColorSlot5) || RETURN",
-                        "displayLines": "ColorSlot5",
-                        "constants": [],
-                        "variables": [
-                          "ColorSlot5"
-                        ]
+                        "displayLines": "ColorSlot5"
                       },
                       "caseEvents": [
                         {
@@ -13633,12 +12006,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13662,12 +12030,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13691,12 +12054,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13720,12 +12078,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13749,12 +12102,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13778,12 +12126,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13807,12 +12150,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13835,12 +12173,7 @@ const compositeAbilityObject = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (ColorSlot6) || RETURN",
-                        "displayLines": "ColorSlot6",
-                        "constants": [],
-                        "variables": [
-                          "ColorSlot6"
-                        ]
+                        "displayLines": "ColorSlot6"
                       },
                       "caseEvents": [
                         {
@@ -13860,12 +12193,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13889,12 +12217,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13918,12 +12241,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13947,12 +12265,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -13976,12 +12289,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -14005,12 +12313,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",
@@ -14034,12 +12337,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                  "displayLines": "{[SkillP01[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[SkillP01[3]]}"
-                                  ]
+                                  "displayLines": "{[SkillP01[3]]}"
                                 },
                                 "dmgFormula": "Max HP Scaling",
                                 "dmgFormulaFinal": "Converted DMG Base",

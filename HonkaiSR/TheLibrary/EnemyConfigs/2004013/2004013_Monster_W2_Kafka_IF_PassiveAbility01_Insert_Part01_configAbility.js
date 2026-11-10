@@ -45,12 +45,7 @@ const configAbility = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Constants[0] (8032010) || RETURN",
-                    "displayLines": "8032010",
-                    "constants": [
-                      8032010
-                    ],
-                    "variables": []
+                    "displayLines": "8032010"
                   },
                   "locationType": "First"
                 }
@@ -74,12 +69,7 @@ const configAbility = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Constants[0] (8032010) || RETURN",
-                    "displayLines": "8032010",
-                    "constants": [
-                      8032010
-                    ],
-                    "variables": []
+                    "displayLines": "8032010"
                   },
                   "locationType": "Last"
                 }

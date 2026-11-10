@@ -13,12 +13,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"2017566930\">Anaxa_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">Everything Is in Everything</span>]",
       "valuePerStack": {
         "MDF_PropertyRatio": {
-          "operator": "Variables[0] (1.3) || RETURN",
-          "displayLines": "1.3",
-          "constants": [],
-          "variables": [
-            1.3
-          ]
+          "displayLines": "1.3"
         }
       }
     }
@@ -42,14 +37,7 @@ const configAbility = {
               "functionName": "<a class=\"gTempYellow\" id=\"-446302809\">ModifyDamageData_IndependentDamageAddedRatio</a>",
               "variables": {
                 "parameter[0]_IndependentDamageAddedRatio": {
-                  "operator": "Variables[0] (MDF_PropertyRatio) || Constants[0] (1) || SUB || RETURN",
-                  "displayLines": "(MDF_PropertyRatio - 1)",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    "MDF_PropertyRatio"
-                  ]
+                  "displayLines": "(MDF_PropertyRatio - 1)"
                 }
               }
             }

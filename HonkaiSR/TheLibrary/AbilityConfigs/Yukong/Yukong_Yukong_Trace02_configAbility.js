@@ -30,12 +30,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageImaginary</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_Ratio) || RETURN",
-                "displayLines": "MDF_Ratio",
-                "constants": [],
-                "variables": [
-                  "MDF_Ratio"
-                ]
+                "displayLines": "MDF_Ratio"
               }
             }
           ]
@@ -58,12 +53,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"931142386\">Yukong_Point02_ImaginaryAddedRatio</a>",
               "valuePerStack": {
                 "MDF_Ratio": {
-                  "operator": "Variables[0] (0.12) || RETURN",
-                  "displayLines": "0.12",
-                  "constants": [],
-                  "variables": [
-                    0.12
-                  ]
+                  "displayLines": "0.12"
                 }
               }
             }
@@ -91,12 +81,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"931142386\">Yukong_Point02_ImaginaryAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_Ratio": {
-                      "operator": "Variables[0] (0.12) || RETURN",
-                      "displayLines": "0.12",
-                      "constants": [],
-                      "variables": [
-                        0.12
-                      ]
+                      "displayLines": "0.12"
                     }
                   }
                 }

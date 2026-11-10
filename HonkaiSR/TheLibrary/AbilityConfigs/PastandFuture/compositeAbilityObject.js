@@ -43,12 +43,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.16) || RETURN",
-                    "displayLines": "0.16",
-                    "constants": [],
-                    "variables": [
-                      0.16
-                    ]
+                    "displayLines": "0.16"
                   }
                 }
               ]
@@ -101,12 +96,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"232669200\">LC_21025_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "duration": {
-                            "operator": "Variables[0] (1) || RETURN",
-                            "displayLines": "1",
-                            "constants": [],
-                            "variables": [
-                              1
-                            ]
+                            "displayLines": "1"
                           }
                         }
                       ]

@@ -13,12 +13,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-211625513\">Enemy_W2_LycanKing_Poison</a>[<span class=\"descriptionNumberColor\">\"Tumbledust\"</span>]",
       "valuePerStack": {
         "MDF_LoseHPRatio": {
-          "operator": "Variables[0] (P1_LoseHPRatio) || RETURN",
-          "displayLines": "P1_LoseHPRatio",
-          "constants": [],
-          "variables": [
-            "P1_LoseHPRatio"
-          ]
+          "displayLines": "P1_LoseHPRatio"
         }
       }
     }
@@ -52,12 +47,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "consumePercent": {
-                "operator": "Variables[0] (MDF_LoseHPRatio) || RETURN",
-                "displayLines": "MDF_LoseHPRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_LoseHPRatio"
-                ]
+                "displayLines": "MDF_LoseHPRatio"
               },
               "consumeFloor": 0.0009999999,
               "attackType": "DOT",
@@ -80,12 +70,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "consumePercent": {
-                    "operator": "Variables[0] (MDF_LoseHPRatio) || RETURN",
-                    "displayLines": "MDF_LoseHPRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_LoseHPRatio"
-                    ]
+                    "displayLines": "MDF_LoseHPRatio"
                   },
                   "consumeFloor": 0.0009999999,
                   "attackType": "DOT",

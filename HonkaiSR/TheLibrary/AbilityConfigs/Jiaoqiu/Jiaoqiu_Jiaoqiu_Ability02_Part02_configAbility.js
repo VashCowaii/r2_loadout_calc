@@ -14,14 +14,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Constants[0] (1) || Variables[0] (1) || ADD || RETURN",
-            "displayLines": "(1 + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              1
-            ]
+            "displayLines": "(1 + 1)"
           },
           "variableName": "Rank01_Stack_Layer"
         }
@@ -30,12 +23,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Constants[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [
-              1
-            ],
-            "variables": []
+            "displayLines": "1"
           },
           "variableName": "Rank01_Stack_Layer"
         }
@@ -49,78 +37,33 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
       "duration": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       },
       "baseChance": {
-        "operator": "Variables[0] (1) || RETURN",
-        "displayLines": "1",
-        "constants": [],
-        "variables": [
-          1
-        ]
+        "displayLines": "1"
       },
       "stackLimit": {
-        "operator": "Variables[0] (_MaxLayer) || RETURN",
-        "displayLines": "_MaxLayer",
-        "constants": [],
-        "variables": [
-          "_MaxLayer"
-        ]
+        "displayLines": "_MaxLayer"
       },
       "valuePerStack": {
         "DOT_Ratio": {
-          "operator": "Variables[0] (SkillP01_DotRatio) || RETURN",
-          "displayLines": "SkillP01_DotRatio",
-          "constants": [],
-          "variables": [
-            "SkillP01_DotRatio"
-          ]
+          "displayLines": "SkillP01_DotRatio"
         },
         "AbilityRank_Eidolon2_P1_Ratio": {
-          "operator": "Variables[0] (3) || RETURN",
-          "displayLines": "3",
-          "constants": [],
-          "variables": [
-            3
-          ]
+          "displayLines": "3"
         },
         "AbilityRank_Eidolon6_P3_DownRatio": {
-          "operator": "Variables[0] (0.03) || RETURN",
-          "displayLines": "0.03",
-          "constants": [],
-          "variables": [
-            0.03
-          ]
+          "displayLines": "0.03"
         },
         "MDF_PropertyValue": {
-          "operator": "Variables[0] (0.15) || RETURN",
-          "displayLines": "0.15",
-          "constants": [],
-          "variables": [
-            0.15
-          ]
+          "displayLines": "0.15"
         },
         "MDF_PropertyValue_2": {
-          "operator": "Variables[0] (0.05) || RETURN",
-          "displayLines": "0.05",
-          "constants": [],
-          "variables": [
-            0.05
-          ]
+          "displayLines": "0.05"
         }
       },
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (Rank01_Stack_Layer) || RETURN",
-        "displayLines": "Rank01_Stack_Layer",
-        "constants": [],
-        "variables": [
-          "Rank01_Stack_Layer"
-        ]
+        "displayLines": "Rank01_Stack_Layer"
       }
     },
     {
@@ -133,20 +76,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (1.5) || RETURN",
-          "displayLines": "1.5",
-          "constants": [],
-          "variables": [
-            1.5
-          ]
+          "displayLines": "1.5"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -162,20 +95,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (0.9) || RETURN",
-          "displayLines": "0.9",
-          "constants": [],
-          "variables": [
-            0.9
-          ]
+          "displayLines": "0.9"
         },
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-          "displayLines": "Blast Toughness Value",
-          "constants": [],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "Blast Toughness Value"
         },
         "Tags": null
       }
@@ -189,69 +112,29 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
       "duration": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       },
       "baseChance": {
-        "operator": "Variables[0] (1) || RETURN",
-        "displayLines": "1",
-        "constants": [],
-        "variables": [
-          1
-        ]
+        "displayLines": "1"
       },
       "stackLimit": {
-        "operator": "Variables[0] (_MaxLayer) || RETURN",
-        "displayLines": "_MaxLayer",
-        "constants": [],
-        "variables": [
-          "_MaxLayer"
-        ]
+        "displayLines": "_MaxLayer"
       },
       "valuePerStack": {
         "DOT_Ratio": {
-          "operator": "Variables[0] (SkillP01_DotRatio) || RETURN",
-          "displayLines": "SkillP01_DotRatio",
-          "constants": [],
-          "variables": [
-            "SkillP01_DotRatio"
-          ]
+          "displayLines": "SkillP01_DotRatio"
         },
         "AbilityRank_Eidolon2_P1_Ratio": {
-          "operator": "Variables[0] (3) || RETURN",
-          "displayLines": "3",
-          "constants": [],
-          "variables": [
-            3
-          ]
+          "displayLines": "3"
         },
         "AbilityRank_Eidolon6_P3_DownRatio": {
-          "operator": "Variables[0] (0.03) || RETURN",
-          "displayLines": "0.03",
-          "constants": [],
-          "variables": [
-            0.03
-          ]
+          "displayLines": "0.03"
         },
         "MDF_PropertyValue": {
-          "operator": "Variables[0] (0.15) || RETURN",
-          "displayLines": "0.15",
-          "constants": [],
-          "variables": [
-            0.15
-          ]
+          "displayLines": "0.15"
         },
         "MDF_PropertyValue_2": {
-          "operator": "Variables[0] (0.05) || RETURN",
-          "displayLines": "0.05",
-          "constants": [],
-          "variables": [
-            0.05
-          ]
+          "displayLines": "0.05"
         }
       },
       "addStacksPerTrigger": 1

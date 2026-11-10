@@ -67,12 +67,7 @@ const configAbility = {
     {
       "name": "SWITCH",
       "switchValue": {
-        "operator": "Variables[0] (MDF_Skill10_TurnCount) || RETURN",
-        "displayLines": "MDF_Skill10_TurnCount",
-        "constants": [],
-        "variables": [
-          "MDF_Skill10_TurnCount"
-        ]
+        "displayLines": "MDF_Skill10_TurnCount"
       },
       "caseEvents": [
         {
@@ -184,12 +179,7 @@ const configAbility = {
     {
       "name": "SWITCH",
       "switchValue": {
-        "operator": "Variables[0] (MDF_Skill10_TurnCount) || RETURN",
-        "displayLines": "MDF_Skill10_TurnCount",
-        "constants": [],
-        "variables": [
-          "MDF_Skill10_TurnCount"
-        ]
+        "displayLines": "MDF_Skill10_TurnCount"
       },
       "caseEvents": [
         {
@@ -226,12 +216,7 @@ const configAbility = {
     {
       "name": "SWITCH",
       "switchValue": {
-        "operator": "Variables[0] (MDF_Skill10_TurnCount) || RETURN",
-        "displayLines": "MDF_Skill10_TurnCount",
-        "constants": [],
-        "variables": [
-          "MDF_Skill10_TurnCount"
-        ]
+        "displayLines": "MDF_Skill10_TurnCount"
       },
       "caseEvents": [
         {
@@ -337,14 +322,7 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Constants[0] (7) || Variables[0] (MDF_Skill10_TurnCount) || SUB || RETURN",
-        "displayLines": "(7 - MDF_Skill10_TurnCount)",
-        "constants": [
-          7
-        ],
-        "variables": [
-          "MDF_Skill10_TurnCount"
-        ]
+        "displayLines": "(7 - MDF_Skill10_TurnCount)"
       },
       "entityClass": "Enemy",
       "target": {

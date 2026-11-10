@@ -113,12 +113,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (MDF_UltraSkillSpareCount) || RETURN",
-                "displayLines": "MDF_UltraSkillSpareCount",
-                "constants": [],
-                "variables": [
-                  "MDF_UltraSkillSpareCount"
-                ]
+                "displayLines": "MDF_UltraSkillSpareCount"
               },
               "isFixed": "(Fixed)",
               "ignoreBlock": true,
@@ -211,12 +206,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "isFixed": "(Fixed)",
               "ignoreBlock": true,
@@ -287,12 +277,7 @@ const configAbility = {
         "show": "Hide",
         "skillType": "Ultimate",
         "toughnessForcedReductionPreview": {
-          "operator": "Variables[0] (ACHERON_OBJECT_UNUSED_1) || RETURN",
-          "displayLines": "ACHERON_OBJECT_UNUSED_1",
-          "constants": [],
-          "variables": [
-            "ACHERON_OBJECT_UNUSED_1"
-          ]
+          "displayLines": "ACHERON_OBJECT_UNUSED_1"
         },
         "showAsForcedReduction": true
       }
@@ -305,12 +290,7 @@ const configAbility = {
         "show": "Hide",
         "skillType": "Skill",
         "toughnessForcedReductionPreview": {
-          "operator": "Variables[0] (ACHERON_OBJECT_UNUSED_1) || RETURN",
-          "displayLines": "ACHERON_OBJECT_UNUSED_1",
-          "constants": [],
-          "variables": [
-            "ACHERON_OBJECT_UNUSED_1"
-          ]
+          "displayLines": "ACHERON_OBJECT_UNUSED_1"
         },
         "showAsForcedReduction": true
       }
@@ -323,12 +303,7 @@ const configAbility = {
         "show": "Hide",
         "skillType": "Basic ATK",
         "toughnessForcedReductionPreview": {
-          "operator": "Variables[0] (ACHERON_OBJECT_UNUSED_1) || RETURN",
-          "displayLines": "ACHERON_OBJECT_UNUSED_1",
-          "constants": [],
-          "variables": [
-            "ACHERON_OBJECT_UNUSED_1"
-          ]
+          "displayLines": "ACHERON_OBJECT_UNUSED_1"
         },
         "showAsForcedReduction": true
       }
@@ -351,12 +326,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ACHERON_OBJECT_UNUSED_1) || RETURN",
-                "displayLines": "ACHERON_OBJECT_UNUSED_1",
-                "constants": [],
-                "variables": [
-                  "ACHERON_OBJECT_UNUSED_1"
-                ]
+                "displayLines": "ACHERON_OBJECT_UNUSED_1"
               }
             }
           ]
@@ -498,14 +468,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           ]
@@ -774,12 +737,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (MDF_Count) || RETURN",
-                "displayLines": "MDF_Count",
-                "constants": [],
-                "variables": [
-                  "MDF_Count"
-                ]
+                "displayLines": "MDF_Count"
               },
               "execute": [
                 {
@@ -797,14 +755,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (Limbo_Count) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(Limbo_Count + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Limbo_Count"
-                        ]
+                        "displayLines": "(Limbo_Count + 1)"
                       },
                       "variableName": "Limbo_Count"
                     }
@@ -871,12 +822,7 @@ const configAbility = {
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (MDF_Count) || RETURN",
-                    "displayLines": "MDF_Count",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Count"
-                    ]
+                    "displayLines": "MDF_Count"
                   },
                   "execute": [
                     {
@@ -894,14 +840,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (Limbo_Count) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(Limbo_Count + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Limbo_Count"
-                            ]
+                            "displayLines": "(Limbo_Count + 1)"
                           },
                           "variableName": "Limbo_Count"
                         }
@@ -1107,12 +1046,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ACHERON_OBJECT_UNUSED_1) || RETURN",
-                "displayLines": "ACHERON_OBJECT_UNUSED_1",
-                "constants": [],
-                "variables": [
-                  "ACHERON_OBJECT_UNUSED_1"
-                ]
+                "displayLines": "ACHERON_OBJECT_UNUSED_1"
               }
             },
             {
@@ -1168,13 +1102,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_PropertyValue * MDF_Layer)"
               }
             }
           ]
@@ -1197,20 +1125,10 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_Passive_Count) || RETURN",
-                "displayLines": "MDF_Passive_Count",
-                "constants": [],
-                "variables": [
-                  "MDF_Passive_Count"
-                ]
+                "displayLines": "MDF_Passive_Count"
               },
               "maximum": {
-                "operator": "Variables[0] (9) || RETURN",
-                "displayLines": "9",
-                "constants": [],
-                "variables": [
-                  9
-                ]
+                "displayLines": "9"
               },
               "assignState": "True",
               "priorState": "Normal",
@@ -1234,20 +1152,10 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_PassiveLayer) || RETURN",
-                "displayLines": "MDF_PassiveLayer",
-                "constants": [],
-                "variables": [
-                  "MDF_PassiveLayer"
-                ]
+                "displayLines": "MDF_PassiveLayer"
               },
               "maximum": {
-                "operator": "Variables[0] (9) || RETURN",
-                "displayLines": "9",
-                "constants": [],
-                "variables": [
-                  9
-                ]
+                "displayLines": "9"
               },
               "assignState": "True",
               "priorState": "Active",
@@ -1313,12 +1221,7 @@ const configAbility = {
                     "value1": "MDF_Passive_Count",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (9) || RETURN",
-                      "displayLines": "9",
-                      "constants": [],
-                      "variables": [
-                        9
-                      ]
+                      "displayLines": "9"
                     }
                   },
                   "passed": [
@@ -1446,12 +1349,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (5) || RETURN",
-                    "displayLines": "5",
-                    "constants": [],
-                    "variables": [
-                      5
-                    ]
+                    "displayLines": "5"
                   },
                   "isFixed": "(Fixed)",
                   "ignoreBlock": true,

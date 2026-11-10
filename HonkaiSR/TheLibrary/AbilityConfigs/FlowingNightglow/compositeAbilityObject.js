@@ -43,12 +43,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (AbilityEquip_P3_DmgAddedRatio) || RETURN",
-                    "displayLines": "AbilityEquip_P3_DmgAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "AbilityEquip_P3_DmgAddedRatio"
-                    ]
+                    "displayLines": "AbilityEquip_P3_DmgAddedRatio"
                   }
                 }
               ]
@@ -89,12 +84,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.48) || RETURN",
-                    "displayLines": "0.48",
-                    "constants": [],
-                    "variables": [
-                      0.48
-                    ]
+                    "displayLines": "0.48"
                   }
                 },
                 {
@@ -105,12 +95,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.24) || RETURN",
-                    "displayLines": "0.24",
-                    "constants": [],
-                    "variables": [
-                      0.24
-                    ]
+                    "displayLines": "0.24"
                   }
                 },
                 {
@@ -122,12 +107,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-36956856\">LC_23026_Sub3</a>[<span class=\"descriptionNumberColor\">Cadenza</span>]",
                   "valuePerStack": {
                     "AbilityEquip_P3_DmgAddedRatio": {
-                      "operator": "Variables[0] (0.24) || RETURN",
-                      "displayLines": "0.24",
-                      "constants": [],
-                      "variables": [
-                        0.24
-                      ]
+                      "displayLines": "0.24"
                     }
                   }
                 }
@@ -156,12 +136,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-36956856\">LC_23026_Sub3</a>[<span class=\"descriptionNumberColor\">Cadenza</span>]",
                       "valuePerStack": {
                         "AbilityEquip_P3_DmgAddedRatio": {
-                          "operator": "Variables[0] (0.24) || RETURN",
-                          "displayLines": "0.24",
-                          "constants": [],
-                          "variables": [
-                            0.24
-                          ]
+                          "displayLines": "0.24"
                         }
                       }
                     }
@@ -192,13 +167,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (AbilityEquip_P1_SPRatio) || Variables[1] (_CurrentLayer) || MUL || RETURN",
-                    "displayLines": "(AbilityEquip_P1_SPRatio * _CurrentLayer)",
-                    "constants": [],
-                    "variables": [
-                      "AbilityEquip_P1_SPRatio",
-                      "_CurrentLayer"
-                    ]
+                    "displayLines": "(AbilityEquip_P1_SPRatio * _CurrentLayer)"
                   },
                   "variableName": "_CurrentSPRatio"
                 },
@@ -210,12 +179,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRate</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (_CurrentSPRatio) || RETURN",
-                    "displayLines": "_CurrentSPRatio",
-                    "constants": [],
-                    "variables": [
-                      "_CurrentSPRatio"
-                    ]
+                    "displayLines": "_CurrentSPRatio"
                   }
                 }
               ]
@@ -251,21 +215,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1072168277\">LC_23026_Sub</a>[<span class=\"descriptionNumberColor\">Cantillation</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (5) || RETURN",
-                        "displayLines": "5",
-                        "constants": [],
-                        "variables": [
-                          5
-                        ]
+                        "displayLines": "5"
                       },
                       "valuePerStack": {
                         "AbilityEquip_P1_SPRatio": {
-                          "operator": "Variables[0] (0.03) || RETURN",
-                          "displayLines": "0.03",
-                          "constants": [],
-                          "variables": [
-                            0.03
-                          ]
+                          "displayLines": "0.03"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -300,12 +254,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-20179237\">LC_23026_Sub2</a>[<span class=\"descriptionNumberColor\">Cadenza</span>]",
                       "duration": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       }
                     }
                   ]

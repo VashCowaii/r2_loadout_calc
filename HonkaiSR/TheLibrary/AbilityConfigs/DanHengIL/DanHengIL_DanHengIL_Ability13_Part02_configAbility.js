@@ -18,24 +18,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (5) || Constants[0] (0.142) || MUL || RETURN",
-          "displayLines": "(5 * 0.142)",
-          "constants": [
-            0.142
-          ],
-          "variables": [
-            5
-          ]
+          "displayLines": "(5 * 0.142)"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.142) || MUL || RETURN",
-          "displayLines": "(ST Toughness Value * 0.142)",
-          "constants": [
-            0.142
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(ST Toughness Value * 0.142)"
         },
         "Tags": null,
         "EnergyGainPercent": "14%"
@@ -44,14 +30,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
-        "displayLines": "(Flag_AttackCount + 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "Flag_AttackCount"
-        ]
+        "displayLines": "(Flag_AttackCount + 1)"
       },
       "variableName": "Flag_AttackCount"
     },
@@ -64,24 +43,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (5) || Constants[0] (0.142) || MUL || RETURN",
-          "displayLines": "(5 * 0.142)",
-          "constants": [
-            0.142
-          ],
-          "variables": [
-            5
-          ]
+          "displayLines": "(5 * 0.142)"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.142) || MUL || RETURN",
-          "displayLines": "(ST Toughness Value * 0.142)",
-          "constants": [
-            0.142
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(ST Toughness Value * 0.142)"
         },
         "Tags": null,
         "EnergyGainPercent": "14%"
@@ -90,14 +55,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
-        "displayLines": "(Flag_AttackCount + 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "Flag_AttackCount"
-        ]
+        "displayLines": "(Flag_AttackCount + 1)"
       },
       "variableName": "Flag_AttackCount"
     },
@@ -110,24 +68,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (5) || Constants[0] (0.142) || MUL || RETURN",
-          "displayLines": "(5 * 0.142)",
-          "constants": [
-            0.142
-          ],
-          "variables": [
-            5
-          ]
+          "displayLines": "(5 * 0.142)"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.142) || MUL || RETURN",
-          "displayLines": "(ST Toughness Value * 0.142)",
-          "constants": [
-            0.142
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(ST Toughness Value * 0.142)"
         },
         "Tags": null,
         "EnergyGainPercent": "14%"
@@ -136,14 +80,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
-        "displayLines": "(Flag_AttackCount + 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "Flag_AttackCount"
-        ]
+        "displayLines": "(Flag_AttackCount + 1)"
       },
       "variableName": "Flag_AttackCount"
     },
@@ -155,38 +92,18 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-1955464894\">DanHengIL_Ability02_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Outroar</span>]",
       "duration": {
-        "operator": "Variables[0] (SkillRank_Rank04_LifeTime) || RETURN",
-        "displayLines": "SkillRank_Rank04_LifeTime",
-        "constants": [],
-        "variables": [
-          "SkillRank_Rank04_LifeTime"
-        ]
+        "displayLines": "SkillRank_Rank04_LifeTime"
       },
       "immediateEffect": true,
       "stackLimit": {
-        "operator": "Variables[0] (4) || RETURN",
-        "displayLines": "4",
-        "constants": [],
-        "variables": [
-          4
-        ]
+        "displayLines": "4"
       },
       "valuePerStack": {
         "MDF_AddCriticalDamage": {
-          "operator": "Variables[0] (0.12) || RETURN",
-          "displayLines": "0.12",
-          "constants": [],
-          "variables": [
-            0.12
-          ]
+          "displayLines": "0.12"
         },
         "MDF_MaxLayer": {
-          "operator": "Variables[0] (4) || RETURN",
-          "displayLines": "4",
-          "constants": [],
-          "variables": [
-            4
-          ]
+          "displayLines": "4"
         }
       }
     },
@@ -199,24 +116,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (5) || Constants[0] (0.142) || MUL || RETURN",
-          "displayLines": "(5 * 0.142)",
-          "constants": [
-            0.142
-          ],
-          "variables": [
-            5
-          ]
+          "displayLines": "(5 * 0.142)"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.142) || MUL || RETURN",
-          "displayLines": "(ST Toughness Value * 0.142)",
-          "constants": [
-            0.142
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(ST Toughness Value * 0.142)"
         },
         "Tags": null,
         "EnergyGainPercent": "14%"
@@ -231,21 +134,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (1.8) || RETURN",
-          "displayLines": "1.8",
-          "constants": [],
-          "variables": [
-            1.8
-          ]
+          "displayLines": "1.8"
         },
         "HitSplit": 0.25,
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-          "displayLines": "Blast Toughness Value",
-          "constants": [],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "Blast Toughness Value"
         },
         "Tags": null
       }
@@ -253,14 +146,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
-        "displayLines": "(Flag_AttackCount + 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "Flag_AttackCount"
-        ]
+        "displayLines": "(Flag_AttackCount + 1)"
       },
       "variableName": "Flag_AttackCount"
     },
@@ -272,38 +158,18 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-1955464894\">DanHengIL_Ability02_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Outroar</span>]",
       "duration": {
-        "operator": "Variables[0] (SkillRank_Rank04_LifeTime) || RETURN",
-        "displayLines": "SkillRank_Rank04_LifeTime",
-        "constants": [],
-        "variables": [
-          "SkillRank_Rank04_LifeTime"
-        ]
+        "displayLines": "SkillRank_Rank04_LifeTime"
       },
       "immediateEffect": true,
       "stackLimit": {
-        "operator": "Variables[0] (4) || RETURN",
-        "displayLines": "4",
-        "constants": [],
-        "variables": [
-          4
-        ]
+        "displayLines": "4"
       },
       "valuePerStack": {
         "MDF_AddCriticalDamage": {
-          "operator": "Variables[0] (0.12) || RETURN",
-          "displayLines": "0.12",
-          "constants": [],
-          "variables": [
-            0.12
-          ]
+          "displayLines": "0.12"
         },
         "MDF_MaxLayer": {
-          "operator": "Variables[0] (4) || RETURN",
-          "displayLines": "4",
-          "constants": [],
-          "variables": [
-            4
-          ]
+          "displayLines": "4"
         }
       }
     },
@@ -316,24 +182,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (5) || Constants[0] (0.142) || MUL || RETURN",
-          "displayLines": "(5 * 0.142)",
-          "constants": [
-            0.142
-          ],
-          "variables": [
-            5
-          ]
+          "displayLines": "(5 * 0.142)"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.142) || MUL || RETURN",
-          "displayLines": "(ST Toughness Value * 0.142)",
-          "constants": [
-            0.142
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(ST Toughness Value * 0.142)"
         },
         "Tags": null,
         "EnergyGainPercent": "15%"
@@ -348,21 +200,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (1.8) || RETURN",
-          "displayLines": "1.8",
-          "constants": [],
-          "variables": [
-            1.8
-          ]
+          "displayLines": "1.8"
         },
         "HitSplit": 0.25,
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-          "displayLines": "Blast Toughness Value",
-          "constants": [],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "Blast Toughness Value"
         },
         "Tags": null
       }
@@ -370,14 +212,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
-        "displayLines": "(Flag_AttackCount + 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "Flag_AttackCount"
-        ]
+        "displayLines": "(Flag_AttackCount + 1)"
       },
       "variableName": "Flag_AttackCount"
     },
@@ -389,38 +224,18 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-1955464894\">DanHengIL_Ability02_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Outroar</span>]",
       "duration": {
-        "operator": "Variables[0] (SkillRank_Rank04_LifeTime) || RETURN",
-        "displayLines": "SkillRank_Rank04_LifeTime",
-        "constants": [],
-        "variables": [
-          "SkillRank_Rank04_LifeTime"
-        ]
+        "displayLines": "SkillRank_Rank04_LifeTime"
       },
       "immediateEffect": true,
       "stackLimit": {
-        "operator": "Variables[0] (4) || RETURN",
-        "displayLines": "4",
-        "constants": [],
-        "variables": [
-          4
-        ]
+        "displayLines": "4"
       },
       "valuePerStack": {
         "MDF_AddCriticalDamage": {
-          "operator": "Variables[0] (0.12) || RETURN",
-          "displayLines": "0.12",
-          "constants": [],
-          "variables": [
-            0.12
-          ]
+          "displayLines": "0.12"
         },
         "MDF_MaxLayer": {
-          "operator": "Variables[0] (4) || RETURN",
-          "displayLines": "4",
-          "constants": [],
-          "variables": [
-            4
-          ]
+          "displayLines": "4"
         }
       }
     },
@@ -433,24 +248,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (5) || Constants[0] (0.142) || MUL || RETURN",
-          "displayLines": "(5 * 0.142)",
-          "constants": [
-            0.142
-          ],
-          "variables": [
-            5
-          ]
+          "displayLines": "(5 * 0.142)"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.142) || MUL || RETURN",
-          "displayLines": "(ST Toughness Value * 0.142)",
-          "constants": [
-            0.142
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(ST Toughness Value * 0.142)"
         },
         "Tags": null,
         "EnergyGainPercent": "14%"
@@ -465,21 +266,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (1.8) || RETURN",
-          "displayLines": "1.8",
-          "constants": [],
-          "variables": [
-            1.8
-          ]
+          "displayLines": "1.8"
         },
         "HitSplit": 0.25,
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-          "displayLines": "Blast Toughness Value",
-          "constants": [],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "Blast Toughness Value"
         },
         "Tags": null
       }
@@ -487,14 +278,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
-        "displayLines": "(Flag_AttackCount + 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "Flag_AttackCount"
-        ]
+        "displayLines": "(Flag_AttackCount + 1)"
       },
       "variableName": "Flag_AttackCount"
     },
@@ -506,38 +290,18 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-1955464894\">DanHengIL_Ability02_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Outroar</span>]",
       "duration": {
-        "operator": "Variables[0] (SkillRank_Rank04_LifeTime) || RETURN",
-        "displayLines": "SkillRank_Rank04_LifeTime",
-        "constants": [],
-        "variables": [
-          "SkillRank_Rank04_LifeTime"
-        ]
+        "displayLines": "SkillRank_Rank04_LifeTime"
       },
       "immediateEffect": true,
       "stackLimit": {
-        "operator": "Variables[0] (4) || RETURN",
-        "displayLines": "4",
-        "constants": [],
-        "variables": [
-          4
-        ]
+        "displayLines": "4"
       },
       "valuePerStack": {
         "MDF_AddCriticalDamage": {
-          "operator": "Variables[0] (0.12) || RETURN",
-          "displayLines": "0.12",
-          "constants": [],
-          "variables": [
-            0.12
-          ]
+          "displayLines": "0.12"
         },
         "MDF_MaxLayer": {
-          "operator": "Variables[0] (4) || RETURN",
-          "displayLines": "4",
-          "constants": [],
-          "variables": [
-            4
-          ]
+          "displayLines": "4"
         }
       }
     },
@@ -551,24 +315,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (5) || Constants[0] (0.148) || MUL || RETURN",
-          "displayLines": "(5 * 0.148)",
-          "constants": [
-            0.148
-          ],
-          "variables": [
-            5
-          ]
+          "displayLines": "(5 * 0.148)"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.148) || MUL || RETURN",
-          "displayLines": "(ST Toughness Value * 0.148)",
-          "constants": [
-            0.148
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(ST Toughness Value * 0.148)"
         },
         "Tags": null,
         "EnergyGainPercent": "15%"
@@ -584,21 +334,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (1.8) || RETURN",
-          "displayLines": "1.8",
-          "constants": [],
-          "variables": [
-            1.8
-          ]
+          "displayLines": "1.8"
         },
         "HitSplit": 0.25,
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-          "displayLines": "Blast Toughness Value",
-          "constants": [],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "Blast Toughness Value"
         },
         "Tags": null
       }
@@ -607,14 +347,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
-        "displayLines": "(Flag_AttackCount + 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "Flag_AttackCount"
-        ]
+        "displayLines": "(Flag_AttackCount + 1)"
       },
       "variableName": "Flag_AttackCount"
     },

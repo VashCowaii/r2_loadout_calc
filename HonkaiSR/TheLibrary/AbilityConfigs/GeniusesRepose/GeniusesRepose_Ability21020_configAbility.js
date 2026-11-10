@@ -34,12 +34,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.24) || RETURN",
-                "displayLines": "0.24",
-                "constants": [],
-                "variables": [
-                  0.24
-                ]
+                "displayLines": "0.24"
               }
             }
           ]
@@ -61,12 +56,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1496959259\">LC_21020_Sub</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               }
             }
           ]

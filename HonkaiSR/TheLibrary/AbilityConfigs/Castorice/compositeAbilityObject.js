@@ -198,12 +198,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingIncoming</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -288,21 +283,11 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"555330029\">Castorice_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Ardent Will</span>]",
                           "counter": {
-                            "operator": "Variables[0] (Castorice_Rank02_Count) || RETURN",
-                            "displayLines": "Castorice_Rank02_Count",
-                            "constants": [],
-                            "variables": [
-                              "Castorice_Rank02_Count"
-                            ]
+                            "displayLines": "Castorice_Rank02_Count"
                           },
                           "valuePerStack": {
                             "MDF_MaxLayer": {
-                              "operator": "Variables[0] (2) || RETURN",
-                              "displayLines": "2",
-                              "constants": [],
-                              "variables": [
-                                2
-                              ]
+                              "displayLines": "2"
                             }
                           }
                         }
@@ -360,13 +345,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_PropertyValue * MDF_Layer)"
                   }
                 }
               ]
@@ -401,13 +380,7 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable",
                   "skipWhenMindControlled": false,
                   "value": {
-                    "operator": "Variables[0] (Castorice_MaxSpecialSP) || Variables[1] (Castorice_PointB1_HealRatioDown) || MUL || RETURN",
-                    "displayLines": "(Castorice_MaxSpecialSP * Castorice_PointB1_HealRatioDown)",
-                    "constants": [],
-                    "variables": [
-                      "Castorice_MaxSpecialSP",
-                      "Castorice_PointB1_HealRatioDown"
-                    ]
+                    "displayLines": "(Castorice_MaxSpecialSP * Castorice_PointB1_HealRatioDown)"
                   },
                   "variableName": "Castorice_MaxSpecialSP"
                 },
@@ -415,16 +388,7 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable",
                   "skipWhenMindControlled": false,
                   "value": {
-                    "operator": "Variables[0] (MIN) || Variables[1] (Castorice_BeingHealValue) || Variables[2] (Castorice_PointB1_HPPercent) || MUL || Variables[3] (Castorice_MaxSpecialSP) || Variables[4] (Castorice_SumBeingHealValue) || SUB || PARAM_2 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((Castorice_BeingHealValue * Castorice_PointB1_HPPercent), (Castorice_MaxSpecialSP - Castorice_SumBeingHealValue))",
-                    "constants": [],
-                    "variables": [
-                      "MIN",
-                      "Castorice_BeingHealValue",
-                      "Castorice_PointB1_HPPercent",
-                      "Castorice_MaxSpecialSP",
-                      "Castorice_SumBeingHealValue"
-                    ]
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((Castorice_BeingHealValue * Castorice_PointB1_HPPercent), (Castorice_MaxSpecialSP - Castorice_SumBeingHealValue))"
                   },
                   "variableName": "HealAmount_CasterAdd"
                 },
@@ -441,13 +405,7 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "skipWhenMindControlled": false,
                       "value": {
-                        "operator": "Variables[0] (Castorice_SumBeingHealValue) || Variables[1] (HealAmount_CasterAdd) || ADD || RETURN",
-                        "displayLines": "(Castorice_SumBeingHealValue + HealAmount_CasterAdd)",
-                        "constants": [],
-                        "variables": [
-                          "Castorice_SumBeingHealValue",
-                          "HealAmount_CasterAdd"
-                        ]
+                        "displayLines": "(Castorice_SumBeingHealValue + HealAmount_CasterAdd)"
                       },
                       "variableName": "Castorice_SumBeingHealValue"
                     },
@@ -466,12 +424,7 @@ const compositeAbilityObject = {
                           "name": "Define Custom Variable",
                           "skipWhenMindControlled": false,
                           "value": {
-                            "operator": "Variables[0] (HealAmount_CasterAdd) || RETURN",
-                            "displayLines": "HealAmount_CasterAdd",
-                            "constants": [],
-                            "variables": [
-                              "HealAmount_CasterAdd"
-                            ]
+                            "displayLines": "HealAmount_CasterAdd"
                           },
                           "variableName": "HealAmount_ServantAdd"
                         },
@@ -513,13 +466,7 @@ const compositeAbilityObject = {
                                     "target": "{{Caster's Memosprite}}"
                                   },
                                   "setValue": {
-                                    "operator": "Variables[0] (CastoriceServant_CurrentHP) || Variables[1] (HealAmount_ServantAdd) || ADD || RETURN",
-                                    "displayLines": "(CastoriceServant_CurrentHP + HealAmount_ServantAdd)",
-                                    "constants": [],
-                                    "variables": [
-                                      "CastoriceServant_CurrentHP",
-                                      "HealAmount_ServantAdd"
-                                    ]
+                                    "displayLines": "(CastoriceServant_CurrentHP + HealAmount_ServantAdd)"
                                   }
                                 }
                               ]
@@ -533,12 +480,7 @@ const compositeAbilityObject = {
                           "functionName": "<a class=\"gTempYellow\" id=\"-1401999190\">Castorice_AddSpecialSP</a>",
                           "variables": {
                             "_FixedAddValue": {
-                              "operator": "Variables[0] (HealAmount_CasterAdd) || RETURN",
-                              "displayLines": "HealAmount_CasterAdd",
-                              "constants": [],
-                              "variables": [
-                                "HealAmount_CasterAdd"
-                              ]
+                              "displayLines": "HealAmount_CasterAdd"
                             }
                           }
                         }
@@ -598,20 +540,10 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "Castorice_PointB1_HPPercent": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 },
                 "Castorice_PointB1_HealRatioDown": {
-                  "operator": "Variables[0] (0.12) || RETURN",
-                  "displayLines": "0.12",
-                  "constants": [],
-                  "variables": [
-                    0.12
-                  ]
+                  "displayLines": "0.12"
                 }
               }
             }
@@ -640,12 +572,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -671,12 +598,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (Castorice_PointB2_HPRatio) || RETURN",
-                      "displayLines": "Castorice_PointB2_HPRatio",
-                      "constants": [],
-                      "variables": [
-                        "Castorice_PointB2_HPRatio"
-                      ]
+                      "displayLines": "Castorice_PointB2_HPRatio"
                     }
                   },
                   "passed": [
@@ -689,12 +611,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (Castorice_PointB2_SpeedRatio) || RETURN",
-                          "displayLines": "Castorice_PointB2_SpeedRatio",
-                          "constants": [],
-                          "variables": [
-                            "Castorice_PointB2_SpeedRatio"
-                          ]
+                          "displayLines": "Castorice_PointB2_SpeedRatio"
                         }
                       }
                     }
@@ -723,12 +640,7 @@ const compositeAbilityObject = {
                         "value1": "CurrentHP%",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (Castorice_PointB2_HPRatio) || RETURN",
-                          "displayLines": "Castorice_PointB2_HPRatio",
-                          "constants": [],
-                          "variables": [
-                            "Castorice_PointB2_HPRatio"
-                          ]
+                          "displayLines": "Castorice_PointB2_HPRatio"
                         }
                       },
                       "passed": [
@@ -753,12 +665,7 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (Castorice_PointB2_SpeedRatio) || RETURN",
-                                  "displayLines": "Castorice_PointB2_SpeedRatio",
-                                  "constants": [],
-                                  "variables": [
-                                    "Castorice_PointB2_SpeedRatio"
-                                  ]
+                                  "displayLines": "Castorice_PointB2_SpeedRatio"
                                 }
                               }
                             }
@@ -825,13 +732,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_PropertyValue * MDF_Layer)"
                   }
                 }
               ]
@@ -858,14 +759,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "(0 - MDF_PropertyValue)"
                   }
                 }
               ]
@@ -891,12 +785,7 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             }
@@ -933,22 +822,12 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (Castorice_Passive_Count) || RETURN",
-                    "displayLines": "Castorice_Passive_Count",
-                    "constants": [],
-                    "variables": [
-                      "Castorice_Passive_Count"
-                    ]
+                    "displayLines": "Castorice_Passive_Count"
                   },
                   "displaySubType": "Percent",
                   "displayShowIcon": "False",
                   "maximum": {
-                    "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
-                    "displayLines": "Castorice_Passive_MaxCount",
-                    "constants": [],
-                    "variables": [
-                      "Castorice_Passive_MaxCount"
-                    ]
+                    "displayLines": "Castorice_Passive_MaxCount"
                   },
                   "assignState": "True",
                   "bar#": "Number"
@@ -1066,13 +945,7 @@ const compositeAbilityObject = {
                               },
                               "previewType": null,
                               "previewValue": {
-                                "operator": "Variables[0] (MDF_PreShowCurrentHP) || Variables[1] (MDF_LoseHPRatio02) || MUL || RETURN",
-                                "displayLines": "(MDF_PreShowCurrentHP * MDF_LoseHPRatio02)",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_PreShowCurrentHP",
-                                  "MDF_LoseHPRatio02"
-                                ]
+                                "displayLines": "(MDF_PreShowCurrentHP * MDF_LoseHPRatio02)"
                               }
                             }
                           ],
@@ -1089,13 +962,7 @@ const compositeAbilityObject = {
                               },
                               "previewType": null,
                               "previewValue": {
-                                "operator": "Variables[0] (MDF_PreShowCurrentHP) || Variables[1] (MDF_LoseHPRatio01) || MUL || RETURN",
-                                "displayLines": "(MDF_PreShowCurrentHP * MDF_LoseHPRatio01)",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_PreShowCurrentHP",
-                                  "MDF_LoseHPRatio01"
-                                ]
+                                "displayLines": "(MDF_PreShowCurrentHP * MDF_LoseHPRatio01)"
                               }
                             }
                           ]
@@ -1461,12 +1328,7 @@ const compositeAbilityObject = {
           "modifier": null,
           "ID": "140704()",
           "duration": {
-            "operator": "Variables[0] (20) || RETURN",
-            "displayLines": "20",
-            "constants": [],
-            "variables": [
-              20
-            ]
+            "displayLines": "20"
           }
         },
         "Submit Technique Use"
@@ -1564,12 +1426,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
-            "displayLines": "Castorice_Passive_MaxCount",
-            "constants": [],
-            "variables": [
-              "Castorice_Passive_MaxCount"
-            ]
+            "displayLines": "Castorice_Passive_MaxCount"
           },
           "variableName": "Castorice_Passive_Count"
         },
@@ -1586,117 +1443,46 @@ const compositeAbilityObject = {
           "memoID": 11407,
           "valuePerStack": {
             "Castorice_Ability21_P3_HPPercentage": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             },
             "CastoriceServant_BaseSpeed": {
-              "operator": "Variables[0] (165) || RETURN",
-              "displayLines": "165",
-              "constants": [],
-              "variables": [
-                165
-              ]
+              "displayLines": "165"
             },
             "CastoriceServant_LifeTime": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             },
             "CastoriceServant_CurrentHP": {
-              "operator": "Variables[0] (Castorice_Passive_MaxCount) || Variables[1] (0.5) || MUL || RETURN",
-              "displayLines": "(Castorice_Passive_MaxCount * 0.5)",
-              "constants": [],
-              "variables": [
-                "Castorice_Passive_MaxCount",
-                0.5
-              ]
+              "displayLines": "(Castorice_Passive_MaxCount * 0.5)"
             },
             "CastoriceServant_MaxHP": {
-              "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
-              "displayLines": "Castorice_Passive_MaxCount",
-              "constants": [],
-              "variables": [
-                "Castorice_Passive_MaxCount"
-              ]
+              "displayLines": "Castorice_Passive_MaxCount"
             },
             "CastoriceServant_PointB2_SpeedRatio": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "CastoriceServant_PointB3_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             },
             "CastoriceServant_PointB3_MaxLayer": {
-              "operator": "Variables[0] (6) || RETURN",
-              "displayLines": "6",
-              "constants": [],
-              "variables": [
-                6
-              ]
+              "displayLines": "6"
             },
             "CastoriceServant_Eidolon1_HPRatio01": {
-              "operator": "Variables[0] (0.8) || RETURN",
-              "displayLines": "0.8",
-              "constants": [],
-              "variables": [
-                0.8
-              ]
+              "displayLines": "0.8"
             },
             "CastoriceServant_Eidolon1_HPRatio02": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             },
             "CastoriceServant_Eidolon1_DamageRatio01": {
-              "operator": "Variables[0] (1.2) || RETURN",
-              "displayLines": "1.2",
-              "constants": [],
-              "variables": [
-                1.2
-              ]
+              "displayLines": "1.2"
             },
             "CastoriceServant_Eidolon1_DamageRatio02": {
-              "operator": "Variables[0] (1.4) || RETURN",
-              "displayLines": "1.4",
-              "constants": [],
-              "variables": [
-                1.4
-              ]
+              "displayLines": "1.4"
             },
             "CastoriceServant_Eidolon2_MaxCount": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             },
             "CastoriceServant_Eidolon6_AddCount": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             }
           }
         },
@@ -1736,12 +1522,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "variableName": "Castorice_Rank02_Count"
             },
@@ -1752,12 +1533,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster's Memosprite}}"
               },
               "value": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "variableName": "CastoriceServant_Rank02_Count"
             }
@@ -1841,12 +1617,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"689500868\">StageAbility_Maze_Castorice_Modifier</a>",
           "valuePerStack": {
             "MDF_LoseHP": {
-              "operator": "Variables[0] (0.4) || RETURN",
-              "displayLines": "0.4",
-              "constants": [],
-              "variables": [
-                0.4
-              ]
+              "displayLines": "0.4"
             }
           }
         }
@@ -1907,12 +1678,7 @@ const compositeAbilityObject = {
                         "target": "{{All Team Members}} - {{Caster's Memosprite}}"
                       },
                       "consumePercent": {
-                        "operator": "Variables[0] (MDF_LoseHP) || RETURN",
-                        "displayLines": "MDF_LoseHP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_LoseHP"
-                        ]
+                        "displayLines": "MDF_LoseHP"
                       },
                       "consumeFloor": 1,
                       "attackType": "Unknown"
@@ -2008,20 +1774,10 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"115720497\">Memosprite_Castorice_PointB2_OnListen</a>",
               "valuePerStack": {
                 "Castorice_PointB2_HPRatio": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
+                  "displayLines": "0.5"
                 },
                 "Castorice_PointB2_SpeedRatio": {
-                  "operator": "Variables[0] (0.4) || RETURN",
-                  "displayLines": "0.4",
-                  "constants": [],
-                  "variables": [
-                    0.4
-                  ]
+                  "displayLines": "0.4"
                 }
               }
             }
@@ -2077,12 +1833,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"332176292\">Castorice_Eidolon6_OnListen</a>",
               "valuePerStack": {
                 "MDF_QuantumPenetrate": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             }
@@ -2099,22 +1850,12 @@ const compositeAbilityObject = {
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (Castorice_Passive_Count) || RETURN",
-            "displayLines": "Castorice_Passive_Count",
-            "constants": [],
-            "variables": [
-              "Castorice_Passive_Count"
-            ]
+            "displayLines": "Castorice_Passive_Count"
           },
           "displaySubType": "Percent",
           "displayShowIcon": "False",
           "maximum": {
-            "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
-            "displayLines": "Castorice_Passive_MaxCount",
-            "constants": [],
-            "variables": [
-              "Castorice_Passive_MaxCount"
-            ]
+            "displayLines": "Castorice_Passive_MaxCount"
           },
           "assignState": "True",
           "bar#": "Number"
@@ -2142,12 +1883,7 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_QuantumPenetrate) || RETURN",
-                  "displayLines": "MDF_QuantumPenetrate",
-                  "constants": [],
-                  "variables": [
-                    "MDF_QuantumPenetrate"
-                  ]
+                  "displayLines": "MDF_QuantumPenetrate"
                 }
               }
             },
@@ -2162,12 +1898,7 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_QuantumPenetrate) || RETURN",
-                  "displayLines": "MDF_QuantumPenetrate",
-                  "constants": [],
-                  "variables": [
-                    "MDF_QuantumPenetrate"
-                  ]
+                  "displayLines": "MDF_QuantumPenetrate"
                 }
               }
             }
@@ -2191,12 +1922,7 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             }
@@ -2234,12 +1960,7 @@ const compositeAbilityObject = {
                             "value1": "<a class=\"gModGreen\" id=\"635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                              "displayLines": "MDF_MaxLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxLayer"
-                              ]
+                              "displayLines": "MDF_MaxLayer"
                             },
                             "valueType": "Layer"
                           },
@@ -2252,37 +1973,17 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                               "duration": {
-                                "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                                "displayLines": "MDF_LifeTime",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_LifeTime"
-                                ]
+                                "displayLines": "MDF_LifeTime"
                               },
                               "stackLimit": {
-                                "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                "displayLines": "MDF_MaxLayer",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_MaxLayer"
-                                ]
+                                "displayLines": "MDF_MaxLayer"
                               },
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                                  "displayLines": "MDF_AllDamageTypeAddedRatio",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_AllDamageTypeAddedRatio"
-                                  ]
+                                  "displayLines": "MDF_AllDamageTypeAddedRatio"
                                 },
                                 "MDF_MaxLayer": {
-                                  "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                  "displayLines": "MDF_MaxLayer",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_MaxLayer"
-                                  ]
+                                  "displayLines": "MDF_MaxLayer"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -2295,37 +1996,17 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                               "duration": {
-                                "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                                "displayLines": "MDF_LifeTime",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_LifeTime"
-                                ]
+                                "displayLines": "MDF_LifeTime"
                               },
                               "stackLimit": {
-                                "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                "displayLines": "MDF_MaxLayer",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_MaxLayer"
-                                ]
+                                "displayLines": "MDF_MaxLayer"
                               },
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                                  "displayLines": "MDF_AllDamageTypeAddedRatio",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_AllDamageTypeAddedRatio"
-                                  ]
+                                  "displayLines": "MDF_AllDamageTypeAddedRatio"
                                 },
                                 "MDF_MaxLayer": {
-                                  "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                  "displayLines": "MDF_MaxLayer",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_MaxLayer"
-                                  ]
+                                  "displayLines": "MDF_MaxLayer"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -2340,37 +2021,17 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                               "duration": {
-                                "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                                "displayLines": "MDF_LifeTime",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_LifeTime"
-                                ]
+                                "displayLines": "MDF_LifeTime"
                               },
                               "stackLimit": {
-                                "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                "displayLines": "MDF_MaxLayer",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_MaxLayer"
-                                ]
+                                "displayLines": "MDF_MaxLayer"
                               },
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                                  "displayLines": "MDF_AllDamageTypeAddedRatio",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_AllDamageTypeAddedRatio"
-                                  ]
+                                  "displayLines": "MDF_AllDamageTypeAddedRatio"
                                 },
                                 "MDF_MaxLayer": {
-                                  "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                  "displayLines": "MDF_MaxLayer",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_MaxLayer"
-                                  ]
+                                  "displayLines": "MDF_MaxLayer"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -2383,37 +2044,17 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                               "duration": {
-                                "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                                "displayLines": "MDF_LifeTime",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_LifeTime"
-                                ]
+                                "displayLines": "MDF_LifeTime"
                               },
                               "stackLimit": {
-                                "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                "displayLines": "MDF_MaxLayer",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_MaxLayer"
-                                ]
+                                "displayLines": "MDF_MaxLayer"
                               },
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                                  "displayLines": "MDF_AllDamageTypeAddedRatio",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_AllDamageTypeAddedRatio"
-                                  ]
+                                  "displayLines": "MDF_AllDamageTypeAddedRatio"
                                 },
                                 "MDF_MaxLayer": {
-                                  "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                  "displayLines": "MDF_MaxLayer",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_MaxLayer"
-                                  ]
+                                  "displayLines": "MDF_MaxLayer"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -2468,28 +2109,13 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 },
                 "MDF_LifeTime": {
-                  "operator": "Variables[0] (3) || RETURN",
-                  "displayLines": "3",
-                  "constants": [],
-                  "variables": [
-                    3
-                  ]
+                  "displayLines": "3"
                 },
                 "MDF_MaxLayer": {
-                  "operator": "Variables[0] (3) || RETURN",
-                  "displayLines": "3",
-                  "constants": [],
-                  "variables": [
-                    3
-                  ]
+                  "displayLines": "3"
                 }
               }
             },
@@ -2506,20 +2132,10 @@ const compositeAbilityObject = {
                 "MDF_PreShowMaxHP": 0,
                 "MDF_PreShowCurrentHP": 0,
                 "MDF_LoseHPRatio01": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 },
                 "MDF_LoseHPRatio02": {
-                  "operator": "Variables[0] (0.4) || RETURN",
-                  "displayLines": "0.4",
-                  "constants": [],
-                  "variables": [
-                    0.4
-                  ]
+                  "displayLines": "0.4"
                 }
               }
             }
@@ -2626,12 +2242,7 @@ const compositeAbilityObject = {
                               "functionName": "<a class=\"gTempYellow\" id=\"-1401999190\">Castorice_AddSpecialSP</a>",
                               "variables": {
                                 "_FixedAddValue": {
-                                  "operator": "Variables[0] (Current_LostHP) || INVERT || RETURN",
-                                  "displayLines": "-Current_LostHP",
-                                  "constants": [],
-                                  "variables": [
-                                    "Current_LostHP"
-                                  ]
+                                  "displayLines": "-Current_LostHP"
                                 }
                               }
                             }
@@ -2666,14 +2277,7 @@ const compositeAbilityObject = {
                                     "target": "{{Caster's Memosprite}}"
                                   },
                                   "setValue": {
-                                    "operator": "Variables[0] (Passive_CastoriceServant_CurrentHP) || Variables[1] (ABS) || Variables[2] (Current_LostHP) || PARAM_1 || FUNCTION || ADD || RETURN",
-                                    "displayLines": "(Passive_CastoriceServant_CurrentHP + &nbsp;<span class=\"descriptionFunctionColor\">ABS</span>(Current_LostHP))",
-                                    "constants": [],
-                                    "variables": [
-                                      "Passive_CastoriceServant_CurrentHP",
-                                      "ABS",
-                                      "Current_LostHP"
-                                    ]
+                                    "displayLines": "(Passive_CastoriceServant_CurrentHP + &nbsp;<span class=\"descriptionFunctionColor\">ABS</span>(Current_LostHP))"
                                   }
                                 }
                               ]
@@ -2720,13 +2324,7 @@ const compositeAbilityObject = {
                       "functionName": "<a class=\"gTempYellow\" id=\"-1401999190\">Castorice_AddSpecialSP</a>",
                       "variables": {
                         "_FixedAddValue": {
-                          "operator": "Variables[0] (Castorice_Passive_MaxCount) || Variables[1] (0.3) || MUL || RETURN",
-                          "displayLines": "(Castorice_Passive_MaxCount * 0.3)",
-                          "constants": [],
-                          "variables": [
-                            "Castorice_Passive_MaxCount",
-                            0.3
-                          ]
+                          "displayLines": "(Castorice_Passive_MaxCount * 0.3)"
                         }
                       }
                     }
@@ -2796,15 +2394,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (FLOOR) || Variables[1] (Castorice_Level) || Variables[1] (Castorice_Level) || MUL || Constants[0] (5.3125) || MUL || PARAM_1 || FUNCTION || RETURN",
-                            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(((Castorice_Level * Castorice_Level) * 5.3125))",
-                            "constants": [
-                              5.3125
-                            ],
-                            "variables": [
-                              "FLOOR",
-                              "Castorice_Level"
-                            ]
+                            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(((Castorice_Level * Castorice_Level) * 5.3125))"
                           },
                           "variableName": "Castorice_Passive_MaxCount"
                         }
@@ -2815,15 +2405,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (FLOOR) || Constants[0] (80) || Constants[0] (80) || MUL || Constants[1] (5.3125) || MUL || PARAM_1 || FUNCTION || RETURN",
-                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(((80 * 80) * 5.3125))",
-                        "constants": [
-                          80,
-                          5.3125
-                        ],
-                        "variables": [
-                          "FLOOR"
-                        ]
+                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(((80 * 80) * 5.3125))"
                       },
                       "variableName": "Castorice_Passive_MaxCount"
                     }
@@ -2848,33 +2430,18 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Character Data Entry",
                   "energyCost": {
-                    "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
-                    "displayLines": "Castorice_Passive_MaxCount",
-                    "constants": [],
-                    "variables": [
-                      "Castorice_Passive_MaxCount"
-                    ]
+                    "displayLines": "Castorice_Passive_MaxCount"
                   },
                   "skills": [
                     {
                       "name": "Skill Data Entry",
                       "skillTrigger": "Skill03",
                       "energyCost": {
-                        "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
-                        "displayLines": "Castorice_Passive_MaxCount",
-                        "constants": [],
-                        "variables": [
-                          "Castorice_Passive_MaxCount"
-                        ]
+                        "displayLines": "Castorice_Passive_MaxCount"
                       },
                       "parameters": {
                         "5": {
-                          "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
-                          "displayLines": "Castorice_Passive_MaxCount",
-                          "constants": [],
-                          "variables": [
-                            "Castorice_Passive_MaxCount"
-                          ]
+                          "displayLines": "Castorice_Passive_MaxCount"
                         }
                       }
                     }
@@ -2891,12 +2458,7 @@ const compositeAbilityObject = {
                       "propertyName": "Energy Cost",
                       "propertyAction": "Remove",
                       "value": {
-                        "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
-                        "displayLines": "Castorice_Passive_MaxCount",
-                        "constants": [],
-                        "variables": [
-                          "Castorice_Passive_MaxCount"
-                        ]
+                        "displayLines": "Castorice_Passive_MaxCount"
                       }
                     }
                   ]
@@ -2909,12 +2471,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">MaxSpecialEnergy</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
-                    "displayLines": "Castorice_Passive_MaxCount",
-                    "constants": [],
-                    "variables": [
-                      "Castorice_Passive_MaxCount"
-                    ]
+                    "displayLines": "Castorice_Passive_MaxCount"
                   },
                   "isRefresh": true
                 },
@@ -2939,13 +2496,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Passive_CastoriceServant_CurrentSpecialSP) || Variables[1] (Passive_CastoriceServant_CurrentExtraSpecialSP) || ADD || RETURN",
-                    "displayLines": "(Passive_CastoriceServant_CurrentSpecialSP + Passive_CastoriceServant_CurrentExtraSpecialSP)",
-                    "constants": [],
-                    "variables": [
-                      "Passive_CastoriceServant_CurrentSpecialSP",
-                      "Passive_CastoriceServant_CurrentExtraSpecialSP"
-                    ]
+                    "displayLines": "(Passive_CastoriceServant_CurrentSpecialSP + Passive_CastoriceServant_CurrentExtraSpecialSP)"
                   },
                   "variableName": "Castorice_Passive_Count"
                 },
@@ -2965,12 +2516,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "maximum": {
-                        "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
-                        "displayLines": "Castorice_Passive_MaxCount",
-                        "constants": [],
-                        "variables": [
-                          "Castorice_Passive_MaxCount"
-                        ]
+                        "displayLines": "Castorice_Passive_MaxCount"
                       }
                     }
                   ]
@@ -2989,13 +2535,7 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable",
                   "skipWhenMindControlled": false,
                   "value": {
-                    "operator": "Variables[0] (Castorice_ChangeValue) || Variables[1] (Castorice_Passive_Count) || ADD || RETURN",
-                    "displayLines": "(Castorice_ChangeValue + Castorice_Passive_Count)",
-                    "constants": [],
-                    "variables": [
-                      "Castorice_ChangeValue",
-                      "Castorice_Passive_Count"
-                    ]
+                    "displayLines": "(Castorice_ChangeValue + Castorice_Passive_Count)"
                   },
                   "variableName": "Castorice_Passive_Count"
                 },
@@ -3039,22 +2579,12 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (Castorice_Passive_Count) || RETURN",
-                            "displayLines": "Castorice_Passive_Count",
-                            "constants": [],
-                            "variables": [
-                              "Castorice_Passive_Count"
-                            ]
+                            "displayLines": "Castorice_Passive_Count"
                           },
                           "displaySubType": "Percent",
                           "displayShowIcon": "False",
                           "maximum": {
-                            "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
-                            "displayLines": "Castorice_Passive_MaxCount",
-                            "constants": [],
-                            "variables": [
-                              "Castorice_Passive_MaxCount"
-                            ]
+                            "displayLines": "Castorice_Passive_MaxCount"
                           },
                           "assignState": "True",
                           "bar#": "Number"
@@ -3143,116 +2673,46 @@ const compositeAbilityObject = {
           "memoID": 11407,
           "valuePerStack": {
             "Castorice_Ability21_P3_HPPercentage": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             },
             "CastoriceServant_BaseSpeed": {
-              "operator": "Variables[0] (165) || RETURN",
-              "displayLines": "165",
-              "constants": [],
-              "variables": [
-                165
-              ]
+              "displayLines": "165"
             },
             "CastoriceServant_LifeTime": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             },
             "CastoriceServant_CurrentHP": {
-              "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
-              "displayLines": "Castorice_Passive_MaxCount",
-              "constants": [],
-              "variables": [
-                "Castorice_Passive_MaxCount"
-              ]
+              "displayLines": "Castorice_Passive_MaxCount"
             },
             "CastoriceServant_MaxHP": {
-              "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
-              "displayLines": "Castorice_Passive_MaxCount",
-              "constants": [],
-              "variables": [
-                "Castorice_Passive_MaxCount"
-              ]
+              "displayLines": "Castorice_Passive_MaxCount"
             },
             "CastoriceServant_PointB2_SpeedRatio": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "CastoriceServant_PointB3_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             },
             "CastoriceServant_PointB3_MaxLayer": {
-              "operator": "Variables[0] (6) || RETURN",
-              "displayLines": "6",
-              "constants": [],
-              "variables": [
-                6
-              ]
+              "displayLines": "6"
             },
             "CastoriceServant_Eidolon1_HPRatio01": {
-              "operator": "Variables[0] (0.8) || RETURN",
-              "displayLines": "0.8",
-              "constants": [],
-              "variables": [
-                0.8
-              ]
+              "displayLines": "0.8"
             },
             "CastoriceServant_Eidolon1_HPRatio02": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             },
             "CastoriceServant_Eidolon1_DamageRatio01": {
-              "operator": "Variables[0] (1.2) || RETURN",
-              "displayLines": "1.2",
-              "constants": [],
-              "variables": [
-                1.2
-              ]
+              "displayLines": "1.2"
             },
             "CastoriceServant_Eidolon1_DamageRatio02": {
-              "operator": "Variables[0] (1.4) || RETURN",
-              "displayLines": "1.4",
-              "constants": [],
-              "variables": [
-                1.4
-              ]
+              "displayLines": "1.4"
             },
             "CastoriceServant_Eidolon2_MaxCount": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             },
             "CastoriceServant_Eidolon6_AddCount": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             }
           }
         },
@@ -3283,12 +2743,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "variableName": "Castorice_Rank02_Count"
             },
@@ -3299,12 +2754,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster's Memosprite}}"
               },
               "value": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "variableName": "CastoriceServant_Rank02_Count"
             }
@@ -3454,12 +2904,7 @@ const compositeAbilityObject = {
             "target": "{{All Team Members}} - {{Caster's Memosprite}}"
           },
           "consumePercent": {
-            "operator": "Variables[0] (0.4) || RETURN",
-            "displayLines": "0.4",
-            "constants": [],
-            "variables": [
-              0.4
-            ]
+            "displayLines": "0.4"
           },
           "consumeFloor": 1,
           "attackType": "Unknown"
@@ -3497,24 +2942,11 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] (0.3) || Variables[1] (Avatar_Castorice_Rank01_DamageRatio) || MUL || RETURN",
-                      "displayLines": "(0.3 * Avatar_Castorice_Rank01_DamageRatio)",
-                      "constants": [],
-                      "variables": [
-                        0.3,
-                        "Avatar_Castorice_Rank01_DamageRatio"
-                      ]
+                      "displayLines": "(0.3 * Avatar_Castorice_Rank01_DamageRatio)"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "Toughness": {
-                      "operator": "Variables[0] (AOE Toughness Value) || Constants[0] (0.5) || MUL || RETURN",
-                      "displayLines": "(AOE Toughness Value * 0.5)",
-                      "constants": [
-                        0.5
-                      ],
-                      "variables": [
-                        "AOE Toughness Value"
-                      ]
+                      "displayLines": "(AOE Toughness Value * 0.5)"
                     },
                     "instanceTag": "CastoricePairsDamage",
                     "Tags": [
@@ -3538,23 +2970,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || Constants[0] (0.5) || MUL || RETURN",
-                  "displayLines": "(AOE Toughness Value * 0.5)",
-                  "constants": [
-                    0.5
-                  ],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "(AOE Toughness Value * 0.5)"
                 },
                 "instanceTag": "CastoricePairsDamage",
                 "Tags": [
@@ -3604,13 +3024,7 @@ const compositeAbilityObject = {
               "functionName": "<a class=\"gTempYellow\" id=\"-1401999190\">Castorice_AddSpecialSP</a>",
               "variables": {
                 "_FixedAddValue": {
-                  "operator": "Variables[0] (Castorice_Rank02_MaxSpecialSP) || Variables[1] (0.3) || MUL || RETURN",
-                  "displayLines": "(Castorice_Rank02_MaxSpecialSP * 0.3)",
-                  "constants": [],
-                  "variables": [
-                    "Castorice_Rank02_MaxSpecialSP",
-                    0.3
-                  ]
+                  "displayLines": "(Castorice_Rank02_MaxSpecialSP * 0.3)"
                 }
               }
             },
@@ -3656,12 +3070,7 @@ const compositeAbilityObject = {
             "target": "{{Caster's Memosprite}}"
           },
           "value": {
-            "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-            "displayLines": "AOE Toughness Value",
-            "constants": [],
-            "variables": [
-              "AOE Toughness Value"
-            ]
+            "displayLines": "AOE Toughness Value"
           },
           "variableName": "_PairStance"
         },
@@ -3725,12 +3134,7 @@ const compositeAbilityObject = {
             "target": "{{All Team Members}} - {{Caster's Memosprite}}"
           },
           "consumePercent": {
-            "operator": "Variables[0] (0.3) || RETURN",
-            "displayLines": "0.3",
-            "constants": [],
-            "variables": [
-              0.3
-            ]
+            "displayLines": "0.3"
           },
           "consumeFloor": 1,
           "attackType": "Unknown"
@@ -3745,21 +3149,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             },
             "dmgFormula": "Max HP Scaling",
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "ToughnessDMGType": {
               "DamageType": "Quantum"
@@ -3778,21 +3172,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             },
             "dmgFormula": "Max HP Scaling",
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "ToughnessDMGType": {
               "DamageType": "Quantum"
@@ -3861,22 +3245,12 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             },
             "dmgFormula": "Max HP Scaling",
             "HitSplit": 0.2,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "ToughnessDMGType": {
               "DamageType": "Quantum"
@@ -3896,22 +3270,12 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             },
             "dmgFormula": "Max HP Scaling",
             "HitSplit": 0.8,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "ToughnessDMGType": {
               "DamageType": "Quantum"
@@ -3991,12 +3355,7 @@ const compositeAbilityObject = {
                 "value1": "CurrentHP%",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (0.8) || RETURN",
-                  "displayLines": "0.8",
-                  "constants": [],
-                  "variables": [
-                    0.8
-                  ]
+                  "displayLines": "0.8"
                 }
               },
               "passed": [
@@ -4021,12 +3380,7 @@ const compositeAbilityObject = {
                         "value1": "CurrentHP%",
                         "compareType": "<=",
                         "value2": {
-                          "operator": "Variables[0] (0.8) || RETURN",
-                          "displayLines": "0.8",
-                          "constants": [],
-                          "variables": [
-                            0.8
-                          ]
+                          "displayLines": "0.8"
                         }
                       },
                       {
@@ -4038,12 +3392,7 @@ const compositeAbilityObject = {
                         "value1": "CurrentHP%",
                         "compareType": ">",
                         "value2": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         }
                       }
                     ]
@@ -4052,12 +3401,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (1.2) || RETURN",
-                        "displayLines": "1.2",
-                        "constants": [],
-                        "variables": [
-                          1.2
-                        ]
+                        "displayLines": "1.2"
                       },
                       "variableName": "Avatar_Castorice_Rank01_DamageRatio"
                     }
@@ -4074,24 +3418,14 @@ const compositeAbilityObject = {
                         "value1": "CurrentHP%",
                         "compareType": "<=",
                         "value2": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         }
                       },
                       "passed": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (1.4) || RETURN",
-                            "displayLines": "1.4",
-                            "constants": [],
-                            "variables": [
-                              1.4
-                            ]
+                            "displayLines": "1.4"
                           },
                           "variableName": "Avatar_Castorice_Rank01_DamageRatio"
                         }
@@ -4129,17 +3463,7 @@ const compositeAbilityObject = {
               "name": "Define Custom Variable",
               "scope": "ContextTaskTemplate",
               "value": {
-                "operator": "Variables[0] (MAX) || Variables[1] (_CurSpecialSP) || Variables[2] (_FixedAddValue) || ADD || Variables[3] (_MaxSpecialSP) || SUB || Constants[0] (0) || PARAM_2 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(((_CurSpecialSP + _FixedAddValue) - _MaxSpecialSP), 0)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MAX",
-                  "_CurSpecialSP",
-                  "_FixedAddValue",
-                  "_MaxSpecialSP"
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(((_CurSpecialSP + _FixedAddValue) - _MaxSpecialSP), 0)"
               },
               "variableName": "_ExtraSpecialSP"
             },
@@ -4161,12 +3485,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecialOverflow</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (_ExtraSpecialSP) || RETURN",
-                    "displayLines": "_ExtraSpecialSP",
-                    "constants": [],
-                    "variables": [
-                      "_ExtraSpecialSP"
-                    ]
+                    "displayLines": "_ExtraSpecialSP"
                   }
                 }
               ]
@@ -4178,12 +3497,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (_FixedAddValue) || RETURN",
-                "displayLines": "_FixedAddValue",
-                "constants": [],
-                "variables": [
-                  "_FixedAddValue"
-                ]
+                "displayLines": "_FixedAddValue"
               },
               "isFixed": "(Fixed)",
               "ignoreBlock": true,
@@ -4209,13 +3523,7 @@ const compositeAbilityObject = {
               "functionName": "<a class=\"gTempYellow\" id=\"-1401999190\">Castorice_AddSpecialSP</a>",
               "variables": {
                 "_FixedAddValue": {
-                  "operator": "Variables[0] (_CurExtraSpecialSP) || Variables[1] (MDF_ReturnRatio) || MUL || RETURN",
-                  "displayLines": "(_CurExtraSpecialSP * MDF_ReturnRatio)",
-                  "constants": [],
-                  "variables": [
-                    "_CurExtraSpecialSP",
-                    "MDF_ReturnRatio"
-                  ]
+                  "displayLines": "(_CurExtraSpecialSP * MDF_ReturnRatio)"
                 }
               }
             },
@@ -4252,12 +3560,7 @@ const compositeAbilityObject = {
             "show": "Hide",
             "skillType": "Memosprite",
             "toughnessForcedReductionPreview": {
-              "operator": "Variables[0] (CASTORICE_OBJECT_UNUSED_8) || RETURN",
-              "displayLines": "CASTORICE_OBJECT_UNUSED_8",
-              "constants": [],
-              "variables": [
-                "CASTORICE_OBJECT_UNUSED_8"
-              ]
+              "displayLines": "CASTORICE_OBJECT_UNUSED_8"
             },
             "showAsForcedReduction": true
           },
@@ -4278,12 +3581,7 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (CASTORICE_OBJECT_UNUSED_8) || RETURN",
-                        "displayLines": "CASTORICE_OBJECT_UNUSED_8",
-                        "constants": [],
-                        "variables": [
-                          "CASTORICE_OBJECT_UNUSED_8"
-                        ]
+                        "displayLines": "CASTORICE_OBJECT_UNUSED_8"
                       }
                     }
                   ]
@@ -4311,12 +3609,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (CASTORICE_OBJECT_UNUSED_8) || RETURN",
-                    "displayLines": "CASTORICE_OBJECT_UNUSED_8",
-                    "constants": [],
-                    "variables": [
-                      "CASTORICE_OBJECT_UNUSED_8"
-                    ]
+                    "displayLines": "CASTORICE_OBJECT_UNUSED_8"
                   }
                 }
               ]
@@ -4757,13 +4050,7 @@ const compositeAbilityObject = {
                             "target": "{{Caster}}"
                           },
                           "flatConsume": {
-                            "operator": "Variables[0] (MDF_OwnerDeltaHP) || INVERT || Variables[1] (5) || MUL || RETURN",
-                            "displayLines": "(-MDF_OwnerDeltaHP * 5)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_OwnerDeltaHP",
-                              5
-                            ]
+                            "displayLines": "(-MDF_OwnerDeltaHP * 5)"
                           },
                           "attackType": "Unknown"
                         }
@@ -4881,12 +4168,7 @@ const compositeAbilityObject = {
                           },
                           "previewType": null,
                           "previewValue": {
-                            "operator": "Variables[0] (MDF_PreShowMaxHP) || RETURN",
-                            "displayLines": "MDF_PreShowMaxHP",
-                            "constants": [],
-                            "variables": [
-                              "MDF_PreShowMaxHP"
-                            ]
+                            "displayLines": "MDF_PreShowMaxHP"
                           }
                         }
                       ],
@@ -4903,13 +4185,7 @@ const compositeAbilityObject = {
                           },
                           "previewType": null,
                           "previewValue": {
-                            "operator": "Variables[0] (MDF_PreShowMaxHP) || Variables[1] (0.25) || MUL || RETURN",
-                            "displayLines": "(MDF_PreShowMaxHP * 0.25)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_PreShowMaxHP",
-                              0.25
-                            ]
+                            "displayLines": "(MDF_PreShowMaxHP * 0.25)"
                           }
                         }
                       ]
@@ -4940,12 +4216,7 @@ const compositeAbilityObject = {
                           },
                           "previewType": null,
                           "previewValue": {
-                            "operator": "Variables[0] (MDF_PreShowMaxHP) || RETURN",
-                            "displayLines": "MDF_PreShowMaxHP",
-                            "constants": [],
-                            "variables": [
-                              "MDF_PreShowMaxHP"
-                            ]
+                            "displayLines": "MDF_PreShowMaxHP"
                           }
                         },
                         {
@@ -4958,20 +4229,10 @@ const compositeAbilityObject = {
                             {
                               "name": "Set Netherwing's Ardent Will Stacks",
                               "displayNum": {
-                                "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
-                                "displayLines": "CastoriceServant_Rank02_Count",
-                                "constants": [],
-                                "variables": [
-                                  "CastoriceServant_Rank02_Count"
-                                ]
+                                "displayLines": "CastoriceServant_Rank02_Count"
                               },
                               "previewNum": {
-                                "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
-                                "displayLines": "CastoriceServant_Rank02_Count",
-                                "constants": [],
-                                "variables": [
-                                  "CastoriceServant_Rank02_Count"
-                                ]
+                                "displayLines": "CastoriceServant_Rank02_Count"
                               }
                             }
                           ]
@@ -4988,12 +4249,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Set Netherwing's Ardent Will Stacks",
                               "displayNum": {
-                                "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
-                                "displayLines": "CastoriceServant_Rank02_Count",
-                                "constants": [],
-                                "variables": [
-                                  "CastoriceServant_Rank02_Count"
-                                ]
+                                "displayLines": "CastoriceServant_Rank02_Count"
                               },
                               "previewNum": 1
                             }
@@ -5027,12 +4283,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -5111,13 +4362,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (6) || Variables[1] (CastoriceServant_Eidolon6_AddCount) || ADD || RETURN",
-                "displayLines": "(6 + CastoriceServant_Eidolon6_AddCount)",
-                "constants": [],
-                "variables": [
-                  6,
-                  "CastoriceServant_Eidolon6_AddCount"
-                ]
+                "displayLines": "(6 + CastoriceServant_Eidolon6_AddCount)"
               },
               "variableName": "CastoriceServant_LoopCount"
             }
@@ -5126,12 +4371,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (6) || RETURN",
-                "displayLines": "6",
-                "constants": [],
-                "variables": [
-                  6
-                ]
+                "displayLines": "6"
               },
               "variableName": "CastoriceServant_LoopCount"
             }
@@ -5140,25 +4380,14 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.4) || Variables[1] (SkillP04_P1_ExtraAddPercentage) || ADD || RETURN",
-            "displayLines": "(0.4 + SkillP04_P1_ExtraAddPercentage)",
-            "constants": [],
-            "variables": [
-              0.4,
-              "SkillP04_P1_ExtraAddPercentage"
-            ]
+            "displayLines": "(0.4 + SkillP04_P1_ExtraAddPercentage)"
           },
           "variableName": "SkillP04_P1_HPPercentage"
         },
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (CastoriceServant_LoopCount) || RETURN",
-            "displayLines": "CastoriceServant_LoopCount",
-            "constants": [],
-            "variables": [
-              "CastoriceServant_LoopCount"
-            ]
+            "displayLines": "CastoriceServant_LoopCount"
           },
           "execute": [
             {
@@ -5190,22 +4419,11 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Quantum",
                         "Damage": {
-                          "operator": "Variables[0] (SkillP04_P1_HPPercentage) || Variables[1] (Castorice_Rank01_DamageRatio) || MUL || RETURN",
-                          "displayLines": "(SkillP04_P1_HPPercentage * Castorice_Rank01_DamageRatio)",
-                          "constants": [],
-                          "variables": [
-                            "SkillP04_P1_HPPercentage",
-                            "Castorice_Rank01_DamageRatio"
-                          ]
+                          "displayLines": "(SkillP04_P1_HPPercentage * Castorice_Rank01_DamageRatio)"
                         },
                         "dmgFormula": "[SUMMONER] Max HP Scaling",
                         "Toughness": {
-                          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                          "displayLines": "ST Toughness Value",
-                          "constants": [],
-                          "variables": [
-                            "ST Toughness Value"
-                          ]
+                          "displayLines": "ST Toughness Value"
                         },
                         "Tags": null,
                         "attackType": "Memosprite",
@@ -5224,21 +4442,11 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Quantum",
                         "Damage": {
-                          "operator": "Variables[0] (SkillP04_P1_HPPercentage) || RETURN",
-                          "displayLines": "SkillP04_P1_HPPercentage",
-                          "constants": [],
-                          "variables": [
-                            "SkillP04_P1_HPPercentage"
-                          ]
+                          "displayLines": "SkillP04_P1_HPPercentage"
                         },
                         "dmgFormula": "[SUMMONER] Max HP Scaling",
                         "Toughness": {
-                          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                          "displayLines": "ST Toughness Value",
-                          "constants": [],
-                          "variables": [
-                            "ST Toughness Value"
-                          ]
+                          "displayLines": "ST Toughness Value"
                         },
                         "Tags": null,
                         "attackType": "Memosprite",
@@ -5259,14 +4467,7 @@ const compositeAbilityObject = {
             "target": "{{All Team Members}} -{{Caster}}"
           },
           "healFlat": {
-            "operator": "Variables[0] (CastoriceServant_SummonMaxHP) || Variables[1] (0.06) || MUL || Variables[2] (800) || ADD || RETURN",
-            "displayLines": "((CastoriceServant_SummonMaxHP * 0.06) + 800)",
-            "constants": [],
-            "variables": [
-              "CastoriceServant_SummonMaxHP",
-              0.06,
-              800
-            ]
+            "displayLines": "((CastoriceServant_SummonMaxHP * 0.06) + 800)"
           },
           "formula": "Heal from Base Value"
         },
@@ -5457,21 +4658,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-509656395\">Memosprite_CastoriceServant_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Roar Rumbles the Realm</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.1) || RETURN",
-                      "displayLines": "0.1",
-                      "constants": [],
-                      "variables": [
-                        0.1
-                      ]
+                      "displayLines": "0.1"
                     }
                   }
                 }
@@ -5498,21 +4689,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-509656395\">Memosprite_CastoriceServant_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Roar Rumbles the Realm</span>]",
                       "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.1) || RETURN",
-                          "displayLines": "0.1",
-                          "constants": [],
-                          "variables": [
-                            0.1
-                          ]
+                          "displayLines": "0.1"
                         }
                       }
                     }
@@ -5582,24 +4763,11 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] (Castorice_Ability21_P3_HPPercentage) || Variables[1] (Castorice_Rank01_DamageRatio) || MUL || RETURN",
-                      "displayLines": "(Castorice_Ability21_P3_HPPercentage * Castorice_Rank01_DamageRatio)",
-                      "constants": [],
-                      "variables": [
-                        "Castorice_Ability21_P3_HPPercentage",
-                        "Castorice_Rank01_DamageRatio"
-                      ]
+                      "displayLines": "(Castorice_Ability21_P3_HPPercentage * Castorice_Rank01_DamageRatio)"
                     },
                     "dmgFormula": "[SUMMONER] Max HP Scaling",
                     "Toughness": {
-                      "operator": "Variables[0] (_PairStance) || Constants[0] (0.5) || MUL || RETURN",
-                      "displayLines": "(_PairStance * 0.5)",
-                      "constants": [
-                        0.5
-                      ],
-                      "variables": [
-                        "_PairStance"
-                      ]
+                      "displayLines": "(_PairStance * 0.5)"
                     },
                     "ToughnessDMGType": {
                       "DamageType": "Quantum"
@@ -5626,23 +4794,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] (Castorice_Ability21_P3_HPPercentage) || RETURN",
-                  "displayLines": "Castorice_Ability21_P3_HPPercentage",
-                  "constants": [],
-                  "variables": [
-                    "Castorice_Ability21_P3_HPPercentage"
-                  ]
+                  "displayLines": "Castorice_Ability21_P3_HPPercentage"
                 },
                 "dmgFormula": "[SUMMONER] Max HP Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] (_PairStance) || Constants[0] (0.5) || MUL || RETURN",
-                  "displayLines": "(_PairStance * 0.5)",
-                  "constants": [
-                    0.5
-                  ],
-                  "variables": [
-                    "_PairStance"
-                  ]
+                  "displayLines": "(_PairStance * 0.5)"
                 },
                 "ToughnessDMGType": {
                   "DamageType": "Quantum"
@@ -5753,21 +4909,11 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-47761406\">Memosprite_CastoriceServant_LifeTime</a>",
           "counter": {
-            "operator": "Variables[0] (CastoriceServant_LifeTime) || RETURN",
-            "displayLines": "CastoriceServant_LifeTime",
-            "constants": [],
-            "variables": [
-              "CastoriceServant_LifeTime"
-            ]
+            "displayLines": "CastoriceServant_LifeTime"
           },
           "valuePerStack": {
             "_AttackTime": {
-              "operator": "Variables[0] (CastoriceServant_LifeTime) || RETURN",
-              "displayLines": "CastoriceServant_LifeTime",
-              "constants": [],
-              "variables": [
-                "CastoriceServant_LifeTime"
-              ]
+              "displayLines": "CastoriceServant_LifeTime"
             }
           }
         },
@@ -5957,14 +5103,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_AttackTime) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(_AttackTime - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_AttackTime"
-                    ]
+                    "displayLines": "(_AttackTime - 1)"
                   },
                   "variableName": "_AttackTime"
                 },
@@ -5976,12 +5115,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_AttackTime) || RETURN",
-                    "displayLines": "_AttackTime",
-                    "constants": [],
-                    "variables": [
-                      "_AttackTime"
-                    ]
+                    "displayLines": "_AttackTime"
                   },
                   "target": {
                     "name": "Target Name",
@@ -6007,36 +5141,21 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_AttackTime) || RETURN",
-                    "displayLines": "_AttackTime",
-                    "constants": [],
-                    "variables": [
-                      "_AttackTime"
-                    ]
+                    "displayLines": "_AttackTime"
                   },
                   "variableName": "_AttackMaxTime"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_AttackTime) || RETURN",
-                    "displayLines": "_AttackTime",
-                    "constants": [],
-                    "variables": [
-                      "_AttackTime"
-                    ]
+                    "displayLines": "_AttackTime"
                   },
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (_AttackMaxTime) || RETURN",
-                    "displayLines": "_AttackMaxTime",
-                    "constants": [],
-                    "variables": [
-                      "_AttackMaxTime"
-                    ]
+                    "displayLines": "_AttackMaxTime"
                   },
                   "assignState": "True",
                   "bar#": "Dot"
@@ -6090,12 +5209,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     }
                   },
                   "passed": [
@@ -6134,12 +5248,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (CastoriceServant_MaxHP) || RETURN",
-                    "displayLines": "CastoriceServant_MaxHP",
-                    "constants": [],
-                    "variables": [
-                      "CastoriceServant_MaxHP"
-                    ]
+                    "displayLines": "CastoriceServant_MaxHP"
                   }
                 },
                 {
@@ -6182,12 +5291,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "setValue": {
-                    "operator": "Variables[0] (CastoriceServant_CurrentHP) || RETURN",
-                    "displayLines": "CastoriceServant_CurrentHP",
-                    "constants": [],
-                    "variables": [
-                      "CastoriceServant_CurrentHP"
-                    ]
+                    "displayLines": "CastoriceServant_CurrentHP"
                   }
                 }
               ]
@@ -6229,13 +5333,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (FLOOR) || Variables[1] (CastoriceServant_CurrentCount) || PARAM_1 || FUNCTION || RETURN",
-                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(CastoriceServant_CurrentCount)",
-                        "constants": [],
-                        "variables": [
-                          "FLOOR",
-                          "CastoriceServant_CurrentCount"
-                        ]
+                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(CastoriceServant_CurrentCount)"
                       },
                       "variableName": "CastoriceServant_CurrentCount"
                     }
@@ -6257,26 +5355,14 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (CastoriceServant_Skill02_AttackCurrent_LostHP) || INVERT || RETURN",
-                        "displayLines": "-CastoriceServant_Skill02_AttackCurrent_LostHP",
-                        "constants": [],
-                        "variables": [
-                          "CastoriceServant_Skill02_AttackCurrent_LostHP"
-                        ]
+                        "displayLines": "-CastoriceServant_Skill02_AttackCurrent_LostHP"
                       },
                       "variableName": "CastoriceServant_Skill02_AttackCurrent_LostHP"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (FLOOR) || Variables[1] (CastoriceServant_Skill02_AttackTotal_LostHP) || Variables[2] (CastoriceServant_Skill02_AttackCurrent_LostHP) || ADD || PARAM_1 || FUNCTION || RETURN",
-                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((CastoriceServant_Skill02_AttackTotal_LostHP + CastoriceServant_Skill02_AttackCurrent_LostHP))",
-                        "constants": [],
-                        "variables": [
-                          "FLOOR",
-                          "CastoriceServant_Skill02_AttackTotal_LostHP",
-                          "CastoriceServant_Skill02_AttackCurrent_LostHP"
-                        ]
+                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((CastoriceServant_Skill02_AttackTotal_LostHP + CastoriceServant_Skill02_AttackCurrent_LostHP))"
                       },
                       "variableName": "CastoriceServant_Skill02_AttackTotal_LostHP"
                     }
@@ -6335,12 +5421,7 @@ const compositeAbilityObject = {
                             "value1": "CurrentHP%",
                             "compareType": ">",
                             "value2": {
-                              "operator": "Variables[0] (0.25) || RETURN",
-                              "displayLines": "0.25",
-                              "constants": [],
-                              "variables": [
-                                0.25
-                              ]
+                              "displayLines": "0.25"
                             }
                           }
                         ]
@@ -6804,13 +5885,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (6) || Variables[1] (CastoriceServant_Eidolon6_AddCount) || ADD || RETURN",
-                "displayLines": "(6 + CastoriceServant_Eidolon6_AddCount)",
-                "constants": [],
-                "variables": [
-                  6,
-                  "CastoriceServant_Eidolon6_AddCount"
-                ]
+                "displayLines": "(6 + CastoriceServant_Eidolon6_AddCount)"
               },
               "variableName": "CastoriceServant_LoopCount"
             }
@@ -6819,12 +5894,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (6) || RETURN",
-                "displayLines": "6",
-                "constants": [],
-                "variables": [
-                  6
-                ]
+                "displayLines": "6"
               },
               "variableName": "CastoriceServant_LoopCount"
             }
@@ -6833,25 +5903,14 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.4) || Variables[1] (SkillP04_P1_ExtraAddPercentage) || ADD || RETURN",
-            "displayLines": "(0.4 + SkillP04_P1_ExtraAddPercentage)",
-            "constants": [],
-            "variables": [
-              0.4,
-              "SkillP04_P1_ExtraAddPercentage"
-            ]
+            "displayLines": "(0.4 + SkillP04_P1_ExtraAddPercentage)"
           },
           "variableName": "SkillP04_P1_HPPercentage"
         },
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (CastoriceServant_LoopCount) || RETURN",
-            "displayLines": "CastoriceServant_LoopCount",
-            "constants": [],
-            "variables": [
-              "CastoriceServant_LoopCount"
-            ]
+            "displayLines": "CastoriceServant_LoopCount"
           },
           "execute": [
             {
@@ -6883,22 +5942,11 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Quantum",
                         "Damage": {
-                          "operator": "Variables[0] (SkillP04_P1_HPPercentage) || Variables[1] (Castorice_Rank01_DamageRatio) || MUL || RETURN",
-                          "displayLines": "(SkillP04_P1_HPPercentage * Castorice_Rank01_DamageRatio)",
-                          "constants": [],
-                          "variables": [
-                            "SkillP04_P1_HPPercentage",
-                            "Castorice_Rank01_DamageRatio"
-                          ]
+                          "displayLines": "(SkillP04_P1_HPPercentage * Castorice_Rank01_DamageRatio)"
                         },
                         "dmgFormula": "[SUMMONER] Max HP Scaling",
                         "Toughness": {
-                          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                          "displayLines": "ST Toughness Value",
-                          "constants": [],
-                          "variables": [
-                            "ST Toughness Value"
-                          ]
+                          "displayLines": "ST Toughness Value"
                         },
                         "Tags": null,
                         "attackType": "Memosprite",
@@ -6917,21 +5965,11 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Quantum",
                         "Damage": {
-                          "operator": "Variables[0] (SkillP04_P1_HPPercentage) || RETURN",
-                          "displayLines": "SkillP04_P1_HPPercentage",
-                          "constants": [],
-                          "variables": [
-                            "SkillP04_P1_HPPercentage"
-                          ]
+                          "displayLines": "SkillP04_P1_HPPercentage"
                         },
                         "dmgFormula": "[SUMMONER] Max HP Scaling",
                         "Toughness": {
-                          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                          "displayLines": "ST Toughness Value",
-                          "constants": [],
-                          "variables": [
-                            "ST Toughness Value"
-                          ]
+                          "displayLines": "ST Toughness Value"
                         },
                         "Tags": null,
                         "attackType": "Memosprite",
@@ -6952,14 +5990,7 @@ const compositeAbilityObject = {
             "target": "{{All Team Members}} -{{Caster}}"
           },
           "healFlat": {
-            "operator": "Variables[0] (CastoriceServant_SummonMaxHP) || Variables[1] (0.06) || MUL || Variables[2] (800) || ADD || RETURN",
-            "displayLines": "((CastoriceServant_SummonMaxHP * 0.06) + 800)",
-            "constants": [],
-            "variables": [
-              "CastoriceServant_SummonMaxHP",
-              0.06,
-              800
-            ]
+            "displayLines": "((CastoriceServant_SummonMaxHP * 0.06) + 800)"
           },
           "formula": "Heal from Base Value"
         },
@@ -7243,21 +6274,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-799988230\">Castorice_PointB3_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Where the West Wind Dwells</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (CastoriceServant_PointB3_MaxLayer) || RETURN",
-                "displayLines": "CastoriceServant_PointB3_MaxLayer",
-                "constants": [],
-                "variables": [
-                  "CastoriceServant_PointB3_MaxLayer"
-                ]
+                "displayLines": "CastoriceServant_PointB3_MaxLayer"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (CastoriceServant_PointB3_AllDamageTypeAddedRatio) || RETURN",
-                  "displayLines": "CastoriceServant_PointB3_AllDamageTypeAddedRatio",
-                  "constants": [],
-                  "variables": [
-                    "CastoriceServant_PointB3_AllDamageTypeAddedRatio"
-                  ]
+                  "displayLines": "CastoriceServant_PointB3_AllDamageTypeAddedRatio"
                 }
               },
               "addStacksPerTrigger": 1
@@ -7297,14 +6318,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CastoriceServant_Rank02_Count) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(CastoriceServant_Rank02_Count - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "CastoriceServant_Rank02_Count"
-                    ]
+                    "displayLines": "(CastoriceServant_Rank02_Count - 1)"
                   },
                   "variableName": "CastoriceServant_Rank02_Count"
                 },
@@ -7316,24 +6330,14 @@ const compositeAbilityObject = {
                   },
                   "scope": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
-                    "displayLines": "CastoriceServant_Rank02_Count",
-                    "constants": [],
-                    "variables": [
-                      "CastoriceServant_Rank02_Count"
-                    ]
+                    "displayLines": "CastoriceServant_Rank02_Count"
                   },
                   "variableName": "Castorice_Rank02_Count"
                 },
                 {
                   "name": "Set Netherwing's Ardent Will Stacks",
                   "displayNum": {
-                    "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
-                    "displayLines": "CastoriceServant_Rank02_Count",
-                    "constants": [],
-                    "variables": [
-                      "CastoriceServant_Rank02_Count"
-                    ]
+                    "displayLines": "CastoriceServant_Rank02_Count"
                   },
                   "previewNum": 0
                 }
@@ -7346,13 +6350,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "flatConsume": {
-                    "operator": "Variables[0] (CastoriceServant_SkillMaxHP) || Variables[1] (0.25) || MUL || RETURN",
-                    "displayLines": "(CastoriceServant_SkillMaxHP * 0.25)",
-                    "constants": [],
-                    "variables": [
-                      "CastoriceServant_SkillMaxHP",
-                      0.25
-                    ]
+                    "displayLines": "(CastoriceServant_SkillMaxHP * 0.25)"
                   },
                   "consumeFloor": 1,
                   "attackType": "Unknown"
@@ -7368,13 +6366,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "flatConsume": {
-                "operator": "Variables[0] (CastoriceServant_SkillMaxHP) || Variables[1] (0.25) || MUL || RETURN",
-                "displayLines": "(CastoriceServant_SkillMaxHP * 0.25)",
-                "constants": [],
-                "variables": [
-                  "CastoriceServant_SkillMaxHP",
-                  0.25
-                ]
+                "displayLines": "(CastoriceServant_SkillMaxHP * 0.25)"
               },
               "consumeFloor": 1,
               "attackType": "Unknown"
@@ -7389,25 +6381,13 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (CastoriceBPLoopMax) || RETURN",
-            "displayLines": "CastoriceBPLoopMax",
-            "constants": [],
-            "variables": [
-              "CastoriceBPLoopMax"
-            ]
+            "displayLines": "CastoriceBPLoopMax"
           },
           "execute": [
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (CastoriceBPLoop) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(CastoriceBPLoop + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "CastoriceBPLoop"
-                ]
+                "displayLines": "(CastoriceBPLoop + 1)"
               },
               "variableName": "CastoriceBPLoop"
             },
@@ -7440,32 +6420,14 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Quantum",
                         "Damage": {
-                          "operator": "Variables[0] (0.34) || Variables[1] (Castorice_Rank01_DamageRatio) || MUL || RETURN",
-                          "displayLines": "(0.34 * Castorice_Rank01_DamageRatio)",
-                          "constants": [],
-                          "variables": [
-                            0.34,
-                            "Castorice_Rank01_DamageRatio"
-                          ]
+                          "displayLines": "(0.34 * Castorice_Rank01_DamageRatio)"
                         },
                         "dmgFormula": "[SUMMONER] Max HP Scaling",
                         "HitSplit": {
-                          "operator": "Constants[0] (1) || Constants[0] (1) || Variables[0] (CastoriceBPLoopMax) || DIV || MUL || RETURN",
-                          "displayLines": "(1 * (1 / CastoriceBPLoopMax))",
-                          "constants": [
-                            1
-                          ],
-                          "variables": [
-                            "CastoriceBPLoopMax"
-                          ]
+                          "displayLines": "(1 * (1 / CastoriceBPLoopMax))"
                         },
                         "Toughness": {
-                          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                          "displayLines": "AOE Toughness Value",
-                          "constants": [],
-                          "variables": [
-                            "AOE Toughness Value"
-                          ]
+                          "displayLines": "AOE Toughness Value"
                         },
                         "Tags": null,
                         "attackType": "Memosprite",
@@ -7486,31 +6448,14 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] (0.34) || RETURN",
-                      "displayLines": "0.34",
-                      "constants": [],
-                      "variables": [
-                        0.34
-                      ]
+                      "displayLines": "0.34"
                     },
                     "dmgFormula": "[SUMMONER] Max HP Scaling",
                     "HitSplit": {
-                      "operator": "Constants[0] (1) || Constants[0] (1) || Variables[0] (CastoriceBPLoopMax) || DIV || MUL || RETURN",
-                      "displayLines": "(1 * (1 / CastoriceBPLoopMax))",
-                      "constants": [
-                        1
-                      ],
-                      "variables": [
-                        "CastoriceBPLoopMax"
-                      ]
+                      "displayLines": "(1 * (1 / CastoriceBPLoopMax))"
                     },
                     "Toughness": {
-                      "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                      "displayLines": "AOE Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "AOE Toughness Value"
-                      ]
+                      "displayLines": "AOE Toughness Value"
                     },
                     "Tags": null,
                     "attackType": "Memosprite",
@@ -7524,14 +6469,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (CastoriceBPLoop) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(CastoriceBPLoop + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "CastoriceBPLoop"
-            ]
+            "displayLines": "(CastoriceBPLoop + 1)"
           },
           "variableName": "CastoriceBPLoop"
         },
@@ -7543,12 +6481,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (CastoriceServant_BattleViewModeLevel) || RETURN",
-            "displayLines": "CastoriceServant_BattleViewModeLevel",
-            "constants": [],
-            "variables": [
-              "CastoriceServant_BattleViewModeLevel"
-            ]
+            "displayLines": "CastoriceServant_BattleViewModeLevel"
           },
           "variableName": "CastoriceServant_ReadyFlag"
         },
@@ -7821,21 +6754,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-799988230\">Castorice_PointB3_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Where the West Wind Dwells</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (CastoriceServant_PointB3_MaxLayer) || RETURN",
-                "displayLines": "CastoriceServant_PointB3_MaxLayer",
-                "constants": [],
-                "variables": [
-                  "CastoriceServant_PointB3_MaxLayer"
-                ]
+                "displayLines": "CastoriceServant_PointB3_MaxLayer"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (CastoriceServant_PointB3_AllDamageTypeAddedRatio) || RETURN",
-                  "displayLines": "CastoriceServant_PointB3_AllDamageTypeAddedRatio",
-                  "constants": [],
-                  "variables": [
-                    "CastoriceServant_PointB3_AllDamageTypeAddedRatio"
-                  ]
+                  "displayLines": "CastoriceServant_PointB3_AllDamageTypeAddedRatio"
                 }
               },
               "addStacksPerTrigger": 1
@@ -7866,14 +6789,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CastoriceServant_Rank02_Count) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(CastoriceServant_Rank02_Count - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "CastoriceServant_Rank02_Count"
-                    ]
+                    "displayLines": "(CastoriceServant_Rank02_Count - 1)"
                   },
                   "variableName": "CastoriceServant_Rank02_Count"
                 },
@@ -7885,24 +6801,14 @@ const compositeAbilityObject = {
                   },
                   "scope": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
-                    "displayLines": "CastoriceServant_Rank02_Count",
-                    "constants": [],
-                    "variables": [
-                      "CastoriceServant_Rank02_Count"
-                    ]
+                    "displayLines": "CastoriceServant_Rank02_Count"
                   },
                   "variableName": "Castorice_Rank02_Count"
                 },
                 {
                   "name": "Set Netherwing's Ardent Will Stacks",
                   "displayNum": {
-                    "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
-                    "displayLines": "CastoriceServant_Rank02_Count",
-                    "constants": [],
-                    "variables": [
-                      "CastoriceServant_Rank02_Count"
-                    ]
+                    "displayLines": "CastoriceServant_Rank02_Count"
                   },
                   "previewNum": 0
                 }
@@ -7915,13 +6821,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "flatConsume": {
-                    "operator": "Variables[0] (CastoriceServant_SkillMaxHP) || Variables[1] (0.25) || MUL || RETURN",
-                    "displayLines": "(CastoriceServant_SkillMaxHP * 0.25)",
-                    "constants": [],
-                    "variables": [
-                      "CastoriceServant_SkillMaxHP",
-                      0.25
-                    ]
+                    "displayLines": "(CastoriceServant_SkillMaxHP * 0.25)"
                   },
                   "consumeFloor": 1,
                   "attackType": "Unknown"
@@ -7937,13 +6837,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "flatConsume": {
-                "operator": "Variables[0] (CastoriceServant_SkillMaxHP) || Variables[1] (0.25) || MUL || RETURN",
-                "displayLines": "(CastoriceServant_SkillMaxHP * 0.25)",
-                "constants": [],
-                "variables": [
-                  "CastoriceServant_SkillMaxHP",
-                  0.25
-                ]
+                "displayLines": "(CastoriceServant_SkillMaxHP * 0.25)"
               },
               "consumeFloor": 1,
               "attackType": "Unknown"
@@ -7958,25 +6852,13 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (CastoriceBPLoopMax) || RETURN",
-            "displayLines": "CastoriceBPLoopMax",
-            "constants": [],
-            "variables": [
-              "CastoriceBPLoopMax"
-            ]
+            "displayLines": "CastoriceBPLoopMax"
           },
           "execute": [
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (CastoriceBPLoop) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(CastoriceBPLoop + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "CastoriceBPLoop"
-                ]
+                "displayLines": "(CastoriceBPLoop + 1)"
               },
               "variableName": "CastoriceBPLoop"
             },
@@ -8009,32 +6891,14 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Quantum",
                         "Damage": {
-                          "operator": "Variables[0] (0.28) || Variables[1] (Castorice_Rank01_DamageRatio) || MUL || RETURN",
-                          "displayLines": "(0.28 * Castorice_Rank01_DamageRatio)",
-                          "constants": [],
-                          "variables": [
-                            0.28,
-                            "Castorice_Rank01_DamageRatio"
-                          ]
+                          "displayLines": "(0.28 * Castorice_Rank01_DamageRatio)"
                         },
                         "dmgFormula": "[SUMMONER] Max HP Scaling",
                         "HitSplit": {
-                          "operator": "Constants[0] (1) || Constants[0] (1) || Variables[0] (CastoriceBPLoopMax) || DIV || MUL || RETURN",
-                          "displayLines": "(1 * (1 / CastoriceBPLoopMax))",
-                          "constants": [
-                            1
-                          ],
-                          "variables": [
-                            "CastoriceBPLoopMax"
-                          ]
+                          "displayLines": "(1 * (1 / CastoriceBPLoopMax))"
                         },
                         "Toughness": {
-                          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                          "displayLines": "AOE Toughness Value",
-                          "constants": [],
-                          "variables": [
-                            "AOE Toughness Value"
-                          ]
+                          "displayLines": "AOE Toughness Value"
                         },
                         "Tags": null,
                         "attackType": "Memosprite",
@@ -8055,31 +6919,14 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] (0.28) || RETURN",
-                      "displayLines": "0.28",
-                      "constants": [],
-                      "variables": [
-                        0.28
-                      ]
+                      "displayLines": "0.28"
                     },
                     "dmgFormula": "[SUMMONER] Max HP Scaling",
                     "HitSplit": {
-                      "operator": "Constants[0] (1) || Constants[0] (1) || Variables[0] (CastoriceBPLoopMax) || DIV || MUL || RETURN",
-                      "displayLines": "(1 * (1 / CastoriceBPLoopMax))",
-                      "constants": [
-                        1
-                      ],
-                      "variables": [
-                        "CastoriceBPLoopMax"
-                      ]
+                      "displayLines": "(1 * (1 / CastoriceBPLoopMax))"
                     },
                     "Toughness": {
-                      "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                      "displayLines": "AOE Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "AOE Toughness Value"
-                      ]
+                      "displayLines": "AOE Toughness Value"
                     },
                     "Tags": null,
                     "attackType": "Memosprite",
@@ -8098,12 +6945,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (CastoriceServant_BattleViewModeLevel) || RETURN",
-            "displayLines": "CastoriceServant_BattleViewModeLevel",
-            "constants": [],
-            "variables": [
-              "CastoriceServant_BattleViewModeLevel"
-            ]
+            "displayLines": "CastoriceServant_BattleViewModeLevel"
           },
           "variableName": "CastoriceServant_ReadyFlag"
         },
@@ -8357,21 +7199,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-799988230\">Castorice_PointB3_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Where the West Wind Dwells</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (CastoriceServant_PointB3_MaxLayer) || RETURN",
-                "displayLines": "CastoriceServant_PointB3_MaxLayer",
-                "constants": [],
-                "variables": [
-                  "CastoriceServant_PointB3_MaxLayer"
-                ]
+                "displayLines": "CastoriceServant_PointB3_MaxLayer"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (CastoriceServant_PointB3_AllDamageTypeAddedRatio) || RETURN",
-                  "displayLines": "CastoriceServant_PointB3_AllDamageTypeAddedRatio",
-                  "constants": [],
-                  "variables": [
-                    "CastoriceServant_PointB3_AllDamageTypeAddedRatio"
-                  ]
+                  "displayLines": "CastoriceServant_PointB3_AllDamageTypeAddedRatio"
                 }
               },
               "addStacksPerTrigger": 1
@@ -8402,14 +7234,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CastoriceServant_Rank02_Count) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(CastoriceServant_Rank02_Count - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "CastoriceServant_Rank02_Count"
-                    ]
+                    "displayLines": "(CastoriceServant_Rank02_Count - 1)"
                   },
                   "variableName": "CastoriceServant_Rank02_Count"
                 },
@@ -8421,24 +7246,14 @@ const compositeAbilityObject = {
                   },
                   "scope": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
-                    "displayLines": "CastoriceServant_Rank02_Count",
-                    "constants": [],
-                    "variables": [
-                      "CastoriceServant_Rank02_Count"
-                    ]
+                    "displayLines": "CastoriceServant_Rank02_Count"
                   },
                   "variableName": "Castorice_Rank02_Count"
                 },
                 {
                   "name": "Set Netherwing's Ardent Will Stacks",
                   "displayNum": {
-                    "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
-                    "displayLines": "CastoriceServant_Rank02_Count",
-                    "constants": [],
-                    "variables": [
-                      "CastoriceServant_Rank02_Count"
-                    ]
+                    "displayLines": "CastoriceServant_Rank02_Count"
                   },
                   "previewNum": 0
                 }
@@ -8451,13 +7266,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "flatConsume": {
-                    "operator": "Variables[0] (CastoriceServant_SkillMaxHP) || Variables[1] (0.25) || MUL || RETURN",
-                    "displayLines": "(CastoriceServant_SkillMaxHP * 0.25)",
-                    "constants": [],
-                    "variables": [
-                      "CastoriceServant_SkillMaxHP",
-                      0.25
-                    ]
+                    "displayLines": "(CastoriceServant_SkillMaxHP * 0.25)"
                   },
                   "consumeFloor": 1,
                   "attackType": "Unknown"
@@ -8473,13 +7282,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "flatConsume": {
-                "operator": "Variables[0] (CastoriceServant_SkillMaxHP) || Variables[1] (0.25) || MUL || RETURN",
-                "displayLines": "(CastoriceServant_SkillMaxHP * 0.25)",
-                "constants": [],
-                "variables": [
-                  "CastoriceServant_SkillMaxHP",
-                  0.25
-                ]
+                "displayLines": "(CastoriceServant_SkillMaxHP * 0.25)"
               },
               "consumeFloor": 1,
               "attackType": "Unknown"
@@ -8494,25 +7297,13 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (CastoriceBPLoopMax) || RETURN",
-            "displayLines": "CastoriceBPLoopMax",
-            "constants": [],
-            "variables": [
-              "CastoriceBPLoopMax"
-            ]
+            "displayLines": "CastoriceBPLoopMax"
           },
           "execute": [
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (CastoriceBPLoop) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(CastoriceBPLoop + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "CastoriceBPLoop"
-                ]
+                "displayLines": "(CastoriceBPLoop + 1)"
               },
               "variableName": "CastoriceBPLoop"
             },
@@ -8545,32 +7336,14 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Quantum",
                         "Damage": {
-                          "operator": "Variables[0] (0.24) || Variables[1] (Castorice_Rank01_DamageRatio) || MUL || RETURN",
-                          "displayLines": "(0.24 * Castorice_Rank01_DamageRatio)",
-                          "constants": [],
-                          "variables": [
-                            0.24,
-                            "Castorice_Rank01_DamageRatio"
-                          ]
+                          "displayLines": "(0.24 * Castorice_Rank01_DamageRatio)"
                         },
                         "dmgFormula": "[SUMMONER] Max HP Scaling",
                         "HitSplit": {
-                          "operator": "Constants[0] (1) || Constants[0] (1) || Variables[0] (CastoriceBPLoopMax) || DIV || MUL || RETURN",
-                          "displayLines": "(1 * (1 / CastoriceBPLoopMax))",
-                          "constants": [
-                            1
-                          ],
-                          "variables": [
-                            "CastoriceBPLoopMax"
-                          ]
+                          "displayLines": "(1 * (1 / CastoriceBPLoopMax))"
                         },
                         "Toughness": {
-                          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                          "displayLines": "AOE Toughness Value",
-                          "constants": [],
-                          "variables": [
-                            "AOE Toughness Value"
-                          ]
+                          "displayLines": "AOE Toughness Value"
                         },
                         "Tags": null,
                         "attackType": "Memosprite",
@@ -8591,31 +7364,14 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] (0.24) || RETURN",
-                      "displayLines": "0.24",
-                      "constants": [],
-                      "variables": [
-                        0.24
-                      ]
+                      "displayLines": "0.24"
                     },
                     "dmgFormula": "[SUMMONER] Max HP Scaling",
                     "HitSplit": {
-                      "operator": "Constants[0] (1) || Constants[0] (1) || Variables[0] (CastoriceBPLoopMax) || DIV || MUL || RETURN",
-                      "displayLines": "(1 * (1 / CastoriceBPLoopMax))",
-                      "constants": [
-                        1
-                      ],
-                      "variables": [
-                        "CastoriceBPLoopMax"
-                      ]
+                      "displayLines": "(1 * (1 / CastoriceBPLoopMax))"
                     },
                     "Toughness": {
-                      "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                      "displayLines": "AOE Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "AOE Toughness Value"
-                      ]
+                      "displayLines": "AOE Toughness Value"
                     },
                     "Tags": null,
                     "attackType": "Memosprite",
@@ -8634,12 +7390,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (CastoriceServant_BattleViewModeLevel) || RETURN",
-            "displayLines": "CastoriceServant_BattleViewModeLevel",
-            "constants": [],
-            "variables": [
-              "CastoriceServant_BattleViewModeLevel"
-            ]
+            "displayLines": "CastoriceServant_BattleViewModeLevel"
           },
           "variableName": "CastoriceServant_ReadyFlag"
         },
@@ -8766,22 +7517,11 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] (0.4) || Variables[1] (Castorice_Rank01_DamageRatio) || MUL || RETURN",
-                      "displayLines": "(0.4 * Castorice_Rank01_DamageRatio)",
-                      "constants": [],
-                      "variables": [
-                        0.4,
-                        "Castorice_Rank01_DamageRatio"
-                      ]
+                      "displayLines": "(0.4 * Castorice_Rank01_DamageRatio)"
                     },
                     "dmgFormula": "[SUMMONER] Max HP Scaling",
                     "Toughness": {
-                      "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                      "displayLines": "AOE Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "AOE Toughness Value"
-                      ]
+                      "displayLines": "AOE Toughness Value"
                     },
                     "Tags": null,
                     "attackType": "Memosprite",
@@ -8802,21 +7542,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] (0.4) || RETURN",
-                  "displayLines": "0.4",
-                  "constants": [],
-                  "variables": [
-                    0.4
-                  ]
+                  "displayLines": "0.4"
                 },
                 "dmgFormula": "[SUMMONER] Max HP Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "Tags": null,
                 "attackType": "Memosprite",
@@ -8847,14 +7577,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (CastoriceServant_BattleViewModeLevel) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(CastoriceServant_BattleViewModeLevel + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "CastoriceServant_BattleViewModeLevel"
-            ]
+            "displayLines": "(CastoriceServant_BattleViewModeLevel + 1)"
           },
           "variableName": "CastoriceServant_ReadyFlag"
         },
@@ -8998,12 +7721,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     }
                   },
                   {
@@ -9088,12 +7806,7 @@ const compositeAbilityObject = {
                 "value1": "CurrentHP%",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (CastoriceServant_Eidolon1_HPRatio01) || RETURN",
-                  "displayLines": "CastoriceServant_Eidolon1_HPRatio01",
-                  "constants": [],
-                  "variables": [
-                    "CastoriceServant_Eidolon1_HPRatio01"
-                  ]
+                  "displayLines": "CastoriceServant_Eidolon1_HPRatio01"
                 }
               },
               "passed": [
@@ -9118,12 +7831,7 @@ const compositeAbilityObject = {
                         "value1": "CurrentHP%",
                         "compareType": "<=",
                         "value2": {
-                          "operator": "Variables[0] (CastoriceServant_Eidolon1_HPRatio01) || RETURN",
-                          "displayLines": "CastoriceServant_Eidolon1_HPRatio01",
-                          "constants": [],
-                          "variables": [
-                            "CastoriceServant_Eidolon1_HPRatio01"
-                          ]
+                          "displayLines": "CastoriceServant_Eidolon1_HPRatio01"
                         }
                       },
                       {
@@ -9135,12 +7843,7 @@ const compositeAbilityObject = {
                         "value1": "CurrentHP%",
                         "compareType": ">",
                         "value2": {
-                          "operator": "Variables[0] (CastoriceServant_Eidolon1_HPRatio02) || RETURN",
-                          "displayLines": "CastoriceServant_Eidolon1_HPRatio02",
-                          "constants": [],
-                          "variables": [
-                            "CastoriceServant_Eidolon1_HPRatio02"
-                          ]
+                          "displayLines": "CastoriceServant_Eidolon1_HPRatio02"
                         }
                       }
                     ]
@@ -9149,12 +7852,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (CastoriceServant_Eidolon1_DamageRatio01) || RETURN",
-                        "displayLines": "CastoriceServant_Eidolon1_DamageRatio01",
-                        "constants": [],
-                        "variables": [
-                          "CastoriceServant_Eidolon1_DamageRatio01"
-                        ]
+                        "displayLines": "CastoriceServant_Eidolon1_DamageRatio01"
                       },
                       "variableName": "Castorice_Rank01_DamageRatio"
                     }
@@ -9171,24 +7869,14 @@ const compositeAbilityObject = {
                         "value1": "CurrentHP%",
                         "compareType": "<=",
                         "value2": {
-                          "operator": "Variables[0] (CastoriceServant_Eidolon1_HPRatio02) || RETURN",
-                          "displayLines": "CastoriceServant_Eidolon1_HPRatio02",
-                          "constants": [],
-                          "variables": [
-                            "CastoriceServant_Eidolon1_HPRatio02"
-                          ]
+                          "displayLines": "CastoriceServant_Eidolon1_HPRatio02"
                         }
                       },
                       "passed": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (CastoriceServant_Eidolon1_DamageRatio02) || RETURN",
-                            "displayLines": "CastoriceServant_Eidolon1_DamageRatio02",
-                            "constants": [],
-                            "variables": [
-                              "CastoriceServant_Eidolon1_DamageRatio02"
-                            ]
+                            "displayLines": "CastoriceServant_Eidolon1_DamageRatio02"
                           },
                           "variableName": "Castorice_Rank01_DamageRatio"
                         }
@@ -9385,12 +8073,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     }
                   },
                   "passed": [
@@ -9542,12 +8225,7 @@ const compositeAbilityObject = {
                       "duration": 1,
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (CastoriceServant_PointB2_SpeedRatio) || RETURN",
-                          "displayLines": "CastoriceServant_PointB2_SpeedRatio",
-                          "constants": [],
-                          "variables": [
-                            "CastoriceServant_PointB2_SpeedRatio"
-                          ]
+                          "displayLines": "CastoriceServant_PointB2_SpeedRatio"
                         }
                       }
                     }
@@ -9692,12 +8370,7 @@ const compositeAbilityObject = {
                               "duration": 1,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (CastoriceServant_PointB2_SpeedRatio) || RETURN",
-                                  "displayLines": "CastoriceServant_PointB2_SpeedRatio",
-                                  "constants": [],
-                                  "variables": [
-                                    "CastoriceServant_PointB2_SpeedRatio"
-                                  ]
+                                  "displayLines": "CastoriceServant_PointB2_SpeedRatio"
                                 }
                               }
                             }
@@ -9995,14 +8668,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CastoriceServant_BattleViewModeLevel) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(CastoriceServant_BattleViewModeLevel + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "CastoriceServant_BattleViewModeLevel"
-                    ]
+                    "displayLines": "(CastoriceServant_BattleViewModeLevel + 1)"
                   },
                   "variableName": "CastoriceServant_BattleViewModeLevel"
                 }

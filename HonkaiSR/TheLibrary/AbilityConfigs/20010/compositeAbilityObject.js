@@ -1364,12 +1364,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SpeedOverride</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (BE_P1_BESpeed) || RETURN",
-                    "displayLines": "BE_P1_BESpeed",
-                    "constants": [],
-                    "variables": [
-                      "BE_P1_BESpeed"
-                    ]
+                    "displayLines": "BE_P1_BESpeed"
                   }
                 },
                 {
@@ -1380,12 +1375,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "multiBase": {
-                    "operator": "Variables[0] (BE_P3_InitDelay) || RETURN",
-                    "displayLines": "BE_P3_InitDelay",
-                    "constants": [],
-                    "variables": [
-                      "BE_P3_InitDelay"
-                    ]
+                    "displayLines": "BE_P3_InitDelay"
                   }
                 }
               ]
@@ -1466,12 +1456,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_14438) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_14438",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_14438"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_14438"
                 },
                 "notAHit": true,
                 "dmgFormula": "Max HP Scaling",
@@ -1488,29 +1473,14 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
               "duration": {
-                "operator": "Variables[0] (UnusedUnderThisBase_11018) || RETURN",
-                "displayLines": "UnusedUnderThisBase_11018",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_11018"
-                ]
+                "displayLines": "UnusedUnderThisBase_11018"
               },
               "baseChance": {
-                "operator": "Variables[0] (UnusedUnderThisBase_11014) || RETURN",
-                "displayLines": "UnusedUnderThisBase_11014",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_11014"
-                ]
+                "displayLines": "UnusedUnderThisBase_11014"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_11016) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_11016",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_11016"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_11016"
                 }
               }
             },

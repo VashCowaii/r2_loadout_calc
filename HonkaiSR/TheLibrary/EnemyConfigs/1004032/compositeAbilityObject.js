@@ -197,12 +197,7 @@ const compositeAbilityObject = {
                                   "conditions": {
                                     "name": "Enemy ID",
                                     "ID": {
-                                      "operator": "Variables[0] (SummonID01) || RETURN",
-                                      "displayLines": "SummonID01",
-                                      "constants": [],
-                                      "variables": [
-                                        "SummonID01"
-                                      ]
+                                      "displayLines": "SummonID01"
                                     },
                                     "target": {
                                       "name": "Target Name",
@@ -407,20 +402,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
                       "valuePerStack": {
                         "MDF_SpeedUpPerLayer": {
-                          "operator": "Variables[0] ({[SkillP04[2]]}) || RETURN",
-                          "displayLines": "{[SkillP04[2]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillP04[2]]}"
-                          ]
+                          "displayLines": "{[SkillP04[2]]}"
                         },
                         "MDF_AttackUpPerLayer": {
-                          "operator": "Variables[0] ({[SkillP04[3]]}) || RETURN",
-                          "displayLines": "{[SkillP04[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillP04[3]]}"
-                          ]
+                          "displayLines": "{[SkillP04[3]]}"
                         }
                       }
                     },
@@ -449,14 +434,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_SpeedDownRatio) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_SpeedDownRatio)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_SpeedDownRatio"
-                    ]
+                    "displayLines": "(0 - MDF_SpeedDownRatio)"
                   }
                 }
               ]
@@ -553,20 +531,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
                       "valuePerStack": {
                         "MDF_SpeedUpPerLayer": {
-                          "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
-                          "displayLines": "{[SkillP04[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillP04[0]]}"
-                          ]
+                          "displayLines": "{[SkillP04[0]]}"
                         },
                         "MDF_AttackUpPerLayer": {
-                          "operator": "Variables[0] ({[SkillP04[1]]}) || RETURN",
-                          "displayLines": "{[SkillP04[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillP04[1]]}"
-                          ]
+                          "displayLines": "{[SkillP04[1]]}"
                         }
                       }
                     }
@@ -581,20 +549,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
                       "valuePerStack": {
                         "MDF_SpeedUpPerLayer": {
-                          "operator": "Variables[0] ({[SkillP04[2]]}) || RETURN",
-                          "displayLines": "{[SkillP04[2]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillP04[2]]}"
-                          ]
+                          "displayLines": "{[SkillP04[2]]}"
                         },
                         "MDF_AttackUpPerLayer": {
-                          "operator": "Variables[0] ({[SkillP04[3]]}) || RETURN",
-                          "displayLines": "{[SkillP04[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillP04[3]]}"
-                          ]
+                          "displayLines": "{[SkillP04[3]]}"
                         }
                       }
                     }
@@ -623,13 +581,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_SpeedUpPerLayer) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_SpeedUpPerLayer * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedUpPerLayer",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_SpeedUpPerLayer * MDF_Layer)"
                   }
                 },
                 {
@@ -640,13 +592,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackUpPerLayer) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_AttackUpPerLayer * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackUpPerLayer",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_AttackUpPerLayer * MDF_Layer)"
                   }
                 }
               ]
@@ -681,12 +627,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_SpeedUp) || RETURN",
-                    "displayLines": "MDF_SpeedUp",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedUp"
-                    ]
+                    "displayLines": "MDF_SpeedUp"
                   }
                 }
               ]
@@ -848,12 +789,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageAddedRatio) || RETURN",
-                    "displayLines": "MDF_DamageAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageAddedRatio"
-                    ]
+                    "displayLines": "MDF_DamageAddedRatio"
                   }
                 }
               ]
@@ -1057,20 +993,10 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
               "valuePerStack": {
                 "MDF_SpeedUpPerLayer": {
-                  "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
-                  "displayLines": "{[SkillP04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP04[0]]}"
-                  ]
+                  "displayLines": "{[SkillP04[0]]}"
                 },
                 "MDF_AttackUpPerLayer": {
-                  "operator": "Variables[0] ({[SkillP04[1]]}) || RETURN",
-                  "displayLines": "{[SkillP04[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP04[1]]}"
-                  ]
+                  "displayLines": "{[SkillP04[1]]}"
                 }
               }
             }
@@ -1085,20 +1011,10 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
               "valuePerStack": {
                 "MDF_SpeedUpPerLayer": {
-                  "operator": "Variables[0] ({[SkillP04[2]]}) || RETURN",
-                  "displayLines": "{[SkillP04[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP04[2]]}"
-                  ]
+                  "displayLines": "{[SkillP04[2]]}"
                 },
                 "MDF_AttackUpPerLayer": {
-                  "operator": "Variables[0] ({[SkillP04[3]]}) || RETURN",
-                  "displayLines": "{[SkillP04[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP04[3]]}"
-                  ]
+                  "displayLines": "{[SkillP04[3]]}"
                 }
               }
             }
@@ -1121,12 +1037,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1364188900\">Enemy_W1_Bronya_IF_02_Enhance</a>[<span class=\"descriptionNumberColor\">Shared Hatred</span>]",
           "valuePerStack": {
             "MDF_SpeedUp": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
+              "displayLines": "{[SkillP01[0]]}"
             }
           }
         },
@@ -1233,12 +1144,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]",
               "valuePerStack": {
                 "MDF_SpeedDownRatio": {
-                  "operator": "Variables[0] ({[SkillP03[4]]}) || RETURN",
-                  "displayLines": "{[SkillP03[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP03[4]]}"
-                  ]
+                  "displayLines": "{[SkillP03[4]]}"
                 }
               }
             }
@@ -1441,20 +1347,10 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
               "valuePerStack": {
                 "MDF_SpeedUpPerLayer": {
-                  "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
-                  "displayLines": "{[SkillP04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP04[0]]}"
-                  ]
+                  "displayLines": "{[SkillP04[0]]}"
                 },
                 "MDF_AttackUpPerLayer": {
-                  "operator": "Variables[0] ({[SkillP04[1]]}) || RETURN",
-                  "displayLines": "{[SkillP04[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP04[1]]}"
-                  ]
+                  "displayLines": "{[SkillP04[1]]}"
                 }
               }
             }
@@ -1469,20 +1365,10 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
               "valuePerStack": {
                 "MDF_SpeedUpPerLayer": {
-                  "operator": "Variables[0] ({[SkillP04[2]]}) || RETURN",
-                  "displayLines": "{[SkillP04[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP04[2]]}"
-                  ]
+                  "displayLines": "{[SkillP04[2]]}"
                 },
                 "MDF_AttackUpPerLayer": {
-                  "operator": "Variables[0] ({[SkillP04[3]]}) || RETURN",
-                  "displayLines": "{[SkillP04[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP04[3]]}"
-                  ]
+                  "displayLines": "{[SkillP04[3]]}"
                 }
               }
             }
@@ -1561,12 +1447,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]",
               "valuePerStack": {
                 "MDF_SpeedDownRatio": {
-                  "operator": "Variables[0] ({[SkillP03[4]]}) || RETURN",
-                  "displayLines": "{[SkillP03[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP03[4]]}"
-                  ]
+                  "displayLines": "{[SkillP03[4]]}"
                 }
               }
             }
@@ -1748,12 +1629,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]",
           "valuePerStack": {
             "MDF_SpeedDownRatio": {
-              "operator": "Variables[0] ({[SkillP03[4]]}) || RETURN",
-              "displayLines": "{[SkillP03[4]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP03[4]]}"
-              ]
+              "displayLines": "{[SkillP03[4]]}"
             }
           }
         },
@@ -1801,20 +1677,10 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
                   "valuePerStack": {
                     "MDF_SpeedUpPerLayer": {
-                      "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
-                      "displayLines": "{[SkillP04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP04[0]]}"
-                      ]
+                      "displayLines": "{[SkillP04[0]]}"
                     },
                     "MDF_AttackUpPerLayer": {
-                      "operator": "Variables[0] ({[SkillP04[1]]}) || RETURN",
-                      "displayLines": "{[SkillP04[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP04[1]]}"
-                      ]
+                      "displayLines": "{[SkillP04[1]]}"
                     }
                   }
                 },
@@ -1927,21 +1793,11 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"2036544920\">Standard_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-            "displayLines": "{[Skill05[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill05[1]]}"
-            ]
+            "displayLines": "{[Skill05[1]]}"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "{[Skill05[0]]}"
             }
           }
         },
@@ -2181,12 +2037,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]",
               "valuePerStack": {
                 "MDF_SpeedDownRatio": {
-                  "operator": "Variables[0] ({[SkillP03[4]]}) || RETURN",
-                  "displayLines": "{[SkillP03[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP03[4]]}"
-                  ]
+                  "displayLines": "{[SkillP03[4]]}"
                 }
               }
             },
@@ -2269,20 +2120,10 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
               "valuePerStack": {
                 "MDF_SpeedUpPerLayer": {
-                  "operator": "Variables[0] ({[SkillP04[2]]}) || RETURN",
-                  "displayLines": "{[SkillP04[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP04[2]]}"
-                  ]
+                  "displayLines": "{[SkillP04[2]]}"
                 },
                 "MDF_AttackUpPerLayer": {
-                  "operator": "Variables[0] ({[SkillP04[3]]}) || RETURN",
-                  "displayLines": "{[SkillP04[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP04[3]]}"
-                  ]
+                  "displayLines": "{[SkillP04[3]]}"
                 }
               }
             },
@@ -2349,20 +2190,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
           "valuePerStack": {
             "MDF_SpeedUpPerLayer": {
-              "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
-              "displayLines": "{[SkillP04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP04[0]]}"
-              ]
+              "displayLines": "{[SkillP04[0]]}"
             },
             "MDF_AttackUpPerLayer": {
-              "operator": "Variables[0] ({[SkillP04[1]]}) || RETURN",
-              "displayLines": "{[SkillP04[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP04[1]]}"
-              ]
+              "displayLines": "{[SkillP04[1]]}"
             }
           }
         },
@@ -2396,12 +2227,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"1364188900\">Enemy_W1_Bronya_IF_02_Enhance</a>[<span class=\"descriptionNumberColor\">Shared Hatred</span>]",
               "valuePerStack": {
                 "MDF_SpeedUp": {
-                  "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                  "displayLines": "{[SkillP01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[0]]}"
-                  ]
+                  "displayLines": "{[SkillP01[0]]}"
                 }
               }
             },
@@ -2448,12 +2274,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
+                  "displayLines": "{[Skill04[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -2564,12 +2385,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
+                  "displayLines": "{[Skill04[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -2831,12 +2647,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageAddedRatio) || RETURN",
-                    "displayLines": "MDF_DamageAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageAddedRatio"
-                    ]
+                    "displayLines": "MDF_DamageAddedRatio"
                   }
                 }
               ]
@@ -2894,12 +2705,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,

@@ -28,21 +28,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
           "duration": {
-            "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__229) || RETURN",
-            "displayLines": "ENEMIES_OBJECT_UNUSED__229",
-            "constants": [],
-            "variables": [
-              "ENEMIES_OBJECT_UNUSED__229"
-            ]
+            "displayLines": "ENEMIES_OBJECT_UNUSED__229"
           },
           "valuePerStack": {
             "Modifier_Electric_DamagePercentage": {
-              "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__230) || RETURN",
-              "displayLines": "ENEMIES_OBJECT_UNUSED__230",
-              "constants": [],
-              "variables": [
-                "ENEMIES_OBJECT_UNUSED__230"
-              ]
+              "displayLines": "ENEMIES_OBJECT_UNUSED__230"
             }
           },
           "stackFlag": "Level"
@@ -55,21 +45,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
           "duration": {
-            "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__229) || RETURN",
-            "displayLines": "ENEMIES_OBJECT_UNUSED__229",
-            "constants": [],
-            "variables": [
-              "ENEMIES_OBJECT_UNUSED__229"
-            ]
+            "displayLines": "ENEMIES_OBJECT_UNUSED__229"
           },
           "valuePerStack": {
             "Modifier_Poison_DamagePercentage": {
-              "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__230) || RETURN",
-              "displayLines": "ENEMIES_OBJECT_UNUSED__230",
-              "constants": [],
-              "variables": [
-                "ENEMIES_OBJECT_UNUSED__230"
-              ]
+              "displayLines": "ENEMIES_OBJECT_UNUSED__230"
             }
           },
           "stackFlag": "Level"
@@ -82,21 +62,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
           "duration": {
-            "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__229) || RETURN",
-            "displayLines": "ENEMIES_OBJECT_UNUSED__229",
-            "constants": [],
-            "variables": [
-              "ENEMIES_OBJECT_UNUSED__229"
-            ]
+            "displayLines": "ENEMIES_OBJECT_UNUSED__229"
           },
           "valuePerStack": {
             "Modifier_Burn_DamagePercentage": {
-              "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__230) || RETURN",
-              "displayLines": "ENEMIES_OBJECT_UNUSED__230",
-              "constants": [],
-              "variables": [
-                "ENEMIES_OBJECT_UNUSED__230"
-              ]
+              "displayLines": "ENEMIES_OBJECT_UNUSED__230"
             }
           },
           "stackFlag": "Level"
@@ -109,22 +79,12 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"227784370\">Standard_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
           "duration": {
-            "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__229) || RETURN",
-            "displayLines": "ENEMIES_OBJECT_UNUSED__229",
-            "constants": [],
-            "variables": [
-              "ENEMIES_OBJECT_UNUSED__229"
-            ]
+            "displayLines": "ENEMIES_OBJECT_UNUSED__229"
           },
           "valuePerStack": {
             "Modifier_Tear_DamageRatio": 0.1,
             "Modifier_Tear_MaxPercentage": {
-              "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__230) || RETURN",
-              "displayLines": "ENEMIES_OBJECT_UNUSED__230",
-              "constants": [],
-              "variables": [
-                "ENEMIES_OBJECT_UNUSED__230"
-              ]
+              "displayLines": "ENEMIES_OBJECT_UNUSED__230"
             }
           },
           "stackFlag": "Level"
@@ -164,14 +124,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceLightningBonus</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             },
             {

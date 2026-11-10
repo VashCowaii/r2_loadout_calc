@@ -101,12 +101,7 @@ const configAbility = {
       "name": "Update Displayed Energy Bar",
       "value": 0,
       "maximum": {
-        "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
-        "displayLines": "MWRen_Qi_MaxLayer",
-        "constants": [],
-        "variables": [
-          "MWRen_Qi_MaxLayer"
-        ]
+        "displayLines": "MWRen_Qi_MaxLayer"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -399,13 +394,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (CasterLostHP2) || INVERT || Variables[1] (CasterLostHP) || ADD || RETURN",
-                        "displayLines": "(-CasterLostHP2 + CasterLostHP)",
-                        "constants": [],
-                        "variables": [
-                          "CasterLostHP2",
-                          "CasterLostHP"
-                        ]
+                        "displayLines": "(-CasterLostHP2 + CasterLostHP)"
                       },
                       "variableName": "CasterLostHP"
                     },
@@ -435,12 +424,7 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1924146149\">MWRen_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
-                            "displayLines": "MWRen_Qi_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "MWRen_Qi_MaxLayer"
-                            ]
+                            "displayLines": "MWRen_Qi_MaxLayer"
                           }
                         },
                         {
@@ -453,12 +437,7 @@ const configAbility = {
                                 "value1": "<a class=\"gModGreen\" id=\"1924146149\">MWRen_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
-                                  "displayLines": "MWRen_Qi_MaxLayer",
-                                  "constants": [],
-                                  "variables": [
-                                    "MWRen_Qi_MaxLayer"
-                                  ]
+                                  "displayLines": "MWRen_Qi_MaxLayer"
                                 },
                                 "valueType": "Layer"
                               },
@@ -545,12 +524,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-510378845\">MWRen_Trace01</a>[<span class=\"descriptionNumberColor\">Vita Infinita</span>]",
                       "valuePerStack": {
                         "MDF_HealEnhanceRatio": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     }
@@ -688,12 +662,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-510378845\">MWRen_Trace01</a>[<span class=\"descriptionNumberColor\">Vita Infinita</span>]",
                       "valuePerStack": {
                         "MDF_HealEnhanceRatio": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     }
@@ -716,12 +685,7 @@ const configAbility = {
                     "value1": "<a class=\"gModGreen\" id=\"1924146149\">MWRen_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
-                      "displayLines": "MWRen_Qi_MaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "MWRen_Qi_MaxLayer"
-                      ]
+                      "displayLines": "MWRen_Qi_MaxLayer"
                     },
                     "valueType": "Layer"
                   },
@@ -788,12 +752,7 @@ const configAbility = {
                     "value1": "<a class=\"gModGreen\" id=\"1924146149\">MWRen_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
-                      "displayLines": "MWRen_Qi_MaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "MWRen_Qi_MaxLayer"
-                      ]
+                      "displayLines": "MWRen_Qi_MaxLayer"
                     },
                     "valueType": "Layer"
                   },
@@ -885,12 +844,7 @@ const configAbility = {
                     "value1": "<a class=\"gModGreen\" id=\"1924146149\">MWRen_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
-                      "displayLines": "MWRen_Qi_MaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "MWRen_Qi_MaxLayer"
-                      ]
+                      "displayLines": "MWRen_Qi_MaxLayer"
                     },
                     "valueType": "Layer"
                   },
@@ -962,13 +916,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CasterLostHP) || Variables[1] (CasterMaxHP) || DIV || RETURN",
-                    "displayLines": "(CasterLostHP / CasterMaxHP)",
-                    "constants": [],
-                    "variables": [
-                      "CasterLostHP",
-                      "CasterMaxHP"
-                    ]
+                    "displayLines": "(CasterLostHP / CasterMaxHP)"
                   },
                   "variableName": "CasterLostHPPercentage"
                 }
@@ -981,12 +929,7 @@ const configAbility = {
                 "value1": "CasterLostHPPercentage",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (0.9) || RETURN",
-                  "displayLines": "0.9",
-                  "constants": [],
-                  "variables": [
-                    0.9
-                  ]
+                  "displayLines": "0.9"
                 },
                 "contextScope": "TargetEntity"
               },
@@ -994,13 +937,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CasterMaxHP) || Variables[1] (0.9) || MUL || RETURN",
-                    "displayLines": "(CasterMaxHP * 0.9)",
-                    "constants": [],
-                    "variables": [
-                      "CasterMaxHP",
-                      0.9
-                    ]
+                    "displayLines": "(CasterMaxHP * 0.9)"
                   },
                   "variableName": "CasterFinalLostHP"
                 }
@@ -1009,12 +946,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CasterLostHP) || RETURN",
-                    "displayLines": "CasterLostHP",
-                    "constants": [],
-                    "variables": [
-                      "CasterLostHP"
-                    ]
+                    "displayLines": "CasterLostHP"
                   },
                   "variableName": "CasterFinalLostHP"
                 }
@@ -1029,12 +961,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-870658235\">MWRen_Ability03_Listen</a>[<span class=\"descriptionNumberColor\">Death Sentence</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (CasterFinalLostHP) || RETURN",
-                  "displayLines": "CasterFinalLostHP",
-                  "constants": [],
-                  "variables": [
-                    "CasterFinalLostHP"
-                  ]
+                  "displayLines": "CasterFinalLostHP"
                 }
               }
             }
@@ -1075,12 +1002,7 @@ const configAbility = {
                     "value1": "CasterCurrentHP2",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (CasterCurrentHP) || RETURN",
-                      "displayLines": "CasterCurrentHP",
-                      "constants": [],
-                      "variables": [
-                        "CasterCurrentHP"
-                      ]
+                      "displayLines": "CasterCurrentHP"
                     }
                   },
                   "passed": [

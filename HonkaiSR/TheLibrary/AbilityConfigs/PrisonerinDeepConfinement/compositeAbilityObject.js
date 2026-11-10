@@ -45,24 +45,14 @@ const compositeAbilityObject = {
                     "value1": "_DotCount",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                      "displayLines": "MDF_MaxCount",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MaxCount"
-                      ]
+                      "displayLines": "MDF_MaxCount"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                        "displayLines": "MDF_MaxCount",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxCount"
-                        ]
+                        "displayLines": "MDF_MaxCount"
                       },
                       "variableName": "_DotCount"
                     }
@@ -98,20 +88,10 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1031791545\">Relic_116_DamageUp_Dot</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.06) || RETURN",
-                      "displayLines": "0.06",
-                      "constants": [],
-                      "variables": [
-                        0.06
-                      ]
+                      "displayLines": "0.06"
                     },
                     "MDF_MaxCount": {
-                      "operator": "Variables[0] (3) || RETURN",
-                      "displayLines": "3",
-                      "constants": [],
-                      "variables": [
-                        3
-                      ]
+                      "displayLines": "3"
                     }
                   }
                 }

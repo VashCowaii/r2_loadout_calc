@@ -86,12 +86,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (Yunli_DamageResistance_Value01) || RETURN",
-                    "displayLines": "Yunli_DamageResistance_Value01",
-                    "constants": [],
-                    "variables": [
-                      "Yunli_DamageResistance_Value01"
-                    ]
+                    "displayLines": "Yunli_DamageResistance_Value01"
                   }
                 }
               ]
@@ -491,12 +486,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-77031042\">Yunli_Trace02_ControlResist</a>[<span class=\"descriptionNumberColor\">Demon Quell</span>]",
                       "valuePerStack": {
                         "Yunli_DamageResistance_Value01": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     }
@@ -918,12 +908,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -994,12 +979,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_ProbabilityValue) || RETURN",
-                    "displayLines": "MDF_ProbabilityValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ProbabilityValue"
-                    ]
+                    "displayLines": "MDF_ProbabilityValue"
                   }
                 }
               ]
@@ -1091,12 +1071,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -1190,12 +1165,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "variableName": "MDF_CriticalDamage"
                 }
@@ -1226,12 +1196,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_ProbabilityValue) || RETURN",
-                    "displayLines": "MDF_ProbabilityValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ProbabilityValue"
-                    ]
+                    "displayLines": "MDF_ProbabilityValue"
                   }
                 }
               ]
@@ -1265,12 +1230,7 @@ const compositeAbilityObject = {
                       "duration": 1,
                       "valuePerStack": {
                         "MDF_ProbabilityValue": {
-                          "operator": "Variables[0] (MDF_ProbabilityValue2) || RETURN",
-                          "displayLines": "MDF_ProbabilityValue2",
-                          "constants": [],
-                          "variables": [
-                            "MDF_ProbabilityValue2"
-                          ]
+                          "displayLines": "MDF_ProbabilityValue2"
                         }
                       }
                     }
@@ -1365,13 +1325,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (1.2) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(1.2 * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      1.2,
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(1.2 * MDF_Layer)"
                   },
                   "variableName": "MDF_PropertyRatio"
                 },
@@ -1383,12 +1337,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                    "displayLines": "MDF_PropertyRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyRatio"
-                    ]
+                    "displayLines": "MDF_PropertyRatio"
                   }
                 }
               ]
@@ -1651,12 +1600,7 @@ const compositeAbilityObject = {
           "modifier": null,
           "ID": "122101(SkillMaze)",
           "duration": {
-            "operator": "Variables[0] (20) || RETURN",
-            "displayLines": "20",
-            "constants": [],
-            "variables": [
-              20
-            ]
+            "displayLines": "20"
           }
         },
         "Submit Technique Use"
@@ -1770,25 +1714,14 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"275203206\">Yunli_Eidolon1</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (6) || Variables[1] (3) || ADD || RETURN",
-                "displayLines": "(6 + 3)",
-                "constants": [],
-                "variables": [
-                  6,
-                  3
-                ]
+                "displayLines": "(6 + 3)"
               },
               "variableName": "MDF_LoopCount"
             }
@@ -1797,12 +1730,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (6) || RETURN",
-                "displayLines": "6",
-                "constants": [],
-                "variables": [
-                  6
-                ]
+                "displayLines": "6"
               },
               "variableName": "MDF_LoopCount"
             }
@@ -2184,20 +2112,10 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] (1.2) || RETURN",
-                  "displayLines": "1.2",
-                  "constants": [],
-                  "variables": [
-                    1.2
-                  ]
+                  "displayLines": "1.2"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "ToughnessDMGType": {
                   "DamageType": "Physical"
@@ -2218,20 +2136,10 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] (0.6) || RETURN",
-                  "displayLines": "0.6",
-                  "constants": [],
-                  "variables": [
-                    0.6
-                  ]
+                  "displayLines": "0.6"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "ToughnessDMGType": {
                   "DamageType": "Physical"
@@ -2428,12 +2336,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-762526263\">Yunli_Trace03</a>",
               "valuePerStack": {
                 "MDF_ProbabilityValue2": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 }
               }
             }
@@ -2455,12 +2358,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"258425587\">Yunli_Eidolon2</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             }
@@ -2482,20 +2380,10 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"325536063\">Yunli_Eidolon6</a>",
               "valuePerStack": {
                 "MDF_CritChance": {
-                  "operator": "Variables[0] (0.15) || RETURN",
-                  "displayLines": "0.15",
-                  "constants": [],
-                  "variables": [
-                    0.15
-                  ]
+                  "displayLines": "0.15"
                 },
                 "MDF_PhysicalPenetrateRatio": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             }
@@ -2573,12 +2461,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (15) || RETURN",
-                    "displayLines": "15",
-                    "constants": [],
-                    "variables": [
-                      15
-                    ]
+                    "displayLines": "15"
                   },
                   "isFixed": "* ERR"
                 },
@@ -2837,21 +2720,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] (2.2) || RETURN",
-                  "displayLines": "2.2",
-                  "constants": [],
-                  "variables": [
-                    2.2
-                  ]
+                  "displayLines": "2.2"
                 },
                 "HitSplit": 0.12,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "ToughnessDMGType": {
                   "DamageType": "Physical"
@@ -2874,21 +2747,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] (1.1) || RETURN",
-                  "displayLines": "1.1",
-                  "constants": [],
-                  "variables": [
-                    1.1
-                  ]
+                  "displayLines": "1.1"
                 },
                 "HitSplit": 0.12,
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "ToughnessDMGType": {
                   "DamageType": "Physical"
@@ -2912,21 +2775,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (2.2) || RETURN",
-              "displayLines": "2.2",
-              "constants": [],
-              "variables": [
-                2.2
-              ]
+              "displayLines": "2.2"
             },
             "HitSplit": 0.16,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "ToughnessDMGType": {
               "DamageType": "Physical"
@@ -2949,21 +2802,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (1.1) || RETURN",
-              "displayLines": "1.1",
-              "constants": [],
-              "variables": [
-                1.1
-              ]
+              "displayLines": "1.1"
             },
             "HitSplit": 0.16,
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "ToughnessDMGType": {
               "DamageType": "Physical"
@@ -2985,13 +2828,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (6) || Variables[1] (3) || ADD || RETURN",
-                "displayLines": "(6 + 3)",
-                "constants": [],
-                "variables": [
-                  6,
-                  3
-                ]
+                "displayLines": "(6 + 3)"
               },
               "variableName": "MDF_LoopCount"
             }
@@ -3000,12 +2837,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (6) || RETURN",
-                "displayLines": "6",
-                "constants": [],
-                "variables": [
-                  6
-                ]
+                "displayLines": "6"
               },
               "variableName": "MDF_LoopCount"
             }
@@ -3014,24 +2846,14 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.72) || RETURN",
-            "displayLines": "0.72",
-            "constants": [],
-            "variables": [
-              0.72
-            ]
+            "displayLines": "0.72"
           },
           "variableName": "MDF_LoopDamage"
         },
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (MDF_LoopCount) || RETURN",
-            "displayLines": "MDF_LoopCount",
-            "constants": [],
-            "variables": [
-              "MDF_LoopCount"
-            ]
+            "displayLines": "MDF_LoopCount"
           },
           "execute": [
             {
@@ -3078,22 +2900,10 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "Damage": {
-                      "operator": "Variables[0] (MDF_LoopDamage) || RETURN",
-                      "displayLines": "MDF_LoopDamage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_LoopDamage"
-                      ]
+                      "displayLines": "MDF_LoopDamage"
                     },
                     "Toughness": {
-                      "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.25) || MUL || RETURN",
-                      "displayLines": "(ST Toughness Value * 0.25)",
-                      "constants": [
-                        0.25
-                      ],
-                      "variables": [
-                        "ST Toughness Value"
-                      ]
+                      "displayLines": "(ST Toughness Value * 0.25)"
                     },
                     "ToughnessDMGType": {
                       "DamageType": "Physical"
@@ -3171,14 +2981,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_Energy_Count) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(MDF_Energy_Count - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_Energy_Count"
-                ]
+                "displayLines": "(MDF_Energy_Count - 1)"
               },
               "variableName": "MDF_Energy_Count"
             }
@@ -3236,21 +3039,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"359091301\">Yunli_Eidolon4</a>[<span class=\"descriptionNumberColor\">Artisan's Ironsong</span>]",
               "duration": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "valuePerStack": {
                 "MDF_ProbabilityValue": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
+                  "displayLines": "0.5"
                 }
               }
             }
@@ -3272,14 +3065,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (MDF_Energy_Count) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(MDF_Energy_Count + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "MDF_Energy_Count"
-            ]
+            "displayLines": "(MDF_Energy_Count + 1)"
           },
           "variableName": "MDF_Energy_Count"
         },
@@ -3302,20 +3088,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (2.2) || RETURN",
-              "displayLines": "2.2",
-              "constants": [],
-              "variables": [
-                2.2
-              ]
+              "displayLines": "2.2"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "ToughnessDMGType": {
               "DamageType": "Physical"
@@ -3338,20 +3114,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (1.1) || RETURN",
-              "displayLines": "1.1",
-              "constants": [],
-              "variables": [
-                1.1
-              ]
+              "displayLines": "1.1"
             },
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "ToughnessDMGType": {
               "DamageType": "Physical"
@@ -3383,12 +3149,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.72) || RETURN",
-            "displayLines": "0.72",
-            "constants": [],
-            "variables": [
-              0.72
-            ]
+            "displayLines": "0.72"
           },
           "variableName": "MDF_LoopDamage"
         },
@@ -3407,21 +3168,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"359091301\">Yunli_Eidolon4</a>[<span class=\"descriptionNumberColor\">Artisan's Ironsong</span>]",
               "duration": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "valuePerStack": {
                 "MDF_ProbabilityValue": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
+                  "displayLines": "0.5"
                 }
               }
             }
@@ -3517,12 +3268,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"275203206\">Yunli_Eidolon1</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 }
@@ -3686,12 +3432,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"275203206\">Yunli_Eidolon1</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     }
@@ -4006,20 +3747,10 @@ const compositeAbilityObject = {
             "target": "{{Caster}}"
           },
           "healPercent": {
-            "operator": "Variables[0] (0.3) || RETURN",
-            "displayLines": "0.3",
-            "constants": [],
-            "variables": [
-              0.3
-            ]
+            "displayLines": "0.3"
           },
           "healFlat": {
-            "operator": "Variables[0] (200) || RETURN",
-            "displayLines": "200",
-            "constants": [],
-            "variables": [
-              200
-            ]
+            "displayLines": "200"
           }
         },
         {
@@ -4035,20 +3766,10 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] (1.2) || RETURN",
-                  "displayLines": "1.2",
-                  "constants": [],
-                  "variables": [
-                    1.2
-                  ]
+                  "displayLines": "1.2"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "ToughnessDMGType": {
                   "DamageType": "Physical"
@@ -4067,20 +3788,10 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] (0.6) || RETURN",
-                  "displayLines": "0.6",
-                  "constants": [],
-                  "variables": [
-                    0.6
-                  ]
+                  "displayLines": "0.6"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "ToughnessDMGType": {
                   "DamageType": "Physical"
@@ -4150,20 +3861,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "ToughnessDMGType": {
               "DamageType": "Physical"

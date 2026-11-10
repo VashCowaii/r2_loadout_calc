@@ -53,12 +53,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-325970381\">MissionBattleEvent60037_Charge</a>",
           "valuePerStack": {
             "MDF_ExtraSP": {
-              "operator": "Variables[0] (#BattleEvent_P8_ADF) || RETURN",
-              "displayLines": "#BattleEvent_P8_ADF",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P8_ADF"
-              ]
+              "displayLines": "#BattleEvent_P8_ADF"
             }
           }
         }

@@ -33,12 +33,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1861656723\">Enemy_W2_Xuanlu_IF_RemoveOneMore</a>",
       "valuePerStack": {
         "MDF_MaxChargeCount": {
-          "operator": "Variables[0] ({[Skill08[2]]}) || RETURN",
-          "displayLines": "{[Skill08[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill08[2]]}"
-          ]
+          "displayLines": "{[Skill08[2]]}"
         }
       }
     },
@@ -96,12 +91,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-283015753\">Enemy_W2_Xuanlu_IF_DamageReduceP2</a>",
       "valuePerStack": {
         "MDF_AllDamageReduce": {
-          "operator": "Variables[0] ({[SkillP02[0]]}) || RETURN",
-          "displayLines": "{[SkillP02[0]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP02[0]]}"
-          ]
+          "displayLines": "{[SkillP02[0]]}"
         }
       }
     },
@@ -125,28 +115,13 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1587187705\">Enemy_W2_Cocolia_IF_SuperArmorController</a>",
           "valuePerStack": {
             "MDF_IF_BOSS_BreakDelay": {
-              "operator": "Variables[0] ({[SkillEX01[2]]}) || RETURN",
-              "displayLines": "{[SkillEX01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[2]]}"
-              ]
+              "displayLines": "{[SkillEX01[2]]}"
             },
             "MDF_IF_BOSS_WeaknessDMGUpRatio": {
-              "operator": "Variables[0] ({[SkillEX01[1]]}) || RETURN",
-              "displayLines": "{[SkillEX01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[1]]}"
-              ]
+              "displayLines": "{[SkillEX01[1]]}"
             },
             "MDF_IF_BOSS_Standard_Defence": {
-              "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
-              "displayLines": "{[SkillEX01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[0]]}"
-              ]
+              "displayLines": "{[SkillEX01[0]]}"
             }
           }
         },
@@ -159,36 +134,16 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1246789467\">Enemy_W2_Cocolia_IF_SoftFrenzyController</a>",
           "valuePerStack": {
             "MDF_FrenzyStartDelay": {
-              "operator": "Variables[0] ({[SkillEX05[0]]}) || RETURN",
-              "displayLines": "{[SkillEX05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX05[0]]}"
-              ]
+              "displayLines": "{[SkillEX05[0]]}"
             },
             "MDF_FrenzyIntervalDelay": {
-              "operator": "Variables[0] ({[SkillEX05[1]]}) || RETURN",
-              "displayLines": "{[SkillEX05[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX05[1]]}"
-              ]
+              "displayLines": "{[SkillEX05[1]]}"
             },
             "MDF_MaxFrenzyLayer": {
-              "operator": "Variables[0] ({[SkillEX05[2]]}) || RETURN",
-              "displayLines": "{[SkillEX05[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX05[2]]}"
-              ]
+              "displayLines": "{[SkillEX05[2]]}"
             },
             "MDF_TokenDMGAddRatioPerLayer": {
-              "operator": "Variables[0] ({[SkillEX05[3]]}) || RETURN",
-              "displayLines": "{[SkillEX05[3]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX05[3]]}"
-              ]
+              "displayLines": "{[SkillEX05[3]]}"
             }
           }
         }

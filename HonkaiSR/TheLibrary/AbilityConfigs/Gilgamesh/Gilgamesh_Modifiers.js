@@ -18,14 +18,7 @@ const configAbility = {
           "name": "Define Custom Variable",
           "scope": "ContextCaster",
           "value": {
-            "operator": "Variables[0] (Gilgamesh_00_MazeSkill_AchievementCount) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(Gilgamesh_00_MazeSkill_AchievementCount + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "Gilgamesh_00_MazeSkill_AchievementCount"
-            ]
+            "displayLines": "(Gilgamesh_00_MazeSkill_AchievementCount + 1)"
           },
           "variableName": "Gilgamesh_00_MazeSkill_AchievementCount"
         },
@@ -290,12 +283,7 @@ const configAbility = {
                     "value1": "Saber_Chain",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (8) || RETURN",
-                      "displayLines": "8",
-                      "constants": [],
-                      "variables": [
-                        8
-                      ]
+                      "displayLines": "8"
                     }
                   }
                 ]
@@ -471,12 +459,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypePenetrate) || RETURN",
-                "displayLines": "MDF_AllDamageTypePenetrate",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypePenetrate"
-                ]
+                "displayLines": "MDF_AllDamageTypePenetrate"
               },
               "isRefresh": true
             }
@@ -536,13 +519,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Gilgamesh_00_Rank06_GoldenRule) || Variables[1] (1) || MUL || RETURN",
-                "displayLines": "(Gilgamesh_00_Rank06_GoldenRule * 1)",
-                "constants": [],
-                "variables": [
-                  "Gilgamesh_00_Rank06_GoldenRule",
-                  1
-                ]
+                "displayLines": "(Gilgamesh_00_Rank06_GoldenRule * 1)"
               },
               "variableName": "MDF_Propertyvalue"
             }
@@ -565,12 +542,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_AllDamageTypePenetrate": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         }
@@ -591,12 +563,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRate</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.2) || RETURN",
-                "displayLines": "0.2",
-                "constants": [],
-                "variables": [
-                  0.2
-                ]
+                "displayLines": "0.2"
               }
             }
           ]
@@ -625,12 +592,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (40) || RETURN",
-                    "displayLines": "40",
-                    "constants": [],
-                    "variables": [
-                      40
-                    ]
+                    "displayLines": "40"
                   },
                   "isFixed": "(Fixed)",
                   "tag": "ActiveSkillAdd"
@@ -679,45 +641,21 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MIN) || Variables[1] (MAX) || Variables[2] (MDF_MaxSP) || Variables[3] (MDF_MaxSPThreshold) || SUB || Constants[0] (0) || PARAM_2 || FUNCTION || Variables[4] (MDF_ExtraRatioPerMaxSP) || MUL || Variables[5] (MDF_MaxExtraRatio) || PARAM_2 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((MDF_MaxSP - MDF_MaxSPThreshold), 0) * MDF_ExtraRatioPerMaxSP), MDF_MaxExtraRatio)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MIN",
-                  "MAX",
-                  "MDF_MaxSP",
-                  "MDF_MaxSPThreshold",
-                  "MDF_ExtraRatioPerMaxSP",
-                  "MDF_MaxExtraRatio"
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((MDF_MaxSP - MDF_MaxSPThreshold), 0) * MDF_ExtraRatioPerMaxSP), MDF_MaxExtraRatio)"
               },
               "variableName": "MDF_ExtraRatio"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_BaseAttackAdded) || Variables[1] (MDF_ExtraRatio) || ADD || RETURN",
-                "displayLines": "(MDF_BaseAttackAdded + MDF_ExtraRatio)",
-                "constants": [],
-                "variables": [
-                  "MDF_BaseAttackAdded",
-                  "MDF_ExtraRatio"
-                ]
+                "displayLines": "(MDF_BaseAttackAdded + MDF_ExtraRatio)"
               },
               "variableName": "MDF_AttackAddedFinal"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_BaseCriticalDamageBaseAdd) || Variables[1] (MDF_ExtraRatio) || ADD || RETURN",
-                "displayLines": "(MDF_BaseCriticalDamageBaseAdd + MDF_ExtraRatio)",
-                "constants": [],
-                "variables": [
-                  "MDF_BaseCriticalDamageBaseAdd",
-                  "MDF_ExtraRatio"
-                ]
+                "displayLines": "(MDF_BaseCriticalDamageBaseAdd + MDF_ExtraRatio)"
               },
               "variableName": "MDF_CriticalDamageBaseFinal"
             },
@@ -729,12 +667,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AttackAddedFinal) || RETURN",
-                "displayLines": "MDF_AttackAddedFinal",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackAddedFinal"
-                ]
+                "displayLines": "MDF_AttackAddedFinal"
               },
               "isRefresh": true
             },
@@ -746,12 +679,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_CriticalDamageBaseFinal) || RETURN",
-                "displayLines": "MDF_CriticalDamageBaseFinal",
-                "constants": [],
-                "variables": [
-                  "MDF_CriticalDamageBaseFinal"
-                ]
+                "displayLines": "MDF_CriticalDamageBaseFinal"
               },
               "isRefresh": true
             }
@@ -793,44 +721,19 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_BaseAttackAdded": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             },
             "MDF_BaseCriticalDamageBaseAdd": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             },
             "MDF_MaxSPThreshold": {
-              "operator": "Variables[0] (140) || RETURN",
-              "displayLines": "140",
-              "constants": [],
-              "variables": [
-                140
-              ]
+              "displayLines": "140"
             },
             "MDF_ExtraRatioPerMaxSP": {
-              "operator": "Variables[0] (0.01) || RETURN",
-              "displayLines": "0.01",
-              "constants": [],
-              "variables": [
-                0.01
-              ]
+              "displayLines": "0.01"
             },
             "MDF_MaxExtraRatio": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             }
           }
         }
@@ -851,12 +754,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_Layer) || RETURN",
-                "displayLines": "MDF_Layer",
-                "constants": [],
-                "variables": [
-                  "MDF_Layer"
-                ]
+                "displayLines": "MDF_Layer"
               },
               "variableName": "SkillTree_DamageAddedlayer"
             },
@@ -868,13 +766,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (SkillTree_DamageAddedlayer) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(SkillTree_DamageAddedlayer * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "SkillTree_DamageAddedlayer",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(SkillTree_DamageAddedlayer * MDF_Layer)"
               }
             }
           ]
@@ -918,30 +810,15 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"481485752\">Gilgamesh_TreeBonus2</a>[<span class=\"descriptionNumberColor\">Hero's Hauteur</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (6) || RETURN",
-                        "displayLines": "6",
-                        "constants": [],
-                        "variables": [
-                          6
-                        ]
+                        "displayLines": "6"
                       },
                       "valuePerStack": {
                         "MDF_DamageBaseAdd": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
+                          "displayLines": "0.25"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (_KingChangeValue) || RETURN",
-                        "displayLines": "_KingChangeValue",
-                        "constants": [],
-                        "variables": [
-                          "_KingChangeValue"
-                        ]
+                        "displayLines": "_KingChangeValue"
                       }
                     }
                   ]
@@ -1071,12 +948,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_TempSPChange) || INVERT || RETURN",
-                        "displayLines": "-MDF_TempSPChange",
-                        "constants": [],
-                        "variables": [
-                          "MDF_TempSPChange"
-                        ]
+                        "displayLines": "-MDF_TempSPChange"
                       },
                       "variableName": "SPChange"
                     }
@@ -1147,12 +1019,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1165,12 +1032,7 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"-1526947844\">function_Gilgamesh_KingCount</a>",
                   "variables": {
                     "KingCountAdd": {
-                      "operator": "Variables[0] (3) || RETURN",
-                      "displayLines": "3",
-                      "constants": [],
-                      "variables": [
-                        3
-                      ]
+                      "displayLines": "3"
                     }
                   }
                 }
@@ -1201,12 +1063,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": {
-                "operator": "Variables[0] (8) || RETURN",
-                "displayLines": "8",
-                "constants": [],
-                "variables": [
-                  8
-                ]
+                "displayLines": "8"
               },
               "includeMaxValueInRange": true,
               "onChange": [
@@ -1217,12 +1074,7 @@ const configAbility = {
                     "value1": "Saber_Chain",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (8) || RETURN",
-                      "displayLines": "8",
-                      "constants": [],
-                      "variables": [
-                        8
-                      ]
+                      "displayLines": "8"
                     }
                   }
                 }
@@ -1279,12 +1131,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-405354814\">Gilgamesh_SaberUltraBonus2</a>",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                      "displayLines": "MDF_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamagePercentage"
-                      ]
+                      "displayLines": "MDF_DamagePercentage"
                     }
                   }
                 }
@@ -1377,20 +1224,10 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (Avatar_Gilgamesh_00_KingCount) || RETURN",
-                "displayLines": "Avatar_Gilgamesh_00_KingCount",
-                "constants": [],
-                "variables": [
-                  "Avatar_Gilgamesh_00_KingCount"
-                ]
+                "displayLines": "Avatar_Gilgamesh_00_KingCount"
               },
               "maximum": {
-                "operator": "Variables[0] (10) || RETURN",
-                "displayLines": "10",
-                "constants": [],
-                "variables": [
-                  10
-                ]
+                "displayLines": "10"
               },
               "assignState": "True",
               "priorState": "Normal",
@@ -1446,12 +1283,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_DamageAddedRatio) || RETURN",
-                "displayLines": "MDF_DamageAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageAddedRatio"
-                ]
+                "displayLines": "MDF_DamageAddedRatio"
               },
               "variableName": "SkillP01_P1_DamageAdded"
             }
@@ -1493,12 +1325,7 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"-1526947844\">function_Gilgamesh_KingCount</a>",
                   "variables": {
                     "KingCountAdd": {
-                      "operator": "Variables[0] (5) || RETURN",
-                      "displayLines": "5",
-                      "constants": [],
-                      "variables": [
-                        5
-                      ]
+                      "displayLines": "5"
                     }
                   }
                 }
@@ -1661,12 +1488,7 @@ const configAbility = {
                     "value1": "Saber_Chain",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (8) || RETURN",
-                      "displayLines": "8",
-                      "constants": [],
-                      "variables": [
-                        8
-                      ]
+                      "displayLines": "8"
                     }
                   },
                   {
@@ -1699,14 +1521,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Saber_Chain) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(Saber_Chain + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Saber_Chain"
-                    ]
+                    "displayLines": "(Saber_Chain + 1)"
                   },
                   "variableName": "Saber_Chain"
                 }
@@ -1746,12 +1561,7 @@ const configAbility = {
                     "value1": "Gilgamesh_00_Rank06_GoldenRule",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (3) || RETURN",
-                      "displayLines": "3",
-                      "constants": [],
-                      "variables": [
-                        3
-                      ]
+                      "displayLines": "3"
                     }
                   }
                 ]
@@ -1760,14 +1570,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Gilgamesh_00_Rank06_GoldenRule) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(Gilgamesh_00_Rank06_GoldenRule + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Gilgamesh_00_Rank06_GoldenRule"
-                    ]
+                    "displayLines": "(Gilgamesh_00_Rank06_GoldenRule + 1)"
                   },
                   "variableName": "Gilgamesh_00_Rank06_GoldenRule"
                 },
@@ -1787,13 +1590,7 @@ const configAbility = {
                   },
                   "modifierName": "<a class=\"gModGreen\" id=\"625310839\">Gilgamesh_Passive_Eidolon6_GoldenRule</a>[<span class=\"descriptionNumberColor\">Golden Rule</span>]",
                   "value": {
-                    "operator": "Variables[0] (WHOLE) || Variables[1] (Gilgamesh_00_Rank06_GoldenRule) || PARAM_1 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(Gilgamesh_00_Rank06_GoldenRule)",
-                    "constants": [],
-                    "variables": [
-                      "WHOLE",
-                      "Gilgamesh_00_Rank06_GoldenRule"
-                    ]
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(Gilgamesh_00_Rank06_GoldenRule)"
                   }
                 }
               ]
@@ -1829,21 +1626,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-791691611\">Gilgamesh_Overcharge</a>[<span class=\"descriptionNumberColor\">King's Burden</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_DamageAddedRatio": {
-                      "operator": "Variables[0] (0.4) || RETURN",
-                      "displayLines": "0.4",
-                      "constants": [],
-                      "variables": [
-                        0.4
-                      ]
+                      "displayLines": "0.4"
                     }
                   }
                 }
@@ -1894,13 +1681,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (Avatar_Gilgamesh_00_TeamSPChangeAmount) || Variables[1] (0.3) || MUL || RETURN",
-                    "displayLines": "(Avatar_Gilgamesh_00_TeamSPChangeAmount * 0.3)",
-                    "constants": [],
-                    "variables": [
-                      "Avatar_Gilgamesh_00_TeamSPChangeAmount",
-                      0.3
-                    ]
+                    "displayLines": "(Avatar_Gilgamesh_00_TeamSPChangeAmount * 0.3)"
                   },
                   "isFixed": "(Fixed)",
                   "tag": "ActiveSkillAdd"
@@ -1910,12 +1691,7 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"-1526947844\">function_Gilgamesh_KingCount</a>",
                   "variables": {
                     "KingCountAdd": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     }
                   }
                 }
@@ -1953,12 +1729,7 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"-1526947844\">function_Gilgamesh_KingCount</a>",
                   "variables": {
                     "KingCountAdd": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     }
                   }
                 }
@@ -2149,12 +1920,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_DefenceDownRatio) || RETURN",
-                "displayLines": "MDF_DefenceDownRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_DefenceDownRatio"
-                ]
+                "displayLines": "MDF_DefenceDownRatio"
               },
               "variableName": "SkillRank_Rank01_DefenceDownRatio"
             }
@@ -2185,12 +1951,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_DefenceDownRatio": {
-              "operator": "Variables[0] (MDF_DefenceDownRatio) || RETURN",
-              "displayLines": "MDF_DefenceDownRatio",
-              "constants": [],
-              "variables": [
-                "MDF_DefenceDownRatio"
-              ]
+              "displayLines": "MDF_DefenceDownRatio"
             }
           }
         }
@@ -2222,12 +1983,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AttackAdd) || RETURN",
-                "displayLines": "MDF_AttackAdd",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackAdd"
-                ]
+                "displayLines": "MDF_AttackAdd"
               }
             }
           ]
@@ -2319,13 +2075,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (Avatar_Gilgamesh_00_KingCount) || Variables[1] (0.1) || MUL || RETURN",
-                "displayLines": "(Avatar_Gilgamesh_00_KingCount * 0.1)",
-                "constants": [],
-                "variables": [
-                  "Avatar_Gilgamesh_00_KingCount",
-                  0.1
-                ]
+                "displayLines": "(Avatar_Gilgamesh_00_KingCount * 0.1)"
               },
               "variableName": "MDF_PropertyValue"
             },
@@ -2337,12 +2087,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]

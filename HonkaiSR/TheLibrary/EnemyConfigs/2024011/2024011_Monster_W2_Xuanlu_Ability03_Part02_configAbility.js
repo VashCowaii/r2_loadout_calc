@@ -7,23 +7,13 @@ const configAbility = {
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-        "displayLines": "{[Skill03[0]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill03[0]]}"
-        ]
+        "displayLines": "{[Skill03[0]]}"
       },
       "enemyList": [
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonMinionID_3) || RETURN",
-            "displayLines": "SummonMinionID_3",
-            "constants": [],
-            "variables": [
-              "SummonMinionID_3"
-            ]
+            "displayLines": "SummonMinionID_3"
           },
           "locationType": "AroundCasterOnEdge"
         }
@@ -39,12 +29,7 @@ const configAbility = {
       "conditions": {
         "name": "Enemy ID",
         "ID": {
-          "operator": "Variables[0] (SummonMinionID_3) || RETURN",
-          "displayLines": "SummonMinionID_3",
-          "constants": [],
-          "variables": [
-            "SummonMinionID_3"
-          ]
+          "displayLines": "SummonMinionID_3"
         },
         "target": {
           "name": "Target Name",
@@ -70,12 +55,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1849849749\">Enemy_W2_Xuanlu_MinionMark_3</a>",
           "valuePerStack": {
             "MDF_MaxMinionCount": {
-              "operator": "Variables[0] (MaxMinionCount) || RETURN",
-              "displayLines": "MaxMinionCount",
-              "constants": [],
-              "variables": [
-                "MaxMinionCount"
-              ]
+              "displayLines": "MaxMinionCount"
             }
           }
         }
@@ -108,12 +88,7 @@ const configAbility = {
               "context": "TargetEntity",
               "value": -1,
               "max": {
-                "operator": "Variables[0] (MDF_MaxMinionCount) || RETURN",
-                "displayLines": "MDF_MaxMinionCount",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxMinionCount"
-                ]
+                "displayLines": "MDF_MaxMinionCount"
               }
             },
             {
@@ -142,12 +117,7 @@ const configAbility = {
               "context": "TargetEntity",
               "value": 1,
               "max": {
-                "operator": "Variables[0] (MDF_MaxMinionCount) || RETURN",
-                "displayLines": "MDF_MaxMinionCount",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxMinionCount"
-                ]
+                "displayLines": "MDF_MaxMinionCount"
               }
             },
             {
@@ -160,12 +130,7 @@ const configAbility = {
               "context": "TargetEntity",
               "value": 1,
               "max": {
-                "operator": "Variables[0] (MDF_MaxMinionCount) || RETURN",
-                "displayLines": "MDF_MaxMinionCount",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxMinionCount"
-                ]
+                "displayLines": "MDF_MaxMinionCount"
               }
             },
             {

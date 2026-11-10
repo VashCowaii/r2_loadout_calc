@@ -66,13 +66,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "setValue": {
-                "operator": "Variables[0] (MaxHPValue) || Variables[1] ({[Skill07[1]]}) || MUL || RETURN",
-                "displayLines": "(MaxHPValue * {[Skill07[1]]})",
-                "constants": [],
-                "variables": [
-                  "MaxHPValue",
-                  "{[Skill07[1]]}"
-                ]
+                "displayLines": "(MaxHPValue * {[Skill07[1]]})"
               }
             }
           ],
@@ -84,13 +78,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "setValue": {
-                "operator": "Variables[0] (MaxHPValue) || Variables[1] ({[Skill07[3]]}) || MUL || RETURN",
-                "displayLines": "(MaxHPValue * {[Skill07[3]]})",
-                "constants": [],
-                "variables": [
-                  "MaxHPValue",
-                  "{[Skill07[3]]}"
-                ]
+                "displayLines": "(MaxHPValue * {[Skill07[3]]})"
               }
             }
           ]

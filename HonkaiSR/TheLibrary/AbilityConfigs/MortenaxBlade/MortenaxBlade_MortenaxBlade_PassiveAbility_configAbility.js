@@ -49,12 +49,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (7) || RETURN",
-            "displayLines": "7",
-            "constants": [],
-            "variables": [
-              7
-            ]
+            "displayLines": "7"
           },
           "variableName": "G_EPMax"
         }
@@ -63,12 +58,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (9) || RETURN",
-            "displayLines": "9",
-            "constants": [],
-            "variables": [
-              9
-            ]
+            "displayLines": "9"
           },
           "variableName": "G_EPMax"
         }
@@ -77,20 +67,10 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (G_EnergyCount) || RETURN",
-        "displayLines": "G_EnergyCount",
-        "constants": [],
-        "variables": [
-          "G_EnergyCount"
-        ]
+        "displayLines": "G_EnergyCount"
       },
       "maximum": {
-        "operator": "Variables[0] (G_EPMax) || RETURN",
-        "displayLines": "G_EPMax",
-        "constants": [],
-        "variables": [
-          "G_EPMax"
-        ]
+        "displayLines": "G_EPMax"
       },
       "assignState": "True",
       "priorState": "Disable",
@@ -135,12 +115,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-356958636\">MortenaxBlade_PointB1_StockSpValue</a>",
           "valuePerStack": {
             "_PointB1_StockSpValue": {
-              "operator": "Variables[0] (80) || RETURN",
-              "displayLines": "80",
-              "constants": [],
-              "variables": [
-                80
-              ]
+              "displayLines": "80"
             }
           }
         },
@@ -200,12 +175,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MortenaxBlade_00_EntityStockSP) || RETURN",
-                    "displayLines": "MortenaxBlade_00_EntityStockSP",
-                    "constants": [],
-                    "variables": [
-                      "MortenaxBlade_00_EntityStockSP"
-                    ]
+                    "displayLines": "MortenaxBlade_00_EntityStockSP"
                   },
                   "variableName": "_Temp_Return_SP"
                 },
@@ -229,12 +199,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (_Temp_Return_SP) || RETURN",
-                    "displayLines": "_Temp_Return_SP",
-                    "constants": [],
-                    "variables": [
-                      "_Temp_Return_SP"
-                    ]
+                    "displayLines": "_Temp_Return_SP"
                   },
                   "isFixed": "(Fixed)"
                 }
@@ -273,13 +238,7 @@ const configAbility = {
                   },
                   "modifierName": "<a class=\"gModGreen\" id=\"-1776434077\">MortenaxBlade_PointB1_ExceedSpStatus</a>[<span class=\"descriptionNumberColor\">Bone, Hardened ad Nauseam</span>]",
                   "value": {
-                    "operator": "Variables[0] (WHOLE) || Variables[1] (MortenaxBlade_00_EntityStockSPForShow) || PARAM_1 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(MortenaxBlade_00_EntityStockSPForShow)",
-                    "constants": [],
-                    "variables": [
-                      "WHOLE",
-                      "MortenaxBlade_00_EntityStockSPForShow"
-                    ]
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(MortenaxBlade_00_EntityStockSPForShow)"
                   }
                 }
               ],
@@ -369,12 +328,7 @@ const configAbility = {
                 "value1": "_SPChangeValue",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Variables[0] (_SPChangeValueRaw) || RETURN",
-                  "displayLines": "_SPChangeValueRaw",
-                  "constants": [],
-                  "variables": [
-                    "_SPChangeValueRaw"
-                  ]
+                  "displayLines": "_SPChangeValueRaw"
                 }
               },
               "failed": [
@@ -403,14 +357,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (_PointB1_EntityCurrentSP) || Variables[1] (_SPChangeValue) || SUB || Variables[2] (_SPChangeValueRaw) || ADD || RETURN",
-                        "displayLines": "((_PointB1_EntityCurrentSP - _SPChangeValue) + _SPChangeValueRaw)",
-                        "constants": [],
-                        "variables": [
-                          "_PointB1_EntityCurrentSP",
-                          "_SPChangeValue",
-                          "_SPChangeValueRaw"
-                        ]
+                        "displayLines": "((_PointB1_EntityCurrentSP - _SPChangeValue) + _SPChangeValueRaw)"
                       },
                       "variableName": "_PointB1_EntityCurrentSP"
                     },
@@ -434,12 +381,7 @@ const configAbility = {
                         "value1": "_PointB1_EntityCurrentSP",
                         "compareType": ">",
                         "value2": {
-                          "operator": "Variables[0] (MortenaxBlade_00_EntityMaxSP) || RETURN",
-                          "displayLines": "MortenaxBlade_00_EntityMaxSP",
-                          "constants": [],
-                          "variables": [
-                            "MortenaxBlade_00_EntityMaxSP"
-                          ]
+                          "displayLines": "MortenaxBlade_00_EntityMaxSP"
                         }
                       },
                       "passed": [
@@ -450,14 +392,7 @@ const configAbility = {
                             "target": "{{Modifier Holder}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (MortenaxBlade_00_EntityStockSP) || Variables[1] (_PointB1_EntityCurrentSP) || ADD || Variables[2] (MortenaxBlade_00_EntityMaxSP) || SUB || RETURN",
-                            "displayLines": "((MortenaxBlade_00_EntityStockSP + _PointB1_EntityCurrentSP) - MortenaxBlade_00_EntityMaxSP)",
-                            "constants": [],
-                            "variables": [
-                              "MortenaxBlade_00_EntityStockSP",
-                              "_PointB1_EntityCurrentSP",
-                              "MortenaxBlade_00_EntityMaxSP"
-                            ]
+                            "displayLines": "((MortenaxBlade_00_EntityStockSP + _PointB1_EntityCurrentSP) - MortenaxBlade_00_EntityMaxSP)"
                           },
                           "variableName": "MortenaxBlade_00_EntityStockSP"
                         },
@@ -468,12 +403,7 @@ const configAbility = {
                             "value1": "MortenaxBlade_00_EntityStockSP",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (_PointB1_StockSpValue) || RETURN",
-                              "displayLines": "_PointB1_StockSpValue",
-                              "constants": [],
-                              "variables": [
-                                "_PointB1_StockSpValue"
-                              ]
+                              "displayLines": "_PointB1_StockSpValue"
                             }
                           },
                           "passed": [
@@ -484,12 +414,7 @@ const configAbility = {
                                 "target": "{{Modifier Holder}}"
                               },
                               "value": {
-                                "operator": "Variables[0] (_PointB1_StockSpValue) || RETURN",
-                                "displayLines": "_PointB1_StockSpValue",
-                                "constants": [],
-                                "variables": [
-                                  "_PointB1_StockSpValue"
-                                ]
+                                "displayLines": "_PointB1_StockSpValue"
                               },
                               "variableName": "MortenaxBlade_00_EntityStockSP"
                             }
@@ -531,12 +456,7 @@ const configAbility = {
                                 "value1": "_Current_Show_Value",
                                 "compareType": "<",
                                 "value2": {
-                                  "operator": "Variables[0] (MortenaxBlade_00_EntityStockSP) || RETURN",
-                                  "displayLines": "MortenaxBlade_00_EntityStockSP",
-                                  "constants": [],
-                                  "variables": [
-                                    "MortenaxBlade_00_EntityStockSP"
-                                  ]
+                                  "displayLines": "MortenaxBlade_00_EntityStockSP"
                                 }
                               },
                               "passed": [
@@ -549,13 +469,7 @@ const configAbility = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-1776434077\">MortenaxBlade_PointB1_ExceedSpStatus</a>[<span class=\"descriptionNumberColor\">Bone, Hardened ad Nauseam</span>]",
                                   "valuePerStack": {
                                     "MortenaxBlade_EntityStockSPForShow": {
-                                      "operator": "Variables[0] (WHOLE) || Variables[1] (MortenaxBlade_00_EntityStockSP) || PARAM_1 || FUNCTION || RETURN",
-                                      "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(MortenaxBlade_00_EntityStockSP)",
-                                      "constants": [],
-                                      "variables": [
-                                        "WHOLE",
-                                        "MortenaxBlade_00_EntityStockSP"
-                                      ]
+                                      "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(MortenaxBlade_00_EntityStockSP)"
                                     }
                                   }
                                 }
@@ -572,13 +486,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-1776434077\">MortenaxBlade_PointB1_ExceedSpStatus</a>[<span class=\"descriptionNumberColor\">Bone, Hardened ad Nauseam</span>]",
                               "valuePerStack": {
                                 "MortenaxBlade_EntityStockSPForShow": {
-                                  "operator": "Variables[0] (WHOLE) || Variables[1] (MortenaxBlade_00_EntityStockSP) || PARAM_1 || FUNCTION || RETURN",
-                                  "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(MortenaxBlade_00_EntityStockSP)",
-                                  "constants": [],
-                                  "variables": [
-                                    "WHOLE",
-                                    "MortenaxBlade_00_EntityStockSP"
-                                  ]
+                                  "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(MortenaxBlade_00_EntityStockSP)"
                                 }
                               }
                             }
@@ -642,13 +550,7 @@ const configAbility = {
                   },
                   "previewType": null,
                   "previewValue": {
-                    "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (0.1) || MUL || RETURN",
-                    "displayLines": "(MDF_MaxHP * 0.1)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxHP",
-                      0.1
-                    ]
+                    "displayLines": "(MDF_MaxHP * 0.1)"
                   }
                 }
               ]
@@ -690,12 +592,7 @@ const configAbility = {
                     "value1": "Energy%",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (0.75) || RETURN",
-                      "displayLines": "0.75",
-                      "constants": [],
-                      "variables": [
-                        0.75
-                      ]
+                      "displayLines": "0.75"
                     }
                   }
                 ]
@@ -718,13 +615,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (_MaxSP) || Variables[1] (0.75) || MUL || RETURN",
-                    "displayLines": "(_MaxSP * 0.75)",
-                    "constants": [],
-                    "variables": [
-                      "_MaxSP",
-                      0.75
-                    ]
+                    "displayLines": "(_MaxSP * 0.75)"
                   },
                   "adjustment": "Set"
                 }

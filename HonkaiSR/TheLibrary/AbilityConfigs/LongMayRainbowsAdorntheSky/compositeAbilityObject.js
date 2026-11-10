@@ -90,13 +90,7 @@ const compositeAbilityObject = {
                           }
                         },
                         "DamageFlat": {
-                          "operator": "Variables[0] (_LoseHPTotal2) || Variables[1] (MDF_DamageRatio) || MUL || RETURN",
-                          "displayLines": "(_LoseHPTotal2 * MDF_DamageRatio)",
-                          "constants": [],
-                          "variables": [
-                            "_LoseHPTotal2",
-                            "MDF_DamageRatio"
-                          ]
+                          "displayLines": "(_LoseHPTotal2 * MDF_DamageRatio)"
                         },
                         "Toughness": null,
                         "Tags": null,
@@ -135,21 +129,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1169158629\">LC_23042_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Tolerant</span>]",
                       "duration": {
-                        "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                        "displayLines": "MDF_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_LifeTime"
-                        ]
+                        "displayLines": "MDF_LifeTime"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_TakenRatio) || RETURN",
-                          "displayLines": "MDF_TakenRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_TakenRatio"
-                          ]
+                          "displayLines": "MDF_TakenRatio"
                         }
                       }
                     }
@@ -189,36 +173,16 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1569683085\">LC_23042_Sub</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0) || RETURN",
-                          "displayLines": "0",
-                          "constants": [],
-                          "variables": [
-                            0
-                          ]
+                          "displayLines": "0"
                         },
                         "MDF_DamageRatio": {
-                          "operator": "Variables[0] (2.5) || RETURN",
-                          "displayLines": "2.5",
-                          "constants": [],
-                          "variables": [
-                            2.5
-                          ]
+                          "displayLines": "2.5"
                         },
                         "MDF_TakenRatio": {
-                          "operator": "Variables[0] (0.18) || RETURN",
-                          "displayLines": "0.18",
-                          "constants": [],
-                          "variables": [
-                            0.18
-                          ]
+                          "displayLines": "0.18"
                         },
                         "MDF_LifeTime": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         }
                       },
                       "casterAssign": "TargetSelf"
@@ -283,12 +247,7 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "consumePercent": {
-                            "operator": "Variables[0] (0.01) || RETURN",
-                            "displayLines": "0.01",
-                            "constants": [],
-                            "variables": [
-                              0.01
-                            ]
+                            "displayLines": "0.01"
                           },
                           "consumeFloor": 1,
                           "dynamicAssignment": "_RealRatio"
@@ -296,26 +255,14 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (_MaxHP) || Variables[1] (_RealRatio) || MUL || RETURN",
-                            "displayLines": "(_MaxHP * _RealRatio)",
-                            "constants": [],
-                            "variables": [
-                              "_MaxHP",
-                              "_RealRatio"
-                            ]
+                            "displayLines": "(_MaxHP * _RealRatio)"
                           },
                           "variableName": "_LoseHP"
                         },
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (_LoseHP) || Variables[1] (_LoseHPTotal) || ADD || RETURN",
-                            "displayLines": "(_LoseHP + _LoseHPTotal)",
-                            "constants": [],
-                            "variables": [
-                              "_LoseHP",
-                              "_LoseHPTotal"
-                            ]
+                            "displayLines": "(_LoseHP + _LoseHPTotal)"
                           },
                           "variableName": "_LoseHPTotal"
                         }
@@ -399,12 +346,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]

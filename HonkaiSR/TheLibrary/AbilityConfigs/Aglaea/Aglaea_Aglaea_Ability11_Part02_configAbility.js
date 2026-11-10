@@ -34,12 +34,7 @@ const configAbility = {
         "target": "{{Caster's Memosprite}}"
       },
       "value": {
-        "operator": "Variables[0] (ST Toughness Value) || RETURN",
-        "displayLines": "ST Toughness Value",
-        "constants": [],
-        "variables": [
-          "ST Toughness Value"
-        ]
+        "displayLines": "ST Toughness Value"
       },
       "variableName": "_PairStanceDMG1"
     },
@@ -50,40 +45,21 @@ const configAbility = {
         "target": "{{Caster's Memosprite}}"
       },
       "value": {
-        "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-        "displayLines": "Blast Toughness Value",
-        "constants": [],
-        "variables": [
-          "Blast Toughness Value"
-        ]
+        "displayLines": "Blast Toughness Value"
       },
       "variableName": "_PairStanceDMG2"
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (_Energy) || Constants[0] (1) || SUB || RETURN",
-        "displayLines": "(_Energy - 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "_Energy"
-        ]
+        "displayLines": "(_Energy - 1)"
       },
       "variableName": "_Energy"
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (Skill11Count) || Constants[0] (1) || ADD || RETURN",
-        "displayLines": "(Skill11Count + 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "Skill11Count"
-        ]
+        "displayLines": "(Skill11Count + 1)"
       },
       "variableName": "Skill11Count"
     },
@@ -107,36 +83,16 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"216440055\">Aglaea_GoldenSword_Mark</a>[<span class=\"descriptionNumberColor\">Seam Stitch</span>]",
           "valuePerStack": {
             "BombDamagePercentage": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             },
             "_SpRecover": {
-              "operator": "Variables[0] (20) || RETURN",
-              "displayLines": "20",
-              "constants": [],
-              "variables": [
-                20
-              ]
+              "displayLines": "20"
             },
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             },
             "MDF_PropertyValue2": {
-              "operator": "Variables[0] (0.15) || RETURN",
-              "displayLines": "0.15",
-              "constants": [],
-              "variables": [
-                0.15
-              ]
+              "displayLines": "0.15"
             }
           }
         }
@@ -151,24 +107,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (2) || Variables[1] (_Rank06Ratio) || ADD || RETURN",
-          "displayLines": "(2 + _Rank06Ratio)",
-          "constants": [],
-          "variables": [
-            2,
-            "_Rank06Ratio"
-          ]
+          "displayLines": "(2 + _Rank06Ratio)"
         },
         "HitSplit": 0.25,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.5) || MUL || RETURN",
-          "displayLines": "(ST Toughness Value * 0.5)",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(ST Toughness Value * 0.5)"
         },
         "instanceTag": "AglasaPairsDamage",
         "Tags": [
@@ -186,24 +129,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (0.9) || Variables[1] (_Rank06Ratio) || ADD || RETURN",
-          "displayLines": "(0.9 + _Rank06Ratio)",
-          "constants": [],
-          "variables": [
-            0.9,
-            "_Rank06Ratio"
-          ]
+          "displayLines": "(0.9 + _Rank06Ratio)"
         },
         "HitSplit": 0.25,
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || Constants[0] (0.5) || MUL || RETURN",
-          "displayLines": "(Blast Toughness Value * 0.5)",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "(Blast Toughness Value * 0.5)"
         },
         "instanceTag": "AglasaPairsDamage",
         "Tags": [
@@ -220,24 +150,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (2) || Variables[1] (_Rank06Ratio) || ADD || RETURN",
-          "displayLines": "(2 + _Rank06Ratio)",
-          "constants": [],
-          "variables": [
-            2,
-            "_Rank06Ratio"
-          ]
+          "displayLines": "(2 + _Rank06Ratio)"
         },
         "HitSplit": 0.25,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.5) || MUL || RETURN",
-          "displayLines": "(ST Toughness Value * 0.5)",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(ST Toughness Value * 0.5)"
         },
         "instanceTag": "AglasaPairsDamage",
         "Tags": [
@@ -255,24 +172,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (0.9) || Variables[1] (_Rank06Ratio) || ADD || RETURN",
-          "displayLines": "(0.9 + _Rank06Ratio)",
-          "constants": [],
-          "variables": [
-            0.9,
-            "_Rank06Ratio"
-          ]
+          "displayLines": "(0.9 + _Rank06Ratio)"
         },
         "HitSplit": 0.25,
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || Constants[0] (0.5) || MUL || RETURN",
-          "displayLines": "(Blast Toughness Value * 0.5)",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "(Blast Toughness Value * 0.5)"
         },
         "instanceTag": "AglasaPairsDamage",
         "Tags": [
@@ -289,24 +193,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (2) || Variables[1] (_Rank06Ratio) || ADD || RETURN",
-          "displayLines": "(2 + _Rank06Ratio)",
-          "constants": [],
-          "variables": [
-            2,
-            "_Rank06Ratio"
-          ]
+          "displayLines": "(2 + _Rank06Ratio)"
         },
         "HitSplit": 0.25,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.5) || MUL || RETURN",
-          "displayLines": "(ST Toughness Value * 0.5)",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(ST Toughness Value * 0.5)"
         },
         "instanceTag": "AglasaPairsDamage",
         "Tags": [
@@ -324,24 +215,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (0.9) || Variables[1] (_Rank06Ratio) || ADD || RETURN",
-          "displayLines": "(0.9 + _Rank06Ratio)",
-          "constants": [],
-          "variables": [
-            0.9,
-            "_Rank06Ratio"
-          ]
+          "displayLines": "(0.9 + _Rank06Ratio)"
         },
         "HitSplit": 0.25,
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || Constants[0] (0.5) || MUL || RETURN",
-          "displayLines": "(Blast Toughness Value * 0.5)",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "(Blast Toughness Value * 0.5)"
         },
         "instanceTag": "AglasaPairsDamage",
         "Tags": [
@@ -358,24 +236,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (2) || Variables[1] (_Rank06Ratio) || ADD || RETURN",
-          "displayLines": "(2 + _Rank06Ratio)",
-          "constants": [],
-          "variables": [
-            2,
-            "_Rank06Ratio"
-          ]
+          "displayLines": "(2 + _Rank06Ratio)"
         },
         "HitSplit": 0.25,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.5) || MUL || RETURN",
-          "displayLines": "(ST Toughness Value * 0.5)",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(ST Toughness Value * 0.5)"
         },
         "instanceTag": "AglasaPairsDamage",
         "Tags": [
@@ -393,24 +258,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (0.9) || Variables[1] (_Rank06Ratio) || ADD || RETURN",
-          "displayLines": "(0.9 + _Rank06Ratio)",
-          "constants": [],
-          "variables": [
-            0.9,
-            "_Rank06Ratio"
-          ]
+          "displayLines": "(0.9 + _Rank06Ratio)"
         },
         "HitSplit": 0.25,
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || Constants[0] (0.5) || MUL || RETURN",
-          "displayLines": "(Blast Toughness Value * 0.5)",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "(Blast Toughness Value * 0.5)"
         },
         "instanceTag": "AglasaPairsDamage",
         "Tags": [

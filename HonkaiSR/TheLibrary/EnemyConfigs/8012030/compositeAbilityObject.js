@@ -49,12 +49,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Imaginary",
                     "Damage": {
-                      "operator": "Variables[0] (Skill01_P2_MarkDamagePercentage) || RETURN",
-                      "displayLines": "Skill01_P2_MarkDamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "Skill01_P2_MarkDamagePercentage"
-                      ]
+                      "displayLines": "Skill01_P2_MarkDamagePercentage"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -283,14 +278,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.33) || MUL || RETURN",
-                  "displayLines": "({[Skill01[0]]} * 0.33)",
-                  "constants": [
-                    0.33
-                  ],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "({[Skill01[0]]} * 0.33)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -312,14 +300,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.33) || MUL || RETURN",
-                  "displayLines": "({[Skill01[0]]} * 0.33)",
-                  "constants": [
-                    0.33
-                  ],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "({[Skill01[0]]} * 0.33)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -341,14 +322,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.34) || MUL || RETURN",
-                  "displayLines": "({[Skill01[0]]} * 0.34)",
-                  "constants": [
-                    0.34
-                  ],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "({[Skill01[0]]} * 0.34)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -365,12 +339,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1102385587\">Enemy_AML_Minion04_Mark</a>[<span class=\"descriptionNumberColor\">Detonated</span>]",
               "valuePerStack": {
                 "Ability01_P2_MarkDamagePercentage": {
-                  "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                  "displayLines": "{[Skill01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[1]]}"
-                  ]
+                  "displayLines": "{[Skill01[1]]}"
                 }
               }
             }

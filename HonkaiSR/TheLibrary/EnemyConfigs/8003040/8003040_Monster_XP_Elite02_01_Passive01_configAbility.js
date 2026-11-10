@@ -41,20 +41,10 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1764090904\">Monster_XP_Elite02_01_DamageReduce</a>",
       "valuePerStack": {
         "MDF_DamageReduceRatio": {
-          "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[0]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[0]]}"
         },
         "MDF_ConfineChance": {
-          "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[1]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[1]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[1]]}"
         }
       }
     }
@@ -208,14 +198,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(EnergyLayer + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "EnergyLayer"
-                ]
+                "displayLines": "(EnergyLayer + 1)"
               },
               "execute": [
                 {
@@ -230,14 +213,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(EnergyLayer - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "EnergyLayer"
-                        ]
+                        "displayLines": "(EnergyLayer - 1)"
                       },
                       "variableName": "EnergyLayer"
                     }
@@ -338,12 +314,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (EnergyLayer) || RETURN",
-                "displayLines": "EnergyLayer",
-                "constants": [],
-                "variables": [
-                  "EnergyLayer"
-                ]
+                "displayLines": "EnergyLayer"
               },
               "variableName": "EnergyLayerLast"
             },

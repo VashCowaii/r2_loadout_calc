@@ -44,21 +44,11 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1230803206\">Monster_Fuyan_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">Slay Move</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                          "displayLines": "{[Skill01[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill01[0]]}"
-                          ]
+                          "displayLines": "{[Skill01[0]]}"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (DamageUpCount) || RETURN",
-                        "displayLines": "DamageUpCount",
-                        "constants": [],
-                        "variables": [
-                          "DamageUpCount"
-                        ]
+                        "displayLines": "DamageUpCount"
                       }
                     }
                   ]
@@ -81,21 +71,11 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1579371120\">Monster_Fuyan_RL_SpeedUp</a>[<span class=\"descriptionNumberColor\">Transfer Move</span>]",
                       "valuePerStack": {
                         "MDF_SpeedAddedRatio_PerLayer": {
-                          "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                          "displayLines": "{[Skill01[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill01[1]]}"
-                          ]
+                          "displayLines": "{[Skill01[1]]}"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (SpeedAddCount) || RETURN",
-                        "displayLines": "SpeedAddCount",
-                        "constants": [],
-                        "variables": [
-                          "SpeedAddCount"
-                        ]
+                        "displayLines": "SpeedAddCount"
                       }
                     }
                   ]
@@ -127,14 +107,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_SummonValue) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(MDF_SummonValue + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_SummonValue"
-                    ]
+                    "displayLines": "(MDF_SummonValue + 1)"
                   },
                   "variableName": "MDF_SummonValue"
                 },
@@ -173,14 +146,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_SummonValue) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(MDF_SummonValue + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_SummonValue"
-                ]
+                "displayLines": "(MDF_SummonValue + 1)"
               },
               "variableName": "MDF_SummonValue"
             },
@@ -210,14 +176,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_SummonValue) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(MDF_SummonValue + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_SummonValue"
-                ]
+                "displayLines": "(MDF_SummonValue + 1)"
               },
               "variableName": "MDF_SummonValue"
             },
@@ -274,13 +233,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedAddedRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(MDF_SpeedAddedRatio_PerLayer * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedAddedRatio_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(MDF_SpeedAddedRatio_PerLayer * ModifierLayers)"
               }
             }
           ]
@@ -317,13 +270,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageUpRatio_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)"
               }
             }
           ]
@@ -407,14 +354,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (DeathCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(DeathCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "DeathCount"
-                    ]
+                    "displayLines": "(DeathCount + 1)"
                   },
                   "variableName": "DeathCount"
                 },
@@ -430,15 +370,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Constants[0] (1) || Variables[0] (MonsterCount) || DIV || Constants[1] (0.0009999999) || ADD || RETURN",
-                    "displayLines": "((1 / MonsterCount) + 0.0009999999)",
-                    "constants": [
-                      1,
-                      0.0009999999
-                    ],
-                    "variables": [
-                      "MonsterCount"
-                    ]
+                    "displayLines": "((1 / MonsterCount) + 0.0009999999)"
                   },
                   "variableName": "ADF_HPDamageRatioValue"
                 },
@@ -458,14 +390,7 @@ const configAbility = {
                     "value1": "ADF_CurrentHPValue",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (ADF_MaxHPValue) || Variables[1] (ADF_HPDamageRatioValue) || MUL || Variables[2] (DeathCount) || MUL || RETURN",
-                      "displayLines": "((ADF_MaxHPValue * ADF_HPDamageRatioValue) * DeathCount)",
-                      "constants": [],
-                      "variables": [
-                        "ADF_MaxHPValue",
-                        "ADF_HPDamageRatioValue",
-                        "DeathCount"
-                      ]
+                      "displayLines": "((ADF_MaxHPValue * ADF_HPDamageRatioValue) * DeathCount)"
                     }
                   },
                   "passed": [
@@ -524,14 +449,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (AchievementCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(AchievementCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "AchievementCount"
-                        ]
+                        "displayLines": "(AchievementCount + 1)"
                       },
                       "variableName": "AchievementCount"
                     }
@@ -826,12 +744,7 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (2022110) || RETURN",
-                        "displayLines": "2022110",
-                        "constants": [
-                          2022110
-                        ],
-                        "variables": []
+                        "displayLines": "2022110"
                       },
                       "locationType": "First"
                     }
@@ -858,24 +771,14 @@ const configAbility = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Constants[0] (2022110) || RETURN",
-                            "displayLines": "2022110",
-                            "constants": [
-                              2022110
-                            ],
-                            "variables": []
+                            "displayLines": "2022110"
                           },
                           "locationType": "First"
                         },
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Constants[0] (2022110) || RETURN",
-                            "displayLines": "2022110",
-                            "constants": [
-                              2022110
-                            ],
-                            "variables": []
+                            "displayLines": "2022110"
                           },
                           "locationType": "Last"
                         }
@@ -906,24 +809,14 @@ const configAbility = {
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Constants[0] (8012030) || RETURN",
-                                "displayLines": "8012030",
-                                "constants": [
-                                  8012030
-                                ],
-                                "variables": []
+                                "displayLines": "8012030"
                               },
                               "locationType": "First"
                             },
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Constants[0] (8012030) || RETURN",
-                                "displayLines": "8012030",
-                                "constants": [
-                                  8012030
-                                ],
-                                "variables": []
+                                "displayLines": "8012030"
                               },
                               "locationType": "Last"
                             }
@@ -986,12 +879,7 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (2022110) || RETURN",
-                        "displayLines": "2022110",
-                        "constants": [
-                          2022110
-                        ],
-                        "variables": []
+                        "displayLines": "2022110"
                       },
                       "locationType": "First"
                     }
@@ -1018,24 +906,14 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (2022110) || RETURN",
-                        "displayLines": "2022110",
-                        "constants": [
-                          2022110
-                        ],
-                        "variables": []
+                        "displayLines": "2022110"
                       },
                       "locationType": "First"
                     },
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (2022110) || RETURN",
-                        "displayLines": "2022110",
-                        "constants": [
-                          2022110
-                        ],
-                        "variables": []
+                        "displayLines": "2022110"
                       },
                       "locationType": "Last"
                     }
@@ -1066,24 +944,14 @@ const configAbility = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Constants[0] (8012030) || RETURN",
-                            "displayLines": "8012030",
-                            "constants": [
-                              8012030
-                            ],
-                            "variables": []
+                            "displayLines": "8012030"
                           },
                           "locationType": "First"
                         },
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Constants[0] (8012030) || RETURN",
-                            "displayLines": "8012030",
-                            "constants": [
-                              8012030
-                            ],
-                            "variables": []
+                            "displayLines": "8012030"
                           },
                           "locationType": "Last"
                         }
@@ -1144,12 +1012,7 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (2022110) || RETURN",
-                        "displayLines": "2022110",
-                        "constants": [
-                          2022110
-                        ],
-                        "variables": []
+                        "displayLines": "2022110"
                       },
                       "locationType": "First"
                     }
@@ -1176,24 +1039,14 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (2022110) || RETURN",
-                        "displayLines": "2022110",
-                        "constants": [
-                          2022110
-                        ],
-                        "variables": []
+                        "displayLines": "2022110"
                       },
                       "locationType": "First"
                     },
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (2022110) || RETURN",
-                        "displayLines": "2022110",
-                        "constants": [
-                          2022110
-                        ],
-                        "variables": []
+                        "displayLines": "2022110"
                       },
                       "locationType": "Last"
                     }
@@ -1224,24 +1077,14 @@ const configAbility = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Constants[0] (8012030) || RETURN",
-                            "displayLines": "8012030",
-                            "constants": [
-                              8012030
-                            ],
-                            "variables": []
+                            "displayLines": "8012030"
                           },
                           "locationType": "First"
                         },
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Constants[0] (8012030) || RETURN",
-                            "displayLines": "8012030",
-                            "constants": [
-                              8012030
-                            ],
-                            "variables": []
+                            "displayLines": "8012030"
                           },
                           "locationType": "Last"
                         }
@@ -1302,12 +1145,7 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (2022110) || RETURN",
-                        "displayLines": "2022110",
-                        "constants": [
-                          2022110
-                        ],
-                        "variables": []
+                        "displayLines": "2022110"
                       },
                       "locationType": "First"
                     }
@@ -1334,24 +1172,14 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (2022110) || RETURN",
-                        "displayLines": "2022110",
-                        "constants": [
-                          2022110
-                        ],
-                        "variables": []
+                        "displayLines": "2022110"
                       },
                       "locationType": "First"
                     },
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (2022110) || RETURN",
-                        "displayLines": "2022110",
-                        "constants": [
-                          2022110
-                        ],
-                        "variables": []
+                        "displayLines": "2022110"
                       },
                       "locationType": "Last"
                     }
@@ -1382,24 +1210,14 @@ const configAbility = {
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Constants[0] (8012030) || RETURN",
-                            "displayLines": "8012030",
-                            "constants": [
-                              8012030
-                            ],
-                            "variables": []
+                            "displayLines": "8012030"
                           },
                           "locationType": "First"
                         },
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Constants[0] (8012030) || RETURN",
-                            "displayLines": "8012030",
-                            "constants": [
-                              8012030
-                            ],
-                            "variables": []
+                            "displayLines": "8012030"
                           },
                           "locationType": "Last"
                         }
@@ -1512,14 +1330,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (DeathCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(DeathCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "DeathCount"
-                    ]
+                    "displayLines": "(DeathCount + 1)"
                   },
                   "variableName": "DeathCount"
                 },
@@ -1535,15 +1346,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Constants[0] (1) || Variables[0] (MonsterCount) || DIV || Constants[1] (0.0009999999) || ADD || RETURN",
-                    "displayLines": "((1 / MonsterCount) + 0.0009999999)",
-                    "constants": [
-                      1,
-                      0.0009999999
-                    ],
-                    "variables": [
-                      "MonsterCount"
-                    ]
+                    "displayLines": "((1 / MonsterCount) + 0.0009999999)"
                   },
                   "variableName": "ADF_HPDamageRatioValue"
                 },
@@ -1563,14 +1366,7 @@ const configAbility = {
                     "value1": "ADF_CurrentHPValue",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (ADF_MaxHPValue) || Variables[1] (ADF_HPDamageRatioValue) || MUL || Variables[2] (DeathCount) || MUL || RETURN",
-                      "displayLines": "((ADF_MaxHPValue * ADF_HPDamageRatioValue) * DeathCount)",
-                      "constants": [],
-                      "variables": [
-                        "ADF_MaxHPValue",
-                        "ADF_HPDamageRatioValue",
-                        "DeathCount"
-                      ]
+                      "displayLines": "((ADF_MaxHPValue * ADF_HPDamageRatioValue) * DeathCount)"
                     }
                   },
                   "passed": [
@@ -1636,14 +1432,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (AchievementCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(AchievementCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "AchievementCount"
-                        ]
+                        "displayLines": "(AchievementCount + 1)"
                       },
                       "variableName": "AchievementCount"
                     }

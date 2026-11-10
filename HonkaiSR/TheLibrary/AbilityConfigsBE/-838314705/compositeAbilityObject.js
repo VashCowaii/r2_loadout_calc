@@ -275,13 +275,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_TokenDMGAddRatioPerLayer) || Variables[1] (_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_TokenDMGAddRatioPerLayer * _Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_TokenDMGAddRatioPerLayer",
-                      "_Layer"
-                    ]
+                    "displayLines": "(MDF_TokenDMGAddRatioPerLayer * _Layer)"
                   }
                 }
               ]
@@ -351,21 +345,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-604897731\">Enemy_W2_Cocolia_IF_Frenzy</a>[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]",
                           "valuePerStack": {
                             "MDF_TokenDMGAddRatioPerLayer": {
-                              "operator": "Variables[0] (MDF_TokenDMGAddRatioPerLayer) || RETURN",
-                              "displayLines": "MDF_TokenDMGAddRatioPerLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_TokenDMGAddRatioPerLayer"
-                              ]
+                              "displayLines": "MDF_TokenDMGAddRatioPerLayer"
                             }
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (_Layer) || RETURN",
-                            "displayLines": "_Layer",
-                            "constants": [],
-                            "variables": [
-                              "_Layer"
-                            ]
+                            "displayLines": "_Layer"
                           }
                         }
                       ]
@@ -393,12 +377,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_FrenzyStartDelay) || RETURN",
-                        "displayLines": "MDF_FrenzyStartDelay",
-                        "constants": [],
-                        "variables": [
-                          "MDF_FrenzyStartDelay"
-                        ]
+                        "displayLines": "MDF_FrenzyStartDelay"
                       },
                       "variableName": "_StartActionDelay"
                     },
@@ -452,12 +431,7 @@ const compositeAbilityObject = {
                     "value1": "_Layer",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_MaxFrenzyLayer) || RETURN",
-                      "displayLines": "MDF_MaxFrenzyLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MaxFrenzyLayer"
-                      ]
+                      "displayLines": "MDF_MaxFrenzyLayer"
                     },
                     "invertCondition": true
                   },
@@ -469,39 +443,21 @@ const compositeAbilityObject = {
                         "value1": "_CurrentActionDelay",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (MDF_FrenzyIntervalDelay) || RETURN",
-                          "displayLines": "MDF_FrenzyIntervalDelay",
-                          "constants": [],
-                          "variables": [
-                            "MDF_FrenzyIntervalDelay"
-                          ]
+                          "displayLines": "MDF_FrenzyIntervalDelay"
                         }
                       },
                       "passed": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (MDF_FrenzyIntervalDelay) || Variables[1] (_CurrentActionDelay) || ADD || RETURN",
-                            "displayLines": "(MDF_FrenzyIntervalDelay + _CurrentActionDelay)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_FrenzyIntervalDelay",
-                              "_CurrentActionDelay"
-                            ]
+                            "displayLines": "(MDF_FrenzyIntervalDelay + _CurrentActionDelay)"
                           },
                           "variableName": "_ThresholdActionDelay"
                         },
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (_Layer) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(_Layer + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "_Layer"
-                            ]
+                            "displayLines": "(_Layer + 1)"
                           },
                           "variableName": "_Layer"
                         },
@@ -530,21 +486,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-604897731\">Enemy_W2_Cocolia_IF_Frenzy</a>[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]",
                           "valuePerStack": {
                             "MDF_TokenDMGAddRatioPerLayer": {
-                              "operator": "Variables[0] (MDF_TokenDMGAddRatioPerLayer) || RETURN",
-                              "displayLines": "MDF_TokenDMGAddRatioPerLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_TokenDMGAddRatioPerLayer"
-                              ]
+                              "displayLines": "MDF_TokenDMGAddRatioPerLayer"
                             }
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (_Layer) || RETURN",
-                            "displayLines": "_Layer",
-                            "constants": [],
-                            "variables": [
-                              "_Layer"
-                            ]
+                            "displayLines": "_Layer"
                           }
                         },
                         {
@@ -556,21 +502,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-604897731\">Enemy_W2_Cocolia_IF_Frenzy</a>[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]",
                           "valuePerStack": {
                             "MDF_TokenDMGAddRatioPerLayer": {
-                              "operator": "Variables[0] (MDF_TokenDMGAddRatioPerLayer) || RETURN",
-                              "displayLines": "MDF_TokenDMGAddRatioPerLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_TokenDMGAddRatioPerLayer"
-                              ]
+                              "displayLines": "MDF_TokenDMGAddRatioPerLayer"
                             }
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (_Layer) || RETURN",
-                            "displayLines": "_Layer",
-                            "constants": [],
-                            "variables": [
-                              "_Layer"
-                            ]
+                            "displayLines": "_Layer"
                           }
                         }
                       ]
@@ -588,13 +524,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_ThresholdActionDelay) || Variables[1] (_StartActionDelay) || ADD || RETURN",
-                    "displayLines": "(_ThresholdActionDelay + _StartActionDelay)",
-                    "constants": [],
-                    "variables": [
-                      "_ThresholdActionDelay",
-                      "_StartActionDelay"
-                    ]
+                    "displayLines": "(_ThresholdActionDelay + _StartActionDelay)"
                   },
                   "variableName": "_ThresholdActionDelay"
                 },
@@ -659,12 +589,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageTypeTakenRatio) || RETURN",
-                    "displayLines": "MDF_AllDamageTypeTakenRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageTypeTakenRatio"
-                    ]
+                    "displayLines": "MDF_AllDamageTypeTakenRatio"
                   }
                 }
               ]
@@ -933,12 +858,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageTypeResistance) || RETURN",
-                    "displayLines": "MDF_AllDamageTypeResistance",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageTypeResistance"
-                    ]
+                    "displayLines": "MDF_AllDamageTypeResistance"
                   }
                 },
                 {
@@ -1015,12 +935,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageTypeTakenRatio) || RETURN",
-                    "displayLines": "MDF_AllDamageTypeTakenRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageTypeTakenRatio"
-                    ]
+                    "displayLines": "MDF_AllDamageTypeTakenRatio"
                   }
                 }
               ]
@@ -1278,12 +1193,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageTypeResistance) || RETURN",
-                    "displayLines": "MDF_AllDamageTypeResistance",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageTypeResistance"
-                    ]
+                    "displayLines": "MDF_AllDamageTypeResistance"
                   }
                 }
               ]
@@ -1314,12 +1224,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeResistance": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_Common_Defence) || RETURN",
-                      "displayLines": "MDF_IF_BOSS_Common_Defence",
-                      "constants": [],
-                      "variables": [
-                        "MDF_IF_BOSS_Common_Defence"
-                      ]
+                      "displayLines": "MDF_IF_BOSS_Common_Defence"
                     }
                   }
                 },
@@ -1332,12 +1237,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1963095263\">Standard_MinionsSuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeResistance": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_Common_Defence) || RETURN",
-                      "displayLines": "MDF_IF_BOSS_Common_Defence",
-                      "constants": [],
-                      "variables": [
-                        "MDF_IF_BOSS_Common_Defence"
-                      ]
+                      "displayLines": "MDF_IF_BOSS_Common_Defence"
                     }
                   }
                 },
@@ -1439,12 +1339,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageTypeResistance": {
-                          "operator": "Variables[0] (MDF_IF_BOSS_Common_Defence) || RETURN",
-                          "displayLines": "MDF_IF_BOSS_Common_Defence",
-                          "constants": [],
-                          "variables": [
-                            "MDF_IF_BOSS_Common_Defence"
-                          ]
+                          "displayLines": "MDF_IF_BOSS_Common_Defence"
                         }
                       }
                     },
@@ -1457,12 +1352,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1963095263\">Standard_MinionsSuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageTypeResistance": {
-                          "operator": "Variables[0] (MDF_IF_BOSS_Common_Defence) || RETURN",
-                          "displayLines": "MDF_IF_BOSS_Common_Defence",
-                          "constants": [],
-                          "variables": [
-                            "MDF_IF_BOSS_Common_Defence"
-                          ]
+                          "displayLines": "MDF_IF_BOSS_Common_Defence"
                         }
                       }
                     }
@@ -1527,12 +1417,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"714067831\">Standard_SuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageTypeTakenRatio": {
-                          "operator": "Variables[0] (MDF_IF_BOSS_WeaknessDMGUpRatio) || RETURN",
-                          "displayLines": "MDF_IF_BOSS_WeaknessDMGUpRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_IF_BOSS_WeaknessDMGUpRatio"
-                          ]
+                          "displayLines": "MDF_IF_BOSS_WeaknessDMGUpRatio"
                         }
                       }
                     },
@@ -1545,12 +1430,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-178829988\">Standard_MinionsSuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageTypeTakenRatio": {
-                          "operator": "Variables[0] (MDF_IF_BOSS_WeaknessDMGUpRatio) || RETURN",
-                          "displayLines": "MDF_IF_BOSS_WeaknessDMGUpRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_IF_BOSS_WeaknessDMGUpRatio"
-                          ]
+                          "displayLines": "MDF_IF_BOSS_WeaknessDMGUpRatio"
                         }
                       }
                     },
@@ -1571,54 +1451,19 @@ const compositeAbilityObject = {
                       "canHitNonTargets": true,
                       "valuePerStack": {
                         "BOSS_BreakDelay_01": {
-                          "operator": "Variables[0] (MDF_IF_BOSS_BreakDelay_01) || Constants[0] (10) || MUL || RETURN",
-                          "displayLines": "(MDF_IF_BOSS_BreakDelay_01 * 10)",
-                          "constants": [
-                            10
-                          ],
-                          "variables": [
-                            "MDF_IF_BOSS_BreakDelay_01"
-                          ]
+                          "displayLines": "(MDF_IF_BOSS_BreakDelay_01 * 10)"
                         },
                         "BOSS_BreakDelay_02": {
-                          "operator": "Variables[0] (MDF_IF_BOSS_BreakDelay_02) || Constants[0] (10) || MUL || RETURN",
-                          "displayLines": "(MDF_IF_BOSS_BreakDelay_02 * 10)",
-                          "constants": [
-                            10
-                          ],
-                          "variables": [
-                            "MDF_IF_BOSS_BreakDelay_02"
-                          ]
+                          "displayLines": "(MDF_IF_BOSS_BreakDelay_02 * 10)"
                         },
                         "BOSS_BreakDelay_03": {
-                          "operator": "Variables[0] (MDF_IF_BOSS_BreakDelay_03) || Constants[0] (10) || MUL || RETURN",
-                          "displayLines": "(MDF_IF_BOSS_BreakDelay_03 * 10)",
-                          "constants": [
-                            10
-                          ],
-                          "variables": [
-                            "MDF_IF_BOSS_BreakDelay_03"
-                          ]
+                          "displayLines": "(MDF_IF_BOSS_BreakDelay_03 * 10)"
                         },
                         "BOSS_BreakDelay_04": {
-                          "operator": "Variables[0] (MDF_IF_BOSS_BreakDelay_04) || Constants[0] (10) || MUL || RETURN",
-                          "displayLines": "(MDF_IF_BOSS_BreakDelay_04 * 10)",
-                          "constants": [
-                            10
-                          ],
-                          "variables": [
-                            "MDF_IF_BOSS_BreakDelay_04"
-                          ]
+                          "displayLines": "(MDF_IF_BOSS_BreakDelay_04 * 10)"
                         },
                         "BOSS_BreakDelay_05": {
-                          "operator": "Variables[0] (MDF_IF_BOSS_BreakDelay_05) || Constants[0] (10) || MUL || RETURN",
-                          "displayLines": "(MDF_IF_BOSS_BreakDelay_05 * 10)",
-                          "constants": [
-                            10
-                          ],
-                          "variables": [
-                            "MDF_IF_BOSS_BreakDelay_05"
-                          ]
+                          "displayLines": "(MDF_IF_BOSS_BreakDelay_05 * 10)"
                         }
                       },
                       "allowAbilityTriggers": false
@@ -1719,12 +1564,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeResistance": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_Common_Defence) || RETURN",
-                      "displayLines": "MDF_IF_BOSS_Common_Defence",
-                      "constants": [],
-                      "variables": [
-                        "MDF_IF_BOSS_Common_Defence"
-                      ]
+                      "displayLines": "MDF_IF_BOSS_Common_Defence"
                     }
                   }
                 },
@@ -1826,12 +1666,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageTypeResistance": {
-                          "operator": "Variables[0] (MDF_IF_BOSS_Common_Defence) || RETURN",
-                          "displayLines": "MDF_IF_BOSS_Common_Defence",
-                          "constants": [],
-                          "variables": [
-                            "MDF_IF_BOSS_Common_Defence"
-                          ]
+                          "displayLines": "MDF_IF_BOSS_Common_Defence"
                         }
                       }
                     }
@@ -1900,15 +1735,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Constants[0] (10) || Variables[0] (MDF_IF_BOSS_BreakDelay) || MUL || Variables[1] (_ActionDelay) || SUB || Constants[0] (10) || DIV || RETURN",
-                        "displayLines": "(((10 * MDF_IF_BOSS_BreakDelay) - _ActionDelay) / 10)",
-                        "constants": [
-                          10
-                        ],
-                        "variables": [
-                          "MDF_IF_BOSS_BreakDelay",
-                          "_ActionDelay"
-                        ]
+                        "displayLines": "(((10 * MDF_IF_BOSS_BreakDelay) - _ActionDelay) / 10)"
                       },
                       "variableName": "PushDelay"
                     },
@@ -1921,12 +1748,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"714067831\">Standard_SuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageTypeTakenRatio": {
-                          "operator": "Variables[0] (MDF_IF_BOSS_WeaknessDMGUpRatio) || RETURN",
-                          "displayLines": "MDF_IF_BOSS_WeaknessDMGUpRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_IF_BOSS_WeaknessDMGUpRatio"
-                          ]
+                          "displayLines": "MDF_IF_BOSS_WeaknessDMGUpRatio"
                         }
                       }
                     },
@@ -1947,14 +1769,7 @@ const compositeAbilityObject = {
                       "canHitNonTargets": true,
                       "valuePerStack": {
                         "BOSS_BreakDelay": {
-                          "operator": "Variables[0] (MDF_IF_BOSS_BreakDelay) || Constants[0] (10) || MUL || RETURN",
-                          "displayLines": "(MDF_IF_BOSS_BreakDelay * 10)",
-                          "constants": [
-                            10
-                          ],
-                          "variables": [
-                            "MDF_IF_BOSS_BreakDelay"
-                          ]
+                          "displayLines": "(MDF_IF_BOSS_BreakDelay * 10)"
                         }
                       },
                       "allowAbilityTriggers": false
@@ -1994,12 +1809,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeResistance": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_Common_Defence) || RETURN",
-                      "displayLines": "MDF_IF_BOSS_Common_Defence",
-                      "constants": [],
-                      "variables": [
-                        "MDF_IF_BOSS_Common_Defence"
-                      ]
+                      "displayLines": "MDF_IF_BOSS_Common_Defence"
                     }
                   }
                 },
@@ -2101,12 +1911,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageTypeResistance": {
-                          "operator": "Variables[0] (MDF_IF_BOSS_Common_Defence) || RETURN",
-                          "displayLines": "MDF_IF_BOSS_Common_Defence",
-                          "constants": [],
-                          "variables": [
-                            "MDF_IF_BOSS_Common_Defence"
-                          ]
+                          "displayLines": "MDF_IF_BOSS_Common_Defence"
                         }
                       }
                     }
@@ -2175,15 +1980,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Constants[0] (10) || Variables[0] (MDF_IF_BOSS_BreakDelay) || MUL || Variables[1] (_ActionDelay) || SUB || Constants[0] (10) || DIV || RETURN",
-                        "displayLines": "(((10 * MDF_IF_BOSS_BreakDelay) - _ActionDelay) / 10)",
-                        "constants": [
-                          10
-                        ],
-                        "variables": [
-                          "MDF_IF_BOSS_BreakDelay",
-                          "_ActionDelay"
-                        ]
+                        "displayLines": "(((10 * MDF_IF_BOSS_BreakDelay) - _ActionDelay) / 10)"
                       },
                       "variableName": "PushDelay"
                     },
@@ -2196,12 +1993,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"714067831\">Standard_SuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageTypeTakenRatio": {
-                          "operator": "Variables[0] (MDF_IF_BOSS_WeaknessDMGUpRatio) || RETURN",
-                          "displayLines": "MDF_IF_BOSS_WeaknessDMGUpRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_IF_BOSS_WeaknessDMGUpRatio"
-                          ]
+                          "displayLines": "MDF_IF_BOSS_WeaknessDMGUpRatio"
                         }
                       }
                     },
@@ -2239,14 +2031,7 @@ const compositeAbilityObject = {
                       "canHitNonTargets": true,
                       "valuePerStack": {
                         "BOSS_BreakDelay": {
-                          "operator": "Variables[0] (MDF_IF_BOSS_BreakDelay) || Constants[0] (10) || MUL || RETURN",
-                          "displayLines": "(MDF_IF_BOSS_BreakDelay * 10)",
-                          "constants": [
-                            10
-                          ],
-                          "variables": [
-                            "MDF_IF_BOSS_BreakDelay"
-                          ]
+                          "displayLines": "(MDF_IF_BOSS_BreakDelay * 10)"
                         }
                       },
                       "allowAbilityTriggers": false
@@ -2289,12 +2074,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "Override_ElationPoint",
                   "resetValue": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   },
                   "scope": "TargetEntity"
                 }
@@ -2499,13 +2279,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (_MaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                        "displayLines": "(_MaxSP - _CurrentSP)",
-                        "constants": [],
-                        "variables": [
-                          "_MaxSP",
-                          "_CurrentSP"
-                        ]
+                        "displayLines": "(_MaxSP - _CurrentSP)"
                       },
                       "isFixed": "(Fixed)",
                       "ignoreBlock": true,
@@ -2538,13 +2312,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (_MaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                        "displayLines": "(_MaxSP - _CurrentSP)",
-                        "constants": [],
-                        "variables": [
-                          "_MaxSP",
-                          "_CurrentSP"
-                        ]
+                        "displayLines": "(_MaxSP - _CurrentSP)"
                       },
                       "isFixed": "(Fixed)"
                     }
@@ -2671,12 +2439,7 @@ const compositeAbilityObject = {
               "functionName": "<a class=\"gTempYellow\" id=\"101547145\">Elation_StartElationTime</a>",
               "variables": {
                 "TryStartElationTime_OverrideElationPoint": {
-                  "operator": "Variables[0] (Override_ElationPoint) || RETURN",
-                  "displayLines": "Override_ElationPoint",
-                  "constants": [],
-                  "variables": [
-                    "Override_ElationPoint"
-                  ]
+                  "displayLines": "Override_ElationPoint"
                 },
                 "TryStartElationTime_ElationTimeIsNoConsume": 1
               }
@@ -2721,12 +2484,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Deal Toughness DMG",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentStance) || RETURN",
-                    "displayLines": "MDF_CurrentStance",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentStance"
-                    ]
+                    "displayLines": "MDF_CurrentStance"
                   },
                   "attacker": {
                     "name": "Target Name",
@@ -2794,12 +2552,7 @@ const compositeAbilityObject = {
                 "value1": "_ActionDelay",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] (BOSS_BreakDelay_01) || RETURN",
-                  "displayLines": "BOSS_BreakDelay_01",
-                  "constants": [],
-                  "variables": [
-                    "BOSS_BreakDelay_01"
-                  ]
+                  "displayLines": "BOSS_BreakDelay_01"
                 }
               },
               "passed": [
@@ -2811,12 +2564,7 @@ const compositeAbilityObject = {
                     "target": "{{Parameter Target}}"
                   },
                   "set": {
-                    "operator": "Variables[0] (BOSS_BreakDelay_01) || RETURN",
-                    "displayLines": "BOSS_BreakDelay_01",
-                    "constants": [],
-                    "variables": [
-                      "BOSS_BreakDelay_01"
-                    ]
+                    "displayLines": "BOSS_BreakDelay_01"
                   }
                 },
                 {
@@ -2869,12 +2617,7 @@ const compositeAbilityObject = {
                 "value1": "_ActionDelay",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] (BOSS_BreakDelay_02) || RETURN",
-                  "displayLines": "BOSS_BreakDelay_02",
-                  "constants": [],
-                  "variables": [
-                    "BOSS_BreakDelay_02"
-                  ]
+                  "displayLines": "BOSS_BreakDelay_02"
                 }
               },
               "passed": [
@@ -2886,12 +2629,7 @@ const compositeAbilityObject = {
                     "target": "{{Parameter Target}}"
                   },
                   "set": {
-                    "operator": "Variables[0] (BOSS_BreakDelay_02) || RETURN",
-                    "displayLines": "BOSS_BreakDelay_02",
-                    "constants": [],
-                    "variables": [
-                      "BOSS_BreakDelay_02"
-                    ]
+                    "displayLines": "BOSS_BreakDelay_02"
                   }
                 },
                 {
@@ -2944,12 +2682,7 @@ const compositeAbilityObject = {
                 "value1": "_ActionDelay",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] (BOSS_BreakDelay_03) || RETURN",
-                  "displayLines": "BOSS_BreakDelay_03",
-                  "constants": [],
-                  "variables": [
-                    "BOSS_BreakDelay_03"
-                  ]
+                  "displayLines": "BOSS_BreakDelay_03"
                 }
               },
               "passed": [
@@ -2961,12 +2694,7 @@ const compositeAbilityObject = {
                     "target": "{{Parameter Target}}"
                   },
                   "set": {
-                    "operator": "Variables[0] (BOSS_BreakDelay_03) || RETURN",
-                    "displayLines": "BOSS_BreakDelay_03",
-                    "constants": [],
-                    "variables": [
-                      "BOSS_BreakDelay_03"
-                    ]
+                    "displayLines": "BOSS_BreakDelay_03"
                   }
                 },
                 {
@@ -3019,12 +2747,7 @@ const compositeAbilityObject = {
                 "value1": "_ActionDelay",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] (BOSS_BreakDelay_04) || RETURN",
-                  "displayLines": "BOSS_BreakDelay_04",
-                  "constants": [],
-                  "variables": [
-                    "BOSS_BreakDelay_04"
-                  ]
+                  "displayLines": "BOSS_BreakDelay_04"
                 }
               },
               "passed": [
@@ -3036,12 +2759,7 @@ const compositeAbilityObject = {
                     "target": "{{Parameter Target}}"
                   },
                   "set": {
-                    "operator": "Variables[0] (BOSS_BreakDelay_04) || RETURN",
-                    "displayLines": "BOSS_BreakDelay_04",
-                    "constants": [],
-                    "variables": [
-                      "BOSS_BreakDelay_04"
-                    ]
+                    "displayLines": "BOSS_BreakDelay_04"
                   }
                 },
                 {
@@ -3094,12 +2812,7 @@ const compositeAbilityObject = {
                 "value1": "_ActionDelay",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] (BOSS_BreakDelay_05) || RETURN",
-                  "displayLines": "BOSS_BreakDelay_05",
-                  "constants": [],
-                  "variables": [
-                    "BOSS_BreakDelay_05"
-                  ]
+                  "displayLines": "BOSS_BreakDelay_05"
                 }
               },
               "passed": [
@@ -3111,12 +2824,7 @@ const compositeAbilityObject = {
                     "target": "{{Parameter Target}}"
                   },
                   "set": {
-                    "operator": "Variables[0] (BOSS_BreakDelay_05) || RETURN",
-                    "displayLines": "BOSS_BreakDelay_05",
-                    "constants": [],
-                    "variables": [
-                      "BOSS_BreakDelay_05"
-                    ]
+                    "displayLines": "BOSS_BreakDelay_05"
                   }
                 },
                 {
@@ -3298,13 +3006,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (_MaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                        "displayLines": "(_MaxSP - _CurrentSP)",
-                        "constants": [],
-                        "variables": [
-                          "_MaxSP",
-                          "_CurrentSP"
-                        ]
+                        "displayLines": "(_MaxSP - _CurrentSP)"
                       },
                       "isFixed": "(Fixed)",
                       "ignoreBlock": true,
@@ -3337,13 +3039,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (_MaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                        "displayLines": "(_MaxSP - _CurrentSP)",
-                        "constants": [],
-                        "variables": [
-                          "_MaxSP",
-                          "_CurrentSP"
-                        ]
+                        "displayLines": "(_MaxSP - _CurrentSP)"
                       },
                       "isFixed": "(Fixed)"
                     }
@@ -3434,12 +3130,7 @@ const compositeAbilityObject = {
               "functionName": "<a class=\"gTempYellow\" id=\"101547145\">Elation_StartElationTime</a>",
               "variables": {
                 "TryStartElationTime_OverrideElationPoint": {
-                  "operator": "Variables[0] (Override_ElationPoint) || RETURN",
-                  "displayLines": "Override_ElationPoint",
-                  "constants": [],
-                  "variables": [
-                    "Override_ElationPoint"
-                  ]
+                  "displayLines": "Override_ElationPoint"
                 },
                 "TryStartElationTime_ElationTimeIsNoConsume": 1
               }
@@ -3476,12 +3167,7 @@ const compositeAbilityObject = {
                 "value1": "_ActionDelay",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] (BOSS_BreakDelay) || RETURN",
-                  "displayLines": "BOSS_BreakDelay",
-                  "constants": [],
-                  "variables": [
-                    "BOSS_BreakDelay"
-                  ]
+                  "displayLines": "BOSS_BreakDelay"
                 }
               },
               "passed": [
@@ -3493,12 +3179,7 @@ const compositeAbilityObject = {
                     "target": "{{Parameter Target}}"
                   },
                   "set": {
-                    "operator": "Variables[0] (BOSS_BreakDelay) || RETURN",
-                    "displayLines": "BOSS_BreakDelay",
-                    "constants": [],
-                    "variables": [
-                      "BOSS_BreakDelay"
-                    ]
+                    "displayLines": "BOSS_BreakDelay"
                   }
                 },
                 {
@@ -3543,12 +3224,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Deal Toughness DMG",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentStance) || RETURN",
-                    "displayLines": "MDF_CurrentStance",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentStance"
-                    ]
+                    "displayLines": "MDF_CurrentStance"
                   },
                   "attacker": {
                     "name": "Target Name",
@@ -3820,14 +3496,7 @@ const compositeAbilityObject = {
                     "value1": "<a class=\"gModGreen\" id=\"2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (_MaxLayer) || Constants[0] (0.5) || MUL || RETURN",
-                      "displayLines": "(_MaxLayer * 0.5)",
-                      "constants": [
-                        0.5
-                      ],
-                      "variables": [
-                        "_MaxLayer"
-                      ]
+                      "displayLines": "(_MaxLayer * 0.5)"
                     },
                     "valueType": "Layer"
                   }
@@ -4073,13 +3742,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (_MaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                        "displayLines": "(_MaxSP - _CurrentSP)",
-                        "constants": [],
-                        "variables": [
-                          "_MaxSP",
-                          "_CurrentSP"
-                        ]
+                        "displayLines": "(_MaxSP - _CurrentSP)"
                       },
                       "isFixed": "(Fixed)",
                       "ignoreBlock": true,
@@ -4112,13 +3775,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (_MaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                        "displayLines": "(_MaxSP - _CurrentSP)",
-                        "constants": [],
-                        "variables": [
-                          "_MaxSP",
-                          "_CurrentSP"
-                        ]
+                        "displayLines": "(_MaxSP - _CurrentSP)"
                       },
                       "isFixed": "(Fixed)"
                     }
@@ -4209,12 +3866,7 @@ const compositeAbilityObject = {
               "functionName": "<a class=\"gTempYellow\" id=\"101547145\">Elation_StartElationTime</a>",
               "variables": {
                 "TryStartElationTime_OverrideElationPoint": {
-                  "operator": "Variables[0] (Override_ElationPoint) || RETURN",
-                  "displayLines": "Override_ElationPoint",
-                  "constants": [],
-                  "variables": [
-                    "Override_ElationPoint"
-                  ]
+                  "displayLines": "Override_ElationPoint"
                 },
                 "TryStartElationTime_ElationTimeIsNoConsume": 1
               }
@@ -4260,12 +3912,7 @@ const compositeAbilityObject = {
         {
           "name": "Deal Toughness DMG",
           "value": {
-            "operator": "Variables[0] (_CurrentStance) || RETURN",
-            "displayLines": "_CurrentStance",
-            "constants": [],
-            "variables": [
-              "_CurrentStance"
-            ]
+            "displayLines": "_CurrentStance"
           },
           "defender": {
             "name": "Target Name",
@@ -4341,12 +3988,7 @@ const compositeAbilityObject = {
             "value1": "_ActionDelay",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] (BOSS_BreakDelay) || RETURN",
-              "displayLines": "BOSS_BreakDelay",
-              "constants": [],
-              "variables": [
-                "BOSS_BreakDelay"
-              ]
+              "displayLines": "BOSS_BreakDelay"
             }
           },
           "passed": [
@@ -4456,14 +4098,7 @@ const compositeAbilityObject = {
                     "value1": "<a class=\"gModGreen\" id=\"2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (_MaxLayer) || Constants[0] (0.5) || MUL || RETURN",
-                      "displayLines": "(_MaxLayer * 0.5)",
-                      "constants": [
-                        0.5
-                      ],
-                      "variables": [
-                        "_MaxLayer"
-                      ]
+                      "displayLines": "(_MaxLayer * 0.5)"
                     },
                     "valueType": "Layer"
                   }
@@ -4656,12 +4291,7 @@ const compositeAbilityObject = {
                   },
                   "healPercent": 1,
                   "healFlat": {
-                    "operator": "Variables[0] (_NegativeHP) || RETURN",
-                    "displayLines": "_NegativeHP",
-                    "constants": [],
-                    "variables": [
-                      "_NegativeHP"
-                    ]
+                    "displayLines": "_NegativeHP"
                   },
                   "formula": "Heal from Target MaxHP"
                 }
@@ -4726,13 +4356,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (_MaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                        "displayLines": "(_MaxSP - _CurrentSP)",
-                        "constants": [],
-                        "variables": [
-                          "_MaxSP",
-                          "_CurrentSP"
-                        ]
+                        "displayLines": "(_MaxSP - _CurrentSP)"
                       },
                       "isFixed": "(Fixed)",
                       "ignoreBlock": true,
@@ -4765,13 +4389,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (_MaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                        "displayLines": "(_MaxSP - _CurrentSP)",
-                        "constants": [],
-                        "variables": [
-                          "_MaxSP",
-                          "_CurrentSP"
-                        ]
+                        "displayLines": "(_MaxSP - _CurrentSP)"
                       },
                       "isFixed": "(Fixed)"
                     }
@@ -4862,12 +4480,7 @@ const compositeAbilityObject = {
               "functionName": "<a class=\"gTempYellow\" id=\"101547145\">Elation_StartElationTime</a>",
               "variables": {
                 "TryStartElationTime_OverrideElationPoint": {
-                  "operator": "Variables[0] (Override_ElationPoint) || RETURN",
-                  "displayLines": "Override_ElationPoint",
-                  "constants": [],
-                  "variables": [
-                    "Override_ElationPoint"
-                  ]
+                  "displayLines": "Override_ElationPoint"
                 },
                 "TryStartElationTime_ElationTimeIsNoConsume": 1
               }
@@ -4897,12 +4510,7 @@ const compositeAbilityObject = {
             "value1": "_ActionDelay",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] (BOSS_BreakDelay) || RETURN",
-              "displayLines": "BOSS_BreakDelay",
-              "constants": [],
-              "variables": [
-                "BOSS_BreakDelay"
-              ]
+              "displayLines": "BOSS_BreakDelay"
             }
           },
           "passed": [
@@ -4914,12 +4522,7 @@ const compositeAbilityObject = {
                 "target": "{{Ability Target(ST)}}"
               },
               "set": {
-                "operator": "Variables[0] (BOSS_BreakDelay) || RETURN",
-                "displayLines": "BOSS_BreakDelay",
-                "constants": [],
-                "variables": [
-                  "BOSS_BreakDelay"
-                ]
+                "displayLines": "BOSS_BreakDelay"
               }
             },
             {
@@ -5051,14 +4654,7 @@ const compositeAbilityObject = {
                     "value1": "<a class=\"gModGreen\" id=\"2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (_MaxLayer) || Constants[0] (0.5) || MUL || RETURN",
-                      "displayLines": "(_MaxLayer * 0.5)",
-                      "constants": [
-                        0.5
-                      ],
-                      "variables": [
-                        "_MaxLayer"
-                      ]
+                      "displayLines": "(_MaxLayer * 0.5)"
                     },
                     "valueType": "Layer"
                   }
@@ -5369,20 +4965,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-764375062\">MStrongChallengeEX_Environment_StageAbility_BOSS_018</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -5497,12 +5083,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"51921734\">MStrongChallengeEX_BEMark_ExtraElationBE</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (#ADF_3) || RETURN",
-                      "displayLines": "#ADF_3",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_3"
-                      ]
+                      "displayLines": "#ADF_3"
                     }
                   }
                 },
@@ -5544,20 +5125,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-982484109\">MStrongChallengeEX_Environment_StageAbility_BOSS_017</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -5701,20 +5272,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-999261728\">MStrongChallengeEX_Environment_StageAbility_BOSS_016</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -5837,12 +5398,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"51921734\">MStrongChallengeEX_BEMark_ExtraElationBE</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (#ADF_3) || RETURN",
-                      "displayLines": "#ADF_3",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_3"
-                      ]
+                      "displayLines": "#ADF_3"
                     }
                   }
                 },
@@ -5884,20 +5440,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-948928871\">MStrongChallengeEX_Environment_StageAbility_BOSS_015</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -6049,20 +5595,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-965706490\">MStrongChallengeEX_Environment_StageAbility_BOSS_014</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -6214,20 +5750,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-915373633\">MStrongChallengeEX_Environment_StageAbility_BOSS_013</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -6379,20 +5905,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-932151252\">MStrongChallengeEX_Environment_StageAbility_BOSS_012</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -6544,20 +6060,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-881818395\">MStrongChallengeEX_Environment_StageAbility_BOSS_011</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -6684,12 +6190,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-898596014\">MStrongChallengeEX_Environment_StageAbility_BOSS_010</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -6734,12 +6235,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingIncoming</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -6807,12 +6303,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-930723394\">MStrongChallengeEX_Environment_StageAbility_AVT_009</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         }
                       }
                     }
@@ -6964,20 +6455,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-932004157\">MStrongChallengeEX_Environment_StageAbility_BOSS_008</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -7129,20 +6610,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-713895110\">MStrongChallengeEX_Environment_StageAbility_BOSS_007</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -7294,20 +6765,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-697117491\">MStrongChallengeEX_Environment_StageAbility_BOSS_006</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -7451,20 +6912,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-747450348\">MStrongChallengeEX_Environment_StageAbility_BOSS_005</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -7608,20 +7059,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-730672729\">MStrongChallengeEX_Environment_StageAbility_BOSS_004</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -7765,20 +7206,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-781005586\">MStrongChallengeEX_Environment_StageAbility_BOSS_003</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -7918,20 +7349,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-764227967\">MStrongChallengeEX_Environment_StageAbility_BOSS_002</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }
@@ -8071,20 +7492,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-814560824\">MStrongChallengeEX_Environment_StageAbility_BOSS_001</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (#ADF_1) || RETURN",
-                          "displayLines": "#ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_1"
-                          ]
+                          "displayLines": "#ADF_1"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (#ADF_2) || RETURN",
-                          "displayLines": "#ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "#ADF_2"
-                          ]
+                          "displayLines": "#ADF_2"
                         }
                       }
                     }

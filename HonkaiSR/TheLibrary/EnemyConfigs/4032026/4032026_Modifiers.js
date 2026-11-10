@@ -74,14 +74,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_PersistLoseHP) || Variables[1] (MDF_MaxHP) || Variables[2] (MDF_LoseHPRatio) || MUL || ADD || RETURN",
-                    "displayLines": "(MDF_PersistLoseHP + (MDF_MaxHP * MDF_LoseHPRatio))",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PersistLoseHP",
-                      "MDF_MaxHP",
-                      "MDF_LoseHPRatio"
-                    ]
+                    "displayLines": "(MDF_PersistLoseHP + (MDF_MaxHP * MDF_LoseHPRatio))"
                   },
                   "variableName": "MDF_PersistLoseHP"
                 },
@@ -94,12 +87,7 @@ const configAbility = {
                   "modifierName": "<a class=\"gModGreen\" id=\"429916549\">Enemy_W4_FireProwler_PersistLoseHPPreShow</a>",
                   "variableName": "MDF_PersistLoseHP",
                   "value": {
-                    "operator": "Variables[0] (MDF_PersistLoseHP) || RETURN",
-                    "displayLines": "MDF_PersistLoseHP",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PersistLoseHP"
-                    ]
+                    "displayLines": "MDF_PersistLoseHP"
                   }
                 },
                 {
@@ -111,12 +99,7 @@ const configAbility = {
                   },
                   "previewType": "Persisting HP Loss",
                   "previewValue": {
-                    "operator": "Variables[0] (MDF_PersistLoseHP) || INVERT || RETURN",
-                    "displayLines": "-MDF_PersistLoseHP",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PersistLoseHP"
-                    ]
+                    "displayLines": "-MDF_PersistLoseHP"
                   }
                 },
                 {
@@ -128,12 +111,7 @@ const configAbility = {
                   },
                   "previewType": "Persisting HP Loss",
                   "previewValue": {
-                    "operator": "Variables[0] (MDF_PersistLoseHP) || INVERT || RETURN",
-                    "displayLines": "-MDF_PersistLoseHP",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PersistLoseHP"
-                    ]
+                    "displayLines": "-MDF_PersistLoseHP"
                   }
                 },
                 {
@@ -144,12 +122,7 @@ const configAbility = {
                     "target": "{{Caster's Summoner}}"
                   },
                   "consumePercent": {
-                    "operator": "Variables[0] (MDF_LoseHPRatio) || RETURN",
-                    "displayLines": "MDF_LoseHPRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_LoseHPRatio"
-                    ]
+                    "displayLines": "MDF_LoseHPRatio"
                   },
                   "attackType": "Unknown",
                   "DamageType": "Physical"
@@ -456,12 +429,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_Speed) || RETURN",
-                "displayLines": "MDF_Speed",
-                "constants": [],
-                "variables": [
-                  "MDF_Speed"
-                ]
+                "displayLines": "MDF_Speed"
               }
             },
             {

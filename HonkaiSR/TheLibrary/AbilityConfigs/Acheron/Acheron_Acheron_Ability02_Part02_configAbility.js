@@ -40,12 +40,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "isFixed": "(Fixed)",
           "ignoreBlock": true,
@@ -58,12 +53,7 @@ const configAbility = {
             "value1": "MDF_Passive_Count",
             "compareType": "<=",
             "value2": {
-              "operator": "Variables[0] (9) || RETURN",
-              "displayLines": "9",
-              "constants": [],
-              "variables": [
-                9
-              ]
+              "displayLines": "9"
             }
           },
           "passed": [
@@ -110,13 +100,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (Skill02_FlowerTotalCount) || Variables[1] (MDF_CurrentCountFlag01) || ADD || RETURN",
-                        "displayLines": "(Skill02_FlowerTotalCount + MDF_CurrentCountFlag01)",
-                        "constants": [],
-                        "variables": [
-                          "Skill02_FlowerTotalCount",
-                          "MDF_CurrentCountFlag01"
-                        ]
+                        "displayLines": "(Skill02_FlowerTotalCount + MDF_CurrentCountFlag01)"
                       },
                       "variableName": "Skill02_FlowerTotalCount"
                     }
@@ -129,12 +113,7 @@ const configAbility = {
                     "value1": "Skill02_FlowerTotalCount",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (9) || RETURN",
-                      "displayLines": "9",
-                      "constants": [],
-                      "variables": [
-                        9
-                      ]
+                      "displayLines": "9"
                     }
                   },
                   "passed": [
@@ -177,22 +156,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1.6) || Variables[1] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-              "displayLines": "(1.6 * Acheron_PointB2_DamageRatio)",
-              "constants": [],
-              "variables": [
-                1.6,
-                "Acheron_PointB2_DamageRatio"
-              ]
+              "displayLines": "(1.6 * Acheron_PointB2_DamageRatio)"
             },
             "HitSplit": 0.1,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Skill"
@@ -208,22 +176,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (0.6) || Variables[1] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-              "displayLines": "(0.6 * Acheron_PointB2_DamageRatio)",
-              "constants": [],
-              "variables": [
-                0.6,
-                "Acheron_PointB2_DamageRatio"
-              ]
+              "displayLines": "(0.6 * Acheron_PointB2_DamageRatio)"
             },
             "HitSplit": 0.1,
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null,
             "attackType": "Skill"
@@ -241,21 +198,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1.6) || RETURN",
-              "displayLines": "1.6",
-              "constants": [],
-              "variables": [
-                1.6
-              ]
+              "displayLines": "1.6"
             },
             "HitSplit": 0.1,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Skill"
@@ -271,21 +218,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (0.6) || RETURN",
-              "displayLines": "0.6",
-              "constants": [],
-              "variables": [
-                0.6
-              ]
+              "displayLines": "0.6"
             },
             "HitSplit": 0.1,
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null,
             "attackType": "Skill"
@@ -310,22 +247,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1.6) || Variables[1] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-              "displayLines": "(1.6 * Acheron_PointB2_DamageRatio)",
-              "constants": [],
-              "variables": [
-                1.6,
-                "Acheron_PointB2_DamageRatio"
-              ]
+              "displayLines": "(1.6 * Acheron_PointB2_DamageRatio)"
             },
             "HitSplit": 0.1,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Skill"
@@ -341,22 +267,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (0.6) || Variables[1] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-              "displayLines": "(0.6 * Acheron_PointB2_DamageRatio)",
-              "constants": [],
-              "variables": [
-                0.6,
-                "Acheron_PointB2_DamageRatio"
-              ]
+              "displayLines": "(0.6 * Acheron_PointB2_DamageRatio)"
             },
             "HitSplit": 0.1,
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null,
             "attackType": "Skill"
@@ -374,21 +289,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1.6) || RETURN",
-              "displayLines": "1.6",
-              "constants": [],
-              "variables": [
-                1.6
-              ]
+              "displayLines": "1.6"
             },
             "HitSplit": 0.1,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Skill"
@@ -404,21 +309,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (0.6) || RETURN",
-              "displayLines": "0.6",
-              "constants": [],
-              "variables": [
-                0.6
-              ]
+              "displayLines": "0.6"
             },
             "HitSplit": 0.1,
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null,
             "attackType": "Skill"
@@ -443,22 +338,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1.6) || Variables[1] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-              "displayLines": "(1.6 * Acheron_PointB2_DamageRatio)",
-              "constants": [],
-              "variables": [
-                1.6,
-                "Acheron_PointB2_DamageRatio"
-              ]
+              "displayLines": "(1.6 * Acheron_PointB2_DamageRatio)"
             },
             "HitSplit": 0.1,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Skill"
@@ -474,22 +358,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (0.6) || Variables[1] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-              "displayLines": "(0.6 * Acheron_PointB2_DamageRatio)",
-              "constants": [],
-              "variables": [
-                0.6,
-                "Acheron_PointB2_DamageRatio"
-              ]
+              "displayLines": "(0.6 * Acheron_PointB2_DamageRatio)"
             },
             "HitSplit": 0.1,
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null,
             "attackType": "Skill"
@@ -507,21 +380,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1.6) || RETURN",
-              "displayLines": "1.6",
-              "constants": [],
-              "variables": [
-                1.6
-              ]
+              "displayLines": "1.6"
             },
             "HitSplit": 0.1,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Skill"
@@ -537,21 +400,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (0.6) || RETURN",
-              "displayLines": "0.6",
-              "constants": [],
-              "variables": [
-                0.6
-              ]
+              "displayLines": "0.6"
             },
             "HitSplit": 0.1,
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null,
             "attackType": "Skill"
@@ -576,22 +429,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1.6) || Variables[1] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-              "displayLines": "(1.6 * Acheron_PointB2_DamageRatio)",
-              "constants": [],
-              "variables": [
-                1.6,
-                "Acheron_PointB2_DamageRatio"
-              ]
+              "displayLines": "(1.6 * Acheron_PointB2_DamageRatio)"
             },
             "HitSplit": 0.7,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Skill"
@@ -607,22 +449,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (0.6) || Variables[1] (Acheron_PointB2_DamageRatio) || MUL || RETURN",
-              "displayLines": "(0.6 * Acheron_PointB2_DamageRatio)",
-              "constants": [],
-              "variables": [
-                0.6,
-                "Acheron_PointB2_DamageRatio"
-              ]
+              "displayLines": "(0.6 * Acheron_PointB2_DamageRatio)"
             },
             "HitSplit": 0.7,
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null,
             "attackType": "Skill"
@@ -640,21 +471,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1.6) || RETURN",
-              "displayLines": "1.6",
-              "constants": [],
-              "variables": [
-                1.6
-              ]
+              "displayLines": "1.6"
             },
             "HitSplit": 0.7,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Skill"
@@ -670,21 +491,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (0.6) || RETURN",
-              "displayLines": "0.6",
-              "constants": [],
-              "variables": [
-                0.6
-              ]
+              "displayLines": "0.6"
             },
             "HitSplit": 0.7,
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null,
             "attackType": "Skill"

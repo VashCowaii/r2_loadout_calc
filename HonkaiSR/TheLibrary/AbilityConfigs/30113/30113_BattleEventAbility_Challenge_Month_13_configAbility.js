@@ -161,12 +161,7 @@ const configAbility = {
               "showInActionOrder": true,
               "valuePerStack": {
                 "AddValue": {
-                  "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                  "displayLines": "#BattleEvent_P2_ADF",
-                  "constants": [],
-                  "variables": [
-                    "#BattleEvent_P2_ADF"
-                  ]
+                  "displayLines": "#BattleEvent_P2_ADF"
                 }
               },
               "allowAbilityTriggers": false
@@ -212,12 +207,7 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (800205000) || RETURN",
-                        "displayLines": "800205000",
-                        "constants": [
-                          800205000
-                        ],
-                        "variables": []
+                        "displayLines": "800205000"
                       },
                       "locationType": "LastDie"
                     }
@@ -275,12 +265,7 @@ const configAbility = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Constants[0] (800205000) || RETURN",
-                    "displayLines": "800205000",
-                    "constants": [
-                      800205000
-                    ],
-                    "variables": []
+                    "displayLines": "800205000"
                   },
                   "locationType": "Last"
                 }

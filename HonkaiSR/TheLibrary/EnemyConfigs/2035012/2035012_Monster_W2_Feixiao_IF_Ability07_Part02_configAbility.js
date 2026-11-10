@@ -237,16 +237,7 @@ const configAbility = {
             "target": "{{Parameter Target}}"
           },
           "set": {
-            "operator": "Constants[0] (1000) || Variables[0] (CurrentSpeed) || DIV || Variables[1] ({[Skill07[0]]}) || MUL || Variables[2] (CurrentDelay) || ADD || RETURN",
-            "displayLines": "(((1000 / CurrentSpeed) * {[Skill07[0]]}) + CurrentDelay)",
-            "constants": [
-              1000
-            ],
-            "variables": [
-              "CurrentSpeed",
-              "{[Skill07[0]]}",
-              "CurrentDelay"
-            ]
+            "displayLines": "(((1000 / CurrentSpeed) * {[Skill07[0]]}) + CurrentDelay)"
           }
         }
       ]

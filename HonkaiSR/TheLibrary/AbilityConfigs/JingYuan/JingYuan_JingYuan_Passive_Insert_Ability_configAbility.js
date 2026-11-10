@@ -54,13 +54,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (ATKCount) || Variables[1] (UltraATKCount) || ADD || RETURN",
-            "displayLines": "(ATKCount + UltraATKCount)",
-            "constants": [],
-            "variables": [
-              "ATKCount",
-              "UltraATKCount"
-            ]
+            "displayLines": "(ATKCount + UltraATKCount)"
           },
           "variableName": "ATKCountSum"
         },
@@ -71,12 +65,7 @@ const configAbility = {
             "value1": "ATKCountSum",
             "compareType": ">=",
             "value2": {
-              "operator": "Variables[0] (6) || RETURN",
-              "displayLines": "6",
-              "constants": [],
-              "variables": [
-                6
-              ]
+              "displayLines": "6"
             }
           },
           "passed": [
@@ -90,12 +79,7 @@ const configAbility = {
               "duration": 1,
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.25) || RETURN",
-                  "displayLines": "0.25",
-                  "constants": [],
-                  "variables": [
-                    0.25
-                  ]
+                  "displayLines": "0.25"
                 }
               }
             }
@@ -106,12 +90,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (ATKCount) || RETURN",
-        "displayLines": "ATKCount",
-        "constants": [],
-        "variables": [
-          "ATKCount"
-        ]
+        "displayLines": "ATKCount"
       },
       "execute": [
         {
@@ -132,20 +111,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
-                  "operator": "Variables[0] (0.66) || RETURN",
-                  "displayLines": "0.66",
-                  "constants": [],
-                  "variables": [
-                    0.66
-                  ]
+                  "displayLines": "0.66"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": [
                   "Summon-Tag DMG"
@@ -170,14 +139,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (0.66) || Variables[1] (0.25) || Variables[2] (0.25) || ADD || MUL || RETURN",
-                      "displayLines": "(0.66 * (0.25 + 0.25))",
-                      "constants": [],
-                      "variables": [
-                        0.66,
-                        0.25,
-                        0.25
-                      ]
+                      "displayLines": "(0.66 * (0.25 + 0.25))"
                     },
                     "Toughness": null,
                     "Tags": [
@@ -198,13 +160,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (0.66) || Variables[1] (0.25) || MUL || RETURN",
-                      "displayLines": "(0.66 * 0.25)",
-                      "constants": [],
-                      "variables": [
-                        0.66,
-                        0.25
-                      ]
+                      "displayLines": "(0.66 * 0.25)"
                     },
                     "Toughness": null,
                     "Tags": [
@@ -229,12 +185,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "isFixed": "* ERR"
                 }
@@ -255,21 +206,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"767237660\">JingYuan_Eidolon6_AllDamageTypeTakenRatio</a>",
                   "stackLimit": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.12) || RETURN",
-                      "displayLines": "0.12",
-                      "constants": [],
-                      "variables": [
-                        0.12
-                      ]
+                      "displayLines": "0.12"
                     }
                   }
                 }
@@ -282,23 +223,13 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (UltraATKCount) || RETURN",
-        "displayLines": "UltraATKCount",
-        "constants": [],
-        "variables": [
-          "UltraATKCount"
-        ]
+        "displayLines": "UltraATKCount"
       },
       "execute": [
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (ATKCount) || RETURN",
-            "displayLines": "ATKCount",
-            "constants": [],
-            "variables": [
-              "ATKCount"
-            ]
+            "displayLines": "ATKCount"
           },
           "execute": [
             {
@@ -319,21 +250,10 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (0.66) || Variables[1] (JINGYUAN_OBJECT_UNUSED_1) || ADD || RETURN",
-                      "displayLines": "(0.66 + JINGYUAN_OBJECT_UNUSED_1)",
-                      "constants": [],
-                      "variables": [
-                        0.66,
-                        "JINGYUAN_OBJECT_UNUSED_1"
-                      ]
+                      "displayLines": "(0.66 + JINGYUAN_OBJECT_UNUSED_1)"
                     },
                     "Toughness": {
-                      "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                      "displayLines": "ST Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "ST Toughness Value"
-                      ]
+                      "displayLines": "ST Toughness Value"
                     },
                     "Tags": [
                       "Summon-Tag DMG"
@@ -358,15 +278,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Thunder",
                         "Damage": {
-                          "operator": "Variables[0] (0.66) || Variables[1] (JINGYUAN_OBJECT_UNUSED_1) || ADD || Variables[2] (0.25) || Variables[3] (0.25) || ADD || MUL || RETURN",
-                          "displayLines": "((0.66 + JINGYUAN_OBJECT_UNUSED_1) * (0.25 + 0.25))",
-                          "constants": [],
-                          "variables": [
-                            0.66,
-                            "JINGYUAN_OBJECT_UNUSED_1",
-                            0.25,
-                            0.25
-                          ]
+                          "displayLines": "((0.66 + JINGYUAN_OBJECT_UNUSED_1) * (0.25 + 0.25))"
                         },
                         "Toughness": null,
                         "Tags": [
@@ -387,14 +299,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Thunder",
                         "Damage": {
-                          "operator": "Variables[0] (0.66) || Variables[1] (JINGYUAN_OBJECT_UNUSED_1) || ADD || Variables[2] (0.25) || MUL || RETURN",
-                          "displayLines": "((0.66 + JINGYUAN_OBJECT_UNUSED_1) * 0.25)",
-                          "constants": [],
-                          "variables": [
-                            0.66,
-                            "JINGYUAN_OBJECT_UNUSED_1",
-                            0.25
-                          ]
+                          "displayLines": "((0.66 + JINGYUAN_OBJECT_UNUSED_1) * 0.25)"
                         },
                         "Toughness": null,
                         "Tags": [
@@ -419,12 +324,7 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "isFixed": "* ERR"
                     }
@@ -445,21 +345,11 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"767237660\">JingYuan_Eidolon6_AllDamageTypeTakenRatio</a>",
                       "stackLimit": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.12) || RETURN",
-                          "displayLines": "0.12",
-                          "constants": [],
-                          "variables": [
-                            0.12
-                          ]
+                          "displayLines": "0.12"
                         }
                       }
                     }
@@ -506,21 +396,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1088669628\">JingYuan_Eidolon2_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">Dharma Corpora</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "valuePerStack": {
             "MDF_DamageAddedRatio": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         }
@@ -555,12 +435,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "variableName": "EnergyBar_ATKCount"
     },
@@ -577,39 +452,19 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
       "stackLimit": {
-        "operator": "Variables[0] (10) || RETURN",
-        "displayLines": "10",
-        "constants": [],
-        "variables": [
-          10
-        ]
+        "displayLines": "10"
       },
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       }
     },
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "maximum": {
-        "operator": "Variables[0] (10) || RETURN",
-        "displayLines": "10",
-        "constants": [],
-        "variables": [
-          10
-        ]
+        "displayLines": "10"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -623,20 +478,10 @@ const configAbility = {
         "target": "{{Jing Yuan: Lightning Lord}}"
       },
       "attackCount": {
-        "operator": "Variables[0] (EnergyBar_ATKCount) || RETURN",
-        "displayLines": "EnergyBar_ATKCount",
-        "constants": [],
-        "variables": [
-          "EnergyBar_ATKCount"
-        ]
+        "displayLines": "EnergyBar_ATKCount"
       },
       "attackCountEnhanced": {
-        "operator": "Variables[0] (EnergyBar_UltraATKCount) || RETURN",
-        "displayLines": "EnergyBar_UltraATKCount",
-        "constants": [],
-        "variables": [
-          "EnergyBar_UltraATKCount"
-        ]
+        "displayLines": "EnergyBar_UltraATKCount"
       },
       "show": true
     },
@@ -649,12 +494,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1141770667\">JingYuan_BattleEvent_ATKCountShowText</a>",
       "valuePerStack": {
         "ATKCount": {
-          "operator": "Variables[0] (EnergyBar_ATKCount) || RETURN",
-          "displayLines": "EnergyBar_ATKCount",
-          "constants": [],
-          "variables": [
-            "EnergyBar_ATKCount"
-          ]
+          "displayLines": "EnergyBar_ATKCount"
         }
       }
     },

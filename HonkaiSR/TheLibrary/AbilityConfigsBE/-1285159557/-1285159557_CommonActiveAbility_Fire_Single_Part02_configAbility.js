@@ -13,12 +13,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__48) || RETURN",
-          "displayLines": "ENEMIES_OBJECT_UNUSED__48",
-          "constants": [],
-          "variables": [
-            "ENEMIES_OBJECT_UNUSED__48"
-          ]
+          "displayLines": "ENEMIES_OBJECT_UNUSED__48"
         },
         "Toughness": null,
         "Tags": null,

@@ -36,12 +36,7 @@ const configAbility = {
       "name": "Update Displayed Energy Bar",
       "value": 0,
       "maximum": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -219,25 +214,14 @@ const configAbility = {
                   },
                   "scope": "ContextModifier",
                   "value": {
-                    "operator": "Variables[0] (MDF_TargetMaxStanceValue) || Variables[1] (MDF_StanceRatio) || MUL || RETURN",
-                    "displayLines": "(MDF_TargetMaxStanceValue * MDF_StanceRatio)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_TargetMaxStanceValue",
-                      "MDF_StanceRatio"
-                    ]
+                    "displayLines": "(MDF_TargetMaxStanceValue * MDF_StanceRatio)"
                   },
                   "variableName": "MDF_StanceValue"
                 },
                 {
                   "name": "Deal Toughness DMG",
                   "value": {
-                    "operator": "Variables[0] (MDF_StanceValue) || RETURN",
-                    "displayLines": "MDF_StanceValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_StanceValue"
-                    ]
+                    "displayLines": "MDF_StanceValue"
                   },
                   "attacker": {
                     "name": "Target Name",
@@ -271,32 +255,13 @@ const configAbility = {
         "show": "Hide",
         "isPercentofMaxToughness": true,
         "addedPercent": {
-          "operator": "Variables[0] (MDF_StanceRatio) || RETURN",
-          "displayLines": "MDF_StanceRatio",
-          "constants": [],
-          "variables": [
-            "MDF_StanceRatio"
-          ]
+          "displayLines": "MDF_StanceRatio"
         },
         "maxToughness": {
-          "operator": "Variables[0] (MDF_MinStanceValue) || Constants[0] (3) || MUL || RETURN",
-          "displayLines": "(MDF_MinStanceValue * 3)",
-          "constants": [
-            3
-          ],
-          "variables": [
-            "MDF_MinStanceValue"
-          ]
+          "displayLines": "(MDF_MinStanceValue * 3)"
         },
         "minToughness": {
-          "operator": "Variables[0] (MDF_MaxStanceValue) || Constants[0] (3) || MUL || RETURN",
-          "displayLines": "(MDF_MaxStanceValue * 3)",
-          "constants": [
-            3
-          ],
-          "variables": [
-            "MDF_MaxStanceValue"
-          ]
+          "displayLines": "(MDF_MaxStanceValue * 3)"
         },
         "conditions": {
           "name": "AND",
@@ -365,12 +330,7 @@ const configAbility = {
                   },
                   "variables": {
                     "DamagePercentage": {
-                      "operator": "Variables[0] (MDF_SuperBreakDamagePercentage) || RETURN",
-                      "displayLines": "MDF_SuperBreakDamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_SuperBreakDamagePercentage"
-                      ]
+                      "displayLines": "MDF_SuperBreakDamagePercentage"
                     }
                   },
                   "damageSequence": [
@@ -399,12 +359,7 @@ const configAbility = {
                           }
                         },
                         "DamageBreak": {
-                          "operator": "Variables[0] (value_0_DamagePercentage) || RETURN",
-                          "displayLines": "value_0_DamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "value_0_DamagePercentage"
-                          ]
+                          "displayLines": "value_0_DamagePercentage"
                         },
                         "dmgFormula": "Break DMG Scaling",
                         "dmgFormulaFinal": "Pure (No DMG%)",
@@ -447,12 +402,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1409392867\">_M_Constance_Aura_ElementDamage</a>",
               "valuePerStack": {
                 "MDF_SuperBreakDamagePercentage": {
-                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                  "displayLines": "MDF_PropertyValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue"
-                  ]
+                  "displayLines": "MDF_PropertyValue"
                 }
               },
               "casterAssign": "TargetSelf"
@@ -491,12 +441,7 @@ const configAbility = {
               "modifierName": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]",
               "variableName": "MDF_PropertyValue",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -514,12 +459,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1409392867\">_M_Constance_Aura_ElementDamage</a>",
               "valuePerStack": {
                 "MDF_SuperBreakDamagePercentage": {
-                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                  "displayLines": "MDF_PropertyValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue"
-                  ]
+                  "displayLines": "MDF_PropertyValue"
                 }
               },
               "casterAssign": "TargetSelf"
@@ -573,14 +513,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"262562001\">Constance_DancerSuperBreak</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (Rank01_Activated) || Variables[1] (0.6) || Variables[2] (0.4) || ADD || Variables[1] (0.6) || CHECK || RETURN",
-              "displayLines": "check(value:Rank01_Activated, then:(0.6 + 0.4), else:0.6)",
-              "constants": [],
-              "variables": [
-                "Rank01_Activated",
-                0.6,
-                0.4
-              ]
+              "displayLines": "check(value:Rank01_Activated, then:(0.6 + 0.4), else:0.6)"
             }
           }
         },
@@ -605,28 +538,13 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_StanceRatio": {
-              "operator": "Variables[0] (0.25) || RETURN",
-              "displayLines": "0.25",
-              "constants": [],
-              "variables": [
-                0.25
-              ]
+              "displayLines": "0.25"
             },
             "MDF_MinStanceValue": {
-              "operator": "Variables[0] (10) || RETURN",
-              "displayLines": "10",
-              "constants": [],
-              "variables": [
-                10
-              ]
+              "displayLines": "10"
             },
             "MDF_MaxStanceValue": {
-              "operator": "Variables[0] (300) || RETURN",
-              "displayLines": "300",
-              "constants": [],
-              "variables": [
-                300
-              ]
+              "displayLines": "300"
             }
           }
         },
@@ -643,28 +561,13 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_StanceRatio": {
-              "operator": "Variables[0] (0.25) || RETURN",
-              "displayLines": "0.25",
-              "constants": [],
-              "variables": [
-                0.25
-              ]
+              "displayLines": "0.25"
             },
             "MDF_MinStanceValue": {
-              "operator": "Variables[0] (10) || RETURN",
-              "displayLines": "10",
-              "constants": [],
-              "variables": [
-                10
-              ]
+              "displayLines": "10"
             },
             "MDF_MaxStanceValue": {
-              "operator": "Variables[0] (300) || RETURN",
-              "displayLines": "300",
-              "constants": [],
-              "variables": [
-                300
-              ]
+              "displayLines": "300"
             }
           }
         }
@@ -890,12 +793,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"793524292\">Constance_Eidolon1_SuperBreak</a>[<span class=\"descriptionNumberColor\">When a Bud Readies to Bloom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.6) || RETURN",
-                      "displayLines": "0.6",
-                      "constants": [],
-                      "variables": [
-                        0.6
-                      ]
+                      "displayLines": "0.6"
                     }
                   }
                 }
@@ -992,12 +890,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"793524292\">Constance_Eidolon1_SuperBreak</a>[<span class=\"descriptionNumberColor\">When a Bud Readies to Bloom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.6) || RETURN",
-                      "displayLines": "0.6",
-                      "constants": [],
-                      "variables": [
-                        0.6
-                      ]
+                      "displayLines": "0.6"
                     }
                   }
                 }
@@ -1088,14 +981,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           ]
@@ -1118,12 +1004,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1624350031\">Constance_Eidolon2_PropertyValue</a>[<span class=\"descriptionNumberColor\">Fresh, Ethereal, and Beloved</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                  "displayLines": "MDF_PropertyValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue"
-                  ]
+                  "displayLines": "MDF_PropertyValue"
                 }
               }
             }
@@ -1155,12 +1036,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1624350031\">Constance_Eidolon2_PropertyValue</a>[<span class=\"descriptionNumberColor\">Fresh, Ethereal, and Beloved</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -1245,12 +1121,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -1274,12 +1145,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1127015724\">Constance_Eidolon6_Property</a>[<span class=\"descriptionNumberColor\">And Yet, Always, Deathly Beautiful</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                  "displayLines": "MDF_PropertyValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue"
-                  ]
+                  "displayLines": "MDF_PropertyValue"
                 }
               }
             }
@@ -1304,12 +1170,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1127015724\">Constance_Eidolon6_Property</a>[<span class=\"descriptionNumberColor\">And Yet, Always, Deathly Beautiful</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -1349,14 +1210,7 @@ const configAbility = {
               },
               "scope": "ContextModifier",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValueCaster) || Variables[1] (0.24) || MUL || Variables[2] (0.5) || ADD || RETURN",
-                "displayLines": "((MDF_PropertyValueCaster * 0.24) + 0.5)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValueCaster",
-                  0.24,
-                  0.5
-                ]
+                "displayLines": "((MDF_PropertyValueCaster * 0.24) + 0.5)"
               },
               "variableName": "MDF_PropertyValue"
             },
@@ -1368,12 +1222,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakConverted</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -1432,12 +1281,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1852842917\">Constance_Tree01_Property</a>[<span class=\"descriptionNumberColor\">Yet Another Funeral</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   }
                 }
               ]
@@ -1465,12 +1309,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1852842917\">Constance_Tree01_Property</a>[<span class=\"descriptionNumberColor\">Yet Another Funeral</span>]",
                   "duration": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   }
                 }
               ]
@@ -1536,12 +1375,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1852842917\">Constance_Tree01_Property</a>[<span class=\"descriptionNumberColor\">Yet Another Funeral</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   }
                 }
               ]
@@ -1579,12 +1413,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (1.5) || RETURN",
-              "displayLines": "1.5",
-              "constants": [],
-              "variables": [
-                1.5
-              ]
+              "displayLines": "1.5"
             }
           }
         },
@@ -1613,12 +1442,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         },
@@ -1669,12 +1493,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (35) || RETURN",
-                    "displayLines": "35",
-                    "constants": [],
-                    "variables": [
-                      35
-                    ]
+                    "displayLines": "35"
                   },
                   "isFixed": "* ERR"
                 },

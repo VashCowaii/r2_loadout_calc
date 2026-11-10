@@ -13,14 +13,7 @@ const configAbility = {
       "modifier": null,
       "ID": "122004()",
       "duration": {
-        "operator": "Variables[0] (20) || Constants[0] (0.5) || ADD || RETURN",
-        "displayLines": "(20 + 0.5)",
-        "constants": [
-          0.5
-        ],
-        "variables": [
-          20
-        ]
+        "displayLines": "(20 + 0.5)"
       }
     },
     {
@@ -32,21 +25,11 @@ const configAbility = {
       "modifier": null,
       "ID": "122001(Avatar_Feixiao_00_SkillMazeSP)",
       "duration": {
-        "operator": "Variables[0] (20) || RETURN",
-        "displayLines": "20",
-        "constants": [],
-        "variables": [
-          20
-        ]
+        "displayLines": "20"
       },
       "valuePerStack": {
         "MDF_MoveSpeedRatio": {
-          "operator": "Variables[0] (0.5) || RETURN",
-          "displayLines": "0.5",
-          "constants": [],
-          "variables": [
-            0.5
-          ]
+          "displayLines": "0.5"
         }
       }
     },

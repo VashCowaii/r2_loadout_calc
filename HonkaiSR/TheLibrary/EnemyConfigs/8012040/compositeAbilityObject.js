@@ -143,26 +143,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_ShieldPercentage_Add) || Variables[1] (CasterBaseAttack) || MUL || RETURN",
-                    "displayLines": "(MDF_ShieldPercentage_Add * CasterBaseAttack)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ShieldPercentage_Add",
-                      "CasterBaseAttack"
-                    ]
+                    "displayLines": "(MDF_ShieldPercentage_Add * CasterBaseAttack)"
                   },
                   "variableName": "AddShield"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (CurShield) || Variables[1] (AddShield) || ADD || RETURN",
-                    "displayLines": "(CurShield + AddShield)",
-                    "constants": [],
-                    "variables": [
-                      "CurShield",
-                      "AddShield"
-                    ]
+                    "displayLines": "(CurShield + AddShield)"
                   },
                   "variableName": "MaxShield"
                 },
@@ -176,12 +164,7 @@ const compositeAbilityObject = {
                     "<a class=\"gModGreen\" id=\"234920767\">Enemy_W5_Shell_LightTeam_Shield</a>"
                   ],
                   "value": {
-                    "operator": "Variables[0] (MaxShield) || RETURN",
-                    "displayLines": "MaxShield",
-                    "constants": [],
-                    "variables": [
-                      "MaxShield"
-                    ]
+                    "displayLines": "MaxShield"
                   },
                   "operation": "Set"
                 },
@@ -195,12 +178,7 @@ const compositeAbilityObject = {
                     "<a class=\"gModGreen\" id=\"234920767\">Enemy_W5_Shell_LightTeam_Shield</a>"
                   ],
                   "value": {
-                    "operator": "Variables[0] (AddShield) || RETURN",
-                    "displayLines": "AddShield",
-                    "constants": [],
-                    "variables": [
-                      "AddShield"
-                    ]
+                    "displayLines": "AddShield"
                   }
                 }
               ]
@@ -247,13 +225,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_ShieldPercentage) || Variables[1] (CasterBaseAttack) || MUL || RETURN",
-                    "displayLines": "(MDF_ShieldPercentage * CasterBaseAttack)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ShieldPercentage",
-                      "CasterBaseAttack"
-                    ]
+                    "displayLines": "(MDF_ShieldPercentage * CasterBaseAttack)"
                   },
                   "variableName": "AddShield"
                 },
@@ -264,12 +236,7 @@ const compositeAbilityObject = {
                     "target": "{{Player Team Entity}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (AddShield) || RETURN",
-                    "displayLines": "AddShield",
-                    "constants": [],
-                    "variables": [
-                      "AddShield"
-                    ]
+                    "displayLines": "AddShield"
                   }
                 },
                 {
@@ -365,12 +332,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1432687016\">Enemy_W5_Shell_LightTeam_Shield_Stack</a>",
                       "valuePerStack": {
                         "MDF_ShieldPercentage_Add": {
-                          "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill01[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill01[0]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill01[0]]}"
                         }
                       }
                     }
@@ -385,12 +347,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"234920767\">Enemy_W5_Shell_LightTeam_Shield</a>",
                       "valuePerStack": {
                         "MDF_ShieldPercentage": {
-                          "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill01[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill01[0]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill01[0]]}"
                         }
                       }
                     }
@@ -424,13 +381,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageTakenUpRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                    "displayLines": "(MDF_DamageTakenUpRatio_PerLayer * ModifierLayers)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageTakenUpRatio_PerLayer",
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "(MDF_DamageTakenUpRatio_PerLayer * ModifierLayers)"
                   }
                 }
               ]
@@ -669,12 +620,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-368521336\">Enemy_W5_Shell_BESpeed</a>",
                   "valuePerStack": {
                     "MDF_Speed": {
-                      "operator": "Variables[0] (BaseSpeed) || RETURN",
-                      "displayLines": "BaseSpeed",
-                      "constants": [],
-                      "variables": [
-                        "BaseSpeed"
-                      ]
+                      "displayLines": "BaseSpeed"
                     }
                   }
                 },
@@ -699,12 +645,7 @@ const compositeAbilityObject = {
           "abilityName": "Monster_W5_Shell_Deathrattle",
           "parameters": {
             "P1_ShieldPercentage": {
-              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[0]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[0]]}"
             }
           }
         }
@@ -831,12 +772,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1432687016\">Enemy_W5_Shell_LightTeam_Shield_Stack</a>",
                           "valuePerStack": {
                             "MDF_ShieldPercentage_Add": {
-                              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                              "displayLines": "{[PassiveSkill01[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[PassiveSkill01[0]]}"
-                              ]
+                              "displayLines": "{[PassiveSkill01[0]]}"
                             }
                           }
                         }
@@ -851,12 +787,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"234920767\">Enemy_W5_Shell_LightTeam_Shield</a>",
                           "valuePerStack": {
                             "MDF_ShieldPercentage": {
-                              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                              "displayLines": "{[PassiveSkill01[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[PassiveSkill01[0]]}"
-                              ]
+                              "displayLines": "{[PassiveSkill01[0]]}"
                             }
                           }
                         }
@@ -925,12 +856,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SpeedOverride</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_Speed) || RETURN",
-                    "displayLines": "MDF_Speed",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Speed"
-                    ]
+                    "displayLines": "MDF_Speed"
                   }
                 }
               ]
@@ -1028,12 +954,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1059,12 +980,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1092,12 +1008,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1125,12 +1036,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1158,12 +1064,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
+                  "displayLines": "{[Skill01[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -2187,12 +2088,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,

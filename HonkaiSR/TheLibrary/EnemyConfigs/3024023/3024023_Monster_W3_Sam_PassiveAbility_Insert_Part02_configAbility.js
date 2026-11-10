@@ -20,12 +20,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "consumePercent": {
-        "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-        "displayLines": "{[Skill04[1]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill04[1]]}"
-        ]
+        "displayLines": "{[Skill04[1]]}"
       },
       "consumeFloor": 1
     },
@@ -38,28 +33,13 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-909732184\">Monster_W3_Sam_Enhance</a>[<span class=\"descriptionNumberColor\">Secondary Combustion</span>]",
       "valuePerStack": {
         "MDF_DamagePercentage": {
-          "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[3]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[3]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[3]]}"
         },
         "MDF_SpeedUpRatio": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-          "displayLines": "{[Skill04[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}"
-          ]
+          "displayLines": "{[Skill04[0]]}"
         },
         "MDF_ChangeHPRatio": {
-          "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-          "displayLines": "{[Skill04[3]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[3]]}"
-          ]
+          "displayLines": "{[Skill04[3]]}"
         }
       }
     }

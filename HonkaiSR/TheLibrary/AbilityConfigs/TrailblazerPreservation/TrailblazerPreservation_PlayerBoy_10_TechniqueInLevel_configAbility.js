@@ -70,12 +70,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (MWAvatar_PlayerBoy_10_Shield_Value02) || RETURN",
-                "displayLines": "MWAvatar_PlayerBoy_10_Shield_Value02",
-                "constants": [],
-                "variables": [
-                  "MWAvatar_PlayerBoy_10_Shield_Value02"
-                ]
+                "displayLines": "MWAvatar_PlayerBoy_10_Shield_Value02"
               }
             }
           ]
@@ -116,23 +111,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"519378514\">PlayerBoy_10_TechniqueUsage_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                   "duration": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "valuePerStack": {
                     "MWPlayerBoy_10_Shield_Value02": {
-                      "operator": "Variables[0] (CasterDefence) || Variables[1] (0.3) || MUL || Variables[2] (384) || ADD || RETURN",
-                      "displayLines": "((CasterDefence * 0.3) + 384)",
-                      "constants": [],
-                      "variables": [
-                        "CasterDefence",
-                        0.3,
-                        384
-                      ]
+                      "displayLines": "((CasterDefence * 0.3) + 384)"
                     }
                   }
                 }

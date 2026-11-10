@@ -16,12 +16,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-        "displayLines": "{[Skill02[2]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill02[2]]}"
-        ]
+        "displayLines": "{[Skill02[2]]}"
       },
       "variableName": "Wolf_MaxAttackCount"
     },
@@ -34,12 +29,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1905621078\">Enemy_W2_Lycan_RageControllerV2</a>",
       "valuePerStack": {
         "MaxAttackCount": {
-          "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-          "displayLines": "{[Skill02[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[2]]}"
-          ]
+          "displayLines": "{[Skill02[2]]}"
         }
       },
       "casterAssign": "TargetSelf"
@@ -97,12 +87,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (MDF_HealRatio) || RETURN",
-                "displayLines": "MDF_HealRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_HealRatio"
-                ]
+                "displayLines": "MDF_HealRatio"
               },
               "formula": "Heal from Target MaxHP"
             }
@@ -214,12 +199,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedUpRatio) || RETURN",
-                "displayLines": "MDF_SpeedUpRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedUpRatio"
-                ]
+                "displayLines": "MDF_SpeedUpRatio"
               }
             }
           ]
@@ -234,12 +214,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (MDF_HealRatio) || RETURN",
-                "displayLines": "MDF_HealRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_HealRatio"
-                ]
+                "displayLines": "MDF_HealRatio"
               },
               "formula": "Heal from Target MaxHP"
             }
@@ -365,12 +340,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1949316860\">Enemy_W2_Lycan_01_RageStatusEnhance</a>[<span class=\"descriptionNumberColor\">Moon Rage</span>]",
                       "valuePerStack": {
                         "MDF_HealRatio": {
-                          "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                          "displayLines": "{[Skill02[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[1]]}"
-                          ]
+                          "displayLines": "{[Skill02[1]]}"
                         }
                       }
                     }
@@ -385,20 +355,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1326641454\">Enemy_W2_Lycan_01_RageStatus</a>[<span class=\"descriptionNumberColor\">Moon Rage</span>]",
                       "valuePerStack": {
                         "MDF_SpeedUpRatio": {
-                          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                          "displayLines": "{[Skill02[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[0]]}"
-                          ]
+                          "displayLines": "{[Skill02[0]]}"
                         },
                         "MDF_HealRatio": {
-                          "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                          "displayLines": "{[Skill02[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[1]]}"
-                          ]
+                          "displayLines": "{[Skill02[1]]}"
                         }
                       }
                     }

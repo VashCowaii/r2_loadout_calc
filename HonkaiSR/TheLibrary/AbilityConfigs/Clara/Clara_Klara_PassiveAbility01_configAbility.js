@@ -18,13 +18,7 @@ const configAbility = {
       "name": "Update Displayed Energy Bar",
       "value": 0,
       "maximum": {
-        "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-        "displayLines": "(2 + 1)",
-        "constants": [],
-        "variables": [
-          2,
-          1
-        ]
+        "displayLines": "(2 + 1)"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -40,12 +34,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1664082780\">Klara_PassiveAbility01_ListenCounter</a>",
       "valuePerStack": {
         "MDF_Chance": {
-          "operator": "Variables[0] (1) || RETURN",
-          "displayLines": "1",
-          "constants": [],
-          "variables": [
-            1
-          ]
+          "displayLines": "1"
         }
       }
     },
@@ -66,12 +55,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-796199138\">Klara_Passive_DamageReduce</a>[<span class=\"descriptionNumberColor\">Guardian</span>]",
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] (0.1) || RETURN",
-          "displayLines": "0.1",
-          "constants": [],
-          "variables": [
-            0.1
-          ]
+          "displayLines": "0.1"
         }
       }
     }
@@ -127,12 +111,7 @@ const configAbility = {
                   {
                     "name": "Random Chance",
                     "chance": {
-                      "operator": "Variables[0] (MDF_Chance) || RETURN",
-                      "displayLines": "MDF_Chance",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Chance"
-                      ]
+                      "displayLines": "MDF_Chance"
                     }
                   },
                   {

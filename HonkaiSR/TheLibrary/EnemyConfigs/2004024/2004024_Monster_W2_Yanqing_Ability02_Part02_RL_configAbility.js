@@ -244,12 +244,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1389810309\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Core_RL</a>[<span class=\"descriptionNumberColor\">Sword Formation</span>]",
       "valuePerStack": {
         "MDF_SpeedDelta": {
-          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-          "displayLines": "{[Skill02[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[0]]}"
-          ]
+          "displayLines": "{[Skill02[0]]}"
         }
       }
     },
@@ -955,21 +950,11 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1122230262\">Enemy_W2_Yanqing_Standard_Overdrive</a>[<span class=\"descriptionNumberColor\">Chilling Light</span>]",
           "valuePerStack": {
             "AllDamageTypeAddedRatioPerLayer": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
+              "displayLines": "{[Skill01[1]]}"
             }
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] (OverdriveLayer) || RETURN",
-            "displayLines": "OverdriveLayer",
-            "constants": [],
-            "variables": [
-              "OverdriveLayer"
-            ]
+            "displayLines": "OverdriveLayer"
           }
         }
       ]

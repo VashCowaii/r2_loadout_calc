@@ -28,12 +28,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "multiBase": {
-        "operator": "Variables[0] (PassiveAbility01_P2_DelayPercentage) || RETURN",
-        "displayLines": "PassiveAbility01_P2_DelayPercentage",
-        "constants": [],
-        "variables": [
-          "PassiveAbility01_P2_DelayPercentage"
-        ]
+        "displayLines": "PassiveAbility01_P2_DelayPercentage"
       }
     },
     {
@@ -116,13 +111,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SpeedOverride</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (CurrentSpeed) || Variables[1] (PassiveSkill01_P6_SpeedRatio) || MUL || RETURN",
-                "displayLines": "(CurrentSpeed * PassiveSkill01_P6_SpeedRatio)",
-                "constants": [],
-                "variables": [
-                  "CurrentSpeed",
-                  "PassiveSkill01_P6_SpeedRatio"
-                ]
+                "displayLines": "(CurrentSpeed * PassiveSkill01_P6_SpeedRatio)"
               }
             }
           ]

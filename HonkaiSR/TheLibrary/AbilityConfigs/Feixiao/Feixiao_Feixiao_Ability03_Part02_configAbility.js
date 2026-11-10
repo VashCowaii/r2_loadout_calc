@@ -267,12 +267,7 @@ const configAbility = {
                     "value1": "ComboAttackCount",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (6) || RETURN",
-                      "displayLines": "6",
-                      "constants": [],
-                      "variables": [
-                        6
-                      ]
+                      "displayLines": "6"
                     }
                   },
                   {
@@ -303,16 +298,7 @@ const configAbility = {
                     "value1": "Target__Toughness",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (ComboAttackCount) || Variables[1] (MDF_BaseStance) || MUL || Constants[0] (1) || Variables[2] (MDF_StanceBreakAddedRatio) || ADD || MUL || RETURN",
-                      "displayLines": "((ComboAttackCount * MDF_BaseStance) * (1 + MDF_StanceBreakAddedRatio))",
-                      "constants": [
-                        1
-                      ],
-                      "variables": [
-                        "ComboAttackCount",
-                        "MDF_BaseStance",
-                        "MDF_StanceBreakAddedRatio"
-                      ]
+                      "displayLines": "((ComboAttackCount * MDF_BaseStance) * (1 + MDF_StanceBreakAddedRatio))"
                     }
                   }
                 ]
@@ -383,12 +369,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1999108381\">M_Feixiao_BreakableElite_Listener</a>",
                   "valuePerStack": {
                     "MDF_BaseStance": {
-                      "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                      "displayLines": "ST Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "ST Toughness Value"
-                      ]
+                      "displayLines": "ST Toughness Value"
                     }
                   }
                 }
@@ -426,12 +407,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1999108381\">M_Feixiao_BreakableElite_Listener</a>",
                   "valuePerStack": {
                     "MDF_BaseStance": {
-                      "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                      "displayLines": "ST Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "ST Toughness Value"
-                      ]
+                      "displayLines": "ST Toughness Value"
                     }
                   }
                 }
@@ -520,12 +496,7 @@ const configAbility = {
           ]
         },
         "toughnessReductionPreview": {
-          "operator": "Variables[0] (1) || RETURN",
-          "displayLines": "1",
-          "constants": [],
-          "variables": [
-            1
-          ]
+          "displayLines": "1"
         }
       }
     },

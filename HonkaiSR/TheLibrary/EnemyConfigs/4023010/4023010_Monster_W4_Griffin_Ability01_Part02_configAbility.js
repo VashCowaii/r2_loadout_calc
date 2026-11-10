@@ -14,12 +14,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-          "displayLines": "{[Skill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[0]]}"
-          ]
+          "displayLines": "{[Skill01[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -47,29 +42,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
           "duration": {
-            "operator": "Variables[0] (UnusedUnderThisBase_13870) || RETURN",
-            "displayLines": "UnusedUnderThisBase_13870",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_13870"
-            ]
+            "displayLines": "UnusedUnderThisBase_13870"
           },
           "baseChance": {
-            "operator": "Variables[0] (UnusedUnderThisBase_13863) || RETURN",
-            "displayLines": "UnusedUnderThisBase_13863",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_13863"
-            ]
+            "displayLines": "UnusedUnderThisBase_13863"
           },
           "valuePerStack": {
             "MDF_DamagePercentage_Layer": {
-              "operator": "Variables[0] (UnusedUnderThisBase_13871) || RETURN",
-              "displayLines": "UnusedUnderThisBase_13871",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_13871"
-              ]
+              "displayLines": "UnusedUnderThisBase_13871"
             }
           }
         }

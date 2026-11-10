@@ -46,13 +46,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_1) || Variables[1] (_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_1 * _Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_1",
-                  "_Layer"
-                ]
+                "displayLines": "(MDF_1 * _Layer)"
               }
             },
             {
@@ -154,13 +148,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1769154752\">MFarmRelic_104309_Sub2</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (DOT_Layer) || Variables[1] (Modifier_Layer) || SUB || RETURN",
-                    "displayLines": "(DOT_Layer - Modifier_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "DOT_Layer",
-                      "Modifier_Layer"
-                    ]
+                    "displayLines": "(DOT_Layer - Modifier_Layer)"
                   }
                 }
               ]
@@ -246,13 +234,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1769154752\">MFarmRelic_104309_Sub2</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (DOT_Layer) || Variables[1] (Modifier_Layer) || SUB || RETURN",
-                    "displayLines": "(DOT_Layer - Modifier_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "DOT_Layer",
-                      "Modifier_Layer"
-                    ]
+                    "displayLines": "(DOT_Layer - Modifier_Layer)"
                   }
                 }
               ]

@@ -13,52 +13,22 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1282910303\">Enemy_Heaven_StoneShieldController</a>",
       "valuePerStack": {
         "MDF_MaxLayer": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13184) || RETURN",
-          "displayLines": "UnusedUnderThisBase_13184",
-          "constants": [],
-          "variables": [
-            "UnusedUnderThisBase_13184"
-          ]
+          "displayLines": "UnusedUnderThisBase_13184"
         },
         "MDF_CrackedEffect": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13179) || RETURN",
-          "displayLines": "UnusedUnderThisBase_13179",
-          "constants": [],
-          "variables": [
-            "UnusedUnderThisBase_13179"
-          ]
+          "displayLines": "UnusedUnderThisBase_13179"
         },
         "MDF_CrackedDamage": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13187) || RETURN",
-          "displayLines": "UnusedUnderThisBase_13187",
-          "constants": [],
-          "variables": [
-            "UnusedUnderThisBase_13187"
-          ]
+          "displayLines": "UnusedUnderThisBase_13187"
         },
         "MDF_DamageResistance": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13185) || RETURN",
-          "displayLines": "UnusedUnderThisBase_13185",
-          "constants": [],
-          "variables": [
-            "UnusedUnderThisBase_13185"
-          ]
+          "displayLines": "UnusedUnderThisBase_13185"
         },
         "MDF_CrackedDamageAfter": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13186) || RETURN",
-          "displayLines": "UnusedUnderThisBase_13186",
-          "constants": [],
-          "variables": [
-            "UnusedUnderThisBase_13186"
-          ]
+          "displayLines": "UnusedUnderThisBase_13186"
         },
         "MDF_ModifySP": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13181) || RETURN",
-          "displayLines": "UnusedUnderThisBase_13181",
-          "constants": [],
-          "variables": [
-            "UnusedUnderThisBase_13181"
-          ]
+          "displayLines": "UnusedUnderThisBase_13181"
         }
       }
     },
@@ -603,12 +573,7 @@ const configAbility = {
                     "value1": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                      "displayLines": "MDF_MaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MaxLayer"
-                      ]
+                      "displayLines": "MDF_MaxLayer"
                     },
                     "valueType": "Layer"
                   },

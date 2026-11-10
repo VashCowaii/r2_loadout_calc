@@ -15,12 +15,7 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (G_EnergyCount) || RETURN",
-        "displayLines": "G_EnergyCount",
-        "constants": [],
-        "variables": [
-          "G_EnergyCount"
-        ]
+        "displayLines": "G_EnergyCount"
       },
       "priorState": "Disable"
     },
@@ -79,12 +74,7 @@ const configAbility = {
             "target": "{{Ability Target(ST)}}"
           },
           "healPercent": {
-            "operator": "Variables[0] (0.5) || RETURN",
-            "displayLines": "0.5",
-            "constants": [],
-            "variables": [
-              0.5
-            ]
+            "displayLines": "0.5"
           },
           "formula": "Heal from Target MaxHP"
         }
@@ -108,12 +98,7 @@ const configAbility = {
             "value1": "Energy%",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] (0.75) || RETURN",
-              "displayLines": "0.75",
-              "constants": [],
-              "variables": [
-                0.75
-              ]
+              "displayLines": "0.75"
             }
           }
         ]
@@ -136,13 +121,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (_MaxSP) || Variables[1] (0.75) || MUL || RETURN",
-            "displayLines": "(_MaxSP * 0.75)",
-            "constants": [],
-            "variables": [
-              "_MaxSP",
-              0.75
-            ]
+            "displayLines": "(_MaxSP * 0.75)"
           },
           "adjustment": "Set"
         }

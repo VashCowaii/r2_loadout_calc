@@ -49,12 +49,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">MerryMake</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -83,12 +78,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             },
             {
@@ -99,12 +89,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.16) || RETURN",
-                "displayLines": "0.16",
-                "constants": [],
-                "variables": [
-                  0.16
-                ]
+                "displayLines": "0.16"
               }
             }
           ]
@@ -163,12 +148,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGConverted</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -190,12 +170,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-              "displayLines": "MDF_PropertyValue",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyValue"
-              ]
+              "displayLines": "MDF_PropertyValue"
             }
           }
         }
@@ -217,12 +192,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -249,12 +219,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -281,12 +246,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -313,12 +273,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGConverted</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -343,12 +298,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGConverted</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   },
                   "isRefresh": true
                 }
@@ -378,12 +328,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (MDF_PropertyValue3) || RETURN",
-              "displayLines": "MDF_PropertyValue3",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyValue3"
-              ]
+              "displayLines": "MDF_PropertyValue3"
             }
           }
         },
@@ -401,12 +346,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.12) || RETURN",
-              "displayLines": "0.12",
-              "constants": [],
-              "variables": [
-                0.12
-              ]
+              "displayLines": "0.12"
             }
           }
         }
@@ -438,13 +378,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_ElationDamageAddedRatioBase) || Variables[1] (0.2) || MUL || RETURN",
-                "displayLines": "(_ElationDamageAddedRatioBase * 0.2)",
-                "constants": [],
-                "variables": [
-                  "_ElationDamageAddedRatioBase",
-                  0.2
-                ]
+                "displayLines": "(_ElationDamageAddedRatioBase * 0.2)"
               },
               "variableName": "MDF_PropertyValue3"
             },
@@ -456,12 +390,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGConverted</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue3) || RETURN",
-                "displayLines": "MDF_PropertyValue3",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue3"
-                ]
+                "displayLines": "MDF_PropertyValue3"
               }
             },
             {
@@ -473,24 +402,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_LifeTime) || RETURN",
-                "displayLines": "_LifeTime",
-                "constants": [],
-                "variables": [
-                  "_LifeTime"
-                ]
+                "displayLines": "_LifeTime"
               },
               "variableName": "G_EnergyBar"
             },
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (G_EnergyBar) || RETURN",
-                "displayLines": "G_EnergyBar",
-                "constants": [],
-                "variables": [
-                  "G_EnergyBar"
-                ]
+                "displayLines": "G_EnergyBar"
               },
               "assignState": "True",
               "priorState": "Active"
@@ -525,12 +444,7 @@ const configAbility = {
                 {
                   "name": "Adjust Team Punchline Value",
                   "value": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "adjustment": "Add"
                 }
@@ -559,13 +473,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_ElationDamageAddedRatioBase) || Variables[1] (0.2) || MUL || RETURN",
-                    "displayLines": "(_ElationDamageAddedRatioBase * 0.2)",
-                    "constants": [],
-                    "variables": [
-                      "_ElationDamageAddedRatioBase",
-                      0.2
-                    ]
+                    "displayLines": "(_ElationDamageAddedRatioBase * 0.2)"
                   },
                   "variableName": "MDF_PropertyValue3"
                 },
@@ -578,12 +486,7 @@ const configAbility = {
                   "modifierName": "<a class=\"gModGreen\" id=\"1266011188\">G_YaoGuang_Ability02_ToMember</a>[<span class=\"descriptionNumberColor\">Decalight Unveils All</span>]",
                   "variableName": "MDF_PropertyValue",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue3) || RETURN",
-                    "displayLines": "MDF_PropertyValue3",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue3"
-                    ]
+                    "displayLines": "MDF_PropertyValue3"
                   }
                 },
                 {
@@ -594,12 +497,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGConverted</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue3) || RETURN",
-                    "displayLines": "MDF_PropertyValue3",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue3"
-                    ]
+                    "displayLines": "MDF_PropertyValue3"
                   },
                   "isRefresh": true
                 }
@@ -669,12 +567,7 @@ const configAbility = {
                     "value1": "_ElationDamageAddedRatio_YG",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (_ElationDamageAddedRatio) || RETURN",
-                      "displayLines": "_ElationDamageAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "_ElationDamageAddedRatio"
-                      ]
+                      "displayLines": "_ElationDamageAddedRatio"
                     }
                   },
                   "passed": [
@@ -807,12 +700,7 @@ const configAbility = {
                           }
                         },
                         "DamageElation": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         },
                         "indirectDMG": true,
                         "dmgFormula": "Elation Scaling",
@@ -833,14 +721,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (G_HongBao_Times) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(G_HongBao_Times + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "G_HongBao_Times"
-                        ]
+                        "displayLines": "(G_HongBao_Times + 1)"
                       },
                       "variableName": "G_HongBao_Times"
                     }
@@ -885,12 +766,7 @@ const configAbility = {
                               }
                             },
                             "DamageElation": {
-                              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                              "displayLines": "MDF_PropertyValue",
-                              "constants": [],
-                              "variables": [
-                                "MDF_PropertyValue"
-                              ]
+                              "displayLines": "MDF_PropertyValue"
                             },
                             "indirectDMG": true,
                             "dmgFormula": "Elation Scaling",
@@ -911,14 +787,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (G_HongBao_Times) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(G_HongBao_Times + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "G_HongBao_Times"
-                            ]
+                            "displayLines": "(G_HongBao_Times + 1)"
                           },
                           "variableName": "G_HongBao_Times"
                         }

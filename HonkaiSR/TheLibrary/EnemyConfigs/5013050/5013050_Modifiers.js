@@ -78,23 +78,13 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeTakenRatio) || RETURN",
-                "displayLines": "MDF_AllDamageTypeTakenRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeTakenRatio"
-                ]
+                "displayLines": "MDF_AllDamageTypeTakenRatio"
               }
             },
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (CurrentRanger) || RETURN",
-                "displayLines": "CurrentRanger",
-                "constants": [],
-                "variables": [
-                  "CurrentRanger"
-                ]
+                "displayLines": "CurrentRanger"
               },
               "caseEvents": [
                 {
@@ -109,14 +99,7 @@ const configAbility = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceQuantumBonus</span>&nbsp;",
                       "value": {
-                        "operator": "Constants[0] (0) || Variables[0] (MDF_ResistanceDelta) || SUB || RETURN",
-                        "displayLines": "(0 - MDF_ResistanceDelta)",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "MDF_ResistanceDelta"
-                        ]
+                        "displayLines": "(0 - MDF_ResistanceDelta)"
                       }
                     },
                     {
@@ -142,14 +125,7 @@ const configAbility = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFireBonus</span>&nbsp;",
                       "value": {
-                        "operator": "Constants[0] (0) || Variables[0] (MDF_ResistanceDelta) || SUB || RETURN",
-                        "displayLines": "(0 - MDF_ResistanceDelta)",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "MDF_ResistanceDelta"
-                        ]
+                        "displayLines": "(0 - MDF_ResistanceDelta)"
                       }
                     },
                     {
@@ -175,14 +151,7 @@ const configAbility = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceImaginaryBonus</span>&nbsp;",
                       "value": {
-                        "operator": "Constants[0] (0) || Variables[0] (MDF_ResistanceDelta) || SUB || RETURN",
-                        "displayLines": "(0 - MDF_ResistanceDelta)",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "MDF_ResistanceDelta"
-                        ]
+                        "displayLines": "(0 - MDF_ResistanceDelta)"
                       }
                     },
                     {
@@ -208,14 +177,7 @@ const configAbility = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistancePhysicalBonus</span>&nbsp;",
                       "value": {
-                        "operator": "Constants[0] (0) || Variables[0] (MDF_ResistanceDelta) || SUB || RETURN",
-                        "displayLines": "(0 - MDF_ResistanceDelta)",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "MDF_ResistanceDelta"
-                        ]
+                        "displayLines": "(0 - MDF_ResistanceDelta)"
                       }
                     },
                     {
@@ -327,43 +289,23 @@ const configAbility = {
                   },
                   "variableName": "CurrentChargeValue",
                   "value": {
-                    "operator": "Variables[0] (MDF_HitCharge) || RETURN",
-                    "displayLines": "MDF_HitCharge",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HitCharge"
-                    ]
+                    "displayLines": "MDF_HitCharge"
                   },
                   "max": {
-                    "operator": "Variables[0] (MDF_MaxCharge) || RETURN",
-                    "displayLines": "MDF_MaxCharge",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxCharge"
-                    ]
+                    "displayLines": "MDF_MaxCharge"
                   }
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentCharge) || RETURN",
-                    "displayLines": "MDF_CurrentCharge",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentCharge"
-                    ]
+                    "displayLines": "MDF_CurrentCharge"
                   },
                   "variableName": "MDF_CurrentCharge"
                 },
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (CurrentRanger) || RETURN",
-                    "displayLines": "CurrentRanger",
-                    "constants": [],
-                    "variables": [
-                      "CurrentRanger"
-                    ]
+                    "displayLines": "CurrentRanger"
                   },
                   "caseEvents": [
                     {
@@ -373,12 +315,7 @@ const configAbility = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (MDF_CurrentCharge) || RETURN",
-                            "displayLines": "MDF_CurrentCharge",
-                            "constants": [],
-                            "variables": [
-                              "MDF_CurrentCharge"
-                            ]
+                            "displayLines": "MDF_CurrentCharge"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -386,12 +323,7 @@ const configAbility = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (MDF_MaxCharge) || RETURN",
-                            "displayLines": "MDF_MaxCharge",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxCharge"
-                            ]
+                            "displayLines": "MDF_MaxCharge"
                           },
                           "assignState": "True"
                         }
@@ -404,12 +336,7 @@ const configAbility = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (MDF_CurrentCharge) || RETURN",
-                            "displayLines": "MDF_CurrentCharge",
-                            "constants": [],
-                            "variables": [
-                              "MDF_CurrentCharge"
-                            ]
+                            "displayLines": "MDF_CurrentCharge"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -417,12 +344,7 @@ const configAbility = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (MDF_MaxCharge) || RETURN",
-                            "displayLines": "MDF_MaxCharge",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxCharge"
-                            ]
+                            "displayLines": "MDF_MaxCharge"
                           },
                           "assignState": "True"
                         }
@@ -435,12 +357,7 @@ const configAbility = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (MDF_CurrentCharge) || RETURN",
-                            "displayLines": "MDF_CurrentCharge",
-                            "constants": [],
-                            "variables": [
-                              "MDF_CurrentCharge"
-                            ]
+                            "displayLines": "MDF_CurrentCharge"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -448,12 +365,7 @@ const configAbility = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (MDF_MaxCharge) || RETURN",
-                            "displayLines": "MDF_MaxCharge",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxCharge"
-                            ]
+                            "displayLines": "MDF_MaxCharge"
                           },
                           "assignState": "True"
                         }
@@ -466,12 +378,7 @@ const configAbility = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (MDF_CurrentCharge) || RETURN",
-                            "displayLines": "MDF_CurrentCharge",
-                            "constants": [],
-                            "variables": [
-                              "MDF_CurrentCharge"
-                            ]
+                            "displayLines": "MDF_CurrentCharge"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -479,12 +386,7 @@ const configAbility = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (MDF_MaxCharge) || RETURN",
-                            "displayLines": "MDF_MaxCharge",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxCharge"
-                            ]
+                            "displayLines": "MDF_MaxCharge"
                           },
                           "assignState": "True"
                         }
@@ -504,12 +406,7 @@ const configAbility = {
                     "value1": "CurrentChargeValue",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_MaxCharge) || RETURN",
-                      "displayLines": "MDF_MaxCharge",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MaxCharge"
-                      ]
+                      "displayLines": "MDF_MaxCharge"
                     }
                   },
                   "passed": [
@@ -837,12 +734,7 @@ const configAbility = {
                     "value1": "CurrentChargeValue",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_MaxCharge) || RETURN",
-                      "displayLines": "MDF_MaxCharge",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MaxCharge"
-                      ]
+                      "displayLines": "MDF_MaxCharge"
                     }
                   },
                   "passed": [
@@ -929,12 +821,7 @@ const configAbility = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (CurrentRanger) || RETURN",
-                "displayLines": "CurrentRanger",
-                "constants": [],
-                "variables": [
-                  "CurrentRanger"
-                ]
+                "displayLines": "CurrentRanger"
               },
               "caseEvents": [
                 {
@@ -944,12 +831,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MDF_CurrentCharge) || RETURN",
-                        "displayLines": "MDF_CurrentCharge",
-                        "constants": [],
-                        "variables": [
-                          "MDF_CurrentCharge"
-                        ]
+                        "displayLines": "MDF_CurrentCharge"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -957,12 +839,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_MaxCharge) || RETURN",
-                        "displayLines": "MDF_MaxCharge",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxCharge"
-                        ]
+                        "displayLines": "MDF_MaxCharge"
                       },
                       "assignState": "True"
                     },
@@ -984,12 +861,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MDF_CurrentCharge) || RETURN",
-                        "displayLines": "MDF_CurrentCharge",
-                        "constants": [],
-                        "variables": [
-                          "MDF_CurrentCharge"
-                        ]
+                        "displayLines": "MDF_CurrentCharge"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -997,12 +869,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_MaxCharge) || RETURN",
-                        "displayLines": "MDF_MaxCharge",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxCharge"
-                        ]
+                        "displayLines": "MDF_MaxCharge"
                       },
                       "assignState": "True"
                     },
@@ -1024,12 +891,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MDF_CurrentCharge) || RETURN",
-                        "displayLines": "MDF_CurrentCharge",
-                        "constants": [],
-                        "variables": [
-                          "MDF_CurrentCharge"
-                        ]
+                        "displayLines": "MDF_CurrentCharge"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -1037,12 +899,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_MaxCharge) || RETURN",
-                        "displayLines": "MDF_MaxCharge",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxCharge"
-                        ]
+                        "displayLines": "MDF_MaxCharge"
                       },
                       "assignState": "True"
                     },
@@ -1064,12 +921,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MDF_CurrentCharge) || RETURN",
-                        "displayLines": "MDF_CurrentCharge",
-                        "constants": [],
-                        "variables": [
-                          "MDF_CurrentCharge"
-                        ]
+                        "displayLines": "MDF_CurrentCharge"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -1077,12 +929,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_MaxCharge) || RETURN",
-                        "displayLines": "MDF_MaxCharge",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxCharge"
-                        ]
+                        "displayLines": "MDF_MaxCharge"
                       },
                       "assignState": "True"
                     },
@@ -1252,12 +1099,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (CurrentRanger) || RETURN",
-                    "displayLines": "CurrentRanger",
-                    "constants": [],
-                    "variables": [
-                      "CurrentRanger"
-                    ]
+                    "displayLines": "CurrentRanger"
                   },
                   "caseEvents": [
                     {

@@ -98,12 +98,7 @@ const configAbility = {
         "value1": "Skill02_AssistCount",
         "compareType": "=",
         "value2": {
-          "operator": "Variables[0] (Skill02_CurCount) || RETURN",
-          "displayLines": "Skill02_CurCount",
-          "constants": [],
-          "variables": [
-            "Skill02_CurCount"
-          ]
+          "displayLines": "Skill02_CurCount"
         }
       }
     },
@@ -118,12 +113,7 @@ const configAbility = {
         "value1": "Skill02_AssistCount",
         "compareType": "=",
         "value2": {
-          "operator": "Variables[0] (Skill02_CurCount) || RETURN",
-          "displayLines": "Skill02_CurCount",
-          "constants": [],
-          "variables": [
-            "Skill02_CurCount"
-          ]
+          "displayLines": "Skill02_CurCount"
         }
       },
       "passed": [
@@ -135,13 +125,7 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"33624492\">Enemy_W4_FireProwler_TimePower</a>[<span class=\"descriptionNumberColor\">Calamity Power</span>]",
           "addStacksPerTrigger": {
-            "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Variables[1] (Skill02_CurCount) || MUL || RETURN",
-            "displayLines": "({[PassiveSkill01[0]]} * Skill02_CurCount)",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[0]]}",
-              "Skill02_CurCount"
-            ]
+            "displayLines": "({[PassiveSkill01[0]]} * Skill02_CurCount)"
           },
           "casterAssign": "TargetSelf"
         },
@@ -195,13 +179,7 @@ const configAbility = {
             "target": "{{Caster's Summoner}}"
           },
           "healPercent": {
-            "operator": "Variables[0] (Skill02_HealHPRatio) || Variables[1] (Skill02_CurCount) || MUL || RETURN",
-            "displayLines": "(Skill02_HealHPRatio * Skill02_CurCount)",
-            "constants": [],
-            "variables": [
-              "Skill02_HealHPRatio",
-              "Skill02_CurCount"
-            ]
+            "displayLines": "(Skill02_HealHPRatio * Skill02_CurCount)"
           },
           "formula": "Heal from Target MaxHP"
         }

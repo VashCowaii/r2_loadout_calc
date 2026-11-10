@@ -39,13 +39,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_ShowValue2) || Variables[1] (MDF_ShowValue1) || MUL || RETURN",
-                "displayLines": "(MDF_ShowValue2 * MDF_ShowValue1)",
-                "constants": [],
-                "variables": [
-                  "MDF_ShowValue2",
-                  "MDF_ShowValue1"
-                ]
+                "displayLines": "(MDF_ShowValue2 * MDF_ShowValue1)"
               }
             }
           ]
@@ -74,12 +68,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (MDF_ShowValue) || RETURN",
-                "displayLines": "MDF_ShowValue",
-                "constants": [],
-                "variables": [
-                  "MDF_ShowValue"
-                ]
+                "displayLines": "MDF_ShowValue"
               }
             }
           ]

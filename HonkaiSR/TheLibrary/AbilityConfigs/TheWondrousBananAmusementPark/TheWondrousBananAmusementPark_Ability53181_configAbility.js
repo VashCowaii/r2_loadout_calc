@@ -33,12 +33,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.32) || RETURN",
-                "displayLines": "0.32",
-                "constants": [],
-                "variables": [
-                  0.32
-                ]
+                "displayLines": "0.32"
               }
             }
           ]

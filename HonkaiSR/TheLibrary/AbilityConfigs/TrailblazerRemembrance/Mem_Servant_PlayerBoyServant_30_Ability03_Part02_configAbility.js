@@ -23,20 +23,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] (Ability03_P1_DamagePercentage) || RETURN",
-          "displayLines": "Ability03_P1_DamagePercentage",
-          "constants": [],
-          "variables": [
-            "Ability03_P1_DamagePercentage"
-          ]
+          "displayLines": "Ability03_P1_DamagePercentage"
         },
         "Toughness": {
-          "operator": "Variables[0] (Ultra_Stance) || RETURN",
-          "displayLines": "Ultra_Stance",
-          "constants": [],
-          "variables": [
-            "Ultra_Stance"
-          ]
+          "displayLines": "Ultra_Stance"
         },
         "ToughnessDMGType": {
           "DamageType": "Ice"

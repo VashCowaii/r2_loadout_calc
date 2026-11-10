@@ -28,28 +28,13 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
       "valuePerStack": {
         "MDF_RallyTransferRatio": {
-          "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-          "displayLines": "{[Skill04[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[1]]}"
-          ]
+          "displayLines": "{[Skill04[1]]}"
         },
         "MDF_Rally_HealPercentage": {
-          "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-          "displayLines": "{[Skill04[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[2]]}"
-          ]
+          "displayLines": "{[Skill04[2]]}"
         },
         "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-          "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-          "displayLines": "{[Skill04[3]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[3]]}"
-          ]
+          "displayLines": "{[Skill04[3]]}"
         }
       }
     },
@@ -68,14 +53,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || Variables[1] ({[Skill04[4]]}) || Variables[2] (Skill04_AttackCount) || MUL || ADD || RETURN",
-          "displayLines": "({[Skill04[0]]} + ({[Skill04[4]]} * Skill04_AttackCount))",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}",
-            "{[Skill04[4]]}",
-            "Skill04_AttackCount"
-          ]
+          "displayLines": "({[Skill04[0]]} + ({[Skill04[4]]} * Skill04_AttackCount))"
         },
         "HitSplit": 0.1,
         "Toughness": null,
@@ -92,14 +70,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || Variables[1] ({[Skill04[4]]}) || Variables[2] (Skill04_AttackCount) || MUL || ADD || RETURN",
-          "displayLines": "({[Skill04[0]]} + ({[Skill04[4]]} * Skill04_AttackCount))",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}",
-            "{[Skill04[4]]}",
-            "Skill04_AttackCount"
-          ]
+          "displayLines": "({[Skill04[0]]} + ({[Skill04[4]]} * Skill04_AttackCount))"
         },
         "HitSplit": 0.1,
         "Toughness": null,
@@ -116,14 +87,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || Variables[1] ({[Skill04[4]]}) || Variables[2] (Skill04_AttackCount) || MUL || ADD || RETURN",
-          "displayLines": "({[Skill04[0]]} + ({[Skill04[4]]} * Skill04_AttackCount))",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}",
-            "{[Skill04[4]]}",
-            "Skill04_AttackCount"
-          ]
+          "displayLines": "({[Skill04[0]]} + ({[Skill04[4]]} * Skill04_AttackCount))"
         },
         "HitSplit": 0.1,
         "Toughness": null,
@@ -140,14 +104,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || Variables[1] ({[Skill04[4]]}) || Variables[2] (Skill04_AttackCount) || MUL || ADD || RETURN",
-          "displayLines": "({[Skill04[0]]} + ({[Skill04[4]]} * Skill04_AttackCount))",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}",
-            "{[Skill04[4]]}",
-            "Skill04_AttackCount"
-          ]
+          "displayLines": "({[Skill04[0]]} + ({[Skill04[4]]} * Skill04_AttackCount))"
         },
         "HitSplit": 0.1,
         "Toughness": null,
@@ -164,14 +121,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || Variables[1] ({[Skill04[4]]}) || Variables[2] (Skill04_AttackCount) || MUL || ADD || RETURN",
-          "displayLines": "({[Skill04[0]]} + ({[Skill04[4]]} * Skill04_AttackCount))",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}",
-            "{[Skill04[4]]}",
-            "Skill04_AttackCount"
-          ]
+          "displayLines": "({[Skill04[0]]} + ({[Skill04[4]]} * Skill04_AttackCount))"
         },
         "HitSplit": 0.1,
         "Toughness": null,
@@ -188,14 +138,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || Variables[1] ({[Skill04[4]]}) || Variables[2] (Skill04_AttackCount) || MUL || ADD || RETURN",
-          "displayLines": "({[Skill04[0]]} + ({[Skill04[4]]} * Skill04_AttackCount))",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}",
-            "{[Skill04[4]]}",
-            "Skill04_AttackCount"
-          ]
+          "displayLines": "({[Skill04[0]]} + ({[Skill04[4]]} * Skill04_AttackCount))"
         },
         "HitSplit": 0.1,
         "Toughness": null,
@@ -212,14 +155,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || Variables[1] ({[Skill04[4]]}) || Variables[2] (Skill04_AttackCount) || MUL || ADD || RETURN",
-          "displayLines": "({[Skill04[0]]} + ({[Skill04[4]]} * Skill04_AttackCount))",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}",
-            "{[Skill04[4]]}",
-            "Skill04_AttackCount"
-          ]
+          "displayLines": "({[Skill04[0]]} + ({[Skill04[4]]} * Skill04_AttackCount))"
         },
         "HitSplit": 0.4,
         "Toughness": null,

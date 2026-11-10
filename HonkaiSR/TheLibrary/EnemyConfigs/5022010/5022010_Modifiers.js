@@ -37,12 +37,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_HPTriggerRatio) || RETURN",
-                "displayLines": "MDF_HPTriggerRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_HPTriggerRatio"
-                ]
+                "displayLines": "MDF_HPTriggerRatio"
               }
             }
           ]
@@ -302,12 +297,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                "displayLines": "MDF_DamageUpRatio_PerLayer",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageUpRatio_PerLayer"
-                ]
+                "displayLines": "MDF_DamageUpRatio_PerLayer"
               }
             }
           ]

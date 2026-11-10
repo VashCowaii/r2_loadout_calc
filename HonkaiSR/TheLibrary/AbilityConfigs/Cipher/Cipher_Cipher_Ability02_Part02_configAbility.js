@@ -37,29 +37,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1685549745\">Cipher_BP_Debuff</a>[<span class=\"descriptionNumberColor\">Hey, Jackpot for the Taking</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "baseChance": {
-            "operator": "Variables[0] (1.2) || RETURN",
-            "displayLines": "1.2",
-            "constants": [],
-            "variables": [
-              1.2
-            ]
+            "displayLines": "1.2"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.1) || RETURN",
-              "displayLines": "0.1",
-              "constants": [],
-              "variables": [
-                0.1
-              ]
+              "displayLines": "0.1"
             }
           }
         }
@@ -73,21 +58,11 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"116163492\">Cipher_BP_Bonus</a>[<span class=\"descriptionNumberColor\">Hey, Jackpot for the Taking</span>]",
       "duration": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       },
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] (0.3) || RETURN",
-          "displayLines": "0.3",
-          "constants": [],
-          "variables": [
-            0.3
-          ]
+          "displayLines": "0.3"
         }
       }
     },
@@ -100,21 +75,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (2) || RETURN",
-          "displayLines": "2",
-          "constants": [],
-          "variables": [
-            2
-          ]
+          "displayLines": "2"
         },
         "HitSplit": 0.1,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -129,24 +94,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (1) || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "(1 * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            1
-          ]
+          "displayLines": "(1 * 0.1)"
         },
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "(Blast Toughness Value * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "(Blast Toughness Value * 0.1)"
         },
         "Tags": null
       }
@@ -160,21 +111,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (2) || RETURN",
-          "displayLines": "2",
-          "constants": [],
-          "variables": [
-            2
-          ]
+          "displayLines": "2"
         },
         "HitSplit": 0.1,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -189,24 +130,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (1) || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "(1 * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            1
-          ]
+          "displayLines": "(1 * 0.1)"
         },
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "(Blast Toughness Value * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "(Blast Toughness Value * 0.1)"
         },
         "Tags": null
       }
@@ -220,21 +147,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (2) || RETURN",
-          "displayLines": "2",
-          "constants": [],
-          "variables": [
-            2
-          ]
+          "displayLines": "2"
         },
         "HitSplit": 0.1,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -249,24 +166,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (1) || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "(1 * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            1
-          ]
+          "displayLines": "(1 * 0.1)"
         },
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "(Blast Toughness Value * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "(Blast Toughness Value * 0.1)"
         },
         "Tags": null
       }
@@ -280,21 +183,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (2) || RETURN",
-          "displayLines": "2",
-          "constants": [],
-          "variables": [
-            2
-          ]
+          "displayLines": "2"
         },
         "HitSplit": 0.1,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -309,24 +202,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (1) || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "(1 * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            1
-          ]
+          "displayLines": "(1 * 0.1)"
         },
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "(Blast Toughness Value * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "(Blast Toughness Value * 0.1)"
         },
         "Tags": null
       }
@@ -340,21 +219,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (2) || RETURN",
-          "displayLines": "2",
-          "constants": [],
-          "variables": [
-            2
-          ]
+          "displayLines": "2"
         },
         "HitSplit": 0.1,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -369,24 +238,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (1) || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "(1 * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            1
-          ]
+          "displayLines": "(1 * 0.1)"
         },
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "(Blast Toughness Value * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "(Blast Toughness Value * 0.1)"
         },
         "Tags": null
       }
@@ -401,21 +256,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (2) || RETURN",
-          "displayLines": "2",
-          "constants": [],
-          "variables": [
-            2
-          ]
+          "displayLines": "2"
         },
         "HitSplit": 0.5,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -430,24 +275,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (1) || Constants[0] (0.5) || MUL || RETURN",
-          "displayLines": "(1 * 0.5)",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            1
-          ]
+          "displayLines": "(1 * 0.5)"
         },
         "Toughness": {
-          "operator": "Variables[0] (Blast Toughness Value) || Constants[0] (0.5) || MUL || RETURN",
-          "displayLines": "(Blast Toughness Value * 0.5)",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "Blast Toughness Value"
-          ]
+          "displayLines": "(Blast Toughness Value * 0.5)"
         },
         "Tags": null
       }

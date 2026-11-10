@@ -78,28 +78,13 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1954613914\">MModifier_Monster_W3_Theater_IF_MinionsSuperArmorController</a>",
       "valuePerStack": {
         "MDF_MinionsSuperArmor_AllDamageReduce": {
-          "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
-          "displayLines": "{[SkillEX01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillEX01[0]]}"
-          ]
+          "displayLines": "{[SkillEX01[0]]}"
         },
         "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio": {
-          "operator": "Variables[0] ({[SkillEX01[1]]}) || RETURN",
-          "displayLines": "{[SkillEX01[1]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillEX01[1]]}"
-          ]
+          "displayLines": "{[SkillEX01[1]]}"
         },
         "MDF_SetActionDelayValue": {
-          "operator": "Variables[0] ({[SkillEX01[2]]}) || RETURN",
-          "displayLines": "{[SkillEX01[2]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillEX01[2]]}"
-          ]
+          "displayLines": "{[SkillEX01[2]]}"
         }
       }
     }

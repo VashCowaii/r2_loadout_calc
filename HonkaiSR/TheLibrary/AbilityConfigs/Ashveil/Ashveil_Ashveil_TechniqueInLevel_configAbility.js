@@ -66,12 +66,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -81,13 +76,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (SkillP01_CurrentEnergy) || Variables[1] (1) || ADD || RETURN",
-                    "displayLines": "(SkillP01_CurrentEnergy + 1)",
-                    "constants": [],
-                    "variables": [
-                      "SkillP01_CurrentEnergy",
-                      1
-                    ]
+                    "displayLines": "(SkillP01_CurrentEnergy + 1)"
                   },
                   "variableName": "SkillP01_CurrentEnergy"
                 },

@@ -65,21 +65,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (Ability03_P1_DamagePercentage) || RETURN",
-                  "displayLines": "Ability03_P1_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "Ability03_P1_DamagePercentage"
-                  ]
+                  "displayLines": "Ability03_P1_DamagePercentage"
                 },
                 "HitSplit": 0.25,
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "Tags": null
               }
@@ -138,21 +128,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (Ability03_P1_DamagePercentage) || RETURN",
-                  "displayLines": "Ability03_P1_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "Ability03_P1_DamagePercentage"
-                  ]
+                  "displayLines": "Ability03_P1_DamagePercentage"
                 },
                 "HitSplit": 0.25,
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "Tags": null
               }
@@ -211,21 +191,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (Ability03_P1_DamagePercentage) || RETURN",
-                  "displayLines": "Ability03_P1_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "Ability03_P1_DamagePercentage"
-                  ]
+                  "displayLines": "Ability03_P1_DamagePercentage"
                 },
                 "HitSplit": 0.25,
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "Tags": null
               }
@@ -284,21 +254,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (Ability03_P1_DamagePercentage) || RETURN",
-                  "displayLines": "Ability03_P1_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "Ability03_P1_DamagePercentage"
-                  ]
+                  "displayLines": "Ability03_P1_DamagePercentage"
                 },
                 "HitSplit": 0.25,
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "Tags": null
               }
@@ -332,29 +292,14 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
       "duration": {
-        "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__335_FREEZEDUR) || RETURN",
-        "displayLines": "ENEMIES_OBJECT_UNUSED__335_FREEZEDUR",
-        "constants": [],
-        "variables": [
-          "ENEMIES_OBJECT_UNUSED__335_FREEZEDUR"
-        ]
+        "displayLines": "ENEMIES_OBJECT_UNUSED__335_FREEZEDUR"
       },
       "baseChance": {
-        "operator": "Variables[0] (Skill03_P2_Chance) || RETURN",
-        "displayLines": "Skill03_P2_Chance",
-        "constants": [],
-        "variables": [
-          "Skill03_P2_Chance"
-        ]
+        "displayLines": "Skill03_P2_Chance"
       },
       "valuePerStack": {
         "Modifier_Frozen_DamagePercentage": {
-          "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__335_FREEZEDMG) || RETURN",
-          "displayLines": "ENEMIES_OBJECT_UNUSED__335_FREEZEDMG",
-          "constants": [],
-          "variables": [
-            "ENEMIES_OBJECT_UNUSED__335_FREEZEDMG"
-          ]
+          "displayLines": "ENEMIES_OBJECT_UNUSED__335_FREEZEDMG"
         }
       }
     },

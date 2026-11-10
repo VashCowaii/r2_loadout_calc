@@ -56,21 +56,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
+                  "displayLines": "{[Skill02[0]]}"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                  "displayLines": "{[Skill02[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[1]]}"
-                  ]
+                  "displayLines": "{[Skill02[1]]}"
                 },
                 "ToughnessDMGType": {
                   "DamageType": "Ice"
@@ -87,29 +77,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-643353377\">Enemy_W4_Manta_LocalLegend_Virus_Monster</a>[<span class=\"descriptionNumberColor\">Glacial Erosion</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                "displayLines": "{[Skill02[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill02[3]]}"
-                ]
+                "displayLines": "{[Skill02[3]]}"
               },
               "valuePerStack": {
                 "MDF_DotHPRatio": {
-                  "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                  "displayLines": "{[Skill02[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[2]]}"
-                  ]
+                  "displayLines": "{[Skill02[2]]}"
                 },
                 "MDF_DotDamageRatio": {
-                  "operator": "Variables[0] (_DotDamageRatio) || RETURN",
-                  "displayLines": "_DotDamageRatio",
-                  "constants": [],
-                  "variables": [
-                    "_DotDamageRatio"
-                  ]
+                  "displayLines": "_DotDamageRatio"
                 }
               },
               "casterAssign": "TargetSelf"
@@ -122,29 +97,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-643353377\">Enemy_W4_Manta_LocalLegend_Virus_Monster</a>[<span class=\"descriptionNumberColor\">Glacial Erosion</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                "displayLines": "{[Skill02[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill02[3]]}"
-                ]
+                "displayLines": "{[Skill02[3]]}"
               },
               "valuePerStack": {
                 "MDF_DotHPRatio": {
-                  "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
-                  "displayLines": "{[Skill02[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[4]]}"
-                  ]
+                  "displayLines": "{[Skill02[4]]}"
                 },
                 "MDF_DotDamageRatio": {
-                  "operator": "Variables[0] (_DotDamageRatio) || RETURN",
-                  "displayLines": "_DotDamageRatio",
-                  "constants": [],
-                  "variables": [
-                    "_DotDamageRatio"
-                  ]
+                  "displayLines": "_DotDamageRatio"
                 }
               },
               "casterAssign": "TargetSelf"

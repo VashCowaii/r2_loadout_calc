@@ -208,15 +208,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Constants[0] (4) || Variables[0] (Monster_W3_Figure_02_AimTargetCount) || SUB || Constants[1] (1) || ADD || RETURN",
-                "displayLines": "((4 - Monster_W3_Figure_02_AimTargetCount) + 1)",
-                "constants": [
-                  4,
-                  1
-                ],
-                "variables": [
-                  "Monster_W3_Figure_02_AimTargetCount"
-                ]
+                "displayLines": "((4 - Monster_W3_Figure_02_AimTargetCount) + 1)"
               },
               "entityClass": "Enemy",
               "assignState": "False",
@@ -239,14 +231,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Constants[0] (5) || Variables[0] (Monster_W3_Figure_02_AimTargetCount) || SUB || RETURN",
-                "displayLines": "(5 - Monster_W3_Figure_02_AimTargetCount)",
-                "constants": [
-                  5
-                ],
-                "variables": [
-                  "Monster_W3_Figure_02_AimTargetCount"
-                ]
+                "displayLines": "(5 - Monster_W3_Figure_02_AimTargetCount)"
               },
               "variableName": "MDF_DangerLevel"
             }
@@ -443,15 +428,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Constants[0] (4) || Variables[0] (Monster_W3_Figure_02_AimTargetCount) || SUB || Constants[1] (1) || ADD || RETURN",
-                    "displayLines": "((4 - Monster_W3_Figure_02_AimTargetCount) + 1)",
-                    "constants": [
-                      4,
-                      1
-                    ],
-                    "variables": [
-                      "Monster_W3_Figure_02_AimTargetCount"
-                    ]
+                    "displayLines": "((4 - Monster_W3_Figure_02_AimTargetCount) + 1)"
                   },
                   "entityClass": "Enemy",
                   "assignState": "True",
@@ -496,15 +473,7 @@ const configAbility = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Constants[0] (4) || Variables[0] (Monster_W3_Figure_02_AimTargetCount) || SUB || Constants[1] (1) || ADD || RETURN",
-                            "displayLines": "((4 - Monster_W3_Figure_02_AimTargetCount) + 1)",
-                            "constants": [
-                              4,
-                              1
-                            ],
-                            "variables": [
-                              "Monster_W3_Figure_02_AimTargetCount"
-                            ]
+                            "displayLines": "((4 - Monster_W3_Figure_02_AimTargetCount) + 1)"
                           },
                           "entityClass": "Enemy",
                           "assignState": "True",
@@ -535,15 +504,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Constants[0] (4) || Variables[0] (Monster_W3_Figure_02_AimTargetCount) || SUB || Constants[1] (1) || ADD || RETURN",
-                "displayLines": "((4 - Monster_W3_Figure_02_AimTargetCount) + 1)",
-                "constants": [
-                  4,
-                  1
-                ],
-                "variables": [
-                  "Monster_W3_Figure_02_AimTargetCount"
-                ]
+                "displayLines": "((4 - Monster_W3_Figure_02_AimTargetCount) + 1)"
               },
               "entityClass": "Enemy",
               "assignState": "True",

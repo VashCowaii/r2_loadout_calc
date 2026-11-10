@@ -91,12 +91,7 @@ const configAbility = {
                     "target": "{{Player Team(Exclude Memosprites)v2}}"
                   },
                   "valuePercent": {
-                    "operator": "Variables[0] (#ADF_1) || RETURN",
-                    "displayLines": "#ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_1"
-                    ]
+                    "displayLines": "#ADF_1"
                   },
                   "isFixed": "(Fixed)"
                 },
@@ -140,12 +135,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"449574929\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0025_02</a>[<span class=\"descriptionNumberColor\">Finale's Kiss</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_Plugins_0025_ADF_2": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     }
                   }
                 }

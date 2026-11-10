@@ -35,12 +35,7 @@ const configAbility = {
         "target": "{{Player Team(Exclude Memosprites)v2}}"
       },
       "value": {
-        "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-        "displayLines": "{[PassiveSkill01[0]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill01[0]]}"
-        ]
+        "displayLines": "{[PassiveSkill01[0]]}"
       },
       "isFixed": "* ERR"
     },

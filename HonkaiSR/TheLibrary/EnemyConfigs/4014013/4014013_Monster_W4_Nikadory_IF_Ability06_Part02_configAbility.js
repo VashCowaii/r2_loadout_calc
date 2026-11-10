@@ -20,14 +20,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Skill06Count) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(Skill06Count + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "Skill06Count"
-            ]
+            "displayLines": "(Skill06Count + 1)"
           },
           "variableName": "Skill06Count"
         }
@@ -36,13 +29,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] ({[Skill06[0]]}) || Variables[1] (Skill06Count) || DIV || RETURN",
-        "displayLines": "({[Skill06[0]]} / Skill06Count)",
-        "constants": [],
-        "variables": [
-          "{[Skill06[0]]}",
-          "Skill06Count"
-        ]
+        "displayLines": "({[Skill06[0]]} / Skill06Count)"
       },
       "variableName": "Skill06Damage"
     },
@@ -55,12 +42,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (Skill06Damage) || RETURN",
-          "displayLines": "Skill06Damage",
-          "constants": [],
-          "variables": [
-            "Skill06Damage"
-          ]
+          "displayLines": "Skill06Damage"
         },
         "Toughness": null,
         "Tags": null,
@@ -93,12 +75,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
       "valuePerStack": {
         "MDF_DamageUpRatio_PerLayer": {
-          "operator": "Variables[0] ({[SkillP03[0]]}) || RETURN",
-          "displayLines": "{[SkillP03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP03[0]]}"
-          ]
+          "displayLines": "{[SkillP03[0]]}"
         }
       },
       "casterAssign": "TargetSelf"

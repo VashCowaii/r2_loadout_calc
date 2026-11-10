@@ -7,25 +7,14 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-        "displayLines": "(2 + 1)",
-        "constants": [],
-        "variables": [
-          2,
-          1
-        ]
+        "displayLines": "(2 + 1)"
       },
       "variableName": "EnergyBar_ATKCount"
     },
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (EnergyBar_ATKCount) || RETURN",
-        "displayLines": "EnergyBar_ATKCount",
-        "constants": [],
-        "variables": [
-          "EnergyBar_ATKCount"
-        ]
+        "displayLines": "EnergyBar_ATKCount"
       },
       "assignState": "True",
       "priorState": "Active"
@@ -45,22 +34,12 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-632500359\">Klara_Eidolon2_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "immediateEffect": true,
           "valuePerStack": {
             "MDF_AttackUP": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             }
           }
         }
@@ -81,30 +60,15 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1618683191\">Klara_Ultimate_WarriorMode</a>[<span class=\"descriptionNumberColor\">Promise, Not Command</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "immediateEffect": true,
           "valuePerStack": {
             "MDF_AggroAddedRatio": {
-              "operator": "Variables[0] (5) || RETURN",
-              "displayLines": "5",
-              "constants": [],
-              "variables": [
-                5
-              ]
+              "displayLines": "5"
             },
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.25) || RETURN",
-              "displayLines": "0.25",
-              "constants": [],
-              "variables": [
-                0.25
-              ]
+              "displayLines": "0.25"
             }
           }
         },
@@ -116,31 +80,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-526728231\">Klara_PassiveATKCount</a>[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]",
           "counter": {
-            "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-            "displayLines": "(2 + 1)",
-            "constants": [],
-            "variables": [
-              2,
-              1
-            ]
+            "displayLines": "(2 + 1)"
           },
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "valuePerStack": {
             "MDF_ShowAmmo": {
-              "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-              "displayLines": "(2 + 1)",
-              "constants": [],
-              "variables": [
-                2,
-                1
-              ]
+              "displayLines": "(2 + 1)"
             }
           }
         }
@@ -154,30 +101,15 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1618683191\">Klara_Ultimate_WarriorMode</a>[<span class=\"descriptionNumberColor\">Promise, Not Command</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "immediateEffect": true,
           "valuePerStack": {
             "MDF_AggroAddedRatio": {
-              "operator": "Variables[0] (5) || RETURN",
-              "displayLines": "5",
-              "constants": [],
-              "variables": [
-                5
-              ]
+              "displayLines": "5"
             },
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.25) || RETURN",
-              "displayLines": "0.25",
-              "constants": [],
-              "variables": [
-                0.25
-              ]
+              "displayLines": "0.25"
             }
           }
         },
@@ -189,29 +121,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-526728231\">Klara_PassiveATKCount</a>[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]",
           "counter": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "valuePerStack": {
             "MDF_ShowAmmo": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             }
           }
         }
@@ -253,12 +170,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AttackUP) || RETURN",
-                "displayLines": "MDF_AttackUP",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackUP"
-                ]
+                "displayLines": "MDF_AttackUP"
               }
             }
           ]
@@ -333,12 +245,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Constants[0] (0) || RETURN",
-                "displayLines": "0",
-                "constants": [
-                  0
-                ],
-                "variables": []
+                "displayLines": "0"
               },
               "assignState": "True",
               "priorState": "Normal"
@@ -352,12 +259,7 @@ const configAbility = {
               "name": "Define Modifier Variable",
               "modifierName": null,
               "value": {
-                "operator": "Variables[0] (MDF_ShowAmmo) || RETURN",
-                "displayLines": "MDF_ShowAmmo",
-                "constants": [],
-                "variables": [
-                  "MDF_ShowAmmo"
-                ]
+                "displayLines": "MDF_ShowAmmo"
               }
             },
             {
@@ -419,12 +321,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Constants[0] (0) || RETURN",
-                "displayLines": "0",
-                "constants": [
-                  0
-                ],
-                "variables": []
+                "displayLines": "0"
               },
               "assignState": "True",
               "priorState": "Normal"
@@ -460,12 +357,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AggroAddedRatio) || RETURN",
-                "displayLines": "MDF_AggroAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AggroAddedRatio"
-                ]
+                "displayLines": "MDF_AggroAddedRatio"
               }
             },
             {
@@ -476,12 +368,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]

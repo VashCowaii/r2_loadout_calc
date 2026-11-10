@@ -29,20 +29,10 @@ const configAbility = {
           "duration": -1,
           "valuePerStack": {
             "BasicDamagePercentage": {
-              "operator": "Variables[0] (0.99) || RETURN",
-              "displayLines": "0.99",
-              "constants": [],
-              "variables": [
-                0.99
-              ]
+              "displayLines": "0.99"
             },
             "EliteDamagePercentage": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             }
           }
         }

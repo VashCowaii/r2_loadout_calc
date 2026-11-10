@@ -13,12 +13,7 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"2034261592\">Monster_W4_PolluxPart_Shield</a>[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]",
       "duration": {
-        "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-        "displayLines": "{[Skill04[1]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill04[1]]}"
-        ]
+        "displayLines": "{[Skill04[1]]}"
       }
     },
     "Trigger: Ability End"

@@ -18,12 +18,7 @@ const configAbility = {
             {
               "name": "Lock HP",
               "threshold": {
-                "operator": "Variables[0] (MDF_LockHp) || RETURN",
-                "displayLines": "MDF_LockHp",
-                "constants": [],
-                "variables": [
-                  "MDF_LockHp"
-                ]
+                "displayLines": "MDF_LockHp"
               }
             }
           ]
@@ -120,12 +115,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1398737430\">Modifier_StageSpecialAbility_SoftRage</a>",
                   "valuePerStack": {
                     "MDF_DamageAddedRatio": {
-                      "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                      "displayLines": "{[Skill01[4]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[4]]}"
-                      ]
+                      "displayLines": "{[Skill01[4]]}"
                     }
                   }
                 }
@@ -145,12 +135,7 @@ const configAbility = {
             {
               "name": "Lock HP",
               "threshold": {
-                "operator": "Variables[0] (MDF_LockHp) || RETURN",
-                "displayLines": "MDF_LockHp",
-                "constants": [],
-                "variables": [
-                  "MDF_LockHp"
-                ]
+                "displayLines": "MDF_LockHp"
               }
             }
           ]
@@ -418,17 +403,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] (MDF_DamagePercentage) || Constants[0] (1) || Variables[1] (_TargetCurrentHp) || Variables[2] (_TargetMaxHp) || DIV || Variables[3] (MDF_DamageHpAddedRatio) || MUL || ADD || MUL || RETURN",
-                  "displayLines": "(MDF_DamagePercentage * (1 + ((_TargetCurrentHp / _TargetMaxHp) * MDF_DamageHpAddedRatio)))",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    "MDF_DamagePercentage",
-                    "_TargetCurrentHp",
-                    "_TargetMaxHp",
-                    "MDF_DamageHpAddedRatio"
-                  ]
+                  "displayLines": "(MDF_DamagePercentage * (1 + ((_TargetCurrentHp / _TargetMaxHp) * MDF_DamageHpAddedRatio)))"
                 },
                 "cantKill": true,
                 "Toughness": null,
@@ -468,17 +443,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] (MDF_DamagePercentage) || Constants[0] (1) || Variables[1] (_TargetCurrentHp) || Variables[2] (_TargetMaxHp) || DIV || Variables[3] (MDF_DamageHpAddedRatio) || MUL || ADD || MUL || RETURN",
-                  "displayLines": "(MDF_DamagePercentage * (1 + ((_TargetCurrentHp / _TargetMaxHp) * MDF_DamageHpAddedRatio)))",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    "MDF_DamagePercentage",
-                    "_TargetCurrentHp",
-                    "_TargetMaxHp",
-                    "MDF_DamageHpAddedRatio"
-                  ]
+                  "displayLines": "(MDF_DamagePercentage * (1 + ((_TargetCurrentHp / _TargetMaxHp) * MDF_DamageHpAddedRatio)))"
                 },
                 "cantKill": true,
                 "Toughness": null,
@@ -750,30 +715,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Constants[0] (1) || Variables[0] (_TargetCurrentHp) || Variables[1] (_TargetMaxHP) || DIV || Variables[2] (_HpLimitRatio) || DIV || SUB || Variables[3] (_FatigueRatio) || MUL || RETURN",
-                "displayLines": "((1 - ((_TargetCurrentHp / _TargetMaxHP) / _HpLimitRatio)) * _FatigueRatio)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_TargetCurrentHp",
-                  "_TargetMaxHP",
-                  "_HpLimitRatio",
-                  "_FatigueRatio"
-                ]
+                "displayLines": "((1 - ((_TargetCurrentHp / _TargetMaxHP) / _HpLimitRatio)) * _FatigueRatio)"
               },
               "variableName": "MDF_ShowValue1"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_TargetMaxHP) || Variables[1] (_HpLimitRatio) || MUL || RETURN",
-                "displayLines": "(_TargetMaxHP * _HpLimitRatio)",
-                "constants": [],
-                "variables": [
-                  "_TargetMaxHP",
-                  "_HpLimitRatio"
-                ]
+                "displayLines": "(_TargetMaxHP * _HpLimitRatio)"
               },
               "variableName": "MDF_ShowValue2"
             },
@@ -786,26 +735,14 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"931855053\">Monster_W4_Pollux_Fatigue</a>",
               "valuePerStack": {
                 "_FatigueRatio": {
-                  "operator": "Variables[0] (MDF_ShowValue1) || RETURN",
-                  "displayLines": "MDF_ShowValue1",
-                  "constants": [],
-                  "variables": [
-                    "MDF_ShowValue1"
-                  ]
+                  "displayLines": "MDF_ShowValue1"
                 }
               }
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_ShowValue1) || Constants[0] (0.01) || ADD || RETURN",
-                "displayLines": "(MDF_ShowValue1 + 0.01)",
-                "constants": [
-                  0.01
-                ],
-                "variables": [
-                  "MDF_ShowValue1"
-                ]
+                "displayLines": "(MDF_ShowValue1 + 0.01)"
               },
               "variableName": "MDF_ShowValue1"
             },
@@ -820,12 +757,7 @@ const configAbility = {
                 "value1": "CurrentHP%",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (_HpLimitRatio) || RETURN",
-                  "displayLines": "_HpLimitRatio",
-                  "constants": [],
-                  "variables": [
-                    "_HpLimitRatio"
-                  ]
+                  "displayLines": "_HpLimitRatio"
                 }
               },
               "passed": [
@@ -866,12 +798,7 @@ const configAbility = {
                 "value1": "CurrentHP%",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (_HpLimitRatio) || RETURN",
-                  "displayLines": "_HpLimitRatio",
-                  "constants": [],
-                  "variables": [
-                    "_HpLimitRatio"
-                  ]
+                  "displayLines": "_HpLimitRatio"
                 }
               },
               "passed": [
@@ -881,30 +808,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Constants[0] (1) || Variables[0] (_TargetCurrentHp) || Variables[1] (_TargetMaxHP) || DIV || Variables[2] (_HpLimitRatio) || DIV || SUB || Variables[3] (_FatigueRatio) || MUL || RETURN",
-                    "displayLines": "((1 - ((_TargetCurrentHp / _TargetMaxHP) / _HpLimitRatio)) * _FatigueRatio)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_TargetCurrentHp",
-                      "_TargetMaxHP",
-                      "_HpLimitRatio",
-                      "_FatigueRatio"
-                    ]
+                    "displayLines": "((1 - ((_TargetCurrentHp / _TargetMaxHP) / _HpLimitRatio)) * _FatigueRatio)"
                   },
                   "variableName": "MDF_ShowValue1"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_TargetMaxHP) || Variables[1] (_HpLimitRatio) || MUL || RETURN",
-                    "displayLines": "(_TargetMaxHP * _HpLimitRatio)",
-                    "constants": [],
-                    "variables": [
-                      "_TargetMaxHP",
-                      "_HpLimitRatio"
-                    ]
+                    "displayLines": "(_TargetMaxHP * _HpLimitRatio)"
                   },
                   "variableName": "MDF_ShowValue2"
                 },
@@ -917,26 +828,14 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"931855053\">Monster_W4_Pollux_Fatigue</a>",
                   "valuePerStack": {
                     "_FatigueRatio": {
-                      "operator": "Variables[0] (MDF_ShowValue1) || RETURN",
-                      "displayLines": "MDF_ShowValue1",
-                      "constants": [],
-                      "variables": [
-                        "MDF_ShowValue1"
-                      ]
+                      "displayLines": "MDF_ShowValue1"
                     }
                   }
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_ShowValue1) || Constants[0] (0.01) || ADD || RETURN",
-                    "displayLines": "(MDF_ShowValue1 + 0.01)",
-                    "constants": [
-                      0.01
-                    ],
-                    "variables": [
-                      "MDF_ShowValue1"
-                    ]
+                    "displayLines": "(MDF_ShowValue1 + 0.01)"
                   },
                   "variableName": "MDF_ShowValue1"
                 }
@@ -1337,27 +1236,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentShieldValue) || Variables[1] (MDF_AttackDamageData) || Variables[2] (MDF_SummonerMaxHP_DownScale) || DIV || Variables[3] (MDF_AttackDamageDataMulRatio) || MUL || SUB || RETURN",
-                    "displayLines": "(MDF_CurrentShieldValue - ((MDF_AttackDamageData / MDF_SummonerMaxHP_DownScale) * MDF_AttackDamageDataMulRatio))",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentShieldValue",
-                      "MDF_AttackDamageData",
-                      "MDF_SummonerMaxHP_DownScale",
-                      "MDF_AttackDamageDataMulRatio"
-                    ]
+                    "displayLines": "(MDF_CurrentShieldValue - ((MDF_AttackDamageData / MDF_SummonerMaxHP_DownScale) * MDF_AttackDamageDataMulRatio))"
                   },
                   "variableName": "MDF_CurrentShieldValue"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_EnergyBarValue) || RETURN",
-                    "displayLines": "MDF_EnergyBarValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_EnergyBarValue"
-                    ]
+                    "displayLines": "MDF_EnergyBarValue"
                   },
                   "variableName": "MDF_LastEnergyBarValue"
                 },
@@ -1392,12 +1278,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_EnergyBarValue) || RETURN",
-                        "displayLines": "MDF_EnergyBarValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_EnergyBarValue"
-                        ]
+                        "displayLines": "MDF_EnergyBarValue"
                       },
                       "variableName": "MDF_LastEnergyBarValue_RL"
                     },
@@ -1447,14 +1328,7 @@ const configAbility = {
                         "target": "{{Player Team All}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (MDF_LastEnergyBarValue_RL) || Variables[1] (MDF_EnergyBarValue) || SUB || Variables[2] (MDF_ShieldAttack_HealRatio) || MUL || RETURN",
-                        "displayLines": "((MDF_LastEnergyBarValue_RL - MDF_EnergyBarValue) * MDF_ShieldAttack_HealRatio)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_LastEnergyBarValue_RL",
-                          "MDF_EnergyBarValue",
-                          "MDF_ShieldAttack_HealRatio"
-                        ]
+                        "displayLines": "((MDF_LastEnergyBarValue_RL - MDF_EnergyBarValue) * MDF_ShieldAttack_HealRatio)"
                       },
                       "formula": "Heal from Target MaxHP"
                     },
@@ -1464,13 +1338,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_CurrentShieldValue) || Variables[1] (MDF_MaxShieldValue) || DIV || RETURN",
-                        "displayLines": "(MDF_CurrentShieldValue / MDF_MaxShieldValue)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_CurrentShieldValue",
-                          "MDF_MaxShieldValue"
-                        ]
+                        "displayLines": "(MDF_CurrentShieldValue / MDF_MaxShieldValue)"
                       },
                       "variableName": "MDF_EnergyBarValue"
                     },
@@ -1504,14 +1372,7 @@ const configAbility = {
                             "target": "{{Player Team All}}"
                           },
                           "healPercent": {
-                            "operator": "Variables[0] (MDF_LastEnergyBarValue_RL) || Variables[1] (MDF_EnergyBarValue) || SUB || Variables[2] (MDF_ShieldAttack_HealRatio) || MUL || RETURN",
-                            "displayLines": "((MDF_LastEnergyBarValue_RL - MDF_EnergyBarValue) * MDF_ShieldAttack_HealRatio)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_LastEnergyBarValue_RL",
-                              "MDF_EnergyBarValue",
-                              "MDF_ShieldAttack_HealRatio"
-                            ]
+                            "displayLines": "((MDF_LastEnergyBarValue_RL - MDF_EnergyBarValue) * MDF_ShieldAttack_HealRatio)"
                           },
                           "formula": "Heal from Target MaxHP"
                         }
@@ -1520,12 +1381,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MDF_EnergyBarValue) || RETURN",
-                        "displayLines": "MDF_EnergyBarValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_EnergyBarValue"
-                        ]
+                        "displayLines": "MDF_EnergyBarValue"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -1554,24 +1410,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_ShieldPercentage) || RETURN",
-                "displayLines": "MDF_ShieldPercentage",
-                "constants": [],
-                "variables": [
-                  "MDF_ShieldPercentage"
-                ]
+                "displayLines": "MDF_ShieldPercentage"
               },
               "variableName": "MDF_MaxShieldValue"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_MaxShieldValue) || RETURN",
-                "displayLines": "MDF_MaxShieldValue",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxShieldValue"
-                ]
+                "displayLines": "MDF_MaxShieldValue"
               },
               "variableName": "MDF_CurrentShieldValue"
             },
@@ -1583,12 +1429,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_EnergyBarValue) || RETURN",
-                "displayLines": "MDF_EnergyBarValue",
-                "constants": [],
-                "variables": [
-                  "MDF_EnergyBarValue"
-                ]
+                "displayLines": "MDF_EnergyBarValue"
               },
               "entityClass": "Enemy",
               "target": {
@@ -1596,12 +1437,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (MDF_EnergyBarValue) || RETURN",
-                "displayLines": "MDF_EnergyBarValue",
-                "constants": [],
-                "variables": [
-                  "MDF_EnergyBarValue"
-                ]
+                "displayLines": "MDF_EnergyBarValue"
               },
               "assignState": "True",
               "state": "Active",
@@ -1669,12 +1505,7 @@ const configAbility = {
                         "value1": "MDF_LastEnergyBarValue_RL",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (MDF_EnergyBarValue) || RETURN",
-                          "displayLines": "MDF_EnergyBarValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_EnergyBarValue"
-                          ]
+                          "displayLines": "MDF_EnergyBarValue"
                         }
                       },
                       {
@@ -1693,14 +1524,7 @@ const configAbility = {
                         "target": "{{Player Team All}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (MDF_LastEnergyBarValue) || Variables[1] (MDF_EnergyBarValue) || SUB || Variables[2] (MDF_ShieldAttack_HealRatio) || MUL || RETURN",
-                        "displayLines": "((MDF_LastEnergyBarValue - MDF_EnergyBarValue) * MDF_ShieldAttack_HealRatio)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_LastEnergyBarValue",
-                          "MDF_EnergyBarValue",
-                          "MDF_ShieldAttack_HealRatio"
-                        ]
+                        "displayLines": "((MDF_LastEnergyBarValue - MDF_EnergyBarValue) * MDF_ShieldAttack_HealRatio)"
                       },
                       "formula": "Heal from Target MaxHP"
                     },
@@ -1837,25 +1661,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentShieldValue) || Variables[1] (MDF_AttackDamageData) || SUB || RETURN",
-                    "displayLines": "(MDF_CurrentShieldValue - MDF_AttackDamageData)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentShieldValue",
-                      "MDF_AttackDamageData"
-                    ]
+                    "displayLines": "(MDF_CurrentShieldValue - MDF_AttackDamageData)"
                   },
                   "variableName": "MDF_CurrentShieldValue"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_EnergyBarValue) || RETURN",
-                    "displayLines": "MDF_EnergyBarValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_EnergyBarValue"
-                    ]
+                    "displayLines": "MDF_EnergyBarValue"
                   },
                   "variableName": "MDF_LastEnergyBarValue"
                 },
@@ -1890,12 +1703,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_EnergyBarValue) || RETURN",
-                        "displayLines": "MDF_EnergyBarValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_EnergyBarValue"
-                        ]
+                        "displayLines": "MDF_EnergyBarValue"
                       },
                       "variableName": "MDF_LastEnergyBarValue_RL"
                     },
@@ -1945,14 +1753,7 @@ const configAbility = {
                         "target": "{{Player Team All}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (MDF_LastEnergyBarValue_RL) || Variables[1] (MDF_EnergyBarValue) || SUB || Variables[2] (MDF_ShieldAttack_HealRatio) || MUL || RETURN",
-                        "displayLines": "((MDF_LastEnergyBarValue_RL - MDF_EnergyBarValue) * MDF_ShieldAttack_HealRatio)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_LastEnergyBarValue_RL",
-                          "MDF_EnergyBarValue",
-                          "MDF_ShieldAttack_HealRatio"
-                        ]
+                        "displayLines": "((MDF_LastEnergyBarValue_RL - MDF_EnergyBarValue) * MDF_ShieldAttack_HealRatio)"
                       },
                       "formula": "Heal from Target MaxHP"
                     },
@@ -1962,13 +1763,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_CurrentShieldValue) || Variables[1] (MDF_MaxShieldValue) || DIV || RETURN",
-                        "displayLines": "(MDF_CurrentShieldValue / MDF_MaxShieldValue)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_CurrentShieldValue",
-                          "MDF_MaxShieldValue"
-                        ]
+                        "displayLines": "(MDF_CurrentShieldValue / MDF_MaxShieldValue)"
                       },
                       "variableName": "MDF_EnergyBarValue"
                     },
@@ -2002,14 +1797,7 @@ const configAbility = {
                             "target": "{{Player Team All}}"
                           },
                           "healPercent": {
-                            "operator": "Variables[0] (MDF_LastEnergyBarValue_RL) || Variables[1] (MDF_EnergyBarValue) || SUB || Variables[2] (MDF_ShieldAttack_HealRatio) || MUL || RETURN",
-                            "displayLines": "((MDF_LastEnergyBarValue_RL - MDF_EnergyBarValue) * MDF_ShieldAttack_HealRatio)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_LastEnergyBarValue_RL",
-                              "MDF_EnergyBarValue",
-                              "MDF_ShieldAttack_HealRatio"
-                            ]
+                            "displayLines": "((MDF_LastEnergyBarValue_RL - MDF_EnergyBarValue) * MDF_ShieldAttack_HealRatio)"
                           },
                           "formula": "Heal from Target MaxHP"
                         }
@@ -2018,12 +1806,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MDF_EnergyBarValue) || RETURN",
-                        "displayLines": "MDF_EnergyBarValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_EnergyBarValue"
-                        ]
+                        "displayLines": "MDF_EnergyBarValue"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -2053,25 +1836,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_SummonerMaxHP) || Variables[1] (MDF_ShieldPercentage) || MUL || RETURN",
-                "displayLines": "(MDF_SummonerMaxHP * MDF_ShieldPercentage)",
-                "constants": [],
-                "variables": [
-                  "MDF_SummonerMaxHP",
-                  "MDF_ShieldPercentage"
-                ]
+                "displayLines": "(MDF_SummonerMaxHP * MDF_ShieldPercentage)"
               },
               "variableName": "MDF_MaxShieldValue"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_MaxShieldValue) || RETURN",
-                "displayLines": "MDF_MaxShieldValue",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxShieldValue"
-                ]
+                "displayLines": "MDF_MaxShieldValue"
               },
               "variableName": "MDF_CurrentShieldValue"
             },
@@ -2083,12 +1855,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_EnergyBarValue) || RETURN",
-                "displayLines": "MDF_EnergyBarValue",
-                "constants": [],
-                "variables": [
-                  "MDF_EnergyBarValue"
-                ]
+                "displayLines": "MDF_EnergyBarValue"
               },
               "entityClass": "Enemy",
               "target": {
@@ -2096,12 +1863,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (MDF_EnergyBarValue) || RETURN",
-                "displayLines": "MDF_EnergyBarValue",
-                "constants": [],
-                "variables": [
-                  "MDF_EnergyBarValue"
-                ]
+                "displayLines": "MDF_EnergyBarValue"
               },
               "assignState": "True",
               "state": "Active",
@@ -2169,12 +1931,7 @@ const configAbility = {
                         "value1": "MDF_LastEnergyBarValue_RL",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (MDF_EnergyBarValue) || RETURN",
-                          "displayLines": "MDF_EnergyBarValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_EnergyBarValue"
-                          ]
+                          "displayLines": "MDF_EnergyBarValue"
                         }
                       },
                       {
@@ -2193,14 +1950,7 @@ const configAbility = {
                         "target": "{{Player Team All}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (MDF_LastEnergyBarValue) || Variables[1] (MDF_EnergyBarValue) || SUB || Variables[2] (MDF_ShieldAttack_HealRatio) || MUL || RETURN",
-                        "displayLines": "((MDF_LastEnergyBarValue - MDF_EnergyBarValue) * MDF_ShieldAttack_HealRatio)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_LastEnergyBarValue",
-                          "MDF_EnergyBarValue",
-                          "MDF_ShieldAttack_HealRatio"
-                        ]
+                        "displayLines": "((MDF_LastEnergyBarValue - MDF_EnergyBarValue) * MDF_ShieldAttack_HealRatio)"
                       },
                       "formula": "Heal from Target MaxHP"
                     },
@@ -2233,12 +1983,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_ShowValue1) || RETURN",
-                "displayLines": "MDF_ShowValue1",
-                "constants": [],
-                "variables": [
-                  "MDF_ShowValue1"
-                ]
+                "displayLines": "MDF_ShowValue1"
               }
             }
           ]
@@ -2382,20 +2127,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1873235590\">Monster_W4_Pollux_Strengthen_Shield</a>",
                   "valuePerStack": {
                     "MDF_ShieldPercentage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12844) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_12844",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_12844"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_12844"
                     },
                     "MDF_ShieldAttack_HealRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12872) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_12872",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_12872"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_12872"
                     }
                   }
                 }
@@ -2417,20 +2152,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1873235590\">Monster_W4_Pollux_Strengthen_Shield</a>",
                       "valuePerStack": {
                         "MDF_ShieldPercentage": {
-                          "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill02[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill02[0]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill02[0]]}"
                         },
                         "MDF_ShieldAttack_HealRatio": {
-                          "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill02[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill02[1]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill02[1]]}"
                         }
                       }
                     }
@@ -2445,20 +2170,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1873235590\">Monster_W4_Pollux_Strengthen_Shield</a>",
                       "valuePerStack": {
                         "MDF_ShieldPercentage": {
-                          "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill02[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill02[0]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill02[0]]}"
                         },
                         "MDF_ShieldAttack_HealRatio": {
-                          "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill02[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill02[1]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill02[1]]}"
                         }
                       }
                     }
@@ -2620,12 +2335,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (_EnergyValue) || RETURN",
-                "displayLines": "_EnergyValue",
-                "constants": [],
-                "variables": [
-                  "_EnergyValue"
-                ]
+                "displayLines": "_EnergyValue"
               },
               "entityClass": "Enemy",
               "maximum": 1,
@@ -2654,13 +2364,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_ShowValue1) || Variables[1] (MDF_SpeedUpRatio) || ADD || RETURN",
-                "displayLines": "(MDF_ShowValue1 + MDF_SpeedUpRatio)",
-                "constants": [],
-                "variables": [
-                  "MDF_ShowValue1",
-                  "MDF_SpeedUpRatio"
-                ]
+                "displayLines": "(MDF_ShowValue1 + MDF_SpeedUpRatio)"
               },
               "variableName": "MDF_ShowValue1"
             },
@@ -2673,25 +2377,14 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1777171408\">Monster_W4_Pollux_Strengthen_SpeedAdded</a>",
               "valuePerStack": {
                 "MDF_ShowValue1": {
-                  "operator": "Variables[0] (MDF_ShowValue1) || RETURN",
-                  "displayLines": "MDF_ShowValue1",
-                  "constants": [],
-                  "variables": [
-                    "MDF_ShowValue1"
-                  ]
+                  "displayLines": "MDF_ShowValue1"
                 }
               }
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_DamageUpTemp) || Variables[1] (MDF_DamageUpRatio) || ADD || RETURN",
-                "displayLines": "(_DamageUpTemp + MDF_DamageUpRatio)",
-                "constants": [],
-                "variables": [
-                  "_DamageUpTemp",
-                  "MDF_DamageUpRatio"
-                ]
+                "displayLines": "(_DamageUpTemp + MDF_DamageUpRatio)"
               },
               "variableName": "_DamageUpTemp"
             },
@@ -2717,12 +2410,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (MDF_DamageUpRatio) || RETURN",
-                      "displayLines": "MDF_DamageUpRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageUpRatio"
-                      ]
+                      "displayLines": "MDF_DamageUpRatio"
                     }
                   }
                 }

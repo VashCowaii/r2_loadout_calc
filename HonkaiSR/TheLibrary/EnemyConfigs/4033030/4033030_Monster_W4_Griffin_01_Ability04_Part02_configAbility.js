@@ -44,25 +44,14 @@ const configAbility = {
             "value1": "_RallyHP",
             "compareType": ">",
             "value2": {
-              "operator": "Variables[0] (_CurrentHPRatio) || RETURN",
-              "displayLines": "_CurrentHPRatio",
-              "constants": [],
-              "variables": [
-                "_CurrentHPRatio"
-              ]
+              "displayLines": "_CurrentHPRatio"
             }
           },
           "passed": [
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_RallyHP) || Variables[1] (_CurrentHPRatio) || SUB || RETURN",
-                "displayLines": "(_RallyHP - _CurrentHPRatio)",
-                "constants": [],
-                "variables": [
-                  "_RallyHP",
-                  "_CurrentHPRatio"
-                ]
+                "displayLines": "(_RallyHP - _CurrentHPRatio)"
               },
               "variableName": "_RallyHP"
             }
@@ -93,22 +82,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "DamageFlat": {
-              "operator": "Variables[0] (_RallyHP) || Variables[1] (_MaxHP) || MUL || Variables[2] ({[Skill04[1]]}) || MUL || RETURN",
-              "displayLines": "((_RallyHP * _MaxHP) * {[Skill04[1]]})",
-              "constants": [],
-              "variables": [
-                "_RallyHP",
-                "_MaxHP",
-                "{[Skill04[1]]}"
-              ]
+              "displayLines": "((_RallyHP * _MaxHP) * {[Skill04[1]]})"
             },
             "HitSplit": 0.55,
             "Toughness": null,
@@ -127,12 +104,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-          "displayLines": "{[Skill04[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}"
-          ]
+          "displayLines": "{[Skill04[0]]}"
         },
         "HitSplit": 0.15,
         "Toughness": null,
@@ -149,12 +121,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-          "displayLines": "{[Skill04[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}"
-          ]
+          "displayLines": "{[Skill04[0]]}"
         },
         "HitSplit": 0.15,
         "Toughness": null,
@@ -171,12 +138,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-          "displayLines": "{[Skill04[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill04[0]]}"
-          ]
+          "displayLines": "{[Skill04[0]]}"
         },
         "HitSplit": 0.15,
         "Toughness": null,

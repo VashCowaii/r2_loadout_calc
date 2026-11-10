@@ -25,14 +25,7 @@ const configAbility = {
       },
       "variableName": "_WorldErosion",
       "value": {
-        "operator": "Variables[0] ({[Skill03[1]]}) || INVERT || Constants[0] (100) || MUL || RETURN",
-        "displayLines": "(-{[Skill03[1]]} * 100)",
-        "constants": [
-          100
-        ],
-        "variables": [
-          "{[Skill03[1]]}"
-        ]
+        "displayLines": "(-{[Skill03[1]]} * 100)"
       },
       "max": 100
     },

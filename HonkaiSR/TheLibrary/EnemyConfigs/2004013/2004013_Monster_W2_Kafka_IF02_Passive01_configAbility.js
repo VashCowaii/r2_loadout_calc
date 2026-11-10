@@ -111,12 +111,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1086358837\">Monster_W2_Kafka_IF_Power</a>",
       "valuePerStack": {
         "MDF_DamageUpRatio_PerLayer": {
-          "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-          "displayLines": "{[PassiveSkill02[0]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill02[0]]}"
-          ]
+          "displayLines": "{[PassiveSkill02[0]]}"
         }
       }
     },
@@ -129,12 +124,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"593237238\">Monster_W2_Kafka_IF_LowHP</a>",
       "valuePerStack": {
         "MDF_LowHPRatio": {
-          "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-          "displayLines": "{[PassiveSkill02[1]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill02[1]]}"
-          ]
+          "displayLines": "{[PassiveSkill02[1]]}"
         }
       }
     },

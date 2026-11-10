@@ -61,14 +61,7 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable",
                   "scope": "ContextCaster",
                   "value": {
-                    "operator": "Variables[0] (TohsakaRin_00_AchievementPassive_Money) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(TohsakaRin_00_AchievementPassive_Money + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "TohsakaRin_00_AchievementPassive_Money"
-                    ]
+                    "displayLines": "(TohsakaRin_00_AchievementPassive_Money + 1)"
                   },
                   "variableName": "TohsakaRin_00_AchievementPassive_Money"
                 },
@@ -497,12 +490,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -532,12 +520,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -654,13 +637,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                        "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue",
-                          "MDF_Layer"
-                        ]
+                        "displayLines": "(MDF_PropertyValue * MDF_Layer)"
                       },
                       "variableName": "MDF_FinalPropertyValue"
                     }
@@ -669,12 +646,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                        "displayLines": "MDF_PropertyValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue"
-                        ]
+                        "displayLines": "MDF_PropertyValue"
                       },
                       "variableName": "MDF_FinalPropertyValue"
                     }
@@ -688,12 +660,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_FinalPropertyValue) || RETURN",
-                    "displayLines": "MDF_FinalPropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_FinalPropertyValue"
-                    ]
+                    "displayLines": "MDF_FinalPropertyValue"
                   }
                 },
                 {
@@ -737,12 +704,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
-                    "displayLines": "MDF_AttackAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackAddedRatio"
-                    ]
+                    "displayLines": "MDF_AttackAddedRatio"
                   }
                 },
                 {
@@ -753,12 +715,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceQuantumPEN</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_Penetrate) || RETURN",
-                    "displayLines": "MDF_Penetrate",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Penetrate"
-                    ]
+                    "displayLines": "MDF_Penetrate"
                   }
                 }
               ]
@@ -789,12 +746,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -950,12 +902,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   },
                   "execute": [
                     {
@@ -1354,12 +1301,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (10) || RETURN",
-                        "displayLines": "10",
-                        "constants": [],
-                        "variables": [
-                          10
-                        ]
+                        "displayLines": "10"
                       }
                     },
                     {
@@ -1374,12 +1316,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (EnergyBar_GemNum_Shadow) || RETURN",
-                            "displayLines": "EnergyBar_GemNum_Shadow",
-                            "constants": [],
-                            "variables": [
-                              "EnergyBar_GemNum_Shadow"
-                            ]
+                            "displayLines": "EnergyBar_GemNum_Shadow"
                           },
                           "priorState": "Normal"
                         }
@@ -1388,12 +1325,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                            "displayLines": "EnergyBar_GemNum",
-                            "constants": [],
-                            "variables": [
-                              "EnergyBar_GemNum"
-                            ]
+                            "displayLines": "EnergyBar_GemNum"
                           },
                           "priorState": "Normal"
                         }
@@ -1444,21 +1376,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             },
             "HitSplit": 0.2,
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": [
               "Joint-Attack"
@@ -1476,21 +1398,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             },
             "HitSplit": 0.2,
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": [
               "Joint-Attack"
@@ -1508,21 +1420,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             },
             "HitSplit": 0.2,
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": [
               "Joint-Attack"
@@ -1540,21 +1442,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             },
             "HitSplit": 0.2,
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": [
               "Joint-Attack"
@@ -1572,21 +1464,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             },
             "HitSplit": 0.2,
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": [
               "Joint-Attack"
@@ -1599,12 +1481,7 @@ const compositeAbilityObject = {
         {
           "name": "Skill Points Modification",
           "adjustmentValue": {
-            "operator": "Variables[0] (4) || RETURN",
-            "displayLines": "4",
-            "constants": [],
-            "variables": [
-              4
-            ]
+            "displayLines": "4"
           },
           "adjustmentType": "+"
         }
@@ -1913,12 +1790,7 @@ const compositeAbilityObject = {
                             "value1": "CurrentSkillPoints",
                             "compareType": "<=",
                             "value2": {
-                              "operator": "Variables[0] (3) || RETURN",
-                              "displayLines": "3",
-                              "constants": [],
-                              "variables": [
-                                3
-                              ]
+                              "displayLines": "3"
                             }
                           },
                           {
@@ -2211,24 +2083,14 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "variableName": "EnergyBar_CostGemNum"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (15) || RETURN",
-            "displayLines": "15",
-            "constants": [],
-            "variables": [
-              15
-            ]
+            "displayLines": "15"
           },
           "variableName": "EnergyBar_ActiveGemNum"
         },
@@ -2268,20 +2130,10 @@ const compositeAbilityObject = {
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-            "displayLines": "EnergyBar_GemNum",
-            "constants": [],
-            "variables": [
-              "EnergyBar_GemNum"
-            ]
+            "displayLines": "EnergyBar_GemNum"
           },
           "maximum": {
-            "operator": "Variables[0] (EnergyBar_ActiveGemNum) || RETURN",
-            "displayLines": "EnergyBar_ActiveGemNum",
-            "constants": [],
-            "variables": [
-              "EnergyBar_ActiveGemNum"
-            ]
+            "displayLines": "EnergyBar_ActiveGemNum"
           },
           "assignState": "True",
           "priorState": "Normal",
@@ -2346,12 +2198,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1863098959\">TohsakaRin_Eidolon2_SelfAbilityBonus</a>[<span class=\"descriptionNumberColor\">Dimensional Traveler</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 }
               }
             },
@@ -2364,12 +2211,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1630247172\">TohsakaRin_Eidolon2_TeamAbilityBonus</a>[<span class=\"descriptionNumberColor\">Dimensional Traveler</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (1.3) || RETURN",
-                  "displayLines": "1.3",
-                  "constants": [],
-                  "variables": [
-                    1.3
-                  ]
+                  "displayLines": "1.3"
                 }
               }
             },
@@ -2399,12 +2241,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-889730965\">TohsakaRin_Eidolon6_Penetrate</a>[<span class=\"descriptionNumberColor\">Nailed It This Time!</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             }
@@ -2456,12 +2293,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1630247172\">TohsakaRin_Eidolon2_TeamAbilityBonus</a>[<span class=\"descriptionNumberColor\">Dimensional Traveler</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (1.3) || RETURN",
-                          "displayLines": "1.3",
-                          "constants": [],
-                          "variables": [
-                            1.3
-                          ]
+                          "displayLines": "1.3"
                         }
                       }
                     }
@@ -2546,21 +2378,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1935988058\">TohsakaRin_PointB2_Bonus</a>[<span class=\"descriptionNumberColor\">Ladylike Poise</span>]",
                       "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     }
@@ -2589,21 +2411,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1935988058\">TohsakaRin_PointB2_Bonus</a>[<span class=\"descriptionNumberColor\">Ladylike Poise</span>]",
                       "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     }
@@ -2630,12 +2442,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "variableName": "MDF_MaxLayer"
                     }
@@ -2719,37 +2526,17 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"945078119\">TohsakaRin_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">Gem Magecraft</span>]",
                               "duration": {
-                                "operator": "Variables[0] (2) || RETURN",
-                                "displayLines": "2",
-                                "constants": [],
-                                "variables": [
-                                  2
-                                ]
+                                "displayLines": "2"
                               },
                               "stackLimit": {
-                                "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                "displayLines": "MDF_MaxLayer",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_MaxLayer"
-                                ]
+                                "displayLines": "MDF_MaxLayer"
                               },
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (0.7) || RETURN",
-                                  "displayLines": "0.7",
-                                  "constants": [],
-                                  "variables": [
-                                    0.7
-                                  ]
+                                  "displayLines": "0.7"
                                 },
                                 "MDF_CurrentMaxLayer": {
-                                  "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                  "displayLines": "MDF_MaxLayer",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_MaxLayer"
-                                  ]
+                                  "displayLines": "MDF_MaxLayer"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -2764,21 +2551,11 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"945078119\">TohsakaRin_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">Gem Magecraft</span>]",
                               "duration": {
-                                "operator": "Variables[0] (2) || RETURN",
-                                "displayLines": "2",
-                                "constants": [],
-                                "variables": [
-                                  2
-                                ]
+                                "displayLines": "2"
                               },
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (0.7) || RETURN",
-                                  "displayLines": "0.7",
-                                  "constants": [],
-                                  "variables": [
-                                    0.7
-                                  ]
+                                  "displayLines": "0.7"
                                 },
                                 "MDF_CurrentMaxLayer": 1
                               }
@@ -2789,24 +2566,14 @@ const compositeAbilityObject = {
                           "name": "Define Custom Variable",
                           "scope": "ContextModifier",
                           "value": {
-                            "operator": "Variables[0] (_BPAddValue) || INVERT || RETURN",
-                            "displayLines": "-_BPAddValue",
-                            "constants": [],
-                            "variables": [
-                              "_BPAddValue"
-                            ]
+                            "displayLines": "-_BPAddValue"
                           },
                           "variableName": "_BPAddValue"
                         },
                         {
                           "name": "Looped Event",
                           "maxLoops": {
-                            "operator": "Variables[0] (_BPAddValue) || RETURN",
-                            "displayLines": "_BPAddValue",
-                            "constants": [],
-                            "variables": [
-                              "_BPAddValue"
-                            ]
+                            "displayLines": "_BPAddValue"
                           },
                           "execute": [
                             {
@@ -2833,12 +2600,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Update Displayed Energy Bar",
                               "value": {
-                                "operator": "Variables[0] (EnergyBar_GemNum_Shadow) || RETURN",
-                                "displayLines": "EnergyBar_GemNum_Shadow",
-                                "constants": [],
-                                "variables": [
-                                  "EnergyBar_GemNum_Shadow"
-                                ]
+                                "displayLines": "EnergyBar_GemNum_Shadow"
                               },
                               "priorState": "Normal"
                             }
@@ -2847,12 +2609,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Update Displayed Energy Bar",
                               "value": {
-                                "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                                "displayLines": "EnergyBar_GemNum",
-                                "constants": [],
-                                "variables": [
-                                  "EnergyBar_GemNum"
-                                ]
+                                "displayLines": "EnergyBar_GemNum"
                               },
                               "priorState": "Normal"
                             }
@@ -2870,12 +2627,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Update Displayed Energy Bar",
                               "value": {
-                                "operator": "Variables[0] (EnergyBar_GemNum_Shadow) || RETURN",
-                                "displayLines": "EnergyBar_GemNum_Shadow",
-                                "constants": [],
-                                "variables": [
-                                  "EnergyBar_GemNum_Shadow"
-                                ]
+                                "displayLines": "EnergyBar_GemNum_Shadow"
                               },
                               "priorState": "Normal"
                             }
@@ -2884,12 +2636,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Update Displayed Energy Bar",
                               "value": {
-                                "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                                "displayLines": "EnergyBar_GemNum",
-                                "constants": [],
-                                "variables": [
-                                  "EnergyBar_GemNum"
-                                ]
+                                "displayLines": "EnergyBar_GemNum"
                               },
                               "priorState": "Normal"
                             }
@@ -2960,37 +2707,17 @@ const compositeAbilityObject = {
                                   },
                                   "modifier": "<a class=\"gModGreen\" id=\"945078119\">TohsakaRin_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">Gem Magecraft</span>]",
                                   "duration": {
-                                    "operator": "Variables[0] (2) || RETURN",
-                                    "displayLines": "2",
-                                    "constants": [],
-                                    "variables": [
-                                      2
-                                    ]
+                                    "displayLines": "2"
                                   },
                                   "stackLimit": {
-                                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                    "displayLines": "MDF_MaxLayer",
-                                    "constants": [],
-                                    "variables": [
-                                      "MDF_MaxLayer"
-                                    ]
+                                    "displayLines": "MDF_MaxLayer"
                                   },
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (0.7) || RETURN",
-                                      "displayLines": "0.7",
-                                      "constants": [],
-                                      "variables": [
-                                        0.7
-                                      ]
+                                      "displayLines": "0.7"
                                     },
                                     "MDF_CurrentMaxLayer": {
-                                      "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                                      "displayLines": "MDF_MaxLayer",
-                                      "constants": [],
-                                      "variables": [
-                                        "MDF_MaxLayer"
-                                      ]
+                                      "displayLines": "MDF_MaxLayer"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -3005,21 +2732,11 @@ const compositeAbilityObject = {
                                   },
                                   "modifier": "<a class=\"gModGreen\" id=\"945078119\">TohsakaRin_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">Gem Magecraft</span>]",
                                   "duration": {
-                                    "operator": "Variables[0] (2) || RETURN",
-                                    "displayLines": "2",
-                                    "constants": [],
-                                    "variables": [
-                                      2
-                                    ]
+                                    "displayLines": "2"
                                   },
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (0.7) || RETURN",
-                                      "displayLines": "0.7",
-                                      "constants": [],
-                                      "variables": [
-                                        0.7
-                                      ]
+                                      "displayLines": "0.7"
                                     },
                                     "MDF_CurrentMaxLayer": 1
                                   }
@@ -3029,12 +2746,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Looped Event",
                               "maxLoops": {
-                                "operator": "Variables[0] (_BPAddValue) || RETURN",
-                                "displayLines": "_BPAddValue",
-                                "constants": [],
-                                "variables": [
-                                  "_BPAddValue"
-                                ]
+                                "displayLines": "_BPAddValue"
                               },
                               "execute": [
                                 {
@@ -3061,12 +2773,7 @@ const compositeAbilityObject = {
                                 {
                                   "name": "Update Displayed Energy Bar",
                                   "value": {
-                                    "operator": "Variables[0] (EnergyBar_GemNum_Shadow) || RETURN",
-                                    "displayLines": "EnergyBar_GemNum_Shadow",
-                                    "constants": [],
-                                    "variables": [
-                                      "EnergyBar_GemNum_Shadow"
-                                    ]
+                                    "displayLines": "EnergyBar_GemNum_Shadow"
                                   },
                                   "priorState": "Normal"
                                 }
@@ -3075,12 +2782,7 @@ const compositeAbilityObject = {
                                 {
                                   "name": "Update Displayed Energy Bar",
                                   "value": {
-                                    "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                                    "displayLines": "EnergyBar_GemNum",
-                                    "constants": [],
-                                    "variables": [
-                                      "EnergyBar_GemNum"
-                                    ]
+                                    "displayLines": "EnergyBar_GemNum"
                                   },
                                   "priorState": "Normal"
                                 }
@@ -3165,12 +2867,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (20) || RETURN",
-                        "displayLines": "20",
-                        "constants": [],
-                        "variables": [
-                          20
-                        ]
+                        "displayLines": "20"
                       }
                     },
                     {
@@ -3185,12 +2882,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (EnergyBar_GemNum_Shadow) || RETURN",
-                            "displayLines": "EnergyBar_GemNum_Shadow",
-                            "constants": [],
-                            "variables": [
-                              "EnergyBar_GemNum_Shadow"
-                            ]
+                            "displayLines": "EnergyBar_GemNum_Shadow"
                           },
                           "priorState": "Normal"
                         }
@@ -3199,12 +2891,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                            "displayLines": "EnergyBar_GemNum",
-                            "constants": [],
-                            "variables": [
-                              "EnergyBar_GemNum"
-                            ]
+                            "displayLines": "EnergyBar_GemNum"
                           },
                           "priorState": "Normal"
                         }
@@ -3294,12 +2981,7 @@ const compositeAbilityObject = {
                   "name": "Change Skill Point Max",
                   "function": "Add",
                   "value": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   }
                 }
               ]
@@ -3311,12 +2993,7 @@ const compositeAbilityObject = {
                   "name": "Change Skill Point Max",
                   "function": "Add",
                   "value": {
-                    "operator": "Variables[0] (2) || INVERT || RETURN",
-                    "displayLines": "-2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "-2"
                   }
                 }
               ]
@@ -3343,20 +3020,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-171150355\">TohsakaRin_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Elegant Conduct</span>]",
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
-                          "operator": "Variables[0] (1.5) || RETURN",
-                          "displayLines": "1.5",
-                          "constants": [],
-                          "variables": [
-                            1.5
-                          ]
+                          "displayLines": "1.5"
                         },
                         "MDF_Penetrate": {
-                          "operator": "Variables[0] (0.15) || RETURN",
-                          "displayLines": "0.15",
-                          "constants": [],
-                          "variables": [
-                            0.15
-                          ]
+                          "displayLines": "0.15"
                         }
                       }
                     },
@@ -3387,20 +3054,10 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-171150355\">TohsakaRin_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Elegant Conduct</span>]",
                           "valuePerStack": {
                             "MDF_AttackAddedRatio": {
-                              "operator": "Variables[0] (1.5) || RETURN",
-                              "displayLines": "1.5",
-                              "constants": [],
-                              "variables": [
-                                1.5
-                              ]
+                              "displayLines": "1.5"
                             },
                             "MDF_Penetrate": {
-                              "operator": "Variables[0] (0.15) || RETURN",
-                              "displayLines": "0.15",
-                              "constants": [],
-                              "variables": [
-                                0.15
-                              ]
+                              "displayLines": "0.15"
                             }
                           }
                         }
@@ -3487,12 +3144,7 @@ const compositeAbilityObject = {
                         "value1": "CurrentSkillPoints",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (7) || RETURN",
-                          "displayLines": "7",
-                          "constants": [],
-                          "variables": [
-                            7
-                          ]
+                          "displayLines": "7"
                         }
                       },
                       {
@@ -3500,12 +3152,7 @@ const compositeAbilityObject = {
                         "value1": "EnergyBar_GemNum",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (EnergyBar_ActiveGemNum) || RETURN",
-                          "displayLines": "EnergyBar_ActiveGemNum",
-                          "constants": [],
-                          "variables": [
-                            "EnergyBar_ActiveGemNum"
-                          ]
+                          "displayLines": "EnergyBar_ActiveGemNum"
                         }
                       },
                       {
@@ -3532,12 +3179,7 @@ const compositeAbilityObject = {
                         "value1": "CurrentSkillPoints",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         }
                       },
                       "passed": [
@@ -3548,15 +3190,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (TMP_CUR_BP) || Variables[1] (2) || SUB || Variables[2] (2) || MUL || Variables[3] (EnergyBar_GemNum) || ADD || RETURN",
-                            "displayLines": "(((TMP_CUR_BP - 2) * 2) + EnergyBar_GemNum)",
-                            "constants": [],
-                            "variables": [
-                              "TMP_CUR_BP",
-                              2,
-                              2,
-                              "EnergyBar_GemNum"
-                            ]
+                            "displayLines": "(((TMP_CUR_BP - 2) * 2) + EnergyBar_GemNum)"
                           },
                           "variableName": "EnergyBar_CostGemNum_Real"
                         }
@@ -3565,12 +3199,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                            "displayLines": "EnergyBar_GemNum",
-                            "constants": [],
-                            "variables": [
-                              "EnergyBar_GemNum"
-                            ]
+                            "displayLines": "EnergyBar_GemNum"
                           },
                           "variableName": "EnergyBar_CostGemNum_Real"
                         }
@@ -3594,12 +3223,7 @@ const compositeAbilityObject = {
                             "value1": "DamageCarry",
                             "compareType": ">",
                             "value2": {
-                              "operator": "Variables[0] (Tohsakarin_00_DamageCarry) || RETURN",
-                              "displayLines": "Tohsakarin_00_DamageCarry",
-                              "constants": [],
-                              "variables": [
-                                "Tohsakarin_00_DamageCarry"
-                              ]
+                              "displayLines": "Tohsakarin_00_DamageCarry"
                             },
                             "contextScope": "AITag"
                           },
@@ -3607,12 +3231,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                                "displayLines": "EnergyBar_GemNum",
-                                "constants": [],
-                                "variables": [
-                                  "EnergyBar_GemNum"
-                                ]
+                                "displayLines": "EnergyBar_GemNum"
                               },
                               "variableName": "EnergyBar_CostGemNum_Real"
                             }
@@ -3627,12 +3246,7 @@ const compositeAbilityObject = {
                         "value1": "EnergyBar_CostGemNum_Real",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__320) || RETURN",
-                          "displayLines": "ENEMIES_OBJECT_UNUSED__320",
-                          "constants": [],
-                          "variables": [
-                            "ENEMIES_OBJECT_UNUSED__320"
-                          ]
+                          "displayLines": "ENEMIES_OBJECT_UNUSED__320"
                         }
                       },
                       "passed": [
@@ -3700,12 +3314,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": -999,
                   "maxValue": {
-                    "operator": "Variables[0] (EnergyBar_MaxGemNum) || RETURN",
-                    "displayLines": "EnergyBar_MaxGemNum",
-                    "constants": [],
-                    "variables": [
-                      "EnergyBar_MaxGemNum"
-                    ]
+                    "displayLines": "EnergyBar_MaxGemNum"
                   },
                   "enteringRange": [
                     {
@@ -3715,12 +3324,7 @@ const compositeAbilityObject = {
                         "value1": "EnergyBar_GemNum",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Constants[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [
-                            1
-                          ],
-                          "variables": []
+                          "displayLines": "1"
                         }
                       },
                       "passed": [
@@ -3740,12 +3344,7 @@ const compositeAbilityObject = {
                           },
                           "modifierName": "<a class=\"gModGreen\" id=\"253442980\">TohsakaRin_GemStone_Show</a>[<span class=\"descriptionNumberColor\">Gem Energy</span>]",
                           "value": {
-                            "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                            "displayLines": "EnergyBar_GemNum",
-                            "constants": [],
-                            "variables": [
-                              "EnergyBar_GemNum"
-                            ]
+                            "displayLines": "EnergyBar_GemNum"
                           }
                         }
                       ],
@@ -3833,12 +3432,7 @@ const compositeAbilityObject = {
                         "value1": "EnergyBar_GemNum",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Constants[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [
-                            1
-                          ],
-                          "variables": []
+                          "displayLines": "1"
                         }
                       },
                       "passed": [
@@ -3858,12 +3452,7 @@ const compositeAbilityObject = {
                           },
                           "modifierName": "<a class=\"gModGreen\" id=\"253442980\">TohsakaRin_GemStone_Show</a>[<span class=\"descriptionNumberColor\">Gem Energy</span>]",
                           "value": {
-                            "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                            "displayLines": "EnergyBar_GemNum",
-                            "constants": [],
-                            "variables": [
-                              "EnergyBar_GemNum"
-                            ]
+                            "displayLines": "EnergyBar_GemNum"
                           }
                         }
                       ],
@@ -3883,12 +3472,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Variable Value Range Conditions",
                   "minValue": {
-                    "operator": "Variables[0] (EnergyBar_MaxGemNum) || RETURN",
-                    "displayLines": "EnergyBar_MaxGemNum",
-                    "constants": [],
-                    "variables": [
-                      "EnergyBar_MaxGemNum"
-                    ]
+                    "displayLines": "EnergyBar_MaxGemNum"
                   },
                   "maxValue": 999,
                   "includeMaxValueInRange": true,
@@ -3900,12 +3484,7 @@ const compositeAbilityObject = {
                         "value1": "EnergyBar_GemNum",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Constants[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [
-                            1
-                          ],
-                          "variables": []
+                          "displayLines": "1"
                         }
                       },
                       "passed": [
@@ -3925,12 +3504,7 @@ const compositeAbilityObject = {
                           },
                           "modifierName": "<a class=\"gModGreen\" id=\"253442980\">TohsakaRin_GemStone_Show</a>[<span class=\"descriptionNumberColor\">Gem Energy</span>]",
                           "value": {
-                            "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                            "displayLines": "EnergyBar_GemNum",
-                            "constants": [],
-                            "variables": [
-                              "EnergyBar_GemNum"
-                            ]
+                            "displayLines": "EnergyBar_GemNum"
                           }
                         }
                       ],
@@ -3975,12 +3549,7 @@ const compositeAbilityObject = {
                         "value1": "EnergyBar_GemNum",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Constants[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [
-                            1
-                          ],
-                          "variables": []
+                          "displayLines": "1"
                         }
                       },
                       "passed": [
@@ -4000,12 +3569,7 @@ const compositeAbilityObject = {
                           },
                           "modifierName": "<a class=\"gModGreen\" id=\"253442980\">TohsakaRin_GemStone_Show</a>[<span class=\"descriptionNumberColor\">Gem Energy</span>]",
                           "value": {
-                            "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                            "displayLines": "EnergyBar_GemNum",
-                            "constants": [],
-                            "variables": [
-                              "EnergyBar_GemNum"
-                            ]
+                            "displayLines": "EnergyBar_GemNum"
                           }
                         }
                       ],
@@ -4043,12 +3607,7 @@ const compositeAbilityObject = {
         {
           "name": "Skill Points Modification",
           "adjustmentValue": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "adjustmentType": "+"
         },
@@ -4068,12 +3627,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (12) || RETURN",
-                "displayLines": "12",
-                "constants": [],
-                "variables": [
-                  12
-                ]
+                "displayLines": "12"
               }
             },
             {
@@ -4088,12 +3642,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (EnergyBar_GemNum_Shadow) || RETURN",
-                    "displayLines": "EnergyBar_GemNum_Shadow",
-                    "constants": [],
-                    "variables": [
-                      "EnergyBar_GemNum_Shadow"
-                    ]
+                    "displayLines": "EnergyBar_GemNum_Shadow"
                   },
                   "priorState": "Normal"
                 }
@@ -4102,12 +3651,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                    "displayLines": "EnergyBar_GemNum",
-                    "constants": [],
-                    "variables": [
-                      "EnergyBar_GemNum"
-                    ]
+                    "displayLines": "EnergyBar_GemNum"
                   },
                   "priorState": "Normal"
                 }
@@ -4131,12 +3675,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (24) || RETURN",
-                "displayLines": "24",
-                "constants": [],
-                "variables": [
-                  24
-                ]
+                "displayLines": "24"
               }
             },
             {
@@ -4151,12 +3690,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (EnergyBar_GemNum_Shadow) || RETURN",
-                    "displayLines": "EnergyBar_GemNum_Shadow",
-                    "constants": [],
-                    "variables": [
-                      "EnergyBar_GemNum_Shadow"
-                    ]
+                    "displayLines": "EnergyBar_GemNum_Shadow"
                   },
                   "priorState": "Normal"
                 }
@@ -4165,12 +3699,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                    "displayLines": "EnergyBar_GemNum",
-                    "constants": [],
-                    "variables": [
-                      "EnergyBar_GemNum"
-                    ]
+                    "displayLines": "EnergyBar_GemNum"
                   },
                   "priorState": "Normal"
                 }
@@ -4222,21 +3751,11 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1113422465\">TohsakaRin_Ability03_Debuff</a>[<span class=\"descriptionNumberColor\">An Gal Ta Ki Gal Šè</span>]",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         },
@@ -4250,20 +3769,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (6) || RETURN",
-              "displayLines": "6",
-              "constants": [],
-              "variables": [
-                6
-              ]
+              "displayLines": "6"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -4279,20 +3788,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             },
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null
           }
@@ -4402,12 +3901,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (EnergyBar_GemNum_Shadow) || RETURN",
-                "displayLines": "EnergyBar_GemNum_Shadow",
-                "constants": [],
-                "variables": [
-                  "EnergyBar_GemNum_Shadow"
-                ]
+                "displayLines": "EnergyBar_GemNum_Shadow"
               },
               "variableName": "TMP_Shadow_Gem_Num"
             },
@@ -4429,21 +3923,11 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] (0.9) || RETURN",
-                      "displayLines": "0.9",
-                      "constants": [],
-                      "variables": [
-                        0.9
-                      ]
+                      "displayLines": "0.9"
                     },
                     "HitSplit": 0.25,
                     "Toughness": {
-                      "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                      "displayLines": "AOE Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "AOE Toughness Value"
-                      ]
+                      "displayLines": "AOE Toughness Value"
                     },
                     "Tags": null,
                     "EnergyGainPercent": "100%"
@@ -4460,21 +3944,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] (0.9) || RETURN",
-                  "displayLines": "0.9",
-                  "constants": [],
-                  "variables": [
-                    0.9
-                  ]
+                  "displayLines": "0.9"
                 },
                 "HitSplit": 0.25,
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -4490,12 +3964,7 @@ const compositeAbilityObject = {
                     "value1": "TMP_Round",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (33) || RETURN",
-                      "displayLines": "33",
-                      "constants": [],
-                      "variables": [
-                        33
-                      ]
+                      "displayLines": "33"
                     }
                   },
                   {
@@ -4503,12 +3972,7 @@ const compositeAbilityObject = {
                     "value1": "TMP_Shadow_Gem_Num",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (EnergyBar_CostGemNum) || RETURN",
-                      "displayLines": "EnergyBar_CostGemNum",
-                      "constants": [],
-                      "variables": [
-                        "EnergyBar_CostGemNum"
-                      ]
+                      "displayLines": "EnergyBar_CostGemNum"
                     }
                   }
                 ]
@@ -4526,14 +3990,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (TMP_Flag) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(TMP_Flag + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "TMP_Flag"
-                        ]
+                        "displayLines": "(TMP_Flag + 1)"
                       },
                       "variableName": "TMP_Flag"
                     }
@@ -4553,26 +4010,14 @@ const compositeAbilityObject = {
                     "value1": "TMP_Interval",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Constants[0] (0.021) || RETURN",
-                      "displayLines": "0.021",
-                      "constants": [
-                        0.021
-                      ],
-                      "variables": []
+                      "displayLines": "0.021"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (TMP_Interval) || Constants[0] (0.011) || SUB || RETURN",
-                        "displayLines": "(TMP_Interval - 0.011)",
-                        "constants": [
-                          0.011
-                        ],
-                        "variables": [
-                          "TMP_Interval"
-                        ]
+                        "displayLines": "(TMP_Interval - 0.011)"
                       },
                       "variableName": "TMP_Interval"
                     }
@@ -4581,40 +4026,21 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (TMP_Round) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(TMP_Round + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "TMP_Round"
-                    ]
+                    "displayLines": "(TMP_Round + 1)"
                   },
                   "variableName": "TMP_Round"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (TMP_Shadow_Gem_Num) || Variables[1] (EnergyBar_CostGemNum) || SUB || RETURN",
-                    "displayLines": "(TMP_Shadow_Gem_Num - EnergyBar_CostGemNum)",
-                    "constants": [],
-                    "variables": [
-                      "TMP_Shadow_Gem_Num",
-                      "EnergyBar_CostGemNum"
-                    ]
+                    "displayLines": "(TMP_Shadow_Gem_Num - EnergyBar_CostGemNum)"
                   },
                   "variableName": "TMP_Shadow_Gem_Num"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (TMP_Shadow_Gem_Cost) || Variables[1] (EnergyBar_CostGemNum) || ADD || RETURN",
-                    "displayLines": "(TMP_Shadow_Gem_Cost + EnergyBar_CostGemNum)",
-                    "constants": [],
-                    "variables": [
-                      "TMP_Shadow_Gem_Cost",
-                      "EnergyBar_CostGemNum"
-                    ]
+                    "displayLines": "(TMP_Shadow_Gem_Cost + EnergyBar_CostGemNum)"
                   },
                   "variableName": "TMP_Shadow_Gem_Cost"
                 },
@@ -4632,12 +4058,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (TMP_Shadow_Gem_Num) || RETURN",
-                        "displayLines": "TMP_Shadow_Gem_Num",
-                        "constants": [],
-                        "variables": [
-                          "TMP_Shadow_Gem_Num"
-                        ]
+                        "displayLines": "TMP_Shadow_Gem_Num"
                       },
                       "priorState": "Normal"
                     }
@@ -4664,20 +4085,10 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] (0.9) || RETURN",
-                              "displayLines": "0.9",
-                              "constants": [],
-                              "variables": [
-                                0.9
-                              ]
+                              "displayLines": "0.9"
                             },
                             "Toughness": {
-                              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                              "displayLines": "ST Toughness Value",
-                              "constants": [],
-                              "variables": [
-                                "ST Toughness Value"
-                              ]
+                              "displayLines": "ST Toughness Value"
                             },
                             "Tags": null
                           }
@@ -4711,12 +4122,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (EnergyBar_GemNum_Shadow) || RETURN",
-                    "displayLines": "EnergyBar_GemNum_Shadow",
-                    "constants": [],
-                    "variables": [
-                      "EnergyBar_GemNum_Shadow"
-                    ]
+                    "displayLines": "EnergyBar_GemNum_Shadow"
                   },
                   "priorState": "Normal"
                 }
@@ -4725,12 +4131,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                    "displayLines": "EnergyBar_GemNum",
-                    "constants": [],
-                    "variables": [
-                      "EnergyBar_GemNum"
-                    ]
+                    "displayLines": "EnergyBar_GemNum"
                   },
                   "priorState": "Normal"
                 }
@@ -4746,12 +4147,7 @@ const compositeAbilityObject = {
                 "value1": "CurrentSkillPoints",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
+                  "displayLines": "2"
                 }
               },
               "maxLoops": 333,
@@ -4770,23 +4166,13 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   }
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                    "displayLines": "EnergyBar_GemNum",
-                    "constants": [],
-                    "variables": [
-                      "EnergyBar_GemNum"
-                    ]
+                    "displayLines": "EnergyBar_GemNum"
                   }
                 }
               ]
@@ -4794,12 +4180,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                "displayLines": "EnergyBar_GemNum",
-                "constants": [],
-                "variables": [
-                  "EnergyBar_GemNum"
-                ]
+                "displayLines": "EnergyBar_GemNum"
               },
               "variableName": "TMP_Gem_Num"
             },
@@ -4821,21 +4202,11 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] (0.9) || RETURN",
-                      "displayLines": "0.9",
-                      "constants": [],
-                      "variables": [
-                        0.9
-                      ]
+                      "displayLines": "0.9"
                     },
                     "HitSplit": 0.25,
                     "Toughness": {
-                      "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                      "displayLines": "AOE Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "AOE Toughness Value"
-                      ]
+                      "displayLines": "AOE Toughness Value"
                     },
                     "Tags": null,
                     "EnergyGainPercent": "100%"
@@ -4852,21 +4223,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
-                  "operator": "Variables[0] (0.9) || RETURN",
-                  "displayLines": "0.9",
-                  "constants": [],
-                  "variables": [
-                    0.9
-                  ]
+                  "displayLines": "0.9"
                 },
                 "HitSplit": 0.25,
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -4882,12 +4243,7 @@ const compositeAbilityObject = {
                     "value1": "TMP_Round",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (33) || RETURN",
-                      "displayLines": "33",
-                      "constants": [],
-                      "variables": [
-                        33
-                      ]
+                      "displayLines": "33"
                     }
                   },
                   {
@@ -4895,12 +4251,7 @@ const compositeAbilityObject = {
                     "value1": "TMP_Gem_Num",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (EnergyBar_CostGemNum) || RETURN",
-                      "displayLines": "EnergyBar_CostGemNum",
-                      "constants": [],
-                      "variables": [
-                        "EnergyBar_CostGemNum"
-                      ]
+                      "displayLines": "EnergyBar_CostGemNum"
                     }
                   },
                   {
@@ -4935,14 +4286,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (TMP_Flag) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(TMP_Flag + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "TMP_Flag"
-                        ]
+                        "displayLines": "(TMP_Flag + 1)"
                       },
                       "variableName": "TMP_Flag"
                     }
@@ -4962,26 +4306,14 @@ const compositeAbilityObject = {
                     "value1": "TMP_Interval",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Constants[0] (0.021) || RETURN",
-                      "displayLines": "0.021",
-                      "constants": [
-                        0.021
-                      ],
-                      "variables": []
+                      "displayLines": "0.021"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (TMP_Interval) || Constants[0] (0.011) || SUB || RETURN",
-                        "displayLines": "(TMP_Interval - 0.011)",
-                        "constants": [
-                          0.011
-                        ],
-                        "variables": [
-                          "TMP_Interval"
-                        ]
+                        "displayLines": "(TMP_Interval - 0.011)"
                       },
                       "variableName": "TMP_Interval"
                     }
@@ -4990,40 +4322,21 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (TMP_Round) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(TMP_Round + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "TMP_Round"
-                    ]
+                    "displayLines": "(TMP_Round + 1)"
                   },
                   "variableName": "TMP_Round"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (TMP_Gem_Num) || Variables[1] (EnergyBar_CostGemNum) || SUB || RETURN",
-                    "displayLines": "(TMP_Gem_Num - EnergyBar_CostGemNum)",
-                    "constants": [],
-                    "variables": [
-                      "TMP_Gem_Num",
-                      "EnergyBar_CostGemNum"
-                    ]
+                    "displayLines": "(TMP_Gem_Num - EnergyBar_CostGemNum)"
                   },
                   "variableName": "TMP_Gem_Num"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (TMP_Gem_Cost) || Variables[1] (EnergyBar_CostGemNum) || ADD || RETURN",
-                    "displayLines": "(TMP_Gem_Cost + EnergyBar_CostGemNum)",
-                    "constants": [],
-                    "variables": [
-                      "TMP_Gem_Cost",
-                      "EnergyBar_CostGemNum"
-                    ]
+                    "displayLines": "(TMP_Gem_Cost + EnergyBar_CostGemNum)"
                   },
                   "variableName": "TMP_Gem_Cost"
                 },
@@ -5041,25 +4354,14 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (TohsakaRin_00_Achievement_Gemstone) || Variables[1] (EnergyBar_CostGemNum) || ADD || RETURN",
-                        "displayLines": "(TohsakaRin_00_Achievement_Gemstone + EnergyBar_CostGemNum)",
-                        "constants": [],
-                        "variables": [
-                          "TohsakaRin_00_Achievement_Gemstone",
-                          "EnergyBar_CostGemNum"
-                        ]
+                        "displayLines": "(TohsakaRin_00_Achievement_Gemstone + EnergyBar_CostGemNum)"
                       },
                       "variableName": "TohsakaRin_00_Achievement_Gemstone"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (TMP_Gem_Num) || RETURN",
-                        "displayLines": "TMP_Gem_Num",
-                        "constants": [],
-                        "variables": [
-                          "TMP_Gem_Num"
-                        ]
+                        "displayLines": "TMP_Gem_Num"
                       },
                       "priorState": "Normal"
                     }
@@ -5086,20 +4388,10 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "operator": "Variables[0] (0.9) || RETURN",
-                              "displayLines": "0.9",
-                              "constants": [],
-                              "variables": [
-                                0.9
-                              ]
+                              "displayLines": "0.9"
                             },
                             "Toughness": {
-                              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                              "displayLines": "ST Toughness Value",
-                              "constants": [],
-                              "variables": [
-                                "ST Toughness Value"
-                              ]
+                              "displayLines": "ST Toughness Value"
                             },
                             "Tags": null
                           }
@@ -5120,14 +4412,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (TMP_Gem_Cost) || SUB || RETURN",
-                "displayLines": "(0 - TMP_Gem_Cost)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "TMP_Gem_Cost"
-                ]
+                "displayLines": "(0 - TMP_Gem_Cost)"
               }
             },
             {
@@ -5157,12 +4442,7 @@ const compositeAbilityObject = {
                     "value1": "TMP_Gem_Cost",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (30) || RETURN",
-                      "displayLines": "30",
-                      "constants": [],
-                      "variables": [
-                        30
-                      ]
+                      "displayLines": "30"
                     }
                   }
                 ]
@@ -5177,12 +4457,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (TMP_Gem_Cost) || RETURN",
-                    "displayLines": "TMP_Gem_Cost",
-                    "constants": [],
-                    "variables": [
-                      "TMP_Gem_Cost"
-                    ]
+                    "displayLines": "TMP_Gem_Cost"
                   }
                 }
               ]
@@ -5199,12 +4474,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (EnergyBar_GemNum_Shadow) || RETURN",
-                    "displayLines": "EnergyBar_GemNum_Shadow",
-                    "constants": [],
-                    "variables": [
-                      "EnergyBar_GemNum_Shadow"
-                    ]
+                    "displayLines": "EnergyBar_GemNum_Shadow"
                   },
                   "priorState": "Normal"
                 }
@@ -5213,12 +4483,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
-                    "displayLines": "EnergyBar_GemNum",
-                    "constants": [],
-                    "variables": [
-                      "EnergyBar_GemNum"
-                    ]
+                    "displayLines": "EnergyBar_GemNum"
                   },
                   "priorState": "Normal"
                 }
@@ -5283,20 +4548,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (1.8) || RETURN",
-              "displayLines": "1.8",
-              "constants": [],
-              "variables": [
-                1.8
-              ]
+              "displayLines": "1.8"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -5361,20 +4616,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"

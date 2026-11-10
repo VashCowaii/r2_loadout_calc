@@ -183,12 +183,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageUp) || RETURN",
-                    "displayLines": "MDF_DamageUp",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageUp"
-                    ]
+                    "displayLines": "MDF_DamageUp"
                   }
                 }
               ]
@@ -216,12 +211,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_SpeedUp) || RETURN",
-                    "displayLines": "MDF_SpeedUp",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedUp"
-                    ]
+                    "displayLines": "MDF_SpeedUp"
                   }
                 }
               ]
@@ -457,12 +447,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                        "displayLines": "SummonList_ADF_1",
-                        "constants": [],
-                        "variables": [
-                          "SummonList_ADF_1"
-                        ]
+                        "displayLines": "SummonList_ADF_1"
                       },
                       "locationType": "BeforeCaster"
                     }
@@ -475,12 +460,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
-                        "displayLines": "SummonList_ADF_3",
-                        "constants": [],
-                        "variables": [
-                          "SummonList_ADF_3"
-                        ]
+                        "displayLines": "SummonList_ADF_3"
                       },
                       "locationType": "BeforeCaster"
                     }
@@ -543,24 +523,14 @@ const compositeAbilityObject = {
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-                "displayLines": "SummonList_ADF_2",
-                "constants": [],
-                "variables": [
-                  "SummonList_ADF_2"
-                ]
+                "displayLines": "SummonList_ADF_2"
               },
               "locationType": "BeforeCaster"
             },
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonList_ADF_4) || RETURN",
-                "displayLines": "SummonList_ADF_4",
-                "constants": [],
-                "variables": [
-                  "SummonList_ADF_4"
-                ]
+                "displayLines": "SummonList_ADF_4"
               },
               "locationType": "AfterCaster"
             }

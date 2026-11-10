@@ -19,21 +19,11 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"135439563\">MModifier_Monster_W4_Claymore_02_Ability05_Speed</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
       "duration": {
-        "operator": "Variables[0] ({[Skill05[4]]}) || RETURN",
-        "displayLines": "{[Skill05[4]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill05[4]]}"
-        ]
+        "displayLines": "{[Skill05[4]]}"
       },
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-          "displayLines": "{[Skill05[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill05[0]]}"
-          ]
+          "displayLines": "{[Skill05[0]]}"
         }
       }
     },
@@ -65,21 +55,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "duration": {
-            "operator": "Variables[0] (UnusedUnderThisBase_11446) || RETURN",
-            "displayLines": "UnusedUnderThisBase_11446",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_11446"
-            ]
+            "displayLines": "UnusedUnderThisBase_11446"
           },
           "valuePerStack": {
             "MDF_DamageUpRatio_PerLayer": {
-              "operator": "Variables[0] (UnusedUnderThisBase_11454) || RETURN",
-              "displayLines": "UnusedUnderThisBase_11454",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_11454"
-              ]
+              "displayLines": "UnusedUnderThisBase_11454"
             }
           }
         }

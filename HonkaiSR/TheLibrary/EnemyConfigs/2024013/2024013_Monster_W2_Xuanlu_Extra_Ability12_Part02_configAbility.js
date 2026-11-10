@@ -32,12 +32,7 @@ const configAbility = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonMinionID_3) || RETURN",
-                    "displayLines": "SummonMinionID_3",
-                    "constants": [],
-                    "variables": [
-                      "SummonMinionID_3"
-                    ]
+                    "displayLines": "SummonMinionID_3"
                   },
                   "locationType": "BeforeCaster"
                 }
@@ -50,12 +45,7 @@ const configAbility = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonMinionID_3) || RETURN",
-                    "displayLines": "SummonMinionID_3",
-                    "constants": [],
-                    "variables": [
-                      "SummonMinionID_3"
-                    ]
+                    "displayLines": "SummonMinionID_3"
                   },
                   "locationType": "AfterCaster"
                 }
@@ -75,12 +65,7 @@ const configAbility = {
       "conditions": {
         "name": "Enemy ID",
         "ID": {
-          "operator": "Variables[0] (SummonMinionID_3) || RETURN",
-          "displayLines": "SummonMinionID_3",
-          "constants": [],
-          "variables": [
-            "SummonMinionID_3"
-          ]
+          "displayLines": "SummonMinionID_3"
         },
         "target": {
           "name": "Target Name",

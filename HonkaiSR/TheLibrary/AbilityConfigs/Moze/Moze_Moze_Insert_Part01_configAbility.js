@@ -28,28 +28,13 @@ const configAbility = {
           "name": "Use Custom Character Function",
           "functionName": "<a class=\"gTempYellow\" id=\"854740786\">Moze_Insert_Part01_LoopDamage</a>",
           "baseDelay": {
-            "operator": "Variables[0] (MOZE_OBJECT_UNUSED_2) || RETURN",
-            "displayLines": "MOZE_OBJECT_UNUSED_2",
-            "constants": [],
-            "variables": [
-              "MOZE_OBJECT_UNUSED_2"
-            ]
+            "displayLines": "MOZE_OBJECT_UNUSED_2"
           },
           "delayInterval": {
-            "operator": "Variables[0] (MOZE_OBJECT_UNUSED_2) || RETURN",
-            "displayLines": "MOZE_OBJECT_UNUSED_2",
-            "constants": [],
-            "variables": [
-              "MOZE_OBJECT_UNUSED_2"
-            ]
+            "displayLines": "MOZE_OBJECT_UNUSED_2"
           },
           "parallelCount": {
-            "operator": "Variables[0] (MOZE_OBJECT_UNUSED_1) || RETURN",
-            "displayLines": "MOZE_OBJECT_UNUSED_1",
-            "constants": [],
-            "variables": [
-              "MOZE_OBJECT_UNUSED_1"
-            ]
+            "displayLines": "MOZE_OBJECT_UNUSED_1"
           }
         }
       ]
@@ -63,21 +48,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (MDF_InsertDamagePercentage) || RETURN",
-          "displayLines": "MDF_InsertDamagePercentage",
-          "constants": [],
-          "variables": [
-            "MDF_InsertDamagePercentage"
-          ]
+          "displayLines": "MDF_InsertDamagePercentage"
         },
         "HitSplit": 0.6,
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "attackType": "Follow-up",
@@ -87,13 +62,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (MDF_EnergyCost) || Variables[1] (3) || SUB || RETURN",
-        "displayLines": "(MDF_EnergyCost - 3)",
-        "constants": [],
-        "variables": [
-          "MDF_EnergyCost",
-          3
-        ]
+        "displayLines": "(MDF_EnergyCost - 3)"
       },
       "variableName": "MDF_EnergyCost"
     },
@@ -116,12 +85,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             },
             "Toughness": null,
             "Tags": null,
@@ -185,23 +149,13 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"707542368\">Moze_Point01_CD</a>[<span class=\"descriptionNumberColor\">Nightfeather</span>]",
               "duration": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               }
             },
             {
               "name": "Skill Points Modification",
               "adjustmentValue": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "adjustmentType": "+"
             }
@@ -232,12 +186,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "isFixed": "* ERR"
             }
@@ -300,12 +249,7 @@ const configAbility = {
             "value1": "MDF_EnergyCost",
             "compareType": ">=",
             "value2": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             }
           }
         ]
@@ -353,21 +297,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (MDF_InsertDamagePercentage) || RETURN",
-              "displayLines": "MDF_InsertDamagePercentage",
-              "constants": [],
-              "variables": [
-                "MDF_InsertDamagePercentage"
-              ]
+              "displayLines": "MDF_InsertDamagePercentage"
             },
             "HitSplit": 0.08,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Follow-up",

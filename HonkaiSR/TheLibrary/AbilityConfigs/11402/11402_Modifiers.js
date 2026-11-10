@@ -56,12 +56,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceLightningPEN</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             },
             {
@@ -196,13 +191,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_Layer) || Variables[1] (_IgnoreDefenceRatio) || MUL || RETURN",
-                "displayLines": "(_Layer * _IgnoreDefenceRatio)",
-                "constants": [],
-                "variables": [
-                  "_Layer",
-                  "_IgnoreDefenceRatio"
-                ]
+                "displayLines": "(_Layer * _IgnoreDefenceRatio)"
               },
               "variableName": "_IgnoreDefenceRatioTotal"
             }
@@ -243,21 +232,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1027471092\">Aglaea_Eidolon2_Effect</a>[<span class=\"descriptionNumberColor\">Sail on the Raft of Eyelids</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_4556) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_4556",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_4556"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_4556"
                   },
                   "valuePerStack": {
                     "_IgnoreDefenceRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_4533) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_4533",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_4533"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_4533"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -308,21 +287,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1027471092\">Aglaea_Eidolon2_Effect</a>[<span class=\"descriptionNumberColor\">Sail on the Raft of Eyelids</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_4556) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_4556",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_4556"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_4556"
                   },
                   "valuePerStack": {
                     "_IgnoreDefenceRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_4533) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_4533",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_4533"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_4533"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -629,12 +598,7 @@ const configAbility = {
                     "value1": "_Energy",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Constants[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [
-                        1
-                      ],
-                      "variables": []
+                      "displayLines": "1"
                     }
                   }
                 ]
@@ -686,12 +650,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1374425540\">Memosprite_AglaeaServant_SummonerAddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (_SpeedLayer) || RETURN",
-                    "displayLines": "_SpeedLayer",
-                    "constants": [],
-                    "variables": [
-                      "_SpeedLayer"
-                    ]
+                    "displayLines": "_SpeedLayer"
                   }
                 }
               ]
@@ -778,13 +737,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_Layer) || Variables[1] (MDF_SpeedUp) || MUL || RETURN",
-                "displayLines": "(MDF_Layer * MDF_SpeedUp)",
-                "constants": [],
-                "variables": [
-                  "MDF_Layer",
-                  "MDF_SpeedUp"
-                ]
+                "displayLines": "(MDF_Layer * MDF_SpeedUp)"
               },
               "variableName": "MDF_PropertyValue"
             }
@@ -812,13 +765,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_Layer) || Variables[1] (MDF_SpeedUp) || MUL || RETURN",
-                "displayLines": "(MDF_Layer * MDF_SpeedUp)",
-                "constants": [],
-                "variables": [
-                  "MDF_Layer",
-                  "MDF_SpeedUp"
-                ]
+                "displayLines": "(MDF_Layer * MDF_SpeedUp)"
               },
               "variableName": "MDF_PropertyValue"
             },
@@ -830,12 +777,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -866,14 +808,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0.5) || Variables[0] (_Layer) || MUL || RETURN",
-                "displayLines": "(0.5 * _Layer)",
-                "constants": [
-                  0.5
-                ],
-                "variables": [
-                  "_Layer"
-                ]
+                "displayLines": "(0.5 * _Layer)"
               }
             }
           ]
@@ -948,12 +883,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -970,13 +900,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_AttackUp) || Variables[1] (MDF_Count2) || MUL || RETURN",
-                "displayLines": "(MDF_AttackUp * MDF_Count2)",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackUp",
-                  "MDF_Count2"
-                ]
+                "displayLines": "(MDF_AttackUp * MDF_Count2)"
               },
               "variableName": "MDF_PropertyValue2"
             }
@@ -1012,27 +936,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_Count2) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(MDF_Count2 - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_Count2"
-                    ]
+                    "displayLines": "(MDF_Count2 - 1)"
                   },
                   "variableName": "MDF_Count2"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackUp) || Variables[1] (MDF_Count2) || MUL || RETURN",
-                    "displayLines": "(MDF_AttackUp * MDF_Count2)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackUp",
-                      "MDF_Count2"
-                    ]
+                    "displayLines": "(MDF_AttackUp * MDF_Count2)"
                   },
                   "variableName": "MDF_PropertyValue2"
                 }
@@ -1070,27 +981,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_Count2) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(MDF_Count2 + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_Count2"
-                    ]
+                    "displayLines": "(MDF_Count2 + 1)"
                   },
                   "variableName": "MDF_Count2"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackUp) || Variables[1] (MDF_Count2) || MUL || RETURN",
-                    "displayLines": "(MDF_AttackUp * MDF_Count2)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackUp",
-                      "MDF_Count2"
-                    ]
+                    "displayLines": "(MDF_AttackUp * MDF_Count2)"
                   },
                   "variableName": "MDF_PropertyValue2"
                 }
@@ -1128,27 +1026,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_Count2) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(MDF_Count2 - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_Count2"
-                    ]
+                    "displayLines": "(MDF_Count2 - 1)"
                   },
                   "variableName": "MDF_Count2"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackUp) || Variables[1] (MDF_Count2) || MUL || RETURN",
-                    "displayLines": "(MDF_AttackUp * MDF_Count2)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackUp",
-                      "MDF_Count2"
-                    ]
+                    "displayLines": "(MDF_AttackUp * MDF_Count2)"
                   },
                   "variableName": "MDF_PropertyValue2"
                 }
@@ -1304,12 +1189,7 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_4532) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_4532",
-                        "constants": [],
-                        "variables": [
-                          "UnusedUnderThisBase_4532"
-                        ]
+                        "displayLines": "UnusedUnderThisBase_4532"
                       },
                       "isFixed": "* ERR"
                     }
@@ -1385,12 +1265,7 @@ const configAbility = {
                             "target": "{{Caster}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_4532) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_4532",
-                            "constants": [],
-                            "variables": [
-                              "UnusedUnderThisBase_4532"
-                            ]
+                            "displayLines": "UnusedUnderThisBase_4532"
                           },
                           "isFixed": "* ERR"
                         }
@@ -1414,12 +1289,7 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Thunder",
                         "Damage": {
-                          "operator": "Variables[0] (BombDamagePercentage) || RETURN",
-                          "displayLines": "BombDamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "BombDamagePercentage"
-                          ]
+                          "displayLines": "BombDamagePercentage"
                         },
                         "Toughness": null,
                         "instanceTag": "AglaeaBomb",
@@ -1478,13 +1348,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_Layer) || Variables[1] (UnusedUnderThisBase_13145) || MUL || RETURN",
-                "displayLines": "(_Layer * UnusedUnderThisBase_13145)",
-                "constants": [],
-                "variables": [
-                  "_Layer",
-                  "UnusedUnderThisBase_13145"
-                ]
+                "displayLines": "(_Layer * UnusedUnderThisBase_13145)"
               },
               "variableName": "SpeedAddTotal"
             },
@@ -1496,12 +1360,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (SpeedAddTotal) || RETURN",
-                "displayLines": "SpeedAddTotal",
-                "constants": [],
-                "variables": [
-                  "SpeedAddTotal"
-                ]
+                "displayLines": "SpeedAddTotal"
               }
             }
           ]
@@ -1572,41 +1431,21 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (_CurrentSpeedConvert) || SUB || RETURN",
-                "displayLines": "(_CurrentSpeed - _CurrentSpeedConvert)",
-                "constants": [],
-                "variables": [
-                  "_CurrentSpeed",
-                  "_CurrentSpeedConvert"
-                ]
+                "displayLines": "(_CurrentSpeed - _CurrentSpeedConvert)"
               },
               "variableName": "_CurrentSpeed"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_ServantCurrentSpeed) || Variables[1] (_ServantCurrentSpeedConvert) || SUB || RETURN",
-                "displayLines": "(_ServantCurrentSpeed - _ServantCurrentSpeedConvert)",
-                "constants": [],
-                "variables": [
-                  "_ServantCurrentSpeed",
-                  "_ServantCurrentSpeedConvert"
-                ]
+                "displayLines": "(_ServantCurrentSpeed - _ServantCurrentSpeedConvert)"
               },
               "variableName": "_ServantCurrentSpeed"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (UnusedUnderThisBase_14185) || MUL || Variables[2] (_ServantCurrentSpeed) || Variables[3] (UnusedUnderThisBase_14186) || MUL || ADD || RETURN",
-                "displayLines": "((_CurrentSpeed * UnusedUnderThisBase_14185) + (_ServantCurrentSpeed * UnusedUnderThisBase_14186))",
-                "constants": [],
-                "variables": [
-                  "_CurrentSpeed",
-                  "UnusedUnderThisBase_14185",
-                  "_ServantCurrentSpeed",
-                  "UnusedUnderThisBase_14186"
-                ]
+                "displayLines": "((_CurrentSpeed * UnusedUnderThisBase_14185) + (_ServantCurrentSpeed * UnusedUnderThisBase_14186))"
               },
               "variableName": "_AttackConvert"
             },
@@ -1618,12 +1457,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (_AttackConvert) || RETURN",
-                "displayLines": "_AttackConvert",
-                "constants": [],
-                "variables": [
-                  "_AttackConvert"
-                ]
+                "displayLines": "_AttackConvert"
               }
             }
           ]

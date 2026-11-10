@@ -27,14 +27,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (count) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(count + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "count"
-                    ]
+                    "displayLines": "(count + 1)"
                   },
                   "variableName": "count"
                 },
@@ -153,12 +146,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (ADF_1) || RETURN",
-                    "displayLines": "ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "ADF_1"
-                    ]
+                    "displayLines": "ADF_1"
                   }
                 },
                 {
@@ -169,12 +157,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (ADF_2) || RETURN",
-                    "displayLines": "ADF_2",
-                    "constants": [],
-                    "variables": [
-                      "ADF_2"
-                    ]
+                    "displayLines": "ADF_2"
                   }
                 }
               ]
@@ -217,12 +200,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P1_ADF"
                     }
                   },
                   "ifTargetFound": [
@@ -234,29 +212,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1602534417\">MLevel_BattleEventAbility_Challenge_New_06</a>[<span class=\"descriptionNumberColor\">CRIT Rate and CRIT DMG Boost</span>]",
                       "duration": {
-                        "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
-                        "displayLines": "#BattleEvent_P4_ADF",
-                        "constants": [],
-                        "variables": [
-                          "#BattleEvent_P4_ADF"
-                        ]
+                        "displayLines": "#BattleEvent_P4_ADF"
                       },
                       "valuePerStack": {
                         "ADF_1": {
-                          "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                          "displayLines": "#BattleEvent_P2_ADF",
-                          "constants": [],
-                          "variables": [
-                            "#BattleEvent_P2_ADF"
-                          ]
+                          "displayLines": "#BattleEvent_P2_ADF"
                         },
                         "ADF_2": {
-                          "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                          "displayLines": "#BattleEvent_P3_ADF",
-                          "constants": [],
-                          "variables": [
-                            "#BattleEvent_P3_ADF"
-                          ]
+                          "displayLines": "#BattleEvent_P3_ADF"
                         }
                       }
                     }

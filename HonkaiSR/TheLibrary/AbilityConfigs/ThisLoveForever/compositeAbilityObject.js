@@ -32,24 +32,14 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.16) || RETURN",
-            "displayLines": "0.16",
-            "constants": [],
-            "variables": [
-              0.16
-            ]
+            "displayLines": "0.16"
           },
           "variableName": "MDF_CritDmg"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.1) || RETURN",
-            "displayLines": "0.1",
-            "constants": [],
-            "variables": [
-              0.1
-            ]
+            "displayLines": "0.1"
           },
           "variableName": "MDF_DamageRatio"
         },
@@ -62,12 +52,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-442867401\">LC_23052_Main</a>",
           "valuePerStack": {
             "MDF_ExtraRatio": {
-              "operator": "Variables[0] (0.6) || RETURN",
-              "displayLines": "0.6",
-              "constants": [],
-              "variables": [
-                0.6
-              ]
+              "displayLines": "0.6"
             }
           }
         }
@@ -92,12 +77,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageRatio) || RETURN",
-                    "displayLines": "MDF_DamageRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageRatio"
-                    ]
+                    "displayLines": "MDF_DamageRatio"
                   }
                 }
               ]
@@ -123,12 +103,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_CritDmg) || RETURN",
-                    "displayLines": "MDF_CritDmg",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CritDmg"
-                    ]
+                    "displayLines": "MDF_CritDmg"
                   }
                 }
               ]
@@ -166,30 +141,14 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_DamageRatio) || Constants[0] (1) || Variables[1] (0.6) || ADD || MUL || RETURN",
-                        "displayLines": "(MDF_DamageRatio * (1 + 0.6))",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_DamageRatio",
-                          0.6
-                        ]
+                        "displayLines": "(MDF_DamageRatio * (1 + 0.6))"
                       },
                       "variableName": "MDF_DamageRatio"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_CritDmg) || Constants[0] (1) || Variables[1] (0.6) || ADD || MUL || RETURN",
-                        "displayLines": "(MDF_CritDmg * (1 + 0.6))",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_CritDmg",
-                          0.6
-                        ]
+                        "displayLines": "(MDF_CritDmg * (1 + 0.6))"
                       },
                       "variableName": "MDF_CritDmg"
                     },
@@ -238,30 +197,14 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_CritDmg) || Constants[0] (1) || Variables[1] (0.6) || ADD || MUL || RETURN",
-                        "displayLines": "(MDF_CritDmg * (1 + 0.6))",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_CritDmg",
-                          0.6
-                        ]
+                        "displayLines": "(MDF_CritDmg * (1 + 0.6))"
                       },
                       "variableName": "MDF_CritDmg"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_DamageRatio) || Constants[0] (1) || Variables[1] (0.6) || ADD || MUL || RETURN",
-                        "displayLines": "(MDF_DamageRatio * (1 + 0.6))",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_DamageRatio",
-                          0.6
-                        ]
+                        "displayLines": "(MDF_DamageRatio * (1 + 0.6))"
                       },
                       "variableName": "MDF_DamageRatio"
                     },

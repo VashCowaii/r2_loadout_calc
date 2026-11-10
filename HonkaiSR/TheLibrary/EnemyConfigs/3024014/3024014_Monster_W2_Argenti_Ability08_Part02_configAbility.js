@@ -28,24 +28,14 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[Skill08[0]]}) || RETURN",
-            "displayLines": "{[Skill08[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill08[0]]}"
-            ]
+            "displayLines": "{[Skill08[0]]}"
           },
           "refreshPositions": false,
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID02) || RETURN",
-                "displayLines": "SummonID02",
-                "constants": [],
-                "variables": [
-                  "SummonID02"
-                ]
+                "displayLines": "SummonID02"
               },
               "locationType": "First"
             }
@@ -56,24 +46,14 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[Skill08[0]]}) || RETURN",
-            "displayLines": "{[Skill08[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill08[0]]}"
-            ]
+            "displayLines": "{[Skill08[0]]}"
           },
           "refreshPositions": false,
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID02) || RETURN",
-                "displayLines": "SummonID02",
-                "constants": [],
-                "variables": [
-                  "SummonID02"
-                ]
+                "displayLines": "SummonID02"
               },
               "locationType": "Last"
             }
@@ -96,24 +76,14 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[Skill08[0]]}) || RETURN",
-            "displayLines": "{[Skill08[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill08[0]]}"
-            ]
+            "displayLines": "{[Skill08[0]]}"
           },
           "refreshPositions": false,
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID02) || RETURN",
-                "displayLines": "SummonID02",
-                "constants": [],
-                "variables": [
-                  "SummonID02"
-                ]
+                "displayLines": "SummonID02"
               },
               "locationType": "First"
             }
@@ -124,24 +94,14 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[Skill08[0]]}) || RETURN",
-            "displayLines": "{[Skill08[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill08[0]]}"
-            ]
+            "displayLines": "{[Skill08[0]]}"
           },
           "refreshPositions": false,
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID02) || RETURN",
-                "displayLines": "SummonID02",
-                "constants": [],
-                "variables": [
-                  "SummonID02"
-                ]
+                "displayLines": "SummonID02"
               },
               "locationType": "Last"
             }
@@ -164,24 +124,14 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[Skill08[0]]}) || RETURN",
-            "displayLines": "{[Skill08[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill08[0]]}"
-            ]
+            "displayLines": "{[Skill08[0]]}"
           },
           "refreshPositions": false,
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID02) || RETURN",
-                "displayLines": "SummonID02",
-                "constants": [],
-                "variables": [
-                  "SummonID02"
-                ]
+                "displayLines": "SummonID02"
               },
               "locationType": "First"
             }
@@ -192,24 +142,14 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[Skill08[0]]}) || RETURN",
-            "displayLines": "{[Skill08[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill08[0]]}"
-            ]
+            "displayLines": "{[Skill08[0]]}"
           },
           "refreshPositions": false,
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID02) || RETURN",
-                "displayLines": "SummonID02",
-                "constants": [],
-                "variables": [
-                  "SummonID02"
-                ]
+                "displayLines": "SummonID02"
               },
               "locationType": "Last"
             }
@@ -232,24 +172,14 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[Skill08[0]]}) || RETURN",
-            "displayLines": "{[Skill08[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill08[0]]}"
-            ]
+            "displayLines": "{[Skill08[0]]}"
           },
           "refreshPositions": false,
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID02) || RETURN",
-                "displayLines": "SummonID02",
-                "constants": [],
-                "variables": [
-                  "SummonID02"
-                ]
+                "displayLines": "SummonID02"
               },
               "locationType": "First"
             }
@@ -260,24 +190,14 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[Skill08[0]]}) || RETURN",
-            "displayLines": "{[Skill08[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill08[0]]}"
-            ]
+            "displayLines": "{[Skill08[0]]}"
           },
           "refreshPositions": false,
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID02) || RETURN",
-                "displayLines": "SummonID02",
-                "constants": [],
-                "variables": [
-                  "SummonID02"
-                ]
+                "displayLines": "SummonID02"
               },
               "locationType": "Last"
             }

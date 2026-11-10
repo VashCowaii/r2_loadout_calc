@@ -48,12 +48,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFireBonus</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ChallengePeakBattle_Plugins_0020_ADF_1) || INVERT || RETURN",
-                "displayLines": "-ChallengePeakBattle_Plugins_0020_ADF_1",
-                "constants": [],
-                "variables": [
-                  "ChallengePeakBattle_Plugins_0020_ADF_1"
-                ]
+                "displayLines": "-ChallengePeakBattle_Plugins_0020_ADF_1"
               }
             },
             {
@@ -64,12 +59,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceLightningBonus</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ChallengePeakBattle_Plugins_0020_ADF_1) || INVERT || RETURN",
-                "displayLines": "-ChallengePeakBattle_Plugins_0020_ADF_1",
-                "constants": [],
-                "variables": [
-                  "ChallengePeakBattle_Plugins_0020_ADF_1"
-                ]
+                "displayLines": "-ChallengePeakBattle_Plugins_0020_ADF_1"
               }
             }
           ]
@@ -137,12 +127,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"96867120\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0020_02</a>[<span class=\"descriptionNumberColor\">Electrical Firestorm</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_Plugins_0020_ADF_1": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }

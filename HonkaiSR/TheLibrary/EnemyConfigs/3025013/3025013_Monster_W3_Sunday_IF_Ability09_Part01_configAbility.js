@@ -43,12 +43,7 @@ const configAbility = {
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (MDF_Skill10_TurnCount) || RETURN",
-            "displayLines": "MDF_Skill10_TurnCount",
-            "constants": [],
-            "variables": [
-              "MDF_Skill10_TurnCount"
-            ]
+            "displayLines": "MDF_Skill10_TurnCount"
           },
           "caseEvents": [
             {

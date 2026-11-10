@@ -32,14 +32,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(Jingliu_FullMoonFlagMax + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "Jingliu_FullMoonFlagMax"
-            ]
+            "displayLines": "(Jingliu_FullMoonFlagMax + 1)"
           },
           "variableName": "Jingliu_FullMoonFlagMax"
         }
@@ -81,32 +74,17 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       },
       "variableName": "Jingliu_MoonFlagMax"
     },
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (Jingliu_MoonFlag) || RETURN",
-        "displayLines": "Jingliu_MoonFlag",
-        "constants": [],
-        "variables": [
-          "Jingliu_MoonFlag"
-        ]
+        "displayLines": "Jingliu_MoonFlag"
       },
       "maximum": {
-        "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-        "displayLines": "Jingliu_MoonFlagMax",
-        "constants": [],
-        "variables": [
-          "Jingliu_MoonFlagMax"
-        ]
+        "displayLines": "Jingliu_MoonFlagMax"
       },
       "assignState": "True",
       "priorState": "Normal",

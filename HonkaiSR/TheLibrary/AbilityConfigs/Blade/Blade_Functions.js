@@ -25,13 +25,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (CasterLostHP) || Variables[1] (CasterMaxHP) || DIV || RETURN",
-                "displayLines": "(CasterLostHP / CasterMaxHP)",
-                "constants": [],
-                "variables": [
-                  "CasterLostHP",
-                  "CasterMaxHP"
-                ]
+                "displayLines": "(CasterLostHP / CasterMaxHP)"
               },
               "variableName": "CasterLostHPPercentage"
             }
@@ -44,12 +38,7 @@ const configAbility = {
             "value1": "CasterLostHPPercentage",
             "compareType": ">=",
             "value2": {
-              "operator": "Variables[0] (0.9) || RETURN",
-              "displayLines": "0.9",
-              "constants": [],
-              "variables": [
-                0.9
-              ]
+              "displayLines": "0.9"
             },
             "contextScope": "TargetEntity"
           },
@@ -57,13 +46,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (CasterMaxHP) || Variables[1] (0.9) || MUL || RETURN",
-                "displayLines": "(CasterMaxHP * 0.9)",
-                "constants": [],
-                "variables": [
-                  "CasterMaxHP",
-                  0.9
-                ]
+                "displayLines": "(CasterMaxHP * 0.9)"
               },
               "variableName": "CasterFinalLostHP"
             }
@@ -72,12 +55,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (CasterLostHP) || RETURN",
-                "displayLines": "CasterLostHP",
-                "constants": [],
-                "variables": [
-                  "CasterLostHP"
-                ]
+                "displayLines": "CasterLostHP"
               },
               "variableName": "CasterFinalLostHP"
             }
@@ -92,12 +70,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-936894999\">Advanced_Ren_Ability03_Listen</a>[<span class=\"descriptionNumberColor\">Death Sentence</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (CasterFinalLostHP) || RETURN",
-              "displayLines": "CasterFinalLostHP",
-              "constants": [],
-              "variables": [
-                "CasterFinalLostHP"
-              ]
+              "displayLines": "CasterFinalLostHP"
             }
           }
         }

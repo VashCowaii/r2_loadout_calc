@@ -282,12 +282,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "isFixed": "(Fixed)",
                   "ignoreBlock": true,
@@ -653,12 +648,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             }
           ]
@@ -698,13 +688,7 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"-446302809\">ModifyDamageData_IndependentDamageAddedRatio</a>",
                   "variables": {
                     "parameter[0]_IndependentDamageAddedRatio": {
-                      "operator": "Variables[0] (MDF_PropertyRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                      "displayLines": "(MDF_PropertyRatio * MDF_Layer)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyRatio",
-                        "MDF_Layer"
-                      ]
+                      "displayLines": "(MDF_PropertyRatio * MDF_Layer)"
                     }
                   }
                 }
@@ -786,12 +770,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               }
             }
           ]

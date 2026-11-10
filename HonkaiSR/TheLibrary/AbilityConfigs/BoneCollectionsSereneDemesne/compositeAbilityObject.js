@@ -38,12 +38,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.28) || RETURN",
-                    "displayLines": "0.28",
-                    "constants": [],
-                    "variables": [
-                      0.28
-                    ]
+                    "displayLines": "0.28"
                   }
                 }
               ]
@@ -68,12 +63,7 @@ const compositeAbilityObject = {
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (5000) || RETURN",
-                      "displayLines": "5000",
-                      "constants": [],
-                      "variables": [
-                        5000
-                      ]
+                      "displayLines": "5000"
                     }
                   },
                   "passed": [
@@ -125,12 +115,7 @@ const compositeAbilityObject = {
                         "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (5000) || RETURN",
-                          "displayLines": "5000",
-                          "constants": [],
-                          "variables": [
-                            5000
-                          ]
+                          "displayLines": "5000"
                         }
                       },
                       "passed": [
@@ -158,12 +143,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": -1,
                   "maxValue": {
-                    "operator": "Variables[0] (5000) || RETURN",
-                    "displayLines": "5000",
-                    "constants": [],
-                    "variables": [
-                      5000
-                    ]
+                    "displayLines": "5000"
                   },
                   "enteringRange": [
                     {

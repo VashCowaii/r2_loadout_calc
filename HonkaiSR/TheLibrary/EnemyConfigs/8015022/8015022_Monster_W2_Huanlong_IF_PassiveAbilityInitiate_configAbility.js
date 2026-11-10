@@ -129,14 +129,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_TurnCount) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(MDF_TurnCount - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_TurnCount"
-                        ]
+                        "displayLines": "(MDF_TurnCount - 1)"
                       },
                       "variableName": "MDF_TurnCount"
                     }
@@ -145,12 +138,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_TurnCount) || RETURN",
-                    "displayLines": "MDF_TurnCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_TurnCount"
-                    ]
+                    "displayLines": "MDF_TurnCount"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -189,12 +177,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_TurnCount) || RETURN",
-                "displayLines": "MDF_TurnCount",
-                "constants": [],
-                "variables": [
-                  "MDF_TurnCount"
-                ]
+                "displayLines": "MDF_TurnCount"
               },
               "entityClass": "Enemy",
               "target": {
@@ -549,12 +532,7 @@ const configAbility = {
                 {
                   "name": "Deal Toughness DMG",
                   "value": {
-                    "operator": "Variables[0] (_MaxStance) || RETURN",
-                    "displayLines": "_MaxStance",
-                    "constants": [],
-                    "variables": [
-                      "_MaxStance"
-                    ]
+                    "displayLines": "_MaxStance"
                   },
                   "forceReduction": true,
                   "canDelay": true,

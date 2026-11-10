@@ -105,12 +105,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_Attack) || RETURN",
-                    "displayLines": "MDF_Attack",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Attack"
-                    ]
+                    "displayLines": "MDF_Attack"
                   }
                 }
               ]
@@ -133,12 +128,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_Attack) || RETURN",
-                    "displayLines": "MDF_Attack",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Attack"
-                    ]
+                    "displayLines": "MDF_Attack"
                   }
                 }
               ]
@@ -168,38 +158,21 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1281011999\">Enemy_W5_Eater_Ability02_Attack</a>",
                   "valuePerStack": {
                     "MDF_Attack": {
-                      "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
-                      "displayLines": "{[Skill02[4]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[4]]}"
-                      ]
+                      "displayLines": "{[Skill02[4]]}"
                     }
                   }
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                    "displayLines": "{[Skill02[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[3]]}"
-                    ]
+                    "displayLines": "{[Skill02[3]]}"
                   },
                   "variableName": "MDF_CurrentCount"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentCount) || Variables[1] ({[Skill02[3]]}) || DIV || Variables[2] ({[Skill02[0]]}) || MUL || RETURN",
-                    "displayLines": "((MDF_CurrentCount / {[Skill02[3]]}) * {[Skill02[0]]})",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentCount",
-                      "{[Skill02[3]]}",
-                      "{[Skill02[0]]}"
-                    ]
+                    "displayLines": "((MDF_CurrentCount / {[Skill02[3]]}) * {[Skill02[0]]})"
                   },
                   "variableName": "MDF_ShowCount"
                 }
@@ -265,12 +238,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (MDF_ShowCount) || RETURN",
-                        "displayLines": "MDF_ShowCount",
-                        "constants": [],
-                        "variables": [
-                          "MDF_ShowCount"
-                        ]
+                        "displayLines": "MDF_ShowCount"
                       },
                       "formula": "Heal from Target MaxHP"
                     }
@@ -359,21 +327,10 @@ const compositeAbilityObject = {
                       "priorityTag": "EnemyBuffOthers",
                       "valuePerStack": {
                         "Ability03_Attack": {
-                          "operator": "Variables[0] (MDF_LoseAttack) || Variables[1] ({[Skill03[0]]}) || MUL || RETURN",
-                          "displayLines": "(MDF_LoseAttack * {[Skill03[0]]})",
-                          "constants": [],
-                          "variables": [
-                            "MDF_LoseAttack",
-                            "{[Skill03[0]]}"
-                          ]
+                          "displayLines": "(MDF_LoseAttack * {[Skill03[0]]})"
                         },
                         "Ability03_LifeTime": {
-                          "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-                          "displayLines": "{[Skill03[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill03[1]]}"
-                          ]
+                          "displayLines": "{[Skill03[1]]}"
                         }
                       },
                       "allowAbilityTriggers": false
@@ -408,40 +365,21 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_CurrentCount) || Variables[1] ({[Skill02[3]]}) || DIV || Variables[2] ({[Skill02[0]]}) || MUL || RETURN",
-                        "displayLines": "((MDF_CurrentCount / {[Skill02[3]]}) * {[Skill02[0]]})",
-                        "constants": [],
-                        "variables": [
-                          "MDF_CurrentCount",
-                          "{[Skill02[3]]}",
-                          "{[Skill02[0]]}"
-                        ]
+                        "displayLines": "((MDF_CurrentCount / {[Skill02[3]]}) * {[Skill02[0]]})"
                       },
                       "variableName": "MDF_ShowCount"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_CurrentCount) || Variables[1] ({[Skill02[3]]}) || DIV || Variables[2] (MDF_LoseAttack) || MUL || RETURN",
-                        "displayLines": "((MDF_CurrentCount / {[Skill02[3]]}) * MDF_LoseAttack)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_CurrentCount",
-                          "{[Skill02[3]]}",
-                          "MDF_LoseAttack"
-                        ]
+                        "displayLines": "((MDF_CurrentCount / {[Skill02[3]]}) * MDF_LoseAttack)"
                       },
                       "variableName": "MDF_Attack"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MDF_CurrentCount) || RETURN",
-                        "displayLines": "MDF_CurrentCount",
-                        "constants": [],
-                        "variables": [
-                          "MDF_CurrentCount"
-                        ]
+                        "displayLines": "MDF_CurrentCount"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -479,12 +417,7 @@ const compositeAbilityObject = {
                           "modifierName": "<a class=\"gModGreen\" id=\"-662226107\">Enemy_W5_Eater_Ability02_Ate</a>[<span class=\"descriptionNumberColor\">Devour</span>]",
                           "variableName": "MDF_DirtyHPRatio",
                           "value": {
-                            "operator": "Variables[0] (MDF_ShowCount) || RETURN",
-                            "displayLines": "MDF_ShowCount",
-                            "constants": [],
-                            "variables": [
-                              "MDF_ShowCount"
-                            ]
+                            "displayLines": "MDF_ShowCount"
                           }
                         },
                         {
@@ -496,12 +429,7 @@ const compositeAbilityObject = {
                           "modifierName": "<a class=\"gModGreen\" id=\"-662226107\">Enemy_W5_Eater_Ability02_Ate</a>[<span class=\"descriptionNumberColor\">Devour</span>]",
                           "variableName": "MDF_LoseAttack",
                           "value": {
-                            "operator": "Variables[0] (MDF_Attack) || RETURN",
-                            "displayLines": "MDF_Attack",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Attack"
-                            ]
+                            "displayLines": "MDF_Attack"
                           }
                         },
                         {
@@ -513,12 +441,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"201524254\">Enemy_W5_Eater_Ability02_BlackBlood</a>",
                           "valuePerStack": {
                             "MDF_DirtyHPRatio": {
-                              "operator": "Variables[0] (MDF_ShowCount) || RETURN",
-                              "displayLines": "MDF_ShowCount",
-                              "constants": [],
-                              "variables": [
-                                "MDF_ShowCount"
-                              ]
+                              "displayLines": "MDF_ShowCount"
                             }
                           }
                         },
@@ -529,13 +452,7 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "healPercent": {
-                            "operator": "Variables[0] ({[Skill02[0]]}) || Variables[1] ({[Skill02[3]]}) || DIV || RETURN",
-                            "displayLines": "({[Skill02[0]]} / {[Skill02[3]]})",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill02[0]]}",
-                              "{[Skill02[3]]}"
-                            ]
+                            "displayLines": "({[Skill02[0]]} / {[Skill02[3]]})"
                           },
                           "formula": "Heal from Target MaxHP"
                         },
@@ -548,12 +465,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"1501806678\">Enemy_W5_Eater_Ability02_LoseAttack</a>",
                           "valuePerStack": {
                             "MDF_LoseAttack": {
-                              "operator": "Variables[0] (MDF_Attack) || RETURN",
-                              "displayLines": "MDF_Attack",
-                              "constants": [],
-                              "variables": [
-                                "MDF_Attack"
-                              ]
+                              "displayLines": "MDF_Attack"
                             }
                           }
                         },
@@ -566,14 +478,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"1281011999\">Enemy_W5_Eater_Ability02_Attack</a>",
                           "valuePerStack": {
                             "MDF_Attack": {
-                              "operator": "Variables[0] (MDF_CurrentCount) || Variables[1] ({[Skill02[3]]}) || DIV || Variables[2] ({[Skill02[4]]}) || MUL || RETURN",
-                              "displayLines": "((MDF_CurrentCount / {[Skill02[3]]}) * {[Skill02[4]]})",
-                              "constants": [],
-                              "variables": [
-                                "MDF_CurrentCount",
-                                "{[Skill02[3]]}",
-                                "{[Skill02[4]]}"
-                              ]
+                              "displayLines": "((MDF_CurrentCount / {[Skill02[3]]}) * {[Skill02[4]]})"
                             }
                           }
                         }
@@ -669,21 +574,10 @@ const compositeAbilityObject = {
                       "priorityTag": "EnemyBuffOthers",
                       "valuePerStack": {
                         "Ability03_Attack": {
-                          "operator": "Variables[0] (MDF_LoseAttack) || Variables[1] ({[Skill03[0]]}) || MUL || RETURN",
-                          "displayLines": "(MDF_LoseAttack * {[Skill03[0]]})",
-                          "constants": [],
-                          "variables": [
-                            "MDF_LoseAttack",
-                            "{[Skill03[0]]}"
-                          ]
+                          "displayLines": "(MDF_LoseAttack * {[Skill03[0]]})"
                         },
                         "Ability03_LifeTime": {
-                          "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-                          "displayLines": "{[Skill03[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill03[1]]}"
-                          ]
+                          "displayLines": "{[Skill03[1]]}"
                         }
                       },
                       "allowAbilityTriggers": false
@@ -731,12 +625,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DirtyHPRatio) || RETURN",
-                    "displayLines": "MDF_DirtyHPRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DirtyHPRatio"
-                    ]
+                    "displayLines": "MDF_DirtyHPRatio"
                   }
                 }
               ]
@@ -777,13 +666,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_LoseAttack) || INVERT || Variables[1] (MDF_BaseAttack) || DIV || RETURN",
-                    "displayLines": "(-MDF_LoseAttack / MDF_BaseAttack)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_LoseAttack",
-                      "MDF_BaseAttack"
-                    ]
+                    "displayLines": "(-MDF_LoseAttack / MDF_BaseAttack)"
                   }
                 }
               ]
@@ -837,15 +720,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MIN) || Variables[1] (MDF_Attack) || Variables[2] (MDF_AttackRatio) || MUL || Variables[3] (MDF_AttackMax) || PARAM_2 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((MDF_Attack * MDF_AttackRatio), MDF_AttackMax)",
-                    "constants": [],
-                    "variables": [
-                      "MIN",
-                      "MDF_Attack",
-                      "MDF_AttackRatio",
-                      "MDF_AttackMax"
-                    ]
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((MDF_Attack * MDF_AttackRatio), MDF_AttackMax)"
                   },
                   "variableName": "MDF_LoseAttack"
                 },
@@ -858,12 +733,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1501806678\">Enemy_W5_Eater_Ability02_LoseAttack</a>",
                   "valuePerStack": {
                     "MDF_LoseAttack": {
-                      "operator": "Variables[0] (MDF_LoseAttack) || RETURN",
-                      "displayLines": "MDF_LoseAttack",
-                      "constants": [],
-                      "variables": [
-                        "MDF_LoseAttack"
-                      ]
+                      "displayLines": "MDF_LoseAttack"
                     }
                   }
                 }
@@ -895,35 +765,18 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"201524254\">Enemy_W5_Eater_Ability02_BlackBlood</a>",
                   "valuePerStack": {
                     "MDF_DirtyHPRatio": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || Variables[1] (MDF_MaxLayer) || DIV || Variables[2] (MDF_Layer) || MUL || RETURN",
-                      "displayLines": "(({[Skill02[0]]} / MDF_MaxLayer) * MDF_Layer)",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}",
-                        "MDF_MaxLayer",
-                        "MDF_Layer"
-                      ]
+                      "displayLines": "(({[Skill02[0]]} / MDF_MaxLayer) * MDF_Layer)"
                     }
                   }
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   },
                   "entityClass": "Enemy",
                   "maximum": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "assignState": "True",
                   "state": "Active"
@@ -955,13 +808,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Skill03_Attack) || Variables[1] ({[Skill03[0]]}) || MUL || RETURN",
-            "displayLines": "(Skill03_Attack * {[Skill03[0]]})",
-            "constants": [],
-            "variables": [
-              "Skill03_Attack",
-              "{[Skill03[0]]}"
-            ]
+            "displayLines": "(Skill03_Attack * {[Skill03[0]]})"
           },
           "variableName": "Skill03_Attack"
         },
@@ -981,21 +828,11 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"555908682\">Enemy_W5_Eater_Ability03_Attack</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-            "displayLines": "{[Skill03[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[1]]}"
-            ]
+            "displayLines": "{[Skill03[1]]}"
           },
           "valuePerStack": {
             "MDF_Attack": {
-              "operator": "Variables[0] (Skill03_Attack) || RETURN",
-              "displayLines": "Skill03_Attack",
-              "constants": [],
-              "variables": [
-                "Skill03_Attack"
-              ]
+              "displayLines": "Skill03_Attack"
             }
           },
           "casterAssign": "TargetSelf"
@@ -1094,12 +931,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "HitSplit": 0.125,
             "Toughness": null,
@@ -1116,12 +948,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "HitSplit": 0.125,
             "Toughness": null,
@@ -1138,12 +965,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "HitSplit": 0.125,
             "Toughness": null,
@@ -1160,12 +982,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "HitSplit": 0.125,
             "Toughness": null,
@@ -1182,12 +999,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "HitSplit": 0.125,
             "Toughness": null,
@@ -1204,12 +1016,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "HitSplit": 0.125,
             "Toughness": null,
@@ -1226,12 +1033,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "HitSplit": 0.125,
             "Toughness": null,
@@ -1248,12 +1050,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "HitSplit": 0.125,
             "Toughness": null,
@@ -1315,28 +1112,13 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-662226107\">Enemy_W5_Eater_Ability02_Ate</a>[<span class=\"descriptionNumberColor\">Devour</span>]",
           "valuePerStack": {
             "MDF_AttackRatio": {
-              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-              "displayLines": "{[Skill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[1]]}"
-              ]
+              "displayLines": "{[Skill02[1]]}"
             },
             "MDF_AttackMax": {
-              "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-              "displayLines": "{[Skill02[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[2]]}"
-              ]
+              "displayLines": "{[Skill02[2]]}"
             },
             "MDF_DirtyHPRatio": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             }
           }
         },
@@ -1348,21 +1130,11 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1742639356\">Enemy_W5_Eater_Ability02_Ate_Sub</a>",
           "stackLimit": {
-            "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-            "displayLines": "{[Skill02[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[3]]}"
-            ]
+            "displayLines": "{[Skill02[3]]}"
           },
           "valuePerStack": {
             "MDF_MaxLayer": {
-              "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-              "displayLines": "{[Skill02[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[3]]}"
-              ]
+              "displayLines": "{[Skill02[3]]}"
             }
           }
         },
@@ -1406,12 +1178,7 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1742639356\">Enemy_W5_Eater_Ability02_Ate_Sub</a>",
           "addStacksPerTrigger": {
-            "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-            "displayLines": "{[Skill02[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[3]]}"
-            ]
+            "displayLines": "{[Skill02[3]]}"
           }
         },
         {
@@ -1434,20 +1201,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1972425744\">Enemy_W5_Eater_Ability02_Eater</a>[<span class=\"descriptionNumberColor\">Satiated</span>]",
           "valuePerStack": {
             "MDF_LoseAttack": {
-              "operator": "Variables[0] (Skill02_Attack) || RETURN",
-              "displayLines": "Skill02_Attack",
-              "constants": [],
-              "variables": [
-                "Skill02_Attack"
-              ]
+              "displayLines": "Skill02_Attack"
             },
             "MDF_Attack": {
-              "operator": "Variables[0] (Skill02_Attack) || RETURN",
-              "displayLines": "Skill02_Attack",
-              "constants": [],
-              "variables": [
-                "Skill02_Attack"
-              ]
+              "displayLines": "Skill02_Attack"
             }
           }
         },
@@ -1513,12 +1270,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "HitSplit": 0.3,
             "Toughness": null,
@@ -1536,12 +1288,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "HitSplit": 0.7,
             "Toughness": null,
@@ -1559,29 +1306,14 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-            "displayLines": "{[Skill01[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[3]]}"
-            ]
+            "displayLines": "{[Skill01[3]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-            "displayLines": "{[Skill01[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[1]]}"
-            ]
+            "displayLines": "{[Skill01[1]]}"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
+              "displayLines": "{[Skill01[2]]}"
             }
           }
         },
@@ -1638,21 +1370,11 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"555908682\">Enemy_W5_Eater_Ability03_Attack</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "duration": {
-            "operator": "Variables[0] (Skill03_LifeTime) || RETURN",
-            "displayLines": "Skill03_LifeTime",
-            "constants": [],
-            "variables": [
-              "Skill03_LifeTime"
-            ]
+            "displayLines": "Skill03_LifeTime"
           },
           "valuePerStack": {
             "MDF_Attack": {
-              "operator": "Variables[0] (Skill03_Attack) || RETURN",
-              "displayLines": "Skill03_Attack",
-              "constants": [],
-              "variables": [
-                "Skill03_Attack"
-              ]
+              "displayLines": "Skill03_Attack"
             }
           },
           "casterAssign": "TargetSelf"

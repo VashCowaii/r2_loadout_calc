@@ -26,12 +26,7 @@ const configAbility = {
         "target": "{{Player Team All}}"
       },
       "healPercent": {
-        "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-        "displayLines": "{[PassiveSkill01[0]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill01[0]]}"
-        ]
+        "displayLines": "{[PassiveSkill01[0]]}"
       },
       "formula": "Heal from Target MaxHP"
     },

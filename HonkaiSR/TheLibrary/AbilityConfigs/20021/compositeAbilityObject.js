@@ -1131,14 +1131,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_9217) || Constants[0] (3) || MUL || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_9217 * 3)",
-                        "constants": [
-                          3
-                        ],
-                        "variables": [
-                          "UnusedUnderThisBase_9217"
-                        ]
+                        "displayLines": "(UnusedUnderThisBase_9217 * 3)"
                       },
                       "attacker": {
                         "name": "Target Name",
@@ -1227,14 +1220,7 @@ const compositeAbilityObject = {
                         "target": "{{Level Entity}}"
                       },
                       "baseToughnessDMG": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_9217) || Constants[0] (3) || MUL || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_9217 * 3)",
-                        "constants": [
-                          3
-                        ],
-                        "variables": [
-                          "UnusedUnderThisBase_9217"
-                        ]
+                        "displayLines": "(UnusedUnderThisBase_9217 * 3)"
                       },
                       "toughnessForcedReductionPreview": 1,
                       "isForcedReduction": true,
@@ -1382,12 +1368,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "set": {
-                "operator": "Variables[0] (MDF_W2_Feixiao_BattleEvent_ActionDelay) || RETURN",
-                "displayLines": "MDF_W2_Feixiao_BattleEvent_ActionDelay",
-                "constants": [],
-                "variables": [
-                  "MDF_W2_Feixiao_BattleEvent_ActionDelay"
-                ]
+                "displayLines": "MDF_W2_Feixiao_BattleEvent_ActionDelay"
               }
             }
           ]
@@ -1769,12 +1750,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_W2_Feixiao_BattleEvent_BaseSpeed) || RETURN",
-                    "displayLines": "MDF_W2_Feixiao_BattleEvent_BaseSpeed",
-                    "constants": [],
-                    "variables": [
-                      "MDF_W2_Feixiao_BattleEvent_BaseSpeed"
-                    ]
+                    "displayLines": "MDF_W2_Feixiao_BattleEvent_BaseSpeed"
                   }
                 }
               ]

@@ -29,12 +29,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"409195494\">M_PlayerBoy_30_CreateServantPreshow</a>",
       "valuePerStack": {
         "ServantID": {
-          "operator": "Variables[0] (ServantID) || RETURN",
-          "displayLines": "ServantID",
-          "constants": [],
-          "variables": [
-            "ServantID"
-          ]
+          "displayLines": "ServantID"
         }
       }
     },
@@ -161,12 +156,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1976946957\">PlayerBoy_30_UltraState</a>[<span class=\"descriptionNumberColor\">Epic</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "addStacksPerTrigger": 1
                 }
@@ -207,12 +197,7 @@ const configAbility = {
                     "value1": "TeamAddSP",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (10) || RETURN",
-                      "displayLines": "10",
-                      "constants": [],
-                      "variables": [
-                        10
-                      ]
+                      "displayLines": "10"
                     }
                   },
                   "passed": [
@@ -224,14 +209,7 @@ const configAbility = {
                       },
                       "variableName": "_chargeEnergy",
                       "resetValue": {
-                        "operator": "Variables[0] (FLOOR) || Variables[1] (TeamAddSP) || Variables[2] (10) || DIV || PARAM_1 || FUNCTION || RETURN",
-                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((TeamAddSP / 10))",
-                        "constants": [],
-                        "variables": [
-                          "FLOOR",
-                          "TeamAddSP",
-                          10
-                        ]
+                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((TeamAddSP / 10))"
                       },
                       "scope": "ContextModifier"
                     },
@@ -244,12 +222,7 @@ const configAbility = {
                       "variableName": "CurEnergy",
                       "context": "TargetEntity",
                       "value": {
-                        "operator": "Variables[0] (_chargeEnergy) || RETURN",
-                        "displayLines": "_chargeEnergy",
-                        "constants": [],
-                        "variables": [
-                          "_chargeEnergy"
-                        ]
+                        "displayLines": "_chargeEnergy"
                       }
                     },
                     {
@@ -260,15 +233,7 @@ const configAbility = {
                       },
                       "variableName": "TeamAddSP",
                       "value": {
-                        "operator": "Constants[0] (0) || Variables[0] (_chargeEnergy) || Variables[1] (10) || MUL || SUB || RETURN",
-                        "displayLines": "(0 - (_chargeEnergy * 10))",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "_chargeEnergy",
-                          10
-                        ]
+                        "displayLines": "(0 - (_chargeEnergy * 10))"
                       }
                     }
                   ]

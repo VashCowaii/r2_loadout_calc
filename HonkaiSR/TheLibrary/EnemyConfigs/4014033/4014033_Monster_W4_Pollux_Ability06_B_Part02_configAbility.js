@@ -59,20 +59,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-2024056044\">Monster_W4_Pollux_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
           "valuePerStack": {
             "MDF_DamagePercentage": {
-              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[1]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[1]]}"
             },
             "MDF_DamageHpAddedRatio": {
-              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[0]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[0]]}"
             }
           }
         }
@@ -81,12 +71,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (_TempAIFlag) || RETURN",
-        "displayLines": "_TempAIFlag",
-        "constants": [],
-        "variables": [
-          "_TempAIFlag"
-        ]
+        "displayLines": "_TempAIFlag"
       },
       "variableName": "AIFlag"
     },
@@ -138,12 +123,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1292838645\">Modifier_Monster_W4_Pollux_B_HardLockHp</a>",
       "valuePerStack": {
         "MDF_LockHp": {
-          "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
-          "displayLines": "{[PassiveSkill02[5]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill02[5]]}"
-          ]
+          "displayLines": "{[PassiveSkill02[5]]}"
         }
       }
     }

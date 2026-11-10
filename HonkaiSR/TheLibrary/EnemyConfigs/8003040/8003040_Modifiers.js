@@ -120,12 +120,7 @@ const configAbility = {
       "stackType": "Replace",
       "stackLimit": 5,
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-        "displayLines": "ModifierStackLayer",
-        "constants": [],
-        "variables": [
-          "ModifierStackLayer"
-        ]
+        "displayLines": "ModifierStackLayer"
       }
     },
     {
@@ -198,12 +193,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessVulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_StanceBreakTakenAddedRatio) || RETURN",
-                "displayLines": "MDF_StanceBreakTakenAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_StanceBreakTakenAddedRatio"
-                ]
+                "displayLines": "MDF_StanceBreakTakenAddedRatio"
               }
             },
             {
@@ -263,14 +253,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(EnergyLayer - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "EnergyLayer"
-                    ]
+                    "displayLines": "(EnergyLayer - 1)"
                   },
                   "variableName": "EnergyLayer"
                 }
@@ -444,12 +427,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (EnergyLayer) || RETURN",
-                    "displayLines": "EnergyLayer",
-                    "constants": [],
-                    "variables": [
-                      "EnergyLayer"
-                    ]
+                    "displayLines": "EnergyLayer"
                   },
                   "variableName": "EnergyLayerLast"
                 },
@@ -476,12 +454,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (EnergyLayer) || RETURN",
-                    "displayLines": "EnergyLayer",
-                    "constants": [],
-                    "variables": [
-                      "EnergyLayer"
-                    ]
+                    "displayLines": "EnergyLayer"
                   },
                   "variableName": "EnergyLayerLast"
                 },
@@ -508,12 +481,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (EnergyLayer) || RETURN",
-                    "displayLines": "EnergyLayer",
-                    "constants": [],
-                    "variables": [
-                      "EnergyLayer"
-                    ]
+                    "displayLines": "EnergyLayer"
                   },
                   "variableName": "EnergyLayerLast"
                 },
@@ -544,12 +512,7 @@ const configAbility = {
                     "value1": "EnergyLayer",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (EnergyLayerLast) || RETURN",
-                      "displayLines": "EnergyLayerLast",
-                      "constants": [],
-                      "variables": [
-                        "EnergyLayerLast"
-                      ]
+                      "displayLines": "EnergyLayerLast"
                     }
                   }
                 },
@@ -560,12 +523,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (EnergyLayer) || RETURN",
-                    "displayLines": "EnergyLayer",
-                    "constants": [],
-                    "variables": [
-                      "EnergyLayer"
-                    ]
+                    "displayLines": "EnergyLayer"
                   },
                   "variableName": "EnergyLayerLast"
                 },
@@ -605,12 +563,7 @@ const configAbility = {
                     "value1": "EnergyLayer",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (EnergyLayerLast) || RETURN",
-                      "displayLines": "EnergyLayerLast",
-                      "constants": [],
-                      "variables": [
-                        "EnergyLayerLast"
-                      ]
+                      "displayLines": "EnergyLayerLast"
                     }
                   }
                 },
@@ -621,12 +574,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (EnergyLayer) || RETURN",
-                    "displayLines": "EnergyLayer",
-                    "constants": [],
-                    "variables": [
-                      "EnergyLayer"
-                    ]
+                    "displayLines": "EnergyLayer"
                   },
                   "variableName": "EnergyLayerLast"
                 },
@@ -666,12 +614,7 @@ const configAbility = {
                     "value1": "EnergyLayer",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (EnergyLayerLast) || RETURN",
-                      "displayLines": "EnergyLayerLast",
-                      "constants": [],
-                      "variables": [
-                        "EnergyLayerLast"
-                      ]
+                      "displayLines": "EnergyLayerLast"
                     }
                   }
                 },
@@ -682,12 +625,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (EnergyLayer) || RETURN",
-                    "displayLines": "EnergyLayer",
-                    "constants": [],
-                    "variables": [
-                      "EnergyLayer"
-                    ]
+                    "displayLines": "EnergyLayer"
                   },
                   "variableName": "EnergyLayerLast"
                 },
@@ -727,12 +665,7 @@ const configAbility = {
                     "value1": "EnergyLayer",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (EnergyLayerLast) || RETURN",
-                      "displayLines": "EnergyLayerLast",
-                      "constants": [],
-                      "variables": [
-                        "EnergyLayerLast"
-                      ]
+                      "displayLines": "EnergyLayerLast"
                     }
                   }
                 },
@@ -743,12 +676,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (EnergyLayer) || RETURN",
-                    "displayLines": "EnergyLayer",
-                    "constants": [],
-                    "variables": [
-                      "EnergyLayer"
-                    ]
+                    "displayLines": "EnergyLayer"
                   },
                   "variableName": "EnergyLayerLast"
                 },
@@ -788,12 +716,7 @@ const configAbility = {
                     "value1": "EnergyLayer",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (EnergyLayerLast) || RETURN",
-                      "displayLines": "EnergyLayerLast",
-                      "constants": [],
-                      "variables": [
-                        "EnergyLayerLast"
-                      ]
+                      "displayLines": "EnergyLayerLast"
                     }
                   }
                 },
@@ -804,12 +727,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (EnergyLayer) || RETURN",
-                    "displayLines": "EnergyLayer",
-                    "constants": [],
-                    "variables": [
-                      "EnergyLayer"
-                    ]
+                    "displayLines": "EnergyLayer"
                   },
                   "variableName": "EnergyLayerLast"
                 },
@@ -849,12 +767,7 @@ const configAbility = {
                     "value1": "EnergyLayer",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (EnergyLayerLast) || RETURN",
-                      "displayLines": "EnergyLayerLast",
-                      "constants": [],
-                      "variables": [
-                        "EnergyLayerLast"
-                      ]
+                      "displayLines": "EnergyLayerLast"
                     }
                   }
                 },
@@ -865,12 +778,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (EnergyLayer) || RETURN",
-                    "displayLines": "EnergyLayer",
-                    "constants": [],
-                    "variables": [
-                      "EnergyLayer"
-                    ]
+                    "displayLines": "EnergyLayer"
                   },
                   "variableName": "EnergyLayerLast"
                 },
@@ -910,12 +818,7 @@ const configAbility = {
                     "value1": "EnergyLayer",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (EnergyLayerLast) || RETURN",
-                      "displayLines": "EnergyLayerLast",
-                      "constants": [],
-                      "variables": [
-                        "EnergyLayerLast"
-                      ]
+                      "displayLines": "EnergyLayerLast"
                     }
                   }
                 },
@@ -926,12 +829,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (EnergyLayer) || RETURN",
-                    "displayLines": "EnergyLayer",
-                    "constants": [],
-                    "variables": [
-                      "EnergyLayer"
-                    ]
+                    "displayLines": "EnergyLayer"
                   },
                   "variableName": "EnergyLayerLast"
                 },
@@ -971,12 +869,7 @@ const configAbility = {
                     "value1": "EnergyLayer",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (EnergyLayerLast) || RETURN",
-                      "displayLines": "EnergyLayerLast",
-                      "constants": [],
-                      "variables": [
-                        "EnergyLayerLast"
-                      ]
+                      "displayLines": "EnergyLayerLast"
                     }
                   }
                 },
@@ -987,12 +880,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (EnergyLayer) || RETURN",
-                    "displayLines": "EnergyLayer",
-                    "constants": [],
-                    "variables": [
-                      "EnergyLayer"
-                    ]
+                    "displayLines": "EnergyLayer"
                   },
                   "variableName": "EnergyLayerLast"
                 },
@@ -1041,12 +929,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (EnergyLayer) || RETURN",
-                    "displayLines": "EnergyLayer",
-                    "constants": [],
-                    "variables": [
-                      "EnergyLayer"
-                    ]
+                    "displayLines": "EnergyLayer"
                   },
                   "variableName": "EnergyLayerLast"
                 },
@@ -1129,12 +1012,7 @@ const configAbility = {
       "type": "Buff",
       "stackLimit": 10,
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-        "displayLines": "ModifierStackLayer",
-        "constants": [],
-        "variables": [
-          "ModifierStackLayer"
-        ]
+        "displayLines": "ModifierStackLayer"
       },
       "execute": [
         {
@@ -1154,13 +1032,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedAddedRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(MDF_SpeedAddedRatio_PerLayer * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedAddedRatio_PerLayer",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(MDF_SpeedAddedRatio_PerLayer * ModifierLayers)"
               }
             }
           ]

@@ -24,27 +24,14 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Constants[0] (1) || Variables[0] (MonsterCount) || DIV || Constants[1] (0.0009999999) || ADD || RETURN",
-        "displayLines": "((1 / MonsterCount) + 0.0009999999)",
-        "constants": [
-          1,
-          0.0009999999
-        ],
-        "variables": [
-          "MonsterCount"
-        ]
+        "displayLines": "((1 / MonsterCount) + 0.0009999999)"
       },
       "variableName": "ADF_HPDamageRatioValue"
     },
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (DeathCount) || RETURN",
-        "displayLines": "DeathCount",
-        "constants": [],
-        "variables": [
-          "DeathCount"
-        ]
+        "displayLines": "DeathCount"
       },
       "execute": [
         {
@@ -63,13 +50,7 @@ const configAbility = {
             "value1": "ADF_CurrentHPValue",
             "compareType": "<=",
             "value2": {
-              "operator": "Variables[0] (ADF_MaxHPValue) || Variables[1] (ADF_HPDamageRatioValue) || MUL || RETURN",
-              "displayLines": "(ADF_MaxHPValue * ADF_HPDamageRatioValue)",
-              "constants": [],
-              "variables": [
-                "ADF_MaxHPValue",
-                "ADF_HPDamageRatioValue"
-              ]
+              "displayLines": "(ADF_MaxHPValue * ADF_HPDamageRatioValue)"
             }
           },
           "passed": [
@@ -88,12 +69,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "consumePercent": {
-                "operator": "Variables[0] (ADF_HPDamageRatioValue) || RETURN",
-                "displayLines": "ADF_HPDamageRatioValue",
-                "constants": [],
-                "variables": [
-                  "ADF_HPDamageRatioValue"
-                ]
+                "displayLines": "ADF_HPDamageRatioValue"
               }
             }
           ],
@@ -106,12 +82,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "consumePercent": {
-                "operator": "Variables[0] (ADF_HPDamageRatioValue) || RETURN",
-                "displayLines": "ADF_HPDamageRatioValue",
-                "constants": [],
-                "variables": [
-                  "ADF_HPDamageRatioValue"
-                ]
+                "displayLines": "ADF_HPDamageRatioValue"
               }
             }
           ]

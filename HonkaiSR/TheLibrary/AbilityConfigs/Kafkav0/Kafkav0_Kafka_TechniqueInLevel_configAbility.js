@@ -50,12 +50,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     },
                     "Toughness": null,
                     "Tags": null
@@ -72,26 +67,14 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-                        "displayLines": "(2 + 1)",
-                        "constants": [],
-                        "variables": [
-                          2,
-                          1
-                        ]
+                        "displayLines": "(2 + 1)"
                       },
                       "variableName": "Skill03_P3_LifeTime"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (2.9) || Variables[1] (1.56) || ADD || RETURN",
-                        "displayLines": "(2.9 + 1.56)",
-                        "constants": [],
-                        "variables": [
-                          2.9,
-                          1.56
-                        ]
+                        "displayLines": "(2.9 + 1.56)"
                       },
                       "variableName": "Skill03_P4_DOTPercentage"
                     }
@@ -100,24 +83,14 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "variableName": "Skill03_P3_LifeTime"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (2.9) || RETURN",
-                        "displayLines": "2.9",
-                        "constants": [],
-                        "variables": [
-                          2.9
-                        ]
+                        "displayLines": "2.9"
                       },
                       "variableName": "Skill03_P4_DOTPercentage"
                     }
@@ -133,13 +106,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (1) || Variables[1] (0.3) || ADD || RETURN",
-                        "displayLines": "(1 + 0.3)",
-                        "constants": [],
-                        "variables": [
-                          1,
-                          0.3
-                        ]
+                        "displayLines": "(1 + 0.3)"
                       },
                       "variableName": "SkillMaze_P1_Chance"
                     }
@@ -148,12 +115,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "variableName": "SkillMaze_P1_Chance"
                     }
@@ -167,29 +129,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
                   "duration": {
-                    "operator": "Variables[0] (Skill03_P3_LifeTime) || RETURN",
-                    "displayLines": "Skill03_P3_LifeTime",
-                    "constants": [],
-                    "variables": [
-                      "Skill03_P3_LifeTime"
-                    ]
+                    "displayLines": "Skill03_P3_LifeTime"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (SkillMaze_P1_Chance) || RETURN",
-                    "displayLines": "SkillMaze_P1_Chance",
-                    "constants": [],
-                    "variables": [
-                      "SkillMaze_P1_Chance"
-                    ]
+                    "displayLines": "SkillMaze_P1_Chance"
                   },
                   "valuePerStack": {
                     "Modifier_Electric_DamagePercentage": {
-                      "operator": "Variables[0] (Skill03_P4_DOTPercentage) || RETURN",
-                      "displayLines": "Skill03_P4_DOTPercentage",
-                      "constants": [],
-                      "variables": [
-                        "Skill03_P4_DOTPercentage"
-                      ]
+                      "displayLines": "Skill03_P4_DOTPercentage"
                     }
                   },
                   "stackFlag": "CharacterSkill"

@@ -80,12 +80,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
-        "displayLines": "{[PassiveSkill02[5]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill02[5]]}"
-        ]
+        "displayLines": "{[PassiveSkill02[5]]}"
       },
       "variableName": "_MaxDamageReduce"
     },
@@ -100,108 +95,63 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill02[7]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[7]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[7]]}"
-            ]
+            "displayLines": "{[PassiveSkill02[7]]}"
           },
           "variableName": "_FactorK"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[1]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[1]]}"
-            ]
+            "displayLines": "{[PassiveSkill02[1]]}"
           },
           "variableName": "_Phase1Sums"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[2]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[2]]}"
-            ]
+            "displayLines": "{[PassiveSkill02[2]]}"
           },
           "variableName": "_Phase2Sums"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[3]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[3]]}"
-            ]
+            "displayLines": "{[PassiveSkill02[3]]}"
           },
           "variableName": "_BonusInit"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[4]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[4]]}"
-            ]
+            "displayLines": "{[PassiveSkill02[4]]}"
           },
           "variableName": "_BonusSums"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill02[8]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[8]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[8]]}"
-            ]
+            "displayLines": "{[PassiveSkill02[8]]}"
           },
           "variableName": "_Bonus2Init"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill02[9]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[9]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[9]]}"
-            ]
+            "displayLines": "{[PassiveSkill02[9]]}"
           },
           "variableName": "_Bonus2Sums"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill02[10]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[10]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[10]]}"
-            ]
+            "displayLines": "{[PassiveSkill02[10]]}"
           },
           "variableName": "_BonusLimit"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill02[11]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[11]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[11]]}"
-            ]
+            "displayLines": "{[PassiveSkill02[11]]}"
           },
           "variableName": "_Bonus2Limit"
         }
@@ -210,108 +160,63 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill02[6]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[6]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[6]]}"
-            ]
+            "displayLines": "{[PassiveSkill02[6]]}"
           },
           "variableName": "_FactorK"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[0]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[0]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[0]]}"
           },
           "variableName": "_Phase1Sums"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill03[1]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[1]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[1]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[1]]}"
           },
           "variableName": "_Phase2Sums"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill03[2]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[2]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[2]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[2]]}"
           },
           "variableName": "_BonusInit"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill03[3]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[3]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[3]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[3]]}"
           },
           "variableName": "_BonusSums"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill03[4]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[4]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[4]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[4]]}"
           },
           "variableName": "_Bonus2Init"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[5]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[5]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[5]]}"
           },
           "variableName": "_Bonus2Sums"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill03[6]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[6]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[6]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[6]]}"
           },
           "variableName": "_BonusLimit"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill03[7]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[7]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[7]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[7]]}"
           },
           "variableName": "_Bonus2Limit"
         }
@@ -519,12 +424,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-191889698\">MModifier_W4_Griffin_LocalLegend_Revenge</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "MDF_AddedDamageRatio": {
-                      "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[0]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[0]]}"
                     }
                   }
                 }

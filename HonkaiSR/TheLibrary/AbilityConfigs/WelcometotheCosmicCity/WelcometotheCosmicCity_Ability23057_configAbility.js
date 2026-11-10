@@ -55,14 +55,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"919563615\">LC_23057_Sub</a>[<span class=\"descriptionNumberColor\">Guaranteed Victory</span>]",
                       "counter": {
-                        "operator": "Variables[0] (MDF_Count) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(MDF_Count - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_Count"
-                        ]
+                        "displayLines": "(MDF_Count - 1)"
                       }
                     }
                   ]
@@ -161,23 +154,13 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"919563615\">LC_23057_Sub</a>[<span class=\"descriptionNumberColor\">Guaranteed Victory</span>]",
                   "counter": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   }
                 },
                 {
                   "name": "Adjust Team Punchline Value",
                   "value": {
-                    "operator": "Variables[0] (20) || RETURN",
-                    "displayLines": "20",
-                    "constants": [],
-                    "variables": [
-                      20
-                    ]
+                    "displayLines": "20"
                   },
                   "adjustment": "Add"
                 }

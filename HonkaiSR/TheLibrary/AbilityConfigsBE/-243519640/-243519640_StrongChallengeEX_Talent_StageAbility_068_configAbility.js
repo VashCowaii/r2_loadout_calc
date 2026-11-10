@@ -30,14 +30,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistancePhysicalBonus</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PhysicalResistanceDelta) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PhysicalResistanceDelta)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PhysicalResistanceDelta"
-                ]
+                "displayLines": "(0 - MDF_PhysicalResistanceDelta)"
               }
             }
           ]
@@ -59,12 +52,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamagePhysical</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PhysicalAddedRatio) || RETURN",
-                "displayLines": "MDF_PhysicalAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PhysicalAddedRatio"
-                ]
+                "displayLines": "MDF_PhysicalAddedRatio"
               }
             }
           ]
@@ -103,12 +91,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1173790972\">MStrongChallengeEX_Talent_StageAbility_PLY_068</a>",
                   "valuePerStack": {
                     "MDF_PhysicalAddedRatio": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }
@@ -139,12 +122,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1134570198\">MStrongChallengeEX_Talent_StageAbility_EMY_068</a>",
                   "valuePerStack": {
                     "MDF_PhysicalResistanceDelta": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     }
                   }
                 }

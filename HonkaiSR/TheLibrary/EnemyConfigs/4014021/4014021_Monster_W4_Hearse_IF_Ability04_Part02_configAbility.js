@@ -432,12 +432,7 @@ const configAbility = {
               "variableName": "Skill04ShieldAddValue",
               "context": "ContextAbility",
               "value": {
-                "operator": "Variables[0] (_SuperShieldValue) || RETURN",
-                "displayLines": "_SuperShieldValue",
-                "constants": [],
-                "variables": [
-                  "_SuperShieldValue"
-                ]
+                "displayLines": "_SuperShieldValue"
               },
               "max": 999
             }

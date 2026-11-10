@@ -14,12 +14,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill10[0]]}) || RETURN",
-          "displayLines": "{[Skill10[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill10[0]]}"
-          ]
+          "displayLines": "{[Skill10[0]]}"
         },
         "Toughness": null,
         "Tags": null,

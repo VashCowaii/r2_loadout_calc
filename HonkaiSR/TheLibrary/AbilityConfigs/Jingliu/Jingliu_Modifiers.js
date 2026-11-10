@@ -227,13 +227,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_Layer) || Variables[1] (0.44) || MUL || RETURN",
-                "displayLines": "(MDF_Layer * 0.44)",
-                "constants": [],
-                "variables": [
-                  "MDF_Layer",
-                  0.44
-                ]
+                "displayLines": "(MDF_Layer * 0.44)"
               },
               "variableName": "MDF_PropertyValue"
             },
@@ -247,14 +241,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || Variables[2] (0.2) || MUL || ADD || RETURN",
-                    "displayLines": "(MDF_PropertyValue + (MDF_Layer * 0.2))",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer",
-                      0.2
-                    ]
+                    "displayLines": "(MDF_PropertyValue + (MDF_Layer * 0.2))"
                   },
                   "variableName": "MDF_PropertyValue"
                 }
@@ -268,12 +255,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -343,13 +325,7 @@ const configAbility = {
                       },
                       "previewType": null,
                       "previewValue": {
-                        "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (0.05) || MUL || RETURN",
-                        "displayLines": "(MDF_MaxHP * 0.05)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxHP",
-                          0.05
-                        ]
+                        "displayLines": "(MDF_MaxHP * 0.05)"
                       }
                     }
                   ]
@@ -379,12 +355,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_CriticalRatio) || RETURN",
-                "displayLines": "MDF_CriticalRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_CriticalRatio"
-                ]
+                "displayLines": "MDF_CriticalRatio"
               }
             }
           ]
@@ -441,12 +412,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -730,12 +696,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-9916760\">Advanced_Jingliu_Eidolon6</a>[<span class=\"descriptionNumberColor\">Eclipse Hollows Corporeal Husk</span>]",
                   "valuePerStack": {
                     "MDF_IcePenetrate": {
-                      "operator": "Variables[0] (0.3) || RETURN",
-                      "displayLines": "0.3",
-                      "constants": [],
-                      "variables": [
-                        0.3
-                      ]
+                      "displayLines": "0.3"
                     }
                   }
                 }
@@ -765,20 +726,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"291641534\">Advanced_Jingliu_Trace_B1_Resist</a>[<span class=\"descriptionNumberColor\">Deathrealm</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.35) || RETURN",
-                      "displayLines": "0.35",
-                      "constants": [],
-                      "variables": [
-                        0.35
-                      ]
+                      "displayLines": "0.35"
                     },
                     "MDF_PropertyValue2": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 }
@@ -793,12 +744,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1354140510\">Advanced_Jingliu_Passive_CriticalUp</a>[<span class=\"descriptionNumberColor\">Spectral Transmigration</span>]",
               "valuePerStack": {
                 "MDF_CriticalRatio": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
+                  "displayLines": "0.5"
                 }
               }
             }
@@ -839,12 +785,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "consumePercent": {
-                    "operator": "Variables[0] (SkillP01_P2_HpConsumption) || RETURN",
-                    "displayLines": "SkillP01_P2_HpConsumption",
-                    "constants": [],
-                    "variables": [
-                      "SkillP01_P2_HpConsumption"
-                    ]
+                    "displayLines": "SkillP01_P2_HpConsumption"
                   },
                   "consumeFloor": 1
                 }
@@ -951,12 +892,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceIcePEN</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_IcePenetrate) || RETURN",
-                "displayLines": "MDF_IcePenetrate",
-                "constants": [],
-                "variables": [
-                  "MDF_IcePenetrate"
-                ]
+                "displayLines": "MDF_IcePenetrate"
               }
             }
           ]
@@ -1031,12 +967,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -1088,20 +1019,10 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (Jingliu_MoonFlag) || RETURN",
-                        "displayLines": "Jingliu_MoonFlag",
-                        "constants": [],
-                        "variables": [
-                          "Jingliu_MoonFlag"
-                        ]
+                        "displayLines": "Jingliu_MoonFlag"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-                        "displayLines": "Jingliu_MoonFlagMax",
-                        "constants": [],
-                        "variables": [
-                          "Jingliu_MoonFlagMax"
-                        ]
+                        "displayLines": "Jingliu_MoonFlagMax"
                       },
                       "assignState": "True",
                       "priorState": "Normal",
@@ -1157,20 +1078,10 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (Jingliu_MoonFlag) || RETURN",
-                        "displayLines": "Jingliu_MoonFlag",
-                        "constants": [],
-                        "variables": [
-                          "Jingliu_MoonFlag"
-                        ]
+                        "displayLines": "Jingliu_MoonFlag"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-                        "displayLines": "Jingliu_MoonFlagMax",
-                        "constants": [],
-                        "variables": [
-                          "Jingliu_MoonFlagMax"
-                        ]
+                        "displayLines": "Jingliu_MoonFlagMax"
                       },
                       "assignState": "True",
                       "priorState": "Normal",
@@ -1226,20 +1137,10 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (Jingliu_MoonFlag) || RETURN",
-                        "displayLines": "Jingliu_MoonFlag",
-                        "constants": [],
-                        "variables": [
-                          "Jingliu_MoonFlag"
-                        ]
+                        "displayLines": "Jingliu_MoonFlag"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-                        "displayLines": "Jingliu_MoonFlagMax",
-                        "constants": [],
-                        "variables": [
-                          "Jingliu_MoonFlagMax"
-                        ]
+                        "displayLines": "Jingliu_MoonFlagMax"
                       },
                       "assignState": "True",
                       "priorState": "Normal",
@@ -1308,20 +1209,10 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (Jingliu_MoonFlag) || RETURN",
-                        "displayLines": "Jingliu_MoonFlag",
-                        "constants": [],
-                        "variables": [
-                          "Jingliu_MoonFlag"
-                        ]
+                        "displayLines": "Jingliu_MoonFlag"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-                        "displayLines": "Jingliu_MoonFlagMax",
-                        "constants": [],
-                        "variables": [
-                          "Jingliu_MoonFlagMax"
-                        ]
+                        "displayLines": "Jingliu_MoonFlagMax"
                       },
                       "assignState": "True",
                       "priorState": "Normal",
@@ -1373,12 +1264,7 @@ const configAbility = {
                     "value1": "Jingliu_MoonFlag",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-                      "displayLines": "Jingliu_MoonFlagMax",
-                      "constants": [],
-                      "variables": [
-                        "Jingliu_MoonFlagMax"
-                      ]
+                      "displayLines": "Jingliu_MoonFlagMax"
                     }
                   },
                   {
@@ -1434,15 +1320,7 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || Variables[1] (2) || ADD || RETURN",
-                        "displayLines": "((Jingliu_MoonFlag + 1) + 2)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Jingliu_MoonFlag",
-                          2
-                        ]
+                        "displayLines": "((Jingliu_MoonFlag + 1) + 2)"
                       }
                     }
                   ],
@@ -1456,14 +1334,7 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(Jingliu_MoonFlag + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Jingliu_MoonFlag"
-                        ]
+                        "displayLines": "(Jingliu_MoonFlag + 1)"
                       }
                     }
                   ]
@@ -1576,14 +1447,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (Jingliu_LoseHPCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(Jingliu_LoseHPCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Jingliu_LoseHPCount"
-                        ]
+                        "displayLines": "(Jingliu_LoseHPCount + 1)"
                       },
                       "variableName": "Jingliu_LoseHPCount"
                     },
@@ -1618,25 +1482,14 @@ const configAbility = {
                         "value1": "Jingliu_LoseHPCount",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (20) || RETURN",
-                          "displayLines": "20",
-                          "constants": [],
-                          "variables": [
-                            20
-                          ]
+                          "displayLines": "20"
                         }
                       },
                       "passed": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (Jingliu_LoseHPCount) || Variables[1] (20) || SUB || RETURN",
-                            "displayLines": "(Jingliu_LoseHPCount - 20)",
-                            "constants": [],
-                            "variables": [
-                              "Jingliu_LoseHPCount",
-                              20
-                            ]
+                            "displayLines": "(Jingliu_LoseHPCount - 20)"
                           },
                           "variableName": "Jingliu_LoseHPCount"
                         },
@@ -1668,12 +1521,7 @@ const configAbility = {
                                 "value1": "Jingliu_FullMoonFlag",
                                 "compareType": ">",
                                 "value2": {
-                                  "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || RETURN",
-                                  "displayLines": "Jingliu_FullMoonFlagMax",
-                                  "constants": [],
-                                  "variables": [
-                                    "Jingliu_FullMoonFlagMax"
-                                  ]
+                                  "displayLines": "Jingliu_FullMoonFlagMax"
                                 },
                                 "contextScope": "ContextCaster"
                               },
@@ -1687,12 +1535,7 @@ const configAbility = {
                                     "target": "{{Caster}}"
                                   },
                                   "value": {
-                                    "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || RETURN",
-                                    "displayLines": "Jingliu_FullMoonFlagMax",
-                                    "constants": [],
-                                    "variables": [
-                                      "Jingliu_FullMoonFlagMax"
-                                    ]
+                                    "displayLines": "Jingliu_FullMoonFlagMax"
                                   }
                                 }
                               ]
@@ -1700,20 +1543,10 @@ const configAbility = {
                             {
                               "name": "Update Displayed Energy Bar",
                               "value": {
-                                "operator": "Variables[0] (Jingliu_FullMoonFlag) || RETURN",
-                                "displayLines": "Jingliu_FullMoonFlag",
-                                "constants": [],
-                                "variables": [
-                                  "Jingliu_FullMoonFlag"
-                                ]
+                                "displayLines": "Jingliu_FullMoonFlag"
                               },
                               "maximum": {
-                                "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || RETURN",
-                                "displayLines": "Jingliu_FullMoonFlagMax",
-                                "constants": [],
-                                "variables": [
-                                  "Jingliu_FullMoonFlagMax"
-                                ]
+                                "displayLines": "Jingliu_FullMoonFlagMax"
                               },
                               "assignState": "True",
                               "priorState": "Active",
@@ -1735,20 +1568,10 @@ const configAbility = {
                             {
                               "name": "Update Displayed Energy Bar",
                               "value": {
-                                "operator": "Variables[0] (Jingliu_MoonFlag) || RETURN",
-                                "displayLines": "Jingliu_MoonFlag",
-                                "constants": [],
-                                "variables": [
-                                  "Jingliu_MoonFlag"
-                                ]
+                                "displayLines": "Jingliu_MoonFlag"
                               },
                               "maximum": {
-                                "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-                                "displayLines": "Jingliu_MoonFlagMax",
-                                "constants": [],
-                                "variables": [
-                                  "Jingliu_MoonFlagMax"
-                                ]
+                                "displayLines": "Jingliu_MoonFlagMax"
                               },
                               "assignState": "True",
                               "priorState": "Normal",
@@ -1768,12 +1591,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"37722324\">Advanced_Jingliu_LoseHPCount</a>[<span class=\"descriptionNumberColor\">Crescent Transmigration</span>]",
                       "valuePerStack": {
                         "Jingliu_LoseHPCount": {
-                          "operator": "Variables[0] (Jingliu_LoseHPCount) || RETURN",
-                          "displayLines": "Jingliu_LoseHPCount",
-                          "constants": [],
-                          "variables": [
-                            "Jingliu_LoseHPCount"
-                          ]
+                          "displayLines": "Jingliu_LoseHPCount"
                         }
                       }
                     }
@@ -1798,12 +1616,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-44910835\">Advanced_Jingliu_MoonMad</a>[<span class=\"descriptionNumberColor\">Moonlight</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (5) || RETURN",
-                        "displayLines": "5",
-                        "constants": [],
-                        "variables": [
-                          5
-                        ]
+                        "displayLines": "5"
                       },
                       "addStacksPerTrigger": 1
                     }
@@ -1877,12 +1690,7 @@ const configAbility = {
                     "value1": "Jingliu_MoonFlag",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-                      "displayLines": "Jingliu_MoonFlagMax",
-                      "constants": [],
-                      "variables": [
-                        "Jingliu_MoonFlagMax"
-                      ]
+                      "displayLines": "Jingliu_MoonFlagMax"
                     }
                   },
                   {
@@ -1938,15 +1746,7 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || Variables[1] (2) || ADD || RETURN",
-                        "displayLines": "((Jingliu_MoonFlag + 1) + 2)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Jingliu_MoonFlag",
-                          2
-                        ]
+                        "displayLines": "((Jingliu_MoonFlag + 1) + 2)"
                       }
                     }
                   ],
@@ -1960,14 +1760,7 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(Jingliu_MoonFlag + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Jingliu_MoonFlag"
-                        ]
+                        "displayLines": "(Jingliu_MoonFlag + 1)"
                       }
                     }
                   ]
@@ -2013,12 +1806,7 @@ const configAbility = {
                     "value1": "Jingliu_MoonFlag",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-                      "displayLines": "Jingliu_MoonFlagMax",
-                      "constants": [],
-                      "variables": [
-                        "Jingliu_MoonFlagMax"
-                      ]
+                      "displayLines": "Jingliu_MoonFlagMax"
                     }
                   },
                   {
@@ -2074,15 +1862,7 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || Variables[1] (2) || ADD || RETURN",
-                        "displayLines": "((Jingliu_MoonFlag + 1) + 2)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Jingliu_MoonFlag",
-                          2
-                        ]
+                        "displayLines": "((Jingliu_MoonFlag + 1) + 2)"
                       }
                     }
                   ],
@@ -2096,14 +1876,7 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(Jingliu_MoonFlag + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Jingliu_MoonFlag"
-                        ]
+                        "displayLines": "(Jingliu_MoonFlag + 1)"
                       }
                     }
                   ]
@@ -2185,12 +1958,7 @@ const configAbility = {
                         "value1": "Jingliu_MoonFlag",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-                          "displayLines": "Jingliu_MoonFlagMax",
-                          "constants": [],
-                          "variables": [
-                            "Jingliu_MoonFlagMax"
-                          ]
+                          "displayLines": "Jingliu_MoonFlagMax"
                         }
                       },
                       {
@@ -2228,15 +1996,7 @@ const configAbility = {
                             "target": "{{Caster}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || Variables[1] (2) || ADD || RETURN",
-                            "displayLines": "((Jingliu_MoonFlag + 1) + 2)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Jingliu_MoonFlag",
-                              2
-                            ]
+                            "displayLines": "((Jingliu_MoonFlag + 1) + 2)"
                           }
                         }
                       ],
@@ -2250,14 +2010,7 @@ const configAbility = {
                             "target": "{{Caster}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(Jingliu_MoonFlag + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Jingliu_MoonFlag"
-                            ]
+                            "displayLines": "(Jingliu_MoonFlag + 1)"
                           }
                         }
                       ]
@@ -2281,12 +2034,7 @@ const configAbility = {
                     "value1": "Jingliu_MoonFlag",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-                      "displayLines": "Jingliu_MoonFlagMax",
-                      "constants": [],
-                      "variables": [
-                        "Jingliu_MoonFlagMax"
-                      ]
+                      "displayLines": "Jingliu_MoonFlagMax"
                     }
                   },
                   {
@@ -2334,15 +2082,7 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || Variables[1] (2) || ADD || RETURN",
-                        "displayLines": "((Jingliu_MoonFlag + 1) + 2)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Jingliu_MoonFlag",
-                          2
-                        ]
+                        "displayLines": "((Jingliu_MoonFlag + 1) + 2)"
                       }
                     }
                   ],
@@ -2356,14 +2096,7 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(Jingliu_MoonFlag + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Jingliu_MoonFlag"
-                        ]
+                        "displayLines": "(Jingliu_MoonFlag + 1)"
                       }
                     }
                   ]
@@ -2385,12 +2118,7 @@ const configAbility = {
                     "value1": "Jingliu_MoonFlag",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-                      "displayLines": "Jingliu_MoonFlagMax",
-                      "constants": [],
-                      "variables": [
-                        "Jingliu_MoonFlagMax"
-                      ]
+                      "displayLines": "Jingliu_MoonFlagMax"
                     }
                   },
                   {
@@ -2446,15 +2174,7 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || Variables[1] (2) || ADD || RETURN",
-                        "displayLines": "((Jingliu_MoonFlag + 1) + 2)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Jingliu_MoonFlag",
-                          2
-                        ]
+                        "displayLines": "((Jingliu_MoonFlag + 1) + 2)"
                       }
                     }
                   ],
@@ -2468,14 +2188,7 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(Jingliu_MoonFlag + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Jingliu_MoonFlag"
-                        ]
+                        "displayLines": "(Jingliu_MoonFlag + 1)"
                       }
                     }
                   ]
@@ -2520,14 +2233,7 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": {
-                "operator": "Variables[0] (Jingliu_MoonFlagMax) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(Jingliu_MoonFlagMax + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "Jingliu_MoonFlagMax"
-                ]
+                "displayLines": "(Jingliu_MoonFlagMax + 1)"
               },
               "maxValue": 99,
               "enteringRange": [
@@ -2547,12 +2253,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"596888368\">AdvancedJingliu_PointB3</a>[<span class=\"descriptionNumberColor\">Frost Wraith</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
+                          "displayLines": "0.25"
                         }
                       }
                     }
@@ -2567,12 +2268,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-                    "displayLines": "Jingliu_MoonFlagMax",
-                    "constants": [],
-                    "variables": [
-                      "Jingliu_MoonFlagMax"
-                    ]
+                    "displayLines": "Jingliu_MoonFlagMax"
                   }
                 }
               ]
@@ -2587,14 +2283,7 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": {
-                "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(Jingliu_FullMoonFlagMax + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "Jingliu_FullMoonFlagMax"
-                ]
+                "displayLines": "(Jingliu_FullMoonFlagMax + 1)"
               },
               "maxValue": 99,
               "includeMaxValueInRange": true,
@@ -2615,12 +2304,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"596888368\">AdvancedJingliu_PointB3</a>[<span class=\"descriptionNumberColor\">Frost Wraith</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
+                          "displayLines": "0.25"
                         }
                       }
                     }
@@ -2653,12 +2337,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Variables[0] (1) || INVERT || RETURN",
-            "displayLines": "-1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "-1"
           }
         }
       }

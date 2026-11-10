@@ -43,12 +43,7 @@ const configAbility = {
       "name": "Update Displayed Energy Bar",
       "value": 0,
       "maximum": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -64,26 +59,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (UnusedUnderThisBase_6495) || Variables[1] (5) || ADD || RETURN",
-            "displayLines": "(UnusedUnderThisBase_6495 + 5)",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_6495",
-              5
-            ]
+            "displayLines": "(UnusedUnderThisBase_6495 + 5)"
           },
           "variableName": "_PassiveBreakCountBase"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (10) || Variables[1] (5) || ADD || RETURN",
-            "displayLines": "(10 + 5)",
-            "constants": [],
-            "variables": [
-              10,
-              5
-            ]
+            "displayLines": "(10 + 5)"
           },
           "variableName": "_PassiveBreakCountMax"
         }
@@ -92,24 +75,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (UnusedUnderThisBase_6495) || RETURN",
-            "displayLines": "UnusedUnderThisBase_6495",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_6495"
-            ]
+            "displayLines": "UnusedUnderThisBase_6495"
           },
           "variableName": "_PassiveBreakCountBase"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (10) || RETURN",
-            "displayLines": "10",
-            "constants": [],
-            "variables": [
-              10
-            ]
+            "displayLines": "10"
           },
           "variableName": "_PassiveBreakCountMax"
         }
@@ -132,20 +105,10 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1458859803\">Rappa_Break_Modifier_ForShow</a>[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
           "stackLimit": {
-            "operator": "Variables[0] (_PassiveBreakCountMax) || RETURN",
-            "displayLines": "_PassiveBreakCountMax",
-            "constants": [],
-            "variables": [
-              "_PassiveBreakCountMax"
-            ]
+            "displayLines": "_PassiveBreakCountMax"
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] (_PassiveBreakCountBase) || RETURN",
-            "displayLines": "_PassiveBreakCountBase",
-            "constants": [],
-            "variables": [
-              "_PassiveBreakCountBase"
-            ]
+            "displayLines": "_PassiveBreakCountBase"
           }
         }
       ]
@@ -317,12 +280,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.5) || RETURN",
-                "displayLines": "0.5",
-                "constants": [],
-                "variables": [
-                  0.5
-                ]
+                "displayLines": "0.5"
               },
               "variableName": "P6_Real_Ratio"
             }

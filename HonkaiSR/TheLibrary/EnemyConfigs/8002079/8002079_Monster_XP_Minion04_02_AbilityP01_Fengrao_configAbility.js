@@ -89,20 +89,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1146816007\">Enemy_XP_Minion04_02_Fengrao_Minion</a>",
                   "valuePerStack": {
                     "_HealRatio": {
-                      "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                      "displayLines": "{[SkillP01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[0]]}"
-                      ]
+                      "displayLines": "{[SkillP01[0]]}"
                     },
                     "_LoseRatio": {
-                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                      "displayLines": "{[SkillP01[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[1]]}"
-                      ]
+                      "displayLines": "{[SkillP01[1]]}"
                     }
                   }
                 }

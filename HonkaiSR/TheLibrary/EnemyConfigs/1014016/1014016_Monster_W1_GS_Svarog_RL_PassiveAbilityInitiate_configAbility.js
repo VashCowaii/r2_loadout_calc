@@ -37,12 +37,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1864956422\">Monster_W1_Svarog_RL_LowHP</a>",
       "valuePerStack": {
         "MDF_LowHPRatio": {
-          "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-          "displayLines": "{[PassiveSkill02[1]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill02[1]]}"
-          ]
+          "displayLines": "{[PassiveSkill02[1]]}"
         }
       }
     },
@@ -92,12 +87,7 @@ const configAbility = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_LowHPRatio) || RETURN",
-                      "displayLines": "MDF_LowHPRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_LowHPRatio"
-                      ]
+                      "displayLines": "MDF_LowHPRatio"
                     }
                   },
                   {

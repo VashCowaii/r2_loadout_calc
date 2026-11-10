@@ -13,14 +13,7 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-770745937\">Monster_W1_SvarogPart_CountDown</a>[<span class=\"descriptionNumberColor\">Overload Countdown</span>]",
       "duration": {
-        "operator": "Variables[0] ({[Skill06[0]]}) || Constants[0] (1) || ADD || RETURN",
-        "displayLines": "({[Skill06[0]]} + 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "{[Skill06[0]]}"
-        ]
+        "displayLines": "({[Skill06[0]]} + 1)"
       }
     },
     {

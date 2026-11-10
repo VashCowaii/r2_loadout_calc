@@ -22,21 +22,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] (_Skill03_P1_DamagePercentage) || RETURN",
-          "displayLines": "_Skill03_P1_DamagePercentage",
-          "constants": [],
-          "variables": [
-            "_Skill03_P1_DamagePercentage"
-          ]
+          "displayLines": "_Skill03_P1_DamagePercentage"
         },
         "dmgFormula": "Max HP Scaling",
         "Toughness": {
-          "operator": "Variables[0] (_Skill03_Stance) || RETURN",
-          "displayLines": "_Skill03_Stance",
-          "constants": [],
-          "variables": [
-            "_Skill03_Stance"
-          ]
+          "displayLines": "_Skill03_Stance"
         },
         "ToughnessDMGType": {
           "DamageType": "Ice"

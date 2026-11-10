@@ -62,13 +62,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackUPRatio) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                    "displayLines": "(MDF_AttackUPRatio * ModifierLayers)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackUPRatio",
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "(MDF_AttackUPRatio * ModifierLayers)"
                   }
                 }
               ]
@@ -130,14 +124,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (SleepNum) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(SleepNum + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "SleepNum"
-                            ]
+                            "displayLines": "(SleepNum + 1)"
                           },
                           "variableName": "SleepNum"
                         }
@@ -152,21 +139,11 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1025576815\">Enemy_W3_Figure_RLElite_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                       "valuePerStack": {
                         "MDF_AttackUPRatio": {
-                          "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill02[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill02[0]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill02[0]]}"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (SleepNum) || RETURN",
-                        "displayLines": "SleepNum",
-                        "constants": [],
-                        "variables": [
-                          "SleepNum"
-                        ]
+                        "displayLines": "SleepNum"
                       }
                     },
                     {
@@ -229,14 +206,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (SleepNum) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(SleepNum + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "SleepNum"
-                            ]
+                            "displayLines": "(SleepNum + 1)"
                           },
                           "variableName": "SleepNum"
                         }
@@ -251,21 +221,11 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1025576815\">Enemy_W3_Figure_RLElite_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                       "valuePerStack": {
                         "MDF_AttackUPRatio": {
-                          "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill02[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill02[0]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill02[0]]}"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (SleepNum) || RETURN",
-                        "displayLines": "SleepNum",
-                        "constants": [],
-                        "variables": [
-                          "SleepNum"
-                        ]
+                        "displayLines": "SleepNum"
                       }
                     },
                     {
@@ -513,37 +473,17 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"2144716663\">Standard_CTRL_Sleep</a>[<span class=\"descriptionNumberColor\">Alien Dream</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-                    "displayLines": "{[Skill05[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill05[2]]}"
-                    ]
+                    "displayLines": "{[Skill05[2]]}"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                    "displayLines": "{[Skill05[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill05[1]]}"
-                    ]
+                    "displayLines": "{[Skill05[1]]}"
                   },
                   "valuePerStack": {
                     "MDF_AllDamageAddedRatio": {
-                      "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                      "displayLines": "{[Skill02[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[2]]}"
-                      ]
+                      "displayLines": "{[Skill02[2]]}"
                     },
                     "MDF_HealPercentage": {
-                      "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                      "displayLines": "{[Skill02[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[3]]}"
-                      ]
+                      "displayLines": "{[Skill02[3]]}"
                     }
                   }
                 }
@@ -563,14 +503,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (SleepCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(SleepCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "SleepCount"
-                    ]
+                    "displayLines": "(SleepCount + 1)"
                   },
                   "variableName": "SleepCount"
                 }
@@ -677,14 +610,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (SleepCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(SleepCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "SleepCount"
-                    ]
+                    "displayLines": "(SleepCount + 1)"
                   },
                   "variableName": "SleepCount"
                 }
@@ -719,37 +645,17 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"2144716663\">Standard_CTRL_Sleep</a>[<span class=\"descriptionNumberColor\">Alien Dream</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-                    "displayLines": "{[Skill05[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill05[2]]}"
-                    ]
+                    "displayLines": "{[Skill05[2]]}"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                    "displayLines": "{[Skill05[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill05[1]]}"
-                    ]
+                    "displayLines": "{[Skill05[1]]}"
                   },
                   "valuePerStack": {
                     "MDF_AllDamageAddedRatio": {
-                      "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                      "displayLines": "{[Skill02[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[2]]}"
-                      ]
+                      "displayLines": "{[Skill02[2]]}"
                     },
                     "MDF_HealPercentage": {
-                      "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                      "displayLines": "{[Skill02[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[3]]}"
-                      ]
+                      "displayLines": "{[Skill02[3]]}"
                     }
                   }
                 }
@@ -773,37 +679,17 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"2144716663\">Standard_CTRL_Sleep</a>[<span class=\"descriptionNumberColor\">Alien Dream</span>]",
                       "duration": {
-                        "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-                        "displayLines": "{[Skill05[2]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill05[2]]}"
-                        ]
+                        "displayLines": "{[Skill05[2]]}"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                        "displayLines": "{[Skill05[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill05[1]]}"
-                        ]
+                        "displayLines": "{[Skill05[1]]}"
                       },
                       "valuePerStack": {
                         "MDF_AllDamageAddedRatio": {
-                          "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                          "displayLines": "{[Skill02[2]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[2]]}"
-                          ]
+                          "displayLines": "{[Skill02[2]]}"
                         },
                         "MDF_HealPercentage": {
-                          "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                          "displayLines": "{[Skill02[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[3]]}"
-                          ]
+                          "displayLines": "{[Skill02[3]]}"
                         }
                       }
                     }
@@ -823,14 +709,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (SleepCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(SleepCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "SleepCount"
-                        ]
+                        "displayLines": "(SleepCount + 1)"
                       },
                       "variableName": "SleepCount"
                     }
@@ -952,12 +831,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -1023,37 +897,17 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"2144716663\">Standard_CTRL_Sleep</a>[<span class=\"descriptionNumberColor\">Alien Dream</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-            "displayLines": "{[Skill02[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[1]]}"
-            ]
+            "displayLines": "{[Skill02[1]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-            "displayLines": "{[Skill02[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[0]]}"
-            ]
+            "displayLines": "{[Skill02[0]]}"
           },
           "valuePerStack": {
             "MDF_AllDamageAddedRatio": {
-              "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-              "displayLines": "{[Skill02[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[2]]}"
-              ]
+              "displayLines": "{[Skill02[2]]}"
             },
             "MDF_HealPercentage": {
-              "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-              "displayLines": "{[Skill02[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[3]]}"
-              ]
+              "displayLines": "{[Skill02[3]]}"
             }
           }
         },
@@ -1114,12 +968,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,

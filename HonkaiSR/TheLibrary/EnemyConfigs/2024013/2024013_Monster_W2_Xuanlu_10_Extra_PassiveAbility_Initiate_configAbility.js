@@ -139,12 +139,7 @@ const configAbility = {
               "conditions": {
                 "name": "Enemy ID",
                 "ID": {
-                  "operator": "Variables[0] (SummonMinionID_2) || RETURN",
-                  "displayLines": "SummonMinionID_2",
-                  "constants": [],
-                  "variables": [
-                    "SummonMinionID_2"
-                  ]
+                  "displayLines": "SummonMinionID_2"
                 },
                 "target": {
                   "name": "Target Name",

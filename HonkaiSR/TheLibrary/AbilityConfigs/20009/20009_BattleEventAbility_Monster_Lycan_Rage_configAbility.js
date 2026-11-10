@@ -67,14 +67,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "set": {
-                    "operator": "Variables[0] (P1_ActionDelay) || Constants[0] (0.1) || ADD || RETURN",
-                    "displayLines": "(P1_ActionDelay + 0.1)",
-                    "constants": [
-                      0.1
-                    ],
-                    "variables": [
-                      "P1_ActionDelay"
-                    ]
+                    "displayLines": "(P1_ActionDelay + 0.1)"
                   }
                 }
               ]

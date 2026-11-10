@@ -407,12 +407,7 @@ const compositeAbilityObject = {
             "target": "{{Player Team(Exclude Memosprites)v2}}"
           },
           "value": {
-            "operator": "Variables[0] ({[Skill08[0]]}) || INVERT || RETURN",
-            "displayLines": "-{[Skill08[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill08[0]]}"
-            ]
+            "displayLines": "-{[Skill08[0]]}"
           },
           "isFixed": "(Fixed)"
         },
@@ -480,12 +475,7 @@ const compositeAbilityObject = {
           "name": "Define Custom Variable",
           "scope": "TargetEntity",
           "value": {
-            "operator": "Variables[0] (FlopSide) || INVERT || RETURN",
-            "displayLines": "-FlopSide",
-            "constants": [],
-            "variables": [
-              "FlopSide"
-            ]
+            "displayLines": "-FlopSide"
           },
           "variableName": "FlopSide"
         },
@@ -583,12 +573,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -612,12 +597,7 @@ const compositeAbilityObject = {
             "target": "{{Player Team(Exclude Memosprites)v2}}"
           },
           "value": {
-            "operator": "Variables[0] ({[Skill02[1]]}) || INVERT || RETURN",
-            "displayLines": "-{[Skill02[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[1]]}"
-            ]
+            "displayLines": "-{[Skill02[1]]}"
           },
           "isFixed": "(Fixed)"
         },
@@ -703,12 +683,7 @@ const compositeAbilityObject = {
             "target": "{{Ability Target(ST)}}"
           },
           "valuePercent": {
-            "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-            "displayLines": "{[Skill01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[0]]}"
-            ]
+            "displayLines": "{[Skill01[0]]}"
           },
           "isFixed": "* ERR"
         },

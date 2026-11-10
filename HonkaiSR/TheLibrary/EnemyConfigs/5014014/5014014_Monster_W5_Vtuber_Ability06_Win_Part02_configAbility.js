@@ -98,21 +98,11 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"1797863602\">Monster_W5_Vtuber_AllDamageTypeTaken</a>[<span class=\"descriptionNumberColor\">Tilted</span>]",
       "duration": {
-        "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-        "displayLines": "{[Skill06[1]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill06[1]]}"
-        ]
+        "displayLines": "{[Skill06[1]]}"
       },
       "valuePerStack": {
         "MDF_AllDamageTypeTakenRatio": {
-          "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-          "displayLines": "{[Skill06[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[0]]}"
-          ]
+          "displayLines": "{[Skill06[0]]}"
         }
       }
     },
@@ -172,12 +162,7 @@ const configAbility = {
             {
               "name": "Skill Points Modification",
               "adjustmentValue": {
-                "operator": "Variables[0] ({[Skill06[5]]}) || RETURN",
-                "displayLines": "{[Skill06[5]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill06[5]]}"
-                ]
+                "displayLines": "{[Skill06[5]]}"
               },
               "adjustmentType": "+"
             },
@@ -186,12 +171,7 @@ const configAbility = {
               "abilityName": "Monster_W5_Vtuber_Ability06_Win_ExtraElationTime",
               "parameters": {
                 "TryStartElationTime_OverrideElationPoint": {
-                  "operator": "Variables[0] ({[Skill06[4]]}) || RETURN",
-                  "displayLines": "{[Skill06[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill06[4]]}"
-                  ]
+                  "displayLines": "{[Skill06[4]]}"
                 }
               }
             },

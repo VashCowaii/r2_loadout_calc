@@ -58,12 +58,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -86,12 +81,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -127,13 +117,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_PropertyValue * MDF_Layer)"
                   }
                 }
               ]
@@ -209,13 +193,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_PropertyValue * MDF_Layer)"
                   }
                 }
               ]
@@ -630,20 +608,10 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (10) || RETURN",
-                        "displayLines": "10",
-                        "constants": [],
-                        "variables": [
-                          10
-                        ]
+                        "displayLines": "10"
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       }
                     },
                     {
@@ -656,33 +624,17 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (EnergyBar_ATKCount) || Variables[1] (EnergyBar_UltraATKCount) || ADD || RETURN",
-                        "displayLines": "(EnergyBar_ATKCount + EnergyBar_UltraATKCount)",
-                        "constants": [],
-                        "variables": [
-                          "EnergyBar_ATKCount",
-                          "EnergyBar_UltraATKCount"
-                        ]
+                        "displayLines": "(EnergyBar_ATKCount + EnergyBar_UltraATKCount)"
                       },
                       "variableName": "EnergyBar_ATKCountSum"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (EnergyBar_ATKCountSum) || RETURN",
-                        "displayLines": "EnergyBar_ATKCountSum",
-                        "constants": [],
-                        "variables": [
-                          "EnergyBar_ATKCountSum"
-                        ]
+                        "displayLines": "EnergyBar_ATKCountSum"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (10) || RETURN",
-                        "displayLines": "10",
-                        "constants": [],
-                        "variables": [
-                          10
-                        ]
+                        "displayLines": "10"
                       },
                       "assignState": "True",
                       "priorState": "Normal",
@@ -696,20 +648,10 @@ const compositeAbilityObject = {
                         "target": "{{Jing Yuan: Lightning Lord}}"
                       },
                       "attackCount": {
-                        "operator": "Variables[0] (EnergyBar_ATKCount) || RETURN",
-                        "displayLines": "EnergyBar_ATKCount",
-                        "constants": [],
-                        "variables": [
-                          "EnergyBar_ATKCount"
-                        ]
+                        "displayLines": "EnergyBar_ATKCount"
                       },
                       "attackCountEnhanced": {
-                        "operator": "Variables[0] (EnergyBar_UltraATKCount) || RETURN",
-                        "displayLines": "EnergyBar_UltraATKCount",
-                        "constants": [],
-                        "variables": [
-                          "EnergyBar_UltraATKCount"
-                        ]
+                        "displayLines": "EnergyBar_UltraATKCount"
                       },
                       "show": true
                     },
@@ -722,12 +664,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1141770667\">JingYuan_BattleEvent_ATKCountShowText</a>",
                       "valuePerStack": {
                         "ATKCount": {
-                          "operator": "Variables[0] (EnergyBar_ATKCount) || RETURN",
-                          "displayLines": "EnergyBar_ATKCount",
-                          "constants": [],
-                          "variables": [
-                            "EnergyBar_ATKCount"
-                          ]
+                          "displayLines": "EnergyBar_ATKCount"
                         }
                       }
                     },
@@ -739,31 +676,15 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1762822846\">JingYuan_BattleEvent_SpeedUp</a>",
                       "stackLimit": {
-                        "operator": "Variables[0] (10) || Variables[1] (3) || SUB || RETURN",
-                        "displayLines": "(10 - 3)",
-                        "constants": [],
-                        "variables": [
-                          10,
-                          3
-                        ]
+                        "displayLines": "(10 - 3)"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (10) || RETURN",
-                          "displayLines": "10",
-                          "constants": [],
-                          "variables": [
-                            10
-                          ]
+                          "displayLines": "10"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       }
                     }
                   ]
@@ -836,13 +757,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (ATKCount) || Variables[1] (UltraATKCount) || ADD || RETURN",
-                "displayLines": "(ATKCount + UltraATKCount)",
-                "constants": [],
-                "variables": [
-                  "ATKCount",
-                  "UltraATKCount"
-                ]
+                "displayLines": "(ATKCount + UltraATKCount)"
               },
               "variableName": "ATKCountSum"
             },
@@ -853,12 +768,7 @@ const compositeAbilityObject = {
                 "value1": "ATKCountSum",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (6) || RETURN",
-                  "displayLines": "6",
-                  "constants": [],
-                  "variables": [
-                    6
-                  ]
+                  "displayLines": "6"
                 }
               },
               "passed": [
@@ -872,12 +782,7 @@ const compositeAbilityObject = {
                   "duration": 1,
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
+                      "displayLines": "0.25"
                     }
                   }
                 }
@@ -888,12 +793,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (ATKCount) || RETURN",
-            "displayLines": "ATKCount",
-            "constants": [],
-            "variables": [
-              "ATKCount"
-            ]
+            "displayLines": "ATKCount"
           },
           "execute": [
             {
@@ -914,20 +814,10 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (0.66) || RETURN",
-                      "displayLines": "0.66",
-                      "constants": [],
-                      "variables": [
-                        0.66
-                      ]
+                      "displayLines": "0.66"
                     },
                     "Toughness": {
-                      "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                      "displayLines": "ST Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "ST Toughness Value"
-                      ]
+                      "displayLines": "ST Toughness Value"
                     },
                     "Tags": [
                       "Summon-Tag DMG"
@@ -952,14 +842,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Thunder",
                         "Damage": {
-                          "operator": "Variables[0] (0.66) || Variables[1] (0.25) || Variables[2] (0.25) || ADD || MUL || RETURN",
-                          "displayLines": "(0.66 * (0.25 + 0.25))",
-                          "constants": [],
-                          "variables": [
-                            0.66,
-                            0.25,
-                            0.25
-                          ]
+                          "displayLines": "(0.66 * (0.25 + 0.25))"
                         },
                         "Toughness": null,
                         "Tags": [
@@ -980,13 +863,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Thunder",
                         "Damage": {
-                          "operator": "Variables[0] (0.66) || Variables[1] (0.25) || MUL || RETURN",
-                          "displayLines": "(0.66 * 0.25)",
-                          "constants": [],
-                          "variables": [
-                            0.66,
-                            0.25
-                          ]
+                          "displayLines": "(0.66 * 0.25)"
                         },
                         "Toughness": null,
                         "Tags": [
@@ -1011,12 +888,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "isFixed": "* ERR"
                     }
@@ -1037,21 +909,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"767237660\">JingYuan_Eidolon6_AllDamageTypeTakenRatio</a>",
                       "stackLimit": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.12) || RETURN",
-                          "displayLines": "0.12",
-                          "constants": [],
-                          "variables": [
-                            0.12
-                          ]
+                          "displayLines": "0.12"
                         }
                       }
                     }
@@ -1064,23 +926,13 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (UltraATKCount) || RETURN",
-            "displayLines": "UltraATKCount",
-            "constants": [],
-            "variables": [
-              "UltraATKCount"
-            ]
+            "displayLines": "UltraATKCount"
           },
           "execute": [
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (ATKCount) || RETURN",
-                "displayLines": "ATKCount",
-                "constants": [],
-                "variables": [
-                  "ATKCount"
-                ]
+                "displayLines": "ATKCount"
               },
               "execute": [
                 {
@@ -1101,21 +953,10 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Thunder",
                         "Damage": {
-                          "operator": "Variables[0] (0.66) || Variables[1] (JINGYUAN_OBJECT_UNUSED_1) || ADD || RETURN",
-                          "displayLines": "(0.66 + JINGYUAN_OBJECT_UNUSED_1)",
-                          "constants": [],
-                          "variables": [
-                            0.66,
-                            "JINGYUAN_OBJECT_UNUSED_1"
-                          ]
+                          "displayLines": "(0.66 + JINGYUAN_OBJECT_UNUSED_1)"
                         },
                         "Toughness": {
-                          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                          "displayLines": "ST Toughness Value",
-                          "constants": [],
-                          "variables": [
-                            "ST Toughness Value"
-                          ]
+                          "displayLines": "ST Toughness Value"
                         },
                         "Tags": [
                           "Summon-Tag DMG"
@@ -1140,15 +981,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "operator": "Variables[0] (0.66) || Variables[1] (JINGYUAN_OBJECT_UNUSED_1) || ADD || Variables[2] (0.25) || Variables[3] (0.25) || ADD || MUL || RETURN",
-                              "displayLines": "((0.66 + JINGYUAN_OBJECT_UNUSED_1) * (0.25 + 0.25))",
-                              "constants": [],
-                              "variables": [
-                                0.66,
-                                "JINGYUAN_OBJECT_UNUSED_1",
-                                0.25,
-                                0.25
-                              ]
+                              "displayLines": "((0.66 + JINGYUAN_OBJECT_UNUSED_1) * (0.25 + 0.25))"
                             },
                             "Toughness": null,
                             "Tags": [
@@ -1169,14 +1002,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "operator": "Variables[0] (0.66) || Variables[1] (JINGYUAN_OBJECT_UNUSED_1) || ADD || Variables[2] (0.25) || MUL || RETURN",
-                              "displayLines": "((0.66 + JINGYUAN_OBJECT_UNUSED_1) * 0.25)",
-                              "constants": [],
-                              "variables": [
-                                0.66,
-                                "JINGYUAN_OBJECT_UNUSED_1",
-                                0.25
-                              ]
+                              "displayLines": "((0.66 + JINGYUAN_OBJECT_UNUSED_1) * 0.25)"
                             },
                             "Toughness": null,
                             "Tags": [
@@ -1201,12 +1027,7 @@ const compositeAbilityObject = {
                             "target": "{{Caster}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (2) || RETURN",
-                            "displayLines": "2",
-                            "constants": [],
-                            "variables": [
-                              2
-                            ]
+                            "displayLines": "2"
                           },
                           "isFixed": "* ERR"
                         }
@@ -1227,21 +1048,11 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"767237660\">JingYuan_Eidolon6_AllDamageTypeTakenRatio</a>",
                           "stackLimit": {
-                            "operator": "Variables[0] (3) || RETURN",
-                            "displayLines": "3",
-                            "constants": [],
-                            "variables": [
-                              3
-                            ]
+                            "displayLines": "3"
                           },
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.12) || RETURN",
-                              "displayLines": "0.12",
-                              "constants": [],
-                              "variables": [
-                                0.12
-                              ]
+                              "displayLines": "0.12"
                             }
                           }
                         }
@@ -1288,21 +1099,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1088669628\">JingYuan_Eidolon2_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">Dharma Corpora</span>]",
               "duration": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "valuePerStack": {
                 "MDF_DamageAddedRatio": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             }
@@ -1337,12 +1138,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "variableName": "EnergyBar_ATKCount"
         },
@@ -1359,39 +1155,19 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
           "stackLimit": {
-            "operator": "Variables[0] (10) || RETURN",
-            "displayLines": "10",
-            "constants": [],
-            "variables": [
-              10
-            ]
+            "displayLines": "10"
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           }
         },
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "maximum": {
-            "operator": "Variables[0] (10) || RETURN",
-            "displayLines": "10",
-            "constants": [],
-            "variables": [
-              10
-            ]
+            "displayLines": "10"
           },
           "assignState": "True",
           "priorState": "Normal",
@@ -1405,20 +1181,10 @@ const compositeAbilityObject = {
             "target": "{{Jing Yuan: Lightning Lord}}"
           },
           "attackCount": {
-            "operator": "Variables[0] (EnergyBar_ATKCount) || RETURN",
-            "displayLines": "EnergyBar_ATKCount",
-            "constants": [],
-            "variables": [
-              "EnergyBar_ATKCount"
-            ]
+            "displayLines": "EnergyBar_ATKCount"
           },
           "attackCountEnhanced": {
-            "operator": "Variables[0] (EnergyBar_UltraATKCount) || RETURN",
-            "displayLines": "EnergyBar_UltraATKCount",
-            "constants": [],
-            "variables": [
-              "EnergyBar_UltraATKCount"
-            ]
+            "displayLines": "EnergyBar_UltraATKCount"
           },
           "show": true
         },
@@ -1431,12 +1197,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1141770667\">JingYuan_BattleEvent_ATKCountShowText</a>",
           "valuePerStack": {
             "ATKCount": {
-              "operator": "Variables[0] (EnergyBar_ATKCount) || RETURN",
-              "displayLines": "EnergyBar_ATKCount",
-              "constants": [],
-              "variables": [
-                "EnergyBar_ATKCount"
-              ]
+              "displayLines": "EnergyBar_ATKCount"
             }
           }
         },
@@ -1521,39 +1282,19 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
           "stackLimit": {
-            "operator": "Variables[0] (10) || RETURN",
-            "displayLines": "10",
-            "constants": [],
-            "variables": [
-              10
-            ]
+            "displayLines": "10"
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           }
         },
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "maximum": {
-            "operator": "Variables[0] (10) || RETURN",
-            "displayLines": "10",
-            "constants": [],
-            "variables": [
-              10
-            ]
+            "displayLines": "10"
           },
           "assignState": "True",
           "priorState": "Normal",
@@ -1570,12 +1311,7 @@ const compositeAbilityObject = {
           },
           "variables": {
             "BattleEvent_JingYuan_BaseSpeed": {
-              "operator": "Variables[0] (60) || RETURN",
-              "displayLines": "60",
-              "constants": [],
-              "variables": [
-                60
-              ]
+              "displayLines": "60"
             }
           }
         },
@@ -1586,20 +1322,10 @@ const compositeAbilityObject = {
             "target": "{{Jing Yuan: Lightning Lord}}"
           },
           "attackCount": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "attackCountEnhanced": {
-            "operator": "Variables[0] (EnergyBar_UltraATKCount) || RETURN",
-            "displayLines": "EnergyBar_UltraATKCount",
-            "constants": [],
-            "variables": [
-              "EnergyBar_UltraATKCount"
-            ]
+            "displayLines": "EnergyBar_UltraATKCount"
           },
           "show": true
         },
@@ -1612,12 +1338,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1141770667\">JingYuan_BattleEvent_ATKCountShowText</a>",
           "valuePerStack": {
             "ATKCount": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             }
           }
         },
@@ -1675,26 +1396,14 @@ const compositeAbilityObject = {
                     "value1": "#Skill03_P2_AddATKCount",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (10) || Variables[1] (EnergyBar_ATKCount) || SUB || RETURN",
-                      "displayLines": "(10 - EnergyBar_ATKCount)",
-                      "constants": [],
-                      "variables": [
-                        10,
-                        "EnergyBar_ATKCount"
-                      ]
+                      "displayLines": "(10 - EnergyBar_ATKCount)"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (10) || Variables[1] (EnergyBar_ATKCount) || SUB || RETURN",
-                        "displayLines": "(10 - EnergyBar_ATKCount)",
-                        "constants": [],
-                        "variables": [
-                          10,
-                          "EnergyBar_ATKCount"
-                        ]
+                        "displayLines": "(10 - EnergyBar_ATKCount)"
                       },
                       "variableName": "_AddLayer"
                     }
@@ -1703,12 +1412,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "variableName": "_AddLayer"
                     }
@@ -1733,26 +1437,14 @@ const compositeAbilityObject = {
                         "value1": "#Skill03_P2_AddATKCount",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (10) || Variables[1] (EnergyBar_ATKCount) || SUB || RETURN",
-                          "displayLines": "(10 - EnergyBar_ATKCount)",
-                          "constants": [],
-                          "variables": [
-                            10,
-                            "EnergyBar_ATKCount"
-                          ]
+                          "displayLines": "(10 - EnergyBar_ATKCount)"
                         }
                       },
                       "passed": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (10) || Variables[1] (EnergyBar_ATKCount) || SUB || RETURN",
-                            "displayLines": "(10 - EnergyBar_ATKCount)",
-                            "constants": [],
-                            "variables": [
-                              10,
-                              "EnergyBar_ATKCount"
-                            ]
+                            "displayLines": "(10 - EnergyBar_ATKCount)"
                           },
                           "variableName": "_AddLayer"
                         }
@@ -1761,12 +1453,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (3) || RETURN",
-                            "displayLines": "3",
-                            "constants": [],
-                            "variables": [
-                              3
-                            ]
+                            "displayLines": "3"
                           },
                           "variableName": "_AddLayer"
                         }
@@ -1814,26 +1501,14 @@ const compositeAbilityObject = {
                     "value1": "#Skill02_P2_AddATKCount",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (10) || Variables[1] (EnergyBar_ATKCount) || SUB || RETURN",
-                      "displayLines": "(10 - EnergyBar_ATKCount)",
-                      "constants": [],
-                      "variables": [
-                        10,
-                        "EnergyBar_ATKCount"
-                      ]
+                      "displayLines": "(10 - EnergyBar_ATKCount)"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (10) || Variables[1] (EnergyBar_ATKCount) || SUB || RETURN",
-                        "displayLines": "(10 - EnergyBar_ATKCount)",
-                        "constants": [],
-                        "variables": [
-                          10,
-                          "EnergyBar_ATKCount"
-                        ]
+                        "displayLines": "(10 - EnergyBar_ATKCount)"
                       },
                       "variableName": "_AddLayer"
                     }
@@ -1842,12 +1517,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "variableName": "_AddLayer"
                     }
@@ -1872,26 +1542,14 @@ const compositeAbilityObject = {
                         "value1": "#Skill02_P2_AddATKCount",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (10) || Variables[1] (EnergyBar_ATKCount) || SUB || RETURN",
-                          "displayLines": "(10 - EnergyBar_ATKCount)",
-                          "constants": [],
-                          "variables": [
-                            10,
-                            "EnergyBar_ATKCount"
-                          ]
+                          "displayLines": "(10 - EnergyBar_ATKCount)"
                         }
                       },
                       "passed": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (10) || Variables[1] (EnergyBar_ATKCount) || SUB || RETURN",
-                            "displayLines": "(10 - EnergyBar_ATKCount)",
-                            "constants": [],
-                            "variables": [
-                              10,
-                              "EnergyBar_ATKCount"
-                            ]
+                            "displayLines": "(10 - EnergyBar_ATKCount)"
                           },
                           "variableName": "_AddLayer"
                         }
@@ -1900,12 +1558,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (2) || RETURN",
-                            "displayLines": "2",
-                            "constants": [],
-                            "variables": [
-                              2
-                            ]
+                            "displayLines": "2"
                           },
                           "variableName": "_AddLayer"
                         }
@@ -1950,12 +1603,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (15) || RETURN",
-                        "displayLines": "15",
-                        "constants": [],
-                        "variables": [
-                          15
-                        ]
+                        "displayLines": "15"
                       },
                       "isFixed": "* ERR"
                     }
@@ -1993,20 +1641,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             },
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "attackType": "Ultimate",
@@ -2022,20 +1660,10 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
           "stackLimit": {
-            "operator": "Variables[0] (10) || RETURN",
-            "displayLines": "10",
-            "constants": [],
-            "variables": [
-              10
-            ]
+            "displayLines": "10"
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           }
         },
         {
@@ -2055,33 +1683,17 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (EnergyBar_ATKCount) || Variables[1] (EnergyBar_UltraATKCount) || ADD || RETURN",
-            "displayLines": "(EnergyBar_ATKCount + EnergyBar_UltraATKCount)",
-            "constants": [],
-            "variables": [
-              "EnergyBar_ATKCount",
-              "EnergyBar_UltraATKCount"
-            ]
+            "displayLines": "(EnergyBar_ATKCount + EnergyBar_UltraATKCount)"
           },
           "variableName": "EnergyBar_ATKCountSum"
         },
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (EnergyBar_ATKCountSum) || RETURN",
-            "displayLines": "EnergyBar_ATKCountSum",
-            "constants": [],
-            "variables": [
-              "EnergyBar_ATKCountSum"
-            ]
+            "displayLines": "EnergyBar_ATKCountSum"
           },
           "maximum": {
-            "operator": "Variables[0] (10) || RETURN",
-            "displayLines": "10",
-            "constants": [],
-            "variables": [
-              10
-            ]
+            "displayLines": "10"
           },
           "assignState": "True",
           "priorState": "Normal",
@@ -2095,20 +1707,10 @@ const compositeAbilityObject = {
             "target": "{{Jing Yuan: Lightning Lord}}"
           },
           "attackCount": {
-            "operator": "Variables[0] (EnergyBar_ATKCount) || RETURN",
-            "displayLines": "EnergyBar_ATKCount",
-            "constants": [],
-            "variables": [
-              "EnergyBar_ATKCount"
-            ]
+            "displayLines": "EnergyBar_ATKCount"
           },
           "attackCountEnhanced": {
-            "operator": "Variables[0] (EnergyBar_UltraATKCount) || RETURN",
-            "displayLines": "EnergyBar_UltraATKCount",
-            "constants": [],
-            "variables": [
-              "EnergyBar_UltraATKCount"
-            ]
+            "displayLines": "EnergyBar_UltraATKCount"
           },
           "show": true
         },
@@ -2121,12 +1723,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1141770667\">JingYuan_BattleEvent_ATKCountShowText</a>",
           "valuePerStack": {
             "ATKCount": {
-              "operator": "Variables[0] (EnergyBar_ATKCount) || RETURN",
-              "displayLines": "EnergyBar_ATKCount",
-              "constants": [],
-              "variables": [
-                "EnergyBar_ATKCount"
-              ]
+              "displayLines": "EnergyBar_ATKCount"
             }
           }
         },
@@ -2138,31 +1735,15 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1762822846\">JingYuan_BattleEvent_SpeedUp</a>",
           "stackLimit": {
-            "operator": "Variables[0] (10) || Variables[1] (3) || SUB || RETURN",
-            "displayLines": "(10 - 3)",
-            "constants": [],
-            "variables": [
-              10,
-              3
-            ]
+            "displayLines": "(10 - 3)"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (10) || RETURN",
-              "displayLines": "10",
-              "constants": [],
-              "variables": [
-                10
-              ]
+              "displayLines": "10"
             }
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           }
         },
         "Trigger: Skip Death Handling",
@@ -2234,20 +1815,10 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
           "stackLimit": {
-            "operator": "Variables[0] (10) || RETURN",
-            "displayLines": "10",
-            "constants": [],
-            "variables": [
-              10
-            ]
+            "displayLines": "10"
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           }
         },
         {
@@ -2260,33 +1831,17 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (EnergyBar_ATKCount) || Variables[1] (EnergyBar_UltraATKCount) || ADD || RETURN",
-            "displayLines": "(EnergyBar_ATKCount + EnergyBar_UltraATKCount)",
-            "constants": [],
-            "variables": [
-              "EnergyBar_ATKCount",
-              "EnergyBar_UltraATKCount"
-            ]
+            "displayLines": "(EnergyBar_ATKCount + EnergyBar_UltraATKCount)"
           },
           "variableName": "EnergyBar_ATKCountSum"
         },
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (EnergyBar_ATKCountSum) || RETURN",
-            "displayLines": "EnergyBar_ATKCountSum",
-            "constants": [],
-            "variables": [
-              "EnergyBar_ATKCountSum"
-            ]
+            "displayLines": "EnergyBar_ATKCountSum"
           },
           "maximum": {
-            "operator": "Variables[0] (10) || RETURN",
-            "displayLines": "10",
-            "constants": [],
-            "variables": [
-              10
-            ]
+            "displayLines": "10"
           },
           "assignState": "True",
           "priorState": "Normal",
@@ -2300,20 +1855,10 @@ const compositeAbilityObject = {
             "target": "{{Jing Yuan: Lightning Lord}}"
           },
           "attackCount": {
-            "operator": "Variables[0] (EnergyBar_ATKCount) || RETURN",
-            "displayLines": "EnergyBar_ATKCount",
-            "constants": [],
-            "variables": [
-              "EnergyBar_ATKCount"
-            ]
+            "displayLines": "EnergyBar_ATKCount"
           },
           "attackCountEnhanced": {
-            "operator": "Variables[0] (EnergyBar_UltraATKCount) || RETURN",
-            "displayLines": "EnergyBar_UltraATKCount",
-            "constants": [],
-            "variables": [
-              "EnergyBar_UltraATKCount"
-            ]
+            "displayLines": "EnergyBar_UltraATKCount"
           },
           "show": true
         },
@@ -2326,12 +1871,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1141770667\">JingYuan_BattleEvent_ATKCountShowText</a>",
           "valuePerStack": {
             "ATKCount": {
-              "operator": "Variables[0] (EnergyBar_ATKCount) || RETURN",
-              "displayLines": "EnergyBar_ATKCount",
-              "constants": [],
-              "variables": [
-                "EnergyBar_ATKCount"
-              ]
+              "displayLines": "EnergyBar_ATKCount"
             }
           }
         },
@@ -2343,31 +1883,15 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1762822846\">JingYuan_BattleEvent_SpeedUp</a>",
           "stackLimit": {
-            "operator": "Variables[0] (10) || Variables[1] (3) || SUB || RETURN",
-            "displayLines": "(10 - 3)",
-            "constants": [],
-            "variables": [
-              10,
-              3
-            ]
+            "displayLines": "(10 - 3)"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (10) || RETURN",
-              "displayLines": "10",
-              "constants": [],
-              "variables": [
-                10
-              ]
+              "displayLines": "10"
             }
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           }
         },
         {
@@ -2379,21 +1903,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "HitSplit": 0.4,
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "attackType": "Skill",
@@ -2426,21 +1940,11 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     },
                     "HitSplit": 0.3,
                     "Toughness": {
-                      "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                      "displayLines": "AOE Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "AOE Toughness Value"
-                      ]
+                      "displayLines": "AOE Toughness Value"
                     },
                     "Tags": null,
                     "attackType": "Skill"
@@ -2455,21 +1959,11 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     },
                     "HitSplit": 0.3,
                     "Toughness": {
-                      "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                      "displayLines": "AOE Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "AOE Toughness Value"
-                      ]
+                      "displayLines": "AOE Toughness Value"
                     },
                     "Tags": null,
                     "attackType": "Skill"
@@ -2484,21 +1978,11 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     },
                     "HitSplit": 0.3,
                     "Toughness": {
-                      "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                      "displayLines": "AOE Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "AOE Toughness Value"
-                      ]
+                      "displayLines": "AOE Toughness Value"
                     },
                     "Tags": null,
                     "attackType": "Skill"
@@ -2544,21 +2028,11 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     },
                     "HitSplit": 0.3,
                     "Toughness": {
-                      "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                      "displayLines": "AOE Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "AOE Toughness Value"
-                      ]
+                      "displayLines": "AOE Toughness Value"
                     },
                     "Tags": null,
                     "attackType": "Skill"
@@ -2573,21 +2047,11 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     },
                     "HitSplit": 0.3,
                     "Toughness": {
-                      "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                      "displayLines": "AOE Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "AOE Toughness Value"
-                      ]
+                      "displayLines": "AOE Toughness Value"
                     },
                     "Tags": null,
                     "attackType": "Skill"
@@ -2602,21 +2066,11 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     },
                     "HitSplit": 0.3,
                     "Toughness": {
-                      "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                      "displayLines": "AOE Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "AOE Toughness Value"
-                      ]
+                      "displayLines": "AOE Toughness Value"
                     },
                     "Tags": null,
                     "attackType": "Skill"
@@ -2652,21 +2106,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-110303717\">JingYuan_Tree03_CriticalChanceUp</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
               "duration": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.1) || RETURN",
-                  "displayLines": "0.1",
-                  "constants": [],
-                  "variables": [
-                    0.1
-                  ]
+                  "displayLines": "0.1"
                 }
               }
             }
@@ -2729,21 +2173,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "HitSplit": 0.45,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Basic ATK",
@@ -2760,21 +2194,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "HitSplit": 0.55,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Basic ATK",

@@ -11,12 +11,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "value": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "isFixed": "* ERR"
     },
@@ -27,12 +22,7 @@ const configAbility = {
         "value1": "MDF_Layer",
         "compareType": "<",
         "value2": {
-          "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-          "displayLines": "MDF_MaxCount",
-          "constants": [],
-          "variables": [
-            "MDF_MaxCount"
-          ]
+          "displayLines": "MDF_MaxCount"
         }
       },
       "passed": [
@@ -44,12 +34,7 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"68075206\">Argenti_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
           "stackLimit": {
-            "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-            "displayLines": "MDF_MaxCount",
-            "constants": [],
-            "variables": [
-              "MDF_MaxCount"
-            ]
+            "displayLines": "MDF_MaxCount"
           }
         }
       ]
@@ -64,20 +49,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (1) || RETURN",
-          "displayLines": "1",
-          "constants": [],
-          "variables": [
-            1
-          ]
+          "displayLines": "1"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"

@@ -14,14 +14,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] ({[Skill07[0]]}) || Constants[0] (0.5) || MUL || RETURN",
-          "displayLines": "({[Skill07[0]]} * 0.5)",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "{[Skill07[0]]}"
-          ]
+          "displayLines": "({[Skill07[0]]} * 0.5)"
         },
         "Toughness": null,
         "Tags": null,
@@ -37,14 +30,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] ({[Skill07[1]]}) || Constants[0] (0.5) || MUL || RETURN",
-          "displayLines": "({[Skill07[1]]} * 0.5)",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "{[Skill07[1]]}"
-          ]
+          "displayLines": "({[Skill07[1]]} * 0.5)"
         },
         "Toughness": null,
         "Tags": null,
@@ -60,14 +46,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] ({[Skill07[0]]}) || Constants[0] (0.5) || MUL || RETURN",
-          "displayLines": "({[Skill07[0]]} * 0.5)",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "{[Skill07[0]]}"
-          ]
+          "displayLines": "({[Skill07[0]]} * 0.5)"
         },
         "Toughness": null,
         "Tags": null,
@@ -83,14 +62,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] ({[Skill07[1]]}) || Constants[0] (0.5) || MUL || RETURN",
-          "displayLines": "({[Skill07[1]]} * 0.5)",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "{[Skill07[1]]}"
-          ]
+          "displayLines": "({[Skill07[1]]} * 0.5)"
         },
         "Toughness": null,
         "Tags": null,

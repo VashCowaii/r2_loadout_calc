@@ -54,13 +54,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.04) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(0.04 * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      0.04,
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(0.04 * MDF_Layer)"
                   }
                 }
               ]
@@ -96,12 +90,7 @@ const compositeAbilityObject = {
                         "value1": "<a class=\"gModGreen\" id=\"-1445057094\">Relic_313_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Sigonia, the Unclaimed Desolation</span>]",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (10) || RETURN",
-                          "displayLines": "10",
-                          "constants": [],
-                          "variables": [
-                            10
-                          ]
+                          "displayLines": "10"
                         },
                         "valueType": "Layer"
                       },
@@ -114,12 +103,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-1445057094\">Relic_313_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Sigonia, the Unclaimed Desolation</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (10) || RETURN",
-                            "displayLines": "10",
-                            "constants": [],
-                            "variables": [
-                              10
-                            ]
+                            "displayLines": "10"
                           }
                         }
                       ]
@@ -134,12 +118,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1445057094\">Relic_313_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Sigonia, the Unclaimed Desolation</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (10) || RETURN",
-                        "displayLines": "10",
-                        "constants": [],
-                        "variables": [
-                          10
-                        ]
+                        "displayLines": "10"
                       }
                     }
                   ]

@@ -50,12 +50,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (Summon_Deathrattle) || RETURN",
-            "displayLines": "Summon_Deathrattle",
-            "constants": [],
-            "variables": [
-              "Summon_Deathrattle"
-            ]
+            "displayLines": "Summon_Deathrattle"
           },
           "execute": [
             {
@@ -67,12 +62,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"149951100\">Enemy_W4_Serpent_01_Passive_StanceDamage</a>",
               "valuePerStack": {
                 "MDF_StanceDamage": {
-                  "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                  "displayLines": "{[Skill02[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[2]]}"
-                  ]
+                  "displayLines": "{[Skill02[2]]}"
                 }
               }
             }

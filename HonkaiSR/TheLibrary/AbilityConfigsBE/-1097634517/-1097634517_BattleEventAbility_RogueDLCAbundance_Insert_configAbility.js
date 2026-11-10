@@ -32,12 +32,7 @@ const configAbility = {
             "target": "{{Parameter Target}}"
           },
           "healPercent": {
-            "operator": "Variables[0] (EliteRatio) || RETURN",
-            "displayLines": "EliteRatio",
-            "constants": [],
-            "variables": [
-              "EliteRatio"
-            ]
+            "displayLines": "EliteRatio"
           },
           "formula": "Heal from Target MaxHP"
         }
@@ -70,12 +65,7 @@ const configAbility = {
             "target": "{{Parameter Target}}"
           },
           "healPercent": {
-            "operator": "Variables[0] (Ratio) || RETURN",
-            "displayLines": "Ratio",
-            "constants": [],
-            "variables": [
-              "Ratio"
-            ]
+            "displayLines": "Ratio"
           },
           "formula": "Heal from Target MaxHP"
         }

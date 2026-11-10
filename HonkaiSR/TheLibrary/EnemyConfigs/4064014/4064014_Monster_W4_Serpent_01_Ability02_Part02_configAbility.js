@@ -20,23 +20,13 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] (UnusedUnderThisBase_13147) || RETURN",
-            "displayLines": "UnusedUnderThisBase_13147",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_13147"
-            ]
+            "displayLines": "UnusedUnderThisBase_13147"
           },
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                "displayLines": "SummonList_ADF_1",
-                "constants": [],
-                "variables": [
-                  "SummonList_ADF_1"
-                ]
+                "displayLines": "SummonList_ADF_1"
               },
               "locationType": "KeepOnEdge"
             }
@@ -45,23 +35,13 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] (UnusedUnderThisBase_13148) || RETURN",
-            "displayLines": "UnusedUnderThisBase_13148",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_13148"
-            ]
+            "displayLines": "UnusedUnderThisBase_13148"
           },
           "enemyList": [
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                "displayLines": "SummonList_ADF_1",
-                "constants": [],
-                "variables": [
-                  "SummonList_ADF_1"
-                ]
+                "displayLines": "SummonList_ADF_1"
               },
               "locationType": "KeepOnEdge"
             }
@@ -105,23 +85,13 @@ const configAbility = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] (UnusedUnderThisBase_13147) || RETURN",
-                "displayLines": "UnusedUnderThisBase_13147",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_13147"
-                ]
+                "displayLines": "UnusedUnderThisBase_13147"
               },
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                    "displayLines": "SummonList_ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "SummonList_ADF_1"
-                    ]
+                    "displayLines": "SummonList_ADF_1"
                   },
                   "locationType": "KeepOnEdge"
                 }
@@ -130,23 +100,13 @@ const configAbility = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] (UnusedUnderThisBase_13148) || RETURN",
-                "displayLines": "UnusedUnderThisBase_13148",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_13148"
-                ]
+                "displayLines": "UnusedUnderThisBase_13148"
               },
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                    "displayLines": "SummonList_ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "SummonList_ADF_1"
-                    ]
+                    "displayLines": "SummonList_ADF_1"
                   },
                   "locationType": "KeepOnEdge"
                 }

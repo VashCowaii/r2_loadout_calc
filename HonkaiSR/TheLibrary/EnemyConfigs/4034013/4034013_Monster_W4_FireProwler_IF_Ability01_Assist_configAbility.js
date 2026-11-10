@@ -14,12 +14,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-          "displayLines": "{[Skill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[0]]}"
-          ]
+          "displayLines": "{[Skill01[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -36,12 +31,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-          "displayLines": "{[Skill01[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[1]]}"
-          ]
+          "displayLines": "{[Skill01[1]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -110,12 +100,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (Skill01_Assist_Damage) || RETURN",
-              "displayLines": "Skill01_Assist_Damage",
-              "constants": [],
-              "variables": [
-                "Skill01_Assist_Damage"
-              ]
+              "displayLines": "Skill01_Assist_Damage"
             },
             "Toughness": null,
             "Tags": null,
@@ -132,12 +117,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (Skill01_Assist_Damage_Adjoin) || RETURN",
-              "displayLines": "Skill01_Assist_Damage_Adjoin",
-              "constants": [],
-              "variables": [
-                "Skill01_Assist_Damage_Adjoin"
-              ]
+              "displayLines": "Skill01_Assist_Damage_Adjoin"
             },
             "Toughness": null,
             "Tags": null,
@@ -170,12 +150,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (Skill01_Assist_Damage) || RETURN",
-              "displayLines": "Skill01_Assist_Damage",
-              "constants": [],
-              "variables": [
-                "Skill01_Assist_Damage"
-              ]
+              "displayLines": "Skill01_Assist_Damage"
             },
             "Toughness": null,
             "Tags": null,
@@ -192,12 +167,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (Skill01_Assist_Damage_Adjoin) || RETURN",
-              "displayLines": "Skill01_Assist_Damage_Adjoin",
-              "constants": [],
-              "variables": [
-                "Skill01_Assist_Damage_Adjoin"
-              ]
+              "displayLines": "Skill01_Assist_Damage_Adjoin"
             },
             "Toughness": null,
             "Tags": null,

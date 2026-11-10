@@ -33,12 +33,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             }
           ]
@@ -73,24 +68,14 @@ const configAbility = {
                 "value1": "_CurrentSpeed",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (160) || RETURN",
-                  "displayLines": "160",
-                  "constants": [],
-                  "variables": [
-                    160
-                  ]
+                  "displayLines": "160"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (0.5) || RETURN",
-                    "displayLines": "0.5",
-                    "constants": [],
-                    "variables": [
-                      0.5
-                    ]
+                    "displayLines": "0.5"
                   },
                   "variableName": "_EPRatioBase"
                 },
@@ -106,26 +91,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (_CurrentSpeedConvert) || SUB || RETURN",
-                    "displayLines": "(_CurrentSpeed - _CurrentSpeedConvert)",
-                    "constants": [],
-                    "variables": [
-                      "_CurrentSpeed",
-                      "_CurrentSpeedConvert"
-                    ]
+                    "displayLines": "(_CurrentSpeed - _CurrentSpeedConvert)"
                   },
                   "variableName": "_CurrentSpeed"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (160) || SUB || RETURN",
-                    "displayLines": "(_CurrentSpeed - 160)",
-                    "constants": [],
-                    "variables": [
-                      "_CurrentSpeed",
-                      160
-                    ]
+                    "displayLines": "(_CurrentSpeed - 160)"
                   },
                   "variableName": "_OverCountSpeedValue"
                 },
@@ -136,24 +109,14 @@ const configAbility = {
                     "value1": "_OverCountSpeedValue",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (100) || RETURN",
-                      "displayLines": "100",
-                      "constants": [],
-                      "variables": [
-                        100
-                      ]
+                      "displayLines": "100"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (100) || RETURN",
-                        "displayLines": "100",
-                        "constants": [],
-                        "variables": [
-                          100
-                        ]
+                        "displayLines": "100"
                       },
                       "variableName": "_OverCountSpeedValue"
                     }
@@ -166,27 +129,14 @@ const configAbility = {
                     "value1": "_OverCountSpeedValue",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (FLOOR) || Variables[1] (_OverCountSpeedValue) || Variables[2] (1) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.02) || MUL || RETURN",
-                        "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_OverCountSpeedValue / 1)) * 0.02)",
-                        "constants": [],
-                        "variables": [
-                          "FLOOR",
-                          "_OverCountSpeedValue",
-                          1,
-                          0.02
-                        ]
+                        "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_OverCountSpeedValue / 1)) * 0.02)"
                       },
                       "variableName": "_EPRatioAdd"
                     }
@@ -208,13 +158,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-767182140\">SilverWolf999_Trace01_Bonus</a>[<span class=\"descriptionNumberColor\">False Ending Speedrun</span>]",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (_EPRatioBase) || Variables[1] (_EPRatioAdd) || ADD || RETURN",
-                      "displayLines": "(_EPRatioBase + _EPRatioAdd)",
-                      "constants": [],
-                      "variables": [
-                        "_EPRatioBase",
-                        "_EPRatioAdd"
-                      ]
+                      "displayLines": "(_EPRatioBase + _EPRatioAdd)"
                     }
                   }
                 }

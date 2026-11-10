@@ -42,12 +42,7 @@ const configAbility = {
             "value1": "Index_Caster",
             "compareType": ">",
             "value2": {
-              "operator": "Variables[0] (Index_Target) || RETURN",
-              "displayLines": "Index_Target",
-              "constants": [],
-              "variables": [
-                "Index_Target"
-              ]
+              "displayLines": "Index_Target"
             }
           },
           "passed": [
@@ -60,21 +55,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill05[5]]}) || RETURN",
-                  "displayLines": "{[Skill05[5]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[5]]}"
-                  ]
+                  "displayLines": "{[Skill05[5]]}"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] ({[Skill05[6]]}) || RETURN",
-                  "displayLines": "{[Skill05[6]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[6]]}"
-                  ]
+                  "displayLines": "{[Skill05[6]]}"
                 },
                 "Tags": null
               }
@@ -90,21 +75,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill05[5]]}) || RETURN",
-                  "displayLines": "{[Skill05[5]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[5]]}"
-                  ]
+                  "displayLines": "{[Skill05[5]]}"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] ({[Skill05[6]]}) || RETURN",
-                  "displayLines": "{[Skill05[6]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[6]]}"
-                  ]
+                  "displayLines": "{[Skill05[6]]}"
                 },
                 "Tags": null
               }
@@ -139,28 +114,13 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"604474914\">MModifier_Monster_W4_Claymore_02_Ability05_Status</a>[<span class=\"descriptionNumberColor\">Revelry</span>]",
           "maxTargetCount": {
-            "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-            "displayLines": "{[Skill05[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill05[2]]}"
-            ]
+            "displayLines": "{[Skill05[2]]}"
           },
           "duration": {
-            "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-            "displayLines": "{[Skill05[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill05[3]]}"
-            ]
+            "displayLines": "{[Skill05[3]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-            "displayLines": "{[Skill05[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill05[1]]}"
-            ]
+            "displayLines": "{[Skill05[1]]}"
           }
         }
       ]
@@ -168,12 +128,7 @@ const configAbility = {
     {
       "name": "Adjust Team Punchline Value",
       "value": {
-        "operator": "Variables[0] ({[Skill05[7]]}) || RETURN",
-        "displayLines": "{[Skill05[7]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill05[7]]}"
-        ]
+        "displayLines": "{[Skill05[7]]}"
       },
       "adjustment": "Add"
     },

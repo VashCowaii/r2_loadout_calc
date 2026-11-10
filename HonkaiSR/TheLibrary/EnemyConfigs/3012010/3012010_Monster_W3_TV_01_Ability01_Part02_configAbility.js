@@ -24,22 +24,10 @@ const configAbility = {
           "isUnique": true,
           "odds": [
             {
-              "operator": "Variables[0] (TV_01_EliteChance) || RETURN",
-              "displayLines": "TV_01_EliteChance",
-              "constants": [],
-              "variables": [
-                "TV_01_EliteChance"
-              ]
+              "displayLines": "TV_01_EliteChance"
             },
             {
-              "operator": "Constants[0] (1) || Variables[0] (TV_01_EliteChance) || SUB || RETURN",
-              "displayLines": "(1 - TV_01_EliteChance)",
-              "constants": [
-                1
-              ],
-              "variables": [
-                "TV_01_EliteChance"
-              ]
+              "displayLines": "(1 - TV_01_EliteChance)"
             }
           ],
           "execute": [
@@ -49,12 +37,7 @@ const configAbility = {
                 {
                   "name": "Select Random Enemy from Pool",
                   "poolID": {
-                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__105) || RETURN",
-                    "displayLines": "ENEMIES_OBJECT_UNUSED__105",
-                    "constants": [],
-                    "variables": [
-                      "ENEMIES_OBJECT_UNUSED__105"
-                    ]
+                    "displayLines": "ENEMIES_OBJECT_UNUSED__105"
                   },
                   "filter": [
                     "Elite"
@@ -69,12 +52,7 @@ const configAbility = {
                 {
                   "name": "Select Random Enemy from Pool",
                   "poolID": {
-                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__105) || RETURN",
-                    "displayLines": "ENEMIES_OBJECT_UNUSED__105",
-                    "constants": [],
-                    "variables": [
-                      "ENEMIES_OBJECT_UNUSED__105"
-                    ]
+                    "displayLines": "ENEMIES_OBJECT_UNUSED__105"
                   },
                   "filter": [
                     "Minion"
@@ -90,12 +68,7 @@ const configAbility = {
         {
           "name": "Select Random Enemy from Pool",
           "poolID": {
-            "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__105) || RETURN",
-            "displayLines": "ENEMIES_OBJECT_UNUSED__105",
-            "constants": [],
-            "variables": [
-              "ENEMIES_OBJECT_UNUSED__105"
-            ]
+            "displayLines": "ENEMIES_OBJECT_UNUSED__105"
           },
           "filter": [
             "Minion"
@@ -117,12 +90,7 @@ const configAbility = {
       "isGlobal": true,
       "variables": {
         "Summon_MonsterIDKey": {
-          "operator": "Variables[0] (MonsterIDKey) || RETURN",
-          "displayLines": "MonsterIDKey",
-          "constants": [],
-          "variables": [
-            "MonsterIDKey"
-          ]
+          "displayLines": "MonsterIDKey"
         }
       }
     },

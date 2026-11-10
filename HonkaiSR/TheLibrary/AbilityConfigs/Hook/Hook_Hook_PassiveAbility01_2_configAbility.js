@@ -11,12 +11,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "value": {
-        "operator": "Variables[0] (5) || RETURN",
-        "displayLines": "5",
-        "constants": [],
-        "variables": [
-          5
-        ]
+        "displayLines": "5"
       },
       "isFixed": "* ERR"
     },
@@ -30,12 +25,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (1) || RETURN",
-          "displayLines": "1",
-          "constants": [],
-          "variables": [
-            1
-          ]
+          "displayLines": "1"
         },
         "Toughness": null,
         "Tags": null,
@@ -58,30 +48,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-            "displayLines": "(2 + 1)",
-            "constants": [],
-            "variables": [
-              2,
-              1
-            ]
+            "displayLines": "(2 + 1)"
           },
           "baseChance": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "valuePerStack": {
             "Modifier_Burn_DamagePercentage": {
-              "operator": "Variables[0] (0.65) || RETURN",
-              "displayLines": "0.65",
-              "constants": [],
-              "variables": [
-                0.65
-              ]
+              "displayLines": "0.65"
             }
           },
           "stackFlag": "CharacterSkill"
@@ -102,12 +76,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "healPercent": {
-            "operator": "Variables[0] (0.05) || RETURN",
-            "displayLines": "0.05",
-            "constants": [],
-            "variables": [
-              0.05
-            ]
+            "displayLines": "0.05"
           },
           "formula": "Heal from Healer's MaxHP"
         }

@@ -59,12 +59,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_Rank02Amount) || RETURN",
-                    "displayLines": "MDF_Rank02Amount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Rank02Amount"
-                    ]
+                    "displayLines": "MDF_Rank02Amount"
                   },
                   "isFixed": "* ERR"
                 },
@@ -123,12 +118,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_Rank02Amount) || RETURN",
-                    "displayLines": "MDF_Rank02Amount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Rank02Amount"
-                    ]
+                    "displayLines": "MDF_Rank02Amount"
                   },
                   "isFixed": "* ERR"
                 },
@@ -156,12 +146,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (5) || RETURN",
-                "displayLines": "5",
-                "constants": [],
-                "variables": [
-                  5
-                ]
+                "displayLines": "5"
               },
               "variableName": "MDF_Rank02Amount"
             },

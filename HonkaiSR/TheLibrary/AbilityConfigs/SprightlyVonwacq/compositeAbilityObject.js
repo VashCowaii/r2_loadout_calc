@@ -50,12 +50,7 @@ const compositeAbilityObject = {
                         "value1": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (120) || RETURN",
-                          "displayLines": "120",
-                          "constants": [],
-                          "variables": [
-                            120
-                          ]
+                          "displayLines": "120"
                         }
                       },
                       "passed": [

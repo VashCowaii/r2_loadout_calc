@@ -30,12 +30,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.66) || RETURN",
-            "displayLines": "0.66",
-            "constants": [],
-            "variables": [
-              0.66
-            ]
+            "displayLines": "0.66"
           },
           "variableName": "CDF_SpeedConvertRatio"
         }
@@ -44,12 +39,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.6) || RETURN",
-            "displayLines": "0.6",
-            "constants": [],
-            "variables": [
-              0.6
-            ]
+            "displayLines": "0.6"
           },
           "variableName": "CDF_SpeedConvertRatio"
         }
@@ -58,12 +48,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       },
       "variableName": "Skill11_EnergyAdd"
     },
@@ -206,12 +191,7 @@ const configAbility = {
                 {
                   "name": "Set Phainon Charge Points Preview",
                   "previewNum": {
-                    "operator": "Variables[0] (Skill11_EnergyAdd) || RETURN",
-                    "displayLines": "Skill11_EnergyAdd",
-                    "constants": [],
-                    "variables": [
-                      "Skill11_EnergyAdd"
-                    ]
+                    "displayLines": "Skill11_EnergyAdd"
                   }
                 }
               ]
@@ -227,13 +207,7 @@ const configAbility = {
                 {
                   "name": "Set Phainon Charge Points Preview",
                   "previewNum": {
-                    "operator": "Variables[0] (_enemyCount) || Variables[1] (Skill21_ExtraEnergyAdd) || ADD || RETURN",
-                    "displayLines": "(_enemyCount + Skill21_ExtraEnergyAdd)",
-                    "constants": [],
-                    "variables": [
-                      "_enemyCount",
-                      "Skill21_ExtraEnergyAdd"
-                    ]
+                    "displayLines": "(_enemyCount + Skill21_ExtraEnergyAdd)"
                   }
                 }
               ]
@@ -249,14 +223,7 @@ const configAbility = {
                 {
                   "name": "Set Phainon Charge Points Preview",
                   "previewNum": {
-                    "operator": "Constants[0] (0) || Variables[0] (Skill22_Energy) || SUB || RETURN",
-                    "displayLines": "(0 - Skill22_Energy)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "Skill22_Energy"
-                    ]
+                    "displayLines": "(0 - Skill22_Energy)"
                   }
                 }
               ]
@@ -318,12 +285,7 @@ const configAbility = {
                       },
                       "modifierName": "<a class=\"gModGreen\" id=\"-330015598\">Phainon_Ultimate_Energy</a>[<span class=\"descriptionNumberColor\">Scourge</span>]",
                       "value": {
-                        "operator": "Variables[0] (Skill22_Energy) || RETURN",
-                        "displayLines": "Skill22_Energy",
-                        "constants": [],
-                        "variables": [
-                          "Skill22_Energy"
-                        ]
+                        "displayLines": "Skill22_Energy"
                       }
                     }
                   ]
@@ -342,12 +304,7 @@ const configAbility = {
                     {
                       "name": "Set Phainon Charge Points",
                       "value": {
-                        "operator": "Variables[0] (Skill22_Energy) || RETURN",
-                        "displayLines": "Skill22_Energy",
-                        "constants": [],
-                        "variables": [
-                          "Skill22_Energy"
-                        ]
+                        "displayLines": "Skill22_Energy"
                       }
                     }
                   ]
@@ -367,12 +324,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-330015598\">Phainon_Ultimate_Energy</a>[<span class=\"descriptionNumberColor\">Scourge</span>]",
                   "counter": {
-                    "operator": "Variables[0] (Skill22_Energy) || RETURN",
-                    "displayLines": "Skill22_Energy",
-                    "constants": [],
-                    "variables": [
-                      "Skill22_Energy"
-                    ]
+                    "displayLines": "Skill22_Energy"
                   }
                 },
                 {
@@ -406,12 +358,7 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": {
-                "operator": "Variables[0] (4) || RETURN",
-                "displayLines": "4",
-                "constants": [],
-                "variables": [
-                  4
-                ]
+                "displayLines": "4"
               },
               "maxValue": 99
             }

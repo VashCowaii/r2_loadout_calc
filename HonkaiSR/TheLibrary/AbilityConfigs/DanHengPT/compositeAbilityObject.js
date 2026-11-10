@@ -276,12 +276,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -304,12 +299,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 },
                 {
@@ -320,12 +310,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                    "displayLines": "MDF_PropertyValue2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue2"
-                    ]
+                    "displayLines": "MDF_PropertyValue2"
                   }
                 }
               ]
@@ -350,12 +335,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -382,12 +362,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -431,35 +406,17 @@ const compositeAbilityObject = {
                 {
                   "name": "Stack Shield",
                   "stackValue": {
-                    "operator": "Variables[0] (MDF_DanHengPT_InitShieldValue) || RETURN",
-                    "displayLines": "MDF_DanHengPT_InitShieldValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DanHengPT_InitShieldValue"
-                    ]
+                    "displayLines": "MDF_DanHengPT_InitShieldValue"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (0.2) || MUL || Variables[2] (400) || ADD || Variables[3] (MDF_MaxShieldRatio) || MUL || RETURN",
-                    "displayLines": "(((DanHengPT_Attack * 0.2) + 400) * MDF_MaxShieldRatio)",
-                    "constants": [],
-                    "variables": [
-                      "DanHengPT_Attack",
-                      0.2,
-                      400,
-                      "MDF_MaxShieldRatio"
-                    ]
+                    "displayLines": "(((DanHengPT_Attack * 0.2) + 400) * MDF_MaxShieldRatio)"
                   }
                 },
                 {
                   "name": "Define Custom Variable",
                   "scope": "ContextCaster",
                   "value": {
-                    "operator": "Variables[0] (MDF_DanHengPT_InitShieldValue) || RETURN",
-                    "displayLines": "MDF_DanHengPT_InitShieldValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DanHengPT_InitShieldValue"
-                    ]
+                    "displayLines": "MDF_DanHengPT_InitShieldValue"
                   },
                   "variableName": "MDF_AchievementCount"
                 },
@@ -496,12 +453,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackDelta) || RETURN",
-                    "displayLines": "MDF_AttackDelta",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackDelta"
-                    ]
+                    "displayLines": "MDF_AttackDelta"
                   }
                 }
               ]
@@ -557,14 +509,7 @@ const compositeAbilityObject = {
             "delayAdvancePreview": {
               "name": "Delay/Advance Preview",
               "previewValue": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PointB2_P3_DelayUp) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PointB2_P3_DelayUp)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PointB2_P3_DelayUp"
-                ]
+                "displayLines": "(0 - MDF_PointB2_P3_DelayUp)"
               }
             }
           },
@@ -586,12 +531,7 @@ const compositeAbilityObject = {
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_Rank04_AllDamageReduceRatio) || RETURN",
-                  "displayLines": "MDF_Rank04_AllDamageReduceRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Rank04_AllDamageReduceRatio"
-                  ]
+                  "displayLines": "MDF_Rank04_AllDamageReduceRatio"
                 }
               }
             },
@@ -612,12 +552,7 @@ const compositeAbilityObject = {
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_Rank06_DefPentRatio) || RETURN",
-                  "displayLines": "MDF_Rank06_DefPentRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Rank06_DefPentRatio"
-                  ]
+                  "displayLines": "MDF_Rank06_DefPentRatio"
                 }
               }
             },
@@ -638,12 +573,7 @@ const compositeAbilityObject = {
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_Rank06_AllDamageTypeTakenRatio) || RETURN",
-                  "displayLines": "MDF_Rank06_AllDamageTypeTakenRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Rank06_AllDamageTypeTakenRatio"
-                  ]
+                  "displayLines": "MDF_Rank06_AllDamageTypeTakenRatio"
                 }
               }
             }
@@ -780,12 +710,7 @@ const compositeAbilityObject = {
                         "target": "{{DHPT}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (MDF_PointB2_P2_AddSP) || RETURN",
-                        "displayLines": "MDF_PointB2_P2_AddSP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PointB2_P2_AddSP"
-                        ]
+                        "displayLines": "MDF_PointB2_P2_AddSP"
                       },
                       "isFixed": "* ERR"
                     }
@@ -809,12 +734,7 @@ const compositeAbilityObject = {
                       },
                       "variables": {
                         "parameter[0]_NormalizedValue": {
-                          "operator": "Variables[0] (MDF_PointB2_P3_DelayUp) || RETURN",
-                          "displayLines": "MDF_PointB2_P3_DelayUp",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PointB2_P3_DelayUp"
-                          ]
+                          "displayLines": "MDF_PointB2_P3_DelayUp"
                         }
                       }
                     }
@@ -855,14 +775,7 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "scope": "ContextCaster",
                       "value": {
-                        "operator": "Variables[0] (DanHengPT_Passive_Count) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(DanHengPT_Passive_Count - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "DanHengPT_Passive_Count"
-                        ]
+                        "displayLines": "(DanHengPT_Passive_Count - 1)"
                       },
                       "variableName": "DanHengPT_Passive_Count"
                     },
@@ -873,12 +786,7 @@ const compositeAbilityObject = {
                         "target": "{{Souldragon}}"
                       },
                       "attackCount": {
-                        "operator": "Variables[0] (DanHengPT_Passive_Count) || RETURN",
-                        "displayLines": "DanHengPT_Passive_Count",
-                        "constants": [],
-                        "variables": [
-                          "DanHengPT_Passive_Count"
-                        ]
+                        "displayLines": "DanHengPT_Passive_Count"
                       },
                       "show": true
                     },
@@ -1162,12 +1070,7 @@ const compositeAbilityObject = {
               "modifier": null,
               "ID": "141401(SkillMaze)",
               "duration": {
-                "operator": "Variables[0] (10) || RETURN",
-                "displayLines": "10",
-                "constants": [],
-                "variables": [
-                  10
-                ]
+                "displayLines": "10"
               }
             }
           ]
@@ -1396,12 +1299,7 @@ const compositeAbilityObject = {
             "target": "{{All Team Members}}"
           },
           "dispelCount": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "dispelOrder": "LastAdded"
         },
@@ -1422,21 +1320,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (Skill03_InsertDanHengPTDamagePercentage) || RETURN",
-              "displayLines": "Skill03_InsertDanHengPTDamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill03_InsertDanHengPTDamagePercentage"
-              ]
+              "displayLines": "Skill03_InsertDanHengPTDamagePercentage"
             },
             "HitSplit": 0.25,
             "Toughness": {
-              "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
-              "displayLines": "DanHengPT_Stance_All",
-              "constants": [],
-              "variables": [
-                "DanHengPT_Stance_All"
-              ]
+              "displayLines": "DanHengPT_Stance_All"
             },
             "Tags": [
               "Summon-Tag DMG"
@@ -1453,21 +1341,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (Skill03_InsertDanHengPTDamagePercentage) || RETURN",
-              "displayLines": "Skill03_InsertDanHengPTDamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill03_InsertDanHengPTDamagePercentage"
-              ]
+              "displayLines": "Skill03_InsertDanHengPTDamagePercentage"
             },
             "HitSplit": 0.25,
             "Toughness": {
-              "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
-              "displayLines": "DanHengPT_Stance_All",
-              "constants": [],
-              "variables": [
-                "DanHengPT_Stance_All"
-              ]
+              "displayLines": "DanHengPT_Stance_All"
             },
             "Tags": [
               "Summon-Tag DMG"
@@ -1484,21 +1362,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (Skill03_InsertDanHengPTDamagePercentage) || RETURN",
-              "displayLines": "Skill03_InsertDanHengPTDamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill03_InsertDanHengPTDamagePercentage"
-              ]
+              "displayLines": "Skill03_InsertDanHengPTDamagePercentage"
             },
             "HitSplit": 0.25,
             "Toughness": {
-              "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
-              "displayLines": "DanHengPT_Stance_All",
-              "constants": [],
-              "variables": [
-                "DanHengPT_Stance_All"
-              ]
+              "displayLines": "DanHengPT_Stance_All"
             },
             "Tags": [
               "Summon-Tag DMG"
@@ -1515,21 +1383,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (Skill03_InsertDanHengPTDamagePercentage) || RETURN",
-              "displayLines": "Skill03_InsertDanHengPTDamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill03_InsertDanHengPTDamagePercentage"
-              ]
+              "displayLines": "Skill03_InsertDanHengPTDamagePercentage"
             },
             "HitSplit": 0.25,
             "Toughness": {
-              "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
-              "displayLines": "DanHengPT_Stance_All",
-              "constants": [],
-              "variables": [
-                "DanHengPT_Stance_All"
-              ]
+              "displayLines": "DanHengPT_Stance_All"
             },
             "Tags": [
               "Summon-Tag DMG"
@@ -1553,12 +1411,7 @@ const compositeAbilityObject = {
               }
             },
             "Damage": {
-              "operator": "Variables[0] (Skill03_InsertOwnerDamagePercentage) || RETURN",
-              "displayLines": "Skill03_InsertOwnerDamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill03_InsertOwnerDamagePercentage"
-              ]
+              "displayLines": "Skill03_InsertOwnerDamagePercentage"
             },
             "Toughness": null,
             "Tags": [
@@ -1606,14 +1459,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (DanHengPT_ExtraDamageCount) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(DanHengPT_ExtraDamageCount - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "DanHengPT_ExtraDamageCount"
-                ]
+                "displayLines": "(DanHengPT_ExtraDamageCount - 1)"
               },
               "variableName": "DanHengPT_ExtraDamageCount"
             },
@@ -1633,13 +1479,7 @@ const compositeAbilityObject = {
                   }
                 },
                 "DamageFlat": {
-                  "operator": "Variables[0] (DanHengPT_ExtraDamageRatio) || Variables[1] (DanHengPT_ExtraDamageShield) || MUL || RETURN",
-                  "displayLines": "(DanHengPT_ExtraDamageRatio * DanHengPT_ExtraDamageShield)",
-                  "constants": [],
-                  "variables": [
-                    "DanHengPT_ExtraDamageRatio",
-                    "DanHengPT_ExtraDamageShield"
-                  ]
+                  "displayLines": "(DanHengPT_ExtraDamageRatio * DanHengPT_ExtraDamageShield)"
                 },
                 "Toughness": null,
                 "Tags": [
@@ -1699,12 +1539,7 @@ const compositeAbilityObject = {
                           }
                         },
                         "Damage": {
-                          "operator": "Variables[0] (SkillTree_PointB3_OwnerDamagePercentage) || RETURN",
-                          "displayLines": "SkillTree_PointB3_OwnerDamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "SkillTree_PointB3_OwnerDamagePercentage"
-                          ]
+                          "displayLines": "SkillTree_PointB3_OwnerDamagePercentage"
                         },
                         "Toughness": null,
                         "Tags": [
@@ -1771,12 +1606,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-            "displayLines": "AOE Toughness Value",
-            "constants": [],
-            "variables": [
-              "AOE Toughness Value"
-            ]
+            "displayLines": "AOE Toughness Value"
           },
           "variableName": "DanHengPT_Stance_All"
         },
@@ -1877,20 +1707,10 @@ const compositeAbilityObject = {
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (DanHengPT_Passive_Count) || RETURN",
-            "displayLines": "DanHengPT_Passive_Count",
-            "constants": [],
-            "variables": [
-              "DanHengPT_Passive_Count"
-            ]
+            "displayLines": "DanHengPT_Passive_Count"
           },
           "maximum": {
-            "operator": "Variables[0] (DanHengPT_Passive_MaxCount) || RETURN",
-            "displayLines": "DanHengPT_Passive_MaxCount",
-            "constants": [],
-            "variables": [
-              "DanHengPT_Passive_MaxCount"
-            ]
+            "displayLines": "DanHengPT_Passive_MaxCount"
           },
           "assignState": "True",
           "priorState": "Normal",
@@ -1899,12 +1719,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.8) || RETURN",
-            "displayLines": "0.8",
-            "constants": [],
-            "variables": [
-              0.8
-            ]
+            "displayLines": "0.8"
           },
           "variableName": "Skill03_InsertDanHengPTDamagePercentage"
         },
@@ -1918,26 +1733,14 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.8) || Variables[1] (2) || MUL || RETURN",
-                "displayLines": "(0.8 * 2)",
-                "constants": [],
-                "variables": [
-                  0.8,
-                  2
-                ]
+                "displayLines": "(0.8 * 2)"
               },
               "variableName": "Skill03_InsertOwnerDamagePercentage"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.4) || Variables[1] (2) || MUL || RETURN",
-                "displayLines": "(0.4 * 2)",
-                "constants": [],
-                "variables": [
-                  0.4,
-                  2
-                ]
+                "displayLines": "(0.4 * 2)"
               },
               "variableName": "SkillTree_PointB3_OwnerDamagePercentage"
             }
@@ -1946,24 +1749,14 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.8) || RETURN",
-                "displayLines": "0.8",
-                "constants": [],
-                "variables": [
-                  0.8
-                ]
+                "displayLines": "0.8"
               },
               "variableName": "Skill03_InsertOwnerDamagePercentage"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.4) || RETURN",
-                "displayLines": "0.4",
-                "constants": [],
-                "variables": [
-                  0.4
-                ]
+                "displayLines": "0.4"
               },
               "variableName": "SkillTree_PointB3_OwnerDamagePercentage"
             }
@@ -2005,12 +1798,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_ShieldUPRatioTemp) || RETURN",
-                        "displayLines": "MDF_ShieldUPRatioTemp",
-                        "constants": [],
-                        "variables": [
-                          "MDF_ShieldUPRatioTemp"
-                        ]
+                        "displayLines": "MDF_ShieldUPRatioTemp"
                       },
                       "variableName": "DanHengPT_ExtraShieldUPRatio"
                     }
@@ -2083,12 +1871,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageRatioTemp) || RETURN",
-                    "displayLines": "MDF_DamageRatioTemp",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageRatioTemp"
-                    ]
+                    "displayLines": "MDF_DamageRatioTemp"
                   },
                   "variableName": "DanHengPT_ExtraDamageRatio"
                 },
@@ -2110,12 +1893,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageCountTemp) || RETURN",
-                    "displayLines": "MDF_DamageCountTemp",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageCountTemp"
-                    ]
+                    "displayLines": "MDF_DamageCountTemp"
                   },
                   "variableName": "DanHengPT_ExtraDamageCount"
                 }
@@ -2276,12 +2054,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Skill Points Modification",
                       "adjustmentValue": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "adjustmentType": "+"
                     },
@@ -2293,21 +2066,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"2035403394\">DanHengPT_Eidolon1</a>[<span class=\"descriptionNumberColor\">Shed Scales of Old</span>]",
                       "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.18) || RETURN",
-                          "displayLines": "0.18",
-                          "constants": [],
-                          "variables": [
-                            0.18
-                          ]
+                          "displayLines": "0.18"
                         }
                       }
                     }
@@ -2389,24 +2152,14 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 1,
                   "maxValue": {
-                    "operator": "Variables[0] (DanHengPT_Passive_MaxCount) || RETURN",
-                    "displayLines": "DanHengPT_Passive_MaxCount",
-                    "constants": [],
-                    "variables": [
-                      "DanHengPT_Passive_MaxCount"
-                    ]
+                    "displayLines": "DanHengPT_Passive_MaxCount"
                   },
                   "includeMaxValueInRange": true,
                   "enteringRange": [
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (DanHengPT_Passive_Count) || RETURN",
-                        "displayLines": "DanHengPT_Passive_Count",
-                        "constants": [],
-                        "variables": [
-                          "DanHengPT_Passive_Count"
-                        ]
+                        "displayLines": "DanHengPT_Passive_Count"
                       },
                       "priorState": "Active"
                     }
@@ -2415,12 +2168,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (DanHengPT_Passive_Count) || RETURN",
-                        "displayLines": "DanHengPT_Passive_Count",
-                        "constants": [],
-                        "variables": [
-                          "DanHengPT_Passive_Count"
-                        ]
+                        "displayLines": "DanHengPT_Passive_Count"
                       },
                       "priorState": "Normal"
                     }
@@ -2429,12 +2177,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (DanHengPT_Passive_Count) || RETURN",
-                        "displayLines": "DanHengPT_Passive_Count",
-                        "constants": [],
-                        "variables": [
-                          "DanHengPT_Passive_Count"
-                        ]
+                        "displayLines": "DanHengPT_Passive_Count"
                       },
                       "priorState": "Active"
                     }
@@ -2486,14 +2229,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-892900131\">DanHengPT_PointB1_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">Empyreanity</span>]",
                           "valuePerStack": {
                             "MDF_AttackDelta": {
-                              "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (DanHengPT_ConvertAttack) || SUB || Variables[2] (0.15) || MUL || RETURN",
-                              "displayLines": "((DanHengPT_Attack - DanHengPT_ConvertAttack) * 0.15)",
-                              "constants": [],
-                              "variables": [
-                                "DanHengPT_Attack",
-                                "DanHengPT_ConvertAttack",
-                                0.15
-                              ]
+                              "displayLines": "((DanHengPT_Attack - DanHengPT_ConvertAttack) * 0.15)"
                             }
                           }
                         }
@@ -2545,14 +2281,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-892900131\">DanHengPT_PointB1_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">Empyreanity</span>]",
                           "valuePerStack": {
                             "MDF_AttackDelta": {
-                              "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (DanHengPT_ConvertAttack) || SUB || Variables[2] (0.15) || MUL || RETURN",
-                              "displayLines": "((DanHengPT_Attack - DanHengPT_ConvertAttack) * 0.15)",
-                              "constants": [],
-                              "variables": [
-                                "DanHengPT_Attack",
-                                "DanHengPT_ConvertAttack",
-                                0.15
-                              ]
+                              "displayLines": "((DanHengPT_Attack - DanHengPT_ConvertAttack) * 0.15)"
                             }
                           }
                         }
@@ -2588,20 +2317,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             },
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "attackType": "Ultimate",
@@ -2640,12 +2359,7 @@ const compositeAbilityObject = {
                       }
                     },
                     "Damage": {
-                      "operator": "Variables[0] (3.3) || RETURN",
-                      "displayLines": "3.3",
-                      "constants": [],
-                      "variables": [
-                        3.3
-                      ]
+                      "displayLines": "3.3"
                     },
                     "Toughness": null,
                     "Tags": [
@@ -2677,14 +2391,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (DanHengPT_Passive_Count) || Variables[1] (2) || ADD || Variables[2] (2) || ADD || RETURN",
-                "displayLines": "((DanHengPT_Passive_Count + 2) + 2)",
-                "constants": [],
-                "variables": [
-                  "DanHengPT_Passive_Count",
-                  2,
-                  2
-                ]
+                "displayLines": "((DanHengPT_Passive_Count + 2) + 2)"
               },
               "variableName": "DanHengPT_Passive_Count"
             }
@@ -2693,13 +2400,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (DanHengPT_Passive_Count) || Variables[1] (2) || ADD || RETURN",
-                "displayLines": "(DanHengPT_Passive_Count + 2)",
-                "constants": [],
-                "variables": [
-                  "DanHengPT_Passive_Count",
-                  2
-                ]
+                "displayLines": "(DanHengPT_Passive_Count + 2)"
               },
               "variableName": "DanHengPT_Passive_Count"
             }
@@ -2728,12 +2429,7 @@ const compositeAbilityObject = {
                 "target": "{{Souldragon}}"
               },
               "attackCount": {
-                "operator": "Variables[0] (DanHengPT_Passive_Count) || RETURN",
-                "displayLines": "DanHengPT_Passive_Count",
-                "constants": [],
-                "variables": [
-                  "DanHengPT_Passive_Count"
-                ]
+                "displayLines": "DanHengPT_Passive_Count"
               },
               "show": true
             }
@@ -2930,44 +2626,19 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
                           "valuePerStack": {
                             "MDF_PointB2_P3_DelayUp": {
-                              "operator": "Variables[0] (0.15) || RETURN",
-                              "displayLines": "0.15",
-                              "constants": [],
-                              "variables": [
-                                0.15
-                              ]
+                              "displayLines": "0.15"
                             },
                             "MDF_PointB2_P2_AddSP": {
-                              "operator": "Variables[0] (6) || RETURN",
-                              "displayLines": "6",
-                              "constants": [],
-                              "variables": [
-                                6
-                              ]
+                              "displayLines": "6"
                             },
                             "MDF_Eidolon4_AllDamageReduceRatio": {
-                              "operator": "Variables[0] (0.2) || RETURN",
-                              "displayLines": "0.2",
-                              "constants": [],
-                              "variables": [
-                                0.2
-                              ]
+                              "displayLines": "0.2"
                             },
                             "MDF_Eidolon6_AllDamageTypeTakenRatio": {
-                              "operator": "Variables[0] (0.2) || RETURN",
-                              "displayLines": "0.2",
-                              "constants": [],
-                              "variables": [
-                                0.2
-                              ]
+                              "displayLines": "0.2"
                             },
                             "MDF_Eidolon6_DefPentRatio": {
-                              "operator": "Variables[0] (0.12) || RETURN",
-                              "displayLines": "0.12",
-                              "constants": [],
-                              "variables": [
-                                0.12
-                              ]
+                              "displayLines": "0.12"
                             }
                           }
                         }
@@ -2982,28 +2653,13 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
                           "valuePerStack": {
                             "MDF_PointB2_P3_DelayUp": {
-                              "operator": "Variables[0] (0.15) || RETURN",
-                              "displayLines": "0.15",
-                              "constants": [],
-                              "variables": [
-                                0.15
-                              ]
+                              "displayLines": "0.15"
                             },
                             "MDF_PointB2_P2_AddSP": {
-                              "operator": "Variables[0] (6) || RETURN",
-                              "displayLines": "6",
-                              "constants": [],
-                              "variables": [
-                                6
-                              ]
+                              "displayLines": "6"
                             },
                             "MDF_Eidolon4_AllDamageReduceRatio": {
-                              "operator": "Variables[0] (0.2) || RETURN",
-                              "displayLines": "0.2",
-                              "constants": [],
-                              "variables": [
-                                0.2
-                              ]
+                              "displayLines": "0.2"
                             },
                             "MDF_Eidolon6_AllDamageTypeTakenRatio": 0,
                             "MDF_Eidolon6_DefPentRatio": 0
@@ -3022,20 +2678,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
                       "valuePerStack": {
                         "MDF_PointB2_P3_DelayUp": {
-                          "operator": "Variables[0] (0.15) || RETURN",
-                          "displayLines": "0.15",
-                          "constants": [],
-                          "variables": [
-                            0.15
-                          ]
+                          "displayLines": "0.15"
                         },
                         "MDF_PointB2_P2_AddSP": {
-                          "operator": "Variables[0] (6) || RETURN",
-                          "displayLines": "6",
-                          "constants": [],
-                          "variables": [
-                            6
-                          ]
+                          "displayLines": "6"
                         },
                         "MDF_Eidolon4_AllDamageReduceRatio": 0,
                         "MDF_Eidolon6_AllDamageTypeTakenRatio": 0,
@@ -3071,28 +2717,13 @@ const compositeAbilityObject = {
                             "MDF_PointB2_P3_DelayUp": 0,
                             "MDF_PointB2_P2_AddSP": 0,
                             "MDF_Eidolon4_AllDamageReduceRatio": {
-                              "operator": "Variables[0] (0.2) || RETURN",
-                              "displayLines": "0.2",
-                              "constants": [],
-                              "variables": [
-                                0.2
-                              ]
+                              "displayLines": "0.2"
                             },
                             "MDF_Eidolon6_AllDamageTypeTakenRatio": {
-                              "operator": "Variables[0] (0.2) || RETURN",
-                              "displayLines": "0.2",
-                              "constants": [],
-                              "variables": [
-                                0.2
-                              ]
+                              "displayLines": "0.2"
                             },
                             "MDF_Eidolon6_DefPentRatio": {
-                              "operator": "Variables[0] (0.12) || RETURN",
-                              "displayLines": "0.12",
-                              "constants": [],
-                              "variables": [
-                                0.12
-                              ]
+                              "displayLines": "0.12"
                             }
                           }
                         }
@@ -3109,12 +2740,7 @@ const compositeAbilityObject = {
                             "MDF_PointB2_P3_DelayUp": 0,
                             "MDF_PointB2_P2_AddSP": 0,
                             "MDF_Eidolon4_AllDamageReduceRatio": {
-                              "operator": "Variables[0] (0.2) || RETURN",
-                              "displayLines": "0.2",
-                              "constants": [],
-                              "variables": [
-                                0.2
-                              ]
+                              "displayLines": "0.2"
                             },
                             "MDF_Eidolon6_AllDamageTypeTakenRatio": 0,
                             "MDF_Eidolon6_DefPentRatio": 0
@@ -3161,20 +2787,10 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
                   "valuePerStack": {
                     "MDF_PointB2_P3_DelayUp": {
-                      "operator": "Variables[0] (0.15) || RETURN",
-                      "displayLines": "0.15",
-                      "constants": [],
-                      "variables": [
-                        0.15
-                      ]
+                      "displayLines": "0.15"
                     },
                     "MDF_PointB2_P2_AddSP": {
-                      "operator": "Variables[0] (6) || RETURN",
-                      "displayLines": "6",
-                      "constants": [],
-                      "variables": [
-                        6
-                      ]
+                      "displayLines": "6"
                     },
                     "MDF_Eidolon4_AllDamageReduceRatio": 0,
                     "MDF_Eidolon6_AllDamageTypeTakenRatio": 0,
@@ -3236,14 +2852,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-892900131\">DanHengPT_PointB1_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">Empyreanity</span>]",
               "valuePerStack": {
                 "MDF_AttackDelta": {
-                  "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (DanHengPT_ConvertAttack) || SUB || Variables[2] (0.15) || MUL || RETURN",
-                  "displayLines": "((DanHengPT_Attack - DanHengPT_ConvertAttack) * 0.15)",
-                  "constants": [],
-                  "variables": [
-                    "DanHengPT_Attack",
-                    "DanHengPT_ConvertAttack",
-                    0.15
-                  ]
+                  "displayLines": "((DanHengPT_Attack - DanHengPT_ConvertAttack) * 0.15)"
                 }
               }
             }
@@ -3298,44 +2907,19 @@ const compositeAbilityObject = {
                           },
                           "valuePerStack": {
                             "MDF_Ability03_DamagePercentage": {
-                              "operator": "Variables[0] (0.8) || RETURN",
-                              "displayLines": "0.8",
-                              "constants": [],
-                              "variables": [
-                                0.8
-                              ]
+                              "displayLines": "0.8"
                             },
                             "MDF_Stance": {
-                              "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
-                              "displayLines": "DanHengPT_Stance_All",
-                              "constants": [],
-                              "variables": [
-                                "DanHengPT_Stance_All"
-                              ]
+                              "displayLines": "DanHengPT_Stance_All"
                             },
                             "MDF_Eidolon2_P1_DamageRatio": {
-                              "operator": "Variables[0] (2) || RETURN",
-                              "displayLines": "2",
-                              "constants": [],
-                              "variables": [
-                                2
-                              ]
+                              "displayLines": "2"
                             },
                             "MDF_Point03_P1_DamageRatio": {
-                              "operator": "Variables[0] (0.4) || RETURN",
-                              "displayLines": "0.4",
-                              "constants": [],
-                              "variables": [
-                                0.4
-                              ]
+                              "displayLines": "0.4"
                             },
                             "MDF_DisperseNum": {
-                              "operator": "Variables[0] (1) || RETURN",
-                              "displayLines": "1",
-                              "constants": [],
-                              "variables": [
-                                1
-                              ]
+                              "displayLines": "1"
                             }
                           }
                         }
@@ -3353,37 +2937,17 @@ const compositeAbilityObject = {
                           },
                           "valuePerStack": {
                             "MDF_Ability03_DamagePercentage": {
-                              "operator": "Variables[0] (0.8) || RETURN",
-                              "displayLines": "0.8",
-                              "constants": [],
-                              "variables": [
-                                0.8
-                              ]
+                              "displayLines": "0.8"
                             },
                             "MDF_Stance": {
-                              "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
-                              "displayLines": "DanHengPT_Stance_All",
-                              "constants": [],
-                              "variables": [
-                                "DanHengPT_Stance_All"
-                              ]
+                              "displayLines": "DanHengPT_Stance_All"
                             },
                             "MDF_Eidolon2_P1_DamageRatio": 0,
                             "MDF_Point03_P1_DamageRatio": {
-                              "operator": "Variables[0] (0.4) || RETURN",
-                              "displayLines": "0.4",
-                              "constants": [],
-                              "variables": [
-                                0.4
-                              ]
+                              "displayLines": "0.4"
                             },
                             "MDF_DisperseNum": {
-                              "operator": "Variables[0] (1) || RETURN",
-                              "displayLines": "1",
-                              "constants": [],
-                              "variables": [
-                                1
-                              ]
+                              "displayLines": "1"
                             }
                           }
                         }
@@ -3414,37 +2978,17 @@ const compositeAbilityObject = {
                           },
                           "valuePerStack": {
                             "MDF_Ability03_DamagePercentage": {
-                              "operator": "Variables[0] (0.8) || RETURN",
-                              "displayLines": "0.8",
-                              "constants": [],
-                              "variables": [
-                                0.8
-                              ]
+                              "displayLines": "0.8"
                             },
                             "MDF_Stance": {
-                              "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
-                              "displayLines": "DanHengPT_Stance_All",
-                              "constants": [],
-                              "variables": [
-                                "DanHengPT_Stance_All"
-                              ]
+                              "displayLines": "DanHengPT_Stance_All"
                             },
                             "MDF_Eidolon2_P1_DamageRatio": {
-                              "operator": "Variables[0] (2) || RETURN",
-                              "displayLines": "2",
-                              "constants": [],
-                              "variables": [
-                                2
-                              ]
+                              "displayLines": "2"
                             },
                             "MDF_Point03_P1_DamageRatio": 0,
                             "MDF_DisperseNum": {
-                              "operator": "Variables[0] (1) || RETURN",
-                              "displayLines": "1",
-                              "constants": [],
-                              "variables": [
-                                1
-                              ]
+                              "displayLines": "1"
                             }
                           }
                         }
@@ -3462,30 +3006,15 @@ const compositeAbilityObject = {
                           },
                           "valuePerStack": {
                             "MDF_Ability03_DamagePercentage": {
-                              "operator": "Variables[0] (0.8) || RETURN",
-                              "displayLines": "0.8",
-                              "constants": [],
-                              "variables": [
-                                0.8
-                              ]
+                              "displayLines": "0.8"
                             },
                             "MDF_Stance": {
-                              "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
-                              "displayLines": "DanHengPT_Stance_All",
-                              "constants": [],
-                              "variables": [
-                                "DanHengPT_Stance_All"
-                              ]
+                              "displayLines": "DanHengPT_Stance_All"
                             },
                             "MDF_Eidolon2_P1_DamageRatio": 0,
                             "MDF_Point03_P1_DamageRatio": 0,
                             "MDF_DisperseNum": {
-                              "operator": "Variables[0] (1) || RETURN",
-                              "displayLines": "1",
-                              "constants": [],
-                              "variables": [
-                                1
-                              ]
+                              "displayLines": "1"
                             }
                           }
                         }
@@ -3523,44 +3052,19 @@ const compositeAbilityObject = {
                           },
                           "variables": {
                             "MDF_Ability03_DamagePercentage": {
-                              "operator": "Variables[0] (0.8) || RETURN",
-                              "displayLines": "0.8",
-                              "constants": [],
-                              "variables": [
-                                0.8
-                              ]
+                              "displayLines": "0.8"
                             },
                             "MDF_Stance": {
-                              "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
-                              "displayLines": "DanHengPT_Stance_All",
-                              "constants": [],
-                              "variables": [
-                                "DanHengPT_Stance_All"
-                              ]
+                              "displayLines": "DanHengPT_Stance_All"
                             },
                             "MDF_Eidolon2_P1_DamageRatio": {
-                              "operator": "Variables[0] (2) || RETURN",
-                              "displayLines": "2",
-                              "constants": [],
-                              "variables": [
-                                2
-                              ]
+                              "displayLines": "2"
                             },
                             "MDF_Point03_P1_DamageRatio": {
-                              "operator": "Variables[0] (0.4) || RETURN",
-                              "displayLines": "0.4",
-                              "constants": [],
-                              "variables": [
-                                0.4
-                              ]
+                              "displayLines": "0.4"
                             },
                             "MDF_DisperseNum": {
-                              "operator": "Variables[0] (1) || RETURN",
-                              "displayLines": "1",
-                              "constants": [],
-                              "variables": [
-                                1
-                              ]
+                              "displayLines": "1"
                             }
                           }
                         }
@@ -3576,37 +3080,17 @@ const compositeAbilityObject = {
                           },
                           "variables": {
                             "MDF_Ability03_DamagePercentage": {
-                              "operator": "Variables[0] (0.8) || RETURN",
-                              "displayLines": "0.8",
-                              "constants": [],
-                              "variables": [
-                                0.8
-                              ]
+                              "displayLines": "0.8"
                             },
                             "MDF_Stance": {
-                              "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
-                              "displayLines": "DanHengPT_Stance_All",
-                              "constants": [],
-                              "variables": [
-                                "DanHengPT_Stance_All"
-                              ]
+                              "displayLines": "DanHengPT_Stance_All"
                             },
                             "MDF_Eidolon2_P1_DamageRatio": 0,
                             "MDF_Point03_P1_DamageRatio": {
-                              "operator": "Variables[0] (0.4) || RETURN",
-                              "displayLines": "0.4",
-                              "constants": [],
-                              "variables": [
-                                0.4
-                              ]
+                              "displayLines": "0.4"
                             },
                             "MDF_DisperseNum": {
-                              "operator": "Variables[0] (1) || RETURN",
-                              "displayLines": "1",
-                              "constants": [],
-                              "variables": [
-                                1
-                              ]
+                              "displayLines": "1"
                             }
                           }
                         }
@@ -3635,37 +3119,17 @@ const compositeAbilityObject = {
                           },
                           "variables": {
                             "MDF_Ability03_DamagePercentage": {
-                              "operator": "Variables[0] (0.8) || RETURN",
-                              "displayLines": "0.8",
-                              "constants": [],
-                              "variables": [
-                                0.8
-                              ]
+                              "displayLines": "0.8"
                             },
                             "MDF_Stance": {
-                              "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
-                              "displayLines": "DanHengPT_Stance_All",
-                              "constants": [],
-                              "variables": [
-                                "DanHengPT_Stance_All"
-                              ]
+                              "displayLines": "DanHengPT_Stance_All"
                             },
                             "MDF_Eidolon2_P1_DamageRatio": {
-                              "operator": "Variables[0] (2) || RETURN",
-                              "displayLines": "2",
-                              "constants": [],
-                              "variables": [
-                                2
-                              ]
+                              "displayLines": "2"
                             },
                             "MDF_Point03_P1_DamageRatio": 0,
                             "MDF_DisperseNum": {
-                              "operator": "Variables[0] (1) || RETURN",
-                              "displayLines": "1",
-                              "constants": [],
-                              "variables": [
-                                1
-                              ]
+                              "displayLines": "1"
                             }
                           }
                         }
@@ -3681,30 +3145,15 @@ const compositeAbilityObject = {
                           },
                           "variables": {
                             "MDF_Ability03_DamagePercentage": {
-                              "operator": "Variables[0] (0.8) || RETURN",
-                              "displayLines": "0.8",
-                              "constants": [],
-                              "variables": [
-                                0.8
-                              ]
+                              "displayLines": "0.8"
                             },
                             "MDF_Stance": {
-                              "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
-                              "displayLines": "DanHengPT_Stance_All",
-                              "constants": [],
-                              "variables": [
-                                "DanHengPT_Stance_All"
-                              ]
+                              "displayLines": "DanHengPT_Stance_All"
                             },
                             "MDF_Eidolon2_P1_DamageRatio": 0,
                             "MDF_Point03_P1_DamageRatio": 0,
                             "MDF_DisperseNum": {
-                              "operator": "Variables[0] (1) || RETURN",
-                              "displayLines": "1",
-                              "constants": [],
-                              "variables": [
-                                1
-                              ]
+                              "displayLines": "1"
                             }
                           }
                         }
@@ -3730,12 +3179,7 @@ const compositeAbilityObject = {
                     "target": "{{Souldragon}}"
                   },
                   "attackCount": {
-                    "operator": "Variables[0] (DanHengPT_Passive_Count) || RETURN",
-                    "displayLines": "DanHengPT_Passive_Count",
-                    "constants": [],
-                    "variables": [
-                      "DanHengPT_Passive_Count"
-                    ]
+                    "displayLines": "DanHengPT_Passive_Count"
                   },
                   "show": true
                 }
@@ -3868,21 +3312,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "HitSplit": 0.3,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -3898,21 +3332,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "HitSplit": 0.7,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -3994,31 +3418,14 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "valuePerStack": {
                 "MDF_DanHengPT_InitShieldValue": {
-                  "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (0.2) || MUL || Variables[2] (400) || ADD || RETURN",
-                  "displayLines": "((DanHengPT_Attack * 0.2) + 400)",
-                  "constants": [],
-                  "variables": [
-                    "DanHengPT_Attack",
-                    0.2,
-                    400
-                  ]
+                  "displayLines": "((DanHengPT_Attack * 0.2) + 400)"
                 },
                 "MDF_MaxShieldRatio": {
-                  "operator": "Variables[0] (3) || RETURN",
-                  "displayLines": "3",
-                  "constants": [],
-                  "variables": [
-                    3
-                  ]
+                  "displayLines": "3"
                 },
                 "MDF_MainTarget": 1
               }
@@ -4046,31 +3453,14 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "valuePerStack": {
                 "MDF_DanHengPT_InitShieldValue": {
-                  "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (0.2) || MUL || Variables[2] (400) || ADD || RETURN",
-                  "displayLines": "((DanHengPT_Attack * 0.2) + 400)",
-                  "constants": [],
-                  "variables": [
-                    "DanHengPT_Attack",
-                    0.2,
-                    400
-                  ]
+                  "displayLines": "((DanHengPT_Attack * 0.2) + 400)"
                 },
                 "MDF_MaxShieldRatio": {
-                  "operator": "Variables[0] (3) || RETURN",
-                  "displayLines": "3",
-                  "constants": [],
-                  "variables": [
-                    3
-                  ]
+                  "displayLines": "3"
                 },
                 "MDF_MainTarget": 1
               }
@@ -4159,33 +3549,14 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_DanHengPT_InitShieldValue": {
-                      "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (0.1) || MUL || Variables[2] (200) || ADD || Variables[3] (DanHengPT_ExtraShieldUPRatio) || MUL || Variables[4] (2) || MUL || RETURN",
-                      "displayLines": "((((DanHengPT_Attack * 0.1) + 200) * DanHengPT_ExtraShieldUPRatio) * 2)",
-                      "constants": [],
-                      "variables": [
-                        "DanHengPT_Attack",
-                        0.1,
-                        200,
-                        "DanHengPT_ExtraShieldUPRatio",
-                        2
-                      ]
+                      "displayLines": "((((DanHengPT_Attack * 0.1) + 200) * DanHengPT_ExtraShieldUPRatio) * 2)"
                     },
                     "MDF_MaxShieldRatio": {
-                      "operator": "Variables[0] (3) || RETURN",
-                      "displayLines": "3",
-                      "constants": [],
-                      "variables": [
-                        3
-                      ]
+                      "displayLines": "3"
                     },
                     "MDF_MainTarget": 1
                   }
@@ -4227,33 +3598,14 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                           "duration": {
-                            "operator": "Variables[0] (3) || RETURN",
-                            "displayLines": "3",
-                            "constants": [],
-                            "variables": [
-                              3
-                            ]
+                            "displayLines": "3"
                           },
                           "valuePerStack": {
                             "MDF_DanHengPT_InitShieldValue": {
-                              "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (0.05) || MUL || Variables[2] (100) || ADD || Variables[3] (DanHengPT_ExtraShieldUPRatio) || MUL || Variables[4] (2) || MUL || RETURN",
-                              "displayLines": "((((DanHengPT_Attack * 0.05) + 100) * DanHengPT_ExtraShieldUPRatio) * 2)",
-                              "constants": [],
-                              "variables": [
-                                "DanHengPT_Attack",
-                                0.05,
-                                100,
-                                "DanHengPT_ExtraShieldUPRatio",
-                                2
-                              ]
+                              "displayLines": "((((DanHengPT_Attack * 0.05) + 100) * DanHengPT_ExtraShieldUPRatio) * 2)"
                             },
                             "MDF_MaxShieldRatio": {
-                              "operator": "Variables[0] (3) || RETURN",
-                              "displayLines": "3",
-                              "constants": [],
-                              "variables": [
-                                3
-                              ]
+                              "displayLines": "3"
                             },
                             "MDF_MainTarget": 1
                           }
@@ -4272,32 +3624,14 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "valuePerStack": {
                     "MDF_DanHengPT_InitShieldValue": {
-                      "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (0.1) || MUL || Variables[2] (200) || ADD || Variables[3] (DanHengPT_ExtraShieldUPRatio) || MUL || RETURN",
-                      "displayLines": "(((DanHengPT_Attack * 0.1) + 200) * DanHengPT_ExtraShieldUPRatio)",
-                      "constants": [],
-                      "variables": [
-                        "DanHengPT_Attack",
-                        0.1,
-                        200,
-                        "DanHengPT_ExtraShieldUPRatio"
-                      ]
+                      "displayLines": "(((DanHengPT_Attack * 0.1) + 200) * DanHengPT_ExtraShieldUPRatio)"
                     },
                     "MDF_MaxShieldRatio": {
-                      "operator": "Variables[0] (3) || RETURN",
-                      "displayLines": "3",
-                      "constants": [],
-                      "variables": [
-                        3
-                      ]
+                      "displayLines": "3"
                     },
                     "MDF_MainTarget": 1
                   }
@@ -4339,32 +3673,14 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                           "duration": {
-                            "operator": "Variables[0] (3) || RETURN",
-                            "displayLines": "3",
-                            "constants": [],
-                            "variables": [
-                              3
-                            ]
+                            "displayLines": "3"
                           },
                           "valuePerStack": {
                             "MDF_DanHengPT_InitShieldValue": {
-                              "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (0.05) || MUL || Variables[2] (100) || ADD || Variables[3] (DanHengPT_ExtraShieldUPRatio) || MUL || RETURN",
-                              "displayLines": "(((DanHengPT_Attack * 0.05) + 100) * DanHengPT_ExtraShieldUPRatio)",
-                              "constants": [],
-                              "variables": [
-                                "DanHengPT_Attack",
-                                0.05,
-                                100,
-                                "DanHengPT_ExtraShieldUPRatio"
-                              ]
+                              "displayLines": "(((DanHengPT_Attack * 0.05) + 100) * DanHengPT_ExtraShieldUPRatio)"
                             },
                             "MDF_MaxShieldRatio": {
-                              "operator": "Variables[0] (3) || RETURN",
-                              "displayLines": "3",
-                              "constants": [],
-                              "variables": [
-                                3
-                              ]
+                              "displayLines": "3"
                             },
                             "MDF_MainTarget": 1
                           }

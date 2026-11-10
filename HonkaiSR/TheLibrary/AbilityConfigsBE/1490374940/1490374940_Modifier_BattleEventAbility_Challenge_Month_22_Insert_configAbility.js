@@ -33,12 +33,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageFlat": {
-                  "operator": "Variables[0] (Bomb_Damage_get) || RETURN",
-                  "displayLines": "Bomb_Damage_get",
-                  "constants": [],
-                  "variables": [
-                    "Bomb_Damage_get"
-                  ]
+                  "displayLines": "Bomb_Damage_get"
                 },
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,

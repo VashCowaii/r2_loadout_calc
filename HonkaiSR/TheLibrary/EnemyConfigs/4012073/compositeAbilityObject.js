@@ -89,20 +89,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-2024056044\">Monster_W4_Pollux_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
                       "valuePerStack": {
                         "MDF_DamagePercentage": {
-                          "operator": "Variables[0] (ThirstBlood_Dot_DamagePercentage) || RETURN",
-                          "displayLines": "ThirstBlood_Dot_DamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "ThirstBlood_Dot_DamagePercentage"
-                          ]
+                          "displayLines": "ThirstBlood_Dot_DamagePercentage"
                         },
                         "MDF_DamageHpAddedRatio": {
-                          "operator": "Variables[0] (ThirstBlood_DamageHpAddedRatio) || RETURN",
-                          "displayLines": "ThirstBlood_DamageHpAddedRatio",
-                          "constants": [],
-                          "variables": [
-                            "ThirstBlood_DamageHpAddedRatio"
-                          ]
+                          "displayLines": "ThirstBlood_DamageHpAddedRatio"
                         }
                       }
                     }
@@ -221,12 +211,7 @@ const compositeAbilityObject = {
                 "value1": "CurrentHP%",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                  "displayLines": "{[Skill02[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[2]]}"
-                  ]
+                  "displayLines": "{[Skill02[2]]}"
                 }
               },
               "passed": [
@@ -248,21 +233,10 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                      "displayLines": "{[Skill02[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[3]]}"
-                      ]
+                      "displayLines": "{[Skill02[3]]}"
                     },
                     "DamageFlat": {
-                      "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill02[1]]}) || MUL || RETURN",
-                      "displayLines": "(_MaxHP * {[Skill02[1]]})",
-                      "constants": [],
-                      "variables": [
-                        "_MaxHP",
-                        "{[Skill02[1]]}"
-                      ]
+                      "displayLines": "(_MaxHP * {[Skill02[1]]})"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -283,12 +257,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
+                      "displayLines": "{[Skill02[0]]}"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -318,12 +287,7 @@ const compositeAbilityObject = {
                 "value1": "CurrentHP%",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                  "displayLines": "{[Skill02[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[2]]}"
-                  ]
+                  "displayLines": "{[Skill02[2]]}"
                 }
               },
               "passed": [
@@ -345,21 +309,10 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                      "displayLines": "{[Skill02[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[3]]}"
-                      ]
+                      "displayLines": "{[Skill02[3]]}"
                     },
                     "DamageFlat": {
-                      "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill02[1]]}) || MUL || RETURN",
-                      "displayLines": "(_MaxHP * {[Skill02[1]]})",
-                      "constants": [],
-                      "variables": [
-                        "_MaxHP",
-                        "{[Skill02[1]]}"
-                      ]
+                      "displayLines": "(_MaxHP * {[Skill02[1]]})"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -380,12 +333,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
+                      "displayLines": "{[Skill02[0]]}"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -477,12 +425,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -631,12 +574,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_EnergyValue) || RETURN",
-                    "displayLines": "_EnergyValue",
-                    "constants": [],
-                    "variables": [
-                      "_EnergyValue"
-                    ]
+                    "displayLines": "_EnergyValue"
                   },
                   "entityClass": "Enemy",
                   "target": {

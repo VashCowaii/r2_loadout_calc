@@ -35,12 +35,7 @@ const configAbility = {
                   "name": "Compare: Ability Use Limit",
                   "skillName": "Skill02",
                   "value1": {
-                    "operator": "Variables[0] (FREEVAR) || RETURN",
-                    "displayLines": "FREEVAR",
-                    "constants": [],
-                    "variables": [
-                      "FREEVAR"
-                    ]
+                    "displayLines": "FREEVAR"
                   }
                 },
                 "passed": [

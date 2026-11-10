@@ -43,13 +43,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_CurrentHP) || Variables[1] (_MaxHP) || DIV || RETURN",
-                "displayLines": "(_CurrentHP / _MaxHP)",
-                "constants": [],
-                "variables": [
-                  "_CurrentHP",
-                  "_MaxHP"
-                ]
+                "displayLines": "(_CurrentHP / _MaxHP)"
               },
               "variableName": "_CurrentHPRatio"
             },
@@ -64,12 +58,7 @@ const configAbility = {
                 "value1": "_CurrentHPRatio",
                 "compareType": "<=",
                 "value2": {
-                  "operator": "Variables[0] (#ADF_2) || RETURN",
-                  "displayLines": "#ADF_2",
-                  "constants": [],
-                  "variables": [
-                    "#ADF_2"
-                  ]
+                  "displayLines": "#ADF_2"
                 }
               },
               "passed": [
@@ -80,12 +69,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (#ADF_3) || RETURN",
-                    "displayLines": "#ADF_3",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_3"
-                    ]
+                    "displayLines": "#ADF_3"
                   },
                   "formula": "Heal from Target MaxHP"
                 }

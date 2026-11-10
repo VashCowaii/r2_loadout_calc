@@ -41,12 +41,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.1) || RETURN",
-                    "displayLines": "0.1",
-                    "constants": [],
-                    "variables": [
-                      0.1
-                    ]
+                    "displayLines": "0.1"
                   }
                 }
               ]

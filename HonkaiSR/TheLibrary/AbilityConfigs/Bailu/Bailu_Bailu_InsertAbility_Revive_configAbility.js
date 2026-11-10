@@ -46,20 +46,10 @@ const configAbility = {
             "target": "{{Ability Target(ST)}}"
           },
           "healPercent": {
-            "operator": "Variables[0] (0.18) || RETURN",
-            "displayLines": "0.18",
-            "constants": [],
-            "variables": [
-              0.18
-            ]
+            "displayLines": "0.18"
           },
           "healFlat": {
-            "operator": "Variables[0] (480) || RETURN",
-            "displayLines": "480",
-            "constants": [],
-            "variables": [
-              480
-            ]
+            "displayLines": "480"
           },
           "formula": "Heal from Healer's MaxHP"
         },
@@ -79,31 +69,16 @@ const configAbility = {
               "variableName": "MDF_ReviveTime2",
               "modifierName": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>",
               "multiplier": {
-                "operator": "Constants[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [
-                  1
-                ],
-                "variables": []
+                "displayLines": "1"
               }
             },
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_ReviveTime2) || RETURN",
-                "displayLines": "MDF_ReviveTime2",
-                "constants": [],
-                "variables": [
-                  "MDF_ReviveTime2"
-                ]
+                "displayLines": "MDF_ReviveTime2"
               },
               "maximum": {
-                "operator": "Variables[0] (MDF_ReviveTime) || RETURN",
-                "displayLines": "MDF_ReviveTime",
-                "constants": [],
-                "variables": [
-                  "MDF_ReviveTime"
-                ]
+                "displayLines": "MDF_ReviveTime"
               },
               "assignState": "True",
               "priorState": "Active",
@@ -114,32 +89,17 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Constants[0] (0) || RETURN",
-                "displayLines": "0",
-                "constants": [
-                  0
-                ],
-                "variables": []
+                "displayLines": "0"
               },
               "variableName": "MDF_ReviveTime2"
             },
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (MDF_ReviveTime2) || RETURN",
-                "displayLines": "MDF_ReviveTime2",
-                "constants": [],
-                "variables": [
-                  "MDF_ReviveTime2"
-                ]
+                "displayLines": "MDF_ReviveTime2"
               },
               "maximum": {
-                "operator": "Variables[0] (MDF_ReviveTime) || RETURN",
-                "displayLines": "MDF_ReviveTime",
-                "constants": [],
-                "variables": [
-                  "MDF_ReviveTime"
-                ]
+                "displayLines": "MDF_ReviveTime"
               },
               "assignState": "True",
               "priorState": "Disable",

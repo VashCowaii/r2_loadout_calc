@@ -63,12 +63,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedUpRatio) || RETURN",
-                "displayLines": "MDF_SpeedUpRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedUpRatio"
-                ]
+                "displayLines": "MDF_SpeedUpRatio"
               }
             }
           ]
@@ -287,12 +282,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedUpRatio) || RETURN",
-                "displayLines": "MDF_SpeedUpRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedUpRatio"
-                ]
+                "displayLines": "MDF_SpeedUpRatio"
               }
             }
           ]
@@ -328,21 +318,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"487625140\">MModifier_Monster_W4_Scholar_LocalLegend_BookKiller</a>[<span class=\"descriptionNumberColor\">Ignited Flame</span>]",
                   "duration": {
-                    "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                    "displayLines": "MDF_LifeTime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_LifeTime"
-                    ]
+                    "displayLines": "MDF_LifeTime"
                   },
                   "valuePerStack": {
                     "MDF_SpeedUpRatio": {
-                      "operator": "Variables[0] (MDF_SpeedUpRatio) || RETURN",
-                      "displayLines": "MDF_SpeedUpRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_SpeedUpRatio"
-                      ]
+                      "displayLines": "MDF_SpeedUpRatio"
                     }
                   }
                 }
@@ -432,12 +412,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedUpRatio) || RETURN",
-                "displayLines": "MDF_SpeedUpRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedUpRatio"
-                ]
+                "displayLines": "MDF_SpeedUpRatio"
               }
             },
             {
@@ -448,12 +423,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageUpRatio) || RETURN",
-                "displayLines": "MDF_DamageUpRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageUpRatio"
-                ]
+                "displayLines": "MDF_DamageUpRatio"
               }
             }
           ]
@@ -489,29 +459,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1075754631\">MModifier_Monster_W4_Scholar_BookKiller</a>[<span class=\"descriptionNumberColor\">Ignited Flame</span>]",
                   "duration": {
-                    "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                    "displayLines": "MDF_LifeTime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_LifeTime"
-                    ]
+                    "displayLines": "MDF_LifeTime"
                   },
                   "valuePerStack": {
                     "MDF_SpeedUpRatio": {
-                      "operator": "Variables[0] (MDF_SpeedUpRatio) || RETURN",
-                      "displayLines": "MDF_SpeedUpRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_SpeedUpRatio"
-                      ]
+                      "displayLines": "MDF_SpeedUpRatio"
                     },
                     "MDF_DamageUpRatio": {
-                      "operator": "Variables[0] (MDF_DamageUpRatio) || RETURN",
-                      "displayLines": "MDF_DamageUpRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageUpRatio"
-                      ]
+                      "displayLines": "MDF_DamageUpRatio"
                     }
                   }
                 }
@@ -587,12 +542,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedUpRatio) || RETURN",
-                "displayLines": "MDF_SpeedUpRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedUpRatio"
-                ]
+                "displayLines": "MDF_SpeedUpRatio"
               }
             },
             {
@@ -603,12 +553,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageUpRatio) || RETURN",
-                "displayLines": "MDF_DamageUpRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageUpRatio"
-                ]
+                "displayLines": "MDF_DamageUpRatio"
               }
             }
           ]

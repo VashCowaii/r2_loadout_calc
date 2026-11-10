@@ -20,12 +20,7 @@ const configAbility = {
         "target": "{{Caster's Memosprite}}"
       },
       "value": {
-        "operator": "Variables[0] (_Energy) || RETURN",
-        "displayLines": "_Energy",
-        "constants": [],
-        "variables": [
-          "_Energy"
-        ]
+        "displayLines": "_Energy"
       },
       "variableName": "_CasterEnergy"
     },
@@ -36,12 +31,7 @@ const configAbility = {
         "target": "{{Caster's Memosprite}}"
       },
       "healPercent": {
-        "operator": "Variables[0] (0.5) || RETURN",
-        "displayLines": "0.5",
-        "constants": [],
-        "variables": [
-          0.5
-        ]
+        "displayLines": "0.5"
       },
       "formula": "Heal from Target MaxHP"
     },

@@ -13,12 +13,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1794214494\">Advanced_Welt_Ultimate_ExtraSP</a>",
       "valuePerStack": {
         "MDF_AddValue": {
-          "operator": "Variables[0] (5) || RETURN",
-          "displayLines": "5",
-          "constants": [],
-          "variables": [
-            5
-          ]
+          "displayLines": "5"
         }
       }
     },
@@ -56,12 +51,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_AddValue) || RETURN",
-                    "displayLines": "MDF_AddValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AddValue"
-                    ]
+                    "displayLines": "MDF_AddValue"
                   },
                   "isFixed": "* ERR"
                 }

@@ -247,12 +247,7 @@ const configAbility = {
                 "value1": "MDF_WeakCount",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_WeaknessNeed) || RETURN",
-                  "displayLines": "MDF_WeaknessNeed",
-                  "constants": [],
-                  "variables": [
-                    "MDF_WeaknessNeed"
-                  ]
+                  "displayLines": "MDF_WeaknessNeed"
                 },
                 "contextScope": "ContextModifier"
               },
@@ -266,12 +261,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"140202366\">Anaxa_Passive_Mark</a>[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (0.3) || RETURN",
-                      "displayLines": "0.3",
-                      "constants": [],
-                      "variables": [
-                        0.3
-                      ]
+                      "displayLines": "0.3"
                     }
                   }
                 },
@@ -280,12 +270,7 @@ const configAbility = {
                   "modifierName": "<a class=\"gModGreen\" id=\"-552811494\">Anaxa_Passive_Mark_Property</a>",
                   "variableName": "MDF_PropertyRatio",
                   "value": {
-                    "operator": "Variables[0] (0.3) || RETURN",
-                    "displayLines": "0.3",
-                    "constants": [],
-                    "variables": [
-                      0.3
-                    ]
+                    "displayLines": "0.3"
                   }
                 }
               ]
@@ -339,12 +324,7 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": {
-                "operator": "Variables[0] (MDF_WeaknessNeed) || RETURN",
-                "displayLines": "MDF_WeaknessNeed",
-                "constants": [],
-                "variables": [
-                  "MDF_WeaknessNeed"
-                ]
+                "displayLines": "MDF_WeaknessNeed"
               },
               "maxValue": 9999,
               "enteringRange": [
@@ -357,12 +337,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"140202366\">Anaxa_Passive_Mark</a>[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (0.3) || RETURN",
-                      "displayLines": "0.3",
-                      "constants": [],
-                      "variables": [
-                        0.3
-                      ]
+                      "displayLines": "0.3"
                     }
                   }
                 },
@@ -371,12 +346,7 @@ const configAbility = {
                   "modifierName": "<a class=\"gModGreen\" id=\"-552811494\">Anaxa_Passive_Mark_Property</a>",
                   "variableName": "MDF_PropertyRatio",
                   "value": {
-                    "operator": "Variables[0] (0.3) || RETURN",
-                    "displayLines": "0.3",
-                    "constants": [],
-                    "variables": [
-                      0.3
-                    ]
+                    "displayLines": "0.3"
                   }
                 }
               ],
@@ -440,12 +410,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_WeaknessNeed": {
-              "operator": "Variables[0] (5) || RETURN",
-              "displayLines": "5",
-              "constants": [],
-              "variables": [
-                5
-              ]
+              "displayLines": "5"
             }
           }
         }
@@ -501,12 +466,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (30) || RETURN",
-                    "displayLines": "30",
-                    "constants": [],
-                    "variables": [
-                      30
-                    ]
+                    "displayLines": "30"
                   },
                   "isFixed": "* ERR"
                 }

@@ -13,12 +13,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1011760406\">MModifier_Monster_W4_Claymore_Ability05_PowerUp</a>[<span class=\"descriptionNumberColor\">Permanent Enhancement</span>]",
       "valuePerStack": {
         "BonusRatio": {
-          "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-          "displayLines": "{[Skill05[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill05[0]]}"
-          ]
+          "displayLines": "{[Skill05[0]]}"
         }
       }
     },
@@ -52,13 +47,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (BonusRatio) || Variables[1] (_Layer) || MUL || RETURN",
-                "displayLines": "(BonusRatio * _Layer)",
-                "constants": [],
-                "variables": [
-                  "BonusRatio",
-                  "_Layer"
-                ]
+                "displayLines": "(BonusRatio * _Layer)"
               }
             },
             {

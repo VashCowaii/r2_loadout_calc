@@ -74,12 +74,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (EnhanceCount) || RETURN",
-        "displayLines": "EnhanceCount",
-        "constants": [],
-        "variables": [
-          "EnhanceCount"
-        ]
+        "displayLines": "EnhanceCount"
       },
       "execute": [
         {
@@ -91,12 +86,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1562887426\">Monster_W4_Theoroi_ReloadEffect</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill03[0]]}"
-              ]
+              "displayLines": "{[PassiveSkill03[0]]}"
             }
           }
         }
@@ -254,14 +244,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Skill16Count) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(Skill16Count + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "Skill16Count"
-            ]
+            "displayLines": "(Skill16Count + 1)"
           },
           "variableName": "Skill16Count"
         }
@@ -286,15 +269,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] ({[Skill16[0]]}) || Variables[1] (Skill16Count) || DIV || Constants[0] (5) || DIV || RETURN",
-        "displayLines": "(({[Skill16[0]]} / Skill16Count) / 5)",
-        "constants": [
-          5
-        ],
-        "variables": [
-          "{[Skill16[0]]}",
-          "Skill16Count"
-        ]
+        "displayLines": "(({[Skill16[0]]} / Skill16Count) / 5)"
       },
       "variableName": "Skill16Damage"
     },
@@ -307,12 +282,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (Skill16Damage) || RETURN",
-          "displayLines": "Skill16Damage",
-          "constants": [],
-          "variables": [
-            "Skill16Damage"
-          ]
+          "displayLines": "Skill16Damage"
         },
         "Toughness": null,
         "Tags": null,
@@ -354,12 +324,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (Skill16Damage) || RETURN",
-          "displayLines": "Skill16Damage",
-          "constants": [],
-          "variables": [
-            "Skill16Damage"
-          ]
+          "displayLines": "Skill16Damage"
         },
         "Toughness": null,
         "Tags": null,
@@ -376,12 +341,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (Skill16Damage) || RETURN",
-          "displayLines": "Skill16Damage",
-          "constants": [],
-          "variables": [
-            "Skill16Damage"
-          ]
+          "displayLines": "Skill16Damage"
         },
         "Toughness": null,
         "Tags": null,
@@ -398,12 +358,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (Skill16Damage) || RETURN",
-          "displayLines": "Skill16Damage",
-          "constants": [],
-          "variables": [
-            "Skill16Damage"
-          ]
+          "displayLines": "Skill16Damage"
         },
         "Toughness": null,
         "Tags": null,
@@ -420,12 +375,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (Skill16Damage) || RETURN",
-          "displayLines": "Skill16Damage",
-          "constants": [],
-          "variables": [
-            "Skill16Damage"
-          ]
+          "displayLines": "Skill16Damage"
         },
         "Toughness": null,
         "Tags": null,
@@ -437,12 +387,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (EnhanceCount) || RETURN",
-        "displayLines": "EnhanceCount",
-        "constants": [],
-        "variables": [
-          "EnhanceCount"
-        ]
+        "displayLines": "EnhanceCount"
       },
       "execute": [
         {
@@ -471,37 +416,17 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"2065489118\">Standard_Entangle</a>[<span class=\"descriptionNumberColor\">Entanglement</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill16[5]]}) || RETURN",
-                "displayLines": "{[Skill16[5]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill16[5]]}"
-                ]
+                "displayLines": "{[Skill16[5]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill16[2]]}) || RETURN",
-                "displayLines": "{[Skill16[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill16[2]]}"
-                ]
+                "displayLines": "{[Skill16[2]]}"
               },
               "valuePerStack": {
                 "MDF_ActionDelayRatio": {
-                  "operator": "Variables[0] ({[Skill16[3]]}) || RETURN",
-                  "displayLines": "{[Skill16[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill16[3]]}"
-                  ]
+                  "displayLines": "{[Skill16[3]]}"
                 },
                 "Modifier_Entangle_DamagePercentage": {
-                  "operator": "Variables[0] ({[Skill16[4]]}) || RETURN",
-                  "displayLines": "{[Skill16[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill16[4]]}"
-                  ]
+                  "displayLines": "{[Skill16[4]]}"
                 },
                 "Modifier_Entangle_DamageValue": 0
               }
@@ -571,12 +496,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"2001837227\">Monster_W4_Theoroi_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Corporeal</span>]",
       "valuePerStack": {
         "MDF_DamageTakenUpRatio_PerLayer": {
-          "operator": "Variables[0] ({[Skill16[1]]}) || RETURN",
-          "displayLines": "{[Skill16[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill16[1]]}"
-          ]
+          "displayLines": "{[Skill16[1]]}"
         }
       },
       "addStacksPerTrigger": 1
@@ -602,12 +522,7 @@ const configAbility = {
       "value": 0,
       "entityClass": "Enemy",
       "maximum": {
-        "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-        "displayLines": "{[PassiveSkill01[0]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill01[0]]}"
-        ]
+        "displayLines": "{[PassiveSkill01[0]]}"
       },
       "assignState": "True",
       "state": "Active",
@@ -741,12 +656,7 @@ const configAbility = {
           "eventID": 20024,
           "variables": {
             "SummonInitDelay": {
-              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[1]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[1]]}"
             }
           }
         }

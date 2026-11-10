@@ -137,12 +137,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-          "displayLines": "{[Skill07[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill07[0]]}"
-          ]
+          "displayLines": "{[Skill07[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -172,12 +167,7 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (MDF_TurnCount) || RETURN",
-        "displayLines": "MDF_TurnCount",
-        "constants": [],
-        "variables": [
-          "MDF_TurnCount"
-        ]
+        "displayLines": "MDF_TurnCount"
       },
       "entityClass": "Enemy",
       "target": {

@@ -35,13 +35,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ModifierLayers) || Variables[1] (MDF_AttackUPRatio) || MUL || RETURN",
-                "displayLines": "(ModifierLayers * MDF_AttackUPRatio)",
-                "constants": [],
-                "variables": [
-                  "ModifierLayers",
-                  "MDF_AttackUPRatio"
-                ]
+                "displayLines": "(ModifierLayers * MDF_AttackUPRatio)"
               }
             }
           ]
@@ -58,12 +52,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                "displayLines": "{[Skill04[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[0]]}"
-                ]
+                "displayLines": "{[Skill04[0]]}"
               },
               "execute": [
                 {
@@ -75,12 +64,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"787345585\">Monster_W3_Figure_02_RLElite_ChargeLayer_DamageUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                   "valuePerStack": {
                     "MDF_AttackUPRatio": {
-                      "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-                      "displayLines": "{[Skill04[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[1]]}"
-                      ]
+                      "displayLines": "{[Skill04[1]]}"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -201,15 +185,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Constants[0] (4) || Variables[0] (Monster_W3_Figure_02_RLElite_AimTargetCount) || SUB || Constants[1] (1) || ADD || RETURN",
-                "displayLines": "((4 - Monster_W3_Figure_02_RLElite_AimTargetCount) + 1)",
-                "constants": [
-                  4,
-                  1
-                ],
-                "variables": [
-                  "Monster_W3_Figure_02_RLElite_AimTargetCount"
-                ]
+                "displayLines": "((4 - Monster_W3_Figure_02_RLElite_AimTargetCount) + 1)"
               },
               "entityClass": "Enemy",
               "assignState": "False",
@@ -231,14 +207,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Constants[0] (5) || Variables[0] (Monster_W3_Figure_02_RLElite_AimTargetCount) || SUB || RETURN",
-                "displayLines": "(5 - Monster_W3_Figure_02_RLElite_AimTargetCount)",
-                "constants": [
-                  5
-                ],
-                "variables": [
-                  "Monster_W3_Figure_02_RLElite_AimTargetCount"
-                ]
+                "displayLines": "(5 - Monster_W3_Figure_02_RLElite_AimTargetCount)"
               },
               "variableName": "MDF_DangerLevel"
             }
@@ -380,12 +349,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Monster_W3_Figure_02_RLElite_AimTargetCount) || RETURN",
-                    "displayLines": "Monster_W3_Figure_02_RLElite_AimTargetCount",
-                    "constants": [],
-                    "variables": [
-                      "Monster_W3_Figure_02_RLElite_AimTargetCount"
-                    ]
+                    "displayLines": "Monster_W3_Figure_02_RLElite_AimTargetCount"
                   },
                   "variableName": "Monster_W3_Figure_02_AimTargetCount"
                 }
@@ -583,15 +547,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Constants[0] (4) || Variables[0] (Monster_W3_Figure_02_RLElite_AimTargetCount) || SUB || Constants[1] (1) || ADD || RETURN",
-                    "displayLines": "((4 - Monster_W3_Figure_02_RLElite_AimTargetCount) + 1)",
-                    "constants": [
-                      4,
-                      1
-                    ],
-                    "variables": [
-                      "Monster_W3_Figure_02_RLElite_AimTargetCount"
-                    ]
+                    "displayLines": "((4 - Monster_W3_Figure_02_RLElite_AimTargetCount) + 1)"
                   },
                   "entityClass": "Enemy",
                   "assignState": "True",
@@ -636,15 +592,7 @@ const configAbility = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Constants[0] (4) || Variables[0] (Monster_W3_Figure_02_RLElite_AimTargetCount) || SUB || Constants[1] (1) || ADD || RETURN",
-                            "displayLines": "((4 - Monster_W3_Figure_02_RLElite_AimTargetCount) + 1)",
-                            "constants": [
-                              4,
-                              1
-                            ],
-                            "variables": [
-                              "Monster_W3_Figure_02_RLElite_AimTargetCount"
-                            ]
+                            "displayLines": "((4 - Monster_W3_Figure_02_RLElite_AimTargetCount) + 1)"
                           },
                           "entityClass": "Enemy",
                           "assignState": "True",
@@ -675,15 +623,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Constants[0] (4) || Variables[0] (Monster_W3_Figure_02_RLElite_AimTargetCount) || SUB || Constants[1] (1) || ADD || RETURN",
-                "displayLines": "((4 - Monster_W3_Figure_02_RLElite_AimTargetCount) + 1)",
-                "constants": [
-                  4,
-                  1
-                ],
-                "variables": [
-                  "Monster_W3_Figure_02_RLElite_AimTargetCount"
-                ]
+                "displayLines": "((4 - Monster_W3_Figure_02_RLElite_AimTargetCount) + 1)"
               },
               "entityClass": "Enemy",
               "assignState": "True",

@@ -77,12 +77,7 @@ const configAbility = {
               "variableName": "_Layer",
               "value": 1,
               "max": {
-                "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                "displayLines": "MDF_PropertyValue2",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue2"
-                ]
+                "displayLines": "MDF_PropertyValue2"
               }
             }
           ]
@@ -121,12 +116,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1358344781\">MStrongChallengeEX_Talent_StageAbility_PLY_063</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue2": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     }
                   }
                 }
@@ -157,13 +147,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1285568769\">MStrongChallengeEX_Talent_StageAbility_EMY_063</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (#ADF_1) || Variables[1] (_Layer) || MUL || RETURN",
-                      "displayLines": "(#ADF_1 * _Layer)",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1",
-                        "_Layer"
-                      ]
+                      "displayLines": "(#ADF_1 * _Layer)"
                     }
                   }
                 },
@@ -176,13 +160,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1285568769\">MStrongChallengeEX_Talent_StageAbility_EMY_063</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (#ADF_1) || Variables[1] (_Layer) || MUL || RETURN",
-                      "displayLines": "(#ADF_1 * _Layer)",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1",
-                        "_Layer"
-                      ]
+                      "displayLines": "(#ADF_1 * _Layer)"
                     }
                   }
                 }
@@ -201,12 +179,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": {
-                "operator": "Variables[0] (#ADF_2) || RETURN",
-                "displayLines": "#ADF_2",
-                "constants": [],
-                "variables": [
-                  "#ADF_2"
-                ]
+                "displayLines": "#ADF_2"
               },
               "includeMaxValueInRange": true,
               "onChange": [
@@ -219,13 +192,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1285568769\">MStrongChallengeEX_Talent_StageAbility_EMY_063</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (#ADF_1) || Variables[1] (_Layer) || MUL || RETURN",
-                      "displayLines": "(#ADF_1 * _Layer)",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1",
-                        "_Layer"
-                      ]
+                      "displayLines": "(#ADF_1 * _Layer)"
                     }
                   }
                 }

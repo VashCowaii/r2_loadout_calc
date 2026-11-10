@@ -62,12 +62,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_1) || RETURN",
-                    "displayLines": "MDF_1",
-                    "constants": [],
-                    "variables": [
-                      "MDF_1"
-                    ]
+                    "displayLines": "MDF_1"
                   }
                 }
               ]
@@ -94,12 +89,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_1) || RETURN",
-                    "displayLines": "MDF_1",
-                    "constants": [],
-                    "variables": [
-                      "MDF_1"
-                    ]
+                    "displayLines": "MDF_1"
                   }
                 }
               ]
@@ -143,13 +133,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1892511260\">LC_24004_AttackAddRatio</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                   "valuePerStack": {
                     "MDF_1": {
-                      "operator": "Variables[0] (AttackNum_24004) || Variables[1] (0.04) || MUL || RETURN",
-                      "displayLines": "(AttackNum_24004 * 0.04)",
-                      "constants": [],
-                      "variables": [
-                        "AttackNum_24004",
-                        0.04
-                      ]
+                      "displayLines": "(AttackNum_24004 * 0.04)"
                     }
                   }
                 },
@@ -160,12 +144,7 @@ const compositeAbilityObject = {
                     "value1": "AttackNum_24004",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (3) || RETURN",
-                      "displayLines": "3",
-                      "constants": [],
-                      "variables": [
-                        3
-                      ]
+                      "displayLines": "3"
                     }
                   },
                   "passed": [
@@ -177,21 +156,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"291841903\">LC_24004_SpeedAddRatio</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                       "duration": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "valuePerStack": {
                         "MDF_1": {
-                          "operator": "Variables[0] (0.08) || RETURN",
-                          "displayLines": "0.08",
-                          "constants": [],
-                          "variables": [
-                            0.08
-                          ]
+                          "displayLines": "0.08"
                         }
                       }
                     }

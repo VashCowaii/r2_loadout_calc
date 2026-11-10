@@ -54,46 +54,20 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-704553388\">Lynx_HOT_HealByMaxHp</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-                        "displayLines": "(2 + 1)",
-                        "constants": [],
-                        "variables": [
-                          2,
-                          1
-                        ]
+                        "displayLines": "(2 + 1)"
                       },
                       "valuePerStack": {
                         "MDF_HOT_HOTPercentage": {
-                          "operator": "Variables[0] (0.036) || RETURN",
-                          "displayLines": "0.036",
-                          "constants": [],
-                          "variables": [
-                            0.036
-                          ]
+                          "displayLines": "0.036"
                         },
                         "MDF_HOT_HealValue": {
-                          "operator": "Variables[0] (96) || RETURN",
-                          "displayLines": "96",
-                          "constants": [],
-                          "variables": [
-                            96
-                          ]
+                          "displayLines": "96"
                         },
                         "MDF_HOT_AggroUp_HOTPercentage": {
-                          "operator": "Variables[0] (0.044999998) || RETURN",
-                          "displayLines": "0.044999998",
-                          "constants": [],
-                          "variables": [
-                            0.044999998
-                          ]
+                          "displayLines": "0.044999998"
                         },
                         "MDF_HOT_AggroUp_HealValue": {
-                          "operator": "Variables[0] (120) || RETURN",
-                          "displayLines": "120",
-                          "constants": [],
-                          "variables": [
-                            120
-                          ]
+                          "displayLines": "120"
                         }
                       }
                     }
@@ -107,45 +81,20 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-704553388\">Lynx_HOT_HealByMaxHp</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "valuePerStack": {
                         "MDF_HOT_HOTPercentage": {
-                          "operator": "Variables[0] (0.036) || RETURN",
-                          "displayLines": "0.036",
-                          "constants": [],
-                          "variables": [
-                            0.036
-                          ]
+                          "displayLines": "0.036"
                         },
                         "MDF_HOT_HealValue": {
-                          "operator": "Variables[0] (96) || RETURN",
-                          "displayLines": "96",
-                          "constants": [],
-                          "variables": [
-                            96
-                          ]
+                          "displayLines": "96"
                         },
                         "MDF_HOT_AggroUp_HOTPercentage": {
-                          "operator": "Variables[0] (0.044999998) || RETURN",
-                          "displayLines": "0.044999998",
-                          "constants": [],
-                          "variables": [
-                            0.044999998
-                          ]
+                          "displayLines": "0.044999998"
                         },
                         "MDF_HOT_AggroUp_HealValue": {
-                          "operator": "Variables[0] (120) || RETURN",
-                          "displayLines": "120",
-                          "constants": [],
-                          "variables": [
-                            120
-                          ]
+                          "displayLines": "120"
                         }
                       }
                     }

@@ -22,20 +22,10 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1927239462\">Enemy_W5_Ranger_Shield</a>",
       "valuePerStack": {
         "MDF_MaxCharge": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-          "displayLines": "{[Skill03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "{[Skill03[0]]}"
         },
         "MDF_HitCharge": {
-          "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-          "displayLines": "{[Skill03[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[1]]}"
-          ]
+          "displayLines": "{[Skill03[1]]}"
         }
       }
     },

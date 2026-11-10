@@ -65,13 +65,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_Layer) || Variables[1] (0.15) || MUL || RETURN",
-                    "displayLines": "(_Layer * 0.15)",
-                    "constants": [],
-                    "variables": [
-                      "_Layer",
-                      0.15
-                    ]
+                    "displayLines": "(_Layer * 0.15)"
                   },
                   "variableName": "MDF_PropertyValue"
                 },
@@ -83,12 +77,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -212,20 +201,10 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"2022288380\">LC_23034_Sub</a>[<span class=\"descriptionNumberColor\">Hymn</span>]",
                               "duration": {
-                                "operator": "Variables[0] (3) || RETURN",
-                                "displayLines": "3",
-                                "constants": [],
-                                "variables": [
-                                  3
-                                ]
+                                "displayLines": "3"
                               },
                               "stackLimit": {
-                                "operator": "Variables[0] (3) || RETURN",
-                                "displayLines": "3",
-                                "constants": [],
-                                "variables": [
-                                  3
-                                ]
+                                "displayLines": "3"
                               }
                             }
                           ],
@@ -238,20 +217,10 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"2022288380\">LC_23034_Sub</a>[<span class=\"descriptionNumberColor\">Hymn</span>]",
                               "duration": {
-                                "operator": "Variables[0] (3) || RETURN",
-                                "displayLines": "3",
-                                "constants": [],
-                                "variables": [
-                                  3
-                                ]
+                                "displayLines": "3"
                               },
                               "stackLimit": {
-                                "operator": "Variables[0] (3) || RETURN",
-                                "displayLines": "3",
-                                "constants": [],
-                                "variables": [
-                                  3
-                                ]
+                                "displayLines": "3"
                               }
                             }
                           ]
@@ -263,26 +232,14 @@ const compositeAbilityObject = {
                             "target": "{{Caster}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (6) || RETURN",
-                            "displayLines": "6",
-                            "constants": [],
-                            "variables": [
-                              6
-                            ]
+                            "displayLines": "6"
                           },
                           "isFixed": "* ERR"
                         },
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (MDF_Times) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(MDF_Times + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "MDF_Times"
-                            ]
+                            "displayLines": "(MDF_Times + 1)"
                           },
                           "variableName": "MDF_Times"
                         },
@@ -293,12 +250,7 @@ const compositeAbilityObject = {
                             "value1": "MDF_Times",
                             "compareType": "=",
                             "value2": {
-                              "operator": "Variables[0] (2) || RETURN",
-                              "displayLines": "2",
-                              "constants": [],
-                              "variables": [
-                                2
-                              ]
+                              "displayLines": "2"
                             }
                           },
                           "passed": [
@@ -321,14 +273,7 @@ const compositeAbilityObject = {
                             "value1": "MDF_Times",
                             "compareType": "=",
                             "value2": {
-                              "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
-                              "displayLines": "(2 - 1)",
-                              "constants": [
-                                1
-                              ],
-                              "variables": [
-                                2
-                              ]
+                              "displayLines": "(2 - 1)"
                             }
                           },
                           "passed": [

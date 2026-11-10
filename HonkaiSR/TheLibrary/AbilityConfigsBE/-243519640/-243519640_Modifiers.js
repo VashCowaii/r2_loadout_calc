@@ -47,13 +47,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (Layer) || Variables[1] (MDF_PropertyValue) || MUL || RETURN",
-                "displayLines": "(Layer * MDF_PropertyValue)",
-                "constants": [],
-                "variables": [
-                  "Layer",
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(Layer * MDF_PropertyValue)"
               }
             }
           ]
@@ -76,29 +70,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"142979484\">MStrongChallengeEX_Talent_StageAbility_BOSS_007_Debuff</a>",
               "duration": {
-                "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                "displayLines": "MDF_LifeTime",
-                "constants": [],
-                "variables": [
-                  "MDF_LifeTime"
-                ]
+                "displayLines": "MDF_LifeTime"
               },
               "stackLimit": {
-                "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                "displayLines": "MDF_MaxLayer",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxLayer"
-                ]
+                "displayLines": "MDF_MaxLayer"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                  "displayLines": "MDF_PropertyValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue"
-                  ]
+                  "displayLines": "MDF_PropertyValue"
                 }
               },
               "casterAssign": "TargetSelf"

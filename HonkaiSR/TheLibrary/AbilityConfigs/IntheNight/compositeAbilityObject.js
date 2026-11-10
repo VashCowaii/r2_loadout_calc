@@ -67,40 +67,21 @@ const compositeAbilityObject = {
                     "value1": "_CasterSpeed",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Constants[0] (100) || Variables[0] (10) || ADD || RETURN",
-                      "displayLines": "(100 + 10)",
-                      "constants": [
-                        100
-                      ],
-                      "variables": [
-                        10
-                      ]
+                      "displayLines": "(100 + 10)"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_CasterSpeed) || Constants[0] (100) || SUB || RETURN",
-                        "displayLines": "(_CasterSpeed - 100)",
-                        "constants": [
-                          100
-                        ],
-                        "variables": [
-                          "_CasterSpeed"
-                        ]
+                        "displayLines": "(_CasterSpeed - 100)"
                       },
                       "variableName": "_CasterSpeed"
                     },
                     {
                       "name": "Looped Event",
                       "maxLoops": {
-                        "operator": "Variables[0] (6) || RETURN",
-                        "displayLines": "6",
-                        "constants": [],
-                        "variables": [
-                          6
-                        ]
+                        "displayLines": "6"
                       },
                       "execute": [
                         {
@@ -110,39 +91,21 @@ const compositeAbilityObject = {
                             "value1": "_CasterSpeed",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (10) || RETURN",
-                              "displayLines": "10",
-                              "constants": [],
-                              "variables": [
-                                10
-                              ]
+                              "displayLines": "10"
                             }
                           },
                           "passed": [
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (_CasterSpeed) || Variables[1] (10) || SUB || RETURN",
-                                "displayLines": "(_CasterSpeed - 10)",
-                                "constants": [],
-                                "variables": [
-                                  "_CasterSpeed",
-                                  10
-                                ]
+                                "displayLines": "(_CasterSpeed - 10)"
                               },
                               "variableName": "_CasterSpeed"
                             },
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (_Layer) || Constants[0] (1) || ADD || RETURN",
-                                "displayLines": "(_Layer + 1)",
-                                "constants": [
-                                  1
-                                ],
-                                "variables": [
-                                  "_Layer"
-                                ]
+                                "displayLines": "(_Layer + 1)"
                               },
                               "variableName": "_Layer"
                             }

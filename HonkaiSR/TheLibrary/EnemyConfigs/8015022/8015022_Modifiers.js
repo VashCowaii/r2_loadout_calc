@@ -28,13 +28,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_Level) || Variables[1] (MDF_PropertyValue) || MUL || RETURN",
-                "displayLines": "(MDF_Level * MDF_PropertyValue)",
-                "constants": [],
-                "variables": [
-                  "MDF_Level",
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(MDF_Level * MDF_PropertyValue)"
               },
               "variableName": "MDF_PropertyValue"
             },
@@ -46,12 +40,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -78,13 +67,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_Level) || Variables[1] (MDF_PropertyValue) || MUL || RETURN",
-                "displayLines": "(MDF_Level * MDF_PropertyValue)",
-                "constants": [],
-                "variables": [
-                  "MDF_Level",
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(MDF_Level * MDF_PropertyValue)"
               },
               "variableName": "MDF_PropertyValue"
             },
@@ -96,12 +79,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -171,14 +149,7 @@ const configAbility = {
                 "value1": "FlowerLevel",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Constants[0] (1) || INVERT || Variables[0] ({[PassiveSkill02[1]]}) || MUL || RETURN",
-                  "displayLines": "(-1 * {[PassiveSkill02[1]]})",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    "{[PassiveSkill02[1]]}"
-                  ]
+                  "displayLines": "(-1 * {[PassiveSkill02[1]]})"
                 }
               },
               "failed": [
@@ -205,14 +176,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (FlowerLevel) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(FlowerLevel - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "FlowerLevel"
-                        ]
+                        "displayLines": "(FlowerLevel - 1)"
                       },
                       "variableName": "FlowerLevel"
                     },
@@ -353,12 +317,7 @@ const configAbility = {
                 "value1": "FlowerLevel",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Variables[0] ({[PassiveSkill03[1]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill03[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill03[1]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill03[1]]}"
                 }
               },
               "failed": [
@@ -385,14 +344,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (FlowerLevel) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(FlowerLevel + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "FlowerLevel"
-                        ]
+                        "displayLines": "(FlowerLevel + 1)"
                       },
                       "variableName": "FlowerLevel"
                     },
@@ -548,12 +500,7 @@ const configAbility = {
                     {
                       "name": "Looped Event",
                       "maxLoops": {
-                        "operator": "Variables[0] (FlowerLevel) || RETURN",
-                        "displayLines": "FlowerLevel",
-                        "constants": [],
-                        "variables": [
-                          "FlowerLevel"
-                        ]
+                        "displayLines": "FlowerLevel"
                       },
                       "execute": [
                         {
@@ -565,20 +512,10 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"1948779644\">Monster_W2_Huanlong_IF_WhiteBonus</a>[<span class=\"descriptionNumberColor\">Abundance Buff</span>]",
                           "valuePerStack": {
                             "MDF_Level": {
-                              "operator": "Variables[0] (FlowerLevel) || RETURN",
-                              "displayLines": "FlowerLevel",
-                              "constants": [],
-                              "variables": [
-                                "FlowerLevel"
-                              ]
+                              "displayLines": "FlowerLevel"
                             },
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
-                              "displayLines": "{[PassiveSkill03[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[PassiveSkill03[0]]}"
-                              ]
+                              "displayLines": "{[PassiveSkill03[0]]}"
                             }
                           }
                         }
@@ -598,12 +535,7 @@ const configAbility = {
                     {
                       "name": "Looped Event",
                       "maxLoops": {
-                        "operator": "Variables[0] (FlowerLevel) || INVERT || RETURN",
-                        "displayLines": "-FlowerLevel",
-                        "constants": [],
-                        "variables": [
-                          "FlowerLevel"
-                        ]
+                        "displayLines": "-FlowerLevel"
                       },
                       "execute": [
                         {
@@ -615,22 +547,10 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"-357357562\">Monster_W2_Huanlong_IF_BlackBonus</a>[<span class=\"descriptionNumberColor\">Destruction Buff</span>]",
                           "valuePerStack": {
                             "MDF_Level": {
-                              "operator": "Constants[0] (1) || INVERT || Variables[0] (FlowerLevel) || MUL || RETURN",
-                              "displayLines": "(-1 * FlowerLevel)",
-                              "constants": [
-                                1
-                              ],
-                              "variables": [
-                                "FlowerLevel"
-                              ]
+                              "displayLines": "(-1 * FlowerLevel)"
                             },
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                              "displayLines": "{[PassiveSkill02[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[PassiveSkill02[0]]}"
-                              ]
+                              "displayLines": "{[PassiveSkill02[0]]}"
                             }
                           }
                         }
@@ -776,22 +696,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-357357562\">Monster_W2_Huanlong_IF_BlackBonus</a>[<span class=\"descriptionNumberColor\">Destruction Buff</span>]",
                   "valuePerStack": {
                     "MDF_Level": {
-                      "operator": "Constants[0] (1) || INVERT || Variables[0] (FlowerLevel) || MUL || RETURN",
-                      "displayLines": "(-1 * FlowerLevel)",
-                      "constants": [
-                        1
-                      ],
-                      "variables": [
-                        "FlowerLevel"
-                      ]
+                      "displayLines": "(-1 * FlowerLevel)"
                     },
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[0]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[0]]}"
                     }
                   }
                 }
@@ -814,22 +722,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-357357562\">Monster_W2_Huanlong_IF_BlackBonus</a>[<span class=\"descriptionNumberColor\">Destruction Buff</span>]",
                   "valuePerStack": {
                     "MDF_Level": {
-                      "operator": "Constants[0] (1) || INVERT || Variables[0] (FlowerLevel) || MUL || RETURN",
-                      "displayLines": "(-1 * FlowerLevel)",
-                      "constants": [
-                        1
-                      ],
-                      "variables": [
-                        "FlowerLevel"
-                      ]
+                      "displayLines": "(-1 * FlowerLevel)"
                     },
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[0]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[0]]}"
                     }
                   }
                 }
@@ -924,20 +820,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1948779644\">Monster_W2_Huanlong_IF_WhiteBonus</a>[<span class=\"descriptionNumberColor\">Abundance Buff</span>]",
                   "valuePerStack": {
                     "MDF_Level": {
-                      "operator": "Variables[0] (FlowerLevel) || RETURN",
-                      "displayLines": "FlowerLevel",
-                      "constants": [],
-                      "variables": [
-                        "FlowerLevel"
-                      ]
+                      "displayLines": "FlowerLevel"
                     },
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill03[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill03[0]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill03[0]]}"
                     }
                   }
                 }
@@ -960,20 +846,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1948779644\">Monster_W2_Huanlong_IF_WhiteBonus</a>[<span class=\"descriptionNumberColor\">Abundance Buff</span>]",
                   "valuePerStack": {
                     "MDF_Level": {
-                      "operator": "Variables[0] (FlowerLevel) || RETURN",
-                      "displayLines": "FlowerLevel",
-                      "constants": [],
-                      "variables": [
-                        "FlowerLevel"
-                      ]
+                      "displayLines": "FlowerLevel"
                     },
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill03[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill03[0]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill03[0]]}"
                     }
                   }
                 }
@@ -1562,12 +1438,7 @@ const configAbility = {
                     "value1": "W2_Huanlong_00_BattleSore1_Flag",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Constants[0] (5) || RETURN",
-                      "displayLines": "5",
-                      "constants": [
-                        5
-                      ],
-                      "variables": []
+                      "displayLines": "5"
                     },
                     "contextScope": "TargetEntity"
                   },
@@ -2056,12 +1927,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">StageFinalDMG</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DamageUpRatio) || RETURN",
-                "displayLines": "MDF_DamageUpRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_DamageUpRatio"
-                ]
+                "displayLines": "MDF_DamageUpRatio"
               }
             }
           ]
@@ -2380,12 +2246,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"117676328\">Monster_W2_Huanlong_JingYuan_DamageUp</a>",
                           "valuePerStack": {
                             "MDF_DamageUpRatio": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_9375) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_9375",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_9375"
-                              ]
+                              "displayLines": "UnusedUnderThisBase_9375"
                             }
                           }
                         },
@@ -3582,12 +3443,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DirtyHPRatio_PerLayer) || RETURN",
-                "displayLines": "MDF_DirtyHPRatio_PerLayer",
-                "constants": [],
-                "variables": [
-                  "MDF_DirtyHPRatio_PerLayer"
-                ]
+                "displayLines": "MDF_DirtyHPRatio_PerLayer"
               }
             }
           ]

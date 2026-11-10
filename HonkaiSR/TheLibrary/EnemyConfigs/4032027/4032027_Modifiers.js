@@ -52,13 +52,7 @@ const configAbility = {
                 "value1": "DV_CurrentDelay",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_12670) || Variables[1] (DV_InitDelay) || ADD || RETURN",
-                  "displayLines": "(UnusedUnderThisBase_12670 + DV_InitDelay)",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_12670",
-                    "DV_InitDelay"
-                  ]
+                  "displayLines": "(UnusedUnderThisBase_12670 + DV_InitDelay)"
                 }
               },
               "passed": [
@@ -121,13 +115,7 @@ const configAbility = {
                 "value1": "DV_CurrentDelay",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_12670) || Variables[1] (DV_InitDelay) || ADD || RETURN",
-                  "displayLines": "(UnusedUnderThisBase_12670 + DV_InitDelay)",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_12670",
-                    "DV_InitDelay"
-                  ]
+                  "displayLines": "(UnusedUnderThisBase_12670 + DV_InitDelay)"
                 }
               },
               "passed": [
@@ -169,12 +157,7 @@ const configAbility = {
                 "value1": "DV_CurrentDelay",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_12670) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_12670",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_12670"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_12670"
                 }
               },
               "passed": [

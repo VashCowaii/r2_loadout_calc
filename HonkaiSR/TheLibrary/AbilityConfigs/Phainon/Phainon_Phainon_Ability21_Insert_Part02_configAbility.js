@@ -73,24 +73,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (0.4) || Constants[0] (1) || Variables[1] (ADF_GuardLayer) || Variables[2] (0.2) || MUL || ADD || MUL || RETURN",
-          "displayLines": "(0.4 * (1 + (ADF_GuardLayer * 0.2)))",
-          "constants": [
-            1
-          ],
-          "variables": [
-            0.4,
-            "ADF_GuardLayer",
-            0.2
-          ]
+          "displayLines": "(0.4 * (1 + (ADF_GuardLayer * 0.2)))"
         },
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "ToughnessDMGType": {
           "DamageType": "Physical"
@@ -104,12 +90,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (4) || RETURN",
-        "displayLines": "4",
-        "constants": [],
-        "variables": [
-          4
-        ]
+        "displayLines": "4"
       },
       "execute": [
         {
@@ -130,24 +111,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] (0.3) || Constants[0] (1) || Variables[1] (ADF_GuardLayer) || Variables[2] (0.2) || MUL || ADD || MUL || RETURN",
-                  "displayLines": "(0.3 * (1 + (ADF_GuardLayer * 0.2)))",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    0.3,
-                    "ADF_GuardLayer",
-                    0.2
-                  ]
+                  "displayLines": "(0.3 * (1 + (ADF_GuardLayer * 0.2)))"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "ToughnessDMGType": {
                   "DamageType": "Physical"

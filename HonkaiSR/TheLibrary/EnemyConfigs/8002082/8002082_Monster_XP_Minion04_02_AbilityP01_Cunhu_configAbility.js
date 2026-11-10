@@ -90,12 +90,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
                       "counter": {
-                        "operator": "Variables[0] (Cunhu_CurrentCount) || RETURN",
-                        "displayLines": "Cunhu_CurrentCount",
-                        "constants": [],
-                        "variables": [
-                          "Cunhu_CurrentCount"
-                        ]
+                        "displayLines": "Cunhu_CurrentCount"
                       }
                     }
                   ]

@@ -14,20 +14,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (3) || RETURN",
-          "displayLines": "3",
-          "constants": [],
-          "variables": [
-            3
-          ]
+          "displayLines": "3"
         },
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "attackType": "Ultimate",
@@ -66,12 +56,7 @@ const configAbility = {
                   }
                 },
                 "Damage": {
-                  "operator": "Variables[0] (3.3) || RETURN",
-                  "displayLines": "3.3",
-                  "constants": [],
-                  "variables": [
-                    3.3
-                  ]
+                  "displayLines": "3.3"
                 },
                 "Toughness": null,
                 "Tags": [
@@ -103,14 +88,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (DanHengPT_Passive_Count) || Variables[1] (2) || ADD || Variables[2] (2) || ADD || RETURN",
-            "displayLines": "((DanHengPT_Passive_Count + 2) + 2)",
-            "constants": [],
-            "variables": [
-              "DanHengPT_Passive_Count",
-              2,
-              2
-            ]
+            "displayLines": "((DanHengPT_Passive_Count + 2) + 2)"
           },
           "variableName": "DanHengPT_Passive_Count"
         }
@@ -119,13 +97,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (DanHengPT_Passive_Count) || Variables[1] (2) || ADD || RETURN",
-            "displayLines": "(DanHengPT_Passive_Count + 2)",
-            "constants": [],
-            "variables": [
-              "DanHengPT_Passive_Count",
-              2
-            ]
+            "displayLines": "(DanHengPT_Passive_Count + 2)"
           },
           "variableName": "DanHengPT_Passive_Count"
         }
@@ -154,12 +126,7 @@ const configAbility = {
             "target": "{{Souldragon}}"
           },
           "attackCount": {
-            "operator": "Variables[0] (DanHengPT_Passive_Count) || RETURN",
-            "displayLines": "DanHengPT_Passive_Count",
-            "constants": [],
-            "variables": [
-              "DanHengPT_Passive_Count"
-            ]
+            "displayLines": "DanHengPT_Passive_Count"
           },
           "show": true
         }

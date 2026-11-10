@@ -18,14 +18,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage) || Constants[0] (0.2) || MUL || RETURN",
-          "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)",
-          "constants": [
-            0.2
-          ],
-          "variables": [
-            "MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage"
-          ]
+          "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)"
         },
         "Toughness": null,
         "Tags": null,
@@ -44,14 +37,7 @@ const configAbility = {
         "target": "{{Player Team All}}"
       },
       "value": {
-        "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_SPAdd) || Constants[0] (0.2) || MUL || RETURN",
-        "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)",
-        "constants": [
-          0.2
-        ],
-        "variables": [
-          "MDF_CocoliaP1_00_RL_BattleEvent_SPAdd"
-        ]
+        "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)"
       },
       "isFixed": "* ERR"
     },
@@ -65,14 +51,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage) || Constants[0] (0.2) || MUL || RETURN",
-          "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)",
-          "constants": [
-            0.2
-          ],
-          "variables": [
-            "MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage"
-          ]
+          "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)"
         },
         "Toughness": null,
         "Tags": null,
@@ -91,14 +70,7 @@ const configAbility = {
         "target": "{{Player Team All}}"
       },
       "value": {
-        "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_SPAdd) || Constants[0] (0.2) || MUL || RETURN",
-        "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)",
-        "constants": [
-          0.2
-        ],
-        "variables": [
-          "MDF_CocoliaP1_00_RL_BattleEvent_SPAdd"
-        ]
+        "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)"
       },
       "isFixed": "* ERR"
     },
@@ -112,14 +84,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage) || Constants[0] (0.2) || MUL || RETURN",
-          "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)",
-          "constants": [
-            0.2
-          ],
-          "variables": [
-            "MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage"
-          ]
+          "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)"
         },
         "Toughness": null,
         "Tags": null,
@@ -138,14 +103,7 @@ const configAbility = {
         "target": "{{Player Team All}}"
       },
       "value": {
-        "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_SPAdd) || Constants[0] (0.2) || MUL || RETURN",
-        "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)",
-        "constants": [
-          0.2
-        ],
-        "variables": [
-          "MDF_CocoliaP1_00_RL_BattleEvent_SPAdd"
-        ]
+        "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)"
       },
       "isFixed": "* ERR"
     },
@@ -159,14 +117,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage) || Constants[0] (0.2) || MUL || RETURN",
-          "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)",
-          "constants": [
-            0.2
-          ],
-          "variables": [
-            "MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage"
-          ]
+          "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)"
         },
         "Toughness": null,
         "Tags": null,
@@ -185,14 +136,7 @@ const configAbility = {
         "target": "{{Player Team All}}"
       },
       "value": {
-        "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_SPAdd) || Constants[0] (0.2) || MUL || RETURN",
-        "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)",
-        "constants": [
-          0.2
-        ],
-        "variables": [
-          "MDF_CocoliaP1_00_RL_BattleEvent_SPAdd"
-        ]
+        "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)"
       },
       "isFixed": "* ERR"
     },
@@ -206,14 +150,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage) || Constants[0] (0.2) || MUL || RETURN",
-          "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)",
-          "constants": [
-            0.2
-          ],
-          "variables": [
-            "MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage"
-          ]
+          "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)"
         },
         "Toughness": null,
         "Tags": null,
@@ -232,14 +169,7 @@ const configAbility = {
         "target": "{{Player Team All}}"
       },
       "value": {
-        "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_SPAdd) || Constants[0] (0.2) || MUL || RETURN",
-        "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)",
-        "constants": [
-          0.2
-        ],
-        "variables": [
-          "MDF_CocoliaP1_00_RL_BattleEvent_SPAdd"
-        ]
+        "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)"
       },
       "isFixed": "* ERR"
     },
@@ -288,12 +218,7 @@ const configAbility = {
               "baseChance": 1,
               "valuePerStack": {
                 "Modifier_Frozen_DamagePercentage": {
-                  "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_FrozenDamagePerTurn) || RETURN",
-                  "displayLines": "MDF_CocoliaP1_00_RL_BattleEvent_FrozenDamagePerTurn",
-                  "constants": [],
-                  "variables": [
-                    "MDF_CocoliaP1_00_RL_BattleEvent_FrozenDamagePerTurn"
-                  ]
+                  "displayLines": "MDF_CocoliaP1_00_RL_BattleEvent_FrozenDamagePerTurn"
                 }
               }
             }
@@ -332,12 +257,7 @@ const configAbility = {
               "baseChance": 1,
               "valuePerStack": {
                 "Modifier_Frozen_DamagePercentage": {
-                  "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_FrozenDamagePerTurn) || RETURN",
-                  "displayLines": "MDF_CocoliaP1_00_RL_BattleEvent_FrozenDamagePerTurn",
-                  "constants": [],
-                  "variables": [
-                    "MDF_CocoliaP1_00_RL_BattleEvent_FrozenDamagePerTurn"
-                  ]
+                  "displayLines": "MDF_CocoliaP1_00_RL_BattleEvent_FrozenDamagePerTurn"
                 }
               }
             }

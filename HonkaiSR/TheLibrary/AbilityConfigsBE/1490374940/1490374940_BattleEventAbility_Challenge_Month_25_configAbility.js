@@ -13,12 +13,7 @@ const configAbility = {
       },
       "variableName": "BattleEvent_P1_ADF",
       "resetValue": {
-        "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-        "displayLines": "#BattleEvent_P1_ADF",
-        "constants": [],
-        "variables": [
-          "#BattleEvent_P1_ADF"
-        ]
+        "displayLines": "#BattleEvent_P1_ADF"
       },
       "scope": "ContextCaster"
     },
@@ -30,12 +25,7 @@ const configAbility = {
       },
       "variableName": "BattleEvent_P2_ADF",
       "resetValue": {
-        "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-        "displayLines": "#BattleEvent_P2_ADF",
-        "constants": [],
-        "variables": [
-          "#BattleEvent_P2_ADF"
-        ]
+        "displayLines": "#BattleEvent_P2_ADF"
       },
       "scope": "ContextCaster"
     },
@@ -47,12 +37,7 @@ const configAbility = {
       },
       "variableName": "BattleEvent_P3_ADF",
       "resetValue": {
-        "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-        "displayLines": "#BattleEvent_P3_ADF",
-        "constants": [],
-        "variables": [
-          "#BattleEvent_P3_ADF"
-        ]
+        "displayLines": "#BattleEvent_P3_ADF"
       },
       "scope": "ContextCaster"
     },
@@ -64,12 +49,7 @@ const configAbility = {
       },
       "variableName": "BattleEvent_P4_ADF",
       "resetValue": {
-        "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
-        "displayLines": "#BattleEvent_P4_ADF",
-        "constants": [],
-        "variables": [
-          "#BattleEvent_P4_ADF"
-        ]
+        "displayLines": "#BattleEvent_P4_ADF"
       },
       "scope": "ContextCaster"
     },
@@ -81,12 +61,7 @@ const configAbility = {
       },
       "variableName": "BattleEvent_P5_ADF",
       "resetValue": {
-        "operator": "Variables[0] (#BattleEvent_P5_ADF) || RETURN",
-        "displayLines": "#BattleEvent_P5_ADF",
-        "constants": [],
-        "variables": [
-          "#BattleEvent_P5_ADF"
-        ]
+        "displayLines": "#BattleEvent_P5_ADF"
       },
       "scope": "ContextCaster"
     },
@@ -253,36 +228,16 @@ const configAbility = {
               "canHitNonTargets": true,
               "valuePerStack": {
                 "BattleEvent_P2_ADF_Set": {
-                  "operator": "Variables[0] (BattleEvent_P2_ADF_Get) || RETURN",
-                  "displayLines": "BattleEvent_P2_ADF_Get",
-                  "constants": [],
-                  "variables": [
-                    "BattleEvent_P2_ADF_Get"
-                  ]
+                  "displayLines": "BattleEvent_P2_ADF_Get"
                 },
                 "BattleEvent_P3_ADF_Set": {
-                  "operator": "Variables[0] (BattleEvent_P3_ADF_Get) || RETURN",
-                  "displayLines": "BattleEvent_P3_ADF_Get",
-                  "constants": [],
-                  "variables": [
-                    "BattleEvent_P3_ADF_Get"
-                  ]
+                  "displayLines": "BattleEvent_P3_ADF_Get"
                 },
                 "BattleEvent_P4_ADF_Set": {
-                  "operator": "Variables[0] (BattleEvent_P4_ADF_Get) || RETURN",
-                  "displayLines": "BattleEvent_P4_ADF_Get",
-                  "constants": [],
-                  "variables": [
-                    "BattleEvent_P4_ADF_Get"
-                  ]
+                  "displayLines": "BattleEvent_P4_ADF_Get"
                 },
                 "BattleEvent_P5_ADF_Set": {
-                  "operator": "Variables[0] (BattleEvent_P5_ADF_Get) || RETURN",
-                  "displayLines": "BattleEvent_P5_ADF_Get",
-                  "constants": [],
-                  "variables": [
-                    "BattleEvent_P5_ADF_Get"
-                  ]
+                  "displayLines": "BattleEvent_P5_ADF_Get"
                 }
               },
               "allowAbilityTriggers": false
@@ -328,12 +283,7 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (800205000) || RETURN",
-                        "displayLines": "800205000",
-                        "constants": [
-                          800205000
-                        ],
-                        "variables": []
+                        "displayLines": "800205000"
                       },
                       "locationType": "LastDie"
                     }
@@ -372,13 +322,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (TempHP) || Variables[1] (Hardlevel_HP) || SUB || RETURN",
-                "displayLines": "(TempHP - Hardlevel_HP)",
-                "constants": [],
-                "variables": [
-                  "TempHP",
-                  "Hardlevel_HP"
-                ]
+                "displayLines": "(TempHP - Hardlevel_HP)"
               }
             },
             {
@@ -398,15 +342,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRate</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (1) || Constants[0] (1) || Variables[0] (Hardlevel_StatusResistance) || Constants[1] (0.1) || ADD || SUB || DIV || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "((1 / (1 - (Hardlevel_StatusResistance + 0.1))) - 1)",
-                "constants": [
-                  1,
-                  0.1
-                ],
-                "variables": [
-                  "Hardlevel_StatusResistance"
-                ]
+                "displayLines": "((1 / (1 - (Hardlevel_StatusResistance + 0.1))) - 1)"
               }
             },
             {
@@ -439,44 +375,19 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-782509985\">Modifier_BattleEventAbility_Challenge_Month_25_Sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
                   "valuePerStack": {
                     "BattleEvent_P1_ADF_Get": {
-                      "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "BattleEvent_P1_ADF"
                     },
                     "BattleEvent_P2_ADF_Get": {
-                      "operator": "Variables[0] (BattleEvent_P2_ADF) || RETURN",
-                      "displayLines": "BattleEvent_P2_ADF",
-                      "constants": [],
-                      "variables": [
-                        "BattleEvent_P2_ADF"
-                      ]
+                      "displayLines": "BattleEvent_P2_ADF"
                     },
                     "BattleEvent_P3_ADF_Get": {
-                      "operator": "Variables[0] (BattleEvent_P3_ADF) || RETURN",
-                      "displayLines": "BattleEvent_P3_ADF",
-                      "constants": [],
-                      "variables": [
-                        "BattleEvent_P3_ADF"
-                      ]
+                      "displayLines": "BattleEvent_P3_ADF"
                     },
                     "BattleEvent_P4_ADF_Get": {
-                      "operator": "Variables[0] (BattleEvent_P4_ADF) || RETURN",
-                      "displayLines": "BattleEvent_P4_ADF",
-                      "constants": [],
-                      "variables": [
-                        "BattleEvent_P4_ADF"
-                      ]
+                      "displayLines": "BattleEvent_P4_ADF"
                     },
                     "BattleEvent_P5_ADF_Get": {
-                      "operator": "Variables[0] (BattleEvent_P5_ADF) || RETURN",
-                      "displayLines": "BattleEvent_P5_ADF",
-                      "constants": [],
-                      "variables": [
-                        "BattleEvent_P5_ADF"
-                      ]
+                      "displayLines": "BattleEvent_P5_ADF"
                     }
                   }
                 }
@@ -496,12 +407,7 @@ const configAbility = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Constants[0] (800205000) || RETURN",
-                    "displayLines": "800205000",
-                    "constants": [
-                      800205000
-                    ],
-                    "variables": []
+                    "displayLines": "800205000"
                   },
                   "locationType": "Last"
                 }

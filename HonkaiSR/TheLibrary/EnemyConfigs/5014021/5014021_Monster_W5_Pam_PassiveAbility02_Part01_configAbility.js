@@ -86,20 +86,10 @@ const configAbility = {
           "eventID": 20033,
           "variables": {
             "PassiveAbility01_P2_DelayPercentage": {
-              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[1]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[1]]}"
             },
             "PassiveAbility01_P5_SpeedRatio": {
-              "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[4]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[4]]}"
             }
           },
           "whenCreated": [
@@ -121,12 +111,7 @@ const configAbility = {
           "eventID": 20033,
           "variables": {
             "PassiveAbility01_P2_DelayPercentage": {
-              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[1]]}"
-              ]
+              "displayLines": "{[PassiveSkill01[1]]}"
             }
           },
           "whenCreated": [

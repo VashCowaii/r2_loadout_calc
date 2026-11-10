@@ -50,14 +50,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2165_ADF_3) || Variables[2] (DV_TargetCount) || MUL || ADD || RETURN",
-                    "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_FantasticStory_PlusAbility_2165_ADF_3 * DV_TargetCount))",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_BaseAbility_CountSum",
-                      "DV_FantasticStory_PlusAbility_2165_ADF_3",
-                      "DV_TargetCount"
-                    ]
+                    "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_FantasticStory_PlusAbility_2165_ADF_3 * DV_TargetCount))"
                   },
                   "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                 },
@@ -68,12 +61,7 @@ const configAbility = {
                     "value1": "DV_FantasticStory_BaseAbility_CountSum",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
-                      "displayLines": "DV_EnterFeverValue",
-                      "constants": [],
-                      "variables": [
-                        "DV_EnterFeverValue"
-                      ]
+                      "displayLines": "DV_EnterFeverValue"
                     }
                   },
                   "passed": [
@@ -82,13 +70,7 @@ const configAbility = {
                       "current": 100,
                       "max": 100,
                       "delta": {
-                        "operator": "Variables[0] (DV_TargetCount) || Variables[1] (DV_FantasticStory_PlusAbility_2165_ADF_3) || MUL || RETURN",
-                        "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2165_ADF_3)",
-                        "constants": [],
-                        "variables": [
-                          "DV_TargetCount",
-                          "DV_FantasticStory_PlusAbility_2165_ADF_3"
-                        ]
+                        "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2165_ADF_3)"
                       },
                       "type": "Special",
                       "phaseType": "P1"
@@ -98,29 +80,13 @@ const configAbility = {
                     {
                       "name": "Update Surging Grit[PF]",
                       "current": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
-                        "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_CountSum"
-                        ]
+                        "displayLines": "DV_FantasticStory_BaseAbility_CountSum"
                       },
                       "max": {
-                        "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
-                        "displayLines": "DV_EnterFeverValue",
-                        "constants": [],
-                        "variables": [
-                          "DV_EnterFeverValue"
-                        ]
+                        "displayLines": "DV_EnterFeverValue"
                       },
                       "delta": {
-                        "operator": "Variables[0] (DV_TargetCount) || Variables[1] (DV_FantasticStory_PlusAbility_2165_ADF_3) || MUL || RETURN",
-                        "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2165_ADF_3)",
-                        "constants": [],
-                        "variables": [
-                          "DV_TargetCount",
-                          "DV_FantasticStory_PlusAbility_2165_ADF_3"
-                        ]
+                        "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2165_ADF_3)"
                       },
                       "type": "Special"
                     }
@@ -259,14 +225,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2164_ADF_2) || Variables[2] (DV_TargetCount) || MUL || ADD || RETURN",
-                    "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_FantasticStory_PlusAbility_2164_ADF_2 * DV_TargetCount))",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_BaseAbility_CountSum",
-                      "DV_FantasticStory_PlusAbility_2164_ADF_2",
-                      "DV_TargetCount"
-                    ]
+                    "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_FantasticStory_PlusAbility_2164_ADF_2 * DV_TargetCount))"
                   },
                   "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                 },
@@ -277,12 +236,7 @@ const configAbility = {
                     "value1": "DV_FantasticStory_BaseAbility_CountSum",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
-                      "displayLines": "DV_EnterFeverValue",
-                      "constants": [],
-                      "variables": [
-                        "DV_EnterFeverValue"
-                      ]
+                      "displayLines": "DV_EnterFeverValue"
                     }
                   },
                   "passed": [
@@ -291,13 +245,7 @@ const configAbility = {
                       "current": 100,
                       "max": 100,
                       "delta": {
-                        "operator": "Variables[0] (DV_TargetCount) || Variables[1] (DV_FantasticStory_PlusAbility_2164_ADF_2) || MUL || RETURN",
-                        "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2164_ADF_2)",
-                        "constants": [],
-                        "variables": [
-                          "DV_TargetCount",
-                          "DV_FantasticStory_PlusAbility_2164_ADF_2"
-                        ]
+                        "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2164_ADF_2)"
                       },
                       "type": "Special",
                       "phaseType": "P1"
@@ -307,29 +255,13 @@ const configAbility = {
                     {
                       "name": "Update Surging Grit[PF]",
                       "current": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
-                        "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_CountSum"
-                        ]
+                        "displayLines": "DV_FantasticStory_BaseAbility_CountSum"
                       },
                       "max": {
-                        "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
-                        "displayLines": "DV_EnterFeverValue",
-                        "constants": [],
-                        "variables": [
-                          "DV_EnterFeverValue"
-                        ]
+                        "displayLines": "DV_EnterFeverValue"
                       },
                       "delta": {
-                        "operator": "Variables[0] (DV_TargetCount) || Variables[1] (DV_FantasticStory_PlusAbility_2164_ADF_2) || MUL || RETURN",
-                        "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2164_ADF_2)",
-                        "constants": [],
-                        "variables": [
-                          "DV_TargetCount",
-                          "DV_FantasticStory_PlusAbility_2164_ADF_2"
-                        ]
+                        "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2164_ADF_2)"
                       },
                       "type": "Special"
                     }
@@ -364,14 +296,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DV_TargetCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(DV_TargetCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "DV_TargetCount"
-                    ]
+                    "displayLines": "(DV_TargetCount + 1)"
                   },
                   "variableName": "DV_TargetCount"
                 }
@@ -446,13 +371,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2163_ADF_3) || ADD || RETURN",
-                    "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + DV_FantasticStory_PlusAbility_2163_ADF_3)",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_BaseAbility_CountSum",
-                      "DV_FantasticStory_PlusAbility_2163_ADF_3"
-                    ]
+                    "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + DV_FantasticStory_PlusAbility_2163_ADF_3)"
                   },
                   "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                 },
@@ -463,12 +382,7 @@ const configAbility = {
                     "value1": "DV_FantasticStory_BaseAbility_CountSum",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
-                      "displayLines": "DV_EnterFeverValue",
-                      "constants": [],
-                      "variables": [
-                        "DV_EnterFeverValue"
-                      ]
+                      "displayLines": "DV_EnterFeverValue"
                     }
                   },
                   "passed": [
@@ -477,12 +391,7 @@ const configAbility = {
                       "current": 100,
                       "max": 100,
                       "delta": {
-                        "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2163_ADF_3) || RETURN",
-                        "displayLines": "DV_FantasticStory_PlusAbility_2163_ADF_3",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_PlusAbility_2163_ADF_3"
-                        ]
+                        "displayLines": "DV_FantasticStory_PlusAbility_2163_ADF_3"
                       },
                       "type": "Special",
                       "phaseType": "P1"
@@ -492,28 +401,13 @@ const configAbility = {
                     {
                       "name": "Update Surging Grit[PF]",
                       "current": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
-                        "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_CountSum"
-                        ]
+                        "displayLines": "DV_FantasticStory_BaseAbility_CountSum"
                       },
                       "max": {
-                        "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
-                        "displayLines": "DV_EnterFeverValue",
-                        "constants": [],
-                        "variables": [
-                          "DV_EnterFeverValue"
-                        ]
+                        "displayLines": "DV_EnterFeverValue"
                       },
                       "delta": {
-                        "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2163_ADF_3) || RETURN",
-                        "displayLines": "DV_FantasticStory_PlusAbility_2163_ADF_3",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_PlusAbility_2163_ADF_3"
-                        ]
+                        "displayLines": "DV_FantasticStory_PlusAbility_2163_ADF_3"
                       },
                       "type": "Special"
                     }
@@ -584,14 +478,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2162_ADF_3) || Variables[2] (DV_TargetCount) || MUL || ADD || RETURN",
-                    "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_FantasticStory_PlusAbility_2162_ADF_3 * DV_TargetCount))",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_BaseAbility_CountSum",
-                      "DV_FantasticStory_PlusAbility_2162_ADF_3",
-                      "DV_TargetCount"
-                    ]
+                    "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_FantasticStory_PlusAbility_2162_ADF_3 * DV_TargetCount))"
                   },
                   "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                 },
@@ -602,12 +489,7 @@ const configAbility = {
                     "value1": "DV_FantasticStory_BaseAbility_CountSum",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
-                      "displayLines": "DV_EnterFeverValue",
-                      "constants": [],
-                      "variables": [
-                        "DV_EnterFeverValue"
-                      ]
+                      "displayLines": "DV_EnterFeverValue"
                     }
                   },
                   "passed": [
@@ -616,13 +498,7 @@ const configAbility = {
                       "current": 100,
                       "max": 100,
                       "delta": {
-                        "operator": "Variables[0] (DV_TargetCount) || Variables[1] (DV_FantasticStory_PlusAbility_2162_ADF_3) || MUL || RETURN",
-                        "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2162_ADF_3)",
-                        "constants": [],
-                        "variables": [
-                          "DV_TargetCount",
-                          "DV_FantasticStory_PlusAbility_2162_ADF_3"
-                        ]
+                        "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2162_ADF_3)"
                       },
                       "type": "Special",
                       "phaseType": "P1"
@@ -632,29 +508,13 @@ const configAbility = {
                     {
                       "name": "Update Surging Grit[PF]",
                       "current": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
-                        "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_CountSum"
-                        ]
+                        "displayLines": "DV_FantasticStory_BaseAbility_CountSum"
                       },
                       "max": {
-                        "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
-                        "displayLines": "DV_EnterFeverValue",
-                        "constants": [],
-                        "variables": [
-                          "DV_EnterFeverValue"
-                        ]
+                        "displayLines": "DV_EnterFeverValue"
                       },
                       "delta": {
-                        "operator": "Variables[0] (DV_TargetCount) || Variables[1] (DV_FantasticStory_PlusAbility_2162_ADF_3) || MUL || RETURN",
-                        "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2162_ADF_3)",
-                        "constants": [],
-                        "variables": [
-                          "DV_TargetCount",
-                          "DV_FantasticStory_PlusAbility_2162_ADF_3"
-                        ]
+                        "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2162_ADF_3)"
                       },
                       "type": "Special"
                     }
@@ -705,46 +565,21 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1010904189\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT</a>[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
                   "duration": {
-                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime) || RETURN",
-                    "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime"
-                    ]
+                    "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer) || RETURN",
-                    "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
-                    ]
+                    "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
                   },
                   "valuePerStack": {
                     "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer": {
-                      "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer) || RETURN",
-                      "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
-                      ]
+                      "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer"
                     },
                     "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage": {
-                      "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage) || RETURN",
-                      "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage",
-                      "constants": [],
-                      "variables": [
-                        "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage"
-                      ]
+                      "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P5_DmgPercentage"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2165_ADF_2) || RETURN",
-                    "displayLines": "DV_FantasticStory_PlusAbility_2165_ADF_2",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_PlusAbility_2165_ADF_2"
-                    ]
+                    "displayLines": "DV_FantasticStory_PlusAbility_2165_ADF_2"
                   }
                 }
               ]
@@ -954,12 +789,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-397579384\">Modifier_FantasticStory_BaseAbility_2160_Plus1_Sub_PLY</a>[<span class=\"descriptionNumberColor\">DoT Boost</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2161_ADF_3) || RETURN",
-                    "displayLines": "DV_FantasticStory_PlusAbility_2161_ADF_3",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_PlusAbility_2161_ADF_3"
-                    ]
+                    "displayLines": "DV_FantasticStory_PlusAbility_2161_ADF_3"
                   }
                 }
               ]
@@ -1043,12 +873,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio) || RETURN",
-                "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio",
-                "constants": [],
-                "variables": [
-                  "DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio"
-                ]
+                "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio"
               }
             },
             {
@@ -1059,12 +884,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Weaken%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio) || RETURN",
-                "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio",
-                "constants": [],
-                "variables": [
-                  "DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio"
-                ]
+                "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio"
               }
             },
             {
@@ -1075,12 +895,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio) || RETURN",
-                "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio",
-                "constants": [],
-                "variables": [
-                  "DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio"
-                ]
+                "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio"
               }
             }
           ]
@@ -1102,28 +917,13 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio": {
-              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio) || RETURN",
-              "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio",
-              "constants": [],
-              "variables": [
-                "DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio"
-              ]
+              "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio"
             },
             "DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio": {
-              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio) || RETURN",
-              "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio",
-              "constants": [],
-              "variables": [
-                "DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio"
-              ]
+              "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio"
             },
             "DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio": {
-              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio) || RETURN",
-              "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio",
-              "constants": [],
-              "variables": [
-                "DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio"
-              ]
+              "displayLines": "DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio"
             }
           }
         },
@@ -1233,40 +1033,20 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSumTemp) || RETURN",
-                "displayLines": "DV_FantasticStory_BaseAbility_CountSumTemp",
-                "constants": [],
-                "variables": [
-                  "DV_FantasticStory_BaseAbility_CountSumTemp"
-                ]
+                "displayLines": "DV_FantasticStory_BaseAbility_CountSumTemp"
               },
               "variableName": "DV_FantasticStory_BaseAbility_CountSum"
             },
             {
               "name": "Update Surging Grit[PF]",
               "current": {
-                "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
-                "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
-                "constants": [],
-                "variables": [
-                  "DV_FantasticStory_BaseAbility_CountSum"
-                ]
+                "displayLines": "DV_FantasticStory_BaseAbility_CountSum"
               },
               "max": {
-                "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
-                "displayLines": "DV_EnterFeverValue",
-                "constants": [],
-                "variables": [
-                  "DV_EnterFeverValue"
-                ]
+                "displayLines": "DV_EnterFeverValue"
               },
               "delta": {
-                "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
-                "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
-                "constants": [],
-                "variables": [
-                  "DV_FantasticStory_BaseAbility_CountSum"
-                ]
+                "displayLines": "DV_FantasticStory_BaseAbility_CountSum"
               },
               "type": "FeverBack"
             },
@@ -1314,14 +1094,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (BattleEvent_BaseHP) || Constants[0] (90) || MUL || RETURN",
-                "displayLines": "(BattleEvent_BaseHP * 90)",
-                "constants": [
-                  90
-                ],
-                "variables": [
-                  "BattleEvent_BaseHP"
-                ]
+                "displayLines": "(BattleEvent_BaseHP * 90)"
               },
               "variableName": "BattleEvent_BaseHP"
             },
@@ -1407,14 +1180,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "DamageFlat": {
-                  "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_Layer) || MUL || Variables[2] (Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage) || MUL || RETURN",
-                  "displayLines": "((BattleEvent_BaseHP * Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_Layer) * Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage)",
-                  "constants": [],
-                  "variables": [
-                    "BattleEvent_BaseHP",
-                    "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_Layer",
-                    "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage"
-                  ]
+                  "displayLines": "((BattleEvent_BaseHP * Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_Layer) * Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1570,15 +1336,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "DamageFlat": {
-                  "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (DOT_TriggerRatio) || MUL || Variables[2] (Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_Layer) || MUL || Variables[3] (Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage) || MUL || RETURN",
-                  "displayLines": "(((BattleEvent_BaseHP * DOT_TriggerRatio) * Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_Layer) * Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage)",
-                  "constants": [],
-                  "variables": [
-                    "BattleEvent_BaseHP",
-                    "DOT_TriggerRatio",
-                    "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_Layer",
-                    "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage"
-                  ]
+                  "displayLines": "(((BattleEvent_BaseHP * DOT_TriggerRatio) * Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_Layer) * Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1626,36 +1384,18 @@ const configAbility = {
                 "value1": "DV_FantasticStory_BaseAbility_CountSumTemp",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSumTempMax) || RETURN",
-                  "displayLines": "DV_FantasticStory_BaseAbility_CountSumTempMax",
-                  "constants": [],
-                  "variables": [
-                    "DV_FantasticStory_BaseAbility_CountSumTempMax"
-                  ]
+                  "displayLines": "DV_FantasticStory_BaseAbility_CountSumTempMax"
                 }
               },
               "passed": [
                 {
                   "name": "Update Surging Grit[PF]",
                   "current": {
-                    "operator": "Variables[0] (DV_CurrentDelay) || Constants[0] (10) || MUL || RETURN",
-                    "displayLines": "(DV_CurrentDelay * 10)",
-                    "constants": [
-                      10
-                    ],
-                    "variables": [
-                      "DV_CurrentDelay"
-                    ]
+                    "displayLines": "(DV_CurrentDelay * 10)"
                   },
                   "max": 100,
                   "extra": {
-                    "operator": "Variables[0] (FLOOR) || Variables[1] (DV_FantasticStory_BaseAbility_CountSumTemp) || PARAM_1 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(DV_FantasticStory_BaseAbility_CountSumTemp)",
-                    "constants": [],
-                    "variables": [
-                      "FLOOR",
-                      "DV_FantasticStory_BaseAbility_CountSumTemp"
-                    ]
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(DV_FantasticStory_BaseAbility_CountSumTemp)"
                   },
                   "phaseType": "P1",
                   "reachedLimit": true
@@ -1665,24 +1405,11 @@ const configAbility = {
                 {
                   "name": "Update Surging Grit[PF]",
                   "current": {
-                    "operator": "Variables[0] (DV_CurrentDelay) || Constants[0] (10) || MUL || RETURN",
-                    "displayLines": "(DV_CurrentDelay * 10)",
-                    "constants": [
-                      10
-                    ],
-                    "variables": [
-                      "DV_CurrentDelay"
-                    ]
+                    "displayLines": "(DV_CurrentDelay * 10)"
                   },
                   "max": 100,
                   "extra": {
-                    "operator": "Variables[0] (FLOOR) || Variables[1] (DV_FantasticStory_BaseAbility_CountSumTemp) || PARAM_1 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(DV_FantasticStory_BaseAbility_CountSumTemp)",
-                    "constants": [],
-                    "variables": [
-                      "FLOOR",
-                      "DV_FantasticStory_BaseAbility_CountSumTemp"
-                    ]
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(DV_FantasticStory_BaseAbility_CountSumTemp)"
                   },
                   "phaseType": "P1"
                 }

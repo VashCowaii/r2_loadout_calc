@@ -70,12 +70,7 @@ const configAbility = {
             {
               "name": "Skill Points Modification",
               "adjustmentValue": {
-                "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                "displayLines": "#BattleEvent_P2_ADF",
-                "constants": [],
-                "variables": [
-                  "#BattleEvent_P2_ADF"
-                ]
+                "displayLines": "#BattleEvent_P2_ADF"
               },
               "adjustmentType": "+"
             }

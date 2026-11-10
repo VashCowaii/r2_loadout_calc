@@ -28,30 +28,14 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__307) || Variables[1] (ENEMIES_OBJECT_UNUSED__308) || SUB || Variables[2] (UNKNOWN_SW999_OBJECT[5]) || Constants[0] (1) || SUB || DIV || RETURN",
-        "displayLines": "((ENEMIES_OBJECT_UNUSED__307 - ENEMIES_OBJECT_UNUSED__308) / (UNKNOWN_SW999_OBJECT[5] - 1))",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "ENEMIES_OBJECT_UNUSED__307",
-          "ENEMIES_OBJECT_UNUSED__308",
-          "UNKNOWN_SW999_OBJECT[5]"
-        ]
+        "displayLines": "((ENEMIES_OBJECT_UNUSED__307 - ENEMIES_OBJECT_UNUSED__308) / (UNKNOWN_SW999_OBJECT[5] - 1))"
       },
       "variableName": "#CL_ADF_DeltaFrame"
     },
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (UNKNOWN_SW999_OBJECT[5]) || Constants[0] (1) || SUB || RETURN",
-        "displayLines": "(UNKNOWN_SW999_OBJECT[5] - 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "UNKNOWN_SW999_OBJECT[5]"
-        ]
+        "displayLines": "(UNKNOWN_SW999_OBJECT[5] - 1)"
       },
       "execute": [
         {
@@ -74,31 +58,14 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "DamageElation": {
-                  "operator": "Variables[0] (0.9) || RETURN",
-                  "displayLines": "0.9",
-                  "constants": [],
-                  "variables": [
-                    0.9
-                  ]
+                  "displayLines": "0.9"
                 },
                 "dmgFormula": "Elation Scaling",
                 "HitSplit": {
-                  "operator": "Constants[0] (1) || Variables[0] (UNKNOWN_SW999_OBJECT[5]) || DIV || RETURN",
-                  "displayLines": "(1 / UNKNOWN_SW999_OBJECT[5])",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    "UNKNOWN_SW999_OBJECT[5]"
-                  ]
+                  "displayLines": "(1 / UNKNOWN_SW999_OBJECT[5])"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "ToughnessDMGType": {
                   "DamageType": "Imaginary"
@@ -121,31 +88,14 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "DamageElation": {
-                  "operator": "Variables[0] (0.9) || RETURN",
-                  "displayLines": "0.9",
-                  "constants": [],
-                  "variables": [
-                    0.9
-                  ]
+                  "displayLines": "0.9"
                 },
                 "dmgFormula": "Elation Scaling",
                 "HitSplit": {
-                  "operator": "Constants[0] (1) || Variables[0] (UNKNOWN_SW999_OBJECT[5]) || DIV || RETURN",
-                  "displayLines": "(1 / UNKNOWN_SW999_OBJECT[5])",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    "UNKNOWN_SW999_OBJECT[5]"
-                  ]
+                  "displayLines": "(1 / UNKNOWN_SW999_OBJECT[5])"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
+                  "displayLines": "AOE Toughness Value"
                 },
                 "ToughnessDMGType": {
                   "DamageType": "Imaginary"
@@ -161,14 +111,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (#CL_ADF_Index) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(#CL_ADF_Index + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "#CL_ADF_Index"
-            ]
+            "displayLines": "(#CL_ADF_Index + 1)"
           },
           "variableName": "#CL_ADF_Index"
         }
@@ -194,31 +137,14 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "DamageElation": {
-              "operator": "Variables[0] (0.9) || RETURN",
-              "displayLines": "0.9",
-              "constants": [],
-              "variables": [
-                0.9
-              ]
+              "displayLines": "0.9"
             },
             "dmgFormula": "Elation Scaling",
             "HitSplit": {
-              "operator": "Constants[0] (1) || Variables[0] (UNKNOWN_SW999_OBJECT[5]) || Constants[0] (1) || SUB || Variables[0] (UNKNOWN_SW999_OBJECT[5]) || DIV || SUB || RETURN",
-              "displayLines": "(1 - ((UNKNOWN_SW999_OBJECT[5] - 1) / UNKNOWN_SW999_OBJECT[5]))",
-              "constants": [
-                1
-              ],
-              "variables": [
-                "UNKNOWN_SW999_OBJECT[5]"
-              ]
+              "displayLines": "(1 - ((UNKNOWN_SW999_OBJECT[5] - 1) / UNKNOWN_SW999_OBJECT[5]))"
             },
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "ToughnessDMGType": {
               "DamageType": "Imaginary"
@@ -241,31 +167,14 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "DamageElation": {
-              "operator": "Variables[0] (0.9) || RETURN",
-              "displayLines": "0.9",
-              "constants": [],
-              "variables": [
-                0.9
-              ]
+              "displayLines": "0.9"
             },
             "dmgFormula": "Elation Scaling",
             "HitSplit": {
-              "operator": "Constants[0] (1) || Variables[0] (UNKNOWN_SW999_OBJECT[5]) || Constants[0] (1) || SUB || Variables[0] (UNKNOWN_SW999_OBJECT[5]) || DIV || SUB || RETURN",
-              "displayLines": "(1 - ((UNKNOWN_SW999_OBJECT[5] - 1) / UNKNOWN_SW999_OBJECT[5]))",
-              "constants": [
-                1
-              ],
-              "variables": [
-                "UNKNOWN_SW999_OBJECT[5]"
-              ]
+              "displayLines": "(1 - ((UNKNOWN_SW999_OBJECT[5] - 1) / UNKNOWN_SW999_OBJECT[5]))"
             },
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "ToughnessDMGType": {
               "DamageType": "Imaginary"

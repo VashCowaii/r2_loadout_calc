@@ -18,12 +18,7 @@ const configAbility = {
             "value1": "Elation_Skill_Punchline_Value",
             "compareType": ">=",
             "value2": {
-              "operator": "Variables[0] (40) || RETURN",
-              "displayLines": "40",
-              "constants": [],
-              "variables": [
-                40
-              ]
+              "displayLines": "40"
             }
           },
           "passed": [
@@ -32,14 +27,7 @@ const configAbility = {
               "functionName": "<a class=\"gTempYellow\" id=\"2105895650\">SilverWolf999_ModifySP</a>",
               "variables": {
                 "parameter[0]_AddValue": {
-                  "operator": "Variables[0] (15) || Variables[1] (20) || ADD || Variables[2] (20) || ADD || RETURN",
-                  "displayLines": "((15 + 20) + 20)",
-                  "constants": [],
-                  "variables": [
-                    15,
-                    20,
-                    20
-                  ]
+                  "displayLines": "((15 + 20) + 20)"
                 }
               }
             }
@@ -52,12 +40,7 @@ const configAbility = {
                 "value1": "Elation_Skill_Punchline_Value",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (20) || RETURN",
-                  "displayLines": "20",
-                  "constants": [],
-                  "variables": [
-                    20
-                  ]
+                  "displayLines": "20"
                 }
               },
               "passed": [
@@ -66,13 +49,7 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"2105895650\">SilverWolf999_ModifySP</a>",
                   "variables": {
                     "parameter[0]_AddValue": {
-                      "operator": "Variables[0] (15) || Variables[1] (20) || ADD || RETURN",
-                      "displayLines": "(15 + 20)",
-                      "constants": [],
-                      "variables": [
-                        15,
-                        20
-                      ]
+                      "displayLines": "(15 + 20)"
                     }
                   }
                 }
@@ -83,12 +60,7 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"2105895650\">SilverWolf999_ModifySP</a>",
                   "variables": {
                     "parameter[0]_AddValue": {
-                      "operator": "Variables[0] (15) || RETURN",
-                      "displayLines": "15",
-                      "constants": [],
-                      "variables": [
-                        15
-                      ]
+                      "displayLines": "15"
                     }
                   }
                 }
@@ -103,12 +75,7 @@ const configAbility = {
           "functionName": "<a class=\"gTempYellow\" id=\"2105895650\">SilverWolf999_ModifySP</a>",
           "variables": {
             "parameter[0]_AddValue": {
-              "operator": "Variables[0] (15) || RETURN",
-              "displayLines": "15",
-              "constants": [],
-              "variables": [
-                15
-              ]
+              "displayLines": "15"
             }
           }
         }

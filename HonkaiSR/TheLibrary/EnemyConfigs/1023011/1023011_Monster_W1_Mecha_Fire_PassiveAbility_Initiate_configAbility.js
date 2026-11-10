@@ -101,21 +101,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1848655652\">Monster_W1_Mecha_Fire_Passive</a>[<span class=\"descriptionNumberColor\">Out of Control</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[PassiveSkillInitiate[1]]}) || RETURN",
-                    "displayLines": "{[PassiveSkillInitiate[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkillInitiate[1]]}"
-                    ]
+                    "displayLines": "{[PassiveSkillInitiate[1]]}"
                   },
                   "valuePerStack": {
                     "ModifierCriticalChanceRatio_PerLayer": {
-                      "operator": "Variables[0] ({[PassiveSkillInitiate[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkillInitiate[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkillInitiate[0]]}"
-                      ]
+                      "displayLines": "{[PassiveSkillInitiate[0]]}"
                     }
                   }
                 },

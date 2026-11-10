@@ -34,12 +34,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.4) || RETURN",
-                "displayLines": "0.4",
-                "constants": [],
-                "variables": [
-                  0.4
-                ]
+                "displayLines": "0.4"
               }
             }
           ]
@@ -81,12 +76,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1101990991\">Relic_316_Sub</a>[<span class=\"descriptionNumberColor\">Forge of the Kalpagni Lantern</span>]",
                       "duration": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       }
                     },
                     {

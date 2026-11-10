@@ -47,28 +47,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_CritialChance) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(_CritialChance - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_CritialChance"
-                    ]
+                    "displayLines": "(_CritialChance - 1)"
                   },
                   "variableName": "_CritialDamage_Add"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_CritialDamage_Add) || Constants[0] (2) || MUL || RETURN",
-                    "displayLines": "(_CritialDamage_Add * 2)",
-                    "constants": [
-                      2
-                    ],
-                    "variables": [
-                      "_CritialDamage_Add"
-                    ]
+                    "displayLines": "(_CritialDamage_Add * 2)"
                   },
                   "variableName": "_CritialDamage_Add"
                 },
@@ -80,12 +66,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (_CritialDamage_Add) || RETURN",
-                    "displayLines": "_CritialDamage_Add",
-                    "constants": [],
-                    "variables": [
-                      "_CritialDamage_Add"
-                    ]
+                    "displayLines": "_CritialDamage_Add"
                   }
                 }
               ]
@@ -243,13 +224,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_Layer) || Variables[1] (MDF_CritValue) || MUL || RETURN",
-                    "displayLines": "(MDF_Layer * MDF_CritValue)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer",
-                      "MDF_CritValue"
-                    ]
+                    "displayLines": "(MDF_Layer * MDF_CritValue)"
                   },
                   "variableName": "MDF_PropertyValue"
                 }
@@ -258,12 +233,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_CritValue) || RETURN",
-                    "displayLines": "MDF_CritValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CritValue"
-                    ]
+                    "displayLines": "MDF_CritValue"
                   },
                   "variableName": "MDF_PropertyValue"
                 }
@@ -277,12 +247,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             },
             {
@@ -795,12 +760,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -919,14 +879,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_ownerCritDamage) || Variables[1] (MDF_PropertyRatio) || MUL || Variables[2] (MDF_PropertyBase) || ADD || RETURN",
-                "displayLines": "((_ownerCritDamage * MDF_PropertyRatio) + MDF_PropertyBase)",
-                "constants": [],
-                "variables": [
-                  "_ownerCritDamage",
-                  "MDF_PropertyRatio",
-                  "MDF_PropertyBase"
-                ]
+                "displayLines": "((_ownerCritDamage * MDF_PropertyRatio) + MDF_PropertyBase)"
               },
               "variableName": "MDF_PropertyFinal"
             },
@@ -938,12 +891,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyFinal) || RETURN",
-                "displayLines": "MDF_PropertyFinal",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyFinal"
-                ]
+                "displayLines": "MDF_PropertyFinal"
               },
               "isRefresh": true
             },
@@ -966,12 +914,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.3) || RETURN",
-                    "displayLines": "0.3",
-                    "constants": [],
-                    "variables": [
-                      0.3
-                    ]
+                    "displayLines": "0.3"
                   }
                 }
               ]
@@ -998,12 +941,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyFinal) || RETURN",
-                    "displayLines": "MDF_PropertyFinal",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyFinal"
-                    ]
+                    "displayLines": "MDF_PropertyFinal"
                   },
                   "isRefresh": true
                 }

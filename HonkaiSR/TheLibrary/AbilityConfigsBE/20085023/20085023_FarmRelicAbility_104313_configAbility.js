@@ -47,13 +47,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ModifierLayers) || Variables[1] (DamageAddedRatio) || MUL || RETURN",
-                "displayLines": "(ModifierLayers * DamageAddedRatio)",
-                "constants": [],
-                "variables": [
-                  "ModifierLayers",
-                  "DamageAddedRatio"
-                ]
+                "displayLines": "(ModifierLayers * DamageAddedRatio)"
               }
             }
           ]

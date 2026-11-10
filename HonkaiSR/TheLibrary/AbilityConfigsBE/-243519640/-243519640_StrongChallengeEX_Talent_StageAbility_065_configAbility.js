@@ -76,12 +76,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1074029153\">MStrongChallengeEX_Talent_StageAbility_SVT_065</a>",
                   "valuePerStack": {
                     "MDF_IgnoreDefenceRatioTotal": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }

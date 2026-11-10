@@ -23,20 +23,10 @@ const configAbility = {
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (G_EnergyBar) || RETURN",
-        "displayLines": "G_EnergyBar",
-        "constants": [],
-        "variables": [
-          "G_EnergyBar"
-        ]
+        "displayLines": "G_EnergyBar"
       },
       "maximum": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -59,12 +49,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         }
@@ -112,12 +97,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (G_EnergyBar) || RETURN",
-                    "displayLines": "G_EnergyBar",
-                    "constants": [],
-                    "variables": [
-                      "G_EnergyBar"
-                    ]
+                    "displayLines": "G_EnergyBar"
                   },
                   "assignState": "True",
                   "priorState": "Active"

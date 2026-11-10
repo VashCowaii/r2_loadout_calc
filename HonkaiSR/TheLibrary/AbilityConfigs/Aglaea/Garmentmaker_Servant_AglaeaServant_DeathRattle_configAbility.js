@@ -39,12 +39,7 @@ const configAbility = {
                 "target": "{{Caster's Summoner}}"
               },
               "value": {
-                "operator": "Variables[0] (20) || RETURN",
-                "displayLines": "20",
-                "constants": [],
-                "variables": [
-                  20
-                ]
+                "displayLines": "20"
               },
               "isFixed": "* ERR"
             }

@@ -46,13 +46,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Damage_Total) || Variables[1] (Damage_Hit) || ADD || RETURN",
-                    "displayLines": "(Damage_Total + Damage_Hit)",
-                    "constants": [],
-                    "variables": [
-                      "Damage_Total",
-                      "Damage_Hit"
-                    ]
+                    "displayLines": "(Damage_Total + Damage_Hit)"
                   },
                   "variableName": "Damage_Total"
                 },
@@ -65,12 +59,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1195474502\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (Damage_Total) || RETURN",
-                      "displayLines": "Damage_Total",
-                      "constants": [],
-                      "variables": [
-                        "Damage_Total"
-                      ]
+                      "displayLines": "Damage_Total"
                     }
                   }
                 }
@@ -217,15 +206,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "DamageFlat": {
-                      "operator": "Variables[0] (Damage_Total) || Variables[1] (#ADF_1) || MUL || Constants[0] (3) || DIV || RETURN",
-                      "displayLines": "((Damage_Total * #ADF_1) / 3)",
-                      "constants": [
-                        3
-                      ],
-                      "variables": [
-                        "Damage_Total",
-                        "#ADF_1"
-                      ]
+                      "displayLines": "((Damage_Total * #ADF_1) / 3)"
                     },
                     "Toughness": null,
                     "Tags": null,

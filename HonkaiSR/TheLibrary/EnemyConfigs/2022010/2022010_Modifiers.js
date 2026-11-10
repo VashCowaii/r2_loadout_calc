@@ -27,12 +27,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedRatio) || RETURN",
-                "displayLines": "MDF_SpeedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedRatio"
-                ]
+                "displayLines": "MDF_SpeedRatio"
               }
             }
           ]

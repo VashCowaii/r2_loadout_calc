@@ -48,23 +48,13 @@ const configAbility = {
     {
       "name": "Create Enemies",
       "delayPercent": {
-        "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-        "displayLines": "{[Skill02[1]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill02[1]]}"
-        ]
+        "displayLines": "{[Skill02[1]]}"
       },
       "enemyList": [
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonID02) || RETURN",
-            "displayLines": "SummonID02",
-            "constants": [],
-            "variables": [
-              "SummonID02"
-            ]
+            "displayLines": "SummonID02"
           },
           "locationType": "AfterCaster"
         }
@@ -110,14 +100,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Constants[0] (3) || Variables[0] (_MascotCounts) || SUB || RETURN",
-        "displayLines": "(3 - _MascotCounts)",
-        "constants": [
-          3
-        ],
-        "variables": [
-          "_MascotCounts"
-        ]
+        "displayLines": "(3 - _MascotCounts)"
       },
       "execute": [
         {

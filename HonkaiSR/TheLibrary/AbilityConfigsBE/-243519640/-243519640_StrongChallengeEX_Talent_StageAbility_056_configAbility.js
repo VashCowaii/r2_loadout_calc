@@ -33,12 +33,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                "displayLines": "MDF_AllDamageTypeAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeAddedRatio"
-                ]
+                "displayLines": "MDF_AllDamageTypeAddedRatio"
               }
             }
           ]
@@ -83,14 +78,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (ABS) || Variables[1] (_bpChange) || PARAM_1 || FUNCTION || Variables[2] (_bpChangeTotal) || ADD || RETURN",
-                    "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">ABS</span>(_bpChange) + _bpChangeTotal)",
-                    "constants": [],
-                    "variables": [
-                      "ABS",
-                      "_bpChange",
-                      "_bpChangeTotal"
-                    ]
+                    "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">ABS</span>(_bpChange) + _bpChangeTotal)"
                   },
                   "variableName": "_bpChangeTotal"
                 },
@@ -105,12 +93,7 @@ const configAbility = {
                     "value1": "_bpChangeTotal",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     }
                   },
                   "passed": [
@@ -121,26 +104,14 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (WHOLE) || Variables[1] (_bpChangeTotal) || Variables[2] (#ADF_2) || DIV || PARAM_1 || FUNCTION || RETURN",
-                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((_bpChangeTotal / #ADF_2))",
-                        "constants": [],
-                        "variables": [
-                          "WHOLE",
-                          "_bpChangeTotal",
-                          "#ADF_2"
-                        ]
+                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((_bpChangeTotal / #ADF_2))"
                       },
                       "variableName": "BPRecoverValue"
                     },
                     {
                       "name": "Skill Points Modification",
                       "adjustmentValue": {
-                        "operator": "Variables[0] (BPRecoverValue) || RETURN",
-                        "displayLines": "BPRecoverValue",
-                        "constants": [],
-                        "variables": [
-                          "BPRecoverValue"
-                        ]
+                        "displayLines": "BPRecoverValue"
                       },
                       "adjustmentType": "+"
                     },
@@ -151,13 +122,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (_bpChangeTotal) || Variables[1] (#ADF_2) || MOD || RETURN",
-                        "displayLines": "(_bpChangeTotal % #ADF_2)",
-                        "constants": [],
-                        "variables": [
-                          "_bpChangeTotal",
-                          "#ADF_2"
-                        ]
+                        "displayLines": "(_bpChangeTotal % #ADF_2)"
                       },
                       "variableName": "_bpChangeTotal"
                     }
@@ -179,12 +144,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1107420759\">MStrongChallengeEX_Talent_StageAbility_PLY_056</a>[<span class=\"descriptionNumberColor\">Bold Leader</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] (#ADF_1) || RETURN",
-                  "displayLines": "#ADF_1",
-                  "constants": [],
-                  "variables": [
-                    "#ADF_1"
-                  ]
+                  "displayLines": "#ADF_1"
                 }
               }
             }

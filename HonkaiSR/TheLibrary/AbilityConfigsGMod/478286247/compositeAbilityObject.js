@@ -65,13 +65,7 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "scope": "TargetEntity",
                       "value": {
-                        "operator": "Variables[0] (BattleEventAbility_Challenge_Month_21_Count) || Variables[1] (BattleEvent_P4_ADF) || ADD || RETURN",
-                        "displayLines": "(BattleEventAbility_Challenge_Month_21_Count + BattleEvent_P4_ADF)",
-                        "constants": [],
-                        "variables": [
-                          "BattleEventAbility_Challenge_Month_21_Count",
-                          "BattleEvent_P4_ADF"
-                        ]
+                        "displayLines": "(BattleEventAbility_Challenge_Month_21_Count + BattleEvent_P4_ADF)"
                       },
                       "variableName": "BattleEventAbility_Challenge_Month_21_Count"
                     }
@@ -84,12 +78,7 @@ const compositeAbilityObject = {
                     "value1": "BattleEventAbility_Challenge_Month_21_Count",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "BattleEvent_P1_ADF"
                     },
                     "contextScope": "TargetEntity"
                   },
@@ -101,12 +90,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "attackCount": {
-                        "operator": "Variables[0] (BattleEventAbility_Challenge_Month_21_Count) || RETURN",
-                        "displayLines": "BattleEventAbility_Challenge_Month_21_Count",
-                        "constants": [],
-                        "variables": [
-                          "BattleEventAbility_Challenge_Month_21_Count"
-                        ]
+                        "displayLines": "BattleEventAbility_Challenge_Month_21_Count"
                       },
                       "show": true
                     }
@@ -119,12 +103,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "attackCount": {
-                        "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-                        "displayLines": "BattleEvent_P1_ADF",
-                        "constants": [],
-                        "variables": [
-                          "BattleEvent_P1_ADF"
-                        ]
+                        "displayLines": "BattleEvent_P1_ADF"
                       },
                       "show": true
                     },
@@ -132,12 +111,7 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "scope": "TargetEntity",
                       "value": {
-                        "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-                        "displayLines": "BattleEvent_P1_ADF",
-                        "constants": [],
-                        "variables": [
-                          "BattleEvent_P1_ADF"
-                        ]
+                        "displayLines": "BattleEvent_P1_ADF"
                       },
                       "variableName": "BattleEventAbility_Challenge_Month_21_Count"
                     }
@@ -164,13 +138,7 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "scope": "TargetEntity",
                       "value": {
-                        "operator": "Variables[0] (BattleEventAbility_Challenge_Month_21_Count) || Variables[1] (BattleEvent_P3_ADF) || ADD || RETURN",
-                        "displayLines": "(BattleEventAbility_Challenge_Month_21_Count + BattleEvent_P3_ADF)",
-                        "constants": [],
-                        "variables": [
-                          "BattleEventAbility_Challenge_Month_21_Count",
-                          "BattleEvent_P3_ADF"
-                        ]
+                        "displayLines": "(BattleEventAbility_Challenge_Month_21_Count + BattleEvent_P3_ADF)"
                       },
                       "variableName": "BattleEventAbility_Challenge_Month_21_Count"
                     },
@@ -191,12 +159,7 @@ const compositeAbilityObject = {
                     "value1": "BattleEventAbility_Challenge_Month_21_Count",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "BattleEvent_P1_ADF"
                     },
                     "contextScope": "TargetEntity"
                   },
@@ -208,12 +171,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "attackCount": {
-                        "operator": "Variables[0] (BattleEventAbility_Challenge_Month_21_Count) || RETURN",
-                        "displayLines": "BattleEventAbility_Challenge_Month_21_Count",
-                        "constants": [],
-                        "variables": [
-                          "BattleEventAbility_Challenge_Month_21_Count"
-                        ]
+                        "displayLines": "BattleEventAbility_Challenge_Month_21_Count"
                       },
                       "show": true
                     }
@@ -226,12 +184,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "attackCount": {
-                        "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-                        "displayLines": "BattleEvent_P1_ADF",
-                        "constants": [],
-                        "variables": [
-                          "BattleEvent_P1_ADF"
-                        ]
+                        "displayLines": "BattleEvent_P1_ADF"
                       },
                       "show": true
                     },
@@ -239,12 +192,7 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "scope": "TargetEntity",
                       "value": {
-                        "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-                        "displayLines": "BattleEvent_P1_ADF",
-                        "constants": [],
-                        "variables": [
-                          "BattleEvent_P1_ADF"
-                        ]
+                        "displayLines": "BattleEvent_P1_ADF"
                       },
                       "variableName": "BattleEventAbility_Challenge_Month_21_Count"
                     }
@@ -285,14 +233,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "(0 - MDF_PropertyValue)"
                   }
                 }
               ]
@@ -316,12 +257,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -344,12 +280,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoing</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -377,12 +308,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (MDF_AddValue) || RETURN",
-                        "displayLines": "MDF_AddValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_AddValue"
-                        ]
+                        "displayLines": "MDF_AddValue"
                       },
                       "isFixed": "* ERR"
                     }
@@ -411,12 +337,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_HPRatio) || RETURN",
-                      "displayLines": "MDF_HPRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_HPRatio"
-                      ]
+                      "displayLines": "MDF_HPRatio"
                     }
                   },
                   "passed": [
@@ -429,12 +350,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"946146039\">M_Trace_AggroDown</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_AggroDown) || RETURN",
-                          "displayLines": "MDF_AggroDown",
-                          "constants": [],
-                          "variables": [
-                            "MDF_AggroDown"
-                          ]
+                          "displayLines": "MDF_AggroDown"
                         }
                       }
                     }
@@ -456,12 +372,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_HPRatio) || RETURN",
-                      "displayLines": "MDF_HPRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_HPRatio"
-                      ]
+                      "displayLines": "MDF_HPRatio"
                     }
                   },
                   "passed": [
@@ -474,12 +385,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"946146039\">M_Trace_AggroDown</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_AggroDown) || RETURN",
-                          "displayLines": "MDF_AggroDown",
-                          "constants": [],
-                          "variables": [
-                            "MDF_AggroDown"
-                          ]
+                          "displayLines": "MDF_AggroDown"
                         }
                       }
                     }

@@ -129,12 +129,7 @@ const configAbility = {
       "variableName": "AttackCount",
       "modifierName": "<a class=\"gModGreen\" id=\"33624492\">Enemy_W4_FireProwler_TimePower</a>[<span class=\"descriptionNumberColor\">Calamity Power</span>]",
       "multiplier": {
-        "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-        "displayLines": "{[Skill07[0]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill07[0]]}"
-        ]
+        "displayLines": "{[Skill07[0]]}"
       }
     },
     {
@@ -145,13 +140,7 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"33624492\">Enemy_W4_FireProwler_TimePower</a>[<span class=\"descriptionNumberColor\">Calamity Power</span>]",
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (AttackCount) || INVERT || Variables[1] ({[Skill07[0]]}) || DIV || RETURN",
-        "displayLines": "(-AttackCount / {[Skill07[0]]})",
-        "constants": [],
-        "variables": [
-          "AttackCount",
-          "{[Skill07[0]]}"
-        ]
+        "displayLines": "(-AttackCount / {[Skill07[0]]})"
       }
     },
     {
@@ -179,12 +168,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill07[2]]}) || RETURN",
-          "displayLines": "{[Skill07[2]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill07[2]]}"
-          ]
+          "displayLines": "{[Skill07[2]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -195,12 +179,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (AttackCount) || RETURN",
-        "displayLines": "AttackCount",
-        "constants": [],
-        "variables": [
-          "AttackCount"
-        ]
+        "displayLines": "AttackCount"
       },
       "execute": [
         {
@@ -213,12 +192,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill07[1]]}) || RETURN",
-              "displayLines": "{[Skill07[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill07[1]]}"
-              ]
+              "displayLines": "{[Skill07[1]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -268,14 +242,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Skill07_HealHP) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(Skill07_HealHP + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "Skill07_HealHP"
-            ]
+            "displayLines": "(Skill07_HealHP + 1)"
           },
           "variableName": "Skill07_HealHP"
         },
@@ -336,13 +303,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "healPercent": {
-        "operator": "Variables[0] (Skill07_HealHPRatio) || Variables[1] (Skill07_HealHP) || MUL || RETURN",
-        "displayLines": "(Skill07_HealHPRatio * Skill07_HealHP)",
-        "constants": [],
-        "variables": [
-          "Skill07_HealHPRatio",
-          "Skill07_HealHP"
-        ]
+        "displayLines": "(Skill07_HealHPRatio * Skill07_HealHP)"
       },
       "formula": "Heal from Target MaxHP"
     },

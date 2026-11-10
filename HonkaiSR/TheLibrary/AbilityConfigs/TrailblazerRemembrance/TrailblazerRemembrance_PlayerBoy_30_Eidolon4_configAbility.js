@@ -70,14 +70,7 @@ const configAbility = {
                       "variableName": "CurEnergy",
                       "context": "TargetEntity",
                       "value": {
-                        "operator": "Variables[0] (0.03) || Constants[0] (100) || MUL || RETURN",
-                        "displayLines": "(0.03 * 100)",
-                        "constants": [
-                          100
-                        ],
-                        "variables": [
-                          0.03
-                        ]
+                        "displayLines": "(0.03 * 100)"
                       }
                     }
                   ]

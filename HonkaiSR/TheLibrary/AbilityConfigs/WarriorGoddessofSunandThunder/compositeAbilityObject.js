@@ -41,12 +41,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (AbilityRelic_125_4_P2_DamageAddRatio) || RETURN",
-                    "displayLines": "AbilityRelic_125_4_P2_DamageAddRatio",
-                    "constants": [],
-                    "variables": [
-                      "AbilityRelic_125_4_P2_DamageAddRatio"
-                    ]
+                    "displayLines": "AbilityRelic_125_4_P2_DamageAddRatio"
                   }
                 }
               ]
@@ -75,12 +70,7 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "AbilityRelic_125_4_P2_DamageAddRatio": {
-                  "operator": "Variables[0] (0.15) || RETURN",
-                  "displayLines": "0.15",
-                  "constants": [],
-                  "variables": [
-                    0.15
-                  ]
+                  "displayLines": "0.15"
                 }
               }
             }
@@ -111,12 +101,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (AbilityRelic_125_4_P1_SpeedAddRatio) || RETURN",
-                    "displayLines": "AbilityRelic_125_4_P1_SpeedAddRatio",
-                    "constants": [],
-                    "variables": [
-                      "AbilityRelic_125_4_P1_SpeedAddRatio"
-                    ]
+                    "displayLines": "AbilityRelic_125_4_P1_SpeedAddRatio"
                   }
                 }
               ]
@@ -140,12 +125,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"149540788\">Relic_125_Bonus2</a>[<span class=\"descriptionNumberColor\">Warrior Goddess of Sun and Thunder</span>]",
                       "valuePerStack": {
                         "AbilityRelic_125_4_P2_DamageAddRatio": {
-                          "operator": "Variables[0] (0.15) || RETURN",
-                          "displayLines": "0.15",
-                          "constants": [],
-                          "variables": [
-                            0.15
-                          ]
+                          "displayLines": "0.15"
                         }
                       }
                     }
@@ -205,21 +185,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1449955790\">Relic_125_Bonus</a>[<span class=\"descriptionNumberColor\">Gentle Rain</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "valuePerStack": {
                         "AbilityRelic_125_4_P1_SpeedAddRatio": {
-                          "operator": "Variables[0] (0.06) || RETURN",
-                          "displayLines": "0.06",
-                          "constants": [],
-                          "variables": [
-                            0.06
-                          ]
+                          "displayLines": "0.06"
                         }
                       }
                     }
@@ -292,21 +262,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1449955790\">Relic_125_Bonus</a>[<span class=\"descriptionNumberColor\">Gentle Rain</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "valuePerStack": {
                         "AbilityRelic_125_4_P1_SpeedAddRatio": {
-                          "operator": "Variables[0] (0.06) || RETURN",
-                          "displayLines": "0.06",
-                          "constants": [],
-                          "variables": [
-                            0.06
-                          ]
+                          "displayLines": "0.06"
                         }
                       }
                     }

@@ -54,13 +54,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (0.007999999) || Variables[1] (_Layer) || MUL || RETURN",
-                    "displayLines": "(0.007999999 * _Layer)",
-                    "constants": [],
-                    "variables": [
-                      0.007999999,
-                      "_Layer"
-                    ]
+                    "displayLines": "(0.007999999 * _Layer)"
                   },
                   "variableName": "MDF_Damage"
                 },
@@ -71,24 +65,14 @@ const compositeAbilityObject = {
                     "value1": "MDF_Damage",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (0.32) || RETURN",
-                      "displayLines": "0.32",
-                      "constants": [],
-                      "variables": [
-                        0.32
-                      ]
+                      "displayLines": "0.32"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (0.32) || RETURN",
-                        "displayLines": "0.32",
-                        "constants": [],
-                        "variables": [
-                          0.32
-                        ]
+                        "displayLines": "0.32"
                       },
                       "variableName": "MDF_Damage"
                     }
@@ -102,12 +86,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_Damage) || RETURN",
-                    "displayLines": "MDF_Damage",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Damage"
-                    ]
+                    "displayLines": "MDF_Damage"
                   }
                 }
               ]
@@ -133,14 +112,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (WHOLE) || Variables[1] (MDF_Target_Defence) || Variables[2] (100) || DIV || PARAM_1 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((MDF_Target_Defence / 100))",
-                    "constants": [],
-                    "variables": [
-                      "WHOLE",
-                      "MDF_Target_Defence",
-                      100
-                    ]
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((MDF_Target_Defence / 100))"
                   },
                   "variableName": "_Layer"
                 },
@@ -153,12 +125,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1008889053\">LC_21039_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "_Layer": {
-                      "operator": "Variables[0] (_Layer) || RETURN",
-                      "displayLines": "_Layer",
-                      "constants": [],
-                      "variables": [
-                        "_Layer"
-                      ]
+                      "displayLines": "_Layer"
                     }
                   }
                 }
@@ -185,14 +152,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (WHOLE) || Variables[1] (MDF_Target_Defence) || Variables[2] (100) || DIV || PARAM_1 || FUNCTION || RETURN",
-                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((MDF_Target_Defence / 100))",
-                        "constants": [],
-                        "variables": [
-                          "WHOLE",
-                          "MDF_Target_Defence",
-                          100
-                        ]
+                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((MDF_Target_Defence / 100))"
                       },
                       "variableName": "_Layer"
                     },
@@ -205,12 +165,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1008889053\">LC_21039_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "_Layer": {
-                          "operator": "Variables[0] (_Layer) || RETURN",
-                          "displayLines": "_Layer",
-                          "constants": [],
-                          "variables": [
-                            "_Layer"
-                          ]
+                          "displayLines": "_Layer"
                         }
                       }
                     }
@@ -237,14 +192,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (WHOLE) || Variables[1] (MDF_Target_Defence) || Variables[2] (100) || DIV || PARAM_1 || FUNCTION || RETURN",
-                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((MDF_Target_Defence / 100))",
-                        "constants": [],
-                        "variables": [
-                          "WHOLE",
-                          "MDF_Target_Defence",
-                          100
-                        ]
+                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((MDF_Target_Defence / 100))"
                       },
                       "variableName": "_Layer"
                     },
@@ -257,12 +205,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1008889053\">LC_21039_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "_Layer": {
-                          "operator": "Variables[0] (_Layer) || RETURN",
-                          "displayLines": "_Layer",
-                          "constants": [],
-                          "variables": [
-                            "_Layer"
-                          ]
+                          "displayLines": "_Layer"
                         }
                       }
                     }
@@ -289,14 +232,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (WHOLE) || Variables[1] (MDF_Target_Defence) || Variables[2] (100) || DIV || PARAM_1 || FUNCTION || RETURN",
-                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((MDF_Target_Defence / 100))",
-                        "constants": [],
-                        "variables": [
-                          "WHOLE",
-                          "MDF_Target_Defence",
-                          100
-                        ]
+                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((MDF_Target_Defence / 100))"
                       },
                       "variableName": "_Layer"
                     },
@@ -309,12 +245,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1008889053\">LC_21039_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "_Layer": {
-                          "operator": "Variables[0] (_Layer) || RETURN",
-                          "displayLines": "_Layer",
-                          "constants": [],
-                          "variables": [
-                            "_Layer"
-                          ]
+                          "displayLines": "_Layer"
                         }
                       }
                     }

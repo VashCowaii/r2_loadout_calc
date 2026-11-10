@@ -77,12 +77,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (Ability01_P1_HitCount) || RETURN",
-            "displayLines": "Ability01_P1_HitCount",
-            "constants": [],
-            "variables": [
-              "Ability01_P1_HitCount"
-            ]
+            "displayLines": "Ability01_P1_HitCount"
           },
           "execute": [
             {
@@ -131,12 +126,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Imaginary",
                     "DamageElation": {
-                      "operator": "Variables[0] (Ability01_P2_DamagePercentage) || RETURN",
-                      "displayLines": "Ability01_P2_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "Ability01_P2_DamagePercentage"
-                      ]
+                      "displayLines": "Ability01_P2_DamagePercentage"
                     },
                     "dmgFormula": "Elation Scaling",
                     "Toughness": null,

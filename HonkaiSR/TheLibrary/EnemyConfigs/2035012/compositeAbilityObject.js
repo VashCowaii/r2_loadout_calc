@@ -1162,14 +1162,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] ({[PassiveSkill04[1]]}) || Constants[0] (3) || MUL || RETURN",
-                        "displayLines": "({[PassiveSkill04[1]]} * 3)",
-                        "constants": [
-                          3
-                        ],
-                        "variables": [
-                          "{[PassiveSkill04[1]]}"
-                        ]
+                        "displayLines": "({[PassiveSkill04[1]]} * 3)"
                       },
                       "attacker": {
                         "name": "Target Name",
@@ -1258,14 +1251,7 @@ const compositeAbilityObject = {
                         "target": "{{Level Entity}}"
                       },
                       "baseToughnessDMG": {
-                        "operator": "Variables[0] ({[PassiveSkill04[1]]}) || Constants[0] (3) || MUL || RETURN",
-                        "displayLines": "({[PassiveSkill04[1]]} * 3)",
-                        "constants": [
-                          3
-                        ],
-                        "variables": [
-                          "{[PassiveSkill04[1]]}"
-                        ]
+                        "displayLines": "({[PassiveSkill04[1]]} * 3)"
                       },
                       "toughnessForcedReductionPreview": 1,
                       "isForcedReduction": true,
@@ -1392,36 +1378,16 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1246789467\">Enemy_W2_Cocolia_IF_SoftFrenzyController</a>",
               "valuePerStack": {
                 "MDF_FrenzyStartDelay": {
-                  "operator": "Variables[0] ({[SkillEX05[0]]}) || RETURN",
-                  "displayLines": "{[SkillEX05[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX05[0]]}"
-                  ]
+                  "displayLines": "{[SkillEX05[0]]}"
                 },
                 "MDF_FrenzyIntervalDelay": {
-                  "operator": "Variables[0] ({[SkillEX05[1]]}) || RETURN",
-                  "displayLines": "{[SkillEX05[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX05[1]]}"
-                  ]
+                  "displayLines": "{[SkillEX05[1]]}"
                 },
                 "MDF_MaxFrenzyLayer": {
-                  "operator": "Variables[0] ({[SkillEX05[2]]}) || RETURN",
-                  "displayLines": "{[SkillEX05[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX05[2]]}"
-                  ]
+                  "displayLines": "{[SkillEX05[2]]}"
                 },
                 "MDF_TokenDMGAddRatioPerLayer": {
-                  "operator": "Variables[0] ({[SkillEX05[3]]}) || RETURN",
-                  "displayLines": "{[SkillEX05[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX05[3]]}"
-                  ]
+                  "displayLines": "{[SkillEX05[3]]}"
                 }
               }
             }
@@ -2184,52 +2150,22 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"72353298\">Standard_StrongChallengeEX_SuperArmorController_MultiNew</a>",
           "valuePerStack": {
             "MDF_IF_BOSS_BreakDelay_01": {
-              "operator": "Variables[0] ({[SkillEX06[0]]}) || RETURN",
-              "displayLines": "{[SkillEX06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX06[0]]}"
-              ]
+              "displayLines": "{[SkillEX06[0]]}"
             },
             "MDF_IF_BOSS_BreakDelay_02": {
-              "operator": "Variables[0] ({[SkillEX06[1]]}) || RETURN",
-              "displayLines": "{[SkillEX06[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX06[1]]}"
-              ]
+              "displayLines": "{[SkillEX06[1]]}"
             },
             "MDF_IF_BOSS_BreakDelay_03": {
-              "operator": "Variables[0] ({[SkillEX06[2]]}) || RETURN",
-              "displayLines": "{[SkillEX06[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX06[2]]}"
-              ]
+              "displayLines": "{[SkillEX06[2]]}"
             },
             "MDF_IF_BOSS_BreakDelay_04": {
-              "operator": "Variables[0] ({[SkillEX06[3]]}) || RETURN",
-              "displayLines": "{[SkillEX06[3]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX06[3]]}"
-              ]
+              "displayLines": "{[SkillEX06[3]]}"
             },
             "MDF_IF_BOSS_WeaknessDMGUpRatio": {
-              "operator": "Variables[0] ({[SkillEX01[1]]}) || RETURN",
-              "displayLines": "{[SkillEX01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[1]]}"
-              ]
+              "displayLines": "{[SkillEX01[1]]}"
             },
             "MDF_IF_BOSS_Standard_Defence": {
-              "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
-              "displayLines": "{[SkillEX01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[0]]}"
-              ]
+              "displayLines": "{[SkillEX01[0]]}"
             }
           },
           "casterAssign": "TargetSelf"
@@ -2275,12 +2211,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill09[0]]}) || RETURN",
-              "displayLines": "{[Skill09[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill09[0]]}"
-              ]
+              "displayLines": "{[Skill09[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -2574,13 +2505,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Skill08DamagePercentage) || Variables[1] ({[Skill08[2]]}) || ADD || RETURN",
-                "displayLines": "(Skill08DamagePercentage + {[Skill08[2]]})",
-                "constants": [],
-                "variables": [
-                  "Skill08DamagePercentage",
-                  "{[Skill08[2]]}"
-                ]
+                "displayLines": "(Skill08DamagePercentage + {[Skill08[2]]})"
               },
               "variableName": "Skill08DamagePercentage"
             }
@@ -2598,13 +2523,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Skill08DamagePercentage) || Variables[1] ({[Skill08[2]]}) || ADD || RETURN",
-                "displayLines": "(Skill08DamagePercentage + {[Skill08[2]]})",
-                "constants": [],
-                "variables": [
-                  "Skill08DamagePercentage",
-                  "{[Skill08[2]]}"
-                ]
+                "displayLines": "(Skill08DamagePercentage + {[Skill08[2]]})"
               },
               "variableName": "Skill08DamagePercentage"
             }
@@ -2622,14 +2541,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Skill08DamagePercentage) || Variables[1] ({[Skill08[1]]}) || ADD || Variables[2] ({[Skill08[0]]}) || ADD || RETURN",
-                "displayLines": "((Skill08DamagePercentage + {[Skill08[1]]}) + {[Skill08[0]]})",
-                "constants": [],
-                "variables": [
-                  "Skill08DamagePercentage",
-                  "{[Skill08[1]]}",
-                  "{[Skill08[0]]}"
-                ]
+                "displayLines": "((Skill08DamagePercentage + {[Skill08[1]]}) + {[Skill08[0]]})"
               },
               "variableName": "Skill08DamagePercentage"
             }
@@ -2638,13 +2550,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Skill08DamagePercentage) || Variables[1] ({[Skill08[0]]}) || ADD || RETURN",
-                "displayLines": "(Skill08DamagePercentage + {[Skill08[0]]})",
-                "constants": [],
-                "variables": [
-                  "Skill08DamagePercentage",
-                  "{[Skill08[0]]}"
-                ]
+                "displayLines": "(Skill08DamagePercentage + {[Skill08[0]]})"
               },
               "variableName": "Skill08DamagePercentage"
             }
@@ -2775,12 +2681,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (Skill08DamagePercentage) || RETURN",
-              "displayLines": "Skill08DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill08DamagePercentage"
-              ]
+              "displayLines": "Skill08DamagePercentage"
             },
             "Toughness": null,
             "Tags": null,
@@ -2806,12 +2707,7 @@ const compositeAbilityObject = {
               },
               "searchRandom": true,
               "maxTargets": {
-                "operator": "Variables[0] ({[PassiveSkill03[4]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[4]]}"
-                ]
+                "displayLines": "{[PassiveSkill03[4]]}"
               },
               "ifTargetFound": [
                 {
@@ -2822,20 +2718,10 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1794338335\">Standard_CTRL_Crazy</a>[<span class=\"descriptionNumberColor\">Outrage</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[PassiveSkill03[3]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill03[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill03[3]]}"
-                    ]
+                    "displayLines": "{[PassiveSkill03[3]]}"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] ({[Skill03[5]]}) || RETURN",
-                    "displayLines": "{[Skill03[5]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill03[5]]}"
-                    ]
+                    "displayLines": "{[Skill03[5]]}"
                   }
                 }
               ]
@@ -2859,29 +2745,14 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1887773470\">Standard_FatigueRatio</a>[<span class=\"descriptionNumberColor\">Weaken</span>]",
               "duration": {
-                "operator": "Variables[0] ({[PassiveSkill03[2]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[2]]}"
-                ]
+                "displayLines": "{[PassiveSkill03[2]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                "displayLines": "{[Skill02[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill02[2]]}"
-                ]
+                "displayLines": "{[Skill02[2]]}"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                  "displayLines": "{[Skill02[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[1]]}"
-                  ]
+                  "displayLines": "{[Skill02[1]]}"
                 }
               }
             }
@@ -3259,16 +3130,7 @@ const compositeAbilityObject = {
                 "target": "{{Parameter Target}}"
               },
               "set": {
-                "operator": "Constants[0] (1000) || Variables[0] (CurrentSpeed) || DIV || Variables[1] ({[Skill07[0]]}) || MUL || Variables[2] (CurrentDelay) || ADD || RETURN",
-                "displayLines": "(((1000 / CurrentSpeed) * {[Skill07[0]]}) + CurrentDelay)",
-                "constants": [
-                  1000
-                ],
-                "variables": [
-                  "CurrentSpeed",
-                  "{[Skill07[0]]}",
-                  "CurrentDelay"
-                ]
+                "displayLines": "(((1000 / CurrentSpeed) * {[Skill07[0]]}) + CurrentDelay)"
               }
             }
           ]
@@ -3503,12 +3365,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (Skill06DamagePercentage) || RETURN",
-              "displayLines": "Skill06DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill06DamagePercentage"
-              ]
+              "displayLines": "Skill06DamagePercentage"
             },
             "HitSplit": 0.5,
             "Toughness": null,
@@ -3527,12 +3384,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (Skill06DamagePercentage) || RETURN",
-              "displayLines": "Skill06DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill06DamagePercentage"
-              ]
+              "displayLines": "Skill06DamagePercentage"
             },
             "HitSplit": 0.3,
             "Toughness": null,
@@ -3551,12 +3403,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (Skill06DamagePercentage) || RETURN",
-              "displayLines": "Skill06DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill06DamagePercentage"
-              ]
+              "displayLines": "Skill06DamagePercentage"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -3583,29 +3430,14 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1887773470\">Standard_FatigueRatio</a>[<span class=\"descriptionNumberColor\">Weaken</span>]",
           "duration": {
-            "operator": "Variables[0] ({[PassiveSkill03[2]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[2]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[2]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[2]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-            "displayLines": "{[Skill02[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[2]]}"
-            ]
+            "displayLines": "{[Skill02[2]]}"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-              "displayLines": "{[Skill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[1]]}"
-              ]
+              "displayLines": "{[Skill02[1]]}"
             }
           }
         },
@@ -3936,12 +3768,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (Skill05DamagePercentage) || RETURN",
-                  "displayLines": "Skill05DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "Skill05DamagePercentage"
-                  ]
+                  "displayLines": "Skill05DamagePercentage"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -4213,12 +4040,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (Skill04DamagePercentage) || RETURN",
-              "displayLines": "Skill04DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill04DamagePercentage"
-              ]
+              "displayLines": "Skill04DamagePercentage"
             },
             "HitSplit": 0.15,
             "Toughness": null,
@@ -4237,12 +4059,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (Skill04DamagePercentage) || RETURN",
-              "displayLines": "Skill04DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill04DamagePercentage"
-              ]
+              "displayLines": "Skill04DamagePercentage"
             },
             "HitSplit": 0.15,
             "Toughness": null,
@@ -4261,12 +4078,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (Skill04DamagePercentage) || RETURN",
-              "displayLines": "Skill04DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill04DamagePercentage"
-              ]
+              "displayLines": "Skill04DamagePercentage"
             },
             "HitSplit": 0.15,
             "Toughness": null,
@@ -4285,12 +4097,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (Skill04DamagePercentage) || RETURN",
-              "displayLines": "Skill04DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill04DamagePercentage"
-              ]
+              "displayLines": "Skill04DamagePercentage"
             },
             "HitSplit": 0.15,
             "Toughness": null,
@@ -4309,12 +4116,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (Skill04DamagePercentage) || RETURN",
-              "displayLines": "Skill04DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill04DamagePercentage"
-              ]
+              "displayLines": "Skill04DamagePercentage"
             },
             "HitSplit": 0.4,
             "Toughness": null,
@@ -4341,12 +4143,7 @@ const compositeAbilityObject = {
           },
           "searchRandom": true,
           "maxTargets": {
-            "operator": "Variables[0] ({[PassiveSkill03[4]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[4]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[4]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[4]]}"
           },
           "ifTargetFound": [
             {
@@ -4357,20 +4154,10 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1794338335\">Standard_CTRL_Crazy</a>[<span class=\"descriptionNumberColor\">Outrage</span>]",
               "duration": {
-                "operator": "Variables[0] ({[PassiveSkill03[3]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[3]]}"
-                ]
+                "displayLines": "{[PassiveSkill03[3]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill03[5]]}) || RETURN",
-                "displayLines": "{[Skill03[5]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill03[5]]}"
-                ]
+                "displayLines": "{[Skill03[5]]}"
               }
             }
           ]
@@ -4563,14 +4350,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (HeadDelay) || Constants[0] (9.313226e-10) || SUB || RETURN",
-                "displayLines": "(HeadDelay - 9.313226e-10)",
-                "constants": [
-                  9.313226e-10
-                ],
-                "variables": [
-                  "HeadDelay"
-                ]
+                "displayLines": "(HeadDelay - 9.313226e-10)"
               },
               "variableName": "HeadDelay"
             }
@@ -4607,14 +4387,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (LimbDelay) || Constants[0] (9.313226e-10) || SUB || RETURN",
-                "displayLines": "(LimbDelay - 9.313226e-10)",
-                "constants": [
-                  9.313226e-10
-                ],
-                "variables": [
-                  "LimbDelay"
-                ]
+                "displayLines": "(LimbDelay - 9.313226e-10)"
               },
               "variableName": "LimbDelay"
             }
@@ -4651,14 +4424,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (TailDelay) || Constants[0] (9.313226e-10) || SUB || RETURN",
-                "displayLines": "(TailDelay - 9.313226e-10)",
-                "constants": [
-                  9.313226e-10
-                ],
-                "variables": [
-                  "TailDelay"
-                ]
+                "displayLines": "(TailDelay - 9.313226e-10)"
               },
               "variableName": "TailDelay"
             }
@@ -4680,12 +4446,7 @@ const compositeAbilityObject = {
             "value1": "HeadDelay",
             "compareType": ">=",
             "value2": {
-              "operator": "Variables[0] (TailDelay) || RETURN",
-              "displayLines": "TailDelay",
-              "constants": [],
-              "variables": [
-                "TailDelay"
-              ]
+              "displayLines": "TailDelay"
             }
           },
           "passed": [
@@ -4696,12 +4457,7 @@ const compositeAbilityObject = {
                 "value1": "TailDelay",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (LimbDelay) || RETURN",
-                  "displayLines": "LimbDelay",
-                  "constants": [],
-                  "variables": [
-                    "LimbDelay"
-                  ]
+                  "displayLines": "LimbDelay"
                 }
               },
               "passed": [
@@ -4835,20 +4591,10 @@ const compositeAbilityObject = {
                           },
                           "variables": {
                             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                              "operator": "Variables[0] (TailDelay) || RETURN",
-                              "displayLines": "TailDelay",
-                              "constants": [],
-                              "variables": [
-                                "TailDelay"
-                              ]
+                              "displayLines": "TailDelay"
                             },
                             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                              "displayLines": "CurrentSpeed",
-                              "constants": [],
-                              "variables": [
-                                "CurrentSpeed"
-                              ]
+                              "displayLines": "CurrentSpeed"
                             }
                           }
                         }
@@ -4869,20 +4615,10 @@ const compositeAbilityObject = {
                           },
                           "variables": {
                             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                              "operator": "Variables[0] (TailDelay) || RETURN",
-                              "displayLines": "TailDelay",
-                              "constants": [],
-                              "variables": [
-                                "TailDelay"
-                              ]
+                              "displayLines": "TailDelay"
                             },
                             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                              "displayLines": "CurrentSpeed",
-                              "constants": [],
-                              "variables": [
-                                "CurrentSpeed"
-                              ]
+                              "displayLines": "CurrentSpeed"
                             }
                           }
                         }
@@ -5015,20 +4751,10 @@ const compositeAbilityObject = {
                           },
                           "variables": {
                             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                              "operator": "Variables[0] (HeadDelay) || RETURN",
-                              "displayLines": "HeadDelay",
-                              "constants": [],
-                              "variables": [
-                                "HeadDelay"
-                              ]
+                              "displayLines": "HeadDelay"
                             },
                             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                              "displayLines": "CurrentSpeed",
-                              "constants": [],
-                              "variables": [
-                                "CurrentSpeed"
-                              ]
+                              "displayLines": "CurrentSpeed"
                             }
                           }
                         }
@@ -5049,20 +4775,10 @@ const compositeAbilityObject = {
                           },
                           "variables": {
                             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                              "operator": "Variables[0] (HeadDelay) || RETURN",
-                              "displayLines": "HeadDelay",
-                              "constants": [],
-                              "variables": [
-                                "HeadDelay"
-                              ]
+                              "displayLines": "HeadDelay"
                             },
                             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                              "displayLines": "CurrentSpeed",
-                              "constants": [],
-                              "variables": [
-                                "CurrentSpeed"
-                              ]
+                              "displayLines": "CurrentSpeed"
                             }
                           }
                         }
@@ -5079,12 +4795,7 @@ const compositeAbilityObject = {
                     "value1": "HeadDelay",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (LimbDelay) || RETURN",
-                      "displayLines": "LimbDelay",
-                      "constants": [],
-                      "variables": [
-                        "LimbDelay"
-                      ]
+                      "displayLines": "LimbDelay"
                     }
                   },
                   "passed": [
@@ -5218,20 +4929,10 @@ const compositeAbilityObject = {
                               },
                               "variables": {
                                 "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                  "operator": "Variables[0] (LimbDelay) || RETURN",
-                                  "displayLines": "LimbDelay",
-                                  "constants": [],
-                                  "variables": [
-                                    "LimbDelay"
-                                  ]
+                                  "displayLines": "LimbDelay"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                  "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                  "displayLines": "CurrentSpeed",
-                                  "constants": [],
-                                  "variables": [
-                                    "CurrentSpeed"
-                                  ]
+                                  "displayLines": "CurrentSpeed"
                                 }
                               }
                             }
@@ -5257,20 +4958,10 @@ const compositeAbilityObject = {
                               },
                               "variables": {
                                 "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                  "operator": "Variables[0] (LimbDelay) || RETURN",
-                                  "displayLines": "LimbDelay",
-                                  "constants": [],
-                                  "variables": [
-                                    "LimbDelay"
-                                  ]
+                                  "displayLines": "LimbDelay"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                  "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                  "displayLines": "CurrentSpeed",
-                                  "constants": [],
-                                  "variables": [
-                                    "CurrentSpeed"
-                                  ]
+                                  "displayLines": "CurrentSpeed"
                                 }
                               }
                             }
@@ -5403,20 +5094,10 @@ const compositeAbilityObject = {
                               },
                               "variables": {
                                 "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                  "operator": "Variables[0] (HeadDelay) || RETURN",
-                                  "displayLines": "HeadDelay",
-                                  "constants": [],
-                                  "variables": [
-                                    "HeadDelay"
-                                  ]
+                                  "displayLines": "HeadDelay"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                  "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                  "displayLines": "CurrentSpeed",
-                                  "constants": [],
-                                  "variables": [
-                                    "CurrentSpeed"
-                                  ]
+                                  "displayLines": "CurrentSpeed"
                                 }
                               }
                             }
@@ -5437,20 +5118,10 @@ const compositeAbilityObject = {
                               },
                               "variables": {
                                 "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                  "operator": "Variables[0] (HeadDelay) || RETURN",
-                                  "displayLines": "HeadDelay",
-                                  "constants": [],
-                                  "variables": [
-                                    "HeadDelay"
-                                  ]
+                                  "displayLines": "HeadDelay"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                  "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                  "displayLines": "CurrentSpeed",
-                                  "constants": [],
-                                  "variables": [
-                                    "CurrentSpeed"
-                                  ]
+                                  "displayLines": "CurrentSpeed"
                                 }
                               }
                             }
@@ -5590,20 +5261,10 @@ const compositeAbilityObject = {
                               },
                               "variables": {
                                 "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                  "operator": "Variables[0] (HeadDelay) || RETURN",
-                                  "displayLines": "HeadDelay",
-                                  "constants": [],
-                                  "variables": [
-                                    "HeadDelay"
-                                  ]
+                                  "displayLines": "HeadDelay"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                  "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                  "displayLines": "CurrentSpeed",
-                                  "constants": [],
-                                  "variables": [
-                                    "CurrentSpeed"
-                                  ]
+                                  "displayLines": "CurrentSpeed"
                                 }
                               }
                             }
@@ -5624,20 +5285,10 @@ const compositeAbilityObject = {
                               },
                               "variables": {
                                 "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                  "operator": "Variables[0] (HeadDelay) || RETURN",
-                                  "displayLines": "HeadDelay",
-                                  "constants": [],
-                                  "variables": [
-                                    "HeadDelay"
-                                  ]
+                                  "displayLines": "HeadDelay"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                  "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                  "displayLines": "CurrentSpeed",
-                                  "constants": [],
-                                  "variables": [
-                                    "CurrentSpeed"
-                                  ]
+                                  "displayLines": "CurrentSpeed"
                                 }
                               }
                             }
@@ -5770,20 +5421,10 @@ const compositeAbilityObject = {
                               },
                               "variables": {
                                 "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                  "operator": "Variables[0] (LimbDelay) || RETURN",
-                                  "displayLines": "LimbDelay",
-                                  "constants": [],
-                                  "variables": [
-                                    "LimbDelay"
-                                  ]
+                                  "displayLines": "LimbDelay"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                  "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                  "displayLines": "CurrentSpeed",
-                                  "constants": [],
-                                  "variables": [
-                                    "CurrentSpeed"
-                                  ]
+                                  "displayLines": "CurrentSpeed"
                                 }
                               }
                             }
@@ -5804,20 +5445,10 @@ const compositeAbilityObject = {
                               },
                               "variables": {
                                 "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                  "operator": "Variables[0] (LimbDelay) || RETURN",
-                                  "displayLines": "LimbDelay",
-                                  "constants": [],
-                                  "variables": [
-                                    "LimbDelay"
-                                  ]
+                                  "displayLines": "LimbDelay"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                  "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                  "displayLines": "CurrentSpeed",
-                                  "constants": [],
-                                  "variables": [
-                                    "CurrentSpeed"
-                                  ]
+                                  "displayLines": "CurrentSpeed"
                                 }
                               }
                             }
@@ -5838,12 +5469,7 @@ const compositeAbilityObject = {
                 "value1": "HeadDelay",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (LimbDelay) || RETURN",
-                  "displayLines": "LimbDelay",
-                  "constants": [],
-                  "variables": [
-                    "LimbDelay"
-                  ]
+                  "displayLines": "LimbDelay"
                 }
               },
               "passed": [
@@ -5977,20 +5603,10 @@ const compositeAbilityObject = {
                           },
                           "variables": {
                             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                              "operator": "Variables[0] (HeadDelay) || RETURN",
-                              "displayLines": "HeadDelay",
-                              "constants": [],
-                              "variables": [
-                                "HeadDelay"
-                              ]
+                              "displayLines": "HeadDelay"
                             },
                             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                              "displayLines": "CurrentSpeed",
-                              "constants": [],
-                              "variables": [
-                                "CurrentSpeed"
-                              ]
+                              "displayLines": "CurrentSpeed"
                             }
                           }
                         }
@@ -6011,20 +5627,10 @@ const compositeAbilityObject = {
                           },
                           "variables": {
                             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                              "operator": "Variables[0] (HeadDelay) || RETURN",
-                              "displayLines": "HeadDelay",
-                              "constants": [],
-                              "variables": [
-                                "HeadDelay"
-                              ]
+                              "displayLines": "HeadDelay"
                             },
                             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                              "displayLines": "CurrentSpeed",
-                              "constants": [],
-                              "variables": [
-                                "CurrentSpeed"
-                              ]
+                              "displayLines": "CurrentSpeed"
                             }
                           }
                         }
@@ -6157,20 +5763,10 @@ const compositeAbilityObject = {
                           },
                           "variables": {
                             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                              "operator": "Variables[0] (TailDelay) || RETURN",
-                              "displayLines": "TailDelay",
-                              "constants": [],
-                              "variables": [
-                                "TailDelay"
-                              ]
+                              "displayLines": "TailDelay"
                             },
                             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                              "displayLines": "CurrentSpeed",
-                              "constants": [],
-                              "variables": [
-                                "CurrentSpeed"
-                              ]
+                              "displayLines": "CurrentSpeed"
                             }
                           }
                         }
@@ -6191,20 +5787,10 @@ const compositeAbilityObject = {
                           },
                           "variables": {
                             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                              "operator": "Variables[0] (TailDelay) || RETURN",
-                              "displayLines": "TailDelay",
-                              "constants": [],
-                              "variables": [
-                                "TailDelay"
-                              ]
+                              "displayLines": "TailDelay"
                             },
                             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                              "displayLines": "CurrentSpeed",
-                              "constants": [],
-                              "variables": [
-                                "CurrentSpeed"
-                              ]
+                              "displayLines": "CurrentSpeed"
                             }
                           }
                         }
@@ -6221,12 +5807,7 @@ const compositeAbilityObject = {
                     "value1": "TailDelay",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (LimbDelay) || RETURN",
-                      "displayLines": "LimbDelay",
-                      "constants": [],
-                      "variables": [
-                        "LimbDelay"
-                      ]
+                      "displayLines": "LimbDelay"
                     }
                   },
                   "passed": [
@@ -6360,20 +5941,10 @@ const compositeAbilityObject = {
                               },
                               "variables": {
                                 "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                  "operator": "Variables[0] (LimbDelay) || RETURN",
-                                  "displayLines": "LimbDelay",
-                                  "constants": [],
-                                  "variables": [
-                                    "LimbDelay"
-                                  ]
+                                  "displayLines": "LimbDelay"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                  "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                  "displayLines": "CurrentSpeed",
-                                  "constants": [],
-                                  "variables": [
-                                    "CurrentSpeed"
-                                  ]
+                                  "displayLines": "CurrentSpeed"
                                 }
                               }
                             }
@@ -6394,20 +5965,10 @@ const compositeAbilityObject = {
                               },
                               "variables": {
                                 "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                  "operator": "Variables[0] (LimbDelay) || RETURN",
-                                  "displayLines": "LimbDelay",
-                                  "constants": [],
-                                  "variables": [
-                                    "LimbDelay"
-                                  ]
+                                  "displayLines": "LimbDelay"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                  "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                  "displayLines": "CurrentSpeed",
-                                  "constants": [],
-                                  "variables": [
-                                    "CurrentSpeed"
-                                  ]
+                                  "displayLines": "CurrentSpeed"
                                 }
                               }
                             }
@@ -6540,20 +6101,10 @@ const compositeAbilityObject = {
                               },
                               "variables": {
                                 "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                  "operator": "Variables[0] (TailDelay) || RETURN",
-                                  "displayLines": "TailDelay",
-                                  "constants": [],
-                                  "variables": [
-                                    "TailDelay"
-                                  ]
+                                  "displayLines": "TailDelay"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                  "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                  "displayLines": "CurrentSpeed",
-                                  "constants": [],
-                                  "variables": [
-                                    "CurrentSpeed"
-                                  ]
+                                  "displayLines": "CurrentSpeed"
                                 }
                               }
                             }
@@ -6574,20 +6125,10 @@ const compositeAbilityObject = {
                               },
                               "variables": {
                                 "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                  "operator": "Variables[0] (TailDelay) || RETURN",
-                                  "displayLines": "TailDelay",
-                                  "constants": [],
-                                  "variables": [
-                                    "TailDelay"
-                                  ]
+                                  "displayLines": "TailDelay"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                  "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                  "displayLines": "CurrentSpeed",
-                                  "constants": [],
-                                  "variables": [
-                                    "CurrentSpeed"
-                                  ]
+                                  "displayLines": "CurrentSpeed"
                                 }
                               }
                             }
@@ -6727,20 +6268,10 @@ const compositeAbilityObject = {
                               },
                               "variables": {
                                 "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                  "operator": "Variables[0] (TailDelay) || RETURN",
-                                  "displayLines": "TailDelay",
-                                  "constants": [],
-                                  "variables": [
-                                    "TailDelay"
-                                  ]
+                                  "displayLines": "TailDelay"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                  "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                  "displayLines": "CurrentSpeed",
-                                  "constants": [],
-                                  "variables": [
-                                    "CurrentSpeed"
-                                  ]
+                                  "displayLines": "CurrentSpeed"
                                 }
                               }
                             }
@@ -6761,20 +6292,10 @@ const compositeAbilityObject = {
                               },
                               "variables": {
                                 "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                  "operator": "Variables[0] (TailDelay) || RETURN",
-                                  "displayLines": "TailDelay",
-                                  "constants": [],
-                                  "variables": [
-                                    "TailDelay"
-                                  ]
+                                  "displayLines": "TailDelay"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                  "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                  "displayLines": "CurrentSpeed",
-                                  "constants": [],
-                                  "variables": [
-                                    "CurrentSpeed"
-                                  ]
+                                  "displayLines": "CurrentSpeed"
                                 }
                               }
                             }
@@ -6907,20 +6428,10 @@ const compositeAbilityObject = {
                               },
                               "variables": {
                                 "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                  "operator": "Variables[0] (LimbDelay) || RETURN",
-                                  "displayLines": "LimbDelay",
-                                  "constants": [],
-                                  "variables": [
-                                    "LimbDelay"
-                                  ]
+                                  "displayLines": "LimbDelay"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                  "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                  "displayLines": "CurrentSpeed",
-                                  "constants": [],
-                                  "variables": [
-                                    "CurrentSpeed"
-                                  ]
+                                  "displayLines": "CurrentSpeed"
                                 }
                               }
                             }
@@ -6941,20 +6452,10 @@ const compositeAbilityObject = {
                               },
                               "variables": {
                                 "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                  "operator": "Variables[0] (LimbDelay) || RETURN",
-                                  "displayLines": "LimbDelay",
-                                  "constants": [],
-                                  "variables": [
-                                    "LimbDelay"
-                                  ]
+                                  "displayLines": "LimbDelay"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                  "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                  "displayLines": "CurrentSpeed",
-                                  "constants": [],
-                                  "variables": [
-                                    "CurrentSpeed"
-                                  ]
+                                  "displayLines": "CurrentSpeed"
                                 }
                               }
                             }
@@ -7047,12 +6548,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -7069,29 +6565,14 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1887773470\">Standard_FatigueRatio</a>[<span class=\"descriptionNumberColor\">Weaken</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-            "displayLines": "{[Skill02[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[3]]}"
-            ]
+            "displayLines": "{[Skill02[3]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-            "displayLines": "{[Skill02[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[2]]}"
-            ]
+            "displayLines": "{[Skill02[2]]}"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-              "displayLines": "{[Skill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[1]]}"
-              ]
+              "displayLines": "{[Skill02[1]]}"
             }
           }
         },
@@ -7216,12 +6697,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "HitSplit": 0.4,
             "Toughness": null,
@@ -7240,12 +6716,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "HitSplit": 0.6,
             "Toughness": null,
@@ -7385,12 +6856,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "HitSplit": 0.4,
             "Toughness": null,
@@ -7409,12 +6875,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "HitSplit": 0.6,
             "Toughness": null,

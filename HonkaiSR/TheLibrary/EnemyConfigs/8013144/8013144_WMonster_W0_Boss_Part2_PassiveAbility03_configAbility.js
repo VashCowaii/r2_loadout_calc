@@ -54,12 +54,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1383210331\">Enemy_W0_Boss_Part2_OnPhase3SpeedUp</a>[<span class=\"descriptionNumberColor\">Burst</span>]",
           "valuePerStack": {
             "MDF_SpeedAddedRatio": {
-              "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill03[0]]}"
-              ]
+              "displayLines": "{[PassiveSkill03[0]]}"
             }
           }
         }

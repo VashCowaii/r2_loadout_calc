@@ -91,12 +91,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                "displayLines": "{[Skill01[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[0]]}"
-                ]
+                "displayLines": "{[Skill01[0]]}"
               },
               "variableName": "TV_01_EliteChance"
             }
@@ -105,14 +100,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (TV_01_EliteChance) || Constants[0] (100) || DIV || RETURN",
-                "displayLines": "(TV_01_EliteChance / 100)",
-                "constants": [
-                  100
-                ],
-                "variables": [
-                  "TV_01_EliteChance"
-                ]
+                "displayLines": "(TV_01_EliteChance / 100)"
               },
               "variableName": "TV_01_EliteChance"
             }
@@ -212,22 +200,10 @@ const compositeAbilityObject = {
               "isUnique": true,
               "odds": [
                 {
-                  "operator": "Variables[0] (TV_01_EliteChance) || RETURN",
-                  "displayLines": "TV_01_EliteChance",
-                  "constants": [],
-                  "variables": [
-                    "TV_01_EliteChance"
-                  ]
+                  "displayLines": "TV_01_EliteChance"
                 },
                 {
-                  "operator": "Constants[0] (1) || Variables[0] (TV_01_EliteChance) || SUB || RETURN",
-                  "displayLines": "(1 - TV_01_EliteChance)",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    "TV_01_EliteChance"
-                  ]
+                  "displayLines": "(1 - TV_01_EliteChance)"
                 }
               ],
               "execute": [
@@ -237,12 +213,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Select Random Enemy from Pool",
                       "poolID": {
-                        "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__105) || RETURN",
-                        "displayLines": "ENEMIES_OBJECT_UNUSED__105",
-                        "constants": [],
-                        "variables": [
-                          "ENEMIES_OBJECT_UNUSED__105"
-                        ]
+                        "displayLines": "ENEMIES_OBJECT_UNUSED__105"
                       },
                       "filter": [
                         "Elite"
@@ -257,12 +228,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Select Random Enemy from Pool",
                       "poolID": {
-                        "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__105) || RETURN",
-                        "displayLines": "ENEMIES_OBJECT_UNUSED__105",
-                        "constants": [],
-                        "variables": [
-                          "ENEMIES_OBJECT_UNUSED__105"
-                        ]
+                        "displayLines": "ENEMIES_OBJECT_UNUSED__105"
                       },
                       "filter": [
                         "Minion"
@@ -278,12 +244,7 @@ const compositeAbilityObject = {
             {
               "name": "Select Random Enemy from Pool",
               "poolID": {
-                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__105) || RETURN",
-                "displayLines": "ENEMIES_OBJECT_UNUSED__105",
-                "constants": [],
-                "variables": [
-                  "ENEMIES_OBJECT_UNUSED__105"
-                ]
+                "displayLines": "ENEMIES_OBJECT_UNUSED__105"
               },
               "filter": [
                 "Minion"
@@ -305,12 +266,7 @@ const compositeAbilityObject = {
           "isGlobal": true,
           "variables": {
             "Summon_MonsterIDKey": {
-              "operator": "Variables[0] (MonsterIDKey) || RETURN",
-              "displayLines": "MonsterIDKey",
-              "constants": [],
-              "variables": [
-                "MonsterIDKey"
-              ]
+              "displayLines": "MonsterIDKey"
             }
           }
         },

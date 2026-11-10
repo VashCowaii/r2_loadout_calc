@@ -99,12 +99,7 @@ const configAbility = {
               },
               "searchRandom": true,
               "maxTargets": {
-                "operator": "Variables[0] (LightTeam_Count) || RETURN",
-                "displayLines": "LightTeam_Count",
-                "constants": [],
-                "variables": [
-                  "LightTeam_Count"
-                ]
+                "displayLines": "LightTeam_Count"
               },
               "conditions": {
                 "name": "Has Modifier",

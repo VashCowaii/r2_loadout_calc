@@ -141,12 +141,7 @@ const configAbility = {
             "target": "{{Parameter Target}}"
           },
           "maximum": {
-            "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-            "displayLines": "Wolf_MaxAttackCount",
-            "constants": [],
-            "variables": [
-              "Wolf_MaxAttackCount"
-            ]
+            "displayLines": "Wolf_MaxAttackCount"
           },
           "assignState": "True",
           "state": "Normal"
@@ -158,12 +153,7 @@ const configAbility = {
       "value": 0,
       "entityClass": "Enemy",
       "maximum": {
-        "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-        "displayLines": "Wolf_MaxAttackCount",
-        "constants": [],
-        "variables": [
-          "Wolf_MaxAttackCount"
-        ]
+        "displayLines": "Wolf_MaxAttackCount"
       },
       "assignState": "True",
       "state": "Normal"
@@ -233,12 +223,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-2108197417\">Enemy_W2_Lycan_Part3SummonSpeed</a>",
           "valuePerStack": {
             "MDF_SpeedPhase3": {
-              "operator": "Variables[0] ({[SkillP03[1]]}) || RETURN",
-              "displayLines": "{[SkillP03[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP03[1]]}"
-              ]
+              "displayLines": "{[SkillP03[1]]}"
             }
           }
         },
@@ -294,12 +279,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedPhase3) || RETURN",
-                "displayLines": "MDF_SpeedPhase3",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedPhase3"
-                ]
+                "displayLines": "MDF_SpeedPhase3"
               }
             }
           ]

@@ -59,15 +59,7 @@ const configAbility = {
                   "referenceModifier": "<a class=\"gModGreen\" id=\"1337385649\">MReference_AllDamageTypeAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MIN) || Variables[1] (0.72) || Variables[2] (CasterStatusProbability) || Variables[3] (0.6) || MUL || PARAM_2 || FUNCTION || RETURN",
-                      "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(0.72, (CasterStatusProbability * 0.6))",
-                      "constants": [],
-                      "variables": [
-                        "MIN",
-                        0.72,
-                        "CasterStatusProbability",
-                        0.6
-                      ]
+                      "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(0.72, (CasterStatusProbability * 0.6))"
                     }
                   }
                 }
@@ -103,15 +95,7 @@ const configAbility = {
                   "referenceModifier": "<a class=\"gModGreen\" id=\"1337385649\">MReference_AllDamageTypeAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MIN) || Variables[1] (0.72) || Variables[2] (CasterStatusProbability) || Variables[3] (0.6) || MUL || PARAM_2 || FUNCTION || RETURN",
-                      "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(0.72, (CasterStatusProbability * 0.6))",
-                      "constants": [],
-                      "variables": [
-                        "MIN",
-                        0.72,
-                        "CasterStatusProbability",
-                        0.6
-                      ]
+                      "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(0.72, (CasterStatusProbability * 0.6))"
                     }
                   }
                 }
@@ -148,15 +132,7 @@ const configAbility = {
               "referenceModifier": "<a class=\"gModGreen\" id=\"1337385649\">MReference_AllDamageTypeAddedRatio</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MIN) || Variables[1] (0.72) || Variables[2] (CasterStatusProbability) || Variables[3] (0.6) || MUL || PARAM_2 || FUNCTION || RETURN",
-                  "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(0.72, (CasterStatusProbability * 0.6))",
-                  "constants": [],
-                  "variables": [
-                    "MIN",
-                    0.72,
-                    "CasterStatusProbability",
-                    0.6
-                  ]
+                  "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(0.72, (CasterStatusProbability * 0.6))"
                 }
               }
             },

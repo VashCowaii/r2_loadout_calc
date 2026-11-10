@@ -114,12 +114,7 @@ const configAbility = {
                 "value1": "<a class=\"gModGreen\" id=\"-1395319081\">Enemy_W3_Dinosaur_01_Standard_Growth</a>[<span class=\"descriptionNumberColor\">Obscure Blaze</span>]",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Variables[0] (Dinosaur_BreakModifierMaxCount) || RETURN",
-                  "displayLines": "Dinosaur_BreakModifierMaxCount",
-                  "constants": [],
-                  "variables": [
-                    "Dinosaur_BreakModifierMaxCount"
-                  ]
+                  "displayLines": "Dinosaur_BreakModifierMaxCount"
                 },
                 "valueType": "Layer"
               },

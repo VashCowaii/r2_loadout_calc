@@ -35,14 +35,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (1) || INVERT || Variables[0] (#ADF_1) || MUL || RETURN",
-                "displayLines": "(-1 * #ADF_1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "#ADF_1"
-                ]
+                "displayLines": "(-1 * #ADF_1)"
               }
             }
           ]
@@ -64,12 +57,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1071238655\">Modifier_RogueDLCRuin_Upgrade1_DefenceDown</a>[<span class=\"descriptionNumberColor\">Formation Extrapolation: Extreme Helium Flash</span>]",
               "duration": {
-                "operator": "Variables[0] (#ADF_2) || RETURN",
-                "displayLines": "#ADF_2",
-                "constants": [],
-                "variables": [
-                  "#ADF_2"
-                ]
+                "displayLines": "#ADF_2"
               }
             }
           ]

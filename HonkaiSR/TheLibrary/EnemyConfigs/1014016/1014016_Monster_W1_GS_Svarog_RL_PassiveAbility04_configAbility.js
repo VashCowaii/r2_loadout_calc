@@ -30,12 +30,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (PassiveSkill04_SpeedDelta) || RETURN",
-                "displayLines": "PassiveSkill04_SpeedDelta",
-                "constants": [],
-                "variables": [
-                  "PassiveSkill04_SpeedDelta"
-                ]
+                "displayLines": "PassiveSkill04_SpeedDelta"
               }
             }
           ]
@@ -59,12 +54,7 @@ const configAbility = {
               "duration": 1,
               "valuePerStack": {
                 "PassiveAbility04_SpeedDelta": {
-                  "operator": "Variables[0] (PassiveSkill04_SpeedDelta) || RETURN",
-                  "displayLines": "PassiveSkill04_SpeedDelta",
-                  "constants": [],
-                  "variables": [
-                    "PassiveSkill04_SpeedDelta"
-                  ]
+                  "displayLines": "PassiveSkill04_SpeedDelta"
                 }
               }
             }

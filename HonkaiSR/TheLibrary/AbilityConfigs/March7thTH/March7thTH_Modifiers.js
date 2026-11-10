@@ -113,12 +113,7 @@ const configAbility = {
                 "value1": "#ADF_1",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (#ADF_2) || RETURN",
-                  "displayLines": "#ADF_2",
-                  "constants": [],
-                  "variables": [
-                    "#ADF_2"
-                  ]
+                  "displayLines": "#ADF_2"
                 }
               },
               "passed": [
@@ -131,30 +126,15 @@ const configAbility = {
                   "modifier": null,
                   "ID": "122401(Avatar_Mar_7th_10_SkillMazeEnergy)",
                   "buffLevel": {
-                    "operator": "Variables[0] (#ADF_2) || RETURN",
-                    "displayLines": "#ADF_2",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_2"
-                    ]
+                    "displayLines": "#ADF_2"
                   },
                   "counter": 1,
                   "valuePerStack": {
                     "#ADF_1": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     },
                     "#ADF_2": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     }
                   }
                 }
@@ -169,32 +149,15 @@ const configAbility = {
                   "modifier": null,
                   "ID": "122401(Avatar_Mar_7th_10_SkillMazeEnergy)",
                   "buffLevel": {
-                    "operator": "Variables[0] (#ADF_1) || RETURN",
-                    "displayLines": "#ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_1"
-                    ]
+                    "displayLines": "#ADF_1"
                   },
                   "counter": 1,
                   "valuePerStack": {
                     "#ADF_1": {
-                      "operator": "Variables[0] (#ADF_1) || Constants[0] (1) || ADD || RETURN",
-                      "displayLines": "(#ADF_1 + 1)",
-                      "constants": [
-                        1
-                      ],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "(#ADF_1 + 1)"
                     },
                     "#ADF_2": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     }
                   }
                 }
@@ -408,13 +371,7 @@ const configAbility = {
               "value1": "EnergyBar_CurEnergy",
               "compareType": ">=",
               "value2": {
-                "operator": "Variables[0] (EnergyBar_MaxEnergy) || Variables[1] (Gain_Energy_Value) || SUB || RETURN",
-                "displayLines": "(EnergyBar_MaxEnergy - Gain_Energy_Value)",
-                "constants": [],
-                "variables": [
-                  "EnergyBar_MaxEnergy",
-                  "Gain_Energy_Value"
-                ]
+                "displayLines": "(EnergyBar_MaxEnergy - Gain_Energy_Value)"
               },
               "contextScope": "ContextCaster"
             },
@@ -466,13 +423,7 @@ const configAbility = {
               "value1": "EnergyBar_CurEnergy",
               "compareType": ">=",
               "value2": {
-                "operator": "Variables[0] (EnergyBar_MaxEnergy) || Variables[1] (Gain_Energy_Value) || SUB || RETURN",
-                "displayLines": "(EnergyBar_MaxEnergy - Gain_Energy_Value)",
-                "constants": [],
-                "variables": [
-                  "EnergyBar_MaxEnergy",
-                  "Gain_Energy_Value"
-                ]
+                "displayLines": "(EnergyBar_MaxEnergy - Gain_Energy_Value)"
               },
               "contextScope": "ContextCaster"
             }
@@ -589,12 +540,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             },
             {
@@ -654,12 +600,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             }
           ]
@@ -696,12 +637,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
+                "displayLines": "MDF_PropertyRatio"
               }
             }
           ]
@@ -827,12 +763,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-237230767\">Mar_7th_10_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">My Sword Stirs Starlight</span>]",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (0.1) || RETURN",
-                      "displayLines": "0.1",
-                      "constants": [],
-                      "variables": [
-                        0.1
-                      ]
+                      "displayLines": "0.1"
                     }
                   }
                 }
@@ -892,14 +823,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Constants[0] (1) || Variables[0] (1) || ADD || RETURN",
-                        "displayLines": "(1 + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "(1 + 1)"
                       },
                       "variableName": "Normal_StanceRatio"
                     },
@@ -922,12 +846,7 @@ const configAbility = {
               "functionName": "<a class=\"gTempYellow\" id=\"-1762944127\">Mar_7th_10_GainEnergyWithCheck</a>",
               "variables": {
                 "parameter[0]_AddValue": {
-                  "operator": "Variables[0] (Gain_Energy_Value) || RETURN",
-                  "displayLines": "Gain_Energy_Value",
-                  "constants": [],
-                  "variables": [
-                    "Gain_Energy_Value"
-                  ]
+                  "displayLines": "Gain_Energy_Value"
                 }
               }
             },
@@ -975,12 +894,7 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"-1762944127\">Mar_7th_10_GainEnergyWithCheck</a>",
                   "variables": {
                     "parameter[0]_AddValue": {
-                      "operator": "Variables[0] (Gain_Energy_Value) || RETURN",
-                      "displayLines": "Gain_Energy_Value",
-                      "constants": [],
-                      "variables": [
-                        "Gain_Energy_Value"
-                      ]
+                      "displayLines": "Gain_Energy_Value"
                     }
                   }
                 }

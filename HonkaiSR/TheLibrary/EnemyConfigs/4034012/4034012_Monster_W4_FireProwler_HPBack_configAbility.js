@@ -312,13 +312,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "consumePercent": {
-                "operator": "Variables[0] ({[Skill04[1]]}) || Variables[1] (CurrentHPRatio) || MUL || RETURN",
-                "displayLines": "({[Skill04[1]]} * CurrentHPRatio)",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[1]]}",
-                  "CurrentHPRatio"
-                ]
+                "displayLines": "({[Skill04[1]]} * CurrentHPRatio)"
               },
               "consumeFloor": 1,
               "attackType": "Unknown",
@@ -333,13 +327,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1577610826\">Enemy_W4_FireProwler_RallyHP_Mark</a>",
               "valuePerStack": {
                 "MDF_RallyHP": {
-                  "operator": "Variables[0] ({[Skill04[1]]}) || Variables[1] (CurrentHPRatio) || MUL || RETURN",
-                  "displayLines": "({[Skill04[1]]} * CurrentHPRatio)",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[1]]}",
-                    "CurrentHPRatio"
-                  ]
+                  "displayLines": "({[Skill04[1]]} * CurrentHPRatio)"
                 }
               }
             }

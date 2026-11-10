@@ -13,39 +13,19 @@ const configAbility = {
       "variableName": "YuKong_Flower_Count",
       "context": "TargetEntity",
       "value": {
-        "operator": "Variables[0] (1) || RETURN",
-        "displayLines": "1",
-        "constants": [],
-        "variables": [
-          1
-        ]
+        "displayLines": "1"
       },
       "max": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       }
     },
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (YuKong_Flower_Count) || RETURN",
-        "displayLines": "YuKong_Flower_Count",
-        "constants": [],
-        "variables": [
-          "YuKong_Flower_Count"
-        ]
+        "displayLines": "YuKong_Flower_Count"
       },
       "maximum": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       },
       "assignState": "True",
       "priorState": "Active",
@@ -81,28 +61,13 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1617821492\">Yukong_Flower</a>",
               "valuePerStack": {
                 "MDF_AttackAddedRatio": {
-                  "operator": "Variables[0] (0.8) || RETURN",
-                  "displayLines": "0.8",
-                  "constants": [],
-                  "variables": [
-                    0.8
-                  ]
+                  "displayLines": "0.8"
                 },
                 "MDF_Eidolon4AddedRatio": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 },
                 "MDF_PointB3Amount": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
+                  "displayLines": "2"
                 }
               }
             }
@@ -117,28 +82,13 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1617821492\">Yukong_Flower</a>",
               "valuePerStack": {
                 "MDF_AttackAddedRatio": {
-                  "operator": "Variables[0] (0.8) || RETURN",
-                  "displayLines": "0.8",
-                  "constants": [],
-                  "variables": [
-                    0.8
-                  ]
+                  "displayLines": "0.8"
                 },
                 "MDF_Eidolon4AddedRatio": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 },
                 "MDF_PointB3Amount": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
+                  "displayLines": "2"
                 },
                 "MDF_FromUltraMark": 1
               }
@@ -156,28 +106,13 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1617821492\">Yukong_Flower</a>",
           "valuePerStack": {
             "MDF_AttackAddedRatio": {
-              "operator": "Variables[0] (0.8) || RETURN",
-              "displayLines": "0.8",
-              "constants": [],
-              "variables": [
-                0.8
-              ]
+              "displayLines": "0.8"
             },
             "MDF_Eidolon4AddedRatio": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             },
             "MDF_PointB3Amount": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             }
           }
         }

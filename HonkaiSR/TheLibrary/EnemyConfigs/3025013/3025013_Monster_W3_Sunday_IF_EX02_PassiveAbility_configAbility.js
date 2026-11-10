@@ -50,12 +50,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -80,12 +75,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -108,12 +98,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"606317793\">Monster_W3_SundayPart_IF_EX02_DamageReduce</a>[<span class=\"descriptionNumberColor\">Rhythm Without End</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
-                  "displayLines": "{[SkillEX01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX01[0]]}"
-                  ]
+                  "displayLines": "{[SkillEX01[0]]}"
                 }
               }
             }
@@ -158,12 +143,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"606317793\">Monster_W3_SundayPart_IF_EX02_DamageReduce</a>[<span class=\"descriptionNumberColor\">Rhythm Without End</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
-                      "displayLines": "{[SkillEX01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillEX01[0]]}"
-                      ]
+                      "displayLines": "{[SkillEX01[0]]}"
                     }
                   }
                 }
@@ -196,12 +176,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"606317793\">Monster_W3_SundayPart_IF_EX02_DamageReduce</a>[<span class=\"descriptionNumberColor\">Rhythm Without End</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
-                      "displayLines": "{[SkillEX01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillEX01[0]]}"
-                      ]
+                      "displayLines": "{[SkillEX01[0]]}"
                     }
                   }
                 }
@@ -221,12 +196,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"901570774\">Monster_W3_SundayPart_IF_EX02_DamageTaken</a>[<span class=\"descriptionNumberColor\">Shattered Illusion</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] ({[SkillEX01[1]]}) || RETURN",
-                  "displayLines": "{[SkillEX01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX01[1]]}"
-                  ]
+                  "displayLines": "{[SkillEX01[1]]}"
                 }
               }
             },

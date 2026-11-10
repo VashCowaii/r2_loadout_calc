@@ -95,12 +95,7 @@ const configAbility = {
         {
           "name": "Skill Points Modification",
           "adjustmentValue": {
-            "operator": "Variables[0] (MaxBP) || RETURN",
-            "displayLines": "MaxBP",
-            "constants": [],
-            "variables": [
-              "MaxBP"
-            ]
+            "displayLines": "MaxBP"
           },
           "adjustmentType": "+"
         },
@@ -139,12 +134,7 @@ const configAbility = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-                    "displayLines": "SummonList_ADF_2",
-                    "constants": [],
-                    "variables": [
-                      "SummonList_ADF_2"
-                    ]
+                    "displayLines": "SummonList_ADF_2"
                   },
                   "locationType": "First"
                 }
@@ -158,12 +148,7 @@ const configAbility = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-                    "displayLines": "SummonList_ADF_2",
-                    "constants": [],
-                    "variables": [
-                      "SummonList_ADF_2"
-                    ]
+                    "displayLines": "SummonList_ADF_2"
                   },
                   "locationType": "Last"
                 }
@@ -200,12 +185,7 @@ const configAbility = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-                    "displayLines": "SummonList_ADF_2",
-                    "constants": [],
-                    "variables": [
-                      "SummonList_ADF_2"
-                    ]
+                    "displayLines": "SummonList_ADF_2"
                   },
                   "locationType": "First"
                 }
@@ -219,12 +199,7 @@ const configAbility = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
-                    "displayLines": "SummonList_ADF_3",
-                    "constants": [],
-                    "variables": [
-                      "SummonList_ADF_3"
-                    ]
+                    "displayLines": "SummonList_ADF_3"
                   },
                   "locationType": "Last"
                 }

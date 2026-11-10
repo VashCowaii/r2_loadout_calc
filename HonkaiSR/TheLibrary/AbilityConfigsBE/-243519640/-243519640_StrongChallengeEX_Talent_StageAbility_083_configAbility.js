@@ -80,12 +80,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1359330519\">MStrongChallengeEX_Talent_StageAbility_PLY_083</a>",
                   "valuePerStack": {
                     "MDF_ElationDamage_AllDamageTypePenetrate": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }
@@ -167,12 +162,7 @@ const configAbility = {
                 {
                   "name": "Adjust Team Punchline Value",
                   "value": {
-                    "operator": "Variables[0] (#ADF_2) || RETURN",
-                    "displayLines": "#ADF_2",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_2"
-                    ]
+                    "displayLines": "#ADF_2"
                   },
                   "adjustment": "Add"
                 }

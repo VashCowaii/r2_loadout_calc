@@ -532,25 +532,13 @@ const compositeAbilityObject = {
                     {
                       "name": "Looped Event",
                       "maxLoops": {
-                        "operator": "Variables[0] (MDF_CurrentLayer) || RETURN",
-                        "displayLines": "MDF_CurrentLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_CurrentLayer"
-                        ]
+                        "displayLines": "MDF_CurrentLayer"
                       },
                       "execute": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (MDF_AttackAddRatioCurrent) || Constants[0] (2) || MUL || RETURN",
-                            "displayLines": "(MDF_AttackAddRatioCurrent * 2)",
-                            "constants": [
-                              2
-                            ],
-                            "variables": [
-                              "MDF_AttackAddRatioCurrent"
-                            ]
+                            "displayLines": "(MDF_AttackAddRatioCurrent * 2)"
                           },
                           "variableName": "MDF_AttackAddRatioCurrent"
                         }
@@ -571,13 +559,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_AttackAddRatioCurrent) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * MDF_AttackAddRatioCurrent)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_AttackAddRatioCurrent"
-                    ]
+                    "displayLines": "(MDF_PropertyValue * MDF_AttackAddRatioCurrent)"
                   },
                   "variableName": "MDF_AttackAddRatioCurrent"
                 },
@@ -589,12 +571,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackAddRatioCurrent) || RETURN",
-                    "displayLines": "MDF_AttackAddRatioCurrent",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackAddRatioCurrent"
-                    ]
+                    "displayLines": "MDF_AttackAddRatioCurrent"
                   }
                 }
               ]
@@ -1245,12 +1222,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1796573830\">Monster_W3_Junk_AttackAddRatio1</a>[<span class=\"descriptionNumberColor\">The Can's Battle Pose</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             }
           }
         },
@@ -1308,12 +1280,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,

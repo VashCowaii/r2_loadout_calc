@@ -39,12 +39,7 @@ const configAbility = {
               },
               "scope": "ContextModifier",
               "value": {
-                "operator": "Constants[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [
-                  1
-                ],
-                "variables": []
+                "displayLines": "1"
               },
               "variableName": "MDF_KillTalk"
             }
@@ -91,14 +86,7 @@ const configAbility = {
                   },
                   "scope": "ContextModifier",
                   "value": {
-                    "operator": "Variables[0] (MDF_KillTalk) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(MDF_KillTalk + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_KillTalk"
-                    ]
+                    "displayLines": "(MDF_KillTalk + 1)"
                   },
                   "variableName": "MDF_KillTalk"
                 }
@@ -120,12 +108,7 @@ const configAbility = {
                 "value1": "MDF_ActionTime",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Constants[0] (0) || RETURN",
-                  "displayLines": "0",
-                  "constants": [
-                    0
-                  ],
-                  "variables": []
+                  "displayLines": "0"
                 },
                 "contextScope": "ContextModifier"
               },
@@ -141,12 +124,7 @@ const configAbility = {
                     "value1": "MDF_ActionTime",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Constants[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [
-                        1
-                      ],
-                      "variables": []
+                      "displayLines": "1"
                     },
                     "contextScope": "ContextModifier"
                   }
@@ -161,14 +139,7 @@ const configAbility = {
               },
               "scope": "ContextModifier",
               "value": {
-                "operator": "Variables[0] (MDF_ActionTime) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(MDF_ActionTime + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_ActionTime"
-                ]
+                "displayLines": "(MDF_ActionTime + 1)"
               },
               "variableName": "MDF_ActionTime"
             }

@@ -23,44 +23,24 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (2) || RETURN",
-        "displayLines": "2",
-        "constants": [],
-        "variables": [
-          2
-        ]
+        "displayLines": "2"
       },
       "variableName": "SkillP01_CurrentEnergy"
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "variableName": "SkillP01_MaxEnergy"
     },
     {
       "name": "Update Displayed Energy Bar",
       "value": {
-        "operator": "Variables[0] (SkillP01_CurrentEnergy) || RETURN",
-        "displayLines": "SkillP01_CurrentEnergy",
-        "constants": [],
-        "variables": [
-          "SkillP01_CurrentEnergy"
-        ]
+        "displayLines": "SkillP01_CurrentEnergy"
       },
       "maximum": {
-        "operator": "Variables[0] (SkillP01_MaxEnergy) || RETURN",
-        "displayLines": "SkillP01_MaxEnergy",
-        "constants": [],
-        "variables": [
-          "SkillP01_MaxEnergy"
-        ]
+        "displayLines": "SkillP01_MaxEnergy"
       },
       "assignState": "True",
       "priorState": "Active",
@@ -97,12 +77,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (18) || RETURN",
-            "displayLines": "18",
-            "constants": [],
-            "variables": [
-              18
-            ]
+            "displayLines": "18"
           },
           "variableName": "SkillP01_EnhanceInsertBuffStackLimit"
         }
@@ -111,12 +86,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (12) || RETURN",
-            "displayLines": "12",
-            "constants": [],
-            "variables": [
-              12
-            ]
+            "displayLines": "12"
           },
           "variableName": "SkillP01_EnhanceInsertBuffStackLimit"
         }
@@ -193,20 +163,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"2049711974\">Ashveil_PointB3_CriticalDamageAddPre</a>",
           "valuePerStack": {
             "MDF_CriticalDamageTemp": {
-              "operator": "Variables[0] (0.4) || RETURN",
-              "displayLines": "0.4",
-              "constants": [],
-              "variables": [
-                0.4
-              ]
+              "displayLines": "0.4"
             },
             "MDF_InsertCriticalDamageAddTemp": {
-              "operator": "Variables[0] (0.8) || RETURN",
-              "displayLines": "0.8",
-              "constants": [],
-              "variables": [
-                0.8
-              ]
+              "displayLines": "0.8"
             }
           }
         }
@@ -284,12 +244,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (8) || RETURN",
-                    "displayLines": "8",
-                    "constants": [],
-                    "variables": [
-                      8
-                    ]
+                    "displayLines": "8"
                   },
                   "isFixed": "(Fixed)"
                 },
@@ -300,12 +255,7 @@ const configAbility = {
                     "value1": "SkillP01_CurrentEnergy",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     }
                   },
                   "passed": [

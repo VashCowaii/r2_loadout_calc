@@ -16,13 +16,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Passive_AttackCount) || Variables[1] (parameter[0]_AddValue) || ADD || RETURN",
-            "displayLines": "(Passive_AttackCount + parameter[0]_AddValue)",
-            "constants": [],
-            "variables": [
-              "Passive_AttackCount",
-              "parameter[0]_AddValue"
-            ]
+            "displayLines": "(Passive_AttackCount + parameter[0]_AddValue)"
           },
           "variableName": "Passive_AttackCount"
         },
@@ -33,26 +27,14 @@ const configAbility = {
             "value1": "ComboAttackCount",
             "compareType": ">=",
             "value2": {
-              "operator": "Variables[0] (12) || RETURN",
-              "displayLines": "12",
-              "constants": [],
-              "variables": [
-                12
-              ]
+              "displayLines": "12"
             }
           },
           "passed": [
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MIN) || Variables[1] (Passive_AttackCount) || Variables[2] (Passive_NeedAttackCount) || PARAM_2 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(Passive_AttackCount, Passive_NeedAttackCount)",
-                "constants": [],
-                "variables": [
-                  "MIN",
-                  "Passive_AttackCount",
-                  "Passive_NeedAttackCount"
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(Passive_AttackCount, Passive_NeedAttackCount)"
               },
               "variableName": "Passive_AttackCount"
             }
@@ -78,12 +60,7 @@ const configAbility = {
                 "value1": "Passive_AttackCount",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (Passive_NeedAttackCount) || RETURN",
-                  "displayLines": "Passive_NeedAttackCount",
-                  "constants": [],
-                  "variables": [
-                    "Passive_NeedAttackCount"
-                  ]
+                  "displayLines": "Passive_NeedAttackCount"
                 }
               },
               {
@@ -91,12 +68,7 @@ const configAbility = {
                 "value1": "ComboAttackCount",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] (12) || RETURN",
-                  "displayLines": "12",
-                  "constants": [],
-                  "variables": [
-                    12
-                  ]
+                  "displayLines": "12"
                 }
               }
             ]
@@ -122,14 +94,7 @@ const configAbility = {
               "variableName": "Passive_AttackCount",
               "context": "ContextCaster",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (Passive_NeedAttackCount) || SUB || RETURN",
-                "displayLines": "(0 - Passive_NeedAttackCount)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "Passive_NeedAttackCount"
-                ]
+                "displayLines": "(0 - Passive_NeedAttackCount)"
               }
             }
           ]
@@ -186,21 +151,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (Ability11_DamagePercentage) || RETURN",
-              "displayLines": "Ability11_DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Ability11_DamagePercentage"
-              ]
+              "displayLines": "Ability11_DamagePercentage"
             },
             "HitSplit": 0.1,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -232,21 +187,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (Ability11_DamagePercentage) || RETURN",
-                  "displayLines": "Ability11_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "Ability11_DamagePercentage"
-                  ]
+                  "displayLines": "Ability11_DamagePercentage"
                 },
                 "HitSplit": 0.9,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -274,21 +219,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (Ability11_DamagePercentage) || RETURN",
-                  "displayLines": "Ability11_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "Ability11_DamagePercentage"
-                  ]
+                  "displayLines": "Ability11_DamagePercentage"
                 },
                 "HitSplit": 0.9,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -316,21 +251,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (Ability11_DamagePercentage) || RETURN",
-                  "displayLines": "Ability11_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "Ability11_DamagePercentage"
-                  ]
+                  "displayLines": "Ability11_DamagePercentage"
                 },
                 "HitSplit": 0.9,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -358,21 +283,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (Ability11_DamagePercentage) || RETURN",
-                  "displayLines": "Ability11_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "Ability11_DamagePercentage"
-                  ]
+                  "displayLines": "Ability11_DamagePercentage"
                 },
                 "HitSplit": 0.9,
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -395,16 +310,7 @@ const configAbility = {
           },
           "variableName": "ADF_Effect_Index",
           "resetValue": {
-            "operator": "Variables[0] (UNKNOWN_OBJECT_FUNCTION_1[Vash is aware]) || Variables[1] (FLOOR) || Variables[2] (ComboHitCount) || Constants[0] (2) || DIV || PARAM_1 || FUNCTION || Constants[0] (2) || PARAM_2 || FUNCTION || RETURN",
-            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">UNKNOWN_OBJECT_FUNCTION_1[Vash is aware]</span>(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((ComboHitCount / 2)), 2)",
-            "constants": [
-              2
-            ],
-            "variables": [
-              "UNKNOWN_OBJECT_FUNCTION_1[Vash is aware]",
-              "FLOOR",
-              "ComboHitCount"
-            ]
+            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">UNKNOWN_OBJECT_FUNCTION_1[Vash is aware]</span>(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((ComboHitCount / 2)), 2)"
           },
           "scope": "ContextAbility"
         },
@@ -436,20 +342,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (Skill21_DamagePercentage) || RETURN",
-                  "displayLines": "Skill21_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "Skill21_DamagePercentage"
-                  ]
+                  "displayLines": "Skill21_DamagePercentage"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -477,20 +373,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (Skill21_DamagePercentage) || RETURN",
-                  "displayLines": "Skill21_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "Skill21_DamagePercentage"
-                  ]
+                  "displayLines": "Skill21_DamagePercentage"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
@@ -546,21 +432,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1384650414\">Feixiao_Eidolon1_Property</a>[<span class=\"descriptionNumberColor\">Skyward I Quell</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (5) || RETURN",
-                "displayLines": "5",
-                "constants": [],
-                "variables": [
-                  5
-                ]
+                "displayLines": "5"
               },
               "valuePerStack": {
                 "MDF_PropertyRatio": {
-                  "operator": "Variables[0] (0.1) || RETURN",
-                  "displayLines": "0.1",
-                  "constants": [],
-                  "variables": [
-                    0.1
-                  ]
+                  "displayLines": "0.1"
                 }
               },
               "addStacksPerTrigger": 1
@@ -677,21 +553,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1384650414\">Feixiao_Eidolon1_Property</a>[<span class=\"descriptionNumberColor\">Skyward I Quell</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (5) || RETURN",
-                "displayLines": "5",
-                "constants": [],
-                "variables": [
-                  5
-                ]
+                "displayLines": "5"
               },
               "valuePerStack": {
                 "MDF_PropertyRatio": {
-                  "operator": "Variables[0] (0.1) || RETURN",
-                  "displayLines": "0.1",
-                  "constants": [],
-                  "variables": [
-                    0.1
-                  ]
+                  "displayLines": "0.1"
                 }
               },
               "addStacksPerTrigger": 1
@@ -785,14 +651,7 @@ const configAbility = {
                 "value1": "ComboHitCount",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Variables[0] (6) || Constants[0] (1) || SUB || RETURN",
-                  "displayLines": "(6 - 1)",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    6
-                  ]
+                  "displayLines": "(6 - 1)"
                 }
               }
             ]
@@ -845,12 +704,7 @@ const configAbility = {
                 "value1": "ComboHitCount",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Variables[0] (6) || RETURN",
-                  "displayLines": "6",
-                  "constants": [],
-                  "variables": [
-                    6
-                  ]
+                  "displayLines": "6"
                 }
               },
               {

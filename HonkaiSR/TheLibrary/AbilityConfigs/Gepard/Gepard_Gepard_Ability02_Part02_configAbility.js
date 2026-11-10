@@ -13,24 +13,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] (2) || Constants[0] (0.15) || MUL || RETURN",
-          "displayLines": "(2 * 0.15)",
-          "constants": [
-            0.15
-          ],
-          "variables": [
-            2
-          ]
+          "displayLines": "(2 * 0.15)"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.15) || MUL || RETURN",
-          "displayLines": "(ST Toughness Value * 0.15)",
-          "constants": [
-            0.15
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(ST Toughness Value * 0.15)"
         },
         "Tags": null,
         "EnergyGainPercent": "15%"
@@ -45,24 +31,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] (2) || Constants[0] (0.35) || MUL || RETURN",
-          "displayLines": "(2 * 0.35)",
-          "constants": [
-            0.35
-          ],
-          "variables": [
-            2
-          ]
+          "displayLines": "(2 * 0.35)"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.35) || MUL || RETURN",
-          "displayLines": "(ST Toughness Value * 0.35)",
-          "constants": [
-            0.35
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(ST Toughness Value * 0.35)"
         },
         "Tags": null,
         "EnergyGainPercent": "35%"
@@ -78,24 +50,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] (2) || Constants[0] (0.5) || MUL || RETURN",
-          "displayLines": "(2 * 0.5)",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            2
-          ]
+          "displayLines": "(2 * 0.5)"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.5) || MUL || RETURN",
-          "displayLines": "(ST Toughness Value * 0.5)",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(ST Toughness Value * 0.5)"
         },
         "Tags": null,
         "EnergyGainPercent": "50%"
@@ -110,30 +68,14 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
       "duration": {
-        "operator": "Variables[0] (1) || RETURN",
-        "displayLines": "1",
-        "constants": [],
-        "variables": [
-          1
-        ]
+        "displayLines": "1"
       },
       "baseChance": {
-        "operator": "Variables[0] (0.65) || Variables[1] (MDF_Rank01_P1_Chance) || ADD || RETURN",
-        "displayLines": "(0.65 + MDF_Rank01_P1_Chance)",
-        "constants": [],
-        "variables": [
-          0.65,
-          "MDF_Rank01_P1_Chance"
-        ]
+        "displayLines": "(0.65 + MDF_Rank01_P1_Chance)"
       },
       "valuePerStack": {
         "Modifier_Frozen_DamagePercentage": {
-          "operator": "Variables[0] (0.6) || RETURN",
-          "displayLines": "0.6",
-          "constants": [],
-          "variables": [
-            0.6
-          ]
+          "displayLines": "0.6"
         }
       },
       "success": [
@@ -153,20 +95,10 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-367770919\">Gepard_Eidolon2_Delay</a>",
               "valuePerStack": {
                 "MDF_SPD": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 },
                 "MDF_Lifetime": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 }
               }
             }

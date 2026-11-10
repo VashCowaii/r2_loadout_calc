@@ -14,14 +14,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.2) || MUL || RETURN",
-          "displayLines": "({[Skill03[0]]} * 0.2)",
-          "constants": [
-            0.2
-          ],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "({[Skill03[0]]} * 0.2)"
         },
         "Toughness": null,
         "Tags": null,
@@ -37,14 +30,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.8) || MUL || RETURN",
-          "displayLines": "({[Skill03[0]]} * 0.8)",
-          "constants": [
-            0.8
-          ],
-          "variables": [
-            "{[Skill03[0]]}"
-          ]
+          "displayLines": "({[Skill03[0]]} * 0.8)"
         },
         "Toughness": null,
         "Tags": null,
@@ -59,30 +45,15 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
       "duration": {
-        "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-        "displayLines": "{[Skill03[2]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill03[2]]}"
-        ]
+        "displayLines": "{[Skill03[2]]}"
       },
       "baseChance": {
-        "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-        "displayLines": "{[Skill03[1]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill03[1]]}"
-        ]
+        "displayLines": "{[Skill03[1]]}"
       },
       "immediateEffect": true,
       "valuePerStack": {
         "MDF_ActionDelayRatio": {
-          "operator": "Variables[0] ({[Skill03[3]]}) || RETURN",
-          "displayLines": "{[Skill03[3]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill03[3]]}"
-          ]
+          "displayLines": "{[Skill03[3]]}"
         }
       }
     },

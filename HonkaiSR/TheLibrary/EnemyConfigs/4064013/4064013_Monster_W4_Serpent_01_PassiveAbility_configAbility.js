@@ -65,12 +65,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-227770037\">Monster_W4_Serpent_01_RLBoss_Passive</a>",
           "valuePerStack": {
             "MDF_DamageUpRatio_PerLayer": {
-              "operator": "Variables[0] (UnusedUnderThisBase_13157) || RETURN",
-              "displayLines": "UnusedUnderThisBase_13157",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_13157"
-              ]
+              "displayLines": "UnusedUnderThisBase_13157"
             }
           }
         },
@@ -190,36 +185,16 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-501224004\">Enemy_W4_Serpent_01_Passive</a>",
       "valuePerStack": {
         "MDF_AllDamageReduce": {
-          "operator": "Variables[0] ({[PassiveSkillInitiate[0]]}) || RETURN",
-          "displayLines": "{[PassiveSkillInitiate[0]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkillInitiate[0]]}"
-          ]
+          "displayLines": "{[PassiveSkillInitiate[0]]}"
         },
         "MDF_ActionDelay": {
-          "operator": "Variables[0] ({[PassiveSkillInitiate[1]]}) || RETURN",
-          "displayLines": "{[PassiveSkillInitiate[1]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkillInitiate[1]]}"
-          ]
+          "displayLines": "{[PassiveSkillInitiate[1]]}"
         },
         "MDF_AllDamageTypeTakenRatio": {
-          "operator": "Variables[0] ({[PassiveSkillInitiate[2]]}) || RETURN",
-          "displayLines": "{[PassiveSkillInitiate[2]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkillInitiate[2]]}"
-          ]
+          "displayLines": "{[PassiveSkillInitiate[2]]}"
         },
         "MDF_DamagePercentage": {
-          "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
-          "displayLines": "{[PassiveSkillInitiate[3]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkillInitiate[3]]}"
-          ]
+          "displayLines": "{[PassiveSkillInitiate[3]]}"
         }
       }
     }

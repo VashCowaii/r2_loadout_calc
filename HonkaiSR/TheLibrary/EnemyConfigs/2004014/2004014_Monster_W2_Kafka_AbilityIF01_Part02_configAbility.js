@@ -9,12 +9,7 @@ const configAbility = {
       "conditions": {
         "name": "Enemy ID",
         "ID": {
-          "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__19) || RETURN",
-          "displayLines": "ENEMIES_OBJECT_UNUSED__19",
-          "constants": [],
-          "variables": [
-            "ENEMIES_OBJECT_UNUSED__19"
-          ]
+          "displayLines": "ENEMIES_OBJECT_UNUSED__19"
         },
         "target": {
           "name": "Target Name",
@@ -32,12 +27,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-689878752\">Monster_W2_Kafka_IF03_SummonKillBonus01</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
           "valuePerStack": {
             "MDF_KillBonus": {
-              "operator": "Variables[0] ({[SkillIF01[2]]}) || RETURN",
-              "displayLines": "{[SkillIF01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillIF01[2]]}"
-              ]
+              "displayLines": "{[SkillIF01[2]]}"
             }
           }
         }
@@ -48,12 +38,7 @@ const configAbility = {
       "conditions": {
         "name": "Enemy ID",
         "ID": {
-          "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__21) || RETURN",
-          "displayLines": "ENEMIES_OBJECT_UNUSED__21",
-          "constants": [],
-          "variables": [
-            "ENEMIES_OBJECT_UNUSED__21"
-          ]
+          "displayLines": "ENEMIES_OBJECT_UNUSED__21"
         },
         "target": {
           "name": "Target Name",
@@ -71,12 +56,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-639545895\">Monster_W2_Kafka_IF03_SummonKillBonus02</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
           "valuePerStack": {
             "MDF_KillBonus": {
-              "operator": "Variables[0] ({[SkillIF01[2]]}) || RETURN",
-              "displayLines": "{[SkillIF01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillIF01[2]]}"
-              ]
+              "displayLines": "{[SkillIF01[2]]}"
             }
           }
         }
@@ -122,12 +102,7 @@ const configAbility = {
               "conditions": {
                 "name": "Enemy ID",
                 "ID": {
-                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__20) || RETURN",
-                  "displayLines": "ENEMIES_OBJECT_UNUSED__20",
-                  "constants": [],
-                  "variables": [
-                    "ENEMIES_OBJECT_UNUSED__20"
-                  ]
+                  "displayLines": "ENEMIES_OBJECT_UNUSED__20"
                 },
                 "target": {
                   "name": "Target Name",
@@ -141,12 +116,7 @@ const configAbility = {
               "conditions": {
                 "name": "Enemy ID",
                 "ID": {
-                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__22) || RETURN",
-                  "displayLines": "ENEMIES_OBJECT_UNUSED__22",
-                  "constants": [],
-                  "variables": [
-                    "ENEMIES_OBJECT_UNUSED__22"
-                  ]
+                  "displayLines": "ENEMIES_OBJECT_UNUSED__22"
                 },
                 "target": {
                   "name": "Target Name",
@@ -168,12 +138,7 @@ const configAbility = {
           "conditions": {
             "name": "Enemy ID",
             "ID": {
-              "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__20) || RETURN",
-              "displayLines": "ENEMIES_OBJECT_UNUSED__20",
-              "constants": [],
-              "variables": [
-                "ENEMIES_OBJECT_UNUSED__20"
-              ]
+              "displayLines": "ENEMIES_OBJECT_UNUSED__20"
             },
             "target": {
               "name": "Target Name",
@@ -226,12 +191,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-656323514\">Monster_W2_Kafka_IF03_SummonKillBonus03</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
                   "valuePerStack": {
                     "MDF_KillBonus": {
-                      "operator": "Variables[0] ({[SkillIF01[2]]}) || RETURN",
-                      "displayLines": "{[SkillIF01[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillIF01[2]]}"
-                      ]
+                      "displayLines": "{[SkillIF01[2]]}"
                     }
                   }
                 }
@@ -250,12 +210,7 @@ const configAbility = {
           "conditions": {
             "name": "Enemy ID",
             "ID": {
-              "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__22) || RETURN",
-              "displayLines": "ENEMIES_OBJECT_UNUSED__22",
-              "constants": [],
-              "variables": [
-                "ENEMIES_OBJECT_UNUSED__22"
-              ]
+              "displayLines": "ENEMIES_OBJECT_UNUSED__22"
             },
             "target": {
               "name": "Target Name",
@@ -308,12 +263,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-605990657\">Monster_W2_Kafka_IF03_SummonKillBonus04</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
                   "valuePerStack": {
                     "MDF_KillBonus": {
-                      "operator": "Variables[0] ({[SkillIF01[2]]}) || RETURN",
-                      "displayLines": "{[SkillIF01[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillIF01[2]]}"
-                      ]
+                      "displayLines": "{[SkillIF01[2]]}"
                     }
                   }
                 }
@@ -328,12 +278,7 @@ const configAbility = {
           "conditions": {
             "name": "Enemy ID",
             "ID": {
-              "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__20) || RETURN",
-              "displayLines": "ENEMIES_OBJECT_UNUSED__20",
-              "constants": [],
-              "variables": [
-                "ENEMIES_OBJECT_UNUSED__20"
-              ]
+              "displayLines": "ENEMIES_OBJECT_UNUSED__20"
             },
             "target": {
               "name": "Target Name",
@@ -351,12 +296,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-656323514\">Monster_W2_Kafka_IF03_SummonKillBonus03</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
               "valuePerStack": {
                 "MDF_KillBonus": {
-                  "operator": "Variables[0] ({[SkillIF01[2]]}) || RETURN",
-                  "displayLines": "{[SkillIF01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillIF01[2]]}"
-                  ]
+                  "displayLines": "{[SkillIF01[2]]}"
                 }
               }
             }
@@ -367,12 +307,7 @@ const configAbility = {
           "conditions": {
             "name": "Enemy ID",
             "ID": {
-              "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__22) || RETURN",
-              "displayLines": "ENEMIES_OBJECT_UNUSED__22",
-              "constants": [],
-              "variables": [
-                "ENEMIES_OBJECT_UNUSED__22"
-              ]
+              "displayLines": "ENEMIES_OBJECT_UNUSED__22"
             },
             "target": {
               "name": "Target Name",
@@ -390,12 +325,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-605990657\">Monster_W2_Kafka_IF03_SummonKillBonus04</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
               "valuePerStack": {
                 "MDF_KillBonus": {
-                  "operator": "Variables[0] ({[SkillIF01[2]]}) || RETURN",
-                  "displayLines": "{[SkillIF01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillIF01[2]]}"
-                  ]
+                  "displayLines": "{[SkillIF01[2]]}"
                 }
               }
             }

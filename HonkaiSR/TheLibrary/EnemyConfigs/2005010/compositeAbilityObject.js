@@ -131,14 +131,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (Feixiao_BattleScore2_Flag) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(Feixiao_BattleScore2_Flag + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "Feixiao_BattleScore2_Flag"
-                        ]
+                        "displayLines": "(Feixiao_BattleScore2_Flag + 1)"
                       },
                       "variableName": "Feixiao_BattleScore2_Flag"
                     },
@@ -574,12 +567,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1482768789\">Monster_W2_Feixiao_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]",
                       "valuePerStack": {
                         "MDF_StanceBreakTakenRatio": {
-                          "operator": "Variables[0] (MDF_StanceBreakTakenRatio) || RETURN",
-                          "displayLines": "MDF_StanceBreakTakenRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_StanceBreakTakenRatio"
-                          ]
+                          "displayLines": "MDF_StanceBreakTakenRatio"
                         }
                       }
                     }
@@ -679,14 +667,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (BaseSpeed) || SUB || RETURN",
-                    "displayLines": "(0 - BaseSpeed)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "BaseSpeed"
-                    ]
+                    "displayLines": "(0 - BaseSpeed)"
                   }
                 }
               ]
@@ -808,12 +789,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"73301376\">Standard_SuperArmor</a>[<span class=\"descriptionNumberColor\">Safeguard</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeResistance": {
-                      "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[0]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[0]]}"
                     }
                   }
                 },
@@ -843,12 +819,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"221422164\">Monster_W2_Feixiao_ModifyActionDelay</a>",
                   "valuePerStack": {
                     "MDF_BreakActionDelay": {
-                      "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[1]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[1]]}"
                     }
                   }
                 },
@@ -861,12 +832,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1917647041\">Standard_SuperArmorBreak</a>[<span class=\"descriptionNumberColor\">Safeguard Broken</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeTakenRatio": {
-                      "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[2]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[2]]}"
                     }
                   }
                 }
@@ -892,12 +858,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"73301376\">Standard_SuperArmor</a>[<span class=\"descriptionNumberColor\">Safeguard</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeResistance": {
-                      "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[0]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill02[0]]}"
                     }
                   }
                 },
@@ -1522,12 +1483,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessVulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_StanceBreakTakenRatio) || RETURN",
-                    "displayLines": "MDF_StanceBreakTakenRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_StanceBreakTakenRatio"
-                    ]
+                    "displayLines": "MDF_StanceBreakTakenRatio"
                   }
                 },
                 {
@@ -1759,12 +1715,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessVulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_StanceBreakTakenRatio) || RETURN",
-                    "displayLines": "MDF_StanceBreakTakenRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_StanceBreakTakenRatio"
-                    ]
+                    "displayLines": "MDF_StanceBreakTakenRatio"
                   }
                 },
                 {
@@ -4250,12 +4201,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill09[0]]}) || RETURN",
-              "displayLines": "{[Skill09[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill09[0]]}"
-              ]
+              "displayLines": "{[Skill09[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -4458,13 +4404,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Skill08DamagePercentage) || Variables[1] ({[Skill08[2]]}) || ADD || RETURN",
-                "displayLines": "(Skill08DamagePercentage + {[Skill08[2]]})",
-                "constants": [],
-                "variables": [
-                  "Skill08DamagePercentage",
-                  "{[Skill08[2]]}"
-                ]
+                "displayLines": "(Skill08DamagePercentage + {[Skill08[2]]})"
               },
               "variableName": "Skill08DamagePercentage"
             }
@@ -4482,13 +4422,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Skill08DamagePercentage) || Variables[1] ({[Skill08[2]]}) || ADD || RETURN",
-                "displayLines": "(Skill08DamagePercentage + {[Skill08[2]]})",
-                "constants": [],
-                "variables": [
-                  "Skill08DamagePercentage",
-                  "{[Skill08[2]]}"
-                ]
+                "displayLines": "(Skill08DamagePercentage + {[Skill08[2]]})"
               },
               "variableName": "Skill08DamagePercentage"
             }
@@ -4506,14 +4440,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Skill08DamagePercentage) || Variables[1] ({[Skill08[1]]}) || ADD || Variables[2] ({[Skill08[0]]}) || ADD || RETURN",
-                "displayLines": "((Skill08DamagePercentage + {[Skill08[1]]}) + {[Skill08[0]]})",
-                "constants": [],
-                "variables": [
-                  "Skill08DamagePercentage",
-                  "{[Skill08[1]]}",
-                  "{[Skill08[0]]}"
-                ]
+                "displayLines": "((Skill08DamagePercentage + {[Skill08[1]]}) + {[Skill08[0]]})"
               },
               "variableName": "Skill08DamagePercentage"
             }
@@ -4522,13 +4449,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (Skill08DamagePercentage) || Variables[1] ({[Skill08[0]]}) || ADD || RETURN",
-                "displayLines": "(Skill08DamagePercentage + {[Skill08[0]]})",
-                "constants": [],
-                "variables": [
-                  "Skill08DamagePercentage",
-                  "{[Skill08[0]]}"
-                ]
+                "displayLines": "(Skill08DamagePercentage + {[Skill08[0]]})"
               },
               "variableName": "Skill08DamagePercentage"
             }
@@ -4659,12 +4580,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (Skill08DamagePercentage) || RETURN",
-              "displayLines": "Skill08DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill08DamagePercentage"
-              ]
+              "displayLines": "Skill08DamagePercentage"
             },
             "Toughness": null,
             "Tags": null,
@@ -4690,12 +4606,7 @@ const compositeAbilityObject = {
               },
               "searchRandom": true,
               "maxTargets": {
-                "operator": "Variables[0] ({[PassiveSkill03[4]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[4]]}"
-                ]
+                "displayLines": "{[PassiveSkill03[4]]}"
               },
               "ifTargetFound": [
                 {
@@ -4706,20 +4617,10 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1794338335\">Standard_CTRL_Crazy</a>[<span class=\"descriptionNumberColor\">Outrage</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[PassiveSkill03[3]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill03[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill03[3]]}"
-                    ]
+                    "displayLines": "{[PassiveSkill03[3]]}"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] ({[Skill03[5]]}) || RETURN",
-                    "displayLines": "{[Skill03[5]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill03[5]]}"
-                    ]
+                    "displayLines": "{[Skill03[5]]}"
                   }
                 }
               ]
@@ -4743,29 +4644,14 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1887773470\">Standard_FatigueRatio</a>[<span class=\"descriptionNumberColor\">Weaken</span>]",
               "duration": {
-                "operator": "Variables[0] ({[PassiveSkill03[2]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[2]]}"
-                ]
+                "displayLines": "{[PassiveSkill03[2]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                "displayLines": "{[Skill02[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill02[2]]}"
-                ]
+                "displayLines": "{[Skill02[2]]}"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                  "displayLines": "{[Skill02[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[1]]}"
-                  ]
+                  "displayLines": "{[Skill02[1]]}"
                 }
               }
             }
@@ -5223,16 +5109,7 @@ const compositeAbilityObject = {
                 "target": "{{Parameter Target}}"
               },
               "set": {
-                "operator": "Constants[0] (1000) || Variables[0] (CurrentSpeed) || DIV || Variables[1] ({[Skill07[0]]}) || MUL || Variables[2] (CurrentDelay) || ADD || RETURN",
-                "displayLines": "(((1000 / CurrentSpeed) * {[Skill07[0]]}) + CurrentDelay)",
-                "constants": [
-                  1000
-                ],
-                "variables": [
-                  "CurrentSpeed",
-                  "{[Skill07[0]]}",
-                  "CurrentDelay"
-                ]
+                "displayLines": "(((1000 / CurrentSpeed) * {[Skill07[0]]}) + CurrentDelay)"
               }
             }
           ]
@@ -5288,12 +5165,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"881636857\">Monster_W2_Feixiao_UltraConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]",
               "valuePerStack": {
                 "MDF_StanceBreakTakenRatio": {
-                  "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill03[5]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill03[5]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill03[5]]}"
                 }
               }
             }
@@ -5561,12 +5433,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-664793449\">Monster_W2_Feixiao_AlreadyConnectRemove</a>",
               "valuePerStack": {
                 "MDF_StanceBreakTakenRatio": {
-                  "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill03[5]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill03[5]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill03[5]]}"
                 }
               }
             }
@@ -5590,12 +5457,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (Skill06DamagePercentage) || RETURN",
-              "displayLines": "Skill06DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill06DamagePercentage"
-              ]
+              "displayLines": "Skill06DamagePercentage"
             },
             "HitSplit": 0.5,
             "Toughness": null,
@@ -5614,12 +5476,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (Skill06DamagePercentage) || RETURN",
-              "displayLines": "Skill06DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill06DamagePercentage"
-              ]
+              "displayLines": "Skill06DamagePercentage"
             },
             "HitSplit": 0.3,
             "Toughness": null,
@@ -5638,12 +5495,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (Skill06DamagePercentage) || RETURN",
-              "displayLines": "Skill06DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill06DamagePercentage"
-              ]
+              "displayLines": "Skill06DamagePercentage"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -5670,29 +5522,14 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1887773470\">Standard_FatigueRatio</a>[<span class=\"descriptionNumberColor\">Weaken</span>]",
           "duration": {
-            "operator": "Variables[0] ({[PassiveSkill03[2]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[2]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[2]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[2]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-            "displayLines": "{[Skill02[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[2]]}"
-            ]
+            "displayLines": "{[Skill02[2]]}"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-              "displayLines": "{[Skill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[1]]}"
-              ]
+              "displayLines": "{[Skill02[1]]}"
             }
           }
         },
@@ -6008,12 +5845,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-664793449\">Monster_W2_Feixiao_AlreadyConnectRemove</a>",
               "valuePerStack": {
                 "MDF_StanceBreakTakenRatio": {
-                  "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill03[5]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill03[5]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill03[5]]}"
                 }
               }
             }
@@ -6107,12 +5939,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (Skill05DamagePercentage) || RETURN",
-                  "displayLines": "Skill05DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "Skill05DamagePercentage"
-                  ]
+                  "displayLines": "Skill05DamagePercentage"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -6411,12 +6238,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-664793449\">Monster_W2_Feixiao_AlreadyConnectRemove</a>",
               "valuePerStack": {
                 "MDF_StanceBreakTakenRatio": {
-                  "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill03[5]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill03[5]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill03[5]]}"
                 }
               }
             }
@@ -6440,12 +6262,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (Skill04DamagePercentage) || RETURN",
-              "displayLines": "Skill04DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill04DamagePercentage"
-              ]
+              "displayLines": "Skill04DamagePercentage"
             },
             "HitSplit": 0.15,
             "Toughness": null,
@@ -6464,12 +6281,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (Skill04DamagePercentage) || RETURN",
-              "displayLines": "Skill04DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill04DamagePercentage"
-              ]
+              "displayLines": "Skill04DamagePercentage"
             },
             "HitSplit": 0.15,
             "Toughness": null,
@@ -6488,12 +6300,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (Skill04DamagePercentage) || RETURN",
-              "displayLines": "Skill04DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill04DamagePercentage"
-              ]
+              "displayLines": "Skill04DamagePercentage"
             },
             "HitSplit": 0.15,
             "Toughness": null,
@@ -6512,12 +6319,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (Skill04DamagePercentage) || RETURN",
-              "displayLines": "Skill04DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill04DamagePercentage"
-              ]
+              "displayLines": "Skill04DamagePercentage"
             },
             "HitSplit": 0.15,
             "Toughness": null,
@@ -6536,12 +6338,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (Skill04DamagePercentage) || RETURN",
-              "displayLines": "Skill04DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill04DamagePercentage"
-              ]
+              "displayLines": "Skill04DamagePercentage"
             },
             "HitSplit": 0.4,
             "Toughness": null,
@@ -6568,12 +6365,7 @@ const compositeAbilityObject = {
           },
           "searchRandom": true,
           "maxTargets": {
-            "operator": "Variables[0] ({[PassiveSkill03[4]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[4]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[4]]}"
-            ]
+            "displayLines": "{[PassiveSkill03[4]]}"
           },
           "ifTargetFound": [
             {
@@ -6584,20 +6376,10 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1794338335\">Standard_CTRL_Crazy</a>[<span class=\"descriptionNumberColor\">Outrage</span>]",
               "duration": {
-                "operator": "Variables[0] ({[PassiveSkill03[3]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[3]]}"
-                ]
+                "displayLines": "{[PassiveSkill03[3]]}"
               },
               "baseChance": {
-                "operator": "Variables[0] ({[Skill03[5]]}) || RETURN",
-                "displayLines": "{[Skill03[5]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill03[5]]}"
-                ]
+                "displayLines": "{[Skill03[5]]}"
               }
             }
           ]
@@ -6803,14 +6585,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (HeadDelay) || Constants[0] (9.313226e-10) || SUB || RETURN",
-                "displayLines": "(HeadDelay - 9.313226e-10)",
-                "constants": [
-                  9.313226e-10
-                ],
-                "variables": [
-                  "HeadDelay"
-                ]
+                "displayLines": "(HeadDelay - 9.313226e-10)"
               },
               "variableName": "HeadDelay"
             }
@@ -6847,14 +6622,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (LimbDelay) || Constants[0] (9.313226e-10) || SUB || RETURN",
-                "displayLines": "(LimbDelay - 9.313226e-10)",
-                "constants": [
-                  9.313226e-10
-                ],
-                "variables": [
-                  "LimbDelay"
-                ]
+                "displayLines": "(LimbDelay - 9.313226e-10)"
               },
               "variableName": "LimbDelay"
             }
@@ -6891,14 +6659,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (TailDelay) || Constants[0] (9.313226e-10) || SUB || RETURN",
-                "displayLines": "(TailDelay - 9.313226e-10)",
-                "constants": [
-                  9.313226e-10
-                ],
-                "variables": [
-                  "TailDelay"
-                ]
+                "displayLines": "(TailDelay - 9.313226e-10)"
               },
               "variableName": "TailDelay"
             }
@@ -6932,28 +6693,13 @@ const compositeAbilityObject = {
               },
               "variables": {
                 "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                  "operator": "Variables[0] ({[Skill03[3]]}) || RETURN",
-                  "displayLines": "{[Skill03[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[3]]}"
-                  ]
+                  "displayLines": "{[Skill03[3]]}"
                 },
                 "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                  "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                  "displayLines": "CurrentSpeed",
-                  "constants": [],
-                  "variables": [
-                    "CurrentSpeed"
-                  ]
+                  "displayLines": "CurrentSpeed"
                 },
                 "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                  "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill03[5]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill03[5]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill03[5]]}"
                 }
               }
             },
@@ -6967,28 +6713,13 @@ const compositeAbilityObject = {
               },
               "variables": {
                 "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                  "operator": "Variables[0] ({[Skill03[4]]}) || RETURN",
-                  "displayLines": "{[Skill03[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[4]]}"
-                  ]
+                  "displayLines": "{[Skill03[4]]}"
                 },
                 "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                  "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                  "displayLines": "CurrentSpeed",
-                  "constants": [],
-                  "variables": [
-                    "CurrentSpeed"
-                  ]
+                  "displayLines": "CurrentSpeed"
                 },
                 "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                  "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill03[5]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill03[5]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill03[5]]}"
                 }
               }
             }
@@ -7129,14 +6860,7 @@ const compositeAbilityObject = {
                                 "target": "{{Parameter Target}}"
                               },
                               "constantValue": {
-                                "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                "displayLines": "(MaxStance / 2)",
-                                "constants": [
-                                  2
-                                ],
-                                "variables": [
-                                  "MaxStance"
-                                ]
+                                "displayLines": "(MaxStance / 2)"
                               }
                             }
                           ],
@@ -7157,14 +6881,7 @@ const compositeAbilityObject = {
                                 "value1": "CurrentStance",
                                 "compareType": "<",
                                 "value2": {
-                                  "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                  "displayLines": "(MaxStance / 2)",
-                                  "constants": [
-                                    2
-                                  ],
-                                  "variables": [
-                                    "MaxStance"
-                                  ]
+                                  "displayLines": "(MaxStance / 2)"
                                 }
                               },
                               "passed": [
@@ -7175,14 +6892,7 @@ const compositeAbilityObject = {
                                     "target": "{{Parameter Target}}"
                                   },
                                   "constantValue": {
-                                    "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                    "displayLines": "(MaxStance / 2)",
-                                    "constants": [
-                                      2
-                                    ],
-                                    "variables": [
-                                      "MaxStance"
-                                    ]
+                                    "displayLines": "(MaxStance / 2)"
                                   }
                                 }
                               ]
@@ -7204,28 +6914,13 @@ const compositeAbilityObject = {
                           },
                           "variables": {
                             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                              "operator": "Variables[0] (LimbDelay) || RETURN",
-                              "displayLines": "LimbDelay",
-                              "constants": [],
-                              "variables": [
-                                "LimbDelay"
-                              ]
+                              "displayLines": "LimbDelay"
                             },
                             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                              "displayLines": "CurrentSpeed",
-                              "constants": [],
-                              "variables": [
-                                "CurrentSpeed"
-                              ]
+                              "displayLines": "CurrentSpeed"
                             },
                             "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                              "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                              "displayLines": "{[PassiveSkill03[5]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[PassiveSkill03[5]]}"
-                              ]
+                              "displayLines": "{[PassiveSkill03[5]]}"
                             }
                           }
                         }
@@ -7247,14 +6942,7 @@ const compositeAbilityObject = {
                             "value1": "CurrentStance",
                             "compareType": "<",
                             "value2": {
-                              "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                              "displayLines": "(MaxStance / 2)",
-                              "constants": [
-                                2
-                              ],
-                              "variables": [
-                                "MaxStance"
-                              ]
+                              "displayLines": "(MaxStance / 2)"
                             }
                           },
                           "passed": [
@@ -7265,14 +6953,7 @@ const compositeAbilityObject = {
                                 "target": "{{Parameter Target}}"
                               },
                               "constantValue": {
-                                "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                "displayLines": "(MaxStance / 2)",
-                                "constants": [
-                                  2
-                                ],
-                                "variables": [
-                                  "MaxStance"
-                                ]
+                                "displayLines": "(MaxStance / 2)"
                               }
                             }
                           ]
@@ -7292,28 +6973,13 @@ const compositeAbilityObject = {
                           },
                           "variables": {
                             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                              "operator": "Variables[0] (LimbDelay) || RETURN",
-                              "displayLines": "LimbDelay",
-                              "constants": [],
-                              "variables": [
-                                "LimbDelay"
-                              ]
+                              "displayLines": "LimbDelay"
                             },
                             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                              "displayLines": "CurrentSpeed",
-                              "constants": [],
-                              "variables": [
-                                "CurrentSpeed"
-                              ]
+                              "displayLines": "CurrentSpeed"
                             },
                             "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                              "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                              "displayLines": "{[PassiveSkill03[5]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[PassiveSkill03[5]]}"
-                              ]
+                              "displayLines": "{[PassiveSkill03[5]]}"
                             }
                           }
                         }
@@ -7429,14 +7095,7 @@ const compositeAbilityObject = {
                                 "target": "{{Parameter Target}}"
                               },
                               "constantValue": {
-                                "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                "displayLines": "(MaxStance / 2)",
-                                "constants": [
-                                  2
-                                ],
-                                "variables": [
-                                  "MaxStance"
-                                ]
+                                "displayLines": "(MaxStance / 2)"
                               }
                             }
                           ],
@@ -7457,14 +7116,7 @@ const compositeAbilityObject = {
                                 "value1": "CurrentStance",
                                 "compareType": "<",
                                 "value2": {
-                                  "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                  "displayLines": "(MaxStance / 2)",
-                                  "constants": [
-                                    2
-                                  ],
-                                  "variables": [
-                                    "MaxStance"
-                                  ]
+                                  "displayLines": "(MaxStance / 2)"
                                 }
                               },
                               "passed": [
@@ -7475,14 +7127,7 @@ const compositeAbilityObject = {
                                     "target": "{{Parameter Target}}"
                                   },
                                   "constantValue": {
-                                    "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                    "displayLines": "(MaxStance / 2)",
-                                    "constants": [
-                                      2
-                                    ],
-                                    "variables": [
-                                      "MaxStance"
-                                    ]
+                                    "displayLines": "(MaxStance / 2)"
                                   }
                                 }
                               ]
@@ -7504,28 +7149,13 @@ const compositeAbilityObject = {
                           },
                           "variables": {
                             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                              "operator": "Variables[0] (HeadDelay) || RETURN",
-                              "displayLines": "HeadDelay",
-                              "constants": [],
-                              "variables": [
-                                "HeadDelay"
-                              ]
+                              "displayLines": "HeadDelay"
                             },
                             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                              "displayLines": "CurrentSpeed",
-                              "constants": [],
-                              "variables": [
-                                "CurrentSpeed"
-                              ]
+                              "displayLines": "CurrentSpeed"
                             },
                             "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                              "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                              "displayLines": "{[PassiveSkill03[5]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[PassiveSkill03[5]]}"
-                              ]
+                              "displayLines": "{[PassiveSkill03[5]]}"
                             }
                           }
                         }
@@ -7547,14 +7177,7 @@ const compositeAbilityObject = {
                             "value1": "CurrentStance",
                             "compareType": "<",
                             "value2": {
-                              "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                              "displayLines": "(MaxStance / 2)",
-                              "constants": [
-                                2
-                              ],
-                              "variables": [
-                                "MaxStance"
-                              ]
+                              "displayLines": "(MaxStance / 2)"
                             }
                           },
                           "passed": [
@@ -7565,14 +7188,7 @@ const compositeAbilityObject = {
                                 "target": "{{Parameter Target}}"
                               },
                               "constantValue": {
-                                "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                "displayLines": "(MaxStance / 2)",
-                                "constants": [
-                                  2
-                                ],
-                                "variables": [
-                                  "MaxStance"
-                                ]
+                                "displayLines": "(MaxStance / 2)"
                               }
                             }
                           ]
@@ -7592,28 +7208,13 @@ const compositeAbilityObject = {
                           },
                           "variables": {
                             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                              "operator": "Variables[0] (HeadDelay) || RETURN",
-                              "displayLines": "HeadDelay",
-                              "constants": [],
-                              "variables": [
-                                "HeadDelay"
-                              ]
+                              "displayLines": "HeadDelay"
                             },
                             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                              "displayLines": "CurrentSpeed",
-                              "constants": [],
-                              "variables": [
-                                "CurrentSpeed"
-                              ]
+                              "displayLines": "CurrentSpeed"
                             },
                             "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                              "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                              "displayLines": "{[PassiveSkill03[5]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[PassiveSkill03[5]]}"
-                              ]
+                              "displayLines": "{[PassiveSkill03[5]]}"
                             }
                           }
                         }
@@ -7644,12 +7245,7 @@ const compositeAbilityObject = {
                         "value1": "MainDelay",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (HeadDelay) || RETURN",
-                          "displayLines": "HeadDelay",
-                          "constants": [],
-                          "variables": [
-                            "HeadDelay"
-                          ]
+                          "displayLines": "HeadDelay"
                         }
                       },
                       "passed": [
@@ -7718,12 +7314,7 @@ const compositeAbilityObject = {
                     "value1": "HeadDelay",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (TailDelay) || RETURN",
-                      "displayLines": "TailDelay",
-                      "constants": [],
-                      "variables": [
-                        "TailDelay"
-                      ]
+                      "displayLines": "TailDelay"
                     }
                   },
                   "passed": [
@@ -7734,12 +7325,7 @@ const compositeAbilityObject = {
                         "value1": "TailDelay",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (LimbDelay) || RETURN",
-                          "displayLines": "LimbDelay",
-                          "constants": [],
-                          "variables": [
-                            "LimbDelay"
-                          ]
+                          "displayLines": "LimbDelay"
                         }
                       },
                       "passed": [
@@ -7877,14 +7463,7 @@ const compositeAbilityObject = {
                                         "value1": "CurrentStance",
                                         "compareType": "<",
                                         "value2": {
-                                          "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                          "displayLines": "(MaxStance / 2)",
-                                          "constants": [
-                                            2
-                                          ],
-                                          "variables": [
-                                            "MaxStance"
-                                          ]
+                                          "displayLines": "(MaxStance / 2)"
                                         }
                                       },
                                       "passed": [
@@ -7895,14 +7474,7 @@ const compositeAbilityObject = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "constantValue": {
-                                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                            "displayLines": "(MaxStance / 2)",
-                                            "constants": [
-                                              2
-                                            ],
-                                            "variables": [
-                                              "MaxStance"
-                                            ]
+                                            "displayLines": "(MaxStance / 2)"
                                           }
                                         }
                                       ]
@@ -7924,28 +7496,13 @@ const compositeAbilityObject = {
                                   },
                                   "variables": {
                                     "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                      "operator": "Variables[0] (TailDelay) || RETURN",
-                                      "displayLines": "TailDelay",
-                                      "constants": [],
-                                      "variables": [
-                                        "TailDelay"
-                                      ]
+                                      "displayLines": "TailDelay"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                      "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                      "displayLines": "CurrentSpeed",
-                                      "constants": [],
-                                      "variables": [
-                                        "CurrentSpeed"
-                                      ]
+                                      "displayLines": "CurrentSpeed"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                      "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                      "displayLines": "{[PassiveSkill03[5]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[PassiveSkill03[5]]}"
-                                      ]
+                                      "displayLines": "{[PassiveSkill03[5]]}"
                                     }
                                   }
                                 }
@@ -7967,14 +7524,7 @@ const compositeAbilityObject = {
                                     "value1": "CurrentStance",
                                     "compareType": "<",
                                     "value2": {
-                                      "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                      "displayLines": "(MaxStance / 2)",
-                                      "constants": [
-                                        2
-                                      ],
-                                      "variables": [
-                                        "MaxStance"
-                                      ]
+                                      "displayLines": "(MaxStance / 2)"
                                     }
                                   },
                                   "passed": [
@@ -7985,14 +7535,7 @@ const compositeAbilityObject = {
                                         "target": "{{Parameter Target}}"
                                       },
                                       "constantValue": {
-                                        "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                        "displayLines": "(MaxStance / 2)",
-                                        "constants": [
-                                          2
-                                        ],
-                                        "variables": [
-                                          "MaxStance"
-                                        ]
+                                        "displayLines": "(MaxStance / 2)"
                                       }
                                     }
                                   ]
@@ -8012,28 +7555,13 @@ const compositeAbilityObject = {
                                   },
                                   "variables": {
                                     "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                      "operator": "Variables[0] (TailDelay) || RETURN",
-                                      "displayLines": "TailDelay",
-                                      "constants": [],
-                                      "variables": [
-                                        "TailDelay"
-                                      ]
+                                      "displayLines": "TailDelay"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                      "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                      "displayLines": "CurrentSpeed",
-                                      "constants": [],
-                                      "variables": [
-                                        "CurrentSpeed"
-                                      ]
+                                      "displayLines": "CurrentSpeed"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                      "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                      "displayLines": "{[PassiveSkill03[5]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[PassiveSkill03[5]]}"
-                                      ]
+                                      "displayLines": "{[PassiveSkill03[5]]}"
                                     }
                                   }
                                 }
@@ -8149,14 +7677,7 @@ const compositeAbilityObject = {
                                         "target": "{{Parameter Target}}"
                                       },
                                       "constantValue": {
-                                        "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                        "displayLines": "(MaxStance / 2)",
-                                        "constants": [
-                                          2
-                                        ],
-                                        "variables": [
-                                          "MaxStance"
-                                        ]
+                                        "displayLines": "(MaxStance / 2)"
                                       }
                                     }
                                   ],
@@ -8177,14 +7698,7 @@ const compositeAbilityObject = {
                                         "value1": "CurrentStance",
                                         "compareType": "<",
                                         "value2": {
-                                          "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                          "displayLines": "(MaxStance / 2)",
-                                          "constants": [
-                                            2
-                                          ],
-                                          "variables": [
-                                            "MaxStance"
-                                          ]
+                                          "displayLines": "(MaxStance / 2)"
                                         }
                                       },
                                       "passed": [
@@ -8195,14 +7709,7 @@ const compositeAbilityObject = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "constantValue": {
-                                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                            "displayLines": "(MaxStance / 2)",
-                                            "constants": [
-                                              2
-                                            ],
-                                            "variables": [
-                                              "MaxStance"
-                                            ]
+                                            "displayLines": "(MaxStance / 2)"
                                           }
                                         }
                                       ]
@@ -8224,28 +7731,13 @@ const compositeAbilityObject = {
                                   },
                                   "variables": {
                                     "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                      "operator": "Variables[0] (HeadDelay) || RETURN",
-                                      "displayLines": "HeadDelay",
-                                      "constants": [],
-                                      "variables": [
-                                        "HeadDelay"
-                                      ]
+                                      "displayLines": "HeadDelay"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                      "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                      "displayLines": "CurrentSpeed",
-                                      "constants": [],
-                                      "variables": [
-                                        "CurrentSpeed"
-                                      ]
+                                      "displayLines": "CurrentSpeed"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                      "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                      "displayLines": "{[PassiveSkill03[5]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[PassiveSkill03[5]]}"
-                                      ]
+                                      "displayLines": "{[PassiveSkill03[5]]}"
                                     }
                                   }
                                 }
@@ -8267,14 +7759,7 @@ const compositeAbilityObject = {
                                     "value1": "CurrentStance",
                                     "compareType": "<",
                                     "value2": {
-                                      "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                      "displayLines": "(MaxStance / 2)",
-                                      "constants": [
-                                        2
-                                      ],
-                                      "variables": [
-                                        "MaxStance"
-                                      ]
+                                      "displayLines": "(MaxStance / 2)"
                                     }
                                   },
                                   "passed": [
@@ -8285,14 +7770,7 @@ const compositeAbilityObject = {
                                         "target": "{{Parameter Target}}"
                                       },
                                       "constantValue": {
-                                        "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                        "displayLines": "(MaxStance / 2)",
-                                        "constants": [
-                                          2
-                                        ],
-                                        "variables": [
-                                          "MaxStance"
-                                        ]
+                                        "displayLines": "(MaxStance / 2)"
                                       }
                                     }
                                   ]
@@ -8312,28 +7790,13 @@ const compositeAbilityObject = {
                                   },
                                   "variables": {
                                     "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                      "operator": "Variables[0] (HeadDelay) || RETURN",
-                                      "displayLines": "HeadDelay",
-                                      "constants": [],
-                                      "variables": [
-                                        "HeadDelay"
-                                      ]
+                                      "displayLines": "HeadDelay"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                      "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                      "displayLines": "CurrentSpeed",
-                                      "constants": [],
-                                      "variables": [
-                                        "CurrentSpeed"
-                                      ]
+                                      "displayLines": "CurrentSpeed"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                      "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                      "displayLines": "{[PassiveSkill03[5]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[PassiveSkill03[5]]}"
-                                      ]
+                                      "displayLines": "{[PassiveSkill03[5]]}"
                                     }
                                   }
                                 }
@@ -8350,12 +7813,7 @@ const compositeAbilityObject = {
                             "value1": "HeadDelay",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (LimbDelay) || RETURN",
-                              "displayLines": "LimbDelay",
-                              "constants": [],
-                              "variables": [
-                                "LimbDelay"
-                              ]
+                              "displayLines": "LimbDelay"
                             }
                           },
                           "passed": [
@@ -8472,14 +7930,7 @@ const compositeAbilityObject = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "constantValue": {
-                                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                            "displayLines": "(MaxStance / 2)",
-                                            "constants": [
-                                              2
-                                            ],
-                                            "variables": [
-                                              "MaxStance"
-                                            ]
+                                            "displayLines": "(MaxStance / 2)"
                                           }
                                         }
                                       ],
@@ -8500,14 +7951,7 @@ const compositeAbilityObject = {
                                             "value1": "CurrentStance",
                                             "compareType": "<",
                                             "value2": {
-                                              "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                              "displayLines": "(MaxStance / 2)",
-                                              "constants": [
-                                                2
-                                              ],
-                                              "variables": [
-                                                "MaxStance"
-                                              ]
+                                              "displayLines": "(MaxStance / 2)"
                                             }
                                           },
                                           "passed": [
@@ -8518,14 +7962,7 @@ const compositeAbilityObject = {
                                                 "target": "{{Parameter Target}}"
                                               },
                                               "constantValue": {
-                                                "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                                "displayLines": "(MaxStance / 2)",
-                                                "constants": [
-                                                  2
-                                                ],
-                                                "variables": [
-                                                  "MaxStance"
-                                                ]
+                                                "displayLines": "(MaxStance / 2)"
                                               }
                                             }
                                           ]
@@ -8547,28 +7984,13 @@ const compositeAbilityObject = {
                                       },
                                       "variables": {
                                         "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                          "operator": "Variables[0] (LimbDelay) || RETURN",
-                                          "displayLines": "LimbDelay",
-                                          "constants": [],
-                                          "variables": [
-                                            "LimbDelay"
-                                          ]
+                                          "displayLines": "LimbDelay"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                          "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                          "displayLines": "CurrentSpeed",
-                                          "constants": [],
-                                          "variables": [
-                                            "CurrentSpeed"
-                                          ]
+                                          "displayLines": "CurrentSpeed"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                          "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                          "displayLines": "{[PassiveSkill03[5]]}",
-                                          "constants": [],
-                                          "variables": [
-                                            "{[PassiveSkill03[5]]}"
-                                          ]
+                                          "displayLines": "{[PassiveSkill03[5]]}"
                                         }
                                       }
                                     }
@@ -8590,14 +8012,7 @@ const compositeAbilityObject = {
                                         "value1": "CurrentStance",
                                         "compareType": "<",
                                         "value2": {
-                                          "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                          "displayLines": "(MaxStance / 2)",
-                                          "constants": [
-                                            2
-                                          ],
-                                          "variables": [
-                                            "MaxStance"
-                                          ]
+                                          "displayLines": "(MaxStance / 2)"
                                         }
                                       },
                                       "passed": [
@@ -8608,14 +8023,7 @@ const compositeAbilityObject = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "constantValue": {
-                                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                            "displayLines": "(MaxStance / 2)",
-                                            "constants": [
-                                              2
-                                            ],
-                                            "variables": [
-                                              "MaxStance"
-                                            ]
+                                            "displayLines": "(MaxStance / 2)"
                                           }
                                         }
                                       ]
@@ -8640,28 +8048,13 @@ const compositeAbilityObject = {
                                       },
                                       "variables": {
                                         "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                          "operator": "Variables[0] (LimbDelay) || RETURN",
-                                          "displayLines": "LimbDelay",
-                                          "constants": [],
-                                          "variables": [
-                                            "LimbDelay"
-                                          ]
+                                          "displayLines": "LimbDelay"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                          "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                          "displayLines": "CurrentSpeed",
-                                          "constants": [],
-                                          "variables": [
-                                            "CurrentSpeed"
-                                          ]
+                                          "displayLines": "CurrentSpeed"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                          "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                          "displayLines": "{[PassiveSkill03[5]]}",
-                                          "constants": [],
-                                          "variables": [
-                                            "{[PassiveSkill03[5]]}"
-                                          ]
+                                          "displayLines": "{[PassiveSkill03[5]]}"
                                         }
                                       }
                                     }
@@ -8777,14 +8170,7 @@ const compositeAbilityObject = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "constantValue": {
-                                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                            "displayLines": "(MaxStance / 2)",
-                                            "constants": [
-                                              2
-                                            ],
-                                            "variables": [
-                                              "MaxStance"
-                                            ]
+                                            "displayLines": "(MaxStance / 2)"
                                           }
                                         }
                                       ],
@@ -8805,14 +8191,7 @@ const compositeAbilityObject = {
                                             "value1": "CurrentStance",
                                             "compareType": "<",
                                             "value2": {
-                                              "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                              "displayLines": "(MaxStance / 2)",
-                                              "constants": [
-                                                2
-                                              ],
-                                              "variables": [
-                                                "MaxStance"
-                                              ]
+                                              "displayLines": "(MaxStance / 2)"
                                             }
                                           },
                                           "passed": [
@@ -8823,14 +8202,7 @@ const compositeAbilityObject = {
                                                 "target": "{{Parameter Target}}"
                                               },
                                               "constantValue": {
-                                                "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                                "displayLines": "(MaxStance / 2)",
-                                                "constants": [
-                                                  2
-                                                ],
-                                                "variables": [
-                                                  "MaxStance"
-                                                ]
+                                                "displayLines": "(MaxStance / 2)"
                                               }
                                             }
                                           ]
@@ -8852,28 +8224,13 @@ const compositeAbilityObject = {
                                       },
                                       "variables": {
                                         "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                          "operator": "Variables[0] (HeadDelay) || RETURN",
-                                          "displayLines": "HeadDelay",
-                                          "constants": [],
-                                          "variables": [
-                                            "HeadDelay"
-                                          ]
+                                          "displayLines": "HeadDelay"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                          "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                          "displayLines": "CurrentSpeed",
-                                          "constants": [],
-                                          "variables": [
-                                            "CurrentSpeed"
-                                          ]
+                                          "displayLines": "CurrentSpeed"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                          "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                          "displayLines": "{[PassiveSkill03[5]]}",
-                                          "constants": [],
-                                          "variables": [
-                                            "{[PassiveSkill03[5]]}"
-                                          ]
+                                          "displayLines": "{[PassiveSkill03[5]]}"
                                         }
                                       }
                                     }
@@ -8895,14 +8252,7 @@ const compositeAbilityObject = {
                                         "value1": "CurrentStance",
                                         "compareType": "<",
                                         "value2": {
-                                          "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                          "displayLines": "(MaxStance / 2)",
-                                          "constants": [
-                                            2
-                                          ],
-                                          "variables": [
-                                            "MaxStance"
-                                          ]
+                                          "displayLines": "(MaxStance / 2)"
                                         }
                                       },
                                       "passed": [
@@ -8913,14 +8263,7 @@ const compositeAbilityObject = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "constantValue": {
-                                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                            "displayLines": "(MaxStance / 2)",
-                                            "constants": [
-                                              2
-                                            ],
-                                            "variables": [
-                                              "MaxStance"
-                                            ]
+                                            "displayLines": "(MaxStance / 2)"
                                           }
                                         }
                                       ]
@@ -8940,28 +8283,13 @@ const compositeAbilityObject = {
                                       },
                                       "variables": {
                                         "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                          "operator": "Variables[0] (HeadDelay) || RETURN",
-                                          "displayLines": "HeadDelay",
-                                          "constants": [],
-                                          "variables": [
-                                            "HeadDelay"
-                                          ]
+                                          "displayLines": "HeadDelay"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                          "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                          "displayLines": "CurrentSpeed",
-                                          "constants": [],
-                                          "variables": [
-                                            "CurrentSpeed"
-                                          ]
+                                          "displayLines": "CurrentSpeed"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                          "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                          "displayLines": "{[PassiveSkill03[5]]}",
-                                          "constants": [],
-                                          "variables": [
-                                            "{[PassiveSkill03[5]]}"
-                                          ]
+                                          "displayLines": "{[PassiveSkill03[5]]}"
                                         }
                                       }
                                     }
@@ -9084,14 +8412,7 @@ const compositeAbilityObject = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "constantValue": {
-                                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                            "displayLines": "(MaxStance / 2)",
-                                            "constants": [
-                                              2
-                                            ],
-                                            "variables": [
-                                              "MaxStance"
-                                            ]
+                                            "displayLines": "(MaxStance / 2)"
                                           }
                                         }
                                       ],
@@ -9112,14 +8433,7 @@ const compositeAbilityObject = {
                                             "value1": "CurrentStance",
                                             "compareType": "<",
                                             "value2": {
-                                              "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                              "displayLines": "(MaxStance / 2)",
-                                              "constants": [
-                                                2
-                                              ],
-                                              "variables": [
-                                                "MaxStance"
-                                              ]
+                                              "displayLines": "(MaxStance / 2)"
                                             }
                                           },
                                           "passed": [
@@ -9130,14 +8444,7 @@ const compositeAbilityObject = {
                                                 "target": "{{Parameter Target}}"
                                               },
                                               "constantValue": {
-                                                "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                                "displayLines": "(MaxStance / 2)",
-                                                "constants": [
-                                                  2
-                                                ],
-                                                "variables": [
-                                                  "MaxStance"
-                                                ]
+                                                "displayLines": "(MaxStance / 2)"
                                               }
                                             }
                                           ]
@@ -9159,28 +8466,13 @@ const compositeAbilityObject = {
                                       },
                                       "variables": {
                                         "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                          "operator": "Variables[0] (HeadDelay) || RETURN",
-                                          "displayLines": "HeadDelay",
-                                          "constants": [],
-                                          "variables": [
-                                            "HeadDelay"
-                                          ]
+                                          "displayLines": "HeadDelay"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                          "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                          "displayLines": "CurrentSpeed",
-                                          "constants": [],
-                                          "variables": [
-                                            "CurrentSpeed"
-                                          ]
+                                          "displayLines": "CurrentSpeed"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                          "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                          "displayLines": "{[PassiveSkill03[5]]}",
-                                          "constants": [],
-                                          "variables": [
-                                            "{[PassiveSkill03[5]]}"
-                                          ]
+                                          "displayLines": "{[PassiveSkill03[5]]}"
                                         }
                                       }
                                     }
@@ -9202,14 +8494,7 @@ const compositeAbilityObject = {
                                         "value1": "CurrentStance",
                                         "compareType": "<",
                                         "value2": {
-                                          "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                          "displayLines": "(MaxStance / 2)",
-                                          "constants": [
-                                            2
-                                          ],
-                                          "variables": [
-                                            "MaxStance"
-                                          ]
+                                          "displayLines": "(MaxStance / 2)"
                                         }
                                       },
                                       "passed": [
@@ -9220,14 +8505,7 @@ const compositeAbilityObject = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "constantValue": {
-                                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                            "displayLines": "(MaxStance / 2)",
-                                            "constants": [
-                                              2
-                                            ],
-                                            "variables": [
-                                              "MaxStance"
-                                            ]
+                                            "displayLines": "(MaxStance / 2)"
                                           }
                                         }
                                       ]
@@ -9247,28 +8525,13 @@ const compositeAbilityObject = {
                                       },
                                       "variables": {
                                         "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                          "operator": "Variables[0] (HeadDelay) || RETURN",
-                                          "displayLines": "HeadDelay",
-                                          "constants": [],
-                                          "variables": [
-                                            "HeadDelay"
-                                          ]
+                                          "displayLines": "HeadDelay"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                          "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                          "displayLines": "CurrentSpeed",
-                                          "constants": [],
-                                          "variables": [
-                                            "CurrentSpeed"
-                                          ]
+                                          "displayLines": "CurrentSpeed"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                          "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                          "displayLines": "{[PassiveSkill03[5]]}",
-                                          "constants": [],
-                                          "variables": [
-                                            "{[PassiveSkill03[5]]}"
-                                          ]
+                                          "displayLines": "{[PassiveSkill03[5]]}"
                                         }
                                       }
                                     }
@@ -9384,14 +8647,7 @@ const compositeAbilityObject = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "constantValue": {
-                                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                            "displayLines": "(MaxStance / 2)",
-                                            "constants": [
-                                              2
-                                            ],
-                                            "variables": [
-                                              "MaxStance"
-                                            ]
+                                            "displayLines": "(MaxStance / 2)"
                                           }
                                         }
                                       ],
@@ -9412,14 +8668,7 @@ const compositeAbilityObject = {
                                             "value1": "CurrentStance",
                                             "compareType": "<",
                                             "value2": {
-                                              "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                              "displayLines": "(MaxStance / 2)",
-                                              "constants": [
-                                                2
-                                              ],
-                                              "variables": [
-                                                "MaxStance"
-                                              ]
+                                              "displayLines": "(MaxStance / 2)"
                                             }
                                           },
                                           "passed": [
@@ -9430,14 +8679,7 @@ const compositeAbilityObject = {
                                                 "target": "{{Parameter Target}}"
                                               },
                                               "constantValue": {
-                                                "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                                "displayLines": "(MaxStance / 2)",
-                                                "constants": [
-                                                  2
-                                                ],
-                                                "variables": [
-                                                  "MaxStance"
-                                                ]
+                                                "displayLines": "(MaxStance / 2)"
                                               }
                                             }
                                           ]
@@ -9459,28 +8701,13 @@ const compositeAbilityObject = {
                                       },
                                       "variables": {
                                         "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                          "operator": "Variables[0] (LimbDelay) || RETURN",
-                                          "displayLines": "LimbDelay",
-                                          "constants": [],
-                                          "variables": [
-                                            "LimbDelay"
-                                          ]
+                                          "displayLines": "LimbDelay"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                          "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                          "displayLines": "CurrentSpeed",
-                                          "constants": [],
-                                          "variables": [
-                                            "CurrentSpeed"
-                                          ]
+                                          "displayLines": "CurrentSpeed"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                          "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                          "displayLines": "{[PassiveSkill03[5]]}",
-                                          "constants": [],
-                                          "variables": [
-                                            "{[PassiveSkill03[5]]}"
-                                          ]
+                                          "displayLines": "{[PassiveSkill03[5]]}"
                                         }
                                       }
                                     }
@@ -9502,14 +8729,7 @@ const compositeAbilityObject = {
                                         "value1": "CurrentStance",
                                         "compareType": "<",
                                         "value2": {
-                                          "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                          "displayLines": "(MaxStance / 2)",
-                                          "constants": [
-                                            2
-                                          ],
-                                          "variables": [
-                                            "MaxStance"
-                                          ]
+                                          "displayLines": "(MaxStance / 2)"
                                         }
                                       },
                                       "passed": [
@@ -9520,14 +8740,7 @@ const compositeAbilityObject = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "constantValue": {
-                                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                            "displayLines": "(MaxStance / 2)",
-                                            "constants": [
-                                              2
-                                            ],
-                                            "variables": [
-                                              "MaxStance"
-                                            ]
+                                            "displayLines": "(MaxStance / 2)"
                                           }
                                         }
                                       ]
@@ -9547,28 +8760,13 @@ const compositeAbilityObject = {
                                       },
                                       "variables": {
                                         "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                          "operator": "Variables[0] (LimbDelay) || RETURN",
-                                          "displayLines": "LimbDelay",
-                                          "constants": [],
-                                          "variables": [
-                                            "LimbDelay"
-                                          ]
+                                          "displayLines": "LimbDelay"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                          "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                          "displayLines": "CurrentSpeed",
-                                          "constants": [],
-                                          "variables": [
-                                            "CurrentSpeed"
-                                          ]
+                                          "displayLines": "CurrentSpeed"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                          "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                          "displayLines": "{[PassiveSkill03[5]]}",
-                                          "constants": [],
-                                          "variables": [
-                                            "{[PassiveSkill03[5]]}"
-                                          ]
+                                          "displayLines": "{[PassiveSkill03[5]]}"
                                         }
                                       }
                                     }
@@ -9589,12 +8787,7 @@ const compositeAbilityObject = {
                         "value1": "HeadDelay",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (LimbDelay) || RETURN",
-                          "displayLines": "LimbDelay",
-                          "constants": [],
-                          "variables": [
-                            "LimbDelay"
-                          ]
+                          "displayLines": "LimbDelay"
                         }
                       },
                       "passed": [
@@ -9711,14 +8904,7 @@ const compositeAbilityObject = {
                                         "target": "{{Parameter Target}}"
                                       },
                                       "constantValue": {
-                                        "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                        "displayLines": "(MaxStance / 2)",
-                                        "constants": [
-                                          2
-                                        ],
-                                        "variables": [
-                                          "MaxStance"
-                                        ]
+                                        "displayLines": "(MaxStance / 2)"
                                       }
                                     }
                                   ],
@@ -9739,14 +8925,7 @@ const compositeAbilityObject = {
                                         "value1": "CurrentStance",
                                         "compareType": "<",
                                         "value2": {
-                                          "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                          "displayLines": "(MaxStance / 2)",
-                                          "constants": [
-                                            2
-                                          ],
-                                          "variables": [
-                                            "MaxStance"
-                                          ]
+                                          "displayLines": "(MaxStance / 2)"
                                         }
                                       },
                                       "passed": [
@@ -9757,14 +8936,7 @@ const compositeAbilityObject = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "constantValue": {
-                                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                            "displayLines": "(MaxStance / 2)",
-                                            "constants": [
-                                              2
-                                            ],
-                                            "variables": [
-                                              "MaxStance"
-                                            ]
+                                            "displayLines": "(MaxStance / 2)"
                                           }
                                         }
                                       ]
@@ -9786,28 +8958,13 @@ const compositeAbilityObject = {
                                   },
                                   "variables": {
                                     "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                      "operator": "Variables[0] (HeadDelay) || RETURN",
-                                      "displayLines": "HeadDelay",
-                                      "constants": [],
-                                      "variables": [
-                                        "HeadDelay"
-                                      ]
+                                      "displayLines": "HeadDelay"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                      "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                      "displayLines": "CurrentSpeed",
-                                      "constants": [],
-                                      "variables": [
-                                        "CurrentSpeed"
-                                      ]
+                                      "displayLines": "CurrentSpeed"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                      "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                      "displayLines": "{[PassiveSkill03[5]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[PassiveSkill03[5]]}"
-                                      ]
+                                      "displayLines": "{[PassiveSkill03[5]]}"
                                     }
                                   }
                                 }
@@ -9829,14 +8986,7 @@ const compositeAbilityObject = {
                                     "value1": "CurrentStance",
                                     "compareType": "<",
                                     "value2": {
-                                      "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                      "displayLines": "(MaxStance / 2)",
-                                      "constants": [
-                                        2
-                                      ],
-                                      "variables": [
-                                        "MaxStance"
-                                      ]
+                                      "displayLines": "(MaxStance / 2)"
                                     }
                                   },
                                   "passed": [
@@ -9847,14 +8997,7 @@ const compositeAbilityObject = {
                                         "target": "{{Parameter Target}}"
                                       },
                                       "constantValue": {
-                                        "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                        "displayLines": "(MaxStance / 2)",
-                                        "constants": [
-                                          2
-                                        ],
-                                        "variables": [
-                                          "MaxStance"
-                                        ]
+                                        "displayLines": "(MaxStance / 2)"
                                       }
                                     }
                                   ]
@@ -9874,28 +9017,13 @@ const compositeAbilityObject = {
                                   },
                                   "variables": {
                                     "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                      "operator": "Variables[0] (HeadDelay) || RETURN",
-                                      "displayLines": "HeadDelay",
-                                      "constants": [],
-                                      "variables": [
-                                        "HeadDelay"
-                                      ]
+                                      "displayLines": "HeadDelay"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                      "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                      "displayLines": "CurrentSpeed",
-                                      "constants": [],
-                                      "variables": [
-                                        "CurrentSpeed"
-                                      ]
+                                      "displayLines": "CurrentSpeed"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                      "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                      "displayLines": "{[PassiveSkill03[5]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[PassiveSkill03[5]]}"
-                                      ]
+                                      "displayLines": "{[PassiveSkill03[5]]}"
                                     }
                                   }
                                 }
@@ -10011,14 +9139,7 @@ const compositeAbilityObject = {
                                         "target": "{{Parameter Target}}"
                                       },
                                       "constantValue": {
-                                        "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                        "displayLines": "(MaxStance / 2)",
-                                        "constants": [
-                                          2
-                                        ],
-                                        "variables": [
-                                          "MaxStance"
-                                        ]
+                                        "displayLines": "(MaxStance / 2)"
                                       }
                                     }
                                   ],
@@ -10039,14 +9160,7 @@ const compositeAbilityObject = {
                                         "value1": "CurrentStance",
                                         "compareType": "<",
                                         "value2": {
-                                          "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                          "displayLines": "(MaxStance / 2)",
-                                          "constants": [
-                                            2
-                                          ],
-                                          "variables": [
-                                            "MaxStance"
-                                          ]
+                                          "displayLines": "(MaxStance / 2)"
                                         }
                                       },
                                       "passed": [
@@ -10057,14 +9171,7 @@ const compositeAbilityObject = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "constantValue": {
-                                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                            "displayLines": "(MaxStance / 2)",
-                                            "constants": [
-                                              2
-                                            ],
-                                            "variables": [
-                                              "MaxStance"
-                                            ]
+                                            "displayLines": "(MaxStance / 2)"
                                           }
                                         }
                                       ]
@@ -10086,28 +9193,13 @@ const compositeAbilityObject = {
                                   },
                                   "variables": {
                                     "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                      "operator": "Variables[0] (TailDelay) || RETURN",
-                                      "displayLines": "TailDelay",
-                                      "constants": [],
-                                      "variables": [
-                                        "TailDelay"
-                                      ]
+                                      "displayLines": "TailDelay"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                      "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                      "displayLines": "CurrentSpeed",
-                                      "constants": [],
-                                      "variables": [
-                                        "CurrentSpeed"
-                                      ]
+                                      "displayLines": "CurrentSpeed"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                      "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                      "displayLines": "{[PassiveSkill03[5]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[PassiveSkill03[5]]}"
-                                      ]
+                                      "displayLines": "{[PassiveSkill03[5]]}"
                                     }
                                   }
                                 }
@@ -10129,14 +9221,7 @@ const compositeAbilityObject = {
                                     "value1": "CurrentStance",
                                     "compareType": "<",
                                     "value2": {
-                                      "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                      "displayLines": "(MaxStance / 2)",
-                                      "constants": [
-                                        2
-                                      ],
-                                      "variables": [
-                                        "MaxStance"
-                                      ]
+                                      "displayLines": "(MaxStance / 2)"
                                     }
                                   },
                                   "passed": [
@@ -10147,14 +9232,7 @@ const compositeAbilityObject = {
                                         "target": "{{Parameter Target}}"
                                       },
                                       "constantValue": {
-                                        "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                        "displayLines": "(MaxStance / 2)",
-                                        "constants": [
-                                          2
-                                        ],
-                                        "variables": [
-                                          "MaxStance"
-                                        ]
+                                        "displayLines": "(MaxStance / 2)"
                                       }
                                     }
                                   ]
@@ -10174,28 +9252,13 @@ const compositeAbilityObject = {
                                   },
                                   "variables": {
                                     "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                      "operator": "Variables[0] (TailDelay) || RETURN",
-                                      "displayLines": "TailDelay",
-                                      "constants": [],
-                                      "variables": [
-                                        "TailDelay"
-                                      ]
+                                      "displayLines": "TailDelay"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                      "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                      "displayLines": "CurrentSpeed",
-                                      "constants": [],
-                                      "variables": [
-                                        "CurrentSpeed"
-                                      ]
+                                      "displayLines": "CurrentSpeed"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                      "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                      "displayLines": "{[PassiveSkill03[5]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[PassiveSkill03[5]]}"
-                                      ]
+                                      "displayLines": "{[PassiveSkill03[5]]}"
                                     }
                                   }
                                 }
@@ -10212,12 +9275,7 @@ const compositeAbilityObject = {
                             "value1": "TailDelay",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (LimbDelay) || RETURN",
-                              "displayLines": "LimbDelay",
-                              "constants": [],
-                              "variables": [
-                                "LimbDelay"
-                              ]
+                              "displayLines": "LimbDelay"
                             }
                           },
                           "passed": [
@@ -10334,14 +9392,7 @@ const compositeAbilityObject = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "constantValue": {
-                                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                            "displayLines": "(MaxStance / 2)",
-                                            "constants": [
-                                              2
-                                            ],
-                                            "variables": [
-                                              "MaxStance"
-                                            ]
+                                            "displayLines": "(MaxStance / 2)"
                                           }
                                         }
                                       ],
@@ -10362,14 +9413,7 @@ const compositeAbilityObject = {
                                             "value1": "CurrentStance",
                                             "compareType": "<",
                                             "value2": {
-                                              "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                              "displayLines": "(MaxStance / 2)",
-                                              "constants": [
-                                                2
-                                              ],
-                                              "variables": [
-                                                "MaxStance"
-                                              ]
+                                              "displayLines": "(MaxStance / 2)"
                                             }
                                           },
                                           "passed": [
@@ -10380,14 +9424,7 @@ const compositeAbilityObject = {
                                                 "target": "{{Parameter Target}}"
                                               },
                                               "constantValue": {
-                                                "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                                "displayLines": "(MaxStance / 2)",
-                                                "constants": [
-                                                  2
-                                                ],
-                                                "variables": [
-                                                  "MaxStance"
-                                                ]
+                                                "displayLines": "(MaxStance / 2)"
                                               }
                                             }
                                           ]
@@ -10409,28 +9446,13 @@ const compositeAbilityObject = {
                                       },
                                       "variables": {
                                         "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                          "operator": "Variables[0] (LimbDelay) || RETURN",
-                                          "displayLines": "LimbDelay",
-                                          "constants": [],
-                                          "variables": [
-                                            "LimbDelay"
-                                          ]
+                                          "displayLines": "LimbDelay"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                          "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                          "displayLines": "CurrentSpeed",
-                                          "constants": [],
-                                          "variables": [
-                                            "CurrentSpeed"
-                                          ]
+                                          "displayLines": "CurrentSpeed"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                          "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                          "displayLines": "{[PassiveSkill03[5]]}",
-                                          "constants": [],
-                                          "variables": [
-                                            "{[PassiveSkill03[5]]}"
-                                          ]
+                                          "displayLines": "{[PassiveSkill03[5]]}"
                                         }
                                       }
                                     }
@@ -10452,14 +9474,7 @@ const compositeAbilityObject = {
                                         "value1": "CurrentStance",
                                         "compareType": "<",
                                         "value2": {
-                                          "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                          "displayLines": "(MaxStance / 2)",
-                                          "constants": [
-                                            2
-                                          ],
-                                          "variables": [
-                                            "MaxStance"
-                                          ]
+                                          "displayLines": "(MaxStance / 2)"
                                         }
                                       },
                                       "passed": [
@@ -10470,14 +9485,7 @@ const compositeAbilityObject = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "constantValue": {
-                                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                            "displayLines": "(MaxStance / 2)",
-                                            "constants": [
-                                              2
-                                            ],
-                                            "variables": [
-                                              "MaxStance"
-                                            ]
+                                            "displayLines": "(MaxStance / 2)"
                                           }
                                         }
                                       ]
@@ -10497,28 +9505,13 @@ const compositeAbilityObject = {
                                       },
                                       "variables": {
                                         "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                          "operator": "Variables[0] (LimbDelay) || RETURN",
-                                          "displayLines": "LimbDelay",
-                                          "constants": [],
-                                          "variables": [
-                                            "LimbDelay"
-                                          ]
+                                          "displayLines": "LimbDelay"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                          "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                          "displayLines": "CurrentSpeed",
-                                          "constants": [],
-                                          "variables": [
-                                            "CurrentSpeed"
-                                          ]
+                                          "displayLines": "CurrentSpeed"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                          "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                          "displayLines": "{[PassiveSkill03[5]]}",
-                                          "constants": [],
-                                          "variables": [
-                                            "{[PassiveSkill03[5]]}"
-                                          ]
+                                          "displayLines": "{[PassiveSkill03[5]]}"
                                         }
                                       }
                                     }
@@ -10634,14 +9627,7 @@ const compositeAbilityObject = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "constantValue": {
-                                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                            "displayLines": "(MaxStance / 2)",
-                                            "constants": [
-                                              2
-                                            ],
-                                            "variables": [
-                                              "MaxStance"
-                                            ]
+                                            "displayLines": "(MaxStance / 2)"
                                           }
                                         }
                                       ],
@@ -10662,14 +9648,7 @@ const compositeAbilityObject = {
                                             "value1": "CurrentStance",
                                             "compareType": "<",
                                             "value2": {
-                                              "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                              "displayLines": "(MaxStance / 2)",
-                                              "constants": [
-                                                2
-                                              ],
-                                              "variables": [
-                                                "MaxStance"
-                                              ]
+                                              "displayLines": "(MaxStance / 2)"
                                             }
                                           },
                                           "passed": [
@@ -10680,14 +9659,7 @@ const compositeAbilityObject = {
                                                 "target": "{{Parameter Target}}"
                                               },
                                               "constantValue": {
-                                                "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                                "displayLines": "(MaxStance / 2)",
-                                                "constants": [
-                                                  2
-                                                ],
-                                                "variables": [
-                                                  "MaxStance"
-                                                ]
+                                                "displayLines": "(MaxStance / 2)"
                                               }
                                             }
                                           ]
@@ -10709,28 +9681,13 @@ const compositeAbilityObject = {
                                       },
                                       "variables": {
                                         "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                          "operator": "Variables[0] (TailDelay) || RETURN",
-                                          "displayLines": "TailDelay",
-                                          "constants": [],
-                                          "variables": [
-                                            "TailDelay"
-                                          ]
+                                          "displayLines": "TailDelay"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                          "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                          "displayLines": "CurrentSpeed",
-                                          "constants": [],
-                                          "variables": [
-                                            "CurrentSpeed"
-                                          ]
+                                          "displayLines": "CurrentSpeed"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                          "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                          "displayLines": "{[PassiveSkill03[5]]}",
-                                          "constants": [],
-                                          "variables": [
-                                            "{[PassiveSkill03[5]]}"
-                                          ]
+                                          "displayLines": "{[PassiveSkill03[5]]}"
                                         }
                                       }
                                     }
@@ -10752,14 +9709,7 @@ const compositeAbilityObject = {
                                         "value1": "CurrentStance",
                                         "compareType": "<",
                                         "value2": {
-                                          "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                          "displayLines": "(MaxStance / 2)",
-                                          "constants": [
-                                            2
-                                          ],
-                                          "variables": [
-                                            "MaxStance"
-                                          ]
+                                          "displayLines": "(MaxStance / 2)"
                                         }
                                       },
                                       "passed": [
@@ -10770,14 +9720,7 @@ const compositeAbilityObject = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "constantValue": {
-                                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                            "displayLines": "(MaxStance / 2)",
-                                            "constants": [
-                                              2
-                                            ],
-                                            "variables": [
-                                              "MaxStance"
-                                            ]
+                                            "displayLines": "(MaxStance / 2)"
                                           }
                                         }
                                       ]
@@ -10797,28 +9740,13 @@ const compositeAbilityObject = {
                                       },
                                       "variables": {
                                         "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                          "operator": "Variables[0] (TailDelay) || RETURN",
-                                          "displayLines": "TailDelay",
-                                          "constants": [],
-                                          "variables": [
-                                            "TailDelay"
-                                          ]
+                                          "displayLines": "TailDelay"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                          "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                          "displayLines": "CurrentSpeed",
-                                          "constants": [],
-                                          "variables": [
-                                            "CurrentSpeed"
-                                          ]
+                                          "displayLines": "CurrentSpeed"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                          "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                          "displayLines": "{[PassiveSkill03[5]]}",
-                                          "constants": [],
-                                          "variables": [
-                                            "{[PassiveSkill03[5]]}"
-                                          ]
+                                          "displayLines": "{[PassiveSkill03[5]]}"
                                         }
                                       }
                                     }
@@ -10941,14 +9869,7 @@ const compositeAbilityObject = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "constantValue": {
-                                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                            "displayLines": "(MaxStance / 2)",
-                                            "constants": [
-                                              2
-                                            ],
-                                            "variables": [
-                                              "MaxStance"
-                                            ]
+                                            "displayLines": "(MaxStance / 2)"
                                           }
                                         }
                                       ],
@@ -10969,14 +9890,7 @@ const compositeAbilityObject = {
                                             "value1": "CurrentStance",
                                             "compareType": "<",
                                             "value2": {
-                                              "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                              "displayLines": "(MaxStance / 2)",
-                                              "constants": [
-                                                2
-                                              ],
-                                              "variables": [
-                                                "MaxStance"
-                                              ]
+                                              "displayLines": "(MaxStance / 2)"
                                             }
                                           },
                                           "passed": [
@@ -10987,14 +9901,7 @@ const compositeAbilityObject = {
                                                 "target": "{{Parameter Target}}"
                                               },
                                               "constantValue": {
-                                                "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                                "displayLines": "(MaxStance / 2)",
-                                                "constants": [
-                                                  2
-                                                ],
-                                                "variables": [
-                                                  "MaxStance"
-                                                ]
+                                                "displayLines": "(MaxStance / 2)"
                                               }
                                             }
                                           ]
@@ -11016,28 +9923,13 @@ const compositeAbilityObject = {
                                       },
                                       "variables": {
                                         "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                          "operator": "Variables[0] (TailDelay) || RETURN",
-                                          "displayLines": "TailDelay",
-                                          "constants": [],
-                                          "variables": [
-                                            "TailDelay"
-                                          ]
+                                          "displayLines": "TailDelay"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                          "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                          "displayLines": "CurrentSpeed",
-                                          "constants": [],
-                                          "variables": [
-                                            "CurrentSpeed"
-                                          ]
+                                          "displayLines": "CurrentSpeed"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                          "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                          "displayLines": "{[PassiveSkill03[5]]}",
-                                          "constants": [],
-                                          "variables": [
-                                            "{[PassiveSkill03[5]]}"
-                                          ]
+                                          "displayLines": "{[PassiveSkill03[5]]}"
                                         }
                                       }
                                     }
@@ -11059,14 +9951,7 @@ const compositeAbilityObject = {
                                         "value1": "CurrentStance",
                                         "compareType": "<",
                                         "value2": {
-                                          "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                          "displayLines": "(MaxStance / 2)",
-                                          "constants": [
-                                            2
-                                          ],
-                                          "variables": [
-                                            "MaxStance"
-                                          ]
+                                          "displayLines": "(MaxStance / 2)"
                                         }
                                       },
                                       "passed": [
@@ -11077,14 +9962,7 @@ const compositeAbilityObject = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "constantValue": {
-                                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                            "displayLines": "(MaxStance / 2)",
-                                            "constants": [
-                                              2
-                                            ],
-                                            "variables": [
-                                              "MaxStance"
-                                            ]
+                                            "displayLines": "(MaxStance / 2)"
                                           }
                                         }
                                       ]
@@ -11104,28 +9982,13 @@ const compositeAbilityObject = {
                                       },
                                       "variables": {
                                         "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                          "operator": "Variables[0] (TailDelay) || RETURN",
-                                          "displayLines": "TailDelay",
-                                          "constants": [],
-                                          "variables": [
-                                            "TailDelay"
-                                          ]
+                                          "displayLines": "TailDelay"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                          "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                          "displayLines": "CurrentSpeed",
-                                          "constants": [],
-                                          "variables": [
-                                            "CurrentSpeed"
-                                          ]
+                                          "displayLines": "CurrentSpeed"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                          "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                          "displayLines": "{[PassiveSkill03[5]]}",
-                                          "constants": [],
-                                          "variables": [
-                                            "{[PassiveSkill03[5]]}"
-                                          ]
+                                          "displayLines": "{[PassiveSkill03[5]]}"
                                         }
                                       }
                                     }
@@ -11241,14 +10104,7 @@ const compositeAbilityObject = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "constantValue": {
-                                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                            "displayLines": "(MaxStance / 2)",
-                                            "constants": [
-                                              2
-                                            ],
-                                            "variables": [
-                                              "MaxStance"
-                                            ]
+                                            "displayLines": "(MaxStance / 2)"
                                           }
                                         }
                                       ],
@@ -11269,14 +10125,7 @@ const compositeAbilityObject = {
                                             "value1": "CurrentStance",
                                             "compareType": "<",
                                             "value2": {
-                                              "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                              "displayLines": "(MaxStance / 2)",
-                                              "constants": [
-                                                2
-                                              ],
-                                              "variables": [
-                                                "MaxStance"
-                                              ]
+                                              "displayLines": "(MaxStance / 2)"
                                             }
                                           },
                                           "passed": [
@@ -11287,14 +10136,7 @@ const compositeAbilityObject = {
                                                 "target": "{{Parameter Target}}"
                                               },
                                               "constantValue": {
-                                                "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                                "displayLines": "(MaxStance / 2)",
-                                                "constants": [
-                                                  2
-                                                ],
-                                                "variables": [
-                                                  "MaxStance"
-                                                ]
+                                                "displayLines": "(MaxStance / 2)"
                                               }
                                             }
                                           ]
@@ -11316,28 +10158,13 @@ const compositeAbilityObject = {
                                       },
                                       "variables": {
                                         "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                          "operator": "Variables[0] (LimbDelay) || RETURN",
-                                          "displayLines": "LimbDelay",
-                                          "constants": [],
-                                          "variables": [
-                                            "LimbDelay"
-                                          ]
+                                          "displayLines": "LimbDelay"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                          "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                          "displayLines": "CurrentSpeed",
-                                          "constants": [],
-                                          "variables": [
-                                            "CurrentSpeed"
-                                          ]
+                                          "displayLines": "CurrentSpeed"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                          "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                          "displayLines": "{[PassiveSkill03[5]]}",
-                                          "constants": [],
-                                          "variables": [
-                                            "{[PassiveSkill03[5]]}"
-                                          ]
+                                          "displayLines": "{[PassiveSkill03[5]]}"
                                         }
                                       }
                                     }
@@ -11359,14 +10186,7 @@ const compositeAbilityObject = {
                                         "value1": "CurrentStance",
                                         "compareType": "<",
                                         "value2": {
-                                          "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                          "displayLines": "(MaxStance / 2)",
-                                          "constants": [
-                                            2
-                                          ],
-                                          "variables": [
-                                            "MaxStance"
-                                          ]
+                                          "displayLines": "(MaxStance / 2)"
                                         }
                                       },
                                       "passed": [
@@ -11377,14 +10197,7 @@ const compositeAbilityObject = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "constantValue": {
-                                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                            "displayLines": "(MaxStance / 2)",
-                                            "constants": [
-                                              2
-                                            ],
-                                            "variables": [
-                                              "MaxStance"
-                                            ]
+                                            "displayLines": "(MaxStance / 2)"
                                           }
                                         }
                                       ]
@@ -11404,28 +10217,13 @@ const compositeAbilityObject = {
                                       },
                                       "variables": {
                                         "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                          "operator": "Variables[0] (LimbDelay) || RETURN",
-                                          "displayLines": "LimbDelay",
-                                          "constants": [],
-                                          "variables": [
-                                            "LimbDelay"
-                                          ]
+                                          "displayLines": "LimbDelay"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                          "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                          "displayLines": "CurrentSpeed",
-                                          "constants": [],
-                                          "variables": [
-                                            "CurrentSpeed"
-                                          ]
+                                          "displayLines": "CurrentSpeed"
                                         },
                                         "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                          "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                          "displayLines": "{[PassiveSkill03[5]]}",
-                                          "constants": [],
-                                          "variables": [
-                                            "{[PassiveSkill03[5]]}"
-                                          ]
+                                          "displayLines": "{[PassiveSkill03[5]]}"
                                         }
                                       }
                                     }
@@ -11568,12 +10366,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -11590,29 +10383,14 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1887773470\">Standard_FatigueRatio</a>[<span class=\"descriptionNumberColor\">Weaken</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-            "displayLines": "{[Skill02[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[3]]}"
-            ]
+            "displayLines": "{[Skill02[3]]}"
           },
           "baseChance": {
-            "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-            "displayLines": "{[Skill02[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[2]]}"
-            ]
+            "displayLines": "{[Skill02[2]]}"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-              "displayLines": "{[Skill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[1]]}"
-              ]
+              "displayLines": "{[Skill02[1]]}"
             }
           }
         },
@@ -11801,12 +10579,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "HitSplit": 0.4,
             "Toughness": null,
@@ -11825,12 +10598,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "HitSplit": 0.6,
             "Toughness": null,
@@ -12034,12 +10802,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "HitSplit": 0.4,
             "Toughness": null,
@@ -12058,12 +10821,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "HitSplit": 0.6,
             "Toughness": null,

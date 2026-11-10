@@ -36,14 +36,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (SummonMonsterEatCount) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(SummonMonsterEatCount + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "SummonMonsterEatCount"
-            ]
+            "displayLines": "(SummonMonsterEatCount + 1)"
           },
           "variableName": "SummonMonsterEatCount"
         }
@@ -59,12 +52,7 @@ const configAbility = {
       "duration": 1,
       "valuePerStack": {
         "MDF_AttackAddedRatio": {
-          "operator": "Variables[0] ({[Skill10[0]]}) || RETURN",
-          "displayLines": "{[Skill10[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill10[0]]}"
-          ]
+          "displayLines": "{[Skill10[0]]}"
         }
       }
     },
@@ -77,12 +65,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-800128779\">Monster_W1_Mecha03_01_AOECount</a>[<span class=\"descriptionNumberColor\">Bitterly Cold</span>]",
       "duration": 1,
       "addStacksPerTrigger": {
-        "operator": "Variables[0] (SummonMonsterEatCount) || RETURN",
-        "displayLines": "SummonMonsterEatCount",
-        "constants": [],
-        "variables": [
-          "SummonMonsterEatCount"
-        ]
+        "displayLines": "SummonMonsterEatCount"
       }
     },
     "Trigger: Ability End"

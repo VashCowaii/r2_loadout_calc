@@ -33,12 +33,7 @@ const configAbility = {
                 "value1": "MDF_AttackAddedRatio",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (0.25) || RETURN",
-                  "displayLines": "0.25",
-                  "constants": [],
-                  "variables": [
-                    0.25
-                  ]
+                  "displayLines": "0.25"
                 }
               },
               "passed": [
@@ -50,12 +45,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.25) || RETURN",
-                    "displayLines": "0.25",
-                    "constants": [],
-                    "variables": [
-                      0.25
-                    ]
+                    "displayLines": "0.25"
                   }
                 }
               ],
@@ -68,12 +58,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
-                    "displayLines": "MDF_AttackAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackAddedRatio"
-                    ]
+                    "displayLines": "MDF_AttackAddedRatio"
                   }
                 }
               ]
@@ -103,12 +88,7 @@ const configAbility = {
                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRate</span>&nbsp;",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_StatusProbability) || RETURN",
-                  "displayLines": "MDF_StatusProbability",
-                  "constants": [],
-                  "variables": [
-                    "MDF_StatusProbability"
-                  ]
+                  "displayLines": "MDF_StatusProbability"
                 }
               },
               "failed": [
@@ -130,13 +110,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-43633495\">Relic_303_Sub</a>",
                   "valuePerStack": {
                     "MDF_AttackAddedRatio": {
-                      "operator": "Variables[0] (MDF_StatusProbability) || Variables[1] (0.25) || MUL || RETURN",
-                      "displayLines": "(MDF_StatusProbability * 0.25)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_StatusProbability",
-                        0.25
-                      ]
+                      "displayLines": "(MDF_StatusProbability * 0.25)"
                     }
                   }
                 }
@@ -158,12 +132,7 @@ const configAbility = {
                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRate</span>&nbsp;",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_StatusProbability) || RETURN",
-                  "displayLines": "MDF_StatusProbability",
-                  "constants": [],
-                  "variables": [
-                    "MDF_StatusProbability"
-                  ]
+                  "displayLines": "MDF_StatusProbability"
                 }
               },
               "failed": [
@@ -185,13 +154,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-43633495\">Relic_303_Sub</a>",
                   "valuePerStack": {
                     "MDF_AttackAddedRatio": {
-                      "operator": "Variables[0] (MDF_StatusProbability) || Variables[1] (0.25) || MUL || RETURN",
-                      "displayLines": "(MDF_StatusProbability * 0.25)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_StatusProbability",
-                        0.25
-                      ]
+                      "displayLines": "(MDF_StatusProbability * 0.25)"
                     }
                   }
                 }
@@ -213,12 +176,7 @@ const configAbility = {
                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRate</span>&nbsp;",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_StatusProbability) || RETURN",
-                  "displayLines": "MDF_StatusProbability",
-                  "constants": [],
-                  "variables": [
-                    "MDF_StatusProbability"
-                  ]
+                  "displayLines": "MDF_StatusProbability"
                 }
               },
               "failed": [
@@ -240,13 +198,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-43633495\">Relic_303_Sub</a>",
                   "valuePerStack": {
                     "MDF_AttackAddedRatio": {
-                      "operator": "Variables[0] (MDF_StatusProbability) || Variables[1] (0.25) || MUL || RETURN",
-                      "displayLines": "(MDF_StatusProbability * 0.25)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_StatusProbability",
-                        0.25
-                      ]
+                      "displayLines": "(MDF_StatusProbability * 0.25)"
                     }
                   }
                 }
@@ -268,12 +220,7 @@ const configAbility = {
                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRate</span>&nbsp;",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Variables[0] (MDF_StatusProbability) || RETURN",
-                  "displayLines": "MDF_StatusProbability",
-                  "constants": [],
-                  "variables": [
-                    "MDF_StatusProbability"
-                  ]
+                  "displayLines": "MDF_StatusProbability"
                 }
               },
               "failed": [
@@ -295,13 +242,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-43633495\">Relic_303_Sub</a>",
                   "valuePerStack": {
                     "MDF_AttackAddedRatio": {
-                      "operator": "Variables[0] (MDF_StatusProbability) || Variables[1] (0.25) || MUL || RETURN",
-                      "displayLines": "(MDF_StatusProbability * 0.25)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_StatusProbability",
-                        0.25
-                      ]
+                      "displayLines": "(MDF_StatusProbability * 0.25)"
                     }
                   }
                 }
@@ -331,13 +272,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-43633495\">Relic_303_Sub</a>",
               "valuePerStack": {
                 "MDF_AttackAddedRatio": {
-                  "operator": "Variables[0] (MDF_StatusProbability) || Variables[1] (0.25) || MUL || RETURN",
-                  "displayLines": "(MDF_StatusProbability * 0.25)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_StatusProbability",
-                    0.25
-                  ]
+                  "displayLines": "(MDF_StatusProbability * 0.25)"
                 }
               }
             }

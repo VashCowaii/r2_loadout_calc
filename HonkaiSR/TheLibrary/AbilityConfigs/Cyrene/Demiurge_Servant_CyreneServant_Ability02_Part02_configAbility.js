@@ -26,12 +26,7 @@ const configAbility = {
     {
       "name": "SWITCH",
       "switchValue": {
-        "operator": "Variables[0] (TargetCharacterID) || RETURN",
-        "displayLines": "TargetCharacterID",
-        "constants": [],
-        "variables": [
-          "TargetCharacterID"
-        ]
+        "displayLines": "TargetCharacterID"
       },
       "caseEvents": [
         {
@@ -124,12 +119,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-588160151\">Memosprite_CyreneServant_AmazingBonus_Hyacine</a>[<span class=\"descriptionNumberColor\">Ode to Sky</span>]",
           "valuePerStack": {
             "MDF_HyacineRatio": {
-              "operator": "Variables[0] (0.72) || RETURN",
-              "displayLines": "0.72",
-              "constants": [],
-              "variables": [
-                0.72
-              ]
+              "displayLines": "0.72"
             }
           },
           "addStacksPerTrigger": 2
@@ -141,12 +131,7 @@ const configAbility = {
             "target": "{{Ability Target(ST)}}"
           },
           "value": {
-            "operator": "Variables[0] (24) || RETURN",
-            "displayLines": "24",
-            "constants": [],
-            "variables": [
-              24
-            ]
+            "displayLines": "24"
           },
           "isFixed": "(Fixed)"
         }
@@ -176,12 +161,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-588160151\">Memosprite_CyreneServant_AmazingBonus_Hyacine</a>[<span class=\"descriptionNumberColor\">Ode to Sky</span>]",
               "valuePerStack": {
                 "MDF_HyacineRatio": {
-                  "operator": "Variables[0] (0.72) || RETURN",
-                  "displayLines": "0.72",
-                  "constants": [],
-                  "variables": [
-                    0.72
-                  ]
+                  "displayLines": "0.72"
                 }
               },
               "addStacksPerTrigger": 2
@@ -210,28 +190,13 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-716696180\">Memosprite_CyreneServant_AmazingBonus_Harscyline</a>[<span class=\"descriptionNumberColor\">Ode to Ocean</span>]",
           "valuePerStack": {
             "MDF_HarscylineRatio": {
-              "operator": "Variables[0] (1.2) || RETURN",
-              "displayLines": "1.2",
-              "constants": [],
-              "variables": [
-                1.2
-              ]
+              "displayLines": "1.2"
             },
             "MDF_DotRatio1": {
-              "operator": "Variables[0] (0.6) || RETURN",
-              "displayLines": "0.6",
-              "constants": [],
-              "variables": [
-                0.6
-              ]
+              "displayLines": "0.6"
             },
             "MDF_DotRatio2": {
-              "operator": "Variables[0] (0.8) || RETURN",
-              "displayLines": "0.8",
-              "constants": [],
-              "variables": [
-                0.8
-              ]
+              "displayLines": "0.8"
             }
           }
         },
@@ -244,12 +209,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-814125319\">Memosprite_CyreneServant_AmazingBonus_Harscyline_Sub</a>[<span class=\"descriptionNumberColor\">Flowing Warmth</span>]",
           "valuePerStack": {
             "MDF_SPAdd": {
-              "operator": "Variables[0] (60) || RETURN",
-              "displayLines": "60",
-              "constants": [],
-              "variables": [
-                60
-              ]
+              "displayLines": "60"
             }
           }
         }
@@ -273,12 +233,7 @@ const configAbility = {
             "target": "{{Ability Target(ST)}}"
           },
           "value": {
-            "operator": "Variables[0] (0.12) || RETURN",
-            "displayLines": "0.12",
-            "constants": [],
-            "variables": [
-              0.12
-            ]
+            "displayLines": "0.12"
           },
           "variableName": "S02_ExtraRatio"
         },
@@ -291,20 +246,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"81139284\">Memosprite_CyreneServant_AmazingBonus_Evernight</a>[<span class=\"descriptionNumberColor\">Ode to Time</span>]",
           "valuePerStack": {
             "MDF_EverNightRatio": {
-              "operator": "Variables[0] (0.18) || RETURN",
-              "displayLines": "0.18",
-              "constants": [],
-              "variables": [
-                0.18
-              ]
+              "displayLines": "0.18"
             },
             "MDF_ExtraPoint": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             }
           }
         }
@@ -330,28 +275,13 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1655562855\">Memosprite_CyreneServant_AmazingBonus_DanHengPT</a>[<span class=\"descriptionNumberColor\">Ode to Earth</span>]",
           "valuePerStack": {
             "MDF_DamageIncrease": {
-              "operator": "Variables[0] (0.24) || RETURN",
-              "displayLines": "0.24",
-              "constants": [],
-              "variables": [
-                0.24
-              ]
+              "displayLines": "0.24"
             },
             "MDF_DanHengPT_ExtraDamageCount": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             },
             "MDF_DamageRatio": {
-              "operator": "Variables[0] (0.8) || RETURN",
-              "displayLines": "0.8",
-              "constants": [],
-              "variables": [
-                0.8
-              ]
+              "displayLines": "0.8"
             }
           }
         },
@@ -364,28 +294,13 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-249685208\">DanHengPT_LongLingAttackExtraDamage</a>",
           "valuePerStack": {
             "MDF_Count": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             },
             "MDF_DanHengPT_ExtraDamageCount": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             },
             "MDF_DamageRatio": {
-              "operator": "Variables[0] (0.8) || RETURN",
-              "displayLines": "0.8",
-              "constants": [],
-              "variables": [
-                0.8
-              ]
+              "displayLines": "0.8"
             }
           }
         },
@@ -398,12 +313,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"297054432\">DanHengPT_LongLingExtraShield</a>",
           "valuePerStack": {
             "MDF_ShieldRatio": {
-              "operator": "Variables[0] (1.5) || RETURN",
-              "displayLines": "1.5",
-              "constants": [],
-              "variables": [
-                1.5
-              ]
+              "displayLines": "1.5"
             }
           }
         }
@@ -434,28 +344,13 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1655562855\">Memosprite_CyreneServant_AmazingBonus_DanHengPT</a>[<span class=\"descriptionNumberColor\">Ode to Earth</span>]",
           "valuePerStack": {
             "MDF_DamageIncrease": {
-              "operator": "Variables[0] (0.24) || RETURN",
-              "displayLines": "0.24",
-              "constants": [],
-              "variables": [
-                0.24
-              ]
+              "displayLines": "0.24"
             },
             "MDF_DanHengPT_ExtraDamageCount": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             },
             "MDF_DamageRatio": {
-              "operator": "Variables[0] (0.8) || RETURN",
-              "displayLines": "0.8",
-              "constants": [],
-              "variables": [
-                0.8
-              ]
+              "displayLines": "0.8"
             }
           }
         },
@@ -484,28 +379,13 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-249685208\">DanHengPT_LongLingAttackExtraDamage</a>",
           "valuePerStack": {
             "MDF_Count": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             },
             "MDF_DanHengPT_ExtraDamageCount": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             },
             "MDF_DamageRatio": {
-              "operator": "Variables[0] (0.8) || RETURN",
-              "displayLines": "0.8",
-              "constants": [],
-              "variables": [
-                0.8
-              ]
+              "displayLines": "0.8"
             }
           }
         }
@@ -531,44 +411,19 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-331286977\">Memosprite_CyreneServant_AmazingBonus_Castorice</a>[<span class=\"descriptionNumberColor\">Ode to Life and Death</span>]",
           "valuePerStack": {
             "MDF_SuicideRatioBase": {
-              "operator": "Variables[0] (0.0024) || RETURN",
-              "displayLines": "0.0024",
-              "constants": [],
-              "variables": [
-                0.0024
-              ]
+              "displayLines": "0.0024"
             },
             "MDF_SuicideRatioBase2": {
-              "operator": "Variables[0] (0.0048) || RETURN",
-              "displayLines": "0.0048",
-              "constants": [],
-              "variables": [
-                0.0048
-              ]
+              "displayLines": "0.0048"
             },
             "MDF_MaxEnergy": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             },
             "MDF_EnergyRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_14223) || RETURN",
-              "displayLines": "UnusedUnderThisBase_14223",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_14223"
-              ]
+              "displayLines": "UnusedUnderThisBase_14223"
             },
             "MDF_TargetCount": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             }
           }
         }
@@ -594,76 +449,31 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-484368069\">Memosprite_CyreneServant_AmazingBonus_Phainon</a>[<span class=\"descriptionNumberColor\">Ode to Worldbearing</span>]",
           "valuePerStack": {
             "MDF_DamageIncrease": {
-              "operator": "Variables[0] (0.16) || RETURN",
-              "displayLines": "0.16",
-              "constants": [],
-              "variables": [
-                0.16
-              ]
+              "displayLines": "0.16"
             },
             "MDF_LoseHP": {
-              "operator": "Variables[0] (0.15) || RETURN",
-              "displayLines": "0.15",
-              "constants": [],
-              "variables": [
-                0.15
-              ]
+              "displayLines": "0.15"
             },
             "MDF_Loop": {
-              "operator": "Variables[0] (5) || RETURN",
-              "displayLines": "5",
-              "constants": [],
-              "variables": [
-                5
-              ]
+              "displayLines": "5"
             },
             "MDF_DamagePercentage": {
-              "operator": "Variables[0] (0.1) || RETURN",
-              "displayLines": "0.1",
-              "constants": [],
-              "variables": [
-                0.1
-              ]
+              "displayLines": "0.1"
             },
             "MDF_EnergyNeed": {
-              "operator": "Variables[0] (12) || RETURN",
-              "displayLines": "12",
-              "constants": [],
-              "variables": [
-                12
-              ]
+              "displayLines": "12"
             },
             "MDF_PropertyRatio": {
-              "operator": "Variables[0] (0.12) || RETURN",
-              "displayLines": "0.12",
-              "constants": [],
-              "variables": [
-                0.12
-              ]
+              "displayLines": "0.12"
             },
             "MDF_PropertyRatioMax": {
-              "operator": "Variables[0] (0.72) || RETURN",
-              "displayLines": "0.72",
-              "constants": [],
-              "variables": [
-                0.72
-              ]
+              "displayLines": "0.72"
             },
             "MDF_Kindling": {
-              "operator": "Variables[0] (6) || RETURN",
-              "displayLines": "6",
-              "constants": [],
-              "variables": [
-                6
-              ]
+              "displayLines": "6"
             },
             "MDF_ChargeEnergy": {
-              "operator": "Variables[0] (4) || RETURN",
-              "displayLines": "4",
-              "constants": [],
-              "variables": [
-                4
-              ]
+              "displayLines": "4"
             }
           },
           "casterAssign": "TargetSelf"
@@ -703,20 +513,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"937032379\">Memosprite_CyreneServant_AmazingBonus_Player</a>[<span class=\"descriptionNumberColor\">Ode to Genesis</span>]",
           "valuePerStack": {
             "MDF_HPTransferRatio": {
-              "operator": "Variables[0] (0.16) || RETURN",
-              "displayLines": "0.16",
-              "constants": [],
-              "variables": [
-                0.16
-              ]
+              "displayLines": "0.16"
             },
             "MDF_CritTranferRatio": {
-              "operator": "Variables[0] (0.72) || RETURN",
-              "displayLines": "0.72",
-              "constants": [],
-              "variables": [
-                0.72
-              ]
+              "displayLines": "0.72"
             }
           }
         }
@@ -742,28 +542,13 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1569324375\">Memosprite_CyreneServant_AmazingBonus_Tribbie</a>[<span class=\"descriptionNumberColor\">Ode to Passage</span>]",
           "valuePerStack": {
             "MDF_TribbieLoopCount": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "MDF_IgnoreDef": {
-              "operator": "Variables[0] (0.12) || RETURN",
-              "displayLines": "0.12",
-              "constants": [],
-              "variables": [
-                0.12
-              ]
+              "displayLines": "0.12"
             },
             "MDF_TargetCount": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             }
           }
         }
@@ -809,31 +594,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-431200233\">Memosprite_CyreneServant_AmazingBonus_Mydeimos</a>",
               "counter": {
-                "operator": "Variables[0] (_AmazingBuff_Mydeimos_ModifierCount) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(_AmazingBuff_Mydeimos_ModifierCount + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_AmazingBuff_Mydeimos_ModifierCount"
-                ]
+                "displayLines": "(_AmazingBuff_Mydeimos_ModifierCount + 1)"
               },
               "valuePerStack": {
                 "MDF_CritDamage": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
+                  "displayLines": "2"
                 },
                 "MDF_ActionDelay": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 }
               }
             }
@@ -849,20 +617,10 @@ const configAbility = {
               "counter": 1,
               "valuePerStack": {
                 "MDF_CritDamage": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
+                  "displayLines": "2"
                 },
                 "MDF_ActionDelay": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 }
               }
             }
@@ -890,20 +648,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1654237423\">Memosprite_CyreneServant_AmazingBonus_Aglaea</a>[<span class=\"descriptionNumberColor\">Ode to Romance</span>]",
           "valuePerStack": {
             "MDF_DamageIncrease": {
-              "operator": "Variables[0] (0.72) || RETURN",
-              "displayLines": "0.72",
-              "constants": [],
-              "variables": [
-                0.72
-              ]
+              "displayLines": "0.72"
             },
             "MDF_IgnoreDef": {
-              "operator": "Variables[0] (0.36) || RETURN",
-              "displayLines": "0.36",
-              "constants": [],
-              "variables": [
-                0.36
-              ]
+              "displayLines": "0.36"
             }
           }
         },
@@ -916,12 +664,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-313440704\">Memosprite_CyreneServant_AmazingBonus_Aglaea_Sub2</a>[<span class=\"descriptionNumberColor\">Romantic</span>]",
           "valuePerStack": {
             "MDF_SPAdd": {
-              "operator": "Variables[0] (70) || RETURN",
-              "displayLines": "70",
-              "constants": [],
-              "variables": [
-                70
-              ]
+              "displayLines": "70"
             }
           }
         }
@@ -941,12 +684,7 @@ const configAbility = {
         {
           "name": "Skill Points Modification",
           "adjustmentValue": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "adjustmentType": "+"
         },
@@ -969,28 +707,13 @@ const configAbility = {
           "duration": 1,
           "valuePerStack": {
             "MDF_AnaxaCount": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             },
             "MDF_DamageIncrease": {
-              "operator": "Variables[0] (0.4) || RETURN",
-              "displayLines": "0.4",
-              "constants": [],
-              "variables": [
-                0.4
-              ]
+              "displayLines": "0.4"
             },
             "MDF_AttackAddRatio": {
-              "operator": "Variables[0] (0.6) || RETURN",
-              "displayLines": "0.6",
-              "constants": [],
-              "variables": [
-                0.6
-              ]
+              "displayLines": "0.6"
             }
           },
           "casterAssign": "TargetSelf"
@@ -1004,28 +727,13 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1645914465\">Memosprite_CyreneServant_AmazingBonus_Anaxa_HaloMain</a>",
           "valuePerStack": {
             "MDF_AnaxaCount": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             },
             "MDF_DamageIncrease": {
-              "operator": "Variables[0] (0.4) || RETURN",
-              "displayLines": "0.4",
-              "constants": [],
-              "variables": [
-                0.4
-              ]
+              "displayLines": "0.4"
             },
             "MDF_AttackAddRatio": {
-              "operator": "Variables[0] (0.6) || RETURN",
-              "displayLines": "0.6",
-              "constants": [],
-              "variables": [
-                0.6
-              ]
+              "displayLines": "0.6"
             }
           },
           "casterAssign": "TargetSelf"
@@ -1052,28 +760,13 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1139724287\">Memosprite_CyreneServant_AmazingBonus_Cipher</a>[<span class=\"descriptionNumberColor\">Ode to Trickery</span>]",
           "valuePerStack": {
             "MDF_DamageIncrease": {
-              "operator": "Variables[0] (0.36) || RETURN",
-              "displayLines": "0.36",
-              "constants": [],
-              "variables": [
-                0.36
-              ]
+              "displayLines": "0.36"
             },
             "MDF_DefDown": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             },
             "MDF_DefDown2": {
-              "operator": "Variables[0] (0.12) || RETURN",
-              "displayLines": "0.12",
-              "constants": [],
-              "variables": [
-                0.12
-              ]
+              "displayLines": "0.12"
             }
           }
         }
@@ -1099,20 +792,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"609996020\">Memosprite_CyreneServant_AmazingBonus_Cerydra</a>[<span class=\"descriptionNumberColor\">Ode to Law</span>]",
           "valuePerStack": {
             "MDF_DamageIncrease": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             },
             "MDF_ExtraPoint": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             }
           }
         }
@@ -1138,21 +821,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"42532209\">Memosprite_CyreneServant_AmazingBonus_Normal</a>[<span class=\"descriptionNumberColor\">This Ode, to All Lives</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "valuePerStack": {
             "MDF_IncreaseRatio": {
-              "operator": "Variables[0] (0.4) || RETURN",
-              "displayLines": "0.4",
-              "constants": [],
-              "variables": [
-                0.4
-              ]
+              "displayLines": "0.4"
             }
           }
         }

@@ -13,12 +13,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-345651043\">LC_23050_Main</a>",
       "valuePerStack": {
         "MDF_BreakRatioIncrease": {
-          "operator": "Variables[0] (0.32) || RETURN",
-          "displayLines": "0.32",
-          "constants": [],
-          "variables": [
-            0.32
-          ]
+          "displayLines": "0.32"
         }
       }
     }
@@ -74,12 +69,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"503983570\">LC_23050_Sub</a>[<span class=\"descriptionNumberColor\">Immolation</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_BreakRatioIncrease) || RETURN",
-                      "displayLines": "MDF_BreakRatioIncrease",
-                      "constants": [],
-                      "variables": [
-                        "MDF_BreakRatioIncrease"
-                      ]
+                      "displayLines": "MDF_BreakRatioIncrease"
                     }
                   }
                 },
@@ -108,12 +98,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"503983570\">LC_23050_Sub</a>[<span class=\"descriptionNumberColor\">Immolation</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_BreakRatioIncrease) || RETURN",
-                          "displayLines": "MDF_BreakRatioIncrease",
-                          "constants": [],
-                          "variables": [
-                            "MDF_BreakRatioIncrease"
-                          ]
+                          "displayLines": "MDF_BreakRatioIncrease"
                         }
                       }
                     }
@@ -128,12 +113,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"503983570\">LC_23050_Sub</a>[<span class=\"descriptionNumberColor\">Immolation</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_BreakRatioIncrease) || RETURN",
-                          "displayLines": "MDF_BreakRatioIncrease",
-                          "constants": [],
-                          "variables": [
-                            "MDF_BreakRatioIncrease"
-                          ]
+                          "displayLines": "MDF_BreakRatioIncrease"
                         }
                       }
                     }
@@ -160,12 +140,7 @@ const configAbility = {
                 {
                   "name": "Skill Points Modification",
                   "adjustmentValue": {
-                    "operator": "Constants[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [
-                      1
-                    ],
-                    "variables": []
+                    "displayLines": "1"
                   },
                   "adjustmentType": "+"
                 },
@@ -206,12 +181,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakMulti</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]

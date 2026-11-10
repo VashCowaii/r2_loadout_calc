@@ -47,12 +47,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-2140377444\">Monster_RogueElite_DamageUp</a>[<span class=\"descriptionNumberColor\">Berserk</span>]",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                  "displayLines": "#BattleEvent_P1_ADF",
-                  "constants": [],
-                  "variables": [
-                    "#BattleEvent_P1_ADF"
-                  ]
+                  "displayLines": "#BattleEvent_P1_ADF"
                 }
               }
             }

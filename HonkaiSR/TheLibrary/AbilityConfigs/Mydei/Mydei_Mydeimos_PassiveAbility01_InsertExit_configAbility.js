@@ -25,14 +25,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (DV_Tree01_ReviveCount) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(DV_Tree01_ReviveCount - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "DV_Tree01_ReviveCount"
-            ]
+            "displayLines": "(DV_Tree01_ReviveCount - 1)"
           },
           "variableName": "DV_Tree01_ReviveCount"
         },
@@ -64,12 +57,7 @@ const configAbility = {
             "target": "{{Ability Target(ST)}}"
           },
           "healPercent": {
-            "operator": "Variables[0] (DV_HealRatio) || RETURN",
-            "displayLines": "DV_HealRatio",
-            "constants": [],
-            "variables": [
-              "DV_HealRatio"
-            ]
+            "displayLines": "DV_HealRatio"
           },
           "formula": "Heal from Target MaxHP"
         }
@@ -94,12 +82,7 @@ const configAbility = {
           "name": "Update Displayed Energy Bar",
           "value": 0,
           "maximum": {
-            "operator": "Variables[0] (MYDEI_OBJECT_UNUSED_8[100]) || RETURN",
-            "displayLines": "MYDEI_OBJECT_UNUSED_8[100]",
-            "constants": [],
-            "variables": [
-              "MYDEI_OBJECT_UNUSED_8[100]"
-            ]
+            "displayLines": "MYDEI_OBJECT_UNUSED_8[100]"
           },
           "assignState": "True",
           "priorState": "Normal",
@@ -124,12 +107,7 @@ const configAbility = {
             "target": "{{Ability Target(ST)}}"
           },
           "healPercent": {
-            "operator": "Variables[0] (DV_HealRatio) || RETURN",
-            "displayLines": "DV_HealRatio",
-            "constants": [],
-            "variables": [
-              "DV_HealRatio"
-            ]
+            "displayLines": "DV_HealRatio"
           },
           "formula": "Heal from Target MaxHP"
         },

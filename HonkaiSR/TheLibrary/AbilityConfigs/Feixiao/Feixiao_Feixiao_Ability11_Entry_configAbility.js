@@ -38,13 +38,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.6) || Variables[1] (0.3) || ADD || RETURN",
-            "displayLines": "(0.6 + 0.3)",
-            "constants": [],
-            "variables": [
-              0.6,
-              0.3
-            ]
+            "displayLines": "(0.6 + 0.3)"
           },
           "variableName": "Skill11_DamagePercentage"
         }
@@ -53,12 +47,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.6) || RETURN",
-            "displayLines": "0.6",
-            "constants": [],
-            "variables": [
-              0.6
-            ]
+            "displayLines": "0.6"
           },
           "variableName": "Skill11_DamagePercentage"
         }
@@ -93,16 +82,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (UNKNOWN_OBJECT_FUNCTION_1[Vash is aware]) || Variables[1] (ComboHitCount) || Constants[0] (3) || ADD || Constants[1] (4) || PARAM_2 || FUNCTION || RETURN",
-            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">UNKNOWN_OBJECT_FUNCTION_1[Vash is aware]</span>((ComboHitCount + 3), 4)",
-            "constants": [
-              3,
-              4
-            ],
-            "variables": [
-              "UNKNOWN_OBJECT_FUNCTION_1[Vash is aware]",
-              "ComboHitCount"
-            ]
+            "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">UNKNOWN_OBJECT_FUNCTION_1[Vash is aware]</span>((ComboHitCount + 3), 4)"
           },
           "variableName": "Combo1_Loop_Index"
         }
@@ -111,14 +91,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (Combo1_Loop_Index) || Constants[0] (1) || ADD || RETURN",
-        "displayLines": "(Combo1_Loop_Index + 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "Combo1_Loop_Index"
-        ]
+        "displayLines": "(Combo1_Loop_Index + 1)"
       },
       "variableName": "Combo1_Loop_Index"
     },
@@ -135,14 +108,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Combo1_Loop_Index) || Constants[0] (4) || SUB || RETURN",
-            "displayLines": "(Combo1_Loop_Index - 4)",
-            "constants": [
-              4
-            ],
-            "variables": [
-              "Combo1_Loop_Index"
-            ]
+            "displayLines": "(Combo1_Loop_Index - 4)"
           },
           "variableName": "Combo1_Loop_Index"
         }
@@ -208,14 +174,7 @@ const configAbility = {
         "value1": "ComboHitCount",
         "compareType": "=",
         "value2": {
-          "operator": "Variables[0] (6) || Constants[0] (1) || SUB || RETURN",
-          "displayLines": "(6 - 1)",
-          "constants": [
-            1
-          ],
-          "variables": [
-            6
-          ]
+          "displayLines": "(6 - 1)"
         }
       },
       "passed": [

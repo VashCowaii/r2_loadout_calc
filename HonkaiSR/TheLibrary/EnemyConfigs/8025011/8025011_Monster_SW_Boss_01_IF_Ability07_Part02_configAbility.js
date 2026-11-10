@@ -87,12 +87,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (Skill07ArmorCount) || RETURN",
-        "displayLines": "Skill07ArmorCount",
-        "constants": [],
-        "variables": [
-          "Skill07ArmorCount"
-        ]
+        "displayLines": "Skill07ArmorCount"
       },
       "execute": [
         {
@@ -113,12 +108,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-103304753\">Enemy_SW_Boss_01_IF_MinionsEnhancement</a>[<span class=\"descriptionNumberColor\">Growth Hormones</span>]",
               "valuePerStack": {
                 "MDF_AttackAddedRatio": {
-                  "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                  "displayLines": "{[Skill07[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill07[0]]}"
-                  ]
+                  "displayLines": "{[Skill07[0]]}"
                 }
               }
             }

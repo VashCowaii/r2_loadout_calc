@@ -29,12 +29,7 @@ const configAbility = {
           },
           "scope": "TargetEntity",
           "value": {
-            "operator": "Variables[0] (ResetBloodRageCount) || RETURN",
-            "displayLines": "ResetBloodRageCount",
-            "constants": [],
-            "variables": [
-              "ResetBloodRageCount"
-            ]
+            "displayLines": "ResetBloodRageCount"
           },
           "variableName": "WolfBoss_BloodRageCount"
         },
@@ -50,12 +45,7 @@ const configAbility = {
         {
           "name": "Deal Toughness DMG",
           "value": {
-            "operator": "Variables[0] (StanceDamage) || RETURN",
-            "displayLines": "StanceDamage",
-            "constants": [],
-            "variables": [
-              "StanceDamage"
-            ]
+            "displayLines": "StanceDamage"
           },
           "forceReduction": true,
           "canDelay": true,
@@ -80,12 +70,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"563066245\">Enemy_W2_LycanKing_BloodRageMark</a>[<span class=\"descriptionNumberColor\">Irate</span>]",
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (ResetBloodRageCount) || RETURN",
-                "displayLines": "ResetBloodRageCount",
-                "constants": [],
-                "variables": [
-                  "ResetBloodRageCount"
-                ]
+                "displayLines": "ResetBloodRageCount"
               }
             },
             {

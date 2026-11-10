@@ -12,12 +12,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "consumePercent": {
-        "operator": "Variables[0] (0.15) || RETURN",
-        "displayLines": "0.15",
-        "constants": [],
-        "variables": [
-          0.15
-        ]
+        "displayLines": "0.15"
       },
       "consumeFloor": 1
     },
@@ -49,24 +44,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (2.4) || Constants[0] (1) || MUL || RETURN",
-          "displayLines": "(2.4 * 1)",
-          "constants": [
-            1
-          ],
-          "variables": [
-            2.4
-          ]
+          "displayLines": "(2.4 * 1)"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Constants[0] (1) || MUL || RETURN",
-          "displayLines": "(ST Toughness Value * 1)",
-          "constants": [
-            1
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(ST Toughness Value * 1)"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"

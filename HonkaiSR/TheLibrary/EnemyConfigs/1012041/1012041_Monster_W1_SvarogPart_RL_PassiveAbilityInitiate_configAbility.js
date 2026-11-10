@@ -36,21 +36,11 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1119505279\">Monster_W1_Svarog_RL_AttackUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "valuePerStack": {
             "MDF_DamageUpRatio_PerLayer": {
-              "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill02[0]]}"
-              ]
+              "displayLines": "{[PassiveSkill02[0]]}"
             }
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] (AttackUpLayer) || RETURN",
-            "displayLines": "AttackUpLayer",
-            "constants": [],
-            "variables": [
-              "AttackUpLayer"
-            ]
+            "displayLines": "AttackUpLayer"
           }
         }
       ]
@@ -66,12 +56,7 @@ const configAbility = {
         "value1": "CurrentHP%",
         "compareType": "<=",
         "value2": {
-          "operator": "Variables[0] (LowHPRatio) || RETURN",
-          "displayLines": "LowHPRatio",
-          "constants": [],
-          "variables": [
-            "LowHPRatio"
-          ]
+          "displayLines": "LowHPRatio"
         }
       },
       "failed": [
@@ -83,14 +68,7 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"764270214\">Monster_W1_SvarogPart_RL_CountDown</a>[<span class=\"descriptionNumberColor\">Overload Countdown</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill06[0]]}) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "({[Skill06[0]]} + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "{[Skill06[0]]}"
-            ]
+            "displayLines": "({[Skill06[0]]} + 1)"
           }
         }
       ]
@@ -137,12 +115,7 @@ const configAbility = {
                 "value1": "CurrentHP%",
                 "compareType": "<=",
                 "value2": {
-                  "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-                  "displayLines": "{[Skill06[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill06[1]]}"
-                  ]
+                  "displayLines": "{[Skill06[1]]}"
                 }
               },
               "passed": [

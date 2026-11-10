@@ -155,12 +155,7 @@ const configAbility = {
           {
             "name": "Enemy ID",
             "ID": {
-              "operator": "Variables[0] (SummonID4) || RETURN",
-              "displayLines": "SummonID4",
-              "constants": [],
-              "variables": [
-                "SummonID4"
-              ]
+              "displayLines": "SummonID4"
             },
             "target": {
               "name": "Target Name",
@@ -276,12 +271,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "multiBase": {
-                "operator": "Variables[0] ({[Skill13[0]]}) || RETURN",
-                "displayLines": "{[Skill13[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill13[0]]}"
-                ]
+                "displayLines": "{[Skill13[0]]}"
               }
             }
           ]

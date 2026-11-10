@@ -13,12 +13,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2110_BeforeFever_P1_MaxLayer",
       "resetValue": {
-        "operator": "Variables[0] (ADF_1_Get) || RETURN",
-        "displayLines": "ADF_1_Get",
-        "constants": [],
-        "variables": [
-          "ADF_1_Get"
-        ]
+        "displayLines": "ADF_1_Get"
       },
       "scope": "ContextCaster"
     },
@@ -30,12 +25,7 @@ const configAbility = {
       },
       "variableName": "DV_FantasticStory_BaseAbility_2110_BeforeFever_P2_Ratio",
       "resetValue": {
-        "operator": "Variables[0] (ADF_2_Get) || RETURN",
-        "displayLines": "ADF_2_Get",
-        "constants": [],
-        "variables": [
-          "ADF_2_Get"
-        ]
+        "displayLines": "ADF_2_Get"
       },
       "scope": "ContextCaster"
     },
@@ -92,12 +82,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "DamageFlat": {
-                      "operator": "Variables[0] (Bomb_Damage) || RETURN",
-                      "displayLines": "Bomb_Damage",
-                      "constants": [],
-                      "variables": [
-                        "Bomb_Damage"
-                      ]
+                      "displayLines": "Bomb_Damage"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -110,14 +95,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (DV_FantasticStory_BaseAbility_2110_EnterFever_P3_Ratio) || MUL || Variables[2] (Bomb_Layer) || MUL || RETURN",
-                    "displayLines": "((BattleEvent_BaseHP * DV_FantasticStory_BaseAbility_2110_EnterFever_P3_Ratio) * Bomb_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "BattleEvent_BaseHP",
-                      "DV_FantasticStory_BaseAbility_2110_EnterFever_P3_Ratio",
-                      "Bomb_Layer"
-                    ]
+                    "displayLines": "((BattleEvent_BaseHP * DV_FantasticStory_BaseAbility_2110_EnterFever_P3_Ratio) * Bomb_Layer)"
                   },
                   "variableName": "Bomb_Damage_Adjoin"
                 },
@@ -131,12 +109,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "DamageFlat": {
-                      "operator": "Variables[0] (Bomb_Damage_Adjoin) || RETURN",
-                      "displayLines": "Bomb_Damage_Adjoin",
-                      "constants": [],
-                      "variables": [
-                        "Bomb_Damage_Adjoin"
-                      ]
+                      "displayLines": "Bomb_Damage_Adjoin"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -158,12 +131,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "DamageFlat": {
-                      "operator": "Variables[0] (Bomb_Damage) || RETURN",
-                      "displayLines": "Bomb_Damage",
-                      "constants": [],
-                      "variables": [
-                        "Bomb_Damage"
-                      ]
+                      "displayLines": "Bomb_Damage"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -194,14 +162,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (DV_FantasticStory_BaseAbility_2110_BeforeFever_P2_Ratio) || MUL || Variables[2] (Bomb_Layer) || MUL || RETURN",
-                "displayLines": "((BattleEvent_BaseHP * DV_FantasticStory_BaseAbility_2110_BeforeFever_P2_Ratio) * Bomb_Layer)",
-                "constants": [],
-                "variables": [
-                  "BattleEvent_BaseHP",
-                  "DV_FantasticStory_BaseAbility_2110_BeforeFever_P2_Ratio",
-                  "Bomb_Layer"
-                ]
+                "displayLines": "((BattleEvent_BaseHP * DV_FantasticStory_BaseAbility_2110_BeforeFever_P2_Ratio) * Bomb_Layer)"
               },
               "variableName": "Bomb_Damage"
             },
@@ -259,14 +220,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (DV_FantasticStory_BaseAbility_2110_EnterFever_P3_Ratio) || MUL || Variables[2] (Bomb_Layer) || MUL || RETURN",
-                    "displayLines": "((BattleEvent_BaseHP * DV_FantasticStory_BaseAbility_2110_EnterFever_P3_Ratio) * Bomb_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "BattleEvent_BaseHP",
-                      "DV_FantasticStory_BaseAbility_2110_EnterFever_P3_Ratio",
-                      "Bomb_Layer"
-                    ]
+                    "displayLines": "((BattleEvent_BaseHP * DV_FantasticStory_BaseAbility_2110_EnterFever_P3_Ratio) * Bomb_Layer)"
                   },
                   "variableName": "Bomb_Damage_Adjoin"
                 },
@@ -295,28 +249,13 @@ const configAbility = {
                       "showInActionOrder": true,
                       "valuePerStack": {
                         "Bomb_Damage_get": {
-                          "operator": "Variables[0] (Bomb_Damage) || RETURN",
-                          "displayLines": "Bomb_Damage",
-                          "constants": [],
-                          "variables": [
-                            "Bomb_Damage"
-                          ]
+                          "displayLines": "Bomb_Damage"
                         },
                         "Bomb_Damage_Adjoin_get": {
-                          "operator": "Variables[0] (Bomb_Damage_Adjoin) || RETURN",
-                          "displayLines": "Bomb_Damage_Adjoin",
-                          "constants": [],
-                          "variables": [
-                            "Bomb_Damage_Adjoin"
-                          ]
+                          "displayLines": "Bomb_Damage_Adjoin"
                         },
                         "Plus2_DamgeStance": {
-                          "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2112_ADF_1) || RETURN",
-                          "displayLines": "DV_FantasticStory_PlusAbility_2112_ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_PlusAbility_2112_ADF_1"
-                          ]
+                          "displayLines": "DV_FantasticStory_PlusAbility_2112_ADF_1"
                         }
                       },
                       "allowAbilityTriggers": false
@@ -337,20 +276,10 @@ const configAbility = {
                       "showInActionOrder": true,
                       "valuePerStack": {
                         "Bomb_Damage_get": {
-                          "operator": "Variables[0] (Bomb_Damage) || RETURN",
-                          "displayLines": "Bomb_Damage",
-                          "constants": [],
-                          "variables": [
-                            "Bomb_Damage"
-                          ]
+                          "displayLines": "Bomb_Damage"
                         },
                         "Bomb_Damage_Adjoin_get": {
-                          "operator": "Variables[0] (Bomb_Damage_Adjoin) || RETURN",
-                          "displayLines": "Bomb_Damage_Adjoin",
-                          "constants": [],
-                          "variables": [
-                            "Bomb_Damage_Adjoin"
-                          ]
+                          "displayLines": "Bomb_Damage_Adjoin"
                         }
                       },
                       "allowAbilityTriggers": false
@@ -373,12 +302,7 @@ const configAbility = {
                   "showInActionOrder": true,
                   "valuePerStack": {
                     "Bomb_Damage_get": {
-                      "operator": "Variables[0] (Bomb_Damage) || RETURN",
-                      "displayLines": "Bomb_Damage",
-                      "constants": [],
-                      "variables": [
-                        "Bomb_Damage"
-                      ]
+                      "displayLines": "Bomb_Damage"
                     }
                   },
                   "allowAbilityTriggers": false
@@ -518,12 +442,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-2132571309\">Modifier_FantasticStory_BaseAbility_2110_BeforeFever_sub2</a>[<span class=\"descriptionNumberColor\">Shatter</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2110_BeforeFever_P1_MaxLayer) || RETURN",
-                    "displayLines": "DV_FantasticStory_BaseAbility_2110_BeforeFever_P1_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_BaseAbility_2110_BeforeFever_P1_MaxLayer"
-                    ]
+                    "displayLines": "DV_FantasticStory_BaseAbility_2110_BeforeFever_P1_MaxLayer"
                   },
                   "addStacksPerTrigger": 1
                 },

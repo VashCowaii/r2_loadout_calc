@@ -30,12 +30,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1480389752\">Pela_StatusProbability</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.1) || RETURN",
-                  "displayLines": "0.1",
-                  "constants": [],
-                  "variables": [
-                    0.1
-                  ]
+                  "displayLines": "0.1"
                 }
               }
             }
@@ -63,12 +58,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1480389752\">Pela_StatusProbability</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.1) || RETURN",
-                      "displayLines": "0.1",
-                      "constants": [],
-                      "variables": [
-                        0.1
-                      ]
+                      "displayLines": "0.1"
                     }
                   }
                 }

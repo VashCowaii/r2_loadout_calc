@@ -7,12 +7,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (DV_StockTempCount) || RETURN",
-        "displayLines": "DV_StockTempCount",
-        "constants": [],
-        "variables": [
-          "DV_StockTempCount"
-        ]
+        "displayLines": "DV_StockTempCount"
       },
       "variableName": "_AMMO"
     },
@@ -24,14 +19,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (_AMMO) || Constants[0] (1) || SUB || RETURN",
-        "displayLines": "(_AMMO - 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "_AMMO"
-        ]
+        "displayLines": "(_AMMO - 1)"
       },
       "variableName": "_AMMO"
     },
@@ -80,23 +68,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || Constants[0] (1) || Variables[1] (0.5) || ADD || MUL || RETURN",
-                  "displayLines": "(ST Toughness Value * (1 + 0.5))",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    "ST Toughness Value",
-                    0.5
-                  ]
+                  "displayLines": "(ST Toughness Value * (1 + 0.5))"
                 },
                 "instanceTag": "Rappa_UltraAttack_Damage",
                 "Tags": null,
@@ -115,20 +90,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "instanceTag": "Rappa_UltraAttack_Damage",
                 "Tags": null,
@@ -164,23 +129,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || Constants[0] (1) || Variables[1] (0.5) || ADD || MUL || RETURN",
-                  "displayLines": "(ST Toughness Value * (1 + 0.5))",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    "ST Toughness Value",
-                    0.5
-                  ]
+                  "displayLines": "(ST Toughness Value * (1 + 0.5))"
                 },
                 "instanceTag": "Rappa_UltraAttack_Damage",
                 "Tags": null,
@@ -199,20 +151,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "instanceTag": "Rappa_UltraAttack_Damage",
                 "Tags": null,
@@ -262,20 +204,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
+                  "displayLines": "0.5"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "instanceTag": "Rappa_UltraAttack_Damage",
                 "Tags": null,
@@ -302,20 +234,10 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
+                  "displayLines": "0.5"
                 },
                 "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
+                  "displayLines": "Blast Toughness Value"
                 },
                 "instanceTag": "Rappa_UltraAttack_Damage",
                 "Tags": null,

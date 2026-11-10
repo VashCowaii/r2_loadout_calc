@@ -42,12 +42,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.32) || RETURN",
-                    "displayLines": "0.32",
-                    "constants": [],
-                    "variables": [
-                      0.32
-                    ]
+                    "displayLines": "0.32"
                   }
                 }
               ]
@@ -115,14 +110,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_BPCount_Sum) || Variables[1] (ABS) || Variables[2] (_BPCount) || PARAM_1 || FUNCTION || ADD || RETURN",
-                        "displayLines": "(_BPCount_Sum + &nbsp;<span class=\"descriptionFunctionColor\">ABS</span>(_BPCount))",
-                        "constants": [],
-                        "variables": [
-                          "_BPCount_Sum",
-                          "ABS",
-                          "_BPCount"
-                        ]
+                        "displayLines": "(_BPCount_Sum + &nbsp;<span class=\"descriptionFunctionColor\">ABS</span>(_BPCount))"
                       },
                       "variableName": "_BPCount_Sum"
                     },
@@ -133,12 +121,7 @@ const compositeAbilityObject = {
                         "value1": "_BPCount_Sum",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (3) || RETURN",
-                          "displayLines": "3",
-                          "constants": [],
-                          "variables": [
-                            3
-                          ]
+                          "displayLines": "3"
                         }
                       },
                       "passed": [
@@ -150,12 +133,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"25554174\">Relic_324_Sub</a>[<span class=\"descriptionNumberColor\">Tengoku@Livestream</span>]",
                           "duration": {
-                            "operator": "Variables[0] (3) || RETURN",
-                            "displayLines": "3",
-                            "constants": [],
-                            "variables": [
-                              3
-                            ]
+                            "displayLines": "3"
                           }
                         },
                         {

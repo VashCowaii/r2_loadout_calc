@@ -214,15 +214,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (WHOLE) || Variables[1] (MDF_DiceResult_RL) || Constants[0] (10) || DIV || PARAM_1 || FUNCTION || RETURN",
-                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((MDF_DiceResult_RL / 10))",
-                        "constants": [
-                          10
-                        ],
-                        "variables": [
-                          "WHOLE",
-                          "MDF_DiceResult_RL"
-                        ]
+                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((MDF_DiceResult_RL / 10))"
                       },
                       "variableName": "MDF_DiceResult_RL"
                     },
@@ -243,12 +235,7 @@ const configAbility = {
                         {
                           "name": "SWITCH",
                           "switchValue": {
-                            "operator": "Variables[0] (MDF_DiceResult_RL) || RETURN",
-                            "displayLines": "MDF_DiceResult_RL",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DiceResult_RL"
-                            ]
+                            "displayLines": "MDF_DiceResult_RL"
                           },
                           "caseEvents": [
                             {
@@ -309,14 +296,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (MDF_DiceResult_RL) || Constants[0] (10) || MOD || RETURN",
-                        "displayLines": "(MDF_DiceResult_RL % 10)",
-                        "constants": [
-                          10
-                        ],
-                        "variables": [
-                          "MDF_DiceResult_RL"
-                        ]
+                        "displayLines": "(MDF_DiceResult_RL % 10)"
                       },
                       "variableName": "MDF_DiceResult_RL"
                     },
@@ -353,12 +333,7 @@ const configAbility = {
                         {
                           "name": "SWITCH",
                           "switchValue": {
-                            "operator": "Variables[0] (MDF_DiceResult_RL) || RETURN",
-                            "displayLines": "MDF_DiceResult_RL",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DiceResult_RL"
-                            ]
+                            "displayLines": "MDF_DiceResult_RL"
                           },
                           "caseEvents": [
                             {
@@ -425,12 +400,7 @@ const configAbility = {
                     "value1": "DiceResult",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (MDF_CurrentDiceResult) || RETURN",
-                      "displayLines": "MDF_CurrentDiceResult",
-                      "constants": [],
-                      "variables": [
-                        "MDF_CurrentDiceResult"
-                      ]
+                      "displayLines": "MDF_CurrentDiceResult"
                     }
                   }
                 }
@@ -668,12 +638,7 @@ const configAbility = {
                     "value1": "DiceResult",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (MDF_CurrentDiceResult) || RETURN",
-                      "displayLines": "MDF_CurrentDiceResult",
-                      "constants": [],
-                      "variables": [
-                        "MDF_CurrentDiceResult"
-                      ]
+                      "displayLines": "MDF_CurrentDiceResult"
                     }
                   }
                 }
@@ -889,15 +854,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (WHOLE) || Variables[1] (MDF_DiceResult_RL) || Constants[0] (10) || DIV || PARAM_1 || FUNCTION || RETURN",
-                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((MDF_DiceResult_RL / 10))",
-                        "constants": [
-                          10
-                        ],
-                        "variables": [
-                          "WHOLE",
-                          "MDF_DiceResult_RL"
-                        ]
+                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((MDF_DiceResult_RL / 10))"
                       },
                       "variableName": "MDF_DiceResult_RL"
                     },
@@ -918,12 +875,7 @@ const configAbility = {
                         {
                           "name": "SWITCH",
                           "switchValue": {
-                            "operator": "Variables[0] (MDF_DiceResult_RL) || RETURN",
-                            "displayLines": "MDF_DiceResult_RL",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DiceResult_RL"
-                            ]
+                            "displayLines": "MDF_DiceResult_RL"
                           },
                           "caseEvents": [
                             {
@@ -984,14 +936,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (MDF_DiceResult_RL) || Constants[0] (10) || MOD || RETURN",
-                        "displayLines": "(MDF_DiceResult_RL % 10)",
-                        "constants": [
-                          10
-                        ],
-                        "variables": [
-                          "MDF_DiceResult_RL"
-                        ]
+                        "displayLines": "(MDF_DiceResult_RL % 10)"
                       },
                       "variableName": "MDF_DiceResult_RL"
                     },
@@ -1028,12 +973,7 @@ const configAbility = {
                         {
                           "name": "SWITCH",
                           "switchValue": {
-                            "operator": "Variables[0] (MDF_DiceResult_RL) || RETURN",
-                            "displayLines": "MDF_DiceResult_RL",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DiceResult_RL"
-                            ]
+                            "displayLines": "MDF_DiceResult_RL"
                           },
                           "caseEvents": [
                             {
@@ -1126,12 +1066,7 @@ const configAbility = {
                     "value1": "DiceResult",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (MDF_CurrentDiceResult) || RETURN",
-                      "displayLines": "MDF_CurrentDiceResult",
-                      "constants": [],
-                      "variables": [
-                        "MDF_CurrentDiceResult"
-                      ]
+                      "displayLines": "MDF_CurrentDiceResult"
                     }
                   }
                 }
@@ -1334,15 +1269,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (WHOLE) || Variables[1] (MDF_DiceResult_RL) || Constants[0] (10) || DIV || PARAM_1 || FUNCTION || RETURN",
-                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((MDF_DiceResult_RL / 10))",
-                        "constants": [
-                          10
-                        ],
-                        "variables": [
-                          "WHOLE",
-                          "MDF_DiceResult_RL"
-                        ]
+                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((MDF_DiceResult_RL / 10))"
                       },
                       "variableName": "MDF_DiceResult_RL"
                     },
@@ -1363,12 +1290,7 @@ const configAbility = {
                         {
                           "name": "SWITCH",
                           "switchValue": {
-                            "operator": "Variables[0] (MDF_DiceResult_RL) || RETURN",
-                            "displayLines": "MDF_DiceResult_RL",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DiceResult_RL"
-                            ]
+                            "displayLines": "MDF_DiceResult_RL"
                           },
                           "caseEvents": [
                             {
@@ -1429,14 +1351,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (MDF_DiceResult_RL) || Constants[0] (10) || MOD || RETURN",
-                        "displayLines": "(MDF_DiceResult_RL % 10)",
-                        "constants": [
-                          10
-                        ],
-                        "variables": [
-                          "MDF_DiceResult_RL"
-                        ]
+                        "displayLines": "(MDF_DiceResult_RL % 10)"
                       },
                       "variableName": "MDF_DiceResult_RL"
                     },
@@ -1473,12 +1388,7 @@ const configAbility = {
                         {
                           "name": "SWITCH",
                           "switchValue": {
-                            "operator": "Variables[0] (MDF_DiceResult_RL) || RETURN",
-                            "displayLines": "MDF_DiceResult_RL",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DiceResult_RL"
-                            ]
+                            "displayLines": "MDF_DiceResult_RL"
                           },
                           "caseEvents": [
                             {
@@ -1545,12 +1455,7 @@ const configAbility = {
                     "value1": "DiceResult",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (MDF_CurrentDiceResult) || RETURN",
-                      "displayLines": "MDF_CurrentDiceResult",
-                      "constants": [],
-                      "variables": [
-                        "MDF_CurrentDiceResult"
-                      ]
+                      "displayLines": "MDF_CurrentDiceResult"
                     }
                   }
                 }
@@ -1600,12 +1505,7 @@ const configAbility = {
                   },
                   "scope": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (MDF_DiceResult) || RETURN",
-                    "displayLines": "MDF_DiceResult",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DiceResult"
-                    ]
+                    "displayLines": "MDF_DiceResult"
                   },
                   "variableName": "DiceResult"
                 }
@@ -1688,12 +1588,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-699513905\">Monster_W3_AventurinePart_ResultCount</a>",
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (MDF_DiceResult) || RETURN",
-                        "displayLines": "MDF_DiceResult",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DiceResult"
-                        ]
+                        "displayLines": "MDF_DiceResult"
                       }
                     }
                   ]
@@ -1751,12 +1646,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-699513905\">Monster_W3_AventurinePart_ResultCount</a>",
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (MDF_DiceResult) || RETURN",
-                        "displayLines": "MDF_DiceResult",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DiceResult"
-                        ]
+                        "displayLines": "MDF_DiceResult"
                       }
                     }
                   ]
@@ -2219,27 +2109,13 @@ const configAbility = {
                                 {
                                   "name": "Looped Event",
                                   "maxLoops": {
-                                    "operator": "Variables[0] (MDF_MaxLoopCount_RL) || Constants[0] (1) || SUB || RETURN",
-                                    "displayLines": "(MDF_MaxLoopCount_RL - 1)",
-                                    "constants": [
-                                      1
-                                    ],
-                                    "variables": [
-                                      "MDF_MaxLoopCount_RL"
-                                    ]
+                                    "displayLines": "(MDF_MaxLoopCount_RL - 1)"
                                   },
                                   "execute": [
                                     {
                                       "name": "Define Custom Variable",
                                       "value": {
-                                        "operator": "Variables[0] (MDF_DiceResult) || Constants[0] (1) || ADD || RETURN",
-                                        "displayLines": "(MDF_DiceResult + 1)",
-                                        "constants": [
-                                          1
-                                        ],
-                                        "variables": [
-                                          "MDF_DiceResult"
-                                        ]
+                                        "displayLines": "(MDF_DiceResult + 1)"
                                       },
                                       "variableName": "MDF_DiceResult"
                                     }
@@ -2275,27 +2151,13 @@ const configAbility = {
                                     {
                                       "name": "Looped Event",
                                       "maxLoops": {
-                                        "operator": "Variables[0] (MDF_MaxLoopCount_RL) || Constants[0] (1) || SUB || RETURN",
-                                        "displayLines": "(MDF_MaxLoopCount_RL - 1)",
-                                        "constants": [
-                                          1
-                                        ],
-                                        "variables": [
-                                          "MDF_MaxLoopCount_RL"
-                                        ]
+                                        "displayLines": "(MDF_MaxLoopCount_RL - 1)"
                                       },
                                       "execute": [
                                         {
                                           "name": "Define Custom Variable",
                                           "value": {
-                                            "operator": "Variables[0] (MDF_DiceResult) || Constants[0] (2) || ADD || RETURN",
-                                            "displayLines": "(MDF_DiceResult + 2)",
-                                            "constants": [
-                                              2
-                                            ],
-                                            "variables": [
-                                              "MDF_DiceResult"
-                                            ]
+                                            "displayLines": "(MDF_DiceResult + 2)"
                                           },
                                           "variableName": "MDF_DiceResult"
                                         }
@@ -2336,27 +2198,13 @@ const configAbility = {
                                         {
                                           "name": "Looped Event",
                                           "maxLoops": {
-                                            "operator": "Variables[0] (MDF_MaxLoopCount_RL) || Constants[0] (1) || SUB || RETURN",
-                                            "displayLines": "(MDF_MaxLoopCount_RL - 1)",
-                                            "constants": [
-                                              1
-                                            ],
-                                            "variables": [
-                                              "MDF_MaxLoopCount_RL"
-                                            ]
+                                            "displayLines": "(MDF_MaxLoopCount_RL - 1)"
                                           },
                                           "execute": [
                                             {
                                               "name": "Define Custom Variable",
                                               "value": {
-                                                "operator": "Variables[0] (MDF_DiceResult) || Constants[0] (3) || ADD || RETURN",
-                                                "displayLines": "(MDF_DiceResult + 3)",
-                                                "constants": [
-                                                  3
-                                                ],
-                                                "variables": [
-                                                  "MDF_DiceResult"
-                                                ]
+                                                "displayLines": "(MDF_DiceResult + 3)"
                                               },
                                               "variableName": "MDF_DiceResult"
                                             }
@@ -2397,27 +2245,13 @@ const configAbility = {
                                             {
                                               "name": "Looped Event",
                                               "maxLoops": {
-                                                "operator": "Variables[0] (MDF_MaxLoopCount_RL) || Constants[0] (1) || SUB || RETURN",
-                                                "displayLines": "(MDF_MaxLoopCount_RL - 1)",
-                                                "constants": [
-                                                  1
-                                                ],
-                                                "variables": [
-                                                  "MDF_MaxLoopCount_RL"
-                                                ]
+                                                "displayLines": "(MDF_MaxLoopCount_RL - 1)"
                                               },
                                               "execute": [
                                                 {
                                                   "name": "Define Custom Variable",
                                                   "value": {
-                                                    "operator": "Variables[0] (MDF_DiceResult) || Constants[0] (4) || ADD || RETURN",
-                                                    "displayLines": "(MDF_DiceResult + 4)",
-                                                    "constants": [
-                                                      4
-                                                    ],
-                                                    "variables": [
-                                                      "MDF_DiceResult"
-                                                    ]
+                                                    "displayLines": "(MDF_DiceResult + 4)"
                                                   },
                                                   "variableName": "MDF_DiceResult"
                                                 }
@@ -2458,27 +2292,13 @@ const configAbility = {
                                                 {
                                                   "name": "Looped Event",
                                                   "maxLoops": {
-                                                    "operator": "Variables[0] (MDF_MaxLoopCount_RL) || Constants[0] (1) || SUB || RETURN",
-                                                    "displayLines": "(MDF_MaxLoopCount_RL - 1)",
-                                                    "constants": [
-                                                      1
-                                                    ],
-                                                    "variables": [
-                                                      "MDF_MaxLoopCount_RL"
-                                                    ]
+                                                    "displayLines": "(MDF_MaxLoopCount_RL - 1)"
                                                   },
                                                   "execute": [
                                                     {
                                                       "name": "Define Custom Variable",
                                                       "value": {
-                                                        "operator": "Variables[0] (MDF_DiceResult) || Constants[0] (5) || ADD || RETURN",
-                                                        "displayLines": "(MDF_DiceResult + 5)",
-                                                        "constants": [
-                                                          5
-                                                        ],
-                                                        "variables": [
-                                                          "MDF_DiceResult"
-                                                        ]
+                                                        "displayLines": "(MDF_DiceResult + 5)"
                                                       },
                                                       "variableName": "MDF_DiceResult"
                                                     }
@@ -2507,27 +2327,13 @@ const configAbility = {
                                                 {
                                                   "name": "Looped Event",
                                                   "maxLoops": {
-                                                    "operator": "Variables[0] (MDF_MaxLoopCount_RL) || Constants[0] (1) || SUB || RETURN",
-                                                    "displayLines": "(MDF_MaxLoopCount_RL - 1)",
-                                                    "constants": [
-                                                      1
-                                                    ],
-                                                    "variables": [
-                                                      "MDF_MaxLoopCount_RL"
-                                                    ]
+                                                    "displayLines": "(MDF_MaxLoopCount_RL - 1)"
                                                   },
                                                   "execute": [
                                                     {
                                                       "name": "Define Custom Variable",
                                                       "value": {
-                                                        "operator": "Variables[0] (MDF_DiceResult) || Constants[0] (6) || ADD || RETURN",
-                                                        "displayLines": "(MDF_DiceResult + 6)",
-                                                        "constants": [
-                                                          6
-                                                        ],
-                                                        "variables": [
-                                                          "MDF_DiceResult"
-                                                        ]
+                                                        "displayLines": "(MDF_DiceResult + 6)"
                                                       },
                                                       "variableName": "MDF_DiceResult"
                                                     }
@@ -2777,13 +2583,7 @@ const configAbility = {
                   },
                   "scope": "TargetEntity",
                   "value": {
-                    "operator": "Variables[0] (DiceResult) || Variables[1] (MDF_DiceResult) || ADD || RETURN",
-                    "displayLines": "(DiceResult + MDF_DiceResult)",
-                    "constants": [],
-                    "variables": [
-                      "DiceResult",
-                      "MDF_DiceResult"
-                    ]
+                    "displayLines": "(DiceResult + MDF_DiceResult)"
                   },
                   "variableName": "DiceResult"
                 }
@@ -2808,12 +2608,7 @@ const configAbility = {
               },
               "scope": "TargetEntity",
               "value": {
-                "operator": "Variables[0] (MDF_DiceResult) || RETURN",
-                "displayLines": "MDF_DiceResult",
-                "constants": [],
-                "variables": [
-                  "MDF_DiceResult"
-                ]
+                "displayLines": "MDF_DiceResult"
               },
               "variableName": "DiceResult"
             }

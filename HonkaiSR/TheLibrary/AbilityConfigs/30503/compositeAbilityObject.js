@@ -31,14 +31,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (count) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(count + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "count"
-                    ]
+                    "displayLines": "(count + 1)"
                   },
                   "variableName": "count"
                 },
@@ -136,28 +129,13 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1148970670\">Modifier_BattleEventAbility_ChallengePeakBattle_CountDown</a>",
           "valuePerStack": {
             "BattleEventTurnLeftParam": {
-              "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-              "displayLines": "#BattleEvent_P2_ADF",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P2_ADF"
-              ]
+              "displayLines": "#BattleEvent_P2_ADF"
             },
             "BattleEventTurnLeftParam2": {
-              "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-              "displayLines": "#BattleEvent_P3_ADF",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P3_ADF"
-              ]
+              "displayLines": "#BattleEvent_P3_ADF"
             },
             "BattleEventTurnLeftParam3": {
-              "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
-              "displayLines": "#BattleEvent_P4_ADF",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P4_ADF"
-              ]
+              "displayLines": "#BattleEvent_P4_ADF"
             }
           }
         },
@@ -192,15 +170,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">BaseDMGMultiplier</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (1) || Variables[0] (BE_ChallengePeakBattle_Rage_AllDamageTypeAddedRatio) || Variables[1] (MDF_Layer) || MUL || ADD || RETURN",
-                    "displayLines": "(1 + (BE_ChallengePeakBattle_Rage_AllDamageTypeAddedRatio * MDF_Layer))",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "BE_ChallengePeakBattle_Rage_AllDamageTypeAddedRatio",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(1 + (BE_ChallengePeakBattle_Rage_AllDamageTypeAddedRatio * MDF_Layer))"
                   }
                 }
               ]
@@ -244,14 +214,7 @@ const compositeAbilityObject = {
                         "value1": "BattleEventTurnLeftParam",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] (BattleEventTurnLeftParam2) || Constants[0] (1) || ADD || RETURN",
-                          "displayLines": "(BattleEventTurnLeftParam2 + 1)",
-                          "constants": [
-                            1
-                          ],
-                          "variables": [
-                            "BattleEventTurnLeftParam2"
-                          ]
+                          "displayLines": "(BattleEventTurnLeftParam2 + 1)"
                         }
                       },
                       {
@@ -289,16 +252,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Set Warning Countdown",
                   "countdownTime": {
-                    "operator": "Variables[0] (MAX) || Variables[1] (BattleEventTurnLeftParam) || Constants[0] (1) || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((BattleEventTurnLeftParam - 1), 0)",
-                    "constants": [
-                      1,
-                      0
-                    ],
-                    "variables": [
-                      "MAX",
-                      "BattleEventTurnLeftParam"
-                    ]
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((BattleEventTurnLeftParam - 1), 0)"
                   }
                 },
                 {
@@ -311,12 +265,7 @@ const compositeAbilityObject = {
                         "value1": "BattleEventTurnLeftParam",
                         "compareType": "<=",
                         "value2": {
-                          "operator": "Variables[0] (BattleEventTurnLeftParam2) || RETURN",
-                          "displayLines": "BattleEventTurnLeftParam2",
-                          "constants": [],
-                          "variables": [
-                            "BattleEventTurnLeftParam2"
-                          ]
+                          "displayLines": "BattleEventTurnLeftParam2"
                         }
                       },
                       {
@@ -348,12 +297,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-936105590\">Modifier_BattleEventAbility_ChallengePeakBattle_Rage</a>[<span class=\"descriptionNumberColor\">Middlegame Mayhem</span>]",
                       "valuePerStack": {
                         "BE_ChallengePeakBattle_Rage_AllDamageTypeAddedRatio": {
-                          "operator": "Variables[0] (BattleEventTurnLeftParam3) || RETURN",
-                          "displayLines": "BattleEventTurnLeftParam3",
-                          "constants": [],
-                          "variables": [
-                            "BattleEventTurnLeftParam3"
-                          ]
+                          "displayLines": "BattleEventTurnLeftParam3"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -449,21 +393,11 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-936105590\">Modifier_BattleEventAbility_ChallengePeakBattle_Rage</a>[<span class=\"descriptionNumberColor\">Middlegame Mayhem</span>]",
                       "valuePerStack": {
                         "BE_ChallengePeakBattle_Rage_AllDamageTypeAddedRatio": {
-                          "operator": "Variables[0] (BattleEventTurnLeftParam3) || RETURN",
-                          "displayLines": "BattleEventTurnLeftParam3",
-                          "constants": [],
-                          "variables": [
-                            "BattleEventTurnLeftParam3"
-                          ]
+                          "displayLines": "BattleEventTurnLeftParam3"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (RageTime) || RETURN",
-                        "displayLines": "RageTime",
-                        "constants": [],
-                        "variables": [
-                          "RageTime"
-                        ]
+                        "displayLines": "RageTime"
                       }
                     }
                   ]
@@ -494,14 +428,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Set Warning Countdown",
                       "countdownTime": {
-                        "operator": "Variables[0] (BattleEventTurnLeftParam) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(BattleEventTurnLeftParam - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "BattleEventTurnLeftParam"
-                        ]
+                        "displayLines": "(BattleEventTurnLeftParam - 1)"
                       }
                     }
                   ]
@@ -679,40 +606,20 @@ const compositeAbilityObject = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                "displayLines": "#BattleEvent_P1_ADF",
-                "constants": [],
-                "variables": [
-                  "#BattleEvent_P1_ADF"
-                ]
+                "displayLines": "#BattleEvent_P1_ADF"
               },
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (Value_NextMonsterId) || RETURN",
-                    "displayLines": "Value_NextMonsterId",
-                    "constants": [],
-                    "variables": [
-                      "Value_NextMonsterId"
-                    ]
+                    "displayLines": "Value_NextMonsterId"
                   },
                   "locationType": "FormationRecord",
                   "overrideActivityGroup": {
-                    "operator": "Variables[0] (Value_NextMonsterEliteGroup) || RETURN",
-                    "displayLines": "Value_NextMonsterEliteGroup",
-                    "constants": [],
-                    "variables": [
-                      "Value_NextMonsterEliteGroup"
-                    ]
+                    "displayLines": "Value_NextMonsterEliteGroup"
                   },
                   "slot": {
-                    "operator": "Variables[0] (Value_MonsterSlotKey) || RETURN",
-                    "displayLines": "Value_MonsterSlotKey",
-                    "constants": [],
-                    "variables": [
-                      "Value_MonsterSlotKey"
-                    ]
+                    "displayLines": "Value_MonsterSlotKey"
                   }
                 }
               ]
@@ -1186,60 +1093,25 @@ const compositeAbilityObject = {
               "name": "Random Event",
               "odds": [
                 {
-                  "operator": "Variables[0] (TDF_NoPhysical) || RETURN",
-                  "displayLines": "TDF_NoPhysical",
-                  "constants": [],
-                  "variables": [
-                    "TDF_NoPhysical"
-                  ]
+                  "displayLines": "TDF_NoPhysical"
                 },
                 {
-                  "operator": "Variables[0] (TDF_NoWind) || RETURN",
-                  "displayLines": "TDF_NoWind",
-                  "constants": [],
-                  "variables": [
-                    "TDF_NoWind"
-                  ]
+                  "displayLines": "TDF_NoWind"
                 },
                 {
-                  "operator": "Variables[0] (TDF_NoFire) || RETURN",
-                  "displayLines": "TDF_NoFire",
-                  "constants": [],
-                  "variables": [
-                    "TDF_NoFire"
-                  ]
+                  "displayLines": "TDF_NoFire"
                 },
                 {
-                  "operator": "Variables[0] (TDF_NoThunder) || RETURN",
-                  "displayLines": "TDF_NoThunder",
-                  "constants": [],
-                  "variables": [
-                    "TDF_NoThunder"
-                  ]
+                  "displayLines": "TDF_NoThunder"
                 },
                 {
-                  "operator": "Variables[0] (TDF_NoIce) || RETURN",
-                  "displayLines": "TDF_NoIce",
-                  "constants": [],
-                  "variables": [
-                    "TDF_NoIce"
-                  ]
+                  "displayLines": "TDF_NoIce"
                 },
                 {
-                  "operator": "Variables[0] (TDF_NoQuantum) || RETURN",
-                  "displayLines": "TDF_NoQuantum",
-                  "constants": [],
-                  "variables": [
-                    "TDF_NoQuantum"
-                  ]
+                  "displayLines": "TDF_NoQuantum"
                 },
                 {
-                  "operator": "Variables[0] (TDF_NoImaginary) || RETURN",
-                  "displayLines": "TDF_NoImaginary",
-                  "constants": [],
-                  "variables": [
-                    "TDF_NoImaginary"
-                  ]
+                  "displayLines": "TDF_NoImaginary"
                 }
               ],
               "execute": [

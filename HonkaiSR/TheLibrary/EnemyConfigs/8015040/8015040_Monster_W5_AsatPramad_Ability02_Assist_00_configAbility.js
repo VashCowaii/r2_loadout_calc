@@ -13,14 +13,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13353) || Constants[0] (3) || DIV || RETURN",
-          "displayLines": "(UnusedUnderThisBase_13353 / 3)",
-          "constants": [
-            3
-          ],
-          "variables": [
-            "UnusedUnderThisBase_13353"
-          ]
+          "displayLines": "(UnusedUnderThisBase_13353 / 3)"
         },
         "Toughness": null,
         "Tags": null,
@@ -37,14 +30,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13353) || Constants[0] (3) || DIV || RETURN",
-          "displayLines": "(UnusedUnderThisBase_13353 / 3)",
-          "constants": [
-            3
-          ],
-          "variables": [
-            "UnusedUnderThisBase_13353"
-          ]
+          "displayLines": "(UnusedUnderThisBase_13353 / 3)"
         },
         "Toughness": null,
         "Tags": null,
@@ -61,14 +47,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13353) || Constants[0] (3) || DIV || RETURN",
-          "displayLines": "(UnusedUnderThisBase_13353 / 3)",
-          "constants": [
-            3
-          ],
-          "variables": [
-            "UnusedUnderThisBase_13353"
-          ]
+          "displayLines": "(UnusedUnderThisBase_13353 / 3)"
         },
         "Toughness": null,
         "Tags": null,

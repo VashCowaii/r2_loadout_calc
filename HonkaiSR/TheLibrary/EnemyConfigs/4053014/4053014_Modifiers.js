@@ -132,15 +132,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_TriggerRatio) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "MDF_TotalDamageValue",
-                        "MDF_TriggerRatio"
-                      ]
+                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -163,15 +155,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_TriggerRatio) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "MDF_TotalDamageValue",
-                        "MDF_TriggerRatio"
-                      ]
+                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -194,15 +178,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_TriggerRatio) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "MDF_TotalDamageValue",
-                        "MDF_TriggerRatio"
-                      ]
+                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -225,15 +201,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_TriggerRatio) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "MDF_TotalDamageValue",
-                        "MDF_TriggerRatio"
-                      ]
+                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -258,15 +226,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_TriggerRatio) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "MDF_TotalDamageValue",
-                        "MDF_TriggerRatio"
-                      ]
+                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -289,15 +249,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_TriggerRatio) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "MDF_TotalDamageValue",
-                        "MDF_TriggerRatio"
-                      ]
+                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -320,15 +272,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_TriggerRatio) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "MDF_TotalDamageValue",
-                        "MDF_TriggerRatio"
-                      ]
+                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -351,15 +295,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_TriggerRatio) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "MDF_TotalDamageValue",
-                        "MDF_TriggerRatio"
-                      ]
+                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -421,15 +357,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_TriggerRatio) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "MDF_TotalDamageValue",
-                        "MDF_TriggerRatio"
-                      ]
+                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -452,15 +380,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_TriggerRatio) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "MDF_TotalDamageValue",
-                        "MDF_TriggerRatio"
-                      ]
+                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -483,15 +403,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_TriggerRatio) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "MDF_TotalDamageValue",
-                        "MDF_TriggerRatio"
-                      ]
+                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -514,15 +426,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_TriggerRatio) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "MDF_TotalDamageValue",
-                        "MDF_TriggerRatio"
-                      ]
+                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -547,15 +451,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "DamageFlat": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (MDF_TotalDamageValue) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((DOT_TriggerRatio * MDF_TotalDamageValue) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "DOT_TriggerRatio",
-                        "MDF_TotalDamageValue"
-                      ]
+                      "displayLines": "((DOT_TriggerRatio * MDF_TotalDamageValue) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -578,15 +474,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "DamageFlat": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (MDF_TotalDamageValue) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((DOT_TriggerRatio * MDF_TotalDamageValue) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "DOT_TriggerRatio",
-                        "MDF_TotalDamageValue"
-                      ]
+                      "displayLines": "((DOT_TriggerRatio * MDF_TotalDamageValue) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -609,15 +497,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "DamageFlat": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (MDF_TotalDamageValue) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((DOT_TriggerRatio * MDF_TotalDamageValue) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "DOT_TriggerRatio",
-                        "MDF_TotalDamageValue"
-                      ]
+                      "displayLines": "((DOT_TriggerRatio * MDF_TotalDamageValue) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -640,15 +520,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "DamageFlat": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (MDF_TotalDamageValue) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((DOT_TriggerRatio * MDF_TotalDamageValue) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "DOT_TriggerRatio",
-                        "MDF_TotalDamageValue"
-                      ]
+                      "displayLines": "((DOT_TriggerRatio * MDF_TotalDamageValue) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -701,13 +573,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_AddDamageValue) || ADD || RETURN",
-                    "displayLines": "(MDF_TotalDamageValue + MDF_AddDamageValue)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_TotalDamageValue",
-                      "MDF_AddDamageValue"
-                    ]
+                    "displayLines": "(MDF_TotalDamageValue + MDF_AddDamageValue)"
                   },
                   "variableName": "MDF_TotalDamageValue"
                 },
@@ -715,12 +581,7 @@ const configAbility = {
                   "name": "Define Modifier Variable",
                   "modifierName": null,
                   "value": {
-                    "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                    "displayLines": "MDF_LifeTime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_LifeTime"
-                    ]
+                    "displayLines": "MDF_LifeTime"
                   },
                   "valueType": "Duration"
                 }
@@ -847,15 +708,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_TriggerRatio) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "MDF_TotalDamageValue",
-                        "MDF_TriggerRatio"
-                      ]
+                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -878,15 +731,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_TriggerRatio) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "MDF_TotalDamageValue",
-                        "MDF_TriggerRatio"
-                      ]
+                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -909,15 +754,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_TriggerRatio) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "MDF_TotalDamageValue",
-                        "MDF_TriggerRatio"
-                      ]
+                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -940,15 +777,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_TriggerRatio) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "MDF_TotalDamageValue",
-                        "MDF_TriggerRatio"
-                      ]
+                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -973,15 +802,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_TriggerRatio) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "MDF_TotalDamageValue",
-                        "MDF_TriggerRatio"
-                      ]
+                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -1004,15 +825,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_TriggerRatio) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "MDF_TotalDamageValue",
-                        "MDF_TriggerRatio"
-                      ]
+                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -1035,15 +848,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_TriggerRatio) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "MDF_TotalDamageValue",
-                        "MDF_TriggerRatio"
-                      ]
+                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -1066,15 +871,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_TriggerRatio) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "MDF_TotalDamageValue",
-                        "MDF_TriggerRatio"
-                      ]
+                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -1287,15 +1084,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_TriggerRatio) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "MDF_TotalDamageValue",
-                        "MDF_TriggerRatio"
-                      ]
+                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -1318,15 +1107,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_TriggerRatio) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "MDF_TotalDamageValue",
-                        "MDF_TriggerRatio"
-                      ]
+                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -1349,15 +1130,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_TriggerRatio) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "MDF_TotalDamageValue",
-                        "MDF_TriggerRatio"
-                      ]
+                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -1380,15 +1153,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_TriggerRatio) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "MDF_TotalDamageValue",
-                        "MDF_TriggerRatio"
-                      ]
+                      "displayLines": "((MDF_TotalDamageValue * MDF_TriggerRatio) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -1413,15 +1178,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "DamageFlat": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (MDF_TotalDamageValue) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((DOT_TriggerRatio * MDF_TotalDamageValue) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "DOT_TriggerRatio",
-                        "MDF_TotalDamageValue"
-                      ]
+                      "displayLines": "((DOT_TriggerRatio * MDF_TotalDamageValue) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -1444,15 +1201,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "DamageFlat": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (MDF_TotalDamageValue) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((DOT_TriggerRatio * MDF_TotalDamageValue) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "DOT_TriggerRatio",
-                        "MDF_TotalDamageValue"
-                      ]
+                      "displayLines": "((DOT_TriggerRatio * MDF_TotalDamageValue) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -1475,15 +1224,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "DamageFlat": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (MDF_TotalDamageValue) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((DOT_TriggerRatio * MDF_TotalDamageValue) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "DOT_TriggerRatio",
-                        "MDF_TotalDamageValue"
-                      ]
+                      "displayLines": "((DOT_TriggerRatio * MDF_TotalDamageValue) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -1506,15 +1247,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "DamageFlat": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (MDF_TotalDamageValue) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((DOT_TriggerRatio * MDF_TotalDamageValue) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "DOT_TriggerRatio",
-                        "MDF_TotalDamageValue"
-                      ]
+                      "displayLines": "((DOT_TriggerRatio * MDF_TotalDamageValue) / 4)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -1567,13 +1300,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_AddDamageValue) || ADD || RETURN",
-                    "displayLines": "(MDF_TotalDamageValue + MDF_AddDamageValue)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_TotalDamageValue",
-                      "MDF_AddDamageValue"
-                    ]
+                    "displayLines": "(MDF_TotalDamageValue + MDF_AddDamageValue)"
                   },
                   "variableName": "MDF_TotalDamageValue"
                 },
@@ -1581,12 +1308,7 @@ const configAbility = {
                   "name": "Define Modifier Variable",
                   "modifierName": null,
                   "value": {
-                    "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                    "displayLines": "MDF_LifeTime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_LifeTime"
-                    ]
+                    "displayLines": "MDF_LifeTime"
                   },
                   "valueType": "Duration"
                 }
@@ -1740,16 +1462,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_ConstFinalDamage) || Variables[1] (MDF_ShieldDamage) || ADD || Constants[0] (1) || Variables[2] (MDF_TransferRatio) || SUB || DIV || Variables[0] (MDF_ConstFinalDamage) || Variables[1] (MDF_ShieldDamage) || ADD || SUB || RETURN",
-                        "displayLines": "(((MDF_ConstFinalDamage + MDF_ShieldDamage) / (1 - MDF_TransferRatio)) - (MDF_ConstFinalDamage + MDF_ShieldDamage))",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_ConstFinalDamage",
-                          "MDF_ShieldDamage",
-                          "MDF_TransferRatio"
-                        ]
+                        "displayLines": "(((MDF_ConstFinalDamage + MDF_ShieldDamage) / (1 - MDF_TransferRatio)) - (MDF_ConstFinalDamage + MDF_ShieldDamage))"
                       },
                       "variableName": "MDF_TransferDamage"
                     }
@@ -1758,18 +1471,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MIN) || Variables[1] (MDF_ConstFinalDamage) || Variables[2] (MDF_ShieldDamage) || ADD || Constants[0] (1) || Variables[3] (MDF_TransferRatio) || SUB || DIV || Variables[4] (MDF_FinalDamageMax) || PARAM_2 || FUNCTION || Variables[1] (MDF_ConstFinalDamage) || Variables[2] (MDF_ShieldDamage) || ADD || SUB || RETURN",
-                        "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(((MDF_ConstFinalDamage + MDF_ShieldDamage) / (1 - MDF_TransferRatio)), MDF_FinalDamageMax) - (MDF_ConstFinalDamage + MDF_ShieldDamage))",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MIN",
-                          "MDF_ConstFinalDamage",
-                          "MDF_ShieldDamage",
-                          "MDF_TransferRatio",
-                          "MDF_FinalDamageMax"
-                        ]
+                        "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(((MDF_ConstFinalDamage + MDF_ShieldDamage) / (1 - MDF_TransferRatio)), MDF_FinalDamageMax) - (MDF_ConstFinalDamage + MDF_ShieldDamage))"
                       },
                       "variableName": "MDF_TransferDamage"
                     }
@@ -1836,20 +1538,10 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"1476575085\">Enemy_W4_Manta_Virus_Mark</a>",
                           "valuePerStack": {
                             "MDF_AddDamageValue": {
-                              "operator": "Variables[0] (MDF_TransferDamage) || RETURN",
-                              "displayLines": "MDF_TransferDamage",
-                              "constants": [],
-                              "variables": [
-                                "MDF_TransferDamage"
-                              ]
+                              "displayLines": "MDF_TransferDamage"
                             },
                             "MDF_TriggerRatio": {
-                              "operator": "Variables[0] (MDF_TriggerRatio) || RETURN",
-                              "displayLines": "MDF_TriggerRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_TriggerRatio"
-                              ]
+                              "displayLines": "MDF_TriggerRatio"
                             }
                           }
                         }
@@ -1874,37 +1566,17 @@ const configAbility = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"-1447914838\">Enemy_W4_Manta_Virus_Monster</a>[<span class=\"descriptionNumberColor\">Black Tide Fever</span>]",
                               "duration": {
-                                "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                                "displayLines": "MDF_LifeTime",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_LifeTime"
-                                ]
+                                "displayLines": "MDF_LifeTime"
                               },
                               "valuePerStack": {
                                 "MDF_TotalDamageValue": {
-                                  "operator": "Variables[0] (MDF_TransferDamage) || RETURN",
-                                  "displayLines": "MDF_TransferDamage",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_TransferDamage"
-                                  ]
+                                  "displayLines": "MDF_TransferDamage"
                                 },
                                 "MDF_LifeTime": {
-                                  "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                                  "displayLines": "MDF_LifeTime",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_LifeTime"
-                                  ]
+                                  "displayLines": "MDF_LifeTime"
                                 },
                                 "MDF_TriggerRatio": {
-                                  "operator": "Variables[0] (MDF_TriggerRatio) || RETURN",
-                                  "displayLines": "MDF_TriggerRatio",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_TriggerRatio"
-                                  ]
+                                  "displayLines": "MDF_TriggerRatio"
                                 }
                               },
                               "casterAssign": "TargetSelf"
@@ -1919,37 +1591,17 @@ const configAbility = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"-1491117859\">Enemy_W4_Manta_Virus_Avatar</a>[<span class=\"descriptionNumberColor\">Black Tide Fever</span>]",
                               "duration": {
-                                "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                                "displayLines": "MDF_LifeTime",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_LifeTime"
-                                ]
+                                "displayLines": "MDF_LifeTime"
                               },
                               "valuePerStack": {
                                 "MDF_TotalDamageValue": {
-                                  "operator": "Variables[0] (MDF_TransferDamage) || RETURN",
-                                  "displayLines": "MDF_TransferDamage",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_TransferDamage"
-                                  ]
+                                  "displayLines": "MDF_TransferDamage"
                                 },
                                 "MDF_LifeTime": {
-                                  "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                                  "displayLines": "MDF_LifeTime",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_LifeTime"
-                                  ]
+                                  "displayLines": "MDF_LifeTime"
                                 },
                                 "MDF_TriggerRatio": {
-                                  "operator": "Variables[0] (MDF_TriggerRatio) || RETURN",
-                                  "displayLines": "MDF_TriggerRatio",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_TriggerRatio"
-                                  ]
+                                  "displayLines": "MDF_TriggerRatio"
                                 }
                               }
                             }
@@ -1974,12 +1626,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_TransferRatio) || RETURN",
-                "displayLines": "MDF_TransferRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_TransferRatio"
-                ]
+                "displayLines": "MDF_TransferRatio"
               }
             }
           ]
@@ -2184,12 +1831,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_NewMaxLayer": {
-              "operator": "Variables[0] (MDF_NewMaxLayer) || RETURN",
-              "displayLines": "MDF_NewMaxLayer",
-              "constants": [],
-              "variables": [
-                "MDF_NewMaxLayer"
-              ]
+              "displayLines": "MDF_NewMaxLayer"
             }
           }
         },
@@ -2219,28 +1861,13 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_TransferRatio": {
-              "operator": "Variables[0] (MDF_TransferRatio) || RETURN",
-              "displayLines": "MDF_TransferRatio",
-              "constants": [],
-              "variables": [
-                "MDF_TransferRatio"
-              ]
+              "displayLines": "MDF_TransferRatio"
             },
             "MDF_LifeTime": {
-              "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-              "displayLines": "MDF_LifeTime",
-              "constants": [],
-              "variables": [
-                "MDF_LifeTime"
-              ]
+              "displayLines": "MDF_LifeTime"
             },
             "MDF_TriggerRatio": {
-              "operator": "Variables[0] (MDF_TriggerRatio) || RETURN",
-              "displayLines": "MDF_TriggerRatio",
-              "constants": [],
-              "variables": [
-                "MDF_TriggerRatio"
-              ]
+              "displayLines": "MDF_TriggerRatio"
             }
           }
         }
@@ -2342,12 +1969,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                "displayLines": "MDF_MaxLayer",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxLayer"
-                ]
+                "displayLines": "MDF_MaxLayer"
               },
               "assignState": "True",
               "state": "Normal"
@@ -2376,14 +1998,7 @@ const configAbility = {
                 },
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (MDF_Count) || Constants[0] (1) || ADD || RETURN",
-                  "displayLines": "(MDF_Count + 1)",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    "MDF_Count"
-                  ]
+                  "displayLines": "(MDF_Count + 1)"
                 },
                 "valueType": "MaxLayer"
               },
@@ -2402,12 +2017,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MDF_Count) || RETURN",
-                        "displayLines": "MDF_Count",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Count"
-                        ]
+                        "displayLines": "MDF_Count"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -2415,12 +2025,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_NewMaxLayer) || RETURN",
-                        "displayLines": "MDF_NewMaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_NewMaxLayer"
-                        ]
+                        "displayLines": "MDF_NewMaxLayer"
                       },
                       "state": "Normal"
                     }
@@ -2429,12 +2034,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (MDF_Count) || RETURN",
-                        "displayLines": "MDF_Count",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Count"
-                        ]
+                        "displayLines": "MDF_Count"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -2442,12 +2042,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                        "displayLines": "MDF_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxLayer"
-                        ]
+                        "displayLines": "MDF_MaxLayer"
                       },
                       "state": "Normal"
                     }
@@ -2465,14 +2060,7 @@ const configAbility = {
                     },
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_Count) || Constants[0] (1) || ADD || RETURN",
-                      "displayLines": "(MDF_Count + 1)",
-                      "constants": [
-                        1
-                      ],
-                      "variables": [
-                        "MDF_Count"
-                      ]
+                      "displayLines": "(MDF_Count + 1)"
                     },
                     "valueType": "MaxLayer"
                   },
@@ -2491,12 +2079,7 @@ const configAbility = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (MDF_Count) || RETURN",
-                            "displayLines": "MDF_Count",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Count"
-                            ]
+                            "displayLines": "MDF_Count"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -2504,12 +2087,7 @@ const configAbility = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (MDF_NewMaxLayer) || RETURN",
-                            "displayLines": "MDF_NewMaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_NewMaxLayer"
-                            ]
+                            "displayLines": "MDF_NewMaxLayer"
                           },
                           "state": "Normal"
                         }
@@ -2518,12 +2096,7 @@ const configAbility = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (MDF_Count) || RETURN",
-                            "displayLines": "MDF_Count",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Count"
-                            ]
+                            "displayLines": "MDF_Count"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -2531,12 +2104,7 @@ const configAbility = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                            "displayLines": "MDF_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxLayer"
-                            ]
+                            "displayLines": "MDF_MaxLayer"
                           },
                           "state": "Normal"
                         }
@@ -2609,12 +2177,7 @@ const configAbility = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (MDF_NewMaxLayer) || RETURN",
-                            "displayLines": "MDF_NewMaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_NewMaxLayer"
-                            ]
+                            "displayLines": "MDF_NewMaxLayer"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -2622,12 +2185,7 @@ const configAbility = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (MDF_NewMaxLayer) || RETURN",
-                            "displayLines": "MDF_NewMaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_NewMaxLayer"
-                            ]
+                            "displayLines": "MDF_NewMaxLayer"
                           },
                           "state": "Active"
                         }
@@ -2636,12 +2194,7 @@ const configAbility = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                            "displayLines": "MDF_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxLayer"
-                            ]
+                            "displayLines": "MDF_MaxLayer"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -2649,12 +2202,7 @@ const configAbility = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                            "displayLines": "MDF_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxLayer"
-                            ]
+                            "displayLines": "MDF_MaxLayer"
                           },
                           "state": "Active"
                         }
@@ -2794,12 +2342,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1650122283\">Enemy_W4_Manta_Passive</a>[<span class=\"descriptionNumberColor\">Respite By The Waters</span>]",
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (MDF_NewMaxLayer) || INVERT || RETURN",
-                        "displayLines": "-MDF_NewMaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_NewMaxLayer"
-                        ]
+                        "displayLines": "-MDF_NewMaxLayer"
                       }
                     }
                   ],
@@ -2812,12 +2355,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1650122283\">Enemy_W4_Manta_Passive</a>[<span class=\"descriptionNumberColor\">Respite By The Waters</span>]",
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (MDF_MaxLayer) || INVERT || RETURN",
-                        "displayLines": "-MDF_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxLayer"
-                        ]
+                        "displayLines": "-MDF_MaxLayer"
                       }
                     }
                   ]
@@ -2856,13 +2394,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || Variables[1] (MDF_NewMaxLayer) || SUB || RETURN",
-                    "displayLines": "(MDF_MaxLayer - MDF_NewMaxLayer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer",
-                      "MDF_NewMaxLayer"
-                    ]
+                    "displayLines": "(MDF_MaxLayer - MDF_NewMaxLayer)"
                   },
                   "variableName": "MDF_NewMaxLayer"
                 },
@@ -2876,12 +2408,7 @@ const configAbility = {
                     },
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (MDF_NewMaxLayer) || RETURN",
-                      "displayLines": "MDF_NewMaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_NewMaxLayer"
-                      ]
+                      "displayLines": "MDF_NewMaxLayer"
                     },
                     "valueType": "Layer"
                   },
@@ -2894,12 +2421,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1650122283\">Enemy_W4_Manta_Passive</a>[<span class=\"descriptionNumberColor\">Respite By The Waters</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (MDF_NewMaxLayer) || RETURN",
-                        "displayLines": "MDF_NewMaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_NewMaxLayer"
-                        ]
+                        "displayLines": "MDF_NewMaxLayer"
                       },
                       "addStacksPerTrigger": 0
                     }
@@ -2913,21 +2435,10 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1650122283\">Enemy_W4_Manta_Passive</a>[<span class=\"descriptionNumberColor\">Respite By The Waters</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (MDF_NewMaxLayer) || RETURN",
-                        "displayLines": "MDF_NewMaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_NewMaxLayer"
-                        ]
+                        "displayLines": "MDF_NewMaxLayer"
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (MDF_Count) || Variables[1] (MDF_NewMaxLayer) || SUB || RETURN",
-                        "displayLines": "(MDF_Count - MDF_NewMaxLayer)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Count",
-                          "MDF_NewMaxLayer"
-                        ]
+                        "displayLines": "(MDF_Count - MDF_NewMaxLayer)"
                       }
                     }
                   ]
@@ -2962,12 +2473,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1650122283\">Enemy_W4_Manta_Passive</a>[<span class=\"descriptionNumberColor\">Respite By The Waters</span>]",
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_Count) || INVERT || RETURN",
-                    "displayLines": "-MDF_Count",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Count"
-                    ]
+                    "displayLines": "-MDF_Count"
                   }
                 },
                 {
@@ -3002,12 +2508,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1650122283\">Enemy_W4_Manta_Passive</a>[<span class=\"descriptionNumberColor\">Respite By The Waters</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                    "displayLines": "MDF_MaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxLayer"
-                    ]
+                    "displayLines": "MDF_MaxLayer"
                   },
                   "addStacksPerTrigger": 0
                 },

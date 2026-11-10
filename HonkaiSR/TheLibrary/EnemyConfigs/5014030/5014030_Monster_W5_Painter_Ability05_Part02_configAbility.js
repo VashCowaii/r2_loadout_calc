@@ -19,48 +19,28 @@ const configAbility = {
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                "displayLines": "SummonList_ADF_1",
-                "constants": [],
-                "variables": [
-                  "SummonList_ADF_1"
-                ]
+                "displayLines": "SummonList_ADF_1"
               },
               "locationType": "BeforeCaster"
             },
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                "displayLines": "SummonList_ADF_1",
-                "constants": [],
-                "variables": [
-                  "SummonList_ADF_1"
-                ]
+                "displayLines": "SummonList_ADF_1"
               },
               "locationType": "BeforeCaster"
             },
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                "displayLines": "SummonList_ADF_1",
-                "constants": [],
-                "variables": [
-                  "SummonList_ADF_1"
-                ]
+                "displayLines": "SummonList_ADF_1"
               },
               "locationType": "AfterCaster"
             },
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                "displayLines": "SummonList_ADF_1",
-                "constants": [],
-                "variables": [
-                  "SummonList_ADF_1"
-                ]
+                "displayLines": "SummonList_ADF_1"
               },
               "locationType": "AfterCaster"
             }
@@ -75,12 +55,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-389172724\">Enemy_W5_Painter_Main_SpecialAbility06Summon</a>",
           "valuePerStack": {
             "MDF_HPAddedRatio": {
-              "operator": "Variables[0] ({[Skill06[4]]}) || RETURN",
-              "displayLines": "{[Skill06[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[4]]}"
-              ]
+              "displayLines": "{[Skill06[4]]}"
             }
           }
         }
@@ -124,23 +99,13 @@ const configAbility = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                    "displayLines": "{[Skill05[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill05[0]]}"
-                    ]
+                    "displayLines": "{[Skill05[0]]}"
                   },
                   "enemyList": [
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                        "displayLines": "SummonList_ADF_1",
-                        "constants": [],
-                        "variables": [
-                          "SummonList_ADF_1"
-                        ]
+                        "displayLines": "SummonList_ADF_1"
                       },
                       "locationType": "AroundCasterOnEdge"
                     }
@@ -149,23 +114,13 @@ const configAbility = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                    "displayLines": "{[Skill05[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill05[1]]}"
-                    ]
+                    "displayLines": "{[Skill05[1]]}"
                   },
                   "enemyList": [
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                        "displayLines": "SummonList_ADF_1",
-                        "constants": [],
-                        "variables": [
-                          "SummonList_ADF_1"
-                        ]
+                        "displayLines": "SummonList_ADF_1"
                       },
                       "locationType": "AroundCasterOnEdge"
                     }
@@ -191,12 +146,7 @@ const configAbility = {
                   "conditions": {
                     "name": "Enemy ID",
                     "ID": {
-                      "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                      "displayLines": "SummonList_ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "SummonList_ADF_1"
-                      ]
+                      "displayLines": "SummonList_ADF_1"
                     },
                     "target": {
                       "name": "Target Name",
@@ -208,23 +158,13 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                        "displayLines": "{[Skill05[0]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill05[0]]}"
-                        ]
+                        "displayLines": "{[Skill05[0]]}"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                            "displayLines": "SummonList_ADF_1",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_1"
-                            ]
+                            "displayLines": "SummonList_ADF_1"
                           },
                           "locationType": "BeforeCaster"
                         }
@@ -237,12 +177,7 @@ const configAbility = {
                   "conditions": {
                     "name": "Enemy ID",
                     "ID": {
-                      "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                      "displayLines": "SummonList_ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "SummonList_ADF_1"
-                      ]
+                      "displayLines": "SummonList_ADF_1"
                     },
                     "target": {
                       "name": "Target Name",
@@ -254,23 +189,13 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                        "displayLines": "{[Skill05[0]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill05[0]]}"
-                        ]
+                        "displayLines": "{[Skill05[0]]}"
                       },
                       "enemyList": [
                         {
                           "name": "Enemy Entry",
                           "enemyID": {
-                            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                            "displayLines": "SummonList_ADF_1",
-                            "constants": [],
-                            "variables": [
-                              "SummonList_ADF_1"
-                            ]
+                            "displayLines": "SummonList_ADF_1"
                           },
                           "locationType": "AfterCaster"
                         }
@@ -308,23 +233,13 @@ const configAbility = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                            "displayLines": "{[Skill05[0]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[0]]}"
-                            ]
+                            "displayLines": "{[Skill05[0]]}"
                           },
                           "enemyList": [
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                                "displayLines": "SummonList_ADF_1",
-                                "constants": [],
-                                "variables": [
-                                  "SummonList_ADF_1"
-                                ]
+                                "displayLines": "SummonList_ADF_1"
                               },
                               "locationType": "AfterCaster"
                             }
@@ -347,23 +262,13 @@ const configAbility = {
                             {
                               "name": "Create Enemies",
                               "delayPercent": {
-                                "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                                "displayLines": "{[Skill05[1]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[Skill05[1]]}"
-                                ]
+                                "displayLines": "{[Skill05[1]]}"
                               },
                               "enemyList": [
                                 {
                                   "name": "Enemy Entry",
                                   "enemyID": {
-                                    "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                                    "displayLines": "SummonList_ADF_1",
-                                    "constants": [],
-                                    "variables": [
-                                      "SummonList_ADF_1"
-                                    ]
+                                    "displayLines": "SummonList_ADF_1"
                                   },
                                   "locationType": "BeforeCaster"
                                 }
@@ -388,23 +293,13 @@ const configAbility = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                            "displayLines": "{[Skill05[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[1]]}"
-                            ]
+                            "displayLines": "{[Skill05[1]]}"
                           },
                           "enemyList": [
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                                "displayLines": "SummonList_ADF_1",
-                                "constants": [],
-                                "variables": [
-                                  "SummonList_ADF_1"
-                                ]
+                                "displayLines": "SummonList_ADF_1"
                               },
                               "locationType": "BeforeCaster"
                             }
@@ -427,23 +322,13 @@ const configAbility = {
                             {
                               "name": "Create Enemies",
                               "delayPercent": {
-                                "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                                "displayLines": "{[Skill05[0]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[Skill05[0]]}"
-                                ]
+                                "displayLines": "{[Skill05[0]]}"
                               },
                               "enemyList": [
                                 {
                                   "name": "Enemy Entry",
                                   "enemyID": {
-                                    "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                                    "displayLines": "SummonList_ADF_1",
-                                    "constants": [],
-                                    "variables": [
-                                      "SummonList_ADF_1"
-                                    ]
+                                    "displayLines": "SummonList_ADF_1"
                                   },
                                   "locationType": "AfterCaster"
                                 }
@@ -529,20 +414,10 @@ const configAbility = {
             "MDF_MaxHPAddedRAtio": 0,
             "MDF_AllDamageTypeAddedRatio": 0,
             "MDF_DamageRatio": {
-              "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-              "displayLines": "{[Skill05[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[2]]}"
-              ]
+              "displayLines": "{[Skill05[2]]}"
             },
             "MDF_BonusBPValue": {
-              "operator": "Variables[0] ({[Skill05[4]]}) || RETURN",
-              "displayLines": "{[Skill05[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[4]]}"
-              ]
+              "displayLines": "{[Skill05[4]]}"
             }
           }
         }
@@ -557,36 +432,16 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"600664801\">Enemy_W5_Painter_SummonerEnhance</a>[<span class=\"descriptionNumberColor\">Beyond-Human Realm</span>]",
           "valuePerStack": {
             "MDF_MaxHPAddedRAtio": {
-              "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-              "displayLines": "{[Skill05[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[3]]}"
-              ]
+              "displayLines": "{[Skill05[3]]}"
             },
             "MDF_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[Skill05[5]]}) || RETURN",
-              "displayLines": "{[Skill05[5]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[5]]}"
-              ]
+              "displayLines": "{[Skill05[5]]}"
             },
             "MDF_DamageRatio": {
-              "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-              "displayLines": "{[Skill05[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[2]]}"
-              ]
+              "displayLines": "{[Skill05[2]]}"
             },
             "MDF_BonusBPValue": {
-              "operator": "Variables[0] ({[Skill05[4]]}) || RETURN",
-              "displayLines": "{[Skill05[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[4]]}"
-              ]
+              "displayLines": "{[Skill05[4]]}"
             }
           }
         }

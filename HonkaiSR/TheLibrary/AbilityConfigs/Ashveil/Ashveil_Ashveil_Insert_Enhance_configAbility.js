@@ -143,21 +143,11 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Thunder",
                         "Damage": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         },
                         "HitSplit": 0.1,
                         "Toughness": {
-                          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                          "displayLines": "ST Toughness Value",
-                          "constants": [],
-                          "variables": [
-                            "ST Toughness Value"
-                          ]
+                          "displayLines": "ST Toughness Value"
                         },
                         "Tags": null,
                         "attackType": "Follow-up"
@@ -208,12 +198,7 @@ const configAbility = {
                         "value1": "SkillP01_EnhanceInsertBuffStack",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (4) || RETURN",
-                          "displayLines": "4",
-                          "constants": [],
-                          "variables": [
-                            4
-                          ]
+                          "displayLines": "4"
                         }
                       },
                       "passed": [
@@ -258,12 +243,7 @@ const configAbility = {
                             "value1": "SkillP01_EnhanceInsertBuffStack",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (4) || RETURN",
-                              "displayLines": "4",
-                              "constants": [],
-                              "variables": [
-                                4
-                              ]
+                              "displayLines": "4"
                             }
                           },
                           {
@@ -314,12 +294,7 @@ const configAbility = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (Ability_CountForSound) || RETURN",
-                "displayLines": "Ability_CountForSound",
-                "constants": [],
-                "variables": [
-                  "Ability_CountForSound"
-                ]
+                "displayLines": "Ability_CountForSound"
               },
               "compareType": ">=",
               "caseEvents": [
@@ -350,14 +325,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (Ability_CountForSound) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(Ability_CountForSound + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Ability_CountForSound"
-                    ]
+                    "displayLines": "(Ability_CountForSound + 1)"
                   },
                   "variableName": "Ability_CountForSound"
                 }
@@ -417,12 +385,7 @@ const configAbility = {
                         "value1": "SkillP01_EnhanceInsertBuffStack",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (4) || RETURN",
-                          "displayLines": "4",
-                          "constants": [],
-                          "variables": [
-                            4
-                          ]
+                          "displayLines": "4"
                         }
                       }
                     ]
@@ -431,26 +394,14 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (SkillP01_EnhanceInsertBuffStack) || Variables[1] (4) || SUB || RETURN",
-                        "displayLines": "(SkillP01_EnhanceInsertBuffStack - 4)",
-                        "constants": [],
-                        "variables": [
-                          "SkillP01_EnhanceInsertBuffStack",
-                          4
-                        ]
+                        "displayLines": "(SkillP01_EnhanceInsertBuffStack - 4)"
                       },
                       "variableName": "SkillP01_EnhanceInsertBuffStack"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (SkillRank_Rank02_EnhanceInsertBuffStackReturn) || Variables[1] (4) || ADD || RETURN",
-                        "displayLines": "(SkillRank_Rank02_EnhanceInsertBuffStackReturn + 4)",
-                        "constants": [],
-                        "variables": [
-                          "SkillRank_Rank02_EnhanceInsertBuffStackReturn",
-                          4
-                        ]
+                        "displayLines": "(SkillRank_Rank02_EnhanceInsertBuffStackReturn + 4)"
                       },
                       "variableName": "SkillRank_Rank02_EnhanceInsertBuffStackReturn"
                     },
@@ -467,12 +418,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "operator": "Variables[0] (2) || RETURN",
-                              "displayLines": "2",
-                              "constants": [],
-                              "variables": [
-                                2
-                              ]
+                              "displayLines": "2"
                             },
                             "HitSplit": 0.1,
                             "Toughness": null,
@@ -502,12 +448,7 @@ const configAbility = {
                         "value1": "SkillP01_EnhanceInsertBuffStack",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (4) || RETURN",
-                          "displayLines": "4",
-                          "constants": [],
-                          "variables": [
-                            4
-                          ]
+                          "displayLines": "4"
                         }
                       },
                       "passed": [
@@ -552,12 +493,7 @@ const configAbility = {
                             "value1": "SkillP01_EnhanceInsertBuffStack",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (4) || RETURN",
-                              "displayLines": "4",
-                              "constants": [],
-                              "variables": [
-                                4
-                              ]
+                              "displayLines": "4"
                             }
                           },
                           {
@@ -606,13 +542,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (SkillP01_EnhanceInsertBuffStack) || Variables[1] (2) || ADD || RETURN",
-        "displayLines": "(SkillP01_EnhanceInsertBuffStack + 2)",
-        "constants": [],
-        "variables": [
-          "SkillP01_EnhanceInsertBuffStack",
-          2
-        ]
+        "displayLines": "(SkillP01_EnhanceInsertBuffStack + 2)"
       },
       "variableName": "SkillP01_EnhanceInsertBuffStack"
     },
@@ -626,15 +556,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (SkillP01_EnhanceInsertBuffStack) || Variables[1] (FLOOR) || Variables[2] (SkillRank_Rank02_EnhanceInsertBuffStackReturn) || Variables[3] (0.35) || MUL || PARAM_1 || FUNCTION || ADD || RETURN",
-            "displayLines": "(SkillP01_EnhanceInsertBuffStack + &nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((SkillRank_Rank02_EnhanceInsertBuffStackReturn * 0.35)))",
-            "constants": [],
-            "variables": [
-              "SkillP01_EnhanceInsertBuffStack",
-              "FLOOR",
-              "SkillRank_Rank02_EnhanceInsertBuffStackReturn",
-              0.35
-            ]
+            "displayLines": "(SkillP01_EnhanceInsertBuffStack + &nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((SkillRank_Rank02_EnhanceInsertBuffStackReturn * 0.35)))"
           },
           "variableName": "SkillP01_EnhanceInsertBuffStack"
         },
@@ -653,20 +575,10 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1033168707\">Ashveil_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">Finale: And Then There Were None</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (30) || RETURN",
-                "displayLines": "30",
-                "constants": [],
-                "variables": [
-                  30
-                ]
+                "displayLines": "30"
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               }
             },
             {
@@ -677,22 +589,10 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1033168707\">Ashveil_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">Finale: And Then There Were None</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (30) || RETURN",
-                "displayLines": "30",
-                "constants": [],
-                "variables": [
-                  30
-                ]
+                "displayLines": "30"
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (FLOOR) || Variables[1] (SkillRank_Rank02_EnhanceInsertBuffStackReturn) || Variables[2] (0.35) || MUL || PARAM_1 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((SkillRank_Rank02_EnhanceInsertBuffStackReturn * 0.35))",
-                "constants": [],
-                "variables": [
-                  "FLOOR",
-                  "SkillRank_Rank02_EnhanceInsertBuffStackReturn",
-                  0.35
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((SkillRank_Rank02_EnhanceInsertBuffStackReturn * 0.35))"
               }
             }
           ]

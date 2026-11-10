@@ -189,12 +189,7 @@ const compositeAbilityObject = {
                     "value1": "MDF_DebuffNumber",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_PointB3DebuffCount) || RETURN",
-                      "displayLines": "MDF_PointB3DebuffCount",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PointB3DebuffCount"
-                      ]
+                      "displayLines": "MDF_PointB3DebuffCount"
                     }
                   },
                   "passed": [
@@ -206,13 +201,7 @@ const compositeAbilityObject = {
                       },
                       "scope": "ContextModifier",
                       "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_DebuffNumber) || MUL || RETURN",
-                        "displayLines": "(MDF_PropertyValue * MDF_DebuffNumber)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue",
-                          "MDF_DebuffNumber"
-                        ]
+                        "displayLines": "(MDF_PropertyValue * MDF_DebuffNumber)"
                       },
                       "variableName": "MDF_PropertyValueChange"
                     },
@@ -223,12 +212,7 @@ const compositeAbilityObject = {
                         "value1": "MDF_PropertyValueChange",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (MDF_PropertyValueMax) || RETURN",
-                          "displayLines": "MDF_PropertyValueMax",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValueMax"
-                          ]
+                          "displayLines": "MDF_PropertyValueMax"
                         }
                       },
                       "passed": [
@@ -240,12 +224,7 @@ const compositeAbilityObject = {
                           },
                           "scope": "ContextModifier",
                           "value": {
-                            "operator": "Variables[0] (MDF_PropertyValueMax) || RETURN",
-                            "displayLines": "MDF_PropertyValueMax",
-                            "constants": [],
-                            "variables": [
-                              "MDF_PropertyValueMax"
-                            ]
+                            "displayLines": "MDF_PropertyValueMax"
                           },
                           "variableName": "MDF_PropertyValueChange"
                         }
@@ -259,13 +238,7 @@ const compositeAbilityObject = {
                           },
                           "scope": "ContextModifier",
                           "value": {
-                            "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_DebuffNumber) || MUL || RETURN",
-                            "displayLines": "(MDF_PropertyValue * MDF_DebuffNumber)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_PropertyValue",
-                              "MDF_DebuffNumber"
-                            ]
+                            "displayLines": "(MDF_PropertyValue * MDF_DebuffNumber)"
                           },
                           "variableName": "MDF_PropertyValueChange"
                         }
@@ -547,13 +520,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue01) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue01 * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue01",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_PropertyValue01 * MDF_Layer)"
                   }
                 },
                 {
@@ -564,13 +531,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue02) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue02 * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue02",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_PropertyValue02 * MDF_Layer)"
                   }
                 }
               ]
@@ -670,45 +631,24 @@ const compositeAbilityObject = {
                     "value1": "_Dr_Ratio_Rank06_Skill03_InsertMaxCount",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-                        "displayLines": "(2 + 1)",
-                        "constants": [],
-                        "variables": [
-                          2,
-                          1
-                        ]
+                        "displayLines": "(2 + 1)"
                       },
                       "variableName": "_Dr_Ratio_00_EnergyBar"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (_Dr_Ratio_00_EnergyBar) || RETURN",
-                        "displayLines": "_Dr_Ratio_00_EnergyBar",
-                        "constants": [],
-                        "variables": [
-                          "_Dr_Ratio_00_EnergyBar"
-                        ]
+                        "displayLines": "_Dr_Ratio_00_EnergyBar"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (_Dr_Ratio_Rank06_Skill03_InsertMaxCount) || RETURN",
-                        "displayLines": "_Dr_Ratio_Rank06_Skill03_InsertMaxCount",
-                        "constants": [],
-                        "variables": [
-                          "_Dr_Ratio_Rank06_Skill03_InsertMaxCount"
-                        ]
+                        "displayLines": "_Dr_Ratio_Rank06_Skill03_InsertMaxCount"
                       },
                       "assignState": "True",
                       "priorState": "Active",
@@ -720,32 +660,17 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "variableName": "_Dr_Ratio_00_EnergyBar"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (_Dr_Ratio_00_EnergyBar) || RETURN",
-                        "displayLines": "_Dr_Ratio_00_EnergyBar",
-                        "constants": [],
-                        "variables": [
-                          "_Dr_Ratio_00_EnergyBar"
-                        ]
+                        "displayLines": "_Dr_Ratio_00_EnergyBar"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "assignState": "True",
                       "priorState": "Active",
@@ -1405,14 +1330,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "(0 - MDF_PropertyValue)"
                   }
                 }
               ]
@@ -1444,29 +1362,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1535177927\">Dr_Ratio_Maze_SpeedDown</a>[<span class=\"descriptionNumberColor\">SPD Reduction</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "baseChance": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.15) || RETURN",
-                          "displayLines": "0.15",
-                          "constants": [],
-                          "variables": [
-                            0.15
-                          ]
+                          "displayLines": "0.15"
                         }
                       }
                     }
@@ -1502,14 +1405,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_Dr_Ratio_00_EnergyBar) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(_Dr_Ratio_00_EnergyBar - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_Dr_Ratio_00_EnergyBar"
-                ]
+                "displayLines": "(_Dr_Ratio_00_EnergyBar - 1)"
               },
               "variableName": "_Dr_Ratio_00_EnergyBar"
             },
@@ -1541,12 +1437,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_Dr_Ratio_00_EnergyBar) || RETURN",
-                    "displayLines": "_Dr_Ratio_00_EnergyBar",
-                    "constants": [],
-                    "variables": [
-                      "_Dr_Ratio_00_EnergyBar"
-                    ]
+                    "displayLines": "_Dr_Ratio_00_EnergyBar"
                   },
                   "priorState": "Active"
                 }
@@ -1563,12 +1454,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_Dr_Ratio_00_EnergyBar) || RETURN",
-                    "displayLines": "_Dr_Ratio_00_EnergyBar",
-                    "constants": [],
-                    "variables": [
-                      "_Dr_Ratio_00_EnergyBar"
-                    ]
+                    "displayLines": "_Dr_Ratio_00_EnergyBar"
                   },
                   "priorState": "Normal"
                 }
@@ -1597,12 +1483,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1351658038\">Dr_Ratio_Eidolon6_AllDamageTypeAddedRatio</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
+                  "displayLines": "0.5"
                 }
               }
             }
@@ -1660,12 +1541,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (15) || RETURN",
-                "displayLines": "15",
-                "constants": [],
-                "variables": [
-                  15
-                ]
+                "displayLines": "15"
               },
               "isFixed": "* ERR"
             }
@@ -1680,20 +1556,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] (2.7) || RETURN",
-              "displayLines": "2.7",
-              "constants": [],
-              "variables": [
-                2.7
-              ]
+              "displayLines": "2.7"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Follow-up",
@@ -1714,24 +1580,14 @@ const compositeAbilityObject = {
                 "value1": "_DebuffCount",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (4) || RETURN",
-                  "displayLines": "4",
-                  "constants": [],
-                  "variables": [
-                    4
-                  ]
+                  "displayLines": "4"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (4) || RETURN",
-                    "displayLines": "4",
-                    "constants": [],
-                    "variables": [
-                      4
-                    ]
+                    "displayLines": "4"
                   },
                   "variableName": "_DebuffCount"
                 }
@@ -1740,12 +1596,7 @@ const compositeAbilityObject = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (_DebuffCount) || RETURN",
-                "displayLines": "_DebuffCount",
-                "constants": [],
-                "variables": [
-                  "_DebuffCount"
-                ]
+                "displayLines": "_DebuffCount"
               },
               "execute": [
                 {
@@ -1758,12 +1609,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Imaginary",
                     "Damage": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1979,13 +1825,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-                "displayLines": "(2 + 1)",
-                "constants": [],
-                "variables": [
-                  2,
-                  1
-                ]
+                "displayLines": "(2 + 1)"
               },
               "variableName": "_Dr_Ratio_Rank06_Skill03_InsertMaxCount"
             },
@@ -1993,12 +1833,7 @@ const compositeAbilityObject = {
               "name": "Update Displayed Energy Bar",
               "value": 0,
               "maximum": {
-                "operator": "Variables[0] (_Dr_Ratio_Rank06_Skill03_InsertMaxCount) || RETURN",
-                "displayLines": "_Dr_Ratio_Rank06_Skill03_InsertMaxCount",
-                "constants": [],
-                "variables": [
-                  "_Dr_Ratio_Rank06_Skill03_InsertMaxCount"
-                ]
+                "displayLines": "_Dr_Ratio_Rank06_Skill03_InsertMaxCount"
               },
               "assignState": "True",
               "priorState": "Normal",
@@ -2011,12 +1846,7 @@ const compositeAbilityObject = {
               "name": "Update Displayed Energy Bar",
               "value": 0,
               "maximum": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "assignState": "True",
               "priorState": "Normal",
@@ -2049,28 +1879,13 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"1222801493\">Dr_Ratio_PointB3_Modifier</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.1) || RETURN",
-                  "displayLines": "0.1",
-                  "constants": [],
-                  "variables": [
-                    0.1
-                  ]
+                  "displayLines": "0.1"
                 },
                 "MDF_PropertyValueMax": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
+                  "displayLines": "0.5"
                 },
                 "MDF_PointB3DebuffCount": {
-                  "operator": "Variables[0] (3) || RETURN",
-                  "displayLines": "3",
-                  "constants": [],
-                  "variables": [
-                    3
-                  ]
+                  "displayLines": "3"
                 }
               }
             }
@@ -2120,39 +1935,18 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1828934114\">Dr_Ratio_Ability03_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Summation</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (6) || Variables[1] (4) || ADD || RETURN",
-                    "displayLines": "(6 + 4)",
-                    "constants": [],
-                    "variables": [
-                      6,
-                      4
-                    ]
+                    "displayLines": "(6 + 4)"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue01": {
-                      "operator": "Variables[0] (0.025) || RETURN",
-                      "displayLines": "0.025",
-                      "constants": [],
-                      "variables": [
-                        0.025
-                      ]
+                      "displayLines": "0.025"
                     },
                     "MDF_PropertyValue02": {
-                      "operator": "Variables[0] (0.05) || RETURN",
-                      "displayLines": "0.05",
-                      "constants": [],
-                      "variables": [
-                        0.05
-                      ]
+                      "displayLines": "0.05"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (4) || RETURN",
-                    "displayLines": "4",
-                    "constants": [],
-                    "variables": [
-                      4
-                    ]
+                    "displayLines": "4"
                   }
                 },
                 "Modifier Deletes Itself"
@@ -2203,16 +1997,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_DebuffChance) || Variables[1] (MDF_SpecialMark_DebuffNumber) || Variables[2] (MDF_DebuffAddChance) || MUL || ADD || Constants[0] (100) || MUL || RETURN",
-                        "displayLines": "((MDF_DebuffChance + (MDF_SpecialMark_DebuffNumber * MDF_DebuffAddChance)) * 100)",
-                        "constants": [
-                          100
-                        ],
-                        "variables": [
-                          "MDF_DebuffChance",
-                          "MDF_SpecialMark_DebuffNumber",
-                          "MDF_DebuffAddChance"
-                        ]
+                        "displayLines": "((MDF_DebuffChance + (MDF_SpecialMark_DebuffNumber * MDF_DebuffAddChance)) * 100)"
                       },
                       "variableName": "MDF_SpecialMark_DebuffChance"
                     },
@@ -2291,16 +2076,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (MDF_DebuffChance) || Variables[1] (MDF_SpecialMark_DebuffNumber) || Variables[2] (MDF_DebuffAddChance) || MUL || ADD || Constants[0] (100) || MUL || RETURN",
-                            "displayLines": "((MDF_DebuffChance + (MDF_SpecialMark_DebuffNumber * MDF_DebuffAddChance)) * 100)",
-                            "constants": [
-                              100
-                            ],
-                            "variables": [
-                              "MDF_DebuffChance",
-                              "MDF_SpecialMark_DebuffNumber",
-                              "MDF_DebuffAddChance"
-                            ]
+                            "displayLines": "((MDF_DebuffChance + (MDF_SpecialMark_DebuffNumber * MDF_DebuffAddChance)) * 100)"
                           },
                           "variableName": "MDF_SpecialMark_DebuffChance"
                         },
@@ -2373,16 +2149,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (MDF_DebuffChance) || Variables[1] (MDF_SpecialMark_DebuffNumber) || Variables[2] (MDF_DebuffAddChance) || MUL || ADD || Constants[0] (100) || MUL || RETURN",
-                            "displayLines": "((MDF_DebuffChance + (MDF_SpecialMark_DebuffNumber * MDF_DebuffAddChance)) * 100)",
-                            "constants": [
-                              100
-                            ],
-                            "variables": [
-                              "MDF_DebuffChance",
-                              "MDF_SpecialMark_DebuffNumber",
-                              "MDF_DebuffAddChance"
-                            ]
+                            "displayLines": "((MDF_DebuffChance + (MDF_SpecialMark_DebuffNumber * MDF_DebuffAddChance)) * 100)"
                           },
                           "variableName": "MDF_SpecialMark_DebuffChance"
                         },
@@ -2658,20 +2425,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1712485914\">Dr_Ratio_Passive_SpecialMark</a>",
                       "valuePerStack": {
                         "MDF_DebuffChance": {
-                          "operator": "Variables[0] (0.4) || RETURN",
-                          "displayLines": "0.4",
-                          "constants": [],
-                          "variables": [
-                            0.4
-                          ]
+                          "displayLines": "0.4"
                         },
                         "MDF_DebuffAddChance": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     }
@@ -2751,20 +2508,10 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1712485914\">Dr_Ratio_Passive_SpecialMark</a>",
                   "valuePerStack": {
                     "MDF_DebuffChance": {
-                      "operator": "Variables[0] (0.4) || RETURN",
-                      "displayLines": "0.4",
-                      "constants": [],
-                      "variables": [
-                        0.4
-                      ]
+                      "displayLines": "0.4"
                     },
                     "MDF_DebuffAddChance": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 }
@@ -2943,13 +2690,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"1000967262\">Dr_Ratio_Ability03_TheFool</a>[<span class=\"descriptionNumberColor\">Wiseman's Folly</span>]",
               "valuePerStack": {
                 "MDF_Ability03_InsertMaxCount": {
-                  "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-                  "displayLines": "(2 + 1)",
-                  "constants": [],
-                  "variables": [
-                    2,
-                    1
-                  ]
+                  "displayLines": "(2 + 1)"
                 }
               }
             }
@@ -2964,12 +2705,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"1000967262\">Dr_Ratio_Ability03_TheFool</a>[<span class=\"descriptionNumberColor\">Wiseman's Folly</span>]",
               "valuePerStack": {
                 "MDF_Ability03_InsertMaxCount": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
+                  "displayLines": "2"
                 }
               }
             }
@@ -2985,20 +2721,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] (2.4) || RETURN",
-              "displayLines": "2.4",
-              "constants": [],
-              "variables": [
-                2.4
-              ]
+              "displayLines": "2.4"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -3113,26 +2839,14 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.4) || RETURN",
-                "displayLines": "0.4",
-                "constants": [],
-                "variables": [
-                  0.4
-                ]
+                "displayLines": "0.4"
               },
               "variableName": "_Dr_Ratio_InsertChance"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_Dr_Ratio_InsertChance) || Variables[1] (_DebuffCount) || Variables[2] (0.2) || MUL || ADD || RETURN",
-                "displayLines": "(_Dr_Ratio_InsertChance + (_DebuffCount * 0.2))",
-                "constants": [],
-                "variables": [
-                  "_Dr_Ratio_InsertChance",
-                  "_DebuffCount",
-                  0.2
-                ]
+                "displayLines": "(_Dr_Ratio_InsertChance + (_DebuffCount * 0.2))"
               },
               "variableName": "_Dr_Ratio_InsertChance"
             }
@@ -3141,12 +2855,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.4) || RETURN",
-                "displayLines": "0.4",
-                "constants": [],
-                "variables": [
-                  0.4
-                ]
+                "displayLines": "0.4"
               },
               "variableName": "_Dr_Ratio_InsertChance"
             }
@@ -3166,12 +2875,7 @@ const compositeAbilityObject = {
               "conditions": {
                 "name": "Random Chance",
                 "chance": {
-                  "operator": "Variables[0] (_Dr_Ratio_InsertChance) || RETURN",
-                  "displayLines": "_Dr_Ratio_InsertChance",
-                  "constants": [],
-                  "variables": [
-                    "_Dr_Ratio_InsertChance"
-                  ]
+                  "displayLines": "_Dr_Ratio_InsertChance"
                 }
               },
               "passed": [
@@ -3222,12 +2926,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_DebuffCount) || RETURN",
-                        "displayLines": "_DebuffCount",
-                        "constants": [],
-                        "variables": [
-                          "_DebuffCount"
-                        ]
+                        "displayLines": "_DebuffCount"
                       },
                       "variableName": "_EffDebuffCount"
                     }
@@ -3261,14 +2960,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_DebuffCount) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(_DebuffCount - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_DebuffCount"
-                    ]
+                    "displayLines": "(_DebuffCount - 1)"
                   },
                   "variableName": "_DebuffCount"
                 },
@@ -3312,30 +3004,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1828934114\">Dr_Ratio_Ability03_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Summation</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (6) || Variables[1] (4) || ADD || RETURN",
-                        "displayLines": "(6 + 4)",
-                        "constants": [],
-                        "variables": [
-                          6,
-                          4
-                        ]
+                        "displayLines": "(6 + 4)"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue01": {
-                          "operator": "Variables[0] (0.025) || RETURN",
-                          "displayLines": "0.025",
-                          "constants": [],
-                          "variables": [
-                            0.025
-                          ]
+                          "displayLines": "0.025"
                         },
                         "MDF_PropertyValue02": {
-                          "operator": "Variables[0] (0.05) || RETURN",
-                          "displayLines": "0.05",
-                          "constants": [],
-                          "variables": [
-                            0.05
-                          ]
+                          "displayLines": "0.05"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -3350,29 +3026,14 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1828934114\">Dr_Ratio_Ability03_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Summation</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (6) || RETURN",
-                        "displayLines": "6",
-                        "constants": [],
-                        "variables": [
-                          6
-                        ]
+                        "displayLines": "6"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue01": {
-                          "operator": "Variables[0] (0.025) || RETURN",
-                          "displayLines": "0.025",
-                          "constants": [],
-                          "variables": [
-                            0.025
-                          ]
+                          "displayLines": "0.025"
                         },
                         "MDF_PropertyValue02": {
-                          "operator": "Variables[0] (0.05) || RETURN",
-                          "displayLines": "0.05",
-                          "constants": [],
-                          "variables": [
-                            0.05
-                          ]
+                          "displayLines": "0.05"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -3393,14 +3054,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_EffDebuffCount) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(_EffDebuffCount - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_EffDebuffCount"
-                    ]
+                    "displayLines": "(_EffDebuffCount - 1)"
                   },
                   "variableName": "_EffDebuffCount"
                 }
@@ -3429,20 +3083,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] (1.5) || RETURN",
-              "displayLines": "1.5",
-              "constants": [],
-              "variables": [
-                1.5
-              ]
+              "displayLines": "1.5"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -3464,29 +3108,14 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1051491293\">Dr_Ratio_Slow</a>[<span class=\"descriptionNumberColor\">Effect RES Reduction</span>]",
               "duration": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "baseChance": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.1) || RETURN",
-                  "displayLines": "0.1",
-                  "constants": [],
-                  "variables": [
-                    0.1
-                  ]
+                  "displayLines": "0.1"
                 }
               }
             }
@@ -3545,14 +3174,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "(0 - MDF_PropertyValue)"
                   }
                 }
               ]
@@ -3641,20 +3263,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"

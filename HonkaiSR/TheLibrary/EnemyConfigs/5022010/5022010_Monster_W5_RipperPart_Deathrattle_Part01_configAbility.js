@@ -98,12 +98,7 @@ const configAbility = {
     {
       "name": "Adjust Team Punchline Value",
       "value": {
-        "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-        "displayLines": "{[PassiveSkill01[0]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill01[0]]}"
-        ]
+        "displayLines": "{[PassiveSkill01[0]]}"
       },
       "adjustment": "Add"
     },

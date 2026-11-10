@@ -30,12 +30,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -60,12 +55,7 @@ const configAbility = {
                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (160) || RETURN",
-                  "displayLines": "160",
-                  "constants": [],
-                  "variables": [
-                    160
-                  ]
+                  "displayLines": "160"
                 }
               },
               "passed": [
@@ -78,12 +68,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"487760194\">Relic_311_Sub</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.18) || RETURN",
-                      "displayLines": "0.18",
-                      "constants": [],
-                      "variables": [
-                        0.18
-                      ]
+                      "displayLines": "0.18"
                     }
                   }
                 }
@@ -100,12 +85,7 @@ const configAbility = {
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (135) || RETURN",
-                      "displayLines": "135",
-                      "constants": [],
-                      "variables": [
-                        135
-                      ]
+                      "displayLines": "135"
                     }
                   },
                   "passed": [
@@ -118,12 +98,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"487760194\">Relic_311_Sub</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.12) || RETURN",
-                          "displayLines": "0.12",
-                          "constants": [],
-                          "variables": [
-                            0.12
-                          ]
+                          "displayLines": "0.12"
                         }
                       }
                     }
@@ -143,12 +118,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": {
-                "operator": "Variables[0] (135) || RETURN",
-                "displayLines": "135",
-                "constants": [],
-                "variables": [
-                  135
-                ]
+                "displayLines": "135"
               },
               "enteringRange": [
                 {
@@ -165,20 +135,10 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": {
-                "operator": "Variables[0] (135) || RETURN",
-                "displayLines": "135",
-                "constants": [],
-                "variables": [
-                  135
-                ]
+                "displayLines": "135"
               },
               "maxValue": {
-                "operator": "Variables[0] (160) || RETURN",
-                "displayLines": "160",
-                "constants": [],
-                "variables": [
-                  160
-                ]
+                "displayLines": "160"
               },
               "enteringRange": [
                 {
@@ -190,12 +150,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"487760194\">Relic_311_Sub</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.12) || RETURN",
-                      "displayLines": "0.12",
-                      "constants": [],
-                      "variables": [
-                        0.12
-                      ]
+                      "displayLines": "0.12"
                     }
                   }
                 }
@@ -204,12 +159,7 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": {
-                "operator": "Variables[0] (160) || RETURN",
-                "displayLines": "160",
-                "constants": [],
-                "variables": [
-                  160
-                ]
+                "displayLines": "160"
               },
               "enteringRange": [
                 {
@@ -221,12 +171,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"487760194\">Relic_311_Sub</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.18) || RETURN",
-                      "displayLines": "0.18",
-                      "constants": [],
-                      "variables": [
-                        0.18
-                      ]
+                      "displayLines": "0.18"
                     }
                   }
                 }

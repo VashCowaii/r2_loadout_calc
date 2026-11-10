@@ -55,12 +55,7 @@ const configAbility = {
       "duration": 2,
       "valuePerStack": {
         "MDF_AllDamageTypeAddedRatio": {
-          "operator": "Variables[0] ({[Skill02[5]]}) || RETURN",
-          "displayLines": "{[Skill02[5]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill02[5]]}"
-          ]
+          "displayLines": "{[Skill02[5]]}"
         }
       }
     }

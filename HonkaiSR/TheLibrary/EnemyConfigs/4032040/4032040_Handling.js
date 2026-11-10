@@ -79,16 +79,7 @@ const configAbility = {
               {
                 "name": "Define Custom Variable",
                 "value": {
-                  "operator": "Variables[0] (WHOLE) || Variables[1] (DarkTeamCount) || Constants[0] (2) || DIV || PARAM_1 || FUNCTION || Variables[2] (StealthCondition) || SUB || RETURN",
-                  "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((DarkTeamCount / 2)) - StealthCondition)",
-                  "constants": [
-                    2
-                  ],
-                  "variables": [
-                    "WHOLE",
-                    "DarkTeamCount",
-                    "StealthCondition"
-                  ]
+                  "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((DarkTeamCount / 2)) - StealthCondition)"
                 },
                 "variableName": "StealthCondition"
               },

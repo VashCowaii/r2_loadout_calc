@@ -25,14 +25,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.6) || Variables[1] (Skill01Count) || Variables[2] (0.06) || MUL || ADD || RETURN",
-            "displayLines": "(0.6 + (Skill01Count * 0.06))",
-            "constants": [],
-            "variables": [
-              0.6,
-              "Skill01Count",
-              0.06
-            ]
+            "displayLines": "(0.6 + (Skill01Count * 0.06))"
           },
           "variableName": "HitRatio"
         }
@@ -41,12 +34,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (0.6) || RETURN",
-            "displayLines": "0.6",
-            "constants": [],
-            "variables": [
-              0.6
-            ]
+            "displayLines": "0.6"
           },
           "variableName": "HitRatio"
         }
@@ -84,13 +72,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (HitCount) || Variables[1] (12) || ADD || RETURN",
-                "displayLines": "(HitCount + 12)",
-                "constants": [],
-                "variables": [
-                  "HitCount",
-                  12
-                ]
+                "displayLines": "(HitCount + 12)"
               },
               "variableName": "HitCount"
             },
@@ -99,12 +81,7 @@ const configAbility = {
               "functionName": "<a class=\"gTempYellow\" id=\"1364306036\">ServantCyrene_ChargeEnergy</a>",
               "variables": {
                 "parameter[0]_AddValue": {
-                  "operator": "Variables[0] (6) || RETURN",
-                  "displayLines": "6",
-                  "constants": [],
-                  "variables": [
-                    6
-                  ]
+                  "displayLines": "6"
                 }
               }
             }
@@ -205,21 +182,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] (0.6) || RETURN",
-          "displayLines": "0.6",
-          "constants": [],
-          "variables": [
-            0.6
-          ]
+          "displayLines": "0.6"
         },
         "dmgFormula": "Max HP Scaling",
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null
       }
@@ -234,12 +201,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (HitCount) || RETURN",
-        "displayLines": "HitCount",
-        "constants": [],
-        "variables": [
-          "HitCount"
-        ]
+        "displayLines": "HitCount"
       },
       "execute": [
         {
@@ -260,21 +222,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (HitRatio) || RETURN",
-                  "displayLines": "HitRatio",
-                  "constants": [],
-                  "variables": [
-                    "HitRatio"
-                  ]
+                  "displayLines": "HitRatio"
                 },
                 "dmgFormula": "Max HP Scaling",
                 "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
+                  "displayLines": "ST Toughness Value"
                 },
                 "Tags": null
               }
@@ -308,12 +260,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-588160151\">Memosprite_CyreneServant_AmazingBonus_Hyacine</a>[<span class=\"descriptionNumberColor\">Ode to Sky</span>]",
           "valuePerStack": {
             "MDF_HyacineRatio": {
-              "operator": "Variables[0] (0.72) || RETURN",
-              "displayLines": "0.72",
-              "constants": [],
-              "variables": [
-                0.72
-              ]
+              "displayLines": "0.72"
             }
           },
           "addStacksPerTrigger": 2
@@ -345,28 +292,13 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1655562855\">Memosprite_CyreneServant_AmazingBonus_DanHengPT</a>[<span class=\"descriptionNumberColor\">Ode to Earth</span>]",
       "valuePerStack": {
         "MDF_DamageIncrease": {
-          "operator": "Variables[0] (0.24) || RETURN",
-          "displayLines": "0.24",
-          "constants": [],
-          "variables": [
-            0.24
-          ]
+          "displayLines": "0.24"
         },
         "MDF_DanHengPT_ExtraDamageCount": {
-          "operator": "Variables[0] (3) || RETURN",
-          "displayLines": "3",
-          "constants": [],
-          "variables": [
-            3
-          ]
+          "displayLines": "3"
         },
         "MDF_DamageRatio": {
-          "operator": "Variables[0] (0.8) || RETURN",
-          "displayLines": "0.8",
-          "constants": [],
-          "variables": [
-            0.8
-          ]
+          "displayLines": "0.8"
         }
       }
     },
@@ -395,28 +327,13 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-249685208\">DanHengPT_LongLingAttackExtraDamage</a>",
       "valuePerStack": {
         "MDF_Count": {
-          "operator": "Variables[0] (3) || RETURN",
-          "displayLines": "3",
-          "constants": [],
-          "variables": [
-            3
-          ]
+          "displayLines": "3"
         },
         "MDF_DanHengPT_ExtraDamageCount": {
-          "operator": "Variables[0] (3) || RETURN",
-          "displayLines": "3",
-          "constants": [],
-          "variables": [
-            3
-          ]
+          "displayLines": "3"
         },
         "MDF_DamageRatio": {
-          "operator": "Variables[0] (0.8) || RETURN",
-          "displayLines": "0.8",
-          "constants": [],
-          "variables": [
-            0.8
-          ]
+          "displayLines": "0.8"
         }
       }
     },
@@ -439,12 +356,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]

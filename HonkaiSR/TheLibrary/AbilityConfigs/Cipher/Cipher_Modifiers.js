@@ -994,25 +994,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_TMP_Damage) || Variables[1] (_TMP_OverflowDamage) || SUB || RETURN",
-                    "displayLines": "(_TMP_Damage - _TMP_OverflowDamage)",
-                    "constants": [],
-                    "variables": [
-                      "_TMP_Damage",
-                      "_TMP_OverflowDamage"
-                    ]
+                    "displayLines": "(_TMP_Damage - _TMP_OverflowDamage)"
                   },
                   "variableName": "_TMP_Damage"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (0.12) || RETURN",
-                    "displayLines": "0.12",
-                    "constants": [],
-                    "variables": [
-                      0.12
-                    ]
+                    "displayLines": "0.12"
                   },
                   "variableName": "_TMP_Rate"
                 },
@@ -1048,13 +1037,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_TMP_Rate) || Variables[1] (0.16) || ADD || RETURN",
-                        "displayLines": "(_TMP_Rate + 0.16)",
-                        "constants": [],
-                        "variables": [
-                          "_TMP_Rate",
-                          0.16
-                        ]
+                        "displayLines": "(_TMP_Rate + 0.16)"
                       },
                       "variableName": "_TMP_Rate"
                     }
@@ -1072,30 +1055,14 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Constants[0] (0) || Variables[0] (_TMP_Damage) || SUB || RETURN",
-                        "displayLines": "(0 - _TMP_Damage)",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "_TMP_Damage"
-                        ]
+                        "displayLines": "(0 - _TMP_Damage)"
                       },
                       "variableName": "SkillP01_CurrentDamge"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (SkillP01_FinalDamage) || Variables[1] (SkillP01_CurrentDamge) || INVERT || Variables[2] (_TMP_Rate) || MUL || Variables[3] (0.12) || DIV || Variables[3] (0.12) || Variables[4] (Rank01_FinalRatio) || MUL || MUL || ADD || RETURN",
-                        "displayLines": "(SkillP01_FinalDamage + (((-SkillP01_CurrentDamge * _TMP_Rate) / 0.12) * (0.12 * Rank01_FinalRatio)))",
-                        "constants": [],
-                        "variables": [
-                          "SkillP01_FinalDamage",
-                          "SkillP01_CurrentDamge",
-                          "_TMP_Rate",
-                          0.12,
-                          "Rank01_FinalRatio"
-                        ]
+                        "displayLines": "(SkillP01_FinalDamage + (((-SkillP01_CurrentDamge * _TMP_Rate) / 0.12) * (0.12 * Rank01_FinalRatio)))"
                       },
                       "variableName": "SkillP01_FinalDamage"
                     },
@@ -1127,24 +1094,14 @@ const configAbility = {
                             "value1": "PointB1_Speed",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (OBJECT_[170]) || RETURN",
-                              "displayLines": "OBJECT_[170]",
-                              "constants": [],
-                              "variables": [
-                                "OBJECT_[170]"
-                              ]
+                              "displayLines": "OBJECT_[170]"
                             }
                           },
                           "passed": [
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (PointB1_Add_2) || RETURN",
-                                "displayLines": "PointB1_Add_2",
-                                "constants": [],
-                                "variables": [
-                                  "PointB1_Add_2"
-                                ]
+                                "displayLines": "PointB1_Add_2"
                               },
                               "variableName": "PointB1_Ratio"
                             }
@@ -1157,24 +1114,14 @@ const configAbility = {
                                 "value1": "PointB1_Speed",
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] (OBJECT_[140]) || RETURN",
-                                  "displayLines": "OBJECT_[140]",
-                                  "constants": [],
-                                  "variables": [
-                                    "OBJECT_[140]"
-                                  ]
+                                  "displayLines": "OBJECT_[140]"
                                 }
                               },
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
                                   "value": {
-                                    "operator": "Variables[0] (PointB1_Add_1) || RETURN",
-                                    "displayLines": "PointB1_Add_1",
-                                    "constants": [],
-                                    "variables": [
-                                      "PointB1_Add_1"
-                                    ]
+                                    "displayLines": "PointB1_Add_1"
                                   },
                                   "variableName": "PointB1_Ratio"
                                 }
@@ -1192,17 +1139,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (SkillP01_FinalDamage) || Variables[1] (SkillP01_CurrentDamge) || INVERT || Variables[2] (PointB1_Ratio) || MUL || Variables[3] (_TMP_Rate) || MUL || Variables[4] (0.12) || DIV || Variables[4] (0.12) || Variables[5] (Rank01_FinalRatio) || MUL || MUL || ADD || RETURN",
-                            "displayLines": "(SkillP01_FinalDamage + ((((-SkillP01_CurrentDamge * PointB1_Ratio) * _TMP_Rate) / 0.12) * (0.12 * Rank01_FinalRatio)))",
-                            "constants": [],
-                            "variables": [
-                              "SkillP01_FinalDamage",
-                              "SkillP01_CurrentDamge",
-                              "PointB1_Ratio",
-                              "_TMP_Rate",
-                              0.12,
-                              "Rank01_FinalRatio"
-                            ]
+                            "displayLines": "(SkillP01_FinalDamage + ((((-SkillP01_CurrentDamge * PointB1_Ratio) * _TMP_Rate) / 0.12) * (0.12 * Rank01_FinalRatio)))"
                           },
                           "variableName": "SkillP01_FinalDamage"
                         }
@@ -1240,17 +1177,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (SkillP01_FinalDamage) || Variables[1] (SkillP01_CurrentDamge) || INVERT || Variables[2] (2) || MUL || Variables[3] (_TMP_Rate) || MUL || Variables[4] (0.12) || DIV || Variables[4] (0.12) || Variables[5] (Rank01_FinalRatio) || MUL || MUL || ADD || RETURN",
-                            "displayLines": "(SkillP01_FinalDamage + ((((-SkillP01_CurrentDamge * 2) * _TMP_Rate) / 0.12) * (0.12 * Rank01_FinalRatio)))",
-                            "constants": [],
-                            "variables": [
-                              "SkillP01_FinalDamage",
-                              "SkillP01_CurrentDamge",
-                              2,
-                              "_TMP_Rate",
-                              0.12,
-                              "Rank01_FinalRatio"
-                            ]
+                            "displayLines": "(SkillP01_FinalDamage + ((((-SkillP01_CurrentDamge * 2) * _TMP_Rate) / 0.12) * (0.12 * Rank01_FinalRatio)))"
                           },
                           "variableName": "SkillP01_FinalDamage"
                         }
@@ -1261,22 +1188,10 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (SkillP01_FinalDamage) || Constants[0] (1000) || DIV || RETURN",
-                    "displayLines": "(SkillP01_FinalDamage / 1000)",
-                    "constants": [
-                      1000
-                    ],
-                    "variables": [
-                      "SkillP01_FinalDamage"
-                    ]
+                    "displayLines": "(SkillP01_FinalDamage / 1000)"
                   },
                   "maximum": {
-                    "operator": "Constants[0] (99999) || RETURN",
-                    "displayLines": "99999",
-                    "constants": [
-                      99999
-                    ],
-                    "variables": []
+                    "displayLines": "99999"
                   },
                   "assignState": "True",
                   "priorState": "Normal",
@@ -1391,12 +1306,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] (Rank04_DamagePercentage) || RETURN",
-                      "displayLines": "Rank04_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "Rank04_DamagePercentage"
-                      ]
+                      "displayLines": "Rank04_DamagePercentage"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -1662,12 +1572,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -1697,12 +1602,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Weaken%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -1728,12 +1628,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -1817,12 +1712,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -1849,12 +1739,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]

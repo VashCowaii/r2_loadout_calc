@@ -53,22 +53,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (1) || Variables[1] (0.2) || Variables[2] (_SkillUseCount) || MUL || ADD || RETURN",
-              "displayLines": "(1 + (0.2 * _SkillUseCount))",
-              "constants": [],
-              "variables": [
-                1,
-                0.2,
-                "_SkillUseCount"
-              ]
+              "displayLines": "(1 + (0.2 * _SkillUseCount))"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Basic ATK",
@@ -85,22 +73,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (0.5) || Variables[1] (0.1) || Variables[2] (_SkillUseCount) || MUL || ADD || RETURN",
-              "displayLines": "(0.5 + (0.1 * _SkillUseCount))",
-              "constants": [],
-              "variables": [
-                0.5,
-                0.1,
-                "_SkillUseCount"
-              ]
+              "displayLines": "(0.5 + (0.1 * _SkillUseCount))"
             },
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null,
             "attackType": "Basic ATK"
@@ -116,12 +92,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "DamageElation": {
-              "operator": "Variables[0] (0.4) || RETURN",
-              "displayLines": "0.4",
-              "constants": [],
-              "variables": [
-                0.4
-              ]
+              "displayLines": "0.4"
             },
             "dmgFormula": "Elation Scaling",
             "Toughness": null,
@@ -140,12 +111,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "DamageElation": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             },
             "dmgFormula": "Elation Scaling",
             "Toughness": null,
@@ -157,12 +123,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (_SkillUseCount) || RETURN",
-            "displayLines": "_SkillUseCount",
-            "constants": [],
-            "variables": [
-              "_SkillUseCount"
-            ]
+            "displayLines": "_SkillUseCount"
           },
           "execute": [
             {
@@ -182,12 +143,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "DamageElation": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     },
                     "dmgFormula": "Elation Scaling",
                     "Toughness": {
@@ -214,22 +170,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (1) || Variables[1] (0.2) || Variables[2] (_SkillUseCount) || MUL || ADD || RETURN",
-              "displayLines": "(1 + (0.2 * _SkillUseCount))",
-              "constants": [],
-              "variables": [
-                1,
-                0.2,
-                "_SkillUseCount"
-              ]
+              "displayLines": "(1 + (0.2 * _SkillUseCount))"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Basic ATK",
@@ -246,22 +190,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] (0.5) || Variables[1] (0.1) || Variables[2] (_SkillUseCount) || MUL || ADD || RETURN",
-              "displayLines": "(0.5 + (0.1 * _SkillUseCount))",
-              "constants": [],
-              "variables": [
-                0.5,
-                0.1,
-                "_SkillUseCount"
-              ]
+              "displayLines": "(0.5 + (0.1 * _SkillUseCount))"
             },
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null,
             "attackType": "Basic ATK"
@@ -297,25 +229,14 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "variableName": "Sparxie_Skill02_GrandPrizeChance"
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (28) || Variables[1] (Sparxie_Skill02_GrandPrizeChance) || SUB || RETURN",
-        "displayLines": "(28 - Sparxie_Skill02_GrandPrizeChance)",
-        "constants": [],
-        "variables": [
-          28,
-          "Sparxie_Skill02_GrandPrizeChance"
-        ]
+        "displayLines": "(28 - Sparxie_Skill02_GrandPrizeChance)"
       },
       "variableName": "Sparxie_Skill02_MinorPrizeChance"
     },

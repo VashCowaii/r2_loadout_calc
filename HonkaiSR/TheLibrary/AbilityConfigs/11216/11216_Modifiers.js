@@ -285,12 +285,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">FireVulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (TOPAZ_OBJECT_UNUSED_1) || RETURN",
-                "displayLines": "TOPAZ_OBJECT_UNUSED_1",
-                "constants": [],
-                "variables": [
-                  "TOPAZ_OBJECT_UNUSED_1"
-                ]
+                "displayLines": "TOPAZ_OBJECT_UNUSED_1"
               }
             }
           ]
@@ -369,12 +364,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_6823) || RETURN",
-                "displayLines": "UnusedUnderThisBase_6823",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_6823"
-                ]
+                "displayLines": "UnusedUnderThisBase_6823"
               }
             },
             {
@@ -392,12 +382,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFirePEN</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_6818) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_6818",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_6818"
-                    ]
+                    "displayLines": "UnusedUnderThisBase_6818"
                   }
                 }
               ]
@@ -498,12 +483,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Constants[0] (0) || RETURN",
-                "displayLines": "0",
-                "constants": [
-                  0
-                ],
-                "variables": []
+                "displayLines": "0"
               },
               "variableName": "MDF_PropertyValue4_InsertCriticalDamageAddLayer"
             },
@@ -516,12 +496,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1350976023\">Topaz_BETargetTagActive</a>",
               "valuePerStack": {
                 "ShowSpecialMarkOnCreate": {
-                  "operator": "Variables[0] (ShowSpecialMarkOnCreate) || RETURN",
-                  "displayLines": "ShowSpecialMarkOnCreate",
-                  "constants": [],
-                  "variables": [
-                    "ShowSpecialMarkOnCreate"
-                  ]
+                  "displayLines": "ShowSpecialMarkOnCreate"
                 }
               }
             },
@@ -849,12 +824,7 @@ const configAbility = {
                         "value1": "MDF_PropertyValue4_InsertCriticalDamageAddLayer",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MDF_PropertyValue5_InsertCriticalDamageAddMaxLayer) || RETURN",
-                          "displayLines": "MDF_PropertyValue5_InsertCriticalDamageAddMaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue5_InsertCriticalDamageAddMaxLayer"
-                          ]
+                          "displayLines": "MDF_PropertyValue5_InsertCriticalDamageAddMaxLayer"
                         },
                         "contextScope": "ContextModifier"
                       },
@@ -862,14 +832,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Constants[0] (1) || Variables[0] (MDF_PropertyValue4_InsertCriticalDamageAddLayer) || ADD || RETURN",
-                            "displayLines": "(1 + MDF_PropertyValue4_InsertCriticalDamageAddLayer)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "MDF_PropertyValue4_InsertCriticalDamageAddLayer"
-                            ]
+                            "displayLines": "(1 + MDF_PropertyValue4_InsertCriticalDamageAddLayer)"
                           },
                           "variableName": "MDF_PropertyValue4_InsertCriticalDamageAddLayer"
                         },
@@ -882,20 +845,10 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"1322510639\">Topaz_BETargetTag_CriticalDamageUp</a>[<span class=\"descriptionNumberColor\">Debtor</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue1_InsertCriticalDamageAddRatio": {
-                              "operator": "Variables[0] (MDF_PropertyValue3_InsertCriticalDamageAddRatio) || RETURN",
-                              "displayLines": "MDF_PropertyValue3_InsertCriticalDamageAddRatio",
-                              "constants": [],
-                              "variables": [
-                                "MDF_PropertyValue3_InsertCriticalDamageAddRatio"
-                              ]
+                              "displayLines": "MDF_PropertyValue3_InsertCriticalDamageAddRatio"
                             },
                             "MDF_PropertyValue2_InsertCriticalDamageAddMaxLayer": {
-                              "operator": "Variables[0] (MDF_PropertyValue5_InsertCriticalDamageAddMaxLayer) || RETURN",
-                              "displayLines": "MDF_PropertyValue5_InsertCriticalDamageAddMaxLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_PropertyValue5_InsertCriticalDamageAddMaxLayer"
-                              ]
+                              "displayLines": "MDF_PropertyValue5_InsertCriticalDamageAddMaxLayer"
                             }
                           }
                         }

@@ -113,13 +113,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (_MaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                    "displayLines": "(_MaxSP - _CurrentSP)",
-                    "constants": [],
-                    "variables": [
-                      "_MaxSP",
-                      "_CurrentSP"
-                    ]
+                    "displayLines": "(_MaxSP - _CurrentSP)"
                   },
                   "isFixed": "(Fixed)",
                   "ignoreBlock": true,
@@ -152,13 +146,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (_MaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                    "displayLines": "(_MaxSP - _CurrentSP)",
-                    "constants": [],
-                    "variables": [
-                      "_MaxSP",
-                      "_CurrentSP"
-                    ]
+                    "displayLines": "(_MaxSP - _CurrentSP)"
                   },
                   "isFixed": "(Fixed)"
                 }
@@ -285,12 +273,7 @@ const configAbility = {
           "functionName": "<a class=\"gTempYellow\" id=\"101547145\">Elation_StartElationTime</a>",
           "variables": {
             "TryStartElationTime_OverrideElationPoint": {
-              "operator": "Variables[0] (Override_ElationPoint) || RETURN",
-              "displayLines": "Override_ElationPoint",
-              "constants": [],
-              "variables": [
-                "Override_ElationPoint"
-              ]
+              "displayLines": "Override_ElationPoint"
             },
             "TryStartElationTime_ElationTimeIsNoConsume": 1
           }
@@ -335,12 +318,7 @@ const configAbility = {
             {
               "name": "Deal Toughness DMG",
               "value": {
-                "operator": "Variables[0] (MDF_CurrentStance) || RETURN",
-                "displayLines": "MDF_CurrentStance",
-                "constants": [],
-                "variables": [
-                  "MDF_CurrentStance"
-                ]
+                "displayLines": "MDF_CurrentStance"
               },
               "attacker": {
                 "name": "Target Name",
@@ -408,12 +386,7 @@ const configAbility = {
             "value1": "_ActionDelay",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] (BOSS_BreakDelay_01) || RETURN",
-              "displayLines": "BOSS_BreakDelay_01",
-              "constants": [],
-              "variables": [
-                "BOSS_BreakDelay_01"
-              ]
+              "displayLines": "BOSS_BreakDelay_01"
             }
           },
           "passed": [
@@ -425,12 +398,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "set": {
-                "operator": "Variables[0] (BOSS_BreakDelay_01) || RETURN",
-                "displayLines": "BOSS_BreakDelay_01",
-                "constants": [],
-                "variables": [
-                  "BOSS_BreakDelay_01"
-                ]
+                "displayLines": "BOSS_BreakDelay_01"
               }
             },
             {
@@ -483,12 +451,7 @@ const configAbility = {
             "value1": "_ActionDelay",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] (BOSS_BreakDelay_02) || RETURN",
-              "displayLines": "BOSS_BreakDelay_02",
-              "constants": [],
-              "variables": [
-                "BOSS_BreakDelay_02"
-              ]
+              "displayLines": "BOSS_BreakDelay_02"
             }
           },
           "passed": [
@@ -500,12 +463,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "set": {
-                "operator": "Variables[0] (BOSS_BreakDelay_02) || RETURN",
-                "displayLines": "BOSS_BreakDelay_02",
-                "constants": [],
-                "variables": [
-                  "BOSS_BreakDelay_02"
-                ]
+                "displayLines": "BOSS_BreakDelay_02"
               }
             },
             {
@@ -558,12 +516,7 @@ const configAbility = {
             "value1": "_ActionDelay",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] (BOSS_BreakDelay_03) || RETURN",
-              "displayLines": "BOSS_BreakDelay_03",
-              "constants": [],
-              "variables": [
-                "BOSS_BreakDelay_03"
-              ]
+              "displayLines": "BOSS_BreakDelay_03"
             }
           },
           "passed": [
@@ -575,12 +528,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "set": {
-                "operator": "Variables[0] (BOSS_BreakDelay_03) || RETURN",
-                "displayLines": "BOSS_BreakDelay_03",
-                "constants": [],
-                "variables": [
-                  "BOSS_BreakDelay_03"
-                ]
+                "displayLines": "BOSS_BreakDelay_03"
               }
             },
             {
@@ -633,12 +581,7 @@ const configAbility = {
             "value1": "_ActionDelay",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] (BOSS_BreakDelay_04) || RETURN",
-              "displayLines": "BOSS_BreakDelay_04",
-              "constants": [],
-              "variables": [
-                "BOSS_BreakDelay_04"
-              ]
+              "displayLines": "BOSS_BreakDelay_04"
             }
           },
           "passed": [
@@ -650,12 +593,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "set": {
-                "operator": "Variables[0] (BOSS_BreakDelay_04) || RETURN",
-                "displayLines": "BOSS_BreakDelay_04",
-                "constants": [],
-                "variables": [
-                  "BOSS_BreakDelay_04"
-                ]
+                "displayLines": "BOSS_BreakDelay_04"
               }
             },
             {
@@ -708,12 +646,7 @@ const configAbility = {
             "value1": "_ActionDelay",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] (BOSS_BreakDelay_05) || RETURN",
-              "displayLines": "BOSS_BreakDelay_05",
-              "constants": [],
-              "variables": [
-                "BOSS_BreakDelay_05"
-              ]
+              "displayLines": "BOSS_BreakDelay_05"
             }
           },
           "passed": [
@@ -725,12 +658,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "set": {
-                "operator": "Variables[0] (BOSS_BreakDelay_05) || RETURN",
-                "displayLines": "BOSS_BreakDelay_05",
-                "constants": [],
-                "variables": [
-                  "BOSS_BreakDelay_05"
-                ]
+                "displayLines": "BOSS_BreakDelay_05"
               }
             },
             {

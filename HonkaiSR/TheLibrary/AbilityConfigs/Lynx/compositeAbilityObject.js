@@ -54,12 +54,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -106,12 +101,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "STAT_CTRL",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -172,12 +162,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (MDF_Lynx_PointB1_AddSpValue) || RETURN",
-                        "displayLines": "MDF_Lynx_PointB1_AddSpValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Lynx_PointB1_AddSpValue"
-                        ]
+                        "displayLines": "MDF_Lynx_PointB1_AddSpValue"
                       },
                       "isFixed": "* ERR"
                     }
@@ -232,22 +217,10 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (MDF_HOT_HOTPercentage) || Variables[1] (MDF_HOT_AggroUp_HOTPercentage) || ADD || RETURN",
-                        "displayLines": "(MDF_HOT_HOTPercentage + MDF_HOT_AggroUp_HOTPercentage)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_HOT_HOTPercentage",
-                          "MDF_HOT_AggroUp_HOTPercentage"
-                        ]
+                        "displayLines": "(MDF_HOT_HOTPercentage + MDF_HOT_AggroUp_HOTPercentage)"
                       },
                       "healFlat": {
-                        "operator": "Variables[0] (MDF_HOT_HealValue) || Variables[1] (MDF_HOT_AggroUp_HealValue) || ADD || RETURN",
-                        "displayLines": "(MDF_HOT_HealValue + MDF_HOT_AggroUp_HealValue)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_HOT_HealValue",
-                          "MDF_HOT_AggroUp_HealValue"
-                        ]
+                        "displayLines": "(MDF_HOT_HealValue + MDF_HOT_AggroUp_HealValue)"
                       },
                       "formula": "Heal from Healer's MaxHP"
                     }
@@ -260,20 +233,10 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (MDF_HOT_HOTPercentage) || RETURN",
-                        "displayLines": "MDF_HOT_HOTPercentage",
-                        "constants": [],
-                        "variables": [
-                          "MDF_HOT_HOTPercentage"
-                        ]
+                        "displayLines": "MDF_HOT_HOTPercentage"
                       },
                       "healFlat": {
-                        "operator": "Variables[0] (MDF_HOT_HealValue) || RETURN",
-                        "displayLines": "MDF_HOT_HealValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_HOT_HealValue"
-                        ]
+                        "displayLines": "MDF_HOT_HealValue"
                       },
                       "formula": "Heal from Healer's MaxHP"
                     }
@@ -316,12 +279,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_HPAddValueConvert) || RETURN",
-                    "displayLines": "MDF_HPAddValueConvert",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HPAddValueConvert"
-                    ]
+                    "displayLines": "MDF_HPAddValueConvert"
                   }
                 },
                 {
@@ -332,12 +290,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_HPDelta) || RETURN",
-                    "displayLines": "MDF_HPDelta",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HPDelta"
-                    ]
+                    "displayLines": "MDF_HPDelta"
                   }
                 },
                 {
@@ -348,12 +301,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AddStatusResistance) || RETURN",
-                    "displayLines": "MDF_AddStatusResistance",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AddStatusResistance"
-                    ]
+                    "displayLines": "MDF_AddStatusResistance"
                   }
                 },
                 {
@@ -379,12 +327,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AggroUp) || RETURN",
-                    "displayLines": "MDF_AggroUp",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AggroUp"
-                    ]
+                    "displayLines": "MDF_AggroUp"
                   }
                 }
               ]
@@ -424,12 +367,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_HPAddValueConvert) || RETURN",
-                    "displayLines": "MDF_HPAddValueConvert",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HPAddValueConvert"
-                    ]
+                    "displayLines": "MDF_HPAddValueConvert"
                   }
                 },
                 {
@@ -440,12 +378,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_HPDelta) || RETURN",
-                    "displayLines": "MDF_HPDelta",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HPDelta"
-                    ]
+                    "displayLines": "MDF_HPDelta"
                   }
                 },
                 {
@@ -471,12 +404,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AggroUp) || RETURN",
-                    "displayLines": "MDF_AggroUp",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AggroUp"
-                    ]
+                    "displayLines": "MDF_AggroUp"
                   }
                 }
               ]
@@ -811,46 +739,20 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-704553388\">Lynx_HOT_HealByMaxHp</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
                           "duration": {
-                            "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-                            "displayLines": "(2 + 1)",
-                            "constants": [],
-                            "variables": [
-                              2,
-                              1
-                            ]
+                            "displayLines": "(2 + 1)"
                           },
                           "valuePerStack": {
                             "MDF_HOT_HOTPercentage": {
-                              "operator": "Variables[0] (0.036) || RETURN",
-                              "displayLines": "0.036",
-                              "constants": [],
-                              "variables": [
-                                0.036
-                              ]
+                              "displayLines": "0.036"
                             },
                             "MDF_HOT_HealValue": {
-                              "operator": "Variables[0] (96) || RETURN",
-                              "displayLines": "96",
-                              "constants": [],
-                              "variables": [
-                                96
-                              ]
+                              "displayLines": "96"
                             },
                             "MDF_HOT_AggroUp_HOTPercentage": {
-                              "operator": "Variables[0] (0.044999998) || RETURN",
-                              "displayLines": "0.044999998",
-                              "constants": [],
-                              "variables": [
-                                0.044999998
-                              ]
+                              "displayLines": "0.044999998"
                             },
                             "MDF_HOT_AggroUp_HealValue": {
-                              "operator": "Variables[0] (120) || RETURN",
-                              "displayLines": "120",
-                              "constants": [],
-                              "variables": [
-                                120
-                              ]
+                              "displayLines": "120"
                             }
                           }
                         }
@@ -864,45 +766,20 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-704553388\">Lynx_HOT_HealByMaxHp</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
                           "duration": {
-                            "operator": "Variables[0] (2) || RETURN",
-                            "displayLines": "2",
-                            "constants": [],
-                            "variables": [
-                              2
-                            ]
+                            "displayLines": "2"
                           },
                           "valuePerStack": {
                             "MDF_HOT_HOTPercentage": {
-                              "operator": "Variables[0] (0.036) || RETURN",
-                              "displayLines": "0.036",
-                              "constants": [],
-                              "variables": [
-                                0.036
-                              ]
+                              "displayLines": "0.036"
                             },
                             "MDF_HOT_HealValue": {
-                              "operator": "Variables[0] (96) || RETURN",
-                              "displayLines": "96",
-                              "constants": [],
-                              "variables": [
-                                96
-                              ]
+                              "displayLines": "96"
                             },
                             "MDF_HOT_AggroUp_HOTPercentage": {
-                              "operator": "Variables[0] (0.044999998) || RETURN",
-                              "displayLines": "0.044999998",
-                              "constants": [],
-                              "variables": [
-                                0.044999998
-                              ]
+                              "displayLines": "0.044999998"
                             },
                             "MDF_HOT_AggroUp_HealValue": {
-                              "operator": "Variables[0] (120) || RETURN",
-                              "displayLines": "120",
-                              "constants": [],
-                              "variables": [
-                                120
-                              ]
+                              "displayLines": "120"
                             }
                           }
                         }
@@ -969,12 +846,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"1819426834\">Lynx_Tree02_Resistance</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.35) || RETURN",
-                  "displayLines": "0.35",
-                  "constants": [],
-                  "variables": [
-                    0.35
-                  ]
+                  "displayLines": "0.35"
                 }
               }
             }
@@ -1017,12 +889,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_Target_HpRatio) || RETURN",
-                      "displayLines": "MDF_Target_HpRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Target_HpRatio"
-                      ]
+                      "displayLines": "MDF_Target_HpRatio"
                     }
                   },
                   "passed": [
@@ -1031,12 +898,7 @@ const compositeAbilityObject = {
                       "on": "Healer",
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoingSUM</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                        "displayLines": "MDF_PropertyValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue"
-                        ]
+                        "displayLines": "MDF_PropertyValue"
                       }
                     }
                   ]
@@ -1066,12 +928,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   },
                   "passed": [
@@ -1080,12 +937,7 @@ const compositeAbilityObject = {
                       "on": "Healer",
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoingSUM</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (0.2) || RETURN",
-                        "displayLines": "0.2",
-                        "constants": [],
-                        "variables": [
-                          0.2
-                        ]
+                        "displayLines": "0.2"
                       }
                     }
                   ]
@@ -1104,20 +956,10 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1715307767\">Lynx_Eidolon1_ListenBeforeDealHeal02</a>",
                   "valuePerStack": {
                     "MDF_Target_HpRatio": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     },
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 }
@@ -1139,12 +981,7 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_Lynx_PointB1_AddSpValue": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
+                  "displayLines": "2"
                 }
               }
             }
@@ -1171,12 +1008,7 @@ const compositeAbilityObject = {
             "target": "{{All Team Members}}"
           },
           "dispelCount": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "dispelOrder": "LastAdded"
         },
@@ -1187,20 +1019,10 @@ const compositeAbilityObject = {
             "target": "{{All Team Members}}"
           },
           "healPercent": {
-            "operator": "Variables[0] (0.135) || RETURN",
-            "displayLines": "0.135",
-            "constants": [],
-            "variables": [
-              0.135
-            ]
+            "displayLines": "0.135"
           },
           "healFlat": {
-            "operator": "Variables[0] (360) || RETURN",
-            "displayLines": "360",
-            "constants": [],
-            "variables": [
-              360
-            ]
+            "displayLines": "360"
           },
           "formula": "Heal from Healer's MaxHP"
         },
@@ -1219,46 +1041,20 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-704553388\">Lynx_HOT_HealByMaxHp</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
               "duration": {
-                "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-                "displayLines": "(2 + 1)",
-                "constants": [],
-                "variables": [
-                  2,
-                  1
-                ]
+                "displayLines": "(2 + 1)"
               },
               "valuePerStack": {
                 "MDF_HOT_HOTPercentage": {
-                  "operator": "Variables[0] (0.036) || RETURN",
-                  "displayLines": "0.036",
-                  "constants": [],
-                  "variables": [
-                    0.036
-                  ]
+                  "displayLines": "0.036"
                 },
                 "MDF_HOT_HealValue": {
-                  "operator": "Variables[0] (96) || RETURN",
-                  "displayLines": "96",
-                  "constants": [],
-                  "variables": [
-                    96
-                  ]
+                  "displayLines": "96"
                 },
                 "MDF_HOT_AggroUp_HOTPercentage": {
-                  "operator": "Variables[0] (0.044999998) || RETURN",
-                  "displayLines": "0.044999998",
-                  "constants": [],
-                  "variables": [
-                    0.044999998
-                  ]
+                  "displayLines": "0.044999998"
                 },
                 "MDF_HOT_AggroUp_HealValue": {
-                  "operator": "Variables[0] (120) || RETURN",
-                  "displayLines": "120",
-                  "constants": [],
-                  "variables": [
-                    120
-                  ]
+                  "displayLines": "120"
                 }
               }
             }
@@ -1272,45 +1068,20 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-704553388\">Lynx_HOT_HealByMaxHp</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
               "duration": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "valuePerStack": {
                 "MDF_HOT_HOTPercentage": {
-                  "operator": "Variables[0] (0.036) || RETURN",
-                  "displayLines": "0.036",
-                  "constants": [],
-                  "variables": [
-                    0.036
-                  ]
+                  "displayLines": "0.036"
                 },
                 "MDF_HOT_HealValue": {
-                  "operator": "Variables[0] (96) || RETURN",
-                  "displayLines": "96",
-                  "constants": [],
-                  "variables": [
-                    96
-                  ]
+                  "displayLines": "96"
                 },
                 "MDF_HOT_AggroUp_HOTPercentage": {
-                  "operator": "Variables[0] (0.044999998) || RETURN",
-                  "displayLines": "0.044999998",
-                  "constants": [],
-                  "variables": [
-                    0.044999998
-                  ]
+                  "displayLines": "0.044999998"
                 },
                 "MDF_HOT_AggroUp_HealValue": {
-                  "operator": "Variables[0] (120) || RETURN",
-                  "displayLines": "120",
-                  "constants": [],
-                  "variables": [
-                    120
-                  ]
+                  "displayLines": "120"
                 }
               }
             }
@@ -1468,60 +1239,23 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"683860338\">Lynx_HPAddedRatio02</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_Lynx_MaxHpValue) || Variables[1] (MDF_Lynx_MaxHpConvert) || SUB || Variables[2] (0.075) || Variables[3] (0.06) || ADD || MUL || Variables[4] (200) || ADD || RETURN",
-                      "displayLines": "(((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * (0.075 + 0.06)) + 200)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Lynx_MaxHpValue",
-                        "MDF_Lynx_MaxHpConvert",
-                        0.075,
-                        0.06,
-                        200
-                      ]
+                      "displayLines": "(((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * (0.075 + 0.06)) + 200)"
                     },
                     "MDF_HPAddValueConvert": {
-                      "operator": "Variables[0] (MDF_Lynx_MaxHpValue) || Variables[1] (MDF_Lynx_MaxHpConvert) || SUB || Variables[2] (0.075) || Variables[3] (0.06) || ADD || MUL || RETURN",
-                      "displayLines": "((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * (0.075 + 0.06))",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Lynx_MaxHpValue",
-                        "MDF_Lynx_MaxHpConvert",
-                        0.075,
-                        0.06
-                      ]
+                      "displayLines": "((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * (0.075 + 0.06))"
                     },
                     "MDF_HPDelta": {
-                      "operator": "Variables[0] (200) || RETURN",
-                      "displayLines": "200",
-                      "constants": [],
-                      "variables": [
-                        200
-                      ]
+                      "displayLines": "200"
                     },
                     "MDF_AggroUp": {
-                      "operator": "Variables[0] (5) || RETURN",
-                      "displayLines": "5",
-                      "constants": [],
-                      "variables": [
-                        5
-                      ]
+                      "displayLines": "5"
                     },
                     "MDF_AddStatusResistance": {
-                      "operator": "Variables[0] (0.3) || RETURN",
-                      "displayLines": "0.3",
-                      "constants": [],
-                      "variables": [
-                        0.3
-                      ]
+                      "displayLines": "0.3"
                     }
                   }
                 }
@@ -1535,53 +1269,21 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"683860338\">Lynx_HPAddedRatio02</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_Lynx_MaxHpValue) || Variables[1] (MDF_Lynx_MaxHpConvert) || SUB || Variables[2] (0.075) || Variables[3] (0.06) || ADD || MUL || Variables[4] (200) || ADD || RETURN",
-                      "displayLines": "(((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * (0.075 + 0.06)) + 200)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Lynx_MaxHpValue",
-                        "MDF_Lynx_MaxHpConvert",
-                        0.075,
-                        0.06,
-                        200
-                      ]
+                      "displayLines": "(((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * (0.075 + 0.06)) + 200)"
                     },
                     "MDF_HPAddValueConvert": {
-                      "operator": "Variables[0] (MDF_Lynx_MaxHpValue) || Variables[1] (MDF_Lynx_MaxHpConvert) || SUB || Variables[2] (0.075) || Variables[3] (0.06) || ADD || MUL || RETURN",
-                      "displayLines": "((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * (0.075 + 0.06))",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Lynx_MaxHpValue",
-                        "MDF_Lynx_MaxHpConvert",
-                        0.075,
-                        0.06
-                      ]
+                      "displayLines": "((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * (0.075 + 0.06))"
                     },
                     "MDF_HPDelta": {
-                      "operator": "Variables[0] (200) || RETURN",
-                      "displayLines": "200",
-                      "constants": [],
-                      "variables": [
-                        200
-                      ]
+                      "displayLines": "200"
                     },
                     "MDF_AggroUp": 0,
                     "MDF_AddStatusResistance": {
-                      "operator": "Variables[0] (0.3) || RETURN",
-                      "displayLines": "0.3",
-                      "constants": [],
-                      "variables": [
-                        0.3
-                      ]
+                      "displayLines": "0.3"
                     }
                   }
                 }
@@ -1625,50 +1327,20 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"667082719\">Lynx_HPAddedRatio01</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_Lynx_MaxHpValue) || Variables[1] (MDF_Lynx_MaxHpConvert) || SUB || Variables[2] (0.075) || MUL || Variables[3] (200) || ADD || RETURN",
-                      "displayLines": "(((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * 0.075) + 200)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Lynx_MaxHpValue",
-                        "MDF_Lynx_MaxHpConvert",
-                        0.075,
-                        200
-                      ]
+                      "displayLines": "(((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * 0.075) + 200)"
                     },
                     "MDF_HPAddValueConvert": {
-                      "operator": "Variables[0] (MDF_Lynx_MaxHpValue) || Variables[1] (MDF_Lynx_MaxHpConvert) || SUB || Variables[2] (0.075) || MUL || RETURN",
-                      "displayLines": "((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * 0.075)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Lynx_MaxHpValue",
-                        "MDF_Lynx_MaxHpConvert",
-                        0.075
-                      ]
+                      "displayLines": "((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * 0.075)"
                     },
                     "MDF_HPDelta": {
-                      "operator": "Variables[0] (200) || RETURN",
-                      "displayLines": "200",
-                      "constants": [],
-                      "variables": [
-                        200
-                      ]
+                      "displayLines": "200"
                     },
                     "MDF_AggroUp": {
-                      "operator": "Variables[0] (5) || RETURN",
-                      "displayLines": "5",
-                      "constants": [],
-                      "variables": [
-                        5
-                      ]
+                      "displayLines": "5"
                     }
                   }
                 }
@@ -1682,42 +1354,17 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"667082719\">Lynx_HPAddedRatio01</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_Lynx_MaxHpValue) || Variables[1] (MDF_Lynx_MaxHpConvert) || SUB || Variables[2] (0.075) || MUL || Variables[3] (200) || ADD || RETURN",
-                      "displayLines": "(((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * 0.075) + 200)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Lynx_MaxHpValue",
-                        "MDF_Lynx_MaxHpConvert",
-                        0.075,
-                        200
-                      ]
+                      "displayLines": "(((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * 0.075) + 200)"
                     },
                     "MDF_HPAddValueConvert": {
-                      "operator": "Variables[0] (MDF_Lynx_MaxHpValue) || Variables[1] (MDF_Lynx_MaxHpConvert) || SUB || Variables[2] (0.075) || MUL || RETURN",
-                      "displayLines": "((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * 0.075)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Lynx_MaxHpValue",
-                        "MDF_Lynx_MaxHpConvert",
-                        0.075
-                      ]
+                      "displayLines": "((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * 0.075)"
                     },
                     "MDF_HPDelta": {
-                      "operator": "Variables[0] (200) || RETURN",
-                      "displayLines": "200",
-                      "constants": [],
-                      "variables": [
-                        200
-                      ]
+                      "displayLines": "200"
                     },
                     "MDF_AggroUp": 0
                   }
@@ -1758,23 +1405,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-96135638\">Lynx_Eidolon4_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
               "duration": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_Lynx_MaxHpValue) || Variables[1] (MDF_Lynx_MaxHpConvert) || SUB || Variables[2] (0.03) || MUL || RETURN",
-                  "displayLines": "((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * 0.03)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Lynx_MaxHpValue",
-                    "MDF_Lynx_MaxHpConvert",
-                    0.03
-                  ]
+                  "displayLines": "((MDF_Lynx_MaxHpValue - MDF_Lynx_MaxHpConvert) * 0.03)"
                 }
               }
             }
@@ -1787,20 +1422,10 @@ const compositeAbilityObject = {
             "target": "{{Ability Target(ST)}}"
           },
           "healPercent": {
-            "operator": "Variables[0] (0.12) || RETURN",
-            "displayLines": "0.12",
-            "constants": [],
-            "variables": [
-              0.12
-            ]
+            "displayLines": "0.12"
           },
           "healFlat": {
-            "operator": "Variables[0] (320) || RETURN",
-            "displayLines": "320",
-            "constants": [],
-            "variables": [
-              320
-            ]
+            "displayLines": "320"
           },
           "formula": "Heal from Healer's MaxHP"
         },
@@ -1819,46 +1444,20 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-704553388\">Lynx_HOT_HealByMaxHp</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
               "duration": {
-                "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-                "displayLines": "(2 + 1)",
-                "constants": [],
-                "variables": [
-                  2,
-                  1
-                ]
+                "displayLines": "(2 + 1)"
               },
               "valuePerStack": {
                 "MDF_HOT_HOTPercentage": {
-                  "operator": "Variables[0] (0.036) || RETURN",
-                  "displayLines": "0.036",
-                  "constants": [],
-                  "variables": [
-                    0.036
-                  ]
+                  "displayLines": "0.036"
                 },
                 "MDF_HOT_HealValue": {
-                  "operator": "Variables[0] (96) || RETURN",
-                  "displayLines": "96",
-                  "constants": [],
-                  "variables": [
-                    96
-                  ]
+                  "displayLines": "96"
                 },
                 "MDF_HOT_AggroUp_HOTPercentage": {
-                  "operator": "Variables[0] (0.044999998) || RETURN",
-                  "displayLines": "0.044999998",
-                  "constants": [],
-                  "variables": [
-                    0.044999998
-                  ]
+                  "displayLines": "0.044999998"
                 },
                 "MDF_HOT_AggroUp_HealValue": {
-                  "operator": "Variables[0] (120) || RETURN",
-                  "displayLines": "120",
-                  "constants": [],
-                  "variables": [
-                    120
-                  ]
+                  "displayLines": "120"
                 }
               }
             }
@@ -1872,45 +1471,20 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-704553388\">Lynx_HOT_HealByMaxHp</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
               "duration": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "2"
               },
               "valuePerStack": {
                 "MDF_HOT_HOTPercentage": {
-                  "operator": "Variables[0] (0.036) || RETURN",
-                  "displayLines": "0.036",
-                  "constants": [],
-                  "variables": [
-                    0.036
-                  ]
+                  "displayLines": "0.036"
                 },
                 "MDF_HOT_HealValue": {
-                  "operator": "Variables[0] (96) || RETURN",
-                  "displayLines": "96",
-                  "constants": [],
-                  "variables": [
-                    96
-                  ]
+                  "displayLines": "96"
                 },
                 "MDF_HOT_AggroUp_HOTPercentage": {
-                  "operator": "Variables[0] (0.044999998) || RETURN",
-                  "displayLines": "0.044999998",
-                  "constants": [],
-                  "variables": [
-                    0.044999998
-                  ]
+                  "displayLines": "0.044999998"
                 },
                 "MDF_HOT_AggroUp_HealValue": {
-                  "operator": "Variables[0] (120) || RETURN",
-                  "displayLines": "120",
-                  "constants": [],
-                  "variables": [
-                    120
-                  ]
+                  "displayLines": "120"
                 }
               }
             }
@@ -2016,21 +1590,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             },
             "dmgFormula": "Max HP Scaling",
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "attackType": "Basic ATK",

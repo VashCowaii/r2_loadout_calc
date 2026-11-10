@@ -16,12 +16,7 @@ const configAbility = {
           "functionName": "<a class=\"gTempYellow\" id=\"-1526947844\">function_Gilgamesh_KingCount</a>",
           "variables": {
             "KingCountAdd": {
-              "operator": "Variables[0] (5) || RETURN",
-              "displayLines": "5",
-              "constants": [],
-              "variables": [
-                5
-              ]
+              "displayLines": "5"
             }
           }
         }
@@ -43,12 +38,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-474529239\">Gilgamesh_Eidolon6_GoldenRule2</a>",
           "valuePerStack": {
             "MDF_GoldenRule": {
-              "operator": "Variables[0] (Gilgamesh_00_Rank06_GoldenRule) || RETURN",
-              "displayLines": "Gilgamesh_00_Rank06_GoldenRule",
-              "constants": [],
-              "variables": [
-                "Gilgamesh_00_Rank06_GoldenRule"
-              ]
+              "displayLines": "Gilgamesh_00_Rank06_GoldenRule"
             }
           }
         },
@@ -76,20 +66,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (4) || RETURN",
-          "displayLines": "4",
-          "constants": [],
-          "variables": [
-            4
-          ]
+          "displayLines": "4"
         },
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -105,12 +85,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (10) || RETURN",
-            "displayLines": "10",
-            "constants": [],
-            "variables": [
-              10
-            ]
+            "displayLines": "10"
           },
           "execute": [
             {
@@ -130,21 +105,10 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (1) || Variables[1] (0.8) || ADD || RETURN",
-                      "displayLines": "(1 + 0.8)",
-                      "constants": [],
-                      "variables": [
-                        1,
-                        0.8
-                      ]
+                      "displayLines": "(1 + 0.8)"
                     },
                     "Toughness": {
-                      "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                      "displayLines": "ST Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "ST Toughness Value"
-                      ]
+                      "displayLines": "ST Toughness Value"
                     },
                     "Tags": null,
                     "attackType": "Ultimate"
@@ -159,12 +123,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (10) || RETURN",
-            "displayLines": "10",
-            "constants": [],
-            "variables": [
-              10
-            ]
+            "displayLines": "10"
           },
           "execute": [
             {
@@ -184,20 +143,10 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     },
                     "Toughness": {
-                      "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                      "displayLines": "ST Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "ST Toughness Value"
-                      ]
+                      "displayLines": "ST Toughness Value"
                     },
                     "Tags": null,
                     "attackType": "Ultimate"

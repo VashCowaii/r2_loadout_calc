@@ -31,18 +31,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MAX) || Variables[1] (ChallengePeakBattle_0025_ADF_1) || Variables[0] (MAX) || Variables[2] (LightTeamNumCurrent) || Constants[0] (4) || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || Variables[3] (ChallengePeakBattle_0025_ADF_2) || MUL || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((ChallengePeakBattle_0025_ADF_1 - (&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((LightTeamNumCurrent - 4), 0) * ChallengePeakBattle_0025_ADF_2)), 0)",
-                "constants": [
-                  4,
-                  0
-                ],
-                "variables": [
-                  "MAX",
-                  "ChallengePeakBattle_0025_ADF_1",
-                  "LightTeamNumCurrent",
-                  "ChallengePeakBattle_0025_ADF_2"
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((ChallengePeakBattle_0025_ADF_1 - (&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((LightTeamNumCurrent - 4), 0) * ChallengePeakBattle_0025_ADF_2)), 0)"
               },
               "variableName": "ChallengePeakBattle_0025_ADF_3"
             },
@@ -54,12 +43,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ChallengePeakBattle_0025_ADF_3) || RETURN",
-                "displayLines": "ChallengePeakBattle_0025_ADF_3",
-                "constants": [],
-                "variables": [
-                  "ChallengePeakBattle_0025_ADF_3"
-                ]
+                "displayLines": "ChallengePeakBattle_0025_ADF_3"
               }
             },
             {
@@ -88,12 +72,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1117622602\">Modifier_ChallengePeakBattle_EnhancedAbility_0025_02_ForShow</a>",
                   "valuePerStack": {
                     "ChallengePeakBattle_0025_ADF_3": {
-                      "operator": "Variables[0] (ChallengePeakBattle_0025_ADF_3) || RETURN",
-                      "displayLines": "ChallengePeakBattle_0025_ADF_3",
-                      "constants": [],
-                      "variables": [
-                        "ChallengePeakBattle_0025_ADF_3"
-                      ]
+                      "displayLines": "ChallengePeakBattle_0025_ADF_3"
                     }
                   }
                 }
@@ -178,28 +157,13 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1330967193\">Modifier_ChallengePeakBattle_EnhancedAbility_0025_02</a>",
                   "valuePerStack": {
                     "ChallengePeakBattle_0025_ADF_1": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     },
                     "ChallengePeakBattle_0025_ADF_2": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     },
                     "LightTeamNumCurrent": {
-                      "operator": "Variables[0] (LightTeamNumLast) || RETURN",
-                      "displayLines": "LightTeamNumLast",
-                      "constants": [],
-                      "variables": [
-                        "LightTeamNumLast"
-                      ]
+                      "displayLines": "LightTeamNumLast"
                     }
                   }
                 }
@@ -268,12 +232,7 @@ const configAbility = {
                 "value1": "TeamCharacterCount",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Variables[0] (LightTeamNumLast) || RETURN",
-                  "displayLines": "LightTeamNumLast",
-                  "constants": [],
-                  "variables": [
-                    "LightTeamNumLast"
-                  ]
+                  "displayLines": "LightTeamNumLast"
                 }
               },
               "failed": [
@@ -311,40 +270,20 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1330967193\">Modifier_ChallengePeakBattle_EnhancedAbility_0025_02</a>",
                   "valuePerStack": {
                     "ChallengePeakBattle_0025_ADF_1": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     },
                     "ChallengePeakBattle_0025_ADF_2": {
-                      "operator": "Variables[0] (#ADF_2) || RETURN",
-                      "displayLines": "#ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_2"
-                      ]
+                      "displayLines": "#ADF_2"
                     },
                     "LightTeamNumCurrent": {
-                      "operator": "Variables[0] (LightTeamNumCurrent) || RETURN",
-                      "displayLines": "LightTeamNumCurrent",
-                      "constants": [],
-                      "variables": [
-                        "LightTeamNumCurrent"
-                      ]
+                      "displayLines": "LightTeamNumCurrent"
                     }
                   }
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (LightTeamNumCurrent) || RETURN",
-                    "displayLines": "LightTeamNumCurrent",
-                    "constants": [],
-                    "variables": [
-                      "LightTeamNumCurrent"
-                    ]
+                    "displayLines": "LightTeamNumCurrent"
                   },
                   "variableName": "LightTeamNumLast"
                 }

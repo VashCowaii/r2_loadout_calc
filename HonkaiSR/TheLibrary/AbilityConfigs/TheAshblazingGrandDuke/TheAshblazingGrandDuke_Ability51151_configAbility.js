@@ -46,13 +46,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_Layer) || Variables[1] (0.06) || MUL || RETURN",
-                "displayLines": "(MDF_Layer * 0.06)",
-                "constants": [],
-                "variables": [
-                  "MDF_Layer",
-                  0.06
-                ]
+                "displayLines": "(MDF_Layer * 0.06)"
               }
             }
           ]
@@ -102,12 +96,7 @@ const configAbility = {
                         "value1": "<a class=\"gModGreen\" id=\"-1551453236\">Relic_115_Sub</a>[<span class=\"descriptionNumberColor\">The Ashblazing Grand Duke</span>]",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] (8) || RETURN",
-                          "displayLines": "8",
-                          "constants": [],
-                          "variables": [
-                            8
-                          ]
+                          "displayLines": "8"
                         },
                         "valueType": "Layer"
                       },
@@ -120,20 +109,10 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-1551453236\">Relic_115_Sub</a>[<span class=\"descriptionNumberColor\">The Ashblazing Grand Duke</span>]",
                           "duration": {
-                            "operator": "Variables[0] (3) || RETURN",
-                            "displayLines": "3",
-                            "constants": [],
-                            "variables": [
-                              3
-                            ]
+                            "displayLines": "3"
                           },
                           "stackLimit": {
-                            "operator": "Variables[0] (8) || RETURN",
-                            "displayLines": "8",
-                            "constants": [],
-                            "variables": [
-                              8
-                            ]
+                            "displayLines": "8"
                           }
                         },
                         {
@@ -158,20 +137,10 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1551453236\">Relic_115_Sub</a>[<span class=\"descriptionNumberColor\">The Ashblazing Grand Duke</span>]",
                       "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       },
                       "stackLimit": {
-                        "operator": "Variables[0] (8) || RETURN",
-                        "displayLines": "8",
-                        "constants": [],
-                        "variables": [
-                          8
-                        ]
+                        "displayLines": "8"
                       }
                     },
                     {

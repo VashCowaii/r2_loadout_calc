@@ -21,12 +21,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "DamageFlat": {
-          "operator": "Variables[0] (Bomb_Damage_get) || RETURN",
-          "displayLines": "Bomb_Damage_get",
-          "constants": [],
-          "variables": [
-            "Bomb_Damage_get"
-          ]
+          "displayLines": "Bomb_Damage_get"
         },
         "dmgFormulaFinal": "Converted DMG Base",
         "Toughness": null,
@@ -52,14 +47,7 @@ const configAbility = {
         {
           "name": "Deal Toughness DMG",
           "value": {
-            "operator": "Variables[0] (Plus2_DamgeStance) || Constants[0] (3) || MUL || RETURN",
-            "displayLines": "(Plus2_DamgeStance * 3)",
-            "constants": [
-              3
-            ],
-            "variables": [
-              "Plus2_DamgeStance"
-            ]
+            "displayLines": "(Plus2_DamgeStance * 3)"
           },
           "defender": {
             "name": "Target Name",
@@ -94,12 +82,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "DamageFlat": {
-              "operator": "Variables[0] (Bomb_Damage_Adjoin_get) || RETURN",
-              "displayLines": "Bomb_Damage_Adjoin_get",
-              "constants": [],
-              "variables": [
-                "Bomb_Damage_Adjoin_get"
-              ]
+              "displayLines": "Bomb_Damage_Adjoin_get"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,

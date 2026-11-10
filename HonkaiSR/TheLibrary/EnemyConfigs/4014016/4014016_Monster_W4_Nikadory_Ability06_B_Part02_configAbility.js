@@ -39,14 +39,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Skill06Count) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(Skill06Count + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "Skill06Count"
-            ]
+            "displayLines": "(Skill06Count + 1)"
           },
           "variableName": "Skill06Count"
         }
@@ -55,13 +48,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] ({[Skill06[0]]}) || Variables[1] (Skill06Count) || DIV || RETURN",
-        "displayLines": "({[Skill06[0]]} / Skill06Count)",
-        "constants": [],
-        "variables": [
-          "{[Skill06[0]]}",
-          "Skill06Count"
-        ]
+        "displayLines": "({[Skill06[0]]} / Skill06Count)"
       },
       "variableName": "Skill06Damage"
     },
@@ -93,12 +80,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] (Skill06Damage) || RETURN",
-              "displayLines": "Skill06Damage",
-              "constants": [],
-              "variables": [
-                "Skill06Damage"
-              ]
+              "displayLines": "Skill06Damage"
             },
             "Toughness": null,
             "Tags": null,
@@ -217,48 +199,21 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
               "stackLimit": {
-                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-                "displayLines": "({[PassiveSkill01[0]]} + MDF_BraveLayer)",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[0]]}",
-                  "MDF_BraveLayer"
-                ]
+                "displayLines": "({[PassiveSkill01[0]]} + MDF_BraveLayer)"
               },
               "valuePerStack": {
                 "MDF_DamageResistance": {
-                  "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill01[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill01[4]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill01[4]]}"
                 },
                 "MDF_CrackedEffect": {
-                  "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill01[1]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill01[1]]}"
                 },
                 "MDF_CrackedDamage": {
-                  "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill01[2]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill01[2]]}"
                 }
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-                "displayLines": "({[PassiveSkill01[0]]} + MDF_BraveLayer)",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[0]]}",
-                  "MDF_BraveLayer"
-                ]
+                "displayLines": "({[PassiveSkill01[0]]} + MDF_BraveLayer)"
               }
             }
           ]
@@ -292,16 +247,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1174103224\">Modifier_Monster_W4_Nikadory_B_HardLockHp_BFAbility02</a>",
       "valuePerStack": {
         "MDF_LockHp": {
-          "operator": "Variables[0] (MIN) || Constants[0] (0.9) || Variables[1] ({[Skill06[1]]}) || Constants[1] (1.2) || MUL || PARAM_2 || FUNCTION || RETURN",
-          "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(0.9, ({[Skill06[1]]} * 1.2))",
-          "constants": [
-            0.9,
-            1.2
-          ],
-          "variables": [
-            "MIN",
-            "{[Skill06[1]]}"
-          ]
+          "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(0.9, ({[Skill06[1]]} * 1.2))"
         }
       }
     },
@@ -314,12 +260,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1329925524\">Modifier_Monster_W4_Nikadory_B_HardLockHp</a>",
       "valuePerStack": {
         "MDF_LockHp": {
-          "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-          "displayLines": "{[Skill06[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill06[1]]}"
-          ]
+          "displayLines": "{[Skill06[1]]}"
         }
       }
     }

@@ -13,12 +13,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-268122719\">Seele_Eidolon4</a>",
       "valuePerStack": {
         "MDF_AddSP": {
-          "operator": "Variables[0] (15) || RETURN",
-          "displayLines": "15",
-          "constants": [],
-          "variables": [
-            15
-          ]
+          "displayLines": "15"
         }
       }
     }
@@ -41,12 +36,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (MDF_AddSP) || RETURN",
-                "displayLines": "MDF_AddSP",
-                "constants": [],
-                "variables": [
-                  "MDF_AddSP"
-                ]
+                "displayLines": "MDF_AddSP"
               },
               "isFixed": "* ERR"
             }

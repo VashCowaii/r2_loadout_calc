@@ -23,12 +23,7 @@ const configAbility = {
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-            "displayLines": "SummonList_ADF_1",
-            "constants": [],
-            "variables": [
-              "SummonList_ADF_1"
-            ]
+            "displayLines": "SummonList_ADF_1"
           },
           "locationType": "BeforeCaster"
         }
@@ -103,21 +98,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (DamageUpRatio) || RETURN",
-                  "displayLines": "DamageUpRatio",
-                  "constants": [],
-                  "variables": [
-                    "DamageUpRatio"
-                  ]
+                  "displayLines": "DamageUpRatio"
                 }
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (DamageUpLayer) || RETURN",
-                "displayLines": "DamageUpLayer",
-                "constants": [],
-                "variables": [
-                  "DamageUpLayer"
-                ]
+                "displayLines": "DamageUpLayer"
               }
             }
           ]
@@ -167,14 +152,7 @@ const configAbility = {
           "name": "Define Custom Variable",
           "scope": "TargetEntity",
           "value": {
-            "operator": "Variables[0] (BossCount) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(BossCount + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "BossCount"
-            ]
+            "displayLines": "(BossCount + 1)"
           },
           "variableName": "BossCount"
         }
@@ -199,12 +177,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "valuePerStack": {
             "MDF_DamageUpRatio_PerLayer": {
-              "operator": "Variables[0] (DamageUpRatio) || RETURN",
-              "displayLines": "DamageUpRatio",
-              "constants": [],
-              "variables": [
-                "DamageUpRatio"
-              ]
+              "displayLines": "DamageUpRatio"
             }
           }
         }
@@ -226,12 +199,7 @@ const configAbility = {
       },
       "scope": "TargetEntity",
       "value": {
-        "operator": "Variables[0] (DamageUpRatio) || RETURN",
-        "displayLines": "DamageUpRatio",
-        "constants": [],
-        "variables": [
-          "DamageUpRatio"
-        ]
+        "displayLines": "DamageUpRatio"
       },
       "variableName": "DamageUpRatio"
     }

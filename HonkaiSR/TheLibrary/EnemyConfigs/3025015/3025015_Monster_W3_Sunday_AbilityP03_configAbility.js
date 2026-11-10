@@ -14,60 +14,25 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"484414107\">Enemy_W3_Sunday_MainStory380_DamageTakenRatio</a>",
       "valuePerStack": {
         "MDF_Monster_DamageTakenRatio_Level01": {
-          "operator": "Variables[0] ({[SkillP03[0]]}) || RETURN",
-          "displayLines": "{[SkillP03[0]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP03[0]]}"
-          ]
+          "displayLines": "{[SkillP03[0]]}"
         },
         "MDF_Monster_DamageTakenRatio_Level02": {
-          "operator": "Variables[0] ({[SkillP03[1]]}) || RETURN",
-          "displayLines": "{[SkillP03[1]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP03[1]]}"
-          ]
+          "displayLines": "{[SkillP03[1]]}"
         },
         "MDF_Monster_DamageTakenRatio_Level03": {
-          "operator": "Variables[0] ({[SkillP03[2]]}) || RETURN",
-          "displayLines": "{[SkillP03[2]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP03[2]]}"
-          ]
+          "displayLines": "{[SkillP03[2]]}"
         },
         "MDF_Monster_DamageTakenRatio_Level04": {
-          "operator": "Variables[0] ({[SkillP03[3]]}) || RETURN",
-          "displayLines": "{[SkillP03[3]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP03[3]]}"
-          ]
+          "displayLines": "{[SkillP03[3]]}"
         },
         "MDF_Monster_DamageTakenRatio_Level05": {
-          "operator": "Variables[0] ({[SkillP03[4]]}) || RETURN",
-          "displayLines": "{[SkillP03[4]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP03[4]]}"
-          ]
+          "displayLines": "{[SkillP03[4]]}"
         },
         "MDF_Monster_DamageTakenRatio_Level06": {
-          "operator": "Variables[0] ({[SkillP03[5]]}) || RETURN",
-          "displayLines": "{[SkillP03[5]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP03[5]]}"
-          ]
+          "displayLines": "{[SkillP03[5]]}"
         },
         "MDF_Monster_DamageTakenRatio_Level00": {
-          "operator": "Variables[0] ({[SkillP03[6]]}) || RETURN",
-          "displayLines": "{[SkillP03[6]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP03[6]]}"
-          ]
+          "displayLines": "{[SkillP03[6]]}"
         }
       }
     },
@@ -96,12 +61,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-709595036\">Enemy_W3_Sunday_MainStory380_Mar7thAllDamageTypeAddedRatio</a>",
           "valuePerStack": {
             "MDF_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[SkillP03[7]]}) || RETURN",
-              "displayLines": "{[SkillP03[7]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP03[7]]}"
-              ]
+              "displayLines": "{[SkillP03[7]]}"
             }
           }
         }
@@ -203,12 +163,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (MDF_WorldLevel) || RETURN",
-                    "displayLines": "MDF_WorldLevel",
-                    "constants": [],
-                    "variables": [
-                      "MDF_WorldLevel"
-                    ]
+                    "displayLines": "MDF_WorldLevel"
                   },
                   "caseEvents": [
                     {

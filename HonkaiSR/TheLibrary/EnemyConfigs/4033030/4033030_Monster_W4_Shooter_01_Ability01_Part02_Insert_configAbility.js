@@ -23,36 +23,16 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
       "valuePerStack": {
         "MDF_RallyTransferRatio": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13197) || RETURN",
-          "displayLines": "UnusedUnderThisBase_13197",
-          "constants": [],
-          "variables": [
-            "UnusedUnderThisBase_13197"
-          ]
+          "displayLines": "UnusedUnderThisBase_13197"
         },
         "MDF_Rally_HealPercentage": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13195) || RETURN",
-          "displayLines": "UnusedUnderThisBase_13195",
-          "constants": [],
-          "variables": [
-            "UnusedUnderThisBase_13195"
-          ]
+          "displayLines": "UnusedUnderThisBase_13195"
         },
         "MDF_Rally_HealUpRatio": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13198) || RETURN",
-          "displayLines": "UnusedUnderThisBase_13198",
-          "constants": [],
-          "variables": [
-            "UnusedUnderThisBase_13198"
-          ]
+          "displayLines": "UnusedUnderThisBase_13198"
         },
         "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13199) || RETURN",
-          "displayLines": "UnusedUnderThisBase_13199",
-          "constants": [],
-          "variables": [
-            "UnusedUnderThisBase_13199"
-          ]
+          "displayLines": "UnusedUnderThisBase_13199"
         }
       }
     },
@@ -74,12 +54,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-          "displayLines": "{[Skill01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill01[0]]}"
-          ]
+          "displayLines": "{[Skill01[0]]}"
         },
         "Toughness": null,
         "Tags": null,

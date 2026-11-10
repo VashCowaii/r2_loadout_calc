@@ -19,12 +19,7 @@ const configAbility = {
             {
               "name": "Inject Ability Use",
               "abilityID": {
-                "operator": "Variables[0] (MDF_AssistantAbilityKey) || RETURN",
-                "displayLines": "MDF_AssistantAbilityKey",
-                "constants": [],
-                "variables": [
-                  "MDF_AssistantAbilityKey"
-                ]
+                "displayLines": "MDF_AssistantAbilityKey"
               },
               "isAssistantAbility": true,
               "abilityTarget": {
@@ -60,12 +55,7 @@ const configAbility = {
             {
               "name": "Inject Ability Use",
               "abilityID": {
-                "operator": "Variables[0] (MDF_AssistantAbilityKey) || RETURN",
-                "displayLines": "MDF_AssistantAbilityKey",
-                "constants": [],
-                "variables": [
-                  "MDF_AssistantAbilityKey"
-                ]
+                "displayLines": "MDF_AssistantAbilityKey"
               },
               "isAssistantAbility": true,
               "abilitySource": {
@@ -145,12 +135,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityID": {
-                    "operator": "Variables[0] (MDF_AssistantAbilityKey) || RETURN",
-                    "displayLines": "MDF_AssistantAbilityKey",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AssistantAbilityKey"
-                    ]
+                    "displayLines": "MDF_AssistantAbilityKey"
                   },
                   "isAssistantAbility": true,
                   "abilityTarget": {
@@ -211,12 +196,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityID": {
-                    "operator": "Variables[0] (MDF_AssistantAbilityKey) || RETURN",
-                    "displayLines": "MDF_AssistantAbilityKey",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AssistantAbilityKey"
-                    ]
+                    "displayLines": "MDF_AssistantAbilityKey"
                   },
                   "isAssistantAbility": true,
                   "abilityTarget": {
@@ -277,12 +257,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityID": {
-                    "operator": "Variables[0] (MDF_AssistantAbilityKey) || RETURN",
-                    "displayLines": "MDF_AssistantAbilityKey",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AssistantAbilityKey"
-                    ]
+                    "displayLines": "MDF_AssistantAbilityKey"
                   },
                   "isAssistantAbility": true,
                   "abilityTarget": {

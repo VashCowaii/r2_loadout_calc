@@ -29,14 +29,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (count) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(count + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "count"
-                    ]
+                    "displayLines": "(count + 1)"
                   },
                   "variableName": "count"
                 },
@@ -167,12 +160,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">PhysicalVulnerability</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (ADF_2) || RETURN",
-                    "displayLines": "ADF_2",
-                    "constants": [],
-                    "variables": [
-                      "ADF_2"
-                    ]
+                    "displayLines": "ADF_2"
                   }
                 }
               ]
@@ -217,12 +205,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Physical",
                         "Damage": {
-                          "operator": "Variables[0] (ADF_1) || RETURN",
-                          "displayLines": "ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "ADF_1"
-                          ]
+                          "displayLines": "ADF_1"
                         },
                         "dmgFormula": "Max HP Scaling",
                         "Toughness": null,

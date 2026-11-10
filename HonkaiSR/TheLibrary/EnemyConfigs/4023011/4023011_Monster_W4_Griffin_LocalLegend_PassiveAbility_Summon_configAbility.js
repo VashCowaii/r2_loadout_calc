@@ -15,12 +15,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (FREEVAR) || RETURN",
-        "displayLines": "FREEVAR",
-        "constants": [],
-        "variables": [
-          "FREEVAR"
-        ]
+        "displayLines": "FREEVAR"
       },
       "execute": [
         {
@@ -36,24 +31,14 @@ const configAbility = {
         "value1": "_DieSumsCheck",
         "compareType": "<",
         "value2": {
-          "operator": "Variables[0] (_DieSums) || RETURN",
-          "displayLines": "_DieSums",
-          "constants": [],
-          "variables": [
-            "_DieSums"
-          ]
+          "displayLines": "_DieSums"
         }
       }
     },
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (_DieSums) || RETURN",
-        "displayLines": "_DieSums",
-        "constants": [],
-        "variables": [
-          "_DieSums"
-        ]
+        "displayLines": "_DieSums"
       },
       "variableName": "_DieSumsCheck"
     },

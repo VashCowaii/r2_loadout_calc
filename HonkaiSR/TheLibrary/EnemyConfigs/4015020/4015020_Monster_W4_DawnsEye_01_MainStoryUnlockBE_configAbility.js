@@ -75,12 +75,7 @@ const configAbility = {
       "eventID": 60029,
       "variables": {
         "BaseAttack": {
-          "operator": "Variables[0] (BaseAttack) || RETURN",
-          "displayLines": "BaseAttack",
-          "constants": [],
-          "variables": [
-            "BaseAttack"
-          ]
+          "displayLines": "BaseAttack"
         }
       },
       "whenCreated": [

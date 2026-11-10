@@ -47,12 +47,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill11[0]]}) || RETURN",
-          "displayLines": "{[Skill11[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill11[0]]}"
-          ]
+          "displayLines": "{[Skill11[0]]}"
         },
         "Toughness": null,
         "Tags": null,
@@ -69,12 +64,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill11[1]]}) || RETURN",
-          "displayLines": "{[Skill11[1]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill11[1]]}"
-          ]
+          "displayLines": "{[Skill11[1]]}"
         },
         "Toughness": null,
         "Tags": null,

@@ -29,13 +29,7 @@ const configAbility = {
           {
             "name": "Random Chance",
             "chance": {
-              "operator": "Variables[0] (Skill11_FixedChance) || Variables[1] (MAR7_HUNT_OBJECT_UNUSED_3) || ADD || RETURN",
-              "displayLines": "(Skill11_FixedChance + MAR7_HUNT_OBJECT_UNUSED_3)",
-              "constants": [],
-              "variables": [
-                "Skill11_FixedChance",
-                "MAR7_HUNT_OBJECT_UNUSED_3"
-              ]
+              "displayLines": "(Skill11_FixedChance + MAR7_HUNT_OBJECT_UNUSED_3)"
             }
           },
           {
@@ -43,12 +37,7 @@ const configAbility = {
             "value1": "Skill11_HitCount",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
+              "displayLines": "3"
             },
             "contextScope": "ContextCaster"
           }
@@ -59,14 +48,7 @@ const configAbility = {
           "name": "Define Custom Variable",
           "scope": "ContextCaster",
           "value": {
-            "operator": "Variables[0] (Skill11_HitCount) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(Skill11_HitCount + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "Skill11_HitCount"
-            ]
+            "displayLines": "(Skill11_HitCount + 1)"
           },
           "variableName": "Skill11_HitCount"
         }
@@ -88,14 +70,7 @@ const configAbility = {
         "value1": "Skill11_HitCount",
         "compareType": ">",
         "value2": {
-          "operator": "Constants[0] (4) || Variables[0] (Skill11_BasicCount) || SUB || RETURN",
-          "displayLines": "(4 - Skill11_BasicCount)",
-          "constants": [
-            4
-          ],
-          "variables": [
-            "Skill11_BasicCount"
-          ]
+          "displayLines": "(4 - Skill11_BasicCount)"
         },
         "contextScope": "ContextCaster"
       },

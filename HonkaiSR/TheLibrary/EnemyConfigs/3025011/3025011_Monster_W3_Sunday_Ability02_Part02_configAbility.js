@@ -25,12 +25,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (Skill02TargetNumber) || RETURN",
-        "displayLines": "Skill02TargetNumber",
-        "constants": [],
-        "variables": [
-          "Skill02TargetNumber"
-        ]
+        "displayLines": "Skill02TargetNumber"
       },
       "execute": [
         {
@@ -59,12 +54,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
+                  "displayLines": "{[Skill02[0]]}"
                 },
                 "Toughness": null,
                 "Tags": null,

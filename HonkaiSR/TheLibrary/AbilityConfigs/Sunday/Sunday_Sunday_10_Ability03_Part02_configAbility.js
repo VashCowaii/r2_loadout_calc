@@ -86,13 +86,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (_MAXSP) || Variables[1] (0.2) || MUL || RETURN",
-        "displayLines": "(_MAXSP * 0.2)",
-        "constants": [],
-        "variables": [
-          "_MAXSP",
-          0.2
-        ]
+        "displayLines": "(_MAXSP * 0.2)"
       },
       "variableName": "_Skill03_AddSPAmount"
     },
@@ -110,24 +104,14 @@ const configAbility = {
             "value1": "_Skill03_AddSPAmount",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] (40) || RETURN",
-              "displayLines": "40",
-              "constants": [],
-              "variables": [
-                40
-              ]
+              "displayLines": "40"
             }
           },
           "passed": [
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (40) || RETURN",
-                "displayLines": "40",
-                "constants": [],
-                "variables": [
-                  40
-                ]
+                "displayLines": "40"
               },
               "variableName": "_Skill03_AddSPAmount"
             }
@@ -149,12 +133,7 @@ const configAbility = {
         {
           "name": "Skill Points Modification",
           "adjustmentValue": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "adjustmentType": "+"
         },
@@ -175,12 +154,7 @@ const configAbility = {
         "target": "{{Ability Target(ST)}}"
       },
       "value": {
-        "operator": "Variables[0] (_Skill03_AddSPAmount) || RETURN",
-        "displayLines": "_Skill03_AddSPAmount",
-        "constants": [],
-        "variables": [
-          "_Skill03_AddSPAmount"
-        ]
+        "displayLines": "_Skill03_AddSPAmount"
       },
       "isFixed": "(Fixed)",
       "tag": "ActiveSkillAdd"
@@ -208,12 +182,7 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"762667758\">Sunday_10_Ability03_Link_ForCaster</a>",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           }
         },
         {
@@ -244,20 +213,10 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1284738050\">Sunday_10_Ability03_Link</a>[<span class=\"descriptionNumberColor\">The Beatified</span>]",
               "valuePerStack": {
                 "MDF_PropertyRatio": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 },
                 "MDF_PropertyBase": {
-                  "operator": "Variables[0] (0.12) || RETURN",
-                  "displayLines": "0.12",
-                  "constants": [],
-                  "variables": [
-                    0.12
-                  ]
+                  "displayLines": "0.12"
                 }
               }
             }
@@ -272,20 +231,10 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1284738050\">Sunday_10_Ability03_Link</a>[<span class=\"descriptionNumberColor\">The Beatified</span>]",
               "valuePerStack": {
                 "MDF_PropertyRatio": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 },
                 "MDF_PropertyBase": {
-                  "operator": "Variables[0] (0.12) || RETURN",
-                  "displayLines": "0.12",
-                  "constants": [],
-                  "variables": [
-                    0.12
-                  ]
+                  "displayLines": "0.12"
                 }
               }
             }
@@ -320,21 +269,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"2041266105\">Sunday_10_MazeBonus</a>[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             }
           }
         }
@@ -366,29 +305,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-2103228822\">Sunday_10_CritUp</a>[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
               "duration": {
-                "operator": "Variables[0] (_P01_LifeTime) || RETURN",
-                "displayLines": "_P01_LifeTime",
-                "constants": [],
-                "variables": [
-                  "_P01_LifeTime"
-                ]
+                "displayLines": "_P01_LifeTime"
               },
               "stackLimit": {
-                "operator": "Variables[0] (_SkillP01_StackingLayer) || RETURN",
-                "displayLines": "_SkillP01_StackingLayer",
-                "constants": [],
-                "variables": [
-                  "_SkillP01_StackingLayer"
-                ]
+                "displayLines": "_SkillP01_StackingLayer"
               },
               "valuePerStack": {
                 "MDF_CritValue": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               },
               "addStacksPerTrigger": 1
@@ -403,29 +327,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-2103228822\">Sunday_10_CritUp</a>[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
               "duration": {
-                "operator": "Variables[0] (_P01_LifeTime) || RETURN",
-                "displayLines": "_P01_LifeTime",
-                "constants": [],
-                "variables": [
-                  "_P01_LifeTime"
-                ]
+                "displayLines": "_P01_LifeTime"
               },
               "stackLimit": {
-                "operator": "Variables[0] (_SkillP01_StackingLayer) || RETURN",
-                "displayLines": "_SkillP01_StackingLayer",
-                "constants": [],
-                "variables": [
-                  "_SkillP01_StackingLayer"
-                ]
+                "displayLines": "_SkillP01_StackingLayer"
               },
               "valuePerStack": {
                 "MDF_CritValue": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             }
@@ -498,12 +407,7 @@ const configAbility = {
                       }
                     },
                     "Damage": {
-                      "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
-                      "displayLines": "MDF_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamagePercentage"
-                      ]
+                      "displayLines": "MDF_DamagePercentage"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -560,14 +464,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_lifeTime) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(_lifeTime - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_lifeTime"
-                    ]
+                    "displayLines": "(_lifeTime - 1)"
                   },
                   "priorState": "Active"
                 }
@@ -594,12 +491,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (_lifeTime) || RETURN",
-                "displayLines": "_lifeTime",
-                "constants": [],
-                "variables": [
-                  "_lifeTime"
-                ]
+                "displayLines": "_lifeTime"
               },
               "priorState": "Active"
             }
@@ -641,14 +533,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_ownerCritDamage) || Variables[1] (0.3) || MUL || Variables[2] (0.12) || ADD || RETURN",
-                        "displayLines": "((_ownerCritDamage * 0.3) + 0.12)",
-                        "constants": [],
-                        "variables": [
-                          "_ownerCritDamage",
-                          0.3,
-                          0.12
-                        ]
+                        "displayLines": "((_ownerCritDamage * 0.3) + 0.12)"
                       },
                       "variableName": "_PropertyFinal"
                     },
@@ -661,12 +546,7 @@ const configAbility = {
                       "modifierName": "<a class=\"gModGreen\" id=\"-1284738050\">Sunday_10_Ability03_Link</a>[<span class=\"descriptionNumberColor\">The Beatified</span>]",
                       "variableName": "MDF_PropertyFinal",
                       "value": {
-                        "operator": "Variables[0] (_PropertyFinal) || RETURN",
-                        "displayLines": "_PropertyFinal",
-                        "constants": [],
-                        "variables": [
-                          "_PropertyFinal"
-                        ]
+                        "displayLines": "_PropertyFinal"
                       }
                     }
                   ]

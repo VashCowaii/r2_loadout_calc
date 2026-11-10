@@ -11,12 +11,7 @@ const configAbility = {
         "target": "{{Player Team All}}"
       },
       "healPercent": {
-        "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-        "displayLines": "#BattleEvent_P1_ADF",
-        "constants": [],
-        "variables": [
-          "#BattleEvent_P1_ADF"
-        ]
+        "displayLines": "#BattleEvent_P1_ADF"
       },
       "formula": "Heal from Target MaxHP"
     },
@@ -27,12 +22,7 @@ const configAbility = {
         "target": "{{Player Team(Exclude Memosprites)v2}}"
       },
       "valuePercent": {
-        "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-        "displayLines": "#BattleEvent_P2_ADF",
-        "constants": [],
-        "variables": [
-          "#BattleEvent_P2_ADF"
-        ]
+        "displayLines": "#BattleEvent_P2_ADF"
       },
       "isFixed": "(Fixed)"
     },

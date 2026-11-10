@@ -173,14 +173,7 @@ const compositeAbilityObject = {
           },
           "variableName": "_WorldErosion",
           "value": {
-            "operator": "Variables[0] ({[Skill03[1]]}) || INVERT || Constants[0] (100) || MUL || RETURN",
-            "displayLines": "(-{[Skill03[1]]} * 100)",
-            "constants": [
-              100
-            ],
-            "variables": [
-              "{[Skill03[1]]}"
-            ]
+            "displayLines": "(-{[Skill03[1]]} * 100)"
           },
           "max": 100
         },
@@ -289,14 +282,7 @@ const compositeAbilityObject = {
           },
           "variableName": "_WorldErosion02",
           "value": {
-            "operator": "Variables[0] ({[Skill03[1]]}) || INVERT || Constants[0] (70) || MUL || RETURN",
-            "displayLines": "(-{[Skill03[1]]} * 70)",
-            "constants": [
-              70
-            ],
-            "variables": [
-              "{[Skill03[1]]}"
-            ]
+            "displayLines": "(-{[Skill03[1]]} * 70)"
           },
           "min": 1,
           "max": 99
@@ -309,14 +295,7 @@ const compositeAbilityObject = {
           },
           "variableName": "_WorldErosion",
           "value": {
-            "operator": "Variables[0] ({[Skill03[1]]}) || INVERT || Constants[0] (100) || MUL || RETURN",
-            "displayLines": "(-{[Skill03[1]]} * 100)",
-            "constants": [
-              100
-            ],
-            "variables": [
-              "{[Skill03[1]]}"
-            ]
+            "displayLines": "(-{[Skill03[1]]} * 100)"
           },
           "max": 100
         },
@@ -621,14 +600,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_CommonTalkType) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(_CommonTalkType + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_CommonTalkType"
-                    ]
+                    "displayLines": "(_CommonTalkType + 1)"
                   },
                   "variableName": "_CommonTalkType"
                 }
@@ -707,14 +679,7 @@ const compositeAbilityObject = {
           },
           "variableName": "_WorldErosion02",
           "value": {
-            "operator": "Variables[0] ({[Skill03[1]]}) || INVERT || Constants[0] (70) || MUL || RETURN",
-            "displayLines": "(-{[Skill03[1]]} * 70)",
-            "constants": [
-              70
-            ],
-            "variables": [
-              "{[Skill03[1]]}"
-            ]
+            "displayLines": "(-{[Skill03[1]]} * 70)"
           },
           "min": 1,
           "max": 99
@@ -727,14 +692,7 @@ const compositeAbilityObject = {
           },
           "variableName": "_WorldErosion",
           "value": {
-            "operator": "Variables[0] ({[Skill03[1]]}) || INVERT || Constants[0] (100) || MUL || RETURN",
-            "displayLines": "(-{[Skill03[1]]} * 100)",
-            "constants": [
-              100
-            ],
-            "variables": [
-              "{[Skill03[1]]}"
-            ]
+            "displayLines": "(-{[Skill03[1]]} * 100)"
           },
           "max": 100
         },
@@ -1153,15 +1111,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Null Type",
                     "DamageFlat": {
-                      "operator": "Variables[0] (_MaxHp) || Variables[1] ({[Skill03[0]]}) || MUL || Constants[0] (5) || DIV || RETURN",
-                      "displayLines": "((_MaxHp * {[Skill03[0]]}) / 5)",
-                      "constants": [
-                        5
-                      ],
-                      "variables": [
-                        "_MaxHp",
-                        "{[Skill03[0]]}"
-                      ]
+                      "displayLines": "((_MaxHp * {[Skill03[0]]}) / 5)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -1196,15 +1146,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Null Type",
                     "DamageFlat": {
-                      "operator": "Variables[0] (_MaxHp) || Variables[1] ({[Skill03[2]]}) || MUL || Constants[0] (5) || DIV || RETURN",
-                      "displayLines": "((_MaxHp * {[Skill03[2]]}) / 5)",
-                      "constants": [
-                        5
-                      ],
-                      "variables": [
-                        "_MaxHp",
-                        "{[Skill03[2]]}"
-                      ]
+                      "displayLines": "((_MaxHp * {[Skill03[2]]}) / 5)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -1246,15 +1188,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Null Type",
                     "DamageFlat": {
-                      "operator": "Variables[0] (_MaxHp) || Variables[1] ({[Skill03[0]]}) || MUL || Constants[0] (5) || DIV || RETURN",
-                      "displayLines": "((_MaxHp * {[Skill03[0]]}) / 5)",
-                      "constants": [
-                        5
-                      ],
-                      "variables": [
-                        "_MaxHp",
-                        "{[Skill03[0]]}"
-                      ]
+                      "displayLines": "((_MaxHp * {[Skill03[0]]}) / 5)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -1289,15 +1223,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Null Type",
                     "DamageFlat": {
-                      "operator": "Variables[0] (_MaxHp) || Variables[1] ({[Skill03[2]]}) || MUL || Constants[0] (5) || DIV || RETURN",
-                      "displayLines": "((_MaxHp * {[Skill03[2]]}) / 5)",
-                      "constants": [
-                        5
-                      ],
-                      "variables": [
-                        "_MaxHp",
-                        "{[Skill03[2]]}"
-                      ]
+                      "displayLines": "((_MaxHp * {[Skill03[2]]}) / 5)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -1332,15 +1258,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Null Type",
                     "DamageFlat": {
-                      "operator": "Variables[0] (_MaxHp) || Variables[1] ({[Skill03[2]]}) || MUL || Constants[0] (5) || DIV || RETURN",
-                      "displayLines": "((_MaxHp * {[Skill03[2]]}) / 5)",
-                      "constants": [
-                        5
-                      ],
-                      "variables": [
-                        "_MaxHp",
-                        "{[Skill03[2]]}"
-                      ]
+                      "displayLines": "((_MaxHp * {[Skill03[2]]}) / 5)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,

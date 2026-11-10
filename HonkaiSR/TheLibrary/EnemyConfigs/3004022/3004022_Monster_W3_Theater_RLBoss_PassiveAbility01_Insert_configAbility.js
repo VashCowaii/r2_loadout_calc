@@ -131,28 +131,13 @@ const configAbility = {
           "eventID": 20010,
           "variables": {
             "BE_P1_BESpeed": {
-              "operator": "Variables[0] (P1_BaseSpeed) || RETURN",
-              "displayLines": "P1_BaseSpeed",
-              "constants": [],
-              "variables": [
-                "P1_BaseSpeed"
-              ]
+              "displayLines": "P1_BaseSpeed"
             },
             "P2_BreakDelayRatioPerFigure": {
-              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-              "displayLines": "{[Skill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[1]]}"
-              ]
+              "displayLines": "{[Skill02[1]]}"
             },
             "BE_P3_InitDelay": {
-              "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-              "displayLines": "{[Skill02[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[2]]}"
-              ]
+              "displayLines": "{[Skill02[2]]}"
             }
           }
         },
@@ -190,12 +175,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"890205763\">Enemy_W3_Theater_IF_BattleEvent</a>",
               "valuePerStack": {
                 "MDF_BEBreakDamageReduce": {
-                  "operator": "Variables[0] ({[Skill08[5]]}) || RETURN",
-                  "displayLines": "{[Skill08[5]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill08[5]]}"
-                  ]
+                  "displayLines": "{[Skill08[5]]}"
                 }
               },
               "casterAssign": "TargetSelf"
@@ -234,12 +214,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "multiBase": {
-                "operator": "Variables[0] ({[Skill08[0]]}) || RETURN",
-                "displayLines": "{[Skill08[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill08[0]]}"
-                ]
+                "displayLines": "{[Skill08[0]]}"
               }
             }
           ]
@@ -277,12 +252,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "multiBase": {
-                "operator": "Variables[0] ({[Skill08[1]]}) || RETURN",
-                "displayLines": "{[Skill08[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill08[1]]}"
-                ]
+                "displayLines": "{[Skill08[1]]}"
               }
             }
           ]
@@ -320,12 +290,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "multiBase": {
-                "operator": "Variables[0] ({[Skill08[2]]}) || RETURN",
-                "displayLines": "{[Skill08[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill08[2]]}"
-                ]
+                "displayLines": "{[Skill08[2]]}"
               }
             }
           ]
@@ -349,12 +314,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "multiBase": {
-                "operator": "Variables[0] ({[Skill08[4]]}) || RETURN",
-                "displayLines": "{[Skill08[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill08[4]]}"
-                ]
+                "displayLines": "{[Skill08[4]]}"
               }
             }
           ]
@@ -378,12 +338,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "multiBase": {
-                "operator": "Variables[0] ({[Skill08[3]]}) || RETURN",
-                "displayLines": "{[Skill08[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill08[3]]}"
-                ]
+                "displayLines": "{[Skill08[3]]}"
               }
             }
           ]
@@ -570,52 +525,22 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1013818127\">MModifier_Monster_W3_Theater_IF_HourglassCharge</a>[<span class=\"descriptionNumberColor\">Regular Examination</span>]",
       "valuePerStack": {
         "MDF_DamageStanceValue_Dinosaur": {
-          "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-          "displayLines": "{[SkillP01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[0]]}"
-          ]
+          "displayLines": "{[SkillP01[0]]}"
         },
         "MDF_DamageStanceValue_TV": {
-          "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-          "displayLines": "{[SkillP01[1]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[1]]}"
-          ]
+          "displayLines": "{[SkillP01[1]]}"
         },
         "MDF_DamageStanceValue_Mecha": {
-          "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-          "displayLines": "{[SkillP01[2]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[2]]}"
-          ]
+          "displayLines": "{[SkillP01[2]]}"
         },
         "MDF_DamageStanceValue_Clock": {
-          "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-          "displayLines": "{[SkillP01[3]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[3]]}"
-          ]
+          "displayLines": "{[SkillP01[3]]}"
         },
         "MDF_DamageStanceValue_2": {
-          "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-          "displayLines": "{[SkillP01[4]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[4]]}"
-          ]
+          "displayLines": "{[SkillP01[4]]}"
         },
         "MDF_DamageStanceValue_All": {
-          "operator": "Variables[0] ({[SkillP01[5]]}) || RETURN",
-          "displayLines": "{[SkillP01[5]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillP01[5]]}"
-          ]
+          "displayLines": "{[SkillP01[5]]}"
         }
       }
     },

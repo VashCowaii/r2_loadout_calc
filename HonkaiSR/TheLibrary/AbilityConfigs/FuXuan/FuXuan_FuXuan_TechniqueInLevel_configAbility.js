@@ -53,21 +53,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1150141703\">FuXuan_ListenLifeTime</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "Ability02_P2_DamageResistance": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_5275) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_5275",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_5275"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_5275"
                     }
                   }
                 },
@@ -80,28 +70,13 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1553530097\">FuXuan_HitDamageSplit</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
                   "valuePerStack": {
                     "MDF_SplitPercentage": {
-                      "operator": "Variables[0] (0.65) || RETURN",
-                      "displayLines": "0.65",
-                      "constants": [],
-                      "variables": [
-                        0.65
-                      ]
+                      "displayLines": "0.65"
                     },
                     "Ability02_P2_DamageResistance": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_5275) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_5275",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_5275"
-                      ]
+                      "displayLines": "UnusedUnderThisBase_5275"
                     },
                     "AddSP": {
-                      "operator": "Variables[0] (5) || RETURN",
-                      "displayLines": "5",
-                      "constants": [],
-                      "variables": [
-                        5
-                      ]
+                      "displayLines": "5"
                     }
                   }
                 },

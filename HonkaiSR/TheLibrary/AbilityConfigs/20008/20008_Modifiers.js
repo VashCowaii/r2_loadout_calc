@@ -334,12 +334,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (WolfBoss_BloodRageCount) || RETURN",
-                "displayLines": "WolfBoss_BloodRageCount",
-                "constants": [],
-                "variables": [
-                  "WolfBoss_BloodRageCount"
-                ]
+                "displayLines": "WolfBoss_BloodRageCount"
               },
               "entityClass": "Enemy",
               "target": {
@@ -347,12 +342,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (WolfBoss_BloodRageMaxCount) || RETURN",
-                "displayLines": "WolfBoss_BloodRageMaxCount",
-                "constants": [],
-                "variables": [
-                  "WolfBoss_BloodRageMaxCount"
-                ]
+                "displayLines": "WolfBoss_BloodRageMaxCount"
               },
               "assignState": "True",
               "barType": "Hulei"
@@ -446,12 +436,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                    "displayLines": "Wolf_AttackCount",
-                    "constants": [],
-                    "variables": [
-                      "Wolf_AttackCount"
-                    ]
+                    "displayLines": "Wolf_AttackCount"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -459,12 +444,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                    "displayLines": "Wolf_MaxAttackCount",
-                    "constants": [],
-                    "variables": [
-                      "Wolf_MaxAttackCount"
-                    ]
+                    "displayLines": "Wolf_MaxAttackCount"
                   },
                   "assignState": "True",
                   "state": "Normal"

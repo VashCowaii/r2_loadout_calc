@@ -20,14 +20,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "setValue": {
-        "operator": "Variables[0] (MDF_LukaMaxHP) || Constants[0] (0.5) || MUL || RETURN",
-        "displayLines": "(MDF_LukaMaxHP * 0.5)",
-        "constants": [
-          0.5
-        ],
-        "variables": [
-          "MDF_LukaMaxHP"
-        ]
+        "displayLines": "(MDF_LukaMaxHP * 0.5)"
       }
     },
     {
@@ -150,12 +143,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">StageFinalDMG</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AttackRatio) || RETURN",
-                "displayLines": "MDF_AttackRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AttackRatio"
-                ]
+                "displayLines": "MDF_AttackRatio"
               }
             },
             {
@@ -197,14 +185,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "setValue": {
-                "operator": "Variables[0] (MDF_TargetMaxHP2) || Constants[0] (0.3) || MUL || RETURN",
-                "displayLines": "(MDF_TargetMaxHP2 * 0.3)",
-                "constants": [
-                  0.3
-                ],
-                "variables": [
-                  "MDF_TargetMaxHP2"
-                ]
+                "displayLines": "(MDF_TargetMaxHP2 * 0.3)"
               }
             }
           ]

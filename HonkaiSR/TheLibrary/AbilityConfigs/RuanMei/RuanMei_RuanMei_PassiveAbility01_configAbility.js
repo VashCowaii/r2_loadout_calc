@@ -24,12 +24,7 @@ const configAbility = {
       "name": "Update Displayed Energy Bar",
       "value": 0,
       "maximum": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "assignState": "True",
       "priorState": "Normal",
@@ -52,12 +47,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-780236472\">RuanMei_Tree02_RecoverSP</a>",
           "valuePerStack": {
             "Trace_PointB2_P1_SP": {
-              "operator": "Variables[0] (5) || RETURN",
-              "displayLines": "5",
-              "constants": [],
-              "variables": [
-                5
-              ]
+              "displayLines": "5"
             }
           }
         }
@@ -87,12 +77,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.1) || RETURN",
-                "displayLines": "0.1",
-                "constants": [],
-                "variables": [
-                  0.1
-                ]
+                "displayLines": "0.1"
               }
             }
           ]
@@ -120,17 +105,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (DV_Passive_Damage_MaxStance) || Constants[0] (30) || DIV || Constants[1] (2) || ADD || Constants[2] (4) || DIV || Variables[1] (SkillP01_FinalBreakDamagePercentage_set) || MUL || RETURN",
-                "displayLines": "((((DV_Passive_Damage_MaxStance / 30) + 2) / 4) * SkillP01_FinalBreakDamagePercentage_set)",
-                "constants": [
-                  30,
-                  2,
-                  4
-                ],
-                "variables": [
-                  "DV_Passive_Damage_MaxStance",
-                  "SkillP01_FinalBreakDamagePercentage_set"
-                ]
+                "displayLines": "((((DV_Passive_Damage_MaxStance / 30) + 2) / 4) * SkillP01_FinalBreakDamagePercentage_set)"
               },
               "variableName": "SkillP01_FinalBreakDamagePercentage_set"
             },
@@ -144,12 +119,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "DamageBreak": {
-                  "operator": "Variables[0] (SkillP01_FinalBreakDamagePercentage_set) || RETURN",
-                  "displayLines": "SkillP01_FinalBreakDamagePercentage_set",
-                  "constants": [],
-                  "variables": [
-                    "SkillP01_FinalBreakDamagePercentage_set"
-                  ]
+                  "displayLines": "SkillP01_FinalBreakDamagePercentage_set"
                 },
                 "dmgFormula": "Break DMG Scaling",
                 "dmgFormulaFinal": "Pure (No DMG%)",
@@ -215,13 +185,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (1.2) || Variables[1] (2) || ADD || RETURN",
-                        "displayLines": "(1.2 + 2)",
-                        "constants": [],
-                        "variables": [
-                          1.2,
-                          2
-                        ]
+                        "displayLines": "(1.2 + 2)"
                       },
                       "variableName": "_SkillP01_FinalBreakDamagePercentage"
                     }
@@ -230,12 +194,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (1.2) || RETURN",
-                        "displayLines": "1.2",
-                        "constants": [],
-                        "variables": [
-                          1.2
-                        ]
+                        "displayLines": "1.2"
                       },
                       "variableName": "_SkillP01_FinalBreakDamagePercentage"
                     }
@@ -250,28 +209,13 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"894337794\">RuanMei_Passive_TriggerBreakDamage</a>",
                   "valuePerStack": {
                     "MDF_BreakBaseDamage_set": {
-                      "operator": "Variables[0] (_BreakBaseDamage) || RETURN",
-                      "displayLines": "_BreakBaseDamage",
-                      "constants": [],
-                      "variables": [
-                        "_BreakBaseDamage"
-                      ]
+                      "displayLines": "_BreakBaseDamage"
                     },
                     "MDF_BreakDamageAddedRatio_set": {
-                      "operator": "Variables[0] (_BreakDamageAddedRatio) || RETURN",
-                      "displayLines": "_BreakDamageAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "_BreakDamageAddedRatio"
-                      ]
+                      "displayLines": "_BreakDamageAddedRatio"
                     },
                     "AbilityP01_FinalBreakDamagePercentage_set": {
-                      "operator": "Variables[0] (_SkillP01_FinalBreakDamagePercentage) || RETURN",
-                      "displayLines": "_SkillP01_FinalBreakDamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "_SkillP01_FinalBreakDamagePercentage"
-                      ]
+                      "displayLines": "_SkillP01_FinalBreakDamagePercentage"
                     }
                   }
                 }
@@ -340,12 +284,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (Skill02_EnergyBarCount) || RETURN",
-                    "displayLines": "Skill02_EnergyBarCount",
-                    "constants": [],
-                    "variables": [
-                      "Skill02_EnergyBarCount"
-                    ]
+                    "displayLines": "Skill02_EnergyBarCount"
                   },
                   "assignState": "True",
                   "priorState": "Active",
@@ -393,12 +332,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-23155683\">RuanMei_BreakDamageAdded</a>[<span class=\"descriptionNumberColor\">Inert Respiration</span>]",
                   "valuePerStack": {
                     "Trace_PointB1_P1_BreakDamageAdded": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 }
@@ -444,12 +378,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-23155683\">RuanMei_BreakDamageAdded</a>[<span class=\"descriptionNumberColor\">Inert Respiration</span>]",
                       "valuePerStack": {
                         "Trace_PointB1_P1_BreakDamageAdded": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
+                          "displayLines": "0.2"
                         }
                       }
                     }
@@ -471,12 +400,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1641844295\">RuanMei_AttackBreakEnemyAttackUp</a>[<span class=\"descriptionNumberColor\">Reedside Promenade</span>]",
                       "valuePerStack": {
                         "AbilityRank_Eidolon2_P1_AttackUpRatio": {
-                          "operator": "Variables[0] (0.4) || RETURN",
-                          "displayLines": "0.4",
-                          "constants": [],
-                          "variables": [
-                            0.4
-                          ]
+                          "displayLines": "0.4"
                         }
                       }
                     }
@@ -582,12 +506,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1641844295\">RuanMei_AttackBreakEnemyAttackUp</a>[<span class=\"descriptionNumberColor\">Reedside Promenade</span>]",
                   "valuePerStack": {
                     "AbilityRank_Eidolon2_P1_AttackUpRatio": {
-                      "operator": "Variables[0] (0.4) || RETURN",
-                      "displayLines": "0.4",
-                      "constants": [],
-                      "variables": [
-                        0.4
-                      ]
+                      "displayLines": "0.4"
                     }
                   }
                 }
@@ -638,12 +557,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (0.32) || RETURN",
-                    "displayLines": "0.32",
-                    "constants": [],
-                    "variables": [
-                      0.32
-                    ]
+                    "displayLines": "0.32"
                   },
                   "variableName": "Skill02_P1_DamageAddedRatioFinal"
                 }

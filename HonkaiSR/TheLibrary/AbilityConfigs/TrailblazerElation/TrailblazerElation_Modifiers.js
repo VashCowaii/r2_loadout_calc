@@ -40,12 +40,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CertifiedBanger</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ElationEchoPoint) || RETURN",
-                "displayLines": "ElationEchoPoint",
-                "constants": [],
-                "variables": [
-                  "ElationEchoPoint"
-                ]
+                "displayLines": "ElationEchoPoint"
               }
             }
           ]
@@ -72,12 +67,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -185,12 +175,7 @@ const configAbility = {
                         "target": "{{Parameter Target}}"
                       },
                       "punchlineFixed": {
-                        "operator": "Variables[0] (20) || RETURN",
-                        "displayLines": "20",
-                        "constants": [],
-                        "variables": [
-                          20
-                        ]
+                        "displayLines": "20"
                       },
                       "actionTag": null,
                       "execute": [

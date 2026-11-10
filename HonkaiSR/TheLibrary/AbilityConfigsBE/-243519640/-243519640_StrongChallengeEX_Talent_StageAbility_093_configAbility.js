@@ -30,14 +30,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindBonus</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_WindResistanceDelta) || SUB || RETURN",
-                "displayLines": "(0 - MDF_WindResistanceDelta)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_WindResistanceDelta"
-                ]
+                "displayLines": "(0 - MDF_WindResistanceDelta)"
               }
             },
             {
@@ -48,14 +41,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceLightningBonus</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_ThunderResistanceDelta) || SUB || RETURN",
-                "displayLines": "(0 - MDF_ThunderResistanceDelta)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_ThunderResistanceDelta"
-                ]
+                "displayLines": "(0 - MDF_ThunderResistanceDelta)"
               }
             }
           ]
@@ -94,20 +80,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"863687676\">MStrongChallengeEX_Talent_StageAbility_EMY_093</a>",
                   "valuePerStack": {
                     "MDF_WindResistanceDelta": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     },
                     "MDF_ThunderResistanceDelta": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }

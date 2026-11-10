@@ -13,12 +13,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"645549950\">M_Yanqing_Tree03</a>",
       "valuePerStack": {
         "MDF_SpeedValue": {
-          "operator": "Variables[0] (0.1) || RETURN",
-          "displayLines": "0.1",
-          "constants": [],
-          "variables": [
-            0.1
-          ]
+          "displayLines": "0.1"
         }
       }
     }
@@ -45,12 +40,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedValue) || RETURN",
-                "displayLines": "MDF_SpeedValue",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedValue"
-                ]
+                "displayLines": "MDF_SpeedValue"
               }
             }
           ]
@@ -79,29 +69,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"2119684740\">M_Yanqing_Tree03SpeedUP</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "MDF_SpeedValue": {
-                      "operator": "Variables[0] (MDF_SpeedValue) || RETURN",
-                      "displayLines": "MDF_SpeedValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_SpeedValue"
-                      ]
+                      "displayLines": "MDF_SpeedValue"
                     },
                     "MDF_LifeTime": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     }
                   }
                 }

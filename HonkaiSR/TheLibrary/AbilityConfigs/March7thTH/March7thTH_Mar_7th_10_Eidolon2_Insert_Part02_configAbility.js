@@ -46,22 +46,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (0.6) || RETURN",
-          "displayLines": "0.6",
-          "constants": [],
-          "variables": [
-            0.6
-          ]
+          "displayLines": "0.6"
         },
         "HitSplit": 0.4,
         "Toughness": {
-          "operator": "Variables[0] (15) || Variables[1] (Normal_StanceRatio) || MUL || RETURN",
-          "displayLines": "(15 * Normal_StanceRatio)",
-          "constants": [],
-          "variables": [
-            15,
-            "Normal_StanceRatio"
-          ]
+          "displayLines": "(15 * Normal_StanceRatio)"
         },
         "Tags": null,
         "attackType": "Follow-up"
@@ -74,14 +63,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "value": {
-        "operator": "Constants[0] (0.4) || Variables[0] (5) || MUL || RETURN",
-        "displayLines": "(0.4 * 5)",
-        "constants": [
-          0.4
-        ],
-        "variables": [
-          5
-        ]
+        "displayLines": "(0.4 * 5)"
       },
       "isFixed": "* ERR"
     },
@@ -95,22 +77,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (0.6) || RETURN",
-          "displayLines": "0.6",
-          "constants": [],
-          "variables": [
-            0.6
-          ]
+          "displayLines": "0.6"
         },
         "HitSplit": 0.6,
         "Toughness": {
-          "operator": "Variables[0] (15) || Variables[1] (Normal_StanceRatio) || MUL || RETURN",
-          "displayLines": "(15 * Normal_StanceRatio)",
-          "constants": [],
-          "variables": [
-            15,
-            "Normal_StanceRatio"
-          ]
+          "displayLines": "(15 * Normal_StanceRatio)"
         },
         "Tags": null,
         "attackType": "Follow-up"
@@ -123,14 +94,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "value": {
-        "operator": "Constants[0] (0.6) || Variables[0] (5) || MUL || RETURN",
-        "displayLines": "(0.6 * 5)",
-        "constants": [
-          0.6
-        ],
-        "variables": [
-          5
-        ]
+        "displayLines": "(0.6 * 5)"
       },
       "isFixed": "* ERR"
     },
@@ -148,12 +112,7 @@ const configAbility = {
       "functionName": "<a class=\"gTempYellow\" id=\"-1762944127\">Mar_7th_10_GainEnergyWithCheck</a>",
       "variables": {
         "parameter[0]_AddValue": {
-          "operator": "Variables[0] (1) || RETURN",
-          "displayLines": "1",
-          "constants": [],
-          "variables": [
-            1
-          ]
+          "displayLines": "1"
         }
       }
     }

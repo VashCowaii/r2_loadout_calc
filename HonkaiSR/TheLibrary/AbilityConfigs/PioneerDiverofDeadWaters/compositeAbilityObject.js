@@ -42,12 +42,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.04) || RETURN",
-                    "displayLines": "0.04",
-                    "constants": [],
-                    "variables": [
-                      0.04
-                    ]
+                    "displayLines": "0.04"
                   }
                 }
               ]
@@ -72,12 +67,7 @@ const compositeAbilityObject = {
                     "value1": "StatusCount",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (3) || RETURN",
-                      "displayLines": "3",
-                      "constants": [],
-                      "variables": [
-                        3
-                      ]
+                      "displayLines": "3"
                     }
                   },
                   "passed": [
@@ -129,12 +119,7 @@ const compositeAbilityObject = {
                         "value1": "StatusCount",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         }
                       },
                       "passed": [
@@ -210,12 +195,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-950302126\">Relic_117_Sub</a>[<span class=\"descriptionNumberColor\">Pioneer Diver of Dead Waters</span>]",
                       "duration": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                        "displayLines": "1"
                       }
                     }
                   ]
@@ -313,12 +293,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-491528476\">Relic_117_DamageUp</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.12) || RETURN",
-                      "displayLines": "0.12",
-                      "constants": [],
-                      "variables": [
-                        0.12
-                      ]
+                      "displayLines": "0.12"
                     }
                   }
                 }

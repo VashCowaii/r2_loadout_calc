@@ -145,12 +145,7 @@ const configAbility = {
                             "value1": "HP_Bars_Remaining",
                             "compareType": "NOT=",
                             "value2": {
-                              "operator": "Variables[0] (MaxPhase) || RETURN",
-                              "displayLines": "MaxPhase",
-                              "constants": [],
-                              "variables": [
-                                "MaxPhase"
-                              ]
+                              "displayLines": "MaxPhase"
                             }
                           },
                           {

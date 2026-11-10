@@ -55,12 +55,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (MDF_HealRatio) || RETURN",
-                    "displayLines": "MDF_HealRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HealRatio"
-                    ]
+                    "displayLines": "MDF_HealRatio"
                   },
                   "formula": "Heal from Healer's MaxHP"
                 }

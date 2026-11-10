@@ -23,12 +23,7 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1234556186\">Boothill_Ultimate_PhysicalWeakness</a>[<span class=\"descriptionNumberColor\">Extra Physical Weakness</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           }
         },
         {
@@ -56,22 +51,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1542670262\">Boothill_DuelState</a>[<span class=\"descriptionNumberColor\">Standoff</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "valuePerStack": {
             "MDF_PropertyRatio": {
-              "operator": "Variables[0] (0.15) || Variables[1] (0.12) || SUB || RETURN",
-              "displayLines": "(0.15 - 0.12)",
-              "constants": [],
-              "variables": [
-                0.15,
-                0.12
-              ]
+              "displayLines": "(0.15 - 0.12)"
             }
           }
         },
@@ -84,13 +68,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-476363000\">Boothill_DuelTarget</a>[<span class=\"descriptionNumberColor\">Standoff</span>]",
           "valuePerStack": {
             "MDF_PropertyRatio": {
-              "operator": "Variables[0] (0.3) || Variables[1] (0.12) || ADD || RETURN",
-              "displayLines": "(0.3 + 0.12)",
-              "constants": [],
-              "variables": [
-                0.3,
-                0.12
-              ]
+              "displayLines": "(0.3 + 0.12)"
             }
           }
         }
@@ -104,21 +82,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1542670262\">Boothill_DuelState</a>[<span class=\"descriptionNumberColor\">Standoff</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "valuePerStack": {
             "MDF_PropertyRatio": {
-              "operator": "Variables[0] (0.15) || RETURN",
-              "displayLines": "0.15",
-              "constants": [],
-              "variables": [
-                0.15
-              ]
+              "displayLines": "0.15"
             }
           }
         },
@@ -131,12 +99,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-476363000\">Boothill_DuelTarget</a>[<span class=\"descriptionNumberColor\">Standoff</span>]",
           "valuePerStack": {
             "MDF_PropertyRatio": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             }
           }
         }

@@ -75,15 +75,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "DamageFlat": {
-              "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (0.125) || MUL || RETURN",
-              "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)",
-              "constants": [
-                0.125
-              ],
-              "variables": [
-                "_MaxHP",
-                "{[Skill05[1]]}"
-              ]
+              "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -120,15 +112,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "DamageFlat": {
-              "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (0.125) || MUL || RETURN",
-              "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)",
-              "constants": [
-                0.125
-              ],
-              "variables": [
-                "_MaxHP",
-                "{[Skill05[1]]}"
-              ]
+              "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -165,15 +149,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "DamageFlat": {
-              "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (0.125) || MUL || RETURN",
-              "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)",
-              "constants": [
-                0.125
-              ],
-              "variables": [
-                "_MaxHP",
-                "{[Skill05[1]]}"
-              ]
+              "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -210,15 +186,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "DamageFlat": {
-              "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (0.125) || MUL || RETURN",
-              "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)",
-              "constants": [
-                0.125
-              ],
-              "variables": [
-                "_MaxHP",
-                "{[Skill05[1]]}"
-              ]
+              "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -255,15 +223,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "DamageFlat": {
-              "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (0.125) || MUL || RETURN",
-              "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)",
-              "constants": [
-                0.125
-              ],
-              "variables": [
-                "_MaxHP",
-                "{[Skill05[1]]}"
-              ]
+              "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -300,15 +260,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "DamageFlat": {
-              "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (0.125) || MUL || RETURN",
-              "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)",
-              "constants": [
-                0.125
-              ],
-              "variables": [
-                "_MaxHP",
-                "{[Skill05[1]]}"
-              ]
+              "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -345,15 +297,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "DamageFlat": {
-              "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (0.125) || MUL || RETURN",
-              "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)",
-              "constants": [
-                0.125
-              ],
-              "variables": [
-                "_MaxHP",
-                "{[Skill05[1]]}"
-              ]
+              "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -390,15 +334,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "DamageFlat": {
-              "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (0.125) || MUL || RETURN",
-              "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)",
-              "constants": [
-                0.125
-              ],
-              "variables": [
-                "_MaxHP",
-                "{[Skill05[1]]}"
-              ]
+              "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,
@@ -445,20 +381,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-976528853\">Enemy_W4_Pollux_IF_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
           "valuePerStack": {
             "MDF_DamagePercentage": {
-              "operator": "Variables[0] ({[SkillP02[1]]}) || RETURN",
-              "displayLines": "{[SkillP02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP02[1]]}"
-              ]
+              "displayLines": "{[SkillP02[1]]}"
             },
             "MDF_DamageHpAddedRatio": {
-              "operator": "Variables[0] ({[SkillP02[0]]}) || RETURN",
-              "displayLines": "{[SkillP02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP02[0]]}"
-              ]
+              "displayLines": "{[SkillP02[0]]}"
             }
           }
         }
@@ -473,20 +399,10 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1085805355\">Enemy_W4_Pollux_IF_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
       "valuePerStack": {
         "MDF_ShowValue1": {
-          "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-          "displayLines": "{[Skill05[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill05[0]]}"
-          ]
+          "displayLines": "{[Skill05[0]]}"
         },
         "MDF_SpeedUpRatio": {
-          "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-          "displayLines": "{[Skill05[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill05[0]]}"
-          ]
+          "displayLines": "{[Skill05[0]]}"
         }
       }
     },
@@ -523,12 +439,7 @@ const configAbility = {
         {
           "name": "Assign Advance/Delay to Current Ability Use",
           "adjustmentValue": {
-            "operator": "Variables[0] (_Skill05_ActionDelay) || RETURN",
-            "displayLines": "_Skill05_ActionDelay",
-            "constants": [],
-            "variables": [
-              "_Skill05_ActionDelay"
-            ]
+            "displayLines": "_Skill05_ActionDelay"
           },
           "adjustmentType": "="
         },
@@ -551,12 +462,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "multiBase": {
-            "operator": "Variables[0] (_Skill05_ActionDelay) || RETURN",
-            "displayLines": "_Skill05_ActionDelay",
-            "constants": [],
-            "variables": [
-              "_Skill05_ActionDelay"
-            ]
+            "displayLines": "_Skill05_ActionDelay"
           }
         }
       ]

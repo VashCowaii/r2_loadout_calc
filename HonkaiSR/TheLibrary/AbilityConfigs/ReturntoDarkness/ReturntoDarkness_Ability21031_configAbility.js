@@ -46,12 +46,7 @@ const configAbility = {
                   "conditions": {
                     "name": "Random Chance",
                     "chance": {
-                      "operator": "Variables[0] (0.16) || RETURN",
-                      "displayLines": "0.16",
-                      "constants": [],
-                      "variables": [
-                        0.16
-                      ]
+                      "displayLines": "0.16"
                     }
                   },
                   "passed": [

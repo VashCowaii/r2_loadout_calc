@@ -14,20 +14,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (1.2) || RETURN",
-          "displayLines": "1.2",
-          "constants": [],
-          "variables": [
-            1.2
-          ]
+          "displayLines": "1.2"
         },
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
@@ -42,12 +32,7 @@ const configAbility = {
       "variableName": "DOT_TriggerRatio",
       "eventType": "DOT_Burn",
       "value": {
-        "operator": "Variables[0] (0.92) || RETURN",
-        "displayLines": "0.92",
-        "constants": [],
-        "variables": [
-          0.92
-        ]
+        "displayLines": "0.92"
       }
     },
     "Trigger: Attack End",

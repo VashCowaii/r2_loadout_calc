@@ -58,21 +58,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1119505279\">Monster_W1_Svarog_RL_AttackUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[0]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill02[0]]}"
                 }
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (AttackUpLayer) || RETURN",
-                "displayLines": "AttackUpLayer",
-                "constants": [],
-                "variables": [
-                  "AttackUpLayer"
-                ]
+                "displayLines": "AttackUpLayer"
               }
             }
           ]
@@ -88,12 +78,7 @@ const compositeAbilityObject = {
             "value1": "CurrentHP%",
             "compareType": "<=",
             "value2": {
-              "operator": "Variables[0] (LowHPRatio) || RETURN",
-              "displayLines": "LowHPRatio",
-              "constants": [],
-              "variables": [
-                "LowHPRatio"
-              ]
+              "displayLines": "LowHPRatio"
             }
           },
           "failed": [
@@ -105,14 +90,7 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"764270214\">Monster_W1_SvarogPart_RL_CountDown</a>[<span class=\"descriptionNumberColor\">Overload Countdown</span>]",
               "duration": {
-                "operator": "Variables[0] ({[Skill06[0]]}) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "({[Skill06[0]]} + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "{[Skill06[0]]}"
-                ]
+                "displayLines": "({[Skill06[0]]} + 1)"
               }
             }
           ]
@@ -159,12 +137,7 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-                      "displayLines": "{[Skill06[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill06[1]]}"
-                      ]
+                      "displayLines": "{[Skill06[1]]}"
                     }
                   },
                   "passed": [
@@ -237,13 +210,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageFlat": {
-                  "operator": "Variables[0] (Owner_MaxHP) || Variables[1] ({[PassiveSkill03[0]]}) || MUL || RETURN",
-                  "displayLines": "(Owner_MaxHP * {[PassiveSkill03[0]]})",
-                  "constants": [],
-                  "variables": [
-                    "Owner_MaxHP",
-                    "{[PassiveSkill03[0]]}"
-                  ]
+                  "displayLines": "(Owner_MaxHP * {[PassiveSkill03[0]]})"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -398,12 +365,7 @@ const compositeAbilityObject = {
             "value1": "CurrentHP%",
             "compareType": "<=",
             "value2": {
-              "operator": "Variables[0] (LowHPRatio) || RETURN",
-              "displayLines": "LowHPRatio",
-              "constants": [],
-              "variables": [
-                "LowHPRatio"
-              ]
+              "displayLines": "LowHPRatio"
             }
           },
           "failed": [
@@ -501,12 +463,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
+              "displayLines": "{[Skill05[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -628,13 +585,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageFlat": {
-                  "operator": "Variables[0] (Owner_MaxHP) || Variables[1] ({[PassiveSkill03[0]]}) || MUL || RETURN",
-                  "displayLines": "(Owner_MaxHP * {[PassiveSkill03[0]]})",
-                  "constants": [],
-                  "variables": [
-                    "Owner_MaxHP",
-                    "{[PassiveSkill03[0]]}"
-                  ]
+                  "displayLines": "(Owner_MaxHP * {[PassiveSkill03[0]]})"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -750,12 +701,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1666707889\">Monster_W1_Svarog_RL_Part_ListenHP_Modifier</a>",
           "valuePerStack": {
             "PassiveAbility02_P2_HPRatio": {
-              "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-              "displayLines": "{[Skill03[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[1]]}"
-              ]
+              "displayLines": "{[Skill03[1]]}"
             }
           }
         },
@@ -776,12 +722,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1762407654\">Monster_W1_Svarog_RL_Control_OnPart_Modifier</a>",
           "valuePerStack": {
             "Modifier_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             }
           }
         },
@@ -829,13 +770,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageFlat": {
-                  "operator": "Variables[0] (Owner_MaxHP) || Variables[1] ({[PassiveSkill03[0]]}) || MUL || RETURN",
-                  "displayLines": "(Owner_MaxHP * {[PassiveSkill03[0]]})",
-                  "constants": [],
-                  "variables": [
-                    "Owner_MaxHP",
-                    "{[PassiveSkill03[0]]}"
-                  ]
+                  "displayLines": "(Owner_MaxHP * {[PassiveSkill03[0]]})"
                 },
                 "Toughness": null,
                 "Tags": null,

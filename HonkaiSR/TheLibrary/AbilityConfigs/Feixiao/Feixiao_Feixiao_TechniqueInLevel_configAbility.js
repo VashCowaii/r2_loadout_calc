@@ -123,18 +123,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] (MIN) || Variables[1] (10) || Variables[2] (2) || Variables[3] (MDF_WaveStageCount) || Constants[0] (1) || SUB || Variables[4] (1) || MUL || ADD || PARAM_2 || FUNCTION || RETURN",
-                      "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(10, (2 + ((MDF_WaveStageCount - 1) * 1)))",
-                      "constants": [
-                        1
-                      ],
-                      "variables": [
-                        "MIN",
-                        10,
-                        2,
-                        "MDF_WaveStageCount",
-                        1
-                      ]
+                      "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(10, (2 + ((MDF_WaveStageCount - 1) * 1)))"
                     },
                     "Toughness": {
                       "displayLines": 30
@@ -157,18 +146,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
-                      "operator": "Variables[0] (MIN) || Variables[1] (10) || Variables[2] (2) || Variables[3] (MDF_WaveStageCount) || Constants[0] (1) || SUB || Variables[4] (1) || MUL || ADD || PARAM_2 || FUNCTION || RETURN",
-                      "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(10, (2 + ((MDF_WaveStageCount - 1) * 1)))",
-                      "constants": [
-                        1
-                      ],
-                      "variables": [
-                        "MIN",
-                        10,
-                        2,
-                        "MDF_WaveStageCount",
-                        1
-                      ]
+                      "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(10, (2 + ((MDF_WaveStageCount - 1) * 1)))"
                     },
                     "Toughness": null,
                     "instanceTag": "Feixiao_00_MazeAttack",

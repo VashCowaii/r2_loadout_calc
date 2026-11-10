@@ -27,14 +27,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (_TalkNum) || Constants[0] (1) || ADD || RETURN",
-        "displayLines": "(_TalkNum + 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "_TalkNum"
-        ]
+        "displayLines": "(_TalkNum + 1)"
       },
       "variableName": "_TalkNum"
     },

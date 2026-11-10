@@ -28,14 +28,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.5) || MUL || RETURN",
-          "displayLines": "({[Skill01[0]]} * 0.5)",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "{[Skill01[0]]}"
-          ]
+          "displayLines": "({[Skill01[0]]} * 0.5)"
         },
         "Toughness": null,
         "Tags": null,
@@ -45,12 +38,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (Monster_W2_Yanqing_00_IF_Skill01_AssistMark01) || RETURN",
-        "displayLines": "Monster_W2_Yanqing_00_IF_Skill01_AssistMark01",
-        "constants": [],
-        "variables": [
-          "Monster_W2_Yanqing_00_IF_Skill01_AssistMark01"
-        ]
+        "displayLines": "Monster_W2_Yanqing_00_IF_Skill01_AssistMark01"
       },
       "execute": [
         {
@@ -62,12 +50,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
+              "displayLines": "{[Skill01[1]]}"
             },
             "Toughness": null,
             "Tags": null
@@ -85,14 +68,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.5) || MUL || RETURN",
-          "displayLines": "({[Skill01[0]]} * 0.5)",
-          "constants": [
-            0.5
-          ],
-          "variables": [
-            "{[Skill01[0]]}"
-          ]
+          "displayLines": "({[Skill01[0]]} * 0.5)"
         },
         "Toughness": null,
         "Tags": null,
@@ -102,12 +78,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (Monster_W2_Yanqing_00_IF_Skill01_AssistMark02) || RETURN",
-        "displayLines": "Monster_W2_Yanqing_00_IF_Skill01_AssistMark02",
-        "constants": [],
-        "variables": [
-          "Monster_W2_Yanqing_00_IF_Skill01_AssistMark02"
-        ]
+        "displayLines": "Monster_W2_Yanqing_00_IF_Skill01_AssistMark02"
       },
       "execute": [
         {
@@ -119,12 +90,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
+              "displayLines": "{[Skill01[1]]}"
             },
             "Toughness": null,
             "Tags": null
@@ -135,12 +101,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (Monster_W2_Yanqing_00_IF_Skill01_AssistMark03) || RETURN",
-        "displayLines": "Monster_W2_Yanqing_00_IF_Skill01_AssistMark03",
-        "constants": [],
-        "variables": [
-          "Monster_W2_Yanqing_00_IF_Skill01_AssistMark03"
-        ]
+        "displayLines": "Monster_W2_Yanqing_00_IF_Skill01_AssistMark03"
       },
       "execute": [
         {
@@ -152,12 +113,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
+              "displayLines": "{[Skill01[1]]}"
             },
             "Toughness": null,
             "Tags": null

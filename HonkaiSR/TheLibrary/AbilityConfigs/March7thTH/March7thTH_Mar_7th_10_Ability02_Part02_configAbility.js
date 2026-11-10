@@ -41,12 +41,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-178417190\">Mar_7th_10_Ability02_Master_SpeedUp</a>[<span class=\"descriptionNumberColor\">Master, It's Tea Time!</span>]",
       "valuePerStack": {
         "MDF_PropertyRatio": {
-          "operator": "Variables[0] (0.1) || RETURN",
-          "displayLines": "0.1",
-          "constants": [],
-          "variables": [
-            0.1
-          ]
+          "displayLines": "0.1"
         }
       }
     },

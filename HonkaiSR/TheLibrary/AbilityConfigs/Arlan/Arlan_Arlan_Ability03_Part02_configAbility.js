@@ -31,24 +31,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (3.2) || Constants[0] (0.3) || MUL || RETURN",
-          "displayLines": "(3.2 * 0.3)",
-          "constants": [
-            0.3
-          ],
-          "variables": [
-            3.2
-          ]
+          "displayLines": "(3.2 * 0.3)"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.3) || MUL || RETURN",
-          "displayLines": "(ST Toughness Value * 0.3)",
-          "constants": [
-            0.3
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(ST Toughness Value * 0.3)"
         },
         "Tags": null,
         "EnergyGainPercent": "30%"
@@ -85,24 +71,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (3.2) || Constants[0] (0.3) || MUL || RETURN",
-              "displayLines": "(3.2 * 0.3)",
-              "constants": [
-                0.3
-              ],
-              "variables": [
-                3.2
-              ]
+              "displayLines": "(3.2 * 0.3)"
             },
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || Constants[0] (0.3) || MUL || RETURN",
-              "displayLines": "(Blast Toughness Value * 0.3)",
-              "constants": [
-                0.3
-              ],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "(Blast Toughness Value * 0.3)"
             },
             "Tags": null
           }
@@ -118,24 +90,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1.6) || Constants[0] (0.3) || MUL || RETURN",
-              "displayLines": "(1.6 * 0.3)",
-              "constants": [
-                0.3
-              ],
-              "variables": [
-                1.6
-              ]
+              "displayLines": "(1.6 * 0.3)"
             },
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || Constants[0] (0.3) || MUL || RETURN",
-              "displayLines": "(Blast Toughness Value * 0.3)",
-              "constants": [
-                0.3
-              ],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "(Blast Toughness Value * 0.3)"
             },
             "Tags": null
           }
@@ -152,24 +110,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (3.2) || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "(3.2 * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            3.2
-          ]
+          "displayLines": "(3.2 * 0.1)"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.1) || MUL || RETURN",
-          "displayLines": "(ST Toughness Value * 0.1)",
-          "constants": [
-            0.1
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(ST Toughness Value * 0.1)"
         },
         "Tags": null,
         "EnergyGainPercent": "10%"
@@ -207,24 +151,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (3.2) || Constants[0] (0.1) || MUL || RETURN",
-              "displayLines": "(3.2 * 0.1)",
-              "constants": [
-                0.1
-              ],
-              "variables": [
-                3.2
-              ]
+              "displayLines": "(3.2 * 0.1)"
             },
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || Constants[0] (0.1) || MUL || RETURN",
-              "displayLines": "(Blast Toughness Value * 0.1)",
-              "constants": [
-                0.1
-              ],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "(Blast Toughness Value * 0.1)"
             },
             "Tags": null
           }
@@ -241,24 +171,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1.6) || Constants[0] (0.1) || MUL || RETURN",
-              "displayLines": "(1.6 * 0.1)",
-              "constants": [
-                0.1
-              ],
-              "variables": [
-                1.6
-              ]
+              "displayLines": "(1.6 * 0.1)"
             },
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || Constants[0] (0.1) || MUL || RETURN",
-              "displayLines": "(Blast Toughness Value * 0.1)",
-              "constants": [
-                0.1
-              ],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "(Blast Toughness Value * 0.1)"
             },
             "Tags": null
           }
@@ -275,24 +191,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
-          "operator": "Variables[0] (3.2) || Constants[0] (0.6) || MUL || RETURN",
-          "displayLines": "(3.2 * 0.6)",
-          "constants": [
-            0.6
-          ],
-          "variables": [
-            3.2
-          ]
+          "displayLines": "(3.2 * 0.6)"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.6) || MUL || RETURN",
-          "displayLines": "(ST Toughness Value * 0.6)",
-          "constants": [
-            0.6
-          ],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "(ST Toughness Value * 0.6)"
         },
         "Tags": null,
         "EnergyGainPercent": "60%"
@@ -330,24 +232,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (3.2) || Constants[0] (0.6) || MUL || RETURN",
-              "displayLines": "(3.2 * 0.6)",
-              "constants": [
-                0.6
-              ],
-              "variables": [
-                3.2
-              ]
+              "displayLines": "(3.2 * 0.6)"
             },
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || Constants[0] (0.6) || MUL || RETURN",
-              "displayLines": "(Blast Toughness Value * 0.6)",
-              "constants": [
-                0.6
-              ],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "(Blast Toughness Value * 0.6)"
             },
             "Tags": null
           }
@@ -364,24 +252,10 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
-              "operator": "Variables[0] (1.6) || Constants[0] (0.6) || MUL || RETURN",
-              "displayLines": "(1.6 * 0.6)",
-              "constants": [
-                0.6
-              ],
-              "variables": [
-                1.6
-              ]
+              "displayLines": "(1.6 * 0.6)"
             },
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || Constants[0] (0.6) || MUL || RETURN",
-              "displayLines": "(Blast Toughness Value * 0.6)",
-              "constants": [
-                0.6
-              ],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "(Blast Toughness Value * 0.6)"
             },
             "Tags": null
           }

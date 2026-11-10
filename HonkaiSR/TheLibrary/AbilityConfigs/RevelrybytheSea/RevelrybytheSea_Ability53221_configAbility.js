@@ -68,12 +68,7 @@ const configAbility = {
                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (3600) || RETURN",
-                  "displayLines": "3600",
-                  "constants": [],
-                  "variables": [
-                    3600
-                  ]
+                  "displayLines": "3600"
                 }
               },
               "passed": [
@@ -86,12 +81,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"294149172\">Relic_322_Sub</a>[<span class=\"descriptionNumberColor\">Revelry by the Sea</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.24) || RETURN",
-                      "displayLines": "0.24",
-                      "constants": [],
-                      "variables": [
-                        0.24
-                      ]
+                      "displayLines": "0.24"
                     }
                   }
                 }
@@ -108,12 +98,7 @@ const configAbility = {
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (2400) || RETURN",
-                      "displayLines": "2400",
-                      "constants": [],
-                      "variables": [
-                        2400
-                      ]
+                      "displayLines": "2400"
                     }
                   },
                   "passed": [
@@ -126,12 +111,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"294149172\">Relic_322_Sub</a>[<span class=\"descriptionNumberColor\">Revelry by the Sea</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.12) || RETURN",
-                          "displayLines": "0.12",
-                          "constants": [],
-                          "variables": [
-                            0.12
-                          ]
+                          "displayLines": "0.12"
                         }
                       }
                     }
@@ -151,12 +131,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": {
-                "operator": "Variables[0] (2400) || RETURN",
-                "displayLines": "2400",
-                "constants": [],
-                "variables": [
-                  2400
-                ]
+                "displayLines": "2400"
               },
               "enteringRange": [
                 {
@@ -173,20 +148,10 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": {
-                "operator": "Variables[0] (2400) || RETURN",
-                "displayLines": "2400",
-                "constants": [],
-                "variables": [
-                  2400
-                ]
+                "displayLines": "2400"
               },
               "maxValue": {
-                "operator": "Variables[0] (3600) || RETURN",
-                "displayLines": "3600",
-                "constants": [],
-                "variables": [
-                  3600
-                ]
+                "displayLines": "3600"
               },
               "enteringRange": [
                 {
@@ -198,12 +163,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"294149172\">Relic_322_Sub</a>[<span class=\"descriptionNumberColor\">Revelry by the Sea</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.12) || RETURN",
-                      "displayLines": "0.12",
-                      "constants": [],
-                      "variables": [
-                        0.12
-                      ]
+                      "displayLines": "0.12"
                     }
                   }
                 }
@@ -212,12 +172,7 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": {
-                "operator": "Variables[0] (3600) || RETURN",
-                "displayLines": "3600",
-                "constants": [],
-                "variables": [
-                  3600
-                ]
+                "displayLines": "3600"
               },
               "enteringRange": [
                 {
@@ -229,12 +184,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"294149172\">Relic_322_Sub</a>[<span class=\"descriptionNumberColor\">Revelry by the Sea</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.24) || RETURN",
-                      "displayLines": "0.24",
-                      "constants": [],
-                      "variables": [
-                        0.24
-                      ]
+                      "displayLines": "0.24"
                     }
                   }
                 }

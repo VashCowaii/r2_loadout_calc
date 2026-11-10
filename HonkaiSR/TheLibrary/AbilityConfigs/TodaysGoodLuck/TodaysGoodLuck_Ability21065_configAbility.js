@@ -46,13 +46,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ModifierLayers) || Variables[1] (0.12) || MUL || RETURN",
-                "displayLines": "(ModifierLayers * 0.12)",
-                "constants": [],
-                "variables": [
-                  "ModifierLayers",
-                  0.12
-                ]
+                "displayLines": "(ModifierLayers * 0.12)"
               }
             }
           ]
@@ -81,12 +75,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"287346796\">LC_21065_Sub</a>[<span class=\"descriptionNumberColor\">Elation Boost</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   }
                 }
               ]

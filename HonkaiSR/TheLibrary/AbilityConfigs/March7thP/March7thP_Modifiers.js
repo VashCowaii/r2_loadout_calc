@@ -70,20 +70,10 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (MDF_HealPercentage) || RETURN",
-                    "displayLines": "MDF_HealPercentage",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HealPercentage"
-                    ]
+                    "displayLines": "MDF_HealPercentage"
                   },
                   "healFlat": {
-                    "operator": "Variables[0] (MDF_HealValue) || RETURN",
-                    "displayLines": "MDF_HealValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HealValue"
-                    ]
+                    "displayLines": "MDF_HealValue"
                   },
                   "formula": "Heal from Target MaxHP"
                 }
@@ -116,20 +106,10 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (MDF_ShieldValue) || RETURN",
-                "displayLines": "MDF_ShieldValue",
-                "constants": [],
-                "variables": [
-                  "MDF_ShieldValue"
-                ]
+                "displayLines": "MDF_ShieldValue"
               },
               "valuePercent": {
-                "operator": "Variables[0] (MDF_ShieldPercentage) || RETURN",
-                "displayLines": "MDF_ShieldPercentage",
-                "constants": [],
-                "variables": [
-                  "MDF_ShieldPercentage"
-                ]
+                "displayLines": "MDF_ShieldPercentage"
               },
               "formula": "DEF Scaling (Shield)"
             },
@@ -141,12 +121,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AggroUp) || RETURN",
-                "displayLines": "MDF_AggroUp",
-                "constants": [],
-                "variables": [
-                  "MDF_AggroUp"
-                ]
+                "displayLines": "MDF_AggroUp"
               }
             }
           ]
@@ -279,14 +254,7 @@ const configAbility = {
                       "name": "Define Custom Variable",
                       "scope": "ContextCaster",
                       "value": {
-                        "operator": "Variables[0] (MDF_FrozenCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_FrozenCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_FrozenCount"
-                        ]
+                        "displayLines": "(MDF_FrozenCount + 1)"
                       },
                       "variableName": "MDF_FrozenCount"
                     },

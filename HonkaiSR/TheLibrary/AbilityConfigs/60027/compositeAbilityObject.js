@@ -290,22 +290,10 @@ const compositeAbilityObject = {
                   "displayLines": 1
                 },
                 "DamageFlat": {
-                  "operator": "Variables[0] (_CurrentHp) || RETURN",
-                  "displayLines": "_CurrentHp",
-                  "constants": [],
-                  "variables": [
-                    "_CurrentHp"
-                  ]
+                  "displayLines": "_CurrentHp"
                 },
                 "HitSplit": {
-                  "operator": "Constants[0] (1) || Variables[0] (ADF_TargetCount) || DIV || RETURN",
-                  "displayLines": "(1 / ADF_TargetCount)",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    "ADF_TargetCount"
-                  ]
+                  "displayLines": "(1 / ADF_TargetCount)"
                 },
                 "Toughness": {
                   "displayLines": 60

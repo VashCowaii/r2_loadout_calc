@@ -196,12 +196,7 @@ const configAbility = {
               "name": "Define Modifier Variable",
               "modifierName": null,
               "value": {
-                "operator": "Variables[0] (CurScore) || RETURN",
-                "displayLines": "CurScore",
-                "constants": [],
-                "variables": [
-                  "CurScore"
-                ]
+                "displayLines": "CurScore"
               }
             }
           ]
@@ -267,27 +262,13 @@ const configAbility = {
                   "modifierName": null,
                   "function": "Add",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (120) || SUB || RETURN",
-                    "displayLines": "(0 - 120)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      120
-                    ]
+                    "displayLines": "(0 - 120)"
                   }
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (UltraAttackCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(UltraAttackCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "UltraAttackCount"
-                    ]
+                    "displayLines": "(UltraAttackCount + 1)"
                   },
                   "variableName": "UltraAttackCount"
                 }
@@ -328,12 +309,7 @@ const configAbility = {
                     "value1": "<a class=\"gModGreen\" id=\"-1885411916\">SilverWolf999_Eidolon2_SumScore</a>[<span class=\"descriptionNumberColor\">It's a Feature, Not a Bug</span>]",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (120) || RETURN",
-                      "displayLines": "120",
-                      "constants": [],
-                      "variables": [
-                        120
-                      ]
+                      "displayLines": "120"
                     }
                   },
                   {
@@ -375,12 +351,7 @@ const configAbility = {
                         "value1": "<a class=\"gModGreen\" id=\"-1885411916\">SilverWolf999_Eidolon2_SumScore</a>[<span class=\"descriptionNumberColor\">It's a Feature, Not a Bug</span>]",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (120) || RETURN",
-                          "displayLines": "120",
-                          "constants": [],
-                          "variables": [
-                            120
-                          ]
+                          "displayLines": "120"
                         }
                       },
                       {
@@ -428,12 +399,7 @@ const configAbility = {
                       "modifierName": null,
                       "function": "Add",
                       "value": {
-                        "operator": "Variables[0] (_tmp_changeValue) || RETURN",
-                        "displayLines": "_tmp_changeValue",
-                        "constants": [],
-                        "variables": [
-                          "_tmp_changeValue"
-                        ]
+                        "displayLines": "_tmp_changeValue"
                       }
                     }
                   ]
@@ -585,12 +551,7 @@ const configAbility = {
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (MDF_Layer) || RETURN",
-                    "displayLines": "MDF_Layer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "MDF_Layer"
                   },
                   "execute": [
                     {
@@ -653,13 +614,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_Item1ExtraDamage) || Variables[1] (0.2) || MUL || RETURN",
-                      "displayLines": "(MDF_Item1ExtraDamage * 0.2)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Item1ExtraDamage",
-                        0.2
-                      ]
+                      "displayLines": "(MDF_Item1ExtraDamage * 0.2)"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": null,
@@ -712,13 +667,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_Item1ExtraDamage) || Variables[1] (MDF_TempDamage) || ADD || RETURN",
-                    "displayLines": "(MDF_Item1ExtraDamage + MDF_TempDamage)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Item1ExtraDamage",
-                      "MDF_TempDamage"
-                    ]
+                    "displayLines": "(MDF_Item1ExtraDamage + MDF_TempDamage)"
                   },
                   "variableName": "MDF_Item1ExtraDamage"
                 }
@@ -1037,12 +986,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "variableName": "#CL_UI_Skill11_ItemCount"
                 }
@@ -1096,12 +1040,7 @@ const configAbility = {
                 "value1": "CurScore",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (60) || RETURN",
-                  "displayLines": "60",
-                  "constants": [],
-                  "variables": [
-                    60
-                  ]
+                  "displayLines": "60"
                 }
               },
               "passed": [
@@ -1149,12 +1088,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">MerryMake</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.5) || RETURN",
-                    "displayLines": "0.5",
-                    "constants": [],
-                    "variables": [
-                      0.5
-                    ]
+                    "displayLines": "0.5"
                   }
                 }
               ]
@@ -1178,44 +1112,24 @@ const configAbility = {
             {
               "name": "SWITCH",
               "switchValue": {
-                "operator": "Variables[0] (CurScore) || RETURN",
-                "displayLines": "CurScore",
-                "constants": [],
-                "variables": [
-                  "CurScore"
-                ]
+                "displayLines": "CurScore"
               },
               "compareType": "<",
               "caseEvents": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": {
-                    "operator": "Variables[0] (60) || RETURN",
-                    "displayLines": "60",
-                    "constants": [],
-                    "variables": [
-                      60
-                    ]
+                    "displayLines": "60"
                   },
                   "execute": [
                     {
                       "name": "SW999 Score Data",
                       "rating": "S",
                       "value": {
-                        "operator": "Variables[0] (CurScore) || RETURN",
-                        "displayLines": "CurScore",
-                        "constants": [],
-                        "variables": [
-                          "CurScore"
-                        ]
+                        "displayLines": "CurScore"
                       },
                       "value2": {
-                        "operator": "Variables[0] (60) || RETURN",
-                        "displayLines": "60",
-                        "constants": [],
-                        "variables": [
-                          60
-                        ]
+                        "displayLines": "60"
                       }
                     }
                   ]
@@ -1223,35 +1137,17 @@ const configAbility = {
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": {
-                    "operator": "Constants[0] (2) || Variables[0] (60) || MUL || RETURN",
-                    "displayLines": "(2 * 60)",
-                    "constants": [
-                      2
-                    ],
-                    "variables": [
-                      60
-                    ]
+                    "displayLines": "(2 * 60)"
                   },
                   "execute": [
                     {
                       "name": "SW999 Score Data",
                       "rating": "SS",
                       "value": {
-                        "operator": "Variables[0] (CurScore) || Variables[1] (60) || SUB || RETURN",
-                        "displayLines": "(CurScore - 60)",
-                        "constants": [],
-                        "variables": [
-                          "CurScore",
-                          60
-                        ]
+                        "displayLines": "(CurScore - 60)"
                       },
                       "value2": {
-                        "operator": "Variables[0] (60) || RETURN",
-                        "displayLines": "60",
-                        "constants": [],
-                        "variables": [
-                          60
-                        ]
+                        "displayLines": "60"
                       }
                     }
                   ]
@@ -1262,20 +1158,10 @@ const configAbility = {
                   "name": "SW999 Score Data",
                   "rating": "SSS",
                   "value": {
-                    "operator": "Variables[0] (60) || RETURN",
-                    "displayLines": "60",
-                    "constants": [],
-                    "variables": [
-                      60
-                    ]
+                    "displayLines": "60"
                   },
                   "value2": {
-                    "operator": "Variables[0] (60) || RETURN",
-                    "displayLines": "60",
-                    "constants": [],
-                    "variables": [
-                      60
-                    ]
+                    "displayLines": "60"
                   }
                 }
               ]
@@ -1301,32 +1187,17 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": {
-                "operator": "Variables[0] (60) || RETURN",
-                "displayLines": "60",
-                "constants": [],
-                "variables": [
-                  60
-                ]
+                "displayLines": "60"
               },
               "enteringRange": [
                 {
                   "name": "SW999 Score Data",
                   "rating": "S",
                   "value": {
-                    "operator": "Variables[0] (CurScore) || RETURN",
-                    "displayLines": "CurScore",
-                    "constants": [],
-                    "variables": [
-                      "CurScore"
-                    ]
+                    "displayLines": "CurScore"
                   },
                   "value2": {
-                    "operator": "Variables[0] (60) || RETURN",
-                    "displayLines": "60",
-                    "constants": [],
-                    "variables": [
-                      60
-                    ]
+                    "displayLines": "60"
                   }
                 }
               ],
@@ -1335,20 +1206,10 @@ const configAbility = {
                   "name": "SW999 Score Data",
                   "rating": "S",
                   "value": {
-                    "operator": "Variables[0] (CurScore) || RETURN",
-                    "displayLines": "CurScore",
-                    "constants": [],
-                    "variables": [
-                      "CurScore"
-                    ]
+                    "displayLines": "CurScore"
                   },
                   "value2": {
-                    "operator": "Variables[0] (60) || RETURN",
-                    "displayLines": "60",
-                    "constants": [],
-                    "variables": [
-                      60
-                    ]
+                    "displayLines": "60"
                   }
                 }
               ]
@@ -1356,43 +1217,20 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": {
-                "operator": "Variables[0] (60) || RETURN",
-                "displayLines": "60",
-                "constants": [],
-                "variables": [
-                  60
-                ]
+                "displayLines": "60"
               },
               "maxValue": {
-                "operator": "Constants[0] (2) || Variables[0] (60) || MUL || RETURN",
-                "displayLines": "(2 * 60)",
-                "constants": [
-                  2
-                ],
-                "variables": [
-                  60
-                ]
+                "displayLines": "(2 * 60)"
               },
               "enteringRange": [
                 {
                   "name": "SW999 Score Data",
                   "rating": "SS",
                   "value": {
-                    "operator": "Variables[0] (CurScore) || Variables[1] (60) || SUB || RETURN",
-                    "displayLines": "(CurScore - 60)",
-                    "constants": [],
-                    "variables": [
-                      "CurScore",
-                      60
-                    ]
+                    "displayLines": "(CurScore - 60)"
                   },
                   "value2": {
-                    "operator": "Variables[0] (60) || RETURN",
-                    "displayLines": "60",
-                    "constants": [],
-                    "variables": [
-                      60
-                    ]
+                    "displayLines": "60"
                   }
                 }
               ],
@@ -1401,21 +1239,10 @@ const configAbility = {
                   "name": "SW999 Score Data",
                   "rating": "SS",
                   "value": {
-                    "operator": "Variables[0] (CurScore) || Variables[1] (60) || SUB || RETURN",
-                    "displayLines": "(CurScore - 60)",
-                    "constants": [],
-                    "variables": [
-                      "CurScore",
-                      60
-                    ]
+                    "displayLines": "(CurScore - 60)"
                   },
                   "value2": {
-                    "operator": "Variables[0] (60) || RETURN",
-                    "displayLines": "60",
-                    "constants": [],
-                    "variables": [
-                      60
-                    ]
+                    "displayLines": "60"
                   }
                 }
               ]
@@ -1423,42 +1250,20 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": {
-                "operator": "Constants[0] (2) || Variables[0] (60) || MUL || RETURN",
-                "displayLines": "(2 * 60)",
-                "constants": [
-                  2
-                ],
-                "variables": [
-                  60
-                ]
+                "displayLines": "(2 * 60)"
               },
               "maxValue": {
-                "operator": "Constants[0] (78125000) || RETURN",
-                "displayLines": "78125000",
-                "constants": [
-                  78125000
-                ],
-                "variables": []
+                "displayLines": "78125000"
               },
               "enteringRange": [
                 {
                   "name": "SW999 Score Data",
                   "rating": "SSS",
                   "value": {
-                    "operator": "Variables[0] (60) || RETURN",
-                    "displayLines": "60",
-                    "constants": [],
-                    "variables": [
-                      60
-                    ]
+                    "displayLines": "60"
                   },
                   "value2": {
-                    "operator": "Variables[0] (60) || RETURN",
-                    "displayLines": "60",
-                    "constants": [],
-                    "variables": [
-                      60
-                    ]
+                    "displayLines": "60"
                   }
                 }
               ]
@@ -1530,20 +1335,10 @@ const configAbility = {
             {
               "name": "SW999 Test Data 2",
               "value": {
-                "operator": "Variables[0] (UltraAttackCount) || RETURN",
-                "displayLines": "UltraAttackCount",
-                "constants": [],
-                "variables": [
-                  "UltraAttackCount"
-                ]
+                "displayLines": "UltraAttackCount"
               },
               "value2": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               }
             },
             {
@@ -1661,20 +1456,10 @@ const configAbility = {
                 {
                   "name": "SW999 Test Data 2",
                   "value": {
-                    "operator": "Variables[0] (UltraAttackCount) || RETURN",
-                    "displayLines": "UltraAttackCount",
-                    "constants": [],
-                    "variables": [
-                      "UltraAttackCount"
-                    ]
+                    "displayLines": "UltraAttackCount"
                   },
                   "value2": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   }
                 }
               ]
@@ -1863,14 +1648,7 @@ const configAbility = {
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Constants[0] (0) || Variables[0] (_bpChange) || SUB || RETURN",
-                    "displayLines": "(0 - _bpChange)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "_bpChange"
-                    ]
+                    "displayLines": "(0 - _bpChange)"
                   },
                   "execute": [
                     {
@@ -1878,25 +1656,14 @@ const configAbility = {
                       "conditions": {
                         "name": "Random Chance",
                         "chance": {
-                          "operator": "Variables[0] (TriggerItemChance) || RETURN",
-                          "displayLines": "TriggerItemChance",
-                          "constants": [],
-                          "variables": [
-                            "TriggerItemChance"
-                          ]
+                          "displayLines": "TriggerItemChance"
                         }
                       },
                       "passed": [
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (TriggerItemChance) || Variables[1] (0.2) || MUL || RETURN",
-                            "displayLines": "(TriggerItemChance * 0.2)",
-                            "constants": [],
-                            "variables": [
-                              "TriggerItemChance",
-                              0.2
-                            ]
+                            "displayLines": "(TriggerItemChance * 0.2)"
                           },
                           "variableName": "TriggerItemChance"
                         },
@@ -1989,12 +1756,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             }
           }
         },
@@ -2018,24 +1780,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (TriggerItemBaseChance) || RETURN",
-                "displayLines": "TriggerItemBaseChance",
-                "constants": [],
-                "variables": [
-                  "TriggerItemBaseChance"
-                ]
+                "displayLines": "TriggerItemBaseChance"
               },
               "variableName": "TriggerItemChance"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "variableName": "UltraAttackCount"
             },
@@ -2088,20 +1840,10 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (CurScore) || RETURN",
-                "displayLines": "CurScore",
-                "constants": [],
-                "variables": [
-                  "CurScore"
-                ]
+                "displayLines": "CurScore"
               },
               "maximum": {
-                "operator": "Variables[0] (60) || RETURN",
-                "displayLines": "60",
-                "constants": [],
-                "variables": [
-                  60
-                ]
+                "displayLines": "60"
               },
               "priorState": "Normal",
               "bar#": 4
@@ -2113,12 +1855,7 @@ const configAbility = {
                 "value1": "CurScore",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (60) || RETURN",
-                  "displayLines": "60",
-                  "constants": [],
-                  "variables": [
-                    60
-                  ]
+                  "displayLines": "60"
                 }
               },
               "passed": [
@@ -2245,12 +1982,7 @@ const configAbility = {
                         "value1": "<a class=\"gModGreen\" id=\"-1885411916\">SilverWolf999_Eidolon2_SumScore</a>[<span class=\"descriptionNumberColor\">It's a Feature, Not a Bug</span>]",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (120) || RETURN",
-                          "displayLines": "120",
-                          "constants": [],
-                          "variables": [
-                            120
-                          ]
+                          "displayLines": "120"
                         }
                       }
                     ],
@@ -2322,12 +2054,7 @@ const configAbility = {
                   "modifierName": "<a class=\"gModGreen\" id=\"1358748576\">SilverWolf999_Ultra</a>[<span class=\"descriptionNumberColor\">Godmode Player</span>]",
                   "variableName": "MDF_Count",
                   "value": {
-                    "operator": "Variables[0] (UltraAttackCount) || RETURN",
-                    "displayLines": "UltraAttackCount",
-                    "constants": [],
-                    "variables": [
-                      "UltraAttackCount"
-                    ]
+                    "displayLines": "UltraAttackCount"
                   }
                 }
               ]

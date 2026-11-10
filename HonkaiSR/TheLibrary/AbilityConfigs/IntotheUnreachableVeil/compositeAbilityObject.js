@@ -99,12 +99,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-574485103\">LC_23037_Sub2</a>[<span class=\"descriptionNumberColor\">Increases Skill DMG and Ultimate DMG</span>]",
                       "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                        "displayLines": "3"
                       }
                     }
                   ]
@@ -140,12 +135,7 @@ const compositeAbilityObject = {
                         "value1": "_Tot_SP_Used",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (140) || RETURN",
-                          "displayLines": "140",
-                          "constants": [],
-                          "variables": [
-                            140
-                          ]
+                          "displayLines": "140"
                         }
                       }
                     ]
@@ -217,13 +207,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_Tot_SP_Used) || Variables[1] (_Cur_SP_Used) || SUB || RETURN",
-                        "displayLines": "(_Tot_SP_Used - _Cur_SP_Used)",
-                        "constants": [],
-                        "variables": [
-                          "_Tot_SP_Used",
-                          "_Cur_SP_Used"
-                        ]
+                        "displayLines": "(_Tot_SP_Used - _Cur_SP_Used)"
                       },
                       "variableName": "_Tot_SP_Used"
                     }

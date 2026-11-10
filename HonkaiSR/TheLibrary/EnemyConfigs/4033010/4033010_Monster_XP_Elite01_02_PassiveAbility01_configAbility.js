@@ -85,12 +85,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                "displayLines": "{[SkillP01[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP01[0]]}"
-                ]
+                "displayLines": "{[SkillP01[0]]}"
               },
               "assignState": "False"
             }
@@ -108,12 +103,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                "displayLines": "{[SkillP01[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP01[0]]}"
-                ]
+                "displayLines": "{[SkillP01[0]]}"
               },
               "assignState": "True"
             }
@@ -147,12 +137,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_CurrentCount) || RETURN",
-                    "displayLines": "_CurrentCount",
-                    "constants": [],
-                    "variables": [
-                      "_CurrentCount"
-                    ]
+                    "displayLines": "_CurrentCount"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -160,12 +145,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                    "displayLines": "{[SkillP01[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillP01[0]]}"
-                    ]
+                    "displayLines": "{[SkillP01[0]]}"
                   },
                   "assignState": "True"
                 }
@@ -186,14 +166,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_CurrentCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(_CurrentCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_CurrentCount"
-                    ]
+                    "displayLines": "(_CurrentCount + 1)"
                   },
                   "variableName": "_CurrentCount"
                 },
@@ -204,24 +177,14 @@ const configAbility = {
                     "value1": "_CurrentCount",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                      "displayLines": "{[SkillP01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[0]]}"
-                      ]
+                      "displayLines": "{[SkillP01[0]]}"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                        "displayLines": "{[SkillP01[0]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillP01[0]]}"
-                        ]
+                        "displayLines": "{[SkillP01[0]]}"
                       },
                       "variableName": "_CurrentCount"
                     },
@@ -238,12 +201,7 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (_CurrentCount) || RETURN",
-                    "displayLines": "_CurrentCount",
-                    "constants": [],
-                    "variables": [
-                      "_CurrentCount"
-                    ]
+                    "displayLines": "_CurrentCount"
                   },
                   "entityClass": "Enemy",
                   "target": {
@@ -251,12 +209,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                    "displayLines": "{[SkillP01[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillP01[0]]}"
-                    ]
+                    "displayLines": "{[SkillP01[0]]}"
                   },
                   "assignState": "True"
                 }

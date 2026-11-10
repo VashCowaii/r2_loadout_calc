@@ -46,13 +46,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.04) || Variables[1] (_Layer) || MUL || RETURN",
-                "displayLines": "(0.04 * _Layer)",
-                "constants": [],
-                "variables": [
-                  0.04,
-                  "_Layer"
-                ]
+                "displayLines": "(0.04 * _Layer)"
               }
             }
           ]
@@ -74,12 +68,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1358976474\">LC_21027_Sub</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               }
             }
           ]

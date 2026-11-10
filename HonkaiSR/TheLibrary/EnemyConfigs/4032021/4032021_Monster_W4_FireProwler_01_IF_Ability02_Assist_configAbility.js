@@ -102,12 +102,7 @@ const configAbility = {
         "value1": "Skill02_AssistCount",
         "compareType": "=",
         "value2": {
-          "operator": "Variables[0] (Skill02_CurCount) || RETURN",
-          "displayLines": "Skill02_CurCount",
-          "constants": [],
-          "variables": [
-            "Skill02_CurCount"
-          ]
+          "displayLines": "Skill02_CurCount"
         }
       },
       "passed": [

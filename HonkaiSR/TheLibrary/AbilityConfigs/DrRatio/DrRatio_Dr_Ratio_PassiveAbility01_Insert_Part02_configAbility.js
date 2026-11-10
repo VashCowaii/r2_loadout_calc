@@ -16,14 +16,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (_Dr_Ratio_00_EnergyBar) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(_Dr_Ratio_00_EnergyBar - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "_Dr_Ratio_00_EnergyBar"
-            ]
+            "displayLines": "(_Dr_Ratio_00_EnergyBar - 1)"
           },
           "variableName": "_Dr_Ratio_00_EnergyBar"
         },
@@ -55,12 +48,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (_Dr_Ratio_00_EnergyBar) || RETURN",
-                "displayLines": "_Dr_Ratio_00_EnergyBar",
-                "constants": [],
-                "variables": [
-                  "_Dr_Ratio_00_EnergyBar"
-                ]
+                "displayLines": "_Dr_Ratio_00_EnergyBar"
               },
               "priorState": "Active"
             }
@@ -77,12 +65,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (_Dr_Ratio_00_EnergyBar) || RETURN",
-                "displayLines": "_Dr_Ratio_00_EnergyBar",
-                "constants": [],
-                "variables": [
-                  "_Dr_Ratio_00_EnergyBar"
-                ]
+                "displayLines": "_Dr_Ratio_00_EnergyBar"
               },
               "priorState": "Normal"
             }
@@ -111,12 +94,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1351658038\">Dr_Ratio_Eidolon6_AllDamageTypeAddedRatio</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             }
           }
         }
@@ -174,12 +152,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (15) || RETURN",
-            "displayLines": "15",
-            "constants": [],
-            "variables": [
-              15
-            ]
+            "displayLines": "15"
           },
           "isFixed": "* ERR"
         }
@@ -194,20 +167,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (2.7) || RETURN",
-          "displayLines": "2.7",
-          "constants": [],
-          "variables": [
-            2.7
-          ]
+          "displayLines": "2.7"
         },
         "Toughness": {
-          "operator": "Variables[0] (ST Toughness Value) || RETURN",
-          "displayLines": "ST Toughness Value",
-          "constants": [],
-          "variables": [
-            "ST Toughness Value"
-          ]
+          "displayLines": "ST Toughness Value"
         },
         "Tags": null,
         "attackType": "Follow-up",
@@ -228,24 +191,14 @@ const configAbility = {
             "value1": "_DebuffCount",
             "compareType": ">=",
             "value2": {
-              "operator": "Variables[0] (4) || RETURN",
-              "displayLines": "4",
-              "constants": [],
-              "variables": [
-                4
-              ]
+              "displayLines": "4"
             }
           },
           "passed": [
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (4) || RETURN",
-                "displayLines": "4",
-                "constants": [],
-                "variables": [
-                  4
-                ]
+                "displayLines": "4"
               },
               "variableName": "_DebuffCount"
             }
@@ -254,12 +207,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (_DebuffCount) || RETURN",
-            "displayLines": "_DebuffCount",
-            "constants": [],
-            "variables": [
-              "_DebuffCount"
-            ]
+            "displayLines": "_DebuffCount"
           },
           "execute": [
             {
@@ -272,12 +220,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 },
                 "Toughness": null,
                 "Tags": null,

@@ -1022,12 +1022,7 @@ const configAbility = {
                 "value1": "HP_Bars_Remaining",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Variables[0] (W2_Yanqing_00_MaxPhaseNum) || RETURN",
-                  "displayLines": "W2_Yanqing_00_MaxPhaseNum",
-                  "constants": [],
-                  "variables": [
-                    "W2_Yanqing_00_MaxPhaseNum"
-                  ]
+                  "displayLines": "W2_Yanqing_00_MaxPhaseNum"
                 }
               }
             }
@@ -1059,12 +1054,7 @@ const configAbility = {
                 "value1": "HP_Bars_Remaining",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Variables[0] (W2_Yanqing_00_MaxPhaseNum) || RETURN",
-                  "displayLines": "W2_Yanqing_00_MaxPhaseNum",
-                  "constants": [],
-                  "variables": [
-                    "W2_Yanqing_00_MaxPhaseNum"
-                  ]
+                  "displayLines": "W2_Yanqing_00_MaxPhaseNum"
                 }
               }
             }
@@ -1096,12 +1086,7 @@ const configAbility = {
                 "value1": "HP_Bars_Remaining",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Variables[0] (W2_Yanqing_00_MaxPhaseNum) || RETURN",
-                  "displayLines": "W2_Yanqing_00_MaxPhaseNum",
-                  "constants": [],
-                  "variables": [
-                    "W2_Yanqing_00_MaxPhaseNum"
-                  ]
+                  "displayLines": "W2_Yanqing_00_MaxPhaseNum"
                 }
               }
             }
@@ -2215,14 +2200,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (W2_Yanqing_00_Skill02_AccumulateRevealed) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(W2_Yanqing_00_Skill02_AccumulateRevealed + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "W2_Yanqing_00_Skill02_AccumulateRevealed"
-                        ]
+                        "displayLines": "(W2_Yanqing_00_Skill02_AccumulateRevealed + 1)"
                       },
                       "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed"
                     }
@@ -2328,12 +2306,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_SpeedDelta) || RETURN",
-                "displayLines": "MDF_SpeedDelta",
-                "constants": [],
-                "variables": [
-                  "MDF_SpeedDelta"
-                ]
+                "displayLines": "MDF_SpeedDelta"
               }
             }
           ]
@@ -2380,26 +2353,14 @@ const configAbility = {
                     "value1": "W2_Yanqing_00_Skill02_AccumulateRevealed",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (W2_Yanqing_00_Skill02_SummonNumber) || RETURN",
-                      "displayLines": "W2_Yanqing_00_Skill02_SummonNumber",
-                      "constants": [],
-                      "variables": [
-                        "W2_Yanqing_00_Skill02_SummonNumber"
-                      ]
+                      "displayLines": "W2_Yanqing_00_Skill02_SummonNumber"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (W2_Yanqing_00_Skill02_AccumulateRevealed) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(W2_Yanqing_00_Skill02_AccumulateRevealed + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "W2_Yanqing_00_Skill02_AccumulateRevealed"
-                        ]
+                        "displayLines": "(W2_Yanqing_00_Skill02_AccumulateRevealed + 1)"
                       },
                       "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed"
                     }
@@ -2432,12 +2393,7 @@ const configAbility = {
                     "value1": "W2_Yanqing_00_Skill02_AccumulateRevealed",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (W2_Yanqing_00_Skill02_SummonNumber) || RETURN",
-                      "displayLines": "W2_Yanqing_00_Skill02_SummonNumber",
-                      "constants": [],
-                      "variables": [
-                        "W2_Yanqing_00_Skill02_SummonNumber"
-                      ]
+                      "displayLines": "W2_Yanqing_00_Skill02_SummonNumber"
                     }
                   }
                 ]

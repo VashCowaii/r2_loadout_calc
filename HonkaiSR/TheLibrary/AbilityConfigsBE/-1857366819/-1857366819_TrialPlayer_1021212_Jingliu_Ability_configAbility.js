@@ -36,12 +36,7 @@ const configAbility = {
                 "value1": "MDF_OneMoreTime",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Constants[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [
-                    1
-                  ],
-                  "variables": []
+                  "displayLines": "1"
                 },
                 "contextScope": "ContextModifier"
               },
@@ -85,12 +80,7 @@ const configAbility = {
                 "value1": "MDF_ActionTime",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Constants[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [
-                    1
-                  ],
-                  "variables": []
+                  "displayLines": "1"
                 },
                 "contextScope": "ContextModifier"
               },
@@ -106,12 +96,7 @@ const configAbility = {
                     "value1": "MDF_ActionTime",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Constants[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [
-                        1
-                      ],
-                      "variables": []
+                      "displayLines": "1"
                     },
                     "contextScope": "ContextModifier"
                   },
@@ -124,14 +109,7 @@ const configAbility = {
                       },
                       "scope": "ContextModifier",
                       "value": {
-                        "operator": "Variables[0] (MDF_ActionTime) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_ActionTime + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_ActionTime"
-                        ]
+                        "displayLines": "(MDF_ActionTime + 1)"
                       },
                       "variableName": "MDF_ActionTime"
                     }
@@ -148,12 +126,7 @@ const configAbility = {
                         "value1": "MDF_ActionTime",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Constants[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [
-                            2
-                          ],
-                          "variables": []
+                          "displayLines": "2"
                         },
                         "contextScope": "ContextModifier"
                       },
@@ -166,14 +139,7 @@ const configAbility = {
                           },
                           "scope": "ContextModifier",
                           "value": {
-                            "operator": "Variables[0] (MDF_ActionTime) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(MDF_ActionTime + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "MDF_ActionTime"
-                            ]
+                            "displayLines": "(MDF_ActionTime + 1)"
                           },
                           "variableName": "MDF_ActionTime"
                         }
@@ -190,12 +156,7 @@ const configAbility = {
                             "value1": "MDF_ActionTime",
                             "compareType": "=",
                             "value2": {
-                              "operator": "Constants[0] (3) || RETURN",
-                              "displayLines": "3",
-                              "constants": [
-                                3
-                              ],
-                              "variables": []
+                              "displayLines": "3"
                             },
                             "contextScope": "ContextModifier"
                           },
@@ -208,14 +169,7 @@ const configAbility = {
                               },
                               "scope": "ContextModifier",
                               "value": {
-                                "operator": "Variables[0] (MDF_ActionTime) || Constants[0] (1) || ADD || RETURN",
-                                "displayLines": "(MDF_ActionTime + 1)",
-                                "constants": [
-                                  1
-                                ],
-                                "variables": [
-                                  "MDF_ActionTime"
-                                ]
+                                "displayLines": "(MDF_ActionTime + 1)"
                               },
                               "variableName": "MDF_ActionTime"
                             }
@@ -238,12 +192,7 @@ const configAbility = {
                     "value1": "MDF_ActionTime",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Constants[0] (0) || RETURN",
-                      "displayLines": "0",
-                      "constants": [
-                        0
-                      ],
-                      "variables": []
+                      "displayLines": "0"
                     },
                     "contextScope": "ContextModifier"
                   }
@@ -266,14 +215,7 @@ const configAbility = {
                   },
                   "scope": "ContextModifier",
                   "value": {
-                    "operator": "Variables[0] (MDF_ActionTime) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(MDF_ActionTime + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_ActionTime"
-                    ]
+                    "displayLines": "(MDF_ActionTime + 1)"
                   },
                   "variableName": "MDF_ActionTime"
                 }

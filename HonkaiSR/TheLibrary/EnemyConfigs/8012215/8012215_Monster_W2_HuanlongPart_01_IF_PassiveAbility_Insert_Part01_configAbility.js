@@ -66,12 +66,7 @@ const configAbility = {
                     "target": "{{Player Team All}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill01[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill01[2]]}"
-                    ]
+                    "displayLines": "{[PassiveSkill01[2]]}"
                   },
                   "formula": "Heal from Target MaxHP"
                 },
@@ -92,22 +87,11 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "DamageFlat": {
-                      "operator": "Variables[0] (SummonerMaxHPValue) || Variables[1] ({[PassiveSkill01[0]]}) || MUL || RETURN",
-                      "displayLines": "(SummonerMaxHPValue * {[PassiveSkill01[0]]})",
-                      "constants": [],
-                      "variables": [
-                        "SummonerMaxHPValue",
-                        "{[PassiveSkill01[0]]}"
-                      ]
+                      "displayLines": "(SummonerMaxHPValue * {[PassiveSkill01[0]]})"
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
                     "Toughness": {
-                      "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill01[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[1]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill01[1]]}"
                     },
                     "Tags": null,
                     "attackType": "Basic ATK"

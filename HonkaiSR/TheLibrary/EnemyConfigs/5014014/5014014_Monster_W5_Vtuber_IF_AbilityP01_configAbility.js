@@ -87,12 +87,7 @@ const configAbility = {
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-            "displayLines": "SummonList_ADF_1",
-            "constants": [],
-            "variables": [
-              "SummonList_ADF_1"
-            ]
+            "displayLines": "SummonList_ADF_1"
           },
           "locationType": "BeforeCaster",
           "locationOffset": -1,
@@ -109,12 +104,7 @@ const configAbility = {
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-            "displayLines": "SummonList_ADF_2",
-            "constants": [],
-            "variables": [
-              "SummonList_ADF_2"
-            ]
+            "displayLines": "SummonList_ADF_2"
           },
           "locationType": "AfterCaster",
           "locationOffset": 1,
@@ -134,28 +124,13 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1418851340\">Enemy_W5_VtuberPart_IF_MinionsSuperArmorController</a>",
       "valuePerStack": {
         "MDF_MinionsSuperArmor_AllDamageReduce": {
-          "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
-          "displayLines": "{[SkillEX01[0]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillEX01[0]]}"
-          ]
+          "displayLines": "{[SkillEX01[0]]}"
         },
         "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio": {
-          "operator": "Variables[0] ({[SkillEX01[1]]}) || RETURN",
-          "displayLines": "{[SkillEX01[1]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillEX01[1]]}"
-          ]
+          "displayLines": "{[SkillEX01[1]]}"
         },
         "MDF_SetActionDelayValue": {
-          "operator": "Variables[0] ({[SkillEX01[2]]}) || RETURN",
-          "displayLines": "{[SkillEX01[2]]}",
-          "constants": [],
-          "variables": [
-            "{[SkillEX01[2]]}"
-          ]
+          "displayLines": "{[SkillEX01[2]]}"
         }
       }
     },
@@ -238,12 +213,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] ({[PassiveSkill01[6]]}) || RETURN",
-        "displayLines": "{[PassiveSkill01[6]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill01[6]]}"
-        ]
+        "displayLines": "{[PassiveSkill01[6]]}"
       },
       "variableName": "ADF_LoseHPRatio_ScreenBonus"
     },
@@ -267,28 +237,13 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1587187705\">Enemy_W2_Cocolia_IF_SuperArmorController</a>",
           "valuePerStack": {
             "MDF_IF_BOSS_BreakDelay": {
-              "operator": "Variables[0] ({[SkillEX01[2]]}) || RETURN",
-              "displayLines": "{[SkillEX01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[2]]}"
-              ]
+              "displayLines": "{[SkillEX01[2]]}"
             },
             "MDF_IF_BOSS_WeaknessDMGUpRatio": {
-              "operator": "Variables[0] ({[SkillEX01[1]]}) || RETURN",
-              "displayLines": "{[SkillEX01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[1]]}"
-              ]
+              "displayLines": "{[SkillEX01[1]]}"
             },
             "MDF_IF_BOSS_Standard_Defence": {
-              "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
-              "displayLines": "{[SkillEX01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[0]]}"
-              ]
+              "displayLines": "{[SkillEX01[0]]}"
             }
           }
         },
@@ -301,36 +256,16 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1246789467\">Enemy_W2_Cocolia_IF_SoftFrenzyController</a>",
           "valuePerStack": {
             "MDF_FrenzyStartDelay": {
-              "operator": "Variables[0] ({[SkillEX05[0]]}) || RETURN",
-              "displayLines": "{[SkillEX05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX05[0]]}"
-              ]
+              "displayLines": "{[SkillEX05[0]]}"
             },
             "MDF_FrenzyIntervalDelay": {
-              "operator": "Variables[0] ({[SkillEX05[1]]}) || RETURN",
-              "displayLines": "{[SkillEX05[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX05[1]]}"
-              ]
+              "displayLines": "{[SkillEX05[1]]}"
             },
             "MDF_MaxFrenzyLayer": {
-              "operator": "Variables[0] ({[SkillEX05[2]]}) || RETURN",
-              "displayLines": "{[SkillEX05[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX05[2]]}"
-              ]
+              "displayLines": "{[SkillEX05[2]]}"
             },
             "MDF_TokenDMGAddRatioPerLayer": {
-              "operator": "Variables[0] ({[SkillEX05[3]]}) || RETURN",
-              "displayLines": "{[SkillEX05[3]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX05[3]]}"
-              ]
+              "displayLines": "{[SkillEX05[3]]}"
             }
           }
         }

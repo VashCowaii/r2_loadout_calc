@@ -10,12 +10,7 @@ const configAbility = {
       "eventID": 96140,
       "variables": {
         "DV_BE_BaseSpeed": {
-          "operator": "Variables[0] (DV_FeverBESpeed) || RETURN",
-          "displayLines": "DV_FeverBESpeed",
-          "constants": [],
-          "variables": [
-            "DV_FeverBESpeed"
-          ]
+          "displayLines": "DV_FeverBESpeed"
         }
       },
       "whenCreated": [
@@ -44,12 +39,7 @@ const configAbility = {
       },
       "variables": {
         "parameter[0]_NormalizedValue": {
-          "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2010_EnterFever_P1_Ratio) || RETURN",
-          "displayLines": "DV_FantasticStory_BaseAbility_2010_EnterFever_P1_Ratio",
-          "constants": [],
-          "variables": [
-            "DV_FantasticStory_BaseAbility_2010_EnterFever_P1_Ratio"
-          ]
+          "displayLines": "DV_FantasticStory_BaseAbility_2010_EnterFever_P1_Ratio"
         }
       }
     },
@@ -73,12 +63,7 @@ const configAbility = {
         {
           "name": "Skill Points Modification",
           "adjustmentValue": {
-            "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2018_ADF_1) || RETURN",
-            "displayLines": "DV_FantasticStory_PlusAbility_2018_ADF_1",
-            "constants": [],
-            "variables": [
-              "DV_FantasticStory_PlusAbility_2018_ADF_1"
-            ]
+            "displayLines": "DV_FantasticStory_PlusAbility_2018_ADF_1"
           },
           "adjustmentType": "+"
         },
@@ -228,12 +213,7 @@ const configAbility = {
                     "DamageType": "Physical",
                     "notAHit": true,
                     "Toughness": {
-                      "operator": "Variables[0] (_CurrentStance) || RETURN",
-                      "displayLines": "_CurrentStance",
-                      "constants": [],
-                      "variables": [
-                        "_CurrentStance"
-                      ]
+                      "displayLines": "_CurrentStance"
                     },
                     "ToughnessDMGType": {
                       "DamageType": "AllType"
@@ -412,12 +392,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Constants[0] (0) || RETURN",
-        "displayLines": "0",
-        "constants": [
-          0
-        ],
-        "variables": []
+        "displayLines": "0"
       },
       "variableName": "DV_FantasticStory_BaseAbility_CountSum"
     }

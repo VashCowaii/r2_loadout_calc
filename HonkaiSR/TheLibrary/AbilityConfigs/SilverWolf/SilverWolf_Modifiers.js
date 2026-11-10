@@ -34,12 +34,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -76,28 +71,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_StatusProbability) || Variables[1] (_StatusProbabilityConvert) || SUB || RETURN",
-                "displayLines": "(_StatusProbability - _StatusProbabilityConvert)",
-                "constants": [],
-                "variables": [
-                  "_StatusProbability",
-                  "_StatusProbabilityConvert"
-                ]
+                "displayLines": "(_StatusProbability - _StatusProbabilityConvert)"
               },
               "variableName": "SkillTree_PointB3_StatusProbabilityValue"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (WHOLE) || Variables[1] (SkillTree_PointB3_StatusProbabilityValue) || Variables[2] (0.1) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.1) || MUL || RETURN",
-                "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((SkillTree_PointB3_StatusProbabilityValue / 0.1)) * 0.1)",
-                "constants": [],
-                "variables": [
-                  "WHOLE",
-                  "SkillTree_PointB3_StatusProbabilityValue",
-                  0.1,
-                  0.1
-                ]
+                "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((SkillTree_PointB3_StatusProbabilityValue / 0.1)) * 0.1)"
               },
               "variableName": "SkillTree_PointB3_StatusProbabilityValue"
             },
@@ -133,12 +114,7 @@ const configAbility = {
                     "value1": "SkillTree_PointB3_StatusProbabilityValue",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     },
                     "contextScope": "ContextCaster"
                   },
@@ -146,12 +122,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (0.5) || RETURN",
-                        "displayLines": "0.5",
-                        "constants": [],
-                        "variables": [
-                          0.5
-                        ]
+                        "displayLines": "0.5"
                       },
                       "variableName": "SkillTree_PointB3_StatusProbabilityValue"
                     }
@@ -166,12 +137,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1388519324\">Advanced_Silwolf_Tree03_AttackUp</a>[<span class=\"descriptionNumberColor\">Side Note</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (SkillTree_PointB3_StatusProbabilityValue) || RETURN",
-                      "displayLines": "SkillTree_PointB3_StatusProbabilityValue",
-                      "constants": [],
-                      "variables": [
-                        "SkillTree_PointB3_StatusProbabilityValue"
-                      ]
+                      "displayLines": "SkillTree_PointB3_StatusProbabilityValue"
                     }
                   }
                 }
@@ -230,14 +196,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           ]
@@ -264,12 +223,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -297,14 +251,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           ]
@@ -334,14 +281,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           ]
@@ -371,14 +311,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           ]
@@ -408,14 +341,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           ]
@@ -508,14 +434,7 @@ const configAbility = {
               },
               "element": null,
               "resReduction": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               },
               "maxImplant": 1,
               "returnWeaknessVar": [
@@ -555,12 +474,7 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"1273458995\">Advanced_Silwolf_PassiveAbility01_WeakTypeTransfer</a>",
                   "variables": {
                     "_WeakType": {
-                      "operator": "Variables[0] (_WeakType) || RETURN",
-                      "displayLines": "_WeakType",
-                      "constants": [],
-                      "variables": [
-                        "_WeakType"
-                      ]
+                      "displayLines": "_WeakType"
                     }
                   }
                 }
@@ -598,12 +512,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (_TheFirstAvatarWeakType) || RETURN",
-                    "displayLines": "_TheFirstAvatarWeakType",
-                    "constants": [],
-                    "variables": [
-                      "_TheFirstAvatarWeakType"
-                    ]
+                    "displayLines": "_TheFirstAvatarWeakType"
                   },
                   "caseEvents": [
                     {
@@ -618,14 +527,7 @@ const configAbility = {
                           },
                           "element": null,
                           "resReduction": {
-                            "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                            "displayLines": "(0 - MDF_PropertyValue)",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "MDF_PropertyValue"
-                            ]
+                            "displayLines": "(0 - MDF_PropertyValue)"
                           },
                           "maxImplant": 1,
                           "prefWeakness": "Physical",
@@ -640,12 +542,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                            "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                            "constants": [],
-                            "variables": [
-                              "Advanced_Silwolf_BPAbility_WeakType_01"
-                            ]
+                            "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                           },
                           "variableName": "_WeakType"
                         }
@@ -663,14 +560,7 @@ const configAbility = {
                           },
                           "element": null,
                           "resReduction": {
-                            "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                            "displayLines": "(0 - MDF_PropertyValue)",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "MDF_PropertyValue"
-                            ]
+                            "displayLines": "(0 - MDF_PropertyValue)"
                           },
                           "maxImplant": 1,
                           "prefWeakness": "Fire",
@@ -685,12 +575,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                            "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                            "constants": [],
-                            "variables": [
-                              "Advanced_Silwolf_BPAbility_WeakType_01"
-                            ]
+                            "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                           },
                           "variableName": "_WeakType"
                         }
@@ -708,14 +593,7 @@ const configAbility = {
                           },
                           "element": null,
                           "resReduction": {
-                            "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                            "displayLines": "(0 - MDF_PropertyValue)",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "MDF_PropertyValue"
-                            ]
+                            "displayLines": "(0 - MDF_PropertyValue)"
                           },
                           "maxImplant": 1,
                           "prefWeakness": "Ice",
@@ -730,12 +608,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                            "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                            "constants": [],
-                            "variables": [
-                              "Advanced_Silwolf_BPAbility_WeakType_01"
-                            ]
+                            "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                           },
                           "variableName": "_WeakType"
                         }
@@ -753,14 +626,7 @@ const configAbility = {
                           },
                           "element": null,
                           "resReduction": {
-                            "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                            "displayLines": "(0 - MDF_PropertyValue)",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "MDF_PropertyValue"
-                            ]
+                            "displayLines": "(0 - MDF_PropertyValue)"
                           },
                           "maxImplant": 1,
                           "prefWeakness": "Lightning",
@@ -775,12 +641,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                            "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                            "constants": [],
-                            "variables": [
-                              "Advanced_Silwolf_BPAbility_WeakType_01"
-                            ]
+                            "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                           },
                           "variableName": "_WeakType"
                         }
@@ -798,14 +659,7 @@ const configAbility = {
                           },
                           "element": null,
                           "resReduction": {
-                            "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                            "displayLines": "(0 - MDF_PropertyValue)",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "MDF_PropertyValue"
-                            ]
+                            "displayLines": "(0 - MDF_PropertyValue)"
                           },
                           "maxImplant": 1,
                           "prefWeakness": "Wind",
@@ -820,12 +674,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                            "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                            "constants": [],
-                            "variables": [
-                              "Advanced_Silwolf_BPAbility_WeakType_01"
-                            ]
+                            "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                           },
                           "variableName": "_WeakType"
                         }
@@ -843,14 +692,7 @@ const configAbility = {
                           },
                           "element": null,
                           "resReduction": {
-                            "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                            "displayLines": "(0 - MDF_PropertyValue)",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "MDF_PropertyValue"
-                            ]
+                            "displayLines": "(0 - MDF_PropertyValue)"
                           },
                           "maxImplant": 1,
                           "prefWeakness": "Quantum",
@@ -865,12 +707,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                            "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                            "constants": [],
-                            "variables": [
-                              "Advanced_Silwolf_BPAbility_WeakType_01"
-                            ]
+                            "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                           },
                           "variableName": "_WeakType"
                         }
@@ -888,14 +725,7 @@ const configAbility = {
                           },
                           "element": null,
                           "resReduction": {
-                            "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                            "displayLines": "(0 - MDF_PropertyValue)",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "MDF_PropertyValue"
-                            ]
+                            "displayLines": "(0 - MDF_PropertyValue)"
                           },
                           "maxImplant": 1,
                           "prefWeakness": "Imaginary",
@@ -910,12 +740,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                            "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                            "constants": [],
-                            "variables": [
-                              "Advanced_Silwolf_BPAbility_WeakType_01"
-                            ]
+                            "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                           },
                           "variableName": "_WeakType"
                         }
@@ -929,12 +754,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "switchValue": {
-                    "operator": "Variables[0] (_WeakType) || RETURN",
-                    "displayLines": "_WeakType",
-                    "constants": [],
-                    "variables": [
-                      "_WeakType"
-                    ]
+                    "displayLines": "_WeakType"
                   },
                   "caseEvents": [
                     {
@@ -949,14 +769,7 @@ const configAbility = {
                           },
                           "element": null,
                           "resReduction": {
-                            "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                            "displayLines": "(0 - MDF_PropertyValue)",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "MDF_PropertyValue"
-                            ]
+                            "displayLines": "(0 - MDF_PropertyValue)"
                           },
                           "maxImplant": 1,
                           "prefWeakness": "Physical",
@@ -971,12 +784,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                            "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                            "constants": [],
-                            "variables": [
-                              "Advanced_Silwolf_BPAbility_WeakType_01"
-                            ]
+                            "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                           },
                           "variableName": "_WeakType"
                         }
@@ -994,14 +802,7 @@ const configAbility = {
                           },
                           "element": null,
                           "resReduction": {
-                            "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                            "displayLines": "(0 - MDF_PropertyValue)",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "MDF_PropertyValue"
-                            ]
+                            "displayLines": "(0 - MDF_PropertyValue)"
                           },
                           "maxImplant": 1,
                           "prefWeakness": "Fire",
@@ -1016,12 +817,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                            "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                            "constants": [],
-                            "variables": [
-                              "Advanced_Silwolf_BPAbility_WeakType_01"
-                            ]
+                            "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                           },
                           "variableName": "_WeakType"
                         }
@@ -1039,14 +835,7 @@ const configAbility = {
                           },
                           "element": null,
                           "resReduction": {
-                            "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                            "displayLines": "(0 - MDF_PropertyValue)",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "MDF_PropertyValue"
-                            ]
+                            "displayLines": "(0 - MDF_PropertyValue)"
                           },
                           "maxImplant": 1,
                           "prefWeakness": "Ice",
@@ -1061,12 +850,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                            "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                            "constants": [],
-                            "variables": [
-                              "Advanced_Silwolf_BPAbility_WeakType_01"
-                            ]
+                            "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                           },
                           "variableName": "_WeakType"
                         }
@@ -1084,14 +868,7 @@ const configAbility = {
                           },
                           "element": null,
                           "resReduction": {
-                            "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                            "displayLines": "(0 - MDF_PropertyValue)",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "MDF_PropertyValue"
-                            ]
+                            "displayLines": "(0 - MDF_PropertyValue)"
                           },
                           "maxImplant": 1,
                           "prefWeakness": "Lightning",
@@ -1106,12 +883,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                            "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                            "constants": [],
-                            "variables": [
-                              "Advanced_Silwolf_BPAbility_WeakType_01"
-                            ]
+                            "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                           },
                           "variableName": "_WeakType"
                         }
@@ -1129,14 +901,7 @@ const configAbility = {
                           },
                           "element": null,
                           "resReduction": {
-                            "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                            "displayLines": "(0 - MDF_PropertyValue)",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "MDF_PropertyValue"
-                            ]
+                            "displayLines": "(0 - MDF_PropertyValue)"
                           },
                           "maxImplant": 1,
                           "prefWeakness": "Wind",
@@ -1151,12 +916,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                            "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                            "constants": [],
-                            "variables": [
-                              "Advanced_Silwolf_BPAbility_WeakType_01"
-                            ]
+                            "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                           },
                           "variableName": "_WeakType"
                         }
@@ -1174,14 +934,7 @@ const configAbility = {
                           },
                           "element": null,
                           "resReduction": {
-                            "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                            "displayLines": "(0 - MDF_PropertyValue)",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "MDF_PropertyValue"
-                            ]
+                            "displayLines": "(0 - MDF_PropertyValue)"
                           },
                           "maxImplant": 1,
                           "prefWeakness": "Quantum",
@@ -1196,12 +949,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                            "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                            "constants": [],
-                            "variables": [
-                              "Advanced_Silwolf_BPAbility_WeakType_01"
-                            ]
+                            "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                           },
                           "variableName": "_WeakType"
                         }
@@ -1219,14 +967,7 @@ const configAbility = {
                           },
                           "element": null,
                           "resReduction": {
-                            "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                            "displayLines": "(0 - MDF_PropertyValue)",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "MDF_PropertyValue"
-                            ]
+                            "displayLines": "(0 - MDF_PropertyValue)"
                           },
                           "maxImplant": 1,
                           "prefWeakness": "Imaginary",
@@ -1241,12 +982,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                            "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                            "constants": [],
-                            "variables": [
-                              "Advanced_Silwolf_BPAbility_WeakType_01"
-                            ]
+                            "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                           },
                           "variableName": "_WeakType"
                         }
@@ -1262,12 +998,7 @@ const configAbility = {
               "functionName": "<a class=\"gTempYellow\" id=\"-509776970\">Advanced_Silwolf_Ability02_OverrideNameForStatus</a>",
               "variables": {
                 "DF_WeakType": {
-                  "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                  "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                  "constants": [],
-                  "variables": [
-                    "Advanced_Silwolf_BPAbility_WeakType_01"
-                  ]
+                  "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01"
                 }
               }
             }
@@ -1293,12 +1024,7 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"1273458995\">Advanced_Silwolf_PassiveAbility01_WeakTypeTransfer</a>",
                   "variables": {
                     "_WeakType": {
-                      "operator": "Variables[0] (_WeakType) || RETURN",
-                      "displayLines": "_WeakType",
-                      "constants": [],
-                      "variables": [
-                        "_WeakType"
-                      ]
+                      "displayLines": "_WeakType"
                     }
                   }
                 }
@@ -1318,12 +1044,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1084383828\">Advanced_Silwolf_Passive_Deathrattle_Sub</a>",
               "valuePerStack": {
                 "_WeakType": {
-                  "operator": "Variables[0] (_WeakType) || RETURN",
-                  "displayLines": "_WeakType",
-                  "constants": [],
-                  "variables": [
-                    "_WeakType"
-                  ]
+                  "displayLines": "_WeakType"
                 }
               }
             }

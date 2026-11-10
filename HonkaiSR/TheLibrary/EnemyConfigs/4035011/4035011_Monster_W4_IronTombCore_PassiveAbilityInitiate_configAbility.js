@@ -188,12 +188,7 @@ const configAbility = {
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (SummonID01) || RETURN",
-            "displayLines": "SummonID01",
-            "constants": [],
-            "variables": [
-              "SummonID01"
-            ]
+            "displayLines": "SummonID01"
           },
           "locationType": "BeforeCaster"
         }
@@ -203,12 +198,7 @@ const configAbility = {
       "name": "Create Enemy as Body Part",
       "partName": "TimePart",
       "value": {
-        "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
-        "displayLines": "PartEntity1_MonsterID",
-        "constants": [],
-        "variables": [
-          "PartEntity1_MonsterID"
-        ]
+        "displayLines": "PartEntity1_MonsterID"
       },
       "offset": -1
     },
@@ -216,12 +206,7 @@ const configAbility = {
       "name": "Create Enemy as Body Part",
       "partName": "EnergyPart",
       "value": {
-        "operator": "Variables[0] (PartEntity2_MonsterID) || RETURN",
-        "displayLines": "PartEntity2_MonsterID",
-        "constants": [],
-        "variables": [
-          "PartEntity2_MonsterID"
-        ]
+        "displayLines": "PartEntity2_MonsterID"
       },
       "offset": 1,
       "type": 2

@@ -91,12 +91,7 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[4]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[4]]}"
-            ]
+            "displayLines": "{[PassiveSkill01[4]]}"
           },
           "refreshPositions": false,
           "enemyList": [
@@ -110,12 +105,7 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[5]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[5]]}"
-            ]
+            "displayLines": "{[PassiveSkill01[5]]}"
           },
           "refreshPositions": false,
           "enemyList": [
@@ -131,12 +121,7 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[4]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[4]]}"
-            ]
+            "displayLines": "{[PassiveSkill01[4]]}"
           },
           "refreshPositions": false,
           "enemyList": [
@@ -150,12 +135,7 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[5]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[5]]}"
-            ]
+            "displayLines": "{[PassiveSkill01[5]]}"
           },
           "refreshPositions": false,
           "enemyList": [
@@ -177,20 +157,10 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1061041544\">Monster_XP_Elite02_03_InitHP_LV2</a>",
       "valuePerStack": {
         "MDF_InitHP_LV2": {
-          "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[3]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[3]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[3]]}"
         },
         "MDF_InitStance_LV2": {
-          "operator": "Variables[0] ({[PassiveSkill01[8]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[8]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[8]]}"
-          ]
+          "displayLines": "{[PassiveSkill01[8]]}"
         }
       }
     },
@@ -297,12 +267,7 @@ const configAbility = {
     {
       "name": "Adjust Team Punchline Value",
       "value": {
-        "operator": "Variables[0] ({[PassiveSkill01[6]]}) || RETURN",
-        "displayLines": "{[PassiveSkill01[6]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill01[6]]}"
-        ]
+        "displayLines": "{[PassiveSkill01[6]]}"
       },
       "adjustment": "Add"
     }

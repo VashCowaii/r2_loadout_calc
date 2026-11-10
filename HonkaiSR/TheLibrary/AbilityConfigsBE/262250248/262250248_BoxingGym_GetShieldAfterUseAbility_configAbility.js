@@ -64,14 +64,7 @@ const configAbility = {
                   "duration": 2,
                   "valuePerStack": {
                     "MDF_ShowValue": {
-                      "operator": "Constants[0] (0.3) || Variables[0] (_MaxHP) || MUL || RETURN",
-                      "displayLines": "(0.3 * _MaxHP)",
-                      "constants": [
-                        0.3
-                      ],
-                      "variables": [
-                        "_MaxHP"
-                      ]
+                      "displayLines": "(0.3 * _MaxHP)"
                     }
                   }
                 }
@@ -116,14 +109,7 @@ const configAbility = {
                   "duration": 2,
                   "valuePerStack": {
                     "MDF_ShowValue": {
-                      "operator": "Constants[0] (0.3) || Variables[0] (_MaxHP) || MUL || RETURN",
-                      "displayLines": "(0.3 * _MaxHP)",
-                      "constants": [
-                        0.3
-                      ],
-                      "variables": [
-                        "_MaxHP"
-                      ]
+                      "displayLines": "(0.3 * _MaxHP)"
                     }
                   }
                 }

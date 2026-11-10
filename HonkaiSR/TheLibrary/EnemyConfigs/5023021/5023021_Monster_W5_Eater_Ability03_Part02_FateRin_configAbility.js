@@ -18,13 +18,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (Skill03_Attack) || Variables[1] ({[Skill03[0]]}) || MUL || RETURN",
-        "displayLines": "(Skill03_Attack * {[Skill03[0]]})",
-        "constants": [],
-        "variables": [
-          "Skill03_Attack",
-          "{[Skill03[0]]}"
-        ]
+        "displayLines": "(Skill03_Attack * {[Skill03[0]]})"
       },
       "variableName": "Skill03_Attack"
     },
@@ -44,21 +38,11 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-2066845206\">Enemy_W5_Eater_Ability03_Attack_FateRin</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "duration": {
-        "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-        "displayLines": "{[Skill03[1]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill03[1]]}"
-        ]
+        "displayLines": "{[Skill03[1]]}"
       },
       "valuePerStack": {
         "MDF_Attack": {
-          "operator": "Variables[0] (Skill03_Attack) || RETURN",
-          "displayLines": "Skill03_Attack",
-          "constants": [],
-          "variables": [
-            "Skill03_Attack"
-          ]
+          "displayLines": "Skill03_Attack"
         }
       },
       "casterAssign": "TargetSelf"

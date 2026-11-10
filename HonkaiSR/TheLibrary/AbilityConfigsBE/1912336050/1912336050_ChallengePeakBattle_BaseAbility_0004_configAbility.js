@@ -46,23 +46,13 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ChallengePeakBattle_0004_ADF_1) || RETURN",
-                "displayLines": "ChallengePeakBattle_0004_ADF_1",
-                "constants": [],
-                "variables": [
-                  "ChallengePeakBattle_0004_ADF_1"
-                ]
+                "displayLines": "ChallengePeakBattle_0004_ADF_1"
               }
             },
             {
               "name": "Lock HP",
               "threshold": {
-                "operator": "Constants[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [
-                  1
-                ],
-                "variables": []
+                "displayLines": "1"
               },
               "target": {
                 "name": "Target Name",
@@ -174,12 +164,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-886944199\">Modifier_ChallengePeakBattle_BaseAbility_0004_02</a>[<span class=\"descriptionNumberColor\">Under Protection</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_0004_ADF_1": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }

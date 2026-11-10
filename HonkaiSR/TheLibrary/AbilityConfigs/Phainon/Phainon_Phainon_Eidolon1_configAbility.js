@@ -22,28 +22,13 @@ const configAbility = {
       "referenceModifier": "<a class=\"gModGreen\" id=\"1832901043\">MReference_Empty</a>",
       "valuePerStack": {
         "MDF_SpeedRatio": {
-          "operator": "Variables[0] (0.66) || RETURN",
-          "displayLines": "0.66",
-          "constants": [],
-          "variables": [
-            0.66
-          ]
+          "displayLines": "0.66"
         },
         "MDF_MaxSpeedRatio": {
-          "operator": "Variables[0] (0.84) || RETURN",
-          "displayLines": "0.84",
-          "constants": [],
-          "variables": [
-            0.84
-          ]
+          "displayLines": "0.84"
         },
         "MDF_PropertyRatio": {
-          "operator": "Variables[0] (0.015) || RETURN",
-          "displayLines": "0.015",
-          "constants": [],
-          "variables": [
-            0.015
-          ]
+          "displayLines": "0.015"
         }
       }
     }
@@ -106,14 +91,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (0.66) || Variables[1] (MDF_KillCount) || Variables[2] (0.015) || MUL || ADD || RETURN",
-                        "displayLines": "(0.66 + (MDF_KillCount * 0.015))",
-                        "constants": [],
-                        "variables": [
-                          0.66,
-                          "MDF_KillCount",
-                          0.015
-                        ]
+                        "displayLines": "(0.66 + (MDF_KillCount * 0.015))"
                       },
                       "variableName": "CDF_SpeedConvertRatio"
                     },
@@ -126,12 +104,7 @@ const configAbility = {
                       "modifierName": "<a class=\"gModGreen\" id=\"-847336142\">Phainon_Eidolon1_AddSpeedRatio</a>[<span class=\"descriptionNumberColor\">Fire and Light Bind Virtue and Vice</span>]",
                       "variableName": "MDF_SpeedRatio",
                       "value": {
-                        "operator": "Variables[0] (CDF_SpeedConvertRatio) || RETURN",
-                        "displayLines": "CDF_SpeedConvertRatio",
-                        "constants": [],
-                        "variables": [
-                          "CDF_SpeedConvertRatio"
-                        ]
+                        "displayLines": "CDF_SpeedConvertRatio"
                       }
                     },
                     {
@@ -150,13 +123,7 @@ const configAbility = {
                           "modifierName": "<a class=\"gModGreen\" id=\"320399697\">Phainon_Ability03_BattleEvent_BaseSpeed</a>",
                           "variableName": "MDF_PropertyValue",
                           "value": {
-                            "operator": "Variables[0] (CDF_SpeedConvertRatio) || Variables[1] (Phainon_BaseSpeed) || MUL || RETURN",
-                            "displayLines": "(CDF_SpeedConvertRatio * Phainon_BaseSpeed)",
-                            "constants": [],
-                            "variables": [
-                              "CDF_SpeedConvertRatio",
-                              "Phainon_BaseSpeed"
-                            ]
+                            "displayLines": "(CDF_SpeedConvertRatio * Phainon_BaseSpeed)"
                           }
                         }
                       ]
@@ -185,22 +152,12 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1114586000\">Phainon_Eidolon1_Property</a>[<span class=\"descriptionNumberColor\">Fire and Light Bind Virtue and Vice</span>]",
                   "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
+                    "displayLines": "3"
                   },
                   "referenceModifier": "<a class=\"gModGreen\" id=\"1042665863\">MReference_CriticalDamageUp</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
+                      "displayLines": "0.5"
                     }
                   }
                 }

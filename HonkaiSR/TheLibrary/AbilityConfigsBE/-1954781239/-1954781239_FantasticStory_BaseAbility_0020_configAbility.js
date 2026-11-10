@@ -98,14 +98,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (BattleEvent_BaseHP) || Constants[0] (90) || MUL || RETURN",
-        "displayLines": "(BattleEvent_BaseHP * 90)",
-        "constants": [
-          90
-        ],
-        "variables": [
-          "BattleEvent_BaseHP"
-        ]
+        "displayLines": "(BattleEvent_BaseHP * 90)"
       },
       "variableName": "BattleEvent_BaseHP"
     },
@@ -118,36 +111,16 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1872930168\">Modifier_FantasticStory_BaseAbility_0020</a>",
       "valuePerStack": {
         "ADF_1": {
-          "operator": "Variables[0] (#ADF_1) || RETURN",
-          "displayLines": "#ADF_1",
-          "constants": [],
-          "variables": [
-            "#ADF_1"
-          ]
+          "displayLines": "#ADF_1"
         },
         "ADF_2": {
-          "operator": "Variables[0] (#ADF_2) || RETURN",
-          "displayLines": "#ADF_2",
-          "constants": [],
-          "variables": [
-            "#ADF_2"
-          ]
+          "displayLines": "#ADF_2"
         },
         "ADF_3": {
-          "operator": "Variables[0] (#ADF_3) || RETURN",
-          "displayLines": "#ADF_3",
-          "constants": [],
-          "variables": [
-            "#ADF_3"
-          ]
+          "displayLines": "#ADF_3"
         },
         "TempHP": {
-          "operator": "Variables[0] (BattleEvent_BaseHP) || RETURN",
-          "displayLines": "BattleEvent_BaseHP",
-          "constants": [],
-          "variables": [
-            "BattleEvent_BaseHP"
-          ]
+          "displayLines": "BattleEvent_BaseHP"
         }
       }
     }
@@ -382,12 +355,7 @@ const configAbility = {
                           "variableName": "DOT_TriggerRatio",
                           "eventType": "DOT",
                           "value": {
-                            "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0028_ADF_3) || RETURN",
-                            "displayLines": "DV_FantasticStory_PlusAbility_0028_ADF_3",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_PlusAbility_0028_ADF_3"
-                            ]
+                            "displayLines": "DV_FantasticStory_PlusAbility_0028_ADF_3"
                           }
                         }
                       ],
@@ -643,12 +611,7 @@ const configAbility = {
                               "variableName": "DOT_TriggerRatio",
                               "eventType": "DOT",
                               "value": {
-                                "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0028_ADF_2) || RETURN",
-                                "displayLines": "DV_FantasticStory_PlusAbility_0028_ADF_2",
-                                "constants": [],
-                                "variables": [
-                                  "DV_FantasticStory_PlusAbility_0028_ADF_2"
-                                ]
+                                "displayLines": "DV_FantasticStory_PlusAbility_0028_ADF_2"
                               }
                             }
                           ],
@@ -830,12 +793,7 @@ const configAbility = {
                                   "variableName": "DOT_TriggerRatio",
                                   "eventType": "DOT",
                                   "value": {
-                                    "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0028_ADF_1) || RETURN",
-                                    "displayLines": "DV_FantasticStory_PlusAbility_0028_ADF_1",
-                                    "constants": [],
-                                    "variables": [
-                                      "DV_FantasticStory_PlusAbility_0028_ADF_1"
-                                    ]
+                                    "displayLines": "DV_FantasticStory_PlusAbility_0028_ADF_1"
                                   }
                                 }
                               ]
@@ -902,13 +860,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "DamageFlat": {
-                  "operator": "Variables[0] (Modifier_Poison_Damage) || Variables[1] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
-                  "displayLines": "(Modifier_Poison_Damage * Modifier_Poison_PoisonLayer)",
-                  "constants": [],
-                  "variables": [
-                    "Modifier_Poison_Damage",
-                    "Modifier_Poison_PoisonLayer"
-                  ]
+                  "displayLines": "(Modifier_Poison_Damage * Modifier_Poison_PoisonLayer)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -939,14 +891,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "DamageFlat": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Poison_Damage) || MUL || Variables[2] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
-                  "displayLines": "((DOT_TriggerRatio * Modifier_Poison_Damage) * Modifier_Poison_PoisonLayer)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "Modifier_Poison_Damage",
-                    "Modifier_Poison_PoisonLayer"
-                  ]
+                  "displayLines": "((DOT_TriggerRatio * Modifier_Poison_Damage) * Modifier_Poison_PoisonLayer)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -973,30 +918,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1431018009\">Modifier_FantasticStory_BaseAbility_0020_sub6_dot</a>[<span class=\"descriptionNumberColor\">Gimmick</span>]",
               "duration": {
-                "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0027_ADF_4) || RETURN",
-                "displayLines": "DV_FantasticStory_PlusAbility_0027_ADF_4",
-                "constants": [],
-                "variables": [
-                  "DV_FantasticStory_PlusAbility_0027_ADF_4"
-                ]
+                "displayLines": "DV_FantasticStory_PlusAbility_0027_ADF_4"
               },
               "stackLimit": {
-                "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0027_ADF_3) || RETURN",
-                "displayLines": "DV_FantasticStory_PlusAbility_0027_ADF_3",
-                "constants": [],
-                "variables": [
-                  "DV_FantasticStory_PlusAbility_0027_ADF_3"
-                ]
+                "displayLines": "DV_FantasticStory_PlusAbility_0027_ADF_3"
               },
               "valuePerStack": {
                 "Modifier_Poison_Damage": {
-                  "operator": "Variables[0] (TempHP_get) || Variables[1] (DV_FantasticStory_PlusAbility_0027_ADF_2) || MUL || RETURN",
-                  "displayLines": "(TempHP_get * DV_FantasticStory_PlusAbility_0027_ADF_2)",
-                  "constants": [],
-                  "variables": [
-                    "TempHP_get",
-                    "DV_FantasticStory_PlusAbility_0027_ADF_2"
-                  ]
+                  "displayLines": "(TempHP_get * DV_FantasticStory_PlusAbility_0027_ADF_2)"
                 }
               },
               "addStacksPerTrigger": 1
@@ -1024,12 +953,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0027_ADF_1) || RETURN",
-                "displayLines": "DV_FantasticStory_PlusAbility_0027_ADF_1",
-                "constants": [],
-                "variables": [
-                  "DV_FantasticStory_PlusAbility_0027_ADF_1"
-                ]
+                "displayLines": "DV_FantasticStory_PlusAbility_0027_ADF_1"
               }
             }
           ]
@@ -1056,12 +980,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (DmgAddedRatio) || RETURN",
-                "displayLines": "DmgAddedRatio",
-                "constants": [],
-                "variables": [
-                  "DmgAddedRatio"
-                ]
+                "displayLines": "DmgAddedRatio"
               }
             },
             {
@@ -1072,12 +991,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (SpdAddedRatio) || RETURN",
-                "displayLines": "SpdAddedRatio",
-                "constants": [],
-                "variables": [
-                  "SpdAddedRatio"
-                ]
+                "displayLines": "SpdAddedRatio"
               }
             }
           ]
@@ -1126,13 +1040,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "DamageFlat": {
-                  "operator": "Variables[0] (Modifier_Poison_Damage) || Variables[1] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
-                  "displayLines": "(Modifier_Poison_Damage * Modifier_Poison_PoisonLayer)",
-                  "constants": [],
-                  "variables": [
-                    "Modifier_Poison_Damage",
-                    "Modifier_Poison_PoisonLayer"
-                  ]
+                  "displayLines": "(Modifier_Poison_Damage * Modifier_Poison_PoisonLayer)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1163,14 +1071,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "DamageFlat": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Poison_Damage) || MUL || Variables[2] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
-                  "displayLines": "((DOT_TriggerRatio * Modifier_Poison_Damage) * Modifier_Poison_PoisonLayer)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "Modifier_Poison_Damage",
-                    "Modifier_Poison_PoisonLayer"
-                  ]
+                  "displayLines": "((DOT_TriggerRatio * Modifier_Poison_Damage) * Modifier_Poison_PoisonLayer)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1197,30 +1098,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-19171630\">Modifier_FantasticStory_BaseAbility_0020_sub3_dot</a>[<span class=\"descriptionNumberColor\">Argument</span>]",
               "duration": {
-                "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0025_ADF_5) || RETURN",
-                "displayLines": "DV_FantasticStory_PlusAbility_0025_ADF_5",
-                "constants": [],
-                "variables": [
-                  "DV_FantasticStory_PlusAbility_0025_ADF_5"
-                ]
+                "displayLines": "DV_FantasticStory_PlusAbility_0025_ADF_5"
               },
               "stackLimit": {
-                "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0025_ADF_4) || RETURN",
-                "displayLines": "DV_FantasticStory_PlusAbility_0025_ADF_4",
-                "constants": [],
-                "variables": [
-                  "DV_FantasticStory_PlusAbility_0025_ADF_4"
-                ]
+                "displayLines": "DV_FantasticStory_PlusAbility_0025_ADF_4"
               },
               "valuePerStack": {
                 "Modifier_Poison_Damage": {
-                  "operator": "Variables[0] (TempHP_get) || Variables[1] (DV_FantasticStory_PlusAbility_0025_ADF_3) || MUL || RETURN",
-                  "displayLines": "(TempHP_get * DV_FantasticStory_PlusAbility_0025_ADF_3)",
-                  "constants": [],
-                  "variables": [
-                    "TempHP_get",
-                    "DV_FantasticStory_PlusAbility_0025_ADF_3"
-                  ]
+                  "displayLines": "(TempHP_get * DV_FantasticStory_PlusAbility_0025_ADF_3)"
                 }
               },
               "addStacksPerTrigger": 1
@@ -1238,30 +1123,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-19171630\">Modifier_FantasticStory_BaseAbility_0020_sub3_dot</a>[<span class=\"descriptionNumberColor\">Argument</span>]",
               "duration": {
-                "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0025_ADF_5) || RETURN",
-                "displayLines": "DV_FantasticStory_PlusAbility_0025_ADF_5",
-                "constants": [],
-                "variables": [
-                  "DV_FantasticStory_PlusAbility_0025_ADF_5"
-                ]
+                "displayLines": "DV_FantasticStory_PlusAbility_0025_ADF_5"
               },
               "stackLimit": {
-                "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0025_ADF_4) || RETURN",
-                "displayLines": "DV_FantasticStory_PlusAbility_0025_ADF_4",
-                "constants": [],
-                "variables": [
-                  "DV_FantasticStory_PlusAbility_0025_ADF_4"
-                ]
+                "displayLines": "DV_FantasticStory_PlusAbility_0025_ADF_4"
               },
               "valuePerStack": {
                 "Modifier_Poison_Damage": {
-                  "operator": "Variables[0] (TempHP_get) || Variables[1] (DV_FantasticStory_PlusAbility_0025_ADF_3) || MUL || RETURN",
-                  "displayLines": "(TempHP_get * DV_FantasticStory_PlusAbility_0025_ADF_3)",
-                  "constants": [],
-                  "variables": [
-                    "TempHP_get",
-                    "DV_FantasticStory_PlusAbility_0025_ADF_3"
-                  ]
+                  "displayLines": "(TempHP_get * DV_FantasticStory_PlusAbility_0025_ADF_3)"
                 }
               },
               "addStacksPerTrigger": 1
@@ -1312,13 +1181,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "DamageFlat": {
-                  "operator": "Variables[0] (Modifier_Poison_Damage) || Variables[1] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
-                  "displayLines": "(Modifier_Poison_Damage * Modifier_Poison_PoisonLayer)",
-                  "constants": [],
-                  "variables": [
-                    "Modifier_Poison_Damage",
-                    "Modifier_Poison_PoisonLayer"
-                  ]
+                  "displayLines": "(Modifier_Poison_Damage * Modifier_Poison_PoisonLayer)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1349,14 +1212,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "DamageFlat": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Poison_Damage) || MUL || Variables[2] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
-                  "displayLines": "((DOT_TriggerRatio * Modifier_Poison_Damage) * Modifier_Poison_PoisonLayer)",
-                  "constants": [],
-                  "variables": [
-                    "DOT_TriggerRatio",
-                    "Modifier_Poison_Damage",
-                    "Modifier_Poison_PoisonLayer"
-                  ]
+                  "displayLines": "((DOT_TriggerRatio * Modifier_Poison_Damage) * Modifier_Poison_PoisonLayer)"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -1383,23 +1239,12 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1561743765\">Modifier_FantasticStory_BaseAbility_0020_sub2_dot</a>[<span class=\"descriptionNumberColor\">Rumor</span>]",
               "duration": {
-                "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0022_ADF_3) || RETURN",
-                "displayLines": "DV_FantasticStory_PlusAbility_0022_ADF_3",
-                "constants": [],
-                "variables": [
-                  "DV_FantasticStory_PlusAbility_0022_ADF_3"
-                ]
+                "displayLines": "DV_FantasticStory_PlusAbility_0022_ADF_3"
               },
               "stackLimit": 5,
               "valuePerStack": {
                 "Modifier_Poison_Damage": {
-                  "operator": "Variables[0] (TempHP_get) || Variables[1] (DV_FantasticStory_PlusAbility_0022_ADF_1) || MUL || RETURN",
-                  "displayLines": "(TempHP_get * DV_FantasticStory_PlusAbility_0022_ADF_1)",
-                  "constants": [],
-                  "variables": [
-                    "TempHP_get",
-                    "DV_FantasticStory_PlusAbility_0022_ADF_1"
-                  ]
+                  "displayLines": "(TempHP_get * DV_FantasticStory_PlusAbility_0022_ADF_1)"
                 }
               },
               "addStacksPerTrigger": 1
@@ -1525,12 +1370,7 @@ const configAbility = {
                           },
                           "selfSplit": 1,
                           "targetSplit": {
-                            "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0021_ADF_1 ) || RETURN",
-                            "displayLines": "DV_FantasticStory_PlusAbility_0021_ADF_1 ",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_PlusAbility_0021_ADF_1 "
-                            ]
+                            "displayLines": "DV_FantasticStory_PlusAbility_0021_ADF_1 "
                           }
                         }
                       ]
@@ -1568,12 +1408,7 @@ const configAbility = {
                           },
                           "selfSplit": 1,
                           "targetSplit": {
-                            "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0021_ADF_1 ) || RETURN",
-                            "displayLines": "DV_FantasticStory_PlusAbility_0021_ADF_1 ",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_PlusAbility_0021_ADF_1 "
-                            ]
+                            "displayLines": "DV_FantasticStory_PlusAbility_0021_ADF_1 "
                           }
                         }
                       ]
@@ -1611,12 +1446,7 @@ const configAbility = {
                           },
                           "selfSplit": 1,
                           "targetSplit": {
-                            "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0021_ADF_1 ) || RETURN",
-                            "displayLines": "DV_FantasticStory_PlusAbility_0021_ADF_1 ",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_PlusAbility_0021_ADF_1 "
-                            ]
+                            "displayLines": "DV_FantasticStory_PlusAbility_0021_ADF_1 "
                           }
                         }
                       ]
@@ -1654,12 +1484,7 @@ const configAbility = {
                           },
                           "selfSplit": 1,
                           "targetSplit": {
-                            "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0021_ADF_1 ) || RETURN",
-                            "displayLines": "DV_FantasticStory_PlusAbility_0021_ADF_1 ",
-                            "constants": [],
-                            "variables": [
-                              "DV_FantasticStory_PlusAbility_0021_ADF_1 "
-                            ]
+                            "displayLines": "DV_FantasticStory_PlusAbility_0021_ADF_1 "
                           }
                         }
                       ]
@@ -1722,12 +1547,7 @@ const configAbility = {
                         "target": "{{Parameter Target}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0023_ADF_1) || RETURN",
-                        "displayLines": "DV_FantasticStory_PlusAbility_0023_ADF_1",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_PlusAbility_0023_ADF_1"
-                        ]
+                        "displayLines": "DV_FantasticStory_PlusAbility_0023_ADF_1"
                       },
                       "formula": "Heal from Target MaxHP"
                     },
@@ -1790,12 +1610,7 @@ const configAbility = {
                         "STAT_DOT"
                       ],
                       "chance": {
-                        "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0024_ADF_1) || RETURN",
-                        "displayLines": "DV_FantasticStory_PlusAbility_0024_ADF_1",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_PlusAbility_0024_ADF_1"
-                        ]
+                        "displayLines": "DV_FantasticStory_PlusAbility_0024_ADF_1"
                       }
                     }
                   ]
@@ -1881,14 +1696,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Constants[0] (0) || Variables[0] (ADF_3_get) || SUB || RETURN",
-            "displayLines": "(0 - ADF_3_get)",
-            "constants": [
-              0
-            ],
-            "variables": [
-              "ADF_3_get"
-            ]
+            "displayLines": "(0 - ADF_3_get)"
           }
         }
       }
@@ -1926,36 +1734,16 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"444006453\">Modifier_FantasticStory_BaseAbility_0020_sub</a>",
               "valuePerStack": {
                 "TempHP_get": {
-                  "operator": "Variables[0] (TempHP) || RETURN",
-                  "displayLines": "TempHP",
-                  "constants": [],
-                  "variables": [
-                    "TempHP"
-                  ]
+                  "displayLines": "TempHP"
                 },
                 "ADF_1_get": {
-                  "operator": "Variables[0] (ADF_1) || RETURN",
-                  "displayLines": "ADF_1",
-                  "constants": [],
-                  "variables": [
-                    "ADF_1"
-                  ]
+                  "displayLines": "ADF_1"
                 },
                 "ADF_2_get": {
-                  "operator": "Variables[0] (ADF_2) || RETURN",
-                  "displayLines": "ADF_2",
-                  "constants": [],
-                  "variables": [
-                    "ADF_2"
-                  ]
+                  "displayLines": "ADF_2"
                 },
                 "ADF_3_get": {
-                  "operator": "Variables[0] (ADF_3) || RETURN",
-                  "displayLines": "ADF_3",
-                  "constants": [],
-                  "variables": [
-                    "ADF_3"
-                  ]
+                  "displayLines": "ADF_3"
                 }
               }
             }
@@ -1984,36 +1772,16 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"444006453\">Modifier_FantasticStory_BaseAbility_0020_sub</a>",
                   "valuePerStack": {
                     "TempHP_get": {
-                      "operator": "Variables[0] (TempHP) || RETURN",
-                      "displayLines": "TempHP",
-                      "constants": [],
-                      "variables": [
-                        "TempHP"
-                      ]
+                      "displayLines": "TempHP"
                     },
                     "ADF_1_get": {
-                      "operator": "Variables[0] (ADF_1) || RETURN",
-                      "displayLines": "ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "ADF_1"
-                      ]
+                      "displayLines": "ADF_1"
                     },
                     "ADF_2_get": {
-                      "operator": "Variables[0] (ADF_2) || RETURN",
-                      "displayLines": "ADF_2",
-                      "constants": [],
-                      "variables": [
-                        "ADF_2"
-                      ]
+                      "displayLines": "ADF_2"
                     },
                     "ADF_3_get": {
-                      "operator": "Variables[0] (ADF_3) || RETURN",
-                      "displayLines": "ADF_3",
-                      "constants": [],
-                      "variables": [
-                        "ADF_3"
-                      ]
+                      "displayLines": "ADF_3"
                     }
                   }
                 },
@@ -2036,12 +1804,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1353381518\">Modifier_FantasticStory_BaseAbility_0020_sub3</a>",
                       "valuePerStack": {
                         "TempHP_get": {
-                          "operator": "Variables[0] (TempHP) || RETURN",
-                          "displayLines": "TempHP",
-                          "constants": [],
-                          "variables": [
-                            "TempHP"
-                          ]
+                          "displayLines": "TempHP"
                         }
                       }
                     }
@@ -2089,12 +1852,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-769619478\">Modifier_FantasticStory_BaseAbility_0020_sub_preshow</a>",
                   "valuePerStack": {
                     "ADF_3_get": {
-                      "operator": "Variables[0] (ADF_3) || RETURN",
-                      "displayLines": "ADF_3",
-                      "constants": [],
-                      "variables": [
-                        "ADF_3"
-                      ]
+                      "displayLines": "ADF_3"
                     }
                   }
                 },
@@ -2125,12 +1883,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1403714375\">Modifier_FantasticStory_BaseAbility_0020_sub6</a>",
                       "valuePerStack": {
                         "TempHP_get": {
-                          "operator": "Variables[0] (TempHP) || RETURN",
-                          "displayLines": "TempHP",
-                          "constants": [],
-                          "variables": [
-                            "TempHP"
-                          ]
+                          "displayLines": "TempHP"
                         }
                       }
                     }
@@ -2188,12 +1941,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1336603899\">Modifier_FantasticStory_BaseAbility_0020_sub2</a>",
                       "valuePerStack": {
                         "TempHP_get": {
-                          "operator": "Variables[0] (TempHP) || RETURN",
-                          "displayLines": "TempHP",
-                          "constants": [],
-                          "variables": [
-                            "TempHP"
-                          ]
+                          "displayLines": "TempHP"
                         }
                       }
                     }
@@ -2245,20 +1993,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1437269613\">Modifier_FantasticStory_BaseAbility_0020_sub4</a>[<span class=\"descriptionNumberColor\">Verification</span>]",
                       "valuePerStack": {
                         "DmgAddedRatio": {
-                          "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0026_ADF_1) || RETURN",
-                          "displayLines": "DV_FantasticStory_PlusAbility_0026_ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_PlusAbility_0026_ADF_1"
-                          ]
+                          "displayLines": "DV_FantasticStory_PlusAbility_0026_ADF_1"
                         },
                         "SpdAddedRatio": {
-                          "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0026_ADF_2) || RETURN",
-                          "displayLines": "DV_FantasticStory_PlusAbility_0026_ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_PlusAbility_0026_ADF_2"
-                          ]
+                          "displayLines": "DV_FantasticStory_PlusAbility_0026_ADF_2"
                         }
                       }
                     }
@@ -2291,12 +2029,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-769619478\">Modifier_FantasticStory_BaseAbility_0020_sub_preshow</a>",
               "valuePerStack": {
                 "ADF_3_get": {
-                  "operator": "Variables[0] (ADF_3) || RETURN",
-                  "displayLines": "ADF_3",
-                  "constants": [],
-                  "variables": [
-                    "ADF_3"
-                  ]
+                  "displayLines": "ADF_3"
                 }
               }
             },
@@ -2319,12 +2052,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1336603899\">Modifier_FantasticStory_BaseAbility_0020_sub2</a>",
                   "valuePerStack": {
                     "TempHP_get": {
-                      "operator": "Variables[0] (TempHP) || RETURN",
-                      "displayLines": "TempHP",
-                      "constants": [],
-                      "variables": [
-                        "TempHP"
-                      ]
+                      "displayLines": "TempHP"
                     }
                   }
                 }
@@ -2349,12 +2077,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1353381518\">Modifier_FantasticStory_BaseAbility_0020_sub3</a>",
                   "valuePerStack": {
                     "TempHP_get": {
-                      "operator": "Variables[0] (TempHP) || RETURN",
-                      "displayLines": "TempHP",
-                      "constants": [],
-                      "variables": [
-                        "TempHP"
-                      ]
+                      "displayLines": "TempHP"
                     }
                   }
                 }
@@ -2402,14 +2125,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (DV_Plus6_WarlockCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(DV_Plus6_WarlockCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "DV_Plus6_WarlockCount"
-                        ]
+                        "displayLines": "(DV_Plus6_WarlockCount + 1)"
                       },
                       "variableName": "DV_Plus6_WarlockCount"
                     }
@@ -2433,20 +2149,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1437269613\">Modifier_FantasticStory_BaseAbility_0020_sub4</a>[<span class=\"descriptionNumberColor\">Verification</span>]",
                       "valuePerStack": {
                         "DmgAddedRatio": {
-                          "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0026_ADF_1) || RETURN",
-                          "displayLines": "DV_FantasticStory_PlusAbility_0026_ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_PlusAbility_0026_ADF_1"
-                          ]
+                          "displayLines": "DV_FantasticStory_PlusAbility_0026_ADF_1"
                         },
                         "SpdAddedRatio": {
-                          "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0026_ADF_2) || RETURN",
-                          "displayLines": "DV_FantasticStory_PlusAbility_0026_ADF_2",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_PlusAbility_0026_ADF_2"
-                          ]
+                          "displayLines": "DV_FantasticStory_PlusAbility_0026_ADF_2"
                         }
                       }
                     }
@@ -2481,12 +2187,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1403714375\">Modifier_FantasticStory_BaseAbility_0020_sub6</a>",
                   "valuePerStack": {
                     "TempHP_get": {
-                      "operator": "Variables[0] (TempHP) || RETURN",
-                      "displayLines": "TempHP",
-                      "constants": [],
-                      "variables": [
-                        "TempHP"
-                      ]
+                      "displayLines": "TempHP"
                     }
                   }
                 },

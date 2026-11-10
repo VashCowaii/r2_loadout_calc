@@ -81,12 +81,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceQuantumPEN</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -150,12 +145,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -261,13 +251,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_RateLayer) || Variables[1] (Jade_Passive_BPBuffAddLayer) || ADD || RETURN",
-                        "displayLines": "(_RateLayer + Jade_Passive_BPBuffAddLayer)",
-                        "constants": [],
-                        "variables": [
-                          "_RateLayer",
-                          "Jade_Passive_BPBuffAddLayer"
-                        ]
+                        "displayLines": "(_RateLayer + Jade_Passive_BPBuffAddLayer)"
                       },
                       "variableName": "_RateLayer"
                     }
@@ -366,12 +350,7 @@ const configAbility = {
                     "value1": "MDF_Layer",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (15) || RETURN",
-                      "displayLines": "15",
-                      "constants": [],
-                      "variables": [
-                        15
-                      ]
+                      "displayLines": "15"
                     }
                   }
                 ]
@@ -386,12 +365,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-759179558\">Jade_Eidolon2_CriticalChance</a>[<span class=\"descriptionNumberColor\">Morality? Herein Authenticated</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.18) || RETURN",
-                      "displayLines": "0.18",
-                      "constants": [],
-                      "variables": [
-                        0.18
-                      ]
+                      "displayLines": "0.18"
                     }
                   }
                 }
@@ -405,13 +379,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "MDF_Layer"
-                ]
+                "displayLines": "(MDF_PropertyValue * MDF_Layer)"
               }
             },
             {
@@ -429,13 +397,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue2) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue2 * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue2",
-                      "MDF_Layer"
-                    ]
+                    "displayLines": "(MDF_PropertyValue2 * MDF_Layer)"
                   }
                 },
                 {

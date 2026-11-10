@@ -78,12 +78,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (MDF_SPValue) || RETURN",
-                        "displayLines": "MDF_SPValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_SPValue"
-                        ]
+                        "displayLines": "MDF_SPValue"
                       },
                       "isFixed": "(Fixed)"
                     }
@@ -186,13 +181,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_BaseHP) || Variables[1] (MDF_BaseAttack) || SUB || RETURN",
-                    "displayLines": "(MDF_BaseHP - MDF_BaseAttack)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_BaseHP",
-                      "MDF_BaseAttack"
-                    ]
+                    "displayLines": "(MDF_BaseHP - MDF_BaseAttack)"
                   }
                 }
               ]
@@ -245,12 +234,7 @@ const compositeAbilityObject = {
             "dmgFormula": "Max HP Scaling",
             "HitSplit": 0.5,
             "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
+              "displayLines": "Blast Toughness Value"
             },
             "Tags": null
           }
@@ -272,12 +256,7 @@ const compositeAbilityObject = {
             "dmgFormula": "Max HP Scaling",
             "HitSplit": 0.5,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"

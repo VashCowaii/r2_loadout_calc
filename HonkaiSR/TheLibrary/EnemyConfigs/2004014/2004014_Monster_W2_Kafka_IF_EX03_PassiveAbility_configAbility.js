@@ -31,20 +31,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1727559793\">Enemy_W2_Kafka_IF_EnemyCount</a>",
           "valuePerStack": {
             "MDF_ShowValue1": {
-              "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-              "displayLines": "{[SkillEX03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX03[0]]}"
-              ]
+              "displayLines": "{[SkillEX03[0]]}"
             },
             "MDF_ShowValue2": {
-              "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-              "displayLines": "{[SkillEX03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX03[0]]}"
-              ]
+              "displayLines": "{[SkillEX03[0]]}"
             }
           }
         }

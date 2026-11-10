@@ -20,20 +20,10 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-919299430\">Enemy_W4_Serpent_Charge</a>[<span class=\"descriptionNumberColor\">Whirl</span>]",
       "stackLimit": {
-        "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-        "displayLines": "{[Skill03[0]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill03[0]]}"
-        ]
+        "displayLines": "{[Skill03[0]]}"
       },
       "addStacksPerTrigger": {
-        "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-        "displayLines": "{[Skill03[0]]}",
-        "constants": [],
-        "variables": [
-          "{[Skill03[0]]}"
-        ]
+        "displayLines": "{[Skill03[0]]}"
       }
     },
     {
@@ -56,21 +46,11 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "valuePerStack": {
             "MDF_DamageUpRatio_PerLayer": {
-              "operator": "Variables[0] (UnusedUnderThisBase_13031) || RETURN",
-              "displayLines": "UnusedUnderThisBase_13031",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_13031"
-              ]
+              "displayLines": "UnusedUnderThisBase_13031"
             }
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-            "displayLines": "{[Skill03[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[0]]}"
-            ]
+            "displayLines": "{[Skill03[0]]}"
           }
         }
       ]

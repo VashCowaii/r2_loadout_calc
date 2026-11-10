@@ -15,12 +15,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": {
-        "operator": "Variables[0] (Huimie_BeHitCounter) || RETURN",
-        "displayLines": "Huimie_BeHitCounter",
-        "constants": [],
-        "variables": [
-          "Huimie_BeHitCounter"
-        ]
+        "displayLines": "Huimie_BeHitCounter"
       },
       "execute": [
         {
@@ -32,12 +27,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
+              "displayLines": "{[SkillP01[0]]}"
             },
             "Toughness": null,
             "Tags": null

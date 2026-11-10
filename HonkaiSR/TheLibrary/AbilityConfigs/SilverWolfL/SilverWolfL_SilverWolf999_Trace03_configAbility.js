@@ -33,12 +33,7 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"2105895650\">SilverWolf999_ModifySP</a>",
                   "variables": {
                     "parameter[0]_AddValue": {
-                      "operator": "Variables[0] (20) || RETURN",
-                      "displayLines": "20",
-                      "constants": [],
-                      "variables": [
-                        20
-                      ]
+                      "displayLines": "20"
                     }
                   }
                 }

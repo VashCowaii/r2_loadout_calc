@@ -49,14 +49,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (HeadDelay) || Constants[0] (9.313226e-10) || SUB || RETURN",
-            "displayLines": "(HeadDelay - 9.313226e-10)",
-            "constants": [
-              9.313226e-10
-            ],
-            "variables": [
-              "HeadDelay"
-            ]
+            "displayLines": "(HeadDelay - 9.313226e-10)"
           },
           "variableName": "HeadDelay"
         }
@@ -93,14 +86,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (LimbDelay) || Constants[0] (9.313226e-10) || SUB || RETURN",
-            "displayLines": "(LimbDelay - 9.313226e-10)",
-            "constants": [
-              9.313226e-10
-            ],
-            "variables": [
-              "LimbDelay"
-            ]
+            "displayLines": "(LimbDelay - 9.313226e-10)"
           },
           "variableName": "LimbDelay"
         }
@@ -137,14 +123,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (TailDelay) || Constants[0] (9.313226e-10) || SUB || RETURN",
-            "displayLines": "(TailDelay - 9.313226e-10)",
-            "constants": [
-              9.313226e-10
-            ],
-            "variables": [
-              "TailDelay"
-            ]
+            "displayLines": "(TailDelay - 9.313226e-10)"
           },
           "variableName": "TailDelay"
         }
@@ -178,28 +157,13 @@ const configAbility = {
           },
           "variables": {
             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-              "operator": "Variables[0] ({[Skill03[3]]}) || RETURN",
-              "displayLines": "{[Skill03[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[3]]}"
-              ]
+              "displayLines": "{[Skill03[3]]}"
             },
             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-              "displayLines": "CurrentSpeed",
-              "constants": [],
-              "variables": [
-                "CurrentSpeed"
-              ]
+              "displayLines": "CurrentSpeed"
             },
             "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-              "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-              "displayLines": "{[PassiveSkill03[5]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill03[5]]}"
-              ]
+              "displayLines": "{[PassiveSkill03[5]]}"
             }
           }
         },
@@ -213,28 +177,13 @@ const configAbility = {
           },
           "variables": {
             "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-              "operator": "Variables[0] ({[Skill03[4]]}) || RETURN",
-              "displayLines": "{[Skill03[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[4]]}"
-              ]
+              "displayLines": "{[Skill03[4]]}"
             },
             "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-              "operator": "Variables[0] (CurrentSpeed) || RETURN",
-              "displayLines": "CurrentSpeed",
-              "constants": [],
-              "variables": [
-                "CurrentSpeed"
-              ]
+              "displayLines": "CurrentSpeed"
             },
             "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-              "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-              "displayLines": "{[PassiveSkill03[5]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill03[5]]}"
-              ]
+              "displayLines": "{[PassiveSkill03[5]]}"
             }
           }
         }
@@ -375,14 +324,7 @@ const configAbility = {
                             "target": "{{Parameter Target}}"
                           },
                           "constantValue": {
-                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                            "displayLines": "(MaxStance / 2)",
-                            "constants": [
-                              2
-                            ],
-                            "variables": [
-                              "MaxStance"
-                            ]
+                            "displayLines": "(MaxStance / 2)"
                           }
                         }
                       ],
@@ -403,14 +345,7 @@ const configAbility = {
                             "value1": "CurrentStance",
                             "compareType": "<",
                             "value2": {
-                              "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                              "displayLines": "(MaxStance / 2)",
-                              "constants": [
-                                2
-                              ],
-                              "variables": [
-                                "MaxStance"
-                              ]
+                              "displayLines": "(MaxStance / 2)"
                             }
                           },
                           "passed": [
@@ -421,14 +356,7 @@ const configAbility = {
                                 "target": "{{Parameter Target}}"
                               },
                               "constantValue": {
-                                "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                "displayLines": "(MaxStance / 2)",
-                                "constants": [
-                                  2
-                                ],
-                                "variables": [
-                                  "MaxStance"
-                                ]
+                                "displayLines": "(MaxStance / 2)"
                               }
                             }
                           ]
@@ -450,28 +378,13 @@ const configAbility = {
                       },
                       "variables": {
                         "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                          "operator": "Variables[0] (LimbDelay) || RETURN",
-                          "displayLines": "LimbDelay",
-                          "constants": [],
-                          "variables": [
-                            "LimbDelay"
-                          ]
+                          "displayLines": "LimbDelay"
                         },
                         "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                          "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                          "displayLines": "CurrentSpeed",
-                          "constants": [],
-                          "variables": [
-                            "CurrentSpeed"
-                          ]
+                          "displayLines": "CurrentSpeed"
                         },
                         "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                          "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill03[5]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill03[5]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill03[5]]}"
                         }
                       }
                     }
@@ -493,14 +406,7 @@ const configAbility = {
                         "value1": "CurrentStance",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                          "displayLines": "(MaxStance / 2)",
-                          "constants": [
-                            2
-                          ],
-                          "variables": [
-                            "MaxStance"
-                          ]
+                          "displayLines": "(MaxStance / 2)"
                         }
                       },
                       "passed": [
@@ -511,14 +417,7 @@ const configAbility = {
                             "target": "{{Parameter Target}}"
                           },
                           "constantValue": {
-                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                            "displayLines": "(MaxStance / 2)",
-                            "constants": [
-                              2
-                            ],
-                            "variables": [
-                              "MaxStance"
-                            ]
+                            "displayLines": "(MaxStance / 2)"
                           }
                         }
                       ]
@@ -538,28 +437,13 @@ const configAbility = {
                       },
                       "variables": {
                         "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                          "operator": "Variables[0] (LimbDelay) || RETURN",
-                          "displayLines": "LimbDelay",
-                          "constants": [],
-                          "variables": [
-                            "LimbDelay"
-                          ]
+                          "displayLines": "LimbDelay"
                         },
                         "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                          "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                          "displayLines": "CurrentSpeed",
-                          "constants": [],
-                          "variables": [
-                            "CurrentSpeed"
-                          ]
+                          "displayLines": "CurrentSpeed"
                         },
                         "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                          "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill03[5]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill03[5]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill03[5]]}"
                         }
                       }
                     }
@@ -675,14 +559,7 @@ const configAbility = {
                             "target": "{{Parameter Target}}"
                           },
                           "constantValue": {
-                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                            "displayLines": "(MaxStance / 2)",
-                            "constants": [
-                              2
-                            ],
-                            "variables": [
-                              "MaxStance"
-                            ]
+                            "displayLines": "(MaxStance / 2)"
                           }
                         }
                       ],
@@ -703,14 +580,7 @@ const configAbility = {
                             "value1": "CurrentStance",
                             "compareType": "<",
                             "value2": {
-                              "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                              "displayLines": "(MaxStance / 2)",
-                              "constants": [
-                                2
-                              ],
-                              "variables": [
-                                "MaxStance"
-                              ]
+                              "displayLines": "(MaxStance / 2)"
                             }
                           },
                           "passed": [
@@ -721,14 +591,7 @@ const configAbility = {
                                 "target": "{{Parameter Target}}"
                               },
                               "constantValue": {
-                                "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                "displayLines": "(MaxStance / 2)",
-                                "constants": [
-                                  2
-                                ],
-                                "variables": [
-                                  "MaxStance"
-                                ]
+                                "displayLines": "(MaxStance / 2)"
                               }
                             }
                           ]
@@ -750,28 +613,13 @@ const configAbility = {
                       },
                       "variables": {
                         "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                          "operator": "Variables[0] (HeadDelay) || RETURN",
-                          "displayLines": "HeadDelay",
-                          "constants": [],
-                          "variables": [
-                            "HeadDelay"
-                          ]
+                          "displayLines": "HeadDelay"
                         },
                         "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                          "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                          "displayLines": "CurrentSpeed",
-                          "constants": [],
-                          "variables": [
-                            "CurrentSpeed"
-                          ]
+                          "displayLines": "CurrentSpeed"
                         },
                         "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                          "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill03[5]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill03[5]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill03[5]]}"
                         }
                       }
                     }
@@ -793,14 +641,7 @@ const configAbility = {
                         "value1": "CurrentStance",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                          "displayLines": "(MaxStance / 2)",
-                          "constants": [
-                            2
-                          ],
-                          "variables": [
-                            "MaxStance"
-                          ]
+                          "displayLines": "(MaxStance / 2)"
                         }
                       },
                       "passed": [
@@ -811,14 +652,7 @@ const configAbility = {
                             "target": "{{Parameter Target}}"
                           },
                           "constantValue": {
-                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                            "displayLines": "(MaxStance / 2)",
-                            "constants": [
-                              2
-                            ],
-                            "variables": [
-                              "MaxStance"
-                            ]
+                            "displayLines": "(MaxStance / 2)"
                           }
                         }
                       ]
@@ -838,28 +672,13 @@ const configAbility = {
                       },
                       "variables": {
                         "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                          "operator": "Variables[0] (HeadDelay) || RETURN",
-                          "displayLines": "HeadDelay",
-                          "constants": [],
-                          "variables": [
-                            "HeadDelay"
-                          ]
+                          "displayLines": "HeadDelay"
                         },
                         "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                          "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                          "displayLines": "CurrentSpeed",
-                          "constants": [],
-                          "variables": [
-                            "CurrentSpeed"
-                          ]
+                          "displayLines": "CurrentSpeed"
                         },
                         "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                          "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill03[5]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill03[5]]}"
-                          ]
+                          "displayLines": "{[PassiveSkill03[5]]}"
                         }
                       }
                     }
@@ -890,12 +709,7 @@ const configAbility = {
                     "value1": "MainDelay",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (HeadDelay) || RETURN",
-                      "displayLines": "HeadDelay",
-                      "constants": [],
-                      "variables": [
-                        "HeadDelay"
-                      ]
+                      "displayLines": "HeadDelay"
                     }
                   },
                   "passed": [
@@ -964,12 +778,7 @@ const configAbility = {
                 "value1": "HeadDelay",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (TailDelay) || RETURN",
-                  "displayLines": "TailDelay",
-                  "constants": [],
-                  "variables": [
-                    "TailDelay"
-                  ]
+                  "displayLines": "TailDelay"
                 }
               },
               "passed": [
@@ -980,12 +789,7 @@ const configAbility = {
                     "value1": "TailDelay",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (LimbDelay) || RETURN",
-                      "displayLines": "LimbDelay",
-                      "constants": [],
-                      "variables": [
-                        "LimbDelay"
-                      ]
+                      "displayLines": "LimbDelay"
                     }
                   },
                   "passed": [
@@ -1123,14 +927,7 @@ const configAbility = {
                                     "value1": "CurrentStance",
                                     "compareType": "<",
                                     "value2": {
-                                      "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                      "displayLines": "(MaxStance / 2)",
-                                      "constants": [
-                                        2
-                                      ],
-                                      "variables": [
-                                        "MaxStance"
-                                      ]
+                                      "displayLines": "(MaxStance / 2)"
                                     }
                                   },
                                   "passed": [
@@ -1141,14 +938,7 @@ const configAbility = {
                                         "target": "{{Parameter Target}}"
                                       },
                                       "constantValue": {
-                                        "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                        "displayLines": "(MaxStance / 2)",
-                                        "constants": [
-                                          2
-                                        ],
-                                        "variables": [
-                                          "MaxStance"
-                                        ]
+                                        "displayLines": "(MaxStance / 2)"
                                       }
                                     }
                                   ]
@@ -1170,28 +960,13 @@ const configAbility = {
                               },
                               "variables": {
                                 "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                  "operator": "Variables[0] (TailDelay) || RETURN",
-                                  "displayLines": "TailDelay",
-                                  "constants": [],
-                                  "variables": [
-                                    "TailDelay"
-                                  ]
+                                  "displayLines": "TailDelay"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                  "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                  "displayLines": "CurrentSpeed",
-                                  "constants": [],
-                                  "variables": [
-                                    "CurrentSpeed"
-                                  ]
+                                  "displayLines": "CurrentSpeed"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                  "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                  "displayLines": "{[PassiveSkill03[5]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[PassiveSkill03[5]]}"
-                                  ]
+                                  "displayLines": "{[PassiveSkill03[5]]}"
                                 }
                               }
                             }
@@ -1213,14 +988,7 @@ const configAbility = {
                                 "value1": "CurrentStance",
                                 "compareType": "<",
                                 "value2": {
-                                  "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                  "displayLines": "(MaxStance / 2)",
-                                  "constants": [
-                                    2
-                                  ],
-                                  "variables": [
-                                    "MaxStance"
-                                  ]
+                                  "displayLines": "(MaxStance / 2)"
                                 }
                               },
                               "passed": [
@@ -1231,14 +999,7 @@ const configAbility = {
                                     "target": "{{Parameter Target}}"
                                   },
                                   "constantValue": {
-                                    "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                    "displayLines": "(MaxStance / 2)",
-                                    "constants": [
-                                      2
-                                    ],
-                                    "variables": [
-                                      "MaxStance"
-                                    ]
+                                    "displayLines": "(MaxStance / 2)"
                                   }
                                 }
                               ]
@@ -1258,28 +1019,13 @@ const configAbility = {
                               },
                               "variables": {
                                 "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                  "operator": "Variables[0] (TailDelay) || RETURN",
-                                  "displayLines": "TailDelay",
-                                  "constants": [],
-                                  "variables": [
-                                    "TailDelay"
-                                  ]
+                                  "displayLines": "TailDelay"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                  "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                  "displayLines": "CurrentSpeed",
-                                  "constants": [],
-                                  "variables": [
-                                    "CurrentSpeed"
-                                  ]
+                                  "displayLines": "CurrentSpeed"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                  "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                  "displayLines": "{[PassiveSkill03[5]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[PassiveSkill03[5]]}"
-                                  ]
+                                  "displayLines": "{[PassiveSkill03[5]]}"
                                 }
                               }
                             }
@@ -1395,14 +1141,7 @@ const configAbility = {
                                     "target": "{{Parameter Target}}"
                                   },
                                   "constantValue": {
-                                    "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                    "displayLines": "(MaxStance / 2)",
-                                    "constants": [
-                                      2
-                                    ],
-                                    "variables": [
-                                      "MaxStance"
-                                    ]
+                                    "displayLines": "(MaxStance / 2)"
                                   }
                                 }
                               ],
@@ -1423,14 +1162,7 @@ const configAbility = {
                                     "value1": "CurrentStance",
                                     "compareType": "<",
                                     "value2": {
-                                      "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                      "displayLines": "(MaxStance / 2)",
-                                      "constants": [
-                                        2
-                                      ],
-                                      "variables": [
-                                        "MaxStance"
-                                      ]
+                                      "displayLines": "(MaxStance / 2)"
                                     }
                                   },
                                   "passed": [
@@ -1441,14 +1173,7 @@ const configAbility = {
                                         "target": "{{Parameter Target}}"
                                       },
                                       "constantValue": {
-                                        "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                        "displayLines": "(MaxStance / 2)",
-                                        "constants": [
-                                          2
-                                        ],
-                                        "variables": [
-                                          "MaxStance"
-                                        ]
+                                        "displayLines": "(MaxStance / 2)"
                                       }
                                     }
                                   ]
@@ -1470,28 +1195,13 @@ const configAbility = {
                               },
                               "variables": {
                                 "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                  "operator": "Variables[0] (HeadDelay) || RETURN",
-                                  "displayLines": "HeadDelay",
-                                  "constants": [],
-                                  "variables": [
-                                    "HeadDelay"
-                                  ]
+                                  "displayLines": "HeadDelay"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                  "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                  "displayLines": "CurrentSpeed",
-                                  "constants": [],
-                                  "variables": [
-                                    "CurrentSpeed"
-                                  ]
+                                  "displayLines": "CurrentSpeed"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                  "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                  "displayLines": "{[PassiveSkill03[5]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[PassiveSkill03[5]]}"
-                                  ]
+                                  "displayLines": "{[PassiveSkill03[5]]}"
                                 }
                               }
                             }
@@ -1513,14 +1223,7 @@ const configAbility = {
                                 "value1": "CurrentStance",
                                 "compareType": "<",
                                 "value2": {
-                                  "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                  "displayLines": "(MaxStance / 2)",
-                                  "constants": [
-                                    2
-                                  ],
-                                  "variables": [
-                                    "MaxStance"
-                                  ]
+                                  "displayLines": "(MaxStance / 2)"
                                 }
                               },
                               "passed": [
@@ -1531,14 +1234,7 @@ const configAbility = {
                                     "target": "{{Parameter Target}}"
                                   },
                                   "constantValue": {
-                                    "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                    "displayLines": "(MaxStance / 2)",
-                                    "constants": [
-                                      2
-                                    ],
-                                    "variables": [
-                                      "MaxStance"
-                                    ]
+                                    "displayLines": "(MaxStance / 2)"
                                   }
                                 }
                               ]
@@ -1558,28 +1254,13 @@ const configAbility = {
                               },
                               "variables": {
                                 "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                  "operator": "Variables[0] (HeadDelay) || RETURN",
-                                  "displayLines": "HeadDelay",
-                                  "constants": [],
-                                  "variables": [
-                                    "HeadDelay"
-                                  ]
+                                  "displayLines": "HeadDelay"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                  "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                  "displayLines": "CurrentSpeed",
-                                  "constants": [],
-                                  "variables": [
-                                    "CurrentSpeed"
-                                  ]
+                                  "displayLines": "CurrentSpeed"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                  "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                  "displayLines": "{[PassiveSkill03[5]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[PassiveSkill03[5]]}"
-                                  ]
+                                  "displayLines": "{[PassiveSkill03[5]]}"
                                 }
                               }
                             }
@@ -1596,12 +1277,7 @@ const configAbility = {
                         "value1": "HeadDelay",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (LimbDelay) || RETURN",
-                          "displayLines": "LimbDelay",
-                          "constants": [],
-                          "variables": [
-                            "LimbDelay"
-                          ]
+                          "displayLines": "LimbDelay"
                         }
                       },
                       "passed": [
@@ -1718,14 +1394,7 @@ const configAbility = {
                                         "target": "{{Parameter Target}}"
                                       },
                                       "constantValue": {
-                                        "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                        "displayLines": "(MaxStance / 2)",
-                                        "constants": [
-                                          2
-                                        ],
-                                        "variables": [
-                                          "MaxStance"
-                                        ]
+                                        "displayLines": "(MaxStance / 2)"
                                       }
                                     }
                                   ],
@@ -1746,14 +1415,7 @@ const configAbility = {
                                         "value1": "CurrentStance",
                                         "compareType": "<",
                                         "value2": {
-                                          "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                          "displayLines": "(MaxStance / 2)",
-                                          "constants": [
-                                            2
-                                          ],
-                                          "variables": [
-                                            "MaxStance"
-                                          ]
+                                          "displayLines": "(MaxStance / 2)"
                                         }
                                       },
                                       "passed": [
@@ -1764,14 +1426,7 @@ const configAbility = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "constantValue": {
-                                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                            "displayLines": "(MaxStance / 2)",
-                                            "constants": [
-                                              2
-                                            ],
-                                            "variables": [
-                                              "MaxStance"
-                                            ]
+                                            "displayLines": "(MaxStance / 2)"
                                           }
                                         }
                                       ]
@@ -1793,28 +1448,13 @@ const configAbility = {
                                   },
                                   "variables": {
                                     "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                      "operator": "Variables[0] (LimbDelay) || RETURN",
-                                      "displayLines": "LimbDelay",
-                                      "constants": [],
-                                      "variables": [
-                                        "LimbDelay"
-                                      ]
+                                      "displayLines": "LimbDelay"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                      "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                      "displayLines": "CurrentSpeed",
-                                      "constants": [],
-                                      "variables": [
-                                        "CurrentSpeed"
-                                      ]
+                                      "displayLines": "CurrentSpeed"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                      "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                      "displayLines": "{[PassiveSkill03[5]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[PassiveSkill03[5]]}"
-                                      ]
+                                      "displayLines": "{[PassiveSkill03[5]]}"
                                     }
                                   }
                                 }
@@ -1836,14 +1476,7 @@ const configAbility = {
                                     "value1": "CurrentStance",
                                     "compareType": "<",
                                     "value2": {
-                                      "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                      "displayLines": "(MaxStance / 2)",
-                                      "constants": [
-                                        2
-                                      ],
-                                      "variables": [
-                                        "MaxStance"
-                                      ]
+                                      "displayLines": "(MaxStance / 2)"
                                     }
                                   },
                                   "passed": [
@@ -1854,14 +1487,7 @@ const configAbility = {
                                         "target": "{{Parameter Target}}"
                                       },
                                       "constantValue": {
-                                        "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                        "displayLines": "(MaxStance / 2)",
-                                        "constants": [
-                                          2
-                                        ],
-                                        "variables": [
-                                          "MaxStance"
-                                        ]
+                                        "displayLines": "(MaxStance / 2)"
                                       }
                                     }
                                   ]
@@ -1886,28 +1512,13 @@ const configAbility = {
                                   },
                                   "variables": {
                                     "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                      "operator": "Variables[0] (LimbDelay) || RETURN",
-                                      "displayLines": "LimbDelay",
-                                      "constants": [],
-                                      "variables": [
-                                        "LimbDelay"
-                                      ]
+                                      "displayLines": "LimbDelay"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                      "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                      "displayLines": "CurrentSpeed",
-                                      "constants": [],
-                                      "variables": [
-                                        "CurrentSpeed"
-                                      ]
+                                      "displayLines": "CurrentSpeed"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                      "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                      "displayLines": "{[PassiveSkill03[5]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[PassiveSkill03[5]]}"
-                                      ]
+                                      "displayLines": "{[PassiveSkill03[5]]}"
                                     }
                                   }
                                 }
@@ -2023,14 +1634,7 @@ const configAbility = {
                                         "target": "{{Parameter Target}}"
                                       },
                                       "constantValue": {
-                                        "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                        "displayLines": "(MaxStance / 2)",
-                                        "constants": [
-                                          2
-                                        ],
-                                        "variables": [
-                                          "MaxStance"
-                                        ]
+                                        "displayLines": "(MaxStance / 2)"
                                       }
                                     }
                                   ],
@@ -2051,14 +1655,7 @@ const configAbility = {
                                         "value1": "CurrentStance",
                                         "compareType": "<",
                                         "value2": {
-                                          "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                          "displayLines": "(MaxStance / 2)",
-                                          "constants": [
-                                            2
-                                          ],
-                                          "variables": [
-                                            "MaxStance"
-                                          ]
+                                          "displayLines": "(MaxStance / 2)"
                                         }
                                       },
                                       "passed": [
@@ -2069,14 +1666,7 @@ const configAbility = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "constantValue": {
-                                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                            "displayLines": "(MaxStance / 2)",
-                                            "constants": [
-                                              2
-                                            ],
-                                            "variables": [
-                                              "MaxStance"
-                                            ]
+                                            "displayLines": "(MaxStance / 2)"
                                           }
                                         }
                                       ]
@@ -2098,28 +1688,13 @@ const configAbility = {
                                   },
                                   "variables": {
                                     "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                      "operator": "Variables[0] (HeadDelay) || RETURN",
-                                      "displayLines": "HeadDelay",
-                                      "constants": [],
-                                      "variables": [
-                                        "HeadDelay"
-                                      ]
+                                      "displayLines": "HeadDelay"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                      "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                      "displayLines": "CurrentSpeed",
-                                      "constants": [],
-                                      "variables": [
-                                        "CurrentSpeed"
-                                      ]
+                                      "displayLines": "CurrentSpeed"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                      "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                      "displayLines": "{[PassiveSkill03[5]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[PassiveSkill03[5]]}"
-                                      ]
+                                      "displayLines": "{[PassiveSkill03[5]]}"
                                     }
                                   }
                                 }
@@ -2141,14 +1716,7 @@ const configAbility = {
                                     "value1": "CurrentStance",
                                     "compareType": "<",
                                     "value2": {
-                                      "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                      "displayLines": "(MaxStance / 2)",
-                                      "constants": [
-                                        2
-                                      ],
-                                      "variables": [
-                                        "MaxStance"
-                                      ]
+                                      "displayLines": "(MaxStance / 2)"
                                     }
                                   },
                                   "passed": [
@@ -2159,14 +1727,7 @@ const configAbility = {
                                         "target": "{{Parameter Target}}"
                                       },
                                       "constantValue": {
-                                        "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                        "displayLines": "(MaxStance / 2)",
-                                        "constants": [
-                                          2
-                                        ],
-                                        "variables": [
-                                          "MaxStance"
-                                        ]
+                                        "displayLines": "(MaxStance / 2)"
                                       }
                                     }
                                   ]
@@ -2186,28 +1747,13 @@ const configAbility = {
                                   },
                                   "variables": {
                                     "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                      "operator": "Variables[0] (HeadDelay) || RETURN",
-                                      "displayLines": "HeadDelay",
-                                      "constants": [],
-                                      "variables": [
-                                        "HeadDelay"
-                                      ]
+                                      "displayLines": "HeadDelay"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                      "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                      "displayLines": "CurrentSpeed",
-                                      "constants": [],
-                                      "variables": [
-                                        "CurrentSpeed"
-                                      ]
+                                      "displayLines": "CurrentSpeed"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                      "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                      "displayLines": "{[PassiveSkill03[5]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[PassiveSkill03[5]]}"
-                                      ]
+                                      "displayLines": "{[PassiveSkill03[5]]}"
                                     }
                                   }
                                 }
@@ -2330,14 +1876,7 @@ const configAbility = {
                                         "target": "{{Parameter Target}}"
                                       },
                                       "constantValue": {
-                                        "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                        "displayLines": "(MaxStance / 2)",
-                                        "constants": [
-                                          2
-                                        ],
-                                        "variables": [
-                                          "MaxStance"
-                                        ]
+                                        "displayLines": "(MaxStance / 2)"
                                       }
                                     }
                                   ],
@@ -2358,14 +1897,7 @@ const configAbility = {
                                         "value1": "CurrentStance",
                                         "compareType": "<",
                                         "value2": {
-                                          "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                          "displayLines": "(MaxStance / 2)",
-                                          "constants": [
-                                            2
-                                          ],
-                                          "variables": [
-                                            "MaxStance"
-                                          ]
+                                          "displayLines": "(MaxStance / 2)"
                                         }
                                       },
                                       "passed": [
@@ -2376,14 +1908,7 @@ const configAbility = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "constantValue": {
-                                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                            "displayLines": "(MaxStance / 2)",
-                                            "constants": [
-                                              2
-                                            ],
-                                            "variables": [
-                                              "MaxStance"
-                                            ]
+                                            "displayLines": "(MaxStance / 2)"
                                           }
                                         }
                                       ]
@@ -2405,28 +1930,13 @@ const configAbility = {
                                   },
                                   "variables": {
                                     "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                      "operator": "Variables[0] (HeadDelay) || RETURN",
-                                      "displayLines": "HeadDelay",
-                                      "constants": [],
-                                      "variables": [
-                                        "HeadDelay"
-                                      ]
+                                      "displayLines": "HeadDelay"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                      "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                      "displayLines": "CurrentSpeed",
-                                      "constants": [],
-                                      "variables": [
-                                        "CurrentSpeed"
-                                      ]
+                                      "displayLines": "CurrentSpeed"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                      "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                      "displayLines": "{[PassiveSkill03[5]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[PassiveSkill03[5]]}"
-                                      ]
+                                      "displayLines": "{[PassiveSkill03[5]]}"
                                     }
                                   }
                                 }
@@ -2448,14 +1958,7 @@ const configAbility = {
                                     "value1": "CurrentStance",
                                     "compareType": "<",
                                     "value2": {
-                                      "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                      "displayLines": "(MaxStance / 2)",
-                                      "constants": [
-                                        2
-                                      ],
-                                      "variables": [
-                                        "MaxStance"
-                                      ]
+                                      "displayLines": "(MaxStance / 2)"
                                     }
                                   },
                                   "passed": [
@@ -2466,14 +1969,7 @@ const configAbility = {
                                         "target": "{{Parameter Target}}"
                                       },
                                       "constantValue": {
-                                        "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                        "displayLines": "(MaxStance / 2)",
-                                        "constants": [
-                                          2
-                                        ],
-                                        "variables": [
-                                          "MaxStance"
-                                        ]
+                                        "displayLines": "(MaxStance / 2)"
                                       }
                                     }
                                   ]
@@ -2493,28 +1989,13 @@ const configAbility = {
                                   },
                                   "variables": {
                                     "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                      "operator": "Variables[0] (HeadDelay) || RETURN",
-                                      "displayLines": "HeadDelay",
-                                      "constants": [],
-                                      "variables": [
-                                        "HeadDelay"
-                                      ]
+                                      "displayLines": "HeadDelay"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                      "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                      "displayLines": "CurrentSpeed",
-                                      "constants": [],
-                                      "variables": [
-                                        "CurrentSpeed"
-                                      ]
+                                      "displayLines": "CurrentSpeed"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                      "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                      "displayLines": "{[PassiveSkill03[5]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[PassiveSkill03[5]]}"
-                                      ]
+                                      "displayLines": "{[PassiveSkill03[5]]}"
                                     }
                                   }
                                 }
@@ -2630,14 +2111,7 @@ const configAbility = {
                                         "target": "{{Parameter Target}}"
                                       },
                                       "constantValue": {
-                                        "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                        "displayLines": "(MaxStance / 2)",
-                                        "constants": [
-                                          2
-                                        ],
-                                        "variables": [
-                                          "MaxStance"
-                                        ]
+                                        "displayLines": "(MaxStance / 2)"
                                       }
                                     }
                                   ],
@@ -2658,14 +2132,7 @@ const configAbility = {
                                         "value1": "CurrentStance",
                                         "compareType": "<",
                                         "value2": {
-                                          "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                          "displayLines": "(MaxStance / 2)",
-                                          "constants": [
-                                            2
-                                          ],
-                                          "variables": [
-                                            "MaxStance"
-                                          ]
+                                          "displayLines": "(MaxStance / 2)"
                                         }
                                       },
                                       "passed": [
@@ -2676,14 +2143,7 @@ const configAbility = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "constantValue": {
-                                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                            "displayLines": "(MaxStance / 2)",
-                                            "constants": [
-                                              2
-                                            ],
-                                            "variables": [
-                                              "MaxStance"
-                                            ]
+                                            "displayLines": "(MaxStance / 2)"
                                           }
                                         }
                                       ]
@@ -2705,28 +2165,13 @@ const configAbility = {
                                   },
                                   "variables": {
                                     "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                      "operator": "Variables[0] (LimbDelay) || RETURN",
-                                      "displayLines": "LimbDelay",
-                                      "constants": [],
-                                      "variables": [
-                                        "LimbDelay"
-                                      ]
+                                      "displayLines": "LimbDelay"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                      "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                      "displayLines": "CurrentSpeed",
-                                      "constants": [],
-                                      "variables": [
-                                        "CurrentSpeed"
-                                      ]
+                                      "displayLines": "CurrentSpeed"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                      "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                      "displayLines": "{[PassiveSkill03[5]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[PassiveSkill03[5]]}"
-                                      ]
+                                      "displayLines": "{[PassiveSkill03[5]]}"
                                     }
                                   }
                                 }
@@ -2748,14 +2193,7 @@ const configAbility = {
                                     "value1": "CurrentStance",
                                     "compareType": "<",
                                     "value2": {
-                                      "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                      "displayLines": "(MaxStance / 2)",
-                                      "constants": [
-                                        2
-                                      ],
-                                      "variables": [
-                                        "MaxStance"
-                                      ]
+                                      "displayLines": "(MaxStance / 2)"
                                     }
                                   },
                                   "passed": [
@@ -2766,14 +2204,7 @@ const configAbility = {
                                         "target": "{{Parameter Target}}"
                                       },
                                       "constantValue": {
-                                        "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                        "displayLines": "(MaxStance / 2)",
-                                        "constants": [
-                                          2
-                                        ],
-                                        "variables": [
-                                          "MaxStance"
-                                        ]
+                                        "displayLines": "(MaxStance / 2)"
                                       }
                                     }
                                   ]
@@ -2793,28 +2224,13 @@ const configAbility = {
                                   },
                                   "variables": {
                                     "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                      "operator": "Variables[0] (LimbDelay) || RETURN",
-                                      "displayLines": "LimbDelay",
-                                      "constants": [],
-                                      "variables": [
-                                        "LimbDelay"
-                                      ]
+                                      "displayLines": "LimbDelay"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                      "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                      "displayLines": "CurrentSpeed",
-                                      "constants": [],
-                                      "variables": [
-                                        "CurrentSpeed"
-                                      ]
+                                      "displayLines": "CurrentSpeed"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                      "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                      "displayLines": "{[PassiveSkill03[5]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[PassiveSkill03[5]]}"
-                                      ]
+                                      "displayLines": "{[PassiveSkill03[5]]}"
                                     }
                                   }
                                 }
@@ -2835,12 +2251,7 @@ const configAbility = {
                     "value1": "HeadDelay",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (LimbDelay) || RETURN",
-                      "displayLines": "LimbDelay",
-                      "constants": [],
-                      "variables": [
-                        "LimbDelay"
-                      ]
+                      "displayLines": "LimbDelay"
                     }
                   },
                   "passed": [
@@ -2957,14 +2368,7 @@ const configAbility = {
                                     "target": "{{Parameter Target}}"
                                   },
                                   "constantValue": {
-                                    "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                    "displayLines": "(MaxStance / 2)",
-                                    "constants": [
-                                      2
-                                    ],
-                                    "variables": [
-                                      "MaxStance"
-                                    ]
+                                    "displayLines": "(MaxStance / 2)"
                                   }
                                 }
                               ],
@@ -2985,14 +2389,7 @@ const configAbility = {
                                     "value1": "CurrentStance",
                                     "compareType": "<",
                                     "value2": {
-                                      "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                      "displayLines": "(MaxStance / 2)",
-                                      "constants": [
-                                        2
-                                      ],
-                                      "variables": [
-                                        "MaxStance"
-                                      ]
+                                      "displayLines": "(MaxStance / 2)"
                                     }
                                   },
                                   "passed": [
@@ -3003,14 +2400,7 @@ const configAbility = {
                                         "target": "{{Parameter Target}}"
                                       },
                                       "constantValue": {
-                                        "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                        "displayLines": "(MaxStance / 2)",
-                                        "constants": [
-                                          2
-                                        ],
-                                        "variables": [
-                                          "MaxStance"
-                                        ]
+                                        "displayLines": "(MaxStance / 2)"
                                       }
                                     }
                                   ]
@@ -3032,28 +2422,13 @@ const configAbility = {
                               },
                               "variables": {
                                 "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                  "operator": "Variables[0] (HeadDelay) || RETURN",
-                                  "displayLines": "HeadDelay",
-                                  "constants": [],
-                                  "variables": [
-                                    "HeadDelay"
-                                  ]
+                                  "displayLines": "HeadDelay"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                  "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                  "displayLines": "CurrentSpeed",
-                                  "constants": [],
-                                  "variables": [
-                                    "CurrentSpeed"
-                                  ]
+                                  "displayLines": "CurrentSpeed"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                  "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                  "displayLines": "{[PassiveSkill03[5]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[PassiveSkill03[5]]}"
-                                  ]
+                                  "displayLines": "{[PassiveSkill03[5]]}"
                                 }
                               }
                             }
@@ -3075,14 +2450,7 @@ const configAbility = {
                                 "value1": "CurrentStance",
                                 "compareType": "<",
                                 "value2": {
-                                  "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                  "displayLines": "(MaxStance / 2)",
-                                  "constants": [
-                                    2
-                                  ],
-                                  "variables": [
-                                    "MaxStance"
-                                  ]
+                                  "displayLines": "(MaxStance / 2)"
                                 }
                               },
                               "passed": [
@@ -3093,14 +2461,7 @@ const configAbility = {
                                     "target": "{{Parameter Target}}"
                                   },
                                   "constantValue": {
-                                    "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                    "displayLines": "(MaxStance / 2)",
-                                    "constants": [
-                                      2
-                                    ],
-                                    "variables": [
-                                      "MaxStance"
-                                    ]
+                                    "displayLines": "(MaxStance / 2)"
                                   }
                                 }
                               ]
@@ -3120,28 +2481,13 @@ const configAbility = {
                               },
                               "variables": {
                                 "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                  "operator": "Variables[0] (HeadDelay) || RETURN",
-                                  "displayLines": "HeadDelay",
-                                  "constants": [],
-                                  "variables": [
-                                    "HeadDelay"
-                                  ]
+                                  "displayLines": "HeadDelay"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                  "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                  "displayLines": "CurrentSpeed",
-                                  "constants": [],
-                                  "variables": [
-                                    "CurrentSpeed"
-                                  ]
+                                  "displayLines": "CurrentSpeed"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                  "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                  "displayLines": "{[PassiveSkill03[5]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[PassiveSkill03[5]]}"
-                                  ]
+                                  "displayLines": "{[PassiveSkill03[5]]}"
                                 }
                               }
                             }
@@ -3257,14 +2603,7 @@ const configAbility = {
                                     "target": "{{Parameter Target}}"
                                   },
                                   "constantValue": {
-                                    "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                    "displayLines": "(MaxStance / 2)",
-                                    "constants": [
-                                      2
-                                    ],
-                                    "variables": [
-                                      "MaxStance"
-                                    ]
+                                    "displayLines": "(MaxStance / 2)"
                                   }
                                 }
                               ],
@@ -3285,14 +2624,7 @@ const configAbility = {
                                     "value1": "CurrentStance",
                                     "compareType": "<",
                                     "value2": {
-                                      "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                      "displayLines": "(MaxStance / 2)",
-                                      "constants": [
-                                        2
-                                      ],
-                                      "variables": [
-                                        "MaxStance"
-                                      ]
+                                      "displayLines": "(MaxStance / 2)"
                                     }
                                   },
                                   "passed": [
@@ -3303,14 +2635,7 @@ const configAbility = {
                                         "target": "{{Parameter Target}}"
                                       },
                                       "constantValue": {
-                                        "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                        "displayLines": "(MaxStance / 2)",
-                                        "constants": [
-                                          2
-                                        ],
-                                        "variables": [
-                                          "MaxStance"
-                                        ]
+                                        "displayLines": "(MaxStance / 2)"
                                       }
                                     }
                                   ]
@@ -3332,28 +2657,13 @@ const configAbility = {
                               },
                               "variables": {
                                 "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                  "operator": "Variables[0] (TailDelay) || RETURN",
-                                  "displayLines": "TailDelay",
-                                  "constants": [],
-                                  "variables": [
-                                    "TailDelay"
-                                  ]
+                                  "displayLines": "TailDelay"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                  "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                  "displayLines": "CurrentSpeed",
-                                  "constants": [],
-                                  "variables": [
-                                    "CurrentSpeed"
-                                  ]
+                                  "displayLines": "CurrentSpeed"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                  "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                  "displayLines": "{[PassiveSkill03[5]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[PassiveSkill03[5]]}"
-                                  ]
+                                  "displayLines": "{[PassiveSkill03[5]]}"
                                 }
                               }
                             }
@@ -3375,14 +2685,7 @@ const configAbility = {
                                 "value1": "CurrentStance",
                                 "compareType": "<",
                                 "value2": {
-                                  "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                  "displayLines": "(MaxStance / 2)",
-                                  "constants": [
-                                    2
-                                  ],
-                                  "variables": [
-                                    "MaxStance"
-                                  ]
+                                  "displayLines": "(MaxStance / 2)"
                                 }
                               },
                               "passed": [
@@ -3393,14 +2696,7 @@ const configAbility = {
                                     "target": "{{Parameter Target}}"
                                   },
                                   "constantValue": {
-                                    "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                    "displayLines": "(MaxStance / 2)",
-                                    "constants": [
-                                      2
-                                    ],
-                                    "variables": [
-                                      "MaxStance"
-                                    ]
+                                    "displayLines": "(MaxStance / 2)"
                                   }
                                 }
                               ]
@@ -3420,28 +2716,13 @@ const configAbility = {
                               },
                               "variables": {
                                 "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                  "operator": "Variables[0] (TailDelay) || RETURN",
-                                  "displayLines": "TailDelay",
-                                  "constants": [],
-                                  "variables": [
-                                    "TailDelay"
-                                  ]
+                                  "displayLines": "TailDelay"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                  "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                  "displayLines": "CurrentSpeed",
-                                  "constants": [],
-                                  "variables": [
-                                    "CurrentSpeed"
-                                  ]
+                                  "displayLines": "CurrentSpeed"
                                 },
                                 "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                  "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                  "displayLines": "{[PassiveSkill03[5]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[PassiveSkill03[5]]}"
-                                  ]
+                                  "displayLines": "{[PassiveSkill03[5]]}"
                                 }
                               }
                             }
@@ -3458,12 +2739,7 @@ const configAbility = {
                         "value1": "TailDelay",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (LimbDelay) || RETURN",
-                          "displayLines": "LimbDelay",
-                          "constants": [],
-                          "variables": [
-                            "LimbDelay"
-                          ]
+                          "displayLines": "LimbDelay"
                         }
                       },
                       "passed": [
@@ -3580,14 +2856,7 @@ const configAbility = {
                                         "target": "{{Parameter Target}}"
                                       },
                                       "constantValue": {
-                                        "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                        "displayLines": "(MaxStance / 2)",
-                                        "constants": [
-                                          2
-                                        ],
-                                        "variables": [
-                                          "MaxStance"
-                                        ]
+                                        "displayLines": "(MaxStance / 2)"
                                       }
                                     }
                                   ],
@@ -3608,14 +2877,7 @@ const configAbility = {
                                         "value1": "CurrentStance",
                                         "compareType": "<",
                                         "value2": {
-                                          "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                          "displayLines": "(MaxStance / 2)",
-                                          "constants": [
-                                            2
-                                          ],
-                                          "variables": [
-                                            "MaxStance"
-                                          ]
+                                          "displayLines": "(MaxStance / 2)"
                                         }
                                       },
                                       "passed": [
@@ -3626,14 +2888,7 @@ const configAbility = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "constantValue": {
-                                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                            "displayLines": "(MaxStance / 2)",
-                                            "constants": [
-                                              2
-                                            ],
-                                            "variables": [
-                                              "MaxStance"
-                                            ]
+                                            "displayLines": "(MaxStance / 2)"
                                           }
                                         }
                                       ]
@@ -3655,28 +2910,13 @@ const configAbility = {
                                   },
                                   "variables": {
                                     "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                      "operator": "Variables[0] (LimbDelay) || RETURN",
-                                      "displayLines": "LimbDelay",
-                                      "constants": [],
-                                      "variables": [
-                                        "LimbDelay"
-                                      ]
+                                      "displayLines": "LimbDelay"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                      "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                      "displayLines": "CurrentSpeed",
-                                      "constants": [],
-                                      "variables": [
-                                        "CurrentSpeed"
-                                      ]
+                                      "displayLines": "CurrentSpeed"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                      "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                      "displayLines": "{[PassiveSkill03[5]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[PassiveSkill03[5]]}"
-                                      ]
+                                      "displayLines": "{[PassiveSkill03[5]]}"
                                     }
                                   }
                                 }
@@ -3698,14 +2938,7 @@ const configAbility = {
                                     "value1": "CurrentStance",
                                     "compareType": "<",
                                     "value2": {
-                                      "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                      "displayLines": "(MaxStance / 2)",
-                                      "constants": [
-                                        2
-                                      ],
-                                      "variables": [
-                                        "MaxStance"
-                                      ]
+                                      "displayLines": "(MaxStance / 2)"
                                     }
                                   },
                                   "passed": [
@@ -3716,14 +2949,7 @@ const configAbility = {
                                         "target": "{{Parameter Target}}"
                                       },
                                       "constantValue": {
-                                        "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                        "displayLines": "(MaxStance / 2)",
-                                        "constants": [
-                                          2
-                                        ],
-                                        "variables": [
-                                          "MaxStance"
-                                        ]
+                                        "displayLines": "(MaxStance / 2)"
                                       }
                                     }
                                   ]
@@ -3743,28 +2969,13 @@ const configAbility = {
                                   },
                                   "variables": {
                                     "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                      "operator": "Variables[0] (LimbDelay) || RETURN",
-                                      "displayLines": "LimbDelay",
-                                      "constants": [],
-                                      "variables": [
-                                        "LimbDelay"
-                                      ]
+                                      "displayLines": "LimbDelay"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                      "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                      "displayLines": "CurrentSpeed",
-                                      "constants": [],
-                                      "variables": [
-                                        "CurrentSpeed"
-                                      ]
+                                      "displayLines": "CurrentSpeed"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                      "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                      "displayLines": "{[PassiveSkill03[5]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[PassiveSkill03[5]]}"
-                                      ]
+                                      "displayLines": "{[PassiveSkill03[5]]}"
                                     }
                                   }
                                 }
@@ -3880,14 +3091,7 @@ const configAbility = {
                                         "target": "{{Parameter Target}}"
                                       },
                                       "constantValue": {
-                                        "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                        "displayLines": "(MaxStance / 2)",
-                                        "constants": [
-                                          2
-                                        ],
-                                        "variables": [
-                                          "MaxStance"
-                                        ]
+                                        "displayLines": "(MaxStance / 2)"
                                       }
                                     }
                                   ],
@@ -3908,14 +3112,7 @@ const configAbility = {
                                         "value1": "CurrentStance",
                                         "compareType": "<",
                                         "value2": {
-                                          "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                          "displayLines": "(MaxStance / 2)",
-                                          "constants": [
-                                            2
-                                          ],
-                                          "variables": [
-                                            "MaxStance"
-                                          ]
+                                          "displayLines": "(MaxStance / 2)"
                                         }
                                       },
                                       "passed": [
@@ -3926,14 +3123,7 @@ const configAbility = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "constantValue": {
-                                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                            "displayLines": "(MaxStance / 2)",
-                                            "constants": [
-                                              2
-                                            ],
-                                            "variables": [
-                                              "MaxStance"
-                                            ]
+                                            "displayLines": "(MaxStance / 2)"
                                           }
                                         }
                                       ]
@@ -3955,28 +3145,13 @@ const configAbility = {
                                   },
                                   "variables": {
                                     "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                      "operator": "Variables[0] (TailDelay) || RETURN",
-                                      "displayLines": "TailDelay",
-                                      "constants": [],
-                                      "variables": [
-                                        "TailDelay"
-                                      ]
+                                      "displayLines": "TailDelay"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                      "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                      "displayLines": "CurrentSpeed",
-                                      "constants": [],
-                                      "variables": [
-                                        "CurrentSpeed"
-                                      ]
+                                      "displayLines": "CurrentSpeed"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                      "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                      "displayLines": "{[PassiveSkill03[5]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[PassiveSkill03[5]]}"
-                                      ]
+                                      "displayLines": "{[PassiveSkill03[5]]}"
                                     }
                                   }
                                 }
@@ -3998,14 +3173,7 @@ const configAbility = {
                                     "value1": "CurrentStance",
                                     "compareType": "<",
                                     "value2": {
-                                      "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                      "displayLines": "(MaxStance / 2)",
-                                      "constants": [
-                                        2
-                                      ],
-                                      "variables": [
-                                        "MaxStance"
-                                      ]
+                                      "displayLines": "(MaxStance / 2)"
                                     }
                                   },
                                   "passed": [
@@ -4016,14 +3184,7 @@ const configAbility = {
                                         "target": "{{Parameter Target}}"
                                       },
                                       "constantValue": {
-                                        "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                        "displayLines": "(MaxStance / 2)",
-                                        "constants": [
-                                          2
-                                        ],
-                                        "variables": [
-                                          "MaxStance"
-                                        ]
+                                        "displayLines": "(MaxStance / 2)"
                                       }
                                     }
                                   ]
@@ -4043,28 +3204,13 @@ const configAbility = {
                                   },
                                   "variables": {
                                     "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                      "operator": "Variables[0] (TailDelay) || RETURN",
-                                      "displayLines": "TailDelay",
-                                      "constants": [],
-                                      "variables": [
-                                        "TailDelay"
-                                      ]
+                                      "displayLines": "TailDelay"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                      "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                      "displayLines": "CurrentSpeed",
-                                      "constants": [],
-                                      "variables": [
-                                        "CurrentSpeed"
-                                      ]
+                                      "displayLines": "CurrentSpeed"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                      "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                      "displayLines": "{[PassiveSkill03[5]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[PassiveSkill03[5]]}"
-                                      ]
+                                      "displayLines": "{[PassiveSkill03[5]]}"
                                     }
                                   }
                                 }
@@ -4187,14 +3333,7 @@ const configAbility = {
                                         "target": "{{Parameter Target}}"
                                       },
                                       "constantValue": {
-                                        "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                        "displayLines": "(MaxStance / 2)",
-                                        "constants": [
-                                          2
-                                        ],
-                                        "variables": [
-                                          "MaxStance"
-                                        ]
+                                        "displayLines": "(MaxStance / 2)"
                                       }
                                     }
                                   ],
@@ -4215,14 +3354,7 @@ const configAbility = {
                                         "value1": "CurrentStance",
                                         "compareType": "<",
                                         "value2": {
-                                          "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                          "displayLines": "(MaxStance / 2)",
-                                          "constants": [
-                                            2
-                                          ],
-                                          "variables": [
-                                            "MaxStance"
-                                          ]
+                                          "displayLines": "(MaxStance / 2)"
                                         }
                                       },
                                       "passed": [
@@ -4233,14 +3365,7 @@ const configAbility = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "constantValue": {
-                                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                            "displayLines": "(MaxStance / 2)",
-                                            "constants": [
-                                              2
-                                            ],
-                                            "variables": [
-                                              "MaxStance"
-                                            ]
+                                            "displayLines": "(MaxStance / 2)"
                                           }
                                         }
                                       ]
@@ -4262,28 +3387,13 @@ const configAbility = {
                                   },
                                   "variables": {
                                     "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                      "operator": "Variables[0] (TailDelay) || RETURN",
-                                      "displayLines": "TailDelay",
-                                      "constants": [],
-                                      "variables": [
-                                        "TailDelay"
-                                      ]
+                                      "displayLines": "TailDelay"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                      "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                      "displayLines": "CurrentSpeed",
-                                      "constants": [],
-                                      "variables": [
-                                        "CurrentSpeed"
-                                      ]
+                                      "displayLines": "CurrentSpeed"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                      "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                      "displayLines": "{[PassiveSkill03[5]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[PassiveSkill03[5]]}"
-                                      ]
+                                      "displayLines": "{[PassiveSkill03[5]]}"
                                     }
                                   }
                                 }
@@ -4305,14 +3415,7 @@ const configAbility = {
                                     "value1": "CurrentStance",
                                     "compareType": "<",
                                     "value2": {
-                                      "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                      "displayLines": "(MaxStance / 2)",
-                                      "constants": [
-                                        2
-                                      ],
-                                      "variables": [
-                                        "MaxStance"
-                                      ]
+                                      "displayLines": "(MaxStance / 2)"
                                     }
                                   },
                                   "passed": [
@@ -4323,14 +3426,7 @@ const configAbility = {
                                         "target": "{{Parameter Target}}"
                                       },
                                       "constantValue": {
-                                        "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                        "displayLines": "(MaxStance / 2)",
-                                        "constants": [
-                                          2
-                                        ],
-                                        "variables": [
-                                          "MaxStance"
-                                        ]
+                                        "displayLines": "(MaxStance / 2)"
                                       }
                                     }
                                   ]
@@ -4350,28 +3446,13 @@ const configAbility = {
                                   },
                                   "variables": {
                                     "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                      "operator": "Variables[0] (TailDelay) || RETURN",
-                                      "displayLines": "TailDelay",
-                                      "constants": [],
-                                      "variables": [
-                                        "TailDelay"
-                                      ]
+                                      "displayLines": "TailDelay"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                      "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                      "displayLines": "CurrentSpeed",
-                                      "constants": [],
-                                      "variables": [
-                                        "CurrentSpeed"
-                                      ]
+                                      "displayLines": "CurrentSpeed"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                      "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                      "displayLines": "{[PassiveSkill03[5]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[PassiveSkill03[5]]}"
-                                      ]
+                                      "displayLines": "{[PassiveSkill03[5]]}"
                                     }
                                   }
                                 }
@@ -4487,14 +3568,7 @@ const configAbility = {
                                         "target": "{{Parameter Target}}"
                                       },
                                       "constantValue": {
-                                        "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                        "displayLines": "(MaxStance / 2)",
-                                        "constants": [
-                                          2
-                                        ],
-                                        "variables": [
-                                          "MaxStance"
-                                        ]
+                                        "displayLines": "(MaxStance / 2)"
                                       }
                                     }
                                   ],
@@ -4515,14 +3589,7 @@ const configAbility = {
                                         "value1": "CurrentStance",
                                         "compareType": "<",
                                         "value2": {
-                                          "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                          "displayLines": "(MaxStance / 2)",
-                                          "constants": [
-                                            2
-                                          ],
-                                          "variables": [
-                                            "MaxStance"
-                                          ]
+                                          "displayLines": "(MaxStance / 2)"
                                         }
                                       },
                                       "passed": [
@@ -4533,14 +3600,7 @@ const configAbility = {
                                             "target": "{{Parameter Target}}"
                                           },
                                           "constantValue": {
-                                            "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                            "displayLines": "(MaxStance / 2)",
-                                            "constants": [
-                                              2
-                                            ],
-                                            "variables": [
-                                              "MaxStance"
-                                            ]
+                                            "displayLines": "(MaxStance / 2)"
                                           }
                                         }
                                       ]
@@ -4562,28 +3622,13 @@ const configAbility = {
                                   },
                                   "variables": {
                                     "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                      "operator": "Variables[0] (LimbDelay) || RETURN",
-                                      "displayLines": "LimbDelay",
-                                      "constants": [],
-                                      "variables": [
-                                        "LimbDelay"
-                                      ]
+                                      "displayLines": "LimbDelay"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                      "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                      "displayLines": "CurrentSpeed",
-                                      "constants": [],
-                                      "variables": [
-                                        "CurrentSpeed"
-                                      ]
+                                      "displayLines": "CurrentSpeed"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                      "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                      "displayLines": "{[PassiveSkill03[5]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[PassiveSkill03[5]]}"
-                                      ]
+                                      "displayLines": "{[PassiveSkill03[5]]}"
                                     }
                                   }
                                 }
@@ -4605,14 +3650,7 @@ const configAbility = {
                                     "value1": "CurrentStance",
                                     "compareType": "<",
                                     "value2": {
-                                      "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                      "displayLines": "(MaxStance / 2)",
-                                      "constants": [
-                                        2
-                                      ],
-                                      "variables": [
-                                        "MaxStance"
-                                      ]
+                                      "displayLines": "(MaxStance / 2)"
                                     }
                                   },
                                   "passed": [
@@ -4623,14 +3661,7 @@ const configAbility = {
                                         "target": "{{Parameter Target}}"
                                       },
                                       "constantValue": {
-                                        "operator": "Variables[0] (MaxStance) || Constants[0] (2) || DIV || RETURN",
-                                        "displayLines": "(MaxStance / 2)",
-                                        "constants": [
-                                          2
-                                        ],
-                                        "variables": [
-                                          "MaxStance"
-                                        ]
+                                        "displayLines": "(MaxStance / 2)"
                                       }
                                     }
                                   ]
@@ -4650,28 +3681,13 @@ const configAbility = {
                                   },
                                   "variables": {
                                     "MDF_W2_Feixiao_BattleEvent_ActionDelay": {
-                                      "operator": "Variables[0] (LimbDelay) || RETURN",
-                                      "displayLines": "LimbDelay",
-                                      "constants": [],
-                                      "variables": [
-                                        "LimbDelay"
-                                      ]
+                                      "displayLines": "LimbDelay"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_BaseSpeed": {
-                                      "operator": "Variables[0] (CurrentSpeed) || RETURN",
-                                      "displayLines": "CurrentSpeed",
-                                      "constants": [],
-                                      "variables": [
-                                        "CurrentSpeed"
-                                      ]
+                                      "displayLines": "CurrentSpeed"
                                     },
                                     "MDF_W2_Feixiao_BattleEvent_StanceBreakTakenRatio": {
-                                      "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                                      "displayLines": "{[PassiveSkill03[5]]}",
-                                      "constants": [],
-                                      "variables": [
-                                        "{[PassiveSkill03[5]]}"
-                                      ]
+                                      "displayLines": "{[PassiveSkill03[5]]}"
                                     }
                                   }
                                 }

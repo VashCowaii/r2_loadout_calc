@@ -254,14 +254,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_HPAddedRatio) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(MDF_HPAddedRatio - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_HPAddedRatio"
-                ]
+                "displayLines": "(MDF_HPAddedRatio - 1)"
               }
             }
           ]
@@ -865,12 +858,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "Damage": {
-                      "operator": "Variables[0] (MDF_DamageRatio) || RETURN",
-                      "displayLines": "MDF_DamageRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageRatio"
-                      ]
+                      "displayLines": "MDF_DamageRatio"
                     },
                     "dmgFormula": "Max HP Scaling",
                     "dmgFormulaFinal": "Converted DMG Base",
@@ -889,12 +877,7 @@ const configAbility = {
             {
               "name": "Skill Points Modification",
               "adjustmentValue": {
-                "operator": "Variables[0] (MDF_BonusBPValue) || RETURN",
-                "displayLines": "MDF_BonusBPValue",
-                "constants": [],
-                "variables": [
-                  "MDF_BonusBPValue"
-                ]
+                "displayLines": "MDF_BonusBPValue"
               },
               "adjustmentType": "+"
             }
@@ -917,13 +900,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_MaxHPAddedRAtio) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(MDF_MaxHPAddedRAtio * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxHPAddedRAtio",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(MDF_MaxHPAddedRAtio * ModifierLayers)"
               }
             },
             {
@@ -934,13 +911,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                "displayLines": "(MDF_AllDamageTypeAddedRatio * ModifierLayers)",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeAddedRatio",
-                  "ModifierLayers"
-                ]
+                "displayLines": "(MDF_AllDamageTypeAddedRatio * ModifierLayers)"
               }
             },
             {
@@ -1411,12 +1382,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypeResistance) || RETURN",
-                "displayLines": "MDF_AllDamageTypeResistance",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTypeResistance"
-                ]
+                "displayLines": "MDF_AllDamageTypeResistance"
               }
             }
           ]
@@ -1495,12 +1461,7 @@ const configAbility = {
               },
               "variableName": "Inferno_Skill01_DamagePercentage",
               "resetValue": {
-                "operator": "Variables[0] (Inferno_Skill01_DamagePercentage) || RETURN",
-                "displayLines": "Inferno_Skill01_DamagePercentage",
-                "constants": [],
-                "variables": [
-                  "Inferno_Skill01_DamagePercentage"
-                ]
+                "displayLines": "Inferno_Skill01_DamagePercentage"
               },
               "scope": "TargetEntity"
             },
@@ -1512,12 +1473,7 @@ const configAbility = {
               },
               "variableName": "Inferno_Skill02_DamagePercentage",
               "resetValue": {
-                "operator": "Variables[0] (Inferno_Skill02_DamagePercentage) || RETURN",
-                "displayLines": "Inferno_Skill02_DamagePercentage",
-                "constants": [],
-                "variables": [
-                  "Inferno_Skill02_DamagePercentage"
-                ]
+                "displayLines": "Inferno_Skill02_DamagePercentage"
               },
               "scope": "TargetEntity"
             },
@@ -1529,12 +1485,7 @@ const configAbility = {
               },
               "variableName": "Inferno_Skill02_SuccessChance",
               "resetValue": {
-                "operator": "Variables[0] (Inferno_Skill02_SuccessChance) || RETURN",
-                "displayLines": "Inferno_Skill02_SuccessChance",
-                "constants": [],
-                "variables": [
-                  "Inferno_Skill02_SuccessChance"
-                ]
+                "displayLines": "Inferno_Skill02_SuccessChance"
               },
               "scope": "TargetEntity"
             },
@@ -1546,12 +1497,7 @@ const configAbility = {
               },
               "variableName": "Inferno_Skill02_Bonus_SPRatio",
               "resetValue": {
-                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__311) || RETURN",
-                "displayLines": "ENEMIES_OBJECT_UNUSED__311",
-                "constants": [],
-                "variables": [
-                  "ENEMIES_OBJECT_UNUSED__311"
-                ]
+                "displayLines": "ENEMIES_OBJECT_UNUSED__311"
               },
               "scope": "TargetEntity"
             },
@@ -1563,12 +1509,7 @@ const configAbility = {
               },
               "variableName": "Inferno_Skill02_Bonus_HPRatio",
               "resetValue": {
-                "operator": "Variables[0] (Inferno_Skill02_Bonus_HPRatio) || RETURN",
-                "displayLines": "Inferno_Skill02_Bonus_HPRatio",
-                "constants": [],
-                "variables": [
-                  "Inferno_Skill02_Bonus_HPRatio"
-                ]
+                "displayLines": "Inferno_Skill02_Bonus_HPRatio"
               },
               "scope": "TargetEntity"
             },
@@ -1589,12 +1530,7 @@ const configAbility = {
               },
               "variableName": "Inferno_Final_SuccessChance",
               "resetValue": {
-                "operator": "Variables[0] (Inferno_Skill02_SuccessChance) || RETURN",
-                "displayLines": "Inferno_Skill02_SuccessChance",
-                "constants": [],
-                "variables": [
-                  "Inferno_Skill02_SuccessChance"
-                ]
+                "displayLines": "Inferno_Skill02_SuccessChance"
               },
               "scope": "TargetEntity"
             },
@@ -1606,12 +1542,7 @@ const configAbility = {
               },
               "scope": "ContextModifier",
               "value": {
-                "operator": "Variables[0] (Inferno_Skill02_SuccessChance) || RETURN",
-                "displayLines": "Inferno_Skill02_SuccessChance",
-                "constants": [],
-                "variables": [
-                  "Inferno_Skill02_SuccessChance"
-                ]
+                "displayLines": "Inferno_Skill02_SuccessChance"
               },
               "variableName": "MDF_SuccessChance"
             },
@@ -1632,13 +1563,7 @@ const configAbility = {
               },
               "scope": "ContextModifier",
               "value": {
-                "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (Inferno_Skill02_DamagePercentage) || MUL || RETURN",
-                "displayLines": "(MDF_MaxHP * Inferno_Skill02_DamagePercentage)",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxHP",
-                  "Inferno_Skill02_DamagePercentage"
-                ]
+                "displayLines": "(MDF_MaxHP * Inferno_Skill02_DamagePercentage)"
               },
               "variableName": "MDF_LoseHPPreshow"
             }
@@ -1692,12 +1617,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] (MDF_Inferno_Part1_DamagePercentage) || RETURN",
-                  "displayLines": "MDF_Inferno_Part1_DamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Inferno_Part1_DamagePercentage"
-                  ]
+                  "displayLines": "MDF_Inferno_Part1_DamagePercentage"
                 },
                 "Toughness": null,
                 "Tags": [
@@ -1945,12 +1865,7 @@ const configAbility = {
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (TutorialFlag) || RETURN",
-                      "displayLines": "TutorialFlag",
-                      "constants": [],
-                      "variables": [
-                        "TutorialFlag"
-                      ]
+                      "displayLines": "TutorialFlag"
                     }
                   }
                 },
@@ -1966,12 +1881,7 @@ const configAbility = {
                   },
                   "previewType": null,
                   "previewValue": {
-                    "operator": "Variables[0] (TutorialFlag) || RETURN",
-                    "displayLines": "TutorialFlag",
-                    "constants": [],
-                    "variables": [
-                      "TutorialFlag"
-                    ]
+                    "displayLines": "TutorialFlag"
                   }
                 }
               ]

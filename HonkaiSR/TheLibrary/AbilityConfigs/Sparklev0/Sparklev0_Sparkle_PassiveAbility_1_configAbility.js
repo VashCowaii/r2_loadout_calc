@@ -36,12 +36,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable",
       "value": {
-        "operator": "Variables[0] (3) || RETURN",
-        "displayLines": "3",
-        "constants": [],
-        "variables": [
-          3
-        ]
+        "displayLines": "3"
       },
       "variableName": "MDF_PassiveMaxLayer"
     }
@@ -68,14 +63,7 @@ const configAbility = {
                   "name": "Change Skill Point Max",
                   "function": "Add",
                   "value": {
-                    "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(2 + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "(2 + 1)"
                   }
                 }
               ],
@@ -84,12 +72,7 @@ const configAbility = {
                   "name": "Change Skill Point Max",
                   "function": "Add",
                   "value": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   }
                 }
               ]
@@ -103,12 +86,7 @@ const configAbility = {
               "name": "Change Skill Point Max",
               "function": "Add",
               "value": {
-                "operator": "Variables[0] (2) || INVERT || RETURN",
-                "displayLines": "-2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
+                "displayLines": "-2"
               }
             }
           ]
@@ -179,14 +157,7 @@ const configAbility = {
                       "name": "Define Custom Variable",
                       "scope": "ContextCaster",
                       "value": {
-                        "operator": "Variables[0] (MDF_QuantumCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_QuantumCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_QuantumCount"
-                        ]
+                        "displayLines": "(MDF_QuantumCount + 1)"
                       },
                       "variableName": "MDF_QuantumCount"
                     },
@@ -218,20 +189,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1336404304\">Sparkle_Tree03</a>[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.15) || RETURN",
-                          "displayLines": "0.15",
-                          "constants": [],
-                          "variables": [
-                            0.15
-                          ]
+                          "displayLines": "0.15"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (0.3) || RETURN",
-                          "displayLines": "0.3",
-                          "constants": [],
-                          "variables": [
-                            0.3
-                          ]
+                          "displayLines": "0.3"
                         }
                       }
                     }
@@ -255,20 +216,10 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1336404304\">Sparkle_Tree03</a>[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.15) || RETURN",
-                              "displayLines": "0.15",
-                              "constants": [],
-                              "variables": [
-                                0.15
-                              ]
+                              "displayLines": "0.15"
                             },
                             "MDF_PropertyValue2": {
-                              "operator": "Variables[0] (0.15) || RETURN",
-                              "displayLines": "0.15",
-                              "constants": [],
-                              "variables": [
-                                0.15
-                              ]
+                              "displayLines": "0.15"
                             }
                           }
                         }
@@ -292,20 +243,10 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-1336404304\">Sparkle_Tree03</a>[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (0.15) || RETURN",
-                                  "displayLines": "0.15",
-                                  "constants": [],
-                                  "variables": [
-                                    0.15
-                                  ]
+                                  "displayLines": "0.15"
                                 },
                                 "MDF_PropertyValue2": {
-                                  "operator": "Variables[0] (0.05) || RETURN",
-                                  "displayLines": "0.05",
-                                  "constants": [],
-                                  "variables": [
-                                    0.05
-                                  ]
+                                  "displayLines": "0.05"
                                 }
                               }
                             }
@@ -331,12 +272,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_BPCount) || INVERT || RETURN",
-                "displayLines": "-MDF_BPCount",
-                "constants": [],
-                "variables": [
-                  "MDF_BPCount"
-                ]
+                "displayLines": "-MDF_BPCount"
               },
               "variableName": "MDF_BPCount"
             },
@@ -370,54 +306,24 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1017813291\">Sparkle_PassiveAbility_AllDamageAddedRatio02</a>[<span class=\"descriptionNumberColor\">Red Herring</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] (MDF_PassiveMaxLayer) || RETURN",
-                    "displayLines": "MDF_PassiveMaxLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PassiveMaxLayer"
-                    ]
+                    "displayLines": "MDF_PassiveMaxLayer"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue2": {
-                      "operator": "Variables[0] (0.06) || RETURN",
-                      "displayLines": "0.06",
-                      "constants": [],
-                      "variables": [
-                        0.06
-                      ]
+                      "displayLines": "0.06"
                     },
                     "MDF_PropertyValue3": {
-                      "operator": "Variables[0] (0.1) || RETURN",
-                      "displayLines": "0.1",
-                      "constants": [],
-                      "variables": [
-                        0.1
-                      ]
+                      "displayLines": "0.1"
                     },
                     "MDF_DefenceAddedRatio2": {
-                      "operator": "Variables[0] (0.08) || RETURN",
-                      "displayLines": "0.08",
-                      "constants": [],
-                      "variables": [
-                        0.08
-                      ]
+                      "displayLines": "0.08"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_BPCount) || RETURN",
-                    "displayLines": "MDF_BPCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_BPCount"
-                    ]
+                    "displayLines": "MDF_BPCount"
                   }
                 }
               ]
@@ -473,14 +379,7 @@ const configAbility = {
                       "name": "Define Custom Variable",
                       "scope": "ContextCaster",
                       "value": {
-                        "operator": "Variables[0] (MDF_QuantumCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_QuantumCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_QuantumCount"
-                        ]
+                        "displayLines": "(MDF_QuantumCount + 1)"
                       },
                       "variableName": "MDF_QuantumCount"
                     },
@@ -512,20 +411,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1336404304\">Sparkle_Tree03</a>[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.15) || RETURN",
-                          "displayLines": "0.15",
-                          "constants": [],
-                          "variables": [
-                            0.15
-                          ]
+                          "displayLines": "0.15"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (0.3) || RETURN",
-                          "displayLines": "0.3",
-                          "constants": [],
-                          "variables": [
-                            0.3
-                          ]
+                          "displayLines": "0.3"
                         }
                       }
                     }
@@ -549,20 +438,10 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1336404304\">Sparkle_Tree03</a>[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.15) || RETURN",
-                              "displayLines": "0.15",
-                              "constants": [],
-                              "variables": [
-                                0.15
-                              ]
+                              "displayLines": "0.15"
                             },
                             "MDF_PropertyValue2": {
-                              "operator": "Variables[0] (0.15) || RETURN",
-                              "displayLines": "0.15",
-                              "constants": [],
-                              "variables": [
-                                0.15
-                              ]
+                              "displayLines": "0.15"
                             }
                           }
                         }
@@ -586,20 +465,10 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-1336404304\">Sparkle_Tree03</a>[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (0.15) || RETURN",
-                                  "displayLines": "0.15",
-                                  "constants": [],
-                                  "variables": [
-                                    0.15
-                                  ]
+                                  "displayLines": "0.15"
                                 },
                                 "MDF_PropertyValue2": {
-                                  "operator": "Variables[0] (0.05) || RETURN",
-                                  "displayLines": "0.05",
-                                  "constants": [],
-                                  "variables": [
-                                    0.05
-                                  ]
+                                  "displayLines": "0.05"
                                 }
                               }
                             }

@@ -52,21 +52,11 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "valuePerStack": {
             "MDF_DamageUpRatio_PerLayer": {
-              "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-              "displayLines": "{[Skill04[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[1]]}"
-              ]
+              "displayLines": "{[Skill04[1]]}"
             }
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] (AttackUpLayer) || RETURN",
-            "displayLines": "AttackUpLayer",
-            "constants": [],
-            "variables": [
-              "AttackUpLayer"
-            ]
+            "displayLines": "AttackUpLayer"
           }
         }
       ]

@@ -23,13 +23,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] ({[Skill02[0]]}) || Variables[1] (_PlayerNum) || DIV || RETURN",
-          "displayLines": "({[Skill02[0]]} / _PlayerNum)",
-          "constants": [],
-          "variables": [
-            "{[Skill02[0]]}",
-            "_PlayerNum"
-          ]
+          "displayLines": "({[Skill02[0]]} / _PlayerNum)"
         },
         "Toughness": null,
         "Tags": null,
@@ -73,13 +67,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill02[1]]}) || MUL || RETURN",
-                  "displayLines": "(_MaxHP * {[Skill02[1]]})",
-                  "constants": [],
-                  "variables": [
-                    "_MaxHP",
-                    "{[Skill02[1]]}"
-                  ]
+                  "displayLines": "(_MaxHP * {[Skill02[1]]})"
                 },
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
@@ -118,20 +106,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-976528853\">Enemy_W4_Pollux_IF_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
           "valuePerStack": {
             "MDF_DamagePercentage": {
-              "operator": "Variables[0] ({[SkillP02[1]]}) || RETURN",
-              "displayLines": "{[SkillP02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP02[1]]}"
-              ]
+              "displayLines": "{[SkillP02[1]]}"
             },
             "MDF_DamageHpAddedRatio": {
-              "operator": "Variables[0] ({[SkillP02[0]]}) || RETURN",
-              "displayLines": "{[SkillP02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP02[0]]}"
-              ]
+              "displayLines": "{[SkillP02[0]]}"
             }
           }
         }

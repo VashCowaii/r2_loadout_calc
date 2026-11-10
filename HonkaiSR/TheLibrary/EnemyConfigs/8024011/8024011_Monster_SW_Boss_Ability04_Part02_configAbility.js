@@ -519,12 +519,7 @@ const configAbility = {
       },
       "scope": "TargetEntity",
       "value": {
-        "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-        "displayLines": "{[PassiveSkill01[0]]}",
-        "constants": [],
-        "variables": [
-          "{[PassiveSkill01[0]]}"
-        ]
+        "displayLines": "{[PassiveSkill01[0]]}"
       },
       "variableName": "DamageUpRatio"
     },
@@ -602,21 +597,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[0]]}"
-                      ]
+                      "displayLines": "{[PassiveSkill01[0]]}"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (DamageUpLayer) || RETURN",
-                    "displayLines": "DamageUpLayer",
-                    "constants": [],
-                    "variables": [
-                      "DamageUpLayer"
-                    ]
+                    "displayLines": "DamageUpLayer"
                   }
                 }
               ]
@@ -701,21 +686,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill01[0]]}"
-                  ]
+                  "displayLines": "{[PassiveSkill01[0]]}"
                 }
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (MonsterNumDamageUpLayer) || RETURN",
-                "displayLines": "MonsterNumDamageUpLayer",
-                "constants": [],
-                "variables": [
-                  "MonsterNumDamageUpLayer"
-                ]
+                "displayLines": "MonsterNumDamageUpLayer"
               }
             }
           ]

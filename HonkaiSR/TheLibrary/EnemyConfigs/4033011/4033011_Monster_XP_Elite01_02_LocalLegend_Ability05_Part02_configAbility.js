@@ -30,13 +30,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Null Type",
             "DamageFlat": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || Variables[1] (_TargetMaxHp) || MUL || RETURN",
-              "displayLines": "({[Skill05[0]]} * _TargetMaxHp)",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}",
-                "_TargetMaxHp"
-              ]
+              "displayLines": "({[Skill05[0]]} * _TargetMaxHp)"
             },
             "dmgFormulaFinal": "Converted DMG Base",
             "Toughness": null,

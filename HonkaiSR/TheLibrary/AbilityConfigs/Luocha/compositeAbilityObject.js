@@ -57,14 +57,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyRatio) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyRatio)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyRatio"
-                    ]
+                    "displayLines": "(0 - MDF_PropertyRatio)"
                   }
                 }
               ]
@@ -91,12 +84,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                    "displayLines": "MDF_PropertyRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyRatio"
-                    ]
+                    "displayLines": "MDF_PropertyRatio"
                   }
                 }
               ]
@@ -228,12 +216,7 @@ const compositeAbilityObject = {
                     "value1": "HeiyuanLayer",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_PassiveLayer) || RETURN",
-                      "displayLines": "MDF_PassiveLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PassiveLayer"
-                      ]
+                      "displayLines": "MDF_PassiveLayer"
                     }
                   },
                   "passed": [
@@ -250,12 +233,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (HeiyuanLayer) || RETURN",
-                        "displayLines": "HeiyuanLayer",
-                        "constants": [],
-                        "variables": [
-                          "HeiyuanLayer"
-                        ]
+                        "displayLines": "HeiyuanLayer"
                       },
                       "bar#": 2
                     }
@@ -320,20 +298,10 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_ShieldValue) || RETURN",
-                    "displayLines": "MDF_ShieldValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ShieldValue"
-                    ]
+                    "displayLines": "MDF_ShieldValue"
                   },
                   "valuePercent": {
-                    "operator": "Variables[0] (MDF_ShieldPercentage) || RETURN",
-                    "displayLines": "MDF_ShieldPercentage",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ShieldPercentage"
-                    ]
+                    "displayLines": "MDF_ShieldPercentage"
                   },
                   "formula": "ATK Scaling (Shield)"
                 }
@@ -354,12 +322,7 @@ const compositeAbilityObject = {
                   "on": "Healer",
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoingSUM</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AddHealRatio) || RETURN",
-                    "displayLines": "MDF_AddHealRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AddHealRatio"
-                    ]
+                    "displayLines": "MDF_AddHealRatio"
                   }
                 },
                 "Modifier Deletes Itself"
@@ -446,12 +409,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-579247332\">M_Luocha_Trace03</a>",
           "valuePerStack": {
             "MDF_Resistance": {
-              "operator": "Variables[0] (0.7) || RETURN",
-              "displayLines": "0.7",
-              "constants": [],
-              "variables": [
-                0.7
-              ]
+              "displayLines": "0.7"
             }
           }
         }
@@ -475,12 +433,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "STAT_CTRL",
                   "value": {
-                    "operator": "Variables[0] (MDF_Resistance) || RETURN",
-                    "displayLines": "MDF_Resistance",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Resistance"
-                    ]
+                    "displayLines": "MDF_Resistance"
                   }
                 }
               ]
@@ -812,12 +765,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-390780291\">Luocha_Passive01Modifier</a>[<span class=\"descriptionNumberColor\">Abyss Flower</span>]",
                       "valuePerStack": {
                         "MDF_PassiveLayer": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         }
                       },
                       "addStacksPerTrigger": 2
@@ -945,12 +893,7 @@ const compositeAbilityObject = {
                 "value1": "CurrentHP%",
                 "compareType": "<=",
                 "value2": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
+                  "displayLines": "0.5"
                 }
               },
               "passed": [
@@ -962,12 +905,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1468187936\">Luocha_Passive01_HealHPCD</a>[<span class=\"descriptionNumberColor\">Prayer of Abyss Flower</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   }
                 },
                 {
@@ -1140,69 +1078,29 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1807885982\">Luocha_Passive01_HealHPArea</a>",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.18) || RETURN",
-              "displayLines": "0.18",
-              "constants": [],
-              "variables": [
-                0.18
-              ]
+              "displayLines": "0.18"
             },
             "MDF_PropertyRatio": {
-              "operator": "Variables[0] (0.12) || RETURN",
-              "displayLines": "0.12",
-              "constants": [],
-              "variables": [
-                0.12
-              ]
+              "displayLines": "0.12"
             },
             "MDF_PropertyHealValue": {
-              "operator": "Variables[0] (240) || RETURN",
-              "displayLines": "240",
-              "constants": [],
-              "variables": [
-                240
-              ]
+              "displayLines": "240"
             },
             "MDF_PropertyValueTraceB2": {
-              "operator": "Variables[0] (0.07) || RETURN",
-              "displayLines": "0.07",
-              "constants": [],
-              "variables": [
-                0.07
-              ]
+              "displayLines": "0.07"
             },
             "MDF_PropertyHealValueTraceB2": {
-              "operator": "Variables[0] (93) || RETURN",
-              "displayLines": "93",
-              "constants": [],
-              "variables": [
-                93
-              ]
+              "displayLines": "93"
             },
             "MDF_PropertyRatio_Eidolon1": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             },
             "MDF_LifeTime": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             }
           }
         },
@@ -1247,12 +1145,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Weaken%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                    "displayLines": "MDF_PropertyRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyRatio"
-                    ]
+                    "displayLines": "MDF_PropertyRatio"
                   }
                 }
               ]
@@ -1277,20 +1170,10 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   },
                   "healFlat": {
-                    "operator": "Variables[0] (MDF_PropertyHealValue) || RETURN",
-                    "displayLines": "MDF_PropertyHealValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyHealValue"
-                    ]
+                    "displayLines": "MDF_PropertyHealValue"
                   }
                 },
                 {
@@ -1307,20 +1190,10 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder's Team Members(Exclude Self)}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (MDF_PropertyValueSkillTreeB2) || RETURN",
-                        "displayLines": "MDF_PropertyValueSkillTreeB2",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValueSkillTreeB2"
-                        ]
+                        "displayLines": "MDF_PropertyValueSkillTreeB2"
                       },
                       "healFlat": {
-                        "operator": "Variables[0] (MDF_PropertyHealValueSkillTreeB2) || RETURN",
-                        "displayLines": "MDF_PropertyHealValueSkillTreeB2",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyHealValueSkillTreeB2"
-                        ]
+                        "displayLines": "MDF_PropertyHealValueSkillTreeB2"
                       }
                     }
                   ]
@@ -1347,20 +1220,10 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   },
                   "healFlat": {
-                    "operator": "Variables[0] (MDF_PropertyHealValue) || RETURN",
-                    "displayLines": "MDF_PropertyHealValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyHealValue"
-                    ]
+                    "displayLines": "MDF_PropertyHealValue"
                   }
                 },
                 {
@@ -1377,20 +1240,10 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder's Team Members(Exclude Self)}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (MDF_PropertyValueSkillTreeB2) || RETURN",
-                        "displayLines": "MDF_PropertyValueSkillTreeB2",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValueSkillTreeB2"
-                        ]
+                        "displayLines": "MDF_PropertyValueSkillTreeB2"
                       },
                       "healFlat": {
-                        "operator": "Variables[0] (MDF_PropertyHealValueSkillTreeB2) || RETURN",
-                        "displayLines": "MDF_PropertyHealValueSkillTreeB2",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyHealValueSkillTreeB2"
-                        ]
+                        "displayLines": "MDF_PropertyHealValueSkillTreeB2"
                       }
                     }
                   ]
@@ -1424,45 +1277,20 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1838655775\">Luocha_Passive01_HealHPSelf</a>[<span class=\"descriptionNumberColor\">Cycle of Life</span>]",
               "duration": {
-                "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                "displayLines": "MDF_LifeTime",
-                "constants": [],
-                "variables": [
-                  "MDF_LifeTime"
-                ]
+                "displayLines": "MDF_LifeTime"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                  "displayLines": "MDF_PropertyValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue"
-                  ]
+                  "displayLines": "MDF_PropertyValue"
                 },
                 "MDF_PropertyHealValue": {
-                  "operator": "Variables[0] (MDF_PropertyHealValue) || RETURN",
-                  "displayLines": "MDF_PropertyHealValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyHealValue"
-                  ]
+                  "displayLines": "MDF_PropertyHealValue"
                 },
                 "MDF_PropertyValueTraceB2": {
-                  "operator": "Variables[0] (MDF_PropertyValueSkillTreeB2) || RETURN",
-                  "displayLines": "MDF_PropertyValueSkillTreeB2",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValueSkillTreeB2"
-                  ]
+                  "displayLines": "MDF_PropertyValueSkillTreeB2"
                 },
                 "MDF_PropertyHealValueTraceB2": {
-                  "operator": "Variables[0] (MDF_PropertyHealValueSkillTreeB2) || RETURN",
-                  "displayLines": "MDF_PropertyHealValueSkillTreeB2",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyHealValueSkillTreeB2"
-                  ]
+                  "displayLines": "MDF_PropertyHealValueSkillTreeB2"
                 }
               }
             },
@@ -1476,36 +1304,16 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                  "displayLines": "MDF_PropertyValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue"
-                  ]
+                  "displayLines": "MDF_PropertyValue"
                 },
                 "MDF_PropertyHealValue": {
-                  "operator": "Variables[0] (MDF_PropertyHealValue) || RETURN",
-                  "displayLines": "MDF_PropertyHealValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyHealValue"
-                  ]
+                  "displayLines": "MDF_PropertyHealValue"
                 },
                 "MDF_PropertyValueTraceB2": {
-                  "operator": "Variables[0] (MDF_PropertyValueSkillTreeB2) || RETURN",
-                  "displayLines": "MDF_PropertyValueSkillTreeB2",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValueSkillTreeB2"
-                  ]
+                  "displayLines": "MDF_PropertyValueSkillTreeB2"
                 },
                 "MDF_PropertyHealValueTraceB2": {
-                  "operator": "Variables[0] (MDF_PropertyHealValueSkillTreeB2) || RETURN",
-                  "displayLines": "MDF_PropertyHealValueSkillTreeB2",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyHealValueSkillTreeB2"
-                  ]
+                  "displayLines": "MDF_PropertyHealValueSkillTreeB2"
                 }
               }
             },
@@ -1523,12 +1331,7 @@ const compositeAbilityObject = {
               },
               "valuePerStack": {
                 "MDF_PropertyRatio": {
-                  "operator": "Variables[0] (MDF_PropertyRatio_Rank01) || RETURN",
-                  "displayLines": "MDF_PropertyRatio_Rank01",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyRatio_Rank01"
-                  ]
+                  "displayLines": "MDF_PropertyRatio_Rank01"
                 }
               }
             },
@@ -1546,12 +1349,7 @@ const compositeAbilityObject = {
               },
               "valuePerStack": {
                 "MDF_PropertyRatio": {
-                  "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                  "displayLines": "MDF_PropertyRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyRatio"
-                  ]
+                  "displayLines": "MDF_PropertyRatio"
                 }
               }
             }
@@ -1614,12 +1412,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-613660626\">Luocha_Passive01_QuickHealthHP</a>",
           "valuePerStack": {
             "MDF_HPRatio": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             }
           }
         },
@@ -1960,12 +1753,7 @@ const compositeAbilityObject = {
                                     "value1": "CurrentHP%",
                                     "compareType": "<=",
                                     "value2": {
-                                      "operator": "Variables[0] (MDF_HPRatio) || RETURN",
-                                      "displayLines": "MDF_HPRatio",
-                                      "constants": [],
-                                      "variables": [
-                                        "MDF_HPRatio"
-                                      ]
+                                      "displayLines": "MDF_HPRatio"
                                     }
                                   },
                                   "passed": [
@@ -2098,12 +1886,7 @@ const compositeAbilityObject = {
               "conditions": {
                 "name": "Random Chance",
                 "chance": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 }
               },
               "passed": [
@@ -2115,21 +1898,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-470154310\">Luocha_Eidolon6_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Reunion With the Dust</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
+                      "displayLines": "0.2"
                     }
                   }
                 }
@@ -2145,12 +1918,7 @@ const compositeAbilityObject = {
           },
           "typeOverride": "Buff",
           "dispelCount": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
+            "displayLines": "1"
           },
           "dispelOrder": "LastAdded",
           "counterKey": "BuffNumber"
@@ -2175,12 +1943,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-390780291\">Luocha_Passive01Modifier</a>[<span class=\"descriptionNumberColor\">Abyss Flower</span>]",
               "valuePerStack": {
                 "MDF_PassiveLayer": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
+                  "displayLines": "2"
                 }
               }
             }
@@ -2196,20 +1959,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             },
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -2296,12 +2049,7 @@ const compositeAbilityObject = {
                 "target": "{{Ability Target(ST)}}"
               },
               "dispelCount": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
+                "displayLines": "1"
               },
               "dispelOrder": "LastAdded"
             }
@@ -2336,12 +2084,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"774057346\">Luocha_Ability02_AddHealRatio</a>",
                   "valuePerStack": {
                     "MDF_AddHealRatio": {
-                      "operator": "Variables[0] (0.3) || RETURN",
-                      "displayLines": "0.3",
-                      "constants": [],
-                      "variables": [
-                        0.3
-                      ]
+                      "displayLines": "0.3"
                     }
                   }
                 }
@@ -2355,29 +2098,14 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1298017769\">Luocha_Ability02_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "valuePerStack": {
                     "MDF_ShieldPercentage": {
-                      "operator": "Variables[0] (0.18) || RETURN",
-                      "displayLines": "0.18",
-                      "constants": [],
-                      "variables": [
-                        0.18
-                      ]
+                      "displayLines": "0.18"
                     },
                     "MDF_ShieldValue": {
-                      "operator": "Variables[0] (240) || RETURN",
-                      "displayLines": "240",
-                      "constants": [],
-                      "variables": [
-                        240
-                      ]
+                      "displayLines": "240"
                     }
                   }
                 }
@@ -2392,20 +2120,10 @@ const compositeAbilityObject = {
             "target": "{{Ability Target(ST)}}"
           },
           "healPercent": {
-            "operator": "Variables[0] (0.6) || RETURN",
-            "displayLines": "0.6",
-            "constants": [],
-            "variables": [
-              0.6
-            ]
+            "displayLines": "0.6"
           },
           "healFlat": {
-            "operator": "Variables[0] (800) || RETURN",
-            "displayLines": "800",
-            "constants": [],
-            "variables": [
-              800
-            ]
+            "displayLines": "800"
           }
         },
         {
@@ -2448,12 +2166,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-390780291\">Luocha_Passive01Modifier</a>[<span class=\"descriptionNumberColor\">Abyss Flower</span>]",
               "valuePerStack": {
                 "MDF_PassiveLayer": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
+                  "displayLines": "2"
                 }
               }
             }
@@ -2539,21 +2252,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "HitSplit": 0.3,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -2569,21 +2272,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "HitSplit": 0.3,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -2599,21 +2292,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "HitSplit": 0.4,
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"

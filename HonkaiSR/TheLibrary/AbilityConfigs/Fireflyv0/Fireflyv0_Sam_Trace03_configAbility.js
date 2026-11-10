@@ -28,27 +28,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (FLOOR) || Variables[1] (MDF_PropertyValue) || Variables[2] (10) || DIV || PARAM_1 || FUNCTION || RETURN",
-                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_PropertyValue / 10))",
-                "constants": [],
-                "variables": [
-                  "FLOOR",
-                  "MDF_PropertyValue",
-                  10
-                ]
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_PropertyValue / 10))"
               },
               "variableName": "MDF_Multipler"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_Multipler) || Variables[1] (0.007999999) || MUL || RETURN",
-                "displayLines": "(MDF_Multipler * 0.007999999)",
-                "constants": [],
-                "variables": [
-                  "MDF_Multipler",
-                  0.007999999
-                ]
+                "displayLines": "(MDF_Multipler * 0.007999999)"
               },
               "variableName": "MDF_PropertyValue2"
             },
@@ -60,12 +47,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakConverted</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                "displayLines": "MDF_PropertyValue2",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue2"
-                ]
+                "displayLines": "MDF_PropertyValue2"
               }
             }
           ]
@@ -113,13 +95,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_CurrentAttack) || Variables[1] (MDF_CurrentAttackConvert) || SUB || RETURN",
-                "displayLines": "(MDF_CurrentAttack - MDF_CurrentAttackConvert)",
-                "constants": [],
-                "variables": [
-                  "MDF_CurrentAttack",
-                  "MDF_CurrentAttackConvert"
-                ]
+                "displayLines": "(MDF_CurrentAttack - MDF_CurrentAttackConvert)"
               },
               "variableName": "MDF_CurrentAttack2"
             },
@@ -130,13 +106,7 @@ const configAbility = {
                 "value1": "MDF_CurrentAttack2",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (1800) || Variables[1] (10) || ADD || RETURN",
-                  "displayLines": "(1800 + 10)",
-                  "constants": [],
-                  "variables": [
-                    1800,
-                    10
-                  ]
+                  "displayLines": "(1800 + 10)"
                 }
               },
               "passed": [
@@ -160,13 +130,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-146915656\">Sam_Trace03_BreakDamageAddedRatio_Sub</a>[<span class=\"descriptionNumberColor\">Module γ: Core Overload</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_CurrentAttack2) || Variables[1] (1800) || SUB || RETURN",
-                          "displayLines": "(MDF_CurrentAttack2 - 1800)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentAttack2",
-                            1800
-                          ]
+                          "displayLines": "(MDF_CurrentAttack2 - 1800)"
                         }
                       }
                     }
@@ -181,13 +145,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-146915656\">Sam_Trace03_BreakDamageAddedRatio_Sub</a>[<span class=\"descriptionNumberColor\">Module γ: Core Overload</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_CurrentAttack2) || Variables[1] (1800) || SUB || RETURN",
-                          "displayLines": "(MDF_CurrentAttack2 - 1800)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentAttack2",
-                            1800
-                          ]
+                          "displayLines": "(MDF_CurrentAttack2 - 1800)"
                         }
                       }
                     }

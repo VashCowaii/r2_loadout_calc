@@ -161,12 +161,7 @@ const configAbility = {
               "showInActionOrder": true,
               "valuePerStack": {
                 "MDF_DamageValue2": {
-                  "operator": "Variables[0] (MDF_DamageValue) || RETURN",
-                  "displayLines": "MDF_DamageValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamageValue"
-                  ]
+                  "displayLines": "MDF_DamageValue"
                 }
               },
               "allowAbilityTriggers": false
@@ -212,12 +207,7 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Constants[0] (800205000) || RETURN",
-                        "displayLines": "800205000",
-                        "constants": [
-                          800205000
-                        ],
-                        "variables": []
+                        "displayLines": "800205000"
                       },
                       "locationType": "LastDie"
                     }
@@ -269,13 +259,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-452417085\">Modifier_BattleEventAbility_Challenge_Month_14_Sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
                   "valuePerStack": {
                     "MDF_DamageValue": {
-                      "operator": "Variables[0] (TempHP) || Variables[1] (#BattleEvent_P2_ADF) || MUL || RETURN",
-                      "displayLines": "(TempHP * #BattleEvent_P2_ADF)",
-                      "constants": [],
-                      "variables": [
-                        "TempHP",
-                        "#BattleEvent_P2_ADF"
-                      ]
+                      "displayLines": "(TempHP * #BattleEvent_P2_ADF)"
                     }
                   }
                 }
@@ -295,12 +279,7 @@ const configAbility = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Constants[0] (800205000) || RETURN",
-                    "displayLines": "800205000",
-                    "constants": [
-                      800205000
-                    ],
-                    "variables": []
+                    "displayLines": "800205000"
                   },
                   "locationType": "Last"
                 }

@@ -16,12 +16,7 @@ const configAbility = {
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (DF_WeakType) || RETURN",
-            "displayLines": "DF_WeakType",
-            "constants": [],
-            "variables": [
-              "DF_WeakType"
-            ]
+            "displayLines": "DF_WeakType"
           },
           "caseEvents": [
             {
@@ -209,29 +204,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
               "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
+                "displayLines": "3"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 },
                 "_WeakType": {
-                  "operator": "Variables[0] (_WeakType) || RETURN",
-                  "displayLines": "_WeakType",
-                  "constants": [],
-                  "variables": [
-                    "_WeakType"
-                  ]
+                  "displayLines": "_WeakType"
                 }
               }
             }

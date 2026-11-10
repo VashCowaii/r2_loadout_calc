@@ -31,12 +31,7 @@ const configAbility = {
       },
       "variableName": "BattleEvent_P1_ADF",
       "resetValue": {
-        "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-        "displayLines": "#BattleEvent_P1_ADF",
-        "constants": [],
-        "variables": [
-          "#BattleEvent_P1_ADF"
-        ]
+        "displayLines": "#BattleEvent_P1_ADF"
       },
       "scope": "ContextCaster"
     },
@@ -48,12 +43,7 @@ const configAbility = {
       },
       "variableName": "BattleEvent_P2_ADF",
       "resetValue": {
-        "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-        "displayLines": "#BattleEvent_P2_ADF",
-        "constants": [],
-        "variables": [
-          "#BattleEvent_P2_ADF"
-        ]
+        "displayLines": "#BattleEvent_P2_ADF"
       },
       "scope": "ContextCaster"
     },
@@ -65,12 +55,7 @@ const configAbility = {
       },
       "variableName": "BattleEvent_P3_ADF",
       "resetValue": {
-        "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-        "displayLines": "#BattleEvent_P3_ADF",
-        "constants": [],
-        "variables": [
-          "#BattleEvent_P3_ADF"
-        ]
+        "displayLines": "#BattleEvent_P3_ADF"
       },
       "scope": "ContextCaster"
     },
@@ -82,12 +67,7 @@ const configAbility = {
       },
       "variableName": "BattleEvent_P4_ADF",
       "resetValue": {
-        "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
-        "displayLines": "#BattleEvent_P4_ADF",
-        "constants": [],
-        "variables": [
-          "#BattleEvent_P4_ADF"
-        ]
+        "displayLines": "#BattleEvent_P4_ADF"
       },
       "scope": "ContextCaster"
     },
@@ -99,12 +79,7 @@ const configAbility = {
       },
       "variableName": "BattleEvent_P5_ADF",
       "resetValue": {
-        "operator": "Variables[0] (#BattleEvent_P5_ADF) || RETURN",
-        "displayLines": "#BattleEvent_P5_ADF",
-        "constants": [],
-        "variables": [
-          "#BattleEvent_P5_ADF"
-        ]
+        "displayLines": "#BattleEvent_P5_ADF"
       },
       "scope": "ContextCaster"
     },
@@ -151,12 +126,7 @@ const configAbility = {
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (BattleEventAbility_Challenge_Month_21_Count) || RETURN",
-                    "displayLines": "BattleEventAbility_Challenge_Month_21_Count",
-                    "constants": [],
-                    "variables": [
-                      "BattleEventAbility_Challenge_Month_21_Count"
-                    ]
+                    "displayLines": "BattleEventAbility_Challenge_Month_21_Count"
                   },
                   "execute": [
                     {
@@ -203,12 +173,7 @@ const configAbility = {
                                 "target": "{{Parameter Target}}"
                               },
                               "consumePercent": {
-                                "operator": "Variables[0] (BattleEvent_P5_ADF) || RETURN",
-                                "displayLines": "BattleEvent_P5_ADF",
-                                "constants": [],
-                                "variables": [
-                                  "BattleEvent_P5_ADF"
-                                ]
+                                "displayLines": "BattleEvent_P5_ADF"
                               }
                             }
                           ],
@@ -221,12 +186,7 @@ const configAbility = {
                                 "target": "{{Parameter Target}}"
                               },
                               "consumePercent": {
-                                "operator": "Variables[0] (BattleEvent_P2_ADF) || RETURN",
-                                "displayLines": "BattleEvent_P2_ADF",
-                                "constants": [],
-                                "variables": [
-                                  "BattleEvent_P2_ADF"
-                                ]
+                                "displayLines": "BattleEvent_P2_ADF"
                               }
                             }
                           ]

@@ -34,12 +34,7 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"551246003\">Lingsha_PointB3_CD</a>[<span class=\"descriptionNumberColor\">Ember's Echo</span>]",
           "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
+            "displayLines": "2"
           }
         }
       ]
@@ -53,20 +48,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (0.75) || RETURN",
-          "displayLines": "0.75",
-          "constants": [],
-          "variables": [
-            0.75
-          ]
+          "displayLines": "0.75"
         },
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-          "displayLines": "AOE Toughness Value",
-          "constants": [],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "AOE Toughness Value"
         },
         "Tags": [
           "Summon-Tag DMG"
@@ -102,12 +87,7 @@ const configAbility = {
         "target": "{{All Team Members}}"
       },
       "dispelCount": {
-        "operator": "Variables[0] (1) || RETURN",
-        "displayLines": "1",
-        "constants": [],
-        "variables": [
-          1
-        ]
+        "displayLines": "1"
       },
       "dispelOrder": "LastAdded"
     },
@@ -118,20 +98,10 @@ const configAbility = {
         "target": "{{All Team Members}}"
       },
       "healPercent": {
-        "operator": "Variables[0] (0.12) || RETURN",
-        "displayLines": "0.12",
-        "constants": [],
-        "variables": [
-          0.12
-        ]
+        "displayLines": "0.12"
       },
       "healFlat": {
-        "operator": "Variables[0] (360) || RETURN",
-        "displayLines": "360",
-        "constants": [],
-        "variables": [
-          360
-        ]
+        "displayLines": "360"
       }
     },
     {
@@ -156,12 +126,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (0.4) || RETURN",
-                "displayLines": "0.4",
-                "constants": [],
-                "variables": [
-                  0.4
-                ]
+                "displayLines": "0.4"
               }
             }
           ]

@@ -53,13 +53,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1594566188\">Enemy_W3_Sunday_LightTeam_Shield_Stack</a>",
           "valuePerStack": {
             "MDF_ShieldPercentage_Add": {
-              "operator": "Variables[0] ({[SkillP02[3]]}) || Variables[1] (W3_Sunday_00_StanceCountDown_Counter) || MUL || RETURN",
-              "displayLines": "({[SkillP02[3]]} * W3_Sunday_00_StanceCountDown_Counter)",
-              "constants": [],
-              "variables": [
-                "{[SkillP02[3]]}",
-                "W3_Sunday_00_StanceCountDown_Counter"
-              ]
+              "displayLines": "({[SkillP02[3]]} * W3_Sunday_00_StanceCountDown_Counter)"
             }
           }
         }
@@ -74,13 +68,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"897199579\">Enemy_W3_Sunday_LightTeam_Shield</a>",
           "valuePerStack": {
             "MDF_ShieldPercentage": {
-              "operator": "Variables[0] ({[SkillP02[3]]}) || Variables[1] (W3_Sunday_00_StanceCountDown_Counter) || MUL || RETURN",
-              "displayLines": "({[SkillP02[3]]} * W3_Sunday_00_StanceCountDown_Counter)",
-              "constants": [],
-              "variables": [
-                "{[SkillP02[3]]}",
-                "W3_Sunday_00_StanceCountDown_Counter"
-              ]
+              "displayLines": "({[SkillP02[3]]} * W3_Sunday_00_StanceCountDown_Counter)"
             }
           }
         }

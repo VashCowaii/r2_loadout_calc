@@ -34,22 +34,10 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] (1.2) || RETURN",
-          "displayLines": "1.2",
-          "constants": [],
-          "variables": [
-            1.2
-          ]
+          "displayLines": "1.2"
         },
         "Toughness": {
-          "operator": "Variables[0] (AOE Toughness Value) || Constants[0] (2) || DIV || RETURN",
-          "displayLines": "(AOE Toughness Value / 2)",
-          "constants": [
-            2
-          ],
-          "variables": [
-            "AOE Toughness Value"
-          ]
+          "displayLines": "(AOE Toughness Value / 2)"
         },
         "Tags": [
           "Joint-Attack"
@@ -70,14 +58,7 @@ const configAbility = {
       "variableName": "CurEnergy",
       "context": "TargetEntity",
       "value": {
-        "operator": "Variables[0] (0.1) || Constants[0] (100) || MUL || RETURN",
-        "displayLines": "(0.1 * 100)",
-        "constants": [
-          100
-        ],
-        "variables": [
-          0.1
-        ]
+        "displayLines": "(0.1 * 100)"
       }
     }
   ],

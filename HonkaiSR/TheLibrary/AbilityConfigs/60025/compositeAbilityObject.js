@@ -205,12 +205,7 @@ const compositeAbilityObject = {
                   "displayLines": 1
                 },
                 "DamageFlat": {
-                  "operator": "Variables[0] (_CurrentHp) || RETURN",
-                  "displayLines": "_CurrentHp",
-                  "constants": [],
-                  "variables": [
-                    "_CurrentHp"
-                  ]
+                  "displayLines": "_CurrentHp"
                 },
                 "Toughness": {
                   "displayLines": 30

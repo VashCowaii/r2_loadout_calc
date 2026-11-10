@@ -35,20 +35,10 @@ const configAbility = {
               "functionName": "<a class=\"gTempYellow\" id=\"1447027795\">Elation_InsertRetarget</a>",
               "variables": {
                 "TP_OverrideElationPoint": {
-                  "operator": "Variables[0] (MDF_OverrideElationPoint) || RETURN",
-                  "displayLines": "MDF_OverrideElationPoint",
-                  "constants": [],
-                  "variables": [
-                    "MDF_OverrideElationPoint"
-                  ]
+                  "displayLines": "MDF_OverrideElationPoint"
                 },
                 "TP_ElationTimeIsNoConsume": {
-                  "operator": "Variables[0] (MDF_ElationTimeIsNoConsume) || RETURN",
-                  "displayLines": "MDF_ElationTimeIsNoConsume",
-                  "constants": [],
-                  "variables": [
-                    "MDF_ElationTimeIsNoConsume"
-                  ]
+                  "displayLines": "MDF_ElationTimeIsNoConsume"
                 }
               },
               "dynamicStringsArray": [
@@ -77,20 +67,10 @@ const configAbility = {
               "functionName": "<a class=\"gTempYellow\" id=\"1447027795\">Elation_InsertRetarget</a>",
               "variables": {
                 "TP_OverrideElationPoint": {
-                  "operator": "Variables[0] (MDF_OverrideElationPoint) || RETURN",
-                  "displayLines": "MDF_OverrideElationPoint",
-                  "constants": [],
-                  "variables": [
-                    "MDF_OverrideElationPoint"
-                  ]
+                  "displayLines": "MDF_OverrideElationPoint"
                 },
                 "TP_ElationTimeIsNoConsume": {
-                  "operator": "Variables[0] (MDF_ElationTimeIsNoConsume) || RETURN",
-                  "displayLines": "MDF_ElationTimeIsNoConsume",
-                  "constants": [],
-                  "variables": [
-                    "MDF_ElationTimeIsNoConsume"
-                  ]
+                  "displayLines": "MDF_ElationTimeIsNoConsume"
                 }
               },
               "dynamicStringsArray": [
@@ -113,20 +93,10 @@ const configAbility = {
               "functionName": "<a class=\"gTempYellow\" id=\"1447027795\">Elation_InsertRetarget</a>",
               "variables": {
                 "TP_OverrideElationPoint": {
-                  "operator": "Variables[0] (MDF_OverrideElationPoint) || RETURN",
-                  "displayLines": "MDF_OverrideElationPoint",
-                  "constants": [],
-                  "variables": [
-                    "MDF_OverrideElationPoint"
-                  ]
+                  "displayLines": "MDF_OverrideElationPoint"
                 },
                 "TP_ElationTimeIsNoConsume": {
-                  "operator": "Variables[0] (MDF_ElationTimeIsNoConsume) || RETURN",
-                  "displayLines": "MDF_ElationTimeIsNoConsume",
-                  "constants": [],
-                  "variables": [
-                    "MDF_ElationTimeIsNoConsume"
-                  ]
+                  "displayLines": "MDF_ElationTimeIsNoConsume"
                 }
               },
               "dynamicStringsArray": [
@@ -149,20 +119,10 @@ const configAbility = {
               "functionName": "<a class=\"gTempYellow\" id=\"1447027795\">Elation_InsertRetarget</a>",
               "variables": {
                 "TP_OverrideElationPoint": {
-                  "operator": "Variables[0] (MDF_OverrideElationPoint) || RETURN",
-                  "displayLines": "MDF_OverrideElationPoint",
-                  "constants": [],
-                  "variables": [
-                    "MDF_OverrideElationPoint"
-                  ]
+                  "displayLines": "MDF_OverrideElationPoint"
                 },
                 "TP_ElationTimeIsNoConsume": {
-                  "operator": "Variables[0] (MDF_ElationTimeIsNoConsume) || RETURN",
-                  "displayLines": "MDF_ElationTimeIsNoConsume",
-                  "constants": [],
-                  "variables": [
-                    "MDF_ElationTimeIsNoConsume"
-                  ]
+                  "displayLines": "MDF_ElationTimeIsNoConsume"
                 }
               },
               "dynamicStringsArray": [
@@ -213,20 +173,10 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"1447027795\">Elation_InsertRetarget</a>",
                   "variables": {
                     "TP_OverrideElationPoint": {
-                      "operator": "Variables[0] (MDF_OverrideElationPoint) || RETURN",
-                      "displayLines": "MDF_OverrideElationPoint",
-                      "constants": [],
-                      "variables": [
-                        "MDF_OverrideElationPoint"
-                      ]
+                      "displayLines": "MDF_OverrideElationPoint"
                     },
                     "TP_ElationTimeIsNoConsume": {
-                      "operator": "Variables[0] (MDF_ElationTimeIsNoConsume) || RETURN",
-                      "displayLines": "MDF_ElationTimeIsNoConsume",
-                      "constants": [],
-                      "variables": [
-                        "MDF_ElationTimeIsNoConsume"
-                      ]
+                      "displayLines": "MDF_ElationTimeIsNoConsume"
                     }
                   },
                   "dynamicStringsArray": [
@@ -290,20 +240,10 @@ const configAbility = {
                       "actionTag": null,
                       "valuePerStack": {
                         "ElationTime_OverrideElationPointTemp": {
-                          "operator": "Variables[0] (MDF_OverrideElationPoint) || RETURN",
-                          "displayLines": "MDF_OverrideElationPoint",
-                          "constants": [],
-                          "variables": [
-                            "MDF_OverrideElationPoint"
-                          ]
+                          "displayLines": "MDF_OverrideElationPoint"
                         },
                         "ElationTime_IsNoConsumeTemp": {
-                          "operator": "Variables[0] (MDF_ElationTimeIsNoConsume) || RETURN",
-                          "displayLines": "MDF_ElationTimeIsNoConsume",
-                          "constants": [],
-                          "variables": [
-                            "MDF_ElationTimeIsNoConsume"
-                          ]
+                          "displayLines": "MDF_ElationTimeIsNoConsume"
                         }
                       },
                       "target": {
@@ -364,12 +304,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CertifiedBanger</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ElationEchoPoint) || RETURN",
-                "displayLines": "ElationEchoPoint",
-                "constants": [],
-                "variables": [
-                  "ElationEchoPoint"
-                ]
+                "displayLines": "ElationEchoPoint"
               }
             }
           ]
@@ -398,12 +333,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CertifiedBanger</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ElationEchoPoint) || RETURN",
-                "displayLines": "ElationEchoPoint",
-                "constants": [],
-                "variables": [
-                  "ElationEchoPoint"
-                ]
+                "displayLines": "ElationEchoPoint"
               }
             }
           ]
@@ -425,12 +355,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CertifiedBanger</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (ElationEchoPoint) || RETURN",
-                    "displayLines": "ElationEchoPoint",
-                    "constants": [],
-                    "variables": [
-                      "ElationEchoPoint"
-                    ]
+                    "displayLines": "ElationEchoPoint"
                   },
                   "isRefresh": true
                 }
@@ -552,13 +477,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_AvatarSpeed) || Variables[1] (_BackEndSpeedRatio) || MUL || RETURN",
-                    "displayLines": "(MDF_AvatarSpeed * _BackEndSpeedRatio)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AvatarSpeed",
-                      "_BackEndSpeedRatio"
-                    ]
+                    "displayLines": "(MDF_AvatarSpeed * _BackEndSpeedRatio)"
                   },
                   "variableName": "MDF_WeightedSpeed"
                 }
@@ -567,12 +486,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_AvatarSpeed) || RETURN",
-                    "displayLines": "MDF_AvatarSpeed",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AvatarSpeed"
-                    ]
+                    "displayLines": "MDF_AvatarSpeed"
                   },
                   "variableName": "MDF_WeightedSpeed"
                 }
@@ -705,12 +619,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1134867804\">MBattleEvent_Elation_GridFight_CalSpeed</a>",
                   "valuePerStack": {
                     "_BackEndSpeedRatio": {
-                      "operator": "Variables[0] (_BackEndSpeedRatio) || RETURN",
-                      "displayLines": "_BackEndSpeedRatio",
-                      "constants": [],
-                      "variables": [
-                        "_BackEndSpeedRatio"
-                      ]
+                      "displayLines": "_BackEndSpeedRatio"
                     }
                   }
                 },
@@ -821,12 +730,7 @@ const configAbility = {
                                 "value1": "MDF_WeightedSpeed_Main",
                                 "compareType": "<",
                                 "value2": {
-                                  "operator": "Variables[0] (MDF_WeightedSpeed_Sub) || RETURN",
-                                  "displayLines": "MDF_WeightedSpeed_Sub",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_WeightedSpeed_Sub"
-                                  ]
+                                  "displayLines": "MDF_WeightedSpeed_Sub"
                                 }
                               },
                               {
@@ -837,12 +741,7 @@ const configAbility = {
                                     "value1": "MDF_WeightedSpeed_Main",
                                     "compareType": "=",
                                     "value2": {
-                                      "operator": "Variables[0] (MDF_WeightedSpeed_Sub) || RETURN",
-                                      "displayLines": "MDF_WeightedSpeed_Sub",
-                                      "constants": [],
-                                      "variables": [
-                                        "MDF_WeightedSpeed_Sub"
-                                      ]
+                                      "displayLines": "MDF_WeightedSpeed_Sub"
                                     }
                                   },
                                   {
@@ -859,14 +758,7 @@ const configAbility = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (MDF_CalRank) || Constants[0] (1) || ADD || RETURN",
-                                "displayLines": "(MDF_CalRank + 1)",
-                                "constants": [
-                                  1
-                                ],
-                                "variables": [
-                                  "MDF_CalRank"
-                                ]
+                                "displayLines": "(MDF_CalRank + 1)"
                               },
                               "variableName": "MDF_CalRank"
                             }
@@ -883,12 +775,7 @@ const configAbility = {
                       "modifierName": "<a class=\"gModGreen\" id=\"-1134867804\">MBattleEvent_Elation_GridFight_CalSpeed</a>",
                       "variableName": "MDF_Rank",
                       "value": {
-                        "operator": "Variables[0] (MDF_CalRank) || RETURN",
-                        "displayLines": "MDF_CalRank",
-                        "constants": [],
-                        "variables": [
-                          "MDF_CalRank"
-                        ]
+                        "displayLines": "MDF_CalRank"
                       }
                     },
                     {
@@ -906,12 +793,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (AHA_OBJECT_UNUSED__194) || RETURN",
-                    "displayLines": "AHA_OBJECT_UNUSED__194",
-                    "constants": [],
-                    "variables": [
-                      "AHA_OBJECT_UNUSED__194"
-                    ]
+                    "displayLines": "AHA_OBJECT_UNUSED__194"
                   },
                   "variableName": "BattleEvent_Elation_00_BaseSpeed"
                 },
@@ -981,12 +863,7 @@ const configAbility = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (MDF_SpeedRank) || RETURN",
-                        "displayLines": "MDF_SpeedRank",
-                        "constants": [],
-                        "variables": [
-                          "MDF_SpeedRank"
-                        ]
+                        "displayLines": "MDF_SpeedRank"
                       },
                       "compareType": ">=",
                       "caseEvents": [
@@ -997,12 +874,7 @@ const configAbility = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (AHA_OBJECT_UNUSED__195) || RETURN",
-                                "displayLines": "AHA_OBJECT_UNUSED__195",
-                                "constants": [],
-                                "variables": [
-                                  "AHA_OBJECT_UNUSED__195"
-                                ]
+                                "displayLines": "AHA_OBJECT_UNUSED__195"
                               },
                               "variableName": "MDF_SpeedCalTemp2"
                             }
@@ -1015,12 +887,7 @@ const configAbility = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (AHA_OBJECT_UNUSED__196) || RETURN",
-                                "displayLines": "AHA_OBJECT_UNUSED__196",
-                                "constants": [],
-                                "variables": [
-                                  "AHA_OBJECT_UNUSED__196"
-                                ]
+                                "displayLines": "AHA_OBJECT_UNUSED__196"
                               },
                               "variableName": "MDF_SpeedCalTemp2"
                             }
@@ -1033,12 +900,7 @@ const configAbility = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (AHA_OBJECT_UNUSED__197) || RETURN",
-                                "displayLines": "AHA_OBJECT_UNUSED__197",
-                                "constants": [],
-                                "variables": [
-                                  "AHA_OBJECT_UNUSED__197"
-                                ]
+                                "displayLines": "AHA_OBJECT_UNUSED__197"
                               },
                               "variableName": "MDF_SpeedCalTemp2"
                             }
@@ -1051,12 +913,7 @@ const configAbility = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (AHA_OBJECT_UNUSED__198) || RETURN",
-                                "displayLines": "AHA_OBJECT_UNUSED__198",
-                                "constants": [],
-                                "variables": [
-                                  "AHA_OBJECT_UNUSED__198"
-                                ]
+                                "displayLines": "AHA_OBJECT_UNUSED__198"
                               },
                               "variableName": "MDF_SpeedCalTemp2"
                             }
@@ -1069,12 +926,7 @@ const configAbility = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] (AHA_OBJECT_UNUSED__199) || RETURN",
-                                "displayLines": "AHA_OBJECT_UNUSED__199",
-                                "constants": [],
-                                "variables": [
-                                  "AHA_OBJECT_UNUSED__199"
-                                ]
+                                "displayLines": "AHA_OBJECT_UNUSED__199"
                               },
                               "variableName": "MDF_SpeedCalTemp2"
                             }
@@ -1086,14 +938,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (BattleEvent_Elation_00_BaseSpeed) || Variables[1] (MDF_SpeedCalTemp1) || Variables[2] (MDF_SpeedCalTemp2) || MUL || ADD || RETURN",
-                        "displayLines": "(BattleEvent_Elation_00_BaseSpeed + (MDF_SpeedCalTemp1 * MDF_SpeedCalTemp2))",
-                        "constants": [],
-                        "variables": [
-                          "BattleEvent_Elation_00_BaseSpeed",
-                          "MDF_SpeedCalTemp1",
-                          "MDF_SpeedCalTemp2"
-                        ]
+                        "displayLines": "(BattleEvent_Elation_00_BaseSpeed + (MDF_SpeedCalTemp1 * MDF_SpeedCalTemp2))"
                       },
                       "variableName": "BattleEvent_Elation_00_BaseSpeed"
                     }
@@ -1107,12 +952,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (BattleEvent_Elation_00_BaseSpeed) || RETURN",
-                    "displayLines": "BattleEvent_Elation_00_BaseSpeed",
-                    "constants": [],
-                    "variables": [
-                      "BattleEvent_Elation_00_BaseSpeed"
-                    ]
+                    "displayLines": "BattleEvent_Elation_00_BaseSpeed"
                   },
                   "isRefresh": true
                 }
@@ -1221,12 +1061,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                    "displayLines": "{[SkillP01[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillP01[0]]}"
-                    ]
+                    "displayLines": "{[SkillP01[0]]}"
                   },
                   "variableName": "BattleEvent_Elation_00_BaseSpeed"
                 },
@@ -1288,12 +1123,7 @@ const configAbility = {
                     {
                       "name": "SWITCH",
                       "switchValue": {
-                        "operator": "Variables[0] (MDF_CalCount) || RETURN",
-                        "displayLines": "MDF_CalCount",
-                        "constants": [],
-                        "variables": [
-                          "MDF_CalCount"
-                        ]
+                        "displayLines": "MDF_CalCount"
                       },
                       "compareType": ">=",
                       "caseEvents": [
@@ -1304,12 +1134,7 @@ const configAbility = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] ({[SkillP01[5]]}) || RETURN",
-                                "displayLines": "{[SkillP01[5]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[SkillP01[5]]}"
-                                ]
+                                "displayLines": "{[SkillP01[5]]}"
                               },
                               "variableName": "MDF_SpeedCalTemp2"
                             }
@@ -1322,12 +1147,7 @@ const configAbility = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-                                "displayLines": "{[SkillP01[4]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[SkillP01[4]]}"
-                                ]
+                                "displayLines": "{[SkillP01[4]]}"
                               },
                               "variableName": "MDF_SpeedCalTemp2"
                             }
@@ -1340,12 +1160,7 @@ const configAbility = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                                "displayLines": "{[SkillP01[3]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[SkillP01[3]]}"
-                                ]
+                                "displayLines": "{[SkillP01[3]]}"
                               },
                               "variableName": "MDF_SpeedCalTemp2"
                             }
@@ -1358,12 +1173,7 @@ const configAbility = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                                "displayLines": "{[SkillP01[2]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[SkillP01[2]]}"
-                                ]
+                                "displayLines": "{[SkillP01[2]]}"
                               },
                               "variableName": "MDF_SpeedCalTemp2"
                             }
@@ -1376,12 +1186,7 @@ const configAbility = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                                "displayLines": "{[SkillP01[1]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[SkillP01[1]]}"
-                                ]
+                                "displayLines": "{[SkillP01[1]]}"
                               },
                               "variableName": "MDF_SpeedCalTemp2"
                             }
@@ -1393,28 +1198,14 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_CalCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_CalCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_CalCount"
-                        ]
+                        "displayLines": "(MDF_CalCount + 1)"
                       },
                       "variableName": "MDF_CalCount"
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (BattleEvent_Elation_00_BaseSpeed) || Variables[1] (MDF_SpeedCalTemp1) || Variables[2] (MDF_SpeedCalTemp2) || MUL || ADD || RETURN",
-                        "displayLines": "(BattleEvent_Elation_00_BaseSpeed + (MDF_SpeedCalTemp1 * MDF_SpeedCalTemp2))",
-                        "constants": [],
-                        "variables": [
-                          "BattleEvent_Elation_00_BaseSpeed",
-                          "MDF_SpeedCalTemp1",
-                          "MDF_SpeedCalTemp2"
-                        ]
+                        "displayLines": "(BattleEvent_Elation_00_BaseSpeed + (MDF_SpeedCalTemp1 * MDF_SpeedCalTemp2))"
                       },
                       "variableName": "BattleEvent_Elation_00_BaseSpeed"
                     }
@@ -1428,12 +1219,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (BattleEvent_Elation_00_BaseSpeed) || RETURN",
-                    "displayLines": "BattleEvent_Elation_00_BaseSpeed",
-                    "constants": [],
-                    "variables": [
-                      "BattleEvent_Elation_00_BaseSpeed"
-                    ]
+                    "displayLines": "BattleEvent_Elation_00_BaseSpeed"
                   },
                   "isRefresh": true
                 }
@@ -1495,14 +1281,7 @@ const configAbility = {
                 {
                   "name": "Adjust Team Punchline Value",
                   "value": {
-                    "operator": "Variables[0] (MDF_Elation_Character_Num) || Constants[0] (1) || MUL || RETURN",
-                    "displayLines": "(MDF_Elation_Character_Num * 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_Elation_Character_Num"
-                    ]
+                    "displayLines": "(MDF_Elation_Character_Num * 1)"
                   },
                   "adjustment": "Add"
                 }
@@ -1528,12 +1307,7 @@ const configAbility = {
             {
               "name": "Lock HP",
               "threshold": {
-                "operator": "Constants[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [
-                  1
-                ],
-                "variables": []
+                "displayLines": "1"
               },
               "target": {
                 "name": "Target Name",
@@ -1805,12 +1579,7 @@ const configAbility = {
                   },
                   "variables": {
                     "AddValue": {
-                      "operator": "Variables[0] (AHA_OBJECT_UNUSED__200) || RETURN",
-                      "displayLines": "AHA_OBJECT_UNUSED__200",
-                      "constants": [],
-                      "variables": [
-                        "AHA_OBJECT_UNUSED__200"
-                      ]
+                      "displayLines": "AHA_OBJECT_UNUSED__200"
                     }
                   }
                 }
@@ -1829,12 +1598,7 @@ const configAbility = {
                   },
                   "variables": {
                     "AddValue": {
-                      "operator": "Variables[0] (Elation_CurrentPoint) || RETURN",
-                      "displayLines": "Elation_CurrentPoint",
-                      "constants": [],
-                      "variables": [
-                        "Elation_CurrentPoint"
-                      ]
+                      "displayLines": "Elation_CurrentPoint"
                     }
                   }
                 },
@@ -2071,14 +1835,7 @@ const configAbility = {
                 {
                   "name": "Adjust Team Punchline Value",
                   "value": {
-                    "operator": "Variables[0] (MDF_Elation_Character_Num) || Constants[0] (1) || MUL || RETURN",
-                    "displayLines": "(MDF_Elation_Character_Num * 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_Elation_Character_Num"
-                    ]
+                    "displayLines": "(MDF_Elation_Character_Num * 1)"
                   },
                   "adjustment": "Add"
                 }

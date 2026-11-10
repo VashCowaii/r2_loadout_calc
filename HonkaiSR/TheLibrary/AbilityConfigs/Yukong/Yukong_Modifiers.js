@@ -73,12 +73,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AddedRatio) || RETURN",
-                "displayLines": "MDF_AddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AddedRatio"
-                ]
+                "displayLines": "MDF_AddedRatio"
               }
             }
           ]
@@ -101,20 +96,10 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-2029608096\">Yukong_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">Seven Layers, One Arrow</span>]",
               "valuePerStack": {
                 "MDF_AddDamagePercentage": {
-                  "operator": "Variables[0] (MDF_AddDamagePercentage) || RETURN",
-                  "displayLines": "MDF_AddDamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "MDF_AddDamagePercentage"
-                  ]
+                  "displayLines": "MDF_AddDamagePercentage"
                 },
                 "MDF_StanceBreakAddedRatio": {
-                  "operator": "Variables[0] (MDF_StanceBreakAddedRatio) || RETURN",
-                  "displayLines": "MDF_StanceBreakAddedRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_StanceBreakAddedRatio"
-                  ]
+                  "displayLines": "MDF_StanceBreakAddedRatio"
                 }
               }
             }
@@ -193,12 +178,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_RealAttack) || RETURN",
-                "displayLines": "MDF_RealAttack",
-                "constants": [],
-                "variables": [
-                  "MDF_RealAttack"
-                ]
+                "displayLines": "MDF_RealAttack"
               }
             },
             {
@@ -209,12 +189,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_CritChanceUp) || RETURN",
-                "displayLines": "MDF_CritChanceUp",
-                "constants": [],
-                "variables": [
-                  "MDF_CritChanceUp"
-                ]
+                "displayLines": "MDF_CritChanceUp"
               }
             },
             {
@@ -225,12 +200,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_CritDamageUpRatio) || RETURN",
-                "displayLines": "MDF_CritDamageUpRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_CritDamageUpRatio"
-                ]
+                "displayLines": "MDF_CritDamageUpRatio"
               }
             }
           ]
@@ -257,12 +227,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_RealAttack) || RETURN",
-                "displayLines": "MDF_RealAttack",
-                "constants": [],
-                "variables": [
-                  "MDF_RealAttack"
-                ]
+                "displayLines": "MDF_RealAttack"
               }
             }
           ]
@@ -293,12 +258,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"781697929\">Yukong_Eidolon4_Flower_Bonus</a>[<span class=\"descriptionNumberColor\">Zephyrean Echoes</span>]",
                   "valuePerStack": {
                     "MDF_AddedRatio": {
-                      "operator": "Variables[0] (MDF_Rank04AddedRatio) || RETURN",
-                      "displayLines": "MDF_Rank04AddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Rank04AddedRatio"
-                      ]
+                      "displayLines": "MDF_Rank04AddedRatio"
                     }
                   }
                 }
@@ -326,12 +286,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"432670237\">Yukong_Flower_ATK</a>[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]",
                   "valuePerStack": {
                     "MDF_RealAttack": {
-                      "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
-                      "displayLines": "MDF_AttackAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AttackAddedRatio"
-                      ]
+                      "displayLines": "MDF_AttackAddedRatio"
                     }
                   }
                 }
@@ -542,12 +497,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (MDF_PointB3Amount) || RETURN",
-                    "displayLines": "MDF_PointB3Amount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PointB3Amount"
-                    ]
+                    "displayLines": "MDF_PointB3Amount"
                   },
                   "isFixed": "* ERR"
                 }

@@ -32,28 +32,13 @@ const configAbility = {
           "memoID": 11402,
           "valuePerStack": {
             "_PointB3Layer": {
-              "operator": "Variables[0] (_EnergyReduce) || RETURN",
-              "displayLines": "_EnergyReduce",
-              "constants": [],
-              "variables": [
-                "_EnergyReduce"
-              ]
+              "displayLines": "_EnergyReduce"
             },
             "Ability11_DamagePercentage": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             },
             "Ability11_DamagePercentageAD": {
-              "operator": "Variables[0] (0.9) || RETURN",
-              "displayLines": "0.9",
-              "constants": [],
-              "variables": [
-                0.9
-              ]
+              "displayLines": "0.9"
             }
           }
         },
@@ -107,12 +92,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (30) || RETURN",
-                    "displayLines": "30",
-                    "constants": [],
-                    "variables": [
-                      30
-                    ]
+                    "displayLines": "30"
                   },
                   "isFixed": "* ERR"
                 },
@@ -126,12 +106,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -158,36 +133,16 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"216440055\">Aglaea_GoldenSword_Mark</a>[<span class=\"descriptionNumberColor\">Seam Stitch</span>]",
                       "valuePerStack": {
                         "BombDamagePercentage": {
-                          "operator": "Variables[0] (0.3) || RETURN",
-                          "displayLines": "0.3",
-                          "constants": [],
-                          "variables": [
-                            0.3
-                          ]
+                          "displayLines": "0.3"
                         },
                         "_SpRecover": {
-                          "operator": "Variables[0] (20) || RETURN",
-                          "displayLines": "20",
-                          "constants": [],
-                          "variables": [
-                            20
-                          ]
+                          "displayLines": "20"
                         },
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.3) || RETURN",
-                          "displayLines": "0.3",
-                          "constants": [],
-                          "variables": [
-                            0.3
-                          ]
+                          "displayLines": "0.3"
                         },
                         "MDF_PropertyValue2": {
-                          "operator": "Variables[0] (0.15) || RETURN",
-                          "displayLines": "0.15",
-                          "constants": [],
-                          "variables": [
-                            0.15
-                          ]
+                          "displayLines": "0.15"
                         }
                       }
                     }

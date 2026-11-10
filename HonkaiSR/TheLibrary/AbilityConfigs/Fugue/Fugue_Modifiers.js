@@ -22,12 +22,7 @@ const configAbility = {
           "ID": "122501(SkillMaze)",
           "counter": 1,
           "duration": {
-            "operator": "Variables[0] (10) || RETURN",
-            "displayLines": "10",
-            "constants": [],
-            "variables": [
-              10
-            ]
+            "displayLines": "10"
           },
           "conditions": {
             "name": "Has Flag",
@@ -65,12 +60,7 @@ const configAbility = {
               },
               "variables": {
                 "DamagePercentage": {
-                  "operator": "Variables[0] (MDF_SuperBreakDamagePercentage) || RETURN",
-                  "displayLines": "MDF_SuperBreakDamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "MDF_SuperBreakDamagePercentage"
-                  ]
+                  "displayLines": "MDF_SuperBreakDamagePercentage"
                 }
               },
               "damageSequence": [
@@ -99,12 +89,7 @@ const configAbility = {
                       }
                     },
                     "DamageBreak": {
-                      "operator": "Variables[0] (value_0_DamagePercentage) || RETURN",
-                      "displayLines": "value_0_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "value_0_DamagePercentage"
-                      ]
+                      "displayLines": "value_0_DamagePercentage"
                     },
                     "dmgFormula": "Break DMG Scaling",
                     "dmgFormulaFinal": "Pure (No DMG%)",
@@ -143,12 +128,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-74108309\">Fugue_PassiveAbility_ElementDamage</a>",
               "valuePerStack": {
                 "MDF_SuperBreakDamagePercentage": {
-                  "operator": "Variables[0] (MDF_PassiveDamage2) || RETURN",
-                  "displayLines": "MDF_PassiveDamage2",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PassiveDamage2"
-                  ]
+                  "displayLines": "MDF_PassiveDamage2"
                 }
               },
               "casterAssign": "TargetSelf"
@@ -176,12 +156,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (FUGUE_OBJECT_UNUSED_1) || RETURN",
-                "displayLines": "FUGUE_OBJECT_UNUSED_1",
-                "constants": [],
-                "variables": [
-                  "FUGUE_OBJECT_UNUSED_1"
-                ]
+                "displayLines": "FUGUE_OBJECT_UNUSED_1"
               }
             }
           ]
@@ -196,12 +171,7 @@ const configAbility = {
         "show": "Hide",
         "skillType": "Ultimate",
         "toughnessForcedReductionPreview": {
-          "operator": "Variables[0] (FUGUE_OBJECT_UNUSED_1) || RETURN",
-          "displayLines": "FUGUE_OBJECT_UNUSED_1",
-          "constants": [],
-          "variables": [
-            "FUGUE_OBJECT_UNUSED_1"
-          ]
+          "displayLines": "FUGUE_OBJECT_UNUSED_1"
         },
         "showAsForcedReduction": true
       }
@@ -251,12 +221,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Variables[0] (0.24) || INVERT || RETURN",
-            "displayLines": "-0.24",
-            "constants": [],
-            "variables": [
-              0.24
-            ]
+            "displayLines": "-0.24"
           }
         }
       }
@@ -276,60 +241,25 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_BreakDamageAdd": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
+              "displayLines": "0.3"
             },
             "MDF_StanceBreakAddRatio": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             },
             "MDF_Chance": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "MDF_DefenceDownRatio": {
-              "operator": "Variables[0] (0.18) || RETURN",
-              "displayLines": "0.18",
-              "constants": [],
-              "variables": [
-                0.18
-              ]
+              "displayLines": "0.18"
             },
             "MDF_BreakDamageAddedRatio": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
+              "displayLines": "0.2"
             },
             "MDF_LifeTime": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
+              "displayLines": "2"
             },
             "MDF_PropertyRatio": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
+              "displayLines": "0.5"
             }
           }
         }
@@ -363,13 +293,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_CurMaxStance2) || Variables[1] (MDF_RedStanceRatio) || MUL || RETURN",
-                "displayLines": "(MDF_CurMaxStance2 * MDF_RedStanceRatio)",
-                "constants": [],
-                "variables": [
-                  "MDF_CurMaxStance2",
-                  "MDF_RedStanceRatio"
-                ]
+                "displayLines": "(MDF_CurMaxStance2 * MDF_RedStanceRatio)"
               },
               "variableName": "MDF_RedStance_First"
             },
@@ -385,12 +309,7 @@ const configAbility = {
                 {
                   "name": "Stack Exo-Toughness",
                   "exoPercent": {
-                    "operator": "Variables[0] (MDF_RedStanceRatio) || RETURN",
-                    "displayLines": "MDF_RedStanceRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_RedStanceRatio"
-                    ]
+                    "displayLines": "MDF_RedStanceRatio"
                   },
                   "exoFlat": 0
                 }
@@ -441,29 +360,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-375769760\">Fugue_DefenceDown</a>[<span class=\"descriptionNumberColor\">Virtue Beckons Bliss</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
+                    "displayLines": "2"
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
+                    "displayLines": "1"
                   },
                   "valuePerStack": {
                     "MDF_DefenceDownRatio": {
-                      "operator": "Variables[0] (0.18) || RETURN",
-                      "displayLines": "0.18",
-                      "constants": [],
-                      "variables": [
-                        0.18
-                      ]
+                      "displayLines": "0.18"
                     }
                   }
                 }

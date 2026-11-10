@@ -12,12 +12,7 @@ const configAbility = {
         "value1": "Minion_1_Alive",
         "compareType": "<",
         "value2": {
-          "operator": "Variables[0] (MinionState_1) || RETURN",
-          "displayLines": "MinionState_1",
-          "constants": [],
-          "variables": [
-            "MinionState_1"
-          ]
+          "displayLines": "MinionState_1"
         }
       },
       "passed": [
@@ -28,12 +23,7 @@ const configAbility = {
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonMinionID_1) || RETURN",
-                "displayLines": "SummonMinionID_1",
-                "constants": [],
-                "variables": [
-                  "SummonMinionID_1"
-                ]
+                "displayLines": "SummonMinionID_1"
               },
               "locationType": "BeforeCaster"
             }
@@ -69,12 +59,7 @@ const configAbility = {
         "value1": "Minion_3_Alive",
         "compareType": "<",
         "value2": {
-          "operator": "Variables[0] (MinionState_3) || RETURN",
-          "displayLines": "MinionState_3",
-          "constants": [],
-          "variables": [
-            "MinionState_3"
-          ]
+          "displayLines": "MinionState_3"
         }
       },
       "passed": [
@@ -84,12 +69,7 @@ const configAbility = {
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonMinionID_3) || RETURN",
-                "displayLines": "SummonMinionID_3",
-                "constants": [],
-                "variables": [
-                  "SummonMinionID_3"
-                ]
+                "displayLines": "SummonMinionID_3"
               },
               "locationType": "AfterCaster"
             }
@@ -125,12 +105,7 @@ const configAbility = {
         "value1": "Minion_4_Alive",
         "compareType": "<",
         "value2": {
-          "operator": "Variables[0] (MinionState_4) || RETURN",
-          "displayLines": "MinionState_4",
-          "constants": [],
-          "variables": [
-            "MinionState_4"
-          ]
+          "displayLines": "MinionState_4"
         }
       },
       "passed": [
@@ -141,12 +116,7 @@ const configAbility = {
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonMinionID_4) || RETURN",
-                "displayLines": "SummonMinionID_4",
-                "constants": [],
-                "variables": [
-                  "SummonMinionID_4"
-                ]
+                "displayLines": "SummonMinionID_4"
               },
               "locationType": "AfterCaster"
             }
@@ -182,12 +152,7 @@ const configAbility = {
         "value1": "Minion_2_Alive",
         "compareType": "<",
         "value2": {
-          "operator": "Variables[0] (MinionState_2) || RETURN",
-          "displayLines": "MinionState_2",
-          "constants": [],
-          "variables": [
-            "MinionState_2"
-          ]
+          "displayLines": "MinionState_2"
         }
       },
       "passed": [
@@ -207,24 +172,14 @@ const configAbility = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonMinionID_2) || RETURN",
-                    "displayLines": "SummonMinionID_2",
-                    "constants": [],
-                    "variables": [
-                      "SummonMinionID_2"
-                    ]
+                    "displayLines": "SummonMinionID_2"
                   },
                   "locationType": "First"
                 },
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonMinionID_2) || RETURN",
-                    "displayLines": "SummonMinionID_2",
-                    "constants": [],
-                    "variables": [
-                      "SummonMinionID_2"
-                    ]
+                    "displayLines": "SummonMinionID_2"
                   },
                   "locationType": "Last"
                 }
@@ -246,12 +201,7 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonMinionID_2) || RETURN",
-                        "displayLines": "SummonMinionID_2",
-                        "constants": [],
-                        "variables": [
-                          "SummonMinionID_2"
-                        ]
+                        "displayLines": "SummonMinionID_2"
                       },
                       "locationType": "First"
                     }
@@ -264,12 +214,7 @@ const configAbility = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonMinionID_2) || RETURN",
-                        "displayLines": "SummonMinionID_2",
-                        "constants": [],
-                        "variables": [
-                          "SummonMinionID_2"
-                        ]
+                        "displayLines": "SummonMinionID_2"
                       },
                       "locationType": "Last"
                     }
@@ -315,12 +260,7 @@ const configAbility = {
           {
             "name": "Enemy ID",
             "ID": {
-              "operator": "Variables[0] (SummonMinionID_2) || RETURN",
-              "displayLines": "SummonMinionID_2",
-              "constants": [],
-              "variables": [
-                "SummonMinionID_2"
-              ]
+              "displayLines": "SummonMinionID_2"
             },
             "target": {
               "name": "Target Name",
@@ -351,12 +291,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1933098157\">Enemy_W2_Xuanlu_10_Extra_IncreaseReturnDamage</a>[<span class=\"descriptionNumberColor\">Cultivation</span>]",
           "valuePerStack": {
             "MDF_DamageIncreaseValue": {
-              "operator": "Variables[0] ({[Skill15[0]]}) || RETURN",
-              "displayLines": "{[Skill15[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill15[0]]}"
-              ]
+              "displayLines": "{[Skill15[0]]}"
             }
           }
         }

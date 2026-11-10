@@ -182,12 +182,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"73301376\">Standard_SuperArmor</a>[<span class=\"descriptionNumberColor\">Safeguard</span>]",
                           "valuePerStack": {
                             "MDF_AllDamageTypeResistance": {
-                              "operator": "Variables[0] (MDF_SuperArmorDamageResistance) || RETURN",
-                              "displayLines": "MDF_SuperArmorDamageResistance",
-                              "constants": [],
-                              "variables": [
-                                "MDF_SuperArmorDamageResistance"
-                              ]
+                              "displayLines": "MDF_SuperArmorDamageResistance"
                             }
                           }
                         }
@@ -202,12 +197,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"73301376\">Standard_SuperArmor</a>[<span class=\"descriptionNumberColor\">Safeguard</span>]",
                           "valuePerStack": {
                             "MDF_AllDamageTypeResistance": {
-                              "operator": "Variables[0] (MDF_SuperArmorDamageResistance) || RETURN",
-                              "displayLines": "MDF_SuperArmorDamageResistance",
-                              "constants": [],
-                              "variables": [
-                                "MDF_SuperArmorDamageResistance"
-                              ]
+                              "displayLines": "MDF_SuperArmorDamageResistance"
                             }
                           }
                         }
@@ -237,12 +227,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"221422164\">Monster_W2_Feixiao_ModifyActionDelay</a>",
                   "valuePerStack": {
                     "MDF_BreakActionDelay": {
-                      "operator": "Variables[0] (MDF_BreakActionDelay) || RETURN",
-                      "displayLines": "MDF_BreakActionDelay",
-                      "constants": [],
-                      "variables": [
-                        "MDF_BreakActionDelay"
-                      ]
+                      "displayLines": "MDF_BreakActionDelay"
                     }
                   }
                 },
@@ -255,12 +240,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1917647041\">Standard_SuperArmorBreak</a>[<span class=\"descriptionNumberColor\">Safeguard Broken</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeTakenRatio": {
-                      "operator": "Variables[0] (MDF_SuperArmorBreakDamageAddedRatio) || RETURN",
-                      "displayLines": "MDF_SuperArmorBreakDamageAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_SuperArmorBreakDamageAddedRatio"
-                      ]
+                      "displayLines": "MDF_SuperArmorBreakDamageAddedRatio"
                     }
                   }
                 }
@@ -286,12 +266,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"73301376\">Standard_SuperArmor</a>[<span class=\"descriptionNumberColor\">Safeguard</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeResistance": {
-                      "operator": "Variables[0] (MDF_SuperArmorDamageResistance) || RETURN",
-                      "displayLines": "MDF_SuperArmorDamageResistance",
-                      "constants": [],
-                      "variables": [
-                        "MDF_SuperArmorDamageResistance"
-                      ]
+                      "displayLines": "MDF_SuperArmorDamageResistance"
                     }
                   }
                 }
@@ -644,14 +619,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (EnhancePartNum) || Constants[0] (1) || SUB || RETURN",
-                            "displayLines": "(EnhancePartNum - 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "EnhancePartNum"
-                            ]
+                            "displayLines": "(EnhancePartNum - 1)"
                           },
                           "variableName": "EnhancePartNum"
                         }
@@ -669,14 +637,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (EnhancePartNum) || Constants[0] (1) || SUB || RETURN",
-                            "displayLines": "(EnhancePartNum - 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "EnhancePartNum"
-                            ]
+                            "displayLines": "(EnhancePartNum - 1)"
                           },
                           "variableName": "EnhancePartNum"
                         }
@@ -694,14 +655,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (EnhancePartNum) || Constants[0] (1) || SUB || RETURN",
-                            "displayLines": "(EnhancePartNum - 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "EnhancePartNum"
-                            ]
+                            "displayLines": "(EnhancePartNum - 1)"
                           },
                           "variableName": "EnhancePartNum"
                         }
@@ -756,14 +710,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (EnhancePartNum) || Constants[0] (1) || SUB || RETURN",
-                            "displayLines": "(EnhancePartNum - 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "EnhancePartNum"
-                            ]
+                            "displayLines": "(EnhancePartNum - 1)"
                           },
                           "variableName": "EnhancePartNum"
                         }
@@ -781,14 +728,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (EnhancePartNum) || Constants[0] (1) || SUB || RETURN",
-                            "displayLines": "(EnhancePartNum - 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "EnhancePartNum"
-                            ]
+                            "displayLines": "(EnhancePartNum - 1)"
                           },
                           "variableName": "EnhancePartNum"
                         }
@@ -806,14 +746,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (EnhancePartNum) || Constants[0] (1) || SUB || RETURN",
-                            "displayLines": "(EnhancePartNum - 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "EnhancePartNum"
-                            ]
+                            "displayLines": "(EnhancePartNum - 1)"
                           },
                           "variableName": "EnhancePartNum"
                         }
@@ -868,14 +801,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (EnhancePartNum) || Constants[0] (1) || SUB || RETURN",
-                            "displayLines": "(EnhancePartNum - 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "EnhancePartNum"
-                            ]
+                            "displayLines": "(EnhancePartNum - 1)"
                           },
                           "variableName": "EnhancePartNum"
                         }
@@ -893,14 +819,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (EnhancePartNum) || Constants[0] (1) || SUB || RETURN",
-                            "displayLines": "(EnhancePartNum - 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "EnhancePartNum"
-                            ]
+                            "displayLines": "(EnhancePartNum - 1)"
                           },
                           "variableName": "EnhancePartNum"
                         }
@@ -918,14 +837,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (EnhancePartNum) || Constants[0] (1) || SUB || RETURN",
-                            "displayLines": "(EnhancePartNum - 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "EnhancePartNum"
-                            ]
+                            "displayLines": "(EnhancePartNum - 1)"
                           },
                           "variableName": "EnhancePartNum"
                         }
@@ -1017,12 +929,7 @@ const compositeAbilityObject = {
           },
           "scope": "TargetEntity",
           "value": {
-            "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-            "displayLines": "{[Skill02[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[0]]}"
-            ]
+            "displayLines": "{[Skill02[0]]}"
           },
           "variableName": "Skill04DamagePercentage"
         },
@@ -1034,12 +941,7 @@ const compositeAbilityObject = {
           },
           "scope": "TargetEntity",
           "value": {
-            "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-            "displayLines": "{[Skill01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[0]]}"
-            ]
+            "displayLines": "{[Skill01[0]]}"
           },
           "variableName": "Skill04DamagePercentage"
         },
@@ -1052,28 +954,13 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1928525254\">Monster_W2_FeixiaoPart_SuperArmorController</a>",
           "valuePerStack": {
             "MDF_SuperArmorDamageResistance": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
+              "displayLines": "{[Skill01[1]]}"
             },
             "MDF_BreakActionDelay": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
+              "displayLines": "{[Skill01[2]]}"
             },
             "MDF_SuperArmorBreakDamageAddedRatio": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
+              "displayLines": "{[Skill01[3]]}"
             }
           }
         },
@@ -1163,12 +1050,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,

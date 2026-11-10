@@ -57,12 +57,7 @@ const compositeAbilityObject = {
                         "value1": "CurrentHP%",
                         "compareType": "<=",
                         "value2": {
-                          "operator": "Variables[0] (MDF_LowHPRatio) || RETURN",
-                          "displayLines": "MDF_LowHPRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_LowHPRatio"
-                          ]
+                          "displayLines": "MDF_LowHPRatio"
                         }
                       },
                       {
@@ -542,13 +537,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                    "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageUpRatio_PerLayer",
-                      "ModifierLayers"
-                    ]
+                    "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)"
                   }
                 }
               ]
@@ -586,12 +575,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-2053914629\">Monster_W2_Kafka_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                          "displayLines": "MDF_DamageUpRatio_PerLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageUpRatio_PerLayer"
-                          ]
+                          "displayLines": "MDF_DamageUpRatio_PerLayer"
                         }
                       }
                     },
@@ -689,12 +673,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-2053914629\">Monster_W2_Kafka_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "valuePerStack": {
                             "MDF_DamageUpRatio_PerLayer": {
-                              "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                              "displayLines": "MDF_DamageUpRatio_PerLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_DamageUpRatio_PerLayer"
-                              ]
+                              "displayLines": "MDF_DamageUpRatio_PerLayer"
                             }
                           }
                         }
@@ -722,12 +701,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1459324201\">Monster_W2_Kafka_RL_ListenElectric</a>",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                      "displayLines": "MDF_DamageUpRatio_PerLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageUpRatio_PerLayer"
-                      ]
+                      "displayLines": "MDF_DamageUpRatio_PerLayer"
                     }
                   }
                 }
@@ -792,12 +766,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1459324201\">Monster_W2_Kafka_RL_ListenElectric</a>",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                          "displayLines": "MDF_DamageUpRatio_PerLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageUpRatio_PerLayer"
-                          ]
+                          "displayLines": "MDF_DamageUpRatio_PerLayer"
                         }
                       }
                     }
@@ -1207,47 +1176,20 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]",
               "duration": {
-                "operator": "Variables[0] (UnusedUnderThisBase_9509) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(UnusedUnderThisBase_9509 + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "UnusedUnderThisBase_9509"
-                ]
+                "displayLines": "(UnusedUnderThisBase_9509 + 1)"
               },
               "baseChance": {
-                "operator": "Variables[0] (UnusedUnderThisBase_9503) || RETURN",
-                "displayLines": "UnusedUnderThisBase_9503",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_9503"
-                ]
+                "displayLines": "UnusedUnderThisBase_9503"
               },
               "valuePerStack": {
                 "MDF_MindControlDamagePercentage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_12801) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_12801",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_12801"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_12801"
                 },
                 "MDF_MaxDamageRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9518) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9518",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_9518"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_9518"
                 },
                 "MDF_MinDamageRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9507) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9507",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_9507"
-                  ]
+                  "displayLines": "UnusedUnderThisBase_9507"
                 }
               },
               "success": [
@@ -1357,12 +1299,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_W2_Kafka_00_RL_BattleEvent_BaseSpeed) || RETURN",
-                    "displayLines": "MDF_W2_Kafka_00_RL_BattleEvent_BaseSpeed",
-                    "constants": [],
-                    "variables": [
-                      "MDF_W2_Kafka_00_RL_BattleEvent_BaseSpeed"
-                    ]
+                    "displayLines": "MDF_W2_Kafka_00_RL_BattleEvent_BaseSpeed"
                   }
                 }
               ]

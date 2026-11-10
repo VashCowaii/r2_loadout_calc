@@ -74,12 +74,7 @@ const configAbility = {
                       "name": "Random Event",
                       "isUnique": true,
                       "count": {
-                        "operator": "Variables[0] (ADF_1) || RETURN",
-                        "displayLines": "ADF_1",
-                        "constants": [],
-                        "variables": [
-                          "ADF_1"
-                        ]
+                        "displayLines": "ADF_1"
                       },
                       "odds": [
                         0.142,
@@ -103,12 +98,7 @@ const configAbility = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] (ADF_2) || RETURN",
-                                  "displayLines": "ADF_2",
-                                  "constants": [],
-                                  "variables": [
-                                    "ADF_2"
-                                  ]
+                                  "displayLines": "ADF_2"
                                 },
                                 "Toughness": null,
                                 "Tags": null,
@@ -129,12 +119,7 @@ const configAbility = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] (ADF_2) || RETURN",
-                                  "displayLines": "ADF_2",
-                                  "constants": [],
-                                  "variables": [
-                                    "ADF_2"
-                                  ]
+                                  "displayLines": "ADF_2"
                                 },
                                 "Toughness": null,
                                 "Tags": null,
@@ -155,12 +140,7 @@ const configAbility = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] (ADF_2) || RETURN",
-                                  "displayLines": "ADF_2",
-                                  "constants": [],
-                                  "variables": [
-                                    "ADF_2"
-                                  ]
+                                  "displayLines": "ADF_2"
                                 },
                                 "Toughness": null,
                                 "Tags": null,
@@ -181,12 +161,7 @@ const configAbility = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] (ADF_2) || RETURN",
-                                  "displayLines": "ADF_2",
-                                  "constants": [],
-                                  "variables": [
-                                    "ADF_2"
-                                  ]
+                                  "displayLines": "ADF_2"
                                 },
                                 "Toughness": null,
                                 "Tags": null,
@@ -207,12 +182,7 @@ const configAbility = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] (ADF_2) || RETURN",
-                                  "displayLines": "ADF_2",
-                                  "constants": [],
-                                  "variables": [
-                                    "ADF_2"
-                                  ]
+                                  "displayLines": "ADF_2"
                                 },
                                 "Toughness": null,
                                 "Tags": null,
@@ -233,12 +203,7 @@ const configAbility = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] (ADF_2) || RETURN",
-                                  "displayLines": "ADF_2",
-                                  "constants": [],
-                                  "variables": [
-                                    "ADF_2"
-                                  ]
+                                  "displayLines": "ADF_2"
                                 },
                                 "Toughness": null,
                                 "Tags": null,
@@ -259,12 +224,7 @@ const configAbility = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] (ADF_2) || RETURN",
-                                  "displayLines": "ADF_2",
-                                  "constants": [],
-                                  "variables": [
-                                    "ADF_2"
-                                  ]
+                                  "displayLines": "ADF_2"
                                 },
                                 "Toughness": null,
                                 "Tags": null,
@@ -304,20 +264,10 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1799241140\">Modifier_BattleEventAbility_Challenge_Month_20_Sub</a>",
               "valuePerStack": {
                 "ADF_1": {
-                  "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                  "displayLines": "#BattleEvent_P1_ADF",
-                  "constants": [],
-                  "variables": [
-                    "#BattleEvent_P1_ADF"
-                  ]
+                  "displayLines": "#BattleEvent_P1_ADF"
                 },
                 "ADF_2": {
-                  "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                  "displayLines": "#BattleEvent_P2_ADF",
-                  "constants": [],
-                  "variables": [
-                    "#BattleEvent_P2_ADF"
-                  ]
+                  "displayLines": "#BattleEvent_P2_ADF"
                 }
               },
               "casterAssign": "TargetSelf"
@@ -347,20 +297,10 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1799241140\">Modifier_BattleEventAbility_Challenge_Month_20_Sub</a>",
                   "valuePerStack": {
                     "ADF_1": {
-                      "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P1_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P1_ADF"
                     },
                     "ADF_2": {
-                      "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P2_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P2_ADF"
-                      ]
+                      "displayLines": "#BattleEvent_P2_ADF"
                     }
                   },
                   "casterAssign": "TargetSelf"

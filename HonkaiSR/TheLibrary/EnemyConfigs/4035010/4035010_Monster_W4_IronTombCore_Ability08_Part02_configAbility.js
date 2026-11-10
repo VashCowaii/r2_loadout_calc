@@ -225,12 +225,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (_Skill08_DamagePercentage) || RETURN",
-          "displayLines": "_Skill08_DamagePercentage",
-          "constants": [],
-          "variables": [
-            "_Skill08_DamagePercentage"
-          ]
+          "displayLines": "_Skill08_DamagePercentage"
         },
         "HitSplit": 0.125,
         "Toughness": null,
@@ -248,12 +243,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (_Skill08_DamagePercentage) || RETURN",
-          "displayLines": "_Skill08_DamagePercentage",
-          "constants": [],
-          "variables": [
-            "_Skill08_DamagePercentage"
-          ]
+          "displayLines": "_Skill08_DamagePercentage"
         },
         "HitSplit": 0.125,
         "Toughness": null,
@@ -271,12 +261,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (_Skill08_DamagePercentage) || RETURN",
-          "displayLines": "_Skill08_DamagePercentage",
-          "constants": [],
-          "variables": [
-            "_Skill08_DamagePercentage"
-          ]
+          "displayLines": "_Skill08_DamagePercentage"
         },
         "HitSplit": 0.125,
         "Toughness": null,
@@ -294,12 +279,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (_Skill08_DamagePercentage) || RETURN",
-          "displayLines": "_Skill08_DamagePercentage",
-          "constants": [],
-          "variables": [
-            "_Skill08_DamagePercentage"
-          ]
+          "displayLines": "_Skill08_DamagePercentage"
         },
         "HitSplit": 0.125,
         "Toughness": null,
@@ -317,12 +297,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (_Skill08_DamagePercentage) || RETURN",
-          "displayLines": "_Skill08_DamagePercentage",
-          "constants": [],
-          "variables": [
-            "_Skill08_DamagePercentage"
-          ]
+          "displayLines": "_Skill08_DamagePercentage"
         },
         "HitSplit": 0.125,
         "Toughness": null,
@@ -340,12 +315,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (_Skill08_DamagePercentage) || RETURN",
-          "displayLines": "_Skill08_DamagePercentage",
-          "constants": [],
-          "variables": [
-            "_Skill08_DamagePercentage"
-          ]
+          "displayLines": "_Skill08_DamagePercentage"
         },
         "HitSplit": 0.125,
         "Toughness": null,
@@ -363,12 +333,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (_Skill08_DamagePercentage) || RETURN",
-          "displayLines": "_Skill08_DamagePercentage",
-          "constants": [],
-          "variables": [
-            "_Skill08_DamagePercentage"
-          ]
+          "displayLines": "_Skill08_DamagePercentage"
         },
         "HitSplit": 0.125,
         "Toughness": null,
@@ -386,12 +351,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (_Skill08_DamagePercentage) || RETURN",
-          "displayLines": "_Skill08_DamagePercentage",
-          "constants": [],
-          "variables": [
-            "_Skill08_DamagePercentage"
-          ]
+          "displayLines": "_Skill08_DamagePercentage"
         },
         "HitSplit": 0.125,
         "Toughness": null,
@@ -461,12 +421,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "DamageFlat": {
-                  "operator": "Variables[0] (_TargetMaxHP) || RETURN",
-                  "displayLines": "_TargetMaxHP",
-                  "constants": [],
-                  "variables": [
-                    "_TargetMaxHP"
-                  ]
+                  "displayLines": "_TargetMaxHP"
                 },
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
@@ -533,12 +488,7 @@ const configAbility = {
           "functionName": "<a class=\"gTempYellow\" id=\"1699523791\">W4_IronTombCore_CalWorldErosion</a>",
           "variables": {
             "_ErosionParam": {
-              "operator": "Variables[0] ({[Skill08[1]]}) || RETURN",
-              "displayLines": "{[Skill08[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill08[1]]}"
-              ]
+              "displayLines": "{[Skill08[1]]}"
             }
           }
         },
@@ -585,20 +535,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1372521903\">MModifier_W4_IronTombCore_TimeLock</a>[<span class=\"descriptionNumberColor\">Action Lock</span>]",
                       "valuePerStack": {
                         "MDF_SPConvert": {
-                          "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-                          "displayLines": "{[Skill04[2]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill04[2]]}"
-                          ]
+                          "displayLines": "{[Skill04[2]]}"
                         },
                         "MDF_ActionDelayConvert": {
-                          "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-                          "displayLines": "{[Skill04[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill04[3]]}"
-                          ]
+                          "displayLines": "{[Skill04[3]]}"
                         }
                       }
                     }
@@ -641,13 +581,7 @@ const configAbility = {
                         "target": "{{Parameter Target}}"
                       },
                       "value": {
-                        "operator": "Variables[0] ({[Skill08[2]]}) || INVERT || Variables[1] (_TargetMaxSP) || MUL || RETURN",
-                        "displayLines": "(-{[Skill08[2]]} * _TargetMaxSP)",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill08[2]]}",
-                          "_TargetMaxSP"
-                        ]
+                        "displayLines": "(-{[Skill08[2]]} * _TargetMaxSP)"
                       },
                       "isFixed": "(Fixed)"
                     }

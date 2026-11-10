@@ -77,25 +77,14 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (AttackCount) || Variables[1] ({[Skill05[0]]}) || MUL || RETURN",
-            "displayLines": "(AttackCount * {[Skill05[0]]})",
-            "constants": [],
-            "variables": [
-              "AttackCount",
-              "{[Skill05[0]]}"
-            ]
+            "displayLines": "(AttackCount * {[Skill05[0]]})"
           },
           "variableName": "AttackCount"
         },
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (AttackCount) || RETURN",
-            "displayLines": "AttackCount",
-            "constants": [],
-            "variables": [
-              "AttackCount"
-            ]
+            "displayLines": "AttackCount"
           },
           "caseEvents": [
             {

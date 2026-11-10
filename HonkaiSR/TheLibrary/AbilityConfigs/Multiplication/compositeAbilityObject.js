@@ -40,12 +40,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Assign Advance/Delay to Current Ability Use",
                       "adjustmentValue": {
-                        "operator": "Variables[0] (0.12) || INVERT || RETURN",
-                        "displayLines": "-0.12",
-                        "constants": [],
-                        "variables": [
-                          0.12
-                        ]
+                        "displayLines": "-0.12"
                       },
                       "adjustmentType": "Advance"
                     }

@@ -52,12 +52,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (ChallengePeakBattle_Plugins_0001_ADF_1) || RETURN",
-                "displayLines": "ChallengePeakBattle_Plugins_0001_ADF_1",
-                "constants": [],
-                "variables": [
-                  "ChallengePeakBattle_Plugins_0001_ADF_1"
-                ]
+                "displayLines": "ChallengePeakBattle_Plugins_0001_ADF_1"
               }
             }
           ]
@@ -204,12 +199,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-963813829\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0001_02</a>[<span class=\"descriptionNumberColor\">Think Outside the Box</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_Plugins_0001_ADF_1": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }

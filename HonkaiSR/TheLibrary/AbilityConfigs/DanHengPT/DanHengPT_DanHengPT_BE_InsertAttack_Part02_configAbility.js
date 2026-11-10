@@ -59,12 +59,7 @@ const configAbility = {
         "target": "{{All Team Members}}"
       },
       "dispelCount": {
-        "operator": "Variables[0] (1) || RETURN",
-        "displayLines": "1",
-        "constants": [],
-        "variables": [
-          1
-        ]
+        "displayLines": "1"
       },
       "dispelOrder": "LastAdded"
     },
@@ -85,21 +80,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (Skill03_InsertDanHengPTDamagePercentage) || RETURN",
-          "displayLines": "Skill03_InsertDanHengPTDamagePercentage",
-          "constants": [],
-          "variables": [
-            "Skill03_InsertDanHengPTDamagePercentage"
-          ]
+          "displayLines": "Skill03_InsertDanHengPTDamagePercentage"
         },
         "HitSplit": 0.25,
         "Toughness": {
-          "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
-          "displayLines": "DanHengPT_Stance_All",
-          "constants": [],
-          "variables": [
-            "DanHengPT_Stance_All"
-          ]
+          "displayLines": "DanHengPT_Stance_All"
         },
         "Tags": [
           "Summon-Tag DMG"
@@ -116,21 +101,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (Skill03_InsertDanHengPTDamagePercentage) || RETURN",
-          "displayLines": "Skill03_InsertDanHengPTDamagePercentage",
-          "constants": [],
-          "variables": [
-            "Skill03_InsertDanHengPTDamagePercentage"
-          ]
+          "displayLines": "Skill03_InsertDanHengPTDamagePercentage"
         },
         "HitSplit": 0.25,
         "Toughness": {
-          "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
-          "displayLines": "DanHengPT_Stance_All",
-          "constants": [],
-          "variables": [
-            "DanHengPT_Stance_All"
-          ]
+          "displayLines": "DanHengPT_Stance_All"
         },
         "Tags": [
           "Summon-Tag DMG"
@@ -147,21 +122,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (Skill03_InsertDanHengPTDamagePercentage) || RETURN",
-          "displayLines": "Skill03_InsertDanHengPTDamagePercentage",
-          "constants": [],
-          "variables": [
-            "Skill03_InsertDanHengPTDamagePercentage"
-          ]
+          "displayLines": "Skill03_InsertDanHengPTDamagePercentage"
         },
         "HitSplit": 0.25,
         "Toughness": {
-          "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
-          "displayLines": "DanHengPT_Stance_All",
-          "constants": [],
-          "variables": [
-            "DanHengPT_Stance_All"
-          ]
+          "displayLines": "DanHengPT_Stance_All"
         },
         "Tags": [
           "Summon-Tag DMG"
@@ -178,21 +143,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (Skill03_InsertDanHengPTDamagePercentage) || RETURN",
-          "displayLines": "Skill03_InsertDanHengPTDamagePercentage",
-          "constants": [],
-          "variables": [
-            "Skill03_InsertDanHengPTDamagePercentage"
-          ]
+          "displayLines": "Skill03_InsertDanHengPTDamagePercentage"
         },
         "HitSplit": 0.25,
         "Toughness": {
-          "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
-          "displayLines": "DanHengPT_Stance_All",
-          "constants": [],
-          "variables": [
-            "DanHengPT_Stance_All"
-          ]
+          "displayLines": "DanHengPT_Stance_All"
         },
         "Tags": [
           "Summon-Tag DMG"
@@ -216,12 +171,7 @@ const configAbility = {
           }
         },
         "Damage": {
-          "operator": "Variables[0] (Skill03_InsertOwnerDamagePercentage) || RETURN",
-          "displayLines": "Skill03_InsertOwnerDamagePercentage",
-          "constants": [],
-          "variables": [
-            "Skill03_InsertOwnerDamagePercentage"
-          ]
+          "displayLines": "Skill03_InsertOwnerDamagePercentage"
         },
         "Toughness": null,
         "Tags": [
@@ -269,14 +219,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (DanHengPT_ExtraDamageCount) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(DanHengPT_ExtraDamageCount - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "DanHengPT_ExtraDamageCount"
-            ]
+            "displayLines": "(DanHengPT_ExtraDamageCount - 1)"
           },
           "variableName": "DanHengPT_ExtraDamageCount"
         },
@@ -296,13 +239,7 @@ const configAbility = {
               }
             },
             "DamageFlat": {
-              "operator": "Variables[0] (DanHengPT_ExtraDamageRatio) || Variables[1] (DanHengPT_ExtraDamageShield) || MUL || RETURN",
-              "displayLines": "(DanHengPT_ExtraDamageRatio * DanHengPT_ExtraDamageShield)",
-              "constants": [],
-              "variables": [
-                "DanHengPT_ExtraDamageRatio",
-                "DanHengPT_ExtraDamageShield"
-              ]
+              "displayLines": "(DanHengPT_ExtraDamageRatio * DanHengPT_ExtraDamageShield)"
             },
             "Toughness": null,
             "Tags": [
@@ -362,12 +299,7 @@ const configAbility = {
                       }
                     },
                     "Damage": {
-                      "operator": "Variables[0] (SkillTree_PointB3_OwnerDamagePercentage) || RETURN",
-                      "displayLines": "SkillTree_PointB3_OwnerDamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "SkillTree_PointB3_OwnerDamagePercentage"
-                      ]
+                      "displayLines": "SkillTree_PointB3_OwnerDamagePercentage"
                     },
                     "Toughness": null,
                     "Tags": [

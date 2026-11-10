@@ -113,12 +113,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"973592377\">MStrongChallengeEX_Talent_StageAbility_PLY_092</a>",
                   "valuePerStack": {
                     "MDF_BP_Ultimate_DamageAddedRatio": {
-                      "operator": "Variables[0] (#ADF_1) || RETURN",
-                      "displayLines": "#ADF_1",
-                      "constants": [],
-                      "variables": [
-                        "#ADF_1"
-                      ]
+                      "displayLines": "#ADF_1"
                     }
                   }
                 }
@@ -138,12 +133,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1783089808\">MStrongChallengeEX_Talent_StageAbility_NO1_092</a>",
               "valuePerStack": {
                 "MDF_BP_Ultimate_DamageAddedRatio_Extra": {
-                  "operator": "Variables[0] (#ADF_2) || RETURN",
-                  "displayLines": "#ADF_2",
-                  "constants": [],
-                  "variables": [
-                    "#ADF_2"
-                  ]
+                  "displayLines": "#ADF_2"
                 }
               }
             }

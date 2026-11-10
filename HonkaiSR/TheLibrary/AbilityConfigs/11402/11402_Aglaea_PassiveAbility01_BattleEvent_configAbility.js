@@ -147,12 +147,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (BattleEvent_Aglaea_BaseSpeed) || RETURN",
-                "displayLines": "BattleEvent_Aglaea_BaseSpeed",
-                "constants": [],
-                "variables": [
-                  "BattleEvent_Aglaea_BaseSpeed"
-                ]
+                "displayLines": "BattleEvent_Aglaea_BaseSpeed"
               }
             }
           ]

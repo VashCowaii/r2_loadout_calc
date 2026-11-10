@@ -30,28 +30,13 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-2138790536\">Cerydra_Ability02_Target_Lv2</a>[<span class=\"descriptionNumberColor\">Peerage</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (PromotionRank_AttackAddedValue) || RETURN",
-              "displayLines": "PromotionRank_AttackAddedValue",
-              "constants": [],
-              "variables": [
-                "PromotionRank_AttackAddedValue"
-              ]
+              "displayLines": "PromotionRank_AttackAddedValue"
             },
             "MDF_PropertyValue2": {
-              "operator": "Variables[0] (0.72) || RETURN",
-              "displayLines": "0.72",
-              "constants": [],
-              "variables": [
-                0.72
-              ]
+              "displayLines": "0.72"
             },
             "MDF_PropertyValue3": {
-              "operator": "Variables[0] (0.1) || RETURN",
-              "displayLines": "0.1",
-              "constants": [],
-              "variables": [
-                0.1
-              ]
+              "displayLines": "0.1"
             }
           }
         },
@@ -66,12 +51,7 @@ const configAbility = {
             "_ReplayAbility": 1
           },
           "addStacksPerTrigger": {
-            "operator": "Variables[0] (InsertActionCount) || RETURN",
-            "displayLines": "InsertActionCount",
-            "constants": [],
-            "variables": [
-              "InsertActionCount"
-            ]
+            "displayLines": "InsertActionCount"
           }
         },
         {
@@ -125,13 +105,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (DV_CurrentPoint) || Variables[1] (DV_AddPoint) || ADD || RETURN",
-            "displayLines": "(DV_CurrentPoint + DV_AddPoint)",
-            "constants": [],
-            "variables": [
-              "DV_CurrentPoint",
-              "DV_AddPoint"
-            ]
+            "displayLines": "(DV_CurrentPoint + DV_AddPoint)"
           },
           "variableName": "DV_CurrentPoint_Temp"
         },
@@ -142,25 +116,14 @@ const configAbility = {
             "value1": "DV_CurrentPoint_Temp",
             "compareType": "<=",
             "value2": {
-              "operator": "Variables[0] (8) || RETURN",
-              "displayLines": "8",
-              "constants": [],
-              "variables": [
-                8
-              ]
+              "displayLines": "8"
             }
           },
           "passed": [
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (DV_CurrentPoint) || Variables[1] (DV_AddPoint) || ADD || RETURN",
-                "displayLines": "(DV_CurrentPoint + DV_AddPoint)",
-                "constants": [],
-                "variables": [
-                  "DV_CurrentPoint",
-                  "DV_AddPoint"
-                ]
+                "displayLines": "(DV_CurrentPoint + DV_AddPoint)"
               },
               "variableName": "DV_CurrentPoint"
             }
@@ -169,12 +132,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (8) || RETURN",
-                "displayLines": "8",
-                "constants": [],
-                "variables": [
-                  8
-                ]
+                "displayLines": "8"
               },
               "variableName": "DV_CurrentPoint"
             }
@@ -201,13 +159,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (DV_CurrentPoint) || Variables[1] (DV_AddPoint) || ADD || RETURN",
-                "displayLines": "(DV_CurrentPoint + DV_AddPoint)",
-                "constants": [],
-                "variables": [
-                  "DV_CurrentPoint",
-                  "DV_AddPoint"
-                ]
+                "displayLines": "(DV_CurrentPoint + DV_AddPoint)"
               },
               "variableName": "DV_CurrentPoint_Temp_SelfHandle"
             },
@@ -222,12 +174,7 @@ const configAbility = {
                 "value1": "DV_CurrentPoint_Temp_SelfHandle",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (6) || RETURN",
-                  "displayLines": "6",
-                  "constants": [],
-                  "variables": [
-                    6
-                  ]
+                  "displayLines": "6"
                 }
               },
               "passed": [

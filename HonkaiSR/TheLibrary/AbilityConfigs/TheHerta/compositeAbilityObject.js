@@ -81,12 +81,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceIcePEN</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -119,13 +114,7 @@ const compositeAbilityObject = {
                       },
                       "modifierName": "<a class=\"gModGreen\" id=\"1787645214\">TheHerta_Passive_ExceedSpStatus</a>",
                       "value": {
-                        "operator": "Variables[0] (WHOLE) || Variables[1] (EntityStockSPForShow) || PARAM_1 || FUNCTION || RETURN",
-                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(EntityStockSPForShow)",
-                        "constants": [],
-                        "variables": [
-                          "WHOLE",
-                          "EntityStockSPForShow"
-                        ]
+                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(EntityStockSPForShow)"
                       }
                     }
                   ],
@@ -169,12 +158,7 @@ const compositeAbilityObject = {
                     "value1": "_SPChangeValue",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (_SPChangeValueRaw) || RETURN",
-                      "displayLines": "_SPChangeValueRaw",
-                      "constants": [],
-                      "variables": [
-                        "_SPChangeValueRaw"
-                      ]
+                      "displayLines": "_SPChangeValueRaw"
                     }
                   },
                   "failed": [
@@ -203,14 +187,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (EntityCurrentSP) || Variables[1] (_SPChangeValue) || SUB || Variables[2] (_SPChangeValueRaw) || ADD || RETURN",
-                            "displayLines": "((EntityCurrentSP - _SPChangeValue) + _SPChangeValueRaw)",
-                            "constants": [],
-                            "variables": [
-                              "EntityCurrentSP",
-                              "_SPChangeValue",
-                              "_SPChangeValueRaw"
-                            ]
+                            "displayLines": "((EntityCurrentSP - _SPChangeValue) + _SPChangeValueRaw)"
                           },
                           "variableName": "EntityCurrentSP"
                         },
@@ -234,12 +211,7 @@ const compositeAbilityObject = {
                             "value1": "EntityCurrentSP",
                             "compareType": ">",
                             "value2": {
-                              "operator": "Variables[0] (EntityMaxSP) || RETURN",
-                              "displayLines": "EntityMaxSP",
-                              "constants": [],
-                              "variables": [
-                                "EntityMaxSP"
-                              ]
+                              "displayLines": "EntityMaxSP"
                             }
                           },
                           "passed": [
@@ -250,14 +222,7 @@ const compositeAbilityObject = {
                                 "target": "{{Modifier Holder}}"
                               },
                               "value": {
-                                "operator": "Variables[0] (EntityStockSP) || Variables[1] (EntityCurrentSP) || ADD || Variables[2] (EntityMaxSP) || SUB || RETURN",
-                                "displayLines": "((EntityStockSP + EntityCurrentSP) - EntityMaxSP)",
-                                "constants": [],
-                                "variables": [
-                                  "EntityStockSP",
-                                  "EntityCurrentSP",
-                                  "EntityMaxSP"
-                                ]
+                                "displayLines": "((EntityStockSP + EntityCurrentSP) - EntityMaxSP)"
                               },
                               "variableName": "EntityStockSP"
                             },
@@ -268,13 +233,7 @@ const compositeAbilityObject = {
                                 "value1": "EntityStockSP",
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] (EntityMaxSP) || Variables[1] (T_HERTA_OBJECT_UNUSED_9) || MUL || RETURN",
-                                  "displayLines": "(EntityMaxSP * T_HERTA_OBJECT_UNUSED_9)",
-                                  "constants": [],
-                                  "variables": [
-                                    "EntityMaxSP",
-                                    "T_HERTA_OBJECT_UNUSED_9"
-                                  ]
+                                  "displayLines": "(EntityMaxSP * T_HERTA_OBJECT_UNUSED_9)"
                                 }
                               },
                               "passed": [
@@ -285,13 +244,7 @@ const compositeAbilityObject = {
                                     "target": "{{Modifier Holder}}"
                                   },
                                   "value": {
-                                    "operator": "Variables[0] (EntityMaxSP) || Variables[1] (T_HERTA_OBJECT_UNUSED_9) || MUL || RETURN",
-                                    "displayLines": "(EntityMaxSP * T_HERTA_OBJECT_UNUSED_9)",
-                                    "constants": [],
-                                    "variables": [
-                                      "EntityMaxSP",
-                                      "T_HERTA_OBJECT_UNUSED_9"
-                                    ]
+                                    "displayLines": "(EntityMaxSP * T_HERTA_OBJECT_UNUSED_9)"
                                   },
                                   "variableName": "EntityStockSP"
                                 }
@@ -333,12 +286,7 @@ const compositeAbilityObject = {
                                     "value1": "_Current_Show_Value",
                                     "compareType": "<",
                                     "value2": {
-                                      "operator": "Variables[0] (EntityStockSP) || RETURN",
-                                      "displayLines": "EntityStockSP",
-                                      "constants": [],
-                                      "variables": [
-                                        "EntityStockSP"
-                                      ]
+                                      "displayLines": "EntityStockSP"
                                     }
                                   },
                                   "passed": [
@@ -351,12 +299,7 @@ const compositeAbilityObject = {
                                       "modifier": "<a class=\"gModGreen\" id=\"1787645214\">TheHerta_Passive_ExceedSpStatus</a>",
                                       "valuePerStack": {
                                         "EntityStockSPForShow": {
-                                          "operator": "Variables[0] (EntityStockSP) || RETURN",
-                                          "displayLines": "EntityStockSP",
-                                          "constants": [],
-                                          "variables": [
-                                            "EntityStockSP"
-                                          ]
+                                          "displayLines": "EntityStockSP"
                                         }
                                       }
                                     }
@@ -373,12 +316,7 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"1787645214\">TheHerta_Passive_ExceedSpStatus</a>",
                                   "valuePerStack": {
                                     "EntityStockSPForShow": {
-                                      "operator": "Variables[0] (EntityStockSP) || RETURN",
-                                      "displayLines": "EntityStockSP",
-                                      "constants": [],
-                                      "variables": [
-                                        "EntityStockSP"
-                                      ]
+                                      "displayLines": "EntityStockSP"
                                     }
                                   }
                                 }
@@ -440,13 +378,7 @@ const compositeAbilityObject = {
                         "value1": "EntityStockSP",
                         "compareType": "<=",
                         "value2": {
-                          "operator": "Variables[0] (EntityMaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                          "displayLines": "(EntityMaxSP - _CurrentSP)",
-                          "constants": [],
-                          "variables": [
-                            "EntityMaxSP",
-                            "_CurrentSP"
-                          ]
+                          "displayLines": "(EntityMaxSP - _CurrentSP)"
                         }
                       },
                       "passed": [
@@ -457,12 +389,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (EntityStockSP) || RETURN",
-                            "displayLines": "EntityStockSP",
-                            "constants": [],
-                            "variables": [
-                              "EntityStockSP"
-                            ]
+                            "displayLines": "EntityStockSP"
                           },
                           "isFixed": "(Fixed)"
                         },
@@ -488,27 +415,14 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (EntityMaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                            "displayLines": "(EntityMaxSP - _CurrentSP)",
-                            "constants": [],
-                            "variables": [
-                              "EntityMaxSP",
-                              "_CurrentSP"
-                            ]
+                            "displayLines": "(EntityMaxSP - _CurrentSP)"
                           },
                           "isFixed": "* ERR"
                         },
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "operator": "Variables[0] (EntityStockSP) || Variables[1] (EntityMaxSP) || SUB || Variables[2] (_CurrentSP) || ADD || RETURN",
-                            "displayLines": "((EntityStockSP - EntityMaxSP) + _CurrentSP)",
-                            "constants": [],
-                            "variables": [
-                              "EntityStockSP",
-                              "EntityMaxSP",
-                              "_CurrentSP"
-                            ]
+                            "displayLines": "((EntityStockSP - EntityMaxSP) + _CurrentSP)"
                           },
                           "variableName": "EntityStockSP"
                         },
@@ -521,12 +435,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"1787645214\">TheHerta_Passive_ExceedSpStatus</a>",
                           "valuePerStack": {
                             "EntityStockSPForShow": {
-                              "operator": "Variables[0] (EntityStockSP) || RETURN",
-                              "displayLines": "EntityStockSP",
-                              "constants": [],
-                              "variables": [
-                                "EntityStockSP"
-                              ]
+                              "displayLines": "EntityStockSP"
                             }
                           }
                         }
@@ -562,12 +471,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -627,14 +531,7 @@ const compositeAbilityObject = {
             "delayAdvancePreview": {
               "name": "Delay/Advance Preview",
               "previewValue": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           }
@@ -666,14 +563,7 @@ const compositeAbilityObject = {
             "delayAdvancePreview": {
               "name": "Delay/Advance Preview",
               "previewValue": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PropertyValue)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "(0 - MDF_PropertyValue)"
               }
             }
           }
@@ -913,27 +803,14 @@ const compositeAbilityObject = {
                     "value1": "_TMP_VAL",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (MDF_Count) || Variables[1] (MagicMark_Ratio) || MUL || RETURN",
-                      "displayLines": "(MDF_Count * MagicMark_Ratio)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Count",
-                        "MagicMark_Ratio"
-                      ]
+                      "displayLines": "(MDF_Count * MagicMark_Ratio)"
                     }
                   },
                   "execute": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_TMP_VAL) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_TMP_VAL + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_TMP_VAL"
-                        ]
+                        "displayLines": "(_TMP_VAL + 1)"
                       },
                       "variableName": "_TMP_VAL"
                     }
@@ -942,12 +819,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (_TMP_VAL) || RETURN",
-                    "displayLines": "_TMP_VAL",
-                    "constants": [],
-                    "variables": [
-                      "_TMP_VAL"
-                    ]
+                    "displayLines": "_TMP_VAL"
                   },
                   "execute": [
                     {
@@ -1000,12 +872,7 @@ const compositeAbilityObject = {
                           "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                           "compareType": "<",
                           "value2": {
-                            "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                            "displayLines": "MagicMark_MaxCount_Max",
-                            "constants": [],
-                            "variables": [
-                              "MagicMark_MaxCount_Max"
-                            ]
+                            "displayLines": "MagicMark_MaxCount_Max"
                           },
                           "valueType": "Layer"
                         }
@@ -1069,12 +936,7 @@ const compositeAbilityObject = {
                             "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                             "compareType": "<",
                             "value2": {
-                              "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                              "displayLines": "MagicMark_MaxCount_Max",
-                              "constants": [],
-                              "variables": [
-                                "MagicMark_MaxCount_Max"
-                              ]
+                              "displayLines": "MagicMark_MaxCount_Max"
                             },
                             "valueType": "Layer"
                           },
@@ -1087,12 +949,7 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                                "displayLines": "MagicMark_MaxCount_Max",
-                                "constants": [],
-                                "variables": [
-                                  "MagicMark_MaxCount_Max"
-                                ]
+                                "displayLines": "MagicMark_MaxCount_Max"
                               },
                               "addStacksPerTrigger": 1
                             }
@@ -1156,12 +1013,7 @@ const compositeAbilityObject = {
                                 "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                                 "compareType": "<",
                                 "value2": {
-                                  "operator": "Variables[0] (MagicMark_MaxCount) || RETURN",
-                                  "displayLines": "MagicMark_MaxCount",
-                                  "constants": [],
-                                  "variables": [
-                                    "MagicMark_MaxCount"
-                                  ]
+                                  "displayLines": "MagicMark_MaxCount"
                                 },
                                 "valueType": "Layer"
                               },
@@ -1174,12 +1026,7 @@ const compositeAbilityObject = {
                                   },
                                   "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                                   "stackLimit": {
-                                    "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                                    "displayLines": "MagicMark_MaxCount_Max",
-                                    "constants": [],
-                                    "variables": [
-                                      "MagicMark_MaxCount_Max"
-                                    ]
+                                    "displayLines": "MagicMark_MaxCount_Max"
                                   },
                                   "addStacksPerTrigger": 1
                                 }
@@ -1247,12 +1094,7 @@ const compositeAbilityObject = {
                             "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                             "compareType": "<",
                             "value2": {
-                              "operator": "Variables[0] (MagicMark_MaxCount) || RETURN",
-                              "displayLines": "MagicMark_MaxCount",
-                              "constants": [],
-                              "variables": [
-                                "MagicMark_MaxCount"
-                              ]
+                              "displayLines": "MagicMark_MaxCount"
                             },
                             "valueType": "Layer"
                           },
@@ -1265,12 +1107,7 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                                "displayLines": "MagicMark_MaxCount_Max",
-                                "constants": [],
-                                "variables": [
-                                  "MagicMark_MaxCount_Max"
-                                ]
+                                "displayLines": "MagicMark_MaxCount_Max"
                               },
                               "addStacksPerTrigger": 1
                             }
@@ -1308,27 +1145,14 @@ const compositeAbilityObject = {
                     "value1": "_TMP_VAL",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (MDF_Count) || Variables[1] (MagicMark_Ratio) || MUL || RETURN",
-                      "displayLines": "(MDF_Count * MagicMark_Ratio)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Count",
-                        "MagicMark_Ratio"
-                      ]
+                      "displayLines": "(MDF_Count * MagicMark_Ratio)"
                     }
                   },
                   "execute": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_TMP_VAL) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_TMP_VAL + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_TMP_VAL"
-                        ]
+                        "displayLines": "(_TMP_VAL + 1)"
                       },
                       "variableName": "_TMP_VAL"
                     }
@@ -1337,12 +1161,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (_TMP_VAL) || RETURN",
-                    "displayLines": "_TMP_VAL",
-                    "constants": [],
-                    "variables": [
-                      "_TMP_VAL"
-                    ]
+                    "displayLines": "_TMP_VAL"
                   },
                   "execute": [
                     {
@@ -1395,12 +1214,7 @@ const compositeAbilityObject = {
                           "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                           "compareType": "<",
                           "value2": {
-                            "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                            "displayLines": "MagicMark_MaxCount_Max",
-                            "constants": [],
-                            "variables": [
-                              "MagicMark_MaxCount_Max"
-                            ]
+                            "displayLines": "MagicMark_MaxCount_Max"
                           },
                           "valueType": "Layer"
                         }
@@ -1464,12 +1278,7 @@ const compositeAbilityObject = {
                             "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                             "compareType": "<",
                             "value2": {
-                              "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                              "displayLines": "MagicMark_MaxCount_Max",
-                              "constants": [],
-                              "variables": [
-                                "MagicMark_MaxCount_Max"
-                              ]
+                              "displayLines": "MagicMark_MaxCount_Max"
                             },
                             "valueType": "Layer"
                           },
@@ -1482,12 +1291,7 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                                "displayLines": "MagicMark_MaxCount_Max",
-                                "constants": [],
-                                "variables": [
-                                  "MagicMark_MaxCount_Max"
-                                ]
+                                "displayLines": "MagicMark_MaxCount_Max"
                               },
                               "addStacksPerTrigger": 1
                             }
@@ -1551,12 +1355,7 @@ const compositeAbilityObject = {
                                 "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                                 "compareType": "<",
                                 "value2": {
-                                  "operator": "Variables[0] (MagicMark_MaxCount) || RETURN",
-                                  "displayLines": "MagicMark_MaxCount",
-                                  "constants": [],
-                                  "variables": [
-                                    "MagicMark_MaxCount"
-                                  ]
+                                  "displayLines": "MagicMark_MaxCount"
                                 },
                                 "valueType": "Layer"
                               },
@@ -1569,12 +1368,7 @@ const compositeAbilityObject = {
                                   },
                                   "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                                   "stackLimit": {
-                                    "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                                    "displayLines": "MagicMark_MaxCount_Max",
-                                    "constants": [],
-                                    "variables": [
-                                      "MagicMark_MaxCount_Max"
-                                    ]
+                                    "displayLines": "MagicMark_MaxCount_Max"
                                   },
                                   "addStacksPerTrigger": 1
                                 }
@@ -1642,12 +1436,7 @@ const compositeAbilityObject = {
                             "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                             "compareType": "<",
                             "value2": {
-                              "operator": "Variables[0] (MagicMark_MaxCount) || RETURN",
-                              "displayLines": "MagicMark_MaxCount",
-                              "constants": [],
-                              "variables": [
-                                "MagicMark_MaxCount"
-                              ]
+                              "displayLines": "MagicMark_MaxCount"
                             },
                             "valueType": "Layer"
                           },
@@ -1660,12 +1449,7 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                                "displayLines": "MagicMark_MaxCount_Max",
-                                "constants": [],
-                                "variables": [
-                                  "MagicMark_MaxCount_Max"
-                                ]
+                                "displayLines": "MagicMark_MaxCount_Max"
                               },
                               "addStacksPerTrigger": 1
                             }
@@ -1860,12 +1644,7 @@ const compositeAbilityObject = {
                             "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                             "compareType": ">",
                             "value2": {
-                              "operator": "Variables[0] (MDF_Count) || RETURN",
-                              "displayLines": "MDF_Count",
-                              "constants": [],
-                              "variables": [
-                                "MDF_Count"
-                              ]
+                              "displayLines": "MDF_Count"
                             },
                             "valueType": "Layer"
                           }
@@ -2141,27 +1920,14 @@ const compositeAbilityObject = {
                     "value1": "_TMP_VAL",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (MDF_Count) || Variables[1] (MagicMark_Ratio) || MUL || RETURN",
-                      "displayLines": "(MDF_Count * MagicMark_Ratio)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Count",
-                        "MagicMark_Ratio"
-                      ]
+                      "displayLines": "(MDF_Count * MagicMark_Ratio)"
                     }
                   },
                   "execute": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_TMP_VAL) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_TMP_VAL + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_TMP_VAL"
-                        ]
+                        "displayLines": "(_TMP_VAL + 1)"
                       },
                       "variableName": "_TMP_VAL"
                     }
@@ -2170,12 +1936,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (_TMP_VAL) || RETURN",
-                    "displayLines": "_TMP_VAL",
-                    "constants": [],
-                    "variables": [
-                      "_TMP_VAL"
-                    ]
+                    "displayLines": "_TMP_VAL"
                   },
                   "execute": [
                     {
@@ -2228,12 +1989,7 @@ const compositeAbilityObject = {
                           "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                           "compareType": "<",
                           "value2": {
-                            "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                            "displayLines": "MagicMark_MaxCount_Max",
-                            "constants": [],
-                            "variables": [
-                              "MagicMark_MaxCount_Max"
-                            ]
+                            "displayLines": "MagicMark_MaxCount_Max"
                           },
                           "valueType": "Layer"
                         }
@@ -2297,12 +2053,7 @@ const compositeAbilityObject = {
                             "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                             "compareType": "<",
                             "value2": {
-                              "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                              "displayLines": "MagicMark_MaxCount_Max",
-                              "constants": [],
-                              "variables": [
-                                "MagicMark_MaxCount_Max"
-                              ]
+                              "displayLines": "MagicMark_MaxCount_Max"
                             },
                             "valueType": "Layer"
                           },
@@ -2315,12 +2066,7 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                                "displayLines": "MagicMark_MaxCount_Max",
-                                "constants": [],
-                                "variables": [
-                                  "MagicMark_MaxCount_Max"
-                                ]
+                                "displayLines": "MagicMark_MaxCount_Max"
                               },
                               "addStacksPerTrigger": 1
                             }
@@ -2384,12 +2130,7 @@ const compositeAbilityObject = {
                                 "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                                 "compareType": "<",
                                 "value2": {
-                                  "operator": "Variables[0] (MagicMark_MaxCount) || RETURN",
-                                  "displayLines": "MagicMark_MaxCount",
-                                  "constants": [],
-                                  "variables": [
-                                    "MagicMark_MaxCount"
-                                  ]
+                                  "displayLines": "MagicMark_MaxCount"
                                 },
                                 "valueType": "Layer"
                               },
@@ -2402,12 +2143,7 @@ const compositeAbilityObject = {
                                   },
                                   "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                                   "stackLimit": {
-                                    "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                                    "displayLines": "MagicMark_MaxCount_Max",
-                                    "constants": [],
-                                    "variables": [
-                                      "MagicMark_MaxCount_Max"
-                                    ]
+                                    "displayLines": "MagicMark_MaxCount_Max"
                                   },
                                   "addStacksPerTrigger": 1
                                 }
@@ -2475,12 +2211,7 @@ const compositeAbilityObject = {
                             "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                             "compareType": "<",
                             "value2": {
-                              "operator": "Variables[0] (MagicMark_MaxCount) || RETURN",
-                              "displayLines": "MagicMark_MaxCount",
-                              "constants": [],
-                              "variables": [
-                                "MagicMark_MaxCount"
-                              ]
+                              "displayLines": "MagicMark_MaxCount"
                             },
                             "valueType": "Layer"
                           },
@@ -2493,12 +2224,7 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
-                                "displayLines": "MagicMark_MaxCount_Max",
-                                "constants": [],
-                                "variables": [
-                                  "MagicMark_MaxCount_Max"
-                                ]
+                                "displayLines": "MagicMark_MaxCount_Max"
                               },
                               "addStacksPerTrigger": 1
                             }
@@ -2580,12 +2306,7 @@ const compositeAbilityObject = {
                     "value1": "_TMP_MAX",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (_TMP_VAL) || RETURN",
-                      "displayLines": "_TMP_VAL",
-                      "constants": [],
-                      "variables": [
-                        "_TMP_VAL"
-                      ]
+                      "displayLines": "_TMP_VAL"
                     }
                   },
                   "passed": [
@@ -2598,27 +2319,13 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (_TMP_VAL) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_TMP_VAL + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_TMP_VAL"
-                        ]
+                        "displayLines": "(_TMP_VAL + 1)"
                       }
                     },
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (_TMP_VAL) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_TMP_VAL + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_TMP_VAL"
-                        ]
+                        "displayLines": "(_TMP_VAL + 1)"
                       },
                       "priorState": "Active"
                     }
@@ -2687,12 +2394,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -2733,12 +2435,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-533235219\">TheHerta_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">The Sixteenth Key</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -2780,12 +2477,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-533235219\">TheHerta_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">The Sixteenth Key</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                              "displayLines": "MDF_PropertyValue",
-                              "constants": [],
-                              "variables": [
-                                "MDF_PropertyValue"
-                              ]
+                              "displayLines": "MDF_PropertyValue"
                             }
                           }
                         }
@@ -2831,12 +2523,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-533235219\">TheHerta_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">The Sixteenth Key</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                              "displayLines": "MDF_PropertyValue",
-                              "constants": [],
-                              "variables": [
-                                "MDF_PropertyValue"
-                              ]
+                              "displayLines": "MDF_PropertyValue"
                             }
                           }
                         }
@@ -2873,12 +2560,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -2900,12 +2582,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceIcePEN</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -2985,13 +2662,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Null Type",
                             "DamageFlat": {
-                              "operator": "Variables[0] (TargetHP) || Variables[1] (EliteDamagePercentage) || MUL || RETURN",
-                              "displayLines": "(TargetHP * EliteDamagePercentage)",
-                              "constants": [],
-                              "variables": [
-                                "TargetHP",
-                                "EliteDamagePercentage"
-                              ]
+                              "displayLines": "(TargetHP * EliteDamagePercentage)"
                             },
                             "dmgFormulaFinal": "Converted DMG Base",
                             "Toughness": null,
@@ -3011,13 +2682,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Null Type",
                             "DamageFlat": {
-                              "operator": "Variables[0] (TargetHP) || Variables[1] (BasicDamagePercentage) || MUL || RETURN",
-                              "displayLines": "(TargetHP * BasicDamagePercentage)",
-                              "constants": [],
-                              "variables": [
-                                "TargetHP",
-                                "BasicDamagePercentage"
-                              ]
+                              "displayLines": "(TargetHP * BasicDamagePercentage)"
                             },
                             "dmgFormulaFinal": "Converted DMG Base",
                             "Toughness": null,
@@ -3255,20 +2920,10 @@ const compositeAbilityObject = {
               "duration": -1,
               "valuePerStack": {
                 "BasicDamagePercentage": {
-                  "operator": "Variables[0] (0.99) || RETURN",
-                  "displayLines": "0.99",
-                  "constants": [],
-                  "variables": [
-                    0.99
-                  ]
+                  "displayLines": "0.99"
                 },
                 "EliteDamagePercentage": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
+                  "displayLines": "0.3"
                 }
               }
             }
@@ -3386,12 +3041,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -3423,21 +3073,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"127317606\">TheHerta_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">Vibe Checker</span>]",
                       "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                        "displayLines": "2"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.6) || RETURN",
-                          "displayLines": "0.6",
-                          "constants": [],
-                          "variables": [
-                            0.6
-                          ]
+                          "displayLines": "0.6"
                         }
                       }
                     }
@@ -3496,12 +3136,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (42) || RETURN",
-            "displayLines": "42",
-            "constants": [],
-            "variables": [
-              42
-            ]
+            "displayLines": "42"
           },
           "variableName": "S03_Mark_Max"
         },
@@ -3513,12 +3148,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (4) || RETURN",
-            "displayLines": "4",
-            "constants": [],
-            "variables": [
-              4
-            ]
+            "displayLines": "4"
           },
           "variableName": "Skill21_Layer_Max"
         },
@@ -3538,12 +3168,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"489116474\">TheHerta_Eidolon2_PreShow</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.35) || RETURN",
-                  "displayLines": "0.35",
-                  "constants": [],
-                  "variables": [
-                    0.35
-                  ]
+                  "displayLines": "0.35"
                 }
               }
             },
@@ -3674,24 +3299,14 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (99) || RETURN",
-                "displayLines": "99",
-                "constants": [],
-                "variables": [
-                  99
-                ]
+                "displayLines": "99"
               },
               "variableName": "_SkillTree03_MaxCount"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.01) || RETURN",
-                "displayLines": "0.01",
-                "constants": [],
-                "variables": [
-                  0.01
-                ]
+                "displayLines": "0.01"
               },
               "variableName": "_PointB3_Ratio"
             }
@@ -3713,12 +3328,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-450886652\">TheHerta_Trace02</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.8) || RETURN",
-                  "displayLines": "0.8",
-                  "constants": [],
-                  "variables": [
-                    0.8
-                  ]
+                  "displayLines": "0.8"
                 }
               }
             }
@@ -3740,12 +3350,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"1044334207\">TheHerta_Eidolon4_Listen</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.12) || RETURN",
-                  "displayLines": "0.12",
-                  "constants": [],
-                  "variables": [
-                    0.12
-                  ]
+                  "displayLines": "0.12"
                 }
               }
             }
@@ -3767,12 +3372,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-73718393\">TheHerta_Eidolon6_Bonus</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
+                  "displayLines": "0.2"
                 }
               }
             }
@@ -3794,46 +3394,21 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-400553795\">TheHerta_Trace01</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (3) || RETURN",
-                  "displayLines": "3",
-                  "constants": [],
-                  "variables": [
-                    3
-                  ]
+                  "displayLines": "3"
                 },
                 "MDF_MaxCount": {
-                  "operator": "Variables[0] (S03_Mark_Max) || RETURN",
-                  "displayLines": "S03_Mark_Max",
-                  "constants": [],
-                  "variables": [
-                    "S03_Mark_Max"
-                  ]
+                  "displayLines": "S03_Mark_Max"
                 },
                 "MDF_MinCount": 0,
                 "MDF_AddLayer": 0,
                 "MDF_MaxLayer": {
-                  "operator": "Variables[0] (42) || RETURN",
-                  "displayLines": "42",
-                  "constants": [],
-                  "variables": [
-                    42
-                  ]
+                  "displayLines": "42"
                 },
                 "MDF_MaxLayer_PointB3": {
-                  "operator": "Variables[0] (_SkillTree03_MaxCount) || RETURN",
-                  "displayLines": "_SkillTree03_MaxCount",
-                  "constants": [],
-                  "variables": [
-                    "_SkillTree03_MaxCount"
-                  ]
+                  "displayLines": "_SkillTree03_MaxCount"
                 },
                 "MDF_Ratio_PointB3": {
-                  "operator": "Variables[0] (_PointB3_Ratio) || RETURN",
-                  "displayLines": "_PointB3_Ratio",
-                  "constants": [],
-                  "variables": [
-                    "_PointB3_Ratio"
-                  ]
+                  "displayLines": "_PointB3_Ratio"
                 },
                 "MDF_BounceLayer": 0
               }
@@ -3858,12 +3433,7 @@ const compositeAbilityObject = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (Skill21_Layer) || RETURN",
-                "displayLines": "Skill21_Layer",
-                "constants": [],
-                "variables": [
-                  "Skill21_Layer"
-                ]
+                "displayLines": "Skill21_Layer"
               },
               "priorState": "Active"
             }
@@ -3890,12 +3460,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   }
                 }
               ]
@@ -3946,12 +3511,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1890012800\">TheHerta_Trace02_Bonus</a>[<span class=\"descriptionNumberColor\">Message From Beyond the Veil</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
+                      "displayLines": "MDF_PropertyValue"
                     }
                   }
                 }
@@ -3980,12 +3540,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1890012800\">TheHerta_Trace02_Bonus</a>[<span class=\"descriptionNumberColor\">Message From Beyond the Veil</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     }
@@ -4034,14 +3589,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_Mage_Count) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_Mage_Count + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_Mage_Count"
-                        ]
+                        "displayLines": "(_Mage_Count + 1)"
                       },
                       "variableName": "_Mage_Count"
                     }
@@ -4065,12 +3613,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1909734267\">TheHerta_Trace02_CheckMage</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         }
                       }
                     },
@@ -4144,37 +3687,17 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (42) || RETURN",
-                        "displayLines": "42",
-                        "constants": [],
-                        "variables": [
-                          42
-                        ]
+                        "displayLines": "42"
                       },
                       "valuePerStack": {
                         "MagicMark_MaxCount_Max": {
-                          "operator": "Variables[0] (42) || RETURN",
-                          "displayLines": "42",
-                          "constants": [],
-                          "variables": [
-                            42
-                          ]
+                          "displayLines": "42"
                         },
                         "MagicMark_MaxCount": {
-                          "operator": "Variables[0] (42) || RETURN",
-                          "displayLines": "42",
-                          "constants": [],
-                          "variables": [
-                            42
-                          ]
+                          "displayLines": "42"
                         },
                         "MagicMark_Ratio": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -4194,21 +3717,11 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (99) || RETURN",
-                            "displayLines": "99",
-                            "constants": [],
-                            "variables": [
-                              99
-                            ]
+                            "displayLines": "99"
                           },
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (_PointB3_Ratio) || RETURN",
-                              "displayLines": "_PointB3_Ratio",
-                              "constants": [],
-                              "variables": [
-                                "_PointB3_Ratio"
-                              ]
+                              "displayLines": "_PointB3_Ratio"
                             }
                           },
                           "addStacksPerTrigger": 1
@@ -4274,37 +3787,17 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] (42) || RETURN",
-                                "displayLines": "42",
-                                "constants": [],
-                                "variables": [
-                                  42
-                                ]
+                                "displayLines": "42"
                               },
                               "valuePerStack": {
                                 "MagicMark_MaxCount_Max": {
-                                  "operator": "Variables[0] (42) || RETURN",
-                                  "displayLines": "42",
-                                  "constants": [],
-                                  "variables": [
-                                    42
-                                  ]
+                                  "displayLines": "42"
                                 },
                                 "MagicMark_MaxCount": {
-                                  "operator": "Variables[0] (42) || RETURN",
-                                  "displayLines": "42",
-                                  "constants": [],
-                                  "variables": [
-                                    42
-                                  ]
+                                  "displayLines": "42"
                                 },
                                 "MagicMark_Ratio": {
-                                  "operator": "Variables[0] (1) || RETURN",
-                                  "displayLines": "1",
-                                  "constants": [],
-                                  "variables": [
-                                    1
-                                  ]
+                                  "displayLines": "1"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4324,21 +3817,11 @@ const compositeAbilityObject = {
                                   },
                                   "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
                                   "stackLimit": {
-                                    "operator": "Variables[0] (99) || RETURN",
-                                    "displayLines": "99",
-                                    "constants": [],
-                                    "variables": [
-                                      99
-                                    ]
+                                    "displayLines": "99"
                                   },
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (_PointB3_Ratio) || RETURN",
-                                      "displayLines": "_PointB3_Ratio",
-                                      "constants": [],
-                                      "variables": [
-                                        "_PointB3_Ratio"
-                                      ]
+                                      "displayLines": "_PointB3_Ratio"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -4386,37 +3869,17 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (42) || RETURN",
-                    "displayLines": "42",
-                    "constants": [],
-                    "variables": [
-                      42
-                    ]
+                    "displayLines": "42"
                   },
                   "valuePerStack": {
                     "MagicMark_MaxCount_Max": {
-                      "operator": "Variables[0] (42) || RETURN",
-                      "displayLines": "42",
-                      "constants": [],
-                      "variables": [
-                        42
-                      ]
+                      "displayLines": "42"
                     },
                     "MagicMark_MaxCount": {
-                      "operator": "Variables[0] (42) || RETURN",
-                      "displayLines": "42",
-                      "constants": [],
-                      "variables": [
-                        42
-                      ]
+                      "displayLines": "42"
                     },
                     "MagicMark_Ratio": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -4436,21 +3899,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (99) || RETURN",
-                        "displayLines": "99",
-                        "constants": [],
-                        "variables": [
-                          99
-                        ]
+                        "displayLines": "99"
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (_PointB3_Ratio) || RETURN",
-                          "displayLines": "_PointB3_Ratio",
-                          "constants": [],
-                          "variables": [
-                            "_PointB3_Ratio"
-                          ]
+                          "displayLines": "_PointB3_Ratio"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -4547,12 +4000,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                        "displayLines": "MDF_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxLayer"
-                        ]
+                        "displayLines": "MDF_MaxLayer"
                       },
                       "addStacksPerTrigger": 1
                     },
@@ -4582,21 +4030,11 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
-                            "displayLines": "MDF_MaxLayer_PointB3",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxLayer_PointB3"
-                            ]
+                            "displayLines": "MDF_MaxLayer_PointB3"
                           },
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (MDF_Ratio_PointB3) || RETURN",
-                              "displayLines": "MDF_Ratio_PointB3",
-                              "constants": [],
-                              "variables": [
-                                "MDF_Ratio_PointB3"
-                              ]
+                              "displayLines": "MDF_Ratio_PointB3"
                             }
                           },
                           "addStacksPerTrigger": 1
@@ -4606,14 +4044,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_Hit_Count) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_Hit_Count + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_Hit_Count"
-                        ]
+                        "displayLines": "(_Hit_Count + 1)"
                       },
                       "variableName": "_Hit_Count"
                     }
@@ -4649,24 +4080,14 @@ const compositeAbilityObject = {
                     "value1": "_Hit_Count",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                      "displayLines": "MDF_MaxCount",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MaxCount"
-                      ]
+                      "displayLines": "MDF_MaxCount"
                     }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                        "displayLines": "MDF_MaxCount",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxCount"
-                        ]
+                        "displayLines": "MDF_MaxCount"
                       },
                       "variableName": "_Hit_Count"
                     }
@@ -4682,12 +4103,7 @@ const compositeAbilityObject = {
                         "value1": "_Hit_Count",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MDF_MinCount) || RETURN",
-                          "displayLines": "MDF_MinCount",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MinCount"
-                          ]
+                          "displayLines": "MDF_MinCount"
                         }
                       },
                       {
@@ -4704,12 +4120,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_MinCount) || RETURN",
-                        "displayLines": "MDF_MinCount",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MinCount"
-                        ]
+                        "displayLines": "MDF_MinCount"
                       },
                       "variableName": "_Hit_Count"
                     }
@@ -4722,13 +4133,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (_Hit_Count) || Variables[1] (MDF_PropertyValue) || MUL || RETURN",
-                    "displayLines": "(_Hit_Count * MDF_PropertyValue)",
-                    "constants": [],
-                    "variables": [
-                      "_Hit_Count",
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "(_Hit_Count * MDF_PropertyValue)"
                   },
                   "isFixed": "(Fixed)"
                 },
@@ -4789,77 +4194,31 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-434693417\">TheHerta_Trace01_Regen</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         },
                         "MDF_PropertyValue_2": {
-                          "operator": "Variables[0] (MDF_PropertyValue_2) || RETURN",
-                          "displayLines": "MDF_PropertyValue_2",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue_2"
-                          ]
+                          "displayLines": "MDF_PropertyValue_2"
                         },
                         "MDF_MaxCount": {
-                          "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                          "displayLines": "MDF_MaxCount",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxCount"
-                          ]
+                          "displayLines": "MDF_MaxCount"
                         },
                         "MDF_MinCount": {
-                          "operator": "Variables[0] (MDF_MinCount) || Variables[1] (3) || ADD || RETURN",
-                          "displayLines": "(MDF_MinCount + 3)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MinCount",
-                            3
-                          ]
+                          "displayLines": "(MDF_MinCount + 3)"
                         },
                         "MDF_AddLayer": {
-                          "operator": "Variables[0] (MDF_AddLayer) || RETURN",
-                          "displayLines": "MDF_AddLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_AddLayer"
-                          ]
+                          "displayLines": "MDF_AddLayer"
                         },
                         "MDF_MaxLayer": {
-                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                          "displayLines": "MDF_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer"
-                          ]
+                          "displayLines": "MDF_MaxLayer"
                         },
                         "MDF_MaxLayer_PointB3": {
-                          "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
-                          "displayLines": "MDF_MaxLayer_PointB3",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer_PointB3"
-                          ]
+                          "displayLines": "MDF_MaxLayer_PointB3"
                         },
                         "MDF_Ratio_PointB3": {
-                          "operator": "Variables[0] (MDF_Ratio_PointB3) || RETURN",
-                          "displayLines": "MDF_Ratio_PointB3",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Ratio_PointB3"
-                          ]
+                          "displayLines": "MDF_Ratio_PointB3"
                         },
                         "MDF_BounceLayer": {
-                          "operator": "Variables[0] (MDF_BounceLayer) || RETURN",
-                          "displayLines": "MDF_BounceLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_BounceLayer"
-                          ]
+                          "displayLines": "MDF_BounceLayer"
                         }
                       }
                     }
@@ -4874,76 +4233,31 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-434693417\">TheHerta_Trace01_Regen</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
+                          "displayLines": "MDF_PropertyValue"
                         },
                         "MDF_PropertyValue_2": {
-                          "operator": "Variables[0] (MDF_PropertyValue_2) || RETURN",
-                          "displayLines": "MDF_PropertyValue_2",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue_2"
-                          ]
+                          "displayLines": "MDF_PropertyValue_2"
                         },
                         "MDF_MaxCount": {
-                          "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                          "displayLines": "MDF_MaxCount",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxCount"
-                          ]
+                          "displayLines": "MDF_MaxCount"
                         },
                         "MDF_MinCount": {
-                          "operator": "Variables[0] (MDF_MinCount) || RETURN",
-                          "displayLines": "MDF_MinCount",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MinCount"
-                          ]
+                          "displayLines": "MDF_MinCount"
                         },
                         "MDF_AddLayer": {
-                          "operator": "Variables[0] (MDF_AddLayer) || RETURN",
-                          "displayLines": "MDF_AddLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_AddLayer"
-                          ]
+                          "displayLines": "MDF_AddLayer"
                         },
                         "MDF_MaxLayer": {
-                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                          "displayLines": "MDF_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer"
-                          ]
+                          "displayLines": "MDF_MaxLayer"
                         },
                         "MDF_MaxLayer_PointB3": {
-                          "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
-                          "displayLines": "MDF_MaxLayer_PointB3",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer_PointB3"
-                          ]
+                          "displayLines": "MDF_MaxLayer_PointB3"
                         },
                         "MDF_Ratio_PointB3": {
-                          "operator": "Variables[0] (MDF_Ratio_PointB3) || RETURN",
-                          "displayLines": "MDF_Ratio_PointB3",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Ratio_PointB3"
-                          ]
+                          "displayLines": "MDF_Ratio_PointB3"
                         },
                         "MDF_BounceLayer": {
-                          "operator": "Variables[0] (MDF_BounceLayer) || RETURN",
-                          "displayLines": "MDF_BounceLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_BounceLayer"
-                          ]
+                          "displayLines": "MDF_BounceLayer"
                         }
                       }
                     }
@@ -4981,77 +4295,31 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-434693417\">TheHerta_Trace01_Regen</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                              "displayLines": "MDF_PropertyValue",
-                              "constants": [],
-                              "variables": [
-                                "MDF_PropertyValue"
-                              ]
+                              "displayLines": "MDF_PropertyValue"
                             },
                             "MDF_PropertyValue_2": {
-                              "operator": "Variables[0] (MDF_PropertyValue_2) || RETURN",
-                              "displayLines": "MDF_PropertyValue_2",
-                              "constants": [],
-                              "variables": [
-                                "MDF_PropertyValue_2"
-                              ]
+                              "displayLines": "MDF_PropertyValue_2"
                             },
                             "MDF_MaxCount": {
-                              "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                              "displayLines": "MDF_MaxCount",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxCount"
-                              ]
+                              "displayLines": "MDF_MaxCount"
                             },
                             "MDF_MinCount": {
-                              "operator": "Variables[0] (MDF_MinCount) || Variables[1] (3) || ADD || RETURN",
-                              "displayLines": "(MDF_MinCount + 3)",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MinCount",
-                                3
-                              ]
+                              "displayLines": "(MDF_MinCount + 3)"
                             },
                             "MDF_AddLayer": {
-                              "operator": "Variables[0] (MDF_AddLayer) || RETURN",
-                              "displayLines": "MDF_AddLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_AddLayer"
-                              ]
+                              "displayLines": "MDF_AddLayer"
                             },
                             "MDF_MaxLayer": {
-                              "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                              "displayLines": "MDF_MaxLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxLayer"
-                              ]
+                              "displayLines": "MDF_MaxLayer"
                             },
                             "MDF_MaxLayer_PointB3": {
-                              "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
-                              "displayLines": "MDF_MaxLayer_PointB3",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxLayer_PointB3"
-                              ]
+                              "displayLines": "MDF_MaxLayer_PointB3"
                             },
                             "MDF_Ratio_PointB3": {
-                              "operator": "Variables[0] (MDF_Ratio_PointB3) || RETURN",
-                              "displayLines": "MDF_Ratio_PointB3",
-                              "constants": [],
-                              "variables": [
-                                "MDF_Ratio_PointB3"
-                              ]
+                              "displayLines": "MDF_Ratio_PointB3"
                             },
                             "MDF_BounceLayer": {
-                              "operator": "Variables[0] (MDF_BounceLayer) || RETURN",
-                              "displayLines": "MDF_BounceLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_BounceLayer"
-                              ]
+                              "displayLines": "MDF_BounceLayer"
                             }
                           }
                         }
@@ -5066,76 +4334,31 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-434693417\">TheHerta_Trace01_Regen</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                              "displayLines": "MDF_PropertyValue",
-                              "constants": [],
-                              "variables": [
-                                "MDF_PropertyValue"
-                              ]
+                              "displayLines": "MDF_PropertyValue"
                             },
                             "MDF_PropertyValue_2": {
-                              "operator": "Variables[0] (MDF_PropertyValue_2) || RETURN",
-                              "displayLines": "MDF_PropertyValue_2",
-                              "constants": [],
-                              "variables": [
-                                "MDF_PropertyValue_2"
-                              ]
+                              "displayLines": "MDF_PropertyValue_2"
                             },
                             "MDF_MaxCount": {
-                              "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                              "displayLines": "MDF_MaxCount",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxCount"
-                              ]
+                              "displayLines": "MDF_MaxCount"
                             },
                             "MDF_MinCount": {
-                              "operator": "Variables[0] (MDF_MinCount) || RETURN",
-                              "displayLines": "MDF_MinCount",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MinCount"
-                              ]
+                              "displayLines": "MDF_MinCount"
                             },
                             "MDF_AddLayer": {
-                              "operator": "Variables[0] (MDF_AddLayer) || RETURN",
-                              "displayLines": "MDF_AddLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_AddLayer"
-                              ]
+                              "displayLines": "MDF_AddLayer"
                             },
                             "MDF_MaxLayer": {
-                              "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                              "displayLines": "MDF_MaxLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxLayer"
-                              ]
+                              "displayLines": "MDF_MaxLayer"
                             },
                             "MDF_MaxLayer_PointB3": {
-                              "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
-                              "displayLines": "MDF_MaxLayer_PointB3",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxLayer_PointB3"
-                              ]
+                              "displayLines": "MDF_MaxLayer_PointB3"
                             },
                             "MDF_Ratio_PointB3": {
-                              "operator": "Variables[0] (MDF_Ratio_PointB3) || RETURN",
-                              "displayLines": "MDF_Ratio_PointB3",
-                              "constants": [],
-                              "variables": [
-                                "MDF_Ratio_PointB3"
-                              ]
+                              "displayLines": "MDF_Ratio_PointB3"
                             },
                             "MDF_BounceLayer": {
-                              "operator": "Variables[0] (MDF_BounceLayer) || RETURN",
-                              "displayLines": "MDF_BounceLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_BounceLayer"
-                              ]
+                              "displayLines": "MDF_BounceLayer"
                             }
                           }
                         }
@@ -5175,77 +4398,31 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-434693417\">TheHerta_Trace01_Regen</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                              "displayLines": "MDF_PropertyValue",
-                              "constants": [],
-                              "variables": [
-                                "MDF_PropertyValue"
-                              ]
+                              "displayLines": "MDF_PropertyValue"
                             },
                             "MDF_PropertyValue_2": {
-                              "operator": "Variables[0] (MDF_PropertyValue_2) || RETURN",
-                              "displayLines": "MDF_PropertyValue_2",
-                              "constants": [],
-                              "variables": [
-                                "MDF_PropertyValue_2"
-                              ]
+                              "displayLines": "MDF_PropertyValue_2"
                             },
                             "MDF_MaxCount": {
-                              "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                              "displayLines": "MDF_MaxCount",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxCount"
-                              ]
+                              "displayLines": "MDF_MaxCount"
                             },
                             "MDF_MinCount": {
-                              "operator": "Variables[0] (MDF_MinCount) || Variables[1] (3) || ADD || RETURN",
-                              "displayLines": "(MDF_MinCount + 3)",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MinCount",
-                                3
-                              ]
+                              "displayLines": "(MDF_MinCount + 3)"
                             },
                             "MDF_AddLayer": {
-                              "operator": "Variables[0] (MDF_AddLayer) || RETURN",
-                              "displayLines": "MDF_AddLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_AddLayer"
-                              ]
+                              "displayLines": "MDF_AddLayer"
                             },
                             "MDF_MaxLayer": {
-                              "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                              "displayLines": "MDF_MaxLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxLayer"
-                              ]
+                              "displayLines": "MDF_MaxLayer"
                             },
                             "MDF_MaxLayer_PointB3": {
-                              "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
-                              "displayLines": "MDF_MaxLayer_PointB3",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxLayer_PointB3"
-                              ]
+                              "displayLines": "MDF_MaxLayer_PointB3"
                             },
                             "MDF_Ratio_PointB3": {
-                              "operator": "Variables[0] (MDF_Ratio_PointB3) || RETURN",
-                              "displayLines": "MDF_Ratio_PointB3",
-                              "constants": [],
-                              "variables": [
-                                "MDF_Ratio_PointB3"
-                              ]
+                              "displayLines": "MDF_Ratio_PointB3"
                             },
                             "MDF_BounceLayer": {
-                              "operator": "Variables[0] (MDF_BounceLayer) || RETURN",
-                              "displayLines": "MDF_BounceLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_BounceLayer"
-                              ]
+                              "displayLines": "MDF_BounceLayer"
                             }
                           }
                         }
@@ -5260,76 +4437,31 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-434693417\">TheHerta_Trace01_Regen</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                              "displayLines": "MDF_PropertyValue",
-                              "constants": [],
-                              "variables": [
-                                "MDF_PropertyValue"
-                              ]
+                              "displayLines": "MDF_PropertyValue"
                             },
                             "MDF_PropertyValue_2": {
-                              "operator": "Variables[0] (MDF_PropertyValue_2) || RETURN",
-                              "displayLines": "MDF_PropertyValue_2",
-                              "constants": [],
-                              "variables": [
-                                "MDF_PropertyValue_2"
-                              ]
+                              "displayLines": "MDF_PropertyValue_2"
                             },
                             "MDF_MaxCount": {
-                              "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                              "displayLines": "MDF_MaxCount",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxCount"
-                              ]
+                              "displayLines": "MDF_MaxCount"
                             },
                             "MDF_MinCount": {
-                              "operator": "Variables[0] (MDF_MinCount) || RETURN",
-                              "displayLines": "MDF_MinCount",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MinCount"
-                              ]
+                              "displayLines": "MDF_MinCount"
                             },
                             "MDF_AddLayer": {
-                              "operator": "Variables[0] (MDF_AddLayer) || RETURN",
-                              "displayLines": "MDF_AddLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_AddLayer"
-                              ]
+                              "displayLines": "MDF_AddLayer"
                             },
                             "MDF_MaxLayer": {
-                              "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                              "displayLines": "MDF_MaxLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxLayer"
-                              ]
+                              "displayLines": "MDF_MaxLayer"
                             },
                             "MDF_MaxLayer_PointB3": {
-                              "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
-                              "displayLines": "MDF_MaxLayer_PointB3",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxLayer_PointB3"
-                              ]
+                              "displayLines": "MDF_MaxLayer_PointB3"
                             },
                             "MDF_Ratio_PointB3": {
-                              "operator": "Variables[0] (MDF_Ratio_PointB3) || RETURN",
-                              "displayLines": "MDF_Ratio_PointB3",
-                              "constants": [],
-                              "variables": [
-                                "MDF_Ratio_PointB3"
-                              ]
+                              "displayLines": "MDF_Ratio_PointB3"
                             },
                             "MDF_BounceLayer": {
-                              "operator": "Variables[0] (MDF_BounceLayer) || RETURN",
-                              "displayLines": "MDF_BounceLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_BounceLayer"
-                              ]
+                              "displayLines": "MDF_BounceLayer"
                             }
                           }
                         }
@@ -5381,14 +4513,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_MCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_MCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_MCount"
-                        ]
+                        "displayLines": "(_MCount + 1)"
                       },
                       "variableName": "_MCount"
                     }
@@ -5705,12 +4830,7 @@ const compositeAbilityObject = {
                       },
                       "modifierName": "<a class=\"gModGreen\" id=\"-612445396\">TheHerta_SKL21</a>[<span class=\"descriptionNumberColor\">Inspiration</span>]",
                       "value": {
-                        "operator": "Variables[0] (Skill21_Layer) || RETURN",
-                        "displayLines": "Skill21_Layer",
-                        "constants": [],
-                        "variables": [
-                          "Skill21_Layer"
-                        ]
+                        "displayLines": "Skill21_Layer"
                       }
                     }
                   ],
@@ -5731,12 +4851,7 @@ const compositeAbilityObject = {
                       },
                       "modifierName": "<a class=\"gModGreen\" id=\"-612445396\">TheHerta_SKL21</a>[<span class=\"descriptionNumberColor\">Inspiration</span>]",
                       "value": {
-                        "operator": "Variables[0] (Skill21_Layer) || RETURN",
-                        "displayLines": "Skill21_Layer",
-                        "constants": [],
-                        "variables": [
-                          "Skill21_Layer"
-                        ]
+                        "displayLines": "Skill21_Layer"
                       }
                     }
                   ]
@@ -5771,13 +4886,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_BounceLayer) || Variables[1] (MDF_MageLayer) || ADD || RETURN",
-                        "displayLines": "(MDF_BounceLayer + MDF_MageLayer)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_BounceLayer",
-                          "MDF_MageLayer"
-                        ]
+                        "displayLines": "(MDF_BounceLayer + MDF_MageLayer)"
                       },
                       "variableName": "_Exec_Layer"
                     }
@@ -5786,12 +4895,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (MDF_BounceLayer) || RETURN",
-                        "displayLines": "MDF_BounceLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_BounceLayer"
-                        ]
+                        "displayLines": "MDF_BounceLayer"
                       },
                       "variableName": "_Exec_Layer"
                     }
@@ -5800,12 +4904,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Looped Event",
                   "maxLoops": {
-                    "operator": "Variables[0] (_Exec_Layer) || RETURN",
-                    "displayLines": "_Exec_Layer",
-                    "constants": [],
-                    "variables": [
-                      "_Exec_Layer"
-                    ]
+                    "displayLines": "_Exec_Layer"
                   },
                   "execute": [
                     {
@@ -5851,12 +4950,7 @@ const compositeAbilityObject = {
                         "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                          "displayLines": "MDF_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer"
-                          ]
+                          "displayLines": "MDF_MaxLayer"
                         },
                         "valueType": "Layer"
                       },
@@ -5869,12 +4963,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                            "displayLines": "MDF_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxLayer"
-                            ]
+                            "displayLines": "MDF_MaxLayer"
                           },
                           "addStacksPerTrigger": 1
                         },
@@ -5893,21 +4982,11 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
-                                "displayLines": "MDF_MaxLayer_PointB3",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_MaxLayer_PointB3"
-                                ]
+                                "displayLines": "MDF_MaxLayer_PointB3"
                               },
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (MDF_Ratio_PointB3) || RETURN",
-                                  "displayLines": "MDF_Ratio_PointB3",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_Ratio_PointB3"
-                                  ]
+                                  "displayLines": "MDF_Ratio_PointB3"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -5939,21 +5018,11 @@ const compositeAbilityObject = {
                                   },
                                   "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
                                   "stackLimit": {
-                                    "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
-                                    "displayLines": "MDF_MaxLayer_PointB3",
-                                    "constants": [],
-                                    "variables": [
-                                      "MDF_MaxLayer_PointB3"
-                                    ]
+                                    "displayLines": "MDF_MaxLayer_PointB3"
                                   },
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (MDF_Ratio_PointB3) || RETURN",
-                                      "displayLines": "MDF_Ratio_PointB3",
-                                      "constants": [],
-                                      "variables": [
-                                        "MDF_Ratio_PointB3"
-                                      ]
+                                      "displayLines": "MDF_Ratio_PointB3"
                                     }
                                   },
                                   "addStacksPerTrigger": 1
@@ -5989,44 +5058,19 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1573828152\">TheHerta_PointB2_Ally</a>",
                   "valuePerStack": {
                     "MDF_MaxLayer_PointB3": {
-                      "operator": "Variables[0] (_SkillTree03_MaxCount) || RETURN",
-                      "displayLines": "_SkillTree03_MaxCount",
-                      "constants": [],
-                      "variables": [
-                        "_SkillTree03_MaxCount"
-                      ]
+                      "displayLines": "_SkillTree03_MaxCount"
                     },
                     "MDF_Ratio_PointB3": {
-                      "operator": "Variables[0] (_PointB3_Ratio) || RETURN",
-                      "displayLines": "_PointB3_Ratio",
-                      "constants": [],
-                      "variables": [
-                        "_PointB3_Ratio"
-                      ]
+                      "displayLines": "_PointB3_Ratio"
                     },
                     "MDF_MaxLayer": {
-                      "operator": "Variables[0] (42) || RETURN",
-                      "displayLines": "42",
-                      "constants": [],
-                      "variables": [
-                        42
-                      ]
+                      "displayLines": "42"
                     },
                     "MDF_BounceLayer": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     },
                     "MDF_MageLayer": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     }
                   }
                 },
@@ -6069,44 +5113,19 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1573828152\">TheHerta_PointB2_Ally</a>",
                   "valuePerStack": {
                     "MDF_MaxLayer_PointB3": {
-                      "operator": "Variables[0] (_SkillTree03_MaxCount) || RETURN",
-                      "displayLines": "_SkillTree03_MaxCount",
-                      "constants": [],
-                      "variables": [
-                        "_SkillTree03_MaxCount"
-                      ]
+                      "displayLines": "_SkillTree03_MaxCount"
                     },
                     "MDF_Ratio_PointB3": {
-                      "operator": "Variables[0] (_PointB3_Ratio) || RETURN",
-                      "displayLines": "_PointB3_Ratio",
-                      "constants": [],
-                      "variables": [
-                        "_PointB3_Ratio"
-                      ]
+                      "displayLines": "_PointB3_Ratio"
                     },
                     "MDF_MaxLayer": {
-                      "operator": "Variables[0] (42) || RETURN",
-                      "displayLines": "42",
-                      "constants": [],
-                      "variables": [
-                        42
-                      ]
+                      "displayLines": "42"
                     },
                     "MDF_BounceLayer": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     },
                     "MDF_MageLayer": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
+                      "displayLines": "2"
                     }
                   }
                 }
@@ -6135,44 +5154,19 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1573828152\">TheHerta_PointB2_Ally</a>",
                       "valuePerStack": {
                         "MDF_MaxLayer_PointB3": {
-                          "operator": "Variables[0] (_SkillTree03_MaxCount) || RETURN",
-                          "displayLines": "_SkillTree03_MaxCount",
-                          "constants": [],
-                          "variables": [
-                            "_SkillTree03_MaxCount"
-                          ]
+                          "displayLines": "_SkillTree03_MaxCount"
                         },
                         "MDF_Ratio_PointB3": {
-                          "operator": "Variables[0] (_PointB3_Ratio) || RETURN",
-                          "displayLines": "_PointB3_Ratio",
-                          "constants": [],
-                          "variables": [
-                            "_PointB3_Ratio"
-                          ]
+                          "displayLines": "_PointB3_Ratio"
                         },
                         "MDF_MaxLayer": {
-                          "operator": "Variables[0] (42) || RETURN",
-                          "displayLines": "42",
-                          "constants": [],
-                          "variables": [
-                            42
-                          ]
+                          "displayLines": "42"
                         },
                         "MDF_BounceLayer": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         },
                         "MDF_MageLayer": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         }
                       }
                     }
@@ -6217,44 +5211,19 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1573828152\">TheHerta_PointB2_Ally</a>",
                       "valuePerStack": {
                         "MDF_MaxLayer_PointB3": {
-                          "operator": "Variables[0] (_SkillTree03_MaxCount) || RETURN",
-                          "displayLines": "_SkillTree03_MaxCount",
-                          "constants": [],
-                          "variables": [
-                            "_SkillTree03_MaxCount"
-                          ]
+                          "displayLines": "_SkillTree03_MaxCount"
                         },
                         "MDF_Ratio_PointB3": {
-                          "operator": "Variables[0] (_PointB3_Ratio) || RETURN",
-                          "displayLines": "_PointB3_Ratio",
-                          "constants": [],
-                          "variables": [
-                            "_PointB3_Ratio"
-                          ]
+                          "displayLines": "_PointB3_Ratio"
                         },
                         "MDF_MaxLayer": {
-                          "operator": "Variables[0] (42) || RETURN",
-                          "displayLines": "42",
-                          "constants": [],
-                          "variables": [
-                            42
-                          ]
+                          "displayLines": "42"
                         },
                         "MDF_BounceLayer": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
+                          "displayLines": "1"
                         },
                         "MDF_MageLayer": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
+                          "displayLines": "2"
                         }
                       }
                     }
@@ -6439,12 +5408,7 @@ const compositeAbilityObject = {
                               ],
                               "valuePerStack": {
                                 "Herta_Roll_Count": {
-                                  "operator": "Variables[0] (Cur_Count) || RETURN",
-                                  "displayLines": "Cur_Count",
-                                  "constants": [],
-                                  "variables": [
-                                    "Cur_Count"
-                                  ]
+                                  "displayLines": "Cur_Count"
                                 }
                               },
                               "allowAbilityTriggers": false
@@ -6506,46 +5470,21 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (42) || RETURN",
-                            "displayLines": "42",
-                            "constants": [],
-                            "variables": [
-                              42
-                            ]
+                            "displayLines": "42"
                           },
                           "valuePerStack": {
                             "MagicMark_MaxCount_Max": {
-                              "operator": "Variables[0] (42) || RETURN",
-                              "displayLines": "42",
-                              "constants": [],
-                              "variables": [
-                                42
-                              ]
+                              "displayLines": "42"
                             },
                             "MagicMark_MaxCount": {
-                              "operator": "Variables[0] (42) || RETURN",
-                              "displayLines": "42",
-                              "constants": [],
-                              "variables": [
-                                42
-                              ]
+                              "displayLines": "42"
                             },
                             "MagicMark_Ratio": {
-                              "operator": "Variables[0] (1) || RETURN",
-                              "displayLines": "1",
-                              "constants": [],
-                              "variables": [
-                                1
-                              ]
+                              "displayLines": "1"
                             }
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (25) || RETURN",
-                            "displayLines": "25",
-                            "constants": [],
-                            "variables": [
-                              25
-                            ]
+                            "displayLines": "25"
                           }
                         },
                         {
@@ -6563,30 +5502,15 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] (99) || RETURN",
-                                "displayLines": "99",
-                                "constants": [],
-                                "variables": [
-                                  99
-                                ]
+                                "displayLines": "99"
                               },
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (_PointB3_Ratio) || RETURN",
-                                  "displayLines": "_PointB3_Ratio",
-                                  "constants": [],
-                                  "variables": [
-                                    "_PointB3_Ratio"
-                                  ]
+                                  "displayLines": "_PointB3_Ratio"
                                 }
                               },
                               "addStacksPerTrigger": {
-                                "operator": "Variables[0] (25) || RETURN",
-                                "displayLines": "25",
-                                "constants": [],
-                                "variables": [
-                                  25
-                                ]
+                                "displayLines": "25"
                               }
                             }
                           ]
@@ -6666,14 +5590,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (__i) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(__i + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "__i"
-                ]
+                "displayLines": "(__i + 1)"
               },
               "variableName": "__i"
             },
@@ -6728,14 +5645,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (__j) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(__j + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "__j"
-                    ]
+                    "displayLines": "(__j + 1)"
                   },
                   "variableName": "__j"
                 },
@@ -6746,12 +5656,7 @@ const compositeAbilityObject = {
                     "value1": "__j",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (__i) || RETURN",
-                      "displayLines": "__i",
-                      "constants": [],
-                      "variables": [
-                        "__i"
-                      ]
+                      "displayLines": "__i"
                     }
                   },
                   "passed": [
@@ -6763,12 +5668,7 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"184474088\">TheHerta_SKL03_Sort_Storge</a>",
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (_Temp_Sort_Layer) || RETURN",
-                        "displayLines": "_Temp_Sort_Layer",
-                        "constants": [],
-                        "variables": [
-                          "_Temp_Sort_Layer"
-                        ]
+                        "displayLines": "_Temp_Sort_Layer"
                       }
                     }
                   ]
@@ -6827,46 +5727,21 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (42) || RETURN",
-                "displayLines": "42",
-                "constants": [],
-                "variables": [
-                  42
-                ]
+                "displayLines": "42"
               },
               "valuePerStack": {
                 "MagicMark_MaxCount_Max": {
-                  "operator": "Variables[0] (42) || RETURN",
-                  "displayLines": "42",
-                  "constants": [],
-                  "variables": [
-                    42
-                  ]
+                  "displayLines": "42"
                 },
                 "MagicMark_MaxCount": {
-                  "operator": "Variables[0] (42) || RETURN",
-                  "displayLines": "42",
-                  "constants": [],
-                  "variables": [
-                    42
-                  ]
+                  "displayLines": "42"
                 },
                 "MagicMark_Ratio": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
+                  "displayLines": "1"
                 }
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (_Temp_Sort_Layer) || RETURN",
-                "displayLines": "_Temp_Sort_Layer",
-                "constants": [],
-                "variables": [
-                  "_Temp_Sort_Layer"
-                ]
+                "displayLines": "_Temp_Sort_Layer"
               }
             }
           ]
@@ -6911,13 +5786,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (_SKL03_EXTRADAMAGE) || Variables[1] (_PointB3_Ratio) || MUL || RETURN",
-                "displayLines": "(_SKL03_EXTRADAMAGE * _PointB3_Ratio)",
-                "constants": [],
-                "variables": [
-                  "_SKL03_EXTRADAMAGE",
-                  "_PointB3_Ratio"
-                ]
+                "displayLines": "(_SKL03_EXTRADAMAGE * _PointB3_Ratio)"
               },
               "variableName": "_SKL03_EXTRADAMAGE"
             }
@@ -6946,13 +5815,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (_SKL03_EXTRADAMAGE) || Variables[1] (1.4) || ADD || RETURN",
-                    "displayLines": "(_SKL03_EXTRADAMAGE + 1.4)",
-                    "constants": [],
-                    "variables": [
-                      "_SKL03_EXTRADAMAGE",
-                      1.4
-                    ]
+                    "displayLines": "(_SKL03_EXTRADAMAGE + 1.4)"
                   },
                   "variableName": "_SKL03_EXTRADAMAGE"
                 }
@@ -6974,13 +5837,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_SKL03_EXTRADAMAGE) || Variables[1] (2.5) || ADD || RETURN",
-                        "displayLines": "(_SKL03_EXTRADAMAGE + 2.5)",
-                        "constants": [],
-                        "variables": [
-                          "_SKL03_EXTRADAMAGE",
-                          2.5
-                        ]
+                        "displayLines": "(_SKL03_EXTRADAMAGE + 2.5)"
                       },
                       "variableName": "_SKL03_EXTRADAMAGE"
                     }
@@ -6989,13 +5846,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (_SKL03_EXTRADAMAGE) || Variables[1] (4) || ADD || RETURN",
-                        "displayLines": "(_SKL03_EXTRADAMAGE + 4)",
-                        "constants": [],
-                        "variables": [
-                          "_SKL03_EXTRADAMAGE",
-                          4
-                        ]
+                        "displayLines": "(_SKL03_EXTRADAMAGE + 4)"
                       },
                       "variableName": "_SKL03_EXTRADAMAGE"
                     }
@@ -7013,21 +5864,11 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"555212333\">TheHerta_Ability03_Bonus</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
+            "displayLines": "3"
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.8) || RETURN",
-              "displayLines": "0.8",
-              "constants": [],
-              "variables": [
-                0.8
-              ]
+              "displayLines": "0.8"
             }
           }
         },
@@ -7049,21 +5890,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (2) || Variables[1] (_SKL03_EXTRADAMAGE) || ADD || RETURN",
-              "displayLines": "(2 + _SKL03_EXTRADAMAGE)",
-              "constants": [],
-              "variables": [
-                2,
-                "_SKL03_EXTRADAMAGE"
-              ]
+              "displayLines": "(2 + _SKL03_EXTRADAMAGE)"
             },
             "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
+              "displayLines": "AOE Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -7098,12 +5928,7 @@ const compositeAbilityObject = {
             "target": "{{Caster}}"
           },
           "value": {
-            "operator": "Variables[0] (Skill21_Layer_Add) || RETURN",
-            "displayLines": "Skill21_Layer_Add",
-            "constants": [],
-            "variables": [
-              "Skill21_Layer_Add"
-            ]
+            "displayLines": "Skill21_Layer_Add"
           }
         },
         {
@@ -7128,12 +5953,7 @@ const compositeAbilityObject = {
         {
           "name": "Update Displayed Energy Bar",
           "value": {
-            "operator": "Variables[0] (Skill21_Layer) || RETURN",
-            "displayLines": "Skill21_Layer",
-            "constants": [],
-            "variables": [
-              "Skill21_Layer"
-            ]
+            "displayLines": "Skill21_Layer"
           },
           "priorState": "Active"
         },
@@ -7329,14 +6149,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "operator": "Variables[0] (S03_Mark_Count) || Variables[1] (_ADJ_TMP_COUNT) || Variables[2] (0.5) || MUL || ADD || RETURN",
-                        "displayLines": "(S03_Mark_Count + (_ADJ_TMP_COUNT * 0.5))",
-                        "constants": [],
-                        "variables": [
-                          "S03_Mark_Count",
-                          "_ADJ_TMP_COUNT",
-                          0.5
-                        ]
+                        "displayLines": "(S03_Mark_Count + (_ADJ_TMP_COUNT * 0.5))"
                       },
                       "variableName": "S03_Mark_Count"
                     }
@@ -7369,12 +6182,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1341843949\">TheHerta_PointB1_42</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
+                          "displayLines": "0.5"
                         }
                       }
                     }
@@ -7396,14 +6204,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (S03_Mark_Count) || Constants[0] (2) || MUL || RETURN",
-                    "displayLines": "(S03_Mark_Count * 2)",
-                    "constants": [
-                      2
-                    ],
-                    "variables": [
-                      "S03_Mark_Count"
-                    ]
+                    "displayLines": "(S03_Mark_Count * 2)"
                   },
                   "variableName": "S03_Mark_Count"
                 }
@@ -7437,46 +6238,21 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (42) || RETURN",
-                    "displayLines": "42",
-                    "constants": [],
-                    "variables": [
-                      42
-                    ]
+                    "displayLines": "42"
                   },
                   "valuePerStack": {
                     "MagicMark_MaxCount_Max": {
-                      "operator": "Variables[0] (42) || RETURN",
-                      "displayLines": "42",
-                      "constants": [],
-                      "variables": [
-                        42
-                      ]
+                      "displayLines": "42"
                     },
                     "MagicMark_MaxCount": {
-                      "operator": "Variables[0] (42) || RETURN",
-                      "displayLines": "42",
-                      "constants": [],
-                      "variables": [
-                        42
-                      ]
+                      "displayLines": "42"
                     },
                     "MagicMark_Ratio": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     }
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (15) || RETURN",
-                    "displayLines": "15",
-                    "constants": [],
-                    "variables": [
-                      15
-                    ]
+                    "displayLines": "15"
                   }
                 }
               ],
@@ -7489,37 +6265,17 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (42) || RETURN",
-                    "displayLines": "42",
-                    "constants": [],
-                    "variables": [
-                      42
-                    ]
+                    "displayLines": "42"
                   },
                   "valuePerStack": {
                     "MagicMark_MaxCount_Max": {
-                      "operator": "Variables[0] (42) || RETURN",
-                      "displayLines": "42",
-                      "constants": [],
-                      "variables": [
-                        42
-                      ]
+                      "displayLines": "42"
                     },
                     "MagicMark_MaxCount": {
-                      "operator": "Variables[0] (42) || RETURN",
-                      "displayLines": "42",
-                      "constants": [],
-                      "variables": [
-                        42
-                      ]
+                      "displayLines": "42"
                     },
                     "MagicMark_Ratio": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
+                      "displayLines": "1"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -7533,28 +6289,13 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"1142002606\">TheHerta_SKL02</a>",
           "variables": {
             "DV_DamageRatio1": {
-              "operator": "Variables[0] (0.8) || RETURN",
-              "displayLines": "0.8",
-              "constants": [],
-              "variables": [
-                0.8
-              ]
+              "displayLines": "0.8"
             },
             "DV_MarkAddLayer": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "DV_MarkMaxLayer": {
-              "operator": "Variables[0] (42) || RETURN",
-              "displayLines": "42",
-              "constants": [],
-              "variables": [
-                42
-              ]
+              "displayLines": "42"
             }
           }
         },
@@ -7599,13 +6340,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (S03_Mark_Count) || Variables[1] (0.08) || MUL || RETURN",
-                    "displayLines": "(S03_Mark_Count * 0.08)",
-                    "constants": [],
-                    "variables": [
-                      "S03_Mark_Count",
-                      0.08
-                    ]
+                    "displayLines": "(S03_Mark_Count * 0.08)"
                   },
                   "variableName": "S03_Mark_Damage"
                 },
@@ -7633,14 +6368,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Ice",
                         "Damage": {
-                          "operator": "Variables[0] (S03_Mark_Count) || Variables[1] (0.08) || MUL || Variables[2] (0.4) || ADD || RETURN",
-                          "displayLines": "((S03_Mark_Count * 0.08) + 0.4)",
-                          "constants": [],
-                          "variables": [
-                            "S03_Mark_Count",
-                            0.08,
-                            0.4
-                          ]
+                          "displayLines": "((S03_Mark_Count * 0.08) + 0.4)"
                         },
                         "Toughness": {
                           "displayLines": 15
@@ -7660,14 +6388,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Ice",
                         "Damage": {
-                          "operator": "Variables[0] (S03_Mark_Count) || Variables[1] (0.04) || MUL || Variables[2] (0.4) || ADD || RETURN",
-                          "displayLines": "((S03_Mark_Count * 0.04) + 0.4)",
-                          "constants": [],
-                          "variables": [
-                            "S03_Mark_Count",
-                            0.04,
-                            0.4
-                          ]
+                          "displayLines": "((S03_Mark_Count * 0.04) + 0.4)"
                         },
                         "Toughness": {
                           "displayLines": 15
@@ -7689,12 +6410,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
-                      "operator": "Variables[0] (0.4) || RETURN",
-                      "displayLines": "0.4",
-                      "constants": [],
-                      "variables": [
-                        0.4
-                      ]
+                      "displayLines": "0.4"
                     },
                     "Toughness": {
                       "displayLines": 15
@@ -7723,12 +6439,7 @@ const compositeAbilityObject = {
               },
               "variables": {
                 "parameter[0]_NormalizedValue": {
-                  "operator": "Variables[0] (0.35) || RETURN",
-                  "displayLines": "0.35",
-                  "constants": [],
-                  "variables": [
-                    0.35
-                  ]
+                  "displayLines": "0.35"
                 }
               }
             }
@@ -7793,12 +6504,7 @@ const compositeAbilityObject = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (Skill21_Layer) || RETURN",
-                "displayLines": "Skill21_Layer",
-                "constants": [],
-                "variables": [
-                  "Skill21_Layer"
-                ]
+                "displayLines": "Skill21_Layer"
               },
               "priorState": "Active"
             }
@@ -7807,12 +6513,7 @@ const compositeAbilityObject = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (Skill21_Layer) || RETURN",
-                "displayLines": "Skill21_Layer",
-                "constants": [],
-                "variables": [
-                  "Skill21_Layer"
-                ]
+                "displayLines": "Skill21_Layer"
               },
               "priorState": "Normal"
             },
@@ -7924,28 +6625,13 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"1142002606\">TheHerta_SKL02</a>",
           "variables": {
             "DV_DamageRatio1": {
-              "operator": "Variables[0] (0.7) || RETURN",
-              "displayLines": "0.7",
-              "constants": [],
-              "variables": [
-                0.7
-              ]
+              "displayLines": "0.7"
             },
             "DV_MarkAddLayer": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "DV_MarkMaxLayer": {
-              "operator": "Variables[0] (42) || RETURN",
-              "displayLines": "42",
-              "constants": [],
-              "variables": [
-                42
-              ]
+              "displayLines": "42"
             }
           }
         },
@@ -8034,20 +6720,10 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
@@ -8119,20 +6795,10 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (DV_MarkMaxLayer) || RETURN",
-                "displayLines": "DV_MarkMaxLayer",
-                "constants": [],
-                "variables": [
-                  "DV_MarkMaxLayer"
-                ]
+                "displayLines": "DV_MarkMaxLayer"
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (DV_MarkAddLayer) || RETURN",
-                "displayLines": "DV_MarkAddLayer",
-                "constants": [],
-                "variables": [
-                  "DV_MarkAddLayer"
-                ]
+                "displayLines": "DV_MarkAddLayer"
               }
             },
             {
@@ -8150,20 +6816,10 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (_SkillTree03_MaxCount) || RETURN",
-                    "displayLines": "_SkillTree03_MaxCount",
-                    "constants": [],
-                    "variables": [
-                      "_SkillTree03_MaxCount"
-                    ]
+                    "displayLines": "_SkillTree03_MaxCount"
                   },
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (DV_MarkAddLayer) || RETURN",
-                    "displayLines": "DV_MarkAddLayer",
-                    "constants": [],
-                    "variables": [
-                      "DV_MarkAddLayer"
-                    ]
+                    "displayLines": "DV_MarkAddLayer"
                   }
                 }
               ]
@@ -8185,12 +6841,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
-                  "operator": "Variables[0] (DV_DamageRatio1) || RETURN",
-                  "displayLines": "DV_DamageRatio1",
-                  "constants": [],
-                  "variables": [
-                    "DV_DamageRatio1"
-                  ]
+                  "displayLines": "DV_DamageRatio1"
                 },
                 "Toughness": {
                   "displayLines": 15
@@ -8307,12 +6958,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Ice",
                         "Damage": {
-                          "operator": "Variables[0] (DV_DamageRatio1) || RETURN",
-                          "displayLines": "DV_DamageRatio1",
-                          "constants": [],
-                          "variables": [
-                            "DV_DamageRatio1"
-                          ]
+                          "displayLines": "DV_DamageRatio1"
                         },
                         "Toughness": {
                           "displayLines": 15
@@ -8336,12 +6982,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Ice",
                         "Damage": {
-                          "operator": "Variables[0] (DV_DamageRatio1) || RETURN",
-                          "displayLines": "DV_DamageRatio1",
-                          "constants": [],
-                          "variables": [
-                            "DV_DamageRatio1"
-                          ]
+                          "displayLines": "DV_DamageRatio1"
                         },
                         "Toughness": {
                           "displayLines": 15
@@ -8451,24 +7092,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DV_DamageRatio1) || RETURN",
-                    "displayLines": "DV_DamageRatio1",
-                    "constants": [],
-                    "variables": [
-                      "DV_DamageRatio1"
-                    ]
+                    "displayLines": "DV_DamageRatio1"
                   },
                   "variableName": "DV_MainTargetFinalDmgRatio"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (DV_DamageRatio1) || RETURN",
-                    "displayLines": "DV_DamageRatio1",
-                    "constants": [],
-                    "variables": [
-                      "DV_DamageRatio1"
-                    ]
+                    "displayLines": "DV_DamageRatio1"
                   },
                   "variableName": "DV_OtherTargetFinalDmgRatio"
                 },
@@ -8505,12 +7136,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Ice",
                         "Damage": {
-                          "operator": "Variables[0] (DV_MainTargetFinalDmgRatio) || RETURN",
-                          "displayLines": "DV_MainTargetFinalDmgRatio",
-                          "constants": [],
-                          "variables": [
-                            "DV_MainTargetFinalDmgRatio"
-                          ]
+                          "displayLines": "DV_MainTargetFinalDmgRatio"
                         },
                         "Toughness": {
                           "displayLines": 15
@@ -8534,12 +7160,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Ice",
                         "Damage": {
-                          "operator": "Variables[0] (DV_OtherTargetFinalDmgRatio) || RETURN",
-                          "displayLines": "DV_OtherTargetFinalDmgRatio",
-                          "constants": [],
-                          "variables": [
-                            "DV_OtherTargetFinalDmgRatio"
-                          ]
+                          "displayLines": "DV_OtherTargetFinalDmgRatio"
                         },
                         "Toughness": {
                           "displayLines": 15

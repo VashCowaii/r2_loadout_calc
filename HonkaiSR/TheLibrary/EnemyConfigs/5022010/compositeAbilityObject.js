@@ -50,12 +50,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_HPTriggerRatio) || RETURN",
-                    "displayLines": "MDF_HPTriggerRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HPTriggerRatio"
-                    ]
+                    "displayLines": "MDF_HPTriggerRatio"
                   }
                 }
               ]
@@ -315,12 +310,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
-                    "displayLines": "MDF_DamageUpRatio_PerLayer",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageUpRatio_PerLayer"
-                    ]
+                    "displayLines": "MDF_DamageUpRatio_PerLayer"
                   }
                 }
               ]
@@ -430,12 +420,7 @@ const compositeAbilityObject = {
         {
           "name": "Adjust Team Punchline Value",
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[0]]}"
-            ]
+            "displayLines": "{[PassiveSkill01[0]]}"
           },
           "adjustment": "Add"
         },
@@ -521,21 +506,11 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1271467699\">Monster_W5_RipperPart_Bonus</a>[<span class=\"descriptionNumberColor\">Wicked Grin</span>]",
           "stackLimit": {
-            "operator": "Variables[0] (Buff_MaxLayer) || RETURN",
-            "displayLines": "Buff_MaxLayer",
-            "constants": [],
-            "variables": [
-              "Buff_MaxLayer"
-            ]
+            "displayLines": "Buff_MaxLayer"
           },
           "valuePerStack": {
             "MDF_DamageUpRatio_PerLayer": {
-              "operator": "Variables[0] (Buff_DamageUpRatio) || RETURN",
-              "displayLines": "Buff_DamageUpRatio",
-              "constants": [],
-              "variables": [
-                "Buff_DamageUpRatio"
-              ]
+              "displayLines": "Buff_DamageUpRatio"
             }
           }
         },

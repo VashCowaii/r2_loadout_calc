@@ -88,12 +88,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] ({[Skill04P1[0]]}) || RETURN",
-            "displayLines": "{[Skill04P1[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill04P1[0]]}"
-            ]
+            "displayLines": "{[Skill04P1[0]]}"
           },
           "variableName": "Skill04P1SunnyHeat"
         },
@@ -106,12 +101,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1737251406\">Enemy_W4_DawnsEye_Ability04_SunnyChargeHeat</a>[<span class=\"descriptionNumberColor\">Helium Flash</span>]",
           "valuePerStack": {
             "MDF_Ability04P1SunnyHeat": {
-              "operator": "Variables[0] ({[Skill04P1[0]]}) || RETURN",
-              "displayLines": "{[Skill04P1[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04P1[0]]}"
-              ]
+              "displayLines": "{[Skill04P1[0]]}"
             }
           }
         },

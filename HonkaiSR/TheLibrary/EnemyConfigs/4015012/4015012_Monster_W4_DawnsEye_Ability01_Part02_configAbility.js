@@ -24,12 +24,7 @@ const configAbility = {
           },
           "variableName": "Sunny_Temperature",
           "value": {
-            "operator": "Variables[0] ({[Skill01P1[2]]}) || RETURN",
-            "displayLines": "{[Skill01P1[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01P1[2]]}"
-            ]
+            "displayLines": "{[Skill01P1[2]]}"
           },
           "max": 999
         },
@@ -44,15 +39,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "operator": "Variables[0] (Sunny_Temperature) || Variables[1] ({[SkillP05[1]]}) || SUB || Constants[0] (10) || ADD || RETURN",
-            "displayLines": "((Sunny_Temperature - {[SkillP05[1]]}) + 10)",
-            "constants": [
-              10
-            ],
-            "variables": [
-              "Sunny_Temperature",
-              "{[SkillP05[1]]}"
-            ]
+            "displayLines": "((Sunny_Temperature - {[SkillP05[1]]}) + 10)"
           },
           "variableName": "DamageAddHeat"
         },
@@ -101,14 +88,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01P1[0]]}) || Variables[1] ({[Skill01P1[1]]}) || Variables[2] (DamageAddHeat) || MUL || ADD || RETURN",
-              "displayLines": "({[Skill01P1[0]]} + ({[Skill01P1[1]]} * DamageAddHeat))",
-              "constants": [],
-              "variables": [
-                "{[Skill01P1[0]]}",
-                "{[Skill01P1[1]]}",
-                "DamageAddHeat"
-              ]
+              "displayLines": "({[Skill01P1[0]]} + ({[Skill01P1[1]]} * DamageAddHeat))"
             },
             "Toughness": null,
             "Tags": null,
@@ -144,14 +124,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01P1[0]]}) || Variables[1] ({[Skill01P1[1]]}) || Variables[2] (DamageAddHeat) || MUL || ADD || RETURN",
-                  "displayLines": "({[Skill01P1[0]]} + ({[Skill01P1[1]]} * DamageAddHeat))",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01P1[0]]}",
-                    "{[Skill01P1[1]]}",
-                    "DamageAddHeat"
-                  ]
+                  "displayLines": "({[Skill01P1[0]]} + ({[Skill01P1[1]]} * DamageAddHeat))"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -189,14 +162,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01P1[0]]}) || Variables[1] ({[Skill01P1[1]]}) || Variables[2] (DamageAddHeat) || MUL || ADD || RETURN",
-              "displayLines": "({[Skill01P1[0]]} + ({[Skill01P1[1]]} * DamageAddHeat))",
-              "constants": [],
-              "variables": [
-                "{[Skill01P1[0]]}",
-                "{[Skill01P1[1]]}",
-                "DamageAddHeat"
-              ]
+              "displayLines": "({[Skill01P1[0]]} + ({[Skill01P1[1]]} * DamageAddHeat))"
             },
             "Toughness": null,
             "Tags": null,
@@ -232,14 +198,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01P1[0]]}) || Variables[1] ({[Skill01P1[1]]}) || Variables[2] (DamageAddHeat) || MUL || ADD || RETURN",
-                  "displayLines": "({[Skill01P1[0]]} + ({[Skill01P1[1]]} * DamageAddHeat))",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01P1[0]]}",
-                    "{[Skill01P1[1]]}",
-                    "DamageAddHeat"
-                  ]
+                  "displayLines": "({[Skill01P1[0]]} + ({[Skill01P1[1]]} * DamageAddHeat))"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -277,14 +236,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01P1[0]]}) || Variables[1] ({[Skill01P1[1]]}) || Variables[2] (DamageAddHeat) || MUL || ADD || RETURN",
-              "displayLines": "({[Skill01P1[0]]} + ({[Skill01P1[1]]} * DamageAddHeat))",
-              "constants": [],
-              "variables": [
-                "{[Skill01P1[0]]}",
-                "{[Skill01P1[1]]}",
-                "DamageAddHeat"
-              ]
+              "displayLines": "({[Skill01P1[0]]} + ({[Skill01P1[1]]} * DamageAddHeat))"
             },
             "Toughness": null,
             "Tags": null,
@@ -320,14 +272,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01P1[0]]}) || Variables[1] ({[Skill01P1[1]]}) || Variables[2] (DamageAddHeat) || MUL || ADD || RETURN",
-                  "displayLines": "({[Skill01P1[0]]} + ({[Skill01P1[1]]} * DamageAddHeat))",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01P1[0]]}",
-                    "{[Skill01P1[1]]}",
-                    "DamageAddHeat"
-                  ]
+                  "displayLines": "({[Skill01P1[0]]} + ({[Skill01P1[1]]} * DamageAddHeat))"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -365,14 +310,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01P1[0]]}) || Variables[1] ({[Skill01P1[1]]}) || Variables[2] (DamageAddHeat) || MUL || ADD || RETURN",
-              "displayLines": "({[Skill01P1[0]]} + ({[Skill01P1[1]]} * DamageAddHeat))",
-              "constants": [],
-              "variables": [
-                "{[Skill01P1[0]]}",
-                "{[Skill01P1[1]]}",
-                "DamageAddHeat"
-              ]
+              "displayLines": "({[Skill01P1[0]]} + ({[Skill01P1[1]]} * DamageAddHeat))"
             },
             "Toughness": null,
             "Tags": null,
@@ -408,14 +346,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01P1[0]]}) || Variables[1] ({[Skill01P1[1]]}) || Variables[2] (DamageAddHeat) || MUL || ADD || RETURN",
-                  "displayLines": "({[Skill01P1[0]]} + ({[Skill01P1[1]]} * DamageAddHeat))",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01P1[0]]}",
-                    "{[Skill01P1[1]]}",
-                    "DamageAddHeat"
-                  ]
+                  "displayLines": "({[Skill01P1[0]]} + ({[Skill01P1[1]]} * DamageAddHeat))"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -453,14 +384,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01P1[0]]}) || Variables[1] ({[Skill01P1[1]]}) || Variables[2] (DamageAddHeat) || MUL || ADD || RETURN",
-              "displayLines": "({[Skill01P1[0]]} + ({[Skill01P1[1]]} * DamageAddHeat))",
-              "constants": [],
-              "variables": [
-                "{[Skill01P1[0]]}",
-                "{[Skill01P1[1]]}",
-                "DamageAddHeat"
-              ]
+              "displayLines": "({[Skill01P1[0]]} + ({[Skill01P1[1]]} * DamageAddHeat))"
             },
             "Toughness": null,
             "Tags": null,
@@ -496,14 +420,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01P1[0]]}) || Variables[1] ({[Skill01P1[1]]}) || Variables[2] (DamageAddHeat) || MUL || ADD || RETURN",
-                  "displayLines": "({[Skill01P1[0]]} + ({[Skill01P1[1]]} * DamageAddHeat))",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01P1[0]]}",
-                    "{[Skill01P1[1]]}",
-                    "DamageAddHeat"
-                  ]
+                  "displayLines": "({[Skill01P1[0]]} + ({[Skill01P1[1]]} * DamageAddHeat))"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -541,14 +458,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01P1[0]]}) || Variables[1] ({[Skill01P1[1]]}) || Variables[2] (DamageAddHeat) || MUL || ADD || RETURN",
-              "displayLines": "({[Skill01P1[0]]} + ({[Skill01P1[1]]} * DamageAddHeat))",
-              "constants": [],
-              "variables": [
-                "{[Skill01P1[0]]}",
-                "{[Skill01P1[1]]}",
-                "DamageAddHeat"
-              ]
+              "displayLines": "({[Skill01P1[0]]} + ({[Skill01P1[1]]} * DamageAddHeat))"
             },
             "Toughness": null,
             "Tags": null,
@@ -584,14 +494,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill01P1[0]]}) || Variables[1] ({[Skill01P1[1]]}) || Variables[2] (DamageAddHeat) || MUL || ADD || RETURN",
-                  "displayLines": "({[Skill01P1[0]]} + ({[Skill01P1[1]]} * DamageAddHeat))",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01P1[0]]}",
-                    "{[Skill01P1[1]]}",
-                    "DamageAddHeat"
-                  ]
+                  "displayLines": "({[Skill01P1[0]]} + ({[Skill01P1[1]]} * DamageAddHeat))"
                 },
                 "Toughness": null,
                 "Tags": null,
@@ -621,12 +524,7 @@ const configAbility = {
       "conditions": {
         "name": "Enemy ID",
         "ID": {
-          "operator": "Variables[0] (PartEntity3_MonsterID) || RETURN",
-          "displayLines": "PartEntity3_MonsterID",
-          "constants": [],
-          "variables": [
-            "PartEntity3_MonsterID"
-          ]
+          "displayLines": "PartEntity3_MonsterID"
         },
         "target": {
           "name": "Target Name",

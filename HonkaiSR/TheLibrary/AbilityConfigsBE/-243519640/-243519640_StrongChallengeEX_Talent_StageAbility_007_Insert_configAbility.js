@@ -12,12 +12,7 @@ const configAbility = {
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Constants[0] (800206100) || RETURN",
-            "displayLines": "800206100",
-            "constants": [
-              800206100
-            ],
-            "variables": []
+            "displayLines": "800206100"
           },
           "locationType": "Last"
         }
@@ -62,28 +57,13 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1349202594\">MStrongChallengeEX_Talent_StageAbility_BOSS_007_Trigger</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (PropertyValue) || RETURN",
-              "displayLines": "PropertyValue",
-              "constants": [],
-              "variables": [
-                "PropertyValue"
-              ]
+              "displayLines": "PropertyValue"
             },
             "MDF_LifeTime": {
-              "operator": "Variables[0] (LifeTime) || RETURN",
-              "displayLines": "LifeTime",
-              "constants": [],
-              "variables": [
-                "LifeTime"
-              ]
+              "displayLines": "LifeTime"
             },
             "MDF_MaxLayer": {
-              "operator": "Variables[0] (MaxLayer) || RETURN",
-              "displayLines": "MaxLayer",
-              "constants": [],
-              "variables": [
-                "MaxLayer"
-              ]
+              "displayLines": "MaxLayer"
             }
           }
         }

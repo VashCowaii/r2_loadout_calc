@@ -14,12 +14,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill13[0]]}) || RETURN",
-          "displayLines": "{[Skill13[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill13[0]]}"
-          ]
+          "displayLines": "{[Skill13[0]]}"
         },
         "HitSplit": 0.2,
         "Toughness": null,
@@ -36,12 +31,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill13[0]]}) || RETURN",
-          "displayLines": "{[Skill13[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill13[0]]}"
-          ]
+          "displayLines": "{[Skill13[0]]}"
         },
         "HitSplit": 0.2,
         "Toughness": null,
@@ -58,12 +48,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill13[0]]}) || RETURN",
-          "displayLines": "{[Skill13[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill13[0]]}"
-          ]
+          "displayLines": "{[Skill13[0]]}"
         },
         "HitSplit": 0.2,
         "Toughness": null,
@@ -80,12 +65,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill13[0]]}) || RETURN",
-          "displayLines": "{[Skill13[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill13[0]]}"
-          ]
+          "displayLines": "{[Skill13[0]]}"
         },
         "HitSplit": 0.2,
         "Toughness": null,
@@ -102,12 +82,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill13[0]]}) || RETURN",
-          "displayLines": "{[Skill13[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill13[0]]}"
-          ]
+          "displayLines": "{[Skill13[0]]}"
         },
         "HitSplit": 0.2,
         "Toughness": null,

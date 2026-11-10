@@ -30,12 +30,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoingConverted</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -77,13 +72,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (MDF_CurrentBreakDamageAddedRatio) || Variables[1] (0.5) || MUL || RETURN",
-                "displayLines": "(MDF_CurrentBreakDamageAddedRatio * 0.5)",
-                "constants": [],
-                "variables": [
-                  "MDF_CurrentBreakDamageAddedRatio",
-                  0.5
-                ]
+                "displayLines": "(MDF_CurrentBreakDamageAddedRatio * 0.5)"
               },
               "variableName": "MDF_HealRatioAddedRatio"
             },
@@ -94,24 +83,14 @@ const configAbility = {
                 "value1": "MDF_HealRatioAddedRatio",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (0.75) || RETURN",
-                  "displayLines": "0.75",
-                  "constants": [],
-                  "variables": [
-                    0.75
-                  ]
+                  "displayLines": "0.75"
                 }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (0.75) || RETURN",
-                    "displayLines": "0.75",
-                    "constants": [],
-                    "variables": [
-                      0.75
-                    ]
+                    "displayLines": "0.75"
                   },
                   "variableName": "MDF_HealRatioAddedRatio"
                 }
@@ -126,12 +105,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1129970541\">Gallagher_HealRatioAddedRatio</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_HealRatioAddedRatio) || RETURN",
-                  "displayLines": "MDF_HealRatioAddedRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_HealRatioAddedRatio"
-                  ]
+                  "displayLines": "MDF_HealRatioAddedRatio"
                 }
               }
             }
@@ -177,12 +151,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.15) || INVERT || RETURN",
-                "displayLines": "-0.15",
-                "constants": [],
-                "variables": [
-                  0.15
-                ]
+                "displayLines": "-0.15"
               }
             }
           ]
@@ -312,12 +281,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.12) || RETURN",
-                "displayLines": "0.12",
-                "constants": [],
-                "variables": [
-                  0.12
-                ]
+                "displayLines": "0.12"
               },
               "variableName": "MDF_BreakDamagTaken"
             }
@@ -378,12 +342,7 @@ const configAbility = {
                             "target": "{{Parameter Target}}"
                           },
                           "healFlat": {
-                            "operator": "Variables[0] (640) || RETURN",
-                            "displayLines": "640",
-                            "constants": [],
-                            "variables": [
-                              640
-                            ]
+                            "displayLines": "640"
                           }
                         }
                       ]
@@ -397,12 +356,7 @@ const configAbility = {
                         "target": "{{Parameter Target}}"
                       },
                       "healFlat": {
-                        "operator": "Variables[0] (640) || RETURN",
-                        "displayLines": "640",
-                        "constants": [],
-                        "variables": [
-                          640
-                        ]
+                        "displayLines": "640"
                       }
                     }
                   ]
@@ -433,12 +387,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -461,12 +410,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]

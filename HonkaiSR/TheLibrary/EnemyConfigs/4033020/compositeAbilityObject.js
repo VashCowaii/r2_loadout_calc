@@ -83,12 +83,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
-                    "displayLines": "MDF_AllDamageTypeAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageTypeAddedRatio"
-                    ]
+                    "displayLines": "MDF_AllDamageTypeAddedRatio"
                   }
                 }
               ]
@@ -125,13 +120,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_Layer) || Variables[1] (MDF_AllDamageTypeAddedRatio) || MUL || RETURN",
-                    "displayLines": "(MDF_Layer * MDF_AllDamageTypeAddedRatio)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Layer",
-                      "MDF_AllDamageTypeAddedRatio"
-                    ]
+                    "displayLines": "(MDF_Layer * MDF_AllDamageTypeAddedRatio)"
                   }
                 }
               ]
@@ -250,12 +239,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                    "displayLines": "MDF_SpeedAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedAddedRatio"
-                    ]
+                    "displayLines": "MDF_SpeedAddedRatio"
                   }
                 }
               ]
@@ -272,12 +256,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1754815848\">Enemy_W4_Claymore_01_Ability02_DeadLock_PowerUp</a>[<span class=\"descriptionNumberColor\">Morale</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeAddedRatio": {
-                      "operator": "Variables[0] (MDF_PowerUp_AllDamageTypeAddedRatio) || RETURN",
-                      "displayLines": "MDF_PowerUp_AllDamageTypeAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PowerUp_AllDamageTypeAddedRatio"
-                      ]
+                      "displayLines": "MDF_PowerUp_AllDamageTypeAddedRatio"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -316,28 +295,13 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1632906191\">Enemy_W4_Claymore_01_Ability02_DeadLock_Target_Servant</a>[<span class=\"descriptionNumberColor\">Duel</span>]",
                   "valuePerStack": {
                     "MDF_DamageReduce": {
-                      "operator": "Variables[0] (MDF_DamageReduce) || RETURN",
-                      "displayLines": "MDF_DamageReduce",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageReduce"
-                      ]
+                      "displayLines": "MDF_DamageReduce"
                     },
                     "MDF_SpeedAddedRatio": {
-                      "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                      "displayLines": "MDF_SpeedAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_SpeedAddedRatio"
-                      ]
+                      "displayLines": "MDF_SpeedAddedRatio"
                     },
                     "MDF_PowerUp_AllDamageTypeAddedRatio": {
-                      "operator": "Variables[0] (MDF_PowerUp_AllDamageTypeAddedRatio) || RETURN",
-                      "displayLines": "MDF_PowerUp_AllDamageTypeAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PowerUp_AllDamageTypeAddedRatio"
-                      ]
+                      "displayLines": "MDF_PowerUp_AllDamageTypeAddedRatio"
                     }
                   }
                 },
@@ -403,12 +367,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                    "displayLines": "MDF_SpeedAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedAddedRatio"
-                    ]
+                    "displayLines": "MDF_SpeedAddedRatio"
                   }
                 }
               ]
@@ -439,28 +398,13 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1632906191\">Enemy_W4_Claymore_01_Ability02_DeadLock_Target_Servant</a>[<span class=\"descriptionNumberColor\">Duel</span>]",
                       "valuePerStack": {
                         "MDF_DamageReduce": {
-                          "operator": "Variables[0] (MDF_DamageReduce) || RETURN",
-                          "displayLines": "MDF_DamageReduce",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageReduce"
-                          ]
+                          "displayLines": "MDF_DamageReduce"
                         },
                         "MDF_SpeedAddedRatio": {
-                          "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                          "displayLines": "MDF_SpeedAddedRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_SpeedAddedRatio"
-                          ]
+                          "displayLines": "MDF_SpeedAddedRatio"
                         },
                         "MDF_PowerUp_AllDamageTypeAddedRatio": {
-                          "operator": "Variables[0] (MDF_PowerUp_AllDamageTypeAddedRatio) || RETURN",
-                          "displayLines": "MDF_PowerUp_AllDamageTypeAddedRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PowerUp_AllDamageTypeAddedRatio"
-                          ]
+                          "displayLines": "MDF_PowerUp_AllDamageTypeAddedRatio"
                         }
                       }
                     }
@@ -480,12 +424,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1754815848\">Enemy_W4_Claymore_01_Ability02_DeadLock_PowerUp</a>[<span class=\"descriptionNumberColor\">Morale</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeAddedRatio": {
-                      "operator": "Variables[0] (MDF_PowerUp_AllDamageTypeAddedRatio) || RETURN",
-                      "displayLines": "MDF_PowerUp_AllDamageTypeAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PowerUp_AllDamageTypeAddedRatio"
-                      ]
+                      "displayLines": "MDF_PowerUp_AllDamageTypeAddedRatio"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -547,13 +486,7 @@ const compositeAbilityObject = {
                       },
                       "scope": "ContextModifier",
                       "value": {
-                        "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (MDF_DeadLock_HPRatio) || MUL || RETURN",
-                        "displayLines": "(MDF_MaxHP * MDF_DeadLock_HPRatio)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxHP",
-                          "MDF_DeadLock_HPRatio"
-                        ]
+                        "displayLines": "(MDF_MaxHP * MDF_DeadLock_HPRatio)"
                       },
                       "variableName": "MDF_DeadLock_HP"
                     },
@@ -565,24 +498,14 @@ const compositeAbilityObject = {
                       },
                       "scope": "ContextModifier",
                       "value": {
-                        "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                        "displayLines": "MDF_DeadLock_HP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DeadLock_HP"
-                        ]
+                        "displayLines": "MDF_DeadLock_HP"
                       },
                       "variableName": "DeadLock_HP_CurrentValue"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                        "displayLines": "DeadLock_HP_CurrentValue",
-                        "constants": [],
-                        "variables": [
-                          "DeadLock_HP_CurrentValue"
-                        ]
+                        "displayLines": "DeadLock_HP_CurrentValue"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -590,12 +513,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                        "displayLines": "MDF_DeadLock_HP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DeadLock_HP"
-                        ]
+                        "displayLines": "MDF_DeadLock_HP"
                       },
                       "assignState": "True",
                       "state": "Normal",
@@ -620,13 +538,7 @@ const compositeAbilityObject = {
                       },
                       "scope": "ContextModifier",
                       "value": {
-                        "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (MDF_DeadLock_HPRatio) || MUL || RETURN",
-                        "displayLines": "(MDF_MaxHP * MDF_DeadLock_HPRatio)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxHP",
-                          "MDF_DeadLock_HPRatio"
-                        ]
+                        "displayLines": "(MDF_MaxHP * MDF_DeadLock_HPRatio)"
                       },
                       "variableName": "MDF_DeadLock_HP"
                     },
@@ -638,24 +550,14 @@ const compositeAbilityObject = {
                       },
                       "scope": "ContextModifier",
                       "value": {
-                        "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                        "displayLines": "MDF_DeadLock_HP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DeadLock_HP"
-                        ]
+                        "displayLines": "MDF_DeadLock_HP"
                       },
                       "variableName": "DeadLock_HP_CurrentValue"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                        "displayLines": "DeadLock_HP_CurrentValue",
-                        "constants": [],
-                        "variables": [
-                          "DeadLock_HP_CurrentValue"
-                        ]
+                        "displayLines": "DeadLock_HP_CurrentValue"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -663,12 +565,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                        "displayLines": "MDF_DeadLock_HP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DeadLock_HP"
-                        ]
+                        "displayLines": "MDF_DeadLock_HP"
                       },
                       "assignState": "True",
                       "state": "Normal",
@@ -691,12 +588,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                        "displayLines": "DeadLock_HP_CurrentValue",
-                        "constants": [],
-                        "variables": [
-                          "DeadLock_HP_CurrentValue"
-                        ]
+                        "displayLines": "DeadLock_HP_CurrentValue"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -704,12 +596,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                        "displayLines": "MDF_DeadLock_HP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DeadLock_HP"
-                        ]
+                        "displayLines": "MDF_DeadLock_HP"
                       },
                       "assignState": "False",
                       "state": "Normal",
@@ -720,12 +607,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                        "displayLines": "DeadLock_HP_CurrentValue",
-                        "constants": [],
-                        "variables": [
-                          "DeadLock_HP_CurrentValue"
-                        ]
+                        "displayLines": "DeadLock_HP_CurrentValue"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -733,12 +615,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                        "displayLines": "MDF_DeadLock_HP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DeadLock_HP"
-                        ]
+                        "displayLines": "MDF_DeadLock_HP"
                       },
                       "assignState": "False",
                       "state": "Normal",
@@ -777,12 +654,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                        "displayLines": "DeadLock_HP_CurrentValue",
-                        "constants": [],
-                        "variables": [
-                          "DeadLock_HP_CurrentValue"
-                        ]
+                        "displayLines": "DeadLock_HP_CurrentValue"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -790,12 +662,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                        "displayLines": "MDF_DeadLock_HP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DeadLock_HP"
-                        ]
+                        "displayLines": "MDF_DeadLock_HP"
                       },
                       "assignState": "True",
                       "state": "Normal",
@@ -806,12 +673,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                        "displayLines": "DeadLock_HP_CurrentValue",
-                        "constants": [],
-                        "variables": [
-                          "DeadLock_HP_CurrentValue"
-                        ]
+                        "displayLines": "DeadLock_HP_CurrentValue"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -819,12 +681,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                        "displayLines": "MDF_DeadLock_HP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DeadLock_HP"
-                        ]
+                        "displayLines": "MDF_DeadLock_HP"
                       },
                       "assignState": "True",
                       "state": "Normal",
@@ -1031,13 +888,7 @@ const compositeAbilityObject = {
                           },
                           "scope": "ContextModifier",
                           "value": {
-                            "operator": "Variables[0] (DeadLock_HP_CurrentValue) || Variables[1] (_Damage) || SUB || RETURN",
-                            "displayLines": "(DeadLock_HP_CurrentValue - _Damage)",
-                            "constants": [],
-                            "variables": [
-                              "DeadLock_HP_CurrentValue",
-                              "_Damage"
-                            ]
+                            "displayLines": "(DeadLock_HP_CurrentValue - _Damage)"
                           },
                           "variableName": "DeadLock_HP_CurrentValue"
                         },
@@ -1070,12 +921,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                            "displayLines": "DeadLock_HP_CurrentValue",
-                            "constants": [],
-                            "variables": [
-                              "DeadLock_HP_CurrentValue"
-                            ]
+                            "displayLines": "DeadLock_HP_CurrentValue"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -1083,12 +929,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                            "displayLines": "MDF_DeadLock_HP",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DeadLock_HP"
-                            ]
+                            "displayLines": "MDF_DeadLock_HP"
                           },
                           "assignState": "True"
                         },
@@ -1180,13 +1021,7 @@ const compositeAbilityObject = {
                           },
                           "scope": "ContextModifier",
                           "value": {
-                            "operator": "Variables[0] (DeadLock_HP_CurrentValue) || Variables[1] (_Damage) || SUB || RETURN",
-                            "displayLines": "(DeadLock_HP_CurrentValue - _Damage)",
-                            "constants": [],
-                            "variables": [
-                              "DeadLock_HP_CurrentValue",
-                              "_Damage"
-                            ]
+                            "displayLines": "(DeadLock_HP_CurrentValue - _Damage)"
                           },
                           "variableName": "DeadLock_HP_CurrentValue"
                         },
@@ -1219,12 +1054,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                            "displayLines": "DeadLock_HP_CurrentValue",
-                            "constants": [],
-                            "variables": [
-                              "DeadLock_HP_CurrentValue"
-                            ]
+                            "displayLines": "DeadLock_HP_CurrentValue"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -1232,12 +1062,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                            "displayLines": "MDF_DeadLock_HP",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DeadLock_HP"
-                            ]
+                            "displayLines": "MDF_DeadLock_HP"
                           },
                           "assignState": "True"
                         },
@@ -1341,12 +1166,7 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
-                    "displayLines": "MDF_SpeedAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedAddedRatio"
-                    ]
+                    "displayLines": "MDF_SpeedAddedRatio"
                   }
                 }
               ]
@@ -1363,12 +1183,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1754815848\">Enemy_W4_Claymore_01_Ability02_DeadLock_PowerUp</a>[<span class=\"descriptionNumberColor\">Morale</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeAddedRatio": {
-                      "operator": "Variables[0] (MDF_PowerUp_AllDamageTypeAddedRatio) || RETURN",
-                      "displayLines": "MDF_PowerUp_AllDamageTypeAddedRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PowerUp_AllDamageTypeAddedRatio"
-                      ]
+                      "displayLines": "MDF_PowerUp_AllDamageTypeAddedRatio"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -1452,12 +1267,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                            "displayLines": "DeadLock_HP_CurrentValue",
-                            "constants": [],
-                            "variables": [
-                              "DeadLock_HP_CurrentValue"
-                            ]
+                            "displayLines": "DeadLock_HP_CurrentValue"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -1465,12 +1275,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                            "displayLines": "MDF_DeadLock_HP",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DeadLock_HP"
-                            ]
+                            "displayLines": "MDF_DeadLock_HP"
                           },
                           "assignState": "True",
                           "enableState": "False"
@@ -1480,12 +1285,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                            "displayLines": "DeadLock_HP_CurrentValue",
-                            "constants": [],
-                            "variables": [
-                              "DeadLock_HP_CurrentValue"
-                            ]
+                            "displayLines": "DeadLock_HP_CurrentValue"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -1493,12 +1293,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                            "displayLines": "MDF_DeadLock_HP",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DeadLock_HP"
-                            ]
+                            "displayLines": "MDF_DeadLock_HP"
                           },
                           "assignState": "True",
                           "enableState": "False"
@@ -1636,12 +1431,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                            "displayLines": "DeadLock_HP_CurrentValue",
-                            "constants": [],
-                            "variables": [
-                              "DeadLock_HP_CurrentValue"
-                            ]
+                            "displayLines": "DeadLock_HP_CurrentValue"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -1649,12 +1439,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                            "displayLines": "MDF_DeadLock_HP",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DeadLock_HP"
-                            ]
+                            "displayLines": "MDF_DeadLock_HP"
                           },
                           "assignState": "True",
                           "state": "Normal",
@@ -1665,12 +1450,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                            "displayLines": "DeadLock_HP_CurrentValue",
-                            "constants": [],
-                            "variables": [
-                              "DeadLock_HP_CurrentValue"
-                            ]
+                            "displayLines": "DeadLock_HP_CurrentValue"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -1678,12 +1458,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                            "displayLines": "MDF_DeadLock_HP",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DeadLock_HP"
-                            ]
+                            "displayLines": "MDF_DeadLock_HP"
                           },
                           "assignState": "True",
                           "state": "Normal",
@@ -1703,12 +1478,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                            "displayLines": "DeadLock_HP_CurrentValue",
-                            "constants": [],
-                            "variables": [
-                              "DeadLock_HP_CurrentValue"
-                            ]
+                            "displayLines": "DeadLock_HP_CurrentValue"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -1716,12 +1486,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                            "displayLines": "MDF_DeadLock_HP",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DeadLock_HP"
-                            ]
+                            "displayLines": "MDF_DeadLock_HP"
                           },
                           "assignState": "True",
                           "state": "Disable",
@@ -1732,12 +1497,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                            "displayLines": "DeadLock_HP_CurrentValue",
-                            "constants": [],
-                            "variables": [
-                              "DeadLock_HP_CurrentValue"
-                            ]
+                            "displayLines": "DeadLock_HP_CurrentValue"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -1745,12 +1505,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                            "displayLines": "MDF_DeadLock_HP",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DeadLock_HP"
-                            ]
+                            "displayLines": "MDF_DeadLock_HP"
                           },
                           "assignState": "True",
                           "state": "Disable",
@@ -1784,12 +1539,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                            "displayLines": "DeadLock_HP_CurrentValue",
-                            "constants": [],
-                            "variables": [
-                              "DeadLock_HP_CurrentValue"
-                            ]
+                            "displayLines": "DeadLock_HP_CurrentValue"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -1797,12 +1547,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                            "displayLines": "MDF_DeadLock_HP",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DeadLock_HP"
-                            ]
+                            "displayLines": "MDF_DeadLock_HP"
                           },
                           "assignState": "True",
                           "state": "Normal",
@@ -1813,12 +1558,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
-                            "displayLines": "DeadLock_HP_CurrentValue",
-                            "constants": [],
-                            "variables": [
-                              "DeadLock_HP_CurrentValue"
-                            ]
+                            "displayLines": "DeadLock_HP_CurrentValue"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -1826,12 +1566,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
-                            "displayLines": "MDF_DeadLock_HP",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DeadLock_HP"
-                            ]
+                            "displayLines": "MDF_DeadLock_HP"
                           },
                           "assignState": "True",
                           "state": "Normal",
@@ -1939,36 +1674,16 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
           "valuePerStack": {
             "MDF_RallyTransferRatio": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
+              "displayLines": "{[SkillP01[0]]}"
             },
             "MDF_Rally_HealPercentage": {
-              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-              "displayLines": "{[SkillP01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[1]]}"
-              ]
+              "displayLines": "{[SkillP01[1]]}"
             },
             "MDF_Rally_HealUpRatio": {
-              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-              "displayLines": "{[SkillP01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[2]]}"
-              ]
+              "displayLines": "{[SkillP01[2]]}"
             },
             "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-              "displayLines": "{[SkillP01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[3]]}"
-              ]
+              "displayLines": "{[SkillP01[3]]}"
             }
           }
         },
@@ -1982,12 +1697,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "HitSplit": 0.25,
             "Toughness": null,
@@ -2004,12 +1714,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "HitSplit": 0.25,
             "Toughness": null,
@@ -2026,12 +1731,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
+              "displayLines": "{[Skill04[0]]}"
             },
             "HitSplit": 0.5,
             "Toughness": null,
@@ -2128,36 +1828,16 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
           "valuePerStack": {
             "MDF_RallyTransferRatio": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
+              "displayLines": "{[SkillP01[0]]}"
             },
             "MDF_Rally_HealPercentage": {
-              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-              "displayLines": "{[SkillP01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[1]]}"
-              ]
+              "displayLines": "{[SkillP01[1]]}"
             },
             "MDF_Rally_HealUpRatio": {
-              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-              "displayLines": "{[SkillP01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[2]]}"
-              ]
+              "displayLines": "{[SkillP01[2]]}"
             },
             "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-              "displayLines": "{[SkillP01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[3]]}"
-              ]
+              "displayLines": "{[SkillP01[3]]}"
             }
           }
         },
@@ -2171,12 +1851,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
+              "displayLines": "{[Skill03[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -2188,12 +1863,7 @@ const compositeAbilityObject = {
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (_ReadyToCharge) || RETURN",
-            "displayLines": "_ReadyToCharge",
-            "constants": [],
-            "variables": [
-              "_ReadyToCharge"
-            ]
+            "displayLines": "_ReadyToCharge"
           },
           "caseEvents": [
             {
@@ -2316,12 +1986,7 @@ const compositeAbilityObject = {
           "duration": 2,
           "valuePerStack": {
             "MDF_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[Skill02[5]]}) || RETURN",
-              "displayLines": "{[Skill02[5]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[5]]}"
-              ]
+              "displayLines": "{[Skill02[5]]}"
             }
           }
         }
@@ -2369,36 +2034,16 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1906405018\">Enemy_W4_Claymore_01_Ability02_DeadLock_Self</a>[<span class=\"descriptionNumberColor\">Duel</span>]",
           "valuePerStack": {
             "MDF_DeadLock_HPRatio": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
+              "displayLines": "{[Skill02[0]]}"
             },
             "MDF_DamageReduce": {
-              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-              "displayLines": "{[Skill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[1]]}"
-              ]
+              "displayLines": "{[Skill02[1]]}"
             },
             "MDF_SpeedAddedRatio": {
-              "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-              "displayLines": "{[Skill02[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[2]]}"
-              ]
+              "displayLines": "{[Skill02[2]]}"
             },
             "MDF_PowerUp_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
-              "displayLines": "{[Skill02[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[4]]}"
-              ]
+              "displayLines": "{[Skill02[4]]}"
             }
           }
         },
@@ -2411,28 +2056,13 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-34378787\">Enemy_W4_Claymore_01_Ability02_DeadLock_Target</a>[<span class=\"descriptionNumberColor\">Duel</span>]",
           "valuePerStack": {
             "MDF_DamageReduce": {
-              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-              "displayLines": "{[Skill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[1]]}"
-              ]
+              "displayLines": "{[Skill02[1]]}"
             },
             "MDF_SpeedAddedRatio": {
-              "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-              "displayLines": "{[Skill02[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[3]]}"
-              ]
+              "displayLines": "{[Skill02[3]]}"
             },
             "MDF_PowerUp_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
-              "displayLines": "{[Skill02[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[4]]}"
-              ]
+              "displayLines": "{[Skill02[4]]}"
             }
           }
         },
@@ -2500,36 +2130,16 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
           "valuePerStack": {
             "MDF_RallyTransferRatio": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
+              "displayLines": "{[SkillP01[0]]}"
             },
             "MDF_Rally_HealPercentage": {
-              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-              "displayLines": "{[SkillP01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[1]]}"
-              ]
+              "displayLines": "{[SkillP01[1]]}"
             },
             "MDF_Rally_HealUpRatio": {
-              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-              "displayLines": "{[SkillP01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[2]]}"
-              ]
+              "displayLines": "{[SkillP01[2]]}"
             },
             "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-              "displayLines": "{[SkillP01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[3]]}"
-              ]
+              "displayLines": "{[SkillP01[3]]}"
             }
           }
         },
@@ -2543,12 +2153,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
+              "displayLines": "{[Skill01[0]]}"
             },
             "Toughness": null,
             "Tags": null,
@@ -2565,12 +2170,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
+              "displayLines": "{[Skill01[1]]}"
             },
             "Toughness": null,
             "Tags": null,

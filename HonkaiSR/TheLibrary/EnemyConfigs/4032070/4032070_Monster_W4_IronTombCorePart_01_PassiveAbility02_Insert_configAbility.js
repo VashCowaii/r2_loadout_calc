@@ -54,13 +54,7 @@ const configAbility = {
             "target": "{{Parameter Target}}"
           },
           "value": {
-            "operator": "Variables[0] ({[PassiveSkill02[0]]}) || Variables[1] (_TargetMaxSP) || MUL || RETURN",
-            "displayLines": "({[PassiveSkill02[0]]} * _TargetMaxSP)",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[0]]}",
-              "_TargetMaxSP"
-            ]
+            "displayLines": "({[PassiveSkill02[0]]} * _TargetMaxSP)"
           },
           "isFixed": "(Fixed)"
         }
@@ -197,44 +191,19 @@ const configAbility = {
               "isUnique": true,
               "odds": [
                 {
-                  "operator": "Variables[0] (_Break01Odds) || RETURN",
-                  "displayLines": "_Break01Odds",
-                  "constants": [],
-                  "variables": [
-                    "_Break01Odds"
-                  ]
+                  "displayLines": "_Break01Odds"
                 },
                 {
-                  "operator": "Variables[0] (_Break02Odds) || RETURN",
-                  "displayLines": "_Break02Odds",
-                  "constants": [],
-                  "variables": [
-                    "_Break02Odds"
-                  ]
+                  "displayLines": "_Break02Odds"
                 },
                 {
-                  "operator": "Variables[0] (_Break03Odds) || RETURN",
-                  "displayLines": "_Break03Odds",
-                  "constants": [],
-                  "variables": [
-                    "_Break03Odds"
-                  ]
+                  "displayLines": "_Break03Odds"
                 },
                 {
-                  "operator": "Variables[0] (_Break04Odds) || RETURN",
-                  "displayLines": "_Break04Odds",
-                  "constants": [],
-                  "variables": [
-                    "_Break04Odds"
-                  ]
+                  "displayLines": "_Break04Odds"
                 },
                 {
-                  "operator": "Variables[0] (_Break05Odds) || RETURN",
-                  "displayLines": "_Break05Odds",
-                  "constants": [],
-                  "variables": [
-                    "_Break05Odds"
-                  ]
+                  "displayLines": "_Break05Odds"
                 }
               ],
               "execute": [

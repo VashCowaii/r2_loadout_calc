@@ -22,12 +22,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"320399697\">Phainon_Ability03_BattleEvent_BaseSpeed</a>",
       "valuePerStack": {
         "MDF_PropertyValue": {
-          "operator": "Variables[0] (BE_Speed) || RETURN",
-          "displayLines": "BE_Speed",
-          "constants": [],
-          "variables": [
-            "BE_Speed"
-          ]
+          "displayLines": "BE_Speed"
         }
       }
     },
@@ -39,16 +34,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "multiBase": {
-        "operator": "Variables[0] (BE_Index) || Variables[1] (MAX) || Constants[0] (1) || Variables[2] (BE_Count) || Constants[0] (1) || SUB || PARAM_2 || FUNCTION || DIV || RETURN",
-        "displayLines": "(BE_Index / &nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(1, (BE_Count - 1)))",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "BE_Index",
-          "MAX",
-          "BE_Count"
-        ]
+        "displayLines": "(BE_Index / &nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(1, (BE_Count - 1)))"
       }
     },
     {
@@ -58,15 +44,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "attackCount": {
-        "operator": "Variables[0] (BE_Count) || Variables[1] (BE_Index) || SUB || Constants[0] (1) || SUB || RETURN",
-        "displayLines": "((BE_Count - BE_Index) - 1)",
-        "constants": [
-          1
-        ],
-        "variables": [
-          "BE_Count",
-          "BE_Index"
-        ]
+        "displayLines": "((BE_Count - BE_Index) - 1)"
       },
       "show": true
     },
@@ -77,14 +55,7 @@ const configAbility = {
         "value1": "BE_Index",
         "compareType": ">=",
         "value2": {
-          "operator": "Variables[0] (BE_Count) || Constants[0] (1) || SUB || RETURN",
-          "displayLines": "(BE_Count - 1)",
-          "constants": [
-            1
-          ],
-          "variables": [
-            "BE_Count"
-          ]
+          "displayLines": "(BE_Count - 1)"
         }
       },
       "passed": [
@@ -188,14 +159,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "operator": "Variables[0] (MDF_Lifetime) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(MDF_Lifetime - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "MDF_Lifetime"
-                    ]
+                    "displayLines": "(MDF_Lifetime - 1)"
                   },
                   "variableName": "MDF_Lifetime"
                 }
@@ -409,12 +373,7 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
+                "displayLines": "MDF_PropertyValue"
               }
             }
           ]
@@ -436,12 +395,7 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
+                    "displayLines": "MDF_PropertyValue"
                   },
                   "isRefresh": true
                 }

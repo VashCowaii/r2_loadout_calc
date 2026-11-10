@@ -65,12 +65,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (UnusedUnderThisBase_5679) || RETURN",
-                "displayLines": "UnusedUnderThisBase_5679",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_5679"
-                ]
+                "displayLines": "UnusedUnderThisBase_5679"
               },
               "addStacksPerTrigger": 7
             },
@@ -85,20 +80,10 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Constants[0] (10) || RETURN",
-                "displayLines": "10",
-                "constants": [
-                  10
-                ],
-                "variables": []
+                "displayLines": "10"
               },
               "maximum": {
-                "operator": "Variables[0] (UnusedUnderThisBase_5679) || RETURN",
-                "displayLines": "UnusedUnderThisBase_5679",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_5679"
-                ]
+                "displayLines": "UnusedUnderThisBase_5679"
               },
               "assignState": "True",
               "priorState": "Normal",

@@ -54,12 +54,7 @@ const configAbility = {
     {
       "name": "Deal Toughness DMG",
       "value": {
-        "operator": "Variables[0] (_CurrentStance) || RETURN",
-        "displayLines": "_CurrentStance",
-        "constants": [],
-        "variables": [
-          "_CurrentStance"
-        ]
+        "displayLines": "_CurrentStance"
       },
       "defender": {
         "name": "Target Name",

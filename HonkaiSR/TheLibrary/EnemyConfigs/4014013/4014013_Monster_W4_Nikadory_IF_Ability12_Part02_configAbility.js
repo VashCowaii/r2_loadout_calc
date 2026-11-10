@@ -14,12 +14,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill12[0]]}) || RETURN",
-          "displayLines": "{[Skill12[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill12[0]]}"
-          ]
+          "displayLines": "{[Skill12[0]]}"
         },
         "HitSplit": 0.4,
         "Toughness": null,
@@ -37,12 +32,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] ({[Skill12[0]]}) || RETURN",
-          "displayLines": "{[Skill12[0]]}",
-          "constants": [],
-          "variables": [
-            "{[Skill12[0]]}"
-          ]
+          "displayLines": "{[Skill12[0]]}"
         },
         "HitSplit": 0.6,
         "Toughness": null,

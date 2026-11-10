@@ -31,12 +31,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "operator": "Variables[0] (0.3) || RETURN",
-                "displayLines": "0.3",
-                "constants": [],
-                "variables": [
-                  0.3
-                ]
+                "displayLines": "0.3"
               },
               "variableName": "_Rank01_DefenceRatio"
             }
@@ -59,29 +54,14 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
+              "displayLines": "1"
             },
             "DamageExtra": {
-              "operator": "Variables[0] (_Rank01_DefenceRatio) || RETURN",
-              "displayLines": "_Rank01_DefenceRatio",
-              "constants": [],
-              "variables": [
-                "_Rank01_DefenceRatio"
-              ]
+              "displayLines": "_Rank01_DefenceRatio"
             },
             "dmgFormulaExtra": "DEF Scaling",
             "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
+              "displayLines": "ST Toughness Value"
             },
             "Tags": [
               "Counter"
@@ -160,12 +140,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (Mar7th_00_Passive_CounterView) || RETURN",
-                "displayLines": "Mar7th_00_Passive_CounterView",
-                "constants": [],
-                "variables": [
-                  "Mar7th_00_Passive_CounterView"
-                ]
+                "displayLines": "Mar7th_00_Passive_CounterView"
               },
               "assignState": "True",
               "priorState": "Active",
@@ -177,12 +152,7 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (Mar7th_00_Passive_CounterView) || RETURN",
-                "displayLines": "Mar7th_00_Passive_CounterView",
-                "constants": [],
-                "variables": [
-                  "Mar7th_00_Passive_CounterView"
-                ]
+                "displayLines": "Mar7th_00_Passive_CounterView"
               },
               "assignState": "True",
               "priorState": "Normal",
